@@ -1,6 +1,6 @@
 Summary: MATE power management service
 Name: mate-power-manager
-Version: 2.32.0
+Version: 1.1.0
 Release: 1%{?dist}
 License: GPLv2+ and GFDL
 Group: Applications/System
