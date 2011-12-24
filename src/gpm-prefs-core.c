@@ -86,22 +86,22 @@ gpm_prefs_class_init (GpmPrefsClass *klass)
 
 	signals [ACTION_HELP] =
 		g_signal_new ("action-help",
-			      G_TYPE_FROM_CLASS (object_class),
-			      G_SIGNAL_RUN_LAST,
-			      G_STRUCT_OFFSET (GpmPrefsClass, action_help),
-			      NULL,
-			      NULL,
-			      g_cclosure_marshal_VOID__VOID,
-			      G_TYPE_NONE, 0);
+				  G_TYPE_FROM_CLASS (object_class),
+				  G_SIGNAL_RUN_LAST,
+				  G_STRUCT_OFFSET (GpmPrefsClass, action_help),
+				  NULL,
+				  NULL,
+				  g_cclosure_marshal_VOID__VOID,
+				  G_TYPE_NONE, 0);
 	signals [ACTION_CLOSE] =
 		g_signal_new ("action-close",
-			      G_TYPE_FROM_CLASS (object_class),
-			      G_SIGNAL_RUN_LAST,
-			      G_STRUCT_OFFSET (GpmPrefsClass, action_close),
-			      NULL,
-			      NULL,
-			      g_cclosure_marshal_VOID__VOID,
-			      G_TYPE_NONE, 0);
+				  G_TYPE_FROM_CLASS (object_class),
+				  G_SIGNAL_RUN_LAST,
+				  G_STRUCT_OFFSET (GpmPrefsClass, action_close),
+				  NULL,
+				  NULL,
+				  g_cclosure_marshal_VOID__VOID,
+				  G_TYPE_NONE, 0);
 }
 
 /**
@@ -330,7 +330,7 @@ gpm_prefs_actions_destroy_cb (GpmActionPolicy *array)
  **/
 static void
 gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
-			      const gchar *gpm_pref_key, const GpmActionPolicy *actions)
+				  const gchar *gpm_pref_key, const GpmActionPolicy *actions)
 {
 	gchar *value_txt;
 	gint i;
@@ -418,7 +418,7 @@ gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
  **/
 static void
 gpm_prefs_setup_time_combo (GpmPrefs *prefs, const gchar *widget_name,
-			    const gchar *gpm_pref_key, const gint *values)
+				const gchar *gpm_pref_key, const gint *values)
 {
 	guint value;
 	gchar *text;
@@ -585,15 +585,15 @@ prefs_setup_notification (GpmPrefs *prefs)
 	g_free (icon_policy_str);
 
 	radiobutton_icon_always = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder,
-					      "radiobutton_notification_always"));
+						  "radiobutton_notification_always"));
 	radiobutton_icon_present = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder,
-					       "radiobutton_notification_present"));
+						   "radiobutton_notification_present"));
 	radiobutton_icon_charge = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder,
-					      "radiobutton_notification_charge"));
+						  "radiobutton_notification_charge"));
 	radiobutton_icon_low = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder,
 					   "radiobutton_notification_low"));
 	radiobutton_icon_never = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder,
-					     "radiobutton_notification_never"));
+						 "radiobutton_notification_never"));
 
 	is_writable = mateconf_client_key_is_writable (prefs->priv->conf, GPM_CONF_UI_ICON_POLICY, NULL);
 	gtk_widget_set_sensitive (radiobutton_icon_always, is_writable);
@@ -603,15 +603,15 @@ prefs_setup_notification (GpmPrefs *prefs)
 	gtk_widget_set_sensitive (radiobutton_icon_never, is_writable);
 
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_icon_always),
-				      icon_policy == GPM_ICON_POLICY_ALWAYS);
+					  icon_policy == GPM_ICON_POLICY_ALWAYS);
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_icon_present),
-				      icon_policy == GPM_ICON_POLICY_PRESENT);
+					  icon_policy == GPM_ICON_POLICY_PRESENT);
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_icon_charge),
-				      icon_policy == GPM_ICON_POLICY_CHARGE);
+					  icon_policy == GPM_ICON_POLICY_CHARGE);
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_icon_low),
-				      icon_policy == GPM_ICON_POLICY_LOW);
+					  icon_policy == GPM_ICON_POLICY_LOW);
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_icon_never),
-				      icon_policy == GPM_ICON_POLICY_NEVER);
+					  icon_policy == GPM_ICON_POLICY_NEVER);
 
 	g_object_set_data (G_OBJECT (radiobutton_icon_always), "policy",
 			   GINT_TO_POINTER (GPM_ICON_POLICY_ALWAYS));
@@ -667,15 +667,15 @@ prefs_setup_ac (GpmPrefs *prefs)
 		 -1};
 
 	gpm_prefs_setup_time_combo (prefs, "combobox_ac_computer",
-				    GPM_CONF_TIMEOUT_SLEEP_COMPUTER_AC,
-				    computer_times);
+					GPM_CONF_TIMEOUT_SLEEP_COMPUTER_AC,
+					computer_times);
 	gpm_prefs_setup_time_combo (prefs, "combobox_ac_display",
-				    GPM_CONF_TIMEOUT_SLEEP_DISPLAY_AC,
-				    display_times);
+					GPM_CONF_TIMEOUT_SLEEP_DISPLAY_AC,
+					display_times);
 
 	gpm_prefs_setup_action_combo (prefs, "combobox_ac_lid",
-				      GPM_CONF_BUTTON_LID_AC,
-				      button_lid_actions);
+					  GPM_CONF_BUTTON_LID_AC,
+					  button_lid_actions);
 
 	gpm_prefs_setup_brightness_slider (prefs, "hscale_ac_brightness",
 					   GPM_CONF_BACKLIGHT_BRIGHTNESS_AC);
@@ -687,11 +687,11 @@ prefs_setup_ac (GpmPrefs *prefs)
 
 	if (prefs->priv->has_button_lid == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_ac_lid"));
-        	#if gtk_check_version (2, 24, 0)
-            		gtk_widget_hide(widget);
-        	#else
-            		gtk_widget_hide_all (widget);
-        	#endif
+		#if gtk_check_version (2, 24, 0)
+			gtk_widget_hide(widget);
+        #else
+			gtk_widget_hide_all (widget);
+		#endif
 	}
 	if (prefs->priv->has_lcd == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_ac_brightness"));
@@ -750,11 +750,11 @@ prefs_setup_battery (GpmPrefs *prefs)
 		 -1};
 
 	gpm_prefs_setup_time_combo (prefs, "combobox_battery_computer",
-				    GPM_CONF_TIMEOUT_SLEEP_COMPUTER_BATT,
-				    computer_times);
+					GPM_CONF_TIMEOUT_SLEEP_COMPUTER_BATT,
+					computer_times);
 	gpm_prefs_setup_time_combo (prefs, "combobox_battery_display",
-				    GPM_CONF_TIMEOUT_SLEEP_DISPLAY_BATT,
-				    display_times);
+					GPM_CONF_TIMEOUT_SLEEP_DISPLAY_BATT,
+					display_times);
 
 	if (prefs->priv->has_batteries == FALSE) {
 		notebook = GTK_NOTEBOOK (gtk_builder_get_object (prefs->priv->builder, "notebook_preferences"));
@@ -765,11 +765,11 @@ prefs_setup_battery (GpmPrefs *prefs)
 	}
 
 	gpm_prefs_setup_action_combo (prefs, "combobox_battery_lid",
-				      GPM_CONF_BUTTON_LID_BATT,
-				      button_lid_actions);
+					  GPM_CONF_BUTTON_LID_BATT,
+					  button_lid_actions);
 	gpm_prefs_setup_action_combo (prefs, "combobox_battery_critical",
-				      GPM_CONF_ACTIONS_CRITICAL_BATT,
-				      battery_critical_actions);
+					  GPM_CONF_ACTIONS_CRITICAL_BATT,
+					  battery_critical_actions);
 
 	/* set up the battery reduce checkbox */
 	gpm_prefs_setup_checkbox (prefs, "checkbutton_battery_display_reduce",
@@ -828,11 +828,11 @@ prefs_setup_ups (GpmPrefs *prefs)
 		 -1};
 
 	gpm_prefs_setup_time_combo (prefs, "combobox_ups_computer",
-				    GPM_CONF_TIMEOUT_SLEEP_COMPUTER_UPS,
-				    computer_times);
+					GPM_CONF_TIMEOUT_SLEEP_COMPUTER_UPS,
+					computer_times);
 	gpm_prefs_setup_time_combo (prefs, "combobox_ups_display",
-				    GPM_CONF_TIMEOUT_SLEEP_DISPLAY_UPS,
-				    display_times);
+					GPM_CONF_TIMEOUT_SLEEP_DISPLAY_UPS,
+					display_times);
 
 	if (prefs->priv->has_ups == FALSE) {
 		notebook = GTK_NOTEBOOK (gtk_builder_get_object (prefs->priv->builder, "notebook_preferences"));
@@ -843,11 +843,11 @@ prefs_setup_ups (GpmPrefs *prefs)
 	}
 
 	gpm_prefs_setup_action_combo (prefs, "combobox_ups_low",
-				      GPM_CONF_ACTIONS_LOW_UPS,
-				      ups_low_actions);
+					  GPM_CONF_ACTIONS_LOW_UPS,
+					  ups_low_actions);
 	gpm_prefs_setup_action_combo (prefs, "combobox_ups_critical",
-				      GPM_CONF_ACTIONS_CRITICAL_UPS,
-				      ups_low_actions);
+					  GPM_CONF_ACTIONS_CRITICAL_UPS,
+					  ups_low_actions);
 }
 
 static void
@@ -867,11 +867,11 @@ prefs_setup_general (GpmPrefs *prefs)
 				 -1};
 
 	gpm_prefs_setup_action_combo (prefs, "combobox_general_power",
-				      GPM_CONF_BUTTON_POWER,
-				      power_button_actions);
+					  GPM_CONF_BUTTON_POWER,
+					  power_button_actions);
 	gpm_prefs_setup_action_combo (prefs, "combobox_general_suspend",
-				      GPM_CONF_BUTTON_SUSPEND,
-				      suspend_button_actions);
+					  GPM_CONF_BUTTON_SUSPEND,
+					  suspend_button_actions);
 
 	if (prefs->priv->has_button_suspend == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_general_suspend"));
@@ -949,7 +949,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 	prefs->priv->conf = mateconf_client_get_default ();
 	/* watch mate-power-manager keys */
 	mateconf_client_add_dir (prefs->priv->conf, GPM_CONF_DIR,
-			      MATECONF_CLIENT_PRELOAD_RECURSIVE, NULL);
+				  MATECONF_CLIENT_PRELOAD_RECURSIVE, NULL);
 	mateconf_client_notify_add (prefs->priv->conf, GPM_CONF_DIR,
 				 (MateConfClientNotifyFunc) gpm_conf_mateconf_key_changed_cb,
 				 prefs, NULL, NULL);
@@ -973,9 +973,9 @@ gpm_prefs_init (GpmPrefs *prefs)
 
 	/* get values from UpClient */
 	g_object_get (prefs->priv->client,
-		      "can-suspend", &prefs->priv->can_suspend,
-		      "can-hibernate", &prefs->priv->can_hibernate,
-		      NULL);
+			  "can-suspend", &prefs->priv->can_suspend,
+			  "can-hibernate", &prefs->priv->can_hibernate,
+			  NULL);
 
 	prefs->priv->builder = gtk_builder_new ();
 	retval = gtk_builder_add_from_file (prefs->priv->builder, GPM_DATA "/gpm-prefs.ui", &error);
