@@ -689,7 +689,7 @@ prefs_setup_ac (GpmPrefs *prefs)
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_ac_lid"));
 		#if gtk_check_version (2, 24, 0)
 			gtk_widget_hide(widget);
-        #else
+		#else
 			gtk_widget_hide_all (widget);
 		#endif
 	}
