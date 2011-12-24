@@ -687,13 +687,28 @@ prefs_setup_ac (GpmPrefs *prefs)
 
 	if (prefs->priv->has_button_lid == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_ac_lid"));
-		gtk_widget_hide_all (widget);
+        	#if gtk_check_version (2, 24, 0)
+            		gtk_widget_hide(widget);
+        	#else
+            		gtk_widget_hide_all (widget);
+        	#endif
 	}
 	if (prefs->priv->has_lcd == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_ac_brightness"));
-		gtk_widget_hide_all (widget);
+
+		#if gtk_check_version (2, 24, 0)
+			gtk_widget_hide(widget);
+		#else
+			gtk_widget_hide_all (widget);
+		#endif
+		
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_ac_display_dim"));
-		gtk_widget_hide_all (widget);
+
+		#if gtk_check_version (2, 24, 0)
+			gtk_widget_hide(widget);
+		#else
+			gtk_widget_hide_all (widget);
+		#endif
 	}
 }
 
@@ -766,11 +781,20 @@ prefs_setup_battery (GpmPrefs *prefs)
 
 	if (prefs->priv->has_button_lid == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_battery_lid"));
-		gtk_widget_hide_all (widget);
+
+		#if gtk_check_version(2, 24, 0)
+			gtk_widget_hide(widget);
+		#else
+			gtk_widget_hide_all (widget);
+		#endif
 	}
 	if (prefs->priv->has_lcd == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_battery_display_dim"));
-		gtk_widget_hide_all (widget);
+		#if gtk_check_version(2, 24, 0)
+			gtk_widget_hide(widget)
+		#else
+			gtk_widget_hide_all (widget);
+		#endif
 	}
 }
 
@@ -851,7 +875,12 @@ prefs_setup_general (GpmPrefs *prefs)
 
 	if (prefs->priv->has_button_suspend == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_general_suspend"));
-		gtk_widget_hide_all (widget);
+
+		#if gtk_check_version (2, 24, 0)
+			gtk_widget_hide(widget)
+		#else
+			gtk_widget_hide_all (widget);
+		#endif
 	}
 }
 
