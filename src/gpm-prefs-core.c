@@ -829,7 +829,7 @@ prefs_setup_battery (GpmPrefs *prefs)
 	if (prefs->priv->has_lcd == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_battery_display_dim"));
 		#if GTK_CHECK_VERSION(2, 24, 0)
-			gtk_widget_hide(widget)
+			gtk_widget_hide(widget);
 		#else
 			gtk_widget_hide_all (widget);
 		#endif
@@ -915,7 +915,7 @@ prefs_setup_general (GpmPrefs *prefs)
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_general_suspend"));
 
 		#if GTK_CHECK_VERSION (2, 24, 0)
-			gtk_widget_hide(widget)
+			gtk_widget_hide(widget);
 		#else
 			gtk_widget_hide_all (widget);
 		#endif
