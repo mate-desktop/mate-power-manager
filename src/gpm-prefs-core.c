@@ -473,14 +473,14 @@ gpm_prefs_setup_time_combo (GpmPrefs *prefs, const gchar *widget_name,
 		if (values[i] != 0) {
 			text = gpm_get_timestring (values[i]);
 			#if GTK_CHECK_VERSION (2, 24, 0)
-				gtk_combo_box_text_append_text(GTK_COMBO_BOX (widget), text);
+				gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), text);
 			#else
 				gtk_combo_box_append_text (GTK_COMBO_BOX (widget), text);
 			#endif
 			g_free (text);
 		} else {
 			#if GTK_CHECK_VERSION (2, 24, 0)
-				gtk_combo_box_text_append_text(GTK_COMBO_BOX (widget), _("Never"));
+				gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Never"));
 			#else
 				gtk_combo_box_append_text (GTK_COMBO_BOX (widget), _("Never"));
 			#endif
