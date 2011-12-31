@@ -94,9 +94,10 @@ AC_DEFINE(GETTEXT_PACKAGE, "AC_PACKAGE_NAME", [foo])
 
 AM_GLIB_GNU_GETTEXT
 
-dnl ---------------------------------------------------------------------------
+dnl ----------------------------------------------------------------------------
 dnl - Library dependencies
-dnl ---------------------------------------------------------------------------
+dnl ----------------------------------------------------------------------------
+GTK_API_VERSION=2.0
 GLIB_REQUIRED=2.13.0
 GTK_REQUIRED=2.17.7
 GDK_REQUIRED=2.11.0
@@ -112,6 +113,29 @@ LIBPANEL_REQUIRED=1.1.0
 XRANDR_REQUIRED=1.2.0
 CANBERRA_REQUIRED=0.10
 UPOWER_REQUIRED=0.9.1
+
+dnl ----------------------------------------------------------------------------
+dnl GTK library version
+dnl ----------------------------------------------------------------------------
+
+AC_MSG_CHECKING([which gtk+ version to compile against])
+AC_ARG_WITH([gtk],
+	[AS_HELP_STRING([--with-gtk=2.0|3.0],[which gtk+ version to compile against (default: 2.0)])],
+	[case "$with_gtk" in
+		2.0|3.0) ;;
+		*) AC_MSG_ERROR([invalid gtk version specified]) ;;
+	 esac],
+	[with_gtk=2.0])
+AC_MSG_RESULT([$with_gtk])
+
+case "$with_gtk" in
+	2.0) GTK_API_VERSION=2.0
+		GTK_REQUIRED=2.17.7
+		;;
+	3.0) GTK_API_VERSION=3.0
+		GTK_REQUIRED=3.0.0
+		;;
+esac
 
 dnl ---------------------------------------------------------------------------
 dnl - Check library dependencies
@@ -148,7 +172,34 @@ PKG_CHECK_EXISTS(
 
 PKG_CHECK_MODULES(LIBMATENOTIFY, libmatenotify >= $LIBMATENOTIFY_REQUIRED)
 
-PKG_CHECK_MODULES(UNIQUE, unique-1.0 >= $UNIQUE_REQUIRED)
+dnl ----------------------------------------------------------------------------
+dnl - Unique
+dnl ----------------------------------------------------------------------------
+#PKG_CHECK_MODULES(UNIQUE, unique-1.0 >= $UNIQUE_REQUIRED)
+case "$with_gtk" in
+	2.0) LIBUNIQUE_VERSION=1.0
+		;;
+	3.0) LIBUNIQUE_VERSION=3.0
+		;;
+esac
+
+PKG_CHECK_MODULES(UNIQUE, unique-$LIBUNIQUE_VERSION, enable_libunique=yes, enable_libunique=no)
+
+AC_SUBST([UNIQUE_CFLAGS])
+AC_SUBST([UNIQUE_LIBS])
+
+AC_ARG_ENABLE(unique, [  --enable-unique         enable the use of libunique instead of g_application or gtk_application], enable_libunique=yes,)
+
+if test "x$enable_libunique" = "xyes"; then
+	UNIQUE_CFLAGS="$UNIQUE_CFLAGS -DUSE_UNIQUE=1"
+	# fix for deprecated on 2.26
+	# unique en la version 1.0, contiene simbolos no definidos a partir de
+	# glib 2.26, pero puede ser obviado si se utiliza -DG_CONST_RETURN=const
+	if $PKG_CONFIG --atleast-version 2.26 glib-2.0; then
+		UNIQUE_CFLAGS="$UNIQUE_CFLAGS -DG_CONST_RETURN=const"
+	fi
+fi
+
 
 PKG_CHECK_MODULES(UPOWER, upower-glib >= $UPOWER_REQUIRED)
 
@@ -350,11 +401,12 @@ echo "
         cflags:                    ${CFLAGS}
         Building extra applets:    ${enable_applets}
         Self test support:         ${have_tests}
-        MateConf default support:     ${have_mateconfdefaults}
+        MateConf default support:  ${have_mateconfdefaults}
+        Use libunique:             ${enable_libunique}
         Docbook support:           ${enable_docbook_docs}
         documentation dir:         $DOCDIR
         dbus-1 services dir:       $DBUS_SERVICES_DIR
-        mateconf-schema dir:          $MATECONF_SCHEMA_FILE_DIR
+        mateconf-schema dir:       $MATECONF_SCHEMA_FILE_DIR
 "
 if [[ "${prefix}" != "/usr" ]] ; then
 	echo '
