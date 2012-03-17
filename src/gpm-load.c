@@ -192,7 +192,7 @@ gpm_load_get_cpu_values (long unsigned *cpu_idle, long unsigned *cpu_total)
 	*cpu_total = cpu_user + cpu_nice + cpu_system + *cpu_idle;
 	ret = TRUE;
 out:
-	if (!fd)
+	if (fd)
 		fclose (fd);
 	return ret;
 }
