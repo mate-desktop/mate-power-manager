@@ -1601,7 +1601,12 @@ main (int argc, char *argv[])
 
 	/* get UI */
 	builder = gtk_builder_new ();
-	retval = gtk_builder_add_from_file (builder, GPM_DATA "/gpm-statistics.ui", &error);
+
+	#if GTK_CHECK_VERSION (2, 24, 0)
+		retval = gtk_builder_add_from_file (builder, GPM_DATA "/gpm-statistics-fix.ui", &error);
+	#else
+		retval = gtk_builder_add_from_file (builder, GPM_DATA "/gpm-statistics.ui", &error);
+	#endif
 	if (retval == 0) {
 		egg_warning ("failed to load ui: %s", error->message);
 		g_error_free (error);
