@@ -1478,18 +1478,22 @@ gpm_stats_points_checkbox_stats_cb (GtkWidget *widget, gpointer data)
 static void
 gpm_stats_set_combo_simple_text (GtkWidget *combo_box)
 {
-	GtkCellRenderer *cell;
-	GtkListStore *store;
+	#if !GTK_CHECK_VERSION (2, 24, 0)
+		GtkCellRenderer *cell;
+		GtkListStore *store;
 
-	store = gtk_list_store_new (1, G_TYPE_STRING);
-	gtk_combo_box_set_model (GTK_COMBO_BOX (combo_box), GTK_TREE_MODEL (store));
-	g_object_unref (store);
+		store = gtk_list_store_new (1, G_TYPE_STRING);
+		gtk_combo_box_set_model (GTK_COMBO_BOX (combo_box), GTK_TREE_MODEL (store));
+		g_object_unref (store);
 
-	cell = gtk_cell_renderer_text_new ();
-	gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (combo_box), cell, TRUE);
-	gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (combo_box), cell,
-					"text", 0,
-					NULL);
+		cell = gtk_cell_renderer_text_new ();
+		gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (combo_box), cell, TRUE);
+		gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (combo_box), cell,
+						"text", 0,
+						NULL);
+	#else
+		// nothing to do with GTK_COMBO_BOX_TEXT
+	#endif
 }
 
 /**
@@ -1603,10 +1607,11 @@ main (int argc, char *argv[])
 	builder = gtk_builder_new ();
 
 	#if GTK_CHECK_VERSION (2, 24, 0)
-		retval = gtk_builder_add_from_file (builder, GPM_DATA "/gpm-statistics-fix.ui", &error);
-	#else
 		retval = gtk_builder_add_from_file (builder, GPM_DATA "/gpm-statistics.ui", &error);
+	#else
+		retval = gtk_builder_add_from_file (builder, GPM_DATA "/gpm-statistics-deprecated.ui", &error);
 	#endif
+
 	if (retval == 0) {
 		egg_warning ("failed to load ui: %s", error->message);
 		g_error_free (error);

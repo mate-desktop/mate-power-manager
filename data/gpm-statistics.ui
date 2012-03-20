@@ -93,7 +93,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkComboBox" id="combobox_history_type">
+                              <object class="GtkComboBoxText" id="combobox_history_type">
                                 <property name="visible">True</property>
                               </object>
                               <packing>
@@ -120,7 +120,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkComboBox" id="combobox_history_time">
+                              <object class="GtkComboBoxText" id="combobox_history_time">
                                 <property name="visible">True</property>
                               </object>
                               <packing>
@@ -260,7 +260,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkComboBox" id="combobox_stats_type">
+                          <object class="GtkComboBoxText" id="combobox_stats_type">
                             <property name="visible">True</property>
                           </object>
                           <packing>
