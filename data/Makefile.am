@@ -25,8 +25,10 @@ $(service_DATA): $(service_in_files) Makefile
 
 pkgdata_DATA =						\
 	gpm-statistics.ui				\
-	gpm-feedback-widget.ui				\
+	gpm-statistics-deprecated.ui	\
+	gpm-feedback-widget.ui			\
 	gpm-prefs.ui					\
+	gpm-prefs-deprecated.ui			\
 	acme.ui
 
 EXTRA_DIST =						\
