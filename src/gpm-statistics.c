@@ -1284,33 +1284,31 @@ gpm_stats_device_removed_cb (UpClient *client, UpDevice *device, gpointer user_d
 static void
 gpm_stats_history_type_combo_changed_cb (GtkWidget *widget, gpointer data)
 {
-	gchar *value;
+	guint active;
 	const gchar *axis_x = NULL;
 	const gchar *axis_y = NULL;
-	#if GTK_CHECK_VERSION (2, 24, 0)
-		value = gtk_combo_box_text_get_active_text (GTK_COMBO_BOX_TEXT (widget));
-	#else
-		value = gtk_combo_box_get_active_text (GTK_COMBO_BOX (widget));
-	#endif
-	if (g_strcmp0 (value, GPM_HISTORY_RATE_TEXT) == 0) {
+	
+	active = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
+	
+	if (active == 0) {
 		history_type = GPM_HISTORY_RATE_VALUE;
 		/* TRANSLATORS: this is the X axis on the graph */
 		axis_x = _("Time elapsed");
 		/* TRANSLATORS: this is the Y axis on the graph */
 		axis_y = _("Power");
-	} else if (g_strcmp0 (value, GPM_HISTORY_CHARGE_TEXT) == 0) {
+	} else if (active == 1) {
 		history_type = GPM_HISTORY_CHARGE_VALUE;
 		/* TRANSLATORS: this is the X axis on the graph */
 		axis_x = _("Time elapsed");
 		/* TRANSLATORS: this is the Y axis on the graph for the whole battery device */
 		axis_y = _("Cell charge");
-	} else if (g_strcmp0 (value, GPM_HISTORY_TIME_FULL_TEXT) == 0) {
+	} else if (active == 2) {
 		history_type = GPM_HISTORY_TIME_FULL_VALUE;
 		/* TRANSLATORS: this is the X axis on the graph */
 		axis_x = _("Time elapsed");
 		/* TRANSLATORS: this is the Y axis on the graph */
 		axis_y = _("Predicted time");
-	} else if (g_strcmp0 (value, GPM_HISTORY_TIME_EMPTY_TEXT) == 0) {
+	} else if (active == 3) {
 		history_type = GPM_HISTORY_TIME_EMPTY_VALUE;
 		/* TRANSLATORS: this is the X axis on the graph */
 		axis_x = _("Time elapsed");
@@ -1327,7 +1325,6 @@ gpm_stats_history_type_combo_changed_cb (GtkWidget *widget, gpointer data)
 	gtk_label_set_label (GTK_LABEL(widget), axis_y);
 
 	gpm_stats_button_update_ui ();
-	g_free (value);
 
 	/* save to mateconf */
 	mateconf_client_set_string (mateconf_client, GPM_CONF_INFO_HISTORY_TYPE, history_type, NULL);
@@ -1339,33 +1336,31 @@ gpm_stats_history_type_combo_changed_cb (GtkWidget *widget, gpointer data)
 static void
 gpm_stats_type_combo_changed_cb (GtkWidget *widget, gpointer data)
 {
-	gchar *value;
+	guint active;
 	const gchar *axis_x = NULL;
 	const gchar *axis_y = NULL;
-	#if GTK_CHECK_VERSION (2, 24, 0)
-		value = gtk_combo_box_text_get_active_text (GTK_COMBO_BOX_TEXT (widget));
-	#else
-		value = gtk_combo_box_get_active_text (GTK_COMBO_BOX (widget));
-	#endif
-	if (g_strcmp0 (value, GPM_STATS_CHARGE_DATA_TEXT) == 0) {
+	
+	active = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
+	
+	if (active == 0) {
 		stats_type = GPM_STATS_CHARGE_DATA_VALUE;
 		/* TRANSLATORS: this is the X axis on the graph for the whole battery device */
 		axis_x = _("Cell charge");
 		/* TRANSLATORS: this is the Y axis on the graph */
 		axis_y = _("Correction factor");
-	} else if (g_strcmp0 (value, GPM_STATS_CHARGE_ACCURACY_TEXT) == 0) {
+	} else if (active == 1) {
 		stats_type = GPM_STATS_CHARGE_ACCURACY_VALUE;
 		/* TRANSLATORS: this is the X axis on the graph for the whole battery device */
 		axis_x = _("Cell charge");
 		/* TRANSLATORS: this is the Y axis on the graph */
 		axis_y = _("Prediction accuracy");
-	} else if (g_strcmp0 (value, GPM_STATS_DISCHARGE_DATA_TEXT) == 0) {
+	} else if (active == 2) {
 		stats_type = GPM_STATS_DISCHARGE_DATA_VALUE;
 		/* TRANSLATORS: this is the X axis on the graph for the whole battery device */
 		axis_x = _("Cell charge");
 		/* TRANSLATORS: this is the Y axis on the graph */
 		axis_y = _("Correction factor");
-	} else if (g_strcmp0 (value, GPM_STATS_DISCHARGE_ACCURACY_TEXT) == 0) {
+	} else if (active == 3) {
 		stats_type = GPM_STATS_DISCHARGE_ACCURACY_VALUE;
 		/* TRANSLATORS: this is the X axis on the graph for the whole battery device */
 		axis_x = _("Cell charge");
@@ -1382,7 +1377,6 @@ gpm_stats_type_combo_changed_cb (GtkWidget *widget, gpointer data)
 	gtk_label_set_label (GTK_LABEL(widget), axis_y);
 
 	gpm_stats_button_update_ui ();
-	g_free (value);
 
 	/* save to mateconf */
 	mateconf_client_set_string (mateconf_client, GPM_CONF_INFO_STATS_TYPE, stats_type, NULL);
@@ -1394,21 +1388,19 @@ gpm_stats_type_combo_changed_cb (GtkWidget *widget, gpointer data)
 static void
 gpm_stats_range_combo_changed (GtkWidget *widget, gpointer data)
 {
-	gchar *value;
-	#if GTK_CHECK_VERSION (2, 24, 0)
-		value = gtk_combo_box_text_get_active_text (GTK_COMBO_BOX_TEXT (widget));
-	#else
-		value = gtk_combo_box_get_active_text (GTK_COMBO_BOX (widget));
-	#endif
-	if (g_strcmp0 (value, GPM_HISTORY_MINUTE_TEXT) == 0)
+	guint active;
+	
+	active = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
+	
+	if (active == 0)
 		history_time = GPM_HISTORY_MINUTE_VALUE;
-	else if (g_strcmp0 (value, GPM_HISTORY_HOUR_TEXT) == 0)
+	else if (active == 1)
 		history_time = GPM_HISTORY_HOUR_VALUE;
-	else if (g_strcmp0 (value, GPM_HISTORY_HOURS_TEXT) == 0)
+	else if (active == 2)
 		history_time = GPM_HISTORY_HOURS_VALUE;
-	else if (g_strcmp0 (value, GPM_HISTORY_DAY_TEXT) == 0)
+	else if (active == 3)
 		history_time = GPM_HISTORY_DAY_VALUE;
-	else if (g_strcmp0 (value, GPM_HISTORY_WEEK_TEXT) == 0)
+	else if (active == 4)
 		history_time = GPM_HISTORY_WEEK_VALUE;
 	else
 		g_assert (FALSE);
@@ -1417,7 +1409,6 @@ gpm_stats_range_combo_changed (GtkWidget *widget, gpointer data)
 	mateconf_client_set_int (mateconf_client, GPM_CONF_INFO_HISTORY_TIME, history_time, NULL);
 
 	gpm_stats_button_update_ui ();
-	g_free (value);
 }
 
 /**
@@ -1478,7 +1469,10 @@ gpm_stats_points_checkbox_stats_cb (GtkWidget *widget, gpointer data)
 static void
 gpm_stats_set_combo_simple_text (GtkWidget *combo_box)
 {
-	#if !GTK_CHECK_VERSION (2, 24, 0)
+	#if GTK_CHECK_VERSION (2, 24, 0)
+		// nothing to do with GTK_COMBO_BOX_TEXT
+		return;
+	#else
 		GtkCellRenderer *cell;
 		GtkListStore *store;
 
@@ -1491,8 +1485,6 @@ gpm_stats_set_combo_simple_text (GtkWidget *combo_box)
 		gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (combo_box), cell,
 						"text", 0,
 						NULL);
-	#else
-		// nothing to do with GTK_COMBO_BOX_TEXT
 	#endif
 }
 
