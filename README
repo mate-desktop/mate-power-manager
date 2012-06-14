@@ -7,7 +7,7 @@ MATE Power Manager listens for system events and responds with user-configurable
 
 MATE Power Manager comes in three main parts:
 
-	- mate-power-manager:	    the manager daemon itself
+	- mate-power-manager:	   the manager daemon itself
 	- mate-power-preferences:  the control panel program, for configuration
 	- mate-power-statistics:   the statistics graphing program
 
@@ -18,7 +18,6 @@ To build, MATE Power Manager requires
 	- MATE Keyring (1.1.0 or later)
 	- DBus (0.70 or later)
 	- libmatenotify (1.1.0 or later)
-	- libwnck (2.10.0 or later)
 	- Cairo (1.0.0 or later)
 	- Unique (0.9.4 or later)
 	- libpanel (2.0.0 or later)
