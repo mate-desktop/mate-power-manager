@@ -323,7 +323,7 @@ gpm_graph_widget_init (GpmGraphWidget *graph)
 
 	/* do pango stuff */
 	fontmap = pango_cairo_font_map_get_default ();
-	context = pango_cairo_font_map_create_context (PANGO_CAIRO_FONT_MAP (fontmap));
+	context = pango_font_map_create_context (PANGO_FONT_MAP (fontmap));
 	pango_context_set_base_gravity (context, PANGO_GRAVITY_AUTO);
 
 	graph->priv->layout = pango_layout_new (context);
