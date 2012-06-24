@@ -27,7 +27,7 @@ dnl - Use strict options (default enabled for devs, disabled in releases)
 dnl ---------------------------------------------------------------------------
 dnl if .git directory is present, considering we are working in the repository
 if test -d ".git"; then
-	default_strict=yes
+	default_strict=no  # Mate is not strict about deprecated functions.
 else
 	default_strict=no
 fi
