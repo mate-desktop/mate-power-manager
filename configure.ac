@@ -281,7 +281,7 @@ have_applets=no
 if test x$enable_applets = xyes ; then
     have_applets=yes
 
-    PKG_CHECK_MODULES(PANEL, [libmatepanelapplet-2.0 >= $LIBPANEL_REQUIRED])
+    PKG_CHECK_MODULES(PANEL, [libmatepanelapplet-3.0 >= $LIBPANEL_REQUIRED])
     AC_DEFINE(HAVE_APPLETS, 1, [Define if we are building applets])
 fi
 AC_MSG_RESULT([$have_applets])
