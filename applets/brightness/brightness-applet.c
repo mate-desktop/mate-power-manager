@@ -33,6 +33,7 @@
 #include <string.h>
 #include <mate-panel-applet.h>
 #include <gtk/gtk.h>
+#include <glib/gi18n.h>
 #include <gdk/gdkkeysyms.h>
 #include <glib-object.h>
 #include <dbus/dbus-glib.h>
@@ -97,12 +98,12 @@ static gboolean  gpm_applet_scroll_cb             (GpmBrightnessApplet *applet, 
 static gboolean  gpm_applet_slide_cb              (GtkWidget *w, GpmBrightnessApplet *applet);
 static void      gpm_applet_create_popup          (GpmBrightnessApplet *applet);
 static gboolean  gpm_applet_popup_cb              (GpmBrightnessApplet *applet, GdkEventButton *event);
-static void      gpm_applet_dialog_about_cb       (MateComponentUIComponent *uic, gpointer data, const gchar *verbname);
-static gboolean  gpm_applet_matecomponent_cb             (MatePanelApplet *_applet, const gchar *iid, gpointer data);
+static void      gpm_applet_dialog_about_cb       (GtkAction *action, gpointer data);
+static gboolean  gpm_applet_cb                    (MatePanelApplet *_applet, const gchar *iid, gpointer data);
 static void      gpm_applet_destroy_cb            (GtkObject *object);
 
-#define GPM_BRIGHTNESS_APPLET_OAFID		"OAFIID:MATE_BrightnessApplet"
-#define GPM_BRIGHTNESS_APPLET_FACTORY_OAFID	"OAFIID:MATE_BrightnessApplet_Factory"
+#define GPM_BRIGHTNESS_APPLET_ID		"BrightnessApplet"
+#define GPM_BRIGHTNESS_APPLET_FACTORY_ID	"BrightnessAppletFactory"
 #define GPM_BRIGHTNESS_APPLET_ICON		"mate-brightness-applet"
 #define GPM_BRIGHTNESS_APPLET_ICON_DISABLED	"gpm-brightness-lcd-disabled"
 #define GPM_BRIGHTNESS_APPLET_ICON_INVALID	"gpm-brightness-lcd-invalid"
@@ -731,7 +732,7 @@ gpm_applet_stop_scroll_events_cb (GtkWidget *widget, GdkEvent  *event)
  * displays about dialog
  **/
 static void
-gpm_applet_dialog_about_cb (MateComponentUIComponent *uic, gpointer data, const gchar *verbname)
+gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 {
 	GtkAboutDialog *about;
 
@@ -796,7 +797,7 @@ gpm_applet_dialog_about_cb (MateComponentUIComponent *uic, gpointer data, const 
  * open gpm help
  **/
 static void
-gpm_applet_help_cb (MateComponentUIComponent *uic, gpointer data, const gchar *verbname)
+gpm_applet_help_cb (GtkAction *action, gpointer data)
 {
 	gpm_help_display ("applets-brightness");
 }
@@ -995,44 +996,56 @@ gpm_brightness_applet_init (GpmBrightnessApplet *applet)
 }
 
 /**
- * gpm_applet_matecomponent_cb:
- * @_applet: GpmBrightnessApplet instance created by the matecomponent factory
- * @iid: MateComponent id
+ * gpm_applet_cb:
+ * @_applet: GpmBrightnessApplet instance created by the applet factory
+ * @iid: Applet id
  *
- * the function called by matecomponent factory after creation
+ * the function called by libmate-panel-applet factory after creation
  **/
 static gboolean
-gpm_applet_matecomponent_cb (MatePanelApplet *_applet, const gchar *iid, gpointer data)
+gpm_applet_cb (MatePanelApplet *_applet, const gchar *iid, gpointer data)
 {
 	GpmBrightnessApplet *applet = GPM_BRIGHTNESS_APPLET(_applet);
+	GtkActionGroup *action_group;
+	gchar *ui_path;
 
-	static MateComponentUIVerb verbs [] = {
-		MATECOMPONENT_UI_VERB ("About", gpm_applet_dialog_about_cb),
-		MATECOMPONENT_UI_VERB ("Help", gpm_applet_help_cb),
-		MATECOMPONENT_UI_VERB_END
+	static const GtkActionEntry menu_actions [] = {
+		{ "About", GTK_STOCK_ABOUT, N_("_About"),
+		  NULL, NULL,
+		  G_CALLBACK (gpm_applet_dialog_about_cb) },
+		{ "Help", GTK_STOCK_HELP, N_("_Help"),
+		  NULL, NULL,
+		  G_CALLBACK (gpm_applet_help_cb) }
 	};
 
-	if (strcmp (iid, GPM_BRIGHTNESS_APPLET_OAFID) != 0) {
+	if (strcmp (iid, GPM_BRIGHTNESS_APPLET_ID) != 0) {
 		return FALSE;
 	}
 
-	mate_panel_applet_setup_menu_from_file (MATE_PANEL_APPLET (applet),
-					   DATADIR,
-					   "MATE_BrightnessApplet.xml",
-					   NULL, verbs, applet);
+	action_group = gtk_action_group_new ("Brightness Applet Actions");
+	gtk_action_group_set_translation_domain (action_group, GETTEXT_PACKAGE);
+	gtk_action_group_add_actions (action_group,
+				      menu_actions,
+				      G_N_ELEMENTS (menu_actions),
+				      applet);
+	ui_path = g_build_filename (BRIGHTNESS_MENU_UI_DIR, "brightness-applet-menu.xml", NULL);
+	mate_panel_applet_setup_menu_from_file (MATE_PANEL_APPLET (applet), ui_path, action_group);
+	g_free (ui_path);
+	g_object_unref (action_group);
+
 	gpm_applet_draw_cb (applet);
 	return TRUE;
 }
 
 /**
- * this generates a main with a matecomponent factory
+ * this generates a main with a applet factory
  **/
-MATE_PANEL_APPLET_MATECOMPONENT_FACTORY
+MATE_PANEL_APPLET_OUT_PROCESS_FACTORY
  (/* the factory iid */
- GPM_BRIGHTNESS_APPLET_FACTORY_OAFID,
+ GPM_BRIGHTNESS_APPLET_FACTORY_ID,
  /* generates brighness applets instead of regular mate applets  */
  GPM_TYPE_BRIGHTNESS_APPLET,
- /* the applet name and version */
- "BrightnessApplet", VERSION,
+ /* the applet name */
+ "BrightnessApplet",
  /* our callback (with no user data) */
- gpm_applet_matecomponent_cb, NULL);
+ gpm_applet_cb, NULL);
