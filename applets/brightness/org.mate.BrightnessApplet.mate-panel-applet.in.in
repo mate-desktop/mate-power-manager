@@ -1,0 +1,16 @@
+[Applet Factory]
+Id=BrightnessAppletFactory
+Location=@LIBEXECDIR@/mate-brightness-applet
+_Name=Brightness Applet Factory
+_Description=Factory for Brightness Applet
+
+[BrightnessApplet]
+_Name=Brightness Applet
+_Description=Adjusts Laptop panel brightness
+Icon=mate-brightness-applet
+MateComponentId=OAFIID:MATE_BrightnessApplet
+X-MATE-Bugzilla-Bugzilla=MATE
+X-MATE-Bugzilla-Product=mate-power-manager
+X-MATE-Bugzilla-Component=applets
+X-MATE-Bugzilla-Version=@VERSION@
+X-MATE-Bugzilla-OtherBinaries=mate-brightness-applet

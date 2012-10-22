@@ -2,9 +2,9 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
 applets/brightness/brightness-applet.c
-applets/brightness/MATE_BrightnessApplet.server.in.in
+[type: gettext/ini]applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in
 applets/inhibit/inhibit-applet.c
-applets/inhibit/MATE_InhibitApplet.server.in.in
+[type: gettext/ini]applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in
 data/mate-power-manager.desktop.in.in
 data/mate-power-manager.schemas.in
 data/mate-power-preferences.desktop.in.in
@@ -34,5 +34,3 @@ src/gpm-screensaver.c
 src/gpm-statistics.c
 src/gpm-tray-icon.c
 src/gpm-upower.c
-applets/brightness/MATE_BrightnessApplet.xml
-applets/inhibit/MATE_InhibitApplet.xml
