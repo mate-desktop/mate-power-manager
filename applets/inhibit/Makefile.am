@@ -14,6 +14,7 @@ INCLUDES =							\
 	-DLIBDIR=\""$(libdir)"\" 				\
 	-DVERSION="\"$(VERSION)\"" 				\
 	-DGPM_DATA=\"$(pkgdatadir)\"				\
+	-DINHIBIT_MENU_UI_DIR=\""$(uidir)"\"			\
 	-DEGG_LOG_FILE=\""~/mate-power-manager.log"\"		\
 	-DEGG_VERBOSE="\"GPM_VERBOSE\""				\
 	-DEGG_LOGGING="\"GPM_LOGGING\""				\
@@ -37,19 +38,31 @@ mate_inhibit_applet_LDADD =					\
 	$(MATE_LIBS)						\
 	$(PANEL_LIBS)
 
-serverdir       = $(libdir)/matecomponent/servers
-server_in_files = MATE_InhibitApplet.server.in
-server_DATA     = $(server_in_files:.server.in=.server)
+appletdir       = $(datadir)/mate-panel/applets
+applet_in_files = org.mate.InhibitApplet.mate-panel-applet.in
+applet_DATA     = $(applet_in_files:.mate-panel-applet.in=.mate-panel-applet)
 
-$(server_in_files): $(server_in_files:.server.in=.server.in.in)
-	sed -e "s|\@LIBEXECDIR\@|$(libexecdir)|" -e "s|\@VERSION\@|$(VERSION)|" $< > $@
+$(applet_in_files): $(applet_in_files).in Makefile
+	$(AM_V_GEN)sed \
+            -e "s|\@LIBEXECDIR\@|$(libexecdir)|" \
+            -e "s|\@VERSION\@|$(PACKAGE_VERSION)|" \
+            $< > $@
 
-@INTLTOOL_SERVER_RULE@
+%.mate-panel-applet: %.mate-panel-applet.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
+
+servicedir       = $(datadir)/dbus-1/services
+service_in_files = org.mate.panel.applet.InhibitAppletFactory.service.in
+service_DATA     = $(service_in_files:.service.in=.service)
+
+org.mate.panel.applet.InhibitAppletFactory.service: $(service_in_files)
+	$(AM_V_GEN)sed \
+            -e "s|\@LIBEXECDIR\@|$(libexecdir)|" \
+            $< > $@
 
 uidir   = $(datadir)/mate-2.0/ui
-ui_DATA = MATE_InhibitApplet.xml
+ui_DATA = inhibit-applet-menu.xml
 
-EXTRA_DIST = MATE_InhibitApplet.server.in.in $(ui_DATA)
+EXTRA_DIST = org.mate.InhibitApplet.mate-panel-applet.in.in $(ui_DATA) $(service_in_files)
 
 DISTCLEANFILES =						\
-	$(server_DATA) $(server_DATA).in
+	$(applet_DATA) $(applet_DATA).in $(server_DATA)

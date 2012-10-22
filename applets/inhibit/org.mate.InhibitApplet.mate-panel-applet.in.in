@@ -1,0 +1,16 @@
+[Applet Factory]
+Id=InhibitAppletFactory
+Location=@LIBEXECDIR@/mate-inhibit-applet
+_Name=Inhibit Applet Factory
+_Description=Factory for Inhibit Applet
+
+[InhibitApplet]
+_Name=Inhibit Applet
+_Description=Allows user to inhibit automatic power saving
+Icon=mate-inhibit-applet
+MateComponentId=OAFIID:MATE_InhibitApplet
+X-MATE-Bugzilla-Bugzilla=MATE
+X-MATE-Bugzilla-Product=mate-power-manager
+X-MATE-Bugzilla-Component=applets
+X-MATE-Bugzilla-Version=@VERSION@
+X-MATE-Bugzilla-OtherBinaries=mate-inhibit-applet

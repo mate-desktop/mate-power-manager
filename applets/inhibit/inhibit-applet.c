@@ -34,6 +34,7 @@
 #include <mate-panel-applet.h>
 #include <gtk/gtk.h>
 #include <glib-object.h>
+#include <glib/gi18n.h>
 #include <dbus/dbus-glib.h>
 
 #include "egg-debug.h"
@@ -83,12 +84,12 @@ static void	gpm_applet_check_size		(GpmInhibitApplet *applet);
 static gboolean	gpm_applet_draw_cb		(GpmInhibitApplet *applet);
 static void	gpm_applet_update_tooltip	(GpmInhibitApplet *applet);
 static gboolean	gpm_applet_click_cb		(GpmInhibitApplet *applet, GdkEventButton *event);
-static void	gpm_applet_dialog_about_cb	(MateComponentUIComponent *uic, gpointer data, const gchar *verbname);
-static gboolean	gpm_applet_matecomponent_cb		(MatePanelApplet *_applet, const gchar *iid, gpointer data);
+static void	gpm_applet_dialog_about_cb	(GtkAction *action, gpointer data);
+static gboolean	gpm_applet_cb		        (MatePanelApplet *_applet, const gchar *iid, gpointer data);
 static void	gpm_applet_destroy_cb		(GtkObject *object);
 
-#define GPM_INHIBIT_APPLET_OAFID		"OAFIID:MATE_InhibitApplet"
-#define GPM_INHIBIT_APPLET_FACTORY_OAFID	"OAFIID:MATE_InhibitApplet_Factory"
+#define GPM_INHIBIT_APPLET_ID		        "InhibitApplet"
+#define GPM_INHIBIT_APPLET_FACTORY_ID	        "InhibitAppletFactory"
 #define GPM_INHIBIT_APPLET_ICON_INHIBIT		"gpm-inhibit"
 #define GPM_INHIBIT_APPLET_ICON_INVALID		"gpm-inhibit-invalid"
 #define GPM_INHIBIT_APPLET_ICON_UNINHIBIT	"gpm-hibernate"
@@ -410,7 +411,7 @@ gpm_applet_click_cb (GpmInhibitApplet *applet, GdkEventButton *event)
  * displays about dialog
  **/
 static void
-gpm_applet_dialog_about_cb (MateComponentUIComponent *uic, gpointer data, const gchar *verbname)
+gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 {
 	GtkAboutDialog *about;
 
@@ -475,7 +476,7 @@ gpm_applet_dialog_about_cb (MateComponentUIComponent *uic, gpointer data, const 
  * open gpm help
  **/
 static void
-gpm_applet_help_cb (MateComponentUIComponent *uic, gpointer data, const gchar *verbname)
+gpm_applet_help_cb (GtkAction *action, gpointer data)
 {
 	gpm_help_display ("applets-inhibit");
 }
@@ -645,44 +646,56 @@ gpm_inhibit_applet_init (GpmInhibitApplet *applet)
 }
 
 /**
- * gpm_applet_matecomponent_cb:
- * @_applet: GpmInhibitApplet instance created by the matecomponent factory
- * @iid: MateComponent id
+ * gpm_applet_cb:
+ * @_applet: GpmInhibitApplet instance created by the applet factory
+ * @iid: Applet id
  *
- * the function called by matecomponent factory after creation
+ * the function called by libmate-panel-applet factory after creation
  **/
 static gboolean
-gpm_applet_matecomponent_cb (MatePanelApplet *_applet, const gchar *iid, gpointer data)
+gpm_applet_cb (MatePanelApplet *_applet, const gchar *iid, gpointer data)
 {
 	GpmInhibitApplet *applet = GPM_INHIBIT_APPLET(_applet);
+	GtkActionGroup *action_group;
+	gchar *ui_path;
 
-	static MateComponentUIVerb verbs [] = {
-		MATECOMPONENT_UI_VERB ("About", gpm_applet_dialog_about_cb),
-		MATECOMPONENT_UI_VERB ("Help", gpm_applet_help_cb),
-		MATECOMPONENT_UI_VERB_END
+	static const GtkActionEntry menu_actions [] = {
+		{ "About", GTK_STOCK_ABOUT, N_("_About"),
+		  NULL, NULL,
+		  G_CALLBACK (gpm_applet_dialog_about_cb) },
+		{ "Help", GTK_STOCK_HELP, N_("_Help"),
+		  NULL, NULL,
+		  G_CALLBACK (gpm_applet_help_cb) }
 	};
 
-	if (strcmp (iid, GPM_INHIBIT_APPLET_OAFID) != 0) {
+	if (strcmp (iid, GPM_INHIBIT_APPLET_ID) != 0) {
 		return FALSE;
 	}
 
-	mate_panel_applet_setup_menu_from_file (MATE_PANEL_APPLET (applet),
-					   DATADIR,
-					   "MATE_InhibitApplet.xml",
-					   NULL, verbs, applet);
+	action_group = gtk_action_group_new ("Inhibit Applet Actions");
+	gtk_action_group_set_translation_domain (action_group, GETTEXT_PACKAGE);
+	gtk_action_group_add_actions (action_group,
+				      menu_actions,
+				      G_N_ELEMENTS (menu_actions),
+				      applet);
+	ui_path = g_build_filename (INHIBIT_MENU_UI_DIR, "inhibit-applet-menu.xml", NULL);
+	mate_panel_applet_setup_menu_from_file (MATE_PANEL_APPLET (applet), ui_path, action_group);
+	g_free (ui_path);
+	g_object_unref (action_group);
+
 	gpm_applet_draw_cb (applet);
 	return TRUE;
 }
 
 /**
- * this generates a main with a matecomponent factory
+ * this generates a main with a applet factory
  **/
-MATE_PANEL_APPLET_MATECOMPONENT_FACTORY
+MATE_PANEL_APPLET_OUT_PROCESS_FACTORY
  (/* the factory iid */
- GPM_INHIBIT_APPLET_FACTORY_OAFID,
+ GPM_INHIBIT_APPLET_FACTORY_ID,
  /* generates brighness applets instead of regular mate applets  */
  GPM_TYPE_INHIBIT_APPLET,
- /* the applet name and version */
- "InhibitApplet", VERSION,
+ /* the applet name */
+ "InhibitApplet",
  /* our callback (with no user data) */
- gpm_applet_matecomponent_cb, NULL);
+ gpm_applet_cb, NULL)
