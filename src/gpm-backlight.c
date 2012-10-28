@@ -39,7 +39,6 @@
 
 #include <glib/gi18n.h>
 #include <dbus/dbus-glib.h>
-#include <mateconf/mateconf-client.h>
 #include <libupower-glib/upower.h>
 
 #include "gpm-button.h"
@@ -62,7 +61,7 @@ struct GpmBacklightPrivate
 	UpClient		*client;
 	GpmBrightness		*brightness;
 	GpmButton		*button;
-	MateConfClient		*conf;
+	GSettings		*settings;
 	GtkWidget		*popup;
 	GpmControl		*control;
 	GpmDpms			*dpms;
@@ -288,7 +287,7 @@ gpm_backlight_brightness_evaluate_and_set (GpmBacklight *backlight, gboolean int
 		return FALSE;
 	}
 
-	do_laptop_lcd = mateconf_client_get_bool (backlight->priv->conf, GPM_CONF_BACKLIGHT_ENABLE, NULL);
+	do_laptop_lcd = g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_BACKLIGHT_ENABLE);
 	if (do_laptop_lcd == FALSE) {
 		egg_warning ("policy is no dimming");
 		return FALSE;
@@ -304,9 +303,9 @@ gpm_backlight_brightness_evaluate_and_set (GpmBacklight *backlight, gboolean int
 		      NULL);
 
 	/* reduce if on battery power if we should */
-	battery_reduce = mateconf_client_get_bool (backlight->priv->conf, GPM_CONF_BACKLIGHT_BATTERY_REDUCE, NULL);
+	battery_reduce = g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_BACKLIGHT_BATTERY_REDUCE);
 	if (on_battery && battery_reduce) {
-		value = mateconf_client_get_int (backlight->priv->conf, GPM_CONF_BACKLIGHT_BRIGHTNESS_DIM_BATT, NULL);
+		value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_BRIGHTNESS_DIM_BATT);
 		if (value > 100) {
 			egg_warning ("cannot use battery brightness value %i, correcting to 50", value);
 			value = 50;
@@ -320,11 +319,11 @@ gpm_backlight_brightness_evaluate_and_set (GpmBacklight *backlight, gboolean int
 
 	/* reduce if system is momentarily idle */
 	if (!on_battery)
-		enable_action = mateconf_client_get_bool (backlight->priv->conf, GPM_CONF_BACKLIGHT_IDLE_DIM_AC, NULL);
+		enable_action = g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_AC);
 	else
-		enable_action = mateconf_client_get_bool (backlight->priv->conf, GPM_CONF_BACKLIGHT_IDLE_DIM_BATT, NULL);
+		enable_action = g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_BATT);
 	if (enable_action && backlight->priv->system_is_idle) {
-		value = mateconf_client_get_int (backlight->priv->conf, GPM_CONF_BACKLIGHT_IDLE_BRIGHTNESS, NULL);
+		value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_IDLE_BRIGHTNESS);
 		if (value > 100) {
 			egg_warning ("cannot use idle brightness value %i, correcting to 50", value);
 			value = 50;
@@ -364,44 +363,39 @@ gpm_backlight_brightness_evaluate_and_set (GpmBacklight *backlight, gboolean int
 }
 
 /**
- * gpm_conf_mateconf_key_changed_cb:
+ * gpm_settings_key_changed_cb:
  *
- * We might have to do things when the mateconf keys change; do them here.
+ * We might have to do things when the keys change; do them here.
  **/
 static void
-gpm_conf_mateconf_key_changed_cb (MateConfClient *client, guint cnxn_id, MateConfEntry *entry, GpmBacklight *backlight)
+gpm_settings_key_changed_cb (GSettings *settings, const gchar *key, GpmBacklight *backlight)
 {
-	MateConfValue *value;
 	gboolean on_battery;
-
-	value = mateconf_entry_get_value (entry);
-	if (value == NULL)
-		return;
 
 	/* get battery status */
 	g_object_get (backlight->priv->client,
 		      "on-battery", &on_battery,
 		      NULL);
 
-	if (!on_battery && strcmp (entry->key, GPM_CONF_BACKLIGHT_BRIGHTNESS_AC) == 0) {
-		backlight->priv->master_percentage = mateconf_value_get_int (value);
+	if (!on_battery && g_strcmp0 (key, GPM_SETTINGS_BRIGHTNESS_AC) == 0) {
+		backlight->priv->master_percentage = g_settings_get_double (settings, key);
 		gpm_backlight_brightness_evaluate_and_set (backlight, FALSE);
 
-	} else if (on_battery && strcmp (entry->key, GPM_CONF_BACKLIGHT_BRIGHTNESS_DIM_BATT) == 0) {
+	} else if (on_battery && g_strcmp0 (key, GPM_SETTINGS_BRIGHTNESS_DIM_BATT) == 0) {
 		gpm_backlight_brightness_evaluate_and_set (backlight, FALSE);
 
-	} else if (strcmp (entry->key, GPM_CONF_BACKLIGHT_IDLE_DIM_AC) == 0 ||
-	         strcmp (entry->key, GPM_CONF_BACKLIGHT_ENABLE) == 0 ||
-	         strcmp (entry->key, GPM_CONF_TIMEOUT_SLEEP_DISPLAY_BATT) == 0 ||
-	         strcmp (entry->key, GPM_CONF_BACKLIGHT_BATTERY_REDUCE) == 0 ||
-	         strcmp (entry->key, GPM_CONF_BACKLIGHT_IDLE_BRIGHTNESS) == 0) {
+	} else if (g_strcmp0 (key, GPM_SETTINGS_IDLE_DIM_AC) == 0 ||
+	           g_strcmp0 (key, GPM_SETTINGS_BACKLIGHT_ENABLE) == 0 ||
+	           g_strcmp0 (key, GPM_SETTINGS_SLEEP_DISPLAY_BATT) == 0 ||
+	           g_strcmp0 (key, GPM_SETTINGS_BACKLIGHT_BATTERY_REDUCE) == 0 ||
+	           g_strcmp0 (key, GPM_SETTINGS_IDLE_BRIGHTNESS) == 0) {
 		gpm_backlight_brightness_evaluate_and_set (backlight, FALSE);
 
-	} else if (strcmp (entry->key, GPM_CONF_BACKLIGHT_IDLE_DIM_TIME) == 0) {
-		backlight->priv->idle_dim_timeout = mateconf_value_get_int (value);
+	} else if (g_strcmp0 (key, GPM_SETTINGS_IDLE_DIM_TIME) == 0) {
+		backlight->priv->idle_dim_timeout = g_settings_get_int (settings, key);
 		gpm_idle_set_timeout_dim (backlight->priv->idle, backlight->priv->idle_dim_timeout);
 	} else {
-		egg_debug ("unknown key %s", entry->key);
+		egg_debug ("unknown key %s", key);
 	}
 }
 
@@ -434,7 +428,7 @@ gpm_backlight_button_pressed_cb (GpmButton *button, const gchar *type, GpmBackli
 	gboolean hw_changed;
 	egg_debug ("Button press event type=%s", type);
 
-	if (strcmp (type, GPM_BUTTON_BRIGHT_UP) == 0) {
+	if (g_strcmp0 (type, GPM_BUTTON_BRIGHT_UP) == 0) {
 		/* go up one step */
 		ret = gpm_brightness_up (backlight->priv->brightness, &hw_changed);
 
@@ -453,7 +447,7 @@ gpm_backlight_button_pressed_cb (GpmButton *button, const gchar *type, GpmBackli
 			egg_debug ("emitting brightness-changed : %i", percentage);
 			g_signal_emit (backlight, signals [BRIGHTNESS_CHANGED], 0, percentage);
 		}
-	} else if (strcmp (type, GPM_BUTTON_BRIGHT_DOWN) == 0) {
+	} else if (g_strcmp0 (type, GPM_BUTTON_BRIGHT_DOWN) == 0) {
 		/* go up down step */
 		ret = gpm_brightness_down (backlight->priv->brightness, &hw_changed);
 
@@ -472,7 +466,7 @@ gpm_backlight_button_pressed_cb (GpmButton *button, const gchar *type, GpmBackli
 			egg_debug ("emitting brightness-changed : %i", percentage);
 			g_signal_emit (backlight, signals [BRIGHTNESS_CHANGED], 0, percentage);
 		}
-	} else if (strcmp (type, GPM_BUTTON_LID_OPEN) == 0) {
+	} else if (g_strcmp0 (type, GPM_BUTTON_LID_OPEN) == 0) {
 		/* make sure we undim when we lift the lid */
 		gpm_backlight_brightness_evaluate_and_set (backlight, FALSE);
 
@@ -520,8 +514,8 @@ gpm_backlight_notify_system_idle_changed (GpmBacklight *backlight, gboolean is_i
 		if (elapsed > 2*60) {
 			/* reset back to our default dimming */
 			backlight->priv->idle_dim_timeout =
-				mateconf_client_get_int (backlight->priv->conf,
-					   GPM_CONF_BACKLIGHT_IDLE_DIM_TIME, NULL);
+				g_settings_get_int (backlight->priv->settings,
+					   GPM_SETTINGS_IDLE_DIM_TIME);
 			egg_debug ("resetting idle dim time to %is", backlight->priv->idle_dim_timeout);
 			gpm_idle_set_timeout_dim (backlight->priv->idle, backlight->priv->idle_dim_timeout);
 		}
@@ -600,9 +594,9 @@ idle_changed_cb (GpmIdle *idle, GpmIdleMode mode, GpmBacklight *backlight)
 			      "on-battery", &on_battery,
 			      NULL);
 		if (!on_battery)
-			dpms_method = mateconf_client_get_string (backlight->priv->conf, GPM_CONF_BACKLIGHT_DPMS_METHOD_AC, NULL);
+			dpms_method = g_settings_get_string (backlight->priv->settings, GPM_SETTINGS_DPMS_METHOD_AC);
 		else
-			dpms_method = mateconf_client_get_string (backlight->priv->conf, GPM_CONF_BACKLIGHT_DPMS_METHOD_BATT, NULL);
+			dpms_method = g_settings_get_string (backlight->priv->settings, GPM_SETTINGS_DPMS_METHOD_BATT);
 
 		/* convert the string types to standard types */
 		dpms_mode = gpm_dpms_mode_from_string (dpms_method);
@@ -680,7 +674,7 @@ gpm_backlight_finalize (GObject *object)
 
 	g_object_unref (backlight->priv->dpms);
 	g_object_unref (backlight->priv->control);
-	g_object_unref (backlight->priv->conf);
+	g_object_unref (backlight->priv->settings);
 	g_object_unref (backlight->priv->client);
 	g_object_unref (backlight->priv->button);
 	g_object_unref (backlight->priv->idle);
@@ -742,17 +736,12 @@ gpm_backlight_init (GpmBacklight *backlight)
 	backlight->priv->can_dim = gpm_brightness_has_hw (backlight->priv->brightness);
 
 	/* watch for dim value changes */
-	backlight->priv->conf = mateconf_client_get_default ();
-
-	/* watch mate-power-manager keys */
-	mateconf_client_add_dir (backlight->priv->conf, GPM_CONF_DIR, MATECONF_CLIENT_PRELOAD_RECURSIVE, NULL);
-	mateconf_client_notify_add (backlight->priv->conf, GPM_CONF_DIR,
-				 (MateConfClientNotifyFunc) gpm_conf_mateconf_key_changed_cb,
-				 backlight, NULL, NULL);
+	backlight->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
+	g_signal_connect (backlight->priv->settings, "changed", G_CALLBACK (gpm_settings_key_changed_cb), backlight);
 
 	/* set the main brightness, this is designed to be updated if the user changes the
 	 * brightness so we can undim to the 'correct' value */
-	backlight->priv->master_percentage = mateconf_client_get_int (backlight->priv->conf, GPM_CONF_BACKLIGHT_BRIGHTNESS_AC, NULL);
+	backlight->priv->master_percentage = g_settings_get_double (backlight->priv->settings, GPM_SETTINGS_BRIGHTNESS_AC);
 
 	/* watch for brightness up and down buttons and also check lid state */
 	backlight->priv->button = gpm_button_new ();
@@ -766,7 +755,7 @@ gpm_backlight_init (GpmBacklight *backlight)
 
 	/* assumption */
 	backlight->priv->system_is_idle = FALSE;
-	backlight->priv->idle_dim_timeout = mateconf_client_get_int (backlight->priv->conf, GPM_CONF_BACKLIGHT_IDLE_DIM_TIME, NULL);
+	backlight->priv->idle_dim_timeout = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_TIME);
 	gpm_idle_set_timeout_dim (backlight->priv->idle, backlight->priv->idle_dim_timeout);
 
 	/* use a visual widget */

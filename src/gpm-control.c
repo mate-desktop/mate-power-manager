@@ -56,6 +56,7 @@
 struct GpmControlPrivate
 {
 	MateConfClient		*conf;
+	GSettings		*settings;
 	UpClient		*client;
 };
 
@@ -103,7 +104,7 @@ gpm_control_shutdown (GpmControl *control, GError **error)
 /**
  * gpm_control_get_lock_policy:
  * @control: This class instance
- * @policy: The policy mateconf string.
+ * @policy: The policy string.
  *
  * This function finds out if we should lock the screen when we do an
  * action. It is required as we can either use the mate-screensaver policy
@@ -116,15 +117,15 @@ gpm_control_get_lock_policy (GpmControl *control, const gchar *policy)
 {
 	gboolean do_lock;
 	gboolean use_ss_setting;
-	/* This allows us to over-ride the custom lock settings set in mateconf
+	/* This allows us to over-ride the custom lock settings set
 	   with a system default set in mate-screensaver.
 	   See bug #331164 for all the juicy details. :-) */
-	use_ss_setting = mateconf_client_get_bool (control->priv->conf, GPM_CONF_LOCK_USE_SCREENSAVER, NULL);
+	use_ss_setting = g_settings_get_boolean (control->priv->settings, GPM_SETTINGS_LOCK_USE_SCREENSAVER);
 	if (use_ss_setting) {
-		do_lock = mateconf_client_get_bool (control->priv->conf, GS_PREF_LOCK_ENABLED, NULL);
+		do_lock = mateconf_client_get_bool (control->priv->conf, GS_CONF_PREF_LOCK_ENABLED, NULL);
 		egg_debug ("Using ScreenSaver settings (%i)", do_lock);
 	} else {
-		do_lock = mateconf_client_get_bool (control->priv->conf, policy, NULL);
+		do_lock = g_settings_get_boolean (control->priv->settings, policy);
 		egg_debug ("Using custom locking settings (%i)", do_lock);
 	}
 	return do_lock;
@@ -157,20 +158,20 @@ gpm_control_suspend (GpmControl *control, GError **error)
 	}
 
 	/* we should perhaps lock keyrings when sleeping #375681 */
-	lock_mate_keyring = mateconf_client_get_bool (control->priv->conf, GPM_CONF_LOCK_MATE_KEYRING_SUSPEND, NULL);
+	lock_mate_keyring = g_settings_get_boolean (control->priv->settings, GPM_SETTINGS_LOCK_KEYRING_SUSPEND);
 	if (lock_mate_keyring) {
 		keyres = mate_keyring_lock_all_sync ();
 		if (keyres != MATE_KEYRING_RESULT_OK)
 			egg_warning ("could not lock keyring");
 	}
 
-	do_lock = gpm_control_get_lock_policy (control, GPM_CONF_LOCK_ON_SUSPEND);
+	do_lock = gpm_control_get_lock_policy (control, GPM_SETTINGS_LOCK_ON_SUSPEND);
 	if (do_lock) {
 		throttle_cookie = gpm_screensaver_add_throttle (screensaver, "suspend");
 		gpm_screensaver_lock (screensaver);
 	}
 
-	nm_sleep = mateconf_client_get_bool (control->priv->conf, GPM_CONF_NETWORKMANAGER_SLEEP, NULL);
+	nm_sleep = g_settings_get_boolean (control->priv->settings, GPM_SETTINGS_NETWORKMANAGER_SLEEP);
 	if (nm_sleep)
 		gpm_networkmanager_sleep ();
 
@@ -189,7 +190,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
 			gpm_screensaver_remove_throttle (screensaver, throttle_cookie);
 	}
 
-	nm_sleep = mateconf_client_get_bool (control->priv->conf, GPM_CONF_NETWORKMANAGER_SLEEP, NULL);
+	nm_sleep = g_settings_get_boolean (control->priv->settings, GPM_SETTINGS_NETWORKMANAGER_SLEEP);
 	if (nm_sleep)
 		gpm_networkmanager_wake ();
 
@@ -225,7 +226,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 	}
 
 	/* we should perhaps lock keyrings when sleeping #375681 */
-	lock_mate_keyring = mateconf_client_get_bool (control->priv->conf, GPM_CONF_LOCK_MATE_KEYRING_HIBERNATE, NULL);
+	lock_mate_keyring = g_settings_get_boolean (control->priv->settings, GPM_SETTINGS_LOCK_KEYRING_HIBERNATE);
 	if (lock_mate_keyring) {
 		keyres = mate_keyring_lock_all_sync ();
 		if (keyres != MATE_KEYRING_RESULT_OK) {
@@ -233,13 +234,13 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 		}
 	}
 
-	do_lock = gpm_control_get_lock_policy (control, GPM_CONF_LOCK_ON_HIBERNATE);
+	do_lock = gpm_control_get_lock_policy (control, GPM_SETTINGS_LOCK_ON_HIBERNATE);
 	if (do_lock) {
 		throttle_cookie = gpm_screensaver_add_throttle (screensaver, "hibernate");
 		gpm_screensaver_lock (screensaver);
 	}
 
-	nm_sleep = mateconf_client_get_bool (control->priv->conf, GPM_CONF_NETWORKMANAGER_SLEEP, NULL);
+	nm_sleep = g_settings_get_boolean (control->priv->settings, GPM_SETTINGS_NETWORKMANAGER_SLEEP);
 	if (nm_sleep)
 		gpm_networkmanager_sleep ();
 
@@ -257,7 +258,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 			gpm_screensaver_remove_throttle (screensaver, throttle_cookie);
 	}
 
-	nm_sleep = mateconf_client_get_bool (control->priv->conf, GPM_CONF_NETWORKMANAGER_SLEEP, NULL);
+	nm_sleep = g_settings_get_boolean (control->priv->settings, GPM_SETTINGS_NETWORKMANAGER_SLEEP);
 	if (nm_sleep)
 		gpm_networkmanager_wake ();
 
@@ -279,6 +280,7 @@ gpm_control_finalize (GObject *object)
 	control = GPM_CONTROL (object);
 
 	g_object_unref (control->priv->conf);
+	g_object_unref (control->priv->settings);
 	g_object_unref (control->priv->client);
 
 	g_return_if_fail (control->priv != NULL);
@@ -326,6 +328,7 @@ gpm_control_init (GpmControl *control)
 	control->priv = GPM_CONTROL_GET_PRIVATE (control);
 
 	control->priv->client = up_client_new ();
+	control->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
 	control->priv->conf = mateconf_client_get_default ();
 }
 

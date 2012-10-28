@@ -24,7 +24,6 @@
 #include <string.h>
 #include <glib.h>
 #include <glib/gi18n.h>
-#include <mateconf/mateconf-client.h>
 #include <libupower-glib/upower.h>
 
 #include "egg-debug.h"
@@ -44,7 +43,7 @@ static void     gpm_engine_finalize   (GObject	  *object);
 
 struct GpmEnginePrivate
 {
-	MateConfClient		*conf;
+	GSettings		*settings;
 	UpClient		*client;
 	UpDevice		*battery_composite;
 	GPtrArray		*array;
@@ -509,28 +508,20 @@ gpm_engine_recalculate_state (GpmEngine *engine)
 }
 
 /**
- * gpm_engine_conf_key_changed_cb:
+ * gpm_engine_settings_key_changed_cb:
  **/
 static void
-gpm_engine_conf_key_changed_cb (MateConfClient *conf, guint cnxn_id, MateConfEntry *entry, GpmEngine *engine)
+gpm_engine_settings_key_changed_cb (GSettings *settings, const gchar *key, GpmEngine *engine)
 {
-	MateConfValue *value;
 	gchar *icon_policy;
 
-	if (entry == NULL)
-		return;
-	value = mateconf_entry_get_value (entry);
-	if (value == NULL)
-		return;
+	if (g_strcmp0 (key, GPM_SETTINGS_USE_TIME_POLICY) == 0) {
+		engine->priv->use_time_primary = g_settings_get_boolean (settings, key);
 
-	if (strcmp (entry->key, GPM_CONF_USE_TIME_POLICY) == 0) {
-
-		engine->priv->use_time_primary = mateconf_value_get_bool (value);
-
-	} else if (strcmp (entry->key, GPM_CONF_UI_ICON_POLICY) == 0) {
+	} else if (g_strcmp0 (key, GPM_SETTINGS_ICON_POLICY) == 0) {
 
 		/* do we want to display the icon in the tray */
-		icon_policy = mateconf_client_get_string (conf, GPM_CONF_UI_ICON_POLICY, NULL);
+		icon_policy = g_settings_get_string (settings, key);
 		engine->priv->icon_policy = gpm_icon_policy_from_string (icon_policy);
 		g_free (icon_policy);
 
@@ -567,8 +558,8 @@ gpm_engine_device_check_capacity (GpmEngine *engine, UpDevice *device)
 	if (capacity < 1.0f)
 		return FALSE;
 
-	/* only emit this if specified in mateconf */
-	ret = mateconf_client_get_bool (engine->priv->conf, GPM_CONF_NOTIFY_LOW_CAPACITY, NULL);
+	/* only emit this if specified in the settings */
+	ret = g_settings_get_boolean (engine->priv->settings, GPM_SETTINGS_NOTIFY_LOW_CAPACITY);
 	if (ret) {
 		egg_debug ("** EMIT: low-capacity");
 		g_signal_emit (engine, signals [LOW_CAPACITY], 0, device);
@@ -1067,10 +1058,9 @@ gpm_engine_init (GpmEngine *engine)
 	g_signal_connect (engine->priv->client, "device-changed",
 			  G_CALLBACK (gpm_engine_device_changed_cb), engine);
 
-	engine->priv->conf = mateconf_client_get_default ();
-	mateconf_client_notify_add (engine->priv->conf, GPM_CONF_DIR,
-				 (MateConfClientNotifyFunc) gpm_engine_conf_key_changed_cb,
-				 engine, NULL, NULL);
+	engine->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
+	g_signal_connect (engine->priv->settings, "changed",
+			  G_CALLBACK (gpm_engine_settings_key_changed_cb), engine);
 
 	engine->priv->phone = gpm_phone_new ();
 	g_signal_connect (engine->priv->phone, "device-added",
@@ -1094,22 +1084,22 @@ gpm_engine_init (GpmEngine *engine)
 	engine->priv->previous_summary = NULL;
 
 	/* do we want to display the icon in the tray */
-	icon_policy = mateconf_client_get_string (engine->priv->conf, GPM_CONF_UI_ICON_POLICY, NULL);
+	icon_policy = g_settings_get_string (engine->priv->settings, GPM_SETTINGS_ICON_POLICY);
 	engine->priv->icon_policy = gpm_icon_policy_from_string (icon_policy);
 	g_free (icon_policy);
 
 	/* get percentage policy */
-	engine->priv->low_percentage = mateconf_client_get_int (engine->priv->conf, GPM_CONF_THRESH_PERCENTAGE_LOW, NULL);
-	engine->priv->critical_percentage = mateconf_client_get_int (engine->priv->conf, GPM_CONF_THRESH_PERCENTAGE_CRITICAL, NULL);
-	engine->priv->action_percentage = mateconf_client_get_int (engine->priv->conf, GPM_CONF_THRESH_PERCENTAGE_ACTION, NULL);
+	engine->priv->low_percentage = g_settings_get_int (engine->priv->settings, GPM_SETTINGS_PERCENTAGE_LOW);
+	engine->priv->critical_percentage = g_settings_get_int (engine->priv->settings, GPM_SETTINGS_PERCENTAGE_CRITICAL);
+	engine->priv->action_percentage = g_settings_get_int (engine->priv->settings, GPM_SETTINGS_PERCENTAGE_ACTION);
 
 	/* get time policy */
-	engine->priv->low_time = mateconf_client_get_int (engine->priv->conf, GPM_CONF_THRESH_TIME_LOW, NULL);
-	engine->priv->critical_time = mateconf_client_get_int (engine->priv->conf, GPM_CONF_THRESH_TIME_CRITICAL, NULL);
-	engine->priv->action_time = mateconf_client_get_int (engine->priv->conf, GPM_CONF_THRESH_TIME_ACTION, NULL);
+	engine->priv->low_time = g_settings_get_int (engine->priv->settings, GPM_SETTINGS_TIME_LOW);
+	engine->priv->critical_time = g_settings_get_int (engine->priv->settings, GPM_SETTINGS_TIME_CRITICAL);
+	engine->priv->action_time = g_settings_get_int (engine->priv->settings, GPM_SETTINGS_TIME_ACTION);
 
 	/* we can disable this if the time remaining is inaccurate or just plain wrong */
-	engine->priv->use_time_primary = mateconf_client_get_bool (engine->priv->conf, GPM_CONF_USE_TIME_POLICY, NULL);
+	engine->priv->use_time_primary = g_settings_get_boolean (engine->priv->settings, GPM_SETTINGS_USE_TIME_POLICY);
 	if (engine->priv->use_time_primary)
 		egg_debug ("Using per-time notification policy");
 	else

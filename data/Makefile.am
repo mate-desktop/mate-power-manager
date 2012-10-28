@@ -1,9 +1,5 @@
 SUBDIRS = icons
 
-@INTLTOOL_SCHEMAS_RULE@
-schemadir = $(sysconfdir)/mateconf/schemas
-schema_in_files = mate-power-manager.schemas.in
-schema_DATA = $(schema_in_files:.schemas.in=.schemas)
 
 @INTLTOOL_DESKTOP_RULE@
 desktopdir = $(datadir)/applications
@@ -23,6 +19,9 @@ service_DATA     = $(service_in_files:.service.in=.service)
 $(service_DATA): $(service_in_files) Makefile
 	@sed -e "s|\@servicedir\@|$(bindir)|" $< > $@
 
+@GSETTINGS_RULES@
+gsettings_SCHEMAS = org.mate.power-manager.gschema.xml
+
 pkgdata_DATA =						\
 	gpm-statistics.ui				\
 	gpm-statistics-deprecated.ui	\
@@ -32,24 +31,11 @@ pkgdata_DATA =						\
 	acme.ui
 
 EXTRA_DIST =						\
-	mate-power-manager.schemas.in			\
-	$(schema_in_files)				\
-	$(desktop_in_files)				\
-	$(autostart_in_files)				\
+	$(gsettings_SCHEMAS)				\
 	$(service_in_files)				\
+	$(autostart_in_files)				\
+	$(desktop_in_files)				\
 	$(pkgdata_DATA)
-
-if MATECONF_SCHEMAS_INSTALL
-install-data-local:
-	-MATECONF_CONFIG_SOURCE=$(MATECONF_SCHEMA_CONFIG_SOURCE) \
-	$(MATECONFTOOL) --makefile-install-rule $(schema_DATA)
-endif
-
-if MATECONF_SCHEMAS_INSTALL
-uninstall-local:
-	-MATECONF_CONFIG_SOURCE=$(MATECONF_SCHEMA_CONFIG_SOURCE) \
-	$(MATECONFTOOL) --makefile-uninstall-rule $(schema_DATA)
-endif
 
 clean-local :
 	rm -f *~
@@ -58,5 +44,4 @@ DISTCLEANFILES =					\
 	mate-power-manager.desktop			\
 	mate-power-preferences.desktop			\
 	mate-power-statistics.desktop			\
-	mate-power-manager.schemas			\
 	mate-power-manager.service

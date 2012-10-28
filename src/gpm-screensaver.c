@@ -137,7 +137,7 @@ gpm_screensaver_lock_enabled (GpmScreensaver *screensaver)
 {
 	gboolean enabled;
 	g_return_val_if_fail (GPM_IS_SCREENSAVER (screensaver), FALSE);
-	enabled = mateconf_client_get_bool (screensaver->priv->conf, GS_PREF_LOCK_ENABLED, NULL);
+	enabled = mateconf_client_get_bool (screensaver->priv->conf, GS_CONF_PREF_LOCK_ENABLED, NULL);
 	return enabled;
 }
 

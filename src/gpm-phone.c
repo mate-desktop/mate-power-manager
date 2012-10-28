@@ -26,7 +26,6 @@
 #include <glib/gi18n.h>
 #include <dbus/dbus-glib.h>
 
-#include <mateconf/mateconf-client.h>
 #include "gpm-phone.h"
 #include "egg-debug.h"
 #include "gpm-marshal.h"
