@@ -40,7 +40,7 @@
 #include "gpm-common.h"
 #include "gpm-prefs-core.h"
 #include "gpm-stock-icons.h"
-#include "gpm-prefs-server.h"
+#include "gpm-brightness.h"
 
 static void gpm_prefs_finalize (GObject *object);
 
@@ -116,46 +116,6 @@ gpm_prefs_activate_window (GpmPrefs *prefs)
 	GtkWindow *window;
 	window = GTK_WINDOW (gtk_builder_get_object (prefs->priv->builder, "dialog_preferences"));
 	gtk_window_present (window);
-}
-
-/**
- * gpm_dbus_get_caps:
- * @method: The g-p-m DBUS method name, e.g. "AllowedSuspend"
- **/
-static gint
-gpm_dbus_get_caps (GpmPrefs *prefs)
-{
-	DBusGConnection *connection;
-	DBusGProxy *proxy = NULL;
-	GError *error = NULL;
-	gboolean ret;
-	gint value = 0;
-
-	connection = dbus_g_bus_get (DBUS_BUS_SESSION, &error);
-	if (connection == NULL) {
-		egg_warning ("Couldn't connect to g-p-m %s", error->message);
-		g_error_free (error);
-		goto out;
-	}
-
-	proxy = dbus_g_proxy_new_for_name (connection,
-					   GPM_DBUS_SERVICE,
-					   GPM_DBUS_PATH,
-					   GPM_DBUS_INTERFACE);
-	ret = dbus_g_proxy_call (proxy, "GetPreferencesOptions", &error,
-				 G_TYPE_INVALID,
-				 G_TYPE_INT, &value,
-				 G_TYPE_INVALID);
-	if (!ret) {
-		/* abort as the DBUS method failed */
-		egg_warning ("GetPreferencesOptions failed: %s", error->message);
-		g_error_free (error);
-		goto out;
-	}
-out:
-	if (proxy != NULL)
-		g_object_unref (proxy);
-	return value;
 }
 
 /**
@@ -980,9 +940,14 @@ gpm_prefs_init (GpmPrefs *prefs)
 {
 	GtkWidget *main_window;
 	GtkWidget *widget;
-	gint caps;
 	guint retval;
 	GError *error = NULL;
+	GPtrArray *devices = NULL;
+	UpDevice *device;
+	UpDeviceKind kind;
+	GpmBrightness *brightness;
+	gboolean ret;
+	guint i;
 
 	prefs->priv = GPM_PREFS_GET_PRIVATE (prefs);
 
@@ -999,25 +964,47 @@ gpm_prefs_init (GpmPrefs *prefs)
 	/* get value of delay in mate-session */
 	prefs->priv->idle_delay = mateconf_client_get_int (prefs->priv->conf, GPM_CONF_IDLE_DELAY, NULL);
 
-	caps = gpm_dbus_get_caps (prefs);
-	egg_debug ("caps=%i", caps);
-
-	/* get properties from mate-power-manager */
-	prefs->priv->has_batteries = ((caps & GPM_PREFS_SERVER_BATTERY) > 0);
-	prefs->priv->has_ups = ((caps & GPM_PREFS_SERVER_UPS) > 0);
-	prefs->priv->has_lcd = ((caps & GPM_PREFS_SERVER_BACKLIGHT) > 0);
-	prefs->priv->has_button_lid = ((caps & GPM_PREFS_SERVER_LID) > 0);
-	prefs->priv->has_button_suspend = TRUE;
-
 	/* are we allowed to shutdown? */
 	prefs->priv->can_shutdown = TRUE;
 	egg_console_kit_can_stop (prefs->priv->console, &prefs->priv->can_shutdown, NULL);
 
 	/* get values from UpClient */
+	prefs->priv->can_suspend = up_client_get_can_suspend (prefs->priv->client);
+	prefs->priv->can_hibernate = up_client_get_can_hibernate (prefs->priv->client);
+	
+#if UP_CHECK_VERSION(0,9,2)
+	prefs->priv->has_button_lid = up_client_get_lid_is_present (prefs->priv->client);
+#else
 	g_object_get (prefs->priv->client,
-			  "can-suspend", &prefs->priv->can_suspend,
-			  "can-hibernate", &prefs->priv->can_hibernate,
-			  NULL);
+		      "lid-is-present", &prefs->priv->has_button_lid,
+		      NULL);
+#endif
+	prefs->priv->has_button_suspend = TRUE;
+
+	/* find if we have brightness hardware */
+	brightness = gpm_brightness_new ();
+	prefs->priv->has_lcd = gpm_brightness_has_hw (brightness);
+	g_object_unref (brightness);
+
+	/* get device list */
+	ret = up_client_enumerate_devices_sync (prefs->priv->client, NULL, &error);
+	if (!ret) {
+		egg_warning ("failed to get device list: %s", error->message);
+		g_error_free (error);
+	}
+
+	devices = up_client_get_devices (prefs->priv->client);
+	for (i=0; i<devices->len; i++) {
+		device = g_ptr_array_index (devices, i);
+		g_object_get (device,
+			      "kind", &kind,
+			      NULL);
+		if (kind == UP_DEVICE_KIND_BATTERY)
+			prefs->priv->has_batteries = TRUE;
+		if (kind == UP_DEVICE_KIND_UPS)
+			prefs->priv->has_ups = TRUE;
+	}
+	g_ptr_array_unref (devices);
 
 	prefs->priv->builder = gtk_builder_new ();
 	

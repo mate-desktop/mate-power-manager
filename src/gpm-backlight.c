@@ -53,7 +53,6 @@
 #include "gpm-idle.h"
 #include "gpm-marshal.h"
 #include "gpm-stock-icons.h"
-#include "gpm-prefs-server.h"
 #include "egg-console-kit.h"
 
 #define GPM_BACKLIGHT_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_BACKLIGHT, GpmBacklightPrivate))
@@ -724,9 +723,6 @@ gpm_backlight_class_init (GpmBacklightClass *klass)
 static void
 gpm_backlight_init (GpmBacklight *backlight)
 {
-	gboolean lid_is_present = TRUE;
-	GpmPrefsServer *prefs_server;
-
 	backlight->priv = GPM_BACKLIGHT_GET_PRIVATE (backlight);
 
 	/* record our idle time */
@@ -744,19 +740,6 @@ gpm_backlight_init (GpmBacklight *backlight)
 
 	/* gets caps */
 	backlight->priv->can_dim = gpm_brightness_has_hw (backlight->priv->brightness);
-
-	/* we use UPower to see if we should show the lid UI */
-	g_object_get (backlight->priv->client,
-		      "lid-is-present", &lid_is_present,
-		      NULL);
-
-	/* expose ui in prefs program */
-	prefs_server = gpm_prefs_server_new ();
-	if (lid_is_present)
-		gpm_prefs_server_set_capability (prefs_server, GPM_PREFS_SERVER_LID);
-	if (backlight->priv->can_dim)
-		gpm_prefs_server_set_capability (prefs_server, GPM_PREFS_SERVER_BACKLIGHT);
-	g_object_unref (prefs_server);
 
 	/* watch for dim value changes */
 	backlight->priv->conf = mateconf_client_get_default ();

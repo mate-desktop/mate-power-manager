@@ -56,7 +56,6 @@
 #include "gpm-backlight.h"
 #include "gpm-session.h"
 #include "gpm-stock-icons.h"
-#include "gpm-prefs-server.h"
 #include "gpm-tray-icon.h"
 #include "gpm-engine.h"
 #include "gpm-upower.h"
@@ -81,7 +80,6 @@ struct GpmManagerPrivate
 	GpmDisks		*disks;
 	GpmDpms			*dpms;
 	GpmIdle			*idle;
-	GpmPrefsServer		*prefs_server;
 	GpmControl		*control;
 	GpmScreensaver		*screensaver;
 	GpmTrayIcon		*tray_icon;
@@ -375,7 +373,7 @@ gpm_manager_sync_policy_sleep (GpmManager *manager)
  * Turn off the backlight of the LCD when we shut the lid, and lock
  * if required. This is required because some laptops do not turn off the
  * LCD backlight when the lid is closed.
- * See http://bugzilla.mate.org/show_bug.cgi?id=321313
+ * See http://bugzilla.gnome.org/show_bug.cgi?id=321313
  *
  * Return value: Success.
  **/
@@ -708,17 +706,6 @@ gpm_manager_perform_policy (GpmManager  *manager, const gchar *policy_key, const
 
 	g_free (action);
 	return TRUE;
-}
-
-/**
- * gpm_manager_get_preferences_options:
- **/
-gboolean
-gpm_manager_get_preferences_options (GpmManager *manager, gint *capability, GError **error)
-{
-	g_return_val_if_fail (manager != NULL, FALSE);
-	g_return_val_if_fail (GPM_IS_MANAGER (manager), FALSE);
-	return gpm_prefs_server_get_capability (manager->priv->prefs_server, capability);
 }
 
 /**
@@ -1930,9 +1917,6 @@ gpm_manager_init (GpmManager *manager)
 	/* don't apply policy when not active, so listen to ConsoleKit */
 	manager->priv->console = egg_console_kit_new ();
 
-	/* this is a singleton, so we keep a master copy open here */
-	manager->priv->prefs_server = gpm_prefs_server_new ();
-
 	manager->priv->notification_general = NULL;
 	manager->priv->notification_warning_low = NULL;
 	manager->priv->notification_discharging = NULL;
@@ -2085,7 +2069,6 @@ gpm_manager_finalize (GObject *object)
 	g_object_unref (manager->priv->engine);
 	g_object_unref (manager->priv->tray_icon);
 	g_object_unref (manager->priv->screensaver);
-	g_object_unref (manager->priv->prefs_server);
 	g_object_unref (manager->priv->control);
 	g_object_unref (manager->priv->button);
 	g_object_unref (manager->priv->backlight);
