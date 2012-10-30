@@ -20,7 +20,9 @@ $(service_DATA): $(service_in_files) Makefile
 	@sed -e "s|\@servicedir\@|$(bindir)|" $< > $@
 
 @GSETTINGS_RULES@
-gsettings_SCHEMAS = org.mate.power-manager.gschema.xml
+@INTLTOOL_XML_NOMERGE_RULE@
+gsettings_schemas_in_files = org.mate.power-manager.gschema.xml.in
+gsettings_SCHEMAS = $(gsettings_schemas_in_files:.gschema.xml.in=.gschema.xml)
 
 pkgdata_DATA =						\
 	gpm-statistics.ui				\
@@ -35,6 +37,7 @@ EXTRA_DIST =						\
 	$(service_in_files)				\
 	$(autostart_in_files)				\
 	$(desktop_in_files)				\
+	$(gsettings_schemas_in_files)	\
 	$(pkgdata_DATA)
 
 clean-local :
@@ -44,4 +47,5 @@ DISTCLEANFILES =					\
 	mate-power-manager.desktop			\
 	mate-power-preferences.desktop			\
 	mate-power-statistics.desktop			\
-	mate-power-manager.service
+	mate-power-manager.service		\
+	org.mate.power-manager.gschema.xml
