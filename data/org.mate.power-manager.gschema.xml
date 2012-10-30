@@ -1,34 +1,55 @@
 <schemalist>
+  <enum id="org.mate.power-manager.ActionType">
+    <value nick="blank" value="0"/>
+    <value nick="suspend" value="1"/>
+    <value nick="shutdown" value="2"/>
+    <value nick="hibernate" value="3"/>
+    <value nick="interactive" value="4"/>
+    <value nick="nothing" value="5"/>
+  </enum>
+  <enum id="org.mate.power-manager.IconPolicy">
+    <value nick="always" value="0"/>
+    <value nick="present" value="1"/>
+    <value nick="charge" value="2"/>
+    <value nick="low" value="3"/>
+    <value nick="critical" value="4"/>
+    <value nick="never" value="5"/>
+  </enum>
+  <enum id="org.mate.power-manager.DpmsMethod">
+    <value nick="standby" value="1"/>
+    <value nick="suspend" value="2"/>
+    <value nick="off" value="3"/>
+  </enum>
   <schema id="org.mate.power-manager" path="/org/mate/power-manager/">
-    <key name="action-sleep-type-battery" type="s">
+    <key name="action-sleep-type-battery" enum="org.mate.power-manager.ActionType">
       <default>'hibernate'</default>
       <summary>Whether to hibernate, suspend or do nothing when inactive</summary>
-      <description>The type of sleeping that should be performed when the computer is inactive. Possible values are "hibernate", "suspend" and "nothing".</description>
+      <description>The type of sleeping that should be performed when the computer is inactive.</description>
     </key>
-    <key name="action-critical-battery" type="s">
+    <key name="action-critical-battery" enum="org.mate.power-manager.ActionType">
       <default>'hibernate'</default>
       <summary>Battery critical low action</summary>
-      <description>The action to take when the battery is critically low. Possible values are "hibernate", "suspend", "shutdown" and "nothing".</description>
+      <description>The action to take when the battery is critically low.</description>
     </key>
     <key name="event-when-closed-battery" type="b">
       <default>true</default>
       <summary>If the battery event should occur when the lid is shut and the power disconnected</summary>
       <description>If the battery lid close event should occur (for example 'Suspend when lid closed on battery') when the lid is previously shut and the AC power disconnected at a later time.</description>
     </key>
-    <key name="action-sleep-type-ac" type="s">
+    <key name="action-sleep-type-ac" enum="org.mate.power-manager.ActionType">
       <default>'suspend'</default>
       <summary>Whether to hibernate, suspend or do nothing when inactive</summary>
-      <description>The type of sleeping that should be performed when the computer is inactive. Possible values are "hibernate", "suspend" and "nothing".</description>
+      <description>The type of sleeping that should be performed when the computer is inactive.</description>
     </key>
-    <key name="action-critical-ups" type="s">
+    <key name="action-critical-ups" enum="org.mate.power-manager.ActionType">
       <default>'shutdown'</default>
       <summary>UPS critical low action</summary>
-      <description>The action to take when the UPS is critically low. Possible values are "hibernate", "suspend", "shutdown" and "nothing".</description>
+      <description>The action to take when the UPS is critically low.</description>
     </key>
-    <key name="action-low-ups" type="s">
+    <key name="action-low-ups" enum="org.mate.power-manager.ActionType">
       <default>'hibernate'</default>
       <summary>UPS low power action</summary>
-      <description>The action to take when the UPS is low. Possible values are "hibernate", "suspend", "shutdown" and "nothing".</description>
+      <description>The action to take when the UPS is low.</description>
     </key>
     <key name="backlight-enable" type="b">
       <default>true</default>
@@ -65,45 +86,45 @@
       <summary>Dim the screen after a period of inactivity when on AC power</summary>
       <description>If the screen should be dimmed to save power when the computer is idle when on AC power.</description>
     </key>
-    <key name="dpms-method-ac" type="s">
+    <key name="dpms-method-ac" enum="org.mate.power-manager.DpmsMethod">
       <default>'off'</default>
       <summary>Method used to blank screen on AC</summary>
-      <description>The DPMS method used to blank the screen when on AC power. Possible values are "standby", "suspend" and "off".</description>
+      <description>The DPMS method used to blank the screen when on AC power.</description>
     </key>
-    <key name="dpms-method-battery" type="s">
+    <key name="dpms-method-battery" enum="org.mate.power-manager.DpmsMethod">
       <default>'off'</default>
       <summary>Method used to blank screen on battery</summary>
-      <description>The DPMS method used to blank the screen when on battery power. Possible values are "standby", "suspend" and "off".</description>
+      <description>The DPMS method used to blank the screen when on battery power.</description>
     </key>
     <key name="brightness-ac" type="d">
       <default>100.0</default>
       <summary>LCD brightness when on AC</summary>
       <description>The brightness of the display when on AC power. Possible values are between 0.0 and 100.0.</description>
     </key>
-    <key name="button-suspend" type="s">
+    <key name="button-suspend" enum="org.mate.power-manager.ActionType">
       <default>'suspend'</default>
       <summary>Suspend button action</summary>
-      <description>The action to take when the system suspend button is pressed. Possible values are "suspend", "hibernate", "interactive", "shutdown" and "nothing".</description>
+      <description>The action to take when the system suspend button is pressed.</description>
     </key>
-    <key name="button-hibernate" type="s">
+    <key name="button-hibernate" enum="org.mate.power-manager.ActionType">
       <default>'hibernate'</default>
       <summary>Hibernate button action</summary>
-      <description>The action to take when the system hibernate button is pressed. Possible values are "suspend", "hibernate", "interactive", "shutdown" and "nothing".</description>
+      <description>The action to take when the system hibernate button is pressed.</description>
     </key>
-    <key name="button-power" type="s">
+    <key name="button-power" enum="org.mate.power-manager.ActionType">
       <default>'interactive'</default>
       <summary>Power button action</summary>
-      <description>The action to take when the system power button is pressed. Possible values are "suspend", "hibernate", "interactive", "shutdown" and "nothing".</description>
+      <description>The action to take when the system power button is pressed.</description>
     </key>
-    <key name="button-lid-battery" type="s">
+    <key name="button-lid-battery" enum="org.mate.power-manager.ActionType">
       <default>'suspend'</default>
       <summary>Laptop lid close action on battery</summary>
-      <description>The action to take when the laptop lid is closed and the laptop is on battery power. Possible values are "suspend", "hibernate", "blank", and "nothing".</description>
+      <description>The action to take when the laptop lid is closed and the laptop is on battery power.</description>
     </key>
-    <key name="button-lid-ac" type="s">
+    <key name="button-lid-ac" enum="org.mate.power-manager.ActionType">
       <default>'suspend'</default>
       <summary>Laptop lid close action when on AC</summary>
-      <description>The action to take when the laptop lid is closed and the laptop is on AC power. Possible values are "suspend", "hibernate", "blank" and "nothing".</description>
+      <description>The action to take when the laptop lid is closed and the laptop is on AC power.</description>
     </key>
     <key name="schema-version" type="i">
       <default>3</default>
@@ -329,10 +350,10 @@
       <default>true</default>
       <summary>If preferences and statistics items should be shown in the context menu</summary>
     </key>
-    <key name="icon-policy" type="s">
+    <key name="icon-policy" enum="org.mate.power-manager.IconPolicy">
       <default>'present'</default>
       <summary>When to show the notification icon</summary>
-      <description>Display options for the notification icon. Valid options are "never", "low", "critical", "charge", and "present".</description>
+      <description>Display options for the notification icon.</description>
     </key>
   </schema>
 </schemalist>

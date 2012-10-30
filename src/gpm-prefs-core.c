@@ -135,13 +135,10 @@ gpm_prefs_help_cb (GtkWidget *widget, GpmPrefs *prefs)
 static void
 gpm_prefs_icon_radio_cb (GtkWidget *widget, GpmPrefs *prefs)
 {
-	const gchar *str;
 	gint policy;
 
 	policy = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (widget), "policy"));
-	str = gpm_icon_policy_to_string (policy);
-	egg_debug ("Changing %s to %s", GPM_SETTINGS_ICON_POLICY, str);
-	g_settings_set_string (prefs->priv->settings, GPM_SETTINGS_ICON_POLICY, str);
+	g_settings_set_enum (prefs->priv->settings, GPM_SETTINGS_ICON_POLICY, policy);
 }
 
 /**
@@ -164,7 +161,6 @@ gpm_prefs_action_combo_changed_cb (GtkWidget *widget, GpmPrefs *prefs)
 	GpmActionPolicy policy;
 	const GpmActionPolicy *actions;
 	const gchar *gpm_pref_key;
-	const gchar *action;
 	guint active;
 
 	actions = (const GpmActionPolicy *) g_object_get_data (G_OBJECT (widget), "actions");
@@ -172,9 +168,7 @@ gpm_prefs_action_combo_changed_cb (GtkWidget *widget, GpmPrefs *prefs)
 
 	active = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
 	policy = actions[active];
-	action = gpm_action_policy_to_string (policy);
-	egg_debug ("Changing %s to %s", gpm_pref_key, action);
-	g_settings_set_string (prefs->priv->settings, gpm_pref_key, action);
+	g_settings_set_enum (prefs->priv->settings, gpm_pref_key, policy);
 }
 
 /**
@@ -242,7 +236,6 @@ static void
 gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 				  const gchar *gpm_pref_key, const GpmActionPolicy *actions)
 {
-	gchar *value_txt;
 	gint i;
 	gboolean is_writable;
 	GtkWidget *widget;
@@ -254,9 +247,8 @@ gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, widget_name));
 	gpm_prefs_set_combo_simple_text (widget);
 
-	value_txt = g_settings_get_string (prefs->priv->settings, gpm_pref_key);
+	value = g_settings_get_enum (prefs->priv->settings, gpm_pref_key);
 	is_writable = g_settings_is_writable (prefs->priv->settings, gpm_pref_key);
-	value = gpm_action_policy_from_string (value_txt);
 
 	gtk_widget_set_sensitive (widget, is_writable);
 
@@ -340,13 +332,11 @@ gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 	/* set what we have in the settings */
 	for (i=0; actions_added[i] != -1; i++) {
 		policy = actions_added[i];
-		egg_debug ("added: %s", gpm_action_policy_to_string (policy));
 		if (value == policy)
 			 gtk_combo_box_set_active (GTK_COMBO_BOX (widget), i);
 	}
 
 	g_ptr_array_unref (array);
-	g_free (value_txt);
 }
 
 /**
@@ -435,7 +425,6 @@ gpm_prefs_delete_event_cb (GtkWidget *widget, GdkEvent *event, GpmPrefs *prefs)
 static void
 prefs_setup_notification (GpmPrefs *prefs)
 {
-	gchar *icon_policy_str;
 	gint icon_policy;
 	GtkWidget *radiobutton_icon_always;
 	GtkWidget *radiobutton_icon_present;
@@ -444,9 +433,7 @@ prefs_setup_notification (GpmPrefs *prefs)
 	GtkWidget *radiobutton_icon_never;
 	gboolean is_writable;
 
-	icon_policy_str = g_settings_get_string (prefs->priv->settings, GPM_SETTINGS_ICON_POLICY);
-	icon_policy = gpm_icon_policy_from_string (icon_policy_str);
-	g_free (icon_policy_str);
+	icon_policy = g_settings_get_enum (prefs->priv->settings, GPM_SETTINGS_ICON_POLICY);
 
 	radiobutton_icon_always = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder,
 						  "radiobutton_notification_always"));

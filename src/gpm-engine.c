@@ -513,7 +513,6 @@ gpm_engine_recalculate_state (GpmEngine *engine)
 static void
 gpm_engine_settings_key_changed_cb (GSettings *settings, const gchar *key, GpmEngine *engine)
 {
-	gchar *icon_policy;
 
 	if (g_strcmp0 (key, GPM_SETTINGS_USE_TIME_POLICY) == 0) {
 		engine->priv->use_time_primary = g_settings_get_boolean (settings, key);
@@ -521,9 +520,7 @@ gpm_engine_settings_key_changed_cb (GSettings *settings, const gchar *key, GpmEn
 	} else if (g_strcmp0 (key, GPM_SETTINGS_ICON_POLICY) == 0) {
 
 		/* do we want to display the icon in the tray */
-		icon_policy = g_settings_get_string (settings, key);
-		engine->priv->icon_policy = gpm_icon_policy_from_string (icon_policy);
-		g_free (icon_policy);
+		engine->priv->icon_policy = g_settings_get_enum (settings, key);
 
 		/* perhaps change icon */
 		gpm_engine_recalculate_state_icon (engine);
@@ -1045,7 +1042,6 @@ phone_device_refresh_cb (GpmPhone *phone, guint idx, GpmEngine *engine)
 static void
 gpm_engine_init (GpmEngine *engine)
 {
-	gchar *icon_policy;
 
 	engine->priv = GPM_ENGINE_GET_PRIVATE (engine);
 
@@ -1084,9 +1080,7 @@ gpm_engine_init (GpmEngine *engine)
 	engine->priv->previous_summary = NULL;
 
 	/* do we want to display the icon in the tray */
-	icon_policy = g_settings_get_string (engine->priv->settings, GPM_SETTINGS_ICON_POLICY);
-	engine->priv->icon_policy = gpm_icon_policy_from_string (icon_policy);
-	g_free (icon_policy);
+	engine->priv->icon_policy = g_settings_get_enum (engine->priv->settings, GPM_SETTINGS_ICON_POLICY);
 
 	/* get percentage policy */
 	engine->priv->low_percentage = g_settings_get_int (engine->priv->settings, GPM_SETTINGS_PERCENTAGE_LOW);

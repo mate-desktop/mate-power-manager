@@ -545,7 +545,6 @@ idle_changed_cb (GpmIdle *idle, GpmIdleMode mode, GpmBacklight *backlight)
 	gboolean ret;
 	GError *error = NULL;
 	gboolean on_battery;
-	gchar *dpms_method;
 	GpmDpmsMode dpms_mode;
 
 	/* don't dim or undim the screen when the lid is closed */
@@ -594,16 +593,13 @@ idle_changed_cb (GpmIdle *idle, GpmIdleMode mode, GpmBacklight *backlight)
 			      "on-battery", &on_battery,
 			      NULL);
 		if (!on_battery)
-			dpms_method = g_settings_get_string (backlight->priv->settings, GPM_SETTINGS_DPMS_METHOD_AC);
+			dpms_mode = g_settings_get_enum (backlight->priv->settings, GPM_SETTINGS_DPMS_METHOD_AC);
 		else
-			dpms_method = g_settings_get_string (backlight->priv->settings, GPM_SETTINGS_DPMS_METHOD_BATT);
-
-		/* convert the string types to standard types */
-		dpms_mode = gpm_dpms_mode_from_string (dpms_method);
+			dpms_mode = g_settings_get_enum (backlight->priv->settings, GPM_SETTINGS_DPMS_METHOD_BATT);
 
 		/* check if method is valid */
 		if (dpms_mode == GPM_DPMS_MODE_UNKNOWN || dpms_mode == GPM_DPMS_MODE_ON) {
-			egg_warning ("BACKLIGHT method %s unknown. Using OFF.", dpms_method);
+			egg_warning ("BACKLIGHT method %i unknown. Using OFF.", dpms_mode);
 			dpms_mode = GPM_DPMS_MODE_OFF;
 		}
 
@@ -614,7 +610,6 @@ idle_changed_cb (GpmIdle *idle, GpmIdleMode mode, GpmBacklight *backlight)
 			g_error_free (error);
 		}
 
-		g_free (dpms_method);
 	}
 }
 

@@ -157,10 +157,6 @@ typedef enum {
 } GpmActionPolicy;
 
 gchar		*gpm_get_timestring				(guint		 time);
-GpmIconPolicy	 gpm_icon_policy_from_string			(const gchar	*policy);
-const gchar	*gpm_icon_policy_to_string			(GpmIconPolicy	 policy);
-GpmActionPolicy	 gpm_action_policy_from_string			(const gchar	*policy);
-const gchar	*gpm_action_policy_to_string			(GpmActionPolicy  policy);
 void 		 gpm_help_display				(const gchar	*link_id);
 #ifdef EGG_TEST
 void		 gpm_common_test				(gpointer	 data);
