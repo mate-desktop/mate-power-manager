@@ -131,11 +131,6 @@
       <_summary>The default configuration version.</_summary>
       <_description>The version of the installed version of the schema. Do not edit this value, it is used so that configure changes between versions can be detected.</_description>
     </key>
-    <key name="use-profile-time" type="b">
-      <default>true</default>
-      <_summary>If the learnt profile should be used to calculate the time remaining</_summary>
-      <_description>If the learnt profile should be used to calculate the time remaining. Only turn this off for debugging.</_description>
-    </key>
     <key name="use-time-for-policy" type="b">
       <default>true</default>
       <_summary>Whether to use time-based notifications</_summary>
