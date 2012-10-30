@@ -73,9 +73,6 @@ gboolean	 gpm_manager_can_suspend		(GpmManager	*manager,
 gboolean	 gpm_manager_can_hibernate		(GpmManager	*manager,
 							 gboolean	*can_hibernate,
 							 GError		**error);
-gboolean	 gpm_manager_get_preferences_options	(GpmManager	*manager,
-							 gint		*capability,
-							 GError		**error);
 
 G_END_DECLS
 
