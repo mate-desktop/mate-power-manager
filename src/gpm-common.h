@@ -36,13 +36,7 @@ G_BEGIN_DECLS
 #define GPM_NAME 			_("Power Manager")
 #define GPM_DESCRIPTION 		_("Power Manager for the MATE desktop")
 
-/* help location */
-#define GPM_HOMEPAGE_URL	 	"http://www.gnome.org/projects/mate-power-manager/"
-#define GPM_BUGZILLA_URL		"http://bugzilla.gnome.org/buglist.cgi?product=mate-power-manager"
-#define GPM_FAQ_URL			"http://live.gnome.org/MatePowerManager/Faq"
-
-/* change general/installed_schema whenever adding or moving keys */
-#define GPM_SETTINGS_SCHEMA_ID				3
+/* schema location */
 #define GPM_SETTINGS_SCHEMA				"org.mate.power-manager"
 
 /* actions */
@@ -73,7 +67,6 @@ G_BEGIN_DECLS
 #define GPM_SETTINGS_BUTTON_POWER			"button-power"
 
 /* general */
-#define GPM_SETTINGS_SCHEMA_VERSION			"schema-version"
 #define GPM_SETTINGS_USE_TIME_POLICY			"use-time-for-policy"
 #define GPM_SETTINGS_NETWORKMANAGER_SLEEP		"network-sleep"
 #define GPM_SETTINGS_IDLE_CHECK_CPU			"check-type-cpu"

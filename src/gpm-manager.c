@@ -565,7 +565,7 @@ gpm_manager_sleep_failure (GpmManager *manager, gboolean is_suspend, const gchar
 	egg_debug ("sleep failed");
 	gpm_manager_play (manager, GPM_MANAGER_SOUND_SUSPEND_ERROR, TRUE);
 
-	/* only emit if in MateConf */
+	/* only emit if specified in settings */
 	if (!show_sleep_failed)
 		goto out;
 
@@ -1876,7 +1876,6 @@ gpm_manager_init (GpmManager *manager)
 	gint timeout;
 	DBusGConnection *connection;
 	GError *error = NULL;
-	guint version;
 
 	manager->priv = GPM_MANAGER_GET_PRIVATE (manager);
 	connection = dbus_g_bus_get (DBUS_BUS_SESSION, &error);
@@ -1909,21 +1908,6 @@ gpm_manager_init (GpmManager *manager)
 
 	/* use libmatenotify */
 	notify_init (GPM_NAME);
-
-	/* check to see if the user has installed the schema properly */
-	version = g_settings_get_int (manager->priv->settings, GPM_SETTINGS_SCHEMA_VERSION);
-	if (version != GPM_SETTINGS_SCHEMA_ID) {
-		gpm_manager_notify (manager, &manager->priv->notification_general,
-				    /* TRANSLATORS: there was in install problem */
-				    _("Install problem!"),
-				    /* TRANSLATORS: the MateConf schema was not installed properly */
-				    _("The configuration defaults for MATE Power Manager have not been installed correctly.\n"
-				      "Please contact your computer administrator."),
-				    GPM_MANAGER_NOTIFY_TIMEOUT_LONG,
-				    GTK_STOCK_DIALOG_WARNING,
-				    NOTIFY_URGENCY_NORMAL);
-		egg_error ("no GSettings schema installed!");
-	}
 
 	/* coldplug so we are in the correct state at startup */
 	g_object_get (manager->priv->client,
