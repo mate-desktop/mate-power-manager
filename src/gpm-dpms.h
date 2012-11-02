@@ -71,8 +71,6 @@ gboolean	 gpm_dpms_get_mode	 	(GpmDpms	*dpms,
 gboolean	 gpm_dpms_set_mode	 	(GpmDpms	*dpms,
 						 GpmDpmsMode	 mode,
 						 GError		**error);
-const gchar	*gpm_dpms_mode_to_string	(GpmDpmsMode	 mode);
-GpmDpmsMode	 gpm_dpms_mode_from_string	(const gchar	*mode);
 void		 gpm_dpms_test			(gpointer	 data);
 
 G_END_DECLS

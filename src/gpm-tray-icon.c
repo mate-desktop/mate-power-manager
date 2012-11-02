@@ -38,7 +38,6 @@
 
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
-#include <mateconf/mateconf-client.h>
 #include <libupower-glib/upower.h>
 
 #include "egg-debug.h"
@@ -55,7 +54,7 @@ static void     gpm_tray_icon_finalize   (GObject	   *object);
 
 struct GpmTrayIconPrivate
 {
-	MateConfClient		*conf;
+	GSettings		*settings;
 	GpmEngine		*engine;
 	GtkStatusIcon		*status_icon;
 	gboolean		 show_actions;
@@ -339,22 +338,17 @@ gpm_tray_icon_activate_cb (GtkStatusIcon *status_icon, GpmTrayIcon *icon)
 }
 
 /**
- * gpm_conf_mateconf_key_changed_cb:
+ * gpm_tray_icon_settings_changed_cb:
  *
- * We might have to do things when the mateconf keys change; do them here.
+ * We might have to do things when the settings change; do them here.
  **/
 static void
-gpm_conf_mateconf_key_changed_cb (MateConfClient *client, guint cnxn_id, MateConfEntry *entry, GpmTrayIcon *icon)
+gpm_tray_icon_settings_changed_cb (GSettings *settings, const gchar *key, GpmTrayIcon *icon)
 {
-	MateConfValue *value;
 	gboolean allowed_in_menu;
 
-	value = mateconf_entry_get_value (entry);
-	if (value == NULL)
-		return;
-
-	if (strcmp (entry->key, GPM_CONF_UI_SHOW_ACTIONS) == 0) {
-		allowed_in_menu = mateconf_value_get_bool (value);
+	if (g_strcmp0 (key, GPM_SETTINGS_SHOW_ACTIONS) == 0) {
+		allowed_in_menu = g_settings_get_boolean (settings, key);
 		gpm_tray_icon_enable_actions (icon, allowed_in_menu);
 	}
 }
@@ -373,13 +367,9 @@ gpm_tray_icon_init (GpmTrayIcon *icon)
 
 	icon->priv->engine = gpm_engine_new ();
 
-	icon->priv->conf = mateconf_client_get_default ();
-	/* watch mate-power-manager keys */
-	mateconf_client_add_dir (icon->priv->conf, GPM_CONF_DIR,
-			      MATECONF_CLIENT_PRELOAD_RECURSIVE, NULL);
-	mateconf_client_notify_add (icon->priv->conf, GPM_CONF_DIR,
-				 (MateConfClientNotifyFunc) gpm_conf_mateconf_key_changed_cb,
-				 icon, NULL, NULL);
+	icon->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
+	g_signal_connect (icon->priv->settings, "changed",
+			  G_CALLBACK (gpm_tray_icon_settings_changed_cb), icon);
 
 	icon->priv->status_icon = gtk_status_icon_new ();
 	g_signal_connect_object (G_OBJECT (icon->priv->status_icon),
@@ -391,7 +381,7 @@ gpm_tray_icon_init (GpmTrayIcon *icon)
 				 G_CALLBACK (gpm_tray_icon_activate_cb),
 				 icon, 0);
 
-	allowed_in_menu = mateconf_client_get_bool (icon->priv->conf, GPM_CONF_UI_SHOW_ACTIONS, NULL);
+	allowed_in_menu = g_settings_get_boolean (icon->priv->settings, GPM_SETTINGS_SHOW_ACTIONS);
 	gpm_tray_icon_enable_actions (icon, allowed_in_menu);
 }
 
