@@ -1,0 +1,349 @@
+<schemalist>
+  <enum id="org.mate.power-manager.ActionType">
+    <value nick="blank" value="0"/>
+    <value nick="suspend" value="1"/>
+    <value nick="shutdown" value="2"/>
+    <value nick="hibernate" value="3"/>
+    <value nick="interactive" value="4"/>
+    <value nick="nothing" value="5"/>
+  </enum>
+  <enum id="org.mate.power-manager.IconPolicy">
+    <value nick="always" value="0"/>
+    <value nick="present" value="1"/>
+    <value nick="charge" value="2"/>
+    <value nick="low" value="3"/>
+    <value nick="critical" value="4"/>
+    <value nick="never" value="5"/>
+  </enum>
+  <enum id="org.mate.power-manager.DpmsMethod">
+    <value nick="standby" value="1"/>
+    <value nick="suspend" value="2"/>
+    <value nick="off" value="3"/>
+  </enum>
+  <schema id="org.mate.power-manager" path="/org/mate/power-manager/">
+    <key name="action-sleep-type-battery" enum="org.mate.power-manager.ActionType">
+      <default>'hibernate'</default>
+      <_summary>Whether to hibernate, suspend or do nothing when inactive</_summary>
+      <_description>The type of sleeping that should be performed when the computer is inactive.</_description>
+    </key>
+    <key name="action-critical-battery" enum="org.mate.power-manager.ActionType">
+      <default>'hibernate'</default>
+      <_summary>Battery critical low action</_summary>
+      <_description>The action to take when the battery is critically low.</_description>
+    </key>
+    <key name="event-when-closed-battery" type="b">
+      <default>true</default>
+      <_summary>If the battery event should occur when the lid is shut and the power disconnected</_summary>
+      <_description>If the battery lid close event should occur (for example 'Suspend when lid closed on battery') when the lid is previously shut and the AC power disconnected at a later time.</_description>
+    </key>
+    <key name="action-sleep-type-ac" enum="org.mate.power-manager.ActionType">
+      <default>'suspend'</default>
+      <_summary>Whether to hibernate, suspend or do nothing when inactive</_summary>
+      <_description>The type of sleeping that should be performed when the computer is inactive.</_description>
+    </key>
+    <key name="action-critical-ups" enum="org.mate.power-manager.ActionType">
+      <default>'shutdown'</default>
+      <_summary>UPS critical low action</_summary>
+      <_description>The action to take when the UPS is critically low.</_description>
+    </key>
+    <key name="action-low-ups" enum="org.mate.power-manager.ActionType">
+      <default>'hibernate'</default>
+      <_summary>UPS low power action</_summary>
+      <_description>The action to take when the UPS is low.</_description>
+    </key>
+    <key name="backlight-enable" type="b">
+      <default>true</default>
+      <_summary>Allow backlight brightness adjustment</_summary>
+      <_description>If the screen brightness should be changed when switching between AC and battery power.</_description>
+    </key>
+    <key name="backlight-battery-reduce" type="b">
+      <default>true</default>
+      <_summary>Reduce the backlight brightness when on battery power</_summary>
+      <_description>If the screen should be reduced in brightness when the computer is on battery power.</_description>
+    </key>
+    <key name="idle-brightness" type="i">
+      <default>30</default>
+      <_summary>The brightness of the screen when idle</_summary>
+      <_description>This is the laptop panel screen brightness used when the session is idle. Only valid when use-time-for-policy is true.</_description>
+    </key>
+    <key name="idle-dim-battery" type="b">
+      <default>true</default>
+      <_summary>Dim the screen after a period of inactivity when on battery power</_summary>
+      <_description>If the screen should be dimmed to save power when the computer is idle when on battery power.</_description>
+    </key>
+    <key name="idle-dim-time" type="i">
+      <default>10</default>
+      <_summary>The default amount of time to dim the screen after idle</_summary>
+      <_description>The default amount of time to dim the screen after idle.</_description>
+    </key>
+    <key name="brightness-dim-battery" type="i">
+      <default>50</default>
+      <_summary>LCD dimming amount when on battery</_summary>
+      <_description>The amount to dim the brightness of the display when on battery power. Possible values are between 0 and 100.</_description>
+    </key>
+    <key name="idle-dim-ac" type="b">
+      <default>false</default>
+      <_summary>Dim the screen after a period of inactivity when on AC power</_summary>
+      <_description>If the screen should be dimmed to save power when the computer is idle when on AC power.</_description>
+    </key>
+    <key name="dpms-method-ac" enum="org.mate.power-manager.DpmsMethod">
+      <default>'off'</default>
+      <_summary>Method used to blank screen on AC</_summary>
+      <_description>The DPMS method used to blank the screen when on AC power.</_description>
+    </key>
+    <key name="dpms-method-battery" enum="org.mate.power-manager.DpmsMethod">
+      <default>'off'</default>
+      <_summary>Method used to blank screen on battery</_summary>
+      <_description>The DPMS method used to blank the screen when on battery power.</_description>
+    </key>
+    <key name="brightness-ac" type="d">
+      <default>100.0</default>
+      <_summary>LCD brightness when on AC</_summary>
+      <_description>The brightness of the display when on AC power. Possible values are between 0.0 and 100.0.</_description>
+    </key>
+    <key name="button-suspend" enum="org.mate.power-manager.ActionType">
+      <default>'suspend'</default>
+      <_summary>Suspend button action</_summary>
+      <_description>The action to take when the system suspend button is pressed.</_description>
+    </key>
+    <key name="button-hibernate" enum="org.mate.power-manager.ActionType">
+      <default>'hibernate'</default>
+      <_summary>Hibernate button action</_summary>
+      <_description>The action to take when the system hibernate button is pressed.</_description>
+    </key>
+    <key name="button-power" enum="org.mate.power-manager.ActionType">
+      <default>'interactive'</default>
+      <_summary>Power button action</_summary>
+      <_description>The action to take when the system power button is pressed.</_description>
+    </key>
+    <key name="button-lid-battery" enum="org.mate.power-manager.ActionType">
+      <default>'suspend'</default>
+      <_summary>Laptop lid close action on battery</_summary>
+      <_description>The action to take when the laptop lid is closed and the laptop is on battery power.</_description>
+    </key>
+    <key name="button-lid-ac" enum="org.mate.power-manager.ActionType">
+      <default>'suspend'</default>
+      <_summary>Laptop lid close action when on AC</_summary>
+      <_description>The action to take when the laptop lid is closed and the laptop is on AC power.</_description>
+    </key>
+    <key name="use-time-for-policy" type="b">
+      <default>true</default>
+      <_summary>Whether to use time-based notifications</_summary>
+      <_description>If time based notifications should be used. If set to false, then the percentage change is used instead, which may fix a broken ACPI BIOS.</_description>
+    </key>
+    <key name="check-type-cpu" type="b">
+      <default>false</default>
+      <_summary>Check CPU load before sleeping</_summary>
+      <_description>If the CPU load should be checked before doing the idle action.</_description>
+    </key>
+    <key name="network-sleep" type="b">
+      <default>false</default>
+      <_summary>Whether NetworkManager should be connected and disconnected on sleep.</_summary>
+      <_description>Whether NetworkManager should disconnect before suspending or hibernating and connect on resume.</_description>
+    </key>
+    <key name="lock-use-screensaver" type="b">
+      <default>true</default>
+      <_summary>Use mate-screensaver lock setting</_summary>
+      <_description>Whether to use the screen lock setting of mate-screensaver to decide if the screen is locked after a hibernate, suspend or blank screen.</_description>
+    </key>
+    <key name="lock-blank-screen" type="b">
+      <default>true</default>
+      <_summary>Lock screen when blanked</_summary>
+      <_description>Whether the screen is locked when the screen is turned off. Only used if lock-use-screensaver is false.</_description>
+    </key>
+    <key name="lock-suspend" type="b">
+      <default>true</default>
+      <_summary>Lock screen on suspend</_summary>
+      <_description>Whether the screen is locked when the computer wakes up from a suspend. Only used if lock-use-screensaver is false.</_description>
+    </key>
+    <key name="lock-hibernate" type="b">
+      <default>true</default>
+      <_summary>Lock screen on hibernate</_summary>
+      <_description>Whether the screen is locked when the computer wakes up from a hibernate. Only used if lock-use-screensaver is false.</_description>
+    </key>
+    <key name="lock-keyring-suspend" type="b">
+      <default>false</default>
+      <_summary>Lock MATE keyring on sleep</_summary>
+      <_description>Whether the MATE keyring is locked before the computer enters suspend. This means the keyring will have to be unlocked on resume.</_description>
+    </key>
+    <key name="lock-keyring-hibernate" type="b">
+      <default>true</default>
+      <_summary>Lock MATE keyring on sleep</_summary>
+      <_description>Whether the MATE keyring is locked before the computer enters hibernate. This means the keyring will have to be unlocked on resume.</_description>
+    </key>
+    <key name="spindown-enable-ac" type="b">
+      <default>false</default>
+      <_summary>If the low-power mode should be enabled when on AC</_summary>
+      <_description>If the system low-power mode should be enabled when on AC power.</_description>
+    </key>
+    <key name="spindown-enable-battery" type="b">
+      <default>true</default>
+      <_summary>If the low-power mode should be enabled when on battery</_summary>
+      <_description>If the system low-power mode should be enabled when on laptop battery power.</_description>
+    </key>
+    <key name="spindown-timeout-ac" type="i">
+      <default>600</default>
+      <_summary>Seconds of inactivity to spin down when on AC</_summary>
+      <_description>The number of seconds of inactivity to spin down the disks when on AC power.</_description>
+    </key>
+    <key name="spindown-timeout-battery" type="i">
+      <default>60</default>
+      <_summary>Seconds of inactivity to spin down when on battery</_summary>
+      <_description>The number of seconds of inactivity to spin down the disks when on battery power.</_description>
+    </key>
+    <key name="notify-perhaps-recall" type="b">
+      <default>true</default>
+      <_summary>If we should show the recalled battery warning for a broken battery</_summary>
+      <_description>If we should show the recalled battery warning for a broken battery. Set this to false only if you know your battery is okay.</_description>
+    </key>
+    <key name="notify-low-capacity" type="b">
+      <default>true</default>
+      <_summary>If we should show the low capacity warning for a broken battery</_summary>
+      <_description>If we should show the low capacity warning for a broken battery.</_description>
+    </key>
+    <key name="notify-discharging" type="b">
+      <default>true</default>
+      <_summary>Notify when AC adapter is disconnected</_summary>
+      <_description>If the user should be notified when the AC adapter is disconnected.</_description>
+    </key>
+    <key name="notify-fully-charged" type="b">
+      <default>false</default>
+      <_summary>Notify when fully charged</_summary>
+      <_description>If a notification message should be displayed when the battery is fully charged.</_description>
+    </key>
+    <key name="notify-sleep-failed" type="b">
+      <default>true</default>
+      <_summary>Notify on a sleep failure</_summary>
+      <_description>If a notification message should be displayed after suspend or hibernate failed.</_description>
+    </key>
+    <key name="notify-sleep-failed-uri" type="s">
+      <default>''</default>
+      <_summary>The URI to show to the user on sleep failure</_summary>
+      <_description>When sleep fails we can show the user a button to help fix the situation. Leave this blank if the button should not be shown.</_description>
+    </key>
+    <key name="notify-low-power" type="b">
+      <default>true</default>
+      <_summary>Notify on a low power</_summary>
+      <_description>If a notification message should be displayed when the battery is getting low.</_description>
+    </key>
+    <key name="info-history-graph-points" type="b">
+      <default>true</default>
+      <_summary>Whether we should show the history data points</_summary>
+      <_description>Whether we should show the history data points in the statistics window.</_description>
+    </key>
+    <key name="info-history-graph-smooth" type="b">
+      <default>true</default>
+      <_summary>Whether we should smooth the history data</_summary>
+      <_description>Whether we should smooth the history data in the graph.</_description>
+    </key>
+    <key name="info-history-type" type="s">
+      <default>'power'</default>
+      <_summary>The default graph type to show for history</_summary>
+      <_description>The default graph type to show in the history window.</_description>
+    </key>
+    <key name="info-history-time" type="i">
+      <default>21600</default>
+      <_summary>The maximum time displayed for history</_summary>
+      <_description>The maximum duration of time displayed on the x-axis of the history graph.</_description>
+    </key>
+    <key name="info-stats-graph-points" type="b">
+      <default>true</default>
+      <_summary>Whether we should show the stats data points</_summary>
+      <_description>Whether we should show the stats data points in the statistics window.</_description>
+    </key>
+    <key name="info-stats-graph-smooth" type="b">
+      <default>true</default>
+      <_summary>Whether we should smooth the stats data</_summary>
+      <_description>Whether we should smooth the stats data in the graph.</_description>
+    </key>
+    <key name="info-stats-type" type="s">
+      <default>'power'</default>
+      <_summary>The default graph type to show for stats</_summary>
+      <_description>The default graph type to show in the stats window.</_description>
+    </key>
+    <key name="info-page-number" type="i">
+      <default>0</default>
+      <_summary>The index of the page number to show by default</_summary>
+      <_description>The index of the page number to show by default which is used to return focus to the correct page.</_description>
+    </key>
+    <key name="info-last-device" type="s">
+      <default>''</default>
+      <_summary>The ID of the last device selected</_summary>
+      <_description>The identifier of the last device which is used to return focus to the correct device.</_description>
+    </key>
+    <key name="percentage-low" type="i">
+      <default>10</default>
+      <_summary>Percentage considered low</_summary>
+      <_description>The percentage of the battery when it is considered low. Only valid when use-time-for-policy is false.</_description>
+    </key>
+    <key name="percentage-critical" type="i">
+      <default>3</default>
+      <_summary>Percentage considered critical</_summary>
+      <_description>The percentage of the battery when it is considered critical. Only valid when use-time-for-policy is false.</_description>
+    </key>
+    <key name="percentage-action" type="i">
+      <default>2</default>
+      <_summary>Percentage action is taken</_summary>
+      <_description>The percentage of the battery when the critical action is performed. Only valid when use-time-for-policy is false.</_description>
+    </key>
+    <key name="time-low" type="i">
+      <default>1200</default>
+      <_summary>The time remaining when low</_summary>
+      <_description>The time remaining in seconds of the battery when it is considered low. Only valid when use-time-for-policy is true.</_description>
+    </key>
+    <key name="time-critical" type="i">
+      <default>300</default>
+      <_summary>The time remaining when critical</_summary>
+      <_description>The time remaining in seconds of the battery when it is considered critical. Only valid when use-time-for-policy is true.</_description>
+    </key>
+    <key name="time-action" type="i">
+      <default>120</default>
+      <_summary>The time remaining when action is taken</_summary>
+      <_description>The time remaining in seconds of the battery when critical action is taken. Only valid when use-time-for-policy is true.</_description>
+    </key>
+    <key name="sleep-computer-battery" type="i">
+      <default>0</default>
+      <_summary>Sleep timeout computer when on battery</_summary>
+      <_description>The amount of time in seconds the computer on battery power needs to be inactive before it goes to sleep.</_description>
+    </key>
+    <key name="sleep-computer-ac" type="i">
+      <default>0</default>
+      <_summary>Sleep timeout computer when on AC</_summary>
+      <_description>The amount of time in seconds the computer on AC power needs to be inactive before it goes to sleep.</_description>
+    </key>
+    <key name="sleep-computer-ups" type="i">
+      <default>0</default>
+      <_summary>Sleep timeout computer when on UPS</_summary>
+      <_description>The amount of time in seconds the computer on UPS power needs to be inactive before it goes to sleep.</_description>
+    </key>
+    <key name="sleep-display-ac" type="i">
+      <default>1800</default>
+      <_summary>Sleep timeout display when on AC</_summary>
+      <_description>The amount of time in seconds before the display goes to sleep when the computer is on AC power.</_description>
+    </key>
+    <key name="sleep-display-battery" type="i">
+      <default>600</default>
+      <_summary>Sleep timeout display when on battery</_summary>
+      <_description>The amount of time in seconds the computer on battery power needs to be inactive before the display goes to sleep.</_description>
+    </key>
+    <key name="sleep-display-ups" type="i">
+      <default>600</default>
+      <_summary>Sleep timeout display when on UPS</_summary>
+      <_description>The amount of time in seconds the computer on UPS power needs to be inactive before the display goes to sleep.</_description>
+    </key>
+    <key name="enable-sound" type="b">
+      <default>true</default>
+      <_summary>If sounds should be used</_summary>
+      <_description>If sounds should be used when the power is critically low, or inhibit requests have stopped the policy action.</_description>
+    </key>
+    <key name="show-actions" type="b">
+      <default>true</default>
+      <_summary>If preferences and statistics items should be shown in the context menu</_summary>
+    </key>
+    <key name="icon-policy" enum="org.mate.power-manager.IconPolicy">
+      <default>'present'</default>
+      <_summary>When to show the notification icon</_summary>
+      <_description>Display options for the notification icon.</_description>
+    </key>
+  </schema>
+</schemalist>

@@ -30,7 +30,6 @@
 #include <dbus/dbus-glib.h>
 #include <math.h>
 #include <string.h>
-#include <mateconf/mateconf-client.h>
 #include <libupower-glib/upower.h>
 
 #include "egg-debug.h"
@@ -58,8 +57,7 @@ struct GpmPrefsPrivate
 	gboolean		 can_shutdown;
 	gboolean		 can_suspend;
 	gboolean		 can_hibernate;
-	guint			 idle_delay;
-	MateConfClient		*conf;
+	GSettings		*settings;
 	EggConsoleKit		*console;
 };
 
@@ -137,13 +135,10 @@ gpm_prefs_help_cb (GtkWidget *widget, GpmPrefs *prefs)
 static void
 gpm_prefs_icon_radio_cb (GtkWidget *widget, GpmPrefs *prefs)
 {
-	const gchar *str;
 	gint policy;
 
 	policy = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (widget), "policy"));
-	str = gpm_icon_policy_to_string (policy);
-	egg_debug ("Changing %s to %s", GPM_CONF_UI_ICON_POLICY, str);
-	mateconf_client_set_string (prefs->priv->conf, GPM_CONF_UI_ICON_POLICY, str, NULL);
+	g_settings_set_enum (prefs->priv->settings, GPM_SETTINGS_ICON_POLICY, policy);
 }
 
 /**
@@ -158,58 +153,6 @@ gpm_prefs_format_percentage_cb (GtkScale *scale, gdouble value)
 }
 
 /**
- * gpm_prefs_brightness_slider_changed_cb:
- * @range: The GtkRange object
- * @gpm_pref_key: The MateConf key for this preference setting.
- **/
-static void
-gpm_prefs_brightness_slider_changed_cb (GtkRange *range, GpmPrefs *prefs)
-{
-	gdouble value;
-	gchar *gpm_pref_key;
-
-	value = gtk_range_get_value (range);
-	gpm_pref_key = (char *) g_object_get_data (G_OBJECT (range), "conf_key");
-
-	g_object_set_data (G_OBJECT (range), "conf_key", (gpointer) gpm_pref_key);
-	egg_debug ("Changing %s to %i", gpm_pref_key, (int) value);
-	mateconf_client_set_int (prefs->priv->conf, gpm_pref_key, (gint) value, NULL);
-}
-
-/**
- * gpm_prefs_setup_brightness_slider:
- * @prefs: This prefs class instance
- * @widget_name: The GtkWidget name
- * @gpm_pref_key: The MateConf key for this preference setting.
- **/
-static GtkWidget *
-gpm_prefs_setup_brightness_slider (GpmPrefs *prefs, const gchar *widget_name, const gchar *gpm_pref_key)
-{
-	GtkWidget *widget;
-	int value;
-	gboolean is_writable;
-
-	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, widget_name));
-
-	g_signal_connect (G_OBJECT (widget), "format-value",
-			  G_CALLBACK (gpm_prefs_format_percentage_cb), NULL);
-
-	value = mateconf_client_get_int (prefs->priv->conf, gpm_pref_key, NULL);
-	is_writable = mateconf_client_key_is_writable (prefs->priv->conf, gpm_pref_key, NULL);
-
-	gtk_widget_set_sensitive (widget, is_writable);
-
-	gtk_range_set_value (GTK_RANGE (widget), value);
-
-	g_object_set_data (G_OBJECT (widget), "conf_key", (gpointer) gpm_pref_key);
-
-	g_signal_connect (G_OBJECT (widget), "value-changed",
-			  G_CALLBACK (gpm_prefs_brightness_slider_changed_cb),
-			  prefs);
-	return widget;
-}
-
-/**
  * gpm_prefs_action_combo_changed_cb:
  **/
 static void
@@ -218,17 +161,14 @@ gpm_prefs_action_combo_changed_cb (GtkWidget *widget, GpmPrefs *prefs)
 	GpmActionPolicy policy;
 	const GpmActionPolicy *actions;
 	const gchar *gpm_pref_key;
-	const gchar *action;
 	guint active;
 
 	actions = (const GpmActionPolicy *) g_object_get_data (G_OBJECT (widget), "actions");
-	gpm_pref_key = (const gchar *) g_object_get_data (G_OBJECT (widget), "conf_key");
+	gpm_pref_key = (const gchar *) g_object_get_data (G_OBJECT (widget), "settings_key");
 
 	active = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
 	policy = actions[active];
-	action = gpm_action_policy_to_string (policy);
-	egg_debug ("Changing %s to %s", gpm_pref_key, action);
-	mateconf_client_set_string (prefs->priv->conf, gpm_pref_key, action, NULL);
+	g_settings_set_enum (prefs->priv->settings, gpm_pref_key, policy);
 }
 
 /**
@@ -243,13 +183,13 @@ gpm_prefs_action_time_changed_cb (GtkWidget *widget, GpmPrefs *prefs)
 	guint active;
 
 	values = (const gint *) g_object_get_data (G_OBJECT (widget), "values");
-	gpm_pref_key = (const gchar *) g_object_get_data (G_OBJECT (widget), "conf_key");
+	gpm_pref_key = (const gchar *) g_object_get_data (G_OBJECT (widget), "settings_key");
 
 	active = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
 	value = values[active];
 
 	egg_debug ("Changing %s to %i", gpm_pref_key, value);
-	mateconf_client_set_int (prefs->priv->conf, gpm_pref_key, value, NULL);
+	g_settings_set_int (prefs->priv->settings, gpm_pref_key, value);
 }
 
 /**
@@ -289,14 +229,13 @@ gpm_prefs_actions_destroy_cb (GpmActionPolicy *array)
  * gpm_prefs_setup_action_combo:
  * @prefs: This prefs class instance
  * @widget_name: The GtkWidget name
- * @gpm_pref_key: The MateConf key for this preference setting.
+ * @gpm_pref_key: The settings key for this preference setting.
  * @actions: The actions to associate in an array.
  **/
 static void
 gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 				  const gchar *gpm_pref_key, const GpmActionPolicy *actions)
 {
-	gchar *value_txt;
 	gint i;
 	gboolean is_writable;
 	GtkWidget *widget;
@@ -308,14 +247,13 @@ gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, widget_name));
 	gpm_prefs_set_combo_simple_text (widget);
 
-	value_txt = mateconf_client_get_string (prefs->priv->conf, gpm_pref_key, NULL);
-	is_writable = mateconf_client_key_is_writable (prefs->priv->conf, gpm_pref_key, NULL);
-	value = gpm_action_policy_from_string (value_txt);
+	value = g_settings_get_enum (prefs->priv->settings, gpm_pref_key);
+	is_writable = g_settings_is_writable (prefs->priv->settings, gpm_pref_key);
 
 	gtk_widget_set_sensitive (widget, is_writable);
 
 	array = g_ptr_array_new ();
-	g_object_set_data (G_OBJECT (widget), "conf_key", (gpointer) gpm_pref_key);
+	g_object_set_data (G_OBJECT (widget), "settings_key", (gpointer) gpm_pref_key);
 	g_signal_connect (G_OBJECT (widget), "changed",
 			  G_CALLBACK (gpm_prefs_action_combo_changed_cb), prefs);
 
@@ -368,7 +306,7 @@ gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 				g_ptr_array_add (array, GINT_TO_POINTER (policy));
 			#endif
 		} else if (policy == GPM_ACTION_POLICY_NOTHING) {
-			/* we only add do nothing in the GUI if the user has explicitly specified this in MateConf */
+			/* we only add do nothing in the GUI if the user has explicitly specified this in the settings */
 			if (value == GPM_ACTION_POLICY_NOTHING) {
 				#if GTK_CHECK_VERSION (2, 24, 0)
 					gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Do nothing"));
@@ -379,7 +317,7 @@ gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 				#endif
 			}
 		} else {
-			egg_warning ("Unknown action read from conf: %i", policy);
+			egg_warning ("Unknown action read from settings: %i", policy);
 		}
 	}
 
@@ -391,23 +329,21 @@ gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 
 	g_object_set_data_full (G_OBJECT (widget), "actions", (gpointer) actions_added, (GDestroyNotify) gpm_prefs_actions_destroy_cb);
 
-	/* set what we have in MateConf */
+	/* set what we have in the settings */
 	for (i=0; actions_added[i] != -1; i++) {
 		policy = actions_added[i];
-		egg_debug ("added: %s", gpm_action_policy_to_string (policy));
 		if (value == policy)
 			 gtk_combo_box_set_active (GTK_COMBO_BOX (widget), i);
 	}
 
 	g_ptr_array_unref (array);
-	g_free (value_txt);
 }
 
 /**
  * gpm_prefs_setup_time_combo:
  * @prefs: This prefs class instance
  * @widget_name: The GtkWidget name
- * @gpm_pref_key: The MateConf key for this preference setting.
+ * @gpm_pref_key: The settings key for this preference setting.
  * @actions: The actions to associate in an array.
  **/
 static void
@@ -423,11 +359,11 @@ gpm_prefs_setup_time_combo (GpmPrefs *prefs, const gchar *widget_name,
 	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, widget_name));
 	gpm_prefs_set_combo_simple_text (widget);
 
-	value = mateconf_client_get_int (prefs->priv->conf, gpm_pref_key, NULL);
-	is_writable = mateconf_client_key_is_writable (prefs->priv->conf, gpm_pref_key, NULL);
+	value = g_settings_get_int (prefs->priv->settings, gpm_pref_key);
+	is_writable = g_settings_is_writable (prefs->priv->settings, gpm_pref_key);
 	gtk_widget_set_sensitive (widget, is_writable);
 
-	g_object_set_data (G_OBJECT (widget), "conf_key", (gpointer) gpm_pref_key);
+	g_object_set_data (G_OBJECT (widget), "settings_key", (gpointer) gpm_pref_key);
 	g_object_set_data (G_OBJECT (widget), "values", (gpointer) values);
 
 	/* add each time */
@@ -461,55 +397,6 @@ gpm_prefs_setup_time_combo (GpmPrefs *prefs, const gchar *widget_name,
 }
 
 /**
- * gpm_prefs_checkbox_lock_cb:
- * @widget: The GtkWidget object
- * @gpm_pref_key: The MateConf key for this preference setting.
- **/
-static void
-gpm_prefs_checkbox_lock_cb (GtkWidget *widget, GpmPrefs *prefs)
-{
-	gboolean checked;
-	gchar *gpm_pref_key;
-
-	checked = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget));
-
-	gpm_pref_key = (char *) g_object_get_data (G_OBJECT (widget), "conf_key");
-	egg_debug ("Changing %s to %i", gpm_pref_key, checked);
-	mateconf_client_set_bool (prefs->priv->conf, gpm_pref_key, checked, NULL);
-}
-
-/**
- * gpm_prefs_setup_checkbox:
- * @prefs: This prefs class instance
- * @widget_name: The GtkWidget name
- * @gpm_pref_key: The MateConf key for this preference setting.
- **/
-static GtkWidget *
-gpm_prefs_setup_checkbox (GpmPrefs *prefs, const gchar *widget_name, const gchar *gpm_pref_key)
-{
-	gboolean checked;
-	GtkWidget *widget;
-
-	egg_debug ("Setting up %s", gpm_pref_key);
-
-	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, widget_name));
-
-	checked = mateconf_client_get_bool (prefs->priv->conf, gpm_pref_key, NULL);
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), checked);
-
-	g_object_set_data (G_OBJECT (widget), "conf_key", (gpointer) gpm_pref_key);
-
-	/* manually do the callback in case we hide elements in the cb */
-	gpm_prefs_checkbox_lock_cb (widget, prefs);
-
-	/* setup after set */
-	g_signal_connect (widget, "clicked",
-			  G_CALLBACK (gpm_prefs_checkbox_lock_cb), prefs);
-
-	return widget;
-}
-
-/**
  * gpm_prefs_close_cb:
  * @widget: The GtkWidget object
  * @prefs: This prefs class instance
@@ -534,46 +421,10 @@ gpm_prefs_delete_event_cb (GtkWidget *widget, GdkEvent *event, GpmPrefs *prefs)
 	return FALSE;
 }
 
-/**
- * gpm_conf_mateconf_key_changed_cb:
- *
- * We might have to do things when the mateconf keys change; do them here.
- **/
-static void
-gpm_conf_mateconf_key_changed_cb (MateConfClient *client, guint cnxn_id, MateConfEntry *entry, GpmPrefs *prefs)
-{
-	MateConfValue *value;
-	gint brightness;
-	GtkWidget *widget;
-	gboolean enabled;
-
-	value = mateconf_entry_get_value (entry);
-	if (value == NULL)
-		return;
-
-	if (g_strcmp0 (entry->key, GPM_CONF_BACKLIGHT_BRIGHTNESS_AC) == 0) {
-		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hscale_ac_brightness"));
-		brightness = mateconf_value_get_int (value);
-		gtk_range_set_value (GTK_RANGE (widget), brightness);
-	}
-
-	if (g_strcmp0 (entry->key, GPM_CONF_DISKS_SPINDOWN_ENABLE_AC) == 0) {
-		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_ac_spindown"));
-		enabled = mateconf_value_get_bool (value);
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), enabled);
-
-	} else if (g_strcmp0 (entry->key, GPM_CONF_DISKS_SPINDOWN_ENABLE_BATT) == 0) {
-		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_battery_spindown"));
-		enabled = mateconf_value_get_bool (value);
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), enabled);
-	}
-}
-
 /** setup the notification page */
 static void
 prefs_setup_notification (GpmPrefs *prefs)
 {
-	gchar *icon_policy_str;
 	gint icon_policy;
 	GtkWidget *radiobutton_icon_always;
 	GtkWidget *radiobutton_icon_present;
@@ -582,9 +433,7 @@ prefs_setup_notification (GpmPrefs *prefs)
 	GtkWidget *radiobutton_icon_never;
 	gboolean is_writable;
 
-	icon_policy_str = mateconf_client_get_string (prefs->priv->conf, GPM_CONF_UI_ICON_POLICY, NULL);
-	icon_policy = gpm_icon_policy_from_string (icon_policy_str);
-	g_free (icon_policy_str);
+	icon_policy = g_settings_get_enum (prefs->priv->settings, GPM_SETTINGS_ICON_POLICY);
 
 	radiobutton_icon_always = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder,
 						  "radiobutton_notification_always"));
@@ -597,7 +446,7 @@ prefs_setup_notification (GpmPrefs *prefs)
 	radiobutton_icon_never = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder,
 						 "radiobutton_notification_never"));
 
-	is_writable = mateconf_client_key_is_writable (prefs->priv->conf, GPM_CONF_UI_ICON_POLICY, NULL);
+	is_writable = g_settings_is_writable (prefs->priv->settings, GPM_SETTINGS_ICON_POLICY);
 	gtk_widget_set_sensitive (radiobutton_icon_always, is_writable);
 	gtk_widget_set_sensitive (radiobutton_icon_present, is_writable);
 	gtk_widget_set_sensitive (radiobutton_icon_charge, is_writable);
@@ -626,7 +475,7 @@ prefs_setup_notification (GpmPrefs *prefs)
 	g_object_set_data (G_OBJECT (radiobutton_icon_never), "policy",
 			   GINT_TO_POINTER (GPM_ICON_POLICY_NEVER));
 
-	/* only connect the callbacks after we set the value, else the conf
+	/* only connect the callbacks after we set the value, else the settings
 	 * keys gets written to (for a split second), and the icon flickers. */
 	g_signal_connect (radiobutton_icon_always, "clicked",
 			  G_CALLBACK (gpm_prefs_icon_radio_cb), prefs);
@@ -669,23 +518,33 @@ prefs_setup_ac (GpmPrefs *prefs)
 		 -1};
 
 	gpm_prefs_setup_time_combo (prefs, "combobox_ac_computer",
-					GPM_CONF_TIMEOUT_SLEEP_COMPUTER_AC,
+					GPM_SETTINGS_SLEEP_COMPUTER_AC,
 					computer_times);
 	gpm_prefs_setup_time_combo (prefs, "combobox_ac_display",
-					GPM_CONF_TIMEOUT_SLEEP_DISPLAY_AC,
+					GPM_SETTINGS_SLEEP_DISPLAY_AC,
 					display_times);
 
 	gpm_prefs_setup_action_combo (prefs, "combobox_ac_lid",
-					  GPM_CONF_BUTTON_LID_AC,
+					  GPM_SETTINGS_BUTTON_LID_AC,
 					  button_lid_actions);
 
-	gpm_prefs_setup_brightness_slider (prefs, "hscale_ac_brightness",
-					   GPM_CONF_BACKLIGHT_BRIGHTNESS_AC);
+	/* setup brightness slider */
+	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hscale_ac_brightness"));
+	g_settings_bind (prefs->priv->settings, GPM_SETTINGS_BRIGHTNESS_AC,
+			 gtk_range_get_adjustment (GTK_RANGE (widget)), "value",
+			 G_SETTINGS_BIND_DEFAULT);
+	g_signal_connect (G_OBJECT (widget), "format-value",
+			  G_CALLBACK (gpm_prefs_format_percentage_cb), NULL);
 
-	gpm_prefs_setup_checkbox (prefs, "checkbutton_ac_display_dim",
-				  GPM_CONF_BACKLIGHT_IDLE_DIM_AC);
-	gpm_prefs_setup_checkbox (prefs, "checkbutton_ac_spindown",
-				  GPM_CONF_DISKS_SPINDOWN_ENABLE_AC);
+	/* set up the checkboxes */
+	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_ac_display_dim"));
+	g_settings_bind (prefs->priv->settings, GPM_SETTINGS_IDLE_DIM_AC,
+			 widget, "active",
+			 G_SETTINGS_BIND_DEFAULT);
+	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_ac_spindown"));
+	g_settings_bind (prefs->priv->settings, GPM_SETTINGS_SPINDOWN_ENABLE_AC,
+			 widget, "active",
+			 G_SETTINGS_BIND_DEFAULT);
 
 	if (prefs->priv->has_button_lid == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_ac_lid"));
@@ -752,10 +611,10 @@ prefs_setup_battery (GpmPrefs *prefs)
 		 -1};
 
 	gpm_prefs_setup_time_combo (prefs, "combobox_battery_computer",
-					GPM_CONF_TIMEOUT_SLEEP_COMPUTER_BATT,
+					GPM_SETTINGS_SLEEP_COMPUTER_BATT,
 					computer_times);
 	gpm_prefs_setup_time_combo (prefs, "combobox_battery_display",
-					GPM_CONF_TIMEOUT_SLEEP_DISPLAY_BATT,
+					GPM_SETTINGS_SLEEP_DISPLAY_BATT,
 					display_times);
 
 	if (prefs->priv->has_batteries == FALSE) {
@@ -767,19 +626,25 @@ prefs_setup_battery (GpmPrefs *prefs)
 	}
 
 	gpm_prefs_setup_action_combo (prefs, "combobox_battery_lid",
-					  GPM_CONF_BUTTON_LID_BATT,
+					  GPM_SETTINGS_BUTTON_LID_BATT,
 					  button_lid_actions);
 	gpm_prefs_setup_action_combo (prefs, "combobox_battery_critical",
-					  GPM_CONF_ACTIONS_CRITICAL_BATT,
+					  GPM_SETTINGS_ACTION_CRITICAL_BATT,
 					  battery_critical_actions);
 
-	/* set up the battery reduce checkbox */
-	gpm_prefs_setup_checkbox (prefs, "checkbutton_battery_display_reduce",
-				  GPM_CONF_BACKLIGHT_BATTERY_REDUCE);
-	gpm_prefs_setup_checkbox (prefs, "checkbutton_battery_display_dim",
-				  GPM_CONF_BACKLIGHT_IDLE_DIM_BATT);
-	gpm_prefs_setup_checkbox (prefs, "checkbutton_battery_spindown",
-				  GPM_CONF_DISKS_SPINDOWN_ENABLE_BATT);
+	/* set up the checkboxes */
+	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_battery_display_reduce"));
+	g_settings_bind (prefs->priv->settings, GPM_SETTINGS_BACKLIGHT_BATTERY_REDUCE,
+			 widget, "active",
+			 G_SETTINGS_BIND_DEFAULT);
+	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_battery_display_dim"));
+	g_settings_bind (prefs->priv->settings, GPM_SETTINGS_IDLE_DIM_BATT,
+			 widget, "active",
+			 G_SETTINGS_BIND_DEFAULT);
+	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_battery_spindown"));
+	g_settings_bind (prefs->priv->settings, GPM_SETTINGS_SPINDOWN_ENABLE_BATT,
+			 widget, "active",
+			 G_SETTINGS_BIND_DEFAULT);
 
 	if (prefs->priv->has_button_lid == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_battery_lid"));
@@ -830,10 +695,10 @@ prefs_setup_ups (GpmPrefs *prefs)
 		 -1};
 
 	gpm_prefs_setup_time_combo (prefs, "combobox_ups_computer",
-					GPM_CONF_TIMEOUT_SLEEP_COMPUTER_UPS,
+					GPM_SETTINGS_SLEEP_COMPUTER_UPS,
 					computer_times);
 	gpm_prefs_setup_time_combo (prefs, "combobox_ups_display",
-					GPM_CONF_TIMEOUT_SLEEP_DISPLAY_UPS,
+					GPM_SETTINGS_SLEEP_DISPLAY_UPS,
 					display_times);
 
 	if (prefs->priv->has_ups == FALSE) {
@@ -845,10 +710,10 @@ prefs_setup_ups (GpmPrefs *prefs)
 	}
 
 	gpm_prefs_setup_action_combo (prefs, "combobox_ups_low",
-					  GPM_CONF_ACTIONS_LOW_UPS,
+					  GPM_SETTINGS_ACTION_LOW_UPS,
 					  ups_low_actions);
 	gpm_prefs_setup_action_combo (prefs, "combobox_ups_critical",
-					  GPM_CONF_ACTIONS_CRITICAL_UPS,
+					  GPM_SETTINGS_ACTION_CRITICAL_UPS,
 					  ups_low_actions);
 }
 
@@ -869,10 +734,10 @@ prefs_setup_general (GpmPrefs *prefs)
 				 -1};
 
 	gpm_prefs_setup_action_combo (prefs, "combobox_general_power",
-					  GPM_CONF_BUTTON_POWER,
+					  GPM_SETTINGS_BUTTON_POWER,
 					  power_button_actions);
 	gpm_prefs_setup_action_combo (prefs, "combobox_general_suspend",
-					  GPM_CONF_BUTTON_SUSPEND,
+					  GPM_SETTINGS_BUTTON_SUSPEND,
 					  suspend_button_actions);
 
 	if (prefs->priv->has_button_suspend == FALSE) {
@@ -886,6 +751,7 @@ prefs_setup_general (GpmPrefs *prefs)
 	}
 }
 
+#ifdef HAVE_MATECONF_DEFAULTS
 /**
  * gpm_prefs_set_defaults_cb:
  **/
@@ -930,6 +796,7 @@ gpm_prefs_set_defaults_cb (GtkWidget *widget, GpmPrefs *prefs)
 
 	g_object_unref (proxy);
 }
+#endif
 
 /**
  * gpm_prefs_init:
@@ -953,16 +820,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 
 	prefs->priv->client = up_client_new ();
 	prefs->priv->console = egg_console_kit_new ();
-	prefs->priv->conf = mateconf_client_get_default ();
-	/* watch mate-power-manager keys */
-	mateconf_client_add_dir (prefs->priv->conf, GPM_CONF_DIR,
-				  MATECONF_CLIENT_PRELOAD_RECURSIVE, NULL);
-	mateconf_client_notify_add (prefs->priv->conf, GPM_CONF_DIR,
-				 (MateConfClientNotifyFunc) gpm_conf_mateconf_key_changed_cb,
-				 prefs, NULL, NULL);
-
-	/* get value of delay in mate-session */
-	prefs->priv->idle_delay = mateconf_client_get_int (prefs->priv->conf, GPM_CONF_IDLE_DELAY, NULL);
+	prefs->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
 
 	/* are we allowed to shutdown? */
 	prefs->priv->can_shutdown = TRUE;
@@ -1070,7 +928,7 @@ gpm_prefs_finalize (GObject *object)
 	prefs = GPM_PREFS (object);
 	prefs->priv = GPM_PREFS_GET_PRIVATE (prefs);
 
-	g_object_unref (prefs->priv->conf);
+	g_object_unref (prefs->priv->settings);
 	g_object_unref (prefs->priv->client);
 	g_object_unref (prefs->priv->console);
 

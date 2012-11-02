@@ -93,12 +93,14 @@ AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE(GETTEXT_PACKAGE, "AC_PACKAGE_NAME", [foo])
 
 AM_GLIB_GNU_GETTEXT
+GLIB_GSETTINGS
 
 dnl ----------------------------------------------------------------------------
 dnl - Library dependencies
 dnl ----------------------------------------------------------------------------
 GTK_API_VERSION=2.0
 GLIB_REQUIRED=2.13.0
+GIO_REQUIRED=2.25.0
 GTK_REQUIRED=2.17.7
 GDK_REQUIRED=2.11.0
 MATECONF_REQUIRED=1.1.0
@@ -139,7 +141,7 @@ esac
 dnl ---------------------------------------------------------------------------
 dnl - Check library dependencies
 dnl ---------------------------------------------------------------------------
-PKG_CHECK_MODULES(GLIB, glib-2.0 >= $GLIB_REQUIRED gobject-2.0)
+PKG_CHECK_MODULES(GLIB, glib-2.0 >= $GLIB_REQUIRED gobject-2.0 gio-2.0 >= $GIO_REQUIRED)
 
 PKG_CHECK_MODULES(CANBERRA, libcanberra-gtk >= $CANBERRA_REQUIRED)
 
@@ -201,9 +203,6 @@ fi
 
 PKG_CHECK_MODULES(UPOWER, upower-glib >= $UPOWER_REQUIRED)
 
-AC_PATH_PROG(MATECONFTOOL, mateconftool-2)
-AM_MATECONF_SOURCE_2
-
 dnl ---------------------------------------------------------------------------
 dnl - Check XF86XK_Keys
 dnl ---------------------------------------------------------------------------
@@ -252,21 +251,6 @@ else
     AC_MSG_RESULT(no)
 fi
 AM_CONDITIONAL([HAVE_TESTS], [test $have_tests = yes])
-
-dnl ---------------------------------------------------------------------------
-dnl - Build mateconf default button?
-dnl ---------------------------------------------------------------------------
-AC_ARG_ENABLE(mateconf-defaults,
-              AS_HELP_STRING([--disable-mateconf-defaults],
-                             [Allow setting mateconf default settings]),
-              have_mateconfdefaults=$enableval,have_mateconfdefaults=yes)
-
-AC_MSG_CHECKING([whether to support mateconf defaults])
-if test x$have_mateconfdefaults = xyes ; then
-    AC_DEFINE(HAVE_MATECONF_DEFAULTS, 1, [Define if have mateconf defaults])
-fi
-AC_MSG_RESULT([$have_mateconfdefaults])
-AM_CONDITIONAL([HAVE_MATECONF_DEFAULTS], [test $have_mateconfdefaults = yes])
 
 dnl ---------------------------------------------------------------------------
 dnl - Build applets
@@ -399,12 +383,10 @@ echo "
         cflags:                    ${CFLAGS}
         Building extra applets:    ${enable_applets}
         Self test support:         ${have_tests}
-        MateConf default support:  ${have_mateconfdefaults}
         Use libunique:             ${enable_libunique}
         Docbook support:           ${enable_docbook_docs}
         documentation dir:         $DOCDIR
         dbus-1 services dir:       $DBUS_SERVICES_DIR
-        mateconf-schema dir:       $MATECONF_SCHEMA_FILE_DIR
 "
 if [[ "${prefix}" != "/usr" ]] ; then
 	echo '

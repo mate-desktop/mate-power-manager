@@ -190,53 +190,6 @@ gpm_dpms_x11_set_mode (GpmDpms *dpms, GpmDpmsMode mode, GError **error)
 }
 
 /**
- * gpm_dpms_mode_from_string:
- **/
-GpmDpmsMode
-gpm_dpms_mode_from_string (const gchar *str)
-{
-	if (str == NULL)
-		return GPM_DPMS_MODE_UNKNOWN;
-	if (strcmp (str, "on") == 0)
-		return GPM_DPMS_MODE_ON;
-	if (strcmp (str, "standby") == 0)
-		return GPM_DPMS_MODE_STANDBY;
-	if (strcmp (str, "suspend") == 0)
-		return GPM_DPMS_MODE_SUSPEND;
-	if (strcmp (str, "off") == 0)
-		return GPM_DPMS_MODE_OFF;
-	return GPM_DPMS_MODE_UNKNOWN;
-}
-
-/**
- * gpm_dpms_mode_to_string:
- **/
-const gchar *
-gpm_dpms_mode_to_string (GpmDpmsMode mode)
-{
-	const gchar *str = NULL;
-
-	switch (mode) {
-	case GPM_DPMS_MODE_ON:
-		str = "on";
-		break;
-	case GPM_DPMS_MODE_STANDBY:
-		str = "standby";
-		break;
-	case GPM_DPMS_MODE_SUSPEND:
-		str = "suspend";
-		break;
-	case GPM_DPMS_MODE_OFF:
-		str = "off";
-		break;
-	default:
-		str = NULL;
-		break;
-	}
-	return str;
-}
-
-/**
  * gpm_dpms_set_mode:
  **/
 gboolean
