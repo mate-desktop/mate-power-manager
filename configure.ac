@@ -109,7 +109,7 @@ DBUS_GLIB_REQUIRED=0.70
 LIBMATENOTIFY_REQUIRED=1.1.0
 CAIRO_REQUIRED=1.0.0
 UNIQUE_REQUIRED=0.9.4
-LIBPANEL_REQUIRED=1.1.0
+LIBPANEL_REQUIRED=1.5.0
 XRANDR_REQUIRED=1.2.0
 CANBERRA_REQUIRED=0.10
 UPOWER_REQUIRED=0.9.1
@@ -263,7 +263,7 @@ have_applets=no
 if test x$enable_applets = xyes ; then
     have_applets=yes
 
-    PKG_CHECK_MODULES(PANEL, [libmatepanelapplet-3.0 >= $LIBPANEL_REQUIRED])
+    PKG_CHECK_MODULES(PANEL, [libmatepanelapplet-4.0 >= $LIBPANEL_REQUIRED])
     AC_DEFINE(HAVE_APPLETS, 1, [Define if we are building applets])
 fi
 AC_MSG_RESULT([$have_applets])
