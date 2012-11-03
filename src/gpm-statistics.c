@@ -28,7 +28,6 @@
 
 #include <gtk/gtk.h>
 #include <dbus/dbus-glib.h>
-#include <mateconf/mateconf-client.h>
 #include <libupower-glib/upower.h>
 
 #include "egg-debug.h"
