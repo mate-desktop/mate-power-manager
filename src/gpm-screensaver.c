@@ -25,7 +25,6 @@
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <dbus/dbus-glib.h>
-#include <gio/gio.h>
 
 #include "gpm-screensaver.h"
 #include "gpm-common.h"
@@ -42,7 +41,6 @@ static void     gpm_screensaver_finalize   (GObject		*object);
 struct GpmScreensaverPrivate
 {
 	DBusGProxy		*proxy;
-	GSettings		*settings;
 };
 
 enum {
@@ -126,20 +124,6 @@ gpm_screensaver_proxy_disconnect_more (GpmScreensaver *screensaver)
 	return TRUE;
 }
 #endif
-
-/**
- * gpm_screensaver_lock_enabled:
- * @screensaver: This class instance
- * Return value: If mate-screensaver is set to lock the screen on screensave
- **/
-gboolean
-gpm_screensaver_lock_enabled (GpmScreensaver *screensaver)
-{
-	gboolean enabled;
-	g_return_val_if_fail (GPM_IS_SCREENSAVER (screensaver), FALSE);
-	enabled = g_settings_get_boolean (screensaver->priv->settings, GS_SETTINGS_PREF_LOCK_ENABLED);
-	return enabled;
-}
 
 /**
  * gpm_screensaver_lock
@@ -357,7 +341,6 @@ gpm_screensaver_init (GpmScreensaver *screensaver)
 							      GS_LISTENER_SERVICE,
 							      GS_LISTENER_PATH,
 							      GS_LISTENER_INTERFACE);
-	screensaver->priv->settings = g_settings_new (GS_SETTINGS_SCHEMA);
 }
 
 /**
@@ -374,7 +357,6 @@ gpm_screensaver_finalize (GObject *object)
 	screensaver = GPM_SCREENSAVER (object);
 	screensaver->priv = GPM_SCREENSAVER_GET_PRIVATE (screensaver);
 
-	g_object_unref (screensaver->priv->settings);
 	g_object_unref (screensaver->priv->proxy);
 
 	G_OBJECT_CLASS (gpm_screensaver_parent_class)->finalize (object);

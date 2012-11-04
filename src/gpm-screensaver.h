@@ -55,7 +55,6 @@ GpmScreensaver	*gpm_screensaver_new			(void);
 void		 gpm_screensaver_test			(gpointer	 data);
 
 gboolean	 gpm_screensaver_lock			(GpmScreensaver	*screensaver);
-gboolean	 gpm_screensaver_lock_enabled		(GpmScreensaver	*screensaver);
 guint32 	 gpm_screensaver_add_throttle    	(GpmScreensaver	*screensaver,
 							 const gchar	*reason);
 gboolean 	 gpm_screensaver_remove_throttle    	(GpmScreensaver	*screensaver,
