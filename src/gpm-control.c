@@ -55,7 +55,6 @@
 struct GpmControlPrivate
 {
 	GSettings		*settings;
-	GSettings		*settings_ss;
 	UpClient		*client;
 };
 
@@ -116,13 +115,31 @@ gpm_control_get_lock_policy (GpmControl *control, const gchar *policy)
 {
 	gboolean do_lock;
 	gboolean use_ss_setting;
+	const char * const *schemas;
+	gboolean schema_exists;
+	gint i;
+
+	/* Check if the mate-screensaver schema exists before trying to read
+	   the lock setting to prevent crashing. See GNOME bug #651225. */
+	schemas = g_settings_list_schemas ();
+	schema_exists = FALSE;
+	for (i = 0; schemas[i] != NULL; i++) {
+		if (g_strcmp0 (schemas[i], GS_SETTINGS_SCHEMA) == 0) {
+			schema_exists = TRUE;
+			break;
+		}
+	}
+
 	/* This allows us to over-ride the custom lock settings set
 	   with a system default set in mate-screensaver.
 	   See bug #331164 for all the juicy details. :-) */
 	use_ss_setting = g_settings_get_boolean (control->priv->settings, GPM_SETTINGS_LOCK_USE_SCREENSAVER);
-	if (use_ss_setting) {
-		do_lock = g_settings_get_boolean (control->priv->settings_ss, GS_SETTINGS_PREF_LOCK_ENABLED);
+	if (use_ss_setting && schema_exists) {
+		GSettings *settings_ss;
+		settings_ss = g_settings_new (GS_SETTINGS_SCHEMA);
+		do_lock = g_settings_get_boolean (settings_ss, GS_SETTINGS_PREF_LOCK_ENABLED);
 		egg_debug ("Using ScreenSaver settings (%i)", do_lock);
+		g_object_unref (settings_ss);
 	} else {
 		do_lock = g_settings_get_boolean (control->priv->settings, policy);
 		egg_debug ("Using custom locking settings (%i)", do_lock);
@@ -279,7 +296,6 @@ gpm_control_finalize (GObject *object)
 	control = GPM_CONTROL (object);
 
 	g_object_unref (control->priv->settings);
-	g_object_unref (control->priv->settings_ss);
 	g_object_unref (control->priv->client);
 
 	g_return_if_fail (control->priv != NULL);
@@ -328,7 +344,6 @@ gpm_control_init (GpmControl *control)
 
 	control->priv->client = up_client_new ();
 	control->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
-	control->priv->settings_ss = g_settings_new (GS_SETTINGS_SCHEMA);
 }
 
 /**
