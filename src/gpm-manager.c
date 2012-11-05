@@ -1085,33 +1085,6 @@ gpm_manager_settings_changed_cb (GSettings *settings, const gchar *key, GpmManag
 		gpm_manager_sync_policy_sleep (manager);
 }
 
-#if 0
-/**
- * gpm_manager_screensaver_auth_request_cb:
- * @manager: This manager class instance
- * @auth: If we are trying to authenticate
- *
- * Called when the user is trying or has authenticated
- **/
-static void
-gpm_manager_screensaver_auth_request_cb (GpmScreensaver *screensaver, gboolean auth_begin, GpmManager *manager)
-{
-	GError *error = NULL;
-
-	if (auth_begin) {
-		/* We turn on the monitor unconditionally, as we may be using
-		 * a smartcard to authenticate and DPMS might still be on.
-		 * See #350291 for more details */
-		gpm_dpms_set_mode (manager->priv->dpms, GPM_DPMS_MODE_ON, &error);
-		if (error != NULL) {
-			egg_warning ("Failed to turn on DPMS: %s", error->message);
-			g_error_free (error);
-			error = NULL;
-		}
-	}
-}
-#endif
-
 /**
  * gpm_manager_perhaps_recall_response_cb:
  */
@@ -1920,10 +1893,6 @@ gpm_manager_init (GpmManager *manager)
 
 	/* try and start an interactive service */
 	manager->priv->screensaver = gpm_screensaver_new ();
-#if 0
-	g_signal_connect (manager->priv->screensaver, "auth-request",
-			  G_CALLBACK (gpm_manager_screensaver_auth_request_cb), manager);
-#endif
 
 	/* try an start an interactive service */
 	manager->priv->backlight = gpm_backlight_new ();
