@@ -43,10 +43,6 @@ struct GpmScreensaverPrivate
 	DBusGProxy		*proxy;
 };
 
-enum {
-	AUTH_REQUEST,
-	LAST_SIGNAL
-};
 
 static gpointer gpm_screensaver_object = NULL;
 
