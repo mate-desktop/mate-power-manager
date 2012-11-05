@@ -44,10 +44,6 @@ typedef struct
 typedef struct
 {
 	GObjectClass	parent_class;
-#if 0
-	void		(* auth_request)		(GpmScreensaver	*screensaver,
-					    		 gboolean	 auth);
-#endif
 } GpmScreensaverClass;
 
 GType		 gpm_screensaver_get_type		(void);
