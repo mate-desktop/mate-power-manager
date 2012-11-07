@@ -306,16 +306,13 @@ gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 				g_ptr_array_add (array, GINT_TO_POINTER (policy));
 			#endif
 		} else if (policy == GPM_ACTION_POLICY_NOTHING) {
-			/* we only add do nothing in the GUI if the user has explicitly specified this in the settings */
-			if (value == GPM_ACTION_POLICY_NOTHING) {
-				#if GTK_CHECK_VERSION (2, 24, 0)
-					gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Do nothing"));
-					g_ptr_array_add(array, GINT_TO_POINTER (policy));
-				#else
-					gtk_combo_box_append_text (GTK_COMBO_BOX (widget), _("Do nothing"));
-					g_ptr_array_add (array, GINT_TO_POINTER (policy));
-				#endif
-			}
+			#if GTK_CHECK_VERSION (2, 24, 0)
+				gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Do nothing"));
+				g_ptr_array_add(array, GINT_TO_POINTER (policy));
+			#else
+				gtk_combo_box_append_text (GTK_COMBO_BOX (widget), _("Do nothing"));
+				g_ptr_array_add (array, GINT_TO_POINTER (policy));
+			#endif
 		} else {
 			egg_warning ("Unknown action read from settings: %i", policy);
 		}
