@@ -37,9 +37,9 @@ G_BEGIN_DECLS
 #define GPM_DESCRIPTION 		_("Power Manager for the MATE desktop")
 
 /* help location */
-#define GPM_HOMEPAGE_URL	 	"http://www.mate.org/projects/mate-power-manager/"
-#define GPM_BUGZILLA_URL		"http://bugzilla.mate.org/buglist.cgi?product=mate-power-manager"
-#define GPM_FAQ_URL			"http://live.mate.org/MatePowerManager/Faq"
+#define GPM_HOMEPAGE_URL	 	"http://www.mate-desktop.org/"
+#define GPM_BUGZILLA_URL		"https://github.com/mate-desktop/mate-power-manager/issues"
+#define GPM_FAQ_URL			"http://wiki.mate-desktop.org/"
 
 /* change general/installed_schema whenever adding or moving keys */
 #define GPM_CONF_SCHEMA_ID	3
