@@ -61,6 +61,26 @@
       <_summary>Reduce the backlight brightness when on battery power</_summary>
       <_description>If the screen should be reduced in brightness when the computer is on battery power.</_description>
     </key>
+    <key name="kbd-backlight-battery-reduce" type="b">
+      <default>true</default>
+      <summary>Reduce the keyboard backlight when on battery power</summary>
+      <description>If the keyboard backlight brightness should be reduced when the computer is on battery power</description>
+    </key>
+    <key name="kbd-brightness-on-ac" type="i">
+      <default>100</default>
+      <summary>Keyboard backlight brightness when on AC power.</summary>
+      <description>Percent brightness to set keyboard backlight at when on AC power. Legal values are between 0 and 100.</description>
+    </key>
+    <key name="kbd-brightness-dim-by-on-battery" type="i">
+      <default>50</default>
+      <summary>Percent to reduce keyboard backlight by when on battery power.</summary>
+      <description>The percentage to reduce the keyboard backlight by when on battery power. For example, if set to '60', the backlight will be cut by 40% on battery power. Legal values are between 0 and 100.</description>
+    </key>
+    <key name="kbd-brightness-dim-by-on-idle" type="i">
+      <default>75</default>
+        <summary>Percent to reduce keyboard backlight by when idle.</summary>
+        <description>The percentage to reduce the keyboard backlight by when idle. For example, if set to '60', the backlight will be cut by 40% when idle. Legal values are between 0 and 100.</description>
+    </key>
     <key name="idle-brightness" type="i">
       <default>30</default>
       <_summary>The brightness of the screen when idle</_summary>
