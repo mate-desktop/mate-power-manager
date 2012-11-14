@@ -79,6 +79,52 @@ gpm_get_timestring (guint time_secs)
 }
 
 /**
+ * gpm_discrete_from_percent:
+ * @percentage: The percentage to convert
+ * @levels: The number of discrete levels
+ *
+ * We have to be carefull when converting from %->discrete as precision is very
+ * important if we want the highest value.
+ *
+ * Return value: The discrete value for this percentage.
+ **/
+guint
+gpm_discrete_from_percent (guint percentage, guint levels)
+{
+    /* check we are in range */
+    if (percentage > 100)
+        return levels;
+    if (levels == 0) {
+        g_warning ("levels is 0!");
+        return 0;
+    }
+    return (guint) ((((gfloat) percentage * (gfloat) (levels - 1)) / 100.0f) + 0.5f);
+}
+
+/**
+ * gpm_discrete_to_percent:
+ * @hw: The discrete level
+ * @levels: The number of discrete levels
+ *
+ * We have to be carefull when converting from discrete->%.
+ *
+ * Return value: The percentage for this discrete value.
+ **/
+guint
+gpm_discrete_to_percent (guint discrete, guint levels)
+{
+    /* check we are in range */
+    if (discrete > levels)
+        return 100;
+    if (levels == 0) {
+        g_warning ("levels is 0!");
+        return 0;
+    }
+    return (guint) (((gfloat) discrete * (100.0f / (gfloat) (levels - 1))) + 0.5f);
+}
+
+
+/**
  * gpm_help_display:
  * @link_id: Subsection of mate-power-manager help section
  **/
