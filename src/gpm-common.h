@@ -31,6 +31,7 @@ G_BEGIN_DECLS
 #define	GPM_DBUS_INTERFACE_BACKLIGHT	"org.mate.PowerManager.Backlight"
 #define	GPM_DBUS_PATH			"/org/mate/PowerManager"
 #define	GPM_DBUS_PATH_BACKLIGHT		"/org/mate/PowerManager/Backlight"
+#define GPM_DBUS_PATH_KBD_BACKLIGHT    "/org/mate/PowerManager/KbdBacklight"
 
 /* common descriptions of this program */
 #define GPM_NAME 			_("Power Manager")
@@ -58,6 +59,12 @@ G_BEGIN_DECLS
 #define GPM_SETTINGS_IDLE_DIM_TIME			"idle-dim-time"
 #define GPM_SETTINGS_BRIGHTNESS_AC			"brightness-ac"
 #define GPM_SETTINGS_BRIGHTNESS_DIM_BATT		"brightness-dim-battery"
+
+/* keyboard backlight */
+#define GPM_SETTINGS_KBD_BACKLIGHT_BATT_REDUCE     "kbd-backlight-battery-reduce"
+#define GPM_SETTINGS_KBD_BRIGHTNESS_ON_AC      "kbd-brightness-on-ac"
+#define GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_BATT      "kbd-brightness-dim-by-on-battery"
+#define GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_IDLE "kbd-brightness-dim-by-on-idle"
 
 /* buttons */
 #define GPM_SETTINGS_BUTTON_LID_AC			"button-lid-ac"
@@ -149,6 +156,10 @@ typedef enum {
 } GpmActionPolicy;
 
 gchar		*gpm_get_timestring				(guint		 time);
+guint        gpm_discrete_from_percent          (guint       percentage,
+                                guint        levels);
+guint        gpm_discrete_to_percent            (guint       discrete,
+                                guint        levels);
 void 		 gpm_help_display				(const gchar	*link_id);
 #ifdef EGG_TEST
 void		 gpm_common_test				(gpointer	 data);
