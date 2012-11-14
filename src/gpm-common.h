@@ -31,7 +31,7 @@ G_BEGIN_DECLS
 #define	GPM_DBUS_INTERFACE_BACKLIGHT	"org.mate.PowerManager.Backlight"
 #define	GPM_DBUS_PATH			"/org/mate/PowerManager"
 #define	GPM_DBUS_PATH_BACKLIGHT		"/org/mate/PowerManager/Backlight"
-#define GPM_DBUS_PATH_KBD_BACKLIGHT    "/org/gnome/PowerManager/KbdBacklight"
+#define GPM_DBUS_PATH_KBD_BACKLIGHT    "/org/mate/PowerManager/KbdBacklight"
 
 /* common descriptions of this program */
 #define GPM_NAME 			_("Power Manager")
