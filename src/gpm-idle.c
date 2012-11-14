@@ -352,6 +352,7 @@ static void
 gpm_idle_session_idle_changed_cb (GpmSession *session, gboolean is_idle, GpmIdle *idle)
 {
 	egg_debug ("Received mate session idle changed: %i", is_idle);
+	idle->priv->x_idle = TRUE;
 	gpm_idle_evaluate (idle);
 }
 
