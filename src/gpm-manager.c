@@ -1852,7 +1852,7 @@ gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
     GError *error = NULL;
     gint32 r = -1;
 
-    proxy == NULL;
+    //proxy == NULL;
     /* Should we define these elsewhere? */
     const char* arg_what = "handle-power-key:handle-suspend-key:handle-lid-switch";
     const char* arg_who = "mate-power-manager";
