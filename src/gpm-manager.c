@@ -1851,7 +1851,7 @@ gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
 	//GDBusProxy *proxy;
     GError *error = NULL;
     gint32 r = -1;
-
+    GVariant *res;
     //proxy == NULL;
     /* Should we define these elsewhere? */
     const char* arg_what = "handle-power-key:handle-suspend-key:handle-lid-switch";
@@ -1874,7 +1874,7 @@ gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
         g_error_free (error);
         return -1;
     }
-    r = g_dbus_proxy_call_sync (proxy, "Inhibit", 
+    res = g_dbus_proxy_call_sync (proxy, "Inhibit", 
                             g_variant_new( "(ssss)",
                                 arg_what,
                                 arg_who,
@@ -1886,11 +1886,17 @@ gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
                             NULL,
                             &error
                             );                        
-	egg_debug ("Inhibiting systemd sleep - fd = %i", r);
-    if (r < 1) {
+    if (error == NULL) {
+        g_variant_get(res, "(h)", &r);
+	    egg_debug ("Inhibiting systemd sleep - fd = %i", r);
+    } else if (error != NULL) {
         egg_error ("Error in dbus - %s", error->message);
         g_error_free (error);
-        return -EIO;    
+        return -EIO; 
+    }   
+    if (r < 1) {
+        egg_error ("Error in FD was less than or 0 - %i", r);
+        return -EIO;
     }
     egg_debug ("Inhibiting systemd sleep - success");
     return r;
