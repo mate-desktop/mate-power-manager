@@ -1851,11 +1851,13 @@ gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
 	//GDBusProxy *proxy;
     GError *error = NULL;
     gint32 r = -1;
+    gint32 fd = -1;
     GVariant *res;
+    GUnixFDList *fd_list = NULL;
     //proxy == NULL;
     /* Should we define these elsewhere? */
     const char* arg_what = "handle-power-key:handle-suspend-key:handle-lid-switch";
-    const char* arg_who = "mate-power-manager";
+    const char* arg_who = g_get_user_name ();
     const char* arg_why = "Mate power manager handles these events";
     const char* arg_mode = "block";
 
@@ -1874,7 +1876,7 @@ gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
         g_error_free (error);
         return -1;
     }
-    res = g_dbus_proxy_call_sync (proxy, "Inhibit", 
+    res = g_dbus_proxy_call_with_unix_fd_list_sync (proxy, "Inhibit", 
                             g_variant_new( "(ssss)",
                                 arg_what,
                                 arg_who,
@@ -1884,20 +1886,26 @@ gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
                             G_DBUS_CALL_FLAGS_NONE,
                             -1,
                             NULL,
+                            &fd_list,
+                            NULL,
                             &error
                             );                        
-    if (error == NULL) {
+    if (error == NULL && res != NULL) {
         g_variant_get(res, "(h)", &r);
-	    egg_debug ("Inhibiting systemd sleep - fd = %i", r);
-    } else if (error != NULL) {
+	    egg_debug ("Inhibiting systemd sleep res = %i", r);
+        fd = g_unix_fd_list_get (fd_list, r, &error); 
+        if (fd == -1) {
+            egg_debug("Failed to get systemd inhibitor");
+            return r;
+        }
+        egg_debug ("System inhibitor fd is %d", fd);
+        g_object_unref (fd_list);
+        g_variant_unref (res);
+    } else if (error != NULL || res == NULL) {
         egg_error ("Error in dbus - %s", error->message);
         g_error_free (error);
         return -EIO; 
     }   
-    if (r < 1) {
-        egg_error ("Error in FD was less than or 0 - %i", r);
-        return -EIO;
-    }
     egg_debug ("Inhibiting systemd sleep - success");
     return r;
 }
