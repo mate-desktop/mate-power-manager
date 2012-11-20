@@ -620,9 +620,11 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
                  &on_battery,
                  NULL);
 
+    //These were all "settings_gsd" originally
+
    enable_action = on_battery
-       ? g_settings_get_boolean (backlight->priv->settings_gsd, GPM_SETTINGS_IDLE_DIM_BATT)
-       : g_settings_get_boolean (backlight->priv->settings_gsd, GPM_SETTINGS_IDLE_DIM_AC);
+       ? g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_BATT)
+       : g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_AC);
 
    if (!enable_action)
        return;
@@ -632,7 +634,7 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
        backlight->priv->master_percentage = 100;
        gpm_kbd_backlight_evaluate_power_source_and_set (backlight);
    } else if (mode == GPM_IDLE_MODE_DIM) {
-        egg_debug("GPM_IDLE_MODE_DIM");
+       egg_debug("GPM_IDLE_MODE_DIM");
        brightness = backlight->priv->master_percentage;
        value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_IDLE);
 
@@ -678,7 +680,7 @@ gpm_kbd_backlight_finalize (GObject *object)
 
    g_object_unref (backlight->priv->control);
    g_object_unref (backlight->priv->settings);
-   g_object_unref (backlight->priv->settings_gsd);
+   //g_object_unref (backlight->priv->settings_gsd);
    g_object_unref (backlight->priv->client);
    g_object_unref (backlight->priv->button);
    g_object_unref (backlight->priv->idle);
@@ -801,8 +803,10 @@ noerr:
    g_signal_connect (backlight->priv->client, "changed",
              G_CALLBACK (gpm_kbd_backlight_client_changed_cb), backlight);
 
-   backlight->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
-   //backlight->priv->settings_gsd = g_settings_new (GSD_SETTINGS_SCHEMA);
+    backlight->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
+	//g_signal_connect (backlight->priv->settings, "changed", G_CALLBACK (gpm_settings_key_changed_cb), backlight);
+   
+    //backlight->priv->settings_gsd = g_settings_new (GSD_SETTINGS_SCHEMA);
 
    /* watch for kbd brightness up and down button presses */
    backlight->priv->button = gpm_button_new ();
@@ -821,7 +825,8 @@ noerr:
 
    /* since gpm is just starting we can pretty safely assume that we're not idle */
    backlight->priv->system_is_idle = FALSE;
-   backlight->priv->idle_dim_timeout = g_settings_get_int (backlight->priv->settings_gsd, GPM_SETTINGS_IDLE_DIM_TIME);
+    //This was settings_gsd originally
+   backlight->priv->idle_dim_timeout = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_TIME);
    gpm_idle_set_timeout_dim (backlight->priv->idle, backlight->priv->idle_dim_timeout);
 
    /* make sure we turn the keyboard backlight back on after resuming */
