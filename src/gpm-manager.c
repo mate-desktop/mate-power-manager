@@ -1842,6 +1842,7 @@ gpm_manager_control_resume_cb (GpmControl *control, GpmControlAction action, Gpm
 	g_timeout_add_seconds (1, gpm_manager_reset_just_resumed_cb, manager);
 }
 
+#ifdef WITH_SYSTEMD_INHIBIT
 /**
  * gpm_main_system_inhibit:
  **/
@@ -1909,6 +1910,7 @@ gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
     egg_debug ("Inhibiting systemd sleep - success");
     return r;
 }
+#endif
 
 /**
  * gpm_manager_init:
@@ -1927,8 +1929,10 @@ gpm_manager_init (GpmManager *manager)
 	connection = dbus_g_bus_get (DBUS_BUS_SESSION, &error);
     g_connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, &error);
 
+#ifdef WITH_SYSTEMD_INHIBIT
     /* We want to inhibit the systemd suspend options, and take care of them ourselves */
     manager->priv->systemd_inhibit = gpm_manager_systemd_inhibit (manager->priv->systemd_inhibit_proxy);
+#endif
 
 	/* init to unthrottled */
 	manager->priv->screensaver_ac_throttle_id = 0;
@@ -2087,6 +2091,7 @@ gpm_manager_finalize (GObject *object)
 	g_object_unref (manager->priv->client);
 	g_object_unref (manager->priv->status_icon);
 
+#ifdef WITH_SYSTEMD_INHIBIT
     /* Let systemd take over again ... */
     if (manager->priv->systemd_inhibit > 0) {
         close(manager->priv->systemd_inhibit);
@@ -2095,6 +2100,7 @@ gpm_manager_finalize (GObject *object)
         g_object_unref (manager->priv->systemd_inhibit_proxy);
     }
     //g_object_unref (manager->priv->systemd_inhibit);
+#endif
 
 	G_OBJECT_CLASS (gpm_manager_parent_class)->finalize (object);
 }
