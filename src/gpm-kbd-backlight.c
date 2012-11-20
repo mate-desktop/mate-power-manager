@@ -148,7 +148,7 @@ gpm_kbd_backlight_set (GpmKbdBacklight *backlight,
                    NULL,
                    NULL);
    }
-
+    egg_debug("Set brightness to %i", backlight->priv->brightness);
    return TRUE;
 }
 
@@ -608,6 +608,8 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
    gboolean on_battery;
    gboolean enable_action;
 
+    egg_debug("Idle changed");
+
    lid_closed = gpm_button_is_lid_closed (backlight->priv->button);
 
    if (lid_closed)
@@ -626,14 +628,16 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
        return;
 
    if (mode == GPM_IDLE_MODE_NORMAL) {
+        egg_debug("GPM_IDLE_MODE_NORMAL");
        backlight->priv->master_percentage = 100;
        gpm_kbd_backlight_evaluate_power_source_and_set (backlight);
    } else if (mode == GPM_IDLE_MODE_DIM) {
+        egg_debug("GPM_IDLE_MODE_DIM");
        brightness = backlight->priv->master_percentage;
        value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_IDLE);
 
        if (value > 100) {
-           g_warning ("Cannot scale brightness down by more than 100%%. Scaling by 50%%");
+           egg_warning ("Cannot scale brightness down by more than 100%%. Scaling by 50%%");
            value = 50;
        }
 
