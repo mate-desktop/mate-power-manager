@@ -280,10 +280,12 @@ AC_ARG_WITH(systemdinhibit,
 
 use_systemdinhibit=no
 if test "x$with_systemdinhibit" != "xno" ; then
-    use_systemdinhibit=yes
-    AC_DEFINE(WITH_SYSTEMD_INHIBIT, 1, [systemdinhibit support])
+    PKG_CHECK_MODULES(SYSTEMD_INHIBIT, libsystemd-login libsystemd-daemon, use_systemdinhibit=yes, use_systemdinhibit=no)
 
-    PKG_CHECK_MODULES(SYSTEMD_INHIBIT, libsystemd-login libsystemd-daemon)
+    if test "x$use_systemdinhibit" = "xyes"; then
+        AC_DEFINE(WITH_SYSTEMD_INHIBIT, 1, [systemdinhibit support])
+    fi
+
 fi
 AM_CONDITIONAL(WITH_SYSTEMD_INHIBIT, test x$use_systemdinhibit = xyes)
 AC_SUBST(WITH_SYSTEMD_INHIBIT)

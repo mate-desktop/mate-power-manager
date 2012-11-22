@@ -100,8 +100,10 @@ struct GpmManagerPrivate
 	NotifyNotification	*notification_warning_low;
 	NotifyNotification	*notification_discharging;
 	NotifyNotification	*notification_fully_charged;
-    gint32              systemd_inhibit;
-    GDBusProxy          *systemd_inhibit_proxy;
+#ifdef WITH_SYSTEMD_INHIBIT
+	gint32                   systemd_inhibit;
+	GDBusProxy              *systemd_inhibit_proxy;
+#endif
 };
 
 typedef enum {
