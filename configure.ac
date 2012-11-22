@@ -270,6 +270,25 @@ AC_MSG_RESULT([$have_applets])
 AM_CONDITIONAL([HAVE_APPLETS], [test $have_applets = yes])
 
 dnl ---------------------------------------------------------------------------
+dnl systemd inhibit
+dnl ---------------------------------------------------------------------------
+
+AC_ARG_WITH(systemdinhibit,
+            AS_HELP_STRING([--with-systemdinhibit],
+            [Add systemdinhibit support]),,
+            with_systemdinhibit=auto)
+
+use_systemdinhibit=no
+if test "x$with_systemdinhibit" != "xno" ; then
+    use_systemdinhibit=yes
+    AC_DEFINE(WITH_SYSTEMD_INHIBIT, 1, [systemdinhibit support])
+
+    PKG_CHECK_MODULES(SYSTEMD_INHIBIT, libsystemd-login libsystemd-daemon)
+fi
+AM_CONDITIONAL(WITH_SYSTEMD_INHIBIT, test x$use_systemdinhibit = xyes)
+AC_SUBST(WITH_SYSTEMD_INHIBIT)
+
+dnl ---------------------------------------------------------------------------
 dnl - DocBook Documentation
 dnl ---------------------------------------------------------------------------
 AC_ARG_ENABLE(docbook-docs,
@@ -382,6 +401,7 @@ echo "
         Building extra applets:    ${enable_applets}
         Self test support:         ${have_tests}
         Use libunique:             ${enable_libunique}
+        systemd support:           ${use_systemdinhibit}
         Docbook support:           ${enable_docbook_docs}
         documentation dir:         $DOCDIR
         dbus-1 services dir:       $DBUS_SERVICES_DIR
