@@ -23,11 +23,13 @@
 #include <glib.h>
 #include <libupower-glib/upower.h>
 
+#include "egg-debug.h"
 #include "gpm-button.h"
 #include "gpm-common.h"
 #include "gpm-control.h"
 #include "gpm-idle.h"
 #include "gpm-kbd-backlight.h"
+#include "gsd-media-keys-window.h"
 
 static const gchar *kbd_backlight_introspection = ""
 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>""<node name=\"/\">"
@@ -48,23 +50,24 @@ static const gchar *kbd_backlight_introspection = ""
 
 struct GpmKbdBacklightPrivate
 {
-   UpClient        *client;
-   GpmButton       *button;
-   GSettings       *settings;
-   GSettings       *settings_gsd;
-   GpmControl      *control;
-   GpmIdle         *idle;
-   gboolean         can_dim;
-   gboolean         system_is_idle;
-   GTimer          *idle_timer;
-   guint            idle_dim_timeout;
-   guint            master_percentage;
-   guint            brightness;
-   guint            max_brightness;
-   guint            brightness_percent;
-   GDBusProxy      *upower_proxy;
-   GDBusConnection     *bus_connection;
-   guint            bus_object_id;
+    UpClient        *client;
+    GpmButton       *button;
+    GSettings       *settings;
+    GSettings       *settings_gsd;
+    GpmControl      *control;
+    GpmIdle         *idle;
+    gboolean         can_dim;
+    gboolean         system_is_idle;
+    GTimer          *idle_timer;
+    guint            idle_dim_timeout;
+    guint            master_percentage;
+    guint            brightness;
+    guint            max_brightness;
+    guint            brightness_percent;
+    GDBusProxy      *upower_proxy;
+    GDBusConnection     *bus_connection;
+    guint            bus_object_id;
+    GtkWidget		*popup;
 };
 
 enum {
@@ -145,8 +148,92 @@ gpm_kbd_backlight_set (GpmKbdBacklight *backlight,
                    NULL,
                    NULL);
    }
-
+    egg_debug("Set brightness to %i", backlight->priv->brightness);
    return TRUE;
+}
+
+/** 
+ * gpm_kbd_backlight_dialog_init
+ **/
+static void
+gpm_kbd_backlight_dialog_init (GpmKbdBacklight *backlight) 
+{  
+    if (backlight->priv->popup != NULL
+	    && !gsd_media_keys_window_is_valid (GSD_MEDIA_KEYS_WINDOW (backlight->priv->popup))) {
+		gtk_widget_destroy (backlight->priv->popup);
+		backlight->priv->popup = NULL;
+	}
+
+	if (backlight->priv->popup == NULL) {
+		backlight->priv->popup= gsd_media_keys_window_new ();
+		gsd_media_keys_window_set_action_custom (GSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
+							 "gpm-brightness-kbd",
+							 TRUE);
+		gtk_window_set_position (GTK_WINDOW (backlight->priv->popup), GTK_WIN_POS_NONE);
+
+    }
+}
+/**
+ * gpm_kbd_backlight_dialog_show:
+ *
+ * Show the brightness popup, and place it nicely on the screen.
+ **/
+static void
+gpm_kbd_backlight_dialog_show (GpmKbdBacklight *backlight)
+{
+	int            orig_w;
+	int            orig_h;
+	int            screen_w;
+	int            screen_h;
+	int            x;
+	int            y;
+	int            pointer_x;
+	int            pointer_y;
+	GtkRequisition win_req;
+	GdkScreen     *pointer_screen;
+	GdkRectangle   geometry;
+	int            monitor;
+
+	/*
+	 * get the window size
+	 * if the window hasn't been mapped, it doesn't necessarily
+	 * know its true size, yet, so we need to jump through hoops
+	 */
+	gtk_window_get_default_size (GTK_WINDOW (backlight->priv->popup), &orig_w, &orig_h);
+	gtk_widget_size_request (backlight->priv->popup, &win_req);
+
+	if (win_req.width > orig_w) {
+		orig_w = win_req.width;
+	}
+	if (win_req.height > orig_h) {
+		orig_h = win_req.height;
+	}
+
+	pointer_screen = NULL;
+	gdk_display_get_pointer (gtk_widget_get_display (backlight->priv->popup),
+				 &pointer_screen,
+				 &pointer_x,
+				 &pointer_y,
+				 NULL);
+	monitor = gdk_screen_get_monitor_at_point (pointer_screen,
+						   pointer_x,
+						   pointer_y);
+
+	gdk_screen_get_monitor_geometry (pointer_screen,
+					 monitor,
+					 &geometry);
+
+	screen_w = geometry.width;
+	screen_h = geometry.height;
+
+	x = ((screen_w - orig_w) / 2) + geometry.x;
+	y = geometry.y + (screen_h / 2) + (screen_h / 2 - orig_h) / 2;
+
+	gtk_window_move (GTK_WINDOW (backlight->priv->popup), x, y);
+
+	gtk_widget_show (backlight->priv->popup);
+
+	gdk_display_sync (gtk_widget_get_display (backlight->priv->popup));
 }
 
 /**
@@ -462,15 +549,30 @@ gpm_kbd_backlight_button_pressed_cb (GpmButton *button,
                     GpmKbdBacklight *backlight)
 {
    static guint saved_brightness;
+   gboolean ret;
 
    saved_brightness = backlight->priv->master_percentage;
 
    if (g_strcmp0 (type, GPM_BUTTON_KBD_BRIGHT_UP) == 0) {
-       gpm_kbd_backlight_brightness_up (backlight);
+       ret = gpm_kbd_backlight_brightness_up (backlight);
+        
+        if (ret) {
+            egg_debug("Going to display OSD");
+            gpm_kbd_backlight_dialog_init (backlight);
+			gsd_media_keys_window_set_volume_level (GSD_MEDIA_KEYS_WINDOW (backlight->priv->popup), backlight->priv->brightness_percent);
+            gpm_kbd_backlight_dialog_show (backlight);
+        }
 
    } else if (g_strcmp0 (type, GPM_BUTTON_KBD_BRIGHT_DOWN) == 0) {
-       gpm_kbd_backlight_brightness_down (backlight);
+       ret = gpm_kbd_backlight_brightness_down (backlight);
 
+        if (ret) {
+            egg_debug("Going to display OSD");
+            gpm_kbd_backlight_dialog_init (backlight);
+			gsd_media_keys_window_set_volume_level (GSD_MEDIA_KEYS_WINDOW (backlight->priv->popup), backlight->priv->brightness_percent);
+            gpm_kbd_backlight_dialog_show (backlight);
+        }
+        
    } else if (g_strcmp0 (type, GPM_BUTTON_KBD_BRIGHT_TOGGLE) == 0) {
        if (backlight->priv->master_percentage == 0) {
            /* backlight is off turn it back on */
@@ -506,6 +608,8 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
    gboolean on_battery;
    gboolean enable_action;
 
+    egg_debug("Idle changed");
+
    lid_closed = gpm_button_is_lid_closed (backlight->priv->button);
 
    if (lid_closed)
@@ -516,22 +620,26 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
                  &on_battery,
                  NULL);
 
+    //These were all "settings_gsd" originally
+
    enable_action = on_battery
-       ? g_settings_get_boolean (backlight->priv->settings_gsd, GPM_SETTINGS_IDLE_DIM_BATT)
-       : g_settings_get_boolean (backlight->priv->settings_gsd, GPM_SETTINGS_IDLE_DIM_AC);
+       ? g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_BATT)
+       : g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_AC);
 
    if (!enable_action)
        return;
 
    if (mode == GPM_IDLE_MODE_NORMAL) {
+        egg_debug("GPM_IDLE_MODE_NORMAL");
        backlight->priv->master_percentage = 100;
        gpm_kbd_backlight_evaluate_power_source_and_set (backlight);
    } else if (mode == GPM_IDLE_MODE_DIM) {
+       egg_debug("GPM_IDLE_MODE_DIM");
        brightness = backlight->priv->master_percentage;
        value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_IDLE);
 
        if (value > 100) {
-           g_warning ("Cannot scale brightness down by more than 100%%. Scaling by 50%%");
+           egg_warning ("Cannot scale brightness down by more than 100%%. Scaling by 50%%");
            value = 50;
        }
 
@@ -572,7 +680,7 @@ gpm_kbd_backlight_finalize (GObject *object)
 
    g_object_unref (backlight->priv->control);
    g_object_unref (backlight->priv->settings);
-   g_object_unref (backlight->priv->settings_gsd);
+   //g_object_unref (backlight->priv->settings_gsd);
    g_object_unref (backlight->priv->client);
    g_object_unref (backlight->priv->button);
    g_object_unref (backlight->priv->idle);
@@ -695,8 +803,10 @@ noerr:
    g_signal_connect (backlight->priv->client, "changed",
              G_CALLBACK (gpm_kbd_backlight_client_changed_cb), backlight);
 
-   backlight->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
-   //backlight->priv->settings_gsd = g_settings_new (GSD_SETTINGS_SCHEMA);
+    backlight->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
+	//g_signal_connect (backlight->priv->settings, "changed", G_CALLBACK (gpm_settings_key_changed_cb), backlight);
+   
+    //backlight->priv->settings_gsd = g_settings_new (GSD_SETTINGS_SCHEMA);
 
    /* watch for kbd brightness up and down button presses */
    backlight->priv->button = gpm_button_new ();
@@ -707,9 +817,16 @@ noerr:
    g_signal_connect (backlight->priv->idle, "idle-changed",
              G_CALLBACK (gpm_kbd_backlight_idle_changed_cb), backlight);
 
+    /* use a visual widget */
+	backlight->priv->popup = gsd_media_keys_window_new ();
+	gsd_media_keys_window_set_action_custom (GSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
+						 "gpm-brightness-kbd", TRUE);
+        gtk_window_set_position (GTK_WINDOW (backlight->priv->popup), GTK_WIN_POS_NONE);
+
    /* since gpm is just starting we can pretty safely assume that we're not idle */
    backlight->priv->system_is_idle = FALSE;
-   backlight->priv->idle_dim_timeout = g_settings_get_int (backlight->priv->settings_gsd, GPM_SETTINGS_IDLE_DIM_TIME);
+    //This was settings_gsd originally
+   backlight->priv->idle_dim_timeout = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_TIME);
    gpm_idle_set_timeout_dim (backlight->priv->idle, backlight->priv->idle_dim_timeout);
 
    /* make sure we turn the keyboard backlight back on after resuming */
