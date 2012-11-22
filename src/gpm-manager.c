@@ -100,6 +100,8 @@ struct GpmManagerPrivate
 	NotifyNotification	*notification_warning_low;
 	NotifyNotification	*notification_discharging;
 	NotifyNotification	*notification_fully_charged;
+    gint32              systemd_inhibit;
+    GDBusProxy          *systemd_inhibit_proxy;
 };
 
 typedef enum {
@@ -1840,6 +1842,76 @@ gpm_manager_control_resume_cb (GpmControl *control, GpmControlAction action, Gpm
 	g_timeout_add_seconds (1, gpm_manager_reset_just_resumed_cb, manager);
 }
 
+#ifdef WITH_SYSTEMD_INHIBIT
+/**
+ * gpm_main_system_inhibit:
+ **/
+static gint32
+gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
+    /* Return a fd to the to the inhibitor, that we can close on exit. */
+	//GDBusProxy *proxy;
+    GError *error = NULL;
+    gint32 r = -1;
+    gint32 fd = -1;
+    GVariant *res;
+    GUnixFDList *fd_list = NULL;
+    //proxy == NULL;
+    /* Should we define these elsewhere? */
+    const char* arg_what = "handle-power-key:handle-suspend-key:handle-lid-switch";
+    const char* arg_who = g_get_user_name ();
+    const char* arg_why = "Mate power manager handles these events";
+    const char* arg_mode = "block";
+
+	egg_debug ("Inhibiting systemd sleep");
+    proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+                                       G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
+                                        NULL,
+                                        "org.freedesktop.login1",
+                                        "/org/freedesktop/login1",
+                                        "org.freedesktop.login1.Manager",
+                                        NULL,
+                                        &error );
+    //append all our arguments
+    if (proxy == NULL) {
+        egg_error("Error connecting to dbus - %s", error->message);
+        g_error_free (error);
+        return -1;
+    }
+    res = g_dbus_proxy_call_with_unix_fd_list_sync (proxy, "Inhibit", 
+                            g_variant_new( "(ssss)",
+                                arg_what,
+                                arg_who,
+                                arg_why,
+                                arg_mode
+                            ),
+                            G_DBUS_CALL_FLAGS_NONE,
+                            -1,
+                            NULL,
+                            &fd_list,
+                            NULL,
+                            &error
+                            );                        
+    if (error == NULL && res != NULL) {
+        g_variant_get(res, "(h)", &r);
+	    egg_debug ("Inhibiting systemd sleep res = %i", r);
+        fd = g_unix_fd_list_get (fd_list, r, &error); 
+        if (fd == -1) {
+            egg_debug("Failed to get systemd inhibitor");
+            return r;
+        }
+        egg_debug ("System inhibitor fd is %d", fd);
+        g_object_unref (fd_list);
+        g_variant_unref (res);
+    } else if (error != NULL || res == NULL) {
+        egg_error ("Error in dbus - %s", error->message);
+        g_error_free (error);
+        return -EIO; 
+    }   
+    egg_debug ("Inhibiting systemd sleep - success");
+    return r;
+}
+#endif
+
 /**
  * gpm_manager_init:
  * @manager: This class instance
@@ -1856,6 +1928,11 @@ gpm_manager_init (GpmManager *manager)
 	manager->priv = GPM_MANAGER_GET_PRIVATE (manager);
 	connection = dbus_g_bus_get (DBUS_BUS_SESSION, &error);
     g_connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, &error);
+
+#ifdef WITH_SYSTEMD_INHIBIT
+    /* We want to inhibit the systemd suspend options, and take care of them ourselves */
+    manager->priv->systemd_inhibit = gpm_manager_systemd_inhibit (manager->priv->systemd_inhibit_proxy);
+#endif
 
 	/* init to unthrottled */
 	manager->priv->screensaver_ac_throttle_id = 0;
@@ -2013,6 +2090,17 @@ gpm_manager_finalize (GObject *object)
 	g_object_unref (manager->priv->console);
 	g_object_unref (manager->priv->client);
 	g_object_unref (manager->priv->status_icon);
+
+#ifdef WITH_SYSTEMD_INHIBIT
+    /* Let systemd take over again ... */
+    if (manager->priv->systemd_inhibit > 0) {
+        close(manager->priv->systemd_inhibit);
+    }
+    if (manager->priv->systemd_inhibit_proxy != NULL) {
+        g_object_unref (manager->priv->systemd_inhibit_proxy);
+    }
+    //g_object_unref (manager->priv->systemd_inhibit);
+#endif
 
 	G_OBJECT_CLASS (gpm_manager_parent_class)->finalize (object);
 }
