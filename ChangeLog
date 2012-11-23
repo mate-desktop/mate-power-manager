@@ -1,0 +1,1762 @@
+commit 4e4fac818bda769a9cdbafe2d88a78c764044b53
+Merge: de6402c 0415b57
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu Nov 22 21:24:13 2012 -0500
+
+    Merge branch 'master' of github.com:mate-desktop/mate-power-manager
+
+commit 0415b57493898c5defa2719d67115f8ff2392904
+Merge: 433b548 af64cc9
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Nov 22 13:32:35 2012 -0800
+
+    Merge pull request #38 from bhull2010/master
+    
+    Auto-detect whether to build systemd support
+
+commit af64cc9fe7244eeec543c7c22adecef3a402d02a
+Author: Brent Hull <bhull2010@live.com>
+Date:   Thu Nov 22 16:19:14 2012 -0500
+
+    Auto-detect whether to build systemd support
+
+ configure.ac      |    8 +++++---
+ src/gpm-manager.c |    6 ++++--
+ 2 files changed, 9 insertions(+), 5 deletions(-)
+
+commit de6402cb66f3eecfbb4aa92155f2cec7bc45225a
+Merge: f915c84 433b548
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu Nov 22 14:18:05 2012 -0500
+
+    Merge branch 'master' of github.com:mate-desktop/mate-power-manager
+
+commit 433b548ea199a66afbb5fc874bfdaa31695c1e3c
+Merge: 237f70f 30eed18
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Nov 22 08:41:47 2012 -0800
+
+    Merge pull request #37 from Firstyear/systemd-inhibit
+    
+    Systemd inhibit support for MPM
+
+commit 237f70ff586bffba55aaefb2af1128d7f321cb30
+Merge: 5fdd6e5 8767ffb
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Nov 22 08:41:26 2012 -0800
+
+    Merge pull request #35 from Firstyear/kbd-backlight
+    
+    Adds on screen display support to keyboard backlight controls
+
+commit f915c8482adab2076b25427517ec6166bb9209a2
+Merge: fa7700a 5fdd6e5
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Wed Nov 21 14:47:55 2012 -0500
+
+    Merge branch 'master' of github.com:mate-desktop/mate-power-manager
+
+commit 8767ffb8172c1e9ae4410226ac4015309bc03f7f
+Author: William Brown <william@firstyear.id.au>
+Date:   Wed Nov 21 00:24:52 2012 +1030
+
+    This fixes the g_settings issue preventing auto dim of keyboard backlight
+
+ src/gpm-kbd-backlight.c |   19 ++++++++++++-------
+ 1 file changed, 12 insertions(+), 7 deletions(-)
+
+commit 1e231ca589272dc0a84199b03c28a1b598fc3748
+Author: William Brown <william@firstyear.id.au>
+Date:   Tue Nov 20 21:07:25 2012 +1030
+
+    Added some debuging options
+
+ src/gpm-kbd-backlight.c |    8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+commit cc5f970075a80bd31ab0dcafe7fa6544082ace96
+Author: William Brown <william@firstyear.id.au>
+Date:   Tue Nov 20 19:40:46 2012 +1030
+
+    Adds on screen display support to keyboard backlight controls
+
+ src/gpm-kbd-backlight.c |  148 ++++++++++++++++++++++++++++++++++++++++-------
+ 1 file changed, 128 insertions(+), 20 deletions(-)
+
+commit 30eed18125a03a0bede7f5e560f8f031db70dcbe
+Author: William Brown <william@firstyear.id.au>
+Date:   Wed Nov 21 09:15:29 2012 +1030
+
+    Adds a systemdinhibit configure flag
+
+ configure.ac      |   20 ++++++++++++++++++++
+ src/gpm-manager.c |    6 ++++++
+ 2 files changed, 26 insertions(+)
+
+commit c5c3b2a3d755e32a851bf7b3c7ef92a056b5bdef
+Author: William Brown <william@firstyear.id.au>
+Date:   Wed Nov 21 09:06:22 2012 +1030
+
+    Initial working support for systemd inhibition
+
+ src/gpm-manager.c |   26 +++++++++++++++++---------
+ 1 file changed, 17 insertions(+), 9 deletions(-)
+
+commit bb165fa927540f40b2b2afce1b4703f6e2cffbb1
+Author: William Brown <william@firstyear.id.au>
+Date:   Tue Nov 20 00:08:50 2012 +1030
+
+    This now uses the gvariant, and fixes some code logic issues
+
+ src/gpm-manager.c |   16 +++++++++++-----
+ 1 file changed, 11 insertions(+), 5 deletions(-)
+
+commit d0eea338cc627b3083e16669a7f3e7a738410818
+Author: William Brown <william@firstyear.id.au>
+Date:   Sun Nov 18 12:06:34 2012 +1030
+
+    Current work on systemd-inhibit support in mpm. DOES NOT WORK YET. See https://bugzilla.redhat.com/show_bug.cgi?id=876396 and https://bugzilla.redhat.com/show_bug.cgi?id=876782
+
+ src/gpm-manager.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit f55a6f37d0805fd9f8270903929cdf08fda55e39
+Author: William Brown <william@firstyear.id.au>
+Date:   Sun Nov 18 12:06:34 2012 +1030
+
+    Current work on systemd-inhibit support in mpm. DOES NOT WORK YET. See https://bugzilla.redhat.com/show_bug.cgi?id=876396 and https://bugzilla.redhat.com/show_bug.cgi?id=876782
+
+ src/gpm-manager.c |   68 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 68 insertions(+)
+
+commit 5fdd6e52207bbf236e3888884cdd6a85c45ab4fd
+Merge: ae8cacd e8b4d0f
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Tue Nov 20 01:37:34 2012 -0800
+
+    Merge pull request #36 from Firstyear/idle
+    
+    Screen on dim, will not "undim"
+
+commit fa7700abefd3599c109891a454555298561da45e
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Sun Nov 18 20:44:13 2012 -0500
+
+    fixed incorrect fsf addresses.
+
+ src/gsd-media-keys-window.h |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit ae8cacd5443dd6f93a5a23a5cad6e60de1b5691e
+Merge: e673e8d c4c747f
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Nov 18 04:19:03 2012 -0800
+
+    Merge pull request #34 from Firstyear/master
+    
+    Corrects an issue with deprecated glib apis
+
+commit c4c747f87ce3fb6f41f25ed5ad7be0d75d30a5c1
+Author: William Brown <william@firstyear.id.au>
+Date:   Sun Nov 18 16:32:32 2012 +1030
+
+    This adds checks for glib version, in regards to deprecated apis. see http://developer.gnome.org/glib/2.31/glib-Deprecated-Thread-APIs.html#g-thread-init
+
+ src/gpm-main.c       |    6 ++++++
+ src/gpm-statistics.c |    3 +++
+ 2 files changed, 9 insertions(+)
+
+commit e8b4d0fc370cca038be614e3c7a72da30e0039b8
+Author: William Brown <william@firstyear.id.au>
+Date:   Sun Nov 18 12:00:05 2012 +1030
+
+    This fixes an issue that I introduced, where when the screen would dim on idle, it would not undim.
+
+ src/gpm-idle.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e673e8d93e0abef7759547a9131e097106920a6e
+Merge: abf46d2 dbc6094
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu Nov 15 18:59:21 2012 -0800
+
+    Merge pull request #10 from fhucho/master
+    
+    Added "nvidia_backlight" to the list of backlight interfaces.
+
+commit abf46d226f006c5b6843ccac2010469ae838d68b
+Merge: fbf40ff 1ea3233
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Nov 14 07:41:30 2012 -0800
+
+    Merge pull request #25 from Firstyear/master
+    
+    keyboard backlight, with basic controls.
+
+commit 1ea3233503f84366afd4e0a76e47afa258d17d04
+Author: William Brown <william@firstyear.id.au>
+Date:   Wed Nov 14 23:46:18 2012 +1030
+
+    Rename some components to mate friendly values
+
+ src/gpm-common.h        |    2 +-
+ src/gpm-kbd-backlight.c |    4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 0453548baedf4e060bc3785555589b551cf5b98c
+Author: William Brown <william@firstyear.id.au>
+Date:   Wed Nov 14 23:21:58 2012 +1030
+
+    This fixes the mismatched dbus library issue
+
+ src/gpm-manager.c |    4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit fbe4f6cc621eab7520e72463434d192cf64c878d
+Author: William Brown <william@firstyear.id.au>
+Date:   Wed Nov 14 22:37:30 2012 +1030
+
+    Fixes an issue where displays would not turn off despite the system being idle
+
+ src/gpm-idle.c |    1 +
+ 1 file changed, 1 insertion(+)
+
+commit 9361bbfbb5f7fda96f147310125fc709f4da2200
+Author: William Brown <william@firstyear.id.au>
+Date:   Sun Nov 11 20:02:11 2012 +1030
+
+    Keyboard backlight patches, tested as working against 1.5.0 on F18
+
+ data/org.mate.power-manager.gschema.xml.in |   20 +
+ src/Makefile.am                            |    2 +
+ src/gpm-common.c                           |   46 ++
+ src/gpm-common.h                           |   11 +
+ src/gpm-kbd-backlight.c                    |  734 ++++++++++++++++++++++++++++
+ src/gpm-kbd-backlight.h                    |   79 +++
+ src/gpm-manager.c                          |   10 +
+ 7 files changed, 902 insertions(+)
+
+commit fbf40ff748a675bdba451168c30aab7abeb5afa2
+Author: Nelson Marques <nmo.marques@gmail.com>
+Date:   Thu Nov 8 01:40:25 2012 +0000
+
+    update gpl-2.0 to latest legal text
+
+ COPYING |   41 ++++++++++++++++++++---------------------
+ 1 file changed, 20 insertions(+), 21 deletions(-)
+
+commit fab1d53b0a47cc4af26575284324962f7ebad769
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Nov 8 00:38:25 2012 +0100
+
+    fix urls
+
+ applets/brightness/gpm-common.h |    6 +++---
+ applets/inhibit/gpm-common.h    |    6 +++---
+ policy/Makefile.am              |    2 +-
+ 3 files changed, 7 insertions(+), 7 deletions(-)
+
+commit 4dcaeb1ce70903034ae8541a773277243dccaa8b
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Nov 8 00:34:47 2012 +0100
+
+    show always "do nothing" option
+
+ src/gpm-prefs-core.c |   17 +++++++----------
+ 1 file changed, 7 insertions(+), 10 deletions(-)
+
+commit ae9f45b112c22538465e060c61b2ed2fb1b0544c
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Nov 7 23:43:17 2012 +0100
+
+    bump version to 1.5.0
+
+ configure.ac |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 6176205aa44f2492ccfe09b35511046651350d53
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Nov 7 23:43:09 2012 +0100
+
+    update AUTHORS
+
+ AUTHORS |    1 +
+ 1 file changed, 1 insertion(+)
+
+commit 1291601153a67b059106a578afd28eaed9f5ea7d
+Merge: 773472d 107e353
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Mon Nov 5 00:35:19 2012 -0800
+
+    Merge pull request #22 from bhull2010/master
+    
+    Removed unused functions and enum
+
+commit 107e3530c49bc8e19e5697e82a98c9c346dee20f
+Author: Brent Hull <bhull2010@live.com>
+Date:   Sun Nov 4 19:32:35 2012 -0500
+
+    Remove unused enum
+
+ src/gpm-screensaver.c |    4 ----
+ 1 file changed, 4 deletions(-)
+
+commit 9fed848678414a926d19f62e9feba4f49edc1bd7
+Author: Brent Hull <bhull2010@live.com>
+Date:   Sun Nov 4 18:15:57 2012 -0500
+
+    Remove commented-out screensaver-auth-request functions
+
+ src/gpm-manager.c     |   31 ---------------
+ src/gpm-screensaver.c |  101 -------------------------------------------------
+ src/gpm-screensaver.h |    4 --
+ 3 files changed, 136 deletions(-)
+
+commit 773472d4a41e60cf7ad8db55737b0fcd21b934ba
+Merge: 7fa7c26 6e3ef00
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Nov 4 02:58:20 2012 -0800
+
+    Merge pull request #21 from bhull2010/master
+    
+    Remove dependency on mate-screensaver's schema
+
+commit 6e3ef00b551ed8ac5b877f0c7c8ebbc4f7fcb3ff
+Author: Brent Hull <bhull2010@live.com>
+Date:   Sun Nov 4 00:03:13 2012 -0400
+
+    Don't depend on mate-screensaver's gschema being installed
+
+ src/gpm-control.c     |   25 ++++++++++++++++++++-----
+ src/gpm-screensaver.c |   18 ------------------
+ src/gpm-screensaver.h |    1 -
+ 3 files changed, 20 insertions(+), 24 deletions(-)
+
+commit 7fa7c26dce5c987539f70b323ae1ff9d40752b0b
+Merge: 7c7b090 70aeb9c
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sat Nov 3 16:02:16 2012 -0700
+
+    Merge pull request #20 from bhull2010/master
+    
+    Migrate screensaver setting to Gsettings and update panel requirements
+
+commit 70aeb9c75a5eff23c16d6ce189e770dc22e8ff89
+Author: Brent Hull <bhull2010@live.com>
+Date:   Sat Nov 3 18:22:28 2012 -0400
+
+    Update libmatepanel requirements for MATE 1.5
+
+ configure.ac |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit b8964a21a6822f9f09215160503377746ea36995
+Author: Brent Hull <bhull2010@live.com>
+Date:   Sat Nov 3 00:08:46 2012 -0400
+
+    Migrate screensaver lock setting to Gsettings
+
+ configure.ac          |    2 --
+ src/gpm-common.h      |    4 ++--
+ src/gpm-control.c     |    9 ++++-----
+ src/gpm-screensaver.c |   10 +++++-----
+ src/gpm-statistics.c  |    1 -
+ 5 files changed, 11 insertions(+), 15 deletions(-)
+
+commit 7c7b09026bde3ffd1ce886fd545e7bfa1e59aec7
+Merge: 83dc101 972be36
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Nov 1 17:33:16 2012 -0700
+
+    Merge pull request #19 from bhull2010/gsettings
+    
+    Port to Gsettings
+
+commit 972be3627b8b6368a0e8c971ade7963ea7d459de
+Author: Brent Hull <bhull2010@live.com>
+Date:   Thu Nov 1 19:40:46 2012 -0400
+
+    Remove unnecessary schema version check and some unused constants
+
+ data/org.mate.power-manager.gschema.xml.in |    5 -----
+ src/gpm-common.h                           |    9 +--------
+ src/gpm-manager.c                          |   18 +-----------------
+ 3 files changed, 2 insertions(+), 30 deletions(-)
+
+commit 83dc101045267b2e793af3af4716f1cf02089ac6
+Merge: 543b06f aa88be1
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Oct 31 01:41:08 2012 -0700
+
+    Merge pull request #18 from bhull2010/master
+    
+    Fix for two batteries appearing
+
+commit 1e0bea49d7d1959d063c6ab74c99500067236110
+Author: Brent Hull <bhull2010@live.com>
+Date:   Tue Oct 30 17:34:02 2012 -0400
+
+    Remove unused key from gsettings schema
+
+ data/org.mate.power-manager.gschema.xml.in |    5 -----
+ src/gpm-common.h                           |    1 -
+ 2 files changed, 6 deletions(-)
+
+commit 6161e23866e73161dc0943c8ff24039edf8c531e
+Author: Brent Hull <bhull2010@live.com>
+Date:   Tue Oct 30 16:33:38 2012 -0400
+
+    Enable translations for gsettings schema
+
+ data/Makefile.am                           |    8 +-
+ data/org.mate.power-manager.gschema.xml    |  359 ----------------------------
+ data/org.mate.power-manager.gschema.xml.in |  359 ++++++++++++++++++++++++++++
+ po/POTFILES.in                             |    2 +-
+ 4 files changed, 366 insertions(+), 362 deletions(-)
+
+commit 060a4507145425c02c6aa0ef810138c04d38f5a9
+Author: Brent Hull <bhull2010@live.com>
+Date:   Tue Oct 30 15:55:35 2012 -0400
+
+    Use gsettings enums (partially from GNOME)
+
+ data/org.mate.power-manager.gschema.xml |   73 +++++++++++++++++----------
+ src/gpm-backlight.c                     |   11 ++--
+ src/gpm-common.c                        |   84 -------------------------------
+ src/gpm-common.h                        |    4 --
+ src/gpm-dpms.c                          |   47 -----------------
+ src/gpm-dpms.h                          |    2 -
+ src/gpm-engine.c                        |   10 +---
+ src/gpm-manager.c                       |   31 +++---------
+ src/gpm-prefs-core.c                    |   21 ++------
+ 9 files changed, 64 insertions(+), 219 deletions(-)
+
+commit e58350ab1a00d55e82f7ae97589562e10a77c485
+Author: Brent Hull <bhull2010@live.com>
+Date:   Sat Oct 27 23:04:21 2012 -0400
+
+    Port to Gsettings based on GNOME patch by Richard Hughes
+
+ configure.ac                            |   24 +-
+ data/Makefile.am                        |   27 +-
+ data/mate-power-manager.schemas.in      |  741 -------------------------------
+ data/org.mate.power-manager.gschema.xml |  338 ++++++++++++++
+ po/POTFILES.in                          |    2 +-
+ src/gpm-backlight.c                     |   77 ++--
+ src/gpm-common.h                        |  164 ++++---
+ src/gpm-control.c                       |   29 +-
+ src/gpm-engine.c                        |   50 +--
+ src/gpm-manager.c                       |  126 +++---
+ src/gpm-phone.c                         |    1 -
+ src/gpm-prefs-core.c                    |  263 +++--------
+ src/gpm-screensaver.c                   |    2 +-
+ src/gpm-statistics.c                    |   54 +--
+ src/gpm-tray-icon.c                     |   30 +-
+ 15 files changed, 655 insertions(+), 1273 deletions(-)
+
+commit aa88be1d4a4e545b4141b0065b094d49d3d3a81b
+Author: Brent Hull <bhull2010@live.com>
+Date:   Sat Oct 27 21:17:07 2012 -0400
+
+    Get device capabilities in the preferences capplet, not the daemon (GNOME fix for bug #617529 originally by Richard Hughes)
+
+ src/Makefile.am               |    8 +--
+ src/gpm-backlight.c           |   17 -----
+ src/gpm-engine.c              |   37 ++---------
+ src/gpm-manager.c             |   19 +-----
+ src/gpm-manager.h             |    3 -
+ src/gpm-prefs-core.c          |   97 +++++++++++++----------------
+ src/gpm-prefs-server.c        |  138 -----------------------------------------
+ src/gpm-prefs-server.h        |   67 --------------------
+ src/org.mate.PowerManager.xml |    3 -
+ 9 files changed, 50 insertions(+), 339 deletions(-)
+
+commit 543b06f44cafd70fe708fd54a82cba198a6da73b
+Merge: 40f8224 0645ff5
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Mon Oct 22 10:09:49 2012 -0700
+
+    Merge pull request #16 from bhull2010/master
+    
+    Port power manager applets to dbus
+
+commit 0645ff5a2d3f5115d411860fa32bef376f8e8d2b
+Author: Brent Hull <bhull2010@live.com>
+Date:   Sun Oct 21 13:55:02 2012 -0400
+
+    Update configure and POTFILES for the applets port
+
+ configure.ac     |    2 +-
+ po/POTFILES.in   |    6 ++----
+ po/POTFILES.skip |    4 ++--
+ 3 files changed, 5 insertions(+), 7 deletions(-)
+
+commit d5d706b9945e2b625de64136328eb0fced479c27
+Author: Brent Hull <bhull2010@live.com>
+Date:   Sun Oct 21 13:54:03 2012 -0400
+
+    Port inhibit applet to dbus based on gnome patch by carlosgc
+
+ applets/inhibit/MATE_InhibitApplet.server.in.in    |   36 -----------
+ applets/inhibit/MATE_InhibitApplet.xml             |    8 ---
+ applets/inhibit/Makefile.am                        |   31 ++++++---
+ applets/inhibit/inhibit-applet-menu.xml            |    2 +
+ applets/inhibit/inhibit-applet.c                   |   67 ++++++++++++--------
+ .../org.mate.InhibitApplet.mate-panel-applet.in.in |   16 +++++
+ ...te.panel.applet.InhibitAppletFactory.service.in |    3 +
+ 7 files changed, 83 insertions(+), 80 deletions(-)
+
+commit 907ea326ca56c3cb89bb5dbb96bcba780538c953
+Author: Brent Hull <bhull2010@live.com>
+Date:   Sun Oct 21 13:53:11 2012 -0400
+
+    Port brightness applet to dbus based on gnome patch by carlosgc
+
+ .../brightness/MATE_BrightnessApplet.server.in.in  |   36 -----------
+ applets/brightness/MATE_BrightnessApplet.xml       |    8 ---
+ applets/brightness/Makefile.am                     |   32 +++++++---
+ applets/brightness/brightness-applet-menu.xml      |    2 +
+ applets/brightness/brightness-applet.c             |   67 ++++++++++++--------
+ ...g.mate.BrightnessApplet.mate-panel-applet.in.in |   16 +++++
+ ...panel.applet.BrightnessAppletFactory.service.in |    3 +
+ 7 files changed, 84 insertions(+), 80 deletions(-)
+
+commit 40f8224e3871eb98bce2df2c3909a810f5e0b959
+Merge: 4fe93e9 35b79d7
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Tue Oct 2 07:37:29 2012 -0700
+
+    Merge pull request #13 from NiceandGently/master
+    
+    fix desktop files
+
+commit 35b79d7b25d77b888a0df798be3e7488979a16a0
+Author: Wolfgang Ulbrich <chat-to-me@raveit.de>
+Date:   Tue Oct 2 15:13:11 2012 +0300
+
+    Update data/mate-power-statistics.desktop.in.in
+    
+    remove OnlyShowIn=XFCE and Catgories=MATE
+
+ data/mate-power-statistics.desktop.in.in |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 179d1b6a4f8938051c6189fbcb9694992f0d1103
+Author: Wolfgang Ulbrich <chat-to-me@raveit.de>
+Date:   Tue Oct 2 15:10:34 2012 +0300
+
+    Update data/mate-power-preferences.desktop.in.in
+    
+    remove OnlyShowIn=XFCE
+
+ data/mate-power-preferences.desktop.in.in |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 04160274ab250ce971a077c26f031a009fed77b1
+Author: Wolfgang Ulbrich <chat-to-me@raveit.de>
+Date:   Tue Oct 2 15:09:12 2012 +0300
+
+    Update data/mate-power-manager.desktop.in.in
+    
+    remove OnlyShowIn=XFCE
+
+ data/mate-power-manager.desktop.in.in |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 4fe93e91235ea1ff4bf7e80c019575df58d1eeeb
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu Jul 12 14:47:12 2012 -0400
+
+    Preparing for 1.4 release.
+
+ configure.ac |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e192b7663d591fd9a0a8fb846adbf0489020916a
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Jul 12 13:04:13 2012 +0200
+
+    sync translations with transifex
+
+ po/ar.po                | 1130 +++++++----------------------------------------
+ po/gnome-copyrights.txt |  998 +++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 1152 insertions(+), 976 deletions(-)
+
+commit dbc609478699bc792611a1ab982c078c64adb561
+Author: fhucho <fhucho@gmail.com>
+Date:   Sat Jul 7 12:26:54 2012 +0300
+
+    Added "nvidia_backlight" to the list of backlight interfaces. Setting brightness with hotkeys should now work on notebooks with the Nvidia binary driver (tested on MacBook Pro 7,1).
+
+ src/gpm-backlight-helper.c |    1 +
+ 1 file changed, 1 insertion(+)
+
+commit aa14fa93ea3ec648987b92e6c5cd804c4a2889c9
+Merge: ad0d27b 0acdf5c
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Jun 24 09:40:59 2012 -0700
+
+    Merge pull request #9 from MDykstra/master
+    
+    idea from: http://cgit.freedesktop.org/gstreamer/gst-plugins-base/commit/?id=0c2f2a64c5a3cde94326950c6b64e04120fe24d7
+
+commit 0acdf5c1cf7b490d81f3d2dfe7850c763408fda1
+Author: Marcel Dijkstra <marcel.dykstra@gmail.com>
+Date:   Sun Jun 24 18:32:36 2012 +0200
+
+    deprecated pango_cairo_font_map_create to pango_font_map_create
+
+ src/gpm-graph-widget.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit ad0d27b6e59f008f0411d9c036fd45fc347c80fd
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Jun 14 22:15:06 2012 +0200
+
+    remove unused wnck refs
+
+ README       |    3 +--
+ configure.ac |    2 --
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+
+commit 1e437dffa450d1a62098374a67d1148b8e673d13
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Jun 14 20:12:48 2012 +0200
+
+    remove distro/fedora folder
+
+ distro/fedora/mate-power-manager.spec |  156 ---------------------------------
+ 1 file changed, 156 deletions(-)
+
+commit 6dd713def558f0e4ca86a4ddd9cf1d300634e3d0
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Fri Apr 6 17:12:40 2012 -0400
+
+    removed ubuntu folder from distro.
+
+ distro/ubuntu/build    |   34 ----------------------------------
+ distro/ubuntu/postinst |    8 --------
+ distro/ubuntu/postrm   |    8 --------
+ distro/ubuntu/preinst  |    6 ------
+ distro/ubuntu/prerm    |    9 ---------
+ 5 files changed, 65 deletions(-)
+
+commit 8a9759af11763809500ad1ec4a2346de5736b0cd
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Mar 21 15:06:59 2012 +0100
+
+    fix combobox deprecation
+
+ src/gpm-statistics.c |   66 ++++++++++++++++++++++----------------------------
+ 1 file changed, 29 insertions(+), 37 deletions(-)
+
+commit 971cbd2be698bdd536efa04a8dfaa409ca4eb242
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Mar 21 14:01:25 2012 +0100
+
+    add deprecated .ui to data folder
+
+ data/Makefile.am |    4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit d86ae86e6cd5a87547434b416b79fc677d9b3ae9
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Tue Mar 20 17:40:58 2012 +0100
+
+    fix gpm-prefs, need to fix gpm-statistics
+
+ configure.ac                      |    2 +-
+ data/gpm-prefs.ui                 |   12 +-
+ data/gpm-statistics-deprecated.ui |  505 +++++++++++++++++++++++++++++++++++++
+ data/gpm-statistics-fix.ui        |  505 -------------------------------------
+ data/gpm-statistics.ui            |    6 +-
+ po/POTFILES.in                    |    2 +
+ src/gpm-prefs-core.c              |   28 +-
+ src/gpm-statistics.c              |   33 ++-
+ 8 files changed, 552 insertions(+), 541 deletions(-)
+
+commit 352827e8a19139a4bb9ff5cfde3fa86841260d65
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Tue Mar 20 11:16:50 2012 +0100
+
+    update Turkish translation
+
+ po/tr.po | 2045 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 1008 insertions(+), 1037 deletions(-)
+
+commit e23ae76053f8c1f7cedd4c2879e23c2da91b83cc
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Sat Mar 17 19:28:51 2012 -0400
+
+    Temporary hack to fix GtkComboBoxText issue.
+
+ data/gpm-statistics-fix.ui |  505 ++++++++++++++++++++++++++++++++++++++++++++
+ src/gpm-statistics.c       |    7 +-
+ 2 files changed, 511 insertions(+), 1 deletion(-)
+
+commit ccfcf2483ffb52d0af9caaf52db4be44ec6ac160
+Merge: 285e040 3178d77
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Sat Mar 17 10:23:09 2012 -0700
+
+    Merge pull request #6 from benpicco/master
+    
+    sync with upstream
+
+commit 3178d77b55f106694ad9aa1e27f437ac1cca862b
+Author: Antoine Jacoutot <ajacoutot@openbsd.org>
+Date:   Tue May 24 11:15:08 2011 +0000
+
+    Don't try to close a non-opened fd
+    
+    On OpenBSD we do not use /proc. As a result, gnome-power-manager segfaults on
+    startup due to a reverse logic in the code.
+    
+    Signed-off-by: Richard Hughes <richard@hughsie.com>
+
+ src/gpm-load.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 3b3bddfeea90ce4d33aa137d6b64b066e81324f3
+Author: Pedro Martinez-Julia <pedromj@um.es>
+Date:   Mon Mar 7 22:31:40 2011 +0000
+
+    Fixed #644143, how to convert from percentage to discrete and vice-versa.
+    
+    Signed-off-by: Richard Hughes <richard@hughsie.com>
+
+ src/egg-discrete.c |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 285e040fd7ba4bedc25054790b4de9eb0fcb6410
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Mar 14 15:00:57 2012 +0100
+
+    update for 1.2
+
+ AUTHORS      |    8 ++++++--
+ MAINTAINERS  |    3 ---
+ README       |    2 ++
+ autogen.sh   |    4 ++--
+ configure.ac |    2 +-
+ 5 files changed, 11 insertions(+), 8 deletions(-)
+
+commit 252ecc3b07c71bebb2d442ef1fd518a25998227c
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Tue Jan 10 14:30:08 2012 -0500
+
+    Changed mate.gr.jp to gnome.gr.jp as requested in issue #86
+
+ po/ja.po |    8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+commit 9ac1e51c8da7647f6f88dbaed9712efcdf1e07a3
+Author: Perberos <perberos@gmail.com>
+Date:   Sat Dec 31 14:41:41 2011 -0300
+
+    agregando hotfix para libunique 1.0 y flags para construir usando GTK3
+
+ configure.ac |   62 +++++++++++++++++++++++++++++++++++++++++++++++++++++-----
+ 1 file changed, 57 insertions(+), 5 deletions(-)
+
+commit b9bcb2bf11168fcc11481999db16b40d67aa41db
+Author: Perberos <perberos@gmail.com>
+Date:   Sat Dec 31 14:40:44 2011 -0300
+
+    removiendo archivos autogenerados
+
+ compile              |  143 -
+ ltmain.sh            | 8406 --------------------------------------------------
+ m4/intltool.m4       |  216 --
+ m4/libtool.m4        | 7360 -------------------------------------------
+ m4/ltoptions.m4      |  368 ---
+ m4/ltversion.m4      |   23 -
+ m4/lt~obsolete.m4    |   92 -
+ m4/mate-doc-utils.m4 |   53 -
+ 8 files changed, 16661 deletions(-)
+
+commit 95e95e4bf5c45ba83899eb3f04dc766120baff26
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Fri Dec 30 16:40:53 2011 +0100
+
+    reverted ssam patch. we need to found a solution to build in fedora
+
+ configure.ac |    6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+commit 6f2018c7a34c7d87ef6c055bcf07ec6e3b9c0b25
+Merge: cfa7ef2 558e32c
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Fri Dec 30 06:22:42 2011 -0800
+
+    Merge pull request #4 from samtygier/master
+    
+    if glib > 2.30, then need to use unique-3.0, to avoid deprecated G_CONST_RETURN
+    need testing on debian/ubuntu and arch
+
+commit 558e32cb739aa14ab0eaee2b94fb3d455fc376ab
+Author: Sam Tygier <samtygier@yahoo.co.uk>
+Date:   Thu Dec 29 17:39:08 2011 +0000
+
+    if glib > 2.30, then need to use unique-3.0, to avoid deprecated G_CONST_RETURN
+
+ configure.ac |    6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit cfa7ef22687d8b4c45f3d7f4921e7eee14d7d0c1
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Dec 29 16:49:46 2011 +0100
+
+    Fix double / in url
+
+ README |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit cd7f29736b7e48754b5854afa1ca11cfe2978fe0
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Dec 29 16:49:18 2011 +0100
+
+    Fix README for MATE
+
+ README |    6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit 30cc6ca0c463d9e2233947f3231399f2d9f64667
+Merge: 67bb8c1 7e7ad48
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Dec 29 07:46:50 2011 -0800
+
+    Merge pull request #3 from samtygier/master
+    
+    this finishes off the gtk 2.24 work started by szesch
+
+commit 7e7ad48eeccbee3e899f662ac8bb2fa097638efa
+Author: Sam Tygier <samtygier@yahoo.co.uk>
+Date:   Thu Dec 29 15:24:52 2011 +0000
+
+    more gtk_combo_box to gtk_combo_box_text migration for gtk 2.24
+
+ src/gpm-statistics.c |   66 ++++++++++++++++++++++++++++++++++++++------------
+ 1 file changed, 50 insertions(+), 16 deletions(-)
+
+commit 89973129ca9fae822573242a9815f1f65ac0ded9
+Author: Sam Tygier <samtygier@yahoo.co.uk>
+Date:   Thu Dec 29 15:07:48 2011 +0000
+
+    fix missing switch of GTK_COMBO_BOX to GTK_COMBO_BOX_TEXT
+
+ src/gpm-prefs-core.c |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit fcb6eb4aed20575c12818e796dfd3506045373ce
+Author: Sam Tygier <samtygier@yahoo.co.uk>
+Date:   Thu Dec 29 15:02:44 2011 +0000
+
+    fix missing semicolons, introduced in 3893856a1e22cb62a9d36eca5ab96284859d0d19
+
+ src/gpm-prefs-core.c |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit f895ab2ee8f0e838d01a51544d7ec06693349a06
+Author: Sam Tygier <samtygier@yahoo.co.uk>
+Date:   Thu Dec 29 13:58:45 2011 +0000
+
+    gtk_check_version should be GTK_CHECK_VERSION, lowercase version is C function, not a preprocessor macro
+
+ src/gpm-prefs-core.c |   30 +++++++++++++++---------------
+ 1 file changed, 15 insertions(+), 15 deletions(-)
+
+commit 67bb8c1d1446c4056fed6832ecfde5f74660ce4f
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Mon Dec 26 19:33:53 2011 -0500
+
+    Fixed gtk_combo_box_append_text deprecation
+
+ data/gpm-prefs-deprecated.ui | 1134 ++++++++++++++++++++++++++++++++++++++++++
+ data/gpm-prefs.ui            |   14 +-
+ src/gpm-prefs-core.c         |   76 ++-
+ 3 files changed, 1202 insertions(+), 22 deletions(-)
+
+commit d9b15ee1bfcb82cd62a1a23be6d159f9cae662a0
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Sat Dec 24 16:58:13 2011 -0500
+
+    Spacing adventures
+
+ src/gpm-prefs-core.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit afa89dd320a5ebd12185a57c6a5504732110ec41
+Merge: 7e05ad6 a5458eb
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Sat Dec 24 16:55:24 2011 -0500
+
+    Merge branch 'master' of https://github.com/mate-desktop/mate-power-manager
+
+commit 7e05ad6ca7077aed029092a4599795fee80bddab
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Sat Dec 24 16:54:49 2011 -0500
+
+    lol spacing
+
+ src/gpm-prefs-core.c |  120 +++++++++++++++++++++++++-------------------------
+ 1 file changed, 60 insertions(+), 60 deletions(-)
+
+commit a5458eb1570cb8745cd32ec123e2015c6b583254
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Sat Dec 24 16:50:49 2011 -0500
+
+    Spacing issues
+
+ src/gpm-prefs-core.c |  120 +++++++++++++++++++++++++-------------------------
+ 1 file changed, 60 insertions(+), 60 deletions(-)
+
+commit 3893856a1e22cb62a9d36eca5ab96284859d0d19
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Sat Dec 24 16:45:32 2011 -0500
+
+    Fixed gtk_widget_hide_all deprecation
+
+ src/gpm-prefs-core.c |   41 +++++++++++++++++++++++++++++++++++------
+ 1 file changed, 35 insertions(+), 6 deletions(-)
+
+commit c3d4f773a0ecc3b824bfcd2d2d21470ca8a7b391
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Tue Dec 13 23:52:31 2011 +0100
+
+    updated version to 1.1.0
+
+ AUTHORS                               |    2 ++
+ configure.ac                          |   10 +++++-----
+ distro/archlinux/PKGBUILD             |    2 +-
+ distro/fedora/mate-power-manager.spec |    2 +-
+ distro/ubuntu/build                   |    2 +-
+ 5 files changed, 10 insertions(+), 8 deletions(-)
+
+commit 419056bf41f38891c3bb5384293868b479478828
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Tue Dec 13 23:50:42 2011 +0100
+
+    added autogen.sh
+
+ autogen.sh |   24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+
+commit cfb5bafb134572090aba2b5064a9b27c5c784fc7
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Tue Dec 13 23:50:29 2011 +0100
+
+    remove autogenerated files
+
+ INSTALL                                 |  237 -
+ Makefile.in                             |  842 --
+ aclocal.m4                              | 1930 ----
+ applets/Makefile.in                     |  626 --
+ applets/brightness/Makefile.in          |  717 --
+ applets/inhibit/Makefile.in             |  717 --
+ config.guess                            | 1561 ---
+ config.h.in                             |  110 -
+ config.sub                              | 1686 ----
+ configure                               |16667 -------------------------------
+ data/Makefile.in                        |  834 --
+ data/icons/16x16/Makefile.in            |  626 --
+ data/icons/16x16/actions/Makefile.in    |  484 -
+ data/icons/16x16/apps/Makefile.in       |  486 -
+ data/icons/16x16/status/Makefile.in     |  537 -
+ data/icons/22x22/Makefile.in            |  626 --
+ data/icons/22x22/actions/Makefile.in    |  484 -
+ data/icons/22x22/apps/Makefile.in       |  486 -
+ data/icons/22x22/status/Makefile.in     |  537 -
+ data/icons/24x24/Makefile.in            |  626 --
+ data/icons/24x24/actions/Makefile.in    |  484 -
+ data/icons/24x24/apps/Makefile.in       |  486 -
+ data/icons/24x24/status/Makefile.in     |  537 -
+ data/icons/32x32/Makefile.in            |  626 --
+ data/icons/32x32/actions/Makefile.in    |  484 -
+ data/icons/32x32/apps/Makefile.in       |  486 -
+ data/icons/32x32/status/Makefile.in     |  537 -
+ data/icons/48x48/Makefile.in            |  626 --
+ data/icons/48x48/actions/Makefile.in    |  484 -
+ data/icons/48x48/apps/Makefile.in       |  486 -
+ data/icons/48x48/status/Makefile.in     |  538 -
+ data/icons/Makefile.in                  |  641 --
+ data/icons/scalable/Makefile.in         |  626 --
+ data/icons/scalable/actions/Makefile.in |  484 -
+ data/icons/scalable/apps/Makefile.in    |  486 -
+ data/icons/scalable/status/Makefile.in  |  529 -
+ depcomp                                 |  630 --
+ docs/Makefile.in                        |  430 -
+ help/Makefile.in                        |  946 --
+ install-sh                              |  520 -
+ man/Makefile.in                         |  529 -
+ mate-doc-utils.make                     |  578 --
+ mkinstalldirs                           |  162 -
+ omf.make                                |   61 -
+ po/Makefile.in.in                       |  217 -
+ policy/Makefile.in                      |  490 -
+ src/Makefile.in                         | 2033 ----
+ tools/Makefile.in                       |  490 -
+ xmldocs.make                            |  101 -
+ 49 files changed, 46546 deletions(-)
+
+commit 51175189c6d7313a3b84019e39496f957c4e6164
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Dec 11 12:55:19 2011 +0100
+
+    moved from Mate-Extra
+
+ AUTHORS                                            |    4 +
+ COPYING                                            |  340 +
+ HACKING                                            |    6 +
+ INSTALL                                            |  237 +
+ MAINTAINERS                                        |    3 +
+ Makefile.am                                        |   65 +
+ Makefile.in                                        |  842 +
+ NEWS                                               | 2622 +++
+ README                                             |   33 +
+ TODO                                               |    1 +
+ aclocal.m4                                         | 1930 +++
+ applets/Makefile.am                                |    1 +
+ applets/Makefile.in                                |  626 +
+ .../brightness/MATE_BrightnessApplet.server.in.in  |   36 +
+ applets/brightness/MATE_BrightnessApplet.xml       |    8 +
+ applets/brightness/Makefile.am                     |   55 +
+ applets/brightness/Makefile.in                     |  717 +
+ applets/brightness/brightness-applet.c             | 1038 ++
+ applets/brightness/egg-dbus-monitor.c              |  251 +
+ applets/brightness/egg-dbus-monitor.h              |   65 +
+ applets/brightness/egg-debug.c                     |  308 +
+ applets/brightness/egg-debug.h                     |   83 +
+ applets/brightness/gpm-common.c                    |  210 +
+ applets/brightness/gpm-common.h                    |  183 +
+ applets/inhibit/MATE_InhibitApplet.server.in.in    |   36 +
+ applets/inhibit/MATE_InhibitApplet.xml             |    8 +
+ applets/inhibit/Makefile.am                        |   55 +
+ applets/inhibit/Makefile.in                        |  717 +
+ applets/inhibit/egg-dbus-monitor.c                 |  251 +
+ applets/inhibit/egg-dbus-monitor.h                 |   65 +
+ applets/inhibit/egg-debug.c                        |  308 +
+ applets/inhibit/egg-debug.h                        |   83 +
+ applets/inhibit/gpm-common.c                       |  210 +
+ applets/inhibit/gpm-common.h                       |  183 +
+ applets/inhibit/inhibit-applet.c                   |  688 +
+ compile                                            |  143 +
+ config.guess                                       | 1561 ++
+ config.h.in                                        |  110 +
+ config.sub                                         | 1686 ++
+ configure                                          |16667 ++++++++++++++++++++
+ configure.ac                                       |  369 +
+ data/Makefile.am                                   |   60 +
+ data/Makefile.in                                   |  834 +
+ data/acme.ui                                       |   41 +
+ data/gpm-feedback-widget.ui                        |   43 +
+ data/gpm-prefs.ui                                  | 1134 ++
+ data/gpm-statistics.ui                             |  505 +
+ data/icons/16x16/Makefile.am                       |    2 +
+ data/icons/16x16/Makefile.in                       |  626 +
+ data/icons/16x16/actions/Makefile.am               |   15 +
+ data/icons/16x16/actions/Makefile.in               |  484 +
+ data/icons/16x16/actions/gpm-hibernate.png         |  Bin 0 -> 685 bytes
+ data/icons/16x16/actions/gpm-suspend.png           |  Bin 0 -> 801 bytes
+ data/icons/16x16/apps/Makefile.am                  |   17 +
+ data/icons/16x16/apps/Makefile.in                  |  486 +
+ data/icons/16x16/apps/mate-brightness-applet.png   |  Bin 0 -> 546 bytes
+ data/icons/16x16/apps/mate-inhibit-applet.png      |  Bin 0 -> 801 bytes
+ data/icons/16x16/apps/mate-power-manager.png       |  Bin 0 -> 1404 bytes
+ data/icons/16x16/apps/mate-power-statistics.png    |  Bin 0 -> 738 bytes
+ data/icons/16x16/status/Makefile.am                |   70 +
+ data/icons/16x16/status/Makefile.in                |  537 +
+ data/icons/16x16/status/gpm-ac-adapter.png         |  Bin 0 -> 719 bytes
+ .../16x16/status/gpm-battery-000-charging.png      |  Bin 0 -> 800 bytes
+ data/icons/16x16/status/gpm-battery-000.png        |  Bin 0 -> 567 bytes
+ .../16x16/status/gpm-battery-020-charging.png      |  Bin 0 -> 804 bytes
+ data/icons/16x16/status/gpm-battery-020.png        |  Bin 0 -> 600 bytes
+ .../16x16/status/gpm-battery-040-charging.png      |  Bin 0 -> 814 bytes
+ data/icons/16x16/status/gpm-battery-040.png        |  Bin 0 -> 635 bytes
+ .../16x16/status/gpm-battery-060-charging.png      |  Bin 0 -> 804 bytes
+ data/icons/16x16/status/gpm-battery-060.png        |  Bin 0 -> 595 bytes
+ .../16x16/status/gpm-battery-080-charging.png      |  Bin 0 -> 808 bytes
+ data/icons/16x16/status/gpm-battery-080.png        |  Bin 0 -> 607 bytes
+ .../16x16/status/gpm-battery-100-charging.png      |  Bin 0 -> 818 bytes
+ data/icons/16x16/status/gpm-battery-100.png        |  Bin 0 -> 591 bytes
+ data/icons/16x16/status/gpm-battery-charged.png    |  Bin 0 -> 754 bytes
+ data/icons/16x16/status/gpm-battery-empty.png      |  Bin 0 -> 501 bytes
+ data/icons/16x16/status/gpm-battery-missing.png    |  Bin 0 -> 603 bytes
+ .../16x16/status/gpm-brightness-kbd-disabled.png   |  Bin 0 -> 561 bytes
+ .../16x16/status/gpm-brightness-kbd-invalid.png    |  Bin 0 -> 561 bytes
+ data/icons/16x16/status/gpm-brightness-kbd.png     |  Bin 0 -> 561 bytes
+ .../16x16/status/gpm-brightness-lcd-disabled.png   |  Bin 0 -> 546 bytes
+ .../16x16/status/gpm-brightness-lcd-invalid.png    |  Bin 0 -> 546 bytes
+ data/icons/16x16/status/gpm-brightness-lcd.png     |  Bin 0 -> 546 bytes
+ data/icons/16x16/status/gpm-inhibit-invalid.png    |  Bin 0 -> 855 bytes
+ data/icons/16x16/status/gpm-inhibit.png            |  Bin 0 -> 855 bytes
+ data/icons/16x16/status/gpm-keyboard-000.png       |  Bin 0 -> 605 bytes
+ data/icons/16x16/status/gpm-keyboard-020.png       |  Bin 0 -> 598 bytes
+ data/icons/16x16/status/gpm-keyboard-040.png       |  Bin 0 -> 615 bytes
+ data/icons/16x16/status/gpm-keyboard-060.png       |  Bin 0 -> 622 bytes
+ data/icons/16x16/status/gpm-keyboard-080.png       |  Bin 0 -> 642 bytes
+ data/icons/16x16/status/gpm-keyboard-100.png       |  Bin 0 -> 628 bytes
+ data/icons/16x16/status/gpm-mouse-000.png          |  Bin 0 -> 651 bytes
+ data/icons/16x16/status/gpm-mouse-020.png          |  Bin 0 -> 698 bytes
+ data/icons/16x16/status/gpm-mouse-040.png          |  Bin 0 -> 725 bytes
+ data/icons/16x16/status/gpm-mouse-060.png          |  Bin 0 -> 730 bytes
+ data/icons/16x16/status/gpm-mouse-080.png          |  Bin 0 -> 681 bytes
+ data/icons/16x16/status/gpm-mouse-100.png          |  Bin 0 -> 697 bytes
+ data/icons/16x16/status/gpm-phone-000.png          |  Bin 0 -> 779 bytes
+ data/icons/16x16/status/gpm-phone-020.png          |  Bin 0 -> 790 bytes
+ data/icons/16x16/status/gpm-phone-040.png          |  Bin 0 -> 822 bytes
+ data/icons/16x16/status/gpm-phone-060.png          |  Bin 0 -> 822 bytes
+ data/icons/16x16/status/gpm-phone-080.png          |  Bin 0 -> 822 bytes
+ data/icons/16x16/status/gpm-phone-100.png          |  Bin 0 -> 814 bytes
+ data/icons/16x16/status/gpm-ups-000-charging.png   |  Bin 0 -> 668 bytes
+ data/icons/16x16/status/gpm-ups-000.png            |  Bin 0 -> 619 bytes
+ data/icons/16x16/status/gpm-ups-020-charging.png   |  Bin 0 -> 698 bytes
+ data/icons/16x16/status/gpm-ups-020.png            |  Bin 0 -> 627 bytes
+ data/icons/16x16/status/gpm-ups-040-charging.png   |  Bin 0 -> 732 bytes
+ data/icons/16x16/status/gpm-ups-040.png            |  Bin 0 -> 682 bytes
+ data/icons/16x16/status/gpm-ups-060-charging.png   |  Bin 0 -> 742 bytes
+ data/icons/16x16/status/gpm-ups-060.png            |  Bin 0 -> 694 bytes
+ data/icons/16x16/status/gpm-ups-080-charging.png   |  Bin 0 -> 749 bytes
+ data/icons/16x16/status/gpm-ups-080.png            |  Bin 0 -> 692 bytes
+ data/icons/16x16/status/gpm-ups-100-charging.png   |  Bin 0 -> 709 bytes
+ data/icons/16x16/status/gpm-ups-100.png            |  Bin 0 -> 662 bytes
+ data/icons/16x16/status/gpm-ups-missing.png        |  Bin 0 -> 595 bytes
+ data/icons/22x22/Makefile.am                       |    2 +
+ data/icons/22x22/Makefile.in                       |  626 +
+ data/icons/22x22/actions/Makefile.am               |   15 +
+ data/icons/22x22/actions/Makefile.in               |  484 +
+ data/icons/22x22/actions/gpm-hibernate.png         |  Bin 0 -> 1042 bytes
+ data/icons/22x22/actions/gpm-suspend.png           |  Bin 0 -> 1032 bytes
+ data/icons/22x22/apps/Makefile.am                  |   17 +
+ data/icons/22x22/apps/Makefile.in                  |  486 +
+ data/icons/22x22/apps/mate-brightness-applet.png   |  Bin 0 -> 1157 bytes
+ data/icons/22x22/apps/mate-inhibit-applet.png      |  Bin 0 -> 1032 bytes
+ data/icons/22x22/apps/mate-power-manager.png       |  Bin 0 -> 1897 bytes
+ data/icons/22x22/apps/mate-power-statistics.png    |  Bin 0 -> 1002 bytes
+ data/icons/22x22/status/Makefile.am                |   70 +
+ data/icons/22x22/status/Makefile.in                |  537 +
+ data/icons/22x22/status/gpm-ac-adapter.png         |  Bin 0 -> 1168 bytes
+ .../22x22/status/gpm-battery-000-charging.png      |  Bin 0 -> 1132 bytes
+ data/icons/22x22/status/gpm-battery-000.png        |  Bin 0 -> 717 bytes
+ .../22x22/status/gpm-battery-020-charging.png      |  Bin 0 -> 1135 bytes
+ data/icons/22x22/status/gpm-battery-020.png        |  Bin 0 -> 715 bytes
+ .../22x22/status/gpm-battery-040-charging.png      |  Bin 0 -> 1126 bytes
+ data/icons/22x22/status/gpm-battery-040.png        |  Bin 0 -> 747 bytes
+ .../22x22/status/gpm-battery-060-charging.png      |  Bin 0 -> 1138 bytes
+ data/icons/22x22/status/gpm-battery-060.png        |  Bin 0 -> 752 bytes
+ .../22x22/status/gpm-battery-080-charging.png      |  Bin 0 -> 1149 bytes
+ data/icons/22x22/status/gpm-battery-080.png        |  Bin 0 -> 751 bytes
+ .../22x22/status/gpm-battery-100-charging.png      |  Bin 0 -> 1131 bytes
+ data/icons/22x22/status/gpm-battery-100.png        |  Bin 0 -> 721 bytes
+ data/icons/22x22/status/gpm-battery-charged.png    |  Bin 0 -> 1053 bytes
+ data/icons/22x22/status/gpm-battery-empty.png      |  Bin 0 -> 641 bytes
+ data/icons/22x22/status/gpm-battery-missing.png    |  Bin 0 -> 799 bytes
+ .../22x22/status/gpm-brightness-kbd-disabled.png   |  Bin 0 -> 1079 bytes
+ .../22x22/status/gpm-brightness-kbd-invalid.png    |  Bin 0 -> 1062 bytes
+ data/icons/22x22/status/gpm-brightness-kbd.png     |  Bin 0 -> 1030 bytes
+ .../22x22/status/gpm-brightness-lcd-disabled.png   |  Bin 0 -> 1259 bytes
+ .../22x22/status/gpm-brightness-lcd-invalid.png    |  Bin 0 -> 1240 bytes
+ data/icons/22x22/status/gpm-brightness-lcd.png     |  Bin 0 -> 1157 bytes
+ data/icons/22x22/status/gpm-inhibit-invalid.png    |  Bin 0 -> 1241 bytes
+ data/icons/22x22/status/gpm-inhibit.png            |  Bin 0 -> 1423 bytes
+ data/icons/22x22/status/gpm-keyboard-000.png       |  Bin 0 -> 1008 bytes
+ data/icons/22x22/status/gpm-keyboard-020.png       |  Bin 0 -> 996 bytes
+ data/icons/22x22/status/gpm-keyboard-040.png       |  Bin 0 -> 1027 bytes
+ data/icons/22x22/status/gpm-keyboard-060.png       |  Bin 0 -> 1027 bytes
+ data/icons/22x22/status/gpm-keyboard-080.png       |  Bin 0 -> 1047 bytes
+ data/icons/22x22/status/gpm-keyboard-100.png       |  Bin 0 -> 1031 bytes
+ data/icons/22x22/status/gpm-mouse-000.png          |  Bin 0 -> 958 bytes
+ data/icons/22x22/status/gpm-mouse-020.png          |  Bin 0 -> 959 bytes
+ data/icons/22x22/status/gpm-mouse-040.png          |  Bin 0 -> 974 bytes
+ data/icons/22x22/status/gpm-mouse-060.png          |  Bin 0 -> 975 bytes
+ data/icons/22x22/status/gpm-mouse-080.png          |  Bin 0 -> 974 bytes
+ data/icons/22x22/status/gpm-mouse-100.png          |  Bin 0 -> 958 bytes
+ data/icons/22x22/status/gpm-phone-000.png          |  Bin 0 -> 1029 bytes
+ data/icons/22x22/status/gpm-phone-020.png          |  Bin 0 -> 1042 bytes
+ data/icons/22x22/status/gpm-phone-040.png          |  Bin 0 -> 1075 bytes
+ data/icons/22x22/status/gpm-phone-060.png          |  Bin 0 -> 1073 bytes
+ data/icons/22x22/status/gpm-phone-080.png          |  Bin 0 -> 1058 bytes
+ data/icons/22x22/status/gpm-phone-100.png          |  Bin 0 -> 1045 bytes
+ data/icons/22x22/status/gpm-ups-000-charging.png   |  Bin 0 -> 969 bytes
+ data/icons/22x22/status/gpm-ups-000.png            |  Bin 0 -> 901 bytes
+ data/icons/22x22/status/gpm-ups-020-charging.png   |  Bin 0 -> 999 bytes
+ data/icons/22x22/status/gpm-ups-020.png            |  Bin 0 -> 913 bytes
+ data/icons/22x22/status/gpm-ups-040-charging.png   |  Bin 0 -> 1000 bytes
+ data/icons/22x22/status/gpm-ups-040.png            |  Bin 0 -> 923 bytes
+ data/icons/22x22/status/gpm-ups-060-charging.png   |  Bin 0 -> 1014 bytes
+ data/icons/22x22/status/gpm-ups-060.png            |  Bin 0 -> 934 bytes
+ data/icons/22x22/status/gpm-ups-080-charging.png   |  Bin 0 -> 1015 bytes
+ data/icons/22x22/status/gpm-ups-080.png            |  Bin 0 -> 937 bytes
+ data/icons/22x22/status/gpm-ups-100-charging.png   |  Bin 0 -> 993 bytes
+ data/icons/22x22/status/gpm-ups-100.png            |  Bin 0 -> 919 bytes
+ data/icons/22x22/status/gpm-ups-missing.png        |  Bin 0 -> 872 bytes
+ data/icons/24x24/Makefile.am                       |    2 +
+ data/icons/24x24/Makefile.in                       |  626 +
+ data/icons/24x24/actions/Makefile.am               |   15 +
+ data/icons/24x24/actions/Makefile.in               |  484 +
+ data/icons/24x24/actions/gpm-hibernate.png         |  Bin 0 -> 1035 bytes
+ data/icons/24x24/actions/gpm-suspend.png           |  Bin 0 -> 1031 bytes
+ data/icons/24x24/apps/Makefile.am                  |   17 +
+ data/icons/24x24/apps/Makefile.in                  |  486 +
+ data/icons/24x24/apps/mate-brightness-applet.png   |  Bin 0 -> 1160 bytes
+ data/icons/24x24/apps/mate-inhibit-applet.png      |  Bin 0 -> 1031 bytes
+ data/icons/24x24/apps/mate-power-manager.png       |  Bin 0 -> 1913 bytes
+ data/icons/24x24/apps/mate-power-statistics.png    |  Bin 0 -> 1555 bytes
+ data/icons/24x24/status/Makefile.am                |   70 +
+ data/icons/24x24/status/Makefile.in                |  537 +
+ data/icons/24x24/status/gpm-ac-adapter.png         |  Bin 0 -> 1170 bytes
+ .../24x24/status/gpm-battery-000-charging.png      |  Bin 0 -> 1152 bytes
+ data/icons/24x24/status/gpm-battery-000.png        |  Bin 0 -> 747 bytes
+ .../24x24/status/gpm-battery-020-charging.png      |  Bin 0 -> 1151 bytes
+ data/icons/24x24/status/gpm-battery-020.png        |  Bin 0 -> 751 bytes
+ .../24x24/status/gpm-battery-040-charging.png      |  Bin 0 -> 1153 bytes
+ data/icons/24x24/status/gpm-battery-040.png        |  Bin 0 -> 778 bytes
+ .../24x24/status/gpm-battery-060-charging.png      |  Bin 0 -> 1162 bytes
+ data/icons/24x24/status/gpm-battery-060.png        |  Bin 0 -> 783 bytes
+ .../24x24/status/gpm-battery-080-charging.png      |  Bin 0 -> 1174 bytes
+ data/icons/24x24/status/gpm-battery-080.png        |  Bin 0 -> 783 bytes
+ .../24x24/status/gpm-battery-100-charging.png      |  Bin 0 -> 1155 bytes
+ data/icons/24x24/status/gpm-battery-100.png        |  Bin 0 -> 749 bytes
+ data/icons/24x24/status/gpm-battery-charged.png    |  Bin 0 -> 1121 bytes
+ data/icons/24x24/status/gpm-battery-empty.png      |  Bin 0 -> 669 bytes
+ data/icons/24x24/status/gpm-battery-missing.png    |  Bin 0 -> 833 bytes
+ .../24x24/status/gpm-brightness-kbd-disabled.png   |  Bin 0 -> 1653 bytes
+ .../24x24/status/gpm-brightness-kbd-invalid.png    |  Bin 0 -> 1540 bytes
+ data/icons/24x24/status/gpm-brightness-kbd.png     |  Bin 0 -> 1160 bytes
+ .../24x24/status/gpm-brightness-lcd-disabled.png   |  Bin 0 -> 2012 bytes
+ .../24x24/status/gpm-brightness-lcd-invalid.png    |  Bin 0 -> 1876 bytes
+ data/icons/24x24/status/gpm-brightness-lcd.png     |  Bin 0 -> 1160 bytes
+ data/icons/24x24/status/gpm-inhibit-invalid.png    |  Bin 0 -> 1828 bytes
+ data/icons/24x24/status/gpm-inhibit.png            |  Bin 0 -> 1513 bytes
+ data/icons/24x24/status/gpm-keyboard-000.png       |  Bin 0 -> 1065 bytes
+ data/icons/24x24/status/gpm-keyboard-020.png       |  Bin 0 -> 1060 bytes
+ data/icons/24x24/status/gpm-keyboard-040.png       |  Bin 0 -> 1081 bytes
+ data/icons/24x24/status/gpm-keyboard-060.png       |  Bin 0 -> 1083 bytes
+ data/icons/24x24/status/gpm-keyboard-080.png       |  Bin 0 -> 1107 bytes
+ data/icons/24x24/status/gpm-keyboard-100.png       |  Bin 0 -> 1089 bytes
+ data/icons/24x24/status/gpm-mouse-000.png          |  Bin 0 -> 1021 bytes
+ data/icons/24x24/status/gpm-mouse-020.png          |  Bin 0 -> 1020 bytes
+ data/icons/24x24/status/gpm-mouse-040.png          |  Bin 0 -> 1035 bytes
+ data/icons/24x24/status/gpm-mouse-060.png          |  Bin 0 -> 1040 bytes
+ data/icons/24x24/status/gpm-mouse-080.png          |  Bin 0 -> 1041 bytes
+ data/icons/24x24/status/gpm-mouse-100.png          |  Bin 0 -> 1022 bytes
+ data/icons/24x24/status/gpm-phone-000.png          |  Bin 0 -> 1069 bytes
+ data/icons/24x24/status/gpm-phone-020.png          |  Bin 0 -> 1081 bytes
+ data/icons/24x24/status/gpm-phone-040.png          |  Bin 0 -> 1107 bytes
+ data/icons/24x24/status/gpm-phone-060.png          |  Bin 0 -> 1100 bytes
+ data/icons/24x24/status/gpm-phone-080.png          |  Bin 0 -> 1085 bytes
+ data/icons/24x24/status/gpm-phone-100.png          |  Bin 0 -> 1075 bytes
+ data/icons/24x24/status/gpm-ups-000-charging.png   |  Bin 0 -> 1034 bytes
+ data/icons/24x24/status/gpm-ups-000.png            |  Bin 0 -> 969 bytes
+ data/icons/24x24/status/gpm-ups-020-charging.png   |  Bin 0 -> 1060 bytes
+ data/icons/24x24/status/gpm-ups-020.png            |  Bin 0 -> 975 bytes
+ data/icons/24x24/status/gpm-ups-040-charging.png   |  Bin 0 -> 1064 bytes
+ data/icons/24x24/status/gpm-ups-040.png            |  Bin 0 -> 990 bytes
+ data/icons/24x24/status/gpm-ups-060-charging.png   |  Bin 0 -> 1061 bytes
+ data/icons/24x24/status/gpm-ups-060.png            |  Bin 0 -> 989 bytes
+ data/icons/24x24/status/gpm-ups-080-charging.png   |  Bin 0 -> 1069 bytes
+ data/icons/24x24/status/gpm-ups-080.png            |  Bin 0 -> 994 bytes
+ data/icons/24x24/status/gpm-ups-100-charging.png   |  Bin 0 -> 1064 bytes
+ data/icons/24x24/status/gpm-ups-100.png            |  Bin 0 -> 989 bytes
+ data/icons/24x24/status/gpm-ups-missing.png        |  Bin 0 -> 916 bytes
+ data/icons/32x32/Makefile.am                       |    2 +
+ data/icons/32x32/Makefile.in                       |  626 +
+ data/icons/32x32/actions/Makefile.am               |   15 +
+ data/icons/32x32/actions/Makefile.in               |  484 +
+ data/icons/32x32/actions/gpm-hibernate.png         |  Bin 0 -> 1699 bytes
+ data/icons/32x32/actions/gpm-suspend.png           |  Bin 0 -> 1714 bytes
+ data/icons/32x32/apps/Makefile.am                  |   17 +
+ data/icons/32x32/apps/Makefile.in                  |  486 +
+ data/icons/32x32/apps/mate-brightness-applet.png   |  Bin 0 -> 1791 bytes
+ data/icons/32x32/apps/mate-inhibit-applet.png      |  Bin 0 -> 1714 bytes
+ data/icons/32x32/apps/mate-power-manager.png       |  Bin 0 -> 2196 bytes
+ data/icons/32x32/apps/mate-power-statistics.png    |  Bin 0 -> 1519 bytes
+ data/icons/32x32/status/Makefile.am                |   70 +
+ data/icons/32x32/status/Makefile.in                |  537 +
+ data/icons/32x32/status/gpm-ac-adapter.png         |  Bin 0 -> 1977 bytes
+ .../32x32/status/gpm-battery-000-charging.png      |  Bin 0 -> 2388 bytes
+ data/icons/32x32/status/gpm-battery-000.png        |  Bin 0 -> 1485 bytes
+ .../32x32/status/gpm-battery-020-charging.png      |  Bin 0 -> 2438 bytes
+ data/icons/32x32/status/gpm-battery-020.png        |  Bin 0 -> 1516 bytes
+ .../32x32/status/gpm-battery-040-charging.png      |  Bin 0 -> 2461 bytes
+ data/icons/32x32/status/gpm-battery-040.png        |  Bin 0 -> 1522 bytes
+ .../32x32/status/gpm-battery-060-charging.png      |  Bin 0 -> 2475 bytes
+ data/icons/32x32/status/gpm-battery-060.png        |  Bin 0 -> 1509 bytes
+ .../32x32/status/gpm-battery-080-charging.png      |  Bin 0 -> 2471 bytes
+ data/icons/32x32/status/gpm-battery-080.png        |  Bin 0 -> 1441 bytes
+ .../32x32/status/gpm-battery-100-charging.png      |  Bin 0 -> 2364 bytes
+ data/icons/32x32/status/gpm-battery-100.png        |  Bin 0 -> 1311 bytes
+ data/icons/32x32/status/gpm-battery-charged.png    |  Bin 0 -> 2257 bytes
+ data/icons/32x32/status/gpm-battery-empty.png      |  Bin 0 -> 1311 bytes
+ data/icons/32x32/status/gpm-battery-missing.png    |  Bin 0 -> 1662 bytes
+ .../32x32/status/gpm-brightness-kbd-disabled.png   |  Bin 0 -> 1969 bytes
+ .../32x32/status/gpm-brightness-kbd-invalid.png    |  Bin 0 -> 1929 bytes
+ data/icons/32x32/status/gpm-brightness-kbd.png     |  Bin 0 -> 1744 bytes
+ .../32x32/status/gpm-brightness-lcd-disabled.png   |  Bin 0 -> 2117 bytes
+ .../32x32/status/gpm-brightness-lcd-invalid.png    |  Bin 0 -> 2060 bytes
+ data/icons/32x32/status/gpm-brightness-lcd.png     |  Bin 0 -> 1791 bytes
+ data/icons/32x32/status/gpm-inhibit-invalid.png    |  Bin 0 -> 1940 bytes
+ data/icons/32x32/status/gpm-inhibit.png            |  Bin 0 -> 2526 bytes
+ data/icons/32x32/status/gpm-keyboard-000.png       |  Bin 0 -> 1696 bytes
+ data/icons/32x32/status/gpm-keyboard-020.png       |  Bin 0 -> 1693 bytes
+ data/icons/32x32/status/gpm-keyboard-040.png       |  Bin 0 -> 1719 bytes
+ data/icons/32x32/status/gpm-keyboard-060.png       |  Bin 0 -> 1722 bytes
+ data/icons/32x32/status/gpm-keyboard-080.png       |  Bin 0 -> 1722 bytes
+ data/icons/32x32/status/gpm-keyboard-100.png       |  Bin 0 -> 1695 bytes
+ data/icons/32x32/status/gpm-mouse-000.png          |  Bin 0 -> 1741 bytes
+ data/icons/32x32/status/gpm-mouse-020.png          |  Bin 0 -> 1755 bytes
+ data/icons/32x32/status/gpm-mouse-040.png          |  Bin 0 -> 1769 bytes
+ data/icons/32x32/status/gpm-mouse-060.png          |  Bin 0 -> 1765 bytes
+ data/icons/32x32/status/gpm-mouse-080.png          |  Bin 0 -> 1769 bytes
+ data/icons/32x32/status/gpm-mouse-100.png          |  Bin 0 -> 1745 bytes
+ data/icons/32x32/status/gpm-phone-000.png          |  Bin 0 -> 2007 bytes
+ data/icons/32x32/status/gpm-phone-020.png          |  Bin 0 -> 2008 bytes
+ data/icons/32x32/status/gpm-phone-040.png          |  Bin 0 -> 2024 bytes
+ data/icons/32x32/status/gpm-phone-060.png          |  Bin 0 -> 2221 bytes
+ data/icons/32x32/status/gpm-phone-080.png          |  Bin 0 -> 2018 bytes
+ data/icons/32x32/status/gpm-phone-100.png          |  Bin 0 -> 2022 bytes
+ data/icons/32x32/status/gpm-ups-000-charging.png   |  Bin 0 -> 1559 bytes
+ data/icons/32x32/status/gpm-ups-000.png            |  Bin 0 -> 1420 bytes
+ data/icons/32x32/status/gpm-ups-020-charging.png   |  Bin 0 -> 1586 bytes
+ data/icons/32x32/status/gpm-ups-020.png            |  Bin 0 -> 1426 bytes
+ data/icons/32x32/status/gpm-ups-040-charging.png   |  Bin 0 -> 1616 bytes
+ data/icons/32x32/status/gpm-ups-040.png            |  Bin 0 -> 1457 bytes
+ data/icons/32x32/status/gpm-ups-060-charging.png   |  Bin 0 -> 1505 bytes
+ data/icons/32x32/status/gpm-ups-060.png            |  Bin 0 -> 1373 bytes
+ data/icons/32x32/status/gpm-ups-080-charging.png   |  Bin 0 -> 1623 bytes
+ data/icons/32x32/status/gpm-ups-080.png            |  Bin 0 -> 1471 bytes
+ data/icons/32x32/status/gpm-ups-100-charging.png   |  Bin 0 -> 1617 bytes
+ data/icons/32x32/status/gpm-ups-100.png            |  Bin 0 -> 1442 bytes
+ data/icons/32x32/status/gpm-ups-missing.png        |  Bin 0 -> 1360 bytes
+ data/icons/48x48/Makefile.am                       |    2 +
+ data/icons/48x48/Makefile.in                       |  626 +
+ data/icons/48x48/actions/Makefile.am               |   15 +
+ data/icons/48x48/actions/Makefile.in               |  484 +
+ data/icons/48x48/actions/gpm-hibernate.png         |  Bin 0 -> 2703 bytes
+ data/icons/48x48/actions/gpm-suspend.png           |  Bin 0 -> 2591 bytes
+ data/icons/48x48/apps/Makefile.am                  |   17 +
+ data/icons/48x48/apps/Makefile.in                  |  486 +
+ data/icons/48x48/apps/mate-brightness-applet.png   |  Bin 0 -> 2844 bytes
+ data/icons/48x48/apps/mate-inhibit-applet.png      |  Bin 0 -> 2591 bytes
+ data/icons/48x48/apps/mate-power-manager.png       |  Bin 0 -> 3737 bytes
+ data/icons/48x48/apps/mate-power-statistics.png    |  Bin 0 -> 2483 bytes
+ data/icons/48x48/status/Makefile.am                |   71 +
+ data/icons/48x48/status/Makefile.in                |  538 +
+ data/icons/48x48/status/gpm-ac-adapter.png         |  Bin 0 -> 3155 bytes
+ .../48x48/status/gpm-battery-000-charging.png      |  Bin 0 -> 4134 bytes
+ data/icons/48x48/status/gpm-battery-000.png        |  Bin 0 -> 2419 bytes
+ .../48x48/status/gpm-battery-020-charging.png      |  Bin 0 -> 4155 bytes
+ data/icons/48x48/status/gpm-battery-020.png        |  Bin 0 -> 2493 bytes
+ .../48x48/status/gpm-battery-040-charging.png      |  Bin 0 -> 4189 bytes
+ data/icons/48x48/status/gpm-battery-040.png        |  Bin 0 -> 2544 bytes
+ .../48x48/status/gpm-battery-060-charging.png      |  Bin 0 -> 4169 bytes
+ data/icons/48x48/status/gpm-battery-060.png        |  Bin 0 -> 2484 bytes
+ .../48x48/status/gpm-battery-080-charging.png      |  Bin 0 -> 4245 bytes
+ data/icons/48x48/status/gpm-battery-080.png        |  Bin 0 -> 2452 bytes
+ .../48x48/status/gpm-battery-100-charging.png      |  Bin 0 -> 4055 bytes
+ data/icons/48x48/status/gpm-battery-100.png        |  Bin 0 -> 2244 bytes
+ data/icons/48x48/status/gpm-battery-charged.png    |  Bin 0 -> 3712 bytes
+ data/icons/48x48/status/gpm-battery-empty.png      |  Bin 0 -> 2129 bytes
+ data/icons/48x48/status/gpm-battery-missing.png    |  Bin 0 -> 2258 bytes
+ .../48x48/status/gpm-brightness-kbd-disabled.png   |  Bin 0 -> 3253 bytes
+ .../48x48/status/gpm-brightness-kbd-invalid.png    |  Bin 0 -> 3155 bytes
+ data/icons/48x48/status/gpm-brightness-kbd.png     |  Bin 0 -> 2670 bytes
+ .../48x48/status/gpm-brightness-lcd-disabled.png   |  Bin 0 -> 3585 bytes
+ .../48x48/status/gpm-brightness-lcd-invalid.png    |  Bin 0 -> 3509 bytes
+ data/icons/48x48/status/gpm-brightness-lcd.png     |  Bin 0 -> 2844 bytes
+ data/icons/48x48/status/gpm-inhibit-invalid.png    |  Bin 0 -> 3230 bytes
+ data/icons/48x48/status/gpm-inhibit.png            |  Bin 0 -> 4132 bytes
+ data/icons/48x48/status/gpm-keyboard-000.png       |  Bin 0 -> 3019 bytes
+ data/icons/48x48/status/gpm-keyboard-020.png       |  Bin 0 -> 3074 bytes
+ data/icons/48x48/status/gpm-keyboard-040.png       |  Bin 0 -> 3095 bytes
+ data/icons/48x48/status/gpm-keyboard-060.png       |  Bin 0 -> 3021 bytes
+ data/icons/48x48/status/gpm-keyboard-080.png       |  Bin 0 -> 3016 bytes
+ data/icons/48x48/status/gpm-keyboard-100.png       |  Bin 0 -> 2855 bytes
+ data/icons/48x48/status/gpm-monitor.png            |  Bin 0 -> 2680 bytes
+ data/icons/48x48/status/gpm-mouse-000.png          |  Bin 0 -> 3395 bytes
+ data/icons/48x48/status/gpm-mouse-020.png          |  Bin 0 -> 3475 bytes
+ data/icons/48x48/status/gpm-mouse-040.png          |  Bin 0 -> 3498 bytes
+ data/icons/48x48/status/gpm-mouse-060.png          |  Bin 0 -> 3493 bytes
+ data/icons/48x48/status/gpm-mouse-080.png          |  Bin 0 -> 3486 bytes
+ data/icons/48x48/status/gpm-mouse-100.png          |  Bin 0 -> 3353 bytes
+ data/icons/48x48/status/gpm-phone-000.png          |  Bin 0 -> 3835 bytes
+ data/icons/48x48/status/gpm-phone-020.png          |  Bin 0 -> 3867 bytes
+ data/icons/48x48/status/gpm-phone-040.png          |  Bin 0 -> 3878 bytes
+ data/icons/48x48/status/gpm-phone-060.png          |  Bin 0 -> 3861 bytes
+ data/icons/48x48/status/gpm-phone-080.png          |  Bin 0 -> 3849 bytes
+ data/icons/48x48/status/gpm-phone-100.png          |  Bin 0 -> 3705 bytes
+ data/icons/48x48/status/gpm-ups-000-charging.png   |  Bin 0 -> 2306 bytes
+ data/icons/48x48/status/gpm-ups-000.png            |  Bin 0 -> 2055 bytes
+ data/icons/48x48/status/gpm-ups-020-charging.png   |  Bin 0 -> 2332 bytes
+ data/icons/48x48/status/gpm-ups-020.png            |  Bin 0 -> 2134 bytes
+ data/icons/48x48/status/gpm-ups-040-charging.png   |  Bin 0 -> 2378 bytes
+ data/icons/48x48/status/gpm-ups-040.png            |  Bin 0 -> 2148 bytes
+ data/icons/48x48/status/gpm-ups-060-charging.png   |  Bin 0 -> 2397 bytes
+ data/icons/48x48/status/gpm-ups-060.png            |  Bin 0 -> 2165 bytes
+ data/icons/48x48/status/gpm-ups-080-charging.png   |  Bin 0 -> 2396 bytes
+ data/icons/48x48/status/gpm-ups-080.png            |  Bin 0 -> 2155 bytes
+ data/icons/48x48/status/gpm-ups-100-charging.png   |  Bin 0 -> 2384 bytes
+ data/icons/48x48/status/gpm-ups-100.png            |  Bin 0 -> 2155 bytes
+ data/icons/48x48/status/gpm-ups-missing.png        |  Bin 0 -> 1832 bytes
+ data/icons/Makefile.am                             |   15 +
+ data/icons/Makefile.in                             |  641 +
+ data/icons/scalable/Makefile.am                    |    2 +
+ data/icons/scalable/Makefile.in                    |  626 +
+ data/icons/scalable/actions/Makefile.am            |   15 +
+ data/icons/scalable/actions/Makefile.in            |  484 +
+ data/icons/scalable/actions/gpm-hibernate.svg      |  249 +
+ data/icons/scalable/actions/gpm-suspend.svg        |  725 +
+ data/icons/scalable/apps/Makefile.am               |   17 +
+ data/icons/scalable/apps/Makefile.in               |  486 +
+ .../icons/scalable/apps/mate-brightness-applet.svg |   91 +
+ data/icons/scalable/apps/mate-inhibit-applet.svg   |  725 +
+ data/icons/scalable/apps/mate-power-manager.svg    |  493 +
+ data/icons/scalable/apps/mate-power-statistics.svg |  263 +
+ data/icons/scalable/status/Makefile.am             |   62 +
+ data/icons/scalable/status/Makefile.in             |  529 +
+ data/icons/scalable/status/gpm-ac-adapter.svg      |  301 +
+ .../scalable/status/gpm-battery-000-charging.svg   |  979 ++
+ data/icons/scalable/status/gpm-battery-000.svg     |  292 +
+ .../scalable/status/gpm-battery-020-charging.svg   | 1228 ++
+ data/icons/scalable/status/gpm-battery-020.svg     |  292 +
+ .../scalable/status/gpm-battery-040-charging.svg   |  504 +
+ data/icons/scalable/status/gpm-battery-040.svg     |  279 +
+ .../scalable/status/gpm-battery-060-charging.svg   |  504 +
+ data/icons/scalable/status/gpm-battery-060.svg     |  279 +
+ .../scalable/status/gpm-battery-080-charging.svg   |  504 +
+ data/icons/scalable/status/gpm-battery-080.svg     |  279 +
+ .../scalable/status/gpm-battery-100-charging.svg   |  501 +
+ data/icons/scalable/status/gpm-battery-100.svg     |  276 +
+ data/icons/scalable/status/gpm-battery-charged.svg |  673 +
+ data/icons/scalable/status/gpm-battery-empty.svg   |  448 +
+ data/icons/scalable/status/gpm-battery-missing.svg |  335 +
+ .../status/gpm-brightness-kbd-disabled.svg         |  358 +
+ .../scalable/status/gpm-brightness-kbd-invalid.svg |  311 +
+ data/icons/scalable/status/gpm-brightness-kbd.svg  |  208 +
+ .../status/gpm-brightness-lcd-disabled.svg         |  245 +
+ .../scalable/status/gpm-brightness-lcd-invalid.svg |  194 +
+ data/icons/scalable/status/gpm-brightness-lcd.svg  |   91 +
+ data/icons/scalable/status/gpm-inhibit-invalid.svg |  376 +
+ data/icons/scalable/status/gpm-inhibit.svg         |  259 +
+ data/icons/scalable/status/gpm-keyboard-000.svg    |  420 +
+ data/icons/scalable/status/gpm-keyboard-060.svg    |  434 +
+ data/icons/scalable/status/gpm-keyboard-100.svg    |  414 +
+ data/icons/scalable/status/gpm-monitor.svg         | 2623 +++
+ data/icons/scalable/status/gpm-mouse-000.svg       |  482 +
+ data/icons/scalable/status/gpm-mouse-060.svg       |  512 +
+ data/icons/scalable/status/gpm-mouse-100.svg       |  511 +
+ data/icons/scalable/status/gpm-phone-000.svg       |  988 ++
+ data/icons/scalable/status/gpm-phone-060.svg       | 1018 ++
+ data/icons/scalable/status/gpm-phone-100.svg       | 1017 ++
+ .../icons/scalable/status/gpm-ups-000-charging.svg |  296 +
+ data/icons/scalable/status/gpm-ups-000.svg         |  264 +
+ .../icons/scalable/status/gpm-ups-020-charging.svg |  296 +
+ data/icons/scalable/status/gpm-ups-020.svg         |  264 +
+ .../icons/scalable/status/gpm-ups-040-charging.svg |  296 +
+ data/icons/scalable/status/gpm-ups-040.svg         |  264 +
+ .../icons/scalable/status/gpm-ups-060-charging.svg |  296 +
+ data/icons/scalable/status/gpm-ups-060.svg         |  264 +
+ .../icons/scalable/status/gpm-ups-080-charging.svg |  296 +
+ data/icons/scalable/status/gpm-ups-080.svg         |  264 +
+ .../icons/scalable/status/gpm-ups-100-charging.svg |  288 +
+ data/icons/scalable/status/gpm-ups-100.svg         |  264 +
+ data/icons/scalable/status/gpm-ups-missing.svg     |  291 +
+ data/mate-power-manager.desktop.in.in              |   16 +
+ data/mate-power-manager.schemas.in                 |  741 +
+ data/mate-power-manager.service.in                 |    3 +
+ data/mate-power-preferences.desktop.in.in          |   15 +
+ data/mate-power-statistics.desktop.in.in           |   16 +
+ depcomp                                            |  630 +
+ distro/archlinux/PKGBUILD                          |   38 +
+ distro/archlinux/mate-power-manager.install        |   22 +
+ distro/fedora/mate-power-manager.spec              |  156 +
+ distro/ubuntu/build                                |   34 +
+ distro/ubuntu/postinst                             |    8 +
+ distro/ubuntu/postrm                               |    8 +
+ distro/ubuntu/preinst                              |    6 +
+ distro/ubuntu/prerm                                |    9 +
+ docs/Makefile.am                                   |    7 +
+ docs/Makefile.in                                   |  430 +
+ docs/config.xsl                                    |   10 +
+ docs/docbook.css                                   |   18 +
+ help/C/figures/applet-brightness.png               |  Bin 0 -> 5168 bytes
+ help/C/figures/applet-inhibit.png                  |  Bin 0 -> 5987 bytes
+ help/C/figures/gpm-cell-capacity.png               |  Bin 0 -> 9312 bytes
+ help/C/figures/gpm-charged.png                     |  Bin 0 -> 16581 bytes
+ help/C/figures/gpm-critical.png                    |  Bin 0 -> 13210 bytes
+ help/C/figures/gpm-low.png                         |  Bin 0 -> 14140 bytes
+ help/C/figures/gpm-prefs-ac.png                    |  Bin 0 -> 34953 bytes
+ help/C/figures/gpm-prefs-battery.png               |  Bin 0 -> 37518 bytes
+ help/C/figures/gpm-prefs-general.png               |  Bin 0 -> 40161 bytes
+ help/C/figures/gpm-stats-graph.png                 |  Bin 0 -> 69191 bytes
+ help/C/figures/gpm-suspend-problem.png             |  Bin 0 -> 16860 bytes
+ help/C/figures/gpm-unplugged.png                   |  Bin 0 -> 11223 bytes
+ help/C/figures/gs-prefs.png                        |  Bin 0 -> 33686 bytes
+ help/C/legal.xml                                   |   76 +
+ help/C/mate-power-manager.xml                      |  770 +
+ help/Makefile.am                                   |   22 +
+ help/Makefile.in                                   |  946 ++
+ help/ca/ca.po                                      | 1846 +++
+ help/ca/figures/gpm-cell-capacity.png              |  Bin 0 -> 9880 bytes
+ help/ca/figures/gpm-charged.png                    |  Bin 0 -> 7877 bytes
+ help/ca/figures/gpm-critical.png                   |  Bin 0 -> 6799 bytes
+ help/ca/figures/gpm-low.png                        |  Bin 0 -> 9062 bytes
+ help/ca/figures/gpm-prefs-ac.png                   |  Bin 0 -> 28205 bytes
+ help/ca/figures/gpm-prefs-battery.png              |  Bin 0 -> 33032 bytes
+ help/ca/figures/gpm-prefs-general.png              |  Bin 0 -> 35374 bytes
+ help/ca/figures/gpm-unplugged.png                  |  Bin 0 -> 7582 bytes
+ help/ca/figures/gs-prefs.png                       |  Bin 0 -> 42903 bytes
+ help/de/de.po                                      | 1676 ++
+ help/de/figures/applet-inhibit.png                 |  Bin 0 -> 8218 bytes
+ help/de/figures/gpm-charged.png                    |  Bin 0 -> 6557 bytes
+ help/de/figures/gpm-critical.png                   |  Bin 0 -> 14744 bytes
+ help/de/figures/gpm-low.png                        |  Bin 0 -> 15468 bytes
+ help/de/figures/gpm-prefs-ac.png                   |  Bin 0 -> 38369 bytes
+ help/de/figures/gpm-prefs-battery.png              |  Bin 0 -> 40658 bytes
+ help/de/figures/gpm-prefs-general.png              |  Bin 0 -> 46365 bytes
+ help/de/figures/gpm-unplugged.png                  |  Bin 0 -> 9751 bytes
+ help/de/figures/gs-prefs.png                       |  Bin 0 -> 49626 bytes
+ help/el/el.po                                      | 1681 ++
+ help/en_GB/en_GB.po                                | 1672 ++
+ help/es/es.po                                      | 1798 +++
+ help/es/figures/applet-inhibit.png                 |  Bin 0 -> 4837 bytes
+ help/es/figures/gpm-cell-capacity.png              |  Bin 0 -> 12054 bytes
+ help/es/figures/gpm-charged.png                    |  Bin 0 -> 9708 bytes
+ help/es/figures/gpm-critical.png                   |  Bin 0 -> 10998 bytes
+ help/es/figures/gpm-low.png                        |  Bin 0 -> 7837 bytes
+ help/es/figures/gpm-prefs-ac.png                   |  Bin 0 -> 34203 bytes
+ help/es/figures/gpm-prefs-battery.png              |  Bin 0 -> 42024 bytes
+ help/es/figures/gpm-prefs-general.png              |  Bin 0 -> 34651 bytes
+ help/es/figures/gpm-stats-graph.png                |  Bin 0 -> 51088 bytes
+ help/es/figures/gpm-unplugged.png                  |  Bin 0 -> 16841 bytes
+ help/es/figures/gs-prefs.png                       |  Bin 0 -> 25668 bytes
+ help/eu/eu.po                                      | 1803 +++
+ help/eu/figures/applet-brightness.png              |  Bin 0 -> 4990 bytes
+ help/eu/figures/applet-inhibit.png                 |  Bin 0 -> 6393 bytes
+ help/eu/figures/gpm-cell-capacity.png              |  Bin 0 -> 65746 bytes
+ help/eu/figures/gpm-charged.png                    |  Bin 0 -> 10280 bytes
+ help/eu/figures/gpm-critical.png                   |  Bin 0 -> 11061 bytes
+ help/eu/figures/gpm-low.png                        |  Bin 0 -> 13390 bytes
+ help/eu/figures/gpm-prefs-ac.png                   |  Bin 0 -> 40813 bytes
+ help/eu/figures/gpm-prefs-battery.png              |  Bin 0 -> 64671 bytes
+ help/eu/figures/gpm-prefs-general.png              |  Bin 0 -> 81699 bytes
+ help/eu/figures/gpm-stats-graph.png                |  Bin 0 -> 78507 bytes
+ help/eu/figures/gpm-suspend-problem.png            |  Bin 0 -> 14967 bytes
+ help/eu/figures/gpm-unplugged.png                  |  Bin 0 -> 9763 bytes
+ help/eu/figures/gs-prefs.png                       |  Bin 0 -> 81117 bytes
+ help/fi/fi.po                                      |  846 +
+ help/fr/figures/applet-inhibit.png                 |  Bin 0 -> 4922 bytes
+ help/fr/figures/gpm-cell-capacity.png              |  Bin 0 -> 9874 bytes
+ help/fr/figures/gpm-charged.png                    |  Bin 0 -> 9743 bytes
+ help/fr/figures/gpm-critical.png                   |  Bin 0 -> 11561 bytes
+ help/fr/figures/gpm-low.png                        |  Bin 0 -> 12356 bytes
+ help/fr/figures/gpm-prefs-ac.png                   |  Bin 0 -> 21219 bytes
+ help/fr/figures/gpm-prefs-battery.png              |  Bin 0 -> 24059 bytes
+ help/fr/figures/gpm-prefs-general.png              |  Bin 0 -> 29431 bytes
+ help/fr/figures/gpm-suspend-problem.png            |  Bin 0 -> 9400 bytes
+ help/fr/figures/gpm-unplugged.png                  |  Bin 0 -> 7692 bytes
+ help/fr/figures/gs-prefs.png                       |  Bin 0 -> 41898 bytes
+ help/fr/fr.po                                      | 1897 +++
+ help/hu/hu.po                                      | 1335 ++
+ help/it/it.po                                      | 1717 ++
+ help/mate-power-manager.omf.in                     |   37 +
+ help/oc/oc.po                                      | 1359 ++
+ help/pa/figures/gpm-unplugged.png                  |  Bin 0 -> 18870 bytes
+ help/pa/pa.po                                      | 1505 ++
+ help/ru/ru.po                                      |  563 +
+ help/sv/figures/applet-inhibit.png                 |  Bin 0 -> 2751 bytes
+ help/sv/figures/gpm-charged.png                    |  Bin 0 -> 12218 bytes
+ help/sv/figures/gpm-critical.png                   |  Bin 0 -> 9321 bytes
+ help/sv/figures/gpm-low.png                        |  Bin 0 -> 11162 bytes
+ help/sv/figures/gpm-prefs-ac.png                   |  Bin 0 -> 39497 bytes
+ help/sv/figures/gpm-prefs-battery.png              |  Bin 0 -> 41935 bytes
+ help/sv/figures/gpm-prefs-general.png              |  Bin 0 -> 45549 bytes
+ help/sv/figures/gpm-stats-graph.png                |  Bin 0 -> 42562 bytes
+ help/sv/figures/gpm-unplugged.png                  |  Bin 0 -> 8104 bytes
+ help/sv/figures/gs-prefs.png                       |  Bin 0 -> 48491 bytes
+ help/sv/sv.po                                      | 1206 ++
+ help/zh_CN/zh_CN.po                                |  989 ++
+ install-sh                                         |  520 +
+ ltmain.sh                                          | 8406 ++++++++++
+ m4/intltool.m4                                     |  216 +
+ m4/libtool.m4                                      | 7360 +++++++++
+ m4/ltoptions.m4                                    |  368 +
+ m4/ltsugar.m4                                      |  123 +
+ m4/ltversion.m4                                    |   23 +
+ m4/lt~obsolete.m4                                  |   92 +
+ m4/mate-doc-utils.m4                               |   53 +
+ man/Makefile.am                                    |   27 +
+ man/Makefile.in                                    |  529 +
+ man/mate-power-manager.sgml                        |  146 +
+ man/mate-power-preferences.sgml                    |  136 +
+ man/mate-power-statistics.sgml                     |  136 +
+ mate-doc-utils.make                                |  578 +
+ missing                                            |  376 +
+ mkinstalldirs                                      |  162 +
+ omf.make                                           |   61 +
+ parches/dont-eat-the-logs.patch                    |   20 +
+ parches/gpm-manager.patch                          |   14 +
+ po/LINGUAS                                         |   73 +
+ po/Makefile.in.in                                  |  217 +
+ po/POTFILES.in                                     |   36 +
+ po/POTFILES.skip                                   |    9 +
+ po/ar.po                                           | 3199 ++++
+ po/as.po                                           | 2916 ++++
+ po/ast.po                                          | 2913 ++++
+ po/be.po                                           | 2187 +++
+ po/be@latin.po                                     | 2900 ++++
+ po/bg.po                                           | 2499 +++
+ po/bn.po                                           | 2585 +++
+ po/bn_IN.po                                        | 2523 +++
+ po/ca.po                                           | 3587 +++++
+ po/ca@valencia.po                                  | 3587 +++++
+ po/cs.po                                           | 2628 +++
+ po/cy.po                                           | 3274 ++++
+ po/da.po                                           | 3373 ++++
+ po/de.po                                           | 3681 +++++
+ po/dz.po                                           | 3218 ++++
+ po/el.po                                           | 2695 ++++
+ po/en@shaw.po                                      | 1922 +++
+ po/en_CA.po                                        | 3007 ++++
+ po/en_GB.po                                        | 3424 ++++
+ po/es.po                                           | 3126 ++++
+ po/et.po                                           | 2057 +++
+ po/eu.po                                           | 2259 +++
+ po/fa.po                                           | 2863 ++++
+ po/fi.po                                           | 2603 +++
+ po/fr.po                                           | 2547 +++
+ po/ga.po                                           | 2209 +++
+ po/gl.po                                           | 2560 +++
+ po/gu.po                                           | 2299 +++
+ po/he.po                                           | 3213 ++++
+ po/hi.po                                           | 2270 +++
+ po/hr.po                                           | 2278 +++
+ po/hu.po                                           | 2499 +++
+ po/id.po                                           | 2501 +++
+ po/is.po                                           | 2478 +++
+ po/it.po                                           | 2555 +++
+ po/ja.po                                           | 2902 ++++
+ po/ka.po                                           | 2741 ++++
+ po/kn.po                                           | 2388 +++
+ po/ko.po                                           | 3086 ++++
+ po/ku.po                                           | 2643 ++++
+ po/lt.po                                           | 2944 ++++
+ po/lv.po                                           | 2688 ++++
+ po/mai.po                                          | 2349 +++
+ po/mg.po                                           | 2950 ++++
+ po/mk.po                                           | 3063 ++++
+ po/ml.po                                           | 2376 +++
+ po/mr.po                                           | 2262 +++
+ po/nb.po                                           | 2387 +++
+ po/nl.po                                           | 2553 +++
+ po/nn.po                                           | 2916 ++++
+ po/oc.po                                           | 2199 +++
+ po/or.po                                           | 2223 +++
+ po/pa.po                                           | 2893 ++++
+ po/pl.po                                           | 2511 +++
+ po/pt.po                                           | 3559 +++++
+ po/pt_BR.po                                        | 3298 ++++
+ po/ro.po                                           | 2149 +++
+ po/ru.po                                           | 2300 +++
+ po/si.po                                           | 2219 +++
+ po/sk.po                                           | 2803 ++++
+ po/sl.po                                           | 3078 ++++
+ po/sr.po                                           | 2712 ++++
+ po/sr@latin.po                                     | 2712 ++++
+ po/sv.po                                           | 2307 +++
+ po/ta.po                                           | 2329 +++
+ po/te.po                                           | 2252 +++
+ po/th.po                                           | 3242 ++++
+ po/tr.po                                           | 2300 +++
+ po/uk.po                                           | 2399 +++
+ po/vi.po                                           | 2623 +++
+ po/zh_CN.po                                        | 2645 ++++
+ po/zh_HK.po                                        | 3178 ++++
+ po/zh_TW.po                                        | 3246 ++++
+ policy/Makefile.am                                 |   17 +
+ policy/Makefile.in                                 |  490 +
+ policy/org.mate.power.policy.in2                   |   32 +
+ src/Makefile.am                                    |  305 +
+ src/Makefile.in                                    | 2033 +++
+ src/egg-array-float.c                              |  770 +
+ src/egg-array-float.h                              |   56 +
+ src/egg-color.c                                    |  157 +
+ src/egg-color.h                                    |   59 +
+ src/egg-console-kit.c                              |  363 +
+ src/egg-console-kit.h                              |   71 +
+ src/egg-dbus-monitor.c                             |  251 +
+ src/egg-dbus-monitor.h                             |   65 +
+ src/egg-dbus-proxy.c                               |  301 +
+ src/egg-dbus-proxy.h                               |   66 +
+ src/egg-debug.c                                    |  308 +
+ src/egg-debug.h                                    |   83 +
+ src/egg-discrete.c                                 |  162 +
+ src/egg-discrete.h                                 |   41 +
+ src/egg-idletime.c                                 |  690 +
+ src/egg-idletime.h                                 |   68 +
+ src/egg-precision.c                                |  193 +
+ src/egg-precision.h                                |   39 +
+ src/egg-string.c                                   |  453 +
+ src/egg-string.h                                   |   47 +
+ src/egg-test.c                                     |  343 +
+ src/egg-test.h                                     |   48 +
+ src/egg-unique.c                                   |  151 +
+ src/egg-unique.h                                   |   59 +
+ src/gpm-backlight-helper.c                         |  280 +
+ src/gpm-backlight.c                                |  821 +
+ src/gpm-backlight.h                                |   73 +
+ src/gpm-brightness.c                               |  997 ++
+ src/gpm-brightness.h                               |   69 +
+ src/gpm-button.c                                   |  387 +
+ src/gpm-button.h                                   |   73 +
+ src/gpm-common.c                                   |  210 +
+ src/gpm-common.h                                   |  183 +
+ src/gpm-control.c                                  |  347 +
+ src/gpm-control.h                                  |   88 +
+ src/gpm-disks.c                                    |  209 +
+ src/gpm-disks.h                                    |   57 +
+ src/gpm-dpms.c                                     |  474 +
+ src/gpm-dpms.h                                     |   80 +
+ src/gpm-engine.c                                   | 1267 ++
+ src/gpm-engine.h                                   |   79 +
+ src/gpm-graph-widget.c                             | 1170 ++
+ src/gpm-graph-widget.h                             |   89 +
+ src/gpm-idle.c                                     |  729 +
+ src/gpm-idle.h                                     |   74 +
+ src/gpm-load.c                                     |  282 +
+ src/gpm-load.h                                     |   56 +
+ src/gpm-main.c                                     |  286 +
+ src/gpm-manager.c                                  | 2110 +++
+ src/gpm-manager.h                                  |   82 +
+ src/gpm-marshal.list                               |   16 +
+ src/gpm-networkmanager.c                           |  102 +
+ src/gpm-networkmanager.h                           |   32 +
+ src/gpm-phone.c                                    |  508 +
+ src/gpm-phone.h                                    |   76 +
+ src/gpm-point-obj.c                                |   64 +
+ src/gpm-point-obj.h                                |   42 +
+ src/gpm-prefs-core.c                               | 1024 ++
+ src/gpm-prefs-core.h                               |   57 +
+ src/gpm-prefs-server.c                             |  138 +
+ src/gpm-prefs-server.h                             |   67 +
+ src/gpm-prefs.c                                    |  133 +
+ src/gpm-screensaver.c                              |  453 +
+ src/gpm-screensaver.h                              |   68 +
+ src/gpm-self-test.c                                |   84 +
+ src/gpm-session.c                                  |  551 +
+ src/gpm-session.h                                  |   79 +
+ src/gpm-statistics.c                               | 1829 +++
+ src/gpm-stock-icons.h                              |   41 +
+ src/gpm-tray-icon.c                                |  430 +
+ src/gpm-tray-icon.h                                |   63 +
+ src/gpm-upower.c                                   |  661 +
+ src/gpm-upower.h                                   |   41 +
+ src/gsd-media-keys-window.c                        | 1079 ++
+ src/gsd-media-keys-window.h                        |   71 +
+ src/org.mate.PowerManager.Backlight.xml            |   15 +
+ src/org.mate.PowerManager.xml                      |    9 +
+ tools/Makefile.am                                  |    6 +
+ tools/Makefile.in                                  |  490 +
+ tools/mate-power-bugreport.sh                      |   90 +
+ xmldocs.make                                       |  101 +
+ 754 files changed, 343974 insertions(+)
