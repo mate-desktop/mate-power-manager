@@ -280,7 +280,7 @@ AC_ARG_WITH(systemdinhibit,
 
 use_systemdinhibit=no
 if test "x$with_systemdinhibit" != "xno" ; then
-    PKG_CHECK_MODULES(SYSTEMD_INHIBIT, libsystemd-login libsystemd-daemon, use_systemdinhibit=yes, use_systemdinhibit=no)
+    PKG_CHECK_MODULES(SYSTEMD_INHIBIT, libsystemd-login >= 195 libsystemd-daemon >= 195 , use_systemdinhibit=yes, use_systemdinhibit=no)
 
     if test "x$use_systemdinhibit" = "xyes"; then
         AC_DEFINE(WITH_SYSTEMD_INHIBIT, 1, [systemdinhibit support])
