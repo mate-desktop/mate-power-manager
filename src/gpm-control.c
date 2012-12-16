@@ -39,8 +39,11 @@
 #include <glib/gi18n.h>
 #include <dbus/dbus-glib.h>
 #include <dbus/dbus-glib-lowlevel.h>
-#include <mate-keyring.h>
 #include <libupower-glib/upower.h>
+
+#ifdef WITH_KEYRING
+#include <mate-keyring.h>
+#endif /* WITH_KEYRING */
 
 #include "egg-debug.h"
 #include "egg-console-kit.h"
@@ -157,10 +160,12 @@ gpm_control_suspend (GpmControl *control, GError **error)
 	gboolean ret = FALSE;
 	gboolean do_lock;
 	gboolean nm_sleep;
-	gboolean lock_mate_keyring;
-	MateKeyringResult keyres;
 	GpmScreensaver *screensaver;
 	guint32 throttle_cookie = 0;
+#ifdef WITH_KEYRING
+	gboolean lock_mate_keyring;
+	MateKeyringResult keyres;
+#endif /* WITH_KEYRING */
 
 	screensaver = gpm_screensaver_new ();
 
@@ -173,6 +178,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
 		goto out;
 	}
 
+#ifdef WITH_KEYRING
 	/* we should perhaps lock keyrings when sleeping #375681 */
 	lock_mate_keyring = g_settings_get_boolean (control->priv->settings, GPM_SETTINGS_LOCK_KEYRING_SUSPEND);
 	if (lock_mate_keyring) {
@@ -180,6 +186,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
 		if (keyres != MATE_KEYRING_RESULT_OK)
 			egg_warning ("could not lock keyring");
 	}
+#endif /* WITH_KEYRING */
 
 	do_lock = gpm_control_get_lock_policy (control, GPM_SETTINGS_LOCK_ON_SUSPEND);
 	if (do_lock) {
@@ -225,10 +232,12 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 	gboolean ret = FALSE;
 	gboolean do_lock;
 	gboolean nm_sleep;
-	gboolean lock_mate_keyring;
-	MateKeyringResult keyres;
 	GpmScreensaver *screensaver;
 	guint32 throttle_cookie = 0;
+#ifdef WITH_KEYRING
+	gboolean lock_mate_keyring;
+	MateKeyringResult keyres;
+#endif /* WITH_KEYRING */
 
 	screensaver = gpm_screensaver_new ();
 
@@ -241,6 +250,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 		goto out;
 	}
 
+#ifdef WITH_KEYRING
 	/* we should perhaps lock keyrings when sleeping #375681 */
 	lock_mate_keyring = g_settings_get_boolean (control->priv->settings, GPM_SETTINGS_LOCK_KEYRING_HIBERNATE);
 	if (lock_mate_keyring) {
@@ -249,6 +259,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 			egg_warning ("could not lock keyring");
 		}
 	}
+#endif /* WITH_KEYRING */
 
 	do_lock = gpm_control_get_lock_policy (control, GPM_SETTINGS_LOCK_ON_HIBERNATE);
 	if (do_lock) {

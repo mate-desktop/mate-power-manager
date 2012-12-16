@@ -13,6 +13,7 @@ INCLUDES =						\
 	$(GLIB_CFLAGS)					\
 	$(DBUS_CFLAGS)					\
 	$(MATE_CFLAGS)					\
+	$(KEYRING_CFLAGS)				\
 	$(UNIQUE_CFLAGS)				\
 	$(X11_CFLAGS)					\
 	$(LIBMATENOTIFY_CFLAGS)				\
@@ -184,6 +185,7 @@ mate_power_manager_LDADD =				\
 	$(X11_LIBS)				\
 	$(GSTREAMER_LIBS)				\
 	$(MATE_LIBS)					\
+	$(KEYRING_LIBS)					\
 	$(DBUS_LIBS)					\
 	$(X11_LIBS)						\
 	$(CANBERRA_LIBS)				\
@@ -250,6 +252,7 @@ mate_power_self_test_LDADD =				\
 	$(GLIB_LIBS)					\
 	$(X11_LIBS)					\
 	$(MATE_LIBS)					\
+	$(KEYRING_LIBS)					\
 	$(GSTREAMER_LIBS)				\
 	$(UPOWER_LIBS)					\
 	$(DBUS_LIBS)					\
