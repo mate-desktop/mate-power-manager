@@ -151,7 +151,6 @@ PKG_CHECK_MODULES(DBUS,[
 
 PKG_CHECK_MODULES(MATE, [
  gtk+-2.0 >= $GTK_REQUIRED
- mate-keyring-1 >= $MATE_KEYRING_REQUIRED
  cairo >= $CAIRO_REQUIRED])
 
 PKG_CHECK_MODULES(GDK, [
@@ -249,6 +248,22 @@ else
     AC_MSG_RESULT(no)
 fi
 AM_CONDITIONAL([HAVE_TESTS], [test $have_tests = yes])
+
+dnl ---------------------------------------------------------------------------
+dnl - Build mate-keyring support
+dnl ---------------------------------------------------------------------------
+AC_ARG_WITH(keyring,
+        [AS_HELP_STRING([--without-keyring],
+                        [Disable the use of mate-keyring])],
+        [],
+        [with_keyring=yes])
+
+AM_CONDITIONAL([WITH_KEYRING],[test "$with_keyring" = "yes"])
+
+if test "$with_keyring" = "yes"; then
+        PKG_CHECK_MODULES(KEYRING, mate-keyring-1 >= $MATE_KEYRING_REQUIRED)
+        AC_DEFINE([WITH_KEYRING],[1],[Define if KEYRING support is enabled])
+fi
 
 dnl ---------------------------------------------------------------------------
 dnl - Build applets
@@ -400,6 +415,7 @@ echo "
         datadir:                   ${datadir}
         compiler:                  ${CC}
         cflags:                    ${CFLAGS}
+        mate-keyring support:      ${with_keyring}
         Building extra applets:    ${enable_applets}
         Self test support:         ${have_tests}
         Use libunique:             ${enable_libunique}
