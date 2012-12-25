@@ -24,6 +24,9 @@ $(service_DATA): $(service_in_files) Makefile
 gsettings_schemas_in_files = org.mate.power-manager.gschema.xml.in
 gsettings_SCHEMAS = $(gsettings_schemas_in_files:.gschema.xml.in=.gschema.xml)
 
+convertdir = $(datadir)/MateConf/gsettings
+convert_DATA = mate-power-manager.convert
+
 pkgdata_DATA =						\
 	gpm-statistics.ui				\
 	gpm-statistics-deprecated.ui	\
@@ -38,6 +41,7 @@ EXTRA_DIST =						\
 	$(autostart_in_files)				\
 	$(desktop_in_files)				\
 	$(gsettings_schemas_in_files)	\
+	$(convert_DATA)					\
 	$(pkgdata_DATA)
 
 clean-local :
