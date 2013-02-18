@@ -33,6 +33,9 @@
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
 #endif /* HAVE_UNISTD_H */
+#ifdef WITH_SYSTEMD_INHIBIT
+#include <systemd/sd-daemon.h>
+#endif /* WITH_SYSTEMD_INHIBIT */
 
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
@@ -1847,17 +1850,19 @@ gpm_manager_control_resume_cb (GpmControl *control, GpmControlAction action, Gpm
 #ifdef WITH_SYSTEMD_INHIBIT
 /**
  * gpm_main_system_inhibit:
+ *
+ * Return a fd to the to the inhibitor, that we can close on exit.
+ *
+ * Return value: fd, -1 on error
  **/
 static gint32
 gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
-    /* Return a fd to the to the inhibitor, that we can close on exit. */
-	//GDBusProxy *proxy;
     GError *error = NULL;
     gint32 r = -1;
     gint32 fd = -1;
     GVariant *res;
     GUnixFDList *fd_list = NULL;
-    //proxy == NULL;
+
     /* Should we define these elsewhere? */
     const char* arg_what = "handle-power-key:handle-suspend-key:handle-lid-switch";
     const char* arg_who = g_get_user_name ();
@@ -1892,7 +1897,7 @@ gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
                             &fd_list,
                             NULL,
                             &error
-                            );                        
+                            );
     if (error == NULL && res != NULL) {
         g_variant_get(res, "(h)", &r);
 	    egg_debug ("Inhibiting systemd sleep res = %i", r);
@@ -1907,8 +1912,8 @@ gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
     } else if (error != NULL || res == NULL) {
         egg_error ("Error in dbus - %s", error->message);
         g_error_free (error);
-        return -EIO; 
-    }   
+        return -EIO;
+    }
     egg_debug ("Inhibiting systemd sleep - success");
     return r;
 }
@@ -1933,7 +1938,10 @@ gpm_manager_init (GpmManager *manager)
 
 #ifdef WITH_SYSTEMD_INHIBIT
     /* We want to inhibit the systemd suspend options, and take care of them ourselves */
-    manager->priv->systemd_inhibit = gpm_manager_systemd_inhibit (manager->priv->systemd_inhibit_proxy);
+    if (sd_booted() > 0) {
+        manager->priv->systemd_inhibit = gpm_manager_systemd_inhibit (manager->priv->systemd_inhibit_proxy);
+    }
+
 #endif
 
 	/* init to unthrottled */
