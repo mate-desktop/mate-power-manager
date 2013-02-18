@@ -4,7 +4,7 @@ INCLUDES =							\
 	$(DBUS_CFLAGS)						\
 	$(MATE_CFLAGS)						\
 	$(PANEL_CFLAGS)						\
-	$(LIBMATENOTIFY_CFLAGS)					\
+	$(LIBNOTIFY_CFLAGS)					\
 	$(GTKUNIQUE_CFLAGS)					\
 	-DBINDIR=\"$(bindir)\"			 		\
 	-DMATELOCALEDIR=\""$(datadir)/locale"\"	 	\
