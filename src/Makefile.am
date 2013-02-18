@@ -16,7 +16,7 @@ INCLUDES =						\
 	$(KEYRING_CFLAGS)				\
 	$(UNIQUE_CFLAGS)				\
 	$(X11_CFLAGS)					\
-	$(LIBMATENOTIFY_CFLAGS)				\
+	$(LIBNOTIFY_CFLAGS)				\
 	$(CANBERRA_CFLAGS)				\
 	$(GSTREAMER_CFLAGS)				\
 	-DI_KNOW_THE_DEVICEKIT_POWER_API_IS_SUBJECT_TO_CHANGE \
@@ -189,7 +189,7 @@ mate_power_manager_LDADD =				\
 	$(DBUS_LIBS)					\
 	$(X11_LIBS)						\
 	$(CANBERRA_LIBS)				\
-	$(LIBMATENOTIFY_LIBS)				\
+	$(LIBNOTIFY_LIBS)				\
 	$(GPM_EXTRA_LIBS)				\
 	$(UPOWER_LIBS)					\
 	-lm
@@ -257,7 +257,7 @@ mate_power_self_test_LDADD =				\
 	$(UPOWER_LIBS)					\
 	$(DBUS_LIBS)					\
 	$(X11_LIBS)						\
-	$(LIBMATENOTIFY_LIBS)				\
+	$(LIBNOTIFY_LIBS)				\
 	$(GPM_EXTRA_LIBS)				\
 	-lm
 
