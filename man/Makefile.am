@@ -12,13 +12,13 @@ endif
 
 if HAVE_DOCBOOK2MAN
 mate-power-manager.1: mate-power-manager.sgml
-	docbook2man $? &> /dev/null
+	docbook2man $?
 
 mate-power-preferences.1: mate-power-preferences.sgml
-	docbook2man $? &> /dev/null
+	docbook2man $?
 
 mate-power-statistics.1: mate-power-statistics.sgml
-	docbook2man $? &> /dev/null
+	docbook2man $?
 endif
 
 clean-local :
