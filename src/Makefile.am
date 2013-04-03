@@ -9,7 +9,7 @@ EXTRA_DIST =						\
 	gpm-marshal.list				\
 	$(NULL)
 
-INCLUDES =						\
+AM_CPPFLAGS =						\
 	$(GLIB_CFLAGS)					\
 	$(DBUS_CFLAGS)					\
 	$(MATE_CFLAGS)					\

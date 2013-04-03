@@ -1,4 +1,4 @@
-INCLUDES =							\
+AM_CPPFLAGS =							\
 	-I. -I$(srcdir) 					\
 	$(GLIB_CFLAGS)						\
 	$(DBUS_CFLAGS)						\
