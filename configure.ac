@@ -2,8 +2,7 @@ AC_PREREQ(2.63)
 
 AC_INIT([mate-power-manager], [1.6.0], [http://www.mate-desktop.org/])
 AC_CONFIG_SRCDIR(src)
-AM_INIT_AUTOMAKE(AC_PACKAGE_NAME, AC_PACKAGE_VERSION)
-AM_INIT_AUTOMAKE([foreign])
+AM_INIT_AUTOMAKE
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 
