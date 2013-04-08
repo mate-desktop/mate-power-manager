@@ -812,6 +812,11 @@ gpm_prefs_init (GpmPrefs *prefs)
 	GpmBrightness *brightness;
 	gboolean ret;
 	guint i;
+#ifdef WITH_SYSTEMD_SLEEP
+	GDBusProxy *proxy;
+	GVariant *res, *inner;
+	gchar * r;
+#endif
 
 	prefs->priv = GPM_PREFS_GET_PRIVATE (prefs);
 
@@ -823,16 +828,103 @@ gpm_prefs_init (GpmPrefs *prefs)
 	prefs->priv->can_shutdown = TRUE;
 	egg_console_kit_can_stop (prefs->priv->console, &prefs->priv->can_shutdown, NULL);
 
+#ifdef WITH_SYSTEMD_SLEEP
+	/* get values from logind */
+
+	prefs->priv->can_suspend = FALSE;
+	prefs->priv->can_hibernate = FALSE;
+	proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+			G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
+			NULL,
+			"org.freedesktop.login1",
+			"/org/freedesktop/login1",
+			"org.freedesktop.login1.Manager",
+			NULL,
+			&error );
+    if (proxy == NULL) {
+        egg_error("Error connecting to dbus - %s", error->message);
+        g_error_free (error);
+        return -1;
+    }
+    res = g_dbus_proxy_call_sync (proxy, "CanSuspend", 
+		    NULL,
+                            G_DBUS_CALL_FLAGS_NONE,
+                            -1,
+                            NULL,
+                            &error
+                            );
+    if (error == NULL && res != NULL) {
+        g_variant_get(res,"(s)", &r);
+	prefs->priv->can_suspend = g_strcmp0(r,"yes")==0?TRUE:FALSE;
+	g_variant_unref (res);
+    } else if (error != NULL ) {
+	    egg_error ("Error in dbus - %s", error->message);
+	    g_error_free (error);
+    }
+
+    res = g_dbus_proxy_call_sync (proxy, "CanHibernate", 
+		    NULL,
+                            G_DBUS_CALL_FLAGS_NONE,
+                            -1,
+                            NULL,
+                            &error
+                            );
+    if (error == NULL && res != NULL) {
+        g_variant_get(res,"(s)", &r);
+	prefs->priv->can_hibernate = g_strcmp0(r,"yes")==0?TRUE:FALSE;
+	g_variant_unref (res);
+    } else if (error != NULL ) {
+	    egg_error ("Error in dbus - %s", error->message);
+	    g_error_free (error);
+    }
+ g_object_unref(proxy);
+#else
 	/* get values from UpClient */
 	prefs->priv->can_suspend = up_client_get_can_suspend (prefs->priv->client);
 	prefs->priv->can_hibernate = up_client_get_can_hibernate (prefs->priv->client);
-	
+#endif	
+#ifdef WITH_SYSTEMD_SLEEP
+	proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+			G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
+			NULL,
+			"org.freedesktop.UPower",
+			"/org/freedesktop/UPower",
+			"org.freedesktop.DBus.Properties",
+			NULL,
+			&error );
+    if (proxy == NULL) {
+        egg_error("Error connecting to dbus - %s", error->message);
+        g_error_free (error);
+        return -1;
+    }
+
+    res = g_dbus_proxy_call_sync (proxy, "Get", 
+                            g_variant_new( "(ss)", 
+				    "org.freedesktop.UPower",
+				    "LidIsPresent"),
+                            G_DBUS_CALL_FLAGS_NONE,
+                            -1,
+                            NULL,
+                            &error
+                            );
+ if (error == NULL && res != NULL) {
+	 g_variant_get(res, "(v)", &inner );
+	 prefs->priv->has_button_lid = g_variant_get_boolean(inner);
+	 	g_variant_unref (inner);
+	g_variant_unref (res);
+    } else if (error != NULL ) {
+	    egg_error ("Error in dbus - %s", error->message);
+	    g_error_free (error);
+    }
+ g_object_unref(proxy);
+#else
 #if UP_CHECK_VERSION(0,9,2)
 	prefs->priv->has_button_lid = up_client_get_lid_is_present (prefs->priv->client);
 #else
 	g_object_get (prefs->priv->client,
 		      "lid-is-present", &prefs->priv->has_button_lid,
 		      NULL);
+#endif
 #endif
 	prefs->priv->has_button_suspend = TRUE;
 

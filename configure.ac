@@ -305,6 +305,27 @@ AM_CONDITIONAL(WITH_SYSTEMD_INHIBIT, test x$use_systemdinhibit = xyes)
 AC_SUBST(WITH_SYSTEMD_INHIBIT)
 
 dnl ---------------------------------------------------------------------------
+dnl systemd sleep
+dnl ---------------------------------------------------------------------------
+
+AC_ARG_WITH(systemdsleep,
+            AS_HELP_STRING([--with-systemdsleep],
+            [Use logind for suspend and hibernate instead of upower]),,
+            with_systemdsleep=auto)
+
+use_systemdsleep=no
+if test "x$with_systemdsleep" != "xno" ; then
+    PKG_CHECK_MODULES(SYSTEMD_SLEEP, libsystemd-login >= 195 libsystemd-daemon >= 195 , use_systemdsleep=yes, use_systemdsleep=no)
+
+    if test "x$use_systemdsleep" = "xyes"; then
+        AC_DEFINE(WITH_SYSTEMD_SLEEP, 1, [systemdsleeo support])
+    fi
+
+fi
+AM_CONDITIONAL(WITH_SYSTEMD_SLEEP, test x$use_systemdsleep = xyes)
+AC_SUBST(WITH_SYSTEMD_SLEEP)
+
+dnl ---------------------------------------------------------------------------
 dnl - DocBook Documentation
 dnl ---------------------------------------------------------------------------
 AC_ARG_ENABLE(docbook-docs,
@@ -419,6 +440,7 @@ echo "
         Self test support:         ${have_tests}
         Use libunique:             ${enable_libunique}
         systemd support:           ${use_systemdinhibit}
+        systemd sleep support:     ${use_systemdsleep}
         Docbook support:           ${enable_docbook_docs}
         documentation dir:         $DOCDIR
         dbus-1 services dir:       $DBUS_SERVICES_DIR
