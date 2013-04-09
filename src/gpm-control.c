@@ -232,9 +232,9 @@ gpm_control_suspend (GpmControl *control, GError **error)
                             &dbus_error
                             );
     if (dbus_error != NULL ) {
-	    egg_error ("Error in dbus - %s", dbus_error->message);
-        fprintf(stderr,"Error connecting to dbus - %s", dbus_error->message);
+	    egg_debug ("Error in dbus - %s", dbus_error->message);
 	    g_error_free (dbus_error);
+	    ret = TRUE;
     }
     else {
 	    ret = TRUE;
@@ -346,9 +346,9 @@ gpm_control_hibernate (GpmControl *control, GError **error)
                             &dbus_error
                             );
     if (dbus_error != NULL ) {
-	    egg_error ("Error in dbus - %s", dbus_error->message);
-        fprintf(stderr,"Error connecting to dbus - %s", dbus_error->message);
+	    egg_debug ("Error in dbus - %s", dbus_error->message);
 	    g_error_free (dbus_error);
+	    ret = TRUE;
     }
     else {
 	    ret = TRUE;
