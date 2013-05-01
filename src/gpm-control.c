@@ -225,7 +225,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
         return -1;
     }
     g_dbus_proxy_call_sync (proxy, "Suspend", 
-                            g_variant_new( "(b)",FALSE),
+                            g_variant_new( "(b)",gpm_button_get_lid_closed()==TRUE?FALSE:TRUE),
                             G_DBUS_CALL_FLAGS_NONE,
                             -1,
                             NULL,
@@ -339,7 +339,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
         return -1;
     }
     g_dbus_proxy_call_sync (proxy, "Hibernate", 
-                            g_variant_new( "(b)",FALSE),
+                            g_variant_new( "(b)",gpm_button_get_lid_closed()==TRUE?FALSE:TRUE),
                             G_DBUS_CALL_FLAGS_NONE,
                             -1,
                             NULL,
