@@ -22,7 +22,7 @@ Released: 2010-09-16
  - Updated British English translation (Bruce Cowan)
  - Updated Finnish translation (Timo Jyrinki)
  - Updated French translation (Bruno Brouard)
- - Updated Greek translation for mate-power-manager (Michael Kotsarinis)
+ - Updated Greek translation for gnome-power-manager (Michael Kotsarinis)
  - Updated Italian translation (Milo Casagrande)
  - Updated Norwegian bokmål translation (Kjartan Maraas)
  - Updated Polish translation (Piotr Drąg)
@@ -52,7 +52,7 @@ Released: 2010-08-31
  - brightness-applet: Add missing include (Martin Pitt)
  - inhibit-applet: Add missing include and re-enable deprecated GDK functions (Martin Pitt)
  - Do not autoscale the percentage graph in the history tab. Fixes #613984 (Richard Hughes)
- - Do not dist org.mate.power.policy in the tarball (Richard Hughes)
+ - Do not dist org.gnome.power.policy in the tarball (Richard Hughes)
  - Fix #627711 - Don't crash on systems which don't have XBACKLIGHT (Chris Coulson)
  - Only connect the UpClient::device-added signal after the coldplug (Richard Hughes)
  - Re-enable deprecated GDK functions for brightness applet (Martin Pitt)
@@ -81,10 +81,10 @@ Version 2.31.6
 Released: 2010-08-06
 
 * Important note:
- - This is 2.31.6, which is forked from the mate-2-30 branch.
+ - This is 2.31.6, which is forked from the gnome-2-30 branch.
  - If you have been using 2.31.5 or any earlier 2.31 version, then you will
    notice the UI and functionality going back in time. This is unfortunate.
- - MATE 3 has been pushed back 6 months, and the GSettings and GtkApplication
+ - GNOME 3 has been pushed back 6 months, and the GSettings and GtkApplication
    code is not ready for prime-time just yet. I'm not willing to add multiple
    levels of ifdef'd code for the n-permutations of distros on different GTK
    and GLib versions, so people are just going to make do with 3.30.x with
@@ -92,8 +92,8 @@ Released: 2010-08-06
    translators, who have wasted some time on translating git master.
  - This release does not use the new control center panel, GDBus or GSettings.
  - I don't intend on wasting time backporting features from git master into
-   MATE 2.32.x. Bugfixes will be, where they make sense.
- - In my personal opinion, MATE 2.32.0 is going to blow goats.
+   GNOME 2.32.x. Bugfixes will be, where they make sense.
+ - In my personal opinion, GNOME 2.32.0 is going to blow goats.
 
 * New Features:
  - Add new 6 hours period in power history stats (Rafał Rosiak)
@@ -105,14 +105,14 @@ Released: 2010-08-06
  - Backport support for new devices recognised in UPower (Richard Hughes)
  - Backport various translation fixes and translator comments from git master (Richard Hughes)
  - Do not assume the lid is open at boot. Fixes #622026 (Richard Hughes)
- - Do not show mate-power-statistics in the menus (Richard Hughes)
+ - Do not show gnome-power-statistics in the menus (Richard Hughes)
  - Do not show the prefs menu on LiveCD's and with GDM. Fixes #621674 (Richard Hughes)
  - Don't treat percentage=0 as error condition (Chow Loong Jin)
- - Fix a crash when displaying the 'No MateConf schema warning' (Richard Hughes)
+ - Fix a crash when displaying the 'No GConf schema warning' (Richard Hughes)
  - Port from DeviceKit-power to UPower (Richard Hughes)
  - Provide a pkexec helper for systems that do not have xbacklight capability (Richard Hughes)
  - Remove hardcoded paths from pkexec setup (Brian Hutsell)
- - Remove the use of HAL from mate-power-manager (Richard Hughes)
+ - Remove the use of HAL from gnome-power-manager (Richard Hughes)
 
 Version 2.30.1
 ~~~~~~~~~~~~~~
@@ -190,7 +190,7 @@ Released: 2010-03-29
  - If a battery charge is low but not critical don't play the sound meant for a critical charge event (Pramod Dematagoda)
  - Play a sound loop if the charge of a laptop battery/ups reaches a critical level. Fixes rh#470090 (Pramod Dematagoda)
  - Remove the pointy-finger status icon when the idletime code fails to work correctly (Richard Hughes)
- - Replace devkit-power call with upower in mate-power-bugreport.sh (Chris Coulson)
+ - Replace devkit-power call with upower in gnome-power-bugreport.sh (Chris Coulson)
 
 Version 2.29.91
 ~~~~~~~~~~~~~~~
@@ -252,7 +252,7 @@ Released: 2009-02-01
  - Do not exit if hal is not available (Martin Pitt)
  - Only connect to HAL if there is no xrandr backlight hardware (Martin Pitt)
  - Fix compile when using an ld that defaults to --as-needed (Richard Hughes)
- - Enable the help action in mate-power-statistics. Fixes #607005 (Richard Hughes)
+ - Enable the help action in gnome-power-statistics. Fixes #607005 (Richard Hughes)
  - Ensure the window is realized before we invalidate it. Fixes #604918 (Richard Hughes)
  - Don't show the user a sleep failed link pointing to the quirk site (Richard Hughes)
  - Show the device name even when using UPower (Richard Hughes)
@@ -284,11 +284,11 @@ Released: 2009-12-08
 * New Features:
  - Switch to a single menu design, rather than a seporate left and right menu (Richard Hughes)
  - Show the sleep failure as a modal dialog box. Fixes rh#427065 (Richard Hughes)
- - Sets some tooltips for the mate-power-preferences buttons (Richard Hughes)
+ - Sets some tooltips for the gnome-power-preferences buttons (Richard Hughes)
  - Throttle screensaver before suspend/hibernate (Tormod Volden)
- - Add a --device parameter to mate-power-statistics so we can set the device focus (Richard Hughes)
- - When we click on a battery device in the context menu, show the mate-power-statistics dialog. Fixes #596983 (Richard Hughes)
- - Use mate-settings-daemon popup code (Bastien Nocera)
+ - Add a --device parameter to gnome-power-statistics so we can set the device focus (Richard Hughes)
+ - When we click on a battery device in the context menu, show the gnome-power-statistics dialog. Fixes #596983 (Richard Hughes)
+ - Use gnome-settings-daemon popup code (Bastien Nocera)
 
 * Bugfix:
  - Add missing indirection to return value of DriveSetAllSpindownTimeouts call (Chris Coulson)
@@ -304,12 +304,12 @@ Released: 2009-12-08
  - Sync compiler warnings handling with DK-power (Michael Biebl)
  - Remove DBUS_SYS_DIR from configure summary (Michael Biebl)
  - Do not hide some radio buttons depending on the current machine state (Richard Hughes)
- - Correctly set the focus on the last used device in mate-power-statistics (Richard Hughes)
+ - Correctly set the focus on the last used device in gnome-power-statistics (Richard Hughes)
  - Add GSEAL_ENABLE to CPPFLAGS (Richard Hughes)
  - Apparently 'whilst' is only a British English thing. Change to 'while' throughout. Fixes #596963 (Richard Hughes)
  - Remove the 'About' and 'Help' items from the status area context menu (Richard Hughes)
  - Rename show_context_menu to show_actions as we're moving to a mono-menu design (Richard Hughes)
- - Remove show_actions_in_menu MateConf key as the menu items are being removed eventually (Richard Hughes)
+ - Remove show_actions_in_menu GConf key as the menu items are being removed eventually (Richard Hughes)
  - Remove the suspend and hibernate menu items (Richard Hughes)
  - Fix a bug where we try to match and refresh a virtual device, which means g-p-s crashes on next start (Richard Hughes)
  - DeviceKit-disks is expecting an int, not a uint (Scott Howard)
@@ -337,11 +337,11 @@ Released: 2009-09-07
  - Updated Telugu Translations (krishnababu k)
 
 * Bugfix:
- - When building with hal, link mate-power-manager against libhal-glib (Frédéric Péters)
+ - When building with hal, link gnome-power-manager against libhal-glib (Frédéric Péters)
  - Make notifications more reliable at session startup (Pramod Dematagoda)
  - Fix a bug where the critical time was not displayed correctly (Richard Hughes)
  - Don't crash g-p-s when there are no devices (Richard Hughes)
- - Open the mate-power-manager help, not the 'cheese' help (Richard Hughes)
+ - Open the gnome-power-manager help, not the 'cheese' help (Richard Hughes)
  - Never, never, show 'Unknown time'. Fixes rh#520999 (Richard Hughes)
  - Allow compile without HAL. Inspired from a patch from Javier Jardón, many thanks (Richard Hughes)
  - Remove small memory leak spotted using clang (Richard Hughes)
@@ -399,7 +399,7 @@ Released: 2009-08-03
 
 * New Features:
  - Claim org.freedesktop.Policy.Power on D-BUS (Martin Pitt)
- - Remove PolkitMate code completely as PolicyKit 1.0 doesn't need this (Matthias Clasen)
+ - Remove PolkitGnome code completely as PolicyKit 1.0 doesn't need this (Matthias Clasen)
  - Add a bodge to reset the idletime XAlarm when we are no longer inhibited (Richard Hughes)
  - Add functionality to debug the idle code by setting GPMIDLEDEBUG on the command line (Richard Hughes)
  - Use the same composited OSD for brightness notification. Fixes rh#512968 (Richard Hughes)
@@ -407,7 +407,7 @@ Released: 2009-08-03
 
 * Bugfix:
  - Fix pointer alignment to build on sparc (Martin Pitt)
- - mate-power-bugreport.sh: add missing hasbang (Martin Pitt)
+ - gnome-power-bugreport.sh: add missing hasbang (Martin Pitt)
  - Show .desktop files in XFCE (Martin Pitt)
  - Make hotkeys work with modifiers (Martin Pitt)
  - Remove an unused include to fix compile (Matthias Clasen)
@@ -420,19 +420,19 @@ Released: 2009-08-03
  - Remove GpmNotify, and do the notifications in a more sane way. Fixes #423186 (Richard Hughes)
  - Constrain the user to a dropdown selection of times, as freeform sliders are bad UI (Richard Hughes)
  - Add policy to show icon when low, rather than critically low. Fixes #589125 (Richard Hughes)
- - Inhibit mate-session in the applet, not mate-power-manager (Richard Hughes)
+ - Inhibit gnome-session in the applet, not gnome-power-manager (Richard Hughes)
  - Change the default to hibernate when critically low on battery power (Richard Hughes)
- - When libmatenotify fails, fall back to modal dialogs (Richard Hughes)
- - Use enumerated values for the policy actions, and hide 'Do nothing' unless specified in MateConf (Richard Hughes)
- - Finally remove the CanSuspend and CanHibernate options, now that mate-session is ported (Richard Hughes)
- - Switch back to org.mate.PowerManager as we don't adhere to the shared spec anymore (Richard Hughes)
+ - When libnotify fails, fall back to modal dialogs (Richard Hughes)
+ - Use enumerated values for the policy actions, and hide 'Do nothing' unless specified in GConf (Richard Hughes)
+ - Finally remove the CanSuspend and CanHibernate options, now that gnome-session is ported (Richard Hughes)
+ - Switch back to org.gnome.PowerManager as we don't adhere to the shared spec anymore (Richard Hughes)
  - Compile common code with a noinst library to make compile quicker, and reduce the compressed package size by 100kB (Richard Hughes)
- - Add a MateConf key to show or hide the sleep quirk site (Richard Hughes)
+ - Add a GConf key to show or hide the sleep quirk site (Richard Hughes)
  - Make the orange icons yellower. Fixes rh#512962 (Richard Hughes)
- - Use the correct DBus signal types when watching mate-session (Richard Hughes)
+ - Use the correct DBus signal types when watching gnome-session (Richard Hughes)
  - Save the caches value before we emit the inhibit and idle signals (Richard Hughes)
- - Only show mate-power-statistics in the context menu if it is installed. Fixes rh#514249 (Richard Hughes)
- - Only use libmate-panel-applet flags to build applets (Vincent Untz)
+ - Only show gnome-power-statistics in the context menu if it is installed. Fixes rh#514249 (Richard Hughes)
+ - Only use libpanel-applet flags to build applets (Vincent Untz)
 
 ==============
 Version 2.27.2
@@ -450,17 +450,17 @@ Translations:
 Features:
  - Enable pretty compiler output with new automake versions (Richard Hughes)
  - Use composite battery mode by default to fix multi-battery laptops (Richard Hughes)
- - Add manager policy to change the disk spindown based on timeouts set in MateConf (Richard Hughes)
- - Add MateConf keys for the disk spindown functionality (Richard Hughes)
+ - Add manager policy to change the disk spindown based on timeouts set in GConf (Richard Hughes)
+ - Add GConf keys for the disk spindown functionality (Richard Hughes)
  - Add preferences checkboxes for the disk spindown functionality (Richard Hughes)
  - No longer support HAL legacy buttons (Richard Hughes)
  - Add support for recall data provided by DeviceKit-power (Richard Hughes)
 
 Bugfixes:
  - Prefix GTKBuilder files with gettext/glade (Claude Paroz)
- - Use gtk_show_uri i.s.o. mate-open (Jaap A. Haitsma)
+ - Use gtk_show_uri i.s.o. gnome-open (Jaap A. Haitsma)
  - Remove -Wunitialized because it does not compile on Ubuntu Jaunty (Jaap A. Haitsma)
- - Fix the category in the mate-power-statistic desktop file. Fixes rh#489041 (Richard Hughes)
+ - Fix the category in the gnome-power-statistic desktop file. Fixes rh#489041 (Richard Hughes)
  - Make minimum size of th statistics graphs smaller. Fixes rh#491426 (Richard Hughes)
  - Don't show the feedback widget when the brightness changes, only on key press and when interactive (Richard Hughes)
  - If we caught our idletime alarm, then remove from the filter (Richard Hughes)
@@ -471,7 +471,7 @@ Bugfixes:
  - Use the composite device for getting the global system warning icon (Richard Hughes)
  - Setup the reset event before we do the idle action, to finally fix blanking (Richard Hughes)
  - Be more paranoid about setting idle in a race (Richard Hughes)
- - Remove three unused MateConf keys (Richard Hughes)
+ - Remove three unused GConf keys (Richard Hughes)
  - Don't show the whole object path in the GUI, just show the ID (Richard Hughes)
  - Only print the DeviceKit device if we are using --verbose (Richard Hughes)
  - Remove a little bit more of our HAL dep, and use the lid-is-present DK-p property (Richard Hughes)
@@ -502,7 +502,7 @@ Translations:
 
 Features:
  - Add DOAP file (Richard Hughes)
- - Connect to mate-session and exit on logout (Richard Hughes)
+ - Connect to gnome-session and exit on logout (Richard Hughes)
  - Change the default lid close on AC policy to be suspend, not blank (Richard Hughes)
  - Show the processor device if we have capability, not if we have events (Richard Hughes)
  - Add support for the DeviceKit-power property lid-is-closed so we can now run without --enable-legacy-buttons (Richard Hughes)
@@ -513,12 +513,12 @@ Features:
 Bugfixes:
  - Add desktop category to doap file (Olav Vitters)
  - Only setup the blanking timeout when a timeout is set. Fixes rh#498041 (Kyle McMartin)
- - Attach the libmatenotify popups to the notification icon later (Pramod Dematagoda)
+ - Attach the libnotify popups to the notification icon later (Pramod Dematagoda)
  - Check whether xrandr-1.3 features are really supported by xorg-server. Fixes #582142 (Priit Laes)
- - Preload mateconf tree /apps/mate-power-manager recursively. Fixes #578545 (Behdad Esfahbod)
+ - Preload gconf tree /apps/gnome-power-manager recursively. Fixes #578545 (Behdad Esfahbod)
  - Fix the low capacity warning to fix rh#489832 (Richard Hughes)
  - Rewrite the DPMS class to have 1% of the complexity (Richard Hughes)
- - Remove unused MateConf keys (Richard Hughes)
+ - Remove unused GConf keys (Richard Hughes)
  - Use ngettext for a 2.26.x era string. Fixes #576128 (Richard Hughes)
  - Unref the popup window when it's cleared. Fixes #577901 (Richard Hughes)
  - Ensure we clear the default DPMS timeout of 1200s. Should fix #576169 (Richard Hughes)
@@ -526,18 +526,18 @@ Bugfixes:
  - Convert a floating reference to prevent a GTK warning (Richard Hughes)
  - Use G_GINT64_FORMAT to fix compile on 64 bit computers (Richard Hughes)
  - Do the lid policy action on active-change. Fixes rh#497262 (Richard Hughes)
- - Don't segfault if org.mate.Session is not present on the bus. Fixes #581425 (Richard Hughes)
+ - Don't segfault if org.gnome.Session is not present on the bus. Fixes #581425 (Richard Hughes)
  - Ensure we are on battery power before we take any of the low power battery actions (Richard Hughes)
  - Remove the unused abstraction GpmAdapter, and use DkpClient directly (Richard Hughes)
  - Remove the single use abstract GpmRefcount and use a local timer (Richard Hughes)
  - Remove some methods on the DBus interface that have moved to DeviceKit-power (Richard Hughes)
- - Remove the inhibit interface, and rely on mate-session (Richard Hughes)
+ - Remove the inhibit interface, and rely on gnome-session (Richard Hughes)
  - Use DeviceKit-power to get the can-suspend and can-hibernate properties (Richard Hughes)
  - Handle return to NORMAL idle when lid closed a bit better (Richard Hughes)
  - Correct the polarity of the on-ac battery check when inhibiting the screensaver (Richard Hughes)
  - Correct the logic for the fully charged and discharging popups (Richard Hughes)
  - Don't try to keep closing the feedback widget (Richard Hughes)
- - Don't always show a single graph dot in mate-power-statistics (Richard Hughes)
+ - Don't always show a single graph dot in gnome-power-statistics (Richard Hughes)
 
 ==============
 Version 2.26.0
@@ -566,9 +566,9 @@ Version 2.25.92
 ===============
 
 - Fixed #529214, Need longer timeout periods (Richard Hughes)
-- Fixed #571330, mate-power-manager shouldn't start on session panel phase (Lucas Rocha)
+- Fixed #571330, gnome-power-manager shouldn't start on session panel phase (Lucas Rocha)
 - Fixed #571950, make default-button have a floppy in it (Richard Hughes)
-- Fixed #485103, Don't crash if there's no mate-session (Richard Hughes)
+- Fixed #485103, Don't crash if there's no gnome-session (Richard Hughes)
 - Fix double free when passed --version (Richard Hughes)
 - Fix the battery history when using a new DeviceKit-power (Richard Hughes)
 - Fix up the icon when we are state unknown, and very close to the charging capacity (Richard Hughes)
@@ -621,7 +621,7 @@ Version 2.25.91
 - Fixed #570242, Add some translator comments to the new stats interface (Richard Hughes)
 - Fixed #570254, Used new icons in 16, 22, and 24 sizes in on-shelf perspective (Andreas Nilsson)
 - Fixed problem where the icon would not show on startup or when the notification try was reloaded (Richard Hughes)
-- Start in the MATE Panel phase, not the MATE Applications phase so we work with the fast user switch applet (Richard Hughes)
+- Start in the GNOME Panel phase, not the GNOME Applications phase so we work with the fast user switch applet (Richard Hughes)
 - Don't show the discharging icon when the status is unknown (Richard Hughes)
 - Remove translatable flag from gtk-refresh stock button (Gabor Kelemen)
 - Ask for edge triggers on system idle time, not level triggers (Adam Jackson)
@@ -648,7 +648,7 @@ Version 2.25.3
 ==============
 
 - Fixed #562576, profile is not saved correctly (Richard Hughes)
-- Fixed #563791, MATE Goal: Clean up GLib and GTK+ includes (Pedro Fragoso)
+- Fixed #563791, GNOME Goal: Clean up GLib and GTK+ includes (Pedro Fragoso)
 - Fixed #565076, Use g_timeout_add_seconds where possible (Richard Hughes)
 - Fixed #565552, gtk_status_icon_set_tooltip has been deprecated (Frederic Peters)
 - Fixed #565867, build time check for DeviceKit (Richard Hughes)
@@ -658,8 +658,8 @@ Version 2.25.3
 - Fixed #567918, idle delay changes (Richard Hughes)
 - Fixed #569100, when brightness is to 0, pressing one more brightness down makes brightness up/down stop working. (Richard Hughes)
 - Fixed #569356, build error, missing egg-idletime.c (Richard Hughes)
-- Add processor wakeup support into mate-power-statistics. This requires DeviceKit-power from git master to work properly.
-- Don't rely on the mate-screensaver idle key now we are using mate-session
+- Add processor wakeup support into gnome-power-statistics. This requires DeviceKit-power from git master to work properly.
+- Don't rely on the gnome-screensaver idle key now we are using gnome-session
 
 Translations:
 - Updated ca: David Planella
@@ -699,7 +699,7 @@ Version 2.25.1
   It's also not tested by me. The next release will probably have the HAL
   compatability code removed completely.
 - Distros that do not yet ship DeviceKit-power can ship packages from
-  MATE_POWER_MANAGER_2_24_X which is still maintained.
+  GNOME_POWER_MANAGER_2_24_X which is still maintained.
 
 - Fixed #462109, make distcheck fails on my laptop (Richard Hughes)
 - Fixed #549844, DBUS times out after longer suspends (Richard Hughes)
@@ -710,8 +710,8 @@ Version 2.25.1
 - Fixed #561114, Escape should close/cancel focused toplevel dialog (Richard Hughes)
 - Fixed #562445, build failure; missing gpm-engine.h (Richard Hughes)
 - Fixed #562836, GPM OSD does not popup on machines that support keys in HW but not in xrandr (Richard Hughes)
-- Fixed #562900, mate power manager keeps using xrandr backend after failed calls (Richard Hughes)
-- Fixed #564531, build error, applets depend on libmateui (Richard Hughes)
+- Fixed #562900, gnome power manager keeps using xrandr backend after failed calls (Richard Hughes)
+- Fixed #564531, build error, applets depend on libgnomeui (Richard Hughes)
 
 Translations:
 - Updated ast: Astur, Gil Forcada
@@ -758,7 +758,7 @@ Help Manual Translations:
 Version 2.23.91
 ===============
 
-- Fixed #547502, mate-power-manager won't configure (Gilles Dartiguelongue)
+- Fixed #547502, gnome-power-manager won't configure (Gilles Dartiguelongue)
 - Fixed #547766, Crash in gpm_cell_array_update gpm-cell-array.c:273 (Richard Hughes)
 - Fixed #549789, "unknown" battery type untranslated (Seán de Búrca)
 - Fixed #549854, gpm-cell.c not translator friendly (Claude Paroz)
@@ -792,7 +792,7 @@ Version 2.23.6
 - Supress low battery warning on Eee as it's reported as non-rechargeable (Matthew Garrett)
 - Use polkit-simple to simplify the optional PolicyKit bits (Richard Hughes)
 - Completely remove all traces of the skipping suppressed action warning (Richard Hughes)
-- Don't use a libmatenotify window for the battery information, use a GtkDialog instead (Richard Hughes)
+- Don't use a libnotify window for the battery information, use a GtkDialog instead (Richard Hughes)
 
 Translations:
 - Updated ar: Khaled Hosny
@@ -816,17 +816,17 @@ Version 2.23.3
 - Fixed #483144, Gconf key for battery brightness labeled incorrectly... (Richard Hughes)
 - Fixed #492132, policy timeout prevents computer from suspend (Richard Hughes)
 - Fixed #517914, Inconsistent colors of graphs (Richard Hughes)
-- Fixed #521686, Removing mate_program_init removes session management (Richard Hughes)
+- Fixed #521686, Removing gnome_program_init removes session management (Richard Hughes)
 - Fixed #522078, aborts when suspend is chosen when running under GDM (Richard Hughes)
 - Fixed #522236, g-p-m should set a window type hint for the brightness feedback window (Richard Hughes)
 - Fixed #522336, Change Playbin state back to NULL on error and EOS : fix potential memory leak when using pulsaudio (Richard Hughes)
 - Fixed #523152, GetBrightness returns a INT not a UINT (Richard Hughes)
-- Fixed #524449, mate-power-preferences gives a critical warning (Richard Hughes)
+- Fixed #524449, gnome-power-preferences gives a critical warning (Richard Hughes)
 - Fixed #526178, Should check user capability "CanShutdown" before providing shutdown option in combo box (simon.zheng)
-- Fixed #526349, mate-power-bugreport.sh doesn't work on Solairs (simon.zheng)
+- Fixed #526349, gnome-power-bugreport.sh doesn't work on Solairs (simon.zheng)
 - Fixed #534335, cpu load calculation doesn't work on Solaris (simon.zheng)
 - Fixed #535271, XBACKLIGHT is very slow (Richard Hughes)
-- Fixed #536956, Should remove cpufreq_show mateconf key (simon.zheng)
+- Fixed #536956, Should remove cpufreq_show gconf key (simon.zheng)
 
 Translations:
 - Updated ru: Yuri Kozlov
@@ -850,17 +850,17 @@ Version 2.23.1
 ==============
 
 - Fixed #526178, Should check user capability "CanShutdown" before providing shutdown option in combo box (Simon Zheng)
-- Fixed #526349, mate-power-bugreport.sh doesn't work on Solairs (Simon Zheng)
+- Fixed #526349, gnome-power-bugreport.sh doesn't work on Solairs (Simon Zheng)
 - Fixed #522236, g-p-m should set a window type hint for the brightness feedback window (Danny Baumann)
 - Fixed #522078, Don't try to generate a config_id when we have no primary batteries (Richard Hughes)
 - Fixed #517914, The graph colors are used inconsistently between the various graphs (Jérôme Guelfucci)
-- Fixed #524449, Fix a critical warning in mate-power-preferences (Richard Hughes)
+- Fixed #524449, Fix a critical warning in gnome-power-preferences (Richard Hughes)
 - Fixed #108075, Don't show some notifications under GDM (Richard Hughes)
 - Fixed rh#444026, Check keys for writability before we try to change them (Richard Hughes)
 - Fixed rh#443069, Be more paranoid about the rates reported from HAL (Richard Hughes)
 - Fix a bunch of build warnings with glib trunk (Kjartan Maraas)
 - Use Unique to make g-p-p and g-p-s single instance (Richard Hughes)
-- Add a default button for MateConf settings (Matthias Clasen)
+- Add a default button for GConf settings (Matthias Clasen)
 - Remove all the hidden cpufreq code, as I keep being told I'm insane by Matthew (Richard Hughes)
 - Use the same logic for xrandr as hal when we have a large number of brightness steps (Richard Hughes)
 - Clear the brightness applet background properly so we can draw on it later (Ted Gould)
@@ -922,7 +922,7 @@ Version 2.21.92
 - Fixed #512267, Automatically put right version in to desktop.in files (Jaap Haitsma)
 - Fixed #514077, Battery profiling does not work (Richard Hughes)
 - Resave as plain vacuumed svg to save over 2Mb from the tarball and installed size (Nicu Buculei)
-- Drop unused mate client from gpm-main.c (Jani Monoses)
+- Drop unused gnome client from gpm-main.c (Jani Monoses)
 
 Translations:
 - Updated vi: Clytie Siddall
@@ -954,7 +954,7 @@ Translations:
 Version 2.21.1
 ==============
 
-- Fixed #413360, After loading mate gpm starts but shows nothing in tray icon despite option (Mart Raudsepp)
+- Fixed #413360, After loading gnome gpm starts but shows nothing in tray icon despite option (Mart Raudsepp)
 - Fixed #474973, Lack of context to translate (Gabor Kelemen)
 - Fixed #497298, The +/- buttons on the brightness applet sometimes get stuck. (Simon Zheng)
 - Fixed #497298, Avoid float computation error (Simon Zheng)
@@ -969,7 +969,7 @@ Version 2.21.1
   about flashing webcam lights and brightness levels changing (Richard Hughes)
 
 Translations:
-- Updated fr: merged from mate-2-20
+- Updated fr: merged from gnome-2-20
 - Updated bg: Alexander Shopov
 - Updated pt_BR: Guilherme de S. Pastore
 - Updated ca: Jordi Mallach
@@ -1063,7 +1063,7 @@ Version 2.19.6
 ==============
 
 - Fixed #405421, TFT head-up brightness appears in centre of screen, rather than 3/5 down (Richard Hughes)
-- Fixed #436717, mate-power-manager should properly show the brightness OSD on laptops which do brightness adjustments in hardware but report keypresses via the keyboard (Richard Hughes)
+- Fixed #436717, gnome-power-manager should properly show the brightness OSD on laptops which do brightness adjustments in hardware but report keypresses via the keyboard (Richard Hughes)
 - Fixed #445173, Strings in server.in files are not marked for translation (Richard Hughes)
 - Fixed #448570, Polish about dialog (Richard Hughes)
 - Fixed #450154, Translate program description correctly (Richard Hughes)
@@ -1074,7 +1074,7 @@ Version 2.19.6
 - Fixed #458609, Translator comment needed for context translations (Gabor Kelemen)
 - Fixed #458613, Hard to understand/translate messages (Richard Hughes)
 - Fixed #459099, non-sensical string (Richard Hughes)
-- Fixed #459747, Enable lock of MATE Keyring on hibernate (Richard Hughes)
+- Fixed #459747, Enable lock of GNOME Keyring on hibernate (Richard Hughes)
 
 Translations:
 - Updated bg: Alexander Shopov
@@ -1094,14 +1094,14 @@ Version 2.19.5
 - Fixed #406144, suspend warning sound could be better (Richard Hughes)
 - Fixed #411932, Regression detecting charged battery (Richard Hughes)
 - Fixed #413642, Only one translation for two different contexts (Stéphane Raimbault)
-- Fixed #422124, When screensaver idle delay was changed, didn't update sleep slider ui and mateconf value (Richard Hughes)
+- Fixed #422124, When screensaver idle delay was changed, didn't update sleep slider ui and gconf value (Richard Hughes)
 - Fixed #423289, Idle power units confused (Richard Hughes)
-- Fixed #433367, Applet icon wrong when mate-power-manager not running (Richard Hughes)
+- Fixed #433367, Applet icon wrong when gnome-power-manager not running (Richard Hughes)
 - Fixed #442425, Power manager should provide more robust bug reporting tool (Richard Hughes)
 - Fixed #448570, Polish about dialog (Jaap Haitsma)
 - Fixed #450154, Translate program description correctly (Gabor Kelemen)
 - Fixed #450362, Remove "battery profile is estimated" from tooltip (Richard Hughes)
-- Fixed #451241, mate-power-manager exits because webcam brightness fails (Richard Hughes)
+- Fixed #451241, gnome-power-manager exits because webcam brightness fails (Richard Hughes)
 - Fixed #452244, Battery menu should have an "allow suspend" option that can be unchecked (Richard Hughes)
 - Fixed #453721, Translators need more info (Richard Hughes)
 
@@ -1127,11 +1127,11 @@ Version 2.19.3
 - Don't try to do the policy action when the average accuracy is low. (Richard Hughes)
 - Make the brightness dim code "learn" to take longer to dim if you keep
   undimming the screen shortly after auto-dimming it. (Richard Hughes)
-- Change default of /apps/mate-power-manager/general/network_sleep to
+- Change default of /apps/gnome-power-manager/general/network_sleep to
   false, as we now do the system action in pm-utils. (Richard Hughes)
 - Add initial code to use a webcam as a brightness sensor. (Richard Hughes)
 - Rework the brightness interactions, and rename a large part of the
-  mateconf schemas. (Richard Hughes)
+  gconf schemas. (Richard Hughes)
 
 Translations:
 - Updated pt: Duarte Loreto
@@ -1155,7 +1155,7 @@ Version 2.19.2
 - Fixed #437920, Build failure (-Werror): gpm-load.c:122: warning: ‘cpu_total’ may be used uninitialized in this function (Richard Hughes)
 - Change suspend when lid close and off AC behaviour to be true.
 - Reduce our DPMS querying to slow X wakeups. We are still waiting for a DPMS protocol bump...
-- Improve the mate-power-statistics UI, and make more HIG compliant.
+- Improve the gnome-power-statistics UI, and make more HIG compliant.
 
 Translations:
 - Updated nb: Kjartan Maraas
@@ -1176,11 +1176,11 @@ New features:
 - Make more of the HAL and DBUS stuff modular and put into libraries
 - Rewrite the engine and the cell and cell-array code.
   Should be faster, more stable and less buggy than the cludges we had before.
-- More integration with libmatenotify allowing non-critical dialogues to be ignored.
+- More integration with libnotify allowing non-critical dialogues to be ignored.
 - Impliment the freedesktop PowerManagement session specification.
   See http://www.freedesktop.org/wiki/Specifications_2fpower_2dmanagement_2dspec
-- Move the FAQ to http://live.mate.org/MatePowerManager/FAQ
-- Re-organsise the mateconf schema with better names, and with a tree structure.
+- Move the FAQ to http://live.gnome.org/GnomePowerManager/FAQ
+- Re-organsise the gconf schema with better names, and with a tree structure.
 
 Translations:
 
@@ -1203,9 +1203,9 @@ Translations:
 Version 2.18.2
 ==============
 
-- Fixed #422345, Fails to build with non-dbus mate-vfs: undefined ref to `dbus_g_proxy_call' (Loïc Minier)
+- Fixed #422345, Fails to build with non-dbus gnome-vfs: undefined ref to `dbus_g_proxy_call' (Loïc Minier)
 - Fixed #425000, add bug-buddy support to the applets (Matthias Clasen)
-- Add a configurable --enable-keyring so we can disable the lock of the MATE
+- Add a configurable --enable-keyring so we can disable the lock of the GNOME
   keyring at build time. Defaults to off (Richard Hughes)
 - Sync dpms policy setting when starting (Young-Ho Cha)
 
@@ -1353,7 +1353,7 @@ Power Manager
    performance on battery.
  - Add this new dbus interface so we can provide an alternate UI environment,
    for instance for XFCE or OLPC.
- - Use correct mate-keyring-1 include directory. #388815
+ - Use correct gnome-keyring-1 include directory. #388815
  - Point the applets help to the applets section in the main help file. #388904.
  - Don't localise battery description string as this is used internally for
    icon name. (Pascal Terjan)
@@ -1367,11 +1367,11 @@ Power Manager
 Power Preferences
 
  - Fix popup_menu callback signature. (Christian Persch) #390172.
- - Add /apps/mate-power-manager/show_cpufreq_ui MateConf key. It's not something
+ - Add /apps/gnome-power-manager/show_cpufreq_ui GConf key. It's not something
    I wanted to do, as 99% of people don't need to ever change this, but the
    1% will need to for specific systems. Default to hiding the control.
    Distros can patch this if required.
- - Categorize mate-power-preferences for the control center shell.
+ - Categorize gnome-power-preferences for the control center shell.
    (Denis Washington) #394701.
 
 Translators
@@ -1401,9 +1401,9 @@ General
 
  - Fix lots of typos in the yelp file. #380920, #381928, #381930.
    (Jorge Gonzalez)
- - Add mate-power-bugreport.sh so we can automatically get the
+ - Add gnome-power-bugreport.sh so we can automatically get the
    distro version and stuff from HAL using the fantastic new
-   X-MATE-Bugzilla-ExtraInfoScript.
+   X-GNOME-Bugzilla-ExtraInfoScript.
 
 Power Preferences
 
@@ -1444,7 +1444,7 @@ General
    instance if suspend fails and the lid is shut. Prevents melting.
    This uses gst-launch to use gstreamer. Add some sample sounds done by me.
  - Convert multi-instance code from libguniqueapp to GtkUnique.
- - Add mate-keyring functionality to lock keyrings when sleeping. #375681
+ - Add gnome-keyring functionality to lock keyrings when sleeping. #375681
  - Use GtkUnique rather than libguniqueapp. Optional but recommended dep.
 
 Power Manager
@@ -1458,7 +1458,7 @@ Power Manager
  - Fix an infrequent odd crash when we are suspending. (Pascal Terjan)
  - Sanity check the rate and time values in case the hardware really goes
    screwy for a few seconds, and gets the values wrong.
- - Set the libmatenotify window to NULL after we unref it, which will probably fix
+ - Set the libnotify window to NULL after we unref it, which will probably fix
    the crash in #365279
  - Only add and remove batteries if sane. This uses a hashtable to keep
    track of what batteries we are watching and should fix #369488.
@@ -1525,13 +1525,13 @@ Power Preferences
 
 Power Statistics
 
- - mate-power-statistics now works instead of the "Information" screen
+ - gnome-power-statistics now works instead of the "Information" screen
    that we used before. As it this is out of process we save 300kb for each
-   instance of mate-power-manager daemon running.
+   instance of gnome-power-manager daemon running.
  - We can now trivially add new graph types and export them over DBUS.
  - The statistics application now includes light/dark coloured symbols with
    different shapes for colour-blind or partially sighted people.
- - mate-power-statistics now remembers settings between invocations.
+ - gnome-power-statistics now remembers settings between invocations.
  - Add a proper tango gpm-statistics tango icon. (Jakub Steiner)
  - Add an icon the the statistics program to the "System Tools" menu.
 
@@ -1564,11 +1564,11 @@ General
  - Move to power measurement in percentages in the spec to better suit low
    power laptops and OLPC.
  - Allow power users to turn off the disconnect and reconnection feature of
-   NetworkManager on sleep and resume using mateconf.
+   NetworkManager on sleep and resume using gconf.
    (Khashayar Naderehvandi) #353431
- - Add /apps/mate-power-manager/session_request_save so distros like
-   Ubuntu can just switch a mateconf key rather than patch the source.
- - Start to implement org.mate.PowerManager.Statistics for the
+ - Add /apps/gnome-power-manager/session_request_save so distros like
+   Ubuntu can just switch a gconf key rather than patch the source.
+ - Start to implement org.gnome.PowerManager.Statistics for the
    out-of-process graphing interface. It actually doesn't do much yet.
  - Use DPMS_METHOD_OFF when we specify "default" for the DPMS action when on
    laptop hardware. Suspending the screen keeps the backlight on. #354726
@@ -1700,7 +1700,7 @@ General
    charged notification under some circumstances. #348938
  - Fix all cases reported by sparse/gcc (Kjartan Maraas). #350058
  - Move the roadmap into the TODO so it's easier to update.
- - Make mate-screensaver connection more resilient to bus failures. #349794
+ - Make gnome-screensaver connection more resilient to bus failures. #349794
  - Poll all the buttons every minute to detect a silent lid close event. #346082
  - Reset the action timer after an ac_adapter event has been received. #348201
  - Add support for different DPMS sleep modes to support broken monitors.
@@ -1711,7 +1711,7 @@ General
  - Fix a typo where we were trying to assign the wrong icon names so the
    battery missing icon didn't show up (instead showed a gtk-broken-image) #348710
  - Fix a crasher where the g-s timeout was larger than the max range for
-   mate-power-preferences. #347932
+   gnome-power-preferences. #347932
 
 Translators
 
@@ -1759,12 +1759,12 @@ General
 
  - Change dbus Inhibit and UnInhibit methods to use a UINT32 rather than INT32,
    as this is specified in the spec.
- - Fix a compile error when we are compiling the non-libmatenotify sections of
+ - Fix a compile error when we are compiling the non-libnotify sections of
    the code, which probably don't happen that often. #344674 (Elijah Newren)
  - Make a few more shared classes into singletons to save memory and CPU.
  - Allow use of --disable-schemas-install on autoconf level for disabling
-   registering MateConf schemas. (Tomasz Kłoczko)
- - Change /apps/mate-power-manager/check_type_cpu default to false after
+   registering GConf schemas. (Tomasz Kłoczko)
+ - Change /apps/gnome-power-manager/check_type_cpu default to false after
    discussion in #326742.
  - Add a test program that allows us to test the multiple inhibit stuff,
    and also to show people how easy it is adding Inhibit and UnInhibit calls
@@ -1776,7 +1776,7 @@ Power Manager
  - Add in initial support to check with PolicyKit over dbus. #344171
  - Logically seporate the help file, and add loads of new content.
  - Allow the user to ignore the inhibit requests from stopping a policy action.
-   The key /apps/mate-power-manager/ignore_inhibit_requests can be set to true,
+   The key /apps/gnome-power-manager/ignore_inhibit_requests can be set to true,
    and the action will still go ahead.
  - Use the same logic as the tooltip for the notification. #345698
  - Only refresh the caches on the last PropertyModified split event to save CPU.
@@ -1833,13 +1833,13 @@ General
 Power Manager
 
  - Actually show the correct levels in the pixmaps for the mouse and keyboard.
- - Add a mateconf key so we can disable the action for when the lid is previously
+ - Add a gconf key so we can disable the action for when the lid is previously
    shut and the AC power removed at a later time as this was causing confusion.
  - Limit the capacity to 100%
  - Undim the screen when we have to unlock returning from resume. #333290
  - Rework the brightness handling so that we only have one way of doing the
    transitions. This simplifies things greatly. #341616
- - Update for mate-screensaver API changes.  #344103
+ - Update for gnome-screensaver API changes.  #344103
 
 Power Preferences
 
@@ -1869,7 +1869,7 @@ Released May 15, 2006
 General
 
  - Remove all suspend-to-{x} terminology in the code and documentation in favour
-   of hibernate and suspend (http://live.mate.org/MatePowerManager/SleepNames).
+   of hibernate and suspend (http://live.gnome.org/GnomePowerManager/SleepNames).
  - Update the FAQ URL. #330889
 
 Power Manager
@@ -1924,12 +1924,12 @@ General
 
  - Update screenshots and add lots of documenation.
  - Switch icons to using the Tango style (Jakub Steiner). #331761
- - Update for new throttle API for mate-screensaver. Also provide a fallback
+ - Update for new throttle API for gnome-screensaver. Also provide a fallback
    to the old API for now. #339209 (William Jon McCann)
  - Respond correctly to systray crashing by reloading the icon to the tray when
    destroyed. (Rodrigo Moya)
  - Fix up the spec file #339263 (Paul Ionescu)
- - Mate Goal #2 PoLinguas (Jaap Haitsma)
+ - Gnome Goal #2 PoLinguas (Jaap Haitsma)
 
 Power Manager
 
@@ -1938,12 +1938,12 @@ Power Manager
    to 95% as some batteries charge to 100% and then fluctuate from ~98% to
    100%. #338281
  - Error alerts should use an OK button. #336997
- - Monitor some more mateconf keys so we don't have to restart to get the new
+ - Monitor some more gconf keys so we don't have to restart to get the new
    settings. #338628
  - Fix where the primary batteries are listed in the reverse order. #338634
  - Check that we do not set a higher brightness when we try to lower the
    brightness on idle. #338630.
- - Set libmatenotify point to the center of the icon. #338638
+ - Set libnotify point to the center of the icon. #338638
  - Set the default for the icon policy to only display if batteries are
    present so we don't display by default on desktops. rh:187140.
  - Make sure the inhibit cookie we generate is really unique. #339307.
@@ -1981,14 +1981,14 @@ Released April 06, 2006
 
 General
 
- - Drop support for obsolete versions of libmatenotify, DBUS and HAL.
+ - Drop support for obsolete versions of libnotify, DBUS and HAL.
  - Code quality improvements (Paolo Borelli)
  - More gtk-doc comments added to all the files.
  - Remove the scons-based build system for now.
  - Use g_option instead of popt (Jaap Haitsma)
  - Install new icons to /usr/share/icons/hicolor and do gtk-update-icon-cache
    when we install. #336067
- - Add X-MATE-Bugzilla keys for use with bug buddy (Vincent Fretin).
+ - Add X-GNOME-Bugzilla keys for use with bug buddy (Vincent Fretin).
  - Add the missing --daemon option to the man page (Ow Mun Heng).
  - Updated Yelp help file with more useful information.
 
@@ -2011,9 +2011,9 @@ Power Manager
    independently and started in any order. #332366
  - Fix the expose event handling (Crispin Flowerday)
  - Use g_slice rather than g_new for the small data-points.
- - Use /apps/mate-power-manager/show_actions_in_menu rather than the compile
+ - Use /apps/gnome-power-manager/show_actions_in_menu rather than the compile
    setting ACTIONS_MENU_ENABLED to disable the actions menu. #335415
- - Add urgency states and the correct icons to libmatenotify windows.
+ - Add urgency states and the correct icons to libnotify windows.
  - Synchronize DPMS policy after a suspend or hibernate. #336081
  - Work around a HAL bug with CSR mice and keyboards so they display the
    correct charge after a short delay.
@@ -2059,7 +2059,7 @@ Power Manager
    ac_adapter is removed. #333525
  - Unrealize the icon when we hide it, else it leaves a 1px line on the
    notification tray. Fixes a transparent panel. #333515
- - Don't try to lock if mate-screensaver is not running.
+ - Don't try to lock if gnome-screensaver is not running.
 
 Power Preferences
 
@@ -2097,7 +2097,7 @@ Power Manager
  - Fix a crash when a very low power mouse is inserted. rh:183127.
  - Fix the UPS "charged" icon. #332761
  - Add a configurable action for the hibernate button and the power button.
- - Wait for mate-screensaver to lock before we suspend (Daniel Silverstone)
+ - Wait for gnome-screensaver to lock before we suspend (Daniel Silverstone)
  - Display a BIG FAT warning in the event of DBUS not being present instead of
    just aborting like we do now.
  - Update with new bluecurve suspend and hibernate icons. (Diana Fong)
@@ -2106,7 +2106,7 @@ Power Manager
    hardware blanking). lp:22522
  - Inhibit activation of the screensaver when the lid is closed.
  - Use a better way to work out if the battery is not charging. #333169
- - Standardise on longer timeouts for the libmatenotify boxes. lp:33411
+ - Standardise on longer timeouts for the libnotify boxes. lp:33411
  - Fix the repeated "battery is fully charged" messages if hardware is
    a little wonky. lp:32650, rh:183612
 
@@ -2130,7 +2130,7 @@ Released February 26, 2006
 General
 
  - Update the yelp screenshots and text.
- - Update the mate-screensaver DBUS methods for new names. Fixes #332481
+ - Update the gnome-screensaver DBUS methods for new names. Fixes #332481
  - Rationalise the icon naming scheme so that we can start to theme g-p-m.
  - Add the new UPS charging and discharging icons. Fixes #331117
 
@@ -2154,7 +2154,7 @@ Power Manager
 
 Power Preferences
 
- - Disable widgets if mateconf key is marked not writable
+ - Disable widgets if gconf key is marked not writable
  - Various HIG fixes (Jaap Haitsma, Crispin Flowerday)
 
 Translators
@@ -2198,10 +2198,10 @@ Power Preferences
  - Change duplicate accesskeys #331538
  - Remove pointless icons in general tab #331530.
  - Remove suspend button action from the GUI (defaults to suspend) but can be
-   changed by power users in mateconf. #331757 (Jaap Haitsma)
+   changed by power users in gconf. #331757 (Jaap Haitsma)
  - Add back option "Suspend" for low power action by popular request, and
    explain in the docs why it might be a bad idea. #330267
- - Make the widgets disabled if the mateconf key is not writable. #327893
+ - Make the widgets disabled if the gconf key is not writable. #327893
 
 Translators
 
@@ -2241,7 +2241,7 @@ Power Manager
 Power Preferences
 
  - Only connect up the value-changed signal once the initial value has been set.
-   This prevents the mateconf keys from getting written to (if only for a
+   This prevents the gconf keys from getting written to (if only for a
    split second), so that the icon no longer flickers when preferences is
    clicked. RH #179797
 
@@ -2277,9 +2277,9 @@ Released January 25, 2006
 
 General
 
- - Bump version to a more suitable MATE release version.
- - Remove the website source from CVS as already in mateweb. #328280
- - Flattern the mateconf schema so that we don't have lots of subfolders
+ - Bump version to a more suitable GNOME release version.
+ - Remove the website source from CVS as already in gnomeweb. #328280
+ - Flattern the gconf schema so that we don't have lots of subfolders
    for very few keys. #327894
 
 Power Manager
@@ -2292,7 +2292,7 @@ Power Manager
  - Manager now changes brightness, not g-p-p. #327895
  - Set the correct lcd brightness on startup.
  - Fix the bug where g-p-m crashes after emitting a signal
- - Added .desktop file for mate-session's autostart mechanism.
+ - Added .desktop file for gnome-session's autostart mechanism.
  - All time now internally stored as seconds. #328289
  - Show the tray menu for any button press. #327959.
  - Only do critical action for primary battery. #328228, #328228
@@ -2303,7 +2303,7 @@ Power Preferences
  - Make the combo boxes in options expand so that we don't get different sizes.
  - Remove time estimates for low and critical battery since this is device
    and system dependent.
- - Brightness now dealt with as a percentage, so mateconf portable. #327895
+ - Brightness now dealt with as a percentage, so gconf portable. #327895
  - Now called "Power Management Preferences". #328397
 
 Translators
@@ -2326,16 +2326,16 @@ Released January 17, 2006
 
 - We now depend on HAL 0.5.6 for the new suspend, hibernate and shutdown
   functionality. HAL 0.5.6 is available in my repo for FC4.
-- Source releases are now done on the MATE ftp servers:
-  ftp://ftp.mate.org/pub/MATE/sources/mate-power-manager/
+- Source releases are now done on the GNOME ftp servers:
+  ftp://ftp.gnome.org/pub/GNOME/sources/gnome-power-manager/
 - We now only show Suspend and Hibernate options when HAL says we should.
   NOTE: just because HAL (i.e. the kernel) says it has hibernation or suspend
   support is compiled in, doesn't automatically mean that it will *work*.
-- DPMS has moved into mate-power-manager from mate-screensaver, thanks
+- DPMS has moved into gnome-power-manager from gnome-screensaver, thanks
   to the work from William Jon McCann. There now is a DBUS interface to
   control this new functionality (#326276)
-- org.mate.MatePowerManager -> org.mate.PowerManager (#326492)
-- MATE Power Manager now listens for the new idle signals from g-s.
+- org.gnome.GnomePowerManager -> org.gnome.PowerManager (#326492)
+- GNOME Power Manager now listens for the new idle signals from g-s.
 - There now is a yelp help file (#324977), thanks to Jaap Haitsma.
 - Lots of new translations: Greek (Nikos Charonitakis), Gujarati (Ankit Patel),
   Vietnamese (Clytie Siddall), Catalan (Josep Puigdemont i Casamajó),
@@ -2345,18 +2345,18 @@ Released January 17, 2006
   Norwegian (Kjartan Maraas), Spanish (Francisco Javier F. Serrador), 
   Simplified Chinese (Funda Wang), Lithuanian (Žygimantas Beručka), 
   Italian (Daniele Medri), French (Guillaume Savary), Finnish (Ilkka Tuohela).
-- We now try to save the MATE application state before the critically-low
+- We now try to save the GNOME application state before the critically-low
   action is taken (default shutdown).
-- The power button is now an interactive shutdown, saving MATE session state.
-- Fix a bug where the preferences program was crashing on missing mateconf schema.
+- The power button is now an interactive shutdown, saving GNOME session state.
+- Fix a bug where the preferences program was crashing on missing gconf schema.
 - Fixed lots of other smaller bugs such as (#322773), (#323135), (RH#174196),
   (#322547), (RH#172963), (RH#176656).
 - Lots of source file re-organisation, also a large refactoring. Thanks to 
   William Jon McCann for the large amount of code cleanup done.
 - Fix problem where preferences window is redrawn and then resized (#323562)
-- Don't crash if mate-panel is restarted, but display the icon again (#324446)
+- Don't crash if gnome-panel is restarted, but display the icon again (#324446)
 - Fix problem where battery is removed, and icon does not change (#323563)
-- Made the warning about the AC adapter and the battery full mateconf
+- Made the warning about the AC adapter and the battery full gconf
   configurable, fixing RH#176433 and (#325876).
 
 =============
@@ -2378,10 +2378,10 @@ Released November 28, 2005
 - Fixed a bug where the correct brightness wasn't being set on battery boot.
 - Added an option in g-p-p so that password protected resume is an option.
 - If you are having problems with crashes or missing settings, please uninstall
-  the mate-power-manager 0.2.8 rpm, and install 0.3.1, rather than upgrading.
-  The old rpm post line in 0.2.8 causes the new mateconf schema to be uninstalled.
+  the gnome-power-manager 0.2.8 rpm, and install 0.3.1, rather than upgrading.
+  The old rpm post line in 0.2.8 causes the new gconf schema to be uninstalled.
 - Also fix a bug which makes the last bug doubly worse, by not crashing on
-  missing mateconf schema, but handling it gracefully, and guessing some defaults.
+  missing gconf schema, but handling it gracefully, and guessing some defaults.
 - Lots of translation updates.
 
 =============
@@ -2395,11 +2395,11 @@ Released November 15, 2005
 - Wireless mice and keyboards now generate messages when battery low.
 - Now align the menu to the bottom (or top) of the notification area like
   all the applets do.
-- Website is now hosted on mate.org servers:
-  http://www.mate.org/projects/mate-power-manager/
+- Website is now hosted on gnome.org servers:
+  http://www.gnome.org/projects/gnome-power-manager/
 - New WIKI with all the things in progress and TODO:
-  http://live.mate.org/MatePowerManager
-- Update the website to be more MATEy, copied from the caja template.
+  http://live.gnome.org/GnomePowerManager
+- Update the website to be more GNOMEy, copied from the nautilus template.
 - Lots of Makefile.am and configure tidy ups with thanks to JP Rosevear.
 - Removed gpm-dbus-test and made the DBUS interface *much* simpler
 - Multiple batteries and wireless device support massivly improved due
@@ -2409,10 +2409,10 @@ Released November 15, 2005
 - Notification icon now only appears when batteries low, or optionally
   when discharging and charging. The options have been turned to radio buttons
   to make options clearer. Also icons are now at 24x24 to conform to the
-  MATE HIG.
-- libmatenotify messages now replace one another, so the screen isn't littered
+  GNOME HIG.
+- libnotify messages now replace one another, so the screen isn't littered
   with "battery is critically low" messages.
-- Replace our own "dumb" icon management with the MATE stock icon functions,
+- Replace our own "dumb" icon management with the GNOME stock icon functions,
   with thanks to Jaap Haitsma.
 - Lots of translation updates.
 
@@ -2424,7 +2424,7 @@ Released October 25, 2005
 
 - Fix a NULL pointer dereference where the remaining_time isn't known, and
   the battery is low.
-- Don't crash when we do not have mate-dev-memory in our theme.
+- Don't crash when we do not have gnome-dev-memory in our theme.
 - We now register the name of the application with the session-manager.
 - Change HAL dep from 0.5.4 to 0.5.3 so we can build on Ubuntu Breezy.
   NOTE: There are *lots* of bugs in HAL 0.5.3 fixed in later releases.
@@ -2438,7 +2438,7 @@ Version 0.2.8
 Released October 17, 2005
 
 - All source files are now fully documented with Doxygen.
-  http://mate-power.sourceforge.net/doxygen/
+  http://gnome-power.sourceforge.net/doxygen/
 - Fixed problems with displaying the just the AC Adapter icon.
   Thanks to Dumitru Ciobarcianu for reporting the problem.
 - Added desktop mode where icon is forced. Disabled by default.
@@ -2446,8 +2446,8 @@ Released October 17, 2005
 - Fixed a fatal error where a NULL pointer was deferenced when removing
   AC Adaptor when icon was hidden.
 - Lots of cosmetic fixes thanks to Wouter Bolsterlee.
-- Add back the (now themed) icons to mate-power-preferences.
-- Add a new tool, mate-power-info to display the p-m capabilities or your
+- Add back the (now themed) icons to gnome-power-preferences.
+- Add a new tool, gnome-power-info to display the p-m capabilities or your
   machine, and report details of your power hardware. More to come...
 - Lots of cosmetic fixes from Wouter Bolsterlee.
 - We now detect when HAL is restarted and warn the user accordingly.
@@ -2461,10 +2461,10 @@ Version 0.2.6
 
 Released October 01, 2005
 
-- MATE Screensaver support runtime detection has been improved
+- GNOME Screensaver support runtime detection has been improved
   (no timeouts now, and console messages supressed)
 - Fixed lots of 64bit warnings thanks to Rodrigo Moya <rodrigo@novell.com>
-- MATE Power Manager is now in Fedora Core Rawhide!
+- GNOME Power Manager is now in Fedora Core Rawhide!
 - The screen now dims gently (rather than a big brightness change) when
   changing brightness states.
 - We now support ONLY the new SetBrightness HAL API in HAL CVS.
@@ -2476,15 +2476,15 @@ Released October 01, 2005
   errors easy to spot. Please report any regressions.
 - Thanks to Robert Love, we now daemonize when being run. Use --no-daemonise
   to disable this.
-- A new "About" box that follows the MATE HIG...
+- A new "About" box that follows the GNOME HIG...
 - A new "Information" tab that tells you a bit about your computers' power
   management capability. This is very young and will have much more
   information in the future about batteries, UPS's etc. Help welcome.
 - Lots of fixes and improvements to the core code, with thanks to Theetjuh
   and Myk Melez for testing the code so well.
-- MATE Power Manager now notifies you your battery is low *and* how much time
+- GNOME Power Manager now notifies you your battery is low *and* how much time
   you have remaining. This fixes a regression from 0.2.2.
-- Working with MATE Screensaver, we now work out the idle time so we can
+- Working with GNOME Screensaver, we now work out the idle time so we can
   suspend or hibernate in a period of keyboard and mouse in-activity. 
   The load value is also computed, so we can avoid sleeping when CPU 
   intensive programs are left running, e.g. kernel compiles or simulations.
@@ -2504,14 +2504,14 @@ Released September 21, 2005
 - 100% GLIB DBUS support - this is faster than libhal, but has not been tested
   much, and is disabled for now. Use ./configure --enable-glibhal to test.
 - DBUS services now works, so we init g-p-m with just a query to 
-  org.mate.MatePowerManager. This makes it easy to make sure g-p-m has been
+  org.gnome.GnomePowerManager. This makes it easy to make sure g-p-m has been
   started, or to start g-p-m when we start Power Preferences.
-- Now we control MATE Screensaver so that we don't use screensavers on battery
+- Now we control GNOME Screensaver so that we don't use screensavers on battery
   but just blank the screen.
 - Lots of updates to the website.
 - Fixed specfile to be in RedHat approved format.
 - Now we only call SetLowPower if system.formfactor is laptop.
-- We detect MATE Screensaver at runtime, rather than with a configure option.
+- We detect GNOME Screensaver at runtime, rather than with a configure option.
 
 =============
 Version 0.2.2
@@ -2523,7 +2523,7 @@ Released September 07, 2005
 - We now check for the presence on the session and system dbus connections,
   and tell the user what they have to do, to fix the problem.
 - New Polish translation by Michał Kastelik
-- Switch to using org.mate.MatePowerManager rather than net.sf.MatePower
+- Switch to using org.gnome.GnomePowerManager rather than net.sf.GnomePower
 - Add the new DBUS api calls isOnBattery(), isOnUps(), and isOnAC() and 
   remove isRunningOnMains().
 - LCD slider brightness now adjusts the correct immediate state while on 
@@ -2539,9 +2539,9 @@ Version 0.2.1
 
 Released September 5, 2005
 
-- The reboot and halt mateconf typos have been fixed.
+- The reboot and halt gconf typos have been fixed.
 - Lots more code compliant with C99.
-- mate-power-manager now sports a --version argument.
+- gnome-power-manager now sports a --version argument.
 - New Italian translation by Daniele Medri
 - Fix a problem reported by Andrew Duggan where the incorrect ACPI reading was
   tripping up our over-zealous HAL checks.
@@ -2558,11 +2558,11 @@ Released August 31, 2005
 
 - This new release brings lots of new features and updated translations.
 - The preferences program now supports LCD brightness, and works with 
-  mate-screensaver to set the DPMS timeout for monitors.
+  gnome-screensaver to set the DPMS timeout for monitors.
 - The website has been updated with a new design with lots more content.
 - *WARNING* this program depends on new DBUS and HAL libraries to install, 
   due to the recent changes in HAL. See the new FAQ page 
-  (http://mate-power.sourceforge.net/faq.php) for more details.
+  (http://gnome-power.sourceforge.net/faq.php) for more details.
 - Working with HAL 0.5.4, lots of problems have been solved.
 - This includes the need for a external DBUS daemon - now we use HAL to 
   launch scripts.
