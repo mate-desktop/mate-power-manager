@@ -1,0 +1,23 @@
+Version 1.6.1
+~~~~~~~~~~~~~
+Released: 2013-05-02
+
+* Features:
+ - Use 'make dist' for tarball
+ - Add support to use systemd logind for suspend and hibernate instead
+   of upower
+
+* Bug fixes:
+ - Dont print an error if keyboard backlight is missing
+
+Version 1.6.0
+~~~~~~~~~~~~~~~
+Released: 2013-04-01
+
+* Features:
+ - Migration to GSettings
+ - Show always "do nothing" option in prefs
+ - Add keyboard backlight support
+ - Add systemd inhibit support
+ - mate-keyring support now optional
+ - replace libmatenotify with libnotify
