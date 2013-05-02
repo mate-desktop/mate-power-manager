@@ -66,7 +66,7 @@ main (int argc, char **argv)
 //	egg_idletime_test (test);
 
 	gpm_common_test (test);
-	gpm_idle_test (test);
+//	gpm_idle_test (test);
 	gpm_phone_test (test);
 //	gpm_dpms_test (test);
 //	gpm_graph_widget_test (test);

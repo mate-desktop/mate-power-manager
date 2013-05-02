@@ -49,8 +49,10 @@ sbin_PROGRAMS =						\
 	mate-power-backlight-helper			\
 	$(NULL)
 
+if HAVE_TESTS
 check_PROGRAMS =					\
 	mate-power-self-test
+endif
 
 noinst_LIBRARIES = libgpmshared.a
 libgpmshared_a_SOURCES =				\
@@ -199,6 +201,7 @@ mate_power_manager_CFLAGS =				\
 	$(WARNINGFLAGS)					\
 	$(NULL)
 
+if HAVE_TESTS
 mate_power_self_test_SOURCES =				\
 	gpm-self-test.c					\
 	egg-color.h					\
@@ -263,6 +266,7 @@ mate_power_self_test_LDADD =				\
 	-lm
 
 mate_power_self_test_CFLAGS = -DEGG_TEST $(AM_CFLAGS) $(WARNINGFLAGS)
+endif
 
 BUILT_SOURCES = 					\
 	org.mate.PowerManager.h			\
@@ -298,7 +302,9 @@ clean-local:
 
 CLEANFILES = $(BUILT_SOURCES)
 
+if HAVE_TESTS
 TESTS = mate-power-self-test
+endif
 
 MAINTAINERCLEANFILES =					\
 	*~			      			\
