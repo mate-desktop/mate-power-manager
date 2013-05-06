@@ -855,7 +855,7 @@ gpm_prefs_init (GpmPrefs *prefs)
                             );
     if (error == NULL && res != NULL) {
         g_variant_get(res,"(s)", &r);
-	prefs->priv->can_suspend = g_strcmp0(r,"yes")==0?TRUE:FALSE;
+	prefs->priv->can_suspend = (g_strcmp0(r,"yes")==0 || g_strcmp0(r,"challenge")==0)?TRUE:FALSE;
 	g_variant_unref (res);
     } else if (error != NULL ) {
 	    egg_error ("Error in dbus - %s", error->message);
@@ -871,7 +871,7 @@ gpm_prefs_init (GpmPrefs *prefs)
                             );
     if (error == NULL && res != NULL) {
         g_variant_get(res,"(s)", &r);
-	prefs->priv->can_hibernate = g_strcmp0(r,"yes")==0?TRUE:FALSE;
+	prefs->priv->can_hibernate = (g_strcmp0(r,"yes")==0 || g_strcmp0(r,"challenge")==0)?TRUE:FALSE;
 	g_variant_unref (res);
     } else if (error != NULL ) {
 	    egg_error ("Error in dbus - %s", error->message);
