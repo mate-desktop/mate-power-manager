@@ -220,7 +220,6 @@ gpm_control_suspend (GpmControl *control, GError **error)
 			&dbus_error );
     if (proxy == NULL) {
         egg_error("Error connecting to dbus - %s", dbus_error->message);
-        fprintf(stderr,"Error connecting to dbus - %s", dbus_error->message);
         g_error_free (dbus_error);
         return -1;
     }
@@ -323,7 +322,6 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 
 #ifdef WITH_SYSTEMD_SLEEP
 	/* sleep via logind */
-	fprintf(stderr,"logind suspend\n");
 	proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
 			G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
 			NULL,
@@ -334,7 +332,6 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 			&dbus_error );
     if (proxy == NULL) {
         egg_error("Error connecting to dbus - %s", dbus_error->message);
-        fprintf(stderr,"Error connecting to dbus - %s", dbus_error->message);
         g_error_free (dbus_error);
         return -1;
     }
