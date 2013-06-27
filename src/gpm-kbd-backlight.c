@@ -31,21 +31,6 @@
 #include "gpm-kbd-backlight.h"
 #include "gsd-media-keys-window.h"
 
-static const gchar *kbd_backlight_introspection = ""
-"<?xml version=\"1.0\" encoding=\"UTF-8\"?>""<node name=\"/\">"
-  "<interface name=\"org.mate.PowerManager.Backlight\">"
-    "<method name=\"GetBrightness\">"
-      "<arg type=\"u\" name=\"percentage_brightness\" direction=\"out\"/>"
-    "</method>"
-    "<method name=\"SetBrightness\">"
-      "<arg type=\"u\" name=\"percentage_brightness\" direction=\"in\"/>"
-    "</method>"
-    "<signal name=\"BrightnessChanged\">"
-      "<arg type=\"u\" name=\"percentage_brightness\" direction=\"out\"/>"
-    "</signal>"
-  "</interface>"
-"</node>";
-
 #define GPM_KBD_BACKLIGHT_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_KBD_BACKLIGHT, GpmKbdBacklightPrivate))
 
 struct GpmKbdBacklightPrivate
@@ -428,40 +413,6 @@ gpm_kbd_backlight_dbus_property_set (GDBusConnection *connection,
 {
    /* do nothing, no properties defined */
    return FALSE;
-}
-
-/**
- * gpm_kbd_backlight_register_dbus:
- * @backlight:
- * @connection:
- * @error:
- **/
-void
-gpm_kbd_backlight_register_dbus (GpmKbdBacklight *backlight,
-                GDBusConnection *connection,
-                GError **error)
-{
-   GDBusNodeInfo *node_info;
-   GDBusInterfaceInfo *interface_info;
-   GDBusInterfaceVTable interface_vtable = {
-           gpm_kbd_backlight_dbus_method_call,
-           gpm_kbd_backlight_dbus_property_get,
-           gpm_kbd_backlight_dbus_property_set
-   };
-
-   node_info = g_dbus_node_info_new_for_xml (kbd_backlight_introspection, NULL);
-   interface_info = g_dbus_node_info_lookup_interface (node_info, GPM_DBUS_INTERFACE_BACKLIGHT);
-
-   backlight->priv->bus_connection = g_object_ref (connection);
-   backlight->priv->bus_object_id =
-       g_dbus_connection_register_object (connection,
-                          GPM_DBUS_PATH_KBD_BACKLIGHT,
-                          interface_info,
-                          &interface_vtable,
-                          backlight,
-                          NULL,
-                          error);
-   g_dbus_node_info_unref (node_info);
 }
 
 static gboolean

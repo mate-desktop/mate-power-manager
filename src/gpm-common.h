@@ -29,6 +29,7 @@ G_BEGIN_DECLS
 #define	GPM_DBUS_SERVICE		"org.mate.PowerManager"
 #define	GPM_DBUS_INTERFACE		"org.mate.PowerManager"
 #define	GPM_DBUS_INTERFACE_BACKLIGHT	"org.mate.PowerManager.Backlight"
+#define	GPM_DBUS_INTERFACE_KBD_BACKLIGHT	"org.mate.PowerManager.KbdBacklight"
 #define	GPM_DBUS_PATH			"/org/mate/PowerManager"
 #define	GPM_DBUS_PATH_BACKLIGHT		"/org/mate/PowerManager/Backlight"
 #define GPM_DBUS_PATH_KBD_BACKLIGHT    "/org/mate/PowerManager/KbdBacklight"
