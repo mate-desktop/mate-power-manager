@@ -166,23 +166,23 @@ gpm_control_suspend (GpmControl *control, GError **error)
 	gboolean lock_mate_keyring;
 	MateKeyringResult keyres;
 #endif /* WITH_KEYRING */
-#ifdef WITH_SYSTEMD_SLEEP
+
 	GError *dbus_error = NULL;
 	DBusGProxy *proxy;
 	GVariant *res;
-#endif
 
 	screensaver = gpm_screensaver_new ();
-#ifndef WITH_SYSTEMD_SLEEP
-	g_object_get (control->priv->client,
-		      "can-suspend", &allowed,
-		      NULL);
-	if (!allowed) {
-		egg_debug ("cannot suspend as not allowed from policy");
-		g_set_error_literal (error, GPM_CONTROL_ERROR, GPM_CONTROL_ERROR_GENERAL, "Cannot suspend");
-		goto out;
+
+	if (LOGIND_RUNNING()) {
+		g_object_get (control->priv->client,
+			      "can-suspend", &allowed,
+			      NULL);
+		if (!allowed) {
+			egg_debug ("cannot suspend as not allowed from policy");
+			g_set_error_literal (error, GPM_CONTROL_ERROR, GPM_CONTROL_ERROR_GENERAL, "Cannot suspend");
+			goto out;
+		}
 	}
-#endif
 
 #ifdef WITH_KEYRING
 	/* we should perhaps lock keyrings when sleeping #375681 */
@@ -208,40 +208,41 @@ gpm_control_suspend (GpmControl *control, GError **error)
 	egg_debug ("emitting sleep");
 	g_signal_emit (control, signals [SLEEP], 0, GPM_CONTROL_ACTION_SUSPEND);
 
-#ifdef WITH_SYSTEMD_SLEEP
-	/* sleep via logind */
-	proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
-			G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
-			NULL,
-			"org.freedesktop.login1",
-			"/org/freedesktop/login1",
-			"org.freedesktop.login1.Manager",
-			NULL,
-			&dbus_error );
-    if (proxy == NULL) {
-        egg_error("Error connecting to dbus - %s", dbus_error->message);
-        g_error_free (dbus_error);
-        return -1;
-    }
-    g_dbus_proxy_call_sync (proxy, "Suspend", 
-                            g_variant_new( "(b)",FALSE),
-                            G_DBUS_CALL_FLAGS_NONE,
-                            -1,
-                            NULL,
-                            &dbus_error
-                            );
-    if (dbus_error != NULL ) {
-	    egg_debug ("Error in dbus - %s", dbus_error->message);
-	    g_error_free (dbus_error);
-	    ret = TRUE;
-    }
-    else {
-	    ret = TRUE;
-    }
-    g_object_unref(proxy);
-#else
-	ret = up_client_suspend_sync (control->priv->client, NULL, error);
-#endif
+	if (LOGIND_RUNNING()) {
+		/* sleep via logind */
+		proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+						       G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
+						       NULL,
+						       "org.freedesktop.login1",
+						       "/org/freedesktop/login1",
+						       "org.freedesktop.login1.Manager",
+						       NULL,
+						       &dbus_error );
+		if (proxy == NULL) {
+			egg_error("Error connecting to dbus - %s", dbus_error->message);
+			g_error_free (dbus_error);
+			return -1;
+		}
+		g_dbus_proxy_call_sync (proxy, "Suspend", 
+					g_variant_new( "(b)",FALSE),
+					G_DBUS_CALL_FLAGS_NONE,
+					-1,
+					NULL,
+					&dbus_error
+					);
+		if (dbus_error != NULL ) {
+			egg_debug ("Error in dbus - %s", dbus_error->message);
+			g_error_free (dbus_error);
+			ret = TRUE;
+		}
+		else {
+			ret = TRUE;
+		}
+		g_object_unref(proxy);
+	}
+	else {
+		ret = up_client_suspend_sync (control->priv->client, NULL, error);
+	}
 
 	egg_debug ("emitting resume");
 	g_signal_emit (control, signals [RESUME], 0, GPM_CONTROL_ACTION_SUSPEND);
@@ -278,23 +279,21 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 	MateKeyringResult keyres;
 #endif /* WITH_KEYRING */
 
-#ifdef WITH_SYSTEMD_SLEEP
 	GError *dbus_error = NULL;
 	DBusGProxy *proxy;
-#endif
 
 	screensaver = gpm_screensaver_new ();
 
-#ifndef WITH_SYSTEMD_SLEEP
-	g_object_get (control->priv->client,
-		      "can-hibernate", &allowed,
-		      NULL);
-	if (!allowed) {
-		egg_debug ("cannot hibernate as not allowed from policy");
-		g_set_error_literal (error, GPM_CONTROL_ERROR, GPM_CONTROL_ERROR_GENERAL, "Cannot hibernate");
-		goto out;
+	if (!LOGIND_RUNNING()) {
+		g_object_get (control->priv->client,
+			      "can-hibernate", &allowed,
+			      NULL);
+		if (!allowed) {
+			egg_debug ("cannot hibernate as not allowed from policy");
+			g_set_error_literal (error, GPM_CONTROL_ERROR, GPM_CONTROL_ERROR_GENERAL, "Cannot hibernate");
+			goto out;
+		}
 	}
-#endif
 
 #ifdef WITH_KEYRING
 	/* we should perhaps lock keyrings when sleeping #375681 */
@@ -320,39 +319,41 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 	egg_debug ("emitting sleep");
 	g_signal_emit (control, signals [SLEEP], 0, GPM_CONTROL_ACTION_HIBERNATE);
 
-#ifdef WITH_SYSTEMD_SLEEP
-	/* sleep via logind */
-	proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
-			G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
-			NULL,
-			"org.freedesktop.login1",
-			"/org/freedesktop/login1",
-			"org.freedesktop.login1.Manager",
-			NULL,
-			&dbus_error );
-    if (proxy == NULL) {
-        egg_error("Error connecting to dbus - %s", dbus_error->message);
-        g_error_free (dbus_error);
-        return -1;
-    }
-    g_dbus_proxy_call_sync (proxy, "Hibernate", 
-                            g_variant_new( "(b)",FALSE),
-                            G_DBUS_CALL_FLAGS_NONE,
-                            -1,
-                            NULL,
-                            &dbus_error
-                            );
-    if (dbus_error != NULL ) {
-	    egg_debug ("Error in dbus - %s", dbus_error->message);
-	    g_error_free (dbus_error);
-	    ret = TRUE;
-    }
-    else {
-	    ret = TRUE;
-    }
-#else
-	ret = up_client_hibernate_sync (control->priv->client, NULL, error);
-#endif
+	if (LOGIND_RUNNING()) {
+		/* sleep via logind */
+		proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+						       G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
+						       NULL,
+						       "org.freedesktop.login1",
+						       "/org/freedesktop/login1",
+						       "org.freedesktop.login1.Manager",
+						       NULL,
+						       &dbus_error );
+		if (proxy == NULL) {
+			egg_error("Error connecting to dbus - %s", dbus_error->message);
+			g_error_free (dbus_error);
+			return -1;
+		}
+		g_dbus_proxy_call_sync (proxy, "Hibernate", 
+					g_variant_new( "(b)",FALSE),
+					G_DBUS_CALL_FLAGS_NONE,
+					-1,
+					NULL,
+					&dbus_error
+					);
+		if (dbus_error != NULL ) {
+			egg_debug ("Error in dbus - %s", dbus_error->message);
+			g_error_free (dbus_error);
+			ret = TRUE;
+		}
+		else {
+			ret = TRUE;
+		}
+	}
+	else {
+		ret = up_client_hibernate_sync (control->priv->client, NULL, error);
+	}
+
 	egg_debug ("emitting resume");
 	g_signal_emit (control, signals [RESUME], 0, GPM_CONTROL_ACTION_HIBERNATE);
 
