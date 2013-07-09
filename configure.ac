@@ -102,7 +102,7 @@ GLIB_REQUIRED=2.13.0
 GIO_REQUIRED=2.25.0
 GTK_REQUIRED=2.17.7
 GDK_REQUIRED=2.11.0
-MATE_KEYRING_REQUIRED=1.1.0
+GNOME_KEYRING_REQUIRED=3.0.0
 DBUS_REQUIRED=1.0
 DBUS_GLIB_REQUIRED=0.70
 LIBNOTIFY_REQUIRED=0.7.0
@@ -249,18 +249,18 @@ fi
 AM_CONDITIONAL([HAVE_TESTS], [test $have_tests = yes])
 
 dnl ---------------------------------------------------------------------------
-dnl - Build mate-keyring support
+dnl - Build gnome-keyring support
 dnl ---------------------------------------------------------------------------
 AC_ARG_WITH(keyring,
         [AS_HELP_STRING([--without-keyring],
-                        [Disable the use of mate-keyring])],
+                        [Disable the use of gnome-keyring])],
         [],
         [with_keyring=yes])
 
 AM_CONDITIONAL([WITH_KEYRING],[test "$with_keyring" = "yes"])
 
 if test "$with_keyring" = "yes"; then
-        PKG_CHECK_MODULES(KEYRING, mate-keyring-1 >= $MATE_KEYRING_REQUIRED)
+        PKG_CHECK_MODULES(KEYRING, gnome-keyring-1 >= $GNOME_KEYRING_REQUIRED)
         AC_DEFINE([WITH_KEYRING],[1],[Define if KEYRING support is enabled])
 fi
 
@@ -435,7 +435,7 @@ echo "
         datadir:                   ${datadir}
         compiler:                  ${CC}
         cflags:                    ${CFLAGS}
-        mate-keyring support:      ${with_keyring}
+        gnome-keyring support:     ${with_keyring}
         Building extra applets:    ${enable_applets}
         Self test support:         ${have_tests}
         Use libunique:             ${enable_libunique}
