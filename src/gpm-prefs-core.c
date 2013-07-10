@@ -841,7 +841,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 		if (proxy == NULL) {
 			egg_error("Error connecting to dbus - %s", error->message);
 			g_error_free (error);
-			return -1;
+			return;
 		}
 
 		res = g_dbus_proxy_call_sync (proxy, "CanPowerOff",
@@ -913,7 +913,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 		if (proxy == NULL) {
 			egg_error("Error connecting to dbus - %s", error->message);
 			g_error_free (error);
-			return -1;
+			return;
 		}
 
 		res = g_dbus_proxy_call_sync (proxy, "Get", 
