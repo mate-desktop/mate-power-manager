@@ -823,15 +823,13 @@ gpm_prefs_init (GpmPrefs *prefs)
 	prefs->priv->console = egg_console_kit_new ();
 	prefs->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
 
-	/* are we allowed to shutdown? */
-	prefs->priv->can_shutdown = TRUE;
-	egg_console_kit_can_stop (prefs->priv->console, &prefs->priv->can_shutdown, NULL);
+	prefs->priv->can_shutdown = FALSE;
+	prefs->priv->can_suspend = FALSE;
+	prefs->priv->can_hibernate = FALSE;
 
 	if (LOGIND_RUNNING()) {
 		/* get values from logind */
 
-		prefs->priv->can_suspend = FALSE;
-		prefs->priv->can_hibernate = FALSE;
 		proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
 						       G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
 						       NULL,
@@ -845,6 +843,23 @@ gpm_prefs_init (GpmPrefs *prefs)
 			g_error_free (error);
 			return -1;
 		}
+
+		res = g_dbus_proxy_call_sync (proxy, "CanPowerOff",
+					      NULL,
+					      G_DBUS_CALL_FLAGS_NONE,
+					      -1,
+					      NULL,
+					      &error
+					      );
+		if (error == NULL && res != NULL) {
+			g_variant_get(res,"(s)", &r);
+			prefs->priv->can_shutdown = g_strcmp0(r,"yes")==0?TRUE:FALSE;
+			g_variant_unref (res);
+		} else if (error != NULL ) {
+			egg_error ("Error in dbus - %s", error->message);
+			g_error_free (error);
+		}
+
 		res = g_dbus_proxy_call_sync (proxy, "CanSuspend", 
 					      NULL,
 					      G_DBUS_CALL_FLAGS_NONE,
@@ -879,6 +894,8 @@ gpm_prefs_init (GpmPrefs *prefs)
 		g_object_unref(proxy);
 	}
 	else {
+		/* are we allowed to shutdown? */
+		egg_console_kit_can_stop (prefs->priv->console, &prefs->priv->can_shutdown, NULL);
 		/* get values from UpClient */
 		prefs->priv->can_suspend = up_client_get_can_suspend (prefs->priv->client);
 		prefs->priv->can_hibernate = up_client_get_can_hibernate (prefs->priv->client);
