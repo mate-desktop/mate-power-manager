@@ -86,6 +86,50 @@ gpm_control_error_quark (void)
 }
 
 /**
+ * gpm_manager_systemd_shutdown:
+ *
+ * Shutdown the system using systemd-logind.
+ *
+ * Return value: fd, -1 on error
+ **/
+static gboolean
+gpm_control_systemd_shutdown (void) {
+	GError *error = NULL;
+	DBusGProxy *proxy;
+
+	egg_debug ("Requesting systemd to shutdown");
+	proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+					       G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
+					       NULL,
+					       "org.freedesktop.login1",
+					       "/org/freedesktop/login1",
+					       "org.freedesktop.login1.Manager",
+					       NULL,
+					       &error );
+	//append all our arguments
+	if (proxy == NULL) {
+		egg_error("Error connecting to dbus - %s", error->message);
+		g_error_free (error);
+		return FALSE;
+	}
+
+	g_dbus_proxy_call_sync (proxy, "PowerOff",
+				g_variant_new( "(b)", FALSE),
+				G_DBUS_CALL_FLAGS_NONE,
+				-1,
+				NULL,
+				&error
+				);
+	if (error != NULL) {
+		egg_error ("Error in dbus - %s", error->message);
+		g_error_free (error);
+		return FALSE;
+	}
+
+	return TRUE;
+}
+
+/**
  * gpm_control_shutdown:
  * @control: This class instance
  *
@@ -96,9 +140,14 @@ gpm_control_shutdown (GpmControl *control, GError **error)
 {
 	gboolean ret;
 	EggConsoleKit *console;
-	console = egg_console_kit_new ();
-	ret = egg_console_kit_stop (console, error);
-	g_object_unref (console);
+
+	if (LOGIND_RUNNING()) {
+		ret = gpm_control_systemd_shutdown ();
+	} else {
+		console = egg_console_kit_new ();
+		ret = egg_console_kit_stop (console, error);
+		g_object_unref (console);
+	}
 	return ret;
 }
 
