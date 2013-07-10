@@ -194,7 +194,6 @@ mate_power_manager_LDADD =				\
 	$(LIBNOTIFY_LIBS)				\
 	$(GPM_EXTRA_LIBS)				\
 	$(UPOWER_LIBS)					\
-	$(SYSTEMD_INHIBIT_LIBS)         \
 	-lm
 
 mate_power_manager_CFLAGS =				\
