@@ -42,7 +42,7 @@
 #include <libupower-glib/upower.h>
 
 #ifdef WITH_KEYRING
-#include <mate-keyring.h>
+#include <gnome-keyring.h>
 #endif /* WITH_KEYRING */
 
 #include "egg-debug.h"
@@ -163,8 +163,8 @@ gpm_control_suspend (GpmControl *control, GError **error)
 	GpmScreensaver *screensaver;
 	guint32 throttle_cookie = 0;
 #ifdef WITH_KEYRING
-	gboolean lock_mate_keyring;
-	MateKeyringResult keyres;
+	gboolean lock_gnome_keyring;
+	GnomeKeyringResult keyres;
 #endif /* WITH_KEYRING */
 #ifdef WITH_SYSTEMD_SLEEP
 	GError *dbus_error = NULL;
@@ -186,10 +186,10 @@ gpm_control_suspend (GpmControl *control, GError **error)
 
 #ifdef WITH_KEYRING
 	/* we should perhaps lock keyrings when sleeping #375681 */
-	lock_mate_keyring = g_settings_get_boolean (control->priv->settings, GPM_SETTINGS_LOCK_KEYRING_SUSPEND);
-	if (lock_mate_keyring) {
-		keyres = mate_keyring_lock_all_sync ();
-		if (keyres != MATE_KEYRING_RESULT_OK)
+	lock_gnome_keyring = g_settings_get_boolean (control->priv->settings, GPM_SETTINGS_LOCK_KEYRING_SUSPEND);
+	if (lock_gnome_keyring) {
+		keyres = gnome_keyring_lock_all_sync ();
+		if (keyres != GNOME_KEYRING_RESULT_OK)
 			egg_warning ("could not lock keyring");
 	}
 #endif /* WITH_KEYRING */
@@ -274,8 +274,8 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 	GpmScreensaver *screensaver;
 	guint32 throttle_cookie = 0;
 #ifdef WITH_KEYRING
-	gboolean lock_mate_keyring;
-	MateKeyringResult keyres;
+	gboolean lock_gnome_keyring;
+	GnomeKeyringResult keyres;
 #endif /* WITH_KEYRING */
 
 #ifdef WITH_SYSTEMD_SLEEP
@@ -298,10 +298,10 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 
 #ifdef WITH_KEYRING
 	/* we should perhaps lock keyrings when sleeping #375681 */
-	lock_mate_keyring = g_settings_get_boolean (control->priv->settings, GPM_SETTINGS_LOCK_KEYRING_HIBERNATE);
-	if (lock_mate_keyring) {
-		keyres = mate_keyring_lock_all_sync ();
-		if (keyres != MATE_KEYRING_RESULT_OK) {
+	lock_gnome_keyring = g_settings_get_boolean (control->priv->settings, GPM_SETTINGS_LOCK_KEYRING_HIBERNATE);
+	if (lock_gnome_keyring) {
+		keyres = gnome_keyring_lock_all_sync ();
+		if (keyres != GNOME_KEYRING_RESULT_OK) {
 			egg_warning ("could not lock keyring");
 		}
 	}
