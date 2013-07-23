@@ -249,53 +249,6 @@ gpm_button_class_init (GpmButtonClass *klass)
 			      G_TYPE_NONE, 1, G_TYPE_STRING);
 }
 
-#ifdef WITH_SYSTEMD_SLEEP
-gboolean gpm_button_get_lid_closed()
-{
-
-	GDBusProxy *proxy;
-	GVariant *res, *inner;
-	gboolean lid;
-GError *error = NULL;
-	proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
-			G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
-			NULL,
-			"org.freedesktop.UPower",
-			"/org/freedesktop/UPower",
-			"org.freedesktop.DBus.Properties",
-			NULL,
-			&error );
-    if (proxy == NULL) {
-        egg_error("Error connecting to dbus - %s", error->message);
-        g_error_free (error);
-        return -1;
-    }
-
- res = g_dbus_proxy_call_sync (proxy, "Get", 
-                            g_variant_new( "(ss)", 
-				    "org.freedesktop.UPower",
-				    "LidIsClosed"),
-                            G_DBUS_CALL_FLAGS_NONE,
-                            -1,
-                            NULL,
-                            &error
-                            );
- if (error == NULL && res != NULL) {
-	 g_variant_get(res, "(v)", &inner );
-	 lid = g_variant_get_boolean(inner);
-	 g_variant_unref (inner);
-	g_variant_unref (res);
-	return lid;
-    } else if (error != NULL ) {
-	    egg_error ("Error in dbus - %s", error->message);
-	    g_error_free (error);
-    }
- g_object_unref(proxy);
-
- return FALSE;
-}
-#endif
-
 /**
  * gpm_button_is_lid_closed:
  **/
@@ -303,11 +256,53 @@ gboolean
 gpm_button_is_lid_closed (GpmButton *button)
 {
 	g_return_val_if_fail (GPM_IS_BUTTON (button), FALSE);
-#ifdef WITH_SYSTEMD_SLEEP
-	return gpm_button_get_lid_closed();
-#else
-	return 	up_client_get_lid_is_closed (button->priv->client);
-#endif
+
+	GDBusProxy *proxy;
+	GVariant *res, *inner;
+	gboolean lid;
+	GError *error = NULL;
+
+	if (LOGIND_RUNNING()) {
+		proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+						       G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
+						       NULL,
+						       "org.freedesktop.UPower",
+						       "/org/freedesktop/UPower",
+						       "org.freedesktop.DBus.Properties",
+						       NULL,
+						       &error );
+		if (proxy == NULL) {
+			egg_error("Error connecting to dbus - %s", error->message);
+			g_error_free (error);
+			return -1;
+		}
+
+		res = g_dbus_proxy_call_sync (proxy, "Get", 
+					      g_variant_new( "(ss)", 
+							     "org.freedesktop.UPower",
+							     "LidIsClosed"),
+					      G_DBUS_CALL_FLAGS_NONE,
+					      -1,
+					      NULL,
+					      &error
+					      );
+		if (error == NULL && res != NULL) {
+			g_variant_get(res, "(v)", &inner );
+			lid = g_variant_get_boolean(inner);
+			g_variant_unref (inner);
+			g_variant_unref (res);
+			return lid;
+		} else if (error != NULL ) {
+			egg_error ("Error in dbus - %s", error->message);
+			g_error_free (error);
+		}
+		g_object_unref(proxy);
+
+		return FALSE;
+	}
+	else {
+		return up_client_get_lid_is_closed (button->priv->client);
+	}
 }
 
 
@@ -334,11 +329,7 @@ gpm_button_client_changed_cb (UpClient *client, GpmButton *button)
 	gboolean lid_is_closed;
 
 	/* get new state */
-#ifdef WITH_SYSTEMD_SLEEP
-	lid_is_closed = gpm_button_get_lid_closed();
-#else
-	lid_is_closed = up_client_get_lid_is_closed (button->priv->client);
-#endif
+	lid_is_closed = gpm_button_is_lid_closed(button);
 
 	/* same state */
 	if (button->priv->lid_is_closed == lid_is_closed)

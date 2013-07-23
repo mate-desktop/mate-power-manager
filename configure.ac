@@ -284,48 +284,6 @@ AC_MSG_RESULT([$have_applets])
 AM_CONDITIONAL([HAVE_APPLETS], [test $have_applets = yes])
 
 dnl ---------------------------------------------------------------------------
-dnl systemd inhibit
-dnl ---------------------------------------------------------------------------
-
-AC_ARG_WITH(systemdinhibit,
-            AS_HELP_STRING([--with-systemdinhibit],
-            [Add systemdinhibit support]),,
-            with_systemdinhibit=auto)
-
-use_systemdinhibit=no
-if test "x$with_systemdinhibit" != "xno" ; then
-    PKG_CHECK_MODULES(SYSTEMD_INHIBIT, libsystemd-login >= 195 libsystemd-daemon >= 195 , use_systemdinhibit=yes, use_systemdinhibit=no)
-
-    if test "x$use_systemdinhibit" = "xyes"; then
-        AC_DEFINE(WITH_SYSTEMD_INHIBIT, 1, [systemdinhibit support])
-    fi
-
-fi
-AM_CONDITIONAL(WITH_SYSTEMD_INHIBIT, test x$use_systemdinhibit = xyes)
-AC_SUBST(WITH_SYSTEMD_INHIBIT)
-
-dnl ---------------------------------------------------------------------------
-dnl systemd sleep
-dnl ---------------------------------------------------------------------------
-
-AC_ARG_WITH(systemdsleep,
-            AS_HELP_STRING([--with-systemdsleep],
-            [Use logind for suspend and hibernate instead of upower]),,
-            with_systemdsleep=auto)
-
-use_systemdsleep=no
-if test "x$with_systemdsleep" != "xno" ; then
-    PKG_CHECK_MODULES(SYSTEMD_SLEEP, libsystemd-login >= 195 libsystemd-daemon >= 195 , use_systemdsleep=yes, use_systemdsleep=no)
-
-    if test "x$use_systemdsleep" = "xyes"; then
-        AC_DEFINE(WITH_SYSTEMD_SLEEP, 1, [systemdsleeo support])
-    fi
-
-fi
-AM_CONDITIONAL(WITH_SYSTEMD_SLEEP, test x$use_systemdsleep = xyes)
-AC_SUBST(WITH_SYSTEMD_SLEEP)
-
-dnl ---------------------------------------------------------------------------
 dnl - DocBook Documentation
 dnl ---------------------------------------------------------------------------
 AC_ARG_ENABLE(docbook-docs,
