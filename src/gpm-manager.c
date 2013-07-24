@@ -903,8 +903,8 @@ gpm_manager_button_pressed_cb (GpmButton *button, const gchar *type, GpmManager 
 	gchar *message;
 	egg_debug ("Button press event type=%s", type);
 
-	/* ConsoleKit says we are not on active console */
-	if (!egg_console_kit_is_active (manager->priv->console)) {
+	/* ConsoleKit/systemd say we are not on active console */
+	if (!LOGIND_RUNNING() && !egg_console_kit_is_active (manager->priv->console)) {
 		egg_debug ("ignoring as not on active console");
 		return;
 	}
