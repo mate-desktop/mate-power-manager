@@ -1,3 +1,15 @@
+Version 1.6.2
+~~~~~~~~~~~~~
+Released: 2013-07-24
+
+* Features:
+ - Removed systemd-daemon dependency and check at runtime if
+   systemd-logind is running
+ - Improved systemd-logind support
+
+* Bug fixes:
+ - Dont rely only on consolekit for button pressed event
+
 Version 1.6.1
 ~~~~~~~~~~~~~
 Released: 2013-05-02
