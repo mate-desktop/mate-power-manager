@@ -397,8 +397,6 @@ echo "
         Building extra applets:    ${enable_applets}
         Self test support:         ${have_tests}
         Use libunique:             ${enable_libunique}
-        systemd support:           ${use_systemdinhibit}
-        systemd sleep support:     ${use_systemdsleep}
         Docbook support:           ${enable_docbook_docs}
         documentation dir:         $DOCDIR
         dbus-1 services dir:       $DBUS_SERVICES_DIR
