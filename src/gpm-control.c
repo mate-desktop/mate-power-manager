@@ -95,7 +95,7 @@ gpm_control_error_quark (void)
 static gboolean
 gpm_control_systemd_shutdown (void) {
 	GError *error = NULL;
-	DBusGProxy *proxy;
+	GDBusProxy *proxy;
 
 	egg_debug ("Requesting systemd to shutdown");
 	proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
@@ -217,8 +217,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
 #endif /* WITH_KEYRING */
 
 	GError *dbus_error = NULL;
-	DBusGProxy *proxy;
-	GVariant *res;
+	GDBusProxy *proxy;
 
 	screensaver = gpm_screensaver_new ();
 
@@ -329,7 +328,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 #endif /* WITH_KEYRING */
 
 	GError *dbus_error = NULL;
-	DBusGProxy *proxy;
+	GDBusProxy *proxy;
 
 	screensaver = gpm_screensaver_new ();
 

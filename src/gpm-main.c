@@ -183,13 +183,14 @@ main (int argc, char *argv[])
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
 
-#if GLIB_CHECK_VERSION(2,32,0)    
-#else
+#if !GLIB_CHECK_VERSION(2,32,0)
 	if (! g_thread_supported ())
 		g_thread_init (NULL);
 #endif
 	dbus_g_thread_init ();
+#if !GLIB_CHECK_VERSION(2,36,0)
 	g_type_init ();
+#endif
 
 	context = g_option_context_new (N_("MATE Power Manager"));
 	/* TRANSLATORS: program name, a simple app to view pending updates */
@@ -203,8 +204,7 @@ main (int argc, char *argv[])
 		goto unref_program;
 	}
 
-#if GLIB_CHECK_VERSION(2,32,0)    
-#else
+#if !GLIB_CHECK_VERSION(2,32,0)
 	if (!g_thread_supported ())
 		g_thread_init (NULL);
 #endif

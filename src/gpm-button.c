@@ -255,12 +255,12 @@ gpm_button_class_init (GpmButtonClass *klass)
 gboolean
 gpm_button_is_lid_closed (GpmButton *button)
 {
-	g_return_val_if_fail (GPM_IS_BUTTON (button), FALSE);
-
 	GDBusProxy *proxy;
 	GVariant *res, *inner;
 	gboolean lid;
 	GError *error = NULL;
+
+	g_return_val_if_fail (GPM_IS_BUTTON (button), FALSE);
 
 	if (LOGIND_RUNNING()) {
 		proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
