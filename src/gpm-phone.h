@@ -33,9 +33,9 @@ G_BEGIN_DECLS
 #define GPM_IS_PHONE_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), GPM_TYPE_PHONE))
 #define GPM_PHONE_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), GPM_TYPE_PHONE, GpmPhoneClass))
 
-#define MATE_PHONE_MANAGER_DBUS_SERVICE	"org.mate.phone"
-#define MATE_PHONE_MANAGER_DBUS_PATH		"/org/mate/phone/Manager"
-#define MATE_PHONE_MANAGER_DBUS_INTERFACE	"org.mate.phone.Manager"
+#define MATE_PHONE_MANAGER_DBUS_SERVICE	"org.gnome.phone"
+#define MATE_PHONE_MANAGER_DBUS_PATH		"/org/gnome/phone/Manager"
+#define MATE_PHONE_MANAGER_DBUS_INTERFACE	"org.gnome.phone.Manager"
 
 typedef struct GpmPhonePrivate GpmPhonePrivate;
 
