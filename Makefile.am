@@ -17,6 +17,7 @@ endif
 
 EXTRA_DIST =						\
 	HACKING						\
+	NEWS.GNOME					\
 	intltool-extract.in				\
 	intltool-merge.in				\
 	intltool-update.in				\
