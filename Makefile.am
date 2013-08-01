@@ -19,8 +19,7 @@ EXTRA_DIST =						\
 	HACKING						\
 	intltool-extract.in				\
 	intltool-merge.in				\
-	intltool-update.in				\
-	mate-doc-utils.make
+	intltool-update.in
 
 clean-local :
 	rm -f *~
