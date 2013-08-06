@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-#   <keltoiboy@gmail.com>, 2012.
-# Michael Findlay <keltoiboy@gmail.com>, 2012.
+# k3lt01 <keltoiboy@gmail.com>, 2012
+# k3lt01 <keltoiboy@gmail.com>, 2012-2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
-"POT-Creation-Date: 2013-02-19 09:34+0100\n"
-"PO-Revision-Date: 2013-02-19 08:35+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"POT-Creation-Date: 2013-03-15 21:36+0100\n"
+"PO-Revision-Date: 2013-05-09 23:10+0000\n"
+"Last-Translator: k3lt01 <keltoiboy@gmail.com>\n"
 "Language-Team: English (Australia) (http://www.transifex.com/projects/p/MATE/language/en_AU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -158,7 +158,7 @@ msgstr "Whether to hibernate, suspend or do nothing when inactive"
 #: ../data/org.mate.power-manager.gschema.xml.in.h:2
 msgid ""
 "The type of sleeping that should be performed when the computer is inactive."
-msgstr ""
+msgstr "The type of sleeping that should be performed when the computer is inactive."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:3
 msgid "Battery critical low action"
@@ -166,7 +166,7 @@ msgstr "Battery critical low action"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:4
 msgid "The action to take when the battery is critically low."
-msgstr ""
+msgstr "The action to take when the battery is critically low."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:5
 msgid ""
@@ -187,7 +187,7 @@ msgstr "UPS critical low action"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:8
 msgid "The action to take when the UPS is critically low."
-msgstr ""
+msgstr "The action to take when the UPS is critically low."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:9
 msgid "UPS low power action"
@@ -195,7 +195,7 @@ msgstr "UPS low power action"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:10
 msgid "The action to take when the UPS is low."
-msgstr ""
+msgstr "The action to take when the UPS is low."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:11
 msgid "Allow backlight brightness adjustment"
@@ -225,7 +225,7 @@ msgstr "The brightness of the screen when idle"
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "This is the laptop panel screen brightness used when the session is idle. Only valid when use-time-for-policy is true."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:17
 msgid "Dim the screen after a period of inactivity when on battery power"
@@ -271,7 +271,7 @@ msgstr "Method used to blank screen on AC"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:26
 msgid "The DPMS method used to blank the screen when on AC power."
-msgstr ""
+msgstr "The DPMS method used to blank the screen when on AC power."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:27
 msgid "Method used to blank screen on battery"
@@ -279,7 +279,7 @@ msgstr "Method used to blank screen on battery"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:28
 msgid "The DPMS method used to blank the screen when on battery power."
-msgstr ""
+msgstr "The DPMS method used to blank the screen when on battery power."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:29
 msgid "LCD brightness when on AC"
@@ -289,7 +289,7 @@ msgstr "LCD brightness when on AC"
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
-msgstr ""
+msgstr "The brightness of the display when on AC power. Possible values are between 0.0 and 100.0."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:31
 msgid "Suspend button action"
@@ -297,7 +297,7 @@ msgstr "Suspend button action"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:32
 msgid "The action to take when the system suspend button is pressed."
-msgstr ""
+msgstr "The action to take when the system suspend button is pressed."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:33
 msgid "Hibernate button action"
@@ -305,7 +305,7 @@ msgstr "Hibernate button action"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:34
 msgid "The action to take when the system hibernate button is pressed."
-msgstr ""
+msgstr "The action to take when the system hibernate button is pressed."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:35
 msgid "Power button action"
@@ -313,7 +313,7 @@ msgstr "Power button action"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:36
 msgid "The action to take when the system power button is pressed."
-msgstr ""
+msgstr "The action to take when the system power button is pressed."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:37
 msgid "Laptop lid close action on battery"
@@ -323,7 +323,7 @@ msgstr "Laptop lid close action on battery"
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
-msgstr ""
+msgstr "The action to take when the laptop lid is closed and the laptop is on battery power."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:39
 msgid "Laptop lid close action when on AC"
@@ -333,7 +333,7 @@ msgstr "Laptop lid close action when on AC"
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
-msgstr ""
+msgstr "The action to take when the laptop lid is closed and the laptop is on AC power."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:41
 msgid "Whether to use time-based notifications"
@@ -355,7 +355,7 @@ msgstr "If the CPU load should be checked before doing the idle action."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:45
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
-msgstr ""
+msgstr "Whether NetworkManager should be connected and disconnected on sleep."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:46
 msgid ""
@@ -381,7 +381,7 @@ msgstr "Lock screen when blanked"
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
-msgstr ""
+msgstr "Whether the screen is locked when the screen is turned off. Only used if lock-use-screensaver is false."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:51
 msgid "Lock screen on suspend"
@@ -391,7 +391,7 @@ msgstr "Lock screen on suspend"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
-msgstr ""
+msgstr "Whether the screen is locked when the computer wakes up from a suspend. Only used if lock-use-screensaver is false."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:53
 msgid "Lock screen on hibernate"
@@ -401,7 +401,7 @@ msgstr "Lock screen on hibernate"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
-msgstr ""
+msgstr "Whether the screen is locked when the computer wakes up from a hibernate. Only used if lock-use-screensaver is false."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:55
 msgid "Lock MATE keyring on sleep"
@@ -523,81 +523,81 @@ msgstr "If a notification message should be displayed when the battery is gettin
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:80
 msgid "Whether we should show the history data points"
-msgstr ""
+msgstr "Whether we should show the history data points"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:81
 msgid ""
 "Whether we should show the history data points in the statistics window."
-msgstr ""
+msgstr "Whether we should show the history data points in the statistics window."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:82
 msgid "Whether we should smooth the history data"
-msgstr ""
+msgstr "Whether we should smooth the history data"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:83
 msgid "Whether we should smooth the history data in the graph."
-msgstr ""
+msgstr "Whether we should smooth the history data in the graph."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:84
 msgid "The default graph type to show for history"
-msgstr ""
+msgstr "The default graph type to show for history"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:85
 msgid "The default graph type to show in the history window."
-msgstr ""
+msgstr "The default graph type to show in the history window."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:86
 msgid "The maximum time displayed for history"
-msgstr ""
+msgstr "The maximum time displayed for history"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:87
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
-msgstr ""
+msgstr "The maximum duration of time displayed on the x-axis of the history graph."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:88
 msgid "Whether we should show the stats data points"
-msgstr ""
+msgstr "Whether we should show the stats data points"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:89
 msgid "Whether we should show the stats data points in the statistics window."
-msgstr ""
+msgstr "Whether we should show the stats data points in the statistics window."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:90
 msgid "Whether we should smooth the stats data"
-msgstr ""
+msgstr "Whether we should smooth the stats data"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:91
 msgid "Whether we should smooth the stats data in the graph."
-msgstr ""
+msgstr "Whether we should smooth the stats data in the graph."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:92
 msgid "The default graph type to show for stats"
-msgstr ""
+msgstr "The default graph type to show for stats"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:93
 msgid "The default graph type to show in the stats window."
-msgstr ""
+msgstr "The default graph type to show in the stats window."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:94
 msgid "The index of the page number to show by default"
-msgstr ""
+msgstr "The index of the page number to show by default"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:95
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
-msgstr ""
+msgstr "The index of the page number to show by default which is used to return focus to the correct page."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
-msgstr ""
+msgstr "The ID of the last device selected"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:97
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
-msgstr ""
+msgstr "The identifier of the last device which is used to return focus to the correct device."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:98
 msgid "Percentage considered low"
@@ -607,7 +607,7 @@ msgstr "Percentage considered low"
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
-msgstr ""
+msgstr "The percentage of the battery when it is considered low. Only valid when use-time-for-policy is false."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:100
 msgid "Percentage considered critical"
@@ -617,7 +617,7 @@ msgstr "Percentage considered critical"
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
-msgstr ""
+msgstr "The percentage of the battery when it is considered critical. Only valid when use-time-for-policy is false."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:102
 msgid "Percentage action is taken"
@@ -627,7 +627,7 @@ msgstr "Percentage action is taken"
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
-msgstr ""
+msgstr "The percentage of the battery when the critical action is performed. Only valid when use-time-for-policy is false."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:104
 msgid "The time remaining when low"
@@ -637,7 +637,7 @@ msgstr "The time remaining when low"
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
-msgstr ""
+msgstr "The time remaining in seconds of the battery when it is considered low. Only valid when use-time-for-policy is true."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:106
 msgid "The time remaining when critical"
@@ -647,7 +647,7 @@ msgstr "The time remaining when critical"
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "The time remaining in seconds of the battery when it is considered critical. Only valid when use-time-for-policy is true."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:108
 msgid "The time remaining when action is taken"
@@ -657,7 +657,7 @@ msgstr "The time remaining when action is taken"
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "The time remaining in seconds of the battery when critical action is taken. Only valid when use-time-for-policy is true."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:110
 msgid "Sleep timeout computer when on battery"
@@ -740,7 +740,7 @@ msgstr "When to show the notification icon"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:126
 msgid "Display options for the notification icon."
-msgstr ""
+msgstr "Display options for the notification icon."
 
 #: ../data/mate-power-preferences.desktop.in.in.h:1
 msgid "Power Management"

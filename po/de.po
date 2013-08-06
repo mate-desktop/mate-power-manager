@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Bernard Ladenthin <bernard@ladenthin.net>, 2013.
-# guyfawkes <a.dawtjan@gmx.de>, 2013.
+# Bernard_Ladenthin <bernard@ladenthin.net>, 2013
+# desperateCoder <a.dawtjan@gmx.de>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2013-03-15 21:36+0100\n"
-"PO-Revision-Date: 2013-03-31 12:55+0000\n"
-"Last-Translator: Bernard_Ladenthin <bernard@ladenthin.net>\n"
+"PO-Revision-Date: 2013-04-30 14:10+0000\n"
+"Last-Translator: desperateCoder <a.dawtjan@gmx.de>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/MATE/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -289,7 +289,7 @@ msgstr "Bildschirmhelligkeit bei Netzversorgung"
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
-msgstr ""
+msgstr "Helligkeit des Bildschirms bei Netzversorgung. Mögliche Werte liegen zwischen 0.0 und 100.0."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:31
 msgid "Suspend button action"
@@ -355,7 +355,7 @@ msgstr "Legt fest, ob die CPU-Last überprüft werden soll, bevor eine Leerlauf-
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:45
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
-msgstr ""
+msgstr "Legt fest, ob »NetworkManager« vor dem Wechsel in Bereitschaft oder den Ruhezustand die Netzwerkverbindung trennen und nach dem Aufwachen wieder aufbauen soll."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:46
 msgid ""
@@ -381,7 +381,7 @@ msgstr "Bildschirm beim Abdunkeln sperren"
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
-msgstr ""
+msgstr "Legt fest, ob der Bildschirm gesperrt wird, nachdem der Bildschirm abgeschaltet wird. Wird nur berücksichtigt, falls »lock-use-screensaver« den Wert »falsch« hat."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:51
 msgid "Lock screen on suspend"
@@ -391,7 +391,7 @@ msgstr "Bildschirm beim Wechsel in die Bereitschaft sperren"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
-msgstr ""
+msgstr "Legt fest, ob der Bildschirm gesperrt werden soll, wenn der Rechner aus der Bereitschaft aufwacht. Wird nur berücksichtigt, wenn »lock-use-screensaver« den Wert »falsch« hat."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:53
 msgid "Lock screen on hibernate"
@@ -401,7 +401,7 @@ msgstr "Bildschirm beim Wechsel in den Ruhezustand sperren"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
-msgstr ""
+msgstr "Legt fest, ob der Bildschirm gesperrt ist, wenn der Rechner aus dem Ruhezustand aufwacht. Wird nur berücksichtigt, wenn »lock-use-screensaver« den Wert »falsch« hat."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:55
 msgid "Lock MATE keyring on sleep"
@@ -523,53 +523,53 @@ msgstr "Legt fest, ob der Benutzer benachrichtigt werden soll, wenn der Ladezust
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:80
 msgid "Whether we should show the history data points"
-msgstr ""
+msgstr "Legt fest, ob  die Historien-Datenpunkte angezeigt werden sollen"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:81
 msgid ""
 "Whether we should show the history data points in the statistics window."
-msgstr ""
+msgstr "Legt fest, ob  die Historien-Datenpunkte im Statistik-Fenster angezeigt werden sollen"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:82
 msgid "Whether we should smooth the history data"
-msgstr ""
+msgstr "Legt fest, ob  die Historien-Daten geglättet werden sollen"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:83
 msgid "Whether we should smooth the history data in the graph."
-msgstr ""
+msgstr "Legt fest, ob die Historien-Daten in der Grafik geglättet werden sollen"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:84
 msgid "The default graph type to show for history"
-msgstr ""
+msgstr "Der Standard-Grafiktyp, der in der Historie angezeigt werden soll"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:85
 msgid "The default graph type to show in the history window."
-msgstr ""
+msgstr "Der Standard-Grafiktyp, der im Historien-Fenster angezeigt werden soll"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:86
 msgid "The maximum time displayed for history"
-msgstr ""
+msgstr "Die maximale Zeitspanne, die in Grafiken dargestellt wird."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:87
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
-msgstr ""
+msgstr "Die Zeitspanne, die auf der x-Achse der Historien-Grafiken maximal dargestellt wird."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:88
 msgid "Whether we should show the stats data points"
-msgstr ""
+msgstr "Legt fest, ob  die Historien-Datenpunkte angezeigt werden sollen"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:89
 msgid "Whether we should show the stats data points in the statistics window."
-msgstr ""
+msgstr "Legt fest, ob  die Historien-Datenpunkte im Statistik-Fenster angezeigt werden sollen"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:90
 msgid "Whether we should smooth the stats data"
-msgstr ""
+msgstr "Legt fest, ob  die Historien-Daten geglättet werden sollen"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:91
 msgid "Whether we should smooth the stats data in the graph."
-msgstr ""
+msgstr "Legt fest, ob Daten in der Grafik geglättet werden sollen."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:92
 msgid "The default graph type to show for stats"
@@ -581,13 +581,13 @@ msgstr "Der Graph, der im Statistikfenster standardmäßig angezeigt werden soll
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:94
 msgid "The index of the page number to show by default"
-msgstr ""
+msgstr "Der Index der standardmäßig anzuzeigenden Seitennummer"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:95
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
-msgstr ""
+msgstr "Der Index der standardmäßig anzuzeigenden Seitennummer, welche zur Rückgabe des Fokus an die korrekte Seite eingesetzt wird."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
@@ -597,7 +597,7 @@ msgstr "Die ID des zuletzt gewählten Gerätes"
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
-msgstr ""
+msgstr "Der Name des letzten Gerätes, welcher zur Rückgabe des Fokus an das korrekte Gerät verwendet wird."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:98
 msgid "Percentage considered low"
@@ -607,7 +607,7 @@ msgstr "Ladezustand niedrig"
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
-msgstr ""
+msgstr "Prozentwert, bei dem der Akkuladezustand als niedrig eingestuft wird. Wird nur berücksichtigt, wenn use_time_for_policy den Wert »falsch« hat."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:100
 msgid "Percentage considered critical"
@@ -617,7 +617,7 @@ msgstr "Ladezustand kritisch"
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
-msgstr ""
+msgstr "Prozentwert, bei dem der Akkuladezustand als kritisch eingestuft wird. Wird nur berücksichtigt, wenn use_time_for_policy den Wert »falsch« hat."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:102
 msgid "Percentage action is taken"
@@ -627,7 +627,7 @@ msgstr "Wegen des Ladezustands wird eine Aktion durchgeführt"
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
-msgstr ""
+msgstr "Prozentwert, bei dem eine Aktion wegen kritischen Ladezustands durchgeführt wird. Wird nur berücksichtigt, wenn use_time_for_policy den Wert »falsch« hat."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:104
 msgid "The time remaining when low"
@@ -637,7 +637,7 @@ msgstr "Die verbleibende Zeit bei niedrigem Ladezustand"
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
-msgstr ""
+msgstr "Verbleibende Laufzeit des Akkus in Sekunden, bei der sein Ladezustand als niedrig angesehen wird. Wird nur berücksichtigt, wenn use_time_for_policy den Wert »wahr« hat."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:106
 msgid "The time remaining when critical"
@@ -647,7 +647,7 @@ msgstr "Die verbleibende Laufzeit bei kritischem Ladezustand"
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "Verbleibende Laufzeit des Akkus in Sekunden, bei der sein Ladezustand als kritisch angesehen wird. Wird nur berücksichtigt, wenn use_time_for_policy den Wert »wahr« hat."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:108
 msgid "The time remaining when action is taken"
@@ -657,7 +657,7 @@ msgstr "Die verbleibende Laufzeit, bei der eine Aktion durchgeführt wird"
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "Verbleibende Laufzeit des Akkus in Sekunden, bei der eine Aktion wegen kritischen Akkuladezustands durchgeführt wird. Wird nur berücksichtigt, wenn use_time_for_policy den Wert »wahr« hat."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:110
 msgid "Sleep timeout computer when on battery"
@@ -740,7 +740,7 @@ msgstr "Legt fest, wann das Benachrichtigungssymbol angezeigt werden soll"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:126
 msgid "Display options for the notification icon."
-msgstr ""
+msgstr "Zeige Optionen für das Benachrichtigungs-Symbol an."
 
 #: ../data/mate-power-preferences.desktop.in.in.h:1
 msgid "Power Management"
