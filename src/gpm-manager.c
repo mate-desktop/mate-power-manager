@@ -775,8 +775,8 @@ gpm_manager_idle_do_sleep (GpmManager *manager)
 static void
 gpm_manager_idle_changed_cb (GpmIdle *idle, GpmIdleMode mode, GpmManager *manager)
 {
-	/* ConsoleKit/systemd say we are not on active console */
-	if (!LOGIND_RUNNING() && !egg_console_kit_is_active (manager->priv->console)) {
+	/* ConsoleKit say we are not on active console */
+	if (!egg_console_kit_is_active (manager->priv->console)) {
 		return;
 	}
 
