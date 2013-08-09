@@ -1004,7 +1004,7 @@ gpm_manager_client_changed_cb (UpClient *client, GpmManager *manager)
 	/* save in local cache */
 	manager->priv->on_battery = on_battery;
 
-	/* ConsoleKit says we are not on active console */
+	/* ConsoleKit/systemd say we are not on active console */
 	if (!LOGIND_RUNNING() && !egg_console_kit_is_active (manager->priv->console)) {
 		egg_debug ("ignoring as not on active console");
 		return;
