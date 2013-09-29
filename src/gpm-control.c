@@ -221,7 +221,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
 
 	screensaver = gpm_screensaver_new ();
 
-	if (LOGIND_RUNNING()) {
+	if (!LOGIND_RUNNING()) {
 		g_object_get (control->priv->client,
 			      "can-suspend", &allowed,
 			      NULL);
