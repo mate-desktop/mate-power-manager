@@ -33,6 +33,7 @@
 #include <X11/extensions/Xrandr.h>
 #include <gdk/gdkx.h>
 #include <gtk/gtk.h>
+#include <gio/gio.h>
 #include <string.h>
 #include <sys/time.h>
 #include <sys/types.h>
@@ -48,6 +49,8 @@
 #include "gpm-common.h"
 #include "gpm-marshal.h"
 
+#define GSETTINGS_SCHEMA_ID                     "org.mate.power-manager"
+#define GCM_BACKLIGHT_HELPER_GSETTINGS_KEY      "acpi-backlight-interface"
 #define GPM_BRIGHTNESS_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_BRIGHTNESS, GpmBrightnessPrivate))
 #define GPM_SOLE_SETTER_USE_CACHE	TRUE	/* this may be insanity */
 
@@ -519,11 +522,17 @@ gpm_brightness_foreach_screen (GpmBrightness *brightness, GpmXRandROp op)
 	XRRScreenResources *resource;
 	gboolean ret;
 	gboolean success_any = FALSE;
+	GSettings* gs = NULL;
+	gchar* userdefined = NULL;
 
 	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
 
-	/* Return immediately if we can't use XRandR */
-	if (!brightness->priv->has_extension)
+	gs = g_settings_new(GSETTINGS_SCHEMA_ID);
+	if (gs != NULL)
+		userdefined = g_settings_get_string(gs, GCM_BACKLIGHT_HELPER_GSETTINGS_KEY);
+
+	/* Return immediately if we can't use XRandR OR the user specified an interface manually */
+	if (!brightness->priv->has_extension || (userdefined != NULL && strlen(userdefined) > 0))
 		return FALSE;
 
 	/* do for each screen */
