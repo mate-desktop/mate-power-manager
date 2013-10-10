@@ -38,7 +38,7 @@
 
 #define GCM_BACKLIGHT_HELPER_SYSFS_LOCATION			"/sys/class/backlight"
 
-#define GSETTIGNS_SCHEMA_ID 					"org.mate.power-manager"
+#define GSETTINGS_SCHEMA_ID 					"org.mate.power-manager"
 #define GCM_BACKLIGHT_HELPER_GSETTINGS_KEY			"acpi-backlight-interface"
 
 /**
@@ -47,13 +47,12 @@
 static gchar *
 gcm_backlight_helper_get_best_backlight ()
 {
-	gchar *filename, *userdefined;
+	gchar *filename, *userdefined = NULL;
 	guint i;
 	gboolean ret;
 	GDir *dir = NULL;
 	GError *error = NULL;
 	GSettings* gs = NULL;
-	GVariant* gv = NULL;
 	const gchar *first_device;
 
 	/* available kernel interfaces in priority order */
@@ -74,23 +73,17 @@ gcm_backlight_helper_get_best_backlight ()
 	};
 
 	/* Try to get the preferred interface from gsettings */
-	userdefined = malloc(sizeof(gchar));
-	*userdefined = '\0';
-
-	gs = g_settings_new(GSETTIGNS_SCHEMA_ID);
+	gs = g_settings_new(GSETTINGS_SCHEMA_ID);
 	if (gs != NULL) {
-		gv = g_settings_get_value(gs, GCM_BACKLIGHT_HELPER_GSETTINGS_KEY);
-		if (gv != NULL) {
-			free(userdefined);
-			userdefined = g_variant_get_string(gv, NULL);
-		} else {	
+		userdefined = g_settings_get_string(gs, GCM_BACKLIGHT_HELPER_GSETTINGS_KEY);
+		if (userdefined == NULL) {
 			g_warning("Could not retrieve value of " GCM_BACKLIGHT_HELPER_GSETTINGS_KEY);
 		}
 	} else {
-		g_warning("Could not open GSettings key " GSETTIGNS_SCHEMA_ID);
+		g_warning("Could not open GSettings key " GSETTINGS_SCHEMA_ID);
 	}
 
-	if (*userdefined != '\0' && strlen(userdefined) > 0) {
+	if (userdefined != NULL && strlen(userdefined) > 0) {
 		filename = g_build_filename (GCM_BACKLIGHT_HELPER_SYSFS_LOCATION, userdefined, NULL);
 		ret = g_file_test (filename, G_FILE_TEST_EXISTS);
                 if (ret)
