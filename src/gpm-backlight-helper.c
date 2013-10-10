@@ -21,7 +21,9 @@
 
 #include "config.h"
 
+#include <stdlib.h>
 #include <unistd.h>
+#include <gio/gio.h>
 #include <glib-object.h>
 #include <glib/gi18n.h>
 #include <locale.h>
@@ -32,9 +34,12 @@
 #define GCM_BACKLIGHT_HELPER_EXIT_CODE_SUCCESS			0
 #define GCM_BACKLIGHT_HELPER_EXIT_CODE_FAILED			1
 #define GCM_BACKLIGHT_HELPER_EXIT_CODE_ARGUMENTS_INVALID	3
-#define GCM_BACKLIGHT_HELPER_EXIT_CODE_INVALID_USER		4
+#define GCM_BACKLIGHT_HELPER_EXIT_CODE_INVALID_USER		4i
 
 #define GCM_BACKLIGHT_HELPER_SYSFS_LOCATION			"/sys/class/backlight"
+
+#define GSETTIGNS_SCHEMA_ID 					"org.mate.power-manager"
+#define GCM_BACKLIGHT_HELPER_GSETTINGS_KEY			"acpi-backlight-interface"
 
 /**
  * gcm_backlight_helper_get_best_backlight:
@@ -42,11 +47,13 @@
 static gchar *
 gcm_backlight_helper_get_best_backlight ()
 {
-	gchar *filename;
+	gchar *filename, *userdefined;
 	guint i;
 	gboolean ret;
 	GDir *dir = NULL;
 	GError *error = NULL;
+	GSettings* gs = NULL;
+	GVariant* gv = NULL;
 	const gchar *first_device;
 
 	/* available kernel interfaces in priority order */
@@ -66,7 +73,32 @@ gcm_backlight_helper_get_best_backlight ()
 		NULL,
 	};
 
-	/* search each one */
+	/* Try to get the preferred interface from gsettings */
+	userdefined = malloc(sizeof(gchar));
+	*userdefined = '\0';
+
+	gs = g_settings_new(GSETTIGNS_SCHEMA_ID);
+	if (gs != NULL) {
+		gv = g_settings_get_value(gs, GCM_BACKLIGHT_HELPER_GSETTINGS_KEY);
+		if (gv != NULL) {
+			free(userdefined);
+			userdefined = g_variant_get_string(gv, NULL);
+		} else {	
+			g_warning("Could not retrieve value of " GCM_BACKLIGHT_HELPER_GSETTINGS_KEY);
+		}
+	} else {
+		g_warning("Could not open GSettings key " GSETTIGNS_SCHEMA_ID);
+	}
+
+	if (*userdefined != '\0' && strlen(userdefined) > 0) {
+		filename = g_build_filename (GCM_BACKLIGHT_HELPER_SYSFS_LOCATION, userdefined, NULL);
+		ret = g_file_test (filename, G_FILE_TEST_EXISTS);
+                if (ret)
+                        goto out;
+                g_free (filename);
+	}
+
+	/* search each one in the list, no user preference found */
 	for (i=0; backlight_interfaces[i] != NULL; i++) {
 		filename = g_build_filename (GCM_BACKLIGHT_HELPER_SYSFS_LOCATION,
 					     backlight_interfaces[i], NULL);
