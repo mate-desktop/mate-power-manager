@@ -44,7 +44,31 @@ if test x$enable_strict != xno; then
 	fi
 fi
 
-if test "$GCC" = "yes"; then
+AC_ARG_ENABLE(deprecated,
+        [AS_HELP_STRING([--enable-deprecated],
+                [Warn about deprecated usages [default=no]])],,
+         [enable_deprecated=no])
+
+if test "x$enable_deprecated" = "xno"; then
+	DISABLE_DEPRECATED=" \
+	-DG_DISABLE_SINGLE_INCLUDES \
+	-DGTK_DISABLE_SINGLE_INCLUDES \
+	-DG_DISABLE_DEPRECATED \
+	-DGTK_DISABLE_DEPRECATED \
+	-DGDK_DISABLE_DEPRECATED \
+	-DGDK_MULTIHEAD_SAFE \
+	-DGTK_MULTIHEAD_SAFE \
+	-DGSEAL_ENABLE"
+
+	CPPFLAGS="$CPPFLAGS $DISABLE_DEPRECATED"
+fi
+
+AC_ARG_ENABLE(extra-warn,
+        [AS_HELP_STRING([--enable-extra-warn],
+                [Enable extra warnings. gcc only. [default=no]])],,
+         [enable_extra_warn=no])
+
+if test "x$enable_extra_warn" = "xyes" && test "$GCC" = "yes"; then
 	WARNINGFLAGS="$WARNINGFLAGS -Wall"
 	WARNINGFLAGS="$WARNINGFLAGS -Wcast-align -Wno-uninitialized"
 	WARNINGFLAGS="$WARNINGFLAGS -Wmissing-declarations"
