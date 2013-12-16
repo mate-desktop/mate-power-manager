@@ -37,6 +37,7 @@ AM_CPPFLAGS =						\
 	-DEGG_LOGGING="\"GPM_LOGGING\""			\
 	-DEGG_CONSOLE="\"GPM_CONSOLE\""			\
 	-I$(top_srcdir)					\
+	$(DISABLE_DEPRECATED)				\
 	$(NULL)
 
 bin_PROGRAMS =						\
