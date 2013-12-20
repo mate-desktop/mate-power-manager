@@ -49,17 +49,8 @@ AC_ARG_ENABLE(deprecated,
                 [Warn about deprecated usages [default=no]])],,
          [enable_deprecated=no])
 
-if test "x$enable_deprecated" = "xno"; then
-	DISABLE_DEPRECATED=" \
-	-DG_DISABLE_SINGLE_INCLUDES \
-	-DGTK_DISABLE_SINGLE_INCLUDES \
-	-DG_DISABLE_DEPRECATED \
-	-DGTK_DISABLE_DEPRECATED \
-	-DGDK_DISABLE_DEPRECATED \
-	-DGDK_MULTIHEAD_SAFE \
-	-DGTK_MULTIHEAD_SAFE \
-	-DGSEAL_ENABLE"
-
+if test "x$enable_deprecated" = "xyes"; then
+	DISABLE_DEPRECATED=""
 	CPPFLAGS="$CPPFLAGS $DISABLE_DEPRECATED"
 fi
 
