@@ -33,6 +33,10 @@
 #include "egg-color.h"
 #include "egg-precision.h"
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+#include <math.h>
+#endif
+
 G_DEFINE_TYPE (GpmGraphWidget, gpm_graph_widget, GTK_TYPE_DRAWING_AREA);
 #define GPM_GRAPH_WIDGET_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_GRAPH_WIDGET, GpmGraphWidgetPrivate))
 #define GPM_GRAPH_WIDGET_FONT "Sans 8"
@@ -69,7 +73,11 @@ struct GpmGraphWidgetPrivate
 	GPtrArray		*plot_list;
 };
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static gboolean gpm_graph_widget_draw (GtkWidget *graph, cairo_t *cr);
+#else
 static gboolean gpm_graph_widget_expose (GtkWidget *graph, GdkEventExpose *event);
+#endif
 static void	gpm_graph_widget_finalize (GObject *object);
 
 enum
@@ -233,7 +241,11 @@ gpm_graph_widget_class_init (GpmGraphWidgetClass *class)
 	GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (class);
 	GObjectClass *object_class = G_OBJECT_CLASS (class);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	widget_class->draw = gpm_graph_widget_draw;
+#else
 	widget_class->expose_event = gpm_graph_widget_expose;
+#endif
 	object_class->get_property = up_graph_get_property;
 	object_class->set_property = up_graph_set_property;
 	object_class->finalize = gpm_graph_widget_finalize;
@@ -1140,8 +1152,25 @@ gpm_graph_widget_draw_graph (GtkWidget *graph_widget, cairo_t *cr)
  * Just repaint the entire graph widget on expose.
  **/
 static gboolean
+#if GTK_CHECK_VERSION (3, 0, 0)
+gpm_graph_widget_draw (GtkWidget *graph, cairo_t *cr)
+#else
 gpm_graph_widget_expose (GtkWidget *graph, GdkEventExpose *event)
+#endif
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GdkRectangle area;
+	gdouble x1, y1, x2, y2;
+
+	cairo_clip_extents (cr, &x1, &y1, &x2, &y2);
+	area.x = floor (x1);
+	area.y = floor (y1);
+	area.width = ceil (x2) - area.x;
+	area.height = ceil (y2) - area.y;
+	cairo_rectangle (cr,
+			 area.x, area.y,
+			 area.width, area.height);
+#else
 	cairo_t *cr;
 
 	/* get a cairo_t */
@@ -1149,12 +1178,15 @@ gpm_graph_widget_expose (GtkWidget *graph, GdkEventExpose *event)
 	cairo_rectangle (cr,
 			 event->area.x, event->area.y,
 			 event->area.width, event->area.height);
+#endif
 	cairo_clip (cr);
 	((GpmGraphWidget *)graph)->priv->cr = cr;
 
 	gpm_graph_widget_draw_graph (graph, cr);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
 	cairo_destroy (cr);
+#endif
 	return FALSE;
 }
 
