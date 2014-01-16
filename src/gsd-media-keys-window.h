@@ -3,69 +3,76 @@
  * Copyright (C) 2006 William Jon McCann <mccann@jhu.edu>
  *
  * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of the
- * License, or (at your option) any later version.
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2, or (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * General Public License for more details.
+ * This program is distributed in the hope that it will be
+ * useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ * PURPOSE.  See the GNU Lesser General Public License for more
+ * details.
  *
- * You should have received a copy of the GNU General Public
- * License along with this program; if not, write to the
+ * You should have received a copy of the GNU Lesser General
+ * Public License along with this program; if not, write to the
  * Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
  * Boston, MA 02110-1301, USA.
  *
  */
 
-#ifndef GSD_MEDIA_KEYS_WINDOW_H
-#define GSD_MEDIA_KEYS_WINDOW_H
+#ifndef MSD_MEDIA_KEYS_WINDOW_H
+#define MSD_MEDIA_KEYS_WINDOW_H
 
 #include <glib-object.h>
 #include <gtk/gtk.h>
 
-G_BEGIN_DECLS
+#include "msd-osd-window.h"
 
-#define GSD_TYPE_MEDIA_KEYS_WINDOW            (gsd_media_keys_window_get_type ())
-#define GSD_MEDIA_KEYS_WINDOW(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj),  GSD_TYPE_MEDIA_KEYS_WINDOW, GsdMediaKeysWindow))
-#define GSD_MEDIA_KEYS_WINDOW_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),   GSD_TYPE_MEDIA_KEYS_WINDOW, GsdMediaKeysWindowClass))
-#define GSD_IS_MEDIA_KEYS_WINDOW(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj),  GSD_TYPE_MEDIA_KEYS_WINDOW))
-#define GSD_IS_MEDIA_KEYS_WINDOW_CLASS(klass) (G_TYPE_INSTANCE_GET_CLASS ((klass), GSD_TYPE_MEDIA_KEYS_WINDOW))
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-typedef struct GsdMediaKeysWindow                   GsdMediaKeysWindow;
-typedef struct GsdMediaKeysWindowClass              GsdMediaKeysWindowClass;
-typedef struct GsdMediaKeysWindowPrivate            GsdMediaKeysWindowPrivate;
+#define MSD_TYPE_MEDIA_KEYS_WINDOW            (msd_media_keys_window_get_type ())
+#define MSD_MEDIA_KEYS_WINDOW(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj),  MSD_TYPE_MEDIA_KEYS_WINDOW, MsdMediaKeysWindow))
+#define MSD_MEDIA_KEYS_WINDOW_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),   MSD_TYPE_MEDIA_KEYS_WINDOW, MsdMediaKeysWindowClass))
+#define MSD_IS_MEDIA_KEYS_WINDOW(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj),  MSD_TYPE_MEDIA_KEYS_WINDOW))
+#define MSD_IS_MEDIA_KEYS_WINDOW_CLASS(klass) (G_TYPE_INSTANCE_GET_CLASS ((klass), MSD_TYPE_MEDIA_KEYS_WINDOW))
 
-struct GsdMediaKeysWindow {
-        GtkWindow                   parent;
+typedef struct MsdMediaKeysWindow                   MsdMediaKeysWindow;
+typedef struct MsdMediaKeysWindowClass              MsdMediaKeysWindowClass;
+typedef struct MsdMediaKeysWindowPrivate            MsdMediaKeysWindowPrivate;
 
-        GsdMediaKeysWindowPrivate  *priv;
+struct MsdMediaKeysWindow {
+        MsdOsdWindow parent;
+
+        MsdMediaKeysWindowPrivate  *priv;
 };
 
-struct GsdMediaKeysWindowClass {
-        GtkWindowClass parent_class;
+struct MsdMediaKeysWindowClass {
+        MsdOsdWindowClass parent_class;
 };
 
 typedef enum {
-        GSD_MEDIA_KEYS_WINDOW_ACTION_VOLUME,
-        GSD_MEDIA_KEYS_WINDOW_ACTION_CUSTOM
-} GsdMediaKeysWindowAction;
+        MSD_MEDIA_KEYS_WINDOW_ACTION_VOLUME,
+        MSD_MEDIA_KEYS_WINDOW_ACTION_CUSTOM
+} MsdMediaKeysWindowAction;
 
-GType                 gsd_media_keys_window_get_type          (void);
+GType                 msd_media_keys_window_get_type          (void);
 
-GtkWidget *           gsd_media_keys_window_new               (void);
-void                  gsd_media_keys_window_set_action        (GsdMediaKeysWindow      *window,
-                                                               GsdMediaKeysWindowAction action);
-void                  gsd_media_keys_window_set_action_custom (GsdMediaKeysWindow      *window,
+GtkWidget *           msd_media_keys_window_new               (void);
+void                  msd_media_keys_window_set_action        (MsdMediaKeysWindow      *window,
+                                                               MsdMediaKeysWindowAction action);
+void                  msd_media_keys_window_set_action_custom (MsdMediaKeysWindow      *window,
                                                                const char              *icon_name,
                                                                gboolean                 show_level);
-void                  gsd_media_keys_window_set_volume_muted  (GsdMediaKeysWindow      *window,
+void                  msd_media_keys_window_set_volume_muted  (MsdMediaKeysWindow      *window,
                                                                gboolean                 muted);
-void                  gsd_media_keys_window_set_volume_level  (GsdMediaKeysWindow      *window,
+void                  msd_media_keys_window_set_volume_level  (MsdMediaKeysWindow      *window,
                                                                int                      level);
-gboolean              gsd_media_keys_window_is_valid          (GsdMediaKeysWindow      *window);
+gboolean              msd_media_keys_window_is_valid          (MsdMediaKeysWindow      *window);
 
-G_END_DECLS
+#ifdef __cplusplus
+}
+#endif
 
 #endif

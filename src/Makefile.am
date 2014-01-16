@@ -178,6 +178,8 @@ mate_power_manager_SOURCES =				\
 	gpm-stock-icons.h				\
 	gsd-media-keys-window.h				\
 	gsd-media-keys-window.c				\
+	msd-osd-window.h				\
+	msd-osd-window.c				\
 	gpm-engine.h					\
 	gpm-engine.c					\
 	$(NULL)

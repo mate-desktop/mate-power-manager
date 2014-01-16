@@ -159,14 +159,14 @@ static void
 gpm_kbd_backlight_dialog_init (GpmKbdBacklight *backlight) 
 {  
     if (backlight->priv->popup != NULL
-	    && !gsd_media_keys_window_is_valid (GSD_MEDIA_KEYS_WINDOW (backlight->priv->popup))) {
+	    && !msd_osd_window_is_valid (MSD_OSD_WINDOW (backlight->priv->popup))) {
 		gtk_widget_destroy (backlight->priv->popup);
 		backlight->priv->popup = NULL;
 	}
 
 	if (backlight->priv->popup == NULL) {
-		backlight->priv->popup= gsd_media_keys_window_new ();
-		gsd_media_keys_window_set_action_custom (GSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
+		backlight->priv->popup= msd_media_keys_window_new ();
+		msd_media_keys_window_set_action_custom (MSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
 							 "gpm-brightness-kbd",
 							 TRUE);
 		gtk_window_set_position (GTK_WINDOW (backlight->priv->popup), GTK_WIN_POS_NONE);
@@ -559,7 +559,7 @@ gpm_kbd_backlight_button_pressed_cb (GpmButton *button,
         if (ret) {
             egg_debug("Going to display OSD");
             gpm_kbd_backlight_dialog_init (backlight);
-			gsd_media_keys_window_set_volume_level (GSD_MEDIA_KEYS_WINDOW (backlight->priv->popup), backlight->priv->brightness_percent);
+			msd_media_keys_window_set_volume_level (MSD_MEDIA_KEYS_WINDOW (backlight->priv->popup), backlight->priv->brightness_percent);
             gpm_kbd_backlight_dialog_show (backlight);
         }
 
@@ -569,7 +569,7 @@ gpm_kbd_backlight_button_pressed_cb (GpmButton *button,
         if (ret) {
             egg_debug("Going to display OSD");
             gpm_kbd_backlight_dialog_init (backlight);
-			gsd_media_keys_window_set_volume_level (GSD_MEDIA_KEYS_WINDOW (backlight->priv->popup), backlight->priv->brightness_percent);
+			msd_media_keys_window_set_volume_level (MSD_MEDIA_KEYS_WINDOW (backlight->priv->popup), backlight->priv->brightness_percent);
             gpm_kbd_backlight_dialog_show (backlight);
         }
         
@@ -819,8 +819,8 @@ noerr:
              G_CALLBACK (gpm_kbd_backlight_idle_changed_cb), backlight);
 
     /* use a visual widget */
-	backlight->priv->popup = gsd_media_keys_window_new ();
-	gsd_media_keys_window_set_action_custom (GSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
+	backlight->priv->popup = msd_media_keys_window_new ();
+	msd_media_keys_window_set_action_custom (MSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
 						 "gpm-brightness-kbd", TRUE);
         gtk_window_set_position (GTK_WINDOW (backlight->priv->popup), GTK_WIN_POS_NONE);
 

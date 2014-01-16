@@ -175,14 +175,14 @@ static void
 gpm_backlight_dialog_init (GpmBacklight *backlight)
 {
 	if (backlight->priv->popup != NULL
-	    && !gsd_media_keys_window_is_valid (GSD_MEDIA_KEYS_WINDOW (backlight->priv->popup))) {
+	    && !msd_osd_window_is_valid (MSD_OSD_WINDOW (backlight->priv->popup))) {
 		gtk_widget_destroy (backlight->priv->popup);
 		backlight->priv->popup = NULL;
 	}
 
 	if (backlight->priv->popup == NULL) {
-		backlight->priv->popup= gsd_media_keys_window_new ();
-		gsd_media_keys_window_set_action_custom (GSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
+		backlight->priv->popup= msd_media_keys_window_new ();
+		msd_media_keys_window_set_action_custom (MSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
 							 "gpm-brightness-lcd",
 							 TRUE);
 		gtk_window_set_position (GTK_WINDOW (backlight->priv->popup), GTK_WIN_POS_NONE);
@@ -351,7 +351,7 @@ gpm_backlight_brightness_evaluate_and_set (GpmBacklight *backlight, gboolean int
 	/* only show dialog if interactive */
 	if (interactive) {
 		gpm_backlight_dialog_init (backlight);
-		gsd_media_keys_window_set_volume_level (GSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
+		msd_media_keys_window_set_volume_level (MSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
 							round (brightness));
 		gpm_backlight_dialog_show (backlight);
 	}
@@ -439,7 +439,7 @@ gpm_backlight_button_pressed_cb (GpmButton *button, const gchar *type, GpmBackli
 		if (ret) {
 			gpm_brightness_get (backlight->priv->brightness, &percentage);
 			gpm_backlight_dialog_init (backlight);
-			gsd_media_keys_window_set_volume_level (GSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
+			msd_media_keys_window_set_volume_level (MSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
 								percentage);
 			gpm_backlight_dialog_show (backlight);
 			/* save the new percentage */
@@ -458,7 +458,7 @@ gpm_backlight_button_pressed_cb (GpmButton *button, const gchar *type, GpmBackli
 		if (ret) {
 			gpm_brightness_get (backlight->priv->brightness, &percentage);
 			gpm_backlight_dialog_init (backlight);
-			gsd_media_keys_window_set_volume_level (GSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
+			msd_media_keys_window_set_volume_level (MSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
 								percentage);
 			gpm_backlight_dialog_show (backlight);
 			/* save the new percentage */
@@ -757,8 +757,8 @@ gpm_backlight_init (GpmBacklight *backlight)
 	gpm_idle_set_timeout_dim (backlight->priv->idle, backlight->priv->idle_dim_timeout);
 
 	/* use a visual widget */
-	backlight->priv->popup = gsd_media_keys_window_new ();
-	gsd_media_keys_window_set_action_custom (GSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
+	backlight->priv->popup = msd_media_keys_window_new ();
+	msd_media_keys_window_set_action_custom (MSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
 						 "gpm-brightness-lcd",
 						 TRUE);
         gtk_window_set_position (GTK_WINDOW (backlight->priv->popup), GTK_WIN_POS_NONE);
