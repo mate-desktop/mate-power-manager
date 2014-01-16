@@ -121,7 +121,6 @@ GLIB_GSETTINGS
 dnl ----------------------------------------------------------------------------
 dnl - Library dependencies
 dnl ----------------------------------------------------------------------------
-GTK_API_VERSION=2.0
 GLIB_REQUIRED=2.13.0
 GIO_REQUIRED=2.25.0
 GTK_REQUIRED=2.17.7
@@ -154,9 +153,11 @@ AC_MSG_RESULT([$with_gtk])
 case "$with_gtk" in
 	2.0) GTK_API_VERSION=2.0
 		GTK_REQUIRED=2.17.7
+		CANBERRA_GTK=libcanberra-gtk
 		;;
 	3.0) GTK_API_VERSION=3.0
 		GTK_REQUIRED=3.0.0
+		CANBERRA_GTK=libcanberra-gtk3
 		;;
 esac
 
@@ -165,7 +166,7 @@ dnl - Check library dependencies
 dnl ---------------------------------------------------------------------------
 PKG_CHECK_MODULES(GLIB, glib-2.0 >= $GLIB_REQUIRED gobject-2.0 gio-2.0 >= $GIO_REQUIRED gio-unix-2.0)
 
-PKG_CHECK_MODULES(CANBERRA, libcanberra-gtk >= $CANBERRA_REQUIRED)
+PKG_CHECK_MODULES(CANBERRA, $CANBERRA_GTK >= $CANBERRA_REQUIRED)
 
 PKG_CHECK_MODULES(DBUS,[
  dbus-glib-1 >= $DBUS_GLIB_REQUIRED
@@ -173,12 +174,12 @@ PKG_CHECK_MODULES(DBUS,[
  gthread-2.0])
 
 PKG_CHECK_MODULES(MATE, [
- gtk+-2.0 >= $GTK_REQUIRED
+ gtk+-$GTK_API_VERSION >= $GTK_REQUIRED
  cairo >= $CAIRO_REQUIRED])
 
 PKG_CHECK_MODULES(GDK, [
- gdk-2.0 >= $GDK_REQUIRED
- gdk-x11-2.0 >= $GDK_REQUIRED])
+ gdk-$GTK_API_VERSION >= $GDK_REQUIRED
+ gdk-x11-$GTK_API_VERSION >= $GDK_REQUIRED])
 
 PKG_CHECK_MODULES(X11, [
  xrandr >= $XRANDR_REQUIRED
@@ -420,6 +421,7 @@ echo "
         gnome-keyring support:     ${with_keyring}
         Building extra applets:    ${enable_applets}
         Self test support:         ${have_tests}
+        GTK+ API version:          ${GTK_API_VERSION}
         Use libunique:             ${enable_libunique}
         Docbook support:           ${enable_docbook_docs}
         documentation dir:         $DOCDIR
