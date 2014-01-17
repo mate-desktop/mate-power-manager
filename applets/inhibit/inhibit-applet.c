@@ -675,8 +675,13 @@ gpm_inhibit_applet_init (GpmInhibitApplet *applet)
 	g_signal_connect (G_OBJECT(applet), "button-press-event",
 			  G_CALLBACK(gpm_applet_click_cb), NULL);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_signal_connect (G_OBJECT(applet), "draw",
+			  G_CALLBACK(gpm_applet_draw_cb), NULL);
+#else
 	g_signal_connect (G_OBJECT(applet), "expose-event",
 			  G_CALLBACK(gpm_applet_draw_cb), NULL);
+#endif
 
 	/* We use g_signal_connect_after because letting the panel draw
 	 * the background is the only way to have the correct

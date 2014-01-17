@@ -1030,8 +1030,13 @@ gpm_brightness_applet_init (GpmBrightnessApplet *applet)
 	/* We use g_signal_connect_after because letting the panel draw
 	 * the background is the only way to have the correct
 	 * background when a theme defines a background picture. */
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_signal_connect_after (G_OBJECT(applet), "draw",
+				G_CALLBACK(gpm_applet_draw_cb), NULL);
+#else
 	g_signal_connect_after (G_OBJECT(applet), "expose-event",
 				G_CALLBACK(gpm_applet_draw_cb), NULL);
+#endif
 
 	g_signal_connect (G_OBJECT(applet), "change-background",
 			  G_CALLBACK(gpm_applet_change_background_cb), NULL);
