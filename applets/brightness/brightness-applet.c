@@ -35,6 +35,10 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 #include <gdk/gdkkeysyms.h>
+#if GTK_CHECK_VERSION (3, 0, 0)
+#include <gdk/gdkkeysyms-compat.h>
+#define GtkObject GtkWidget
+#endif
 #include <glib-object.h>
 #include <dbus/dbus-glib.h>
 
@@ -85,7 +89,11 @@ static void      gpm_applet_check_size            (GpmBrightnessApplet *applet);
 static gboolean  gpm_applet_draw_cb               (GpmBrightnessApplet *applet);
 static void      gpm_applet_change_background_cb  (GpmBrightnessApplet *applet,
 						   MatePanelAppletBackgroundType arg1,
+#if GTK_CHECK_VERSION (3, 0, 0)
+						   cairo_pattern_t *arg2, gpointer data);
+#else
 						   GdkColor *arg2, GdkPixmap *arg3, gpointer data);
+#endif
 static void      gpm_applet_theme_change_cb (GtkIconTheme *icon_theme, gpointer data);
 static void      gpm_applet_stop_scroll_events_cb (GtkWidget *widget, GdkEvent  *event);
 static gboolean  gpm_applet_destroy_popup_cb      (GpmBrightnessApplet *applet);
@@ -259,9 +267,16 @@ static gboolean
 gpm_applet_draw_cb (GpmBrightnessApplet *applet)
 {
 	gint w, h, bg_type;
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GdkRGBA color;
+	cairo_t *cr;
+	cairo_pattern_t *pattern;
+	GtkStyleContext *context;
+#else
 	GdkColor color;
 	GdkGC *gc;
 	GdkPixmap *background;
+#endif
 	GtkAllocation allocation;
 
 	if (gtk_widget_get_window (GTK_WIDGET(applet)) == NULL) {
@@ -284,37 +299,74 @@ gpm_applet_draw_cb (GpmBrightnessApplet *applet)
 	w = allocation.width;
 	h = allocation.height;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	cr = gdk_cairo_create (gtk_widget_get_window (GTK_WIDGET(applet)));
+#else
 	gc = gdk_gc_new (gtk_widget_get_window (GTK_WIDGET(applet)));
+#endif
 
 	/* draw pixmap background */
+#if GTK_CHECK_VERSION (3, 0, 0)
+	bg_type = mate_panel_applet_get_background (MATE_PANEL_APPLET (applet), &color, &pattern);
+#else
 	bg_type = mate_panel_applet_get_background (MATE_PANEL_APPLET (applet), &color, &background);
+#endif
 	if (bg_type == PANEL_PIXMAP_BACKGROUND && !applet->popped) {
 		/* fill with given background pixmap */
+#if GTK_CHECK_VERSION (3, 0, 0)
+		cairo_set_source (cr, pattern);
+		cairo_rectangle (cr, 0, 0, w, h);
+		cairo_fill (cr);
+#else
 		gdk_draw_drawable (gtk_widget_get_window (GTK_WIDGET(applet)), gc, background, 0, 0, 0, 0, w, h);
+#endif
 	}
 	
 	/* draw color background */
 	if (bg_type == PANEL_COLOR_BACKGROUND && !applet->popped) {
+#if GTK_CHECK_VERSION (3, 0, 0)
+		gdk_cairo_set_source_rgba (cr, &color);
+		cairo_rectangle (cr, 0, 0, w, h);
+		cairo_fill (cr);
+#else
 		gdk_gc_set_rgb_fg_color (gc,&color);
 		gdk_gc_set_fill (gc,GDK_SOLID);
 		gdk_draw_rectangle (gtk_widget_get_window (GTK_WIDGET(applet)), gc, TRUE, 0, 0, w, h);
+#endif
 	}
 
 	/* fill with selected color if popped */
 	if (applet->popped) {
+#if GTK_CHECK_VERSION (3, 0, 0)
+		context = gtk_widget_get_style_context (GTK_WIDGET(applet));
+		gtk_style_context_get_color (context, GTK_STATE_FLAG_SELECTED, &color);
+		gdk_cairo_set_source_rgba (cr, &color);
+		cairo_rectangle (cr, 0, 0, w, h);
+		cairo_fill (cr);
+#else
 		color = gtk_rc_get_style (GTK_WIDGET(applet))->bg[GTK_STATE_SELECTED];
 		gdk_gc_set_rgb_fg_color (gc,&color);
 		gdk_gc_set_fill (gc,GDK_SOLID);
 		gdk_draw_rectangle (gtk_widget_get_window (GTK_WIDGET(applet)), gc, TRUE, 0, 0, w, h);
+#endif
 	}
 
 	/* draw icon at center */
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gdk_cairo_set_source_pixbuf (cr, applet->icon, (w - applet->icon_width)/2, (h - applet->icon_height)/2);
+	cairo_paint (cr);
+#else
 	gdk_draw_pixbuf (gtk_widget_get_window (GTK_WIDGET(applet)), gc, applet->icon,
 			 0, 0, (w - applet->icon_width)/2, (h - applet->icon_height)/2,
 			 applet->icon_width, applet->icon_height,
 			 GDK_RGB_DITHER_NONE, 0, 0);
+#endif
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	cairo_destroy (cr);
+#else
 	g_object_unref (gc);
+#endif
 
 	return TRUE;
 }
@@ -327,7 +379,11 @@ gpm_applet_draw_cb (GpmBrightnessApplet *applet)
 static void
 gpm_applet_change_background_cb (GpmBrightnessApplet *applet,
 				 MatePanelAppletBackgroundType arg1,
+#if GTK_CHECK_VERSION (3, 0, 0)
+				 cairo_pattern_t *arg2, gpointer data)
+#else
 				 GdkColor *arg2, GdkPixmap *arg3, gpointer data)
+#endif
 {
 	gtk_widget_queue_draw (GTK_WIDGET (applet));
 }
