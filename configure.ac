@@ -1,6 +1,6 @@
 AC_PREREQ(2.63)
 
-AC_INIT([mate-power-manager], [1.6.2], [http://www.mate-desktop.org/])
+AC_INIT([mate-power-manager], [1.7.0], [http://www.mate-desktop.org/])
 AC_CONFIG_SRCDIR(src)
 AM_INIT_AUTOMAKE([1.9 no-dist-gzip dist-xz])
 AC_CONFIG_HEADERS([config.h])
