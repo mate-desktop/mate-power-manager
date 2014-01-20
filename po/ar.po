@@ -3,134 +3,147 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-#   <noureddin@barid.com>, 2012.
+# moceap <moceap@hotmail.com>, 2013
+# moceap <moceap@hotmail.com>, 2013
+# noureddin <noureddin@barid.com>, 2012
+# noureddin <noureddin@barid.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
-"POT-Creation-Date: 2012-01-01 13:42+0100\n"
-"PO-Revision-Date: 2012-04-28 01:35+0000\n"
-"Last-Translator: noureddin <noureddin@barid.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-15 21:36+0100\n"
+"PO-Revision-Date: 2013-10-05 16:07+0000\n"
+"Last-Translator: mauron\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/MATE/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ar\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: ../applets/brightness/brightness-applet.c:109
+#: ../applets/brightness/brightness-applet.c:110
 msgid "Power Manager Brightness Applet"
 msgstr "بريمج سطوع مدير الطاقة"
 
-#: ../applets/brightness/brightness-applet.c:110
+#: ../applets/brightness/brightness-applet.c:111
 msgid "Adjusts laptop panel brightness."
 msgstr "يضبط سطوع لوحة الحاسوب المحمول."
 
-#: ../applets/brightness/brightness-applet.c:363
-#: ../applets/inhibit/inhibit-applet.c:362
+#: ../applets/brightness/brightness-applet.c:364
+#: ../applets/inhibit/inhibit-applet.c:363
 msgid "Cannot connect to mate-power-manager"
-msgstr "تعذّر الاتصال بمدير طاقة جنوم"
+msgstr "تعذّر الاتصال بمدير طاقة متّة"
 
-#: ../applets/brightness/brightness-applet.c:365
+#: ../applets/brightness/brightness-applet.c:366
 msgid "Cannot get laptop panel brightness"
 msgstr "تعذّر معرفة سطوع لوحة الحاسوب المحمول"
 
-#: ../applets/brightness/brightness-applet.c:367
+#: ../applets/brightness/brightness-applet.c:368
 #, c-format
 msgid "LCD brightness : %d%%"
 msgstr "سطوع LCD: %d%%"
 
-#: ../applets/brightness/brightness-applet.c:752
-#: ../applets/inhibit/inhibit-applet.c:431
-msgid "Licensed under the GNU General Public License Version 2"
-msgstr "مرخّص تحت الإصدارة الثانية من رخصة جنو العمومية العامة "
-
 #: ../applets/brightness/brightness-applet.c:753
 #: ../applets/inhibit/inhibit-applet.c:432
+msgid "Licensed under the GNU General Public License Version 2"
+msgstr "مرخّص تحت الإصدارة الثانية من رخصة غنّو العمومية العامة "
+
+#: ../applets/brightness/brightness-applet.c:754
+#: ../applets/inhibit/inhibit-applet.c:433
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
 "as published by the Free Software Foundation; either version 2\n"
 "of the License, or (at your option) any later version."
-msgstr "مدير الطاقة برمجية حرة؛ بامكانك إعادة توزيعه و/أو تعديله تحت شروط الرخصة العمومية\nالعامة لجنو والتي نشرتها منظمة البرمجيات الحرة؛ سواء الإصدارة 2 من الرخصة أو أي إصدارة بعدها حسب رغبتك."
+msgstr "مدير الطاقة برمجية حرة؛ بامكانك إعادة توزيعه و/أو تعديله تحت شروط الرخصة العمومية\nالعامة لغنّو والتي نشرتها منظمة البرمجيات الحرة؛ سواء الإصدارة 2 من الرخصة أو أي إصدارة بعدها حسب رغبتك."
 
-#: ../applets/brightness/brightness-applet.c:757
-#: ../applets/inhibit/inhibit-applet.c:436
+#: ../applets/brightness/brightness-applet.c:758
+#: ../applets/inhibit/inhibit-applet.c:437
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
 "GNU General Public License for more details."
-msgstr "يوزّع مدير على أمل أن يكون مفيدًا لمن يستخدمه دون أدنى مسؤولية؛ ولا حتى \nأي ضمان يضمن صلاحية العرض في السوق أو توافقه مع أي استخدام محدد. يمكنك \nمراجعةالرخصة العمومية العامة لجنو لمزيد من التفاصيل."
+msgstr "يوزّع مدير الطّاقة على أمل أن يكون مفيدًا لمن يستخدمه دون أدنى مسؤولية؛ ولا حتى \nأي ضمان يضمن صلاحية العرض في السوق أو توافقه مع أي استخدام محدد. يمكنك \nمراجعةالرخصة العمومية العامة لغنّو لمزيد من التفاصيل."
 
-#: ../applets/brightness/brightness-applet.c:761
-#: ../applets/inhibit/inhibit-applet.c:440
+#: ../applets/brightness/brightness-applet.c:762
+#: ../applets/inhibit/inhibit-applet.c:441
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
-msgstr "من المفترض أن تكون قد استلمت نسخة من رخصة جنو العامة\nمع هذا البرنامج؛ في حال عدم استلامك لذلك\n، يمكنك مكاتبة:\nFree Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA"
+msgstr "من المفترض أن تكون قد استلمت نسخة من رخصة غنّو العامة\nمع هذا البرنامج؛ في حال عدم استلامك لذلك\n، يمكنك مكاتبة:\nFree Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA"
 
-#: ../applets/brightness/brightness-applet.c:775
+#: ../applets/brightness/brightness-applet.c:776
 msgid "Copyright © 2006 Benjamin Canou"
 msgstr "حقوق النشر © 2006 Benjamin Canou"
 
-#: ../applets/brightness/MATE_BrightnessApplet.server.in.in.h:1
-msgid "Adjusts Laptop panel brightness"
-msgstr "يضبط سطوع لوحة الحاسوب المحمول"
+#: ../applets/brightness/brightness-applet.c:1013
+#: ../applets/inhibit/inhibit-applet.c:663
+msgid "_About"
+msgstr "_عن"
 
-#: ../applets/brightness/MATE_BrightnessApplet.server.in.in.h:2
-msgid "Brightness Applet"
-msgstr "بريمج السطوع"
+#: ../applets/brightness/brightness-applet.c:1016
+#: ../applets/inhibit/inhibit-applet.c:666
+msgid "_Help"
+msgstr "م_ساعدة"
 
-#: ../applets/brightness/MATE_BrightnessApplet.server.in.in.h:3
+#: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:1
 msgid "Brightness Applet Factory"
 msgstr "مصنع بريمج السطوع"
 
-#: ../applets/brightness/MATE_BrightnessApplet.server.in.in.h:4
+#: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:2
 msgid "Factory for Brightness Applet"
 msgstr "مصنع لبريمج السطوع"
 
-#: ../applets/inhibit/inhibit-applet.c:95
+#: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:3
+msgid "Brightness Applet"
+msgstr "بريمج السطوع"
+
+#: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:4
+msgid "Adjusts Laptop panel brightness"
+msgstr "يضبط سطوع لوحة الحاسوب المحمول"
+
+#: ../applets/inhibit/inhibit-applet.c:96
 msgid "Power Manager Inhibit Applet"
 msgstr "بريمج تثبيط مدير الطاقة"
 
-#: ../applets/inhibit/inhibit-applet.c:96
+#: ../applets/inhibit/inhibit-applet.c:97
 msgid "Allows user to inhibit automatic power saving."
 msgstr "يسمح للمستخدم بتثبيط حفظ الطاقة الآلي."
 
-#: ../applets/inhibit/inhibit-applet.c:365
+#: ../applets/inhibit/inhibit-applet.c:366
 msgid "Automatic sleep inhibited"
 msgstr "ثُبِّط النوم الآلي"
 
-#: ../applets/inhibit/inhibit-applet.c:367
+#: ../applets/inhibit/inhibit-applet.c:368
 msgid "Automatic sleep enabled"
 msgstr "فُعِّل النوم الآلي"
 
-#: ../applets/inhibit/inhibit-applet.c:395
+#: ../applets/inhibit/inhibit-applet.c:396
 msgid "Manual inhibit"
 msgstr "تثبيط يدوي"
 
-#: ../applets/inhibit/inhibit-applet.c:454
+#: ../applets/inhibit/inhibit-applet.c:455
 msgid "Copyright © 2006-2007 Richard Hughes"
 msgstr "حقوق النشر © 2006-2007 Richard Hughes"
 
-#: ../applets/inhibit/MATE_InhibitApplet.server.in.in.h:1
-msgid "Allows user to inhibit automatic power saving"
-msgstr "يسمح للمستخدم بتثبيط حفظ الطاقة الآلي"
+#: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:1
+msgid "Inhibit Applet Factory"
+msgstr "مصنع بريمج التثبيط"
 
-#: ../applets/inhibit/MATE_InhibitApplet.server.in.in.h:2
+#: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:2
 msgid "Factory for Inhibit Applet"
 msgstr "مصنع لبريمج التثبيط"
 
-#: ../applets/inhibit/MATE_InhibitApplet.server.in.in.h:3
+#: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:3
 msgid "Inhibit Applet"
 msgstr "بريمج التثبيط"
 
-#: ../applets/inhibit/MATE_InhibitApplet.server.in.in.h:4
-msgid "Inhibit Applet Factory"
-msgstr "مصنع بريمج التثبيط"
+#: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:4
+msgid "Allows user to inhibit automatic power saving"
+msgstr "يسمح للمستخدم بتثبيط حفظ الطاقة الآلي"
 
 #: ../data/mate-power-manager.desktop.in.in.h:1
 msgid "Power Manager"
@@ -140,839 +153,835 @@ msgstr "مدير الطاقة"
 msgid "Power management daemon"
 msgstr "جني إدارة الطاقة"
 
-#: ../data/mate-power-manager.schemas.in.h:1
-msgid "Allow backlight brightness adjustment"
-msgstr "اسمح بضبط سطوع الضوء الخلفي"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:1
+msgid "Whether to hibernate, suspend or do nothing when inactive"
+msgstr "ما إذا يتم سبات, توقيف أو فعل لا شيء عند عدم النشاط"
 
-#: ../data/mate-power-manager.schemas.in.h:2
+#: ../data/org.mate.power-manager.gschema.xml.in.h:2
+msgid ""
+"The type of sleeping that should be performed when the computer is inactive."
+msgstr "نوع النّوم الذي ينبغي أن يقوم فيه الحاسوب بعد عدم النشاط."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:3
 msgid "Battery critical low action"
 msgstr "إجراء انخفاض البطارية الحرِج"
 
-#: ../data/mate-power-manager.schemas.in.h:3
-msgid "Check CPU load before sleeping"
-msgstr "راجع حِمْل المعالج قبل النوم"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:4
+msgid "The action to take when the battery is critically low."
+msgstr "الإجراءات المتّبعة عند انخفاض قدرة البطّارية بشكل كبير."
 
-#: ../data/mate-power-manager.schemas.in.h:4
-msgid "Dim the screen after a period of inactivity when on AC power"
-msgstr "أخفت إضاءة الشاشة بعد انقضاء مدة من عدم النشاط أثناء استعمال الطاقة الاعتيادية"
-
-#: ../data/mate-power-manager.schemas.in.h:5
-msgid "Dim the screen after a period of inactivity when on battery power"
-msgstr "أخفت إضاءة الشاشة بعد انقضاء مدة من عدم النشاط أثناء استعمال طاقة البطارية"
-
-#: ../data/mate-power-manager.schemas.in.h:6
-msgid ""
-"Display options for the notification icon. Valid options are \"never\", "
-"\"low\", \"critical\", \"charge\", \"present\" and \"always\"."
-msgstr "خيارات العرض لأيقونة التنبيه. الخيارات الصالحة هي \n\"never\"، \"low\"، \"critical\"، \"charge\"، \"present\" و \"always\"."
-
-#: ../data/mate-power-manager.schemas.in.h:7
-msgid "Hibernate button action"
-msgstr "إجراء زر السبات"
-
-#: ../data/mate-power-manager.schemas.in.h:8
-msgid ""
-"If a notification message should be displayed after suspend or hibernate "
-"failed."
-msgstr "إن كان يفترض إظهار رسالة تنبيهية في حال فشل تعليق أو إسبات الحاسوب"
-
-#: ../data/mate-power-manager.schemas.in.h:9
-msgid ""
-"If a notification message should be displayed when the battery is fully "
-"charged."
-msgstr "إن كان يفترض إظهار رسالة تنبيهية في حال اكتمال شحن البطارية"
-
-#: ../data/mate-power-manager.schemas.in.h:10
-msgid ""
-"If a notification message should be displayed when the battery is getting "
-"low."
-msgstr "نبّهني إذا كانت البطارية ضعيفة الشحن."
-
-#: ../data/mate-power-manager.schemas.in.h:11
-msgid ""
-"If preferences and statistics items should be shown in the context menu"
-msgstr "إذا ما كان يتعين عرض عنصر التفضيلات والإحصائيات في قائمة السياق"
-
-#: ../data/mate-power-manager.schemas.in.h:12
-msgid "If sounds should be used"
-msgstr "إن كانت الأصوات ستُستخدم"
-
-#: ../data/mate-power-manager.schemas.in.h:13
-msgid ""
-"If sounds should be used when the power is critically low, or inhibit "
-"requests have stopped the policy action."
-msgstr "استعمل الأصوات إذا كانت الطاقة ضعيفة جدا أو أن طلبات التثبيط أوقفت عمل السياسة."
-
-#: ../data/mate-power-manager.schemas.in.h:14
-msgid "If the CPU load should be checked before doing the idle action."
-msgstr "إذا يفترض التأكد من تحميل المعالج قبل عمل إجراء الخمول."
-
-#: ../data/mate-power-manager.schemas.in.h:15
+#: ../data/org.mate.power-manager.gschema.xml.in.h:5
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
 msgstr "إذا يفترض حدوث حدث البطارية حينما يغلق الغطاء و تفصل الطاقة"
 
-#: ../data/mate-power-manager.schemas.in.h:16
+#: ../data/org.mate.power-manager.gschema.xml.in.h:6
 msgid ""
 "If the battery lid close event should occur (for example 'Suspend when lid "
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
-msgstr "إن كان يفترض حدوث حدث إغلاق غطاء البطارية (على سبيل المثال تعليق الجهاز حين إغلاق الجهاز على البطارية) في حالة كان الغطاء مغلق مسبقا و من ثم تم فصل طاقة التيار المتردد لاحقا"
+msgstr "إن كان يفترض حدوث حدث إغلاق غطاء البطارية (على سبيل المثال تعليق الجهاز حين إغلاق الجهاز على البطارية) في حالة كان الغطاء مغلق مسبقا و من ثم تم فصل طاقة التيار المتردد لاحقًا"
 
-#: ../data/mate-power-manager.schemas.in.h:17
-msgid "If the learnt profile should be used to calculate the time remaining"
-msgstr "إن كان يُفترض أن يُستخدم ملف تعريف التعلم لحساب الوقت المتبقي"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:7
+msgid "UPS critical low action"
+msgstr "الإجراء العاجل لـ UPS"
 
-#: ../data/mate-power-manager.schemas.in.h:18
-msgid ""
-"If the learnt profile should be used to calculate the time remaining. Only "
-"turn this off for debugging."
-msgstr "إن كان يُفترض أن يُستخدم ملف تعريف التعلم لحساب الوقت المتبقي. أطفئ هذا فقط في حالة التنقيح."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:8
+msgid "The action to take when the UPS is critically low."
+msgstr "الإجراءات المتّبعة عند انخفاض قدرة وحدة التّخزين UPS بشكل كبير."
 
-#: ../data/mate-power-manager.schemas.in.h:19
-msgid "If the low-power mode should be enabled when on AC"
-msgstr "إذا يفترض تفعيل نمط الطاقة-المنخفضة أثناء العمل على التيار المتردد"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:9
+msgid "UPS low power action"
+msgstr "تصرف الUPS في حالة الطاقة المنخفضة"
 
-#: ../data/mate-power-manager.schemas.in.h:20
-msgid "If the low-power mode should be enabled when on battery"
-msgstr "إذا يفترض تفعيل نمط الطاقة-المنخفضة أثناء العمل على البطارية"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:10
+msgid "The action to take when the UPS is low."
+msgstr "الإجراءات المتّبعة عند انخفاض قدرة وحدة التّخزين UPS"
 
-#: ../data/mate-power-manager.schemas.in.h:21
+#: ../data/org.mate.power-manager.gschema.xml.in.h:11
+msgid "Allow backlight brightness adjustment"
+msgstr "اسمح بضبط سطوع الضوء الخلفي"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:12
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
 msgstr "إن كان يمكن تغيير سطوع الشاشة عند التحويل بين الطاقة المتناوبة وطاقة البطارية."
 
-#: ../data/mate-power-manager.schemas.in.h:22
-msgid ""
-"If the screen should be dimmed to save power when the computer is idle when "
-"on AC power."
-msgstr "إن كان يفترض خفض إضاءة الشاشة لحفظ الطاقة إذا كان الحاسوب في حالة خامدة أثناء استعمال الطاقة الاعتيادية"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:13
+msgid "Reduce the backlight brightness when on battery power"
+msgstr "خفض سطوع الإضاءة الخلفية أثناء استعمال طاقة البطارية"
 
-#: ../data/mate-power-manager.schemas.in.h:23
-msgid ""
-"If the screen should be dimmed to save power when the computer is idle when "
-"on battery power."
-msgstr "إن كان يفترض خفض إضاءة الشاشة لحفظ الطاقة إذا كان الحاسوب في حالة خامدة أثناء استعمال طاقة البطارية."
-
-#: ../data/mate-power-manager.schemas.in.h:24
+#: ../data/org.mate.power-manager.gschema.xml.in.h:14
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
 msgstr "إن كان يفترض خفض إضاءة الشاشة لحفظ الطاقة إذا كان الحاسوب في حالة خامدة أثناء استعمال طاقة البطارية."
 
-#: ../data/mate-power-manager.schemas.in.h:25
-msgid "If the system low-power mode should be enabled when on AC power."
-msgstr "إن كان يفترض تفعيل وضع الطاقة المنخفضة للنظام في حال كون الجهاز يعمل على التيار المتردد"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:15
+msgid "The brightness of the screen when idle"
+msgstr "سطوع الشاشة عندما تكون في حالة خمول"
 
-#: ../data/mate-power-manager.schemas.in.h:26
+#: ../data/org.mate.power-manager.gschema.xml.in.h:16
 msgid ""
-"If the system low-power mode should be enabled when on laptop battery power."
-msgstr "إن كان يفترض تفعيل وضع الطاقة المنخفضة للنظام في حال كون الجهاز يعمل على البطارية"
+"This is the laptop panel screen brightness used when the session is idle. "
+"Only valid when use-time-for-policy is true."
+msgstr "التوهج المستعمل لشاشة الحاسوب النقال عندما تكون الجلسة غير نشطة. تستعمل فقط عندما تكون use_time_for_policy صحيح. "
 
-#: ../data/mate-power-manager.schemas.in.h:27
-msgid "If the user should be notified when the AC adapter is disconnected."
-msgstr "إذا يفترض إعلام المستخدم في حال إنقطاع التيار المتردد"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:17
+msgid "Dim the screen after a period of inactivity when on battery power"
+msgstr "أخفت إضاءة الشاشة بعد انقضاء مدة من عدم النشاط أثناء استعمال طاقة البطارية"
 
-#: ../data/mate-power-manager.schemas.in.h:28
+#: ../data/org.mate.power-manager.gschema.xml.in.h:18
+msgid ""
+"If the screen should be dimmed to save power when the computer is idle when "
+"on battery power."
+msgstr "إن كان يفترض خفض إضاءة الشاشة لحفظ الطاقة إذا كان الحاسوب في حالة خامدة أثناء استعمال طاقة البطارية."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:19
+msgid "The default amount of time to dim the screen after idle"
+msgstr "وقت الخمول الافتراضي الذي ستُعتّم الشاشة بعده"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:20
+msgid "The default amount of time to dim the screen after idle."
+msgstr "وقت الخمول الافتراضي الذي ستُعتّم الشاشة بعده."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:21
+msgid "LCD dimming amount when on battery"
+msgstr "درجة خفوت شاشة الكريستال السائل عند استخدام البطارية"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:22
+msgid ""
+"The amount to dim the brightness of the display when on battery power. "
+"Possible values are between 0 and 100."
+msgstr "الحجم الذي تعتم الشّاشة فيه عند استعمال البطارية. القيم الممكنة بين 0 و 100. "
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:23
+msgid "Dim the screen after a period of inactivity when on AC power"
+msgstr "أخفت إضاءة الشاشة بعد انقضاء مدة من عدم النشاط أثناء استعمال الطاقة الاعتيادية"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:24
+msgid ""
+"If the screen should be dimmed to save power when the computer is idle when "
+"on AC power."
+msgstr "إن كان يفترض خفض إضاءة الشاشة لحفظ الطاقة إذا كان الحاسوب في حالة خامدة أثناء استعمال الطاقة الاعتيادية"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:25
+msgid "Method used to blank screen on AC"
+msgstr "الطريقة المستخدمة لإفراغ الشاشة مع التيار المتردد"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:26
+msgid "The DPMS method used to blank the screen when on AC power."
+msgstr "طريقة DPMS المستعملة لتفريغ الشّاشة وذلك في حالة التّيار المتردد."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:27
+msgid "Method used to blank screen on battery"
+msgstr "الطريقة المستخدمة لإفراغ الشاشة مع البطارية"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:28
+msgid "The DPMS method used to blank the screen when on battery power."
+msgstr "طريقة DPMS المستعملة لتفريغ الشّاشة وذلك في حالة التّيار البطارية."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:29
+msgid "LCD brightness when on AC"
+msgstr "سطوع شاشة الكريستال السائل LCD عند استخدام التيار المتردد"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:30
+msgid ""
+"The brightness of the display when on AC power. Possible values are between "
+"0.0 and 100.0."
+msgstr "توهج الشاشة عند استعمال التيار. القيم الممكنة بين 0.0 و 100.0.  "
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:31
+msgid "Suspend button action"
+msgstr "إجراء زر التعليق"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:32
+msgid "The action to take when the system suspend button is pressed."
+msgstr "الإجراءات المتّبعة عند الضّغط على زرّ التّعليق."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:33
+msgid "Hibernate button action"
+msgstr "إجراء زر السبات"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:34
+msgid "The action to take when the system hibernate button is pressed."
+msgstr "الإجراءات المتّبعة عند الضّغط على زرّ الإسبات."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:35
+msgid "Power button action"
+msgstr "إجراء زر الطاقة"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:36
+msgid "The action to take when the system power button is pressed."
+msgstr "الإجراءات المتّبعة عند الضّغط على زرّ التّشغيل."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:37
+msgid "Laptop lid close action on battery"
+msgstr "الإجراء اللازم عند إغلاق غطاء الجهاز المحمول أثناء استخدام البطارية"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:38
+msgid ""
+"The action to take when the laptop lid is closed and the laptop is on "
+"battery power."
+msgstr "الإجراءات المتّبعة عند مُلامسة قطعتي المحمول بعضهما و المحمول موصول بتيار البطّارية."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:39
+msgid "Laptop lid close action when on AC"
+msgstr "الإجراء اللازم عند إغلاق غطاء الجهاز المحمول أثناء استخدام التيار المتردد"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:40
+msgid ""
+"The action to take when the laptop lid is closed and the laptop is on AC "
+"power."
+msgstr "الإجراءات المتّبعة عند مُلامسة قطعتي المحمول بعضهما و المحمول موصول بالتّيار المتردد."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:41
+msgid "Whether to use time-based notifications"
+msgstr "ما إذا يتم استخدام تنبيهات مبنية على الوقت"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:42
 msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
 msgstr "إن كان يفترض استعمال تنبيهات وقتية. إذا لم يتم تفعيل هذا الخيار, سيتم استعمال تغير النسبة المئوية."
 
-#: ../data/mate-power-manager.schemas.in.h:29
-msgid "If we should show the low capacity warning for a broken battery"
-msgstr "إن كان سيُظهر تنبيه إفراغ البطارية إذا كانت البطارية فاسدة"
-
-#: ../data/mate-power-manager.schemas.in.h:30
-msgid "If we should show the low capacity warning for a broken battery."
-msgstr "إن كان سيُظهر تنبيه إفراغ البطارية إذا كانت البطارية فاسدة."
-
-#: ../data/mate-power-manager.schemas.in.h:31
-msgid "If we should show the recalled battery warning for a broken battery"
-msgstr "إن كان سيُظهر تنبيه البطارية المعاد إذا كانت البطارية فاسدة"
-
-#: ../data/mate-power-manager.schemas.in.h:32
-msgid ""
-"If we should show the recalled battery warning for a broken battery. Set "
-"this to false only if you know your battery is okay."
-msgstr "أظهر تنبيه إفراغ البطارية إذا كانت البطارية فاسدة. اختر  FALSE إذا كانت البطارية في حالة جيدة."
-
-#: ../data/mate-power-manager.schemas.in.h:33
-msgid "LCD brightness when on AC"
-msgstr "سطوع شاشة الكريستال السائل LCD عند استخدام التيار المتردد"
-
-#: ../data/mate-power-manager.schemas.in.h:34
-msgid "LCD dimming amount when on battery"
-msgstr "درجة خفوت شاشة الكريستال السائل عند استخدام البطارية"
-
-#: ../data/mate-power-manager.schemas.in.h:35
-msgid "Laptop lid close action on battery"
-msgstr "الإجراء اللازم عند إغلاق غطاء الجهاز المحمول أثناء استخدام البطارية"
-
-#: ../data/mate-power-manager.schemas.in.h:36
-msgid "Laptop lid close action when on AC"
-msgstr "الإجراء اللازم عند إغلاق غطاء الجهاز المحمول أثناء استخدام التيار المتردد"
-
-#: ../data/mate-power-manager.schemas.in.h:37
-msgid "Lock MATE keyring on sleep"
-msgstr "أغلق حلقة مفاتيح جنوم عند النوم"
-
-#: ../data/mate-power-manager.schemas.in.h:38
-msgid "Lock screen on hibernate"
-msgstr "أقفل الشاشة في حالة السبات"
-
-#: ../data/mate-power-manager.schemas.in.h:39
-msgid "Lock screen on suspend"
-msgstr "أقفل الشاشة في حالة التعليق"
-
-#: ../data/mate-power-manager.schemas.in.h:40
-msgid "Lock screen when blanked"
-msgstr "أقفل الشاشة عند الإفراغ"
-
-#: ../data/mate-power-manager.schemas.in.h:41
-msgid "Method used to blank screen on AC"
-msgstr "الطريقة المستخدمة لإفراغ الشاشة مع التيار المتردد"
-
-#: ../data/mate-power-manager.schemas.in.h:42
-msgid "Method used to blank screen on battery"
-msgstr "الطريقة المستخدمة لإفراغ الشاشة مع البطارية"
-
-#: ../data/mate-power-manager.schemas.in.h:43
-msgid "Notify on a low power"
-msgstr "التبليغ في حالة الطاقة المنخفضة"
-
-#: ../data/mate-power-manager.schemas.in.h:44
-msgid "Notify on a sleep failure"
-msgstr "التبليغ في حال فشل النوم"
-
-#: ../data/mate-power-manager.schemas.in.h:45
-msgid "Notify when AC adapter is disconnected"
-msgstr "التنبيه حين يتم فصل التيار المتردد"
-
-#: ../data/mate-power-manager.schemas.in.h:46
-msgid "Notify when fully charged"
-msgstr "التنبيه حين اكتمال الشحن"
-
-#: ../data/mate-power-manager.schemas.in.h:47
-msgid "Percentage action is taken"
-msgstr "تم إتخاذ الإجراء النسبي"
-
-#: ../data/mate-power-manager.schemas.in.h:48
-msgid "Percentage considered critical"
-msgstr "النسبة تُعد حرجة"
-
-#: ../data/mate-power-manager.schemas.in.h:49
-msgid "Percentage considered low"
-msgstr "النسبة تُعد منخفضة"
-
-#: ../data/mate-power-manager.schemas.in.h:50
-msgid "Power button action"
-msgstr "إجراء زر الطاقة"
-
-#: ../data/mate-power-manager.schemas.in.h:51
-msgid "Reduce the backlight brightness when on battery power"
-msgstr "خفض سطوع الإضاءة الخلفية أثناء استعمال طاقة البطارية"
-
-#: ../data/mate-power-manager.schemas.in.h:52
-msgid "Seconds of inactivity to spin down when on AC"
-msgstr ""
-
-#: ../data/mate-power-manager.schemas.in.h:53
-msgid "Seconds of inactivity to spin down when on battery"
-msgstr ""
-
-#: ../data/mate-power-manager.schemas.in.h:54
-msgid "Sleep timeout computer when on AC"
-msgstr "جعل الحاسوب ينام بعد فترة الإستراحة عندما يكون على التيار"
-
-#: ../data/mate-power-manager.schemas.in.h:55
-msgid "Sleep timeout computer when on UPS"
-msgstr ""
-
-#: ../data/mate-power-manager.schemas.in.h:56
-msgid "Sleep timeout computer when on battery"
-msgstr "جعل الحاسوب ينام بعد فترة الإستراحة عندما يكون على البطارية"
-
-#: ../data/mate-power-manager.schemas.in.h:57
-msgid "Sleep timeout display when on AC"
-msgstr "جعل الشاشة تنام بعد فترة الإستراحة عندما يكون على التيار"
-
-#: ../data/mate-power-manager.schemas.in.h:58
-msgid "Sleep timeout display when on UPS"
-msgstr ""
-
-#: ../data/mate-power-manager.schemas.in.h:59
-msgid "Sleep timeout display when on battery"
-msgstr "جعل الشاشة تنام بعد فترة الإستراحة عندما يكون على البطارية"
-
-#: ../data/mate-power-manager.schemas.in.h:60
-msgid "Suspend button action"
-msgstr "إجراء زر التعليق"
-
-#: ../data/mate-power-manager.schemas.in.h:61
-msgid ""
-"The DPMS method used to blank the screen when on AC power. Possible values "
-"are \"standby\", \"suspend\" and \"off\"."
-msgstr ""
-
-#: ../data/mate-power-manager.schemas.in.h:62
-msgid ""
-"The DPMS method used to blank the screen when on battery power. Possible "
-"values are \"standby\", \"suspend\" and \"off\"."
-msgstr ""
-
-#: ../data/mate-power-manager.schemas.in.h:63
-msgid "The URI to show to the user on sleep failure"
-msgstr ""
-
-#: ../data/mate-power-manager.schemas.in.h:64
-msgid ""
-"The action to take when the UPS is critically low. Possible values are "
-"\"hibernate\", \"suspend\", \"shutdown\" and \"nothing\"."
-msgstr "الاجراء الواجب اتخاذه عندما تكون بطارية UPS في مستوى متدن جدا. القيم الممكنة هي \"سبات\", \"توقيف\", \"إطفاء\" و \"لا شيء\"."
-
-#: ../data/mate-power-manager.schemas.in.h:65
-msgid ""
-"The action to take when the UPS is low. Possible values are \"hibernate\", "
-"\"suspend\", \"shutdown\" and \"nothing\"."
-msgstr "التصرف الذي ينفذ عندما طاقة ال UPS منخفضة. القيم الممكنة هى \"سبت\", \"علـّق\", \"أطفئ\" و \"لا شيء\"."
-
-#: ../data/mate-power-manager.schemas.in.h:66
-msgid ""
-"The action to take when the battery is critically low. Possible values are "
-"\"hibernate\", \"suspend\", \"shutdown\" and \"nothing\"."
-msgstr "الاجراء الواجب اتخاذه عندما تكون البطارية في مستوى متدن جدا. القيم الممكنة هي \"سبات\", \"توقيف\", \"إطفاء\" و \"لا شيء\"."
-
-#: ../data/mate-power-manager.schemas.in.h:67
-msgid ""
-"The action to take when the laptop lid is closed and the laptop is on AC "
-"power. Possible values are \"suspend\", \"hibernate\", \"blank\" and "
-"\"nothing\"."
-msgstr "الاجراء الواجب اتخاذه عند غلق غطاء الحاسوب المحمول و هو موصول بالتيار. القيم الممكنة هي \"توقيف\", \"سبات\", \"فراغ\" و \"لا شيء\"."
-
-#: ../data/mate-power-manager.schemas.in.h:68
-msgid ""
-"The action to take when the laptop lid is closed and the laptop is on "
-"battery power. Possible values are \"suspend\", \"hibernate\", \"blank\", "
-"and \"nothing\"."
-msgstr "االاجراء الواجب اتخاذه عند غلق غطاء الحاسوب المحمول و هو يعمل على البطارية. القيم الممكنة هي \"توقيف\", \"سبات\", \"فراغ\" و \"لا شيء\"."
-
-#: ../data/mate-power-manager.schemas.in.h:69
-msgid ""
-"The action to take when the system hibernate button is pressed. Possible "
-"values are \"suspend\", \"hibernate\", \"interactive\", \"shutdown\" and "
-"\"nothing\"."
-msgstr "االاجراء الواجب اتخاذه عند ضغط زر السبات للجهاز. القيم الممكنة هي \"توقيف\", \"سبات\", \"السؤال\", \"إطفاء\" و \"لا شيء\"."
-
-#: ../data/mate-power-manager.schemas.in.h:70
-msgid ""
-"The action to take when the system power button is pressed. Possible values "
-"are \"suspend\", \"hibernate\", \"interactive\", \"shutdown\" and "
-"\"nothing\"."
-msgstr "االاجراء الواجب اتخاذه عند ضغط زر الغلق للجهاز. القيم الممكنة هي \"توقيف\", \"سبات\", \"السؤال\", \"إطفاء\" و \"لا شيء\"."
-
-#: ../data/mate-power-manager.schemas.in.h:71
-msgid ""
-"The action to take when the system suspend button is pressed. Possible "
-"values are \"suspend\", \"hibernate\", \"interactive\", \"shutdown\" and "
-"\"nothing\"."
-msgstr "االاجراء الواجب اتخاذه عند ضغط زر التوقيف للجهاز. القيم الممكنة هي \"توقيف\", \"سبات\", \"السؤال\", \"إطفاء\" و \"لا شيء\"."
-
-#: ../data/mate-power-manager.schemas.in.h:72
-msgid ""
-"The amount of time in seconds before the display goes to sleep when the "
-"computer is on AC power."
-msgstr "مقدار الوقت بالثانية قبل نوم الشاشة عندما يكون الحاسوب موصولًا بالتيار."
-
-#: ../data/mate-power-manager.schemas.in.h:73
-msgid ""
-"The amount of time in seconds the computer on AC power needs to be inactive "
-"before it goes to sleep."
-msgstr "مقدار الوقت بالثانية بعد عدم استعمال الحاسوب على التيار قبل جعل الحاسوب في حالة نوم. "
-
-#: ../data/mate-power-manager.schemas.in.h:74
-msgid ""
-"The amount of time in seconds the computer on UPS power needs to be inactive"
-" before it goes to sleep."
-msgstr ""
-
-#: ../data/mate-power-manager.schemas.in.h:75
-msgid ""
-"The amount of time in seconds the computer on UPS power needs to be inactive"
-" before the display goes to sleep."
-msgstr ""
-
-#: ../data/mate-power-manager.schemas.in.h:76
-msgid ""
-"The amount of time in seconds the computer on battery power needs to be "
-"inactive before it goes to sleep."
-msgstr "مقدار الوقت بالثانية بعد عدم استعمال الحاسوب على البطاريه قبل جعل الحاسوب في حالة نوم. "
-
-#: ../data/mate-power-manager.schemas.in.h:77
-msgid ""
-"The amount of time in seconds the computer on battery power needs to be "
-"inactive before the display goes to sleep."
-msgstr "مقدار الوقت بالثانية بعد عدم استعمال الحاسوب على البطاريه و غير نشط قبل جعل الشاشة في حالة نوم. "
-
-#: ../data/mate-power-manager.schemas.in.h:78
-msgid ""
-"The amount to dim the brightness of the display when on battery power. "
-"Possible values are between 0 and 100."
-msgstr ""
-
-#: ../data/mate-power-manager.schemas.in.h:79
-msgid ""
-"The brightness of the display when on AC power. Possible values are between "
-"0 and 100."
-msgstr "توهج الشاشة عند استعمال التيار. القيم الممكنة بين 0 و 100.  "
-
-#: ../data/mate-power-manager.schemas.in.h:80
-msgid "The brightness of the screen when idle"
-msgstr "سطوع الشاشة عندما تكون في حالة خمول"
-
-#: ../data/mate-power-manager.schemas.in.h:81
-msgid "The default amount of time to dim the screen after idle"
-msgstr "وقت الخمول الافتراضي الذي ستُعتّم الشاشة بعده"
-
-#: ../data/mate-power-manager.schemas.in.h:82
-msgid "The default amount of time to dim the screen after idle."
-msgstr "وقت الخمول الافتراضي الذي ستُعتّم الشاشة بعده."
-
-#: ../data/mate-power-manager.schemas.in.h:83
-msgid "The default configuration version"
-msgstr "إصدار الإعدادات المبدئية"
-
-#: ../data/mate-power-manager.schemas.in.h:84
-msgid "The default graph type to show in the statistics window"
-msgstr "نوع الرسم البياني الافتراضي لإظهاره في نافذة الإحصاءات"
-
-#: ../data/mate-power-manager.schemas.in.h:85
-msgid "The default graph type to show in the statistics window."
-msgstr "نوع الرسم البياني الأفتراضي لأظهاره في نافذة الاحصاءات."
-
-#: ../data/mate-power-manager.schemas.in.h:86
-msgid "The maximum duration of time displayed on the x-axis of the graph."
-msgstr "أقصى مدة لظهور الوقت على محور-س في الرسم البياني"
-
-#: ../data/mate-power-manager.schemas.in.h:87
-msgid "The maximum time displayed on the graph"
-msgstr "أقصى ظهور للوقت على الرسم البياني"
-
-#: ../data/mate-power-manager.schemas.in.h:88
-msgid ""
-"The number of seconds of inactivity to spin down the disks when on AC power."
-msgstr ""
-
-#: ../data/mate-power-manager.schemas.in.h:89
-msgid ""
-"The number of seconds of inactivity to spin down the disks when on battery "
-"power."
-msgstr ""
-
-#: ../data/mate-power-manager.schemas.in.h:90
-msgid ""
-"The percentage of the battery when it is considered critical. Only valid "
-"when use_time_for_policy is false."
-msgstr "نسبة البطارية التي تعتبر حاسمة. فقط صحيحة عندما يكون use_time_for_policy غير صحيح. "
-
-#: ../data/mate-power-manager.schemas.in.h:91
-msgid ""
-"The percentage of the battery when it is considered low. Only valid when "
-"use_time_for_policy is false."
-msgstr "نسبة البطارية التي تعتبر منخفضة. فقط صحيحة عندما يكون use_time_for_policy غير صحيح. "
-
-#: ../data/mate-power-manager.schemas.in.h:92
-msgid ""
-"The percentage of the battery when the critical action is performed. Only "
-"valid when use_time_for_policy is false."
-msgstr "نسبة البطارية عند انجاز الإجراء الحاسم. فقط صحيحة عندما يكون use_time_for_policy غير صحيح. "
-
-#: ../data/mate-power-manager.schemas.in.h:93
-msgid ""
-"The time remaining in seconds of the battery when critical action is taken. "
-"Only valid when use_time_for_policy is true."
-msgstr "الوقت المتبقي للبطارية بالثواني عند انجاز الاجراء الحاسم. فقط صحيحة عندما يكون use_time_for_policy صحيح."
-
-#: ../data/mate-power-manager.schemas.in.h:94
-msgid ""
-"The time remaining in seconds of the battery when it is considered critical."
-" Only valid when use_time_for_policy is true."
-msgstr "الوقت المتبقي للبطارية بالثواني عند اعتبارها حاسمة. فقط صحيحة عندما يكون use_time_for_policy صحيح."
-
-#: ../data/mate-power-manager.schemas.in.h:95
-msgid ""
-"The time remaining in seconds of the battery when it is considered low. Only"
-" valid when use_time_for_policy is true."
-msgstr "الوقت المتبقي للبطارية بالثواني عند اعتبارها منخفضة. فقط صحيحة عندما يكون use_time_for_policy صحيح."
-
-#: ../data/mate-power-manager.schemas.in.h:96
-msgid "The time remaining when action is taken"
-msgstr "الوقت المتبقي بعد إتخاذ الإجراء اللازم"
-
-#: ../data/mate-power-manager.schemas.in.h:97
-msgid "The time remaining when critical"
-msgstr "الوقت المتبقي في الحالة الحرجة"
-
-#: ../data/mate-power-manager.schemas.in.h:98
-msgid "The time remaining when low"
-msgstr "الوقت المتبقي في الحالة المنخفضة"
-
-#: ../data/mate-power-manager.schemas.in.h:99
-msgid ""
-"The type of sleeping that should be performed when the computer is inactive."
-" Possible values are \"hibernate\", \"suspend\" and \"nothing\"."
-msgstr "نوع النوم الذي ينبغي ان يقوم فيه الحاسوب بعد عدم النشاط. القيم الممكنة هي \"سبات\", \"توقيف\" و \"لا شيء\"."
-
-#: ../data/mate-power-manager.schemas.in.h:100
-msgid ""
-"The version of the installed version of the schema. Do not edit this value, "
-"it is used so that configure changes between versions can be detected."
-msgstr "رقم النسخة المثبتة من المخطط. لا تحرّر هذه القيمة، إنها تُتسخدم لكي يتمكن الإعداد من التفريق بين النُسخ."
-
-#: ../data/mate-power-manager.schemas.in.h:101
-msgid ""
-"This is the laptop panel screen brightness used when the session is idle. "
-"Only valid when use_time_for_policy is true."
-msgstr "التوهج المستعمل لشاشة الحاسوب النقال عندما تكون الجلسة غير نشطة. تستعمل فقط عندما تكون use_time_for_policy صحيح. "
-
-#: ../data/mate-power-manager.schemas.in.h:102
-msgid "UPS critical low action"
-msgstr "الإجراء العاجل لـ UPS"
-
-#: ../data/mate-power-manager.schemas.in.h:103
-msgid "UPS low power action"
-msgstr "تصرف الUPS في حالة الطاقة المنخفضة"
-
-#: ../data/mate-power-manager.schemas.in.h:104
-msgid "Use mate-screensaver lock setting"
-msgstr "استعمل خيارات القفل لـحافظ الشاشة لجنوم"
-
-#: ../data/mate-power-manager.schemas.in.h:105
-msgid ""
-"When sleep fails we can show the user a button to help fix the situation. "
-"Leave this blank if the button should not be shown."
-msgstr ""
-
-#: ../data/mate-power-manager.schemas.in.h:106
-msgid "When to show the notification icon"
-msgstr "متى يتم عرض ايقونة التنبيه"
-
-#: ../data/mate-power-manager.schemas.in.h:107
-msgid "Whether NetworkManager should be connected and disconnected on sleep"
-msgstr ""
-
-#: ../data/mate-power-manager.schemas.in.h:108
+#: ../data/org.mate.power-manager.gschema.xml.in.h:43
+msgid "Check CPU load before sleeping"
+msgstr "راجع حِمْل المعالج قبل النوم"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:44
+msgid "If the CPU load should be checked before doing the idle action."
+msgstr "إذا يفترض التأكد من تحميل المعالج قبل عمل إجراء الخمول."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:45
+msgid "Whether NetworkManager should be connected and disconnected on sleep."
+msgstr "ما إذا سيكون مُدير الشّبكة مُتّصلًا أو لا عند النّوم."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:46
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
 msgstr "فك اتصال مدير الشبكة عند التعليق أو الإسبات وأوصله عند الاسترجاع."
 
-#: ../data/mate-power-manager.schemas.in.h:109
-msgid ""
-"Whether the MATE keyring is locked before the computer enters hibernate. "
-"This means the keyring will have to be unlocked on resume."
-msgstr "إن كانت حلقة مفاتيح جنوم مقفلة قبل دخول الحاسوب لحالة الإسبات. هذا يعني أن حلقة المفاتيح ستُفتح عند المتابعة."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:47
+msgid "Use mate-screensaver lock setting"
+msgstr "استعمل خيارات القفل لـحافظة الشاشة لمتّة"
 
-#: ../data/mate-power-manager.schemas.in.h:110
-msgid ""
-"Whether the MATE keyring is locked before the computer enters suspend. This "
-"means the keyring will have to be unlocked on resume."
-msgstr "إن كانت حلقة مفاتيح جنوم مقفلة قبل دخول الحاسوب لحالة التعليق. هذا يعني أن حلقة المفاتيح ستُفتح عند المتابعة."
-
-#: ../data/mate-power-manager.schemas.in.h:111
-msgid ""
-"Whether the screen is locked when the computer wakes up from a hibernate. "
-"Only used if lock_use_screensaver_settings is false."
-msgstr "إن كان يفترض قفل الشاشة عند إيقاظ الحاسوب من السبات. يتم استعمالها فقط إذا كان  lock_use_screensaver_settings محددا ب false."
-
-#: ../data/mate-power-manager.schemas.in.h:112
-msgid ""
-"Whether the screen is locked when the computer wakes up from a suspend. Only"
-" used if lock_use_screensaver_settings is false."
-msgstr "إن كان يفترض قفل الشاشة عند إيقاظ الحاسوب من التوقيف. يتم استعمالها فقط إذا كان  lock_use_screensaver_settings محددًا ب false."
-
-#: ../data/mate-power-manager.schemas.in.h:113
-msgid ""
-"Whether the screen is locked when the screen is turned off. Only used if "
-"lock_use_screensaver_settings is false."
-msgstr "إن كانت الشاشة مقفلة أثناء إغلاق الشاشة. تستخدم فقط إن كان lock_use_screensaver_settings محددًا ب false."
-
-#: ../data/mate-power-manager.schemas.in.h:114
-msgid "Whether to hibernate, suspend or do nothing when inactive"
-msgstr "ما إذا يتم سبات, توقيف أو فعل لا شيء عند عدم النشاط"
-
-#: ../data/mate-power-manager.schemas.in.h:115
+#: ../data/org.mate.power-manager.gschema.xml.in.h:48
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
 msgstr "إن كانت ستُستخدم خيارات القفل ل mate-screensaver لتحديد هل يتم قفل الشاشة بعد السبات أو التوقيف أو فراغ الشاشة."
 
-#: ../data/mate-power-manager.schemas.in.h:116
-msgid "Whether to use time-based notifications"
-msgstr "ما إذا يتم استخدام تنبيهات مبنية على الوقت"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:49
+msgid "Lock screen when blanked"
+msgstr "أقفل الشاشة عند الإفراغ"
 
-#: ../data/mate-power-manager.schemas.in.h:117
-msgid "Whether we should show the axis labels in the statistics window"
-msgstr "في حال ما توجب علينا اظهار رقع المحور في نافذة الإحصاءات"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:50
+msgid ""
+"Whether the screen is locked when the screen is turned off. Only used if "
+"lock-use-screensaver is false."
+msgstr "إن كانت الشاشة مقفلة أثناء إغلاق الشاشة. تستخدم فقط إن كان  lock-use-screensaver-settings محددًا ب false."
 
-#: ../data/mate-power-manager.schemas.in.h:118
-msgid "Whether we should show the axis labels in the statistics window."
-msgstr "في حال ما توجب علينا اظهار رقع المحور في نافذة الإحصاءات."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:51
+msgid "Lock screen on suspend"
+msgstr "أقفل الشاشة في حالة التعليق"
 
-#: ../data/mate-power-manager.schemas.in.h:119
-msgid "Whether we should show the events in the statistics window"
-msgstr "في حال ما توجب علينا اظهار الأحداث في نافذة الإحصاءات"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:52
+msgid ""
+"Whether the screen is locked when the computer wakes up from a suspend. Only"
+" used if lock-use-screensaver is false."
+msgstr "إن كان يفترض قفل الشاشة عند إيقاظ الحاسوب من التوقيف. يتم استعمالها فقط إذا كان  lock-use-screensaver-settings محددًا ب false."
 
-#: ../data/mate-power-manager.schemas.in.h:120
-msgid "Whether we should show the events in the statistics window."
-msgstr "في حال ما توجب علينا اظهار الأحداث في نافذة الإحصاءات"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:53
+msgid "Lock screen on hibernate"
+msgstr "أقفل الشاشة في حالة السبات"
 
-#: ../data/mate-power-manager.schemas.in.h:121
-msgid "Whether we should smooth the data in the graph"
-msgstr "في حال ما توجب علينا صقل البيانات في الرسم البياني"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:54
+msgid ""
+"Whether the screen is locked when the computer wakes up from a hibernate. "
+"Only used if lock-use-screensaver is false."
+msgstr "إن كان يفترض قفل الشاشة عند إيقاظ الحاسوب من السبات. يتم استعمالها فقط إذا كان  lock-use-screensaver-settings محددا ب false."
 
-#: ../data/mate-power-manager.schemas.in.h:122
-msgid "Whether we should smooth the data in the graph."
-msgstr "في حال ما توجب علينا صقل البيانات في الرسم البياني."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:55
+msgid "Lock MATE keyring on sleep"
+msgstr "أغلق حلقة مفاتيح متّة عند النوم"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:56
+msgid ""
+"Whether the MATE keyring is locked before the computer enters suspend. This "
+"means the keyring will have to be unlocked on resume."
+msgstr "إن كانت حلقة مفاتيح متّة مُقفلة قبل دخول الحاسوب لحالة التعليق. هذا يعني أن حلقة المفاتيح ستُفتح عند المتابعة."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:57
+msgid ""
+"Whether the MATE keyring is locked before the computer enters hibernate. "
+"This means the keyring will have to be unlocked on resume."
+msgstr "إن كانت حلقة مفاتيح متّة مقفلة قبل دخول الحاسوب لحالة الإسبات. هذا يعني أن حلقة المفاتيح ستُفتح عند المتابعة."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:58
+msgid "If the low-power mode should be enabled when on AC"
+msgstr "إذا يفترض تفعيل نمط الطاقة-المنخفضة أثناء العمل على التيار المتردد"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:59
+msgid "If the system low-power mode should be enabled when on AC power."
+msgstr "إن كان يفترض تفعيل وضع الطاقة المنخفضة للنظام في حال كون الجهاز يعمل على التيار المتردد"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:60
+msgid "If the low-power mode should be enabled when on battery"
+msgstr "إذا يفترض تفعيل نمط الطاقة-المنخفضة أثناء العمل على البطارية"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:61
+msgid ""
+"If the system low-power mode should be enabled when on laptop battery power."
+msgstr "إن كان يفترض تفعيل وضع الطاقة المنخفضة للنظام في حال كون الجهاز يعمل على البطارية"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:62
+msgid "Seconds of inactivity to spin down when on AC"
+msgstr "عدد الثواني التي يكون فيها الجهاز غير نشط لإطفائه عندما يكون على التّيار"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:63
+msgid ""
+"The number of seconds of inactivity to spin down the disks when on AC power."
+msgstr "عدد الثواني التي يكون فيها الجهاز غير نشط لإطفائه عندما يكون على التّيار"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:64
+msgid "Seconds of inactivity to spin down when on battery"
+msgstr "عدد الثواني التي يكون فيها الجهاز غير نشط لإطفائه عندما يكون على البطاريّة"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:65
+msgid ""
+"The number of seconds of inactivity to spin down the disks when on battery "
+"power."
+msgstr "عدد الثواني التي يكون فيها الجهاز غير نشط لإطفائه عندما يكون على البطاريّة"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:66
+msgid "If we should show the recalled battery warning for a broken battery"
+msgstr "إن كان سيُظهر تنبيه البطارية المعاد إذا كانت البطارية فاسدة"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:67
+msgid ""
+"If we should show the recalled battery warning for a broken battery. Set "
+"this to false only if you know your battery is okay."
+msgstr "أظهر تنبيه إفراغ البطارية إذا كانت البطارية فاسدة. اختر  FALSE إذا كانت البطارية في حالة جيدة."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:68
+msgid "If we should show the low capacity warning for a broken battery"
+msgstr "إن كان سيُظهر تنبيه إفراغ البطارية إذا كانت البطارية فاسدة"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:69
+msgid "If we should show the low capacity warning for a broken battery."
+msgstr "إن كان سيُظهر تنبيه إفراغ البطارية إذا كانت البطارية فاسدة."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:70
+msgid "Notify when AC adapter is disconnected"
+msgstr "التنبيه حين يتم فصل التيار المتردد"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:71
+msgid "If the user should be notified when the AC adapter is disconnected."
+msgstr "إذا يفترض إعلام المستخدم في حال إنقطاع التيار المتردد"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:72
+msgid "Notify when fully charged"
+msgstr "التنبيه حين اكتمال الشحن"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:73
+msgid ""
+"If a notification message should be displayed when the battery is fully "
+"charged."
+msgstr "إن كان يفترض إظهار رسالة تنبيهية في حال اكتمال شحن البطارية"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:74
+msgid "Notify on a sleep failure"
+msgstr "التبليغ في حال فشل النوم"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:75
+msgid ""
+"If a notification message should be displayed after suspend or hibernate "
+"failed."
+msgstr "إن كان يفترض إظهار رسالة تنبيهية في حال فشل تعليق أو إسبات الحاسوب"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:76
+msgid "The URI to show to the user on sleep failure"
+msgstr "إظهار رابط URI للمستخدم في حال فشل النّوم"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:77
+msgid ""
+"When sleep fails we can show the user a button to help fix the situation. "
+"Leave this blank if the button should not be shown."
+msgstr "عند فشل وضع النّوم بإمكاننا عرض زرّ للمُستخدم ليساعده في الإصلاح. اتركه فارغًا في حال عدم رغبتك بمشاهدة ذلك الزّر."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:78
+msgid "Notify on a low power"
+msgstr "التبليغ في حالة الطاقة المنخفضة"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:79
+msgid ""
+"If a notification message should be displayed when the battery is getting "
+"low."
+msgstr "نبّهني إذا كانت البطارية ضعيفة الشحن."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:80
+msgid "Whether we should show the history data points"
+msgstr "ما إذا سيتم عرض نقاط بيانات التأريخ"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:81
+msgid ""
+"Whether we should show the history data points in the statistics window."
+msgstr "ما إذا سيتم عرض نقاط بيانات التأريخ في نافذة الإحصائيات."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:82
+msgid "Whether we should smooth the history data"
+msgstr "في حال ما توجب علينا صقل بيانات التّأريخ في الرسم البياني"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:83
+msgid "Whether we should smooth the history data in the graph."
+msgstr "في حال ما توجب علينا صقل بيانات التّأريخ في الرسم البياني."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:84
+msgid "The default graph type to show for history"
+msgstr "نوع الرسم البياني الافتراضي لإظهاره في التّأريخ"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:85
+msgid "The default graph type to show in the history window."
+msgstr "نوع الرسم البياني الأفتراضي لإظهاره في نافذة التأريخ."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:86
+msgid "The maximum time displayed for history"
+msgstr "أقصى ظهور للوقت في التأريخ"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:87
+msgid ""
+"The maximum duration of time displayed on the x-axis of the history graph."
+msgstr "أقصى مدة لظهور الوقت على محور-س في الرسم البياني للتأريخ."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:88
+msgid "Whether we should show the stats data points"
+msgstr "ما إذا سيتم عرض نقاط بيانات الإحصائيات"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:89
+msgid "Whether we should show the stats data points in the statistics window."
+msgstr "في حال ما توجب علينا إظهار نقاط بيانات الإحصاء في نافذة الإحصاءات."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:90
+msgid "Whether we should smooth the stats data"
+msgstr "في حال ما توجب علينا صقل بيانات الإحصائيات"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:91
+msgid "Whether we should smooth the stats data in the graph."
+msgstr "في حال ما توجب علينا صقل بيانات الإحصائيات في الرسم البياني."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:92
+msgid "The default graph type to show for stats"
+msgstr "نوع الرسم البياني الافتراضي لإظهاره في الإحصائيات"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:93
+msgid "The default graph type to show in the stats window."
+msgstr "نوع الرسم البياني الأفتراضي لأظهاره في نافذة الاحصاءات."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:94
+msgid "The index of the page number to show by default"
+msgstr "فهرس رقم الصّفحة لإظهاره افتراضيًا"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:95
+msgid ""
+"The index of the page number to show by default which is used to return "
+"focus to the correct page."
+msgstr "فهرس رقم الصّفحة لإظهاره افتراضيًا حيث يُستخدم للتّركيز على الصّفحة الصّحيحة"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:96
+msgid "The ID of the last device selected"
+msgstr "معرّف آخر جهار تم اختياره"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:97
+msgid ""
+"The identifier of the last device which is used to return focus to the "
+"correct device."
+msgstr "مُعرّف آخر جهاز حيث يستخدم للتّركيز على الجهاز الصّحيح."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:98
+msgid "Percentage considered low"
+msgstr "النسبة تُعد منخفضة"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:99
+msgid ""
+"The percentage of the battery when it is considered low. Only valid when "
+"use-time-for-policy is false."
+msgstr "نسبة البطارية التي تعتبر منخفضة. فقط صحيحة عندما يكون use-time-for-policy غير صحيح. "
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:100
+msgid "Percentage considered critical"
+msgstr "النسبة تُعد حرجة"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:101
+msgid ""
+"The percentage of the battery when it is considered critical. Only valid "
+"when use-time-for-policy is false."
+msgstr "نسبة البطارية التي تعتبر حاسمة. فقط صحيحة عندما يكون use-time-for-policy غير صحيح. "
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:102
+msgid "Percentage action is taken"
+msgstr "تم إتخاذ الإجراء النسبي"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:103
+msgid ""
+"The percentage of the battery when the critical action is performed. Only "
+"valid when use-time-for-policy is false."
+msgstr "نسبة البطارية عند انجاز الإجراء الحاسم. فقط صحيحة عندما يكون use-time-for-policy غير صحيح. "
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:104
+msgid "The time remaining when low"
+msgstr "الوقت المتبقي في الحالة المنخفضة"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:105
+msgid ""
+"The time remaining in seconds of the battery when it is considered low. Only"
+" valid when use-time-for-policy is true."
+msgstr "الوقت المتبقي للبطارية بالثواني عند اعتبارها منخفضة. فقط صحيحة عندما يكون use-time-for-policy صحيح."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:106
+msgid "The time remaining when critical"
+msgstr "الوقت المتبقي في الحالة الحرجة"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:107
+msgid ""
+"The time remaining in seconds of the battery when it is considered critical."
+" Only valid when use-time-for-policy is true."
+msgstr "الوقت المتبقي للبطارية بالثواني عند اعتبارها حاسمة. فقط صحيحة عندما يكون use-time-for-policy صحيح."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:108
+msgid "The time remaining when action is taken"
+msgstr "الوقت المتبقي بعد إتخاذ الإجراء اللازم"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:109
+msgid ""
+"The time remaining in seconds of the battery when critical action is taken. "
+"Only valid when use-time-for-policy is true."
+msgstr "الوقت المتبقي للبطارية بالثواني عند انجاز الاجراء الحاسم. فقط صحيحة عندما يكون use-time-for-policy صحيح."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:110
+msgid "Sleep timeout computer when on battery"
+msgstr "جعل الحاسوب ينام بعد فترة الاستراحة عندما يكون على البطارية"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:111
+msgid ""
+"The amount of time in seconds the computer on battery power needs to be "
+"inactive before it goes to sleep."
+msgstr "مقدار الوقت بالثانية بعد عدم استعمال الحاسوب على البطارية قبل جعل الحاسوب في حالة نوم. "
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:112
+msgid "Sleep timeout computer when on AC"
+msgstr "جعل الحاسوب ينام بعد فترة الاستراحة عندما يكون على التيار"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:113
+msgid ""
+"The amount of time in seconds the computer on AC power needs to be inactive "
+"before it goes to sleep."
+msgstr "مقدار الوقت بالثانية بعد عدم استعمال الحاسوب على التيار قبل جعل الحاسوب في حالة نوم. "
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:114
+msgid "Sleep timeout computer when on UPS"
+msgstr "جعل الحاسوب ينام بعد فترة الاستراحة عندما يكون على وحدة التخزين UPS"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:115
+msgid ""
+"The amount of time in seconds the computer on UPS power needs to be inactive"
+" before it goes to sleep."
+msgstr "كميّة الوقت بالثّواني لجعل الحاسب غير نشط قبل وضع النّوم ، و ذلك عند العمل على وحدة تخزين الطاقة UPS."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:116
+msgid "Sleep timeout display when on AC"
+msgstr "جعل الشاشة تنام بعد فترة الاستراحة عندما يكون على التيار"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:117
+msgid ""
+"The amount of time in seconds before the display goes to sleep when the "
+"computer is on AC power."
+msgstr "مقدار الوقت بالثانية قبل نوم الشاشة عندما يكون الحاسوب موصولًا بالتيار."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:118
+msgid "Sleep timeout display when on battery"
+msgstr "جعل الشاشة تنام بعد فترة الاستراحة عندما يكون على البطارية"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:119
+msgid ""
+"The amount of time in seconds the computer on battery power needs to be "
+"inactive before the display goes to sleep."
+msgstr "مقدار الوقت بالثانية بعد عدم استعمال الحاسوب على البطارية و غير نشط قبل جعل الشاشة في حالة نوم. "
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:120
+msgid "Sleep timeout display when on UPS"
+msgstr "جعل الشاشة تنام بعد فترة الاستراحة عندما يكون على وحدة التخزين UPS"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:121
+msgid ""
+"The amount of time in seconds the computer on UPS power needs to be inactive"
+" before the display goes to sleep."
+msgstr "كميّة الوقت بالثّواني لجعل الحاسب غير نشط قبل جعل جهاز العرض في وضع النّوم ، و ذلك عند العمل على وحدة تخزين الطاقة UPS"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:122
+msgid "If sounds should be used"
+msgstr "إن كانت الأصوات ستُستخدم"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:123
+msgid ""
+"If sounds should be used when the power is critically low, or inhibit "
+"requests have stopped the policy action."
+msgstr "استعمل الأصوات إذا كانت الطاقة ضعيفة جدا أو أن طلبات التثبيط أوقفت عمل السياسة."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:124
+msgid ""
+"If preferences and statistics items should be shown in the context menu"
+msgstr "إذا ما كان يتعين عرض عنصر التفضيلات والإحصائيات في قائمة السياق"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:125
+msgid "When to show the notification icon"
+msgstr "متى يتم عرض ايقونة التنبيه"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:126
+msgid "Display options for the notification icon."
+msgstr "أظهر خيارات أيقونة التنبيهات."
 
 #: ../data/mate-power-preferences.desktop.in.in.h:1
-msgid "Configure power management"
-msgstr "اضبط إدارة الطاقة"
-
-#: ../data/mate-power-preferences.desktop.in.in.h:2
 msgid "Power Management"
 msgstr "إدارة الطاقة"
 
-#: ../data/mate-power-statistics.desktop.in.in.h:1
-msgid "Observe power management"
-msgstr "راجع إدارة الطاقة"
+#: ../data/mate-power-preferences.desktop.in.in.h:2
+msgid "Configure power management"
+msgstr "اضبط إدارة الطاقة"
 
 #. TRANSLATORS: shown on the titlebar
 #. TRANSLATORS: the program name
-#: ../data/mate-power-statistics.desktop.in.in.h:2
-#: ../data/gpm-statistics.ui.h:6 ../src/gpm-statistics.c:1092
-#: ../src/gpm-statistics.c:1579
+#: ../data/mate-power-statistics.desktop.in.in.h:1
+#: ../data/gpm-statistics.ui.h:1 ../data/gpm-statistics-deprecated.ui.h:1
+#: ../src/gpm-statistics.c:1091 ../src/gpm-statistics.c:1577
 msgid "Power Statistics"
 msgstr "إحصاءات الطاقة"
+
+#: ../data/mate-power-statistics.desktop.in.in.h:2
+msgid "Observe power management"
+msgstr "راجع إدارة الطاقة"
 
 #: ../data/gpm-feedback-widget.ui.h:1
 msgid "Brightness"
 msgstr "السطوع"
 
-#: ../data/gpm-statistics.ui.h:1
-msgid "0"
-msgstr "0"
-
-#: ../data/gpm-statistics.ui.h:2
-msgid "Data length:"
-msgstr "طول البيانات:"
-
-#: ../data/gpm-statistics.ui.h:3 ../src/gpm-statistics.c:210
+#: ../data/gpm-statistics.ui.h:2 ../data/gpm-statistics-deprecated.ui.h:2
+#: ../src/gpm-statistics.c:209
 msgid "Details"
 msgstr "التفاصيل"
 
-#: ../data/gpm-statistics.ui.h:4
+#: ../data/gpm-statistics.ui.h:3 ../data/gpm-statistics-deprecated.ui.h:3
 msgid "Graph type:"
 msgstr "نوع الرسم البياني:"
 
-#: ../data/gpm-statistics.ui.h:5
-msgid "History"
-msgstr "التأريخ"
+#: ../data/gpm-statistics.ui.h:4 ../data/gpm-statistics-deprecated.ui.h:4
+msgid "Data length:"
+msgstr "طول البيانات:"
 
-#: ../data/gpm-statistics.ui.h:7
-msgid "Processor wakeups per second:"
-msgstr "استيقاظا المعالج في الثانية:"
-
-#: ../data/gpm-statistics.ui.h:8
-msgid "Show data points"
-msgstr "أظهر نقاط البيانات"
-
-#: ../data/gpm-statistics.ui.h:9
-msgid "Statistics"
-msgstr "الإحصائيّات"
-
-#: ../data/gpm-statistics.ui.h:10
+#: ../data/gpm-statistics.ui.h:5 ../data/gpm-statistics-deprecated.ui.h:5
 msgid "There is no data to display."
 msgstr "لا بيانات لعرضها"
 
-#: ../data/gpm-statistics.ui.h:11
+#: ../data/gpm-statistics.ui.h:6 ../data/gpm-statistics-deprecated.ui.h:6
 msgid "Use smoothed line"
-msgstr "استخدم خطا منعّما"
+msgstr "استخدم خطا منعّمًا"
 
-#: ../data/gpm-statistics.ui.h:12 ../src/gpm-statistics.c:196
+#: ../data/gpm-statistics.ui.h:7 ../data/gpm-statistics-deprecated.ui.h:7
+msgid "Show data points"
+msgstr "أظهر نقاط البيانات"
+
+#: ../data/gpm-statistics.ui.h:8 ../data/gpm-statistics-deprecated.ui.h:8
+msgid "History"
+msgstr "التأريخ"
+
+#: ../data/gpm-statistics.ui.h:9 ../data/gpm-statistics-deprecated.ui.h:9
+msgid "Statistics"
+msgstr "الإحصائيّات"
+
+#: ../data/gpm-statistics.ui.h:10 ../data/gpm-statistics-deprecated.ui.h:10
+msgid "Processor wakeups per second:"
+msgstr "استيقاظا المعالج في الثانية:"
+
+#: ../data/gpm-statistics.ui.h:11 ../data/gpm-statistics-deprecated.ui.h:11
+msgid "0"
+msgstr "0"
+
+#: ../data/gpm-statistics.ui.h:12 ../data/gpm-statistics-deprecated.ui.h:12
+#: ../src/gpm-statistics.c:195
 msgid "Wakeups"
 msgstr "الاستيقاظات"
 
-#: ../data/gpm-prefs.ui.h:1
-msgid "<b>Actions</b>"
-msgstr "<b>الإجراءات</b>"
-
-#: ../data/gpm-prefs.ui.h:2
-msgid "<b>Display</b>"
-msgstr "<b>الشاشة</b>"
-
-#: ../data/gpm-prefs.ui.h:3
-msgid "<b>Notification Area</b>"
-msgstr "<b>مساحة التبليغ</b>"
-
-#: ../data/gpm-prefs.ui.h:4
-msgid "Closes the program"
-msgstr "تغلق البرنامج"
-
-#: ../data/gpm-prefs.ui.h:5
-msgid "Di_m display when idle"
-msgstr "_عتّم الشاشة عند الخمول"
-
-#: ../data/gpm-prefs.ui.h:6
-msgid "General"
-msgstr "عام"
-
-#: ../data/gpm-prefs.ui.h:7
-msgid "Make Default"
-msgstr "اجعله المبدئي"
-
-#: ../data/gpm-prefs.ui.h:8
-msgid "On AC Power"
-msgstr "على الطاقة الاعتيادية"
-
-#: ../data/gpm-prefs.ui.h:9
-msgid "On Battery Power"
-msgstr "على طاقة البطارية"
-
-#: ../data/gpm-prefs.ui.h:10
-msgid "On UPS Power"
-msgstr "على طاقة UPS"
-
-#: ../data/gpm-prefs.ui.h:11
-msgid "Only display an icon when a battery is p_resent"
-msgstr "اعرض الأيقونة فقط في حالة وجود _بطارية"
-
-#: ../data/gpm-prefs.ui.h:12
-msgid "Only display an icon when charging or _discharging"
-msgstr "اعرض الأيقونة فقط في حالة ال_شحن أو الإفراغ"
-
-#: ../data/gpm-prefs.ui.h:13
+#: ../data/gpm-prefs.ui.h:1 ../data/gpm-prefs-deprecated.ui.h:1
 msgid "Power Management Preferences"
 msgstr "تفضيلات إدارة الطاقة"
 
-#: ../data/gpm-prefs.ui.h:14
-msgid "Provides help about this program"
-msgstr "توفر مساعدة حول هذا البرنامج"
+#: ../data/gpm-prefs.ui.h:2 ../data/gpm-prefs-deprecated.ui.h:2
+msgid "<b>Actions</b>"
+msgstr "<b>الإجراءات</b>"
 
-#: ../data/gpm-prefs.ui.h:15
-msgid "Put _display to sleep when inactive for:"
-msgstr "ضع الشاشة لتنام عندما تكون غير _نشطة لمدة:"
-
-#: ../data/gpm-prefs.ui.h:16
+#: ../data/gpm-prefs.ui.h:3 ../data/gpm-prefs-deprecated.ui.h:3
 msgid "Put computer to _sleep when inactive for:"
-msgstr "ضع الحاسوب لينا_م عندما لايكون نشطا لمدة:"
+msgstr "ضع الحاسوب لينا_م عندما لا يكون نشطا لمدة:"
 
-#: ../data/gpm-prefs.ui.h:17
-msgid "Set display _brightness to:"
-msgstr "اجعل سطوع ال_شّاشة:"
-
-#: ../data/gpm-prefs.ui.h:18
-msgid "Sets this policy to be used by all users"
-msgstr "تضبط هذه السياسة ليستخدمها كل المستخدمين"
-
-#: ../data/gpm-prefs.ui.h:19
-msgid "Sp_in down hard disks when possible"
-msgstr "_قلل دوران القرص الصلب متى أمكن"
-
-#: ../data/gpm-prefs.ui.h:20
-msgid "When UPS power is _critically low:"
-msgstr "عندما تكون طاقة UPS منخفضة ب_شكل حرج:"
-
-#: ../data/gpm-prefs.ui.h:21
-msgid "When UPS power is l_ow:"
-msgstr "عندما تكون طاقة UPS من_خفضة:"
-
-#: ../data/gpm-prefs.ui.h:22
-msgid "When battery po_wer is critically low:"
-msgstr "عندما تكون طاقة البطارية منخفضة بشكل حرج:"
-
-#: ../data/gpm-prefs.ui.h:23
+#: ../data/gpm-prefs.ui.h:4 ../data/gpm-prefs-deprecated.ui.h:4
 msgid "When laptop lid is cl_osed:"
 msgstr "عندما يكون غ_طاء الحاسوب المحمول مغلقا:"
 
-#: ../data/gpm-prefs.ui.h:24
-msgid "When the _suspend button is pressed:"
-msgstr "عند _ضغط زر التعليق:"
+#: ../data/gpm-prefs.ui.h:5 ../data/gpm-prefs-deprecated.ui.h:5
+msgid "Sp_in down hard disks when possible"
+msgstr "_قلل دوران القرص الصلب متى أمكن"
 
-#: ../data/gpm-prefs.ui.h:25
-msgid "When the power _button is pressed:"
-msgstr "عند ضغط زر ال_طاقة:"
+#: ../data/gpm-prefs.ui.h:6 ../data/gpm-prefs-deprecated.ui.h:6
+msgid "<b>Display</b>"
+msgstr "<b>الشاشة</b>"
 
-#: ../data/gpm-prefs.ui.h:26
-msgid "_Always display an icon"
-msgstr "اعرض الأيقونة _دائمًا"
+#: ../data/gpm-prefs.ui.h:7 ../data/gpm-prefs-deprecated.ui.h:7
+msgid "Put _display to sleep when inactive for:"
+msgstr "ضع الشاشة لتنام عندما تكون غير _نشطة لمدة:"
 
-#: ../data/gpm-prefs.ui.h:27
-msgid "_Never display an icon"
-msgstr "لا _تعرض الأيقونة أبدًا"
+#: ../data/gpm-prefs.ui.h:8 ../data/gpm-prefs-deprecated.ui.h:8
+msgid "Set display _brightness to:"
+msgstr "اجعل سطوع ال_شّاشة:"
 
-#: ../data/gpm-prefs.ui.h:28
-msgid "_Only display an icon when battery power is low"
-msgstr "ا_عرض الأيقونة فقط عندما تكون طاقة البطارية منخفضة"
+#: ../data/gpm-prefs.ui.h:9 ../data/gpm-prefs-deprecated.ui.h:9
+msgid "Di_m display when idle"
+msgstr "_عتّم الشاشة عند الخمول"
 
-#: ../data/gpm-prefs.ui.h:29
+#: ../data/gpm-prefs.ui.h:10 ../data/gpm-prefs-deprecated.ui.h:10
+msgid "On AC Power"
+msgstr "على الطاقة الاعتيادية"
+
+#: ../data/gpm-prefs.ui.h:11 ../data/gpm-prefs-deprecated.ui.h:11
+msgid "When battery po_wer is critically low:"
+msgstr "عندما تكون طاقة البطارية منخفضة بشكل حرج:"
+
+#: ../data/gpm-prefs.ui.h:12 ../data/gpm-prefs-deprecated.ui.h:12
 msgid "_Reduce backlight brightness"
 msgstr "أ_خفض سطوع الضوء الخلفي"
 
+#: ../data/gpm-prefs.ui.h:13 ../data/gpm-prefs-deprecated.ui.h:13
+msgid "On Battery Power"
+msgstr "على طاقة البطارية"
+
+#: ../data/gpm-prefs.ui.h:14 ../data/gpm-prefs-deprecated.ui.h:14
+msgid "When UPS power is l_ow:"
+msgstr "عندما تكون طاقة UPS من_خفضة:"
+
+#: ../data/gpm-prefs.ui.h:15 ../data/gpm-prefs-deprecated.ui.h:15
+msgid "When UPS power is _critically low:"
+msgstr "عندما تكون طاقة UPS منخفضة ب_شكل حرج:"
+
+#: ../data/gpm-prefs.ui.h:16 ../data/gpm-prefs-deprecated.ui.h:16
+msgid "On UPS Power"
+msgstr "على طاقة UPS"
+
+#: ../data/gpm-prefs.ui.h:17 ../data/gpm-prefs-deprecated.ui.h:17
+msgid "When the power _button is pressed:"
+msgstr "عند ضغط زر ال_طاقة:"
+
+#: ../data/gpm-prefs.ui.h:18 ../data/gpm-prefs-deprecated.ui.h:18
+msgid "When the _suspend button is pressed:"
+msgstr "عند _ضغط زر التعليق:"
+
+#: ../data/gpm-prefs.ui.h:19 ../data/gpm-prefs-deprecated.ui.h:19
+msgid "<b>Notification Area</b>"
+msgstr "<b>مساحة التبليغ</b>"
+
+#: ../data/gpm-prefs.ui.h:20 ../data/gpm-prefs-deprecated.ui.h:20
+msgid "_Never display an icon"
+msgstr "لا _تعرض الرّمز أبدًا"
+
+#: ../data/gpm-prefs.ui.h:21 ../data/gpm-prefs-deprecated.ui.h:21
+msgid "_Only display an icon when battery power is low"
+msgstr "ا_عرض الرّمز فقط عندما تكون طاقة البطارية منخفضة"
+
+#: ../data/gpm-prefs.ui.h:22 ../data/gpm-prefs-deprecated.ui.h:22
+msgid "Only display an icon when charging or _discharging"
+msgstr "اعرض الرّمز فقط في حالة ال_شحن أو الإفراغ"
+
+#: ../data/gpm-prefs.ui.h:23 ../data/gpm-prefs-deprecated.ui.h:23
+msgid "Only display an icon when a battery is p_resent"
+msgstr "اعرض الرّمز فقط في حالة وجود _بطارية"
+
+#: ../data/gpm-prefs.ui.h:24 ../data/gpm-prefs-deprecated.ui.h:24
+msgid "_Always display an icon"
+msgstr "اعرض الرّمز _دائمًا"
+
+#: ../data/gpm-prefs.ui.h:25 ../data/gpm-prefs-deprecated.ui.h:25
+msgid "General"
+msgstr "عام"
+
+#: ../data/gpm-prefs.ui.h:26 ../data/gpm-prefs-deprecated.ui.h:26
+msgid "Provides help about this program"
+msgstr "توفر مساعدة حول هذا البرنامج"
+
+#: ../data/gpm-prefs.ui.h:27 ../data/gpm-prefs-deprecated.ui.h:27
+msgid "Make Default"
+msgstr "اجعله المبدئي"
+
+#: ../data/gpm-prefs.ui.h:28 ../data/gpm-prefs-deprecated.ui.h:28
+msgid "Sets this policy to be used by all users"
+msgstr "تضبط هذه السياسة ليستخدمها كل المستخدمين"
+
+#: ../data/gpm-prefs.ui.h:29 ../data/gpm-prefs-deprecated.ui.h:29
+msgid "Closes the program"
+msgstr "تغلق البرنامج"
+
 #. command line argument
-#: ../src/gpm-backlight-helper.c:161
+#: ../src/gpm-backlight-helper.c:162
 msgid "Set the current brightness"
 msgstr "ضبط السطوع الحالي"
 
 #. command line argument
-#: ../src/gpm-backlight-helper.c:164
+#: ../src/gpm-backlight-helper.c:165
 msgid "Get the current brightness"
 msgstr "احصل على السطوع الحالي"
 
 #. command line argument
-#: ../src/gpm-backlight-helper.c:167
+#: ../src/gpm-backlight-helper.c:168
 msgid "Get the number of brightness levels supported"
 msgstr "احصل على عدد مستويات السطوع المدعومة"
 
 #. TRANSLATORS: tool that is used when copying profiles system-wide
-#: ../src/gpm-backlight-helper.c:182
+#: ../src/gpm-backlight-helper.c:183
 msgid "MATE Power Manager Backlight Helper"
-msgstr "مساعد الإضاءة الخلفية لمدير طاقة جنوم"
+msgstr "مساعد الإضاءة الخلفية لمدير طاقة متّة"
 
 #. TRANSLATORS: user did not specify valid options
-#: ../src/gpm-backlight-helper.c:190
+#: ../src/gpm-backlight-helper.c:191
 msgid "No valid option was specified"
 msgstr "لم تحدد خيار صالح"
 
 #. TRANSLATORS: no backlights found
-#: ../src/gpm-backlight-helper.c:199
+#: ../src/gpm-backlight-helper.c:200
 msgid "No backlights were found on your system"
 msgstr "لا توجد إضاءة خلفية في جهازك"
 
 #. TRANSLATORS: failed to access backlight file
-#: ../src/gpm-backlight-helper.c:210
+#: ../src/gpm-backlight-helper.c:211
 msgid "Could not get the value of the backlight"
 msgstr "تعذَر الحصول على قيمة الإضاءة الخلفية"
 
 #. TRANSLATORS: failed to access backlight file
-#: ../src/gpm-backlight-helper.c:228
+#: ../src/gpm-backlight-helper.c:229
 msgid "Could not get the maximum value of the backlight"
 msgstr "تعذّر الحصول على القيمة العظمى للإضاءة الخلفية"
 
 #. TRANSLATORS: only able to install profiles as root
-#: ../src/gpm-backlight-helper.c:245
+#: ../src/gpm-backlight-helper.c:246
 msgid "This program can only be used by the root user"
 msgstr "هذا البرنامج لا يستطيع استخدامه إلا الجذر"
 
 #. TRANSLATORS: the program must never be directly run
-#: ../src/gpm-backlight-helper.c:254
+#: ../src/gpm-backlight-helper.c:255
 msgid "This program must only be run through pkexec"
-msgstr ""
+msgstr "يجب تشغيل هذا البرنامج عبر ‪pkexec"
 
 #. TRANSLATORS: failed to access backlight file
-#: ../src/gpm-backlight-helper.c:265
+#: ../src/gpm-backlight-helper.c:266
 msgid "Could not set the value of the backlight"
 msgstr "تعذّر ضبط قيمة الإضاءة الخلفية"
 
@@ -1090,7 +1099,7 @@ msgid "%.1fV"
 msgstr "%I.1fف"
 
 #. TRANSLATORS: show verbose debugging
-#: ../src/gpm-main.c:171 ../src/gpm-prefs.c:90 ../src/gpm-statistics.c:1559
+#: ../src/gpm-main.c:171 ../src/gpm-prefs.c:90 ../src/gpm-statistics.c:1554
 msgid "Show extra debugging information"
 msgstr "اعرض معلومات تنقيح أكثر"
 
@@ -1106,114 +1115,114 @@ msgstr "اخرج بعد تأخير قليل (للتنقيح)"
 msgid "Exit after the manager has loaded (for debugging)"
 msgstr "اخرج بعد تحميل المدير (للتنقيح)"
 
-#: ../src/gpm-main.c:191 ../src/gpm-main.c:195
+#: ../src/gpm-main.c:194 ../src/gpm-main.c:198
 msgid "MATE Power Manager"
-msgstr "مدير طاقة جنوم"
+msgstr "مدير طاقة متّة"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:223 ../src/gpm-manager.c:293
+#: ../src/gpm-manager.c:229 ../src/gpm-manager.c:299
 msgid "Battery is very low"
-msgstr "طاقة البطارية منخفضة جدا"
+msgstr "طاقة البطارية منخفضة جدًا"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:273
+#: ../src/gpm-manager.c:279
 msgid "Power plugged in"
 msgstr "وصّل مقبس الطاقة"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:277
+#: ../src/gpm-manager.c:283
 msgid "Power unplugged"
 msgstr "فصل مقبس الطاقة"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:281
+#: ../src/gpm-manager.c:287
 msgid "Lid has opened"
 msgstr "فتح الغطاء"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:285
+#: ../src/gpm-manager.c:291
 msgid "Lid has closed"
 msgstr "أُغلق الغطاء"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:289
+#: ../src/gpm-manager.c:295
 msgid "Battery is low"
 msgstr "طاقة البطارية منخفضة"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:297
+#: ../src/gpm-manager.c:303
 msgid "Battery is full"
 msgstr "البطارية مكتملة"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:301
+#: ../src/gpm-manager.c:307
 msgid "Suspend started"
 msgstr "بدأ التعليق"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:305
+#: ../src/gpm-manager.c:311
 msgid "Resumed"
 msgstr "استرجع من التعليق"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:309
+#: ../src/gpm-manager.c:315
 msgid "Suspend failed"
 msgstr "فشل التعليق"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:579
+#: ../src/gpm-manager.c:585
 msgid "Computer failed to suspend."
 msgstr "فشل الحاسوب في التعليق."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:581
+#: ../src/gpm-manager.c:587
 msgid "Failed to suspend"
 msgstr "فشل التعليق"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:585
+#: ../src/gpm-manager.c:591
 msgid "Computer failed to hibernate."
 msgstr "فشل الحاسوب في الإسبات."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:587
+#: ../src/gpm-manager.c:593
 msgid "Failed to hibernate"
 msgstr "فشل الإسبات"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:592
+#: ../src/gpm-manager.c:598
 msgid "Failure was reported as:"
 msgstr "أبلغ عن الفشل على الصورة:"
 
 #. TRANSLATORS: button text, visit the suspend help website
-#: ../src/gpm-manager.c:605
+#: ../src/gpm-manager.c:611
 msgid "Visit help page"
 msgstr "اذهب لصفحة المساعدة"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:868
+#: ../src/gpm-manager.c:857
 msgid "Display DPMS activated"
 msgstr "عرض DPMS منشط"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:887
+#: ../src/gpm-manager.c:876
 msgid "On battery power"
 msgstr "على طاقة البطارية"
 
-#: ../src/gpm-manager.c:905
+#: ../src/gpm-manager.c:894
 msgid "Laptop lid is closed"
 msgstr "غطاء الحاسوب المحمول مغلق"
 
-#: ../src/gpm-manager.c:943
+#: ../src/gpm-manager.c:932
 msgid "Power Information"
 msgstr "معلومات الطاقة"
 
 #. TRANSLATORS: the battery may be recalled by it's vendor
-#: ../src/gpm-manager.c:1191
+#: ../src/gpm-manager.c:1147
 msgid "Battery may be recalled"
 msgstr "قد أُعيد نداء البطاريّة"
 
-#: ../src/gpm-manager.c:1192
+#: ../src/gpm-manager.c:1148
 #, c-format
 msgid ""
 "A battery in your computer may have been recalled by %s and you may be at risk.\n"
@@ -1222,12 +1231,12 @@ msgid ""
 msgstr "ربما طلب %s استرجاع بطارية حاسوبك وقد تكون في خطر.\n\nلمعلومات أكثر زُر موقع استرجاع البطارية."
 
 #. TRANSLATORS: button text, visit the manufacturers recall website
-#: ../src/gpm-manager.c:1202
+#: ../src/gpm-manager.c:1158
 msgid "Visit recall website"
 msgstr "زُر موقع الإعادة"
 
 #. TRANSLATORS: button text, do not show this bubble again
-#: ../src/gpm-manager.c:1205
+#: ../src/gpm-manager.c:1161
 msgid "Do not show me this again"
 msgstr "لا تُظهر هذا لي مجددًا"
 
@@ -1235,13 +1244,13 @@ msgstr "لا تُظهر هذا لي مجددًا"
 #. * where capacity is the ratio of the last_full capacity with that of
 #. * the design capacity. (#326740)
 #. TRANSLATORS: battery is old or broken
-#: ../src/gpm-manager.c:1290
+#: ../src/gpm-manager.c:1246
 msgid "Battery may be broken"
 msgstr "ربما البطاريّة معطوبة"
 
 #. TRANSLATORS: notify the user that that battery is broken as the capacity is
 #. very low
-#: ../src/gpm-manager.c:1293
+#: ../src/gpm-manager.c:1249
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
@@ -1249,7 +1258,7 @@ msgid ""
 msgstr "سعة البطارية منخفضة جدًا (%1.1f%%)، مما يعني أنها قد تكون قديمة أو معطوبة."
 
 #. TRANSLATORS: show the charged notification
-#: ../src/gpm-manager.c:1342
+#: ../src/gpm-manager.c:1298
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] "البطارية مشحونة تماما"
@@ -1260,189 +1269,189 @@ msgstr[4] "البطاريات مشحونة تماما"
 msgstr[5] "البطاريات مشحونة تماما"
 
 #. TRANSLATORS: laptop battery is now discharging
-#: ../src/gpm-manager.c:1388
+#: ../src/gpm-manager.c:1344
 msgid "Battery Discharging"
 msgstr "تُفرّغ البطارية"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1392
+#: ../src/gpm-manager.c:1348
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr "باقي %s من طاقة البطارية (%.0f%%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-manager.c:1395 ../src/gpm-manager.c:1407
+#: ../src/gpm-manager.c:1351 ../src/gpm-manager.c:1363
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr "‏%s تُفرّغ (%.0f%%)"
 
 #. TRANSLATORS: UPS is now discharging
-#: ../src/gpm-manager.c:1400
+#: ../src/gpm-manager.c:1356
 msgid "UPS Discharging"
 msgstr "يُفرّغ ال UPS"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1404
+#: ../src/gpm-manager.c:1360
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr "باقي %s من طاقة مزود الطاقة اللامنقطعة (%.0f%%)"
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
-#: ../src/gpm-manager.c:1488
+#: ../src/gpm-manager.c:1444
 msgid "Battery low"
 msgstr "طاقة البطارية منخفضة"
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
-#: ../src/gpm-manager.c:1491
+#: ../src/gpm-manager.c:1447
 msgid "Laptop battery low"
 msgstr "بطارية الحاسوب المحمول منخفضة"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1497
+#: ../src/gpm-manager.c:1453
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "لديك تقريبًا <b>%s</b> متبقية (%.0f%%)"
 
 #. TRANSLATORS: UPS is starting to get a little low
-#: ../src/gpm-manager.c:1501
+#: ../src/gpm-manager.c:1457
 msgid "UPS low"
 msgstr "طاقة UPS منخفضة"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1505
+#: ../src/gpm-manager.c:1461
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr "تقريبًا <b>%s</b> متبقية من شحنة طاقة مزود الطاقة اللامنفطعة (%.0f%%)"
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1509 ../src/gpm-manager.c:1648
+#: ../src/gpm-manager.c:1465 ../src/gpm-manager.c:1601
 msgid "Mouse battery low"
 msgstr "بطارية الفأرة منخفضة"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1512
+#: ../src/gpm-manager.c:1468
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr "الفأرة اللاسلكية الموصولة بهذا الحاسوب طاقتها منخفضة (%.0f%%)"
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1516 ../src/gpm-manager.c:1656
+#: ../src/gpm-manager.c:1472 ../src/gpm-manager.c:1609
 msgid "Keyboard battery low"
 msgstr "بطارية لوحة المفاتيح منخفضة"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1519
+#: ../src/gpm-manager.c:1475
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr "لوحة المفاتيح اللاسلكية الموصولة بهذا الحاسوب طاقتها منخفضة (%.0f%%)"
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1523 ../src/gpm-manager.c:1665
+#: ../src/gpm-manager.c:1479 ../src/gpm-manager.c:1618
 msgid "PDA battery low"
 msgstr "طاقة بطارية المساعد الرقمي منخفضة"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1526
+#: ../src/gpm-manager.c:1482
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr "المساعد الرقمي الموصول بهذا الحاسوب طاقته منخفضة (%.0f%%)"
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1530 ../src/gpm-manager.c:1675
-#: ../src/gpm-manager.c:1686
+#: ../src/gpm-manager.c:1486 ../src/gpm-manager.c:1628
+#: ../src/gpm-manager.c:1639
 msgid "Cell phone battery low"
 msgstr "طاقة الهاتف المحمول منخفضة"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1533
+#: ../src/gpm-manager.c:1489
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "الهاتف المحمول الموصول بهذا الحاسوب طاقته منخفضة (%.0f%%)"
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1538
+#: ../src/gpm-manager.c:1494
 msgid "Media player battery low"
 msgstr "طاقة مشغل الوسائط منخفضة"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1541
+#: ../src/gpm-manager.c:1497
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr "مشغل الوسائط الموصول بهذا الحاسوب طاقته منخفضة (%.0f%%)"
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1545 ../src/gpm-manager.c:1695
+#: ../src/gpm-manager.c:1501 ../src/gpm-manager.c:1648
 msgid "Tablet battery low"
 msgstr "بطارية اللوحة منخفضة"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1548
+#: ../src/gpm-manager.c:1504
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "طاقة اللوحة منخفضة (%.0f%%)"
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1552 ../src/gpm-manager.c:1704
+#: ../src/gpm-manager.c:1508 ../src/gpm-manager.c:1657
 msgid "Attached computer battery low"
 msgstr "بطارية الحاسوب المتصل منخفضة"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1555
+#: ../src/gpm-manager.c:1511
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "طاقة الحاسوب المُوصَّل منخفضة (%.1f%%)"
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
-#: ../src/gpm-manager.c:1605
+#: ../src/gpm-manager.c:1560
 msgid "Battery critically low"
 msgstr "البطارية منخفضة جدًا"
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1608 ../src/gpm-manager.c:1765
+#: ../src/gpm-manager.c:1563 ../src/gpm-manager.c:1717
 msgid "Laptop battery critically low"
 msgstr "بطارية الحاسوب المحمول منخفضة جدًا"
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
-#: ../src/gpm-manager.c:1618
+#: ../src/gpm-manager.c:1572
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr "وصّل محوّل التيار لتتجنب فقدان البيانات."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1622
+#: ../src/gpm-manager.c:1576
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
-msgstr "سيُعلّق هذا الحاسوب خلال ثوان ما لم يوصّل بالتيار."
+msgstr "سيُعلّق هذا الحاسوب خلال ثوانٍ ما لم يوصّل بالتيار."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1626
+#: ../src/gpm-manager.c:1580
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
-msgstr "سيُسبت هذا الحاسوب خلال ثوان ما لم يوصّل بالتيار."
+msgstr "سيُسبت هذا الحاسوب خلال ثوانٍ ما لم يوصّل بالتيار."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1630
+#: ../src/gpm-manager.c:1584
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
-msgstr "سيُطفأ هذا الحاسوب خلال ثوان ما لم يوصّل بالتيار."
+msgstr "سيُطفأ هذا الحاسوب خلال ثوانٍ ما لم يوصّل بالتيار."
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1638 ../src/gpm-manager.c:1803
+#: ../src/gpm-manager.c:1591 ../src/gpm-manager.c:1752
 msgid "UPS critically low"
 msgstr "طاقة UPS منخفضة جدًا"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1642
+#: ../src/gpm-manager.c:1595
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
@@ -1450,7 +1459,7 @@ msgid ""
 msgstr "لديك تقريبًا <b>%s</b> متبقية من شحنة UPS‏ (%.0f%%). أرجع التيار للحاسوب لتتجنب ضياع البيانات."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1651
+#: ../src/gpm-manager.c:1604
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
@@ -1458,7 +1467,7 @@ msgid ""
 msgstr "الفأرة اللاسلكية الموصولة بهذا الحاسوب طاقتها ضعيفة (%.0f%%). ستتوقف بعد قليل إن لم تُشحن."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1659
+#: ../src/gpm-manager.c:1612
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
@@ -1466,7 +1475,7 @@ msgid ""
 msgstr "لوحة المفاتيح اللاسلكية الموصولة بهذا الحاسوب طاقتها ضعيفة (%.0f%%). ستتوقف بعد قليل إن لم تُشحن."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1668
+#: ../src/gpm-manager.c:1621
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
@@ -1474,7 +1483,7 @@ msgid ""
 msgstr "المساعد الرقمي الموصول بهذا الحاسوب طاقته ضعيفة (%.0f%%). سيتوقف بعد قليل إن لم يُشحن."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1678
+#: ../src/gpm-manager.c:1631
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
@@ -1482,7 +1491,7 @@ msgid ""
 msgstr "الهاتف المحمول الموصول بهذا الحاسوب طاقته ضعيفة (%.0f%%). سيتوقف بعد قليل إن لم يُشحن."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1689
+#: ../src/gpm-manager.c:1642
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
@@ -1490,7 +1499,7 @@ msgid ""
 msgstr "مشغل الوسائط الموصول بهذا الحاسوب طاقته ضعيفة (%.0f%%). سيتوقف بعد قليل إن لم يُشحن."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1698
+#: ../src/gpm-manager.c:1651
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
@@ -1498,7 +1507,7 @@ msgid ""
 msgstr "طاقة اللوح ضعيفة جدا (%.0f%%). سيتوقف بعد قليل إن لم يُشحن."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1707
+#: ../src/gpm-manager.c:1660
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
@@ -1506,14 +1515,14 @@ msgid ""
 msgstr "طاقة الحاسوب الموصول ضعيفة جدا (%.0f%%). سيتوقف بعد قليل إن لم يُشحن."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1774
+#: ../src/gpm-manager.c:1725
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
 msgstr "طاقة البطارية تحت المستوى الحرج، <b>سيتوقف</b> هذا الحاسوب عند فراغ البطارية. "
 
 #. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1780
+#: ../src/gpm-manager.c:1731
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
@@ -1521,173 +1530,161 @@ msgid ""
 msgstr "طاقة البطاريه تحت المستوى الحرج و الحاسوب على وشك الدخول في حالة الاستعداد.<br><b>ملاحظة:</b> تتطلب حالة الاستعداد كمية صغيرة من الطاقة."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1787
+#: ../src/gpm-manager.c:1738
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr "البطاريه دون المستوى الحرج وهذا الحاسوب على وشك الإسبات."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1792
+#: ../src/gpm-manager.c:1743
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr "البطاريه دون المستوى الحرج وهذا الحاسوب على وشك الإغلاق."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1812
+#: ../src/gpm-manager.c:1760
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
 msgstr "البطارية في حالة منخفضة، <b>سيتوقف</b> هذا الحاسوب عند فراغ البطارية."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1818
+#: ../src/gpm-manager.c:1766
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr "ال UPS دون المستوى الحرج وهذا الحاسوب على وشك الإسبات."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1823
+#: ../src/gpm-manager.c:1771
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr "ال UPS دون المستوى الحرج وهذا الحاسوب على وشك الإغلاق."
 
-#. TRANSLATORS: there was in install problem
-#: ../src/gpm-manager.c:1961
-msgid "Install problem!"
-msgstr "مشكلة في التثبيتب!"
-
-#. TRANSLATORS: the MateConf schema was not installed properly
-#: ../src/gpm-manager.c:1963
-msgid ""
-"The configuration defaults for MATE Power Manager have not been installed correctly.\n"
-"Please contact your computer administrator."
-msgstr "الإعدادات المبدئية لمدير طاقة جنوم لم تُعدّ بشكل صحيح.\nرجاءً راجع مدير حاسوبك."
-
 #: ../src/gpm-prefs.c:94
 msgid "MATE Power Preferences"
-msgstr "تفضيلات الطّاقة لجنوم"
+msgstr "تفضيلات الطّاقة لمتّة"
 
-#: ../src/gpm-prefs-core.c:364 ../src/gpm-prefs-core.c:367
+#: ../src/gpm-prefs-core.c:266 ../src/gpm-prefs-core.c:269
 msgid "Shutdown"
 msgstr "أطفئ"
 
-#: ../src/gpm-prefs-core.c:376 ../src/gpm-prefs-core.c:379
+#: ../src/gpm-prefs-core.c:278 ../src/gpm-prefs-core.c:281
 msgid "Suspend"
 msgstr "علّق"
 
-#: ../src/gpm-prefs-core.c:384 ../src/gpm-prefs-core.c:387
+#: ../src/gpm-prefs-core.c:286 ../src/gpm-prefs-core.c:289
 msgid "Hibernate"
 msgstr "أسبِت"
 
-#: ../src/gpm-prefs-core.c:392 ../src/gpm-prefs-core.c:395
+#: ../src/gpm-prefs-core.c:294 ../src/gpm-prefs-core.c:297
 msgid "Blank screen"
 msgstr "صفّر الشاشة"
 
-#: ../src/gpm-prefs-core.c:400 ../src/gpm-prefs-core.c:403
+#: ../src/gpm-prefs-core.c:302 ../src/gpm-prefs-core.c:305
 msgid "Ask me"
 msgstr "اسألني"
 
-#: ../src/gpm-prefs-core.c:410 ../src/gpm-prefs-core.c:413
+#: ../src/gpm-prefs-core.c:310 ../src/gpm-prefs-core.c:313
 msgid "Do nothing"
 msgstr "لا تفعل أي شيء"
 
-#: ../src/gpm-prefs-core.c:483 ../src/gpm-prefs-core.c:485
+#: ../src/gpm-prefs-core.c:380 ../src/gpm-prefs-core.c:382
 msgid "Never"
 msgstr "أبدًا"
 
 #. TRANSLATORS: the rate of discharge for the device
-#: ../src/gpm-statistics.c:80 ../src/gpm-statistics.c:468
+#: ../src/gpm-statistics.c:79 ../src/gpm-statistics.c:467
 msgid "Rate"
 msgstr "المعدل"
 
-#: ../src/gpm-statistics.c:81
+#: ../src/gpm-statistics.c:80
 msgid "Charge"
 msgstr "الشحن"
 
-#: ../src/gpm-statistics.c:82 ../src/gpm-statistics.c:482
+#: ../src/gpm-statistics.c:81 ../src/gpm-statistics.c:481
 msgid "Time to full"
 msgstr "وقت الامتلاء"
 
-#: ../src/gpm-statistics.c:83 ../src/gpm-statistics.c:487
+#: ../src/gpm-statistics.c:82 ../src/gpm-statistics.c:486
 msgid "Time to empty"
 msgstr "وقت التفريغ"
 
-#: ../src/gpm-statistics.c:90
+#: ../src/gpm-statistics.c:89
 msgid "10 minutes"
 msgstr "10 دقائق"
 
-#: ../src/gpm-statistics.c:91
+#: ../src/gpm-statistics.c:90
 msgid "2 hours"
 msgstr "ساعتين"
 
-#: ../src/gpm-statistics.c:92
+#: ../src/gpm-statistics.c:91
 msgid "6 hours"
 msgstr "6 ساعات"
 
-#: ../src/gpm-statistics.c:93
+#: ../src/gpm-statistics.c:92
 msgid "1 day"
 msgstr "يوم واحد"
 
-#: ../src/gpm-statistics.c:94
+#: ../src/gpm-statistics.c:93
 msgid "1 week"
 msgstr "أسبوع واحد"
 
 #. TRANSLATORS: what we've observed about the device
-#: ../src/gpm-statistics.c:103
+#: ../src/gpm-statistics.c:102
 msgid "Charge profile"
 msgstr "لاحة الشحن"
 
-#: ../src/gpm-statistics.c:104
+#: ../src/gpm-statistics.c:103
 msgid "Discharge profile"
 msgstr "لاحة التفريغ"
 
 #. TRANSLATORS: how accurately we can predict the time remaining of the
 #. battery
-#: ../src/gpm-statistics.c:106
+#: ../src/gpm-statistics.c:105
 msgid "Charge accuracy"
 msgstr "دقة الشحن"
 
-#: ../src/gpm-statistics.c:107
+#: ../src/gpm-statistics.c:106
 msgid "Discharge accuracy"
 msgstr "دقة التفريغ"
 
-#: ../src/gpm-statistics.c:134
+#: ../src/gpm-statistics.c:133
 msgid "Attribute"
 msgstr "الخاصية"
 
-#: ../src/gpm-statistics.c:141
+#: ../src/gpm-statistics.c:140
 msgid "Value"
 msgstr "القيمة"
 
-#: ../src/gpm-statistics.c:158
+#: ../src/gpm-statistics.c:157
 msgid "Image"
 msgstr "الصورة"
 
-#: ../src/gpm-statistics.c:164
+#: ../src/gpm-statistics.c:163
 msgid "Description"
 msgstr "الوصف"
 
-#: ../src/gpm-statistics.c:183 ../src/gpm-statistics.c:407
+#: ../src/gpm-statistics.c:182 ../src/gpm-statistics.c:406
 msgid "Type"
 msgstr "النوع"
 
-#: ../src/gpm-statistics.c:189
+#: ../src/gpm-statistics.c:188
 msgid "ID"
 msgstr "المعرّف"
 
-#: ../src/gpm-statistics.c:203
+#: ../src/gpm-statistics.c:202
 msgid "Command"
 msgstr "الأمر"
 
 #. TRANSLATORS: this is when the stats time is not known
-#: ../src/gpm-statistics.c:288
+#: ../src/gpm-statistics.c:287
 msgid "Unknown"
 msgstr "مجهول"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:292
+#: ../src/gpm-statistics.c:291
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
@@ -1699,7 +1696,7 @@ msgstr[4] "%.0f ثانية"
 msgstr[5] "%.0f ثانية"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:297
+#: ../src/gpm-statistics.c:296
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
@@ -1711,7 +1708,7 @@ msgstr[4] "%.1f دقيقة"
 msgstr[5] "%.1f دقيقة"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:302
+#: ../src/gpm-statistics.c:301
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
@@ -1723,7 +1720,7 @@ msgstr[4] "%.1f ساعة"
 msgstr[5] "%.1f ساعة"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:306
+#: ../src/gpm-statistics.c:305
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
@@ -1734,28 +1731,28 @@ msgstr[3] "%.1f أيام"
 msgstr[4] "%.1f يوما"
 msgstr[5] "%.1f يوم"
 
-#: ../src/gpm-statistics.c:315
+#: ../src/gpm-statistics.c:314
 msgid "Yes"
 msgstr "نعم"
 
-#: ../src/gpm-statistics.c:315
+#: ../src/gpm-statistics.c:314
 msgid "No"
 msgstr "لا"
 
 #. TRANSLATORS: the device ID of the current device, e.g. "battery0"
-#: ../src/gpm-statistics.c:404
+#: ../src/gpm-statistics.c:403
 msgid "Device"
 msgstr "الجهاز"
 
-#: ../src/gpm-statistics.c:409
+#: ../src/gpm-statistics.c:408
 msgid "Vendor"
 msgstr "المُنتِج"
 
-#: ../src/gpm-statistics.c:411
+#: ../src/gpm-statistics.c:410
 msgid "Model"
 msgstr "الطراز"
 
-#: ../src/gpm-statistics.c:413
+#: ../src/gpm-statistics.c:412
 msgid "Serial number"
 msgstr "الرقم التسلسلي"
 
@@ -1763,11 +1760,11 @@ msgstr "الرقم التسلسلي"
 #. * main power for the computer. For instance, an AC adapter or laptop
 #. battery
 #. * would be TRUE,  but a mobile phone or mouse taking power is FALSE
-#: ../src/gpm-statistics.c:418
+#: ../src/gpm-statistics.c:417
 msgid "Supply"
-msgstr "المصدر"
+msgstr "التزويد"
 
-#: ../src/gpm-statistics.c:421
+#: ../src/gpm-statistics.c:420
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -1780,126 +1777,126 @@ msgstr[5] "%d ثانية"
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
-#: ../src/gpm-statistics.c:425
+#: ../src/gpm-statistics.c:424
 msgid "Refreshed"
 msgstr "محدّث"
 
 #. TRANSLATORS: Present is whether the device is currently attached
 #. * to the computer, as some devices (e.g. laptop batteries) can
 #. * be removed, but still observed as devices on the system
-#: ../src/gpm-statistics.c:435
+#: ../src/gpm-statistics.c:434
 msgid "Present"
 msgstr "الحالي"
 
 #. TRANSLATORS: If the device can be recharged, e.g. lithium
 #. * batteries rather than alkaline ones
-#: ../src/gpm-statistics.c:442
+#: ../src/gpm-statistics.c:441
 msgid "Rechargeable"
 msgstr "قابلة لإعادة الشحن"
 
 #. TRANSLATORS: The state of the device, e.g. "Changing" or "Fully charged"
-#: ../src/gpm-statistics.c:448
+#: ../src/gpm-statistics.c:447
 msgid "State"
 msgstr "الحالة"
 
-#: ../src/gpm-statistics.c:452
+#: ../src/gpm-statistics.c:451
 msgid "Energy"
 msgstr "الطاقة"
 
-#: ../src/gpm-statistics.c:455
+#: ../src/gpm-statistics.c:454
 msgid "Energy when empty"
 msgstr "الطاقة عندما تكون فارغة"
 
-#: ../src/gpm-statistics.c:458
+#: ../src/gpm-statistics.c:457
 msgid "Energy when full"
 msgstr "الطاقة عندما تكون ممتلئة"
 
-#: ../src/gpm-statistics.c:461
+#: ../src/gpm-statistics.c:460
 msgid "Energy (design)"
 msgstr "الطاقة (التصميم)"
 
-#: ../src/gpm-statistics.c:475
+#: ../src/gpm-statistics.c:474
 msgid "Voltage"
-msgstr "الفلطية"
+msgstr "فرق الكمون"
 
 #. TRANSLATORS: the amount of charge the cell contains
-#: ../src/gpm-statistics.c:497
+#: ../src/gpm-statistics.c:496
 msgid "Percentage"
 msgstr "النسبة المئوية"
 
 #. TRANSLATORS: the capacity of the device, which is basically a measure
 #. * of how full it can get, relative to the design capacity
-#: ../src/gpm-statistics.c:504
+#: ../src/gpm-statistics.c:503
 msgid "Capacity"
 msgstr "السعة"
 
 #. TRANSLATORS: the type of battery, e.g. lithium or nikel metal hydroxide
-#: ../src/gpm-statistics.c:509
+#: ../src/gpm-statistics.c:508
 msgid "Technology"
 msgstr "التقنية"
 
 #. TRANSLATORS: this is when the device is plugged in, typically
 #. * only shown for the ac adaptor device
-#: ../src/gpm-statistics.c:514
+#: ../src/gpm-statistics.c:513
 msgid "Online"
 msgstr "متصل"
 
 #. TRANSLATORS: the command line was not provided
-#: ../src/gpm-statistics.c:826
+#: ../src/gpm-statistics.c:825
 msgid "No data"
 msgstr "لا بيانات"
 
 #. TRANSLATORS: kernel module, usually a device driver
-#: ../src/gpm-statistics.c:833 ../src/gpm-statistics.c:838
+#: ../src/gpm-statistics.c:832 ../src/gpm-statistics.c:837
 msgid "Kernel module"
 msgstr "وحدة النواة"
 
 #. TRANSLATORS: kernel housekeeping
-#: ../src/gpm-statistics.c:843
+#: ../src/gpm-statistics.c:842
 msgid "Kernel core"
-msgstr "لب النواة"
+msgstr "جوهر النواة"
 
 #. TRANSLATORS: interrupt between processors
-#: ../src/gpm-statistics.c:848
+#: ../src/gpm-statistics.c:847
 msgid "Interprocessor interrupt"
 msgstr "قاطِع بين المعالجات"
 
 #. TRANSLATORS: unknown interrupt
-#: ../src/gpm-statistics.c:853
+#: ../src/gpm-statistics.c:852
 msgid "Interrupt"
 msgstr "قاطِع"
 
 #. TRANSLATORS: the keyboard and mouse device event
-#: ../src/gpm-statistics.c:900
+#: ../src/gpm-statistics.c:899
 msgid "PS/2 keyboard/mouse/touchpad"
 msgstr "لوحة مفاتيح\\فأرة\\لوحة لمس PS/2"
 
 #. TRANSLATORS: ACPI, the Intel power standard on laptops and desktops
-#: ../src/gpm-statistics.c:903
+#: ../src/gpm-statistics.c:902
 msgid "ACPI"
 msgstr "ACPI"
 
 #. TRANSLATORS: serial ATA is a new style of hard disk interface
-#: ../src/gpm-statistics.c:906
+#: ../src/gpm-statistics.c:905
 msgid "Serial ATA"
 msgstr "‏ATA تسلسلي"
 
 #. TRANSLATORS: this is the old-style ATA interface
-#: ../src/gpm-statistics.c:909
+#: ../src/gpm-statistics.c:908
 msgid "ATA host controller"
 msgstr "متحكم مستضيف ATA"
 
 #. TRANSLATORS: 802.11 wireless adaptor
-#: ../src/gpm-statistics.c:912
+#: ../src/gpm-statistics.c:911
 msgid "Intel wireless adaptor"
 msgstr "محول لاسلكي إنتل"
 
 #. TRANSLATORS: a timer is something that fires periodically.
 #. * The parameter is a process name, e.g. "firefox-bin".
 #. * This is shown when the timer wakes up.
-#: ../src/gpm-statistics.c:919 ../src/gpm-statistics.c:924
-#: ../src/gpm-statistics.c:929 ../src/gpm-statistics.c:934
-#: ../src/gpm-statistics.c:939
+#: ../src/gpm-statistics.c:918 ../src/gpm-statistics.c:923
+#: ../src/gpm-statistics.c:928 ../src/gpm-statistics.c:933
+#: ../src/gpm-statistics.c:938
 #, c-format
 msgid "Timer %s"
 msgstr "مؤقت %s"
@@ -1907,125 +1904,125 @@ msgstr "مؤقت %s"
 #. TRANSLATORS: the parameter is the name of task that's woken up from
 #. sleeping.
 #. * This is shown when the task wakes up.
-#: ../src/gpm-statistics.c:943
+#: ../src/gpm-statistics.c:942
 #, c-format
 msgid "Sleep %s"
 msgstr "نوم %s"
 
 #. TRANSLATORS: this is the name of a new realtime task.
-#: ../src/gpm-statistics.c:946
+#: ../src/gpm-statistics.c:945
 #, c-format
 msgid "New task %s"
 msgstr "مهمّة جديدة %s"
 
 #. TRANSLATORS: this is the name of a task that's woken to check state.
 #. * This is shown when the task wakes up.
-#: ../src/gpm-statistics.c:950
+#: ../src/gpm-statistics.c:949
 #, c-format
 msgid "Wait %s"
 msgstr "انتظار %s"
 
 #. TRANSLATORS: this is the name of a work queue.
 #. * A work queue is a list of work that has to be done.
-#: ../src/gpm-statistics.c:954 ../src/gpm-statistics.c:958
+#: ../src/gpm-statistics.c:953 ../src/gpm-statistics.c:957
 #, c-format
 msgid "Work queue %s"
 msgstr "طابور العمل %s"
 
 #. TRANSLATORS: this is when the networking subsystem clears out old entries
-#: ../src/gpm-statistics.c:961
+#: ../src/gpm-statistics.c:960
 #, c-format
 msgid "Network route flush %s"
 msgstr "تنظيف مسار الشبكة %s "
 
 #. TRANSLATORS: this is the name of an activity on the USB bus
-#: ../src/gpm-statistics.c:964
+#: ../src/gpm-statistics.c:963
 #, c-format
 msgid "USB activity %s"
 msgstr "نشاط USB ‏%s"
 
 #. TRANSLATORS: we've timed out of an aligned timer, with the name
-#: ../src/gpm-statistics.c:967
+#: ../src/gpm-statistics.c:966
 #, c-format
 msgid "Wakeup %s"
 msgstr "استيقاظ %s"
 
 #. TRANSLATORS: interupts on the system required for basic operation
-#: ../src/gpm-statistics.c:970
+#: ../src/gpm-statistics.c:969
 msgid "Local interrupts"
 msgstr "قاطِعات محلية"
 
 #. TRANSLATORS: interrupts when a task gets moved from one core to another
-#: ../src/gpm-statistics.c:973
+#: ../src/gpm-statistics.c:972
 msgid "Rescheduling interrupts"
 msgstr "يعيد جدولة القاطعات"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1082
+#: ../src/gpm-statistics.c:1081
 msgid "Device Information"
 msgstr "معلومات الجهاز"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1084
+#: ../src/gpm-statistics.c:1083
 msgid "Device History"
 msgstr "تأريخ الجهاز"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1086
+#: ../src/gpm-statistics.c:1085
 msgid "Device Profile"
-msgstr "لاحة الجهاز"
+msgstr "تشكيل الجهاز الجانبي"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1088
+#: ../src/gpm-statistics.c:1087
 msgid "Processor Wakeups"
 msgstr "استيقاظات المعالج"
 
 #. TRANSLATORS: this is the X axis on the graph
-#: ../src/gpm-statistics.c:1298 ../src/gpm-statistics.c:1304
-#: ../src/gpm-statistics.c:1310 ../src/gpm-statistics.c:1316
+#: ../src/gpm-statistics.c:1295 ../src/gpm-statistics.c:1301
+#: ../src/gpm-statistics.c:1307 ../src/gpm-statistics.c:1313
 msgid "Time elapsed"
 msgstr "الوقت المنقضي"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1300
+#: ../src/gpm-statistics.c:1297
 msgid "Power"
 msgstr "الطاقة"
 
 #. TRANSLATORS: this is the Y axis on the graph for the whole battery device
 #. TRANSLATORS: this is the X axis on the graph for the whole battery device
-#: ../src/gpm-statistics.c:1306 ../src/gpm-statistics.c:1353
-#: ../src/gpm-statistics.c:1359 ../src/gpm-statistics.c:1365
-#: ../src/gpm-statistics.c:1371
+#: ../src/gpm-statistics.c:1303 ../src/gpm-statistics.c:1347
+#: ../src/gpm-statistics.c:1353 ../src/gpm-statistics.c:1359
+#: ../src/gpm-statistics.c:1365
 msgid "Cell charge"
 msgstr "شحنة البطارية"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1312 ../src/gpm-statistics.c:1318
+#: ../src/gpm-statistics.c:1309 ../src/gpm-statistics.c:1315
 msgid "Predicted time"
 msgstr "الزمن المتوقع"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1355 ../src/gpm-statistics.c:1367
+#: ../src/gpm-statistics.c:1349 ../src/gpm-statistics.c:1361
 msgid "Correction factor"
 msgstr "عامل التصحيح"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1361 ../src/gpm-statistics.c:1373
+#: ../src/gpm-statistics.c:1355 ../src/gpm-statistics.c:1367
 msgid "Prediction accuracy"
 msgstr "دقة التوقع"
 
 #. TRANSLATORS: show a device by default
-#: ../src/gpm-statistics.c:1562
+#: ../src/gpm-statistics.c:1557
 msgid "Select this device at startup"
 msgstr "اختر هذا الجهاز عند بدأ التشغيل"
 
 #. TRANSLATORS: the icon for the CPU
-#: ../src/gpm-statistics.c:1832
+#: ../src/gpm-statistics.c:1836
 msgid "Processor"
 msgstr "المعالج"
 
 #. preferences
-#: ../src/gpm-tray-icon.c:297
+#: ../src/gpm-tray-icon.c:296
 msgid "_Preferences"
 msgstr "التف_ضيلات"
 
@@ -2319,7 +2316,7 @@ msgstr[5] "حواسيب"
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:589
 msgid "Lithium Ion"
-msgstr "أيونات ليثيوم"
+msgstr "شوارد ليثيوم"
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:593
@@ -2365,13 +2362,3 @@ msgstr "‏تنتظر لتُشحن"
 #: ../src/gpm-upower.c:653
 msgid "Waiting to discharge"
 msgstr "تنتظر لتُستخدم"
-
-#: ../applets/brightness/MATE_BrightnessApplet.xml.h:1
-#: ../applets/inhibit/MATE_InhibitApplet.xml.h:1
-msgid "_About"
-msgstr "_عن"
-
-#: ../applets/brightness/MATE_BrightnessApplet.xml.h:2
-#: ../applets/inhibit/MATE_InhibitApplet.xml.h:2
-msgid "_Help"
-msgstr "م_ساعدة"
