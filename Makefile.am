@@ -16,6 +16,7 @@ SUBDIRS += applets
 endif
 
 EXTRA_DIST =						\
+	autogen.sh					\
 	HACKING						\
 	NEWS.GNOME					\
 	intltool-extract.in				\
