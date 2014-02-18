@@ -3,13 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# i_sty <szollosi.istv4n@gmail.com>, 2014
+# Rezső Páder <rezso@rezso.net>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-15 21:36+0100\n"
-"PO-Revision-Date: 2013-07-12 08:52+0000\n"
-"Last-Translator: Rezső Páder <rezso@rezso.net>\n"
+"PO-Revision-Date: 2014-01-26 13:16+0000\n"
+"Last-Translator: i_sty <szollosi.istv4n@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/projects/p/MATE/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -156,7 +158,7 @@ msgstr "Legyen-e hibernálás, felfüggesztés vagy sem tétlenség esetén"
 #: ../data/org.mate.power-manager.gschema.xml.in.h:2
 msgid ""
 "The type of sleeping that should be performed when the computer is inactive."
-msgstr ""
+msgstr "A számítógép tétlensége esetén használandó energiatakarékossági mód típusa. "
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:3
 msgid "Battery critical low action"
@@ -164,7 +166,7 @@ msgstr "Az akkumulátor kritikusan gyenge művelet"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:4
 msgid "The action to take when the battery is critically low."
-msgstr ""
+msgstr "Az akkumulátor kritikusan alacsony szintje esetén végrehajtandó művelet."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:5
 msgid ""
@@ -185,7 +187,7 @@ msgstr "A szünetmentes táp kritikusan gyenge művelet"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:8
 msgid "The action to take when the UPS is critically low."
-msgstr ""
+msgstr "Az UPS kritikusan alacsony szintje esetén végrehajtandó művelet."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:9
 msgid "UPS low power action"
@@ -193,7 +195,7 @@ msgstr "A szünetmentes táp gyenge művelet"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:10
 msgid "The action to take when the UPS is low."
-msgstr ""
+msgstr "Az UPS alacsony szintje esetén végrehajtandó művelet."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:11
 msgid "Allow backlight brightness adjustment"
@@ -269,7 +271,7 @@ msgstr "A képernyő elsötétítésére használt módszer hálózati tápellá
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:26
 msgid "The DPMS method used to blank the screen when on AC power."
-msgstr ""
+msgstr "A képernyő elsötétítésére használandó DPMS módszer hálózati tápellátás esetén."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:27
 msgid "Method used to blank screen on battery"
@@ -277,7 +279,7 @@ msgstr "A képernyő elsötétítésére használt módszer akkumulátoros tápe
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:28
 msgid "The DPMS method used to blank the screen when on battery power."
-msgstr ""
+msgstr "A képernyő elsötétítésére használandó DPMS módszer akkumulátoros tápellátás esetén."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:29
 msgid "LCD brightness when on AC"
@@ -295,7 +297,7 @@ msgstr "Felfüggesztés gomb művelete"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:32
 msgid "The action to take when the system suspend button is pressed."
-msgstr ""
+msgstr "Mi történjen a felfüggesztés gomb lenyomásakor."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:33
 msgid "Hibernate button action"
@@ -303,7 +305,7 @@ msgstr "Hibernálás gomb művelete"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:34
 msgid "The action to take when the system hibernate button is pressed."
-msgstr ""
+msgstr "Mi történjen a hibernálás gomb lenyomásakor."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:35
 msgid "Power button action"
@@ -311,7 +313,7 @@ msgstr "Bekapcsoló gomb művelete"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:36
 msgid "The action to take when the system power button is pressed."
-msgstr ""
+msgstr "Mi történjen a kikapcsolás gomb lenyomásakor."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:37
 msgid "Laptop lid close action on battery"
@@ -321,7 +323,7 @@ msgstr "A noteszgép fedelének lezárásakor végrehajtandó művelet akkumulá
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
-msgstr ""
+msgstr "A noteszgép fedelének lezárásakor végrehajtandó művelet, ha a gép akkumulátorról működik. "
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:39
 msgid "Laptop lid close action when on AC"
@@ -331,7 +333,7 @@ msgstr "A noteszgép fedelének lezárásakor végrehajtandó művelet hálózat
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
-msgstr ""
+msgstr "A noteszgép fedelének lezárásakor végrehajtandó művelet hálózati tápellátás esetén."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:41
 msgid "Whether to use time-based notifications"
@@ -379,7 +381,7 @@ msgstr "Képernyő zárolása elsötétítéskor"
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
-msgstr ""
+msgstr "Le legyen-e zárva a képernyő a kikapcsolásakor. Ez csak akkor használható, ha a lock_use_screensaver értéke hamis."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:51
 msgid "Lock screen on suspend"
@@ -389,7 +391,7 @@ msgstr "Képernyő zárolása felfüggesztéskor"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
-msgstr ""
+msgstr "Le legyen-e zárva a képernyő, amikor a számítógép felébred a felfüggesztésből. Ez csak akkor használható, ha a lock_use_screensaver értéke hamis."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:53
 msgid "Lock screen on hibernate"
@@ -399,7 +401,7 @@ msgstr "Képernyő zárolása hibernáláskor"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
-msgstr ""
+msgstr "Le legyen-e zárva a képernyő, amikor a számítógép felébred a hibernálásból. Ez csak akkor használható, ha a lock_use_screensaver értéke hamis."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:55
 msgid "Lock MATE keyring on sleep"
@@ -738,7 +740,7 @@ msgstr "Mikor jelenjen meg az értesítési ikon"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:126
 msgid "Display options for the notification icon."
-msgstr ""
+msgstr "Beállítás megjelenítése értesítési ikonnak."
 
 #: ../data/mate-power-preferences.desktop.in.in.h:1
 msgid "Power Management"
