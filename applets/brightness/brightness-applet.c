@@ -656,6 +656,9 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
 
 	/* window */
 	applet->popup = gtk_window_new (GTK_WINDOW_POPUP);
+#if !GTK_CHECK_VERSION (2, 90, 0)
+	GTK_WIDGET_UNSET_FLAGS (applet->popup, GTK_TOPLEVEL);
+#endif
 	gtk_window_set_type_hint (GTK_WINDOW(applet->popup), GDK_WINDOW_TYPE_HINT_UTILITY);
 	gtk_widget_set_parent (applet->popup, GTK_WIDGET(applet));
 	gtk_container_add (GTK_CONTAINER(applet->popup), frame);
