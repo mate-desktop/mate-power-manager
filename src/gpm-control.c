@@ -39,6 +39,7 @@
 #include <glib/gi18n.h>
 #include <dbus/dbus-glib.h>
 #include <dbus/dbus-glib-lowlevel.h>
+#define UPOWER_ENABLE_DEPRECATED
 #include <libupower-glib/upower.h>
 
 #ifdef WITH_KEYRING
