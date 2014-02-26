@@ -30,6 +30,8 @@
 #include <dbus/dbus-glib.h>
 #include <math.h>
 #include <string.h>
+
+#define UPOWER_ENABLE_DEPRECATED 1
 #include <libupower-glib/upower.h>
 
 #include "egg-debug.h"

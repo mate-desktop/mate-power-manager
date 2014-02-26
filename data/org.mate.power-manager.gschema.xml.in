@@ -365,5 +365,10 @@
       <_summary>When to show the notification icon</_summary>
       <_description>Display options for the notification icon.</_description>
     </key>
+    <key name="acpi-backlight-interface" type="s">
+      <default>''</default>
+      <_summary>Which interface under /sys/class/backlight/ should be used</_summary>
+      <_description>Configures which backlight interface should be used.</_description>
+    </key>
   </schema>
 </schemalist>

@@ -21,7 +21,9 @@
 
 #include "config.h"
 
+#include <stdlib.h>
 #include <unistd.h>
+#include <gio/gio.h>
 #include <glib-object.h>
 #include <glib/gi18n.h>
 #include <locale.h>
@@ -36,17 +38,21 @@
 
 #define GCM_BACKLIGHT_HELPER_SYSFS_LOCATION			"/sys/class/backlight"
 
+#define GSETTINGS_SCHEMA_ID 					"org.mate.power-manager"
+#define GCM_BACKLIGHT_HELPER_GSETTINGS_KEY			"acpi-backlight-interface"
+
 /**
  * gcm_backlight_helper_get_best_backlight:
  **/
 static gchar *
 gcm_backlight_helper_get_best_backlight ()
 {
-	gchar *filename;
+	gchar *filename, *userdefined = NULL;
 	guint i;
 	gboolean ret;
 	GDir *dir = NULL;
 	GError *error = NULL;
+	GSettings* gs = NULL;
 	const gchar *first_device;
 
 	/* available kernel interfaces in priority order */
@@ -69,7 +75,26 @@ gcm_backlight_helper_get_best_backlight ()
 		NULL,
 	};
 
-	/* search each one */
+	/* Try to get the preferred interface from gsettings */
+	gs = g_settings_new(GSETTINGS_SCHEMA_ID);
+	if (gs != NULL) {
+		userdefined = g_settings_get_string(gs, GCM_BACKLIGHT_HELPER_GSETTINGS_KEY);
+		if (userdefined == NULL) {
+			g_warning("Could not retrieve value of " GCM_BACKLIGHT_HELPER_GSETTINGS_KEY);
+		}
+	} else {
+		g_warning("Could not open GSettings key " GSETTINGS_SCHEMA_ID);
+	}
+
+	if (userdefined != NULL && strlen(userdefined) > 0) {
+		filename = g_build_filename (GCM_BACKLIGHT_HELPER_SYSFS_LOCATION, userdefined, NULL);
+		ret = g_file_test (filename, G_FILE_TEST_EXISTS);
+                if (ret)
+                        goto out;
+                g_free (filename);
+	}
+
+	/* search each one in the list, no user preference found */
 	for (i=0; backlight_interfaces[i] != NULL; i++) {
 		filename = g_build_filename (GCM_BACKLIGHT_HELPER_SYSFS_LOCATION,
 					     backlight_interfaces[i], NULL);
