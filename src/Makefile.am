@@ -6,6 +6,7 @@ NULL =
 EXTRA_DIST =						\
 	org.mate.PowerManager.xml			\
 	org.mate.PowerManager.Backlight.xml		\
+	org.mate.PowerManager.KbdBacklight.xml		\
 	gpm-marshal.list				\
 	$(NULL)
 
@@ -273,6 +274,7 @@ endif
 BUILT_SOURCES = 					\
 	org.mate.PowerManager.h			\
 	org.mate.PowerManager.Backlight.h		\
+	org.mate.PowerManager.KbdBacklight.h \
 	gpm-marshal.c					\
 	gpm-marshal.h					\
 	$(NULL)
@@ -297,6 +299,13 @@ org.mate.PowerManager.Backlight.h: org.mate.PowerManager.Backlight.xml
 		--mode=glib-server			\
 		--output=org.mate.PowerManager.Backlight.h	\
 		$(srcdir)/org.mate.PowerManager.Backlight.xml
+
+org.mate.PowerManager.KbdBacklight.h: org.mate.PowerManager.KbdBacklight.xml
+	libtool --mode=execute dbus-binding-tool	\
+		--prefix=gpm_kbd_backlight			\
+		--mode=glib-server			\
+		--output=org.mate.PowerManager.KbdBacklight.h	\
+		$(srcdir)/org.mate.PowerManager.KbdBacklight.xml
 
 clean-local:
 	rm -f *~

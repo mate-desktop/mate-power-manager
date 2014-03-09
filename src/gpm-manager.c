@@ -63,6 +63,7 @@
 #include "gpm-disks.h"
 
 #include "org.mate.PowerManager.Backlight.h"
+#include "org.mate.PowerManager.KbdBacklight.h"
 
 static void     gpm_manager_finalize	(GObject	 *object);
 
@@ -1988,9 +1989,11 @@ gpm_manager_init (GpmManager *manager)
 
     manager->priv->kbd_backlight = gpm_kbd_backlight_new ();
     if (manager->priv->kbd_backlight != NULL) {
-        gpm_kbd_backlight_register_dbus (manager->priv->kbd_backlight,
-                                        g_connection,
-                                        NULL);
+    	dbus_g_object_type_install_info (GPM_TYPE_KBD_BACKLIGHT,
+						 &dbus_glib_gpm_kbd_backlight_object_info);
+		dbus_g_connection_register_g_object (connection, GPM_DBUS_PATH_KBD_BACKLIGHT,
+						     G_OBJECT (manager->priv->kbd_backlight));
+    
     }
 
 	manager->priv->idle = gpm_idle_new ();
