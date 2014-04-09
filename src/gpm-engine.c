@@ -768,12 +768,14 @@ gpm_engine_coldplug_idle_cb (GpmEngine *engine)
 	guint i;
 	GPtrArray *array = NULL;
 	UpDevice *device;
+#if !UP_CHECK_VERSION(0, 99, 0)
 	gboolean ret;
 	GError *error = NULL;
+#endif
 
 	g_return_val_if_fail (engine != NULL, FALSE);
 	g_return_val_if_fail (GPM_IS_ENGINE (engine), FALSE);
-
+#if !UP_CHECK_VERSION(0, 99, 0)
 	/* get devices from UPower */
 	ret = up_client_enumerate_devices_sync (engine->priv->client, NULL, &error);
 	if (!ret) {
@@ -781,7 +783,7 @@ gpm_engine_coldplug_idle_cb (GpmEngine *engine)
 		g_error_free (error);
 		goto out;
 	}
-
+#endif
 	/* connected mobile phones */
 	gpm_phone_coldplug (engine->priv->phone);
 
@@ -793,7 +795,9 @@ gpm_engine_coldplug_idle_cb (GpmEngine *engine)
 		device = g_ptr_array_index (array, i);
 		gpm_engine_device_add (engine, device);
 	}
+#if !UP_CHECK_VERSION(0, 99, 0)
 out:
+#endif
 	if (array != NULL)
 		g_ptr_array_unref (array);
 	/* never repeat */
@@ -816,6 +820,22 @@ gpm_engine_device_added_cb (UpClient *client, UpDevice *device, GpmEngine *engin
  * gpm_engine_device_removed_cb:
  **/
 static void
+#if UP_CHECK_VERSION(0, 99, 0)
+gpm_engine_device_removed_cb (UpClient *client, const char *object_path, GpmEngine *engine)
+{
+	guint i;
+
+	for (i = 0; i < engine->priv->array->len; i++) {
+		UpDevice *device = g_ptr_array_index (engine->priv->array, i);
+
+		if (g_strcmp0 (object_path, up_device_get_object_path (device)) == 0) {
+			g_ptr_array_remove_index (engine->priv->array, i);
+			break;
+		}
+	}
+	gpm_engine_recalculate_state (engine);
+}
+#else
 gpm_engine_device_removed_cb (UpClient *client, UpDevice *device, GpmEngine *engine)
 {
 	gboolean ret;
@@ -824,12 +844,18 @@ gpm_engine_device_removed_cb (UpClient *client, UpDevice *device, GpmEngine *eng
 		return;
 	gpm_engine_recalculate_state (engine);
 }
-
+#endif
 
 /**
  * gpm_engine_device_changed_cb:
  **/
 static void
+#if UP_CHECK_VERSION(0, 99, 0)
+gpm_engine_device_changed_cb (UpClient *client, GParamSpec *pspec, GpmEngine *engine)
+{
+	gpm_engine_recalculate_state (engine);
+}
+#else
 gpm_engine_device_changed_cb (UpClient *client, UpDevice *device, GpmEngine *engine)
 {
 	UpDeviceKind kind;
@@ -891,6 +917,7 @@ gpm_engine_device_changed_cb (UpClient *client, UpDevice *device, GpmEngine *eng
 
 	gpm_engine_recalculate_state (engine);
 }
+#endif
 
 /**
  * gpm_engine_get_devices:
@@ -1003,7 +1030,10 @@ phone_device_refresh_cb (GpmPhone *phone, guint idx, GpmEngine *engine)
 static void
 gpm_engine_init (GpmEngine *engine)
 {
-
+#if UP_CHECK_VERSION(0, 99, 0)
+	GPtrArray *array = NULL;
+	guint i;
+#endif
 	engine->priv = GPM_ENGINE_GET_PRIVATE (engine);
 
 	engine->priv->array = g_ptr_array_new_with_free_func (g_object_unref);
@@ -1012,8 +1042,13 @@ gpm_engine_init (GpmEngine *engine)
 			  G_CALLBACK (gpm_engine_device_added_cb), engine);
 	g_signal_connect (engine->priv->client, "device-removed",
 			  G_CALLBACK (gpm_engine_device_removed_cb), engine);
+#if UP_CHECK_VERSION(0, 99, 0)
+	g_signal_connect (engine->priv->client, "notify",
+			  G_CALLBACK (gpm_engine_device_changed_cb), engine);
+#else
 	g_signal_connect (engine->priv->client, "device-changed",
 			  G_CALLBACK (gpm_engine_device_changed_cb), engine);
+#endif
 
 	engine->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
 	g_signal_connect (engine->priv->settings, "changed",
@@ -1026,6 +1061,18 @@ gpm_engine_init (GpmEngine *engine)
 			  G_CALLBACK (phone_device_removed_cb), engine);
 	g_signal_connect (engine->priv->phone, "device-refresh",
 			  G_CALLBACK (phone_device_refresh_cb), engine);
+
+#if UP_CHECK_VERSION(0, 99, 0)
+	/* coldplug */
+	array = up_client_get_devices(engine->priv->client);
+	if (array) {
+		for (i = 0; i < array->len; i++) {
+			UpDevice *device = g_ptr_array_index (array, i);
+			gpm_engine_device_added_cb(engine->priv->client, device, engine);
+		}
+		g_ptr_array_free (array, TRUE);
+	}
+#endif
 
 	/* create a fake virtual composite battery */
 	engine->priv->battery_composite = up_device_new ();
