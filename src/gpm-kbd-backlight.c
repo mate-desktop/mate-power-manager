@@ -128,6 +128,9 @@ gpm_kbd_backlight_set (GpmKbdBacklight *backlight,
    guint goal;
 
    g_return_val_if_fail (GPM_IS_KBD_BACKLIGHT (backlight), FALSE);
+   /* avoid warnings if no keyboard brightness is available */
+   if (backlight->priv->max_brightness < 1)
+       return FALSE;
    /* if we're setting the same we are, don't bother */
    //g_return_val_if_fail (backlight->priv->brightness_percent != percentage, FALSE);
 
