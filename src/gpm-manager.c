@@ -67,7 +67,6 @@
 static void     gpm_manager_finalize	(GObject	 *object);
 
 #define GPM_MANAGER_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_MANAGER, GpmManagerPrivate))
-#define GPM_MANAGER_RECALL_DELAY		30 /* seconds */
 #define GPM_MANAGER_NOTIFY_TIMEOUT_NEVER	0 /* ms */
 #define GPM_MANAGER_NOTIFY_TIMEOUT_SHORT	10 * 1000 /* ms */
 #define GPM_MANAGER_NOTIFY_TIMEOUT_LONG		30 * 1000 /* ms */
@@ -1091,111 +1090,6 @@ gpm_manager_settings_changed_cb (GSettings *settings, const gchar *key, GpmManag
 }
 
 /**
- * gpm_manager_perhaps_recall_response_cb:
- */
-static void
-gpm_manager_perhaps_recall_response_cb (GtkDialog *dialog, gint response_id, GpmManager *manager)
-{
-	GdkScreen *screen;
-	GtkWidget *dialog_error;
-	GError *error = NULL;
-	gboolean ret;
-	const gchar *website;
-
-	/* don't show this again */
-	if (response_id == GTK_RESPONSE_CANCEL) {
-		g_settings_set_boolean (manager->priv->settings, GPM_SETTINGS_NOTIFY_PERHAPS_RECALL, FALSE);
-		goto out;
-	}
-
-	/* visit recall website */
-	if (response_id == GTK_RESPONSE_OK) {
-		screen = gdk_screen_get_default();
-		website = (const gchar *) g_object_get_data (G_OBJECT (manager), "recall-oem-website");
-		ret = gtk_show_uri (screen, website, gtk_get_current_event_time (), &error);
-		if (!ret) {
-			dialog_error = gtk_message_dialog_new (NULL, GTK_DIALOG_MODAL, GTK_MESSAGE_INFO, GTK_BUTTONS_OK,
-							       "Failed to show url %s", error->message);
-			gtk_dialog_run (GTK_DIALOG (dialog_error));
-			g_error_free (error);
-		}
-		goto out;
-	}
-out:
-	gtk_widget_destroy (GTK_WIDGET (dialog));
-	return;
-}
-
-/**
- * gpm_manager_perhaps_recall_delay_cb:
- */
-static gboolean
-gpm_manager_perhaps_recall_delay_cb (GpmManager *manager)
-{
-	const gchar *oem_vendor;
-	gchar *title = NULL;
-	gchar *message = NULL;
-	GtkWidget *dialog;
-
-	oem_vendor = (const gchar *) g_object_get_data (G_OBJECT (manager), "recall-oem-vendor");
-
-	/* TRANSLATORS: the battery may be recalled by it's vendor */
-	title = g_strdup_printf ("%s: %s", GPM_NAME, _("Battery may be recalled"));
-	message = g_strdup_printf (_("A battery in your computer may have been "
-				     "recalled by %s and you may be at risk.\n\n"
-				     "For more information visit the battery recall website."), oem_vendor);
-	dialog = gtk_message_dialog_new_with_markup (NULL, GTK_DIALOG_DESTROY_WITH_PARENT,
-						     GTK_MESSAGE_INFO, GTK_BUTTONS_CLOSE,
-						     "<span size='larger'><b>%s</b></span>", title);
-
-	gtk_message_dialog_format_secondary_markup (GTK_MESSAGE_DIALOG (dialog), "%s", message);
-
-	/* TRANSLATORS: button text, visit the manufacturers recall website */
-	gtk_dialog_add_button (GTK_DIALOG (dialog), _("Visit recall website"), GTK_RESPONSE_OK);
-
-	/* TRANSLATORS: button text, do not show this bubble again */
-	gtk_dialog_add_button (GTK_DIALOG (dialog), _("Do not show me this again"), GTK_RESPONSE_CANCEL);
-
-	/* wait async for response */
-	gtk_widget_show (dialog);
-	g_signal_connect (dialog, "response", G_CALLBACK (gpm_manager_perhaps_recall_response_cb), manager);
-
-	g_free (title);
-	g_free (message);
-
-	/* never repeat */
-	return FALSE;
-}
-
-/**
- * gpm_manager_engine_perhaps_recall_cb:
- */
-static void
-gpm_manager_engine_perhaps_recall_cb (GpmEngine *engine, UpDevice *device, gchar *oem_vendor, gchar *website, GpmManager *manager)
-{
-	gboolean ret;
-
-	/* don't show when running under GDM */
-	if (g_getenv ("RUNNING_UNDER_GDM") != NULL) {
-		egg_debug ("running under gdm, so no notification");
-		return;
-	}
-
-	/* already shown, and dismissed */
-	ret = g_settings_get_boolean (manager->priv->settings, GPM_SETTINGS_NOTIFY_PERHAPS_RECALL);
-	if (!ret) {
-		egg_debug ("Gsettings prevents notification: %s", GPM_SETTINGS_NOTIFY_PERHAPS_RECALL);
-		return;
-	}
-
-	g_object_set_data_full (G_OBJECT (manager), "recall-oem-vendor", (gpointer) g_strdup (oem_vendor), (GDestroyNotify) g_free);
-	g_object_set_data_full (G_OBJECT (manager), "recall-oem-website", (gpointer) g_strdup (website), (GDestroyNotify) g_free);
-
-	/* delay by a few seconds so the panel can load */
-	g_timeout_add_seconds (GPM_MANAGER_RECALL_DELAY, (GSourceFunc) gpm_manager_perhaps_recall_delay_cb, manager);
-}
-
-/**
  * gpm_manager_engine_icon_changed_cb:
  */
 static void
@@ -2020,8 +1914,6 @@ gpm_manager_init (GpmManager *manager)
 	gpm_manager_sync_policy_sleep (manager);
 
 	manager->priv->engine = gpm_engine_new ();
-	g_signal_connect (manager->priv->engine, "perhaps-recall",
-			  G_CALLBACK (gpm_manager_engine_perhaps_recall_cb), manager);
 	g_signal_connect (manager->priv->engine, "low-capacity",
 			  G_CALLBACK (gpm_manager_engine_low_capacity_cb), manager);
 	g_signal_connect (manager->priv->engine, "icon-changed",
