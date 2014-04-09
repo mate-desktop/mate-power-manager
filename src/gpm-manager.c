@@ -970,7 +970,11 @@ gpm_manager_get_spindown_timeout (GpmManager *manager)
  * gpm_manager_client_changed_cb:
  **/
 static void
+#if UP_CHECK_VERSION(0, 99, 0)
+gpm_manager_client_changed_cb (UpClient *client, GParamSpec *pspec, GpmManager *manager)
+#else
 gpm_manager_client_changed_cb (UpClient *client, GpmManager *manager)
+#endif
 {
 	gboolean event_when_closed;
 	gint timeout;
@@ -1852,8 +1856,13 @@ gpm_manager_init (GpmManager *manager)
 	g_signal_connect (manager->priv->settings, "changed",
 			  G_CALLBACK (gpm_manager_settings_changed_cb), manager);
 	manager->priv->client = up_client_new ();
+#if UP_CHECK_VERSION(0, 99, 0)
+	g_signal_connect (manager->priv->client, "notify",
+			  G_CALLBACK (gpm_manager_client_changed_cb), manager);
+#else
 	g_signal_connect (manager->priv->client, "changed",
 			  G_CALLBACK (gpm_manager_client_changed_cb), manager);
+#endif
 
 	/* use libmatenotify */
 	notify_init (GPM_NAME);

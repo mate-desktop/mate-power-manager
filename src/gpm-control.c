@@ -289,10 +289,11 @@ gpm_control_suspend (GpmControl *control, GError **error)
 		}
 		g_object_unref(proxy);
 	}
+#if !UP_CHECK_VERSION(0, 99, 0)
 	else {
 		ret = up_client_suspend_sync (control->priv->client, NULL, error);
 	}
-
+#endif
 	egg_debug ("emitting resume");
 	g_signal_emit (control, signals [RESUME], 0, GPM_CONTROL_ACTION_SUSPEND);
 
@@ -399,10 +400,11 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 			ret = TRUE;
 		}
 	}
+#if !UP_CHECK_VERSION(0, 99, 0)
 	else {
 		ret = up_client_hibernate_sync (control->priv->client, NULL, error);
 	}
-
+#endif
 	egg_debug ("emitting resume");
 	g_signal_emit (control, signals [RESUME], 0, GPM_CONTROL_ACTION_HIBERNATE);
 

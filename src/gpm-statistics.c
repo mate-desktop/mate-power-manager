@@ -1236,6 +1236,12 @@ gpm_stats_device_added_cb (UpClient *client, UpDevice *device, gpointer user_dat
  * gpm_stats_device_changed_cb:
  **/
 static void
+#if UP_CHECK_VERSION(0, 99, 0)
+gpm_stats_device_changed_cb (UpClient *client, GParamSpec *pspec, gpointer user_data)
+{
+	gpm_stats_button_update_ui();
+}
+#else
 gpm_stats_device_changed_cb (UpClient *client, UpDevice *device, gpointer user_data)
 {
 	const gchar *object_path;
@@ -1246,6 +1252,7 @@ gpm_stats_device_changed_cb (UpClient *client, UpDevice *device, gpointer user_d
 	if (g_strcmp0 (current_device, object_path) == 0)
 		gpm_stats_update_info_data (device);
 }
+#endif
 
 /**
  * gpm_stats_device_removed_cb:
@@ -1794,11 +1801,12 @@ main (int argc, char *argv[])
 
 	wakeups = up_wakeups_new ();
 	g_signal_connect (wakeups, "data-changed", G_CALLBACK (gpm_stats_data_changed_cb), NULL);
-
+#if !UP_CHECK_VERSION(0, 99, 0)
 	/* coldplug */
 	ret = up_client_enumerate_devices_sync (client, NULL, NULL);
 	if (!ret)
 		goto out;
+#endif
 	devices = up_client_get_devices (client);
 
 	/* add devices in visually pleasing order */
@@ -1814,7 +1822,11 @@ main (int argc, char *argv[])
 	/* connect now the coldplug is done */
 	g_signal_connect (client, "device-added", G_CALLBACK (gpm_stats_device_added_cb), NULL);
 	g_signal_connect (client, "device-removed", G_CALLBACK (gpm_stats_device_removed_cb), NULL);
+#if UP_CHECK_VERSION(0, 99, 0)
+	g_signal_connect (client, "notify", G_CALLBACK (gpm_stats_device_changed_cb), NULL);
+#else
 	g_signal_connect (client, "device-changed", G_CALLBACK (gpm_stats_device_changed_cb), NULL);
+#endif
 
 	/* set current device */
 	if (devices->len > 0) {
@@ -1854,8 +1866,9 @@ main (int argc, char *argv[])
 	gtk_widget_show (widget);
 
 	gtk_main ();
-
+#if !UP_CHECK_VERSION(0, 99, 0)
 out:
+#endif
 	g_object_unref (settings);
 	g_object_unref (client);
 	g_object_unref (wakeups);

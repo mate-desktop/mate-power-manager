@@ -811,7 +811,9 @@ gpm_prefs_init (GpmPrefs *prefs)
 	UpDevice *device;
 	UpDeviceKind kind;
 	GpmBrightness *brightness;
+#if !UP_CHECK_VERSION(0, 99, 0)
 	gboolean ret;
+#endif
 	guint i;
 
 	GDBusProxy *proxy;
@@ -897,9 +899,11 @@ gpm_prefs_init (GpmPrefs *prefs)
 	else {
 		/* are we allowed to shutdown? */
 		egg_console_kit_can_stop (prefs->priv->console, &prefs->priv->can_shutdown, NULL);
+#if !UP_CHECK_VERSION(0, 99, 0)
 		/* get values from UpClient */
 		prefs->priv->can_suspend = up_client_get_can_suspend (prefs->priv->client);
 		prefs->priv->can_hibernate = up_client_get_can_hibernate (prefs->priv->client);
+#endif
 	}
 
 	if (LOGIND_RUNNING()) {
@@ -953,14 +957,14 @@ gpm_prefs_init (GpmPrefs *prefs)
 	brightness = gpm_brightness_new ();
 	prefs->priv->has_lcd = gpm_brightness_has_hw (brightness);
 	g_object_unref (brightness);
-
+#if !UP_CHECK_VERSION(0, 99, 0)
 	/* get device list */
 	ret = up_client_enumerate_devices_sync (prefs->priv->client, NULL, &error);
 	if (!ret) {
 		egg_warning ("failed to get device list: %s", error->message);
 		g_error_free (error);
 	}
-
+#endif
 	devices = up_client_get_devices (prefs->priv->client);
 	for (i=0; i<devices->len; i++) {
 		device = g_ptr_array_index (devices, i);
