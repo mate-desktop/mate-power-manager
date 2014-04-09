@@ -49,10 +49,6 @@ typedef struct
 						 gchar		*icon);
 	void		(* summary_changed)	(GpmEngine	*engine,
 						 gchar		*status);
-	void		(* perhaps_recall)	(GpmEngine	*engine,
-						 UpDevice	*device,
-						 const gchar	*oem_vendor,
-						 const gchar	*website);
 	void		(* low_capacity)	(GpmEngine	*engine,
 						 UpDevice	*device);
 	void		(* charge_low)		(GpmEngine	*engine,

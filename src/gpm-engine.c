@@ -72,7 +72,6 @@ enum {
 	CHARGE_ACTION,
 	DISCHARGING,
 	LOW_CAPACITY,
-	PERHAPS_RECALL,
 	LAST_SIGNAL
 };
 
@@ -761,42 +760,6 @@ gpm_engine_device_add (GpmEngine *engine, UpDevice *device)
 }
 
 /**
- * gpm_engine_check_recall:
- **/
-static gboolean
-gpm_engine_check_recall (GpmEngine *engine, UpDevice *device)
-{
-	UpDeviceKind kind;
-	gboolean recall_notice = FALSE;
-	gchar *recall_vendor = NULL;
-	gchar *recall_url = NULL;
-
-	/* get device properties */
-	g_object_get (device,
-		      "kind", &kind,
-		      "recall-notice", &recall_notice,
-		      "recall-vendor", &recall_vendor,
-		      "recall-url", &recall_url,
-		      NULL);
-
-	/* not battery */
-	if (kind != UP_DEVICE_KIND_BATTERY)
-		goto out;
-
-	/* no recall data */
-	if (!recall_notice)
-		goto out;
-
-	/* emit signal for manager */
-	egg_debug ("** EMIT: perhaps-recall");
-	g_signal_emit (engine, signals [PERHAPS_RECALL], 0, device, recall_vendor, recall_url);
-out:
-	g_free (recall_vendor);
-	g_free (recall_url);
-	return recall_notice;
-}
-
-/**
  * gpm_engine_coldplug_idle_cb:
  **/
 static gboolean
@@ -829,7 +792,6 @@ gpm_engine_coldplug_idle_cb (GpmEngine *engine)
 	for (i=0;i<array->len;i++) {
 		device = g_ptr_array_index (array, i);
 		gpm_engine_device_add (engine, device);
-		gpm_engine_check_recall (engine, device);
 	}
 out:
 	if (array != NULL)
@@ -846,7 +808,6 @@ gpm_engine_device_added_cb (UpClient *client, UpDevice *device, GpmEngine *engin
 {
 	/* add to list */
 	g_ptr_array_add (engine->priv->array, g_object_ref (device));
-	gpm_engine_check_recall (engine, device);
 
 	gpm_engine_recalculate_state (engine);
 }
@@ -1134,14 +1095,6 @@ gpm_engine_class_init (GpmEngineClass *klass)
 			      G_STRUCT_OFFSET (GpmEngineClass, low_capacity),
 			      NULL, NULL, g_cclosure_marshal_VOID__POINTER,
 			      G_TYPE_NONE, 1, G_TYPE_POINTER);
-	signals [PERHAPS_RECALL] =
-		g_signal_new ("perhaps-recall",
-			      G_TYPE_FROM_CLASS (object_class),
-			      G_SIGNAL_RUN_LAST,
-			      G_STRUCT_OFFSET (GpmEngineClass, perhaps_recall),
-			      NULL, NULL, gpm_marshal_VOID__POINTER_STRING_STRING,
-			      G_TYPE_NONE,
-			      3, G_TYPE_POINTER, G_TYPE_STRING, G_TYPE_STRING);
 	signals [FULLY_CHARGED] =
 		g_signal_new ("fully-charged",
 			      G_TYPE_FROM_CLASS (object_class),

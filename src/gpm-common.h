@@ -98,7 +98,6 @@ G_BEGIN_DECLS
 #define GPM_SETTINGS_SPINDOWN_TIMEOUT_BATT		"spindown-timeout-battery"
 
 /* notify */
-#define GPM_SETTINGS_NOTIFY_PERHAPS_RECALL		"notify-perhaps-recall"
 #define GPM_SETTINGS_NOTIFY_LOW_CAPACITY		"notify-low-capacity"
 #define GPM_SETTINGS_NOTIFY_DISCHARGING			"notify-discharging"
 #define GPM_SETTINGS_NOTIFY_FULLY_CHARGED		"notify-fully-charged"
