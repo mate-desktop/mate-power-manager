@@ -113,6 +113,9 @@ gpm_kbd_backlight_set (GpmKbdBacklight *backlight,
    guint goal;
 
    g_return_val_if_fail (GPM_IS_KBD_BACKLIGHT (backlight), FALSE);
+   /* avoid warnings if no keyboard brightness is available */
+   if (backlight->priv->max_brightness < 1)
+       return FALSE;
    /* if we're setting the same we are, don't bother */
    //g_return_val_if_fail (backlight->priv->brightness_percent != percentage, FALSE);
 
@@ -483,6 +486,9 @@ gpm_kbd_backlight_control_resume_cb (GpmControl *control,
  **/
 static void
 gpm_kbd_backlight_client_changed_cb (UpClient *client,
+#if UP_CHECK_VERSION(0, 99, 0)
+                    GParamSpec *pspec,
+#endif
                     GpmKbdBacklight *backlight)
 {
    gpm_kbd_backlight_evaluate_power_source_and_set (backlight);
@@ -752,8 +758,13 @@ noerr:
 
    /* Use upower for ac changed signal */
    backlight->priv->client = up_client_new ();
+#if UP_CHECK_VERSION(0, 99, 0)
+   g_signal_connect (backlight->priv->client, "notify",
+             G_CALLBACK (gpm_kbd_backlight_client_changed_cb), backlight);
+#else
    g_signal_connect (backlight->priv->client, "changed",
              G_CALLBACK (gpm_kbd_backlight_client_changed_cb), backlight);
+#endif
 
     backlight->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
 	//g_signal_connect (backlight->priv->settings, "changed", G_CALLBACK (gpm_settings_key_changed_cb), backlight);
