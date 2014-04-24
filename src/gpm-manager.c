@@ -1858,7 +1858,9 @@ gpm_manager_init (GpmManager *manager)
 			  G_CALLBACK (gpm_manager_settings_changed_cb), manager);
 	manager->priv->client = up_client_new ();
 #if UP_CHECK_VERSION(0, 99, 0)
-	g_signal_connect (manager->priv->client, "notify",
+	g_signal_connect (manager->priv->client, "notify::lid-is-closed",
+			  G_CALLBACK (gpm_manager_client_changed_cb), manager);
+	g_signal_connect (manager->priv->client, "notify::on-battery",
 			  G_CALLBACK (gpm_manager_client_changed_cb), manager);
 #else
 	g_signal_connect (manager->priv->client, "changed",
