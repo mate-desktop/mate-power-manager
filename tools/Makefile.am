@@ -1,5 +1,5 @@
 script_SCRIPTS =					\
-	mate-power-bugreport.sh
+	mate-power-manager-bugreport
 
 EXTRA_DIST=$(script_SCRIPTS)
 
