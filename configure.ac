@@ -126,6 +126,7 @@ LIBPANEL_REQUIRED=1.5.0
 XRANDR_REQUIRED=1.2.0
 CANBERRA_REQUIRED=0.10
 UPOWER_REQUIRED=0.9.1
+MATE_DESKTOP_REQUIRED=1.9.0
 
 dnl ----------------------------------------------------------------------------
 dnl GTK library version
@@ -166,6 +167,7 @@ PKG_CHECK_MODULES(DBUS,[
 
 PKG_CHECK_MODULES(MATE, [
  gtk+-$GTK_API_VERSION >= $GTK_REQUIRED
+ mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED
  cairo >= $CAIRO_REQUIRED])
 
 PKG_CHECK_MODULES(GDK, [

@@ -39,6 +39,7 @@
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include <libupower-glib/upower.h>
+#include <libmate-desktop/mate-aboutdialog.h>
 
 #include "egg-debug.h"
 
@@ -170,6 +171,37 @@ gpm_tray_icon_show_preferences_cb (GtkMenuItem *item, gpointer data)
 }
 
 /**
+ * gpm_tray_icon_show_about_cb:
+ * @action: A valid GtkAction
+ **/
+static void
+gpm_tray_icon_show_about_cb (GtkMenuItem *item, gpointer data)
+{
+	const gchar *authors[] =
+	{
+		"Perberos",
+		"Steve Zesch",
+		"Stefano Karapetsas",
+		NULL
+	};
+
+	mate_show_about_dialog (NULL,
+							"program-name", _("Power Manager"),
+							"version", VERSION,
+							"comments", _("Power management daemon"),
+							"copyright", _("Copyright \xC2\xA9 2011-2014 MATE developers"),
+							"authors", authors,
+							/* Translators should localize the following string
+							* which will be displayed at the bottom of the about
+							* box to give credit to the translator(s).
+							*/
+							"translator-credits", _("translator-credits"),
+							"logo-icon-name", "mate-power-manager",
+							"website", "http://www.mate-desktop.org",
+							NULL);
+}
+
+/**
  * gpm_tray_icon_popup_cleared_cd:
  * @widget: The popup Gtkwidget
  *
@@ -298,6 +330,12 @@ gpm_tray_icon_create_menu (GpmTrayIcon *icon, guint32 timestamp)
 	gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (item), image);
 	g_signal_connect (G_OBJECT (item), "activate",
 			  G_CALLBACK (gpm_tray_icon_show_preferences_cb), icon);
+	gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
+
+	/* about */
+	item = gtk_image_menu_item_new_from_stock (GTK_STOCK_ABOUT, NULL);
+	g_signal_connect (G_OBJECT (item), "activate",
+			  G_CALLBACK (gpm_tray_icon_show_about_cb), icon);
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
 
 skip_prefs:
