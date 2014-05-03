@@ -36,6 +36,7 @@
 #include <glib-object.h>
 #include <glib/gi18n.h>
 #include <dbus/dbus-glib.h>
+#include <libmate-desktop/mate-aboutdialog.h>
 
 #include "egg-debug.h"
 #include "egg-dbus-monitor.h"
@@ -462,7 +463,7 @@ gpm_applet_click_cb (GpmInhibitApplet *applet, GdkEventButton *event)
 static void
 gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 {
-	GtkAboutDialog *about;
+	MateAboutDialog *about;
 
 	GdkPixbuf *logo =
 		gtk_icon_theme_load_icon (gtk_icon_theme_get_default (),
@@ -498,17 +499,17 @@ gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 	license_trans = g_strconcat (_(license[0]), "\n\n", _(license[1]), "\n\n",
 				     _(license[2]), "\n\n", _(license[3]), "\n", NULL);
 
-	about = (GtkAboutDialog*) gtk_about_dialog_new ();
-	gtk_about_dialog_set_program_name (about, GPM_INHIBIT_APPLET_NAME);
-	gtk_about_dialog_set_version (about, VERSION);
-	gtk_about_dialog_set_copyright (about, _("Copyright \xc2\xa9 2006-2007 Richard Hughes"));
-	gtk_about_dialog_set_comments (about, GPM_INHIBIT_APPLET_DESC);
-	gtk_about_dialog_set_authors (about, authors);
-	gtk_about_dialog_set_documenters (about, documenters);
-	gtk_about_dialog_set_translator_credits (about, translator_credits);
-	gtk_about_dialog_set_logo (about, logo);
-	gtk_about_dialog_set_license (about, license_trans);
-	gtk_about_dialog_set_website (about, GPM_HOMEPAGE_URL);
+	about = (MateAboutDialog*) mate_about_dialog_new ();
+	mate_about_dialog_set_program_name (about, GPM_INHIBIT_APPLET_NAME);
+	mate_about_dialog_set_version (about, VERSION);
+	mate_about_dialog_set_copyright (about, _("Copyright \xc2\xa9 2006-2007 Richard Hughes"));
+	mate_about_dialog_set_comments (about, GPM_INHIBIT_APPLET_DESC);
+	mate_about_dialog_set_authors (about, authors);
+	mate_about_dialog_set_documenters (about, documenters);
+	mate_about_dialog_set_translator_credits (about, translator_credits);
+	mate_about_dialog_set_logo (about, logo);
+	mate_about_dialog_set_license (about, license_trans);
+	mate_about_dialog_set_website (about, GPM_HOMEPAGE_URL);
 
 	g_signal_connect (G_OBJECT(about), "response",
 			  G_CALLBACK(gtk_widget_destroy), NULL);
