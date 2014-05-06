@@ -60,7 +60,7 @@ org.mate.panel.applet.InhibitAppletFactory.service: $(service_in_files)
             -e "s|\@LIBEXECDIR\@|$(libexecdir)|" \
             $< > $@
 
-uidir   = $(datadir)/mate-2.0/ui
+uidir   = $(datadir)/mate-panel/ui
 ui_DATA = inhibit-applet-menu.xml
 
 EXTRA_DIST = org.mate.InhibitApplet.mate-panel-applet.in.in $(ui_DATA) $(service_in_files)
