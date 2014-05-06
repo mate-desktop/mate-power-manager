@@ -61,7 +61,7 @@ org.mate.panel.applet.BrightnessAppletFactory.service: $(service_in_files)
             -e "s|\@LIBEXECDIR\@|$(libexecdir)|" \
             $< > $@
 
-uidir   = $(datadir)/mate-2.0/ui
+uidir   = $(datadir)/mate-power-manager/ui
 ui_DATA = brightness-applet-menu.xml
 
 EXTRA_DIST = org.mate.BrightnessApplet.mate-panel-applet.in.in $(ui_DATA) $(service_in_files)
