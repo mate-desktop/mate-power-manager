@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-15 21:36+0100\n"
-"PO-Revision-Date: 2014-02-16 17:27+0000\n"
+"PO-Revision-Date: 2014-03-06 02:07+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitoschido@ubuntu.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/MATE/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -39,12 +39,12 @@ msgstr "No se puede obtener el brillo del panel del portátil"
 #: ../applets/brightness/brightness-applet.c:368
 #, c-format
 msgid "LCD brightness : %d%%"
-msgstr "Brillo del LCD : %d%%"
+msgstr "Brillo del LCD: %d %%"
 
 #: ../applets/brightness/brightness-applet.c:753
 #: ../applets/inhibit/inhibit-applet.c:432
 msgid "Licensed under the GNU General Public License Version 2"
-msgstr "Licenciado bajo la Licencia Pública General GNU Versión 2"
+msgstr "Disponible bajo la Licencia Pública General de GNU, versión 2"
 
 #: ../applets/brightness/brightness-applet.c:754
 #: ../applets/inhibit/inhibit-applet.c:433
@@ -591,7 +591,7 @@ msgstr "El índice del número de página que mostrar por defecto el cual se usa
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
-msgstr "El número ID de identificación del último dispositivo seleccionado."
+msgstr "El identificador numérico del último dispositivo seleccionado."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:97
 msgid ""
@@ -1066,7 +1066,7 @@ msgstr "%2is"
 #: ../src/gpm-graph-widget.c:461
 #, c-format
 msgid "%i%%"
-msgstr "%i%%"
+msgstr "%i %%"
 
 #. Translators: This is %.1f Watts
 #: ../src/gpm-graph-widget.c:464
@@ -1237,7 +1237,7 @@ msgstr "La batería podría estar estropeada"
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
 " broken."
-msgstr "Su batería tiene una capacidad muy baja (%1.1f%%), lo que significa que puede ser vieja o estar defectuosa."
+msgstr "La batería tiene una capacidad muy baja (%1.1f %%), indicando que puede ser vieja o estar defectuosa."
 
 #. TRANSLATORS: show the charged notification
 #: ../src/gpm-manager.c:1298
@@ -1255,29 +1255,29 @@ msgstr "Descargando la batería"
 #: ../src/gpm-manager.c:1348
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
-msgstr "%s de energía batería restante (%.0f%%)"
+msgstr "%s de energía de batería restante (%.0f %%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
 #: ../src/gpm-manager.c:1351 ../src/gpm-manager.c:1363
 #, c-format
 msgid "%s discharging (%.0f%%)"
-msgstr "%s descargándose (%.0f%%)"
+msgstr "%s descargándose (%.0f %%)"
 
 #. TRANSLATORS: UPS is now discharging
 #: ../src/gpm-manager.c:1356
 msgid "UPS Discharging"
-msgstr "Descargando el SAI"
+msgstr "SAI descargándose"
 
 #. TRANSLATORS: tell the user how much time they have got
 #: ../src/gpm-manager.c:1360
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
-msgstr "%s de energía de respaldo del SAI restante (%.0f%%)"
+msgstr "%s de energía de respaldo del SAI restante (%.0f %%)"
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
 #: ../src/gpm-manager.c:1444
 msgid "Battery low"
-msgstr "La batería está baja"
+msgstr "Batería baja"
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
 #: ../src/gpm-manager.c:1447
@@ -1288,7 +1288,7 @@ msgstr "Batería del portátil baja"
 #: ../src/gpm-manager.c:1453
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
-msgstr "Le queda aproximadamente <b>%s</b> (%.0f%%)"
+msgstr "Quedan aproximadamente <b>%s</b> (%.0f %%)"
 
 #. TRANSLATORS: UPS is starting to get a little low
 #: ../src/gpm-manager.c:1457
@@ -1311,7 +1311,7 @@ msgstr "Batería del ratón baja"
 #: ../src/gpm-manager.c:1468
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
-msgstr "El ratón inalámbrico se está quedando sin carga (%.0f%%)"
+msgstr "El ratón inalámbrico se está quedando sin carga (%.0f %%)"
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
@@ -1323,7 +1323,7 @@ msgstr "Batería del teclado baja"
 #: ../src/gpm-manager.c:1475
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
-msgstr "El teclado inalámbrico se está quedando sin carga (%.0f%%)"
+msgstr "El teclado inalámbrico se está quedando sin carga (%.0f %%)"
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
@@ -1335,7 +1335,7 @@ msgstr "Batería de la PDA baja"
 #: ../src/gpm-manager.c:1482
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
-msgstr "La PDA se está quedando sin carga (%.0f%%)"
+msgstr "La PDA se está quedando sin carga (%.0f %%)"
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
@@ -1348,7 +1348,7 @@ msgstr "Batería del teléfono móvil baja"
 #: ../src/gpm-manager.c:1489
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
-msgstr "El teléfono móvil se está quedando sin carga (%.0f%%)"
+msgstr "El teléfono móvil se está quedando sin carga (%.0f %%)"
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
 #: ../src/gpm-manager.c:1494
@@ -1359,19 +1359,19 @@ msgstr "Batería del reproductor multimedia baja"
 #: ../src/gpm-manager.c:1497
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
-msgstr "El reproductor multimedia se está quedando sin carga (%.0f%%)"
+msgstr "El reproductor multimedia se está quedando sin carga (%.0f %%)"
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
 #: ../src/gpm-manager.c:1501 ../src/gpm-manager.c:1648
 msgid "Tablet battery low"
-msgstr "Batería de la «tablet» baja"
+msgstr "Batería de la tableta baja"
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1504
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
-msgstr "La «tablet» se está quedando sin carga (%.0f%%)"
+msgstr "La tableta se está quedando sin carga (%.0f %%)"
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
@@ -1383,13 +1383,13 @@ msgstr "Batería del equipo acoplado baja"
 #: ../src/gpm-manager.c:1511
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
-msgstr "El equipo acoplado se está quedando sin carga (%.0f%%)"
+msgstr "El equipo acoplado se está quedando sin carga (%.0f %%)"
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
 #: ../src/gpm-manager.c:1560
 msgid "Battery critically low"
-msgstr "La batería está críticamente baja"
+msgstr "Batería críticamente baja"
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
@@ -1402,25 +1402,25 @@ msgstr "La batería del portátil está críticamente baja"
 #. anything
 #: ../src/gpm-manager.c:1572
 msgid "Plug in your AC adapter to avoid losing data."
-msgstr "Conecte su adaptador de adaptador de corriente para evitar perder datos."
+msgstr "Conecte el adaptador de corriente para evitar perder datos."
 
 #. TRANSLATORS: give the user a ultimatum
 #: ../src/gpm-manager.c:1576
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
-msgstr "El equipo se suspenderá muy pronto a menos que esté conectado."
+msgstr "El equipo se suspenderá muy pronto a menos que se conecte."
 
 #. TRANSLATORS: give the user a ultimatum
 #: ../src/gpm-manager.c:1580
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
-msgstr "El equipo hibernará muy pronto a menos que esté conectado."
+msgstr "El equipo hibernará muy pronto a menos que se conecte."
 
 #. TRANSLATORS: give the user a ultimatum
 #: ../src/gpm-manager.c:1584
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
-msgstr "El equipo se apagará muy pronto a menos que esté conectado."
+msgstr "El equipo se apagará muy pronto a menos que se conecte."
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
@@ -1434,7 +1434,7 @@ msgstr "El SAI está críticamente bajo"
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
-msgstr "Le queda aproximadamente <b>%s</b> de carga en el SAI (%.0f%%). Restaure el adaptador de corriente en su equipo para evitar la pérdida de datos."
+msgstr "Queda aproximadamente <b>%s</b> de carga en el SAI (%.0f %%). Restaure la corriente en el equipo para evitar perder datos."
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1604
@@ -1442,7 +1442,7 @@ msgstr "Le queda aproximadamente <b>%s</b> de carga en el SAI (%.0f%%). Restaure
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "El ratón inalámbrico está agotando su carga (%.0f%%). Este dispositivo pronto dejará de funcionar si no se carga."
+msgstr "El ratón inalámbrico está agotando su carga (%.0f %%). Este dispositivo pronto dejará de funcionar si no se carga."
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1612
@@ -1450,7 +1450,7 @@ msgstr "El ratón inalámbrico está agotando su carga (%.0f%%). Este dispositiv
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "El teclado inalámbrico está agotando su carga (%.0f%%). Este dispositivo pronto dejará de funcionar si no se carga."
+msgstr "El teclado inalámbrico está agotando su carga (%.0f %%). Este dispositivo pronto dejará de funcionar si no se carga."
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1621
@@ -1458,7 +1458,7 @@ msgstr "El teclado inalámbrico está agotando su carga (%.0f%%). Este dispositi
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
 " not charged."
-msgstr "La PDA está agotando su carga (%.0f%%). Este dispositivo pronto dejará de funcionar si no se carga."
+msgstr "La PDA está agotando su carga (%.0f %%). Este dispositivo pronto dejará de funcionar si no se carga."
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1631
@@ -1466,7 +1466,7 @@ msgstr "La PDA está agotando su carga (%.0f%%). Este dispositivo pronto dejará
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "El teléfono móvil está agotando su carga (%.0f%%). Este dispositivo pronto dejará de funcionar si no se carga."
+msgstr "El teléfono móvil está agotando su carga (%.0f %%). Este dispositivo pronto dejará de funcionar si no se carga."
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1642
@@ -1474,7 +1474,7 @@ msgstr "El teléfono móvil está agotando su carga (%.0f%%). Este dispositivo p
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "El reproductor multimedia está agotando su carga (%.0f%%). Este dispositivo pronto dejará de funcionar si no se carga."
+msgstr "El reproductor multimedia está agotando su carga (%.0f %%). Este dispositivo pronto dejará de funcionar si no se carga."
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1651
@@ -1482,7 +1482,7 @@ msgstr "El reproductor multimedia está agotando su carga (%.0f%%). Este disposi
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
-msgstr "La «tablet» está agotando su carga (%.0f%%). Este dispositivo pronto dejará de funcionar si no se carga."
+msgstr "La tableta está agotando su carga (%.0f %%). Este dispositivo pronto dejará de funcionar si no se carga."
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1660
@@ -1490,14 +1490,14 @@ msgstr "La «tablet» está agotando su carga (%.0f%%). Este dispositivo pronto 
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
-msgstr "El equipo acoplado está agotando su carga (%.0f%%). Este dispositivo pronto dejará de funcionar si no se carga."
+msgstr "El equipo acoplado está agotando su carga (%.0f %%). Este dispositivo pronto dejará de funcionar si no se carga."
 
 #. TRANSLATORS: computer will shutdown without saving data
 #: ../src/gpm-manager.c:1725
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
-msgstr "La batería está por debajo de un nivel crítico y este equipo se <b>apagará</b> cuando la batería esté completamente vacía."
+msgstr "La batería está por debajo del nivel crítico y este equipo se <b>apagará</b> cuando la batería esté completamente vacía."
 
 #. TRANSLATORS: computer will suspend
 #: ../src/gpm-manager.c:1731
@@ -1505,21 +1505,21 @@ msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
-msgstr "La batería está por debajo de un nivel crítico y este equipo se va a suspender. <br><b>NOTA:</b> Se requiere una pequeña cantidad de energía para mantener su equipo en un estado de suspensión."
+msgstr "La batería está por debajo del nivel crítico y este equipo se suspenderá. <br><b>NOTA:</b> Se requiere una pequeña cantidad de energía para mantener su equipo en un estado de suspensión."
 
 #. TRANSLATORS: computer will hibernate
 #: ../src/gpm-manager.c:1738
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
-msgstr "La batería está por debajo del nivel crítico y este equipo se va a poner a hibernar."
+msgstr "La batería está por debajo del nivel crítico y este equipo entrará en modo de hibernación."
 
 #. TRANSLATORS: computer will just shutdown
 #: ../src/gpm-manager.c:1743
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
-msgstr "La batería está por debajo de un nivel crítico y este equipo se apagará."
+msgstr "La batería está por debajo del nivel crítico y este equipo se apagará."
 
 #. TRANSLATORS: computer will shutdown without saving data
 #: ../src/gpm-manager.c:1760
@@ -1532,7 +1532,7 @@ msgstr "EL SAI (UPS) está por debajo de un nivel crítico y este equipo se <b>a
 #: ../src/gpm-manager.c:1766
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
-msgstr "El SAI (UPS) está por debajo del nivel crítico y este equipo se va a poner a hibernar."
+msgstr "El SAI (UPS) está por debajo del nivel crítico y este equipo entrará en modo de hibernación."
 
 #. TRANSLATORS: computer will just shutdown
 #: ../src/gpm-manager.c:1771
@@ -1616,7 +1616,7 @@ msgstr "Perfil de carga"
 
 #: ../src/gpm-statistics.c:103
 msgid "Discharge profile"
-msgstr "Perfil descarga"
+msgstr "Perfil de descarga"
 
 #. TRANSLATORS: how accurately we can predict the time remaining of the
 #. battery
@@ -1650,7 +1650,7 @@ msgstr "Tipo"
 
 #: ../src/gpm-statistics.c:188
 msgid "ID"
-msgstr "ID"
+msgstr "Id."
 
 #: ../src/gpm-statistics.c:202
 msgid "Command"
@@ -1807,7 +1807,7 @@ msgstr "Sin datos"
 #. TRANSLATORS: kernel module, usually a device driver
 #: ../src/gpm-statistics.c:832 ../src/gpm-statistics.c:837
 msgid "Kernel module"
-msgstr "Módulo del kernel"
+msgstr "Módulo del núcleo"
 
 #. TRANSLATORS: kernel housekeeping
 #: ../src/gpm-statistics.c:842
@@ -1827,7 +1827,7 @@ msgstr "Interrupción"
 #. TRANSLATORS: the keyboard and mouse device event
 #: ../src/gpm-statistics.c:899
 msgid "PS/2 keyboard/mouse/touchpad"
-msgstr "Teclado/ratón/touchpad PS/2"
+msgstr "Teclado/ratón/panel táctil PS/2"
 
 #. TRANSLATORS: ACPI, the Intel power standard on laptops and desktops
 #: ../src/gpm-statistics.c:902
@@ -1989,7 +1989,7 @@ msgstr "Prefere_ncias"
 #: ../src/gpm-upower.c:221 ../src/gpm-upower.c:285
 #, c-format
 msgid "%s charging (%.1f%%)"
-msgstr "%s cargando (%.1f%%)"
+msgstr "%s cargándose (%.1f %%)"
 
 #. TRANSLATORS: The laptop battery is fully charged, and we know a time
 #: ../src/gpm-upower.c:236
@@ -2009,13 +2009,13 @@ msgstr "%s totalmente cargada"
 #: ../src/gpm-upower.c:249
 #, c-format
 msgid "%s %s remaining (%.1f%%)"
-msgstr "%s %s restantes (%.1f%%)"
+msgstr "%s %s restantes (%.1f %%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
 #: ../src/gpm-upower.c:254
 #, c-format
 msgid "%s discharging (%.1f%%)"
-msgstr "%s descargándose (%.1f%%)"
+msgstr "%s descargándose (%.1f %%)"
 
 #. TRANSLATORS: the device is charging, and we have a time to full and empty
 #: ../src/gpm-upower.c:268
@@ -2023,26 +2023,26 @@ msgstr "%s descargándose (%.1f%%)"
 msgid ""
 "%s %s until charged (%.1f%%)\n"
 "Provides %s battery runtime"
-msgstr "%s %s hasta su carga (%.1f%%)\nProporciona %s de tiempo de uso de batería"
+msgstr "%s %s hasta su carga (%.1f %%)\nProporciona %s de tiempo de uso de batería"
 
 #. TRANSLATORS: device is charging, and we have a time to full and a
 #. percentage
 #: ../src/gpm-upower.c:279
 #, c-format
 msgid "%s %s until charged (%.1f%%)"
-msgstr "%s %s hasta su carga (%.1f%%)"
+msgstr "%s %s hasta su carga (%.1f %%)"
 
 #. TRANSLATORS: this is only shown for laptops with multiple batteries
 #: ../src/gpm-upower.c:292
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
-msgstr "%s esperando para descargar (%.1f%%)"
+msgstr "%s esperando para descargar (%.1f %%)"
 
 #. TRANSLATORS: this is only shown for laptops with multiple batteries
 #: ../src/gpm-upower.c:298
 #, c-format
 msgid "%s waiting to charge (%.1f%%)"
-msgstr "%s esperando para cargar (%.1f%%)"
+msgstr "%s esperando para cargar (%.1f %%)"
 
 #. TRANSLATORS: the type of data, e.g. Laptop battery
 #: ../src/gpm-upower.c:357
@@ -2217,8 +2217,8 @@ msgstr[1] "Reproductores multimedia"
 #: ../src/gpm-upower.c:515
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "«Tablet»"
-msgstr[1] "«Tablet»"
+msgstr[0] "Tableta"
+msgstr[1] "Tabletas"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:519
