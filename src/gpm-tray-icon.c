@@ -95,11 +95,8 @@ gpm_tray_icon_set_tooltip (GpmTrayIcon *icon, const gchar *tooltip)
 	g_return_val_if_fail (GPM_IS_TRAY_ICON (icon), FALSE);
 	g_return_val_if_fail (tooltip != NULL, FALSE);
 
-#if GTK_CHECK_VERSION(2,15,0)
 	gtk_status_icon_set_tooltip_text (icon->priv->status_icon, tooltip);
-#else
-	gtk_status_icon_set_tooltip (icon->priv->status_icon, tooltip);
-#endif
+
 	return TRUE;
 }
 

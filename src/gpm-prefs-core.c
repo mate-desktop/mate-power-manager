@@ -194,30 +194,6 @@ gpm_prefs_action_time_changed_cb (GtkWidget *widget, GpmPrefs *prefs)
 }
 
 /**
- * gpm_prefs_set_combo_simple_text:
- **/
-static void
-gpm_prefs_set_combo_simple_text (GtkWidget *combo_box)
-{
-	#if !GTK_CHECK_VERSION (2, 24, 0)
-		GtkCellRenderer *cell;
-		GtkListStore *store;
-
-		store = gtk_list_store_new (1, G_TYPE_STRING);
-		gtk_combo_box_set_model (GTK_COMBO_BOX (combo_box), GTK_TREE_MODEL (store));
-		g_object_unref (store);
-
-		cell = gtk_cell_renderer_text_new ();
-		gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (combo_box), cell, TRUE);
-		gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (combo_box), cell,
-						"text", 0,
-						NULL);
-	#else
-		// nothing to do with GTK_COMBO_BOX_TEXT
-	#endif
-}
-
-/**
  * gpm_prefs_actions_destroy_cb:
  **/
 static void
@@ -246,7 +222,6 @@ gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 	GpmActionPolicy *actions_added;
 
 	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, widget_name));
-	gpm_prefs_set_combo_simple_text (widget);
 
 	value = g_settings_get_enum (prefs->priv->settings, gpm_pref_key);
 	is_writable = g_settings_is_writable (prefs->priv->settings, gpm_pref_key);
@@ -263,57 +238,27 @@ gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 		if (policy == GPM_ACTION_POLICY_SHUTDOWN && !prefs->priv->can_shutdown) {
 			egg_debug ("Cannot add option, as cannot shutdown.");
 		} else if (policy == GPM_ACTION_POLICY_SHUTDOWN && prefs->priv->can_shutdown) {
-			#if GTK_CHECK_VERSION (2, 24, 0)
-				gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Shutdown"));
-				g_ptr_array_add(array, GINT_TO_POINTER (policy));
-			#else
-				gtk_combo_box_append_text (GTK_COMBO_BOX (widget), _("Shutdown"));
-				g_ptr_array_add (array, GINT_TO_POINTER (policy));
-			#endif
+			gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Shutdown"));
+			g_ptr_array_add(array, GINT_TO_POINTER (policy));
 		} else if (policy == GPM_ACTION_POLICY_SUSPEND && !prefs->priv->can_suspend) {
 			egg_debug ("Cannot add option, as cannot suspend.");
 		} else if (policy == GPM_ACTION_POLICY_HIBERNATE && !prefs->priv->can_hibernate) {
 			egg_debug ("Cannot add option, as cannot hibernate.");
 		} else if (policy == GPM_ACTION_POLICY_SUSPEND && prefs->priv->can_suspend) {
-			#if GTK_CHECK_VERSION (2, 24, 0)
-				gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Suspend"));
-				g_ptr_array_add (array, GINT_TO_POINTER (policy));
-			#else
-				gtk_combo_box_append_text (GTK_COMBO_BOX (widget), _("Suspend"));
-				g_ptr_array_add (array, GINT_TO_POINTER (policy));
-			#endif
+			gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Suspend"));
+			g_ptr_array_add (array, GINT_TO_POINTER (policy));
 		} else if (policy == GPM_ACTION_POLICY_HIBERNATE && prefs->priv->can_hibernate) {
-			#if GTK_CHECK_VERSION (2, 24, 0)
-				gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Hibernate"));
-				g_ptr_array_add(array, GINT_TO_POINTER (policy));
-			#else
-				gtk_combo_box_append_text (GTK_COMBO_BOX (widget), _("Hibernate"));
-				g_ptr_array_add (array, GINT_TO_POINTER (policy));
-			#endif
+			gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Hibernate"));
+			g_ptr_array_add(array, GINT_TO_POINTER (policy));
 		} else if (policy == GPM_ACTION_POLICY_BLANK) {
-			#if GTK_CHECK_VERSION (2, 24, 0)
-				gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Blank screen"));
-				g_ptr_array_add (array, GINT_TO_POINTER (policy));
-			#else
-				gtk_combo_box_append_text (GTK_COMBO_BOX (widget), _("Blank screen"));
-				g_ptr_array_add (array, GINT_TO_POINTER (policy));
-			#endif
+			gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Blank screen"));
+			g_ptr_array_add (array, GINT_TO_POINTER (policy));
 		} else if (policy == GPM_ACTION_POLICY_INTERACTIVE) {
-			#if GTK_CHECK_VERSION (2, 24, 0)
-				gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Ask me"));
-				g_ptr_array_add(array, GINT_TO_POINTER (policy));
-			#else
-				gtk_combo_box_append_text (GTK_COMBO_BOX (widget), _("Ask me"));
-				g_ptr_array_add (array, GINT_TO_POINTER (policy));
-			#endif
+			gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Ask me"));
+			g_ptr_array_add(array, GINT_TO_POINTER (policy));
 		} else if (policy == GPM_ACTION_POLICY_NOTHING) {
-			#if GTK_CHECK_VERSION (2, 24, 0)
-				gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Do nothing"));
-				g_ptr_array_add(array, GINT_TO_POINTER (policy));
-			#else
-				gtk_combo_box_append_text (GTK_COMBO_BOX (widget), _("Do nothing"));
-				g_ptr_array_add (array, GINT_TO_POINTER (policy));
-			#endif
+			gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Do nothing"));
+			g_ptr_array_add(array, GINT_TO_POINTER (policy));
 		} else {
 			egg_warning ("Unknown action read from settings: %i", policy);
 		}
@@ -355,7 +300,6 @@ gpm_prefs_setup_time_combo (GpmPrefs *prefs, const gchar *widget_name,
 	GtkWidget *widget;
 
 	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, widget_name));
-	gpm_prefs_set_combo_simple_text (widget);
 
 	value = g_settings_get_int (prefs->priv->settings, gpm_pref_key);
 	is_writable = g_settings_is_writable (prefs->priv->settings, gpm_pref_key);
@@ -370,18 +314,10 @@ gpm_prefs_setup_time_combo (GpmPrefs *prefs, const gchar *widget_name,
 		/* get translation for number of seconds */
 		if (values[i] != 0) {
 			text = gpm_get_timestring (values[i]);
-			#if GTK_CHECK_VERSION (2, 24, 0)
-				gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), text);
-			#else
-				gtk_combo_box_append_text (GTK_COMBO_BOX (widget), text);
-			#endif
+			gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), text);
 			g_free (text);
 		} else {
-			#if GTK_CHECK_VERSION (2, 24, 0)
-				gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Never"));
-			#else
-				gtk_combo_box_append_text (GTK_COMBO_BOX (widget), _("Never"));
-			#endif
+			gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Never"));
 		}
 
 		/* matches, so set default */
@@ -546,28 +482,16 @@ prefs_setup_ac (GpmPrefs *prefs)
 
 	if (prefs->priv->has_button_lid == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_ac_lid"));
-		#if GTK_CHECK_VERSION (2, 24, 0)
-			gtk_widget_hide(widget);
-		#else
-			gtk_widget_hide_all (widget);
-		#endif
+		gtk_widget_hide(widget);
 	}
 	if (prefs->priv->has_lcd == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_ac_brightness"));
 
-		#if GTK_CHECK_VERSION (2, 24, 0)
-			gtk_widget_hide(widget);
-		#else
-			gtk_widget_hide_all (widget);
-		#endif
+		gtk_widget_hide(widget);
 		
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_ac_display_dim"));
 
-		#if GTK_CHECK_VERSION (2, 24, 0)
-			gtk_widget_hide(widget);
-		#else
-			gtk_widget_hide_all (widget);
-		#endif
+		gtk_widget_hide(widget);
 	}
 }
 
@@ -647,19 +571,11 @@ prefs_setup_battery (GpmPrefs *prefs)
 	if (prefs->priv->has_button_lid == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_battery_lid"));
 
-		#if GTK_CHECK_VERSION(2, 24, 0)
-			gtk_widget_hide(widget);
-		#else
-			gtk_widget_hide_all (widget);
-		#endif
+		gtk_widget_hide(widget);
 	}
 	if (prefs->priv->has_lcd == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_battery_display_dim"));
-		#if GTK_CHECK_VERSION(2, 24, 0)
-			gtk_widget_hide(widget);
-		#else
-			gtk_widget_hide_all (widget);
-		#endif
+		gtk_widget_hide(widget);
 	}
 }
 
@@ -741,11 +657,7 @@ prefs_setup_general (GpmPrefs *prefs)
 	if (prefs->priv->has_button_suspend == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_general_suspend"));
 
-		#if GTK_CHECK_VERSION (2, 24, 0)
-			gtk_widget_hide(widget);
-		#else
-			gtk_widget_hide_all (widget);
-		#endif
+		gtk_widget_hide(widget);
 	}
 }
 
@@ -980,13 +892,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 
 	prefs->priv->builder = gtk_builder_new ();
 	
-	#if GTK_CHECK_VERSION(2, 24, 0)
-		retval = gtk_builder_add_from_file (prefs->priv->builder, GPM_DATA "/gpm-prefs.ui",
-				&error);
-	#else
-		retval = gtk_builder_add_from_file (prefs->priv->builder,
-				GPM_DATA "/gpm-prefs-deprecated.ui", &error);
-	#endif
+	retval = gtk_builder_add_from_file (prefs->priv->builder, GPM_DATA "/gpm-prefs.ui", &error);
 
 	if (retval == 0) {
 		egg_warning ("failed to load ui: %s", error->message);

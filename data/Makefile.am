@@ -29,10 +29,8 @@ convert_DATA = mate-power-manager.convert
 
 pkgdata_DATA =						\
 	gpm-statistics.ui				\
-	gpm-statistics-deprecated.ui	\
 	gpm-feedback-widget.ui			\
 	gpm-prefs.ui					\
-	gpm-prefs-deprecated.ui			\
 	acme.ui
 
 EXTRA_DIST =						\

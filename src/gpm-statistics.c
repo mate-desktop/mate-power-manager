@@ -1470,31 +1470,6 @@ gpm_stats_points_checkbox_stats_cb (GtkWidget *widget, gpointer data)
 }
 
 /**
- * gpm_stats_set_combo_simple_text:
- **/
-static void
-gpm_stats_set_combo_simple_text (GtkWidget *combo_box)
-{
-	#if GTK_CHECK_VERSION (2, 24, 0)
-		// nothing to do with GTK_COMBO_BOX_TEXT
-		return;
-	#else
-		GtkCellRenderer *cell;
-		GtkListStore *store;
-
-		store = gtk_list_store_new (1, G_TYPE_STRING);
-		gtk_combo_box_set_model (GTK_COMBO_BOX (combo_box), GTK_TREE_MODEL (store));
-		g_object_unref (store);
-
-		cell = gtk_cell_renderer_text_new ();
-		gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (combo_box), cell, TRUE);
-		gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (combo_box), cell,
-						"text", 0,
-						NULL);
-	#endif
-}
-
-/**
  * gpm_stats_highlight_device:
  **/
 static void
@@ -1601,11 +1576,7 @@ main (int argc, char *argv[])
 	/* get UI */
 	builder = gtk_builder_new ();
 
-	#if GTK_CHECK_VERSION (2, 24, 0)
-		retval = gtk_builder_add_from_file (builder, GPM_DATA "/gpm-statistics.ui", &error);
-	#else
-		retval = gtk_builder_add_from_file (builder, GPM_DATA "/gpm-statistics-deprecated.ui", &error);
-	#endif
+	retval = gtk_builder_add_from_file (builder, GPM_DATA "/gpm-statistics.ui", &error);
 
 	if (retval == 0) {
 		egg_warning ("failed to load ui: %s", error->message);
@@ -1720,18 +1691,10 @@ main (int argc, char *argv[])
 		stats_type = GPM_STATS_CHARGE_DATA_VALUE;
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "combobox_history_type"));
-	gpm_stats_set_combo_simple_text (widget);
-	#if GTK_CHECK_VERSION (2, 24, 0)
-		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_RATE_TEXT);
-		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_CHARGE_TEXT);
-		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_TIME_FULL_TEXT);
-		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_TIME_EMPTY_TEXT);
-	#else
-		gtk_combo_box_append_text (GTK_COMBO_BOX (widget), GPM_HISTORY_RATE_TEXT);
-		gtk_combo_box_append_text (GTK_COMBO_BOX (widget), GPM_HISTORY_CHARGE_TEXT);
-		gtk_combo_box_append_text (GTK_COMBO_BOX (widget), GPM_HISTORY_TIME_FULL_TEXT);
-		gtk_combo_box_append_text (GTK_COMBO_BOX (widget), GPM_HISTORY_TIME_EMPTY_TEXT);
-	#endif
+	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_RATE_TEXT);
+	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_CHARGE_TEXT);
+	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_TIME_FULL_TEXT);
+	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_TIME_EMPTY_TEXT);
 	if (g_strcmp0 (history_type, GPM_HISTORY_RATE_VALUE) == 0)
 		gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 0);
 	else
@@ -1740,18 +1703,10 @@ main (int argc, char *argv[])
 			  G_CALLBACK (gpm_stats_history_type_combo_changed_cb), NULL);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "combobox_stats_type"));
-	gpm_stats_set_combo_simple_text (widget);
-	#if GTK_CHECK_VERSION (2, 24, 0)
-		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_STATS_CHARGE_DATA_TEXT);
-		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_STATS_CHARGE_ACCURACY_TEXT);
-		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_STATS_DISCHARGE_DATA_TEXT);
-		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_STATS_DISCHARGE_ACCURACY_TEXT);
-	#else
-		gtk_combo_box_append_text (GTK_COMBO_BOX (widget), GPM_STATS_CHARGE_DATA_TEXT);
-		gtk_combo_box_append_text (GTK_COMBO_BOX (widget), GPM_STATS_CHARGE_ACCURACY_TEXT);
-		gtk_combo_box_append_text (GTK_COMBO_BOX (widget), GPM_STATS_DISCHARGE_DATA_TEXT);
-		gtk_combo_box_append_text (GTK_COMBO_BOX (widget), GPM_STATS_DISCHARGE_ACCURACY_TEXT);
-	#endif
+	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_STATS_CHARGE_DATA_TEXT);
+	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_STATS_CHARGE_ACCURACY_TEXT);
+	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_STATS_DISCHARGE_DATA_TEXT);
+	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_STATS_DISCHARGE_ACCURACY_TEXT);
 	if (g_strcmp0 (stats_type, GPM_STATS_CHARGE_DATA_VALUE) == 0)
 		gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 0);
 	else if (g_strcmp0 (stats_type, GPM_STATS_CHARGE_DATA_VALUE) == 0)
@@ -1766,20 +1721,11 @@ main (int argc, char *argv[])
 			  G_CALLBACK (gpm_stats_type_combo_changed_cb), NULL);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "combobox_history_time"));
-	gpm_stats_set_combo_simple_text (widget);
-	#if GTK_CHECK_VERSION (2, 24, 0)
-		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_MINUTE_TEXT);
-		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_HOUR_TEXT);
-		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_HOURS_TEXT);
-		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_DAY_TEXT);
-		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_WEEK_TEXT);
-	#else
-		gtk_combo_box_append_text (GTK_COMBO_BOX (widget), GPM_HISTORY_MINUTE_TEXT);
-		gtk_combo_box_append_text (GTK_COMBO_BOX (widget), GPM_HISTORY_HOUR_TEXT);
-		gtk_combo_box_append_text (GTK_COMBO_BOX (widget), GPM_HISTORY_HOURS_TEXT);
-		gtk_combo_box_append_text (GTK_COMBO_BOX (widget), GPM_HISTORY_DAY_TEXT);
-		gtk_combo_box_append_text (GTK_COMBO_BOX (widget), GPM_HISTORY_WEEK_TEXT);
-	#endif
+	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_MINUTE_TEXT);
+	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_HOUR_TEXT);
+	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_HOURS_TEXT);
+	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_DAY_TEXT);
+	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_WEEK_TEXT);
 	gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 1);
 	if (history_time == GPM_HISTORY_MINUTE_VALUE)
 		gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 0);
