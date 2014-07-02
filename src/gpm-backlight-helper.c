@@ -178,11 +178,6 @@ main (gint argc, gchar *argv[])
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
 
-#if !GLIB_CHECK_VERSION(2,36,0)
-	/* setup type system */
-	g_type_init ();
-#endif
-
 	context = g_option_context_new (NULL);
 	/* TRANSLATORS: tool that is used when copying profiles system-wide */
 	g_option_context_set_summary (context, _("MATE Power Manager Backlight Helper"));
