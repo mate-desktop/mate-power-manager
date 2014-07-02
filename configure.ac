@@ -112,9 +112,8 @@ GLIB_GSETTINGS
 dnl ----------------------------------------------------------------------------
 dnl - Library dependencies
 dnl ----------------------------------------------------------------------------
-GLIB_REQUIRED=2.13.0
-GIO_REQUIRED=2.25.0
-GTK_REQUIRED=2.17.7
+GLIB_REQUIRED=2.36.0
+GIO_REQUIRED=2.36.0
 GDK_REQUIRED=2.11.0
 GNOME_KEYRING_REQUIRED=3.0.0
 DBUS_REQUIRED=1.0
@@ -144,7 +143,7 @@ AC_MSG_RESULT([$with_gtk])
 
 case "$with_gtk" in
 	2.0) GTK_API_VERSION=2.0
-		GTK_REQUIRED=2.17.7
+		GTK_REQUIRED=2.24.0
 		CANBERRA_GTK=libcanberra-gtk
 		;;
 	3.0) GTK_API_VERSION=3.0
