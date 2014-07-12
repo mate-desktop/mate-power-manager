@@ -3,14 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Mislav E. Lukšić <meluksic@yahoo.com>, 2014
 # Ivica  Kolić <ikoli@yahoo.com>, 2014
+# Mislav E. Lukšić <meluksic@yahoo.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-15 21:36+0100\n"
-"PO-Revision-Date: 2014-05-03 17:01+0000\n"
-"Last-Translator: CroatianFan <meluksic@yahoo.com>\n"
+"PO-Revision-Date: 2014-05-24 20:52+0000\n"
+"Last-Translator: Mislav E. Lukšić <meluksic@yahoo.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/MATE/language/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,7 +54,7 @@ msgid ""
 "modify it under the terms of the GNU General Public License\n"
 "as published by the Free Software Foundation; either version 2\n"
 "of the License, or (at your option) any later version."
-msgstr "Energetski upravitelj je slobodni softver; možeš ga dijeliti i/ili\nmijenjati pod uvjetima navedenim u GNU-ovoj općoj javnoj dozvoli\nobjavljenoj od strane Fundacije slobodnog softvera (Free Software Fondation); bilo u skladu s Inačicom 2\nDozvole, bilo (po vlastitom izboru) svakom kasnijom inačicom."
+msgstr "Energetski upravitelj je slobodni softver; možeš ga dalje dijeliti i/ili\nmijenjati pod uvjetima navedenim u GNU-ovoj općoj javnoj dozvoli\nobjavljenoj od strane Zaklade slobodnog softvera (Free Software Foundation); bilo u skladu s 2. inačicom\nDozvole, bilo (po vlastitom izboru) svakom kasnijom inačicom."
 
 #: ../applets/brightness/brightness-applet.c:758
 #: ../applets/inhibit/inhibit-applet.c:437
@@ -70,7 +72,7 @@ msgid ""
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
-msgstr "Korisnik je trebao primiti GNU-ovu opću javnu dozvolu uz ovaj program;\nako nisi, piši na adresu Free Software Foundation, Inc., 51 Franklin Street,\nFifth Floor, Boston, MA 02110-1301, USA."
+msgstr "Korisnik je trebao primiti primjerak GNU-ove opće javne dozvole uz ovaj program;\nako ti nisi, piši na adresu Free Software Foundation, Inc., 51 Franklin Street,\nFifth Floor, Boston, MA 02110-1301, USA."
 
 #: ../applets/brightness/brightness-applet.c:776
 msgid "Copyright © 2006 Benjamin Canou"
@@ -292,27 +294,27 @@ msgstr "Svjetlina zaslona pri mrežnom napajanju. Moguće vrijednosti su između
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:31
 msgid "Suspend button action"
-msgstr "Postupak pri pritisku tipke za obustavu rada"
+msgstr "Postupak pri pritisku gumba za obustavu rada"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:32
 msgid "The action to take when the system suspend button is pressed."
-msgstr "Postupak kada je tipka obustave rada sustava pritisnuta."
+msgstr "Postupak koji treba izvršiti kada je gumb obustave rada sustava pritisnut."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:33
 msgid "Hibernate button action"
-msgstr "Postupak pri pritisku tipke za hibernaciju"
+msgstr "Postupak pri pritisku gumba hibernacije"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:34
 msgid "The action to take when the system hibernate button is pressed."
-msgstr "Postupak kada je tipka hibernacije sustava pritisnuta."
+msgstr "Postupak koji treba izvršiti kada je gumb hibernacije sustava pritisnut."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:35
 msgid "Power button action"
-msgstr "Postupak pri pritisku tipke za isključivanje"
+msgstr "Postupak pri pritisku gumba napajanja"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:36
 msgid "The action to take when the system power button is pressed."
-msgstr "Postupak kada je tipka isključivanja sustava pritisnuta."
+msgstr "Postupak koji treba izvršiti kada je gumb napajanja sustava pritisnut."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:37
 msgid "Laptop lid close action on battery"
@@ -508,7 +510,7 @@ msgstr "URI za prikazivanje korisniku pri neuspjelom mirovanju"
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
-msgstr "Kada mirovanje ne uspije, korisniku se može prikazati pomoćna tipka za popravljanje stanja. Ostavi ovo prazno ako tipka ne treba biti prikazana."
+msgstr "Kada mirovanje ne uspije, korisniku se može prikazati pomoćni gumb za popravljanje stanja. Ostavi ovo prazno ako gumb ne treba biti prikazan."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:78
 msgid "Notify on a low power"
@@ -877,11 +879,11 @@ msgstr "Na napajanju UPS-om"
 
 #: ../data/gpm-prefs.ui.h:17 ../data/gpm-prefs-deprecated.ui.h:17
 msgid "When the power _button is pressed:"
-msgstr "Kada se pritisne _tipka za isključivanje:"
+msgstr "Kada je pritisnut _gumb napajanja:"
 
 #: ../data/gpm-prefs.ui.h:18 ../data/gpm-prefs-deprecated.ui.h:18
 msgid "When the _suspend button is pressed:"
-msgstr "Kada se pritisne tipka za _obustavu rada:"
+msgstr "Kada je pritisnut gumb _obustave rada:"
 
 #: ../data/gpm-prefs.ui.h:19 ../data/gpm-prefs-deprecated.ui.h:19
 msgid "<b>Notification Area</b>"
