@@ -587,9 +587,20 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
        return;
 
    if (mode == GPM_IDLE_MODE_NORMAL) {
-        egg_debug("GPM_IDLE_MODE_NORMAL");
-       backlight->priv->master_percentage = 100;
-       gpm_kbd_backlight_evaluate_power_source_and_set (backlight);
+       egg_debug("GPM_IDLE_MODE_NORMAL");
+       brightness = backlight->priv->brightness_percent;
+       value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_IDLE);
+       if (value > 100) {
+           g_warning ("Cannot scale brightness down by more than 100%%. Scaling by 50%%");
+           value = 50;
+       }
+
+       scale = 100.0f / (100 - value);		// Inverse of below formula
+       brightness *= scale;
+
+       value = (guint) brightness;
+
+       gpm_kbd_backlight_set (backlight, value);
    } else if (mode == GPM_IDLE_MODE_DIM) {
        egg_debug("GPM_IDLE_MODE_DIM");
        brightness = backlight->priv->master_percentage;
