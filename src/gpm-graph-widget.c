@@ -1184,7 +1184,7 @@ gpm_graph_widget_expose (GtkWidget *graph, GdkEventExpose *event)
 
 	gpm_graph_widget_draw_graph (graph, cr);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	cairo_destroy (cr);
 #endif
 	return FALSE;
