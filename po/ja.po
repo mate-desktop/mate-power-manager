@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# ABE Tsunehiko <hallconnen2+transifex@gmail.com>, 2013
+# ABE Tsunehiko, 2013-2014
+# BALLOON a.k.a. Fu-sen., 2014
 # BALLOON a.k.a. Fu-sen., 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-15 21:36+0100\n"
-"PO-Revision-Date: 2014-05-27 08:57+0000\n"
-"Last-Translator: BALLOON a.k.a. Fu-sen.\n"
+"PO-Revision-Date: 2014-09-21 01:13+0000\n"
+"Last-Translator: AWASHIRO Ikuya <ikunya@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/MATE/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -205,7 +206,7 @@ msgstr "バックライトの明るさを調節できるようにするかどう
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
-msgstr ""
+msgstr "AC電源とバッテリーを切り替えた際に画面の明るさを変更するかどうか"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:13
 msgid "Reduce the backlight brightness when on battery power"
@@ -323,7 +324,7 @@ msgstr "ノート PC を閉じたときのアクション (バッテリ使用時
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
-msgstr ""
+msgstr "ノートPCがバッテリー駆動時、画面を閉じた際に行うアクション"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:39
 msgid "Laptop lid close action when on AC"
@@ -438,22 +439,22 @@ msgstr "バッテリーを使用している時に低電力モードを有効に
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:62
 msgid "Seconds of inactivity to spin down when on AC"
-msgstr ""
+msgstr "AC電源駆動時、非アクティブ時にスピンダウンするまでの秒数"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:63
 msgid ""
 "The number of seconds of inactivity to spin down the disks when on AC power."
-msgstr ""
+msgstr "AC電源駆動時、非アクティブになってからHDDを停止するまでの秒数"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:64
 msgid "Seconds of inactivity to spin down when on battery"
-msgstr ""
+msgstr "バッテリー駆動時、非アクティブ時にスピンダウンするまでの秒数"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:65
 msgid ""
 "The number of seconds of inactivity to spin down the disks when on battery "
 "power."
-msgstr ""
+msgstr "バッテリー駆動時、非アクティブになってからHDDを停止するまでの秒数"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:66
 msgid "If we should show the recalled battery warning for a broken battery"
@@ -503,13 +504,13 @@ msgstr "サスペンドやハイバーネートが失敗したら通知メッセ
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:76
 msgid "The URI to show to the user on sleep failure"
-msgstr ""
+msgstr "スリープ失敗時にユーザーに表示するURI"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:77
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
-msgstr ""
+msgstr "スリープ失敗時、問題解決のためのヘルプボタンをユーザーに表示できます。ボタンを表示しない場合は空欄にしてください。"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:78
 msgid "Notify on a low power"
@@ -548,46 +549,46 @@ msgstr "履歴ウィンドウの中に表示するデフォルトのグラフの
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:86
 msgid "The maximum time displayed for history"
-msgstr ""
+msgstr "ヒストリーに表示する最大経過時間"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:87
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
-msgstr ""
+msgstr "グラフのX軸上に表示する経過時間の最大値"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:88
 msgid "Whether we should show the stats data points"
-msgstr ""
+msgstr "統計データ点を表示するかどうか"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:89
 msgid "Whether we should show the stats data points in the statistics window."
-msgstr ""
+msgstr "統計ウィンドウに統計データ点を表示するかどうか"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:90
 msgid "Whether we should smooth the stats data"
-msgstr ""
+msgstr "統計データを滑らかに表示するかどうか"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:91
 msgid "Whether we should smooth the stats data in the graph."
-msgstr ""
+msgstr "グラフの統計データ点をを滑らかに表示するかどうか"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:92
 msgid "The default graph type to show for stats"
-msgstr ""
+msgstr "統計を表示するデフォルトのグラフ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:93
 msgid "The default graph type to show in the stats window."
-msgstr ""
+msgstr "統計ウィンドウに表示するデフォルトのグラフの種類"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:94
 msgid "The index of the page number to show by default"
-msgstr ""
+msgstr "デフォルトで表示するページ番号のインデックス"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:95
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
-msgstr ""
+msgstr "正しいページにフォーカスを戻した際にデフォルトで表示するページ番号のインデックス"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
@@ -931,17 +932,17 @@ msgstr "プログラムを閉じる"
 #. command line argument
 #: ../src/gpm-backlight-helper.c:162
 msgid "Set the current brightness"
-msgstr ""
+msgstr "現在の明るさを設定"
 
 #. command line argument
 #: ../src/gpm-backlight-helper.c:165
 msgid "Get the current brightness"
-msgstr ""
+msgstr "現在の明るさを取得"
 
 #. command line argument
 #: ../src/gpm-backlight-helper.c:168
 msgid "Get the number of brightness levels supported"
-msgstr ""
+msgstr "サポートしている明るさレベルを取得"
 
 #. TRANSLATORS: tool that is used when copying profiles system-wide
 #: ../src/gpm-backlight-helper.c:183
@@ -1150,7 +1151,7 @@ msgstr "サスペンドに失敗しました"
 #. TRANSLATORS: message text
 #: ../src/gpm-manager.c:585
 msgid "Computer failed to suspend."
-msgstr ""
+msgstr "コンピューターはサスペンドに失敗しました。"
 
 #. TRANSLATORS: title text
 #: ../src/gpm-manager.c:587
@@ -1160,7 +1161,7 @@ msgstr "サスペンドに失敗しました"
 #. TRANSLATORS: message text
 #: ../src/gpm-manager.c:591
 msgid "Computer failed to hibernate."
-msgstr ""
+msgstr "コンピューターはハイバネートに失敗しました。"
 
 #. TRANSLATORS: title text
 #: ../src/gpm-manager.c:593
@@ -1170,7 +1171,7 @@ msgstr "ハイバネートに失敗しました"
 #. TRANSLATORS: message text
 #: ../src/gpm-manager.c:598
 msgid "Failure was reported as:"
-msgstr ""
+msgstr "失敗の内容が報告されています:"
 
 #. TRANSLATORS: button text, visit the suspend help website
 #: ../src/gpm-manager.c:611
@@ -1250,13 +1251,13 @@ msgstr "バッテリーの放電中"
 #: ../src/gpm-manager.c:1348
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
-msgstr ""
+msgstr "%s のバッテリー電力が残っています (%.0f%%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
 #: ../src/gpm-manager.c:1351 ../src/gpm-manager.c:1363
 #, c-format
 msgid "%s discharging (%.0f%%)"
-msgstr ""
+msgstr "%s 放電中 (%.0f%%)"
 
 #. TRANSLATORS: UPS is now discharging
 #: ../src/gpm-manager.c:1356
@@ -1272,7 +1273,7 @@ msgstr ""
 #. TRANSLATORS: laptop battery low, and we only have one battery
 #: ../src/gpm-manager.c:1444
 msgid "Battery low"
-msgstr ""
+msgstr "バッテリーの残量わずか"
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
 #: ../src/gpm-manager.c:1447
@@ -1348,7 +1349,7 @@ msgstr "携帯電話機のバッテリー残量が少なくなっています (%
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
 #: ../src/gpm-manager.c:1494
 msgid "Media player battery low"
-msgstr ""
+msgstr "メディアプレイヤーの残量わずか"
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1497

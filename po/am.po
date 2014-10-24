@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-15 21:36+0100\n"
-"PO-Revision-Date: 2014-05-18 23:52+0000\n"
+"PO-Revision-Date: 2014-07-13 16:26+0000\n"
 "Last-Translator: samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic (http://www.transifex.com/projects/p/MATE/language/am/)\n"
 "MIME-Version: 1.0\n"
@@ -144,11 +144,11 @@ msgstr ""
 
 #: ../data/mate-power-manager.desktop.in.in.h:1
 msgid "Power Manager"
-msgstr ""
+msgstr "የሐይል አስተዳዳሪ "
 
 #: ../data/mate-power-manager.desktop.in.in.h:2
 msgid "Power management daemon"
-msgstr ""
+msgstr "የሐይል አስተዳዳሪ አዋቂ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:1
 msgid "Whether to hibernate, suspend or do nothing when inactive"
@@ -292,7 +292,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:31
 msgid "Suspend button action"
-msgstr ""
+msgstr "የማገጃ ቁልፍ ተግባር"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:32
 msgid "The action to take when the system suspend button is pressed."
@@ -300,7 +300,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:33
 msgid "Hibernate button action"
-msgstr ""
+msgstr "የማስተኛ ቁልፍ ምርጫዎች"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:34
 msgid "The action to take when the system hibernate button is pressed."
@@ -308,7 +308,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:35
 msgid "Power button action"
-msgstr ""
+msgstr "የ ሐይል ቁልፍ ተግባር"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:36
 msgid "The action to take when the system power button is pressed."
@@ -384,7 +384,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:51
 msgid "Lock screen on suspend"
-msgstr ""
+msgstr "መመልከቻውን መቆለፊያ በሚታገድ ጊዜ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:52
 msgid ""
@@ -394,7 +394,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:53
 msgid "Lock screen on hibernate"
-msgstr ""
+msgstr "መመልከቻውን መቆለፊያ በሚተኛ ጊዜ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:54
 msgid ""
@@ -482,7 +482,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:72
 msgid "Notify when fully charged"
-msgstr ""
+msgstr "በሙሉ ሲሞላ ማስታወቂያ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:73
 msgid ""
@@ -512,7 +512,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:78
 msgid "Notify on a low power"
-msgstr ""
+msgstr "ሐይል በሚቀንስ ጊዜ ማስታወቂያ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:79
 msgid ""
@@ -720,7 +720,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:122
 msgid "If sounds should be used"
-msgstr ""
+msgstr "ድምፅ የሚጠቀም ከሆነ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:123
 msgid ""
@@ -743,7 +743,7 @@ msgstr ""
 
 #: ../data/mate-power-preferences.desktop.in.in.h:1
 msgid "Power Management"
-msgstr ""
+msgstr "የሐይል አስተዳዳሪ "
 
 #: ../data/mate-power-preferences.desktop.in.in.h:2
 msgid "Configure power management"
@@ -759,7 +759,7 @@ msgstr ""
 
 #: ../data/mate-power-statistics.desktop.in.in.h:2
 msgid "Observe power management"
-msgstr ""
+msgstr "የሐይል _አስተዳዳሪ መመልከቻ"
 
 #: ../data/gpm-feedback-widget.ui.h:1
 msgid "Brightness"
@@ -845,7 +845,7 @@ msgstr ""
 
 #: ../data/gpm-prefs.ui.h:9 ../data/gpm-prefs-deprecated.ui.h:9
 msgid "Di_m display when idle"
-msgstr ""
+msgstr "በማይሰራ ጊዜ መመልከቻውን _ማፍዘዣ"
 
 #: ../data/gpm-prefs.ui.h:10 ../data/gpm-prefs-deprecated.ui.h:10
 msgid "On AC Power"
@@ -913,7 +913,7 @@ msgstr "ባጠቃላይ "
 
 #: ../data/gpm-prefs.ui.h:26 ../data/gpm-prefs-deprecated.ui.h:26
 msgid "Provides help about this program"
-msgstr ""
+msgstr "ለዚህ ፕሮግራም እርዳታ ማቅረቢያ"
 
 #: ../data/gpm-prefs.ui.h:27 ../data/gpm-prefs-deprecated.ui.h:27
 msgid "Make Default"
@@ -1108,37 +1108,37 @@ msgstr "ባትሪው በጣም ዝቅተኛ ነው"
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:279
 msgid "Power plugged in"
-msgstr ""
+msgstr "ሐይል ተሰክቷል"
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:283
 msgid "Power unplugged"
-msgstr ""
+msgstr "ሐይል ተነቅሏል "
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:287
 msgid "Lid has opened"
-msgstr ""
+msgstr "ክዳኑ ተከፍቷል"
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:291
 msgid "Lid has closed"
-msgstr ""
+msgstr "ክዳኑ ተዘግቷል"
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:295
 msgid "Battery is low"
-msgstr ""
+msgstr "ባትሪው ዝቅተኛ ነው"
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:303
 msgid "Battery is full"
-msgstr ""
+msgstr "ባትሪው ሙሉ ነው"
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:307
 msgid "Suspend started"
-msgstr ""
+msgstr "ማገጃው ጀምሯል"
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:311
@@ -1148,27 +1148,27 @@ msgstr ""
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:315
 msgid "Suspend failed"
-msgstr ""
+msgstr "ማገድ አልተቻለም"
 
 #. TRANSLATORS: message text
 #: ../src/gpm-manager.c:585
 msgid "Computer failed to suspend."
-msgstr ""
+msgstr "ኮምፒዩተሩን ማገድ አልተቻለም"
 
 #. TRANSLATORS: title text
 #: ../src/gpm-manager.c:587
 msgid "Failed to suspend"
-msgstr ""
+msgstr "ማገድ አልተቻለም "
 
 #. TRANSLATORS: message text
 #: ../src/gpm-manager.c:591
 msgid "Computer failed to hibernate."
-msgstr ""
+msgstr "ኮምፒዩተሩን ማስተኛት አልተቻለም"
 
 #. TRANSLATORS: title text
 #: ../src/gpm-manager.c:593
 msgid "Failed to hibernate"
-msgstr ""
+msgstr "ማስተኛት አልተቻለም"
 
 #. TRANSLATORS: message text
 #: ../src/gpm-manager.c:598
@@ -1188,15 +1188,15 @@ msgstr ""
 #. TRANSLATORS: this is the mate-screensaver throttle
 #: ../src/gpm-manager.c:876
 msgid "On battery power"
-msgstr ""
+msgstr "በ ባትሪ ሐይል"
 
 #: ../src/gpm-manager.c:894
 msgid "Laptop lid is closed"
-msgstr ""
+msgstr "የ ላፕቶፑ ክዳኑ ተዘግቷል"
 
 #: ../src/gpm-manager.c:932
 msgid "Power Information"
-msgstr ""
+msgstr "የ ሐይል መረጃ"
 
 #. TRANSLATORS: the battery may be recalled by it's vendor
 #: ../src/gpm-manager.c:1147
@@ -1219,7 +1219,7 @@ msgstr ""
 #. TRANSLATORS: button text, do not show this bubble again
 #: ../src/gpm-manager.c:1161
 msgid "Do not show me this again"
-msgstr ""
+msgstr "ይህን በድጋሚ አታሳየኝ"
 
 #. We should notify the user if the battery has a low capacity,
 #. * where capacity is the ratio of the last_full capacity with that of
@@ -1227,7 +1227,7 @@ msgstr ""
 #. TRANSLATORS: battery is old or broken
 #: ../src/gpm-manager.c:1246
 msgid "Battery may be broken"
-msgstr ""
+msgstr "ባትሪው ምናልባት የተሰበረ ነው"
 
 #. TRANSLATORS: notify the user that that battery is broken as the capacity is
 #. very low

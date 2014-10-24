@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Bernard_Ladenthin <bernard@ladenthin.net>, 2013
-# desperateCoder <a.dawtjan@gmx.de>, 2013
+# Bernard Ladenthin <bernard.ladenthin@gmail.com>, 2013
+# guyfawkes <a.dawtjan@gmx.de>, 2013
+# Tobias Bannert, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-15 21:36+0100\n"
-"PO-Revision-Date: 2013-04-30 14:10+0000\n"
-"Last-Translator: desperateCoder <a.dawtjan@gmx.de>\n"
+"PO-Revision-Date: 2014-08-28 18:02+0000\n"
+"Last-Translator: Tobias Bannert\n"
 "Language-Team: German (http://www.transifex.com/projects/p/MATE/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +22,7 @@ msgstr ""
 
 #: ../applets/brightness/brightness-applet.c:110
 msgid "Power Manager Brightness Applet"
-msgstr "Bildschirmhelligkeits-Applet"
+msgstr "Helligkeitsregler der Energieverwaltung"
 
 #: ../applets/brightness/brightness-applet.c:111
 msgid "Adjusts laptop panel brightness."
@@ -71,16 +72,16 @@ msgid ""
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
-msgstr "Im Paket mit MATE Power Manager sollten Sie ebenfalls eine Kopie der\nGNU General Public License erhalten haben. Wenn nicht, schreiben\nSie bitte an die Free Software Foundation, Inc., 59 Temple Place,\nSuite 330, Boston, MA  02111-1307  USA"
+msgstr "Sie sollten ein Exemplar, der »GNU General Public License«,\nzusammen mit diesem Programm erhalten haben. Wenn nicht,\nschreiben Sie bitte an die Free Software Foundation, Inc.,\n51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 
 #: ../applets/brightness/brightness-applet.c:776
 msgid "Copyright © 2006 Benjamin Canou"
-msgstr "Copyright © 2006 Benjamin Canou"
+msgstr "Urheberrecht © 2006 Benjamin Canou"
 
 #: ../applets/brightness/brightness-applet.c:1013
 #: ../applets/inhibit/inhibit-applet.c:663
 msgid "_About"
-msgstr "_Info"
+msgstr "_Über"
 
 #: ../applets/brightness/brightness-applet.c:1016
 #: ../applets/inhibit/inhibit-applet.c:666
@@ -89,15 +90,15 @@ msgstr "_Hilfe"
 
 #: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:1
 msgid "Brightness Applet Factory"
-msgstr "Helligkeits-Applet-Fabrik"
+msgstr "Helligkeitsreglerfabrik"
 
 #: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:2
 msgid "Factory for Brightness Applet"
-msgstr "Fabrik für das Helligkeits-Applet"
+msgstr "Fabrik für den Helligkeitsregler"
 
 #: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:3
 msgid "Brightness Applet"
-msgstr "Helligkeits-Applet"
+msgstr "Helligkeitsregler"
 
 #: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:4
 msgid "Adjusts Laptop panel brightness"
@@ -105,7 +106,7 @@ msgstr "Regelt die Helligkeit des Laptopbildschirms"
 
 #: ../applets/inhibit/inhibit-applet.c:96
 msgid "Power Manager Inhibit Applet"
-msgstr "Applet zur Unterdrückung des Energiesparmodus"
+msgstr "Rgeler zur Unterdrückung des Energiesparmodus"
 
 #: ../applets/inhibit/inhibit-applet.c:97
 msgid "Allows user to inhibit automatic power saving."
@@ -121,23 +122,23 @@ msgstr "Automatischer Energiesparmodus ist aktiviert"
 
 #: ../applets/inhibit/inhibit-applet.c:396
 msgid "Manual inhibit"
-msgstr "Explizit unterdrückt"
+msgstr "Manuell unterdrückt"
 
 #: ../applets/inhibit/inhibit-applet.c:455
 msgid "Copyright © 2006-2007 Richard Hughes"
-msgstr "Copyright © 2006-2007 Richard Hughes"
+msgstr "Urheberrecht © 2006-2007 Richard Hughes"
 
 #: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:1
 msgid "Inhibit Applet Factory"
-msgstr "Fabrik des Energiesparmodus-Unterdrückungsapplets"
+msgstr "Fabrik des Energiesparmodusunterdrückungsreglers"
 
 #: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:2
 msgid "Factory for Inhibit Applet"
-msgstr "Fabrik für das Energiesparmodus-Unterdrückungsapplet"
+msgstr "Fabrik für das Energiesparmodusunterdrückungsreglers"
 
 #: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:3
 msgid "Inhibit Applet"
-msgstr "Energiesparmodus-Unterdrückungsapplet"
+msgstr "Energiesparmodusunterdrückungsregler"
 
 #: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:4
 msgid "Allows user to inhibit automatic power saving"
@@ -229,7 +230,7 @@ msgstr "Die Helligkeit des Bildschirms bei Leerlauf. Wird nur berücksichtigt, w
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:17
 msgid "Dim the screen after a period of inactivity when on battery power"
-msgstr "Bildschirm nach längerem Leerlauf im Akkubetrieb abdunkeln"
+msgstr "Bildschirm, nach längerem Leerlauf im Akkubetrieb, abdunkeln"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:18
 msgid ""
@@ -351,7 +352,7 @@ msgstr "Prozessorlast überprüfen, bevor in Bereitschaft gewechselt wird"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:44
 msgid "If the CPU load should be checked before doing the idle action."
-msgstr "Legt fest, ob die CPU-Last überprüft werden soll, bevor eine Leerlauf-Aktion durchgeführt wird."
+msgstr "Legt fest, ob die CPU-Last überprüft werden soll, bevor eine Leerlaufaktion durchgeführt wird."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:45
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
@@ -411,7 +412,7 @@ msgstr "Schlüsselbund im Energiesparmodus sperren"
 msgid ""
 "Whether the MATE keyring is locked before the computer enters suspend. This "
 "means the keyring will have to be unlocked on resume."
-msgstr "Legt fest, der MATE-Schlüsselbund gesperrt wird, bevor der Rechner in die Bereitschaft wechselt. Das bedeutet, dass der Schlüsselbund beim Fortsetzen entsperrt werden muss."
+msgstr "Legt fest, ob der MATE-Schlüsselbund gesperrt wird, bevor der Rechner in die Bereitschaft wechselt. Das bedeutet, dass der Schlüsselbund beim Fortsetzen entsperrt werden muss."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:57
 msgid ""
@@ -523,61 +524,61 @@ msgstr "Legt fest, ob der Benutzer benachrichtigt werden soll, wenn der Ladezust
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:80
 msgid "Whether we should show the history data points"
-msgstr "Legt fest, ob  die Historien-Datenpunkte angezeigt werden sollen"
+msgstr "Legt fest, ob die Verlaufsdatenpunkte angezeigt werden sollen"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:81
 msgid ""
 "Whether we should show the history data points in the statistics window."
-msgstr "Legt fest, ob  die Historien-Datenpunkte im Statistik-Fenster angezeigt werden sollen"
+msgstr "Legt fest, ob die Verlaufsdatenpunkte im Statistikfenster angezeigt werden sollen"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:82
 msgid "Whether we should smooth the history data"
-msgstr "Legt fest, ob  die Historien-Daten geglättet werden sollen"
+msgstr "Legt fest, ob  die Verlaufsdaten geglättet werden sollen"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:83
 msgid "Whether we should smooth the history data in the graph."
-msgstr "Legt fest, ob die Historien-Daten in der Grafik geglättet werden sollen"
+msgstr "Legt fest, ob die Verlaufsdaten in der Grafik geglättet werden sollen"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:84
 msgid "The default graph type to show for history"
-msgstr "Der Standard-Grafiktyp, der in der Historie angezeigt werden soll"
+msgstr "Der vorgegebene Grafiktyp, der im Verlauf angezeigt werden soll"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:85
 msgid "The default graph type to show in the history window."
-msgstr "Der Standard-Grafiktyp, der im Historien-Fenster angezeigt werden soll"
+msgstr "Der vorgegebene Grafiktyp, der im Verlaufsfenster angezeigt werden soll"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:86
 msgid "The maximum time displayed for history"
-msgstr "Die maximale Zeitspanne, die in Grafiken dargestellt wird."
+msgstr "Die größte Zeitspanne, die im Verlauf dargestellt wird"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:87
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
-msgstr "Die Zeitspanne, die auf der x-Achse der Historien-Grafiken maximal dargestellt wird."
+msgstr "Die größte Zeitspanne, die auf der x-Achse des Verlaufsdiagramms dargestellt wird."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:88
 msgid "Whether we should show the stats data points"
-msgstr "Legt fest, ob  die Historien-Datenpunkte angezeigt werden sollen"
+msgstr "Legt fest, ob die Satistischendatenpunkte angezeigt werden sollen"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:89
 msgid "Whether we should show the stats data points in the statistics window."
-msgstr "Legt fest, ob  die Historien-Datenpunkte im Statistik-Fenster angezeigt werden sollen"
+msgstr "Legt fest, ob die Satistischendatenpunkte im Statistikfenster angezeigt werden sollen"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:90
 msgid "Whether we should smooth the stats data"
-msgstr "Legt fest, ob  die Historien-Daten geglättet werden sollen"
+msgstr "Legt fest, ob die Statistikdaten geglättet werden sollen"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:91
 msgid "Whether we should smooth the stats data in the graph."
-msgstr "Legt fest, ob Daten in der Grafik geglättet werden sollen."
+msgstr "Legt fest, ob Statistikdaten im Diagramm geglättet werden sollen."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:92
 msgid "The default graph type to show for stats"
-msgstr "Der Graph, der für Statistiken standardmäßig angezeigt werden soll"
+msgstr "Der vorgegebene Diagrammtyp für die Statistiken"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:93
 msgid "The default graph type to show in the stats window."
-msgstr "Der Graph, der im Statistikfenster standardmäßig angezeigt werden soll."
+msgstr "Der vorgegebene Diagrammtyp für das Statistikfenster"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:94
 msgid "The index of the page number to show by default"
@@ -591,13 +592,13 @@ msgstr "Der Index der standardmäßig anzuzeigenden Seitennummer, welche zur Rü
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
-msgstr "Die ID des zuletzt gewählten Gerätes"
+msgstr "Die Kennung des zuletzt gewählten Gerätes"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:97
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
-msgstr "Der Name des letzten Gerätes, welcher zur Rückgabe des Fokus an das korrekte Gerät verwendet wird."
+msgstr "Der Name des letzten Gerätes, welcher zur Rückgabe des Fokus an das richtige Gerät verwendet wird."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:98
 msgid "Percentage considered low"
@@ -621,7 +622,7 @@ msgstr "Prozentwert, bei dem der Akkuladezustand als kritisch eingestuft wird. W
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:102
 msgid "Percentage action is taken"
-msgstr "Wegen des Ladezustands wird eine Aktion durchgeführt"
+msgstr "Wegen des Ladezustandes wird eine Aktion durchgeführt"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:103
 msgid ""
@@ -732,7 +733,7 @@ msgstr "Legt fest, ob bei kritischem Ladezustand oder bei unterdrücktem Wechsel
 #: ../data/org.mate.power-manager.gschema.xml.in.h:124
 msgid ""
 "If preferences and statistics items should be shown in the context menu"
-msgstr "Legt fest, ob Einstellungs- und Statistik-Einträge im Kontextmenü angezeigt werden sollen"
+msgstr "Legt fest, ob Einstellungs- und Statistikeinträge im Kontextmenü angezeigt werden sollen"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:125
 msgid "When to show the notification icon"
@@ -740,7 +741,7 @@ msgstr "Legt fest, wann das Benachrichtigungssymbol angezeigt werden soll"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:126
 msgid "Display options for the notification icon."
-msgstr "Zeige Optionen für das Benachrichtigungs-Symbol an."
+msgstr "Optionen für das Benachrichtigungssymbol anzeigen."
 
 #: ../data/mate-power-preferences.desktop.in.in.h:1
 msgid "Power Management"
@@ -773,7 +774,7 @@ msgstr "Details"
 
 #: ../data/gpm-statistics.ui.h:3 ../data/gpm-statistics-deprecated.ui.h:3
 msgid "Graph type:"
-msgstr "Graph:"
+msgstr "Diagrammtyp:"
 
 #: ../data/gpm-statistics.ui.h:4 ../data/gpm-statistics-deprecated.ui.h:4
 msgid "Data length:"
@@ -793,7 +794,7 @@ msgstr "Datenpunkte anzeigen"
 
 #: ../data/gpm-statistics.ui.h:8 ../data/gpm-statistics-deprecated.ui.h:8
 msgid "History"
-msgstr "Chronik"
+msgstr "Verlauf"
 
 #: ../data/gpm-statistics.ui.h:9 ../data/gpm-statistics-deprecated.ui.h:9
 msgid "Statistics"
@@ -822,7 +823,7 @@ msgstr "<b>Aktionen</b>"
 
 #: ../data/gpm-prefs.ui.h:3 ../data/gpm-prefs-deprecated.ui.h:3
 msgid "Put computer to _sleep when inactive for:"
-msgstr "_Rechner bei Leerlauf in Energiesparmodus versetzen nach:"
+msgstr "_Rechner bei Leerlauf in den Energiesparmodus versetzen nach:"
 
 #: ../data/gpm-prefs.ui.h:4 ../data/gpm-prefs-deprecated.ui.h:4
 msgid "When laptop lid is cl_osed:"
@@ -842,7 +843,7 @@ msgstr "_Bildschirm bei Leerlauf ausschalten nach:"
 
 #: ../data/gpm-prefs.ui.h:8 ../data/gpm-prefs-deprecated.ui.h:8
 msgid "Set display _brightness to:"
-msgstr "Bildschirm_helligkeit setzen auf:"
+msgstr "Bildschirm_helligkeit einstellen auf:"
 
 #: ../data/gpm-prefs.ui.h:9 ../data/gpm-prefs-deprecated.ui.h:9
 msgid "Di_m display when idle"
@@ -898,11 +899,11 @@ msgstr "Nur bei _niedrigem Akkuladezustand Symbol anzeigen"
 
 #: ../data/gpm-prefs.ui.h:22 ../data/gpm-prefs-deprecated.ui.h:22
 msgid "Only display an icon when charging or _discharging"
-msgstr "Nur bei _Ladung oder Entladung des Akku Symbol anzeigen"
+msgstr "Nur bei _Ladung oder Entladung das Akkusymbol anzeigen"
 
 #: ../data/gpm-prefs.ui.h:23 ../data/gpm-prefs-deprecated.ui.h:23
 msgid "Only display an icon when a battery is p_resent"
-msgstr "Nur bei vorhandenem _Akku Symbol anzeigen"
+msgstr "Nur bei vorhandenem _Akku ein Symbol anzeigen"
 
 #: ../data/gpm-prefs.ui.h:24 ../data/gpm-prefs-deprecated.ui.h:24
 msgid "_Always display an icon"
@@ -971,7 +972,7 @@ msgstr "Der größtmögliche Wert der Hintergrundbeleuchtung konnte nicht ausgel
 #. TRANSLATORS: only able to install profiles as root
 #: ../src/gpm-backlight-helper.c:246
 msgid "This program can only be used by the root user"
-msgstr "Dieses Programm darf nur durch den Administrator (root) verwendet werden"
+msgstr "Dieses Programm darf nur durch den Systemverwalter (root) verwendet werden"
 
 #. TRANSLATORS: the program must never be directly run
 #: ../src/gpm-backlight-helper.c:255
@@ -1197,7 +1198,7 @@ msgstr "Deckel wurde geschlossen"
 
 #: ../src/gpm-manager.c:932
 msgid "Power Information"
-msgstr "Energie-Informationen"
+msgstr "Energieinformationen"
 
 #. TRANSLATORS: the battery may be recalled by it's vendor
 #: ../src/gpm-manager.c:1147
@@ -1210,7 +1211,7 @@ msgid ""
 "A battery in your computer may have been recalled by %s and you may be at risk.\n"
 "\n"
 "For more information visit the battery recall website."
-msgstr "Sie befinden sich möglicherweise in Gefahr. Ein Akku in Ihrem Rechner wurde wahrscheinlich von %s zurückgerufen.\n\nNäheres finden Sie auf der zur Rückrufaktion gehörigen Web-Seite."
+msgstr "Sie befinden sich möglicherweise in Gefahr. Ein Akku in Ihrem Rechner wurde wahrscheinlich von %s zurückgerufen.\n\nNäheres finden Sie, auf der zur Rückrufaktion gehörigen Internetseite."
 
 #. TRANSLATORS: button text, visit the manufacturers recall website
 #: ../src/gpm-manager.c:1158
@@ -1220,7 +1221,7 @@ msgstr "Rückrufaktionsseite besuchen"
 #. TRANSLATORS: button text, do not show this bubble again
 #: ../src/gpm-manager.c:1161
 msgid "Do not show me this again"
-msgstr "Dies in Zukunft nicht mehr anzeigen"
+msgstr "Dieses in Zukunft nicht mehr anzeigen"
 
 #. We should notify the user if the battery has a low capacity,
 #. * where capacity is the ratio of the last_full capacity with that of
@@ -1272,7 +1273,7 @@ msgstr "Notstromaggregat wird entladen"
 #: ../src/gpm-manager.c:1360
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
-msgstr "%s der Notstrom-Ladung verbleibend (%.0f%%)"
+msgstr "%s der Notstromladung verbleibend (%.0f%%)"
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
 #: ../src/gpm-manager.c:1444
@@ -1342,7 +1343,7 @@ msgstr "Der PDA hat nur noch wenig Energie (%.0f%%)"
 #: ../src/gpm-manager.c:1486 ../src/gpm-manager.c:1628
 #: ../src/gpm-manager.c:1639
 msgid "Cell phone battery low"
-msgstr "Mobiltelefon-Akku fast leer"
+msgstr "Mobiltelefonakku fast leer"
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1489
@@ -1402,7 +1403,7 @@ msgstr "Kritischer Ladezustand des Laptop-Akkus"
 #. anything
 #: ../src/gpm-manager.c:1572
 msgid "Plug in your AC adapter to avoid losing data."
-msgstr "Schließen Sie Ihr Netzteil an, um Datenverlust zu vermeiden."
+msgstr "Netzteil anschließen, um Datenverlust zu vermeiden."
 
 #. TRANSLATORS: give the user a ultimatum
 #: ../src/gpm-manager.c:1576
@@ -1575,7 +1576,7 @@ msgstr "Nie"
 #. TRANSLATORS: the rate of discharge for the device
 #: ../src/gpm-statistics.c:79 ../src/gpm-statistics.c:467
 msgid "Rate"
-msgstr "Rate"
+msgstr "Geschwindigkeit"
 
 #: ../src/gpm-statistics.c:80
 msgid "Charge"
@@ -1797,7 +1798,7 @@ msgstr "Technik"
 #. * only shown for the ac adaptor device
 #: ../src/gpm-statistics.c:513
 msgid "Online"
-msgstr "Online"
+msgstr "Verbunden"
 
 #. TRANSLATORS: the command line was not provided
 #: ../src/gpm-statistics.c:825
@@ -1812,17 +1813,17 @@ msgstr "Kernelmodul"
 #. TRANSLATORS: kernel housekeeping
 #: ../src/gpm-statistics.c:842
 msgid "Kernel core"
-msgstr "Kernel-Core"
+msgstr "Kernelkern"
 
 #. TRANSLATORS: interrupt between processors
 #: ../src/gpm-statistics.c:847
 msgid "Interprocessor interrupt"
-msgstr "Zwischenprozessor-Interrupt"
+msgstr "Zwischenprozessorunterbrechung"
 
 #. TRANSLATORS: unknown interrupt
 #: ../src/gpm-statistics.c:852
 msgid "Interrupt"
-msgstr "Interrupt"
+msgstr "Unterbrechung"
 
 #. TRANSLATORS: the keyboard and mouse device event
 #: ../src/gpm-statistics.c:899
@@ -1857,7 +1858,7 @@ msgstr "Intel-Drahtlosadapter"
 #: ../src/gpm-statistics.c:938
 #, c-format
 msgid "Timer %s"
-msgstr "Timer %s"
+msgstr "Zeitmesser %s"
 
 #. TRANSLATORS: the parameter is the name of task that's woken up from
 #. sleeping.
@@ -1891,7 +1892,7 @@ msgstr "Abzuarbeitende Warteschlange %s"
 #: ../src/gpm-statistics.c:960
 #, c-format
 msgid "Network route flush %s"
-msgstr "Netzwerkrouten-Bereinigung %s"
+msgstr "Netzwerkstreckenbereinigung %s"
 
 #. TRANSLATORS: this is the name of an activity on the USB bus
 #: ../src/gpm-statistics.c:963
@@ -1908,12 +1909,12 @@ msgstr "Aufwachen %s"
 #. TRANSLATORS: interupts on the system required for basic operation
 #: ../src/gpm-statistics.c:969
 msgid "Local interrupts"
-msgstr "Lokale Interrupts"
+msgstr "Lokale Unterbrechungen"
 
 #. TRANSLATORS: interrupts when a task gets moved from one core to another
 #: ../src/gpm-statistics.c:972
 msgid "Rescheduling interrupts"
-msgstr "Interrupts neu ansetzen"
+msgstr "Unterbrechungen neu ansetzen"
 
 #. TRANSLATORS: shown on the titlebar
 #: ../src/gpm-statistics.c:1081
@@ -1923,7 +1924,7 @@ msgstr "Geräteinformation"
 #. TRANSLATORS: shown on the titlebar
 #: ../src/gpm-statistics.c:1083
 msgid "Device History"
-msgstr "Gerätechronik"
+msgstr "Geräteverlauf"
 
 #. TRANSLATORS: shown on the titlebar
 #: ../src/gpm-statistics.c:1085
@@ -1997,7 +1998,7 @@ msgstr "%s wird geladen (%.1f%%)"
 msgid ""
 "Battery is fully charged.\n"
 "Provides %s laptop runtime"
-msgstr "Akku ist vollständig geladen.\nErmöglicht %s Akku-Laufzeit"
+msgstr "Akku ist vollständig geladen.\nErmöglicht %s Akkulaufzeit"
 
 #. TRANSLATORS: the device is fully charged
 #: ../src/gpm-upower.c:241
@@ -2023,7 +2024,7 @@ msgstr "%s entlädt (%.1f%%)"
 msgid ""
 "%s %s until charged (%.1f%%)\n"
 "Provides %s battery runtime"
-msgstr "%s %s bis vollständig geladen (%.1f%%)\nStellt %s Akku-Laufzeit zur Verfügung"
+msgstr "%s %s bis vollständig geladen (%.1f%%)\nStellt %s Akkulaufzeit zur Verfügung"
 
 #. TRANSLATORS: device is charging, and we have a time to full and a
 #. percentage
@@ -2148,7 +2149,7 @@ msgstr "Spezifizierte Maximalladung:"
 
 #: ../src/gpm-upower.c:443
 msgid "Charge rate:"
-msgstr "Laderate:"
+msgstr "Ladegeschwindigkeit:"
 
 #. TRANSLATORS: system power cord
 #: ../src/gpm-upower.c:478
@@ -2270,9 +2271,9 @@ msgstr "Leer"
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:649
 msgid "Waiting to charge"
-msgstr "Wartet auf Aufladung"
+msgstr "Auf Aufladung wird gewartet"
 
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:653
 msgid "Waiting to discharge"
-msgstr "Wartet auf Entladung"
+msgstr "Auf Entladung wird gewartet"
