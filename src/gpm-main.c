@@ -243,7 +243,7 @@ main (int argc, char *argv[])
 
 	if (!gpm_object_register (session_connection, G_OBJECT (manager))) {
 		egg_error ("%s is already running in this session.", GPM_NAME);
-		return 0;
+		goto unref_program;
 	}
 
 	/* register to be a policy agent, just like kpackagekit does */
