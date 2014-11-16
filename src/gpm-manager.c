@@ -1673,8 +1673,10 @@ gpm_manager_engine_charge_action_cb (GpmEngine *engine, UpDevice *device, GpmMan
 	}
 
 	/* not all types have actions */
-	if (title == NULL)
+	if (title == NULL) {
+		g_free (message);
 		return;
+	}
 
 	/* get correct icon */
 	icon = gpm_upower_get_device_icon (device);
