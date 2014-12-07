@@ -37,7 +37,6 @@ DISTCLEANFILES =					\
 
 DISTCHECK_CONFIGURE_FLAGS = 				\
 	--disable-schemas-install			\
-	--disable-scrollkeeper				\
 	--disable-applets				\
 	--disable-tests
 
