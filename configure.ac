@@ -145,10 +145,12 @@ case "$with_gtk" in
 	2.0) GTK_API_VERSION=2.0
 		GTK_REQUIRED=2.24.0
 		CANBERRA_GTK=libcanberra-gtk
+		LIBUNIQUE_VERSION=1.0
 		;;
 	3.0) GTK_API_VERSION=3.0
 		GTK_REQUIRED=3.0.0
 		CANBERRA_GTK=libcanberra-gtk3
+		LIBUNIQUE_VERSION=3.0
 		;;
 esac
 
@@ -185,34 +187,15 @@ PKG_CHECK_EXISTS(
 
 PKG_CHECK_MODULES(LIBNOTIFY, libnotify >= $LIBNOTIFY_REQUIRED)
 
-dnl ----------------------------------------------------------------------------
-dnl - Unique
-dnl ----------------------------------------------------------------------------
-#PKG_CHECK_MODULES(UNIQUE, unique-1.0 >= $UNIQUE_REQUIRED)
-case "$with_gtk" in
-	2.0) LIBUNIQUE_VERSION=1.0
-		;;
-	3.0) LIBUNIQUE_VERSION=3.0
-		;;
-esac
-
-PKG_CHECK_MODULES(UNIQUE, unique-$LIBUNIQUE_VERSION, enable_libunique=yes, enable_libunique=no)
+PKG_CHECK_MODULES(UNIQUE, unique-$LIBUNIQUE_VERSION)
 
 AC_SUBST([UNIQUE_CFLAGS])
 AC_SUBST([UNIQUE_LIBS])
 
-AC_ARG_ENABLE(unique, [  --enable-unique         enable the use of libunique instead of g_application or gtk_application], enable_libunique=yes,)
-
-if test "x$enable_libunique" = "xyes"; then
-	UNIQUE_CFLAGS="$UNIQUE_CFLAGS -DUSE_UNIQUE=1"
-	# fix for deprecated on 2.26
-	# unique en la version 1.0, contiene simbolos no definidos a partir de
-	# glib 2.26, pero puede ser obviado si se utiliza -DG_CONST_RETURN=const
-	if $PKG_CONFIG --atleast-version 2.26 glib-2.0; then
-		UNIQUE_CFLAGS="$UNIQUE_CFLAGS -DG_CONST_RETURN=const"
-	fi
-fi
-
+# this deprecated stuff should be removed from unique in most distros
+# but it's still not removed upstream in unique 1.x, so leaving it alone
+# just in case.
+UNIQUE_CFLAGS="$UNIQUE_CFLAGS -DG_CONST_RETURN=const"
 
 PKG_CHECK_MODULES(UPOWER, upower-glib >= $UPOWER_REQUIRED)
 
@@ -414,7 +397,6 @@ echo "
         Building extra applets:    ${enable_applets}
         Self test support:         ${have_tests}
         GTK+ API version:          ${GTK_API_VERSION}
-        Use libunique:             ${enable_libunique}
         Docbook support:           ${enable_docbook_docs}
         documentation dir:         $DOCDIR
         dbus-1 services dir:       $DBUS_SERVICES_DIR
