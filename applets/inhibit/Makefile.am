@@ -66,4 +66,4 @@ ui_DATA = inhibit-applet-menu.xml
 EXTRA_DIST = org.mate.InhibitApplet.mate-panel-applet.in.in $(ui_DATA) $(service_in_files)
 
 DISTCLEANFILES =						\
-	$(applet_DATA) $(applet_DATA).in $(server_DATA)
+	$(applet_DATA) $(applet_DATA).in $(service_DATA)
