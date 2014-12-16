@@ -112,7 +112,7 @@ GLIB_GSETTINGS
 dnl ----------------------------------------------------------------------------
 dnl - Library dependencies
 dnl ----------------------------------------------------------------------------
-GLIB_REQUIRED=2.36.0
+GLIB_REQUIRED=2.32.0
 GIO_REQUIRED=2.36.0
 GDK_REQUIRED=2.11.0
 GNOME_KEYRING_REQUIRED=3.0.0
