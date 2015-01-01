@@ -13,7 +13,7 @@ autostart_in_files = mate-power-manager.desktop.in
 autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
 
 servicedir       = $(DBUS_SERVICES_DIR)
-service_in_files = mate-power-manager.service.in
+service_in_files = org.mate.PowerManager.service.in
 service_DATA     = $(service_in_files:.service.in=.service)
 
 $(service_DATA): $(service_in_files) Makefile
@@ -49,5 +49,5 @@ DISTCLEANFILES =					\
 	mate-power-manager.desktop			\
 	mate-power-preferences.desktop			\
 	mate-power-statistics.desktop			\
-	mate-power-manager.service		\
+	org.mate.PowerManager.service		\
 	org.mate.power-manager.gschema.xml
