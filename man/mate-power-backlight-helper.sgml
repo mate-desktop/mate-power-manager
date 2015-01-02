@@ -1,0 +1,145 @@
+<!doctype refentry PUBLIC "-//OASIS//DTD DocBook V4.1//EN" [
+
+<!-- Process this file with docbook-to-man to generate an nroff manual
+     page: `docbook-to-man manpage.sgml > manpage.1'.  You may view
+     the manual page with: `docbook-to-man manpage.sgml | nroff -man |
+     less'.  A typical entry in a Makefile or Makefile.am is:
+
+manpage.1: manpage.sgml
+	docbook-to-man $< > $@
+
+    
+	The docbook-to-man binary is found in the docbook-to-man package.
+	Please remember that if you create the nroff version in one of the
+	debian/rules file targets (such as build), you will need to include
+	docbook-to-man in your Build-Depends control field.
+
+  -->
+
+  <!-- Please adjust the date whenever revising the manpage. -->
+  <!ENTITY date        "<date>21 April, 2014</date>">
+  <!-- SECTION should be 1-8, maybe w/ subsection other parameters are
+       allowed: see man(7), man(1). -->
+  <!ENTITY package     "mate-power-backlight-helper">
+  <!ENTITY gnu         "<acronym>GNU</acronym>">
+  <!ENTITY gpl         "&gnu; <acronym>GPL</acronym>">
+]>
+
+<refentry>
+  <refentryinfo>
+    <address>
+      <email>richard@hughsie.com</email>;
+    </address>
+    <author>
+      <firstname>Richard</firstname>
+      <surname>Hughes</surname>
+    </author>
+    <copyright>
+      <year>2005</year>
+      <holder>Richard Hughes</holder>
+    </copyright>
+    &date;
+  </refentryinfo>
+  <refmeta>
+    <refentrytitle>mate-power-backlight-helper</refentrytitle>
+    <manvolnum>1</manvolnum>
+  </refmeta>
+  <refnamediv>
+    <refname>&package;</refname>
+
+    <refpurpose>helper application for MATE's power management backlight control</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>&package;</command>
+      <arg><option>--help</option></arg>
+      <arg><option>--set-brightness</option></arg>
+      <arg><option>--get-brightness</option></arg>
+      <arg><option>--get-max-brightness</option></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+  <refsect1>
+    <title>DESCRIPTION</title>
+
+    <para>This manual page documents briefly the
+      <command>&package;</command> command.</para>
+
+    <para><command>&package;</command> is a helper utility for controlling the backlight of TFT displays via the MATE power manager userspace daemon.</para>
+	<para>The <command>&package;</command> requires to be run with root privileges.</para>
+
+  </refsect1>
+  <refsect1>
+    <title>OPTIONS</title>
+
+    <para>This program follows the usual &gnu; command line syntax,
+      with long options starting with two dashes (`-').  A summary of
+      options is included below. </para>
+
+    <variablelist>
+      <varlistentry>
+        <term>
+          <option>--help</option>
+        </term>
+        <listitem>
+          <para>Show summary of options.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <option>--set-brightness BRIGHTNESS_LEVEL</option>
+        </term>
+        <listitem>
+          <para>Set the given brightness.</para>
+        </listitem>
+      </varlistentry>
+  	  <varlistentry>
+        <term>
+          <option>--get-brightness</option>
+        </term>
+        <listitem>
+          <para>Get the current brightness.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <option>--get-max-brightness</option>
+        </term>
+        <listitem>
+          <para>Get the number of brightness levels supported.</para>
+        </listitem>
+      </varlistentry>
+ 
+	</variablelist>
+  </refsect1>
+  <refsect1>
+    <title>SEE ALSO</title>
+
+    <para>mate-power-manager (1).</para>
+
+  </refsect1>
+  <refsect1>
+    <title>AUTHOR</title>
+
+    <para>This manual page has been written by Mike Gabriel <email>mike.gabriel@das-netzwerkteam.de</email> for
+      the <productname>Debian</productname> system (but may be used by others).
+    </para>
+
+  </refsect1>
+</refentry>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:t
+sgml-parent-document:nil
+sgml-default-dtd-file:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->
