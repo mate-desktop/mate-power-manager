@@ -51,7 +51,6 @@ main (int argc, char **argv)
 {
 	EggTest *test;
 
-	g_type_init ();
 	test = egg_test_init ();
 	egg_debug_init (TRUE);
 
