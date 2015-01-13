@@ -1383,7 +1383,6 @@ gpm_manager_engine_charge_low_cb (GpmEngine *engine, UpDevice *device, GpmManage
 		/* TRANSLATORS: tell user more details */
 		message = g_strdup_printf (_("Cell phone is low in power (%.0f%%)"), percentage);
 
-#if UP_CHECK_VERSION(0,9,5)
 	} else if (kind == UP_DEVICE_KIND_MEDIA_PLAYER) {
 		/* TRANSLATORS: media player, e.g. mp3 is getting a little low */
 		title = _("Media player battery low");
@@ -1404,7 +1403,6 @@ gpm_manager_engine_charge_low_cb (GpmEngine *engine, UpDevice *device, GpmManage
 
 		/* TRANSLATORS: tell user more details */
 		message = g_strdup_printf (_("Attached computer is low in power (%.0f%%)"), percentage);
-#endif
 	}
 
 	/* get correct icon */
@@ -1527,7 +1525,6 @@ gpm_manager_engine_charge_critical_cb (GpmEngine *engine, UpDevice *device, GpmM
 					     "This device will soon stop functioning if not charged."),
 					   percentage);
 
-#if UP_CHECK_VERSION(0,9,5)
 	} else if (kind == UP_DEVICE_KIND_MEDIA_PLAYER) {
 
 		/* TRANSLATORS: the cell battery is very low */
@@ -1555,7 +1552,6 @@ gpm_manager_engine_charge_critical_cb (GpmEngine *engine, UpDevice *device, GpmM
 		message = g_strdup_printf (_("Attached computer is very low in power (%.0f%%). "
 					     "The device will soon shutdown if not charged."),
 					   percentage);
-#endif
 	}
 
 	/* get correct icon */

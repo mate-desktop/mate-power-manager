@@ -854,13 +854,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 		g_object_unref(proxy);
 	}
 	else {
-#if UP_CHECK_VERSION(0,9,2)
 		prefs->priv->has_button_lid = up_client_get_lid_is_present (prefs->priv->client);
-#else
-		g_object_get (prefs->priv->client,
-			      "lid-is-present", &prefs->priv->has_button_lid,
-			      NULL);
-#endif
 	}
 
 	prefs->priv->has_button_suspend = TRUE;

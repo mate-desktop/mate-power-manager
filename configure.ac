@@ -124,7 +124,7 @@ UNIQUE_REQUIRED=0.9.4
 LIBPANEL_REQUIRED=1.5.0
 XRANDR_REQUIRED=1.2.0
 CANBERRA_REQUIRED=0.10
-UPOWER_REQUIRED=0.9.1
+UPOWER_REQUIRED=0.9.5
 MATE_DESKTOP_REQUIRED=1.9.0
 
 dnl ----------------------------------------------------------------------------
