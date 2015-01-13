@@ -218,11 +218,9 @@ gpm_engine_get_warning (GpmEngine *engine, UpDevice *device)
 		warning_type = gpm_engine_get_warning_csr (engine, device);
 
 	} else if (kind == UP_DEVICE_KIND_UPS ||
-#if UP_CHECK_VERSION(0,9,5)
 		   kind == UP_DEVICE_KIND_MEDIA_PLAYER ||
 		   kind == UP_DEVICE_KIND_TABLET ||
 		   kind == UP_DEVICE_KIND_COMPUTER ||
-#endif
 		   kind == UP_DEVICE_KIND_PDA) {
 
 		warning_type = gpm_engine_get_warning_percentage (engine, device);
