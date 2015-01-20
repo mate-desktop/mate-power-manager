@@ -1,1146 +1,984 @@
-# Serbian translation of mate-power-manager
-# Courtesy of Prevod.org team (http://prevod.org/) -- 2006 - 2009.
-#
-# This file is distributed under the same license as the mate-power-manager package.
-#
-# Maintainer: Милош Поповић <gpopac@gmail.com>
-# Prevous maintainer: Slobodan D. Sredojevic <ssl@uns.ns.ac.yu>
-# Милош Поповић <gpopac@gmail.com>, 2010.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-power-manager\n"
-"Report-Msgid-Bugs-To: http://bugzilla.mate.org/enter_bug.cgi?product=mate-"
-"power-manager&component=general\n"
-"POT-Creation-Date: 2010-08-06 15:44+0000\n"
-"PO-Revision-Date: 2010-08-20 18:35+0200\n"
-"Last-Translator: Милош Поповић <gpopac@gmail.com>\n"
-"Language-Team: Serbian <gnom@prevod.org>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-15 21:36+0100\n"
+"PO-Revision-Date: 2014-12-14 08:54+0000\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"Language-Team: Serbian (http://www.transifex.com/projects/p/MATE/language/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4;    plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 :    n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../applets/brightness/brightness-applet.c:105
+#: ../applets/brightness/brightness-applet.c:110
 msgid "Power Manager Brightness Applet"
 msgstr "Програмче за штеловање осветљености екрана"
 
-#: ../applets/brightness/brightness-applet.c:106
+#: ../applets/brightness/brightness-applet.c:111
 msgid "Adjusts laptop panel brightness."
 msgstr "Штелује осветљеност екрана преносног уређаја."
 
-#: ../applets/brightness/brightness-applet.c:359
-#: ../applets/inhibit/inhibit-applet.c:358
+#: ../applets/brightness/brightness-applet.c:364
+#: ../applets/inhibit/inhibit-applet.c:363
 msgid "Cannot connect to mate-power-manager"
-msgstr "Не могу да се повежем на Гномов управник потрошње."
+msgstr "Не могу да се повежем са Мејтовим управником напајања"
 
-#: ../applets/brightness/brightness-applet.c:361
+#: ../applets/brightness/brightness-applet.c:366
 msgid "Cannot get laptop panel brightness"
-msgstr "Не могу да добијем текућу вредност осветљености екрана"
+msgstr "Не могу да добавим осветљеност екрана"
 
-#: ../applets/brightness/brightness-applet.c:363
+#: ../applets/brightness/brightness-applet.c:368
 #, c-format
 msgid "LCD brightness : %d%%"
-msgstr "Осветљеност танког екрана : %d%%"
+msgstr "Осветљеност екрана са течним кристалима : %d%%"
 
-#: ../applets/brightness/brightness-applet.c:748
-#: ../applets/inhibit/inhibit-applet.c:427
+#: ../applets/brightness/brightness-applet.c:753
+#: ../applets/inhibit/inhibit-applet.c:432
 msgid "Licensed under the GNU General Public License Version 2"
-msgstr "Објављено под условима Опште Јавне Лиценце верзије 2"
+msgstr "Објављено под Гнуовом општом јавном дозволом издања 2"
 
-#: ../applets/brightness/brightness-applet.c:749
-#: ../applets/inhibit/inhibit-applet.c:428
+#: ../applets/brightness/brightness-applet.c:754
+#: ../applets/inhibit/inhibit-applet.c:433
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
 "as published by the Free Software Foundation; either version 2\n"
 "of the License, or (at your option) any later version."
-msgstr ""
-"Гномов управник потрошње електричне енергије је слободан софтвер;\n"
-"можете га расподељивати и/или га мењати под условима ГНУ Опште\n"
-"Јавне Лиценце (GNU GPL) како је објављује Задужбина за Слободни \n"
-"Софтвер (FSF); било верзије 2 те Лиценце, било (по вашем нахођењу)\n"
-"било које новије верзије."
+msgstr "Управник напајања је слободан софтвер; можете га расподељивати\nи/или мењати под условима Гнуове опште јавне лиценце коју\nје објавила Задужбина слободног софтвера; издања 3 лиценце\nили (по вашем избору) било којег новијег издања."
 
-#: ../applets/brightness/brightness-applet.c:753
-#: ../applets/inhibit/inhibit-applet.c:432
+#: ../applets/brightness/brightness-applet.c:758
+#: ../applets/inhibit/inhibit-applet.c:437
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
 "GNU General Public License for more details."
-msgstr ""
-"Гномов управник потрошње електричне енергије се расподељује у нади\n"
-"да ће бити од користи, али БЕЗ ИКАКВИХ ГАРАНЦИЈА; чак и без \n"
-"подразумеване гаранције КОРИСНОСТИ или ПРИЛАГОЂЕНОСТИ ОДРЕЂЕНОЈ \n"
-"НАМЕНИ. Видите ГНУ Општу Јавну Лиценцу за више детаља."
+msgstr "Управник напајања се расподељује у нади да ће бити користан,\nали БЕЗ ИКАКВЕ ГАРАНЦИЈЕ; чак и без примењене гаранције\nТРЖИШНЕ ВРЕДНОСТИ или ПРИЛАГОЂЕНОСТИ ОДРЕЂЕНОЈ НАМЕНИ.\nПогледајте Гнуову Општу јавну лиценцу за више детаља."
 
-#: ../applets/brightness/brightness-applet.c:757
-#: ../applets/inhibit/inhibit-applet.c:436
+#: ../applets/brightness/brightness-applet.c:762
+#: ../applets/inhibit/inhibit-applet.c:441
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
-msgstr ""
-"Требали сте да примите примерак ГНУ Опште Јавне Лиценце уз\n"
-"овај програм; ако нисте, пишите Задужбини за Слободни Софтвер\n"
-"(Free Software Foundation, Inc.), 51 Franklin Street, Fifth Floor,\n"
-"Boston, MA 02110-1301, USA."
+msgstr "Требали сте да примите примерак Гнуове Опште јавне лиценце\nуз овај програм. Ако нисте, пишите Задужбини слободног\nсофтвера на адресу: „Free Software\nFoundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n02110-1301, USA“."
 
-#: ../applets/brightness/brightness-applet.c:771
+#: ../applets/brightness/brightness-applet.c:776
 msgid "Copyright © 2006 Benjamin Canou"
-msgstr "Сва права задржана, 2006 , Бенџамин Кано"
+msgstr "Ауторска права © 2006 Бенџамин Кану"
 
-#: ../applets/brightness/MATE_BrightnessApplet.server.in.in.h:1
-msgid "Adjusts Laptop panel brightness"
-msgstr "Штелује осветљеност екрана преносног уређаја."
+#: ../applets/brightness/brightness-applet.c:1013
+#: ../applets/inhibit/inhibit-applet.c:663
+msgid "_About"
+msgstr "_О програму"
 
-#: ../applets/brightness/MATE_BrightnessApplet.server.in.in.h:2
-msgid "Brightness Applet"
-msgstr "Програмче за осветљеност"
+#: ../applets/brightness/brightness-applet.c:1016
+#: ../applets/inhibit/inhibit-applet.c:666
+msgid "_Help"
+msgstr "_Помоћ"
 
-#: ../applets/brightness/MATE_BrightnessApplet.server.in.in.h:3
+#: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:1
 msgid "Brightness Applet Factory"
 msgstr "Штеловање осветљености екрана"
 
-#: ../applets/brightness/MATE_BrightnessApplet.server.in.in.h:4
+#: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:2
 msgid "Factory for Brightness Applet"
 msgstr "Програмче за штеловање осветљености екрана"
 
-#: ../applets/inhibit/inhibit-applet.c:91
+#: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:3
+msgid "Brightness Applet"
+msgstr "Програмче за осветљеност"
+
+#: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:4
+msgid "Adjusts Laptop panel brightness"
+msgstr "Дотерајте осветљеност екрана преносног рачунара"
+
+#: ../applets/inhibit/inhibit-applet.c:96
 msgid "Power Manager Inhibit Applet"
-msgstr "Програмче за онемогућавање уштеде енергије"
+msgstr "Програмче за спречавање управника потрошње"
 
-#: ../applets/inhibit/inhibit-applet.c:92
+#: ../applets/inhibit/inhibit-applet.c:97
 msgid "Allows user to inhibit automatic power saving."
-msgstr "Дозвољава корисницима да онемогуће уштеду потрошње енергије."
+msgstr "Дозвољава корисницима да онемогуће самосталну уштеду напајања."
 
-#: ../applets/inhibit/inhibit-applet.c:361
+#: ../applets/inhibit/inhibit-applet.c:366
 msgid "Automatic sleep inhibited"
 msgstr "Успављивање је онемогућено"
 
-#: ../applets/inhibit/inhibit-applet.c:363
+#: ../applets/inhibit/inhibit-applet.c:368
 msgid "Automatic sleep enabled"
 msgstr "Успављивање је омогућено"
 
-#: ../applets/inhibit/inhibit-applet.c:391
+#: ../applets/inhibit/inhibit-applet.c:396
 msgid "Manual inhibit"
 msgstr "Ручно онемогућавање"
 
-#: ../applets/inhibit/inhibit-applet.c:450
+#: ../applets/inhibit/inhibit-applet.c:455
 msgid "Copyright © 2006-2007 Richard Hughes"
-msgstr "Сва права задржана, 2006-2007, Ричард Хјуз"
+msgstr "Ауторска права © 2006-2007 Ричард Хјуз"
 
-#: ../applets/inhibit/MATE_InhibitApplet.server.in.in.h:1
-msgid "Allows user to inhibit automatic power saving"
-msgstr "Дозвољава корисницима да онемогуће уштеду потрошње енергије."
-
-#: ../applets/inhibit/MATE_InhibitApplet.server.in.in.h:2
-msgid "Factory for Inhibit Applet"
-msgstr "Програмче за онемогућавање уштеде енергије"
-
-#: ../applets/inhibit/MATE_InhibitApplet.server.in.in.h:3
-msgid "Inhibit Applet"
-msgstr "Програмче за онемогућавање уштеде"
-
-#: ../applets/inhibit/MATE_InhibitApplet.server.in.in.h:4
+#: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:1
 msgid "Inhibit Applet Factory"
 msgstr "Програмче за онемогућавање уштеде"
 
+#: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:2
+msgid "Factory for Inhibit Applet"
+msgstr "Програмче за онемогућавање уштеде енергије"
+
+#: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:3
+msgid "Inhibit Applet"
+msgstr "Програмче за онемогућавање уштеде"
+
+#: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:4
+msgid "Allows user to inhibit automatic power saving"
+msgstr "Дозвољава корисницима да онемогуће уштеду потрошње енергије."
+
 #: ../data/mate-power-manager.desktop.in.in.h:1
 msgid "Power Manager"
-msgstr "Управник потрошњом електричне енергије"
+msgstr "Управник напајања"
 
 #: ../data/mate-power-manager.desktop.in.in.h:2
 msgid "Power management daemon"
-msgstr "Позадински процес за управљање потрошњом"
+msgstr "Услужник управљања напајањем"
 
-#: ../data/mate-power-manager.schemas.in.h:1
-msgid "Allow backlight brightness adjustment"
-msgstr "Понуди подешавање осветљеност екрана"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:1
+msgid "Whether to hibernate, suspend or do nothing when inactive"
+msgstr "Да ли да замрзне, обустави или да не ради ништа приликом неактивности"
 
-#: ../data/mate-power-manager.schemas.in.h:2
+#: ../data/org.mate.power-manager.gschema.xml.in.h:2
+msgid ""
+"The type of sleeping that should be performed when the computer is inactive."
+msgstr "Врста успављивања која треба да се обави када рачунар не ради ништа."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:3
 msgid "Battery critical low action"
 msgstr "Радња када је батерија скоро празна"
 
-#: ../data/mate-power-manager.schemas.in.h:3
-msgid "Check CPU load before sleeping"
-msgstr "Провери запосленост процесора пре успављивања"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:4
+msgid "The action to take when the battery is critically low."
+msgstr "Радња која ће се обавити када батерија буде била скоро празна."
 
-#: ../data/mate-power-manager.schemas.in.h:4
-msgid "Dim the screen after a period of inactivity when on AC power"
-msgstr ""
-"Замагли екран након неког времена неактивности при напајању из електричне "
-"мреже"
-
-#: ../data/mate-power-manager.schemas.in.h:5
-msgid "Dim the screen after a period of inactivity when on battery power"
-msgstr ""
-"Замагли екран након неког времена неактивности при напајаљу из батерије"
-
-#: ../data/mate-power-manager.schemas.in.h:6
-msgid ""
-"Display options for the notification icon. Valid options are \"never\", \"low"
-"\", \"critical\", \"charge\", \"present\" and \"always\"."
-msgstr ""
-"Начин појављивања обавештајне иконице. Могуће вредности су „never“ (никад), "
-"„low“ (када је батерија скоро празна), „critical“ (када је батерија критично "
-"празна), „charge“ (док се бетерија пуни), „present“ (када је присутна "
-"батерија) и „always“ (увек)."
-
-#: ../data/mate-power-manager.schemas.in.h:7
-msgid "Hibernate button action"
-msgstr "Радња која се предузима након притиска на дугме за замрзавање"
-
-#: ../data/mate-power-manager.schemas.in.h:8
-msgid ""
-"If a notification message should be displayed after suspend or hibernate "
-"failed."
-msgstr "Обевести корисника приликом неуспешног обустављања или замрзавања."
-
-#: ../data/mate-power-manager.schemas.in.h:9
-msgid ""
-"If a notification message should be displayed when the battery is fully "
-"charged."
-msgstr "Обавести корисника када је батерија допуњена до краја."
-
-#: ../data/mate-power-manager.schemas.in.h:10
-msgid ""
-"If a notification message should be displayed when the battery is getting "
-"low."
-msgstr "Обавести корисника када је батерија скоро празна."
-
-#: ../data/mate-power-manager.schemas.in.h:11
-msgid "If preferences and statistics items should be shown in the context menu"
-msgstr ""
-"Одређује да ли треба приказати поставке и дијаграм потрошње у приложеном "
-"менију"
-
-#: ../data/mate-power-manager.schemas.in.h:12
-msgid "If sounds should be used"
-msgstr "Користи звучно обавештавање"
-
-#: ../data/mate-power-manager.schemas.in.h:13
-msgid ""
-"If sounds should be used when the power is critically low, or inhibit "
-"requests have stopped the policy action."
-msgstr ""
-"Користи звучно обавештавање када је батерија скоро празна, или када су "
-"захтеви за онемогућавање зауставили предвиђену радњу."
-
-#: ../data/mate-power-manager.schemas.in.h:14
-msgid "If the CPU load should be checked before doing the idle action."
-msgstr ""
-"Провери упосленост процесора пре позива радње када корисник ништа не ради."
-
-#: ../data/mate-power-manager.schemas.in.h:15
+#: ../data/org.mate.power-manager.gschema.xml.in.h:5
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
-msgstr ""
-"Покрени батеријски догађај када се поклопац затвори и кабл за напајање извуче"
+msgstr "Да ли треба да дође до догађаја батерије када се поклопац спусти и када се искључи напајање"
 
-#: ../data/mate-power-manager.schemas.in.h:16
+#: ../data/org.mate.power-manager.gschema.xml.in.h:6
 msgid ""
 "If the battery lid close event should occur (for example 'Suspend when lid "
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
-msgstr ""
-"Реагуј при затварању поклопца (нпр. обустави) када је поклопац претходно био "
-"затворен и исчупан кабл из струје у времену након тога."
+msgstr "Да ли треба да дође до догађаја затварања поклопца (нпр. „Обустави при затварању поклопца када ради на батерији“) када је поклопац претходно био затворен а мрежно напајање искључено у каснијем времену."
 
-#: ../data/mate-power-manager.schemas.in.h:17
-msgid "If the learnt profile should be used to calculate the time remaining"
-msgstr ""
-"Користи протекли профил потрошње за прорачун преосталог времена трајања "
-"батерије"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:7
+msgid "UPS critical low action"
+msgstr "Радња ниског резервног напајања"
 
-#: ../data/mate-power-manager.schemas.in.h:18
-msgid ""
-"If the learnt profile should be used to calculate the time remaining. Only "
-"turn this off for debugging."
-msgstr ""
-"Користи протекли профил потрошње за прорачун преосталог времена трајања "
-"батерије. Искључите ово само ако тражите грешке у програму."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:8
+msgid "The action to take when the UPS is critically low."
+msgstr "Радња која ће се обавити када резервно напајање буде било скоро празно."
 
-#: ../data/mate-power-manager.schemas.in.h:19
-msgid "If the low-power mode should be enabled when on AC"
-msgstr "Омогући режим ниске потрошње ако се рачунар напаја из електричне мреже"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:9
+msgid "UPS low power action"
+msgstr "Радња празног резервног напајања"
 
-#: ../data/mate-power-manager.schemas.in.h:20
-msgid "If the low-power mode should be enabled when on battery"
-msgstr "Омогући режим ниске потрошње ако се рачунар напаја из батерије"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:10
+msgid "The action to take when the UPS is low."
+msgstr "Радња која ће се обавити када резервно напајање буде било празно."
 
-#: ../data/mate-power-manager.schemas.in.h:21
+#: ../data/org.mate.power-manager.gschema.xml.in.h:11
+msgid "Allow backlight brightness adjustment"
+msgstr "Омогућава подешавање осветљености екрана"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:12
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
-msgstr ""
-"Одређује да ли да се промени осветљење екрана при преласку са батеријског на "
-"напајање из електричне мреже и обрнуто."
+msgstr "Да ли осветљење екрана треба да се промени када се прелази са батеријског на напајање из електричне мреже и обрнуто."
 
-#: ../data/mate-power-manager.schemas.in.h:22
-msgid ""
-"If the screen should be dimmed to save power when the computer is idle when "
-"on AC power."
-msgstr ""
-"Замагли екран, ради уштеде енергије, када се рачунар не користи а напајање "
-"се обезбеђује из електричне мреже."
-
-#: ../data/mate-power-manager.schemas.in.h:23
-msgid ""
-"If the screen should be dimmed to save power when the computer is idle when "
-"on battery power."
-msgstr ""
-"Замагли екран, ради уштеде енергије, када се рачунар не користи а напајање "
-"се обезбеђује из батерија."
-
-#: ../data/mate-power-manager.schemas.in.h:24
-msgid ""
-"If the screen should be reduced in brightness when the computer is on "
-"battery power."
-msgstr ""
-"Замагљивање екрана, ради уштеде енергије, када се рачунар не користи а "
-"напајање се обезбеђује из батерија."
-
-#: ../data/mate-power-manager.schemas.in.h:25
-msgid "If the system low-power mode should be enabled when on AC power."
-msgstr ""
-"Укључи режим ниске потрошње ако се остварује напајање из електричне мреже"
-
-#: ../data/mate-power-manager.schemas.in.h:26
-msgid ""
-"If the system low-power mode should be enabled when on laptop battery power."
-msgstr "Укључи режим ниске потрошње ако се користи батеријско напајање"
-
-#: ../data/mate-power-manager.schemas.in.h:27
-msgid "If the user should be notified when the AC adapter is disconnected."
-msgstr ""
-"Обавести корисника када се уклони кабл за напајање из електричне мреже."
-
-#: ../data/mate-power-manager.schemas.in.h:28
-msgid ""
-"If time based notifications should be used. If set to false, then the "
-"percentage change is used instead, which may fix a broken ACPI BIOS."
-msgstr ""
-"Користи обавештења на основи протеклог времена. Ако је постављено на false "
-"(нетачно), тада се прати процентуално стање, што понекад поправља нетачан "
-"ACPI/BIOS одзив."
-
-#: ../data/mate-power-manager.schemas.in.h:29
-msgid "If we should show the low capacity warning for a broken battery"
-msgstr ""
-"Прикажи упозорење о испражњеној батерији и када јој се стање не може очитати"
-
-#: ../data/mate-power-manager.schemas.in.h:30
-msgid "If we should show the low capacity warning for a broken battery."
-msgstr ""
-"Прикажи упозорење о испражњеној батерији и када јој се стање не може очитати"
-
-#: ../data/mate-power-manager.schemas.in.h:31
-msgid "If we should show the recalled battery warning for a broken battery"
-msgstr "Понављај упозорење о батерији и када јој се стање не може очитати"
-
-#: ../data/mate-power-manager.schemas.in.h:32
-msgid ""
-"If we should show the recalled battery warning for a broken battery. Set "
-"this to false only if you know your battery is okay."
-msgstr ""
-"Понављај упозорење о батерији када јој се стање из неког разлога не може "
-"очитати. Поставите ову вредност на false (нетачно) само ако знате да је ваша "
-"батерија исправна."
-
-#: ../data/mate-power-manager.schemas.in.h:33
-msgid "LCD brightness when on AC"
-msgstr "Вредност осветљења танког екрана при напајању из електричне мреже"
-
-#: ../data/mate-power-manager.schemas.in.h:34
-msgid "LCD dimming amount when on battery"
-msgstr "Замагљење танког екрана при батеријском напајању"
-
-#: ../data/mate-power-manager.schemas.in.h:35
-msgid "Laptop lid close action on battery"
-msgstr ""
-"Радња која се обавља када се поклопац преносног рачунара затвори при "
-"батеријском напајању"
-
-#: ../data/mate-power-manager.schemas.in.h:36
-msgid "Laptop lid close action when on AC"
-msgstr ""
-"Радња која се обавља када се поклопац преносног рачунара затвори при "
-"напајању из електричне мреже "
-
-#: ../data/mate-power-manager.schemas.in.h:37
-msgid "Lock MATE keyring on sleep"
-msgstr "Закључава Гномов привезак за кључеве при успављивању"
-
-#: ../data/mate-power-manager.schemas.in.h:38
-msgid "Lock screen on hibernate"
-msgstr "Закључава екран када корисник замрзне рачунар"
-
-#: ../data/mate-power-manager.schemas.in.h:39
-msgid "Lock screen on suspend"
-msgstr "Закључава екран када корисник обустави рад рачунара"
-
-#: ../data/mate-power-manager.schemas.in.h:40
-msgid "Lock screen when blanked"
-msgstr "Закључава екран када корисник затамни екран"
-
-#: ../data/mate-power-manager.schemas.in.h:41
-msgid "Method used to blank screen on AC"
-msgstr "Метод за затамњење екрана када је напајање из електричне мреже"
-
-#: ../data/mate-power-manager.schemas.in.h:42
-msgid "Method used to blank screen on battery"
-msgstr "Метод за затамњење екрана када је напајање батеријско"
-
-#: ../data/mate-power-manager.schemas.in.h:43
-msgid "Notify on a low power"
-msgstr "Обавести ако је батерија празна"
-
-#: ../data/mate-power-manager.schemas.in.h:44
-msgid "Notify on a sleep failure"
-msgstr "Обавести при неуспелом успављивању"
-
-#: ../data/mate-power-manager.schemas.in.h:45
-msgid "Notify when AC adapter is disconnected"
-msgstr "Обавести при губитку напајања из електричне мреже"
-
-#: ../data/mate-power-manager.schemas.in.h:46
-msgid "Notify when fully charged"
-msgstr "Обавести када је батерија напуњена до краја"
-
-#: ../data/mate-power-manager.schemas.in.h:47
-msgid "Percentage action is taken"
-msgstr "Радња везана за проценат напуњености је спроведена"
-
-#: ../data/mate-power-manager.schemas.in.h:48
-msgid "Percentage considered critical"
-msgstr "Проценат који се сматра критичним"
-
-#: ../data/mate-power-manager.schemas.in.h:49
-msgid "Percentage considered low"
-msgstr "Проценат који се сматра ниским"
-
-#: ../data/mate-power-manager.schemas.in.h:50
-msgid "Power button action"
-msgstr ""
-"Радња која се предузима након притиска на дугме за паљење/гашење рачунара"
-
-#: ../data/mate-power-manager.schemas.in.h:51
+#: ../data/org.mate.power-manager.gschema.xml.in.h:13
 msgid "Reduce the backlight brightness when on battery power"
 msgstr "Смањује позадинско осветљење при батеријском напајању"
 
-#: ../data/mate-power-manager.schemas.in.h:52
-msgid "Seconds of inactivity to spin down when on AC"
-msgstr ""
-"Секунди неактивности пре смањења обртаја диска, при напајању из електричне "
-"мреже"
-
-#: ../data/mate-power-manager.schemas.in.h:53
-msgid "Seconds of inactivity to spin down when on battery"
-msgstr ""
-"Секунди неактивности пре смањења обртаја диска, при напајању из батерије"
-
-#: ../data/mate-power-manager.schemas.in.h:54
-msgid "Sleep timeout computer when on AC"
-msgstr "Време за успављивање рачунара при напајању из електричне мреже"
-
-#: ../data/mate-power-manager.schemas.in.h:55
-msgid "Sleep timeout computer when on UPS"
-msgstr "Време за успављивање рачунара када је на резервном напајању"
-
-#: ../data/mate-power-manager.schemas.in.h:56
-msgid "Sleep timeout computer when on battery"
-msgstr "Време за успављивање рачунара при напајању из батерије"
-
-#: ../data/mate-power-manager.schemas.in.h:57
-msgid "Sleep timeout display when on AC"
-msgstr "Време за успављивање екрана при напајање из електричне мреже"
-
-#: ../data/mate-power-manager.schemas.in.h:58
-msgid "Sleep timeout display when on UPS"
-msgstr "Време за успављивање екрана када је на резервном напајању"
-
-#: ../data/mate-power-manager.schemas.in.h:59
-msgid "Sleep timeout display when on battery"
-msgstr "Време за успављивање екрана при напајању из батерије"
-
-#: ../data/mate-power-manager.schemas.in.h:60
-msgid "Suspend button action"
-msgstr "Наредба дугмета за обустављање"
-
-#: ../data/mate-power-manager.schemas.in.h:61
+#: ../data/org.mate.power-manager.gschema.xml.in.h:14
 msgid ""
-"The DPMS method used to blank the screen when on AC power. Possible values "
-"are \"standby\", \"suspend\" and \"off\"."
-msgstr ""
-"DPMS метод који се користи за затамњење екрана при напајању из електричне "
-"мреже. Могуће вредности су „standby“ (у приправности), "
-"„suspend“ (обустављено) и „off (угашено)."
+"If the screen should be reduced in brightness when the computer is on "
+"battery power."
+msgstr "Да ли треба да се смањи осветљеност екрана када се рачунар напаја из батерије."
 
-#: ../data/mate-power-manager.schemas.in.h:62
+#: ../data/org.mate.power-manager.gschema.xml.in.h:15
+msgid "The brightness of the screen when idle"
+msgstr "Осветљеност екрана приликом неактивности"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:16
 msgid ""
-"The DPMS method used to blank the screen when on battery power. Possible "
-"values are \"standby\", \"suspend\" and \"off\"."
-msgstr ""
-"DPMS метод који се користи за затамњење екрана при батеријском напајању. "
-"Могуће вредности су „standby“ (у приправности), „suspend“ (обустављено) и "
-"„off“ (угашено)."
+"This is the laptop panel screen brightness used when the session is idle. "
+"Only valid when use-time-for-policy is true."
+msgstr "Одређује осветљеност екрана преносног рачунара приликом мировања сесије. Користи се само када је постављено „use-time-for-policy“."
 
-#: ../data/mate-power-manager.schemas.in.h:63
-msgid "The URI to show to the user on sleep failure"
-msgstr "Адреса која се приказује кориснику по неуспелом успављивању"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:17
+msgid "Dim the screen after a period of inactivity when on battery power"
+msgstr "Замагљује екран након времена неактивности при напајању из батерије"
 
-#: ../data/mate-power-manager.schemas.in.h:64
+#: ../data/org.mate.power-manager.gschema.xml.in.h:18
 msgid ""
-"The action to take when the UPS is critically low. Possible values are "
-"\"hibernate\", \"suspend\", \"shutdown\" and \"nothing\"."
-msgstr ""
-"Радња која се предузима када је УСП напајање критично празно. Могуће "
-"вредности су „hibernate“ (замрзни), „suspend“ (обустави), "
-"„shutdown“ (искључи рачунар) и „nothing“ (не ради ништа)."
+"If the screen should be dimmed to save power when the computer is idle when "
+"on battery power."
+msgstr "Да ли екран треба да буде замагљен зарад уштеде енергије када се рачунар не користи а напаја се из батерија."
 
-#: ../data/mate-power-manager.schemas.in.h:65
-msgid ""
-"The action to take when the UPS is low. Possible values are \"hibernate\", "
-"\"suspend\", \"shutdown\" and \"nothing\"."
-msgstr ""
-"Радња која се предузима када је резервно напајање скоро празно. Могуће "
-"вредности су „hibernate“ (замрзни), „suspend“, (обустави), "
-"„shutdown“ (искључи рачунар) и „nothing“ (не ради ништа)."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:19
+msgid "The default amount of time to dim the screen after idle"
+msgstr "Основни износ времена за замагљивање екрана након мировања"
 
-#: ../data/mate-power-manager.schemas.in.h:66
-msgid ""
-"The action to take when the battery is critically low. Possible values are "
-"\"hibernate\", \"suspend\", \"shutdown\" and \"nothing\"."
-msgstr ""
-"Радња која се предузима када је напуњеност батерије критично ниска. Могуће "
-"вредности су „hibernate“ (замрзни), „suspend“ (обустави), "
-"„shutdown“ (искључи рачунар) и „nothing“ (не ради ништа)."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:20
+msgid "The default amount of time to dim the screen after idle."
+msgstr "Након колико времена ће се замаглити екрана ако рачунар мирује."
 
-#: ../data/mate-power-manager.schemas.in.h:67
-msgid ""
-"The action to take when the laptop lid is closed and the laptop is on AC "
-"power. Possible values are \"suspend\", \"hibernate\", \"blank\" and "
-"\"nothing\"."
-msgstr ""
-"Радња које се предузима када се затвори поклопац преносног рачунара и када "
-"се он напаја из електричне мреже. Могуће вредности су „hibernate“ замрзни, "
-"„suspend“ (обустави), „blank“ (искључи екран) и „nothing“ (не ради ништа)."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:21
+msgid "LCD dimming amount when on battery"
+msgstr "Замагљење екрана са течним кристалима када ради на батерији"
 
-#: ../data/mate-power-manager.schemas.in.h:68
-msgid ""
-"The action to take when the laptop lid is closed and the laptop is on "
-"battery power. Possible values are \"suspend\", \"hibernate\", \"blank\", "
-"and \"nothing\"."
-msgstr ""
-"Радња које се предузима када се затвори поклопац преносног рачунара и када "
-"се он напаја из батерије. Могуће вредности су „hibernate“ (замрзни), "
-"„suspend“ (обустави), „blank“ (искључи екран) и „nothing“ (не ради ништа)."
-
-#: ../data/mate-power-manager.schemas.in.h:69
-msgid ""
-"The action to take when the system hibernate button is pressed. Possible "
-"values are \"suspend\", \"hibernate\", \"interactive\", \"shutdown\" and "
-"\"nothing\"."
-msgstr ""
-"Радња која се обавља када се притисне на дугме за замрзавање рачунара. "
-"Могуће вредности су „suspend“ (обустави), „hibernate“ (замрзни), "
-"„interactive“ (питај), „shutdown“ (искључи рачунар) и „nothing“ не ради "
-"ништа."
-
-#: ../data/mate-power-manager.schemas.in.h:70
-msgid ""
-"The action to take when the system power button is pressed. Possible values "
-"are \"suspend\", \"hibernate\", \"interactive\", \"shutdown\" and \"nothing"
-"\"."
-msgstr ""
-"Радња која се обавља када се притисне на дугме за паљење/гашење рачунара. "
-"Могуће вредности су „suspend“ (обустави), „hibernate“ (замрзни), "
-"„interactive“ (питај), „shutdown“ (искључи рачунар) и „nothing“ не ради "
-"ништа."
-
-#: ../data/mate-power-manager.schemas.in.h:71
-msgid ""
-"The action to take when the system suspend button is pressed. Possible "
-"values are \"suspend\", \"hibernate\", \"interactive\", \"shutdown\" and "
-"\"nothing\"."
-msgstr ""
-"Радња која се обавља када се притисне дугме за превођење у стање "
-"приправности. Могуће вредности су „suspend“ (обустави), "
-"„hibernate“ (замрзни), „interactive“ (питај), „shutdown“ (искључи) и "
-"„nothing“ (не ради ништа)."
-
-#: ../data/mate-power-manager.schemas.in.h:72
-msgid ""
-"The amount of time in seconds before the display goes to sleep when the "
-"computer is on AC power."
-msgstr ""
-"Време неактивности у секундама пре успављивања екрана при напајању из "
-"електирчне мреже."
-
-#: ../data/mate-power-manager.schemas.in.h:73
-msgid ""
-"The amount of time in seconds the computer on AC power needs to be inactive "
-"before it goes to sleep."
-msgstr ""
-"Време неактивности у секундама пре успављивања рачунара при напајању из "
-"електричне мреже."
-
-#: ../data/mate-power-manager.schemas.in.h:74
-msgid ""
-"The amount of time in seconds the computer on UPS power needs to be inactive "
-"before it goes to sleep."
-msgstr ""
-"Време неактивности у секундама пре покушаја успављивања рачунара када се "
-"користи резервно напајање."
-
-#: ../data/mate-power-manager.schemas.in.h:75
-msgid ""
-"The amount of time in seconds the computer on UPS power needs to be inactive "
-"before the display goes to sleep."
-msgstr ""
-"Време неактивности у секундама пре покушаја успављивања екрана када се "
-"користи резервно напајање."
-
-#: ../data/mate-power-manager.schemas.in.h:76
-msgid ""
-"The amount of time in seconds the computer on battery power needs to be "
-"inactive before it goes to sleep."
-msgstr ""
-"Време неактивности у секундама пре покушаја успављивања рачунара при "
-"напајању из батерије."
-
-#: ../data/mate-power-manager.schemas.in.h:77
-msgid ""
-"The amount of time in seconds the computer on battery power needs to be "
-"inactive before the display goes to sleep."
-msgstr ""
-"Време неактивности у секундама пре покушаја успављивања екрана при напајању "
-"из батерије."
-
-#: ../data/mate-power-manager.schemas.in.h:78
+#: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
-msgstr ""
-"Замагљеност екрана када се рачунар напаја из батерије. Могуће вредности леже "
-"су између 0 и 100."
+msgstr "Колико ће екран бити замагљен када се рачунар напаја из батерије. Могуће вредности су између 0 и 100."
 
-#: ../data/mate-power-manager.schemas.in.h:79
+#: ../data/org.mate.power-manager.gschema.xml.in.h:23
+msgid "Dim the screen after a period of inactivity when on AC power"
+msgstr "Замагљује екран након времена неактивности при напајању из електричне мреже"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:24
+msgid ""
+"If the screen should be dimmed to save power when the computer is idle when "
+"on AC power."
+msgstr "Да ли екран треба да буде замагљен зарад уштеде енергије када се рачунар не користи а напаја се из електричне мреже."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:25
+msgid "Method used to blank screen on AC"
+msgstr "Начин затамњења екрана када се напаја из електричне мреже"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:26
+msgid "The DPMS method used to blank the screen when on AC power."
+msgstr "ДПМС начин који се користи за затамњење екрана када се напаја из ел. мреже."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:27
+msgid "Method used to blank screen on battery"
+msgstr "Начин затамњења екрана када се напаја из батерије"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:28
+msgid "The DPMS method used to blank the screen when on battery power."
+msgstr "ДПМС начин који се користи за затамњење екрана када се напаја из батерије."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:29
+msgid "LCD brightness when on AC"
+msgstr "Осветљеност екрана са течним кристалима при напајању из електричне мреже"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:30
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
-"0 and 100."
-msgstr ""
-"Осветљеност екрана када се рачунар напраја из електричне мреже. Могуће "
-"вредности су између 0 и 100"
+"0.0 and 100.0."
+msgstr "Колико ће екран бити осветљен када се рачунар напаја из батерије. Могуће вредности су између 0 и 100."
 
-#: ../data/mate-power-manager.schemas.in.h:80
-msgid "The brightness of the screen when idle"
-msgstr "Осветљеност екрана ако корисник ништа не ради"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:31
+msgid "Suspend button action"
+msgstr "Радња дугмета за обустављање"
 
-#: ../data/mate-power-manager.schemas.in.h:81
-msgid "The default amount of time to dim the screen after idle"
-msgstr "Време неактивности пре него што замаглим екран"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:32
+msgid "The action to take when the system suspend button is pressed."
+msgstr "Радња која ће бити предузета када се притисне дугме за обустављање система."
 
-#: ../data/mate-power-manager.schemas.in.h:82
-msgid "The default amount of time to dim the screen after idle."
-msgstr "Време неактивности пре него што замаглим екран."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:33
+msgid "Hibernate button action"
+msgstr "Радња дугмета за замрзавање"
 
-#: ../data/mate-power-manager.schemas.in.h:83
-#| msgid "The default configuration version."
-msgid "The default configuration version"
-msgstr "Подразумевано издање поставки"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:34
+msgid "The action to take when the system hibernate button is pressed."
+msgstr "Радња која ће бити предузета када се притисне дугме за замрзавање система."
 
-#: ../data/mate-power-manager.schemas.in.h:84
-msgid "The default graph type to show in the statistics window"
-msgstr "Подразумевани тип графика који се приказује у прозору за статистику"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:35
+msgid "Power button action"
+msgstr "Радња дугмета за напајање"
 
-#: ../data/mate-power-manager.schemas.in.h:85
-msgid "The default graph type to show in the statistics window."
-msgstr "Подразумевани тип графика који се приказује у прозору за статистику."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:36
+msgid "The action to take when the system power button is pressed."
+msgstr "Радња која ће бити предузета када се притисне дугме за напајање система."
 
-#: ../data/mate-power-manager.schemas.in.h:86
-msgid "The maximum duration of time displayed on the x-axis of the graph."
-msgstr "Максимални временски подеок приказан на апсциси графика."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:37
+msgid "Laptop lid close action on battery"
+msgstr "Радња затварања поклопца преносног рачунара на батерији"
 
-#: ../data/mate-power-manager.schemas.in.h:87
-msgid "The maximum time displayed on the graph"
-msgstr "Максимални временски подеок приказан на графику"
-
-#: ../data/mate-power-manager.schemas.in.h:88
+#: ../data/org.mate.power-manager.gschema.xml.in.h:38
 msgid ""
-"The number of seconds of inactivity to spin down the disks when on AC power."
-msgstr ""
-"Време неактивности у секундама након чега се смањује број обртаја диска при "
-"напајању из електричне мреже"
+"The action to take when the laptop lid is closed and the laptop is on "
+"battery power."
+msgstr "Радња која ће бити предузета када се затвори поклопац преносног рачунара када се напаја из батерије."
 
-#: ../data/mate-power-manager.schemas.in.h:89
+#: ../data/org.mate.power-manager.gschema.xml.in.h:39
+msgid "Laptop lid close action when on AC"
+msgstr "Радња затварања поклопца преносног рачунара на мрежном напајању"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:40
 msgid ""
-"The number of seconds of inactivity to spin down the disks when on battery "
+"The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
-msgstr ""
-"Време неактивности у секундама након чега се смањује број обртаја диска при "
-"напајању из батерије"
+msgstr "Радња која ће бити предузета када се затвори поклопац преносног рачунара када се напаја из електричне мреже."
 
-#: ../data/mate-power-manager.schemas.in.h:90
+#: ../data/org.mate.power-manager.gschema.xml.in.h:41
+msgid "Whether to use time-based notifications"
+msgstr "Обавештења на основу протеклог времена"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:42
 msgid ""
-"The percentage of the battery when it is considered critical. Only valid "
-"when use_time_for_policy is false."
-msgstr ""
-"Проценат напуњености батерије након чега се стање сматра критично празном. "
-"Ова вредност се користи само ако је use_time_for_policy (користи време за "
-"правило) искључен."
+"If time based notifications should be used. If set to false, then the "
+"percentage change is used instead, which may fix a broken ACPI BIOS."
+msgstr "Да ли треба да се користе обавештења на основу протеклог времена. Ако није постављено, тада се прати процентуално стање, што може да поправи оштећени АЦПИ БИОС."
 
-#: ../data/mate-power-manager.schemas.in.h:91
-msgid ""
-"The percentage of the battery when it is considered low. Only valid when "
-"use_time_for_policy is false."
-msgstr ""
-"Проценат напуњености батерије након кога се она сматра скоро празном. Ова "
-"вредност се користи само ако је use_time_for_policy (користи време за "
-"правило) искључен."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:43
+msgid "Check CPU load before sleeping"
+msgstr "Проверава оптерећење процесора пре успављивања"
 
-#: ../data/mate-power-manager.schemas.in.h:92
-msgid ""
-"The percentage of the battery when the critical action is performed. Only "
-"valid when use_time_for_policy is false."
-msgstr ""
-"Проценат напуњености батерије након кога се извршава радња критичног стања. "
-"Ова вредност се користи само ако је use_time_for_policy (користи време за "
-"правило) искључен."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:44
+msgid "If the CPU load should be checked before doing the idle action."
+msgstr "Да ли треба да се провери оптерећење процесора обављања радње мировања."
 
-#: ../data/mate-power-manager.schemas.in.h:93
-msgid ""
-"The time remaining in seconds of the battery when critical action is taken. "
-"Only valid when use_time_for_policy is true."
-msgstr ""
-"Преостало трајање батерије у секундама након кога се извршава радња "
-"критичног стања. Ова вредност се користи само ако је use_time_for_policy "
-"(користи време за правило) укључен."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:45
+msgid "Whether NetworkManager should be connected and disconnected on sleep."
+msgstr "Да ли Управник мреже треба да се повеже и прекине везу приликом успављивања."
 
-#: ../data/mate-power-manager.schemas.in.h:94
-msgid ""
-"The time remaining in seconds of the battery when it is considered critical. "
-"Only valid when use_time_for_policy is true."
-msgstr ""
-"Преостало трајање батерије у секундама након кога се она сматра критично "
-"празном. Ова вредност се користи само ако је use_time_for_policy (користи "
-"време за правило) укључен."
-
-#: ../data/mate-power-manager.schemas.in.h:95
-msgid ""
-"The time remaining in seconds of the battery when it is considered low. Only "
-"valid when use_time_for_policy is true."
-msgstr ""
-"Преостало трајање батерије у секундама након кога се она сматра скоро "
-"празном. Ова вредност се користи само ако је use_time_for_policy (користи "
-"време за правило) укључен."
-
-#: ../data/mate-power-manager.schemas.in.h:96
-msgid "The time remaining when action is taken"
-msgstr "Време након кога се предузима радња"
-
-#: ../data/mate-power-manager.schemas.in.h:97
-msgid "The time remaining when critical"
-msgstr "Време након кога је батерија критично празна"
-
-#: ../data/mate-power-manager.schemas.in.h:98
-msgid "The time remaining when low"
-msgstr "Време након кога је батерија скоро празна"
-
-#: ../data/mate-power-manager.schemas.in.h:99
-msgid ""
-"The type of sleeping that should be performed when the computer is inactive. "
-"Possible values are \"hibernate\", \"suspend\" and \"nothing\"."
-msgstr ""
-"Начин успављивања који се изводи када се рачунар не користи. Могуће "
-"вредности су „hibernate“ (замрзни), „suspend“ (обустави) и „nothing“ (не "
-"ради ништа)."
-
-#: ../data/mate-power-manager.schemas.in.h:100
-msgid ""
-"The version of the installed version of the schema. Do not edit this value, "
-"it is used so that configure changes between versions can be detected."
-msgstr ""
-"Ова верзија инсталиране верзије шеме. Не мењајте ову вредност, она се "
-"користи за откривање промена подешавања при промени верзије програма."
-
-#: ../data/mate-power-manager.schemas.in.h:101
-msgid ""
-"This is the laptop panel screen brightness used when the session is idle. "
-"Only valid when use_time_for_policy is true."
-msgstr ""
-"Ово је вредност за осветљење панела екрана преносног рачунара када се "
-"рачунар не користи а укључен је. Ова вредност се користи једино ако је "
-"use_time_for_policy (користи време за правило) укључен."
-
-#: ../data/mate-power-manager.schemas.in.h:102
-msgid "UPS critical low action"
-msgstr "Радња када је резервно напајање критично празно"
-
-#: ../data/mate-power-manager.schemas.in.h:103
-msgid "UPS low power action"
-msgstr "Радња када је резервно напајање скоро празно"
-
-#: ../data/mate-power-manager.schemas.in.h:104
-msgid "Use mate-screensaver lock setting"
-msgstr "Користи подешавања закључавања Чувара екрана"
-
-#: ../data/mate-power-manager.schemas.in.h:105
-msgid ""
-"When sleep fails we can show the user a button to help fix the situation. "
-"Leave this blank if the button should not be shown."
-msgstr ""
-"Када рачунар не успе да се успава, може се приказати дугме за исправљање "
-"овог проблема. Оставите ово празно уколико не желите да се се прикаже дугме."
-
-#: ../data/mate-power-manager.schemas.in.h:106
-msgid "When to show the notification icon"
-msgstr "Када да прикажем обавештајну иконицу"
-
-#: ../data/mate-power-manager.schemas.in.h:107
-#| msgid ""
-#| "Whether NetworkManager should be connected and disconnected on sleep."
-msgid "Whether NetworkManager should be connected and disconnected on sleep"
-msgstr "Да ли да искључим Управника мреже приликом успављивања рачунара"
-
-#: ../data/mate-power-manager.schemas.in.h:108
+#: ../data/org.mate.power-manager.gschema.xml.in.h:46
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
-msgstr ""
-"Да ли Отправник Мреже треба да прекине везу пре обустављања или замрзавања и "
-"успостави везу након повратка."
+msgstr "Да ли Управник мреже треба да прекине везу пре обустављања или замрзавања и успостави везу након повратка."
 
-#: ../data/mate-power-manager.schemas.in.h:109
-msgid ""
-"Whether the MATE keyring is locked before the computer enters hibernate. "
-"This means the keyring will have to be unlocked on resume."
-msgstr ""
-"Закључај Гномов привезак за кључеве пре него што замрзнеш рачунар. Ово значи "
-"да ћете морати да откључате привеске након одмрзавања."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:47
+msgid "Use mate-screensaver lock setting"
+msgstr "Користи подешавања закључавања мејтовог чувара екрана"
 
-#: ../data/mate-power-manager.schemas.in.h:110
-msgid ""
-"Whether the MATE keyring is locked before the computer enters suspend. This "
-"means the keyring will have to be unlocked on resume."
-msgstr ""
-"Закључај Гномов привезак за кључеве пре него што обуставиш рад рачунара. Ово "
-"значи да ћете морати да откључате привеске након повратка из стања "
-"приправности."
-
-#: ../data/mate-power-manager.schemas.in.h:111
-msgid ""
-"Whether the screen is locked when the computer wakes up from a hibernate. "
-"Only used if lock_use_screensaver_settings is false."
-msgstr ""
-"Закључај екран када се рачунар пробуди из замрзнутог стања. Једино се "
-"користи ако је lock_use_screensaver_settings (закључај коришћење постаставки "
-"чувара екрана) искључен."
-
-#: ../data/mate-power-manager.schemas.in.h:112
-msgid ""
-"Whether the screen is locked when the computer wakes up from a suspend. Only "
-"used if lock_use_screensaver_settings is false."
-msgstr ""
-"Закључај екран када се рачунар врати из обустављеног стања. Једино се "
-"користи ако је lock_use_screensaver_settings (закључај коришћење постаставки "
-"чувара екрана) искључен."
-
-#: ../data/mate-power-manager.schemas.in.h:113
-msgid ""
-"Whether the screen is locked when the screen is turned off. Only used if "
-"lock_use_screensaver_settings is false."
-msgstr ""
-"Закључај екран приликом његовог искључивања. Једино се користи ако је "
-"lock_use_screensaver_settings (закључај коришћење постаставки чувара екрана) "
-"искључен."
-
-#: ../data/mate-power-manager.schemas.in.h:114
-msgid "Whether to hibernate, suspend or do nothing when inactive"
-msgstr "Замрзни, обустави или да не ради ништа приликом неактивности"
-
-#: ../data/mate-power-manager.schemas.in.h:115
+#: ../data/org.mate.power-manager.gschema.xml.in.h:48
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
-msgstr ""
-"Користи подешавање закључавања екрана Чувара екрана ради одлуке о "
-"закључавању након повратка из замрзнутог или обустављеног стања и након "
-"затамњења екрана."
+msgstr "Да ли ће да користи подешавање закључавања екрана мејтовог чувара екрана како би одлучио да ли је екран закључан након замрзавања, обустављања или затамњења екрана."
 
-#: ../data/mate-power-manager.schemas.in.h:116
-msgid "Whether to use time-based notifications"
-msgstr "Приказуј обавештења на основу протеклог времена"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:49
+msgid "Lock screen when blanked"
+msgstr "Закључава екран приликом затамњивања"
 
-#: ../data/mate-power-manager.schemas.in.h:117
-msgid "Whether we should show the axis labels in the statistics window"
-msgstr "Прикжи натписе уз осе у прозору за статистику"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:50
+msgid ""
+"Whether the screen is locked when the screen is turned off. Only used if "
+"lock-use-screensaver is false."
+msgstr "Да ли ће се екран закључати приликом његовог искључивања. Користи се само ако „lock-use-screensaver“ није постављено."
 
-#: ../data/mate-power-manager.schemas.in.h:118
-msgid "Whether we should show the axis labels in the statistics window."
-msgstr "Прикажи натписе уз осе у прозору за статистику."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:51
+msgid "Lock screen on suspend"
+msgstr "Закључава екран приликом обустављања"
 
-#: ../data/mate-power-manager.schemas.in.h:119
-msgid "Whether we should show the events in the statistics window"
-msgstr "Прикажи догађаје у прозору за статистику"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:52
+msgid ""
+"Whether the screen is locked when the computer wakes up from a suspend. Only"
+" used if lock-use-screensaver is false."
+msgstr "Да ли ће се екран закључати када се рачун пробуди из обустављања. Користи се само ако „lock-use-screensaver“ није постављено."
 
-#: ../data/mate-power-manager.schemas.in.h:120
-msgid "Whether we should show the events in the statistics window."
-msgstr "Прикажи догађаје у прозору за статистику."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:53
+msgid "Lock screen on hibernate"
+msgstr "Закључава екран приликом замрзавања"
 
-#: ../data/mate-power-manager.schemas.in.h:121
-msgid "Whether we should smooth the data in the graph"
-msgstr "Прикажи изглађене податке у графику"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:54
+msgid ""
+"Whether the screen is locked when the computer wakes up from a hibernate. "
+"Only used if lock-use-screensaver is false."
+msgstr "Да ли ће се екран закључати када се рачун пробуди из замрзавања. Користи се само ако „lock-use-screensaver“ није постављено."
 
-#: ../data/mate-power-manager.schemas.in.h:122
-msgid "Whether we should smooth the data in the graph."
-msgstr "Прикажи изглађене податке у графику."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:55
+msgid "Lock MATE keyring on sleep"
+msgstr "Закључава Мејтов привезак кључева приликом успављивања"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:56
+msgid ""
+"Whether the MATE keyring is locked before the computer enters suspend. This "
+"means the keyring will have to be unlocked on resume."
+msgstr "Да ли ће се Мејтов привезак кључева закључати пре него што рачунар оде у обуставу. Ово значи да ћете морати да откључате привеске након повратка из стања приправности."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:57
+msgid ""
+"Whether the MATE keyring is locked before the computer enters hibernate. "
+"This means the keyring will have to be unlocked on resume."
+msgstr "Да ли ће се Мејтов привезак кључева закључати пре него што рачунар оде у замрзавање. Ово значи да ћете морати да откључате привеске након повратка из стања приправности."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:58
+msgid "If the low-power mode should be enabled when on AC"
+msgstr "Да ли треба да се укључи режим ниске потрошње када ради на ел. мрежи"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:59
+msgid "If the system low-power mode should be enabled when on AC power."
+msgstr "Да ли треба да се укључи режим ниске потрошње када ради на ел. мрежи."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:60
+msgid "If the low-power mode should be enabled when on battery"
+msgstr "Да ли треба да се укључи режим ниске потрошње када ради на батерији"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:61
+msgid ""
+"If the system low-power mode should be enabled when on laptop battery power."
+msgstr "Да ли треба да се укључи режим ниске потрошње када ради на батерији."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:62
+msgid "Seconds of inactivity to spin down when on AC"
+msgstr "Секунде неактивности пре смањења обртаја диска, при напајању из ел. мреже"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:63
+msgid ""
+"The number of seconds of inactivity to spin down the disks when on AC power."
+msgstr "Време неактивности у секундама након чега се смањује број обртаја диска при напајању из ел. мреже."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:64
+msgid "Seconds of inactivity to spin down when on battery"
+msgstr "Секунде неактивности пре смањења обртаја диска, при напајању из батерије"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:65
+msgid ""
+"The number of seconds of inactivity to spin down the disks when on battery "
+"power."
+msgstr "Време неактивности у секундама након чега се смањује број обртаја диска при напајању из батерије."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:66
+msgid "If we should show the recalled battery warning for a broken battery"
+msgstr "Да ли да прикаже упозорење о батерији и када јој се стање не може очитати"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:67
+msgid ""
+"If we should show the recalled battery warning for a broken battery. Set "
+"this to false only if you know your battery is okay."
+msgstr "Да ли треба да прикаже упозорење о батерији када јој се стање из неког разлога не може очитати. Немојте постављати ову вредност само ако знате да је ваша батерија исправна."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:68
+msgid "If we should show the low capacity warning for a broken battery"
+msgstr "Да ли да прикаже упозорење о испражњеној батерији и када јој се стање не може очитати"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:69
+msgid "If we should show the low capacity warning for a broken battery."
+msgstr "Да ли треба да прикаже упозорење о испражњеној батерији и када јој се стање не може очитати."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:70
+msgid "Notify when AC adapter is disconnected"
+msgstr "Обавештава када се искључи напајање из ел. мреже"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:71
+msgid "If the user should be notified when the AC adapter is disconnected."
+msgstr "Да ли треба да обавести корисника када се искључи напајање из ел. мреже."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:72
+msgid "Notify when fully charged"
+msgstr "Обавештава када је батерија напуњена до краја"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:73
+msgid ""
+"If a notification message should be displayed when the battery is fully "
+"charged."
+msgstr "Да ли треба да прикаже поруку обавештења када је батерија напуњена до краја."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:74
+msgid "Notify on a sleep failure"
+msgstr "Обавештава о неуспелом успављивању"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:75
+msgid ""
+"If a notification message should be displayed after suspend or hibernate "
+"failed."
+msgstr "Да ли треба да обевести корисника приликом неуспешног обустављања или замрзавања."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:76
+msgid "The URI to show to the user on sleep failure"
+msgstr "Путања која се приказује кориснику по неуспелом успављивању"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:77
+msgid ""
+"When sleep fails we can show the user a button to help fix the situation. "
+"Leave this blank if the button should not be shown."
+msgstr "Када рачунар не успе да се успава, може приказати дугме за исправљање овог проблема. Оставите ово празно уколико не желите да се се прикаже дугме."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:78
+msgid "Notify on a low power"
+msgstr "Обавештава ако је батерија празна"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:79
+msgid ""
+"If a notification message should be displayed when the battery is getting "
+"low."
+msgstr "Да ли треба да обавести корисника када је батерија скоро празна."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:80
+msgid "Whether we should show the history data points"
+msgstr "Да ли да приказује тачке са подацима у историјату"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:81
+msgid ""
+"Whether we should show the history data points in the statistics window."
+msgstr "Да ли да приказује тачке са подацима у историјату унутар прозора са статистиком."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:82
+msgid "Whether we should smooth the history data"
+msgstr "Да ли да углади податке о историјату"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:83
+msgid "Whether we should smooth the history data in the graph."
+msgstr "Да ли да приказује углађене податке о историјату унутар графика."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:84
+msgid "The default graph type to show for history"
+msgstr "Основна врста графика који се приказује у историјату"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:85
+msgid "The default graph type to show in the history window."
+msgstr "Основна врста графика који се приказује у прозору за историјат."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:86
+msgid "The maximum time displayed for history"
+msgstr "Највећи временски период за историјат"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:87
+msgid ""
+"The maximum duration of time displayed on the x-axis of the history graph."
+msgstr "Највећи временски период који се приказује на апсциси графика историјата."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:88
+msgid "Whether we should show the stats data points"
+msgstr "Да ли да приказује тачке са подацима у статистици"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:89
+msgid "Whether we should show the stats data points in the statistics window."
+msgstr "Да ли треба да приказује тачке са подацима у статистици унутар прозора са статистиком."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:90
+msgid "Whether we should smooth the stats data"
+msgstr "Да ли да углади податаке о статистици"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:91
+msgid "Whether we should smooth the stats data in the graph."
+msgstr "Да ли да приказује углађене податке о статистици унутар графика."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:92
+msgid "The default graph type to show for stats"
+msgstr "Основна врста графика који се приказује у статистикама"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:93
+msgid "The default graph type to show in the stats window."
+msgstr "Основна врста графика који се приказује у прозору за статистику."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:94
+msgid "The index of the page number to show by default"
+msgstr "Индекс броја странице за приказ по основи"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:95
+msgid ""
+"The index of the page number to show by default which is used to return "
+"focus to the correct page."
+msgstr "Индекс броја странице који бива приказан по основи који је коришћен за враћање фокуса на одговарајућу страницу."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:96
+msgid "The ID of the last device selected"
+msgstr "ИБ последњег изабраног уређаја"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:97
+msgid ""
+"The identifier of the last device which is used to return focus to the "
+"correct device."
+msgstr "Одредник последњег уређаја који је коришћен за враћање фокуса на одговарајући уређај."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:98
+msgid "Percentage considered low"
+msgstr "Проценат који се сматра ниским"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:99
+msgid ""
+"The percentage of the battery when it is considered low. Only valid when "
+"use-time-for-policy is false."
+msgstr "Проценат напуњености батерије када се сматра ниским. Користи се само ако није изабран кључ „use-time-for-policy“."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:100
+msgid "Percentage considered critical"
+msgstr "Проценат који се сматра критичним"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:101
+msgid ""
+"The percentage of the battery when it is considered critical. Only valid "
+"when use-time-for-policy is false."
+msgstr "Проценат напуњености батерије када се сматра критичним. Користи се само ако није изабран кључ „use-time-for-policy“."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:102
+msgid "Percentage action is taken"
+msgstr "Радња за проценат напуњености се спроводи"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:103
+msgid ""
+"The percentage of the battery when the critical action is performed. Only "
+"valid when use-time-for-policy is false."
+msgstr "Проценат напуњености батерије када се спроводи радња критичног стања. Користи се само ако није изабран кључ „use-time-for-policy“."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:104
+msgid "The time remaining when low"
+msgstr "Преостало време када је батерија скоро празна"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:105
+msgid ""
+"The time remaining in seconds of the battery when it is considered low. Only"
+" valid when use-time-for-policy is true."
+msgstr "Преостало време у секундама напуњености батерије када се сматра ниским. Користи се само ако није изабран кључ „use-time-for-policy“."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:106
+msgid "The time remaining when critical"
+msgstr "Преостало време када је батерија критично празна"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:107
+msgid ""
+"The time remaining in seconds of the battery when it is considered critical."
+" Only valid when use-time-for-policy is true."
+msgstr "Преостало време у секундама напуњености батерије када се сматра критичним. Користи се само ако није изабран кључ „use-time-for-policy“."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:108
+msgid "The time remaining when action is taken"
+msgstr "Преостало време када се предузима радња"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:109
+msgid ""
+"The time remaining in seconds of the battery when critical action is taken. "
+"Only valid when use-time-for-policy is true."
+msgstr "Преостало време у секундама напуњености батерије када се спроводи радња критичности. Користи се само ако није изабран кључ „use-time-for-policy“."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:110
+msgid "Sleep timeout computer when on battery"
+msgstr "Време за успављивање рачунара при напајању из батерије"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:111
+msgid ""
+"The amount of time in seconds the computer on battery power needs to be "
+"inactive before it goes to sleep."
+msgstr "Време неактивности у секундама пре покушаја успављивања рачунара при напајању из батерије."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:112
+msgid "Sleep timeout computer when on AC"
+msgstr "Време за успављивање рачунара при напајању из електричне мреже"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:113
+msgid ""
+"The amount of time in seconds the computer on AC power needs to be inactive "
+"before it goes to sleep."
+msgstr "Време неактивности у секундама пре успављивања рачунара при напајању из електричне мреже."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:114
+msgid "Sleep timeout computer when on UPS"
+msgstr "Време за успављивање рачунара када је на резервном напајању"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:115
+msgid ""
+"The amount of time in seconds the computer on UPS power needs to be inactive"
+" before it goes to sleep."
+msgstr "Време неактивности у секундама пре покушаја успављивања рачунара када се користи резервно напајање."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:116
+msgid "Sleep timeout display when on AC"
+msgstr "Време за успављивање екрана при напајању из електричне мреже"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:117
+msgid ""
+"The amount of time in seconds before the display goes to sleep when the "
+"computer is on AC power."
+msgstr "Време неактивности у секундама пре успављивања екрана при напајању из електирчне мреже."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:118
+msgid "Sleep timeout display when on battery"
+msgstr "Време за успављивање екрана при напајању из батерије"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:119
+msgid ""
+"The amount of time in seconds the computer on battery power needs to be "
+"inactive before the display goes to sleep."
+msgstr "Време неактивности у секундама пре покушаја успављивања екрана при напајању из батерије."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:120
+msgid "Sleep timeout display when on UPS"
+msgstr "Време за успављивање екрана када је на резервном напајању"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:121
+msgid ""
+"The amount of time in seconds the computer on UPS power needs to be inactive"
+" before the display goes to sleep."
+msgstr "Време неактивности у секундама пре покушаја успављивања екрана када се користи резервно напајање."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:122
+msgid "If sounds should be used"
+msgstr "Да ли користи звучно обавештавање"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:123
+msgid ""
+"If sounds should be used when the power is critically low, or inhibit "
+"requests have stopped the policy action."
+msgstr "Да ли треба да користи звучно обавештавање када је батерија скоро празна, или када су захтеви за спречавање зауставили предвиђену радњу."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:124
+msgid ""
+"If preferences and statistics items should be shown in the context menu"
+msgstr "Одређује да ли треба приказати поставке и статистику у приручном изборнику"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:125
+msgid "When to show the notification icon"
+msgstr "Када да прикаже иконицу обавештења"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:126
+msgid "Display options for the notification icon."
+msgstr "Могућности приказивања иконице обавештења."
 
 #: ../data/mate-power-preferences.desktop.in.in.h:1
-msgid "Configure power management"
-msgstr "Подесите управљање потрошњом електричне енергије"
+msgid "Power Management"
+msgstr "Управљање напајањем"
 
 #: ../data/mate-power-preferences.desktop.in.in.h:2
-msgid "Power Management"
-msgstr "Управник потрошњом енергије"
+msgid "Configure power management"
+msgstr "Подесите управљање напајањем"
 
-#: ../data/mate-power-statistics.desktop.in.in.h:1
-msgid "Observe power management"
-msgstr "Посматрање потрошње електричне енергије"
-
-# bug(slobo): потрошња се посматра преко дијаграма потрошње промени статистика у дијаграм потрошње на свим местима
 #. TRANSLATORS: shown on the titlebar
 #. TRANSLATORS: the program name
-#: ../data/mate-power-statistics.desktop.in.in.h:2
-#: ../data/gpm-statistics.ui.h:6 ../src/gpm-statistics.c:1090
-#: ../src/gpm-statistics.c:1565
+#: ../data/mate-power-statistics.desktop.in.in.h:1
+#: ../data/gpm-statistics.ui.h:1 ../data/gpm-statistics-deprecated.ui.h:1
+#: ../src/gpm-statistics.c:1091 ../src/gpm-statistics.c:1577
 msgid "Power Statistics"
-msgstr "Дијаграм потрошње електричне енергије"
+msgstr "Статистика напајања"
+
+#: ../data/mate-power-statistics.desktop.in.in.h:2
+msgid "Observe power management"
+msgstr "Посматрајте потрошњу електричне енергије"
 
 #: ../data/gpm-feedback-widget.ui.h:1
 msgid "Brightness"
 msgstr "Осветљеност"
 
-#: ../data/gpm-statistics.ui.h:1
-msgid "0"
-msgstr "0"
-
-#: ../data/gpm-statistics.ui.h:2
-msgid "Data length:"
-msgstr "Дужина података:"
-
-#: ../data/gpm-statistics.ui.h:3 ../src/gpm-statistics.c:210
+#: ../data/gpm-statistics.ui.h:2 ../data/gpm-statistics-deprecated.ui.h:2
+#: ../src/gpm-statistics.c:209
 msgid "Details"
-msgstr "Детаљи"
+msgstr "Појединости"
 
-#: ../data/gpm-statistics.ui.h:4
+#: ../data/gpm-statistics.ui.h:3 ../data/gpm-statistics-deprecated.ui.h:3
 msgid "Graph type:"
-msgstr "Тип графика:"
+msgstr "Врста графика:"
 
-#: ../data/gpm-statistics.ui.h:5
-msgid "History"
-msgstr "Историјат"
+#: ../data/gpm-statistics.ui.h:4 ../data/gpm-statistics-deprecated.ui.h:4
+msgid "Data length:"
+msgstr "Време праћења:"
 
-#: ../data/gpm-statistics.ui.h:7
-msgid "Processor wakeups per second:"
-msgstr "Број буђења процесора у секунди:"
-
-#: ../data/gpm-statistics.ui.h:8
-msgid "Show data points"
-msgstr "Прикажи тачке са подацима"
-
-# bug(slobo): потрошња се посматра преко дијаграма потрошње промени статистика у дијаграм потрошње на свим местима
-#: ../data/gpm-statistics.ui.h:9
-msgid "Statistics"
-msgstr "Статистика"
-
-#: ../data/gpm-statistics.ui.h:10
+#: ../data/gpm-statistics.ui.h:5 ../data/gpm-statistics-deprecated.ui.h:5
 msgid "There is no data to display."
 msgstr "Нема података за приказ."
 
-#: ../data/gpm-statistics.ui.h:11
+#: ../data/gpm-statistics.ui.h:6 ../data/gpm-statistics-deprecated.ui.h:6
 msgid "Use smoothed line"
 msgstr "Користи углађену линију"
 
-#: ../data/gpm-statistics.ui.h:12 ../src/gpm-statistics.c:196
+#: ../data/gpm-statistics.ui.h:7 ../data/gpm-statistics-deprecated.ui.h:7
+msgid "Show data points"
+msgstr "Прикажи тачке са подацима"
+
+#: ../data/gpm-statistics.ui.h:8 ../data/gpm-statistics-deprecated.ui.h:8
+msgid "History"
+msgstr "Историјат"
+
+#: ../data/gpm-statistics.ui.h:9 ../data/gpm-statistics-deprecated.ui.h:9
+msgid "Statistics"
+msgstr "Статистика"
+
+#: ../data/gpm-statistics.ui.h:10 ../data/gpm-statistics-deprecated.ui.h:10
+msgid "Processor wakeups per second:"
+msgstr "Број буђења процесора у секунди:"
+
+#: ../data/gpm-statistics.ui.h:11 ../data/gpm-statistics-deprecated.ui.h:11
+msgid "0"
+msgstr "0"
+
+#: ../data/gpm-statistics.ui.h:12 ../data/gpm-statistics-deprecated.ui.h:12
+#: ../src/gpm-statistics.c:195
 msgid "Wakeups"
 msgstr "Буђења"
 
-#: ../data/gpm-prefs.ui.h:1
-msgid "<b>Actions</b>"
-msgstr "<b>Наредбе</b>"
-
-#: ../data/gpm-prefs.ui.h:2
-msgid "<b>Display</b>"
-msgstr "<b>Екран</b>"
-
-#: ../data/gpm-prefs.ui.h:3
-msgid "<b>Notification Area</b>"
-msgstr "<b>Област за обавештења</b>"
-
-#: ../data/gpm-prefs.ui.h:4
-msgid "Closes the program"
-msgstr "Затвара програм"
-
-#: ../data/gpm-prefs.ui.h:5
-msgid "Di_m display when idle"
-msgstr "За_магли екран након неактивности"
-
-#: ../data/gpm-prefs.ui.h:6
-msgid "General"
-msgstr "Опште"
-
-#: ../data/gpm-prefs.ui.h:7
-msgid "Make Default"
-msgstr "Постави као подразумевано"
-
-#: ../data/gpm-prefs.ui.h:8
-msgid "On AC Power"
-msgstr "Напајање преко електричне мреже"
-
-#: ../data/gpm-prefs.ui.h:9
-msgid "On Battery Power"
-msgstr "Напајање преко батерије"
-
-#: ../data/gpm-prefs.ui.h:10
-msgid "On UPS Power"
-msgstr "Напајање преко резервног извора"
-
-#: ../data/gpm-prefs.ui.h:11
-msgid "Only display an icon when a battery is p_resent"
-msgstr "Једино прикажи иконицу када је _присутна батерија"
-
-#: ../data/gpm-prefs.ui.h:12
-msgid "Only display an icon when charging or _discharging"
-msgstr "Једино прикажи иконицу при пуњењу и_ли пражњењу"
-
-#: ../data/gpm-prefs.ui.h:13
+#: ../data/gpm-prefs.ui.h:1 ../data/gpm-prefs-deprecated.ui.h:1
 msgid "Power Management Preferences"
-msgstr "Поставке управљања потрошњом"
+msgstr "Поставке управљања напајањем"
 
-#: ../data/gpm-prefs.ui.h:14
-msgid "Provides help about this program"
-msgstr "Приказује помоћ за овај програм"
+#: ../data/gpm-prefs.ui.h:2 ../data/gpm-prefs-deprecated.ui.h:2
+msgid "<b>Actions</b>"
+msgstr "<b>Радње</b>"
 
-#: ../data/gpm-prefs.ui.h:15
-msgid "Put _display to sleep when inactive for:"
-msgstr "Успавај _екран (ако се не користи) након:"
-
-#: ../data/gpm-prefs.ui.h:16
+#: ../data/gpm-prefs.ui.h:3 ../data/gpm-prefs-deprecated.ui.h:3
 msgid "Put computer to _sleep when inactive for:"
-msgstr "Успавај _рачунар (ако се не користи) након:"
+msgstr "Успавај _рачунар ако се не користи након:"
 
-#: ../data/gpm-prefs.ui.h:17
-msgid "Set display _brightness to:"
-msgstr "Постави осветљење е_крана на:"
-
-#: ../data/gpm-prefs.ui.h:18
-msgid "Sets this policy to be used by all users"
-msgstr "Поставља ове радње за све кориснике"
-
-#: ../data/gpm-prefs.ui.h:19
-msgid "Sp_in down hard disks when possible"
-msgstr "Смањи _обртаје диска уколико је могуће"
-
-#: ../data/gpm-prefs.ui.h:20
-msgid "When UPS power is _critically low:"
-msgstr "Када је резервно напајање _критично празно:"
-
-#: ../data/gpm-prefs.ui.h:21
-msgid "When UPS power is l_ow:"
-msgstr "Када је резервно напајање _скоро празно:"
-
-#: ../data/gpm-prefs.ui.h:22
-msgid "When battery po_wer is critically low:"
-msgstr "Када је батерија _критично празна:"
-
-#: ../data/gpm-prefs.ui.h:23
+#: ../data/gpm-prefs.ui.h:4 ../data/gpm-prefs-deprecated.ui.h:4
 msgid "When laptop lid is cl_osed:"
 msgstr "Када се _поклопац преносног рачунара затвори:"
 
-#: ../data/gpm-prefs.ui.h:24
-msgid "When the _suspend button is pressed:"
-msgstr "Када је притиснуто _дугме за обустављање:"
+#: ../data/gpm-prefs.ui.h:5 ../data/gpm-prefs-deprecated.ui.h:5
+msgid "Sp_in down hard disks when possible"
+msgstr "Смањи _обртаје диска уколико је могуће"
 
-#: ../data/gpm-prefs.ui.h:25
-msgid "When the power _button is pressed:"
-msgstr "Када је притиснуто д_угме за паљење/гашење:"
+#: ../data/gpm-prefs.ui.h:6 ../data/gpm-prefs-deprecated.ui.h:6
+msgid "<b>Display</b>"
+msgstr "<b>Екран</b>"
 
-#: ../data/gpm-prefs.ui.h:26
-msgid "_Always display an icon"
-msgstr "_Увек прикажи иконицу"
+#: ../data/gpm-prefs.ui.h:7 ../data/gpm-prefs-deprecated.ui.h:7
+msgid "Put _display to sleep when inactive for:"
+msgstr "Успавај _екран ако се не користи након:"
 
-#: ../data/gpm-prefs.ui.h:27
-msgid "_Never display an icon"
-msgstr "_Никад не приказуј иконицу"
+#: ../data/gpm-prefs.ui.h:8 ../data/gpm-prefs-deprecated.ui.h:8
+msgid "Set display _brightness to:"
+msgstr "Постави _осветљење екрана на:"
 
-#: ../data/gpm-prefs.ui.h:28
-msgid "_Only display an icon when battery power is low"
-msgstr "Прикажи иконицу када је батерија _критично празна"
+#: ../data/gpm-prefs.ui.h:9 ../data/gpm-prefs-deprecated.ui.h:9
+msgid "Di_m display when idle"
+msgstr "За_магли екран када мирује"
 
-#: ../data/gpm-prefs.ui.h:29
+#: ../data/gpm-prefs.ui.h:10 ../data/gpm-prefs-deprecated.ui.h:10
+msgid "On AC Power"
+msgstr "Напајање из ел. мреже"
+
+#: ../data/gpm-prefs.ui.h:11 ../data/gpm-prefs-deprecated.ui.h:11
+msgid "When battery po_wer is critically low:"
+msgstr "Када је батерија _критично празна:"
+
+#: ../data/gpm-prefs.ui.h:12 ../data/gpm-prefs-deprecated.ui.h:12
 msgid "_Reduce backlight brightness"
 msgstr "_Смањи позадинско осветљење"
 
+#: ../data/gpm-prefs.ui.h:13 ../data/gpm-prefs-deprecated.ui.h:13
+msgid "On Battery Power"
+msgstr "Напајање из батерије"
+
+#: ../data/gpm-prefs.ui.h:14 ../data/gpm-prefs-deprecated.ui.h:14
+msgid "When UPS power is l_ow:"
+msgstr "Када је резервно напајање _скоро празно:"
+
+#: ../data/gpm-prefs.ui.h:15 ../data/gpm-prefs-deprecated.ui.h:15
+msgid "When UPS power is _critically low:"
+msgstr "Када је резервно напајање _критично празно:"
+
+#: ../data/gpm-prefs.ui.h:16 ../data/gpm-prefs-deprecated.ui.h:16
+msgid "On UPS Power"
+msgstr "Напајање из резервног извора"
+
+#: ../data/gpm-prefs.ui.h:17 ../data/gpm-prefs-deprecated.ui.h:17
+msgid "When the power _button is pressed:"
+msgstr "Када је притиснуто дугме за _паљење/гашење:"
+
+#: ../data/gpm-prefs.ui.h:18 ../data/gpm-prefs-deprecated.ui.h:18
+msgid "When the _suspend button is pressed:"
+msgstr "Када је притиснуто дугме за _обустављање:"
+
+#: ../data/gpm-prefs.ui.h:19 ../data/gpm-prefs-deprecated.ui.h:19
+msgid "<b>Notification Area</b>"
+msgstr "<b>Област обавештења</b>"
+
+#: ../data/gpm-prefs.ui.h:20 ../data/gpm-prefs-deprecated.ui.h:20
+msgid "_Never display an icon"
+msgstr "_Никад не приказуј иконицу"
+
+#: ../data/gpm-prefs.ui.h:21 ../data/gpm-prefs-deprecated.ui.h:21
+msgid "_Only display an icon when battery power is low"
+msgstr "Прикажи иконицу када је батерија _критично празна"
+
+#: ../data/gpm-prefs.ui.h:22 ../data/gpm-prefs-deprecated.ui.h:22
+msgid "Only display an icon when charging or _discharging"
+msgstr "Прикажи иконицу само приликом пуњења _или пражњења"
+
+#: ../data/gpm-prefs.ui.h:23 ../data/gpm-prefs-deprecated.ui.h:23
+msgid "Only display an icon when a battery is p_resent"
+msgstr "Прикажи иконицу само када је присутна _батерија"
+
+#: ../data/gpm-prefs.ui.h:24 ../data/gpm-prefs-deprecated.ui.h:24
+msgid "_Always display an icon"
+msgstr "_Увек прикажи иконицу"
+
+#: ../data/gpm-prefs.ui.h:25 ../data/gpm-prefs-deprecated.ui.h:25
+msgid "General"
+msgstr "Опште"
+
+#: ../data/gpm-prefs.ui.h:26 ../data/gpm-prefs-deprecated.ui.h:26
+msgid "Provides help about this program"
+msgstr "Прикажите помоћ за овај програм"
+
+#: ../data/gpm-prefs.ui.h:27 ../data/gpm-prefs-deprecated.ui.h:27
+msgid "Make Default"
+msgstr "Учини основним"
+
+#: ../data/gpm-prefs.ui.h:28 ../data/gpm-prefs-deprecated.ui.h:28
+msgid "Sets this policy to be used by all users"
+msgstr "Поставља ове радње за све кориснике"
+
+#: ../data/gpm-prefs.ui.h:29 ../data/gpm-prefs-deprecated.ui.h:29
+msgid "Closes the program"
+msgstr "Затвара програм"
+
 #. command line argument
-#: ../src/gpm-backlight-helper.c:161
+#: ../src/gpm-backlight-helper.c:162
 msgid "Set the current brightness"
-msgstr "Постави тренутно осветљење"
+msgstr "Поставља тренутно осветљење"
 
 #. command line argument
-#: ../src/gpm-backlight-helper.c:164
+#: ../src/gpm-backlight-helper.c:165
 msgid "Get the current brightness"
-msgstr "Преузми тренутно осветљење"
+msgstr "Добавља тренутно осветљење"
 
 #. command line argument
-#: ../src/gpm-backlight-helper.c:167
+#: ../src/gpm-backlight-helper.c:168
 msgid "Get the number of brightness levels supported"
-msgstr "Преузми подржане вредности осветљења"
+msgstr "Добавља подржане вредности осветљења"
 
 #. TRANSLATORS: tool that is used when copying profiles system-wide
-#: ../src/gpm-backlight-helper.c:182
-#| msgid "MATE Power Manager Website"
+#: ../src/gpm-backlight-helper.c:183
 msgid "MATE Power Manager Backlight Helper"
-msgstr "Помоћник за позадинско осветљење управника потрошње"
+msgstr "Помоћник позадинског осветљења Мејтовог управника потрошњом"
 
 #. TRANSLATORS: user did not specify valid options
-#: ../src/gpm-backlight-helper.c:190
+#: ../src/gpm-backlight-helper.c:191
 msgid "No valid option was specified"
-msgstr "Није одређена исправна опција"
+msgstr "Није наведена исправна опција"
 
 #. TRANSLATORS: no backlights found
-#: ../src/gpm-backlight-helper.c:199
+#: ../src/gpm-backlight-helper.c:200
 msgid "No backlights were found on your system"
-msgstr "Нису пронађена позадинска осветљења"
+msgstr "Нисам пронашао позадинска осветљења на систему"
 
 #. TRANSLATORS: failed to access backlight file
-#: ../src/gpm-backlight-helper.c:210
+#: ../src/gpm-backlight-helper.c:211
 msgid "Could not get the value of the backlight"
-msgstr "Не могу да преузмем вредност позадинског осветљења"
+msgstr "Не могу да добавим вредност позадинског осветљења"
 
 #. TRANSLATORS: failed to access backlight file
-#: ../src/gpm-backlight-helper.c:228
+#: ../src/gpm-backlight-helper.c:229
 msgid "Could not get the maximum value of the backlight"
-msgstr "Не могу да преузмем највећу вредност позадинског осветљења"
+msgstr "Не могу да добавим највећу вредност позадинског осветљења"
 
 #. TRANSLATORS: only able to install profiles as root
-#: ../src/gpm-backlight-helper.c:245
-#| msgid "Sets this policy to be used by all users"
+#: ../src/gpm-backlight-helper.c:246
 msgid "This program can only be used by the root user"
 msgstr "Само администратор може да користи овај програм"
 
 #. TRANSLATORS: the program must never be directly run
-#: ../src/gpm-backlight-helper.c:254
+#: ../src/gpm-backlight-helper.c:255
 msgid "This program must only be run through pkexec"
-msgstr "Морате да покренете програм кроз pkexec"
+msgstr "Морате да покренете програм кроз „pkexec“"
 
 #. TRANSLATORS: failed to access backlight file
-#: ../src/gpm-backlight-helper.c:265
+#: ../src/gpm-backlight-helper.c:266
 msgid "Could not set the value of the backlight"
 msgstr "Не могу да поставим вредност осветљења"
 
@@ -1155,7 +993,6 @@ msgid_plural "%i minutes"
 msgstr[0] "%i минут"
 msgstr[1] "%i минута"
 msgstr[2] "%i минута"
-msgstr[3] "%i минут"
 
 #: ../src/gpm-common.c:69
 #, c-format
@@ -1164,7 +1001,6 @@ msgid_plural "%i hours"
 msgstr[0] "%i сат"
 msgstr[1] "%i сата"
 msgstr[2] "%i сати"
-msgstr[3] "%i сат"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -1179,57 +1015,55 @@ msgid_plural "hours"
 msgstr[0] "сат"
 msgstr[1] "сата"
 msgstr[2] "сати"
-msgstr[3] "сат"
 
 #: ../src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] "минута"
+msgstr[0] "минут"
 msgstr[1] "минута"
 msgstr[2] "минута"
-msgstr[3] "минута"
 
 #. Translators: This is %i days
 #: ../src/gpm-graph-widget.c:434
 #, c-format
 msgid "%id"
-msgstr "%id"
+msgstr "%iд"
 
 #. Translators: This is %i days %02i hours
 #: ../src/gpm-graph-widget.c:437
 #, c-format
 msgid "%id%02ih"
-msgstr "%id%02ih"
+msgstr "%iд%02iч"
 
 #. Translators: This is %i hours
 #: ../src/gpm-graph-widget.c:442
 #, c-format
 msgid "%ih"
-msgstr "%ih"
+msgstr "%iч"
 
 #. Translators: This is %i hours %02i minutes
 #: ../src/gpm-graph-widget.c:445
 #, c-format
 msgid "%ih%02im"
-msgstr "%ih%02im"
+msgstr "%iч%02iм"
 
 #. Translators: This is %2i minutes
 #: ../src/gpm-graph-widget.c:450
 #, c-format
 msgid "%2im"
-msgstr "%2im"
+msgstr "%2iм"
 
 #. Translators: This is %2i minutes %02i seconds
 #: ../src/gpm-graph-widget.c:453
 #, c-format
 msgid "%2im%02i"
-msgstr "%2im%02i"
+msgstr "%2iм%02i"
 
 #. Translators: This is %2i seconds
 #: ../src/gpm-graph-widget.c:457
 #, c-format
 msgid "%2is"
-msgstr "%2is"
+msgstr "%2iс"
 
 #. Translators: This is %i Percentage
 #: ../src/gpm-graph-widget.c:461
@@ -1241,166 +1075,153 @@ msgstr "%i%%"
 #: ../src/gpm-graph-widget.c:464
 #, c-format
 msgid "%.1fW"
-msgstr "%.1fW"
+msgstr "%.1f W"
 
 #. Translators: This is %.1f Volts
 #: ../src/gpm-graph-widget.c:469
 #, c-format
 msgid "%.1fV"
-msgstr "%.1fV"
+msgstr "%.1f V"
 
 #. TRANSLATORS: show verbose debugging
-#: ../src/gpm-main.c:171 ../src/gpm-prefs.c:90 ../src/gpm-statistics.c:1545
+#: ../src/gpm-main.c:171 ../src/gpm-prefs.c:90 ../src/gpm-statistics.c:1554
 msgid "Show extra debugging information"
-msgstr "Прикажи додатне информације за тражење грешака"
+msgstr "Приказује додатне податке прочишћавања"
 
 #: ../src/gpm-main.c:173
 msgid "Show version of installed program and exit"
-msgstr "Испиши инсталирану верзију програма и изађи"
+msgstr "Исписује издање програма и излази"
 
 #: ../src/gpm-main.c:175
 msgid "Exit after a small delay (for debugging)"
-msgstr "Изађи након једне мале паузе (ради тражења грешака)"
+msgstr "Излази након мање паузе (ради прочишћавања)"
 
 #: ../src/gpm-main.c:177
 msgid "Exit after the manager has loaded (for debugging)"
-msgstr "Изађи након учитавања управника (ради тражења грешака)"
+msgstr "Излази након учитавања управника (ради прочишћавања)"
 
-#: ../src/gpm-main.c:191 ../src/gpm-main.c:195
+#: ../src/gpm-main.c:194 ../src/gpm-main.c:198
 msgid "MATE Power Manager"
-msgstr "Гномов управник потрошњом енергије"
+msgstr "Мејтов Управник напајањем"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:221 ../src/gpm-manager.c:289
+#: ../src/gpm-manager.c:229 ../src/gpm-manager.c:299
 msgid "Battery is very low"
-msgstr "Батерија критично празна"
+msgstr "Батерија је скоро празна"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:269
+#: ../src/gpm-manager.c:279
 msgid "Power plugged in"
-msgstr "Укључен у струју"
+msgstr "Напајање је укључено"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:273
+#: ../src/gpm-manager.c:283
 msgid "Power unplugged"
-msgstr "Искључен из струје"
+msgstr "Нпајање је искључено"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:277
+#: ../src/gpm-manager.c:287
 msgid "Lid has opened"
-msgstr "Отворен поклопац"
+msgstr "Поклопац је подигнут"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:281
+#: ../src/gpm-manager.c:291
 msgid "Lid has closed"
-msgstr "Затворен поклопац"
+msgstr "Поклопац је спуштен"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:285
+#: ../src/gpm-manager.c:295
 msgid "Battery is low"
-msgstr "Батерија скоро празна"
+msgstr "Батерија је скоро празна"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:293
+#: ../src/gpm-manager.c:303
 msgid "Battery is full"
-msgstr "Батерија пуна"
+msgstr "Батерија је пуна"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:297
+#: ../src/gpm-manager.c:307
 msgid "Suspend started"
-msgstr "Рачунар обустављен"
+msgstr "Обустављање је започело"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:301
+#: ../src/gpm-manager.c:311
 msgid "Resumed"
-msgstr "Настављено"
+msgstr "Настављено је"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:305
+#: ../src/gpm-manager.c:315
 msgid "Suspend failed"
-msgstr "Неуспело обустављање"
+msgstr "Обустављање није успело"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:574
-#| msgid "Your computer failed to suspend."
+#: ../src/gpm-manager.c:585
 msgid "Computer failed to suspend."
-msgstr "Рачунар не може да обустави рад."
+msgstr "Рачунар није успео да обустави рад."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:576
-msgid "Failed to suspend"
-msgstr "Не могу да обуставим рад."
-
-#. TRANSLATORS: message text
-#: ../src/gpm-manager.c:580
-#| msgid "Your computer failed to hibernate."
-msgid "Computer failed to hibernate."
-msgstr "Рачунар не може да се замрзне."
-
-#. TRANSLATORS: title text
-#: ../src/gpm-manager.c:582
-msgid "Failed to hibernate"
-msgstr "Не могу да се замрзнем."
-
-#. TRANSLATORS: message text
 #: ../src/gpm-manager.c:587
-#| msgid "The failure was reported as:"
+msgid "Failed to suspend"
+msgstr "Нисам успео да обуставим рад"
+
+#. TRANSLATORS: message text
+#: ../src/gpm-manager.c:591
+msgid "Computer failed to hibernate."
+msgstr "Рачунар није успео да се замрзне."
+
+#. TRANSLATORS: title text
+#: ../src/gpm-manager.c:593
+msgid "Failed to hibernate"
+msgstr "Нисам успео да се замрзнем"
+
+#. TRANSLATORS: message text
+#: ../src/gpm-manager.c:598
 msgid "Failure was reported as:"
-msgstr "Извештај је пријављен као:"
+msgstr "Неуспех је пријављен као:"
 
 #. TRANSLATORS: button text, visit the suspend help website
-#: ../src/gpm-manager.c:600
+#: ../src/gpm-manager.c:611
 msgid "Visit help page"
-msgstr "Посети Интернет страницу"
+msgstr "Посетите страницу помоћи"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:863
+#: ../src/gpm-manager.c:857
 msgid "Display DPMS activated"
-msgstr "Покренут је DPMS"
+msgstr "Покренут је ДМПС екрана"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:882
+#: ../src/gpm-manager.c:876
 msgid "On battery power"
-msgstr "Напајање из батерије"
+msgstr "Напајање на батерији"
 
-#: ../src/gpm-manager.c:900
+#: ../src/gpm-manager.c:894
 msgid "Laptop lid is closed"
 msgstr "Поклопац преносног рачунара је затворен"
 
-#: ../src/gpm-manager.c:938
+#: ../src/gpm-manager.c:932
 msgid "Power Information"
-msgstr "Подаци о потрошњи"
+msgstr "Подаци о напајању"
 
 #. TRANSLATORS: the battery may be recalled by it's vendor
-#: ../src/gpm-manager.c:1186
+#: ../src/gpm-manager.c:1147
 msgid "Battery may be recalled"
 msgstr "Батерија вашег преносног рачунара се више не производи"
 
-#: ../src/gpm-manager.c:1187
+#: ../src/gpm-manager.c:1148
 #, c-format
-#| msgid ""
-#| "The battery in your computer may have been recalled by %s and you may be "
-#| "at risk.\n"
-#| "\n"
-#| "For more information visit the battery recall website."
 msgid ""
-"A battery in your computer may have been recalled by %s and you may be at "
-"risk.\n"
+"A battery in your computer may have been recalled by %s and you may be at risk.\n"
 "\n"
 "For more information visit the battery recall website."
-msgstr ""
-"Батерија рачунара је можда замењена са %s, па постоји ризик ако наставите да "
-"је користите.\n"
-"\n"
-"За више података посетите Интернет страницу за замену батерије."
+msgstr "Батерију вашег рачунара је можда опозвао „%s“ тако да постоји ризик ако наставите да је користите.\n\nЗа више података посетите Интернет страницу за замену батерије."
 
 #. TRANSLATORS: button text, visit the manufacturers recall website
-#: ../src/gpm-manager.c:1197
+#: ../src/gpm-manager.c:1158
 msgid "Visit recall website"
-msgstr "Посетите интернет страну за замену батерије"
+msgstr "Посетите интернет страницу за замену батерије"
 
 #. TRANSLATORS: button text, do not show this bubble again
-#: ../src/gpm-manager.c:1200
+#: ../src/gpm-manager.c:1161
 msgid "Do not show me this again"
 msgstr "Не приказуј ми ово поново"
 
@@ -1408,863 +1229,767 @@ msgstr "Не приказуј ми ово поново"
 #. * where capacity is the ratio of the last_full capacity with that of
 #. * the design capacity. (#326740)
 #. TRANSLATORS: battery is old or broken
-#: ../src/gpm-manager.c:1285
+#: ../src/gpm-manager.c:1246
 msgid "Battery may be broken"
-msgstr "Можда је батерија неисправна"
+msgstr "Батерија је можда неисправна"
 
-#. TRANSLATORS: notify the user that that battery is broken as the capacity is very low
-#: ../src/gpm-manager.c:1288
+#. TRANSLATORS: notify the user that that battery is broken as the capacity is
+#. very low
+#: ../src/gpm-manager.c:1249
 #, c-format
-#| msgid ""
-#| "Your battery has a very low capacity (%1.1f%%), which means that it may "
-#| "be old or broken."
 msgid ""
-"Battery has a very low capacity (%1.1f%%), which means that it may be old or "
-"broken."
-msgstr ""
-"Батерија има веома низак капацитет (%1.1f%%), што може да значи да је стара "
-"или покварена."
+"Battery has a very low capacity (%1.1f%%), which means that it may be old or"
+" broken."
+msgstr "Батерија има веома низак капацитет (%1.1f%%), што може да значи да је стара или оштећена."
 
 #. TRANSLATORS: show the charged notification
-#: ../src/gpm-manager.c:1337
-#| msgid "Battery Fully Charged"
-#| msgid_plural "Batteries Fully Charged"
+#: ../src/gpm-manager.c:1298
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] "Батерија је напуњена"
 msgstr[1] "Батерије су напуњене"
-msgstr[2] "Батерија су напуњене"
-msgstr[3] "Батерија је напуњена"
+msgstr[2] "Батерије су напуњене"
 
 #. TRANSLATORS: laptop battery is now discharging
-#: ../src/gpm-manager.c:1383
+#: ../src/gpm-manager.c:1344
 msgid "Battery Discharging"
-msgstr "Пражњење батерије"
+msgstr "Батерија се празни"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1387
+#: ../src/gpm-manager.c:1348
 #, c-format
-#| msgid "%s of battery power remaining (%.1f%%)"
 msgid "%s of battery power remaining (%.0f%%)"
-msgstr "Преостало је још %s рада батерије (%.0f%%)"
+msgstr "Преостало је још %s за рад на батерији (%.0f%%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-manager.c:1390 ../src/gpm-manager.c:1402
+#: ../src/gpm-manager.c:1351 ../src/gpm-manager.c:1363
 #, c-format
-#| msgid "%s discharging (%.1f%%)"
 msgid "%s discharging (%.0f%%)"
 msgstr "%s се празни (%.0f%%)"
 
 #. TRANSLATORS: UPS is now discharging
-#: ../src/gpm-manager.c:1395
+#: ../src/gpm-manager.c:1356
 msgid "UPS Discharging"
-msgstr "Пражњење резервног напајања"
+msgstr "Резервно напајање се празни"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1399
+#: ../src/gpm-manager.c:1360
 #, c-format
-#| msgid "%s of UPS backup power remaining (%.1f%%)"
 msgid "%s of UPS backup power remaining (%.0f%%)"
-msgstr "Преостало је још %s резервног напајања (%.0f%%)"
+msgstr "Преостало је још %s за рад на резервном напајању (%.0f%%)"
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
-#: ../src/gpm-manager.c:1483
+#: ../src/gpm-manager.c:1444
 msgid "Battery low"
 msgstr "Батерија је скоро празна"
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
-#: ../src/gpm-manager.c:1486
+#: ../src/gpm-manager.c:1447
 msgid "Laptop battery low"
-msgstr "Батерија преносног рачунара је скоро празна"
+msgstr "Батерија рачунара је скоро празна"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1492
+#: ../src/gpm-manager.c:1453
 #, c-format
-#| msgid "Approximately <b>%s</b> remaining (%.1f%%)"
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "Имате још <b>%s</b> времена са преосталих (%.0f%%)"
 
 #. TRANSLATORS: UPS is starting to get a little low
-#: ../src/gpm-manager.c:1496
+#: ../src/gpm-manager.c:1457
 msgid "UPS low"
 msgstr "Резервно напајање је скоро празно"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1500
+#: ../src/gpm-manager.c:1461
 #, c-format
-#| msgid ""
-#| "You have approximately <b>%s</b> of remaining UPS backup power (%.1f%%)"
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
-msgstr ""
-"Имате приближно још <b>%s</b> преосталог капацитета резервног напајања (%.0f"
-"%%)"
+msgstr "Имате приближно још <b>%s</b> преосталог капацитета резервног напајања (%.0f%%)"
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1504 ../src/gpm-manager.c:1643
+#: ../src/gpm-manager.c:1465 ../src/gpm-manager.c:1601
 msgid "Mouse battery low"
 msgstr "Батерија миша је скоро празна"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1507
+#: ../src/gpm-manager.c:1468
 #, c-format
-#| msgid ""
-#| "The wireless mouse attached to this computer is low in power (%.1f%%)"
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr "Бежичном мишу су ослабиле батерије (%.0f%%)"
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1511 ../src/gpm-manager.c:1651
+#: ../src/gpm-manager.c:1472 ../src/gpm-manager.c:1609
 msgid "Keyboard battery low"
 msgstr "Батерија тастатуре је скоро празна"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1514
+#: ../src/gpm-manager.c:1475
 #, c-format
-#| msgid ""
-#| "The wireless keyboard attached to this computer is low in power (%.1f%%)"
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr "Бежичној тастатури су ослабиле батерије (%.0f%%)"
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1518 ../src/gpm-manager.c:1660
+#: ../src/gpm-manager.c:1479 ../src/gpm-manager.c:1618
 msgid "PDA battery low"
 msgstr "Батерија ПДА уређаја је скоро празна"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1521
+#: ../src/gpm-manager.c:1482
 #, c-format
-#| msgid "The PDA attached to this computer is low in power (%.1f%%)"
 msgid "PDA is low in power (%.0f%%)"
 msgstr "ПДА уређају су ослабиле батерије (%.0f%%)"
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1525 ../src/gpm-manager.c:1670
-#: ../src/gpm-manager.c:1681
+#: ../src/gpm-manager.c:1486 ../src/gpm-manager.c:1628
+#: ../src/gpm-manager.c:1639
 msgid "Cell phone battery low"
 msgstr "Батерија мобилног телефона је скоро празна"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1528
+#: ../src/gpm-manager.c:1489
 #, c-format
-#| msgid "The cell phone attached to this computer is low in power (%.1f%%)"
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "Мобилном телефону су ослабиле батерије (%.0f%%)"
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1533
-#| msgid "Cell phone battery low"
+#: ../src/gpm-manager.c:1494
 msgid "Media player battery low"
-msgstr "Батерија плејера је скоро празна"
+msgstr "Батерија медијског уређаја је скоро празна"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1536
+#: ../src/gpm-manager.c:1497
 #, c-format
-#| msgid "The PDA attached to this computer is low in power (%.1f%%)"
 msgid "Media player is low in power (%.0f%%)"
-msgstr "Плејеру су ослабиле батерије (%.0f%%)"
+msgstr "Медијском уређају су ослабиле батерије (%.0f%%)"
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1540 ../src/gpm-manager.c:1690
-#| msgid "Laptop battery low"
+#: ../src/gpm-manager.c:1501 ../src/gpm-manager.c:1648
 msgid "Tablet battery low"
-msgstr "Батерија на табли за цртање је скоро празна"
+msgstr "Батерија табличног рачунара је скоро празна"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1543
+#: ../src/gpm-manager.c:1504
 #, c-format
-#| msgid "The PDA attached to this computer is low in power (%.1f%%)"
 msgid "Tablet is low in power (%.0f%%)"
-msgstr "Табли за цртање су ослабиле батерије (%.0f%%)"
+msgstr "Табличном рачунару су ослабиле батерије (%.0f%%)"
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1547 ../src/gpm-manager.c:1699
-#| msgid "Mouse battery low"
+#: ../src/gpm-manager.c:1508 ../src/gpm-manager.c:1657
 msgid "Attached computer battery low"
 msgstr "Батерија прикаченог рачунара је скоро празна"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1550
+#: ../src/gpm-manager.c:1511
 #, c-format
-#| msgid "The PDA attached to this computer is low in power (%.1f%%)"
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "Прикаченом рачунару су ослабиле батерије (%.0f%%)"
 
-#. TRANSLATORS: laptop battery critically low, and only have one kind of battery
-#: ../src/gpm-manager.c:1600
+#. TRANSLATORS: laptop battery critically low, and only have one kind of
+#. battery
+#: ../src/gpm-manager.c:1560
 msgid "Battery critically low"
 msgstr "Батерија је критично празна"
 
-#. TRANSLATORS: laptop battery critically low, and we have more than one type of battery
+#. TRANSLATORS: laptop battery critically low, and we have more than one type
+#. of battery
 #. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1603 ../src/gpm-manager.c:1760
+#: ../src/gpm-manager.c:1563 ../src/gpm-manager.c:1717
 msgid "Laptop battery critically low"
-msgstr "Батерија преносног уређаја је скоро празна"
+msgstr "Батерија преносног рачунара је критично празна"
 
-#. TRANSLATORS: tell the use to insert the plug, as we're not going to do anything
-#: ../src/gpm-manager.c:1613
+#. TRANSLATORS: tell the use to insert the plug, as we're not going to do
+#. anything
+#: ../src/gpm-manager.c:1572
 msgid "Plug in your AC adapter to avoid losing data."
-msgstr "Прикључите кабл напајања како би избегли губитак података."
+msgstr "Прикључите напајање из ел. мреже да избегнете губитак података."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1617
+#: ../src/gpm-manager.c:1576
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
-msgstr ""
-"Рачунар ће убрзо обуставити рад уколико га не повежете на електричну мрежу."
+msgstr "Рачунар ће убрзо обуставити рад уколико га не повежете на електричну мрежу."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1621
+#: ../src/gpm-manager.c:1580
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
-msgstr ""
-"Рачунар ће се убрзо замрзнути за уколико га не повежете на електричну мрежу."
+msgstr "Рачунар ће се убрзо замрзнути за уколико га не повежете на електричну мрежу."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1625
+#: ../src/gpm-manager.c:1584
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
-msgstr ""
-"Рачунар ће се ускоро угасити уколико га не повежете на електричну мрежу."
+msgstr "Рачунар ће се ускоро угасити уколико га не повежете на електричну мрежу."
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1633 ../src/gpm-manager.c:1798
+#: ../src/gpm-manager.c:1591 ../src/gpm-manager.c:1752
 msgid "UPS critically low"
 msgstr "Резервно напајање је критично празно"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1637
+#: ../src/gpm-manager.c:1595
 #, c-format
-#| msgid ""
-#| "You have approximately <b>%s</b> of remaining UPS power (%.1f%%). Restore "
-#| "AC power to your computer to avoid losing data."
 msgid ""
-"Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to "
-"your computer to avoid losing data."
-msgstr ""
-"Имате приближно још <b>%s</b> преосталог капацитета резервног напајања (%.0f"
-"%%). Укључите га у струју како бисте избегли губљење податке."
+"Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
+" your computer to avoid losing data."
+msgstr "Имате приближно још <b>%s</b> преосталог капацитета резервног напајања (%.0f%%). Укључите га на ел. мрежу да избегнете губљење податке."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1646
+#: ../src/gpm-manager.c:1604
 #, c-format
-#| msgid ""
-#| "Your cell phone is very low in power (%.1f%%). This device will soon stop "
-#| "functioning if not charged."
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr ""
-"Бежичном мишу су критично ослабиле батерије (%.0f%%). Он ће ускоро престати "
-"да ради ако му не допуните батерије."
+msgstr "Бежичном мишу су критично ослабиле батерије (%.0f%%). Он ће ускоро престати да ради ако му не допуните батерије."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1654
+#: ../src/gpm-manager.c:1612
 #, c-format
-#| msgid ""
-#| "Your cell phone is very low in power (%.1f%%). This device will soon stop "
-#| "functioning if not charged."
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr ""
-"Бежичној тастатури су критично ослабиле батерије (%.0f%%). Она ће ускоро "
-"престати да ради ако јој не допуните батерије."
+msgstr "Бежичној тастатури су критично ослабиле батерије (%.0f%%). Она ће ускоро престати да ради ако јој не допуните батерије."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1663
+#: ../src/gpm-manager.c:1621
 #, c-format
-#| msgid ""
-#| "Your cell phone is very low in power (%.1f%%). This device will soon stop "
-#| "functioning if not charged."
 msgid ""
-"PDA is very low in power (%.0f%%). This device will soon stop functioning if "
-"not charged."
-msgstr ""
-"ПДА уређају су критично ослабиле батерије (%.0f%%). Он ће ускоро престати да "
-"ради ако му не допуните батерије."
+"PDA is very low in power (%.0f%%). This device will soon stop functioning if"
+" not charged."
+msgstr "ПДА уређају су критично ослабиле батерије (%.0f%%). Он ће ускоро престати да ради ако му не допуните батерије."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1673
+#: ../src/gpm-manager.c:1631
 #, c-format
-#| msgid ""
-#| "Your cell phone is very low in power (%.1f%%). This device will soon stop "
-#| "functioning if not charged."
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr ""
-"Мобилном телефону су критично ослабиле батерије (%.0f%%). Он ће ускоро "
-"престати да ради ако му не допуните батерије."
+msgstr "Мобилном телефону су критично ослабиле батерије (%.0f%%). Он ће ускоро престати да ради ако му не допуните батерије."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1684
+#: ../src/gpm-manager.c:1642
 #, c-format
-#| msgid ""
-#| "Your cell phone is very low in power (%.1f%%). This device will soon stop "
-#| "functioning if not charged."
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr ""
-"Плејеру су критично ослабиле батерије (%.0f%%). Он ће ускоро престати да "
-"ради ако му не допуните батерије."
+msgstr "Медијском уређају су критично ослабиле батерије (%.0f%%). Он ће ускоро престати да ради ако му не допуните батерије."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1693
+#: ../src/gpm-manager.c:1651
 #, c-format
-#| msgid ""
-#| "Your cell phone is very low in power (%.1f%%). This device will soon stop "
-#| "functioning if not charged."
 msgid ""
-"Tablet is very low in power (%.0f%%). This device will soon stop functioning "
-"if not charged."
-msgstr ""
-"Табли за цртање су критично ослабиле батерије (%.0f%%). Она ће ускоро "
-"престати да ради ако јој не допуните батерије."
+"Tablet is very low in power (%.0f%%). This device will soon stop functioning"
+" if not charged."
+msgstr "Табличном рачунару су критично ослабиле батерије (%.0f%%). Он ће ускоро престати да ради ако му не допуните батерије."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1702
+#: ../src/gpm-manager.c:1660
 #, c-format
-#| msgid ""
-#| "The PDA attached to this computer is very low in power (%.1f%%). This "
-#| "device will soon stop functioning if not charged."
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
-msgstr ""
-"Прикаченом рачунар су критично ослабиле батерије (%.0f%%). Он ће ускоро "
-"престати да ради ако му не допуните батерије."
+msgstr "Прикаченом рачунар су критично ослабиле батерије (%.0f%%). Он ће ускоро престати да ради ако му не допуните батерије."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1769
+#: ../src/gpm-manager.c:1725
 msgid ""
-"The battery is below the critical level and this computer will <b>power-off</"
-"b> when the battery becomes completely empty."
-msgstr ""
-"Стање батерије је испод критичног нивоа и рачунар ће бити <b>угашен</b>када "
-"се она у потпуности истроши."
+"The battery is below the critical level and this computer will <b>power-"
+"off</b> when the battery becomes completely empty."
+msgstr "Стање батерије је испод критичног нивоа и рачунар ће бити <b>угашен</b> када се она у потпуности истроши."
 
 #. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1775
+#: ../src/gpm-manager.c:1731
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
-msgstr ""
-"Стање батерије је испод критичног нивоа па ће рачунар бити преведен у стање "
-"приправности. <br><b>Напомена:</b> Потребна је мала количина енергије за "
-"одржавање рачунара у обустављеном стању."
+msgstr "Стање батерије је испод критичног нивоа па ће рачунар бити преведен у стање приправности. <br><b>Напомена:</b> Потребна је мала количина енергије за одржавање рачунара у стању обуставе."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1782
+#: ../src/gpm-manager.c:1738
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr "Стање батерије је испод критичног нивоа па ће рачунар бити замрзнут."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1787
+#: ../src/gpm-manager.c:1743
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr "Стање батерије је испод критичног нивоа па ће рачунар бити угашен."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1807
+#: ../src/gpm-manager.c:1760
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
-msgstr ""
-"Стање резервног напајања је испод критичног нивоа па ће рачунар бити "
-"<b>угашен</b> када се резервно напајање потпуно истроши."
+msgstr "Стање резервног напајања је испод критичног нивоа па ће рачунар бити <b>угашен</b> када се резервно напајање потпуно истроши."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1813
+#: ../src/gpm-manager.c:1766
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
-msgstr ""
-"Стање резервног напајања је испод критичног нивоа па ће рачунар бити "
-"замрзнут."
+msgstr "Стање резервног напајања је испод критичног нивоа па ће рачунар бити замрзнут."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1818
+#: ../src/gpm-manager.c:1771
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
-msgstr ""
-"Стање резервног напајања је испод критичног нивоа и рачунар ће бити угашен."
-
-#. TRANSLATORS: there was in install problem
-#: ../src/gpm-manager.c:1956
-msgid "Install problem!"
-msgstr "Проблем при инсталацији!"
-
-#. TRANSLATORS: the MateConf schema was not installed properly
-#: ../src/gpm-manager.c:1958
-msgid ""
-"The configuration defaults for MATE Power Manager have not been installed "
-"correctly.\n"
-"Please contact your computer administrator."
-msgstr ""
-"Подразумеване поставке Гномовог управника потрошње нису исправно "
-"инсталиране.\n"
-"Контактирајте Вашег системског администратора."
+msgstr "Стање резервног напајања је испод критичног нивоа и рачунар ће бити угашен."
 
 #: ../src/gpm-prefs.c:94
 msgid "MATE Power Preferences"
-msgstr "Поставке потрошње енергије"
+msgstr "Поставке Мејтовог напајања"
 
-#: ../src/gpm-prefs-core.c:363
+#: ../src/gpm-prefs-core.c:266 ../src/gpm-prefs-core.c:269
 msgid "Shutdown"
 msgstr "Искључи"
 
-#: ../src/gpm-prefs-core.c:370
+#: ../src/gpm-prefs-core.c:278 ../src/gpm-prefs-core.c:281
 msgid "Suspend"
 msgstr "Обустави"
 
-#: ../src/gpm-prefs-core.c:373
+#: ../src/gpm-prefs-core.c:286 ../src/gpm-prefs-core.c:289
 msgid "Hibernate"
 msgstr "Замрзни"
 
-#: ../src/gpm-prefs-core.c:376
+#: ../src/gpm-prefs-core.c:294 ../src/gpm-prefs-core.c:297
 msgid "Blank screen"
 msgstr "Затамни екран"
 
-#: ../src/gpm-prefs-core.c:379
+#: ../src/gpm-prefs-core.c:302 ../src/gpm-prefs-core.c:305
 msgid "Ask me"
 msgstr "Питај ме"
 
-#: ../src/gpm-prefs-core.c:384
+#: ../src/gpm-prefs-core.c:310 ../src/gpm-prefs-core.c:313
 msgid "Do nothing"
-msgstr "Ништа не ради"
+msgstr "Не ради ништа"
 
-#: ../src/gpm-prefs-core.c:448
+#: ../src/gpm-prefs-core.c:380 ../src/gpm-prefs-core.c:382
 msgid "Never"
 msgstr "Никад"
 
 #. TRANSLATORS: the rate of discharge for the device
-#: ../src/gpm-statistics.c:80 ../src/gpm-statistics.c:468
+#: ../src/gpm-statistics.c:79 ../src/gpm-statistics.c:467
 msgid "Rate"
 msgstr "Стопа"
 
-#: ../src/gpm-statistics.c:81
+#: ../src/gpm-statistics.c:80
 msgid "Charge"
-msgstr "Напуњено"
+msgstr "Пуњење"
 
-#: ../src/gpm-statistics.c:82 ../src/gpm-statistics.c:482
+#: ../src/gpm-statistics.c:81 ../src/gpm-statistics.c:481
 msgid "Time to full"
 msgstr "Време до пуњења"
 
-#: ../src/gpm-statistics.c:83 ../src/gpm-statistics.c:487
+#: ../src/gpm-statistics.c:82 ../src/gpm-statistics.c:486
 msgid "Time to empty"
 msgstr "Време до пражњења"
 
-#: ../src/gpm-statistics.c:90
+#: ../src/gpm-statistics.c:89
 msgid "10 minutes"
 msgstr "10 минута"
 
-#: ../src/gpm-statistics.c:91
+#: ../src/gpm-statistics.c:90
 msgid "2 hours"
 msgstr "2 сата"
 
-#: ../src/gpm-statistics.c:92
-#| msgid "2 hours"
+#: ../src/gpm-statistics.c:91
 msgid "6 hours"
 msgstr "6 сата"
 
-#: ../src/gpm-statistics.c:93
+#: ../src/gpm-statistics.c:92
 msgid "1 day"
 msgstr "1 дан"
 
-#: ../src/gpm-statistics.c:94
+#: ../src/gpm-statistics.c:93
 msgid "1 week"
 msgstr "1 недеља"
 
 #. TRANSLATORS: what we've observed about the device
-#: ../src/gpm-statistics.c:103
+#: ../src/gpm-statistics.c:102
 msgid "Charge profile"
 msgstr "Профил пуњења"
 
-#: ../src/gpm-statistics.c:104
+#: ../src/gpm-statistics.c:103
 msgid "Discharge profile"
 msgstr "Профил пражњења"
 
-#. TRANSLATORS: how accurately we can predict the time remaining of the battery
-#: ../src/gpm-statistics.c:106
+#. TRANSLATORS: how accurately we can predict the time remaining of the
+#. battery
+#: ../src/gpm-statistics.c:105
 msgid "Charge accuracy"
-msgstr "Прецизности пуњења"
+msgstr "Прецизност пуњења"
 
-#: ../src/gpm-statistics.c:107
+#: ../src/gpm-statistics.c:106
 msgid "Discharge accuracy"
-msgstr "Прецизности пражњења"
+msgstr "Прецизност пражњења"
 
-#: ../src/gpm-statistics.c:134
+#: ../src/gpm-statistics.c:133
 msgid "Attribute"
 msgstr "Особина"
 
-#: ../src/gpm-statistics.c:141
+#: ../src/gpm-statistics.c:140
 msgid "Value"
-msgstr "Вреднсот"
+msgstr "Вредност"
 
-#: ../src/gpm-statistics.c:158
+#: ../src/gpm-statistics.c:157
 msgid "Image"
 msgstr "Слика"
 
-#: ../src/gpm-statistics.c:164
+#: ../src/gpm-statistics.c:163
 msgid "Description"
 msgstr "Опис"
 
-#: ../src/gpm-statistics.c:183 ../src/gpm-statistics.c:407
+#: ../src/gpm-statistics.c:182 ../src/gpm-statistics.c:406
 msgid "Type"
 msgstr "Врста"
 
-#: ../src/gpm-statistics.c:189
+#: ../src/gpm-statistics.c:188
 msgid "ID"
 msgstr "ИБ"
 
-#: ../src/gpm-statistics.c:203
+#: ../src/gpm-statistics.c:202
 msgid "Command"
 msgstr "Наредба"
 
 #. TRANSLATORS: this is when the stats time is not known
-#: ../src/gpm-statistics.c:288
+#: ../src/gpm-statistics.c:287
 msgid "Unknown"
 msgstr "Непознато"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:292
+#: ../src/gpm-statistics.c:291
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
 msgstr[0] "%.0f секунда"
 msgstr[1] "%.0f секунде"
 msgstr[2] "%.0f секунди"
-msgstr[3] "%.0f секунда"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:297
+#: ../src/gpm-statistics.c:296
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
 msgstr[0] "%.1f минут"
 msgstr[1] "%.1f минута"
 msgstr[2] "%.1f минута"
-msgstr[3] "%.1f минут"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:302
+#: ../src/gpm-statistics.c:301
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
 msgstr[0] "%.1f сат"
 msgstr[1] "%.1f сата"
 msgstr[2] "%.1f сати"
-msgstr[3] "%.1f сат"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:306
+#: ../src/gpm-statistics.c:305
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
 msgstr[0] "%.1f дан"
 msgstr[1] "%.1f дана"
 msgstr[2] "%.1f дана"
-msgstr[3] "%.1f дан"
 
-#: ../src/gpm-statistics.c:315
+#: ../src/gpm-statistics.c:314
 msgid "Yes"
 msgstr "Да"
 
-#: ../src/gpm-statistics.c:315
+#: ../src/gpm-statistics.c:314
 msgid "No"
 msgstr "Не"
 
 #. TRANSLATORS: the device ID of the current device, e.g. "battery0"
-#: ../src/gpm-statistics.c:404
+#: ../src/gpm-statistics.c:403
 msgid "Device"
 msgstr "Уређај"
 
-#: ../src/gpm-statistics.c:409
+#: ../src/gpm-statistics.c:408
 msgid "Vendor"
 msgstr "Произвођач"
 
-#: ../src/gpm-statistics.c:411
+#: ../src/gpm-statistics.c:410
 msgid "Model"
 msgstr "Модел"
 
-#: ../src/gpm-statistics.c:413
+#: ../src/gpm-statistics.c:412
 msgid "Serial number"
 msgstr "Серијски број"
 
 #. TRANSLATORS: a boolean attribute that means if the device is supplying the
-#. * main power for the computer. For instance, an AC adapter or laptop battery
+#. * main power for the computer. For instance, an AC adapter or laptop
+#. battery
 #. * would be TRUE,  but a mobile phone or mouse taking power is FALSE
-#: ../src/gpm-statistics.c:418
+#: ../src/gpm-statistics.c:417
 msgid "Supply"
 msgstr "Залихе"
 
-#: ../src/gpm-statistics.c:421
+#: ../src/gpm-statistics.c:420
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d секунда"
+msgstr[0] "%d секунде"
 msgstr[1] "%d секунде"
 msgstr[2] "%d секунди"
-msgstr[3] "%d секунда"
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
-#: ../src/gpm-statistics.c:425
+#: ../src/gpm-statistics.c:424
 msgid "Refreshed"
-msgstr "Освежено"
+msgstr "Освежено пре"
 
 #. TRANSLATORS: Present is whether the device is currently attached
 #. * to the computer, as some devices (e.g. laptop batteries) can
 #. * be removed, but still observed as devices on the system
-#: ../src/gpm-statistics.c:435
+#: ../src/gpm-statistics.c:434
 msgid "Present"
-msgstr "Присутно"
+msgstr "Присутна"
 
 #. TRANSLATORS: If the device can be recharged, e.g. lithium
 #. * batteries rather than alkaline ones
-#: ../src/gpm-statistics.c:442
+#: ../src/gpm-statistics.c:441
 msgid "Rechargeable"
-msgstr "Пуњиво"
+msgstr "Допуњива"
 
 #. TRANSLATORS: The state of the device, e.g. "Changing" or "Fully charged"
-#: ../src/gpm-statistics.c:448
+#: ../src/gpm-statistics.c:447
 msgid "State"
 msgstr "Стање"
 
-#: ../src/gpm-statistics.c:452
+#: ../src/gpm-statistics.c:451
 msgid "Energy"
 msgstr "Енергија"
 
-#: ../src/gpm-statistics.c:455
+#: ../src/gpm-statistics.c:454
 msgid "Energy when empty"
-msgstr "Енергија када је празно"
+msgstr "Енергија празне"
 
-#: ../src/gpm-statistics.c:458
+#: ../src/gpm-statistics.c:457
 msgid "Energy when full"
-msgstr "Енергија када је пуно"
+msgstr "Енергија пуне"
 
-#: ../src/gpm-statistics.c:461
+#: ../src/gpm-statistics.c:460
 msgid "Energy (design)"
-msgstr "Енергија (фабрички)"
+msgstr "Енергија (фабричка)"
 
-#: ../src/gpm-statistics.c:475
+#: ../src/gpm-statistics.c:474
 msgid "Voltage"
 msgstr "Напон"
 
 #. TRANSLATORS: the amount of charge the cell contains
-#: ../src/gpm-statistics.c:497
+#: ../src/gpm-statistics.c:496
 msgid "Percentage"
 msgstr "Проценат"
 
 #. TRANSLATORS: the capacity of the device, which is basically a measure
 #. * of how full it can get, relative to the design capacity
-#: ../src/gpm-statistics.c:504
+#: ../src/gpm-statistics.c:503
 msgid "Capacity"
 msgstr "Капацитет"
 
 #. TRANSLATORS: the type of battery, e.g. lithium or nikel metal hydroxide
-#: ../src/gpm-statistics.c:509
+#: ../src/gpm-statistics.c:508
 msgid "Technology"
 msgstr "Технологија"
 
 #. TRANSLATORS: this is when the device is plugged in, typically
 #. * only shown for the ac adaptor device
-#: ../src/gpm-statistics.c:514
+#: ../src/gpm-statistics.c:513
 msgid "Online"
-msgstr "У мрежи"
+msgstr "Прикључен"
 
 #. TRANSLATORS: the command line was not provided
-#: ../src/gpm-statistics.c:824
+#: ../src/gpm-statistics.c:825
 msgid "No data"
 msgstr "Нема података"
 
 #. TRANSLATORS: kernel module, usually a device driver
-#: ../src/gpm-statistics.c:831 ../src/gpm-statistics.c:836
+#: ../src/gpm-statistics.c:832 ../src/gpm-statistics.c:837
 msgid "Kernel module"
-msgstr "Модул из кернела"
+msgstr "Модул језгра"
 
 #. TRANSLATORS: kernel housekeeping
-#: ../src/gpm-statistics.c:841
+#: ../src/gpm-statistics.c:842
 msgid "Kernel core"
-msgstr "Језгро кернела"
+msgstr "Језгро"
 
 #. TRANSLATORS: interrupt between processors
-#: ../src/gpm-statistics.c:846
+#: ../src/gpm-statistics.c:847
 msgid "Interprocessor interrupt"
 msgstr "Међупроцесорско ометање"
 
 #. TRANSLATORS: unknown interrupt
-#: ../src/gpm-statistics.c:851
+#: ../src/gpm-statistics.c:852
 msgid "Interrupt"
 msgstr "Ометање"
 
 #. TRANSLATORS: the keyboard and mouse device event
-#: ../src/gpm-statistics.c:898
+#: ../src/gpm-statistics.c:899
 msgid "PS/2 keyboard/mouse/touchpad"
-msgstr "PS/2 тастатура/миш/тачпед"
+msgstr "ПС/2 тастатура/миш/додирна табла"
 
 #. TRANSLATORS: ACPI, the Intel power standard on laptops and desktops
-#: ../src/gpm-statistics.c:901
+#: ../src/gpm-statistics.c:902
 msgid "ACPI"
-msgstr "ACPI"
+msgstr "АЦПИ"
 
 #. TRANSLATORS: serial ATA is a new style of hard disk interface
-#: ../src/gpm-statistics.c:904
+#: ../src/gpm-statistics.c:905
 msgid "Serial ATA"
 msgstr "Серијски АТА"
 
 #. TRANSLATORS: this is the old-style ATA interface
-#: ../src/gpm-statistics.c:907
+#: ../src/gpm-statistics.c:908
 msgid "ATA host controller"
-msgstr "АТА"
+msgstr "АТА контролер"
 
 #. TRANSLATORS: 802.11 wireless adaptor
-#: ../src/gpm-statistics.c:910
+#: ../src/gpm-statistics.c:911
 msgid "Intel wireless adaptor"
 msgstr "Интелов бежични адаптер"
 
 #. TRANSLATORS: a timer is something that fires periodically.
 #. * The parameter is a process name, e.g. "firefox-bin".
 #. * This is shown when the timer wakes up.
-#: ../src/gpm-statistics.c:917 ../src/gpm-statistics.c:922
-#: ../src/gpm-statistics.c:927 ../src/gpm-statistics.c:932
-#: ../src/gpm-statistics.c:937
+#: ../src/gpm-statistics.c:918 ../src/gpm-statistics.c:923
+#: ../src/gpm-statistics.c:928 ../src/gpm-statistics.c:933
+#: ../src/gpm-statistics.c:938
 #, c-format
 msgid "Timer %s"
-msgstr "Тајмер %s"
+msgstr "Одбројавач „%s“"
 
-#. TRANSLATORS: the parameter is the name of task that's woken up from sleeping.
+#. TRANSLATORS: the parameter is the name of task that's woken up from
+#. sleeping.
 #. * This is shown when the task wakes up.
-#: ../src/gpm-statistics.c:941
+#: ../src/gpm-statistics.c:942
 #, c-format
 msgid "Sleep %s"
-msgstr "Пробуђен %s"
+msgstr "Пробуђен „%s“"
 
 #. TRANSLATORS: this is the name of a new realtime task.
-#: ../src/gpm-statistics.c:944
+#: ../src/gpm-statistics.c:945
 #, c-format
 msgid "New task %s"
-msgstr "Нови задатак %s"
+msgstr "Нови задатак „%s“"
 
 #. TRANSLATORS: this is the name of a task that's woken to check state.
 #. * This is shown when the task wakes up.
-#: ../src/gpm-statistics.c:948
+#: ../src/gpm-statistics.c:949
 #, c-format
 msgid "Wait %s"
-msgstr "Чека %s"
+msgstr "Чека „%s“"
 
 #. TRANSLATORS: this is the name of a work queue.
 #. * A work queue is a list of work that has to be done.
-#: ../src/gpm-statistics.c:952 ../src/gpm-statistics.c:956
+#: ../src/gpm-statistics.c:953 ../src/gpm-statistics.c:957
 #, c-format
 msgid "Work queue %s"
-msgstr "Заказани послови %s"
+msgstr "Заказани послови „%s“"
 
 #. TRANSLATORS: this is when the networking subsystem clears out old entries
-#: ../src/gpm-statistics.c:959
+#: ../src/gpm-statistics.c:960
 #, c-format
 msgid "Network route flush %s"
-msgstr "Чишћење мрежне руте %s"
+msgstr "Чишћење мрежне руте „%s“"
 
 #. TRANSLATORS: this is the name of an activity on the USB bus
-#: ../src/gpm-statistics.c:962
+#: ../src/gpm-statistics.c:963
 #, c-format
 msgid "USB activity %s"
-msgstr "УСБ активност %s"
+msgstr "УСБ активност „%s“"
 
 #. TRANSLATORS: we've timed out of an aligned timer, with the name
-#: ../src/gpm-statistics.c:965
+#: ../src/gpm-statistics.c:966
 #, c-format
 msgid "Wakeup %s"
-msgstr "Буђење %s"
+msgstr "Буђење „%s“"
 
 #. TRANSLATORS: interupts on the system required for basic operation
-#: ../src/gpm-statistics.c:968
+#: ../src/gpm-statistics.c:969
 msgid "Local interrupts"
-msgstr "Локална ометања"
+msgstr "Месна ометања"
 
 #. TRANSLATORS: interrupts when a task gets moved from one core to another
-#: ../src/gpm-statistics.c:971
+#: ../src/gpm-statistics.c:972
 msgid "Rescheduling interrupts"
-msgstr "Ометања у пребацивању"
+msgstr "Ометања поновног заказивања"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1080
+#: ../src/gpm-statistics.c:1081
 msgid "Device Information"
 msgstr "Подаци о уређају"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1082
+#: ../src/gpm-statistics.c:1083
 msgid "Device History"
 msgstr "Историјат уређаја"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1084
+#: ../src/gpm-statistics.c:1085
 msgid "Device Profile"
 msgstr "Профил уређаја"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1086
+#: ../src/gpm-statistics.c:1087
 msgid "Processor Wakeups"
 msgstr "Буђења процесора"
 
 #. TRANSLATORS: this is the X axis on the graph
-#: ../src/gpm-statistics.c:1292 ../src/gpm-statistics.c:1298
-#: ../src/gpm-statistics.c:1304 ../src/gpm-statistics.c:1310
+#: ../src/gpm-statistics.c:1295 ../src/gpm-statistics.c:1301
+#: ../src/gpm-statistics.c:1307 ../src/gpm-statistics.c:1313
 msgid "Time elapsed"
-msgstr "Преостало време"
+msgstr "Протекло време"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1294
+#: ../src/gpm-statistics.c:1297
 msgid "Power"
-msgstr "Електрична енергија"
+msgstr "Напајање"
 
 #. TRANSLATORS: this is the Y axis on the graph for the whole battery device
 #. TRANSLATORS: this is the X axis on the graph for the whole battery device
-#: ../src/gpm-statistics.c:1300 ../src/gpm-statistics.c:1343
-#: ../src/gpm-statistics.c:1349 ../src/gpm-statistics.c:1355
-#: ../src/gpm-statistics.c:1361
+#: ../src/gpm-statistics.c:1303 ../src/gpm-statistics.c:1347
+#: ../src/gpm-statistics.c:1353 ../src/gpm-statistics.c:1359
+#: ../src/gpm-statistics.c:1365
 msgid "Cell charge"
 msgstr "Напон ћелије"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1306 ../src/gpm-statistics.c:1312
+#: ../src/gpm-statistics.c:1309 ../src/gpm-statistics.c:1315
 msgid "Predicted time"
-msgstr "Процењено време"
+msgstr "Предвиђено време"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1345 ../src/gpm-statistics.c:1357
+#: ../src/gpm-statistics.c:1349 ../src/gpm-statistics.c:1361
 msgid "Correction factor"
-msgstr "Фактор корекције"
+msgstr "Чинилац поправке"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1351 ../src/gpm-statistics.c:1363
+#: ../src/gpm-statistics.c:1355 ../src/gpm-statistics.c:1367
 msgid "Prediction accuracy"
 msgstr "Тачност предвиђања"
 
 #. TRANSLATORS: show a device by default
-#: ../src/gpm-statistics.c:1548
+#: ../src/gpm-statistics.c:1557
 msgid "Select this device at startup"
 msgstr "Изабери овај уређај при покретању"
 
 #. TRANSLATORS: the icon for the CPU
-#: ../src/gpm-statistics.c:1794
+#: ../src/gpm-statistics.c:1836
 msgid "Processor"
 msgstr "Процесор"
 
 #. preferences
-#: ../src/gpm-tray-icon.c:297
+#: ../src/gpm-tray-icon.c:296
 msgid "_Preferences"
 msgstr "_Поставке"
 
@@ -2281,15 +2006,13 @@ msgstr "%s се пуни (%.1f%%)"
 msgid ""
 "Battery is fully charged.\n"
 "Provides %s laptop runtime"
-msgstr ""
-"Батерија је потпуно напуњена.\n"
-"Обезбеђује %s рада рачуанра"
+msgstr "Батерија је потпуно напуњена.\nОбезбеђује %s рада преносног рачунара"
 
 #. TRANSLATORS: the device is fully charged
 #: ../src/gpm-upower.c:241
 #, c-format
 msgid "%s is fully charged"
-msgstr "%s потпуно напуњена"
+msgstr "%s је потпуно напуњена"
 
 #. TRANSLATORS: the device is discharging, and we have a time remaining
 #: ../src/gpm-upower.c:249
@@ -2309,11 +2032,10 @@ msgstr "%s се празни (%.1f%%)"
 msgid ""
 "%s %s until charged (%.1f%%)\n"
 "Provides %s battery runtime"
-msgstr ""
-"%s %s док се не напуни (%.1f%%)\n"
-"Обезбеђује %s трајања батерије"
+msgstr "%s %s док се не напуни (%.1f%%)\nОбезбеђује %s рада на батерији"
 
-#. TRANSLATORS: device is charging, and we have a time to full and a percentage
+#. TRANSLATORS: device is charging, and we have a time to full and a
+#. percentage
 #: ../src/gpm-upower.c:279
 #, c-format
 msgid "%s %s until charged (%.1f%%)"
@@ -2323,13 +2045,13 @@ msgstr "%s %s док се не напуни (%.1f%%)"
 #: ../src/gpm-upower.c:292
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
-msgstr "%s чекам да се испразни (%.1f%%)"
+msgstr "%s чека да се испразни (%.1f%%)"
 
 #. TRANSLATORS: this is only shown for laptops with multiple batteries
 #: ../src/gpm-upower.c:298
 #, c-format
 msgid "%s waiting to charge (%.1f%%)"
-msgstr "%s чекам да се напуни (%.1f%%)"
+msgstr "%s чека да се напуни (%.1f%%)"
 
 #. TRANSLATORS: the type of data, e.g. Laptop battery
 #: ../src/gpm-upower.c:357
@@ -2352,7 +2074,7 @@ msgstr "Недостаје"
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:364 ../src/gpm-upower.c:645
 msgid "Charged"
-msgstr "Напуњено"
+msgstr "Напуњена"
 
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:367 ../src/gpm-upower.c:633
@@ -2377,7 +2099,7 @@ msgstr "Произвођач:"
 #. TRANSLATORS: how the battery is made, e.g. Lithium Ion
 #: ../src/gpm-upower.c:384
 msgid "Technology:"
-msgstr "Врста:"
+msgstr "Технологија:"
 
 #. TRANSLATORS: serial number of the battery
 #: ../src/gpm-upower.c:388
@@ -2399,7 +2121,8 @@ msgstr "Време пуњења:"
 msgid "Discharge time:"
 msgstr "Време пражњења:"
 
-#. TRANSLATORS: Excellent, Good, Fair and Poor are all related to battery Capacity
+#. TRANSLATORS: Excellent, Good, Fair and Poor are all related to battery
+#. Capacity
 #: ../src/gpm-upower.c:410
 msgid "Excellent"
 msgstr "Одлично"
@@ -2430,11 +2153,11 @@ msgstr "Последња потпуна напуњеност:"
 
 #: ../src/gpm-upower.c:438 ../src/gpm-upower.c:456
 msgid "Design charge:"
-msgstr "Фабрички капацитет:"
+msgstr "Фабричка напуњеност:"
 
 #: ../src/gpm-upower.c:443
 msgid "Charge rate:"
-msgstr "Стопа пуњења:"
+msgstr "Стопа напуњености:"
 
 #. TRANSLATORS: system power cord
 #: ../src/gpm-upower.c:478
@@ -2443,16 +2166,14 @@ msgid_plural "AC adapters"
 msgstr[0] "Напајање из електричне мреже"
 msgstr[1] "Напајања из електричне мреже"
 msgstr[2] "Напајања из електричне мреже"
-msgstr[3] "Напајање из електричне мреже"
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/gpm-upower.c:482
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "Батерија рачунара"
-msgstr[1] "Батерије рачунара"
-msgstr[2] "Батерије рачунара"
-msgstr[3] "Батерија рачунара"
+msgstr[0] "Батерија преносног рачунара"
+msgstr[1] "Батерије преносних рачунара"
+msgstr[2] "Батерије преносних рачунара"
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/gpm-upower.c:486
@@ -2461,7 +2182,6 @@ msgid_plural "UPSs"
 msgstr[0] "Резервно напајање"
 msgstr[1] "Резервна напајања"
 msgstr[2] "Резервна напајања"
-msgstr[3] "Резервно напајање"
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/gpm-upower.c:490
@@ -2470,17 +2190,14 @@ msgid_plural "Monitors"
 msgstr[0] "Монитор"
 msgstr[1] "Монитори"
 msgstr[2] "Монитори"
-msgstr[3] "Монитор"
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/gpm-upower.c:494
-#| msgid "Model"
 msgid "Mouse"
 msgid_plural "Mice"
 msgstr[0] "Миш"
 msgstr[1] "Мишеви"
 msgstr[2] "Мишеви"
-msgstr[3] "Миш"
 
 #. TRANSLATORS: wireless keyboard with internal battery
 #: ../src/gpm-upower.c:498
@@ -2489,7 +2206,6 @@ msgid_plural "Keyboards"
 msgstr[0] "Тастатура"
 msgstr[1] "Тастатуре"
 msgstr[2] "Тастатуре"
-msgstr[3] "МишТастатура"
 
 #. TRANSLATORS: portable device
 #: ../src/gpm-upower.c:502
@@ -2498,7 +2214,6 @@ msgid_plural "PDAs"
 msgstr[0] "ПДА уређај"
 msgstr[1] "ПДА уређаји"
 msgstr[2] "ПДА уређаји"
-msgstr[3] "ПДА уређај"
 
 #. TRANSLATORS: cell phone (mobile...)
 #: ../src/gpm-upower.c:506
@@ -2507,25 +2222,22 @@ msgid_plural "Cell phones"
 msgstr[0] "Мобилни телефон"
 msgstr[1] "Мобилни телтфони"
 msgstr[2] "Мобилни телефони"
-msgstr[3] "Mobilni telefon"
 
 #. TRANSLATORS: media player, mp3 etc
 #: ../src/gpm-upower.c:511
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] "Плејер"
-msgstr[1] "Плејери"
-msgstr[2] "Плејери"
-msgstr[3] "Плејер"
+msgstr[0] "Медијски уређај"
+msgstr[1] "Медијски уређаји"
+msgstr[2] "Медијски уређаји"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:515
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "Табла за цртање"
-msgstr[1] "Табле за цртање"
-msgstr[2] "Таблже за цртање"
-msgstr[3] "Табла за цртање"
+msgstr[0] "Таблични рачунар"
+msgstr[1] "Таблични рачунари"
+msgstr[2] "Таблични рачунари"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:519
@@ -2534,7 +2246,6 @@ msgid_plural "Computers"
 msgstr[0] "Рачунар"
 msgstr[1] "Рачунари"
 msgstr[2] "Рачунари"
-msgstr[3] "Рачунар"
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:589
@@ -2559,7 +2270,7 @@ msgstr "Оловни акумулатор"
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:605
 msgid "Nickel Cadmium"
-msgstr "Никал кадминумска"
+msgstr "Никал кадмијумска"
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:609
@@ -2574,139 +2285,14 @@ msgstr "Непозната технологија"
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:641
 msgid "Empty"
-msgstr "Празно"
+msgstr "Празна"
 
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:649
-#| msgid "%s waiting to charge (%.1f%%)"
 msgid "Waiting to charge"
 msgstr "Чекам да се напуни"
 
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:653
-#| msgid "%s waiting to discharge (%.1f%%)"
 msgid "Waiting to discharge"
 msgstr "Чекам да се испразни"
-
-#: ../applets/brightness/MATE_BrightnessApplet.xml.h:1
-#: ../applets/inhibit/MATE_InhibitApplet.xml.h:1
-msgid "_About"
-msgstr "_О програму"
-
-#: ../applets/brightness/MATE_BrightnessApplet.xml.h:2
-#: ../applets/inhibit/MATE_InhibitApplet.xml.h:2
-msgid "_Help"
-msgstr "_Помоћ"
-
-#~ msgid ""
-#~ "The wireless mouse attached to this computer is very low in power (%.1f%"
-#~ "%). This device will soon stop functioning if not charged."
-#~ msgstr ""
-#~ "Бежичном мишу прикљученом на овај рачунар су критично ослабиле батерије "
-#~ "(%.1f%%). Он ће ускоро престати да ради ако му не допуните батерије."
-
-#~ msgid ""
-#~ "The wireless keyboard attached to this computer is very low in power (%.1f"
-#~ "%%). This device will soon stop functioning if not charged."
-#~ msgstr ""
-#~ "Бежичној тастатури прикљученој на овај рачунар су критично ослабиле "
-#~ "батерије (%.1f%%). Она ће ускоро престати да ради ако му не допуните "
-#~ "батерије."
-
-#~ msgid "Allow Suspend and Hibernate in the menu"
-#~ msgstr "Понуди обустављање и замрзавање у менију"
-
-#~ msgid "Hibernate enabled"
-#~ msgstr "Замрзавање је омогућено"
-
-#~ msgid "If preferences should be shown"
-#~ msgstr "Приказује поставке"
-
-#~ msgid ""
-#~ "If the Suspend and Hibernate options should be allowed in the "
-#~ "notification area drop down menu."
-#~ msgstr ""
-#~ "Прикажи ставке за обустављање и замрзавање у падајућем менију простора за "
-#~ "обавештавање."
-
-#~ msgid "If the user is authorized to hibernate the computer."
-#~ msgstr "Дај облашћења кориснику да замрзне рачунар."
-
-#~ msgid "If the user is authorized to suspend the computer."
-#~ msgstr "Дај овлашћењакориснику да обустави рад рачунара."
-
-#~ msgid "Suspend enabled"
-#~ msgstr "Обустављање је омогућено"
-
-#~ msgid "Please see %s for more information."
-#~ msgstr "Погледајте %s за више података."
-
-#~ msgid ""
-#~ "If you can see this text, your display server is broken and you should "
-#~ "notify your distributor."
-#~ msgstr ""
-#~ "Уколико видите овај текст, ваш X сервер је неисправан и потребно је да "
-#~ "обавестите добављача пакета."
-
-#~ msgid "Session idle"
-#~ msgstr "Сесија неактивности"
-
-#~ msgid "Session active"
-#~ msgstr "Сесија активности"
-
-#~ msgid "inhibited"
-#~ msgstr "онемогућено"
-
-#~ msgid "not inhibited"
-#~ msgstr "омогућено"
-
-#~ msgid "screen idle"
-#~ msgstr "неактиван екран"
-
-#~ msgid "screen awake"
-#~ msgstr "активиран екран"
-
-#~ msgid "Action disallowed"
-#~ msgstr "Недозвољена радња"
-
-#~ msgid ""
-#~ "Suspend support has been disabled. Contact your administrator for more "
-#~ "details."
-#~ msgstr ""
-#~ "Подршка за обустављање је онемогућена. За више података питајте Вашег "
-#~ "системског администратора."
-
-#~ msgid ""
-#~ "Hibernate support has been disabled. Contact your administrator for more "
-#~ "details."
-#~ msgstr ""
-#~ "Подршка за замрзавање је онемогућена. За више података питајте Вашег "
-#~ "системског администратора."
-
-#~ msgid "Sleep problem"
-#~ msgstr "Проблем при успављивању"
-
-#~ msgid "Check the help file for common problems."
-#~ msgstr "Погледајте помоћ за списак најчешћих проблема."
-
-#~ msgid "Device information"
-#~ msgstr "Информације о уређају"
-
-#~ msgid "There is no detailed information for this device"
-#~ msgstr "Нема исцрпних података о овом уређају"
-
-#~ msgid "translator-credits"
-#~ msgstr ""
-#~ "Слободан Д. Средојевић <slobo@akrep.be>\n"
-#~ "Милош Поповић <gpopac@gmail.com>\n"
-#~ "\n"
-#~ "http://prevod.org — преводи на српски језик"
-
-#~ msgid "Power _History"
-#~ msgstr "_Дијаграм потрошње"
-
-#~ msgid "_Suspend"
-#~ msgstr "_Обустави"
-
-#~ msgid "Hi_bernate"
-#~ msgstr "_Замрзни"
