@@ -884,13 +884,12 @@ gpm_prefs_init (GpmPrefs *prefs)
 	}
 	g_ptr_array_unref (devices);
 
+	error = NULL;
 	prefs->priv->builder = gtk_builder_new ();
-	
 	retval = gtk_builder_add_from_file (prefs->priv->builder, GPM_DATA "/gpm-prefs.ui", &error);
 
-	if (retval == 0) {
-		egg_warning ("failed to load ui: %s", error->message);
-		g_error_free (error);
+	if (error) {
+		egg_error ("failed to load ui: %s", error->message);
 	}
 
 	main_window = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "dialog_preferences"));

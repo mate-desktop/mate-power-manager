@@ -1575,12 +1575,10 @@ main (int argc, char *argv[])
 
 	/* get UI */
 	builder = gtk_builder_new ();
-
 	retval = gtk_builder_add_from_file (builder, GPM_DATA "/gpm-statistics.ui", &error);
 
-	if (retval == 0) {
-		egg_warning ("failed to load ui: %s", error->message);
-		g_error_free (error);
+	if (error) {
+		egg_error ("failed to load ui: %s", error->message);
 	}
 
 	/* add history graph */
