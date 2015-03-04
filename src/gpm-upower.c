@@ -648,6 +648,10 @@ gpm_device_state_to_localised_string (UpDeviceState state)
 		/* TRANSLATORS: battery state */
 		state_string = _("Waiting to discharge");
 		break;
+	case UP_DEVICE_STATE_UNKNOWN:
+		/* TRANSLATORS: battery state */
+		state_string = _("Unknown state");
+		break;
 	default:
 		g_assert_not_reached ();
 		break;
