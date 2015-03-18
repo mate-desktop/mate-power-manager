@@ -38,7 +38,6 @@ struct GpmKbdBacklightPrivate
     UpClient        *client;
     GpmButton       *button;
     GSettings       *settings;
-    GSettings       *settings_gsd;
     GpmControl      *control;
     GpmIdle         *idle;
     gboolean         can_dim;
@@ -577,8 +576,6 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
                  &on_battery,
                  NULL);
 
-    //These were all "settings_gsd" originally
-
    enable_action = on_battery
        ? g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_BATT)
        : g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_AC);
@@ -637,7 +634,6 @@ gpm_kbd_backlight_finalize (GObject *object)
 
    g_object_unref (backlight->priv->control);
    g_object_unref (backlight->priv->settings);
-   //g_object_unref (backlight->priv->settings_gsd);
    g_object_unref (backlight->priv->client);
    g_object_unref (backlight->priv->button);
    g_object_unref (backlight->priv->idle);
@@ -766,10 +762,7 @@ noerr:
              G_CALLBACK (gpm_kbd_backlight_client_changed_cb), backlight);
 #endif
 
-    backlight->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
-	//g_signal_connect (backlight->priv->settings, "changed", G_CALLBACK (gpm_settings_key_changed_cb), backlight);
-   
-    //backlight->priv->settings_gsd = g_settings_new (GSD_SETTINGS_SCHEMA);
+   backlight->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
 
    /* watch for kbd brightness up and down button presses */
    backlight->priv->button = gpm_button_new ();
@@ -781,14 +774,13 @@ noerr:
              G_CALLBACK (gpm_kbd_backlight_idle_changed_cb), backlight);
 
     /* use a visual widget */
-	backlight->priv->popup = msd_media_keys_window_new ();
-	msd_media_keys_window_set_action_custom (MSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
-						 "gpm-brightness-kbd", TRUE);
-        gtk_window_set_position (GTK_WINDOW (backlight->priv->popup), GTK_WIN_POS_NONE);
+   backlight->priv->popup = msd_media_keys_window_new ();
+   msd_media_keys_window_set_action_custom (MSD_MEDIA_KEYS_WINDOW (backlight->priv->popup),
+                                            "gpm-brightness-kbd", TRUE);
+   gtk_window_set_position (GTK_WINDOW (backlight->priv->popup), GTK_WIN_POS_NONE);
 
    /* since gpm is just starting we can pretty safely assume that we're not idle */
    backlight->priv->system_is_idle = FALSE;
-    //This was settings_gsd originally
    backlight->priv->idle_dim_timeout = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_TIME);
    gpm_idle_set_timeout_dim (backlight->priv->idle, backlight->priv->idle_dim_timeout);
 
