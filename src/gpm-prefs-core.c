@@ -661,53 +661,6 @@ prefs_setup_general (GpmPrefs *prefs)
 	}
 }
 
-#ifdef HAVE_MATECONF_DEFAULTS
-/**
- * gpm_prefs_set_defaults_cb:
- **/
-static void
-gpm_prefs_set_defaults_cb (GtkWidget *widget, GpmPrefs *prefs)
-{
-	MateConfClient *client;
-	DBusGProxy *proxy;
-	DBusGConnection *connection;
-	GError *error = NULL;
-	const gchar *keys[5] = {
-		"/apps/mate-power-manager/actions",
-		"/apps/mate-power-manager/ui",
-		"/apps/mate-power-manager/buttons",
-		"/apps/mate-power-manager/backlight",
-		"/apps/mate-power-manager/timeout"
-	};
-
-	connection = dbus_g_bus_get (DBUS_BUS_SYSTEM, &error);
-	if (error != NULL) {
-		g_warning ("failed to get system bus connection: %s", error->message);
-		g_error_free (error);
-		return;
-	}
-
-	proxy = dbus_g_proxy_new_for_name (connection,
-					   "org.mate.MateConf.Defaults",
-					   "/",
-					   "org.mate.MateConf.Defaults");
-	if (proxy == NULL) {
-		g_warning ("Cannot connect to defaults mechanism");
-		return;
-	}
-
-	client = mateconf_client_get_default ();
-	mateconf_client_suggest_sync (client, NULL);
-	g_object_unref (client);
-	dbus_g_proxy_call (proxy, "SetSystem", &error,
-			   G_TYPE_STRV, keys,
-			   G_TYPE_STRV, NULL,
-			   G_TYPE_INVALID, G_TYPE_INVALID);
-
-	g_object_unref (proxy);
-}
-#endif
-
 /**
  * gpm_prefs_init:
  * @prefs: This prefs class instance
@@ -911,12 +864,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 			  G_CALLBACK (gpm_prefs_help_cb), prefs);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "button_defaults"));
-#ifdef HAVE_MATECONF_DEFAULTS
-	g_signal_connect (widget, "clicked",
-			  G_CALLBACK (gpm_prefs_set_defaults_cb), prefs);
-#else
 	gtk_widget_hide (widget);
-#endif
 
 	prefs_setup_ac (prefs);
 	prefs_setup_battery (prefs);
