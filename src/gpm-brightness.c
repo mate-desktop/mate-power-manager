@@ -42,7 +42,6 @@
 
 #include "egg-discrete.h"
 #include "egg-debug.h"
-#include "egg-string.h"
 
 #include "gpm-brightness.h"
 #include "gpm-common.h"
@@ -89,6 +88,35 @@ static guint signals [LAST_SIGNAL] = { 0 };
 static gpointer gpm_brightness_object = NULL;
 
 /**
+ * gpm_brightness_helper_strtoint:
+ * @text: The text to be converted
+ * @value: The return numeric return value
+ *
+ * Convert a string to a signed integer value in a safe way.
+ *
+ * Return value: %TRUE if the string was converted correctly
+ **/
+static gboolean
+gpm_brightness_helper_strtoint (const gchar *text, gint *value)
+{
+	gchar *endptr = NULL;
+	gint64 value_raw;
+
+	if (text == NULL)
+		return FALSE;
+
+	value_raw = g_ascii_strtoll (text, &endptr, 10);
+
+	if (endptr == text)
+		return FALSE;
+	if (errno == ERANGE || value_raw > G_MAXINT || value_raw < G_MININT)
+		return FALSE;
+
+	*value = (gint) value_raw;
+	return TRUE;
+}
+
+/**
  * gpm_brightness_helper_get_value:
  **/
 static gint
@@ -113,7 +141,7 @@ gpm_brightness_helper_get_value (const gchar *argument)
 	egg_debug ("executing %s retval: %i", command, exit_status);
 
 	/* parse for a number */
-	ret = egg_strtoint (stdout_data, &value);
+	ret = gpm_brightness_helper_strtoint (stdout_data, &value);
 	if (!ret)
 		goto out;
 out:

@@ -76,8 +76,6 @@ libgpmshared_a_SOURCES =				\
 	egg-dbus-monitor.c				\
 	egg-discrete.h					\
 	egg-discrete.c					\
-	egg-string.h					\
-	egg-string.c					\
 	egg-console-kit.h				\
 	egg-console-kit.c				\
 	gpm-common.h					\
