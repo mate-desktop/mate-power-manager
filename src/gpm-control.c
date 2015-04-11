@@ -97,6 +97,7 @@ static gboolean
 gpm_control_systemd_shutdown (void) {
 	GError *error = NULL;
 	GDBusProxy *proxy;
+	GVariant *res = NULL;
 
 	egg_debug ("Requesting systemd to shutdown");
 	proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
@@ -114,19 +115,20 @@ gpm_control_systemd_shutdown (void) {
 		return FALSE;
 	}
 
-	g_dbus_proxy_call_sync (proxy, "PowerOff",
-				g_variant_new( "(b)", FALSE),
-				G_DBUS_CALL_FLAGS_NONE,
-				-1,
-				NULL,
-				&error
-				);
+	res = g_dbus_proxy_call_sync (proxy, "PowerOff",
+				      g_variant_new( "(b)", FALSE),
+				      G_DBUS_CALL_FLAGS_NONE,
+				      -1,
+				      NULL,
+				      &error
+				      );
 	if (error != NULL) {
 		egg_error ("Error in dbus - %s", error->message);
 		g_error_free (error);
 		return FALSE;
 	}
 
+	g_variant_unref(res);
 	return TRUE;
 }
 
@@ -219,6 +221,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
 
 	GError *dbus_error = NULL;
 	GDBusProxy *proxy;
+	GVariant *res = NULL;
 
 	screensaver = gpm_screensaver_new ();
 
@@ -272,19 +275,20 @@ gpm_control_suspend (GpmControl *control, GError **error)
 			g_error_free (dbus_error);
 			return -1;
 		}
-		g_dbus_proxy_call_sync (proxy, "Suspend", 
-					g_variant_new( "(b)",FALSE),
-					G_DBUS_CALL_FLAGS_NONE,
-					-1,
-					NULL,
-					&dbus_error
-					);
+		res = g_dbus_proxy_call_sync (proxy, "Suspend",
+					      g_variant_new( "(b)",FALSE),
+					      G_DBUS_CALL_FLAGS_NONE,
+					      -1,
+					      NULL,
+					      &dbus_error
+					      );
 		if (dbus_error != NULL ) {
 			egg_debug ("Error in dbus - %s", dbus_error->message);
 			g_error_free (dbus_error);
 			ret = TRUE;
 		}
 		else {
+			g_variant_unref(res);
 			ret = TRUE;
 		}
 		g_object_unref(proxy);
@@ -331,6 +335,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 
 	GError *dbus_error = NULL;
 	GDBusProxy *proxy;
+	GVariant *res = NULL;
 
 	screensaver = gpm_screensaver_new ();
 
@@ -384,19 +389,20 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 			g_error_free (dbus_error);
 			return -1;
 		}
-		g_dbus_proxy_call_sync (proxy, "Hibernate", 
-					g_variant_new( "(b)",FALSE),
-					G_DBUS_CALL_FLAGS_NONE,
-					-1,
-					NULL,
-					&dbus_error
-					);
+		res = g_dbus_proxy_call_sync (proxy, "Hibernate",
+					      g_variant_new( "(b)",FALSE),
+					      G_DBUS_CALL_FLAGS_NONE,
+					      -1,
+					      NULL,
+					      &dbus_error
+					      );
 		if (dbus_error != NULL ) {
 			egg_debug ("Error in dbus - %s", dbus_error->message);
 			g_error_free (dbus_error);
 			ret = TRUE;
 		}
 		else {
+			g_variant_unref(res);
 			ret = TRUE;
 		}
 	}
