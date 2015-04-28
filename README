@@ -1,9 +1,9 @@
 			      MATE Power Manager
 			   A Power Manager for MATE
 
-MATE Power Manager is a MATE session daemon that acts as a policy agent on top of
-UPower, which requires fairly new versions of the kernel and udev.
-MATE Power Manager listens for system events and responds with user-configurable actions.
+MATE Power Manager is a MATE session daemon that acts as a policy agent on
+top of UPower. It listens to system events and responds with user-configurable
+actions.
 
 MATE Power Manager comes in three main parts:
 
@@ -20,14 +20,12 @@ To build, MATE Power Manager requires
 	- libnotify (0.7.0 or later)
 	- Cairo (1.0.0 or later)
 	- Unique (0.9.4 or later)
-	- libpanel (2.0.0 or later)
+	- libmate-panel-applet (1.5.0 or later)
 	- xrandr (1.2.0 or later)
 	- Canberra (0.10 or later)
-	- UPower (0.9.1 or later)
-	- HAL (0.5.8 or later)
+	- UPower (0.9.5 or later)
 
-To work properly, mate-power-manager requires udevd, upowerd and
-udisks-daemon to be running.
+To work properly, mate-power-manager requires udevd and upowerd to be running.
 
 MATE Power Manager is a fork of GNOME Power Manager.
 

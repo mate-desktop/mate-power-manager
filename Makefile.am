@@ -8,8 +8,7 @@ SUBDIRS = 						\
 	man						\
 	data						\
 	help						\
-	policy						\
-	tools
+	policy
 
 if HAVE_APPLETS
 SUBDIRS += applets
