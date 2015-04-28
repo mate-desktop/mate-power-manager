@@ -191,26 +191,6 @@
       <_summary>Lock GNOME keyring on sleep</_summary>
       <_description>Whether the GNOME keyring is locked before the computer enters hibernate. This means the keyring will have to be unlocked on resume.</_description>
     </key>
-    <key name="spindown-enable-ac" type="b">
-      <default>false</default>
-      <_summary>If the low-power mode should be enabled when on AC</_summary>
-      <_description>If the system low-power mode should be enabled when on AC power.</_description>
-    </key>
-    <key name="spindown-enable-battery" type="b">
-      <default>true</default>
-      <_summary>If the low-power mode should be enabled when on battery</_summary>
-      <_description>If the system low-power mode should be enabled when on laptop battery power.</_description>
-    </key>
-    <key name="spindown-timeout-ac" type="i">
-      <default>600</default>
-      <_summary>Seconds of inactivity to spin down when on AC</_summary>
-      <_description>The number of seconds of inactivity to spin down the disks when on AC power.</_description>
-    </key>
-    <key name="spindown-timeout-battery" type="i">
-      <default>60</default>
-      <_summary>Seconds of inactivity to spin down when on battery</_summary>
-      <_description>The number of seconds of inactivity to spin down the disks when on battery power.</_description>
-    </key>
     <key name="notify-low-capacity" type="b">
       <default>true</default>
       <_summary>If we should show the low capacity warning for a broken battery</_summary>
