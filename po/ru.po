@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Alexei Sorokin <sor.alexei@hotbox.ru>, 2013
+# Alexei Sorokin <sor.alexei@meowr.ru>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-15 21:36+0100\n"
-"PO-Revision-Date: 2013-04-27 11:49+0000\n"
-"Last-Translator: Alexei Sorokin <sor.alexei@hotbox.ru>\n"
+"PO-Revision-Date: 2015-05-29 01:31+0000\n"
+"Last-Translator: Alexei Sorokin <sor.alexei@meowr.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/MATE/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: ../applets/brightness/brightness-applet.c:110
 msgid "Power Manager Brightness Applet"
@@ -993,6 +993,7 @@ msgid_plural "%i minutes"
 msgstr[0] "%i минута"
 msgstr[1] "%i минуты"
 msgstr[2] "%i минут"
+msgstr[3] "%i минут"
 
 #: ../src/gpm-common.c:69
 #, c-format
@@ -1001,6 +1002,7 @@ msgid_plural "%i hours"
 msgstr[0] "%i час"
 msgstr[1] "%i часа"
 msgstr[2] "%i часов"
+msgstr[3] "%i часов"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -1015,6 +1017,7 @@ msgid_plural "hours"
 msgstr[0] "час"
 msgstr[1] "часа"
 msgstr[2] "часов"
+msgstr[3] "часов"
 
 #: ../src/gpm-common.c:77
 msgid "minute"
@@ -1022,6 +1025,7 @@ msgid_plural "minutes"
 msgstr[0] "минута"
 msgstr[1] "минуты"
 msgstr[2] "минут"
+msgstr[3] "минут"
 
 #. Translators: This is %i days
 #: ../src/gpm-graph-widget.c:434
@@ -1249,6 +1253,7 @@ msgid_plural "Batteries Charged"
 msgstr[0] "Батарея заряжена"
 msgstr[1] "Батареи заряжены"
 msgstr[2] "Батарей заряжены"
+msgstr[3] "Батарей заряжены"
 
 #. TRANSLATORS: laptop battery is now discharging
 #: ../src/gpm-manager.c:1344
@@ -1673,6 +1678,7 @@ msgid_plural "%.0f seconds"
 msgstr[0] "%.0f секунда"
 msgstr[1] "%.0f секунды"
 msgstr[2] "%.0f секунд"
+msgstr[3] "%.0f секунд"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:296
@@ -1682,6 +1688,7 @@ msgid_plural "%.1f minutes"
 msgstr[0] "%.1f минута"
 msgstr[1] "%.1f минуты"
 msgstr[2] "%.1f минут"
+msgstr[3] "%.1f минут"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:301
@@ -1691,6 +1698,7 @@ msgid_plural "%.1f hours"
 msgstr[0] "%.1f час"
 msgstr[1] "%.1f часа"
 msgstr[2] "%.1f часов"
+msgstr[3] "%.1f часов"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:305
@@ -1700,6 +1708,7 @@ msgid_plural "%.1f days"
 msgstr[0] "%.1f день"
 msgstr[1] "%.1f дня"
 msgstr[2] "%.1f дней"
+msgstr[3] "%.1f дней"
 
 #: ../src/gpm-statistics.c:314
 msgid "Yes"
@@ -1741,6 +1750,7 @@ msgid_plural "%d seconds"
 msgstr[0] "%d секунда"
 msgstr[1] "%d секунды"
 msgstr[2] "%d секунд"
+msgstr[3] "%d секунд"
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
@@ -2166,6 +2176,7 @@ msgid_plural "AC adapters"
 msgstr[0] "Сетевой адаптер"
 msgstr[1] "Сетевых адаптера"
 msgstr[2] "Сетевых адаптеров"
+msgstr[3] "Сетевых адаптеров"
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/gpm-upower.c:482
@@ -2174,6 +2185,7 @@ msgid_plural "Laptop batteries"
 msgstr[0] "Батарея ноутбука"
 msgstr[1] "Батареи ноутбука"
 msgstr[2] "Батарей ноутбука"
+msgstr[3] "Батарей ноутбука"
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/gpm-upower.c:486
@@ -2182,6 +2194,7 @@ msgid_plural "UPSs"
 msgstr[0] "Блок бесперебойного питания"
 msgstr[1] "Блока бесперебойного питания"
 msgstr[2] "Блоков бесперебойного питания"
+msgstr[3] "Блоков бесперебойного питания"
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/gpm-upower.c:490
@@ -2190,6 +2203,7 @@ msgid_plural "Monitors"
 msgstr[0] "Монитор"
 msgstr[1] "Монитора"
 msgstr[2] "Мониторов"
+msgstr[3] "Мониторов"
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/gpm-upower.c:494
@@ -2198,6 +2212,7 @@ msgid_plural "Mice"
 msgstr[0] "Мышь"
 msgstr[1] "Мыши"
 msgstr[2] "Мышей"
+msgstr[3] "Мышей"
 
 #. TRANSLATORS: wireless keyboard with internal battery
 #: ../src/gpm-upower.c:498
@@ -2206,6 +2221,7 @@ msgid_plural "Keyboards"
 msgstr[0] "Клавиатура"
 msgstr[1] "Клавиатуры"
 msgstr[2] "Клавиатур"
+msgstr[3] "Клавиатур"
 
 #. TRANSLATORS: portable device
 #: ../src/gpm-upower.c:502
@@ -2214,6 +2230,7 @@ msgid_plural "PDAs"
 msgstr[0] "КПК"
 msgstr[1] "КПК"
 msgstr[2] "КПК"
+msgstr[3] "КПК"
 
 #. TRANSLATORS: cell phone (mobile...)
 #: ../src/gpm-upower.c:506
@@ -2222,6 +2239,7 @@ msgid_plural "Cell phones"
 msgstr[0] "Мобильный телефон"
 msgstr[1] "Мобильных телефона"
 msgstr[2] "Мобильный телефонов"
+msgstr[3] "Мобильный телефонов"
 
 #. TRANSLATORS: media player, mp3 etc
 #: ../src/gpm-upower.c:511
@@ -2230,6 +2248,7 @@ msgid_plural "Media players"
 msgstr[0] "Медиаплеер"
 msgstr[1] "Медиаплеера"
 msgstr[2] "Медиаплееров"
+msgstr[3] "Медиаплееров"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:515
@@ -2238,6 +2257,7 @@ msgid_plural "Tablets"
 msgstr[0] "Планшет"
 msgstr[1] "Планшета"
 msgstr[2] "Планшетов"
+msgstr[3] "Планшетов"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:519
@@ -2246,6 +2266,7 @@ msgid_plural "Computers"
 msgstr[0] "Компьютер"
 msgstr[1] "Компьютера"
 msgstr[2] "Компьютеров"
+msgstr[3] "Компьютеров"
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:589

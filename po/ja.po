@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# ABE Tsunehiko, 2013-2014
+# ABE Tsunehiko, 2013-2015
 # BALLOON a.k.a. Fu-sen., 2014
 # BALLOON a.k.a. Fu-sen., 2014
 msgid ""
@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-15 21:36+0100\n"
-"PO-Revision-Date: 2014-09-21 01:13+0000\n"
-"Last-Translator: AWASHIRO Ikuya <ikunya@gmail.com>\n"
+"PO-Revision-Date: 2015-05-30 14:52+0000\n"
+"Last-Translator: ABE Tsunehiko\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/MATE/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -592,13 +592,13 @@ msgstr "正しいページにフォーカスを戻した際にデフォルトで
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
-msgstr ""
+msgstr "最後に選択したデバイスの ID"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:97
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
-msgstr ""
+msgstr "正しいデバイスにフォーカスを戻した際に使われる最後のデバイスのID"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:98
 msgid "Percentage considered low"
@@ -608,7 +608,7 @@ msgstr "残量が少ないとみなす充電率"
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
-msgstr ""
+msgstr "バッテリーの残量が少ない状態であるとする充電率です。use-time-for-policy が FALSE の場合にのみ有効になります。"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:100
 msgid "Percentage considered critical"
@@ -618,7 +618,7 @@ msgstr "残量が深刻であるとみなす充電率"
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
-msgstr ""
+msgstr "バッテリーの残量が深刻な状態であるとする充電率です。use-time-for-policy が FALSE の場合にのみ有効になります。"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:102
 msgid "Percentage action is taken"
@@ -628,7 +628,7 @@ msgstr "アクションを実行する時の充電率"
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
-msgstr ""
+msgstr "バッテリーの残量が深刻な状態の時に実行するアクションです。use-time-for-policy が FALSE の場合にのみ有効になります。"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:104
 msgid "The time remaining when low"
@@ -638,7 +638,7 @@ msgstr "残量が少ない時の残り時間"
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
-msgstr ""
+msgstr "バッテリーの残量が少ない時の残り時間 (秒単位) です。use-time-for-policy が TRUE の場合にのみ有効になります。"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:106
 msgid "The time remaining when critical"
@@ -648,7 +648,7 @@ msgstr "残量が深刻な時の残り時間"
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "バッテリーの残量が深刻な時の残り時間 (秒単位) です。use-time-for-policy が TRUE の場合にのみ有効になります。"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:108
 msgid "The time remaining when action is taken"
@@ -658,7 +658,7 @@ msgstr "アクションを実行する時の残り時間"
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "バッテリーの残量が深刻な状態でアクションを実行する時の残り時間 (秒単位) です。use-time-for-policy が TRUE の場合にのみ有効になります。"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:110
 msgid "Sleep timeout computer when on battery"
@@ -688,7 +688,7 @@ msgstr "UPS の使用中にシステムがスリープするまでの時間"
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before it goes to sleep."
-msgstr ""
+msgstr "UPS を使用している時にシステムがアイドル状態になってからスリープするまでの時間 (秒) を指定します。"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:116
 msgid "Sleep timeout display when on AC"
@@ -718,7 +718,7 @@ msgstr "UPS の使用中にディスプレイがスリープするまでの時�
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before the display goes to sleep."
-msgstr ""
+msgstr "UPS を使用している時にシステムがアイドル状態になってからスリープするまでの時間 (秒) を指定します。"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:122
 msgid "If sounds should be used"
@@ -733,7 +733,7 @@ msgstr "電源がきわめて低くなった時、または電源消費の抑制
 #: ../data/org.mate.power-manager.gschema.xml.in.h:124
 msgid ""
 "If preferences and statistics items should be shown in the context menu"
-msgstr ""
+msgstr "コンテキストメニューに設定と統計情報を表示します。"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:125
 msgid "When to show the notification icon"
@@ -741,7 +741,7 @@ msgstr "いつ通知アイコンを表示するか"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:126
 msgid "Display options for the notification icon."
-msgstr ""
+msgstr "通知アイコンの表示オプションです。"
 
 #: ../data/mate-power-preferences.desktop.in.in.h:1
 msgid "Power Management"
@@ -1268,7 +1268,7 @@ msgstr "UPS の放電中"
 #: ../src/gpm-manager.c:1360
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
-msgstr ""
+msgstr "%s の of UPS 電源容量が残っています (%.0f%%)"
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
 #: ../src/gpm-manager.c:1444
@@ -1284,7 +1284,7 @@ msgstr "バッテリーの残量が少なくなっています"
 #: ../src/gpm-manager.c:1453
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
-msgstr ""
+msgstr "残量はおよそ <b>%s</b> (%.0f%%) です"
 
 #. TRANSLATORS: UPS is starting to get a little low
 #: ../src/gpm-manager.c:1457
@@ -1295,7 +1295,7 @@ msgstr "UPS の残量が少なくなっています"
 #: ../src/gpm-manager.c:1461
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
-msgstr ""
+msgstr "UPS のバックアップ電力の残量はおよそ <b>%s</b> (%.0f%%) です"
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
@@ -2027,13 +2027,13 @@ msgstr "%sは充電完了まで %s あります (現在 %.1f%% 完了)"
 #: ../src/gpm-upower.c:292
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
-msgstr ""
+msgstr "%s 放電待ち (%.1f%%)"
 
 #. TRANSLATORS: this is only shown for laptops with multiple batteries
 #: ../src/gpm-upower.c:298
 #, c-format
 msgid "%s waiting to charge (%.1f%%)"
-msgstr ""
+msgstr "%s 充電待ち (%.1f%%)"
 
 #. TRANSLATORS: the type of data, e.g. Laptop battery
 #: ../src/gpm-upower.c:357
@@ -2135,7 +2135,7 @@ msgstr "最後の完全充電:"
 
 #: ../src/gpm-upower.c:438 ../src/gpm-upower.c:456
 msgid "Design charge:"
-msgstr ""
+msgstr "出荷時充電容量:"
 
 #: ../src/gpm-upower.c:443
 msgid "Charge rate:"
