@@ -5,13 +5,13 @@
   <!ENTITY GFDL  SYSTEM "fdl-appendix.xml">
   <!ENTITY app "MATE Power Manager">
   <!ENTITY application "<application>&app;</application>">
-  <!ENTITY appversion "2.27.3">
-  <!ENTITY manrevision "2.27.3">
+  <!ENTITY appversion "1.10.0">
+  <!ENTITY manrevision "1.10.0">
 ]>
 <!--
       (Do not remove this comment block.)
   Template Maintained by the MATE Documentation Project:
-	  http://developer.mate.org/projects/gdp
+	  http://www.mate-desktop.org/development/
   Template version: 2.0 beta
   Template last modified Feb 12, 2002
 -->
@@ -30,6 +30,10 @@
       </para>
     </abstract>
     <copyright>
+      <year>2015</year>
+      <holder>MATE Documentation Team</holder>
+    </copyright>
+    <copyright>
       <year>2006-2009</year>
       <holder>Richard Hughes (richard@hughsie.com)</holder>
     </copyright>
@@ -47,6 +51,9 @@
      not specified, the publisher/author is the same for all versions of the
      document.  -->
     <publisher role="maintainer">
+      <publishername>MATE Documentation Team</publishername>
+    </publisher>
+    <publisher role="maintainer">
       <publishername>Richard Hughes</publishername>
     </publisher>
 
@@ -56,6 +63,16 @@
         any of this. -->
 
     <authorgroup>
+      <author role="maintainer"> 
+	<surname>MATE Documentation Team</surname>
+	<affiliation>
+	  <!-- <orgname>MATE Documentation
+	  Project</orgname> -->
+	  <!-- The email address of the author is optional and is commented out by default.
+	  <address> <email>doc-writer2@mate.org</email> </address>
+	  --> 
+	</affiliation>
+      </author>
       <author role="maintainer">
         <firstname>Richard</firstname>
         <surname>Hughes</surname>
@@ -93,7 +110,7 @@
       <para>
         To report a bug or make a suggestion regarding the &app; application or
         this manual, follow the directions in the 
-        <ulink url="http://www.mate.org/projects/mate-power-manager/"
+        <ulink url="https://github.com/mate-desktop/mate-power-manager/"
 	  type="http">&application; Contact Page</ulink>.
       </para>
 <!-- Translators may also add here feedback address for translations -->
@@ -166,8 +183,8 @@
     </figure>
     <note>
       <para>
-        You can disable this notification by changing the MateConf key
-        <command>/apps/mate-power-manager/notify/discharging</command>.
+        You can disable this notification by changing the dconf key
+        <command>org.mate.power-manager notify-discharging</command>.
       </para>
     </note>
   </section>
@@ -186,8 +203,8 @@
     </figure>
     <note>
       <para>
-        You can disable this notification by changing the MateConf key
-        <command>/apps/mate-power-manager/notify/fully_charged</command>.
+        You can disable this notification by changing the dconf key
+        <command>org.mate.power-manager notify-fully-charged</command>.
       </para>
     </note>
     <note>
@@ -218,8 +235,8 @@
     </figure>
     <note>
       <para>
-        You can disable this notification by changing the MateConf key
-        <command>/apps/mate-power-manager/notify/low_power</command>.
+        You can disable this notification by changing the dconf key
+        <command>org.mate.power-manager notify-low-power</command>.
       </para>
     </note>
   </section>
@@ -262,8 +279,8 @@
     </figure>
     <note>
       <para>
-        You can disable this notification by changing the MateConf key
-        <command>/apps/mate-power-manager/notify/sleep_failed</command>.
+        You can disable this notification by changing the dconf key
+        <command>org.mate.power-manager notify-sleep-failed</command>.
       </para>
     </note>
   </section>
@@ -380,7 +397,7 @@
 
   <note>
     <para>
-      Some sliders or option boxes may be disabled if the MateConf policy keys are
+      Some sliders or option boxes may be disabled if the dconf policy keys are
       not writable.
       This allows administrators to lock-down the actions that a user can select.
     </para>
@@ -482,8 +499,8 @@
     <title>Screen Dim Brightness</title>
     <note>
       <para>
-        You can change the idle laptop panel brightness by changing the MateConf key
-        <command>/apps/mate-power-manager/backlight/idle_brightness</command>.
+        You can change the idle laptop panel brightness by changing the dconf key
+        <command>org.mate.power-manager idle-brightness</command>.
       </para>
     </note>
   </section>
@@ -499,13 +516,13 @@
     <para>
       There is a complex locking scheme available for power users that allows
       locking policy to change for the lid, suspend and hibernate actions.
-      To enable this complex mode, you will have to disable the MateConf key:
+      To enable this complex mode, you will have to disable the dconf key:
     </para>
 
     <itemizedlist>
       <listitem>
         <para>
-          <command>/apps/mate-power-manager/lock/use_screensaver_settings</command>
+          <command>org.mate.power-manager lock-use-screensaver</command>
         </para>
       </listitem>
     </itemizedlist>
@@ -517,17 +534,17 @@
     <itemizedlist>
       <listitem>
         <para>
-          <command>/apps/mate-power-manager/lock/blank_screen</command>
+          <command>org.mate.power-manager lock-blank-screen</command>
         </para>
       </listitem>
       <listitem>
         <para>
-          <command>/apps/mate-power-manager/lock/suspend</command>
+          <command>org.mate.power-manager lock-suspend</command>
         </para>
       </listitem>
       <listitem>
         <para>
-          <command>/apps/mate-power-manager/lock/hibernate</command>
+          <command>org.mate.power-manager lock-hibernate</command>
         </para>
       </listitem>
     </itemizedlist>
@@ -666,9 +683,9 @@
     </title>
     <para>
       You have to change the DPMS suspend mode &application; uses.
-      Open <command>mateconf-editor</command>, and then change the keys 
-      <literal>/apps/mate-power-manager/backlight/dpms_method_ac</literal> and
-      <literal>/apps/mate-power-manager/backlight/dpms_method_battery</literal>
+      Open <command>dconf-editor</command>, and then change the keys 
+      <literal>org.mate.power-manager dpms-method-ac</literal> and
+      <literal>org.mate.power-manager dpms-method-battery</literal>
       to one of the modes that work, e.g. standby, suspend or off.
     </para>
   </section>
@@ -681,12 +698,11 @@
     <para>
       You might be able to use the percentage charge for g-p-m to use as the
       policy data.
-      Open <command>mateconf-editor</command>, and then change the key 
-      <command>/apps/mate-power-manager/general/use_time_for_policy</command> to false.
+      Open <command>dconf-editor</command>, and then change the key 
+      <command>org.mate.power-manager use-time-for-policy</command> to false.
       You can do this easily by doing:
       <command>
-        mateconftool-2 --set --type bool
-        /apps/mate-power-manager/general/use_time_for_policy false
+        gsettings get org.mate.power-manager use-time-for-policy false
       </command>
     </para>
     <para>
@@ -747,22 +763,23 @@
 <section id="about">
   <title>About</title>
   <para>
-    &app; was written by Richard Hughes <email>richard@hughsie.com</email>.
+    &app; was written by Mate Development.
     To find more information about &app;, please visit the
-    <ulink url="http://www.mate.org/projects/mate-power-manager" type="http">
+    <ulink url="https://github.com/mate-desktop/mate-power-manager" type="http">
     &application; web page</ulink>.
+    Origin power-manager was written by Richard Hughes <email>richard@hughsie.com</email>.
   </para>
   <para>
     To report a bug or make a suggestion regarding this application or
     this manual, follow the directions at the
-    <ulink url="http://www.mate.org/projects/mate-power-manager/bugs.html" type="http">
+    <ulink url="https://github.com/mate-desktop/mate-power-manager" type="http">
     &application; Bug Page</ulink>.
   </para>
   <para>This program is distributed under the terms of the GNU
     General Public license as published by the Free Software
     Foundation; either version 2 of the License, or (at your option)
     any later version. A copy of this license can be found at this
-    <ulink url="mate-power-manager:gpl" type="help">link</ulink>, or in the file
+    <ulink type="help" url="help:gpl">link</ulink>, or in the file
     COPYING included with the source code of this program.
   </para>
 </section>
