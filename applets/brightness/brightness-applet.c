@@ -859,7 +859,7 @@ gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 static void
 gpm_applet_help_cb (GtkAction *action, gpointer data)
 {
-	gpm_help_display ("applets-brightness");
+	gpm_help_display ("applets-general#applets-brightness");
 }
 
 /**

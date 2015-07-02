@@ -135,7 +135,7 @@ gpm_help_display (const gchar *link_id)
 	gchar *uri;
 
 	if (link_id != NULL)
-		uri = g_strconcat ("help:mate-power-manager?", link_id, NULL);
+		uri = g_strconcat ("help:mate-power-manager/", link_id, NULL);
 	else
 		uri = g_strdup ("help:mate-power-manager");
 
