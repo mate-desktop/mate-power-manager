@@ -887,6 +887,7 @@ gpm_prefs_finalize (GObject *object)
 	g_object_unref (prefs->priv->settings);
 	g_object_unref (prefs->priv->client);
 	g_object_unref (prefs->priv->console);
+	g_object_unref (prefs->priv->builder);
 
 	G_OBJECT_CLASS (gpm_prefs_parent_class)->finalize (object);
 }
