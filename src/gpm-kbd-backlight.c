@@ -121,6 +121,11 @@ gpm_kbd_backlight_set (GpmKbdBacklight *backlight,
    goal = gpm_discrete_from_percent (percentage, backlight->priv->max_brightness);
    scale = percentage > backlight->priv->brightness_percent ? 1 : -1;
 
+   /* if percentage change too small force next value */
+   if (goal == backlight->priv->brightness) {
+       goal += percentage == backlight->priv->brightness_percent ? 0 : scale;
+   }
+
    /* step loop down by 1 for a dimming effect */
    while (backlight->priv->brightness != goal) {
        backlight->priv->brightness += scale;
