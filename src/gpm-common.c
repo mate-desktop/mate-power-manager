@@ -91,6 +91,9 @@ gpm_get_timestring (guint time_secs)
 guint
 gpm_discrete_from_percent (guint percentage, guint levels)
 {
+    /* for levels < 10 min value is 0 */
+    gint factor;
+    factor = levels < 10 ? 0 : 1;
     /* check we are in range */
     if (percentage > 100)
         return levels;
@@ -98,7 +101,7 @@ gpm_discrete_from_percent (guint percentage, guint levels)
         g_warning ("levels is 0!");
         return 0;
     }
-    return (guint) ((((gfloat) percentage * (gfloat) (levels - 1)) / 100.0f) + 0.5f);
+    return (guint) ((((gfloat) percentage * (gfloat) (levels - factor)) / 100.0f) + 0.5f);
 }
 
 /**
@@ -113,6 +116,9 @@ gpm_discrete_from_percent (guint percentage, guint levels)
 guint
 gpm_discrete_to_percent (guint discrete, guint levels)
 {
+    /* for levels < 10 min value is 0 */
+    gint factor;
+    factor = levels < 10 ? 0 : 1;
     /* check we are in range */
     if (discrete > levels)
         return 100;
@@ -120,7 +126,7 @@ gpm_discrete_to_percent (guint discrete, guint levels)
         g_warning ("levels is 0!");
         return 0;
     }
-    return (guint) (((gfloat) discrete * (100.0f / (gfloat) (levels - 1))) + 0.5f);
+    return (guint) (((gfloat) discrete * (100.0f / (gfloat) (levels - factor))) + 0.5f);
 }
 
 
