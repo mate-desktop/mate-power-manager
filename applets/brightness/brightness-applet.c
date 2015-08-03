@@ -36,7 +36,6 @@
 #include <glib/gi18n.h>
 #include <gdk/gdkkeysyms.h>
 #if GTK_CHECK_VERSION (3, 0, 0)
-#include <gdk/gdkkeysyms-compat.h>
 #define GtkObject GtkWidget
 #endif
 #include <glib-object.h>
@@ -520,13 +519,13 @@ gpm_applet_key_press_cb (GpmBrightnessApplet *applet, GdkEventKey *event)
 	int i;
 	
 	switch (event->keyval) {
-	case GDK_KP_Enter:
-	case GDK_ISO_Enter:
-	case GDK_3270_Enter:
-	case GDK_Return:
-	case GDK_space:
-	case GDK_KP_Space:
-	case GDK_Escape:
+	case GDK_KEY_KP_Enter:
+	case GDK_KEY_ISO_Enter:
+	case GDK_KEY_3270_Enter:
+	case GDK_KEY_Return:
+	case GDK_KEY_space:
+	case GDK_KEY_KP_Space:
+	case GDK_KEY_Escape:
 		/* if yet popped, release focus and hide then redraw applet unselected */
 		if (applet->popped) {
 			gdk_keyboard_ungrab (GDK_CURRENT_TIME);
@@ -542,25 +541,25 @@ gpm_applet_key_press_cb (GpmBrightnessApplet *applet, GdkEventKey *event)
 			return FALSE;
 		}
 		break;
-	case GDK_Page_Up:
+	case GDK_KEY_Page_Up:
 		for (i = 0;i < 10;i++) {
 			gpm_applet_plus_cb (NULL, applet);
 		}
 		return TRUE;
 		break;
-	case GDK_Left:
-	case GDK_Up:
+	case GDK_KEY_Left:
+	case GDK_KEY_Up:
 		gpm_applet_plus_cb (NULL, applet);
 		return TRUE;
 		break;
-	case GDK_Page_Down:
+	case GDK_KEY_Page_Down:
 		for (i = 0;i < 10;i++) {
 			gpm_applet_minus_cb (NULL, applet);
 		}
 		return TRUE;
 		break;
-	case GDK_Right:
-	case GDK_Down:
+	case GDK_KEY_Right:
+	case GDK_KEY_Down:
 		gpm_applet_minus_cb (NULL, applet);
 		return TRUE;
 		break;
