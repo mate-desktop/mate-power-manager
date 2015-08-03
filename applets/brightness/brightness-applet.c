@@ -35,9 +35,6 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 #include <gdk/gdkkeysyms.h>
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define GtkObject GtkWidget
-#endif
 #include <glib-object.h>
 #include <dbus/dbus-glib.h>
 #include <libmate-desktop/mate-aboutdialog.h>
@@ -108,7 +105,7 @@ static void      gpm_applet_create_popup          (GpmBrightnessApplet *applet);
 static gboolean  gpm_applet_popup_cb              (GpmBrightnessApplet *applet, GdkEventButton *event);
 static void      gpm_applet_dialog_about_cb       (GtkAction *action, gpointer data);
 static gboolean  gpm_applet_cb                    (MatePanelApplet *_applet, const gchar *iid, gpointer data);
-static void      gpm_applet_destroy_cb            (GtkObject *object);
+static void      gpm_applet_destroy_cb            (GtkWidget *widget);
 
 #define GPM_BRIGHTNESS_APPLET_ID		"BrightnessApplet"
 #define GPM_BRIGHTNESS_APPLET_FACTORY_ID	"BrightnessAppletFactory"
@@ -863,12 +860,12 @@ gpm_applet_help_cb (GtkAction *action, gpointer data)
 
 /**
  * gpm_applet_destroy_cb:
- * @object: Class instance to destroy
+ * @widget: Class instance to destroy
  **/
 static void
-gpm_applet_destroy_cb (GtkObject *object)
+gpm_applet_destroy_cb (GtkWidget *widget)
 {
-	GpmBrightnessApplet *applet = GPM_BRIGHTNESS_APPLET(object);
+	GpmBrightnessApplet *applet = GPM_BRIGHTNESS_APPLET(widget);
 
 	if (applet->monitor != NULL) {
 		g_object_unref (applet->monitor);
