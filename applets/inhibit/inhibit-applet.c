@@ -49,10 +49,6 @@
 #define GPM_IS_INHIBIT_APPLET_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), GPM_TYPE_INHIBIT_APPLET))
 #define GPM_INHIBIT_APPLET_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), GPM_TYPE_INHIBIT_APPLET, GpmInhibitAppletClass))
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define GtkObject GtkWidget
-#endif
-
 typedef struct{
 	MatePanelApplet parent;
 	/* applet state */
@@ -91,7 +87,7 @@ static void	gpm_applet_update_tooltip	(GpmInhibitApplet *applet);
 static gboolean	gpm_applet_click_cb		(GpmInhibitApplet *applet, GdkEventButton *event);
 static void	gpm_applet_dialog_about_cb	(GtkAction *action, gpointer data);
 static gboolean	gpm_applet_cb		        (MatePanelApplet *_applet, const gchar *iid, gpointer data);
-static void	gpm_applet_destroy_cb		(GtkObject *object);
+static void	gpm_applet_destroy_cb		(GtkWidget *widget);
 
 #define GPM_INHIBIT_APPLET_ID		        "InhibitApplet"
 #define GPM_INHIBIT_APPLET_FACTORY_ID	        "InhibitAppletFactory"
@@ -533,12 +529,12 @@ gpm_applet_help_cb (GtkAction *action, gpointer data)
 
 /**
  * gpm_applet_destroy_cb:
- * @object: Class instance to destroy
+ * @widget: Class instance to destroy
  **/
 static void
-gpm_applet_destroy_cb (GtkObject *object)
+gpm_applet_destroy_cb (GtkWidget *widget)
 {
-	GpmInhibitApplet *applet = GPM_INHIBIT_APPLET(object);
+	GpmInhibitApplet *applet = GPM_INHIBIT_APPLET(widget);
 
 	if (applet->monitor != NULL) {
 		g_object_unref (applet->monitor);
