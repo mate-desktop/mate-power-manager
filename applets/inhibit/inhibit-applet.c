@@ -71,9 +71,9 @@ typedef struct{
 
 GType                gpm_inhibit_applet_get_type  (void);
 
-#define GS_DBUS_SERVICE		"org.mate.SessionManager"
-#define GS_DBUS_PATH		"/org/mate/SessionManager"
-#define GS_DBUS_INTERFACE	"org.mate.SessionManager"
+#define GS_DBUS_SERVICE		"org.gnome.SessionManager"
+#define GS_DBUS_PATH		"/org/gnome/SessionManager"
+#define GS_DBUS_INTERFACE	"org.gnome.SessionManager"
 
 static void      gpm_inhibit_applet_class_init (GpmInhibitAppletClass *klass);
 static void      gpm_inhibit_applet_init       (GpmInhibitApplet *applet);

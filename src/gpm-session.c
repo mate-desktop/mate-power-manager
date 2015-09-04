@@ -35,12 +35,12 @@ static void     gpm_session_finalize   (GObject		*object);
 
 #define GPM_SESSION_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_SESSION, GpmSessionPrivate))
 
-#define GPM_SESSION_MANAGER_SERVICE			"org.mate.SessionManager"
-#define GPM_SESSION_MANAGER_PATH			"/org/mate/SessionManager"
-#define GPM_SESSION_MANAGER_INTERFACE			"org.mate.SessionManager"
-#define GPM_SESSION_MANAGER_PRESENCE_PATH		"/org/mate/SessionManager/Presence"
-#define GPM_SESSION_MANAGER_PRESENCE_INTERFACE		"org.mate.SessionManager.Presence"
-#define GPM_SESSION_MANAGER_CLIENT_PRIVATE_INTERFACE	"org.mate.SessionManager.ClientPrivate"
+#define GPM_SESSION_MANAGER_SERVICE			"org.gnome.SessionManager"
+#define GPM_SESSION_MANAGER_PATH			"/org/gnome/SessionManager"
+#define GPM_SESSION_MANAGER_INTERFACE			"org.gnome.SessionManager"
+#define GPM_SESSION_MANAGER_PRESENCE_PATH		"/org/gnome/SessionManager/Presence"
+#define GPM_SESSION_MANAGER_PRESENCE_INTERFACE		"org.gnome.SessionManager.Presence"
+#define GPM_SESSION_MANAGER_CLIENT_PRIVATE_INTERFACE	"org.gnome.SessionManager.ClientPrivate"
 #define GPM_DBUS_PROPERTIES_INTERFACE			"org.freedesktop.DBus.Properties"
 
 typedef enum {
