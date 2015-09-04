@@ -234,11 +234,10 @@ gpm_tray_icon_add_device (GpmTrayIcon *icon, GtkMenu *menu, const GPtrArray *arr
 	guint i;
 	guint added = 0;
 	gchar *icon_name;
-	gchar *label;
+	gchar *label, *vendor, *model;
 	GtkWidget *item;
 	GtkWidget *image;
 	const gchar *object_path;
-	const gchar *desc;
 	UpDevice *device;
 	UpDeviceKind kind_tmp;
 	gdouble percentage;
@@ -251,6 +250,8 @@ gpm_tray_icon_add_device (GpmTrayIcon *icon, GtkMenu *menu, const GPtrArray *arr
 		g_object_get (device,
 			      "kind", &kind_tmp,
 			      "percentage", &percentage,
+			      "vendor", &vendor,
+			      "model", &model,
 			      NULL);
 
 		if (kind != kind_tmp)
@@ -261,8 +262,12 @@ gpm_tray_icon_add_device (GpmTrayIcon *icon, GtkMenu *menu, const GPtrArray *arr
 		added++;
 
 		/* generate the label */
-		desc = gpm_device_kind_to_localised_text (kind, 1);
-		label = g_strdup_printf ("%s (%.1f%%)", desc, percentage);
+		if ((vendor != NULL && strlen(vendor) != 0) && (model != NULL && strlen(model) != 0)) {
+			label = g_strdup_printf ("%s %s (%.1f%%)", vendor, model, percentage);
+		}
+		else {
+			label = g_strdup_printf ("%s (%.1f%%)", gpm_device_kind_to_localised_text (kind, 1), percentage);
+		}
 		item = gtk_image_menu_item_new_with_label (label);
 
 		/* generate the image */
@@ -278,6 +283,8 @@ gpm_tray_icon_add_device (GpmTrayIcon *icon, GtkMenu *menu, const GPtrArray *arr
 
 		g_free (icon_name);
 		g_free (label);
+		g_free (vendor);
+		g_free (model);
 	}
 	return added;
 }

@@ -1216,6 +1216,7 @@ gpm_stats_add_device (UpDevice *device)
 	const gchar *text;
 	const gchar *icon;
 	UpDeviceKind kind;
+	gchar *label, *vendor, *model;
 
 #if UP_CHECK_VERSION(0, 99, 0)
 	if (devices != NULL)
@@ -1228,17 +1229,27 @@ gpm_stats_add_device (UpDevice *device)
 	/* get device properties */
 	g_object_get (device,
 		      "kind", &kind,
+		      "vendor", &vendor,
+		      "model", &model,
 		      NULL);
 
 	id = up_device_get_object_path (device);
-	text = gpm_device_kind_to_localised_text (kind, 1);
+	if ((vendor != NULL && strlen(vendor) != 0) && (model != NULL && strlen(model) != 0)) {
+		label = g_strdup_printf ("%s %s", vendor, model);
+	}
+	else {
+		label = g_strdup_printf ("%s", gpm_device_kind_to_localised_text (kind, 1));
+	}
 	icon = gpm_upower_get_device_icon (device);
 
 	gtk_list_store_append (list_store_devices, &iter);
 	gtk_list_store_set (list_store_devices, &iter,
 			    GPM_DEVICES_COLUMN_ID, id,
-			    GPM_DEVICES_COLUMN_TEXT, text,
+			    GPM_DEVICES_COLUMN_TEXT, label,
 			    GPM_DEVICES_COLUMN_ICON, icon, -1);
+	g_free (label);
+	g_free (vendor);
+	g_free (model);
 }
 
 /**
