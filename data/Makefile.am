@@ -22,7 +22,7 @@ $(service_DATA): $(service_in_files) Makefile
 @GSETTINGS_RULES@
 @INTLTOOL_XML_NOMERGE_RULE@
 gsettings_schemas_in_files = org.mate.power-manager.gschema.xml.in
-gsettings_SCHEMAS = $(gsettings_schemas_in_files:.gschema.xml.in=.gschema.xml)
+gsettings_SCHEMAS = $(gsettings_schemas_in_files:.xml.in=.xml)
 
 convertdir = $(datadir)/MateConf/gsettings
 convert_DATA = mate-power-manager.convert
@@ -34,7 +34,6 @@ pkgdata_DATA =						\
 	acme.ui
 
 EXTRA_DIST =						\
-	$(gsettings_SCHEMAS)				\
 	$(service_in_files)				\
 	$(autostart_in_files)				\
 	$(desktop_in_files)				\
@@ -49,5 +48,5 @@ DISTCLEANFILES =					\
 	mate-power-manager.desktop			\
 	mate-power-preferences.desktop			\
 	mate-power-statistics.desktop			\
-	org.mate.PowerManager.service		\
-	org.mate.power-manager.gschema.xml
+	org.mate.PowerManager.service			\
+	$(gsettings_SCHEMAS)

@@ -14,7 +14,7 @@ AM_PROG_CC_C_O
 
 AC_PROG_INSTALL
 LT_INIT
-IT_PROG_INTLTOOL([0.35.0])
+IT_PROG_INTLTOOL([0.50.1])
 
 MATE_COMPILE_WARNINGS
 YELP_HELP_INIT
@@ -350,6 +350,7 @@ data/Makefile
 data/mate-power-manager.desktop.in
 data/mate-power-preferences.desktop.in
 data/mate-power-statistics.desktop.in
+data/org.mate.power-manager.gschema.xml
 data/icons/Makefile
 data/icons/16x16/Makefile
 data/icons/16x16/actions/Makefile
