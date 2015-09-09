@@ -51,6 +51,7 @@ gcm_backlight_helper_get_best_backlight ()
 
 	/* available kernel interfaces in priority order */
 	static const gchar *backlight_interfaces[] = {
+		"gmux_backlight",
 		"nv_backlight",
 		"nvidia_backlight",
 		"intel_backlight",
