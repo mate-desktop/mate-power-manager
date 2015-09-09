@@ -19,6 +19,12 @@ IT_PROG_INTLTOOL([0.50.1])
 MATE_COMPILE_WARNINGS
 YELP_HELP_INIT
 
+# GLib min/max required versions
+AC_DEFINE([GLIB_VERSION_MAX_ALLOWED], [GLIB_VERSION_2_36],
+	[Warn on use of APIs added after GLib 2.36])
+AC_DEFINE([GLIB_VERSION_MIN_REQUIRED], [GLIB_VERSION_2_36],
+	[Warn on use of APIs deprecated before GLib 2.36])
+
 AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
 
 dnl ---------------------------------------------------------------------------
