@@ -433,6 +433,7 @@ gpm_backlight_button_pressed_cb (GpmButton *button, const gchar *type, GpmBackli
 	GError *error = NULL;
 	guint percentage;
 	gboolean hw_changed;
+	gboolean on_battery;
 	egg_debug ("Button press event type=%s", type);
 
 	if (g_strcmp0 (type, GPM_BUTTON_BRIGHT_UP) == 0) {
@@ -448,6 +449,13 @@ gpm_backlight_button_pressed_cb (GpmButton *button, const gchar *type, GpmBackli
 			gpm_backlight_dialog_show (backlight);
 			/* save the new percentage */
 			backlight->priv->master_percentage = percentage;
+			/* if using AC power supply, save the new brightness settings */
+			g_object_get (backlight->priv->client, "on-battery", &on_battery, NULL);
+			if (!on_battery) {
+				egg_debug ("saving brightness for ac supply: %i", percentage);
+				g_settings_set_double (backlight->priv->settings, GPM_SETTINGS_BRIGHTNESS_AC,
+						       percentage*1.0);
+			}
 		}
 		/* we emit a signal for the brightness applet */
 		if (ret && hw_changed) {
@@ -467,6 +475,13 @@ gpm_backlight_button_pressed_cb (GpmButton *button, const gchar *type, GpmBackli
 			gpm_backlight_dialog_show (backlight);
 			/* save the new percentage */
 			backlight->priv->master_percentage = percentage;
+			/* if using AC power supply, save the new brightness settings */
+			g_object_get (backlight->priv->client, "on-battery", &on_battery, NULL);
+			if (!on_battery) {
+				egg_debug ("saving brightness for ac supply: %i", percentage);
+				g_settings_set_double (backlight->priv->settings, GPM_SETTINGS_BRIGHTNESS_AC,
+						       percentage*1.0);
+			}
 		}
 		/* we emit a signal for the brightness applet */
 		if (ret && hw_changed) {
