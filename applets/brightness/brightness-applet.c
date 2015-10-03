@@ -599,6 +599,37 @@ gpm_applet_scroll_cb (GpmBrightnessApplet *applet, GdkEventScroll *event)
 	return FALSE;
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+/**
+ * on_popup_button_press:
+ * @applet: Brightness applet instance
+ * @event: The button press event
+ *
+ * hide popup on focus loss.
+ **/
+static gboolean
+on_popup_button_press (GtkWidget      *widget,
+                       GdkEventButton *event,
+                       GpmBrightnessApplet *applet)
+{
+        GtkWidget *event_widget;
+
+        if (event->type != GDK_BUTTON_PRESS) {
+                return FALSE;
+        }
+        event_widget = gtk_get_event_widget ((GdkEvent *)event);
+        g_debug ("Button press: %p dock=%p", event_widget, widget);
+        if (event_widget == widget) {
+                gtk_widget_hide (applet->popup);
+                applet->popped = FALSE;
+                gpm_applet_update_tooltip (applet);
+                return TRUE;
+        }
+
+        return FALSE;
+}
+#endif
+
 /**
  * gpm_applet_create_popup:
  * @applet: Brightness applet instance
@@ -629,11 +660,13 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
 	/* minus button */
 	applet->btn_minus = gtk_button_new_with_label ("\342\210\222"); /* U+2212 MINUS SIGN */
 	gtk_button_set_relief (GTK_BUTTON(applet->btn_minus), GTK_RELIEF_NONE);
+	gtk_widget_set_can_focus (applet->btn_minus, FALSE);
 	g_signal_connect (G_OBJECT(applet->btn_minus), "pressed", G_CALLBACK(gpm_applet_minus_cb), applet);
 
 	/* plus button */
 	applet->btn_plus = gtk_button_new_with_label ("+");
 	gtk_button_set_relief (GTK_BUTTON(applet->btn_plus), GTK_RELIEF_NONE);
+	gtk_widget_set_can_focus (applet->btn_plus, FALSE);
 	g_signal_connect (G_OBJECT(applet->btn_plus), "pressed", G_CALLBACK(gpm_applet_plus_cb), applet);
 
 	/* box */
@@ -657,8 +690,19 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
 	GTK_WIDGET_UNSET_FLAGS (applet->popup, GTK_TOPLEVEL);
 #endif
 	gtk_window_set_type_hint (GTK_WINDOW(applet->popup), GDK_WINDOW_TYPE_HINT_UTILITY);
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	gtk_widget_set_parent (applet->popup, GTK_WIDGET(applet));
+#endif
 	gtk_container_add (GTK_CONTAINER(applet->popup), frame);
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+        /* window events */
+        g_signal_connect (G_OBJECT(applet->popup), "button-press-event",
+                          G_CALLBACK (on_popup_button_press), applet);
+
+        g_signal_connect (G_OBJECT(applet->popup), "key-press-event",
+                          G_CALLBACK(gpm_applet_key_press_cb), applet);
+#endif
 }
 
 /**
@@ -672,6 +716,13 @@ gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 {
 	GtkAllocation allocation, popup_allocation;
 	gint orientation, x, y;
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GdkWindow *window;
+	GdkDisplay *display;
+	GdkDeviceManager *device_manager;
+	GdkDevice *pointer;
+	GdkDevice *keyboard;
+#endif
 
 	/* react only to left mouse button */
 	if (event->button != 1) {
@@ -680,23 +731,36 @@ gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 
 	/* if yet popped, release focus and hide then redraw applet unselected */
 	if (applet->popped) {
+#if !GTK_CHECK_VERSION (3, 0, 0)
 		gdk_keyboard_ungrab (GDK_CURRENT_TIME);
 		gdk_pointer_ungrab (GDK_CURRENT_TIME);
 		gtk_grab_remove (GTK_WIDGET(applet));
 		gtk_widget_set_state (GTK_WIDGET(applet), GTK_STATE_NORMAL);
+#endif
 		gtk_widget_hide (applet->popup);
 		applet->popped = FALSE;
+#if !GTK_CHECK_VERSION (3, 0, 0)
 		gpm_applet_draw_cb (applet);
+#endif
 		gpm_applet_update_tooltip (applet);
 		return TRUE;
 	}
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	/* don't show the popup if brightness is unavailable */
+	if (applet->level == -1) {
+		return FALSE;
+	}
+#else
 	/* update UI for current brightness */
 	gpm_applet_update_popup_level (applet);
+#endif
 
 	/* otherwise pop */
 	applet->popped = TRUE;
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	gpm_applet_draw_cb (applet);
+#endif
 
 	/* create a new popup (initial or if panel parameters changed) */
 	if (applet->popup == NULL) {
@@ -744,6 +808,21 @@ gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 	gtk_window_move (GTK_WINDOW (applet->popup), x, y);
 
 	/* grab input */
+#if GTK_CHECK_VERSION (3, 0, 0)
+	window = gtk_widget_get_window (GTK_WIDGET (applet->popup));
+	display = gdk_window_get_display (window);
+	device_manager = gdk_display_get_device_manager (display);
+	pointer = gdk_device_manager_get_client_pointer (device_manager);
+	keyboard = gdk_device_get_associated_device (pointer);
+	gdk_device_grab (pointer, window,
+			 GDK_OWNERSHIP_NONE, TRUE,
+			 GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK,
+			 NULL, GDK_CURRENT_TIME);
+	gdk_device_grab (keyboard, window,
+			 GDK_OWNERSHIP_NONE, TRUE,
+			 GDK_KEY_PRESS_MASK | GDK_KEY_RELEASE_MASK,
+			 NULL, GDK_CURRENT_TIME);
+#else
 	gtk_widget_grab_focus (GTK_WIDGET(applet));
 	gtk_grab_add (GTK_WIDGET(applet));
 	gdk_pointer_grab (gtk_widget_get_window (GTK_WIDGET(applet)), TRUE,
@@ -754,6 +833,7 @@ gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 	gdk_keyboard_grab (gtk_widget_get_window (GTK_WIDGET(applet)),
 			   TRUE, GDK_CURRENT_TIME);
 	gtk_widget_set_state (GTK_WIDGET(applet), GTK_STATE_SELECTED);
+#endif
 
 	return TRUE;
 }
