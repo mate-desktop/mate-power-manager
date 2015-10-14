@@ -342,7 +342,7 @@ gpm_session_register_client (GpmSession *session, const gchar *app_id, const gch
 		goto out;
 	}
 
-	/* get org.mate.Session.ClientPrivate interface */
+	/* get org.gnome.SessionManager.ClientPrivate interface */
 	connection = dbus_g_bus_get (DBUS_BUS_SESSION, NULL);
 	session->priv->proxy_client_private = dbus_g_proxy_new_for_name_owner (connection, GPM_SESSION_MANAGER_SERVICE,
 									       client_id, GPM_SESSION_MANAGER_CLIENT_PRIVATE_INTERFACE, &error);
@@ -462,7 +462,7 @@ gpm_session_init (GpmSession *session)
 
 	connection = dbus_g_bus_get (DBUS_BUS_SESSION, NULL);
 
-	/* get org.mate.Session interface */
+	/* get org.gnome.SessionManager interface */
 	session->priv->proxy = dbus_g_proxy_new_for_name_owner (connection, GPM_SESSION_MANAGER_SERVICE,
 								GPM_SESSION_MANAGER_PATH,
 								GPM_SESSION_MANAGER_INTERFACE, &error);
@@ -472,7 +472,7 @@ gpm_session_init (GpmSession *session)
 		return;
 	}
 
-	/* get org.mate.Session.Presence interface */
+	/* get org.gnome.SessionManager.Presence interface */
 	session->priv->proxy_presence = dbus_g_proxy_new_for_name_owner (connection, GPM_SESSION_MANAGER_SERVICE,
 									 GPM_SESSION_MANAGER_PRESENCE_PATH,
 									 GPM_SESSION_MANAGER_PRESENCE_INTERFACE, &error);
