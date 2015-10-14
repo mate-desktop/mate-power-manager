@@ -703,6 +703,19 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
         g_signal_connect (G_OBJECT(applet->popup), "key-press-event",
                           G_CALLBACK(gpm_applet_key_press_cb), applet);
 #endif
+
+#if GTK_CHECK_VERSION (3, 0, 0) 
+	/* Set volume control frame, slider and toplevel window to follow panel volume control theme */ 
+	GtkWidget *toplevel = gtk_widget_get_toplevel (frame);
+	GtkStyleContext *context;
+	context = gtk_widget_get_style_context (GTK_WIDGET(toplevel));
+	gtk_style_context_remove_class (context,GTK_STYLE_CLASS_BACKGROUND);
+	gtk_style_context_add_class(context,"mate-media-applet-slider");
+	/*Make transparency possible in gtk3 theme3 */   
+ 	GdkScreen *screen = gtk_widget_get_screen(GTK_WIDGET(toplevel));
+	GdkVisual *visual = gdk_screen_get_rgba_visual(screen);
+	gtk_widget_set_visual(GTK_WIDGET(toplevel), visual);  
+#endif
 }
 
 /**
