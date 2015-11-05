@@ -632,6 +632,7 @@ prefs_setup_general (GpmPrefs *prefs)
 				 GPM_ACTION_POLICY_SUSPEND,
 				 GPM_ACTION_POLICY_HIBERNATE,
 				 GPM_ACTION_POLICY_SHUTDOWN,
+				 GPM_ACTION_POLICY_NOTHING,
 				 -1};
 	const GpmActionPolicy suspend_button_actions[] =
 				{GPM_ACTION_POLICY_NOTHING,
