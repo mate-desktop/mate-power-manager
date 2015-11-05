@@ -567,7 +567,7 @@ idle_changed_cb (GpmIdle *idle, GpmIdleMode mode, GpmBacklight *backlight)
 	if (mode == GPM_IDLE_MODE_NORMAL) {
 		/* sync lcd brightness */
 		gpm_backlight_notify_system_idle_changed (backlight, FALSE);
-		gpm_backlight_brightness_evaluate_and_set (backlight, FALSE, FALSE);
+		gpm_backlight_brightness_evaluate_and_set (backlight, FALSE, TRUE);
 
 		/* ensure backlight is on */
 		ret = gpm_dpms_set_mode (backlight->priv->dpms, GPM_DPMS_MODE_ON, &error);
@@ -580,7 +580,7 @@ idle_changed_cb (GpmIdle *idle, GpmIdleMode mode, GpmBacklight *backlight)
 
 		/* sync lcd brightness */
 		gpm_backlight_notify_system_idle_changed (backlight, TRUE);
-		gpm_backlight_brightness_evaluate_and_set (backlight, FALSE, FALSE);
+		gpm_backlight_brightness_evaluate_and_set (backlight, FALSE, TRUE);
 
 		/* ensure backlight is on */
 		ret = gpm_dpms_set_mode (backlight->priv->dpms, GPM_DPMS_MODE_ON, &error);
@@ -593,7 +593,7 @@ idle_changed_cb (GpmIdle *idle, GpmIdleMode mode, GpmBacklight *backlight)
 
 		/* sync lcd brightness */
 		gpm_backlight_notify_system_idle_changed (backlight, TRUE);
-		gpm_backlight_brightness_evaluate_and_set (backlight, FALSE, FALSE);
+		gpm_backlight_brightness_evaluate_and_set (backlight, FALSE, TRUE);
 
 		/* get the DPMS state we're supposed to use on the power state */
 		g_object_get (backlight->priv->client,
