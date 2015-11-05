@@ -380,7 +380,7 @@ gpm_settings_key_changed_cb (GSettings *settings, const gchar *key, GpmBacklight
 		      "on-battery", &on_battery,
 		      NULL);
 
-	if (!on_battery && g_strcmp0 (key, GPM_SETTINGS_BRIGHTNESS_AC) == 0) {
+	if (g_strcmp0 (key, GPM_SETTINGS_BRIGHTNESS_AC) == 0) {
 		backlight->priv->master_percentage = g_settings_get_double (settings, key);
 		gpm_backlight_brightness_evaluate_and_set (backlight, FALSE, TRUE);
 
