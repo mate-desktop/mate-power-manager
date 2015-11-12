@@ -1945,8 +1945,11 @@ gpm_manager_finalize (GObject *object)
 		gpm_manager_notify_close (manager, manager->priv->notification_discharging);
 	if (manager->priv->notification_fully_charged != NULL)
 		gpm_manager_notify_close (manager, manager->priv->notification_fully_charged);
-	if (manager->priv->critical_alert_timeout_id != 0)
+
+	if (manager->priv->critical_alert_timeout_id != 0) {
 		g_source_remove (manager->priv->critical_alert_timeout_id);
+		manager->priv->critical_alert_timeout_id = 0;
+	}
 
 	g_object_unref (manager->priv->settings);
 	g_object_unref (manager->priv->dpms);

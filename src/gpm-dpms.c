@@ -321,8 +321,10 @@ gpm_dpms_finalize (GObject *object)
 
 	g_return_if_fail (dpms->priv != NULL);
 
-	if (dpms->priv->timer_id != 0)
+	if (dpms->priv->timer_id != 0) {
 		g_source_remove (dpms->priv->timer_id);
+		dpms->priv->timer_id = 0;
+	}
 
 	G_OBJECT_CLASS (gpm_dpms_parent_class)->finalize (object);
 }

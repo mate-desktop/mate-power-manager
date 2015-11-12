@@ -411,10 +411,15 @@ gpm_idle_finalize (GObject *object)
 
 	g_return_if_fail (idle->priv != NULL);
 
-	if (idle->priv->timeout_blank_id != 0)
+	if (idle->priv->timeout_blank_id != 0) {
 		g_source_remove (idle->priv->timeout_blank_id);
-	if (idle->priv->timeout_sleep_id != 0)
+		idle->priv->timeout_blank_id = 0;
+	}
+
+	if (idle->priv->timeout_sleep_id != 0) {
 		g_source_remove (idle->priv->timeout_sleep_id);
+		idle->priv->timeout_sleep_id = 0;
+	}
 
 	g_object_unref (idle->priv->load);
 	g_object_unref (idle->priv->session);
