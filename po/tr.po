@@ -3,49 +3,54 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Butterfly <gokhanlnx@gmail.com>, 2015
+# mauron, 2013
+# mauron, 2012
+# Mehmet <mehmet337402@gmail.com>, 2015
+# Umut Barış GÖKMEN <umtbrsgkmn@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
-"POT-Creation-Date: 2012-01-01 13:42+0100\n"
-"PO-Revision-Date: 2012-03-20 00:25+0000\n"
-"Last-Translator: mauron <mauron@vmail.me>\n"
-"Language-Team: Turkish (http://www.transifex.net/projects/p/MATE/language/tr/)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-09 13:07+0200\n"
+"PO-Revision-Date: 2015-11-09 13:56+0000\n"
+"Last-Translator: Butterfly <gokhanlnx@gmail.com>\n"
+"Language-Team: Turkish (http://www.transifex.com/mate/MATE/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: tr\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../applets/brightness/brightness-applet.c:109
+#: ../applets/brightness/brightness-applet.c:115
 msgid "Power Manager Brightness Applet"
 msgstr "Güç Yöneticisi Parlaklık Uygulamacığı"
 
-#: ../applets/brightness/brightness-applet.c:110
+#: ../applets/brightness/brightness-applet.c:116
 msgid "Adjusts laptop panel brightness."
 msgstr "Dizüstü parlaklığını ayarlar."
 
-#: ../applets/brightness/brightness-applet.c:363
-#: ../applets/inhibit/inhibit-applet.c:362
+#: ../applets/brightness/brightness-applet.c:417
+#: ../applets/inhibit/inhibit-applet.c:409
 msgid "Cannot connect to mate-power-manager"
 msgstr "MATE Güç Yöneticisi'ne bağlanılamıyor"
 
-#: ../applets/brightness/brightness-applet.c:365
+#: ../applets/brightness/brightness-applet.c:419
 msgid "Cannot get laptop panel brightness"
 msgstr "Dizüstü parlaklığı okunamıyor"
 
-#: ../applets/brightness/brightness-applet.c:367
+#: ../applets/brightness/brightness-applet.c:421
 #, c-format
 msgid "LCD brightness : %d%%"
 msgstr "LCD parlaklığı : %%%d"
 
-#: ../applets/brightness/brightness-applet.c:752
-#: ../applets/inhibit/inhibit-applet.c:431
+#: ../applets/brightness/brightness-applet.c:809
+#: ../applets/inhibit/inhibit-applet.c:478
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "GNU Genel Kamu Lisansı Sürüm 2 ile lisanslanmıştır"
 
-#: ../applets/brightness/brightness-applet.c:753
-#: ../applets/inhibit/inhibit-applet.c:432
+#: ../applets/brightness/brightness-applet.c:810
+#: ../applets/inhibit/inhibit-applet.c:479
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -53,8 +58,8 @@ msgid ""
 "of the License, or (at your option) any later version."
 msgstr "Güç Yöneticisi özgür bir yazılımdır; uygulamayı, Free Software Foundation\ntarafından yayınlanan GNU Genel Kamu Lisansı'nın 2. sürümüyle veya\n(isteğe bağlı olarak) daha yeni bir sürümüyle belirlenmiş koşullar altında \ndağıtabilir ve/veya değiştirebilirsiniz."
 
-#: ../applets/brightness/brightness-applet.c:757
-#: ../applets/inhibit/inhibit-applet.c:436
+#: ../applets/brightness/brightness-applet.c:814
+#: ../applets/inhibit/inhibit-applet.c:483
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -62,8 +67,8 @@ msgid ""
 "GNU General Public License for more details."
 msgstr "Güç yöneticisi faydalı olacağı düşüncesiyle fakat HİÇBİR GARANTİ OLMADAN;\nhatta ima edilen bir ORTALAMA KALİTE veya BELLİ BİR AMACA UYGUNLUK\ngarantisi olmadan dağıtılmaktadır. Ayrıntılar için GNU Genel Kamu Lisansı'na\nbakınız."
 
-#: ../applets/brightness/brightness-applet.c:761
-#: ../applets/inhibit/inhibit-applet.c:440
+#: ../applets/brightness/brightness-applet.c:818
+#: ../applets/inhibit/inhibit-applet.c:487
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -71,907 +76,905 @@ msgid ""
 "02110-1301, USA."
 msgstr "Bu programla birlikte GNU Genel Kamu Lisansı'nın bir kopyasını\nalmış olmalısınız, eğer almadıysanız, Free·Software\nFoundation,·Inc.,·51·Franklin·Street,·Fifth·Floor,·Boston,·MA\n02110-1301,·USA adresine yazınız."
 
-#: ../applets/brightness/brightness-applet.c:775
+#: ../applets/brightness/brightness-applet.c:832
 msgid "Copyright © 2006 Benjamin Canou"
 msgstr "Telif Hakkı © 2006 Benjamin Canou"
 
-#: ../applets/brightness/MATE_BrightnessApplet.server.in.in.h:1
-msgid "Adjusts Laptop panel brightness"
-msgstr "Dizüstü panel parlaklığını ayarlar"
+#: ../applets/brightness/brightness-applet.c:1074
+#: ../applets/inhibit/inhibit-applet.c:714
+msgid "_About"
+msgstr "_Hakkında"
 
-#: ../applets/brightness/MATE_BrightnessApplet.server.in.in.h:2
-msgid "Brightness Applet"
-msgstr "Parlaklık Uygulamacığı"
+#: ../applets/brightness/brightness-applet.c:1077
+#: ../applets/inhibit/inhibit-applet.c:717
+msgid "_Help"
+msgstr "_Yardım"
 
-#: ../applets/brightness/MATE_BrightnessApplet.server.in.in.h:3
+#: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:1
 msgid "Brightness Applet Factory"
 msgstr "Parlaklık Uygulamacığı Üreticisi"
 
-#: ../applets/brightness/MATE_BrightnessApplet.server.in.in.h:4
+#: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:2
 msgid "Factory for Brightness Applet"
 msgstr "Parlaklık Uygulamacığı için Üretici"
 
-#: ../applets/inhibit/inhibit-applet.c:95
+#: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:3
+msgid "Brightness Applet"
+msgstr "Parlaklık Uygulamacığı"
+
+#: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:4
+msgid "Adjusts Laptop panel brightness"
+msgstr "Dizüstü panel parlaklığını ayarlar"
+
+#: ../applets/inhibit/inhibit-applet.c:97
 msgid "Power Manager Inhibit Applet"
 msgstr "Güç Yöneticisi Önleme Uygulamacığı"
 
-#: ../applets/inhibit/inhibit-applet.c:96
+#: ../applets/inhibit/inhibit-applet.c:98
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Kullanıcının kendiliğinden güç korumayı önlemesine izin ver."
 
-#: ../applets/inhibit/inhibit-applet.c:365
+#: ../applets/inhibit/inhibit-applet.c:412
 msgid "Automatic sleep inhibited"
 msgstr "Kendiliğinden uyutma önlendi"
 
-#: ../applets/inhibit/inhibit-applet.c:367
+#: ../applets/inhibit/inhibit-applet.c:414
 msgid "Automatic sleep enabled"
 msgstr "Kendiliğinden uyutma etkin"
 
-#: ../applets/inhibit/inhibit-applet.c:395
+#: ../applets/inhibit/inhibit-applet.c:442
 msgid "Manual inhibit"
 msgstr "El ile önleme"
 
-#: ../applets/inhibit/inhibit-applet.c:454
+#: ../applets/inhibit/inhibit-applet.c:501
 msgid "Copyright © 2006-2007 Richard Hughes"
 msgstr "Telif Hakkı © 2006-2007 Richard Hughes"
 
-#: ../applets/inhibit/MATE_InhibitApplet.server.in.in.h:1
-msgid "Allows user to inhibit automatic power saving"
-msgstr "Kullanıcının kendiliğinden güç korumayı önlemesine izin verir"
-
-#: ../applets/inhibit/MATE_InhibitApplet.server.in.in.h:2
-msgid "Factory for Inhibit Applet"
-msgstr "Önleme Uygulamacığı için Üretici"
-
-#: ../applets/inhibit/MATE_InhibitApplet.server.in.in.h:3
-msgid "Inhibit Applet"
-msgstr "Önleme Uygulamacığı"
-
-#: ../applets/inhibit/MATE_InhibitApplet.server.in.in.h:4
+#: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:1
 msgid "Inhibit Applet Factory"
 msgstr "Önleme Uygulamacığı Üreticisi"
 
-#: ../data/mate-power-manager.desktop.in.in.h:1
+#: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:2
+msgid "Factory for Inhibit Applet"
+msgstr "Önleme Uygulamacığı için Üretici"
+
+#: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:3
+msgid "Inhibit Applet"
+msgstr "Önleme Uygulamacığı"
+
+#: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:4
+msgid "Allows user to inhibit automatic power saving"
+msgstr "Kullanıcının kendiliğinden güç korumayı önlemesine izin verir"
+
+#: ../data/mate-power-manager.desktop.in.in.h:1 ../src/gpm-tray-icon.c:186
 msgid "Power Manager"
 msgstr "Güç Yöneticisi"
 
-#: ../data/mate-power-manager.desktop.in.in.h:2
+#: ../data/mate-power-manager.desktop.in.in.h:2 ../src/gpm-tray-icon.c:188
 msgid "Power management daemon"
 msgstr "Güç yönetimi servisi"
 
-#: ../data/mate-power-manager.schemas.in.h:1
-msgid "Allow backlight brightness adjustment"
-msgstr "Arkaışık parlatma ayarlamasına izin ver"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:1
+msgid "Whether to hibernate, suspend or do nothing when inactive"
+msgstr "Hareketsiz iken uyku kipine geçme, askıya alma ya da hiçbir şeyin yapılmaması"
 
-#: ../data/mate-power-manager.schemas.in.h:2
+#: ../data/org.mate.power-manager.gschema.xml.in.h:2
+msgid ""
+"The type of sleeping that should be performed when the computer is inactive."
+msgstr "Bilgisayar hareketsiz iken uygulanacak uyku tipi."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:3
 msgid "Battery critical low action"
 msgstr "Pil tehlikeli biçimde düşük eylemi"
 
-#: ../data/mate-power-manager.schemas.in.h:3
-msgid "Check CPU load before sleeping"
-msgstr "Uyutmadan önce işlemci yükünü denetle"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:4
+msgid "The action to take when the battery is critically low."
+msgstr "Pil gücü tehlikeli biçimde düşük iken uygulanacak eylem."
 
-#: ../data/mate-power-manager.schemas.in.h:4
-msgid "Dim the screen after a period of inactivity when on AC power"
-msgstr "AC gücü ile çalışırken bir sürelik hareketsizlikten sonra ekranı karart"
-
-#: ../data/mate-power-manager.schemas.in.h:5
-msgid "Dim the screen after a period of inactivity when on battery power"
-msgstr "Pil gücü ile çalışırken bir sürelik hareketsizlikten sonra ekranı karart"
-
-#: ../data/mate-power-manager.schemas.in.h:6
-msgid ""
-"Display options for the notification icon. Valid options are \"never\", "
-"\"low\", \"critical\", \"charge\", \"present\" and \"always\"."
-msgstr "Uyarı simgesi için görüntüleme seçenekleri. Geçerli seçenekler \"never\", \"low\", \"critical\", \"charge\", \"present\" ve \"always\"."
-
-#: ../data/mate-power-manager.schemas.in.h:7
-msgid "Hibernate button action"
-msgstr "Uyku kipi düğmesi eylemi"
-
-#: ../data/mate-power-manager.schemas.in.h:8
-msgid ""
-"If a notification message should be displayed after suspend or hibernate "
-"failed."
-msgstr "Bekleme veya uyku kipi başarısız olduğunda bir uyarı iletisi gösterilsin."
-
-#: ../data/mate-power-manager.schemas.in.h:9
-msgid ""
-"If a notification message should be displayed when the battery is fully "
-"charged."
-msgstr "Pil tam olarak dolduğunda bir uyarı iletisi gösterilsin."
-
-#: ../data/mate-power-manager.schemas.in.h:10
-msgid ""
-"If a notification message should be displayed when the battery is getting "
-"low."
-msgstr "Pil gücü azalırken bir uyarı iletisi gösterilsin."
-
-#: ../data/mate-power-manager.schemas.in.h:11
-msgid ""
-"If preferences and statistics items should be shown in the context menu"
-msgstr "Tercihler ve istatistik unsurlarının bağlam menüsünde gösterilip gösterilmeyeceği"
-
-#: ../data/mate-power-manager.schemas.in.h:12
-msgid "If sounds should be used"
-msgstr "Seslerin kullanılması"
-
-#: ../data/mate-power-manager.schemas.in.h:13
-msgid ""
-"If sounds should be used when the power is critically low, or inhibit "
-"requests have stopped the policy action."
-msgstr "Pil düzeyi tehlikeli biçimde düşükken veya önleme istekleri kural eylemine engel olduğunda seslerin kullanılması."
-
-#: ../data/mate-power-manager.schemas.in.h:14
-msgid "If the CPU load should be checked before doing the idle action."
-msgstr "Atıl eylemini gerçekleştirmeden önce işlemci yükü kontrol edilsin."
-
-#: ../data/mate-power-manager.schemas.in.h:15
+#: ../data/org.mate.power-manager.gschema.xml.in.h:5
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
 msgstr "Kapak kapatıldığında ve AC gücü kesildiğinde pil olayı oluşturulsun"
 
-#: ../data/mate-power-manager.schemas.in.h:16
+#: ../data/org.mate.power-manager.gschema.xml.in.h:6
 msgid ""
 "If the battery lid close event should occur (for example 'Suspend when lid "
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
 msgstr "Önce dizüstü kapağı kapatılıp daha sonra AC gücü kesildiğinde bir pil kapak kapatma olayı oluşturulsun (örneğin 'Pil gücü ile çalışırken kapak kapandığında Bekleme')."
 
-#: ../data/mate-power-manager.schemas.in.h:17
-msgid "If the learnt profile should be used to calculate the time remaining"
-msgstr "Öğrenilen profil kalan süreyi hesaplamada kullanılsın"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:7
+msgid "UPS critical low action"
+msgstr "UPS tehlikeli biçimde düşük güç eylemi"
 
-#: ../data/mate-power-manager.schemas.in.h:18
-msgid ""
-"If the learnt profile should be used to calculate the time remaining. Only "
-"turn this off for debugging."
-msgstr "Öğrenilen profilin kalan süreyi hesaplamada kullanılması. Bunu adece hata ayıklama için kapatın."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:8
+msgid "The action to take when the UPS is critically low."
+msgstr "UPS gücü tehlikeli biçimde düşük iken uygulanacak eylem."
 
-#: ../data/mate-power-manager.schemas.in.h:19
-msgid "If the low-power mode should be enabled when on AC"
-msgstr "AC gücüyle çalışırken düşük güç kipi etkinleştirilsin"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:9
+msgid "UPS low power action"
+msgstr "UPS düşük güç eylemi"
 
-#: ../data/mate-power-manager.schemas.in.h:20
-msgid "If the low-power mode should be enabled when on battery"
-msgstr "Pil gücüyle çalışırken düşük güç kipi etkinleştirilsin"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:10
+msgid "The action to take when the UPS is low."
+msgstr "UPS gücü düşük iken uygulanacak eylem."
 
-#: ../data/mate-power-manager.schemas.in.h:21
+#: ../data/org.mate.power-manager.gschema.xml.in.h:11
+msgid "Allow backlight brightness adjustment"
+msgstr "Arkaışık parlatma ayarlamasına izin ver"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:12
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
 msgstr "AC ve pil gücü arasında geçiş yapıldığında ekran parlaklığının değiştirilmesi."
 
-#: ../data/mate-power-manager.schemas.in.h:22
-msgid ""
-"If the screen should be dimmed to save power when the computer is idle when "
-"on AC power."
-msgstr "AC gücü ile çalışırken bilgisayar boşta ise ekran güç tasarrufu için karartılsın."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:13
+msgid "Reduce the backlight brightness when on battery power"
+msgstr "Pil gücü ile çalışırken arka aydınlatma parlaklığını düşür"
 
-#: ../data/mate-power-manager.schemas.in.h:23
-msgid ""
-"If the screen should be dimmed to save power when the computer is idle when "
-"on battery power."
-msgstr "Pil gücü ile çalışırken bilgisayar boşta ise ekran güç tasarrufu için karartılsın."
-
-#: ../data/mate-power-manager.schemas.in.h:24
+#: ../data/org.mate.power-manager.gschema.xml.in.h:14
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
 msgstr "Pil gücü ile çalışırken bilgisayar boşta ise ekran güç tasarrufu için parlaklık azaltılsın."
 
-#: ../data/mate-power-manager.schemas.in.h:25
-msgid "If the system low-power mode should be enabled when on AC power."
-msgstr "AC gücü ile çalışırken sistem düşük güç kipi etkinleştirilsin."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:15
+msgid "Reduce the keyboard backlight when on battery power"
+msgstr "Pil kullanılırken tuş takımı arka aydınlatmasını azalt."
 
-#: ../data/mate-power-manager.schemas.in.h:26
+#: ../data/org.mate.power-manager.gschema.xml.in.h:16
 msgid ""
-"If the system low-power mode should be enabled when on laptop battery power."
-msgstr "Dizüstü pil gücü ile çalışırken sistem düşük güç kipi etkinleştirilsin."
+"If the keyboard backlight brightness should be reduced when the computer is "
+"on battery power"
+msgstr "Bilgisayar pil gücüyle kullandığında klavye arka aydınlatması azaltılmalı"
 
-#: ../data/mate-power-manager.schemas.in.h:27
-msgid "If the user should be notified when the AC adapter is disconnected."
-msgstr "AC gücü kesildiğinde kullanıcıya bildirim yapılsın."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:17
+msgid "Keyboard backlight brightness when on AC power."
+msgstr "Fişe takıldığında tuş takımı aydınlatmasını artır"
 
-#: ../data/mate-power-manager.schemas.in.h:28
+#: ../data/org.mate.power-manager.gschema.xml.in.h:18
 msgid ""
-"If time based notifications should be used. If set to false, then the "
-"percentage change is used instead, which may fix a broken ACPI BIOS."
-msgstr "Zaman temelli bildirimler yapılsın. Yanlış olarak işaretlenirse, yerine yüzde değişimi kullanılır, sorunlu bir ACPI BIOS'u için yararlı olabilir."
+"Percent brightness to set keyboard backlight at when on AC power. Legal "
+"values are between 0 and 100."
+msgstr "AC gücü ile çalışırken klavye arka aydınlatması oranı ayarlaması. Geçerli değerler 0 ile 100 arasındadır."
 
-#: ../data/mate-power-manager.schemas.in.h:29
-msgid "If we should show the low capacity warning for a broken battery"
-msgstr "Bozuk bir pil için hatırlatıcı düşük kapasite uyarısı gösterilsin"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:19
+msgid "Percent to reduce keyboard backlight by when on battery power."
+msgstr "Pil gücündeyken klavye arka aydınlatması azaltma oranı."
 
-#: ../data/mate-power-manager.schemas.in.h:30
-msgid "If we should show the low capacity warning for a broken battery."
-msgstr "Bozuk bir pil için hatırlatıcı düşük kapasite uyarısı gösterilsin."
-
-#: ../data/mate-power-manager.schemas.in.h:31
-msgid "If we should show the recalled battery warning for a broken battery"
-msgstr "Bozuk bir pil için hatırlatıcı pil geri çağırılma uyarısı gösterilsin"
-
-#: ../data/mate-power-manager.schemas.in.h:32
+#: ../data/org.mate.power-manager.gschema.xml.in.h:21
+#, no-c-format
 msgid ""
-"If we should show the recalled battery warning for a broken battery. Set "
-"this to false only if you know your battery is okay."
-msgstr "Bozuk bir pil için hatırlatıcı pil geri çağırılma uyarısı gösterilsin. Bu seçeneği sadece pilinizin düzgün olduğundan eminseniz yanlış olarak işaretleyin."
+"The percentage to reduce the keyboard backlight by when on battery power. "
+"For example, if set to '60', the backlight will be cut by 40% on battery "
+"power. Legal values are between 0 and 100."
+msgstr "Klavye arka aydınlatması oranını pil gücündeyken azaltmak içindir. Örneğin, eğer '60' değerini ayarlarsanız, arka aydınlatması %40 oranında azalacaktır. Geçerli değerler 0 ve 100 arasındadır."
 
-#: ../data/mate-power-manager.schemas.in.h:33
-msgid "LCD brightness when on AC"
-msgstr "AC gücü ile çalışırken LCD parlaklığı"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:22
+msgid "Percent to reduce keyboard backlight by when idle."
+msgstr "Boşdayken klavye arka aydınlatması azaltma oranı."
 
-#: ../data/mate-power-manager.schemas.in.h:34
+#: ../data/org.mate.power-manager.gschema.xml.in.h:24
+#, no-c-format
+msgid ""
+"The percentage to reduce the keyboard backlight by when idle. For example, "
+"if set to '60', the backlight will be cut by 40% when idle. Legal values are"
+" between 0 and 100."
+msgstr "Klavye arka aydınlatması oranını boştayken azaltmak içindir. Örneğin, eğer '60' değerini ayarlarsanız, arka aydınlatması %40 oranında azalacaktır. Geçerli değerler 0 ve 100 arasındadır."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:25
+msgid "The brightness of the screen when idle"
+msgstr "Boşta iken ekran parlaklığı"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:26
+msgid ""
+"This is the laptop panel screen brightness used when the session is idle. "
+"Only valid when use-time-for-policy is true."
+msgstr "Oturum boşta iken kullanılacak dizüstü paneli parlaklığı. Sadece use_time_for_policy anahtarı doğru olarak işaretliyse geçerlidir."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:27
+msgid "Dim the screen after a period of inactivity when on battery power"
+msgstr "Pil gücü ile çalışırken bir sürelik hareketsizlikten sonra ekranı karart"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:28
+msgid ""
+"If the screen should be dimmed to save power when the computer is idle when "
+"on battery power."
+msgstr "Pil gücü ile çalışırken bilgisayar boşta ise ekran güç tasarrufu için karartılsın."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:29
+msgid "The default amount of time to dim the screen after idle"
+msgstr "Boştayken ekranı karartmak için öntanımlı geçmesi gereken süre"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:30
+msgid "The default amount of time to dim the screen after idle."
+msgstr "Boştayken ekranı karartmak için öntanımlı geçmesi gereken süre."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:31
 msgid "LCD dimming amount when on battery"
 msgstr "Pil gücü ile çalışırken LCD kısma"
 
-#: ../data/mate-power-manager.schemas.in.h:35
-msgid "Laptop lid close action on battery"
-msgstr "Pil gücü ile çalışırken dizüstü kapağı kapatma eylemi"
-
-#: ../data/mate-power-manager.schemas.in.h:36
-msgid "Laptop lid close action when on AC"
-msgstr "AC gücü ile çalışırken dizüstü kapağı kapatma eylemi"
-
-#: ../data/mate-power-manager.schemas.in.h:37
-msgid "Lock MATE keyring on sleep"
-msgstr "Uykudayken MATE anahtarlığını kilitle"
-
-#: ../data/mate-power-manager.schemas.in.h:38
-msgid "Lock screen on hibernate"
-msgstr "Uyku kipinde ekranı kilitle"
-
-#: ../data/mate-power-manager.schemas.in.h:39
-msgid "Lock screen on suspend"
-msgstr "Beklemede ekranı kilitle"
-
-#: ../data/mate-power-manager.schemas.in.h:40
-msgid "Lock screen when blanked"
-msgstr "Boş ekranda ekranı kilitle"
-
-#: ../data/mate-power-manager.schemas.in.h:41
-msgid "Method used to blank screen on AC"
-msgstr "AC gücü ile çalışırken ekranı boşaltmak için kullanılan yöntem"
-
-#: ../data/mate-power-manager.schemas.in.h:42
-msgid "Method used to blank screen on battery"
-msgstr "Pil gücü ile çalşırken ekranı boşaltmak için kullanılan yöntem"
-
-#: ../data/mate-power-manager.schemas.in.h:43
-msgid "Notify on a low power"
-msgstr "Düşük güç durumunu bildir"
-
-#: ../data/mate-power-manager.schemas.in.h:44
-msgid "Notify on a sleep failure"
-msgstr "Uyku başarısızlığını bildir"
-
-#: ../data/mate-power-manager.schemas.in.h:45
-msgid "Notify when AC adapter is disconnected"
-msgstr "AC adaptörü ayrıldığında bildir"
-
-#: ../data/mate-power-manager.schemas.in.h:46
-msgid "Notify when fully charged"
-msgstr "Pil tam dolduğunda bildir"
-
-#: ../data/mate-power-manager.schemas.in.h:47
-msgid "Percentage action is taken"
-msgstr "Eylem için yüzde"
-
-#: ../data/mate-power-manager.schemas.in.h:48
-msgid "Percentage considered critical"
-msgstr "Tehlikeli biçimde düşük sayılan yüzde"
-
-#: ../data/mate-power-manager.schemas.in.h:49
-msgid "Percentage considered low"
-msgstr "Düşük sayılan yüzde"
-
-#: ../data/mate-power-manager.schemas.in.h:50
-msgid "Power button action"
-msgstr "Güç düğmesi eylemi"
-
-#: ../data/mate-power-manager.schemas.in.h:51
-msgid "Reduce the backlight brightness when on battery power"
-msgstr "Pil gücü ile çalışırken arka aydınlatma parlaklığını düşür"
-
-#: ../data/mate-power-manager.schemas.in.h:52
-msgid "Seconds of inactivity to spin down when on AC"
-msgstr "AC gücündeyken dönmeyi azaltmak için hareketsiz geçmesi gereken saniye"
-
-#: ../data/mate-power-manager.schemas.in.h:53
-msgid "Seconds of inactivity to spin down when on battery"
-msgstr "Pil gücündeyken dönmeyi azaltmak için hareketsiz geçmesi gereken saniye"
-
-#: ../data/mate-power-manager.schemas.in.h:54
-msgid "Sleep timeout computer when on AC"
-msgstr "AC gücü ile çalışırken bilgisayar için uyku zaman aşımı"
-
-#: ../data/mate-power-manager.schemas.in.h:55
-msgid "Sleep timeout computer when on UPS"
-msgstr "UPS ile çalışırken bilgisayar için uyku zaman aşımı"
-
-#: ../data/mate-power-manager.schemas.in.h:56
-msgid "Sleep timeout computer when on battery"
-msgstr "Pil gücü ile çalışırken bilgisayar için uyku zaman aşımı"
-
-#: ../data/mate-power-manager.schemas.in.h:57
-msgid "Sleep timeout display when on AC"
-msgstr "AC gücü ile çalışırken ekran için uyku zaman aşımı"
-
-#: ../data/mate-power-manager.schemas.in.h:58
-msgid "Sleep timeout display when on UPS"
-msgstr "UPS ile çalışırken ekran için uyku zaman aşımı"
-
-#: ../data/mate-power-manager.schemas.in.h:59
-msgid "Sleep timeout display when on battery"
-msgstr "Pil gücü ile çalışırken ekran için uyku zaman aşımı"
-
-#: ../data/mate-power-manager.schemas.in.h:60
-msgid "Suspend button action"
-msgstr "Bekleme düğmesi eylemi"
-
-#: ../data/mate-power-manager.schemas.in.h:61
-msgid ""
-"The DPMS method used to blank the screen when on AC power. Possible values "
-"are \"standby\", \"suspend\" and \"off\"."
-msgstr "AC gücü ile çalışırken ekranı boşaltmada kullanılacak DPMS yöntemi. Olası değerler: \"standby\", \"suspend\", ve \"off\"."
-
-#: ../data/mate-power-manager.schemas.in.h:62
-msgid ""
-"The DPMS method used to blank the screen when on battery power. Possible "
-"values are \"standby\", \"suspend\" and \"off\"."
-msgstr "Pil·gücü ile çalışırken ekranı boşaltmada kullanılacak DPMS yöntemi. Olası değerler: \"standby\", \"suspend\", ve \"off\"."
-
-#: ../data/mate-power-manager.schemas.in.h:63
-msgid "The URI to show to the user on sleep failure"
-msgstr "Uyuma hatasında kullanıcıya göstermek için URI"
-
-#: ../data/mate-power-manager.schemas.in.h:64
-msgid ""
-"The action to take when the UPS is critically low. Possible values are "
-"\"hibernate\", \"suspend\", \"shutdown\" and \"nothing\"."
-msgstr "UPS gücü tehlikeli biçimde düşük iken uygulanacak eylem. Olası değerler: \"hibernate\", \"suspend\", \"shutdown\" ve \"nothing\"."
-
-#: ../data/mate-power-manager.schemas.in.h:65
-msgid ""
-"The action to take when the UPS is low. Possible values are \"hibernate\", "
-"\"suspend\", \"shutdown\" and \"nothing\"."
-msgstr "UPS gücü düşük iken uygulanacak eylem. Olası değerler: \"hibernate\", \"suspend\", \"shutdown\" ve \"nothing\"."
-
-#: ../data/mate-power-manager.schemas.in.h:66
-msgid ""
-"The action to take when the battery is critically low. Possible values are "
-"\"hibernate\", \"suspend\", \"shutdown\" and \"nothing\"."
-msgstr "Pil gücü tehlikeli biçimde düşük iken uygulanacak eylem. Olası değerler: \"hibernate\", \"suspend\", \"shutdown\" ve \"nothing\"."
-
-#: ../data/mate-power-manager.schemas.in.h:67
-msgid ""
-"The action to take when the laptop lid is closed and the laptop is on AC "
-"power. Possible values are \"suspend\", \"hibernate\", \"blank\" and "
-"\"nothing\"."
-msgstr "AC gücü ile çalışırken dizüstü kapağı kapatıldığında uygulanacak eylem. Olası değerler: \"hibernate\", \"suspend\", \"shutdown\" ve \"nothing\"."
-
-#: ../data/mate-power-manager.schemas.in.h:68
-msgid ""
-"The action to take when the laptop lid is closed and the laptop is on "
-"battery power. Possible values are \"suspend\", \"hibernate\", \"blank\", "
-"and \"nothing\"."
-msgstr "Pil gücü ile çalışırken dizüstü kapağı kapatıldığında uygulanacak eylem. Olası·değerler: \"hibernate\", \"suspend\", \"shutdown\" ve \"nothing\"."
-
-#: ../data/mate-power-manager.schemas.in.h:69
-msgid ""
-"The action to take when the system hibernate button is pressed. Possible "
-"values are \"suspend\", \"hibernate\", \"interactive\", \"shutdown\" and "
-"\"nothing\"."
-msgstr "Uyku kipi düğmesine basıldığında uygulanacak·eylem. Olası değerler: \"hibernate\", \"suspend\", \"interactive\", \"shutdown\" ve \"nothing\"."
-
-#: ../data/mate-power-manager.schemas.in.h:70
-msgid ""
-"The action to take when the system power button is pressed. Possible values "
-"are \"suspend\", \"hibernate\", \"interactive\", \"shutdown\" and "
-"\"nothing\"."
-msgstr "Sistem güç düğmesine basıldığında uygulanacak eylem. Olası değerler: \"hibernate\", \"suspend\", \"interactive\", \"shutdown\" ve \"nothing\"."
-
-#: ../data/mate-power-manager.schemas.in.h:71
-msgid ""
-"The action to take when the system suspend button is pressed. Possible "
-"values are \"suspend\", \"hibernate\", \"interactive\", \"shutdown\" and "
-"\"nothing\"."
-msgstr "Sistem askıya alma düğmesine basıldığında uygulanacak eylem. Olası değerler:·\"hibernate\", \"suspend\", \"interactive\", \"shutdown\" ve \"nothing\"."
-
-#: ../data/mate-power-manager.schemas.in.h:72
-msgid ""
-"The amount of time in seconds before the display goes to sleep when the "
-"computer is on AC power."
-msgstr "AC gücü ile çalışırken ekranın uyutulması için gereken zaman aşımı. (saniye cinsinden)."
-
-#: ../data/mate-power-manager.schemas.in.h:73
-msgid ""
-"The amount of time in seconds the computer on AC power needs to be inactive "
-"before it goes to sleep."
-msgstr "AC gücü ile çalışırken bilgisayarın uyutulması için gereken hareketsizlik süresi. (saniye cinsinden)."
-
-#: ../data/mate-power-manager.schemas.in.h:74
-msgid ""
-"The amount of time in seconds the computer on UPS power needs to be inactive"
-" before it goes to sleep."
-msgstr "UPS ile çalışırken bilgisayarın uyutulması için gereken saniye cinsinden hareketsizlik süresi."
-
-#: ../data/mate-power-manager.schemas.in.h:75
-msgid ""
-"The amount of time in seconds the computer on UPS power needs to be inactive"
-" before the display goes to sleep."
-msgstr "UPS ile çalışırken ekranın uyutulması için gereken saniye·cinsinden zaman aşımı."
-
-#: ../data/mate-power-manager.schemas.in.h:76
-msgid ""
-"The amount of time in seconds the computer on battery power needs to be "
-"inactive before it goes to sleep."
-msgstr "Pil gücü ile çalışırken bilgisayarın uyutulması için gereken hareketsizlik süresi. (saniye·cinsinden)."
-
-#: ../data/mate-power-manager.schemas.in.h:77
-msgid ""
-"The amount of time in seconds the computer on battery power needs to be "
-"inactive before the display goes to sleep."
-msgstr "Pil gücü ile çalışırken ekranın uyutulması için gereken zaman aşımı. (saniye·cinsinden)."
-
-#: ../data/mate-power-manager.schemas.in.h:78
+#: ../data/org.mate.power-manager.gschema.xml.in.h:32
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
 msgstr "Pil gücü ile çalışırken ekran parlaklığının azaltılma değeri. Olası değerler 0 ile 100 arasındadır."
 
-#: ../data/mate-power-manager.schemas.in.h:79
+#: ../data/org.mate.power-manager.gschema.xml.in.h:33
+msgid "Dim the screen after a period of inactivity when on AC power"
+msgstr "AC gücü ile çalışırken bir sürelik hareketsizlikten sonra ekranı karart"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:34
+msgid ""
+"If the screen should be dimmed to save power when the computer is idle when "
+"on AC power."
+msgstr "AC gücü ile çalışırken bilgisayar boşta ise ekran güç tasarrufu için karartılsın."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:35
+msgid "Method used to blank screen on AC"
+msgstr "AC gücü ile çalışırken ekranı boşaltmak için kullanılan yöntem"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:36
+msgid "The DPMS method used to blank the screen when on AC power."
+msgstr "AC gücü ile çalışırken ekranı boşaltmada kullanılacak DPMS yöntemi."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:37
+msgid "Method used to blank screen on battery"
+msgstr "Pil gücü ile çalışırken ekranı boşaltmak için kullanılan yöntem"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:38
+msgid "The DPMS method used to blank the screen when on battery power."
+msgstr "Pil gücü ile çalışırken ekranı boşaltmada kullanılacak DPMS yöntemi."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:39
+msgid "LCD brightness when on AC"
+msgstr "AC gücü ile çalışırken LCD parlaklığı"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:40
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
-"0 and 100."
-msgstr "AC gücü ile çalışırken ekran parlaklığı. Olası değerler 0 ile 100 arasındadır."
+"0.0 and 100.0."
+msgstr "AC gücü ile çalışırken ekran parlaklığı. Olası değerler 0.0 ilâ 100.0 arasındadır."
 
-#: ../data/mate-power-manager.schemas.in.h:80
-msgid "The brightness of the screen when idle"
-msgstr "Boşta iken ekran parlaklığı"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:41
+msgid "Suspend button action"
+msgstr "Bekleme düğmesi eylemi"
 
-#: ../data/mate-power-manager.schemas.in.h:81
-msgid "The default amount of time to dim the screen after idle"
-msgstr "Boştayken ekranı karartmak için öntanımlı geçmesi gereken süre"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:42
+msgid "The action to take when the system suspend button is pressed."
+msgstr "Sistem askıya alma düğmesine basıldığında uygulanacak eylem."
 
-#: ../data/mate-power-manager.schemas.in.h:82
-msgid "The default amount of time to dim the screen after idle."
-msgstr "Boştayken ekranı karartmak için öntanımlı geçmesi gereken süre."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:43
+msgid "Hibernate button action"
+msgstr "Uyku kipi düğmesi eylemi"
 
-#: ../data/mate-power-manager.schemas.in.h:83
-msgid "The default configuration version"
-msgstr "Varsayılan yapılandırma sürümü"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:44
+msgid "The action to take when the system hibernate button is pressed."
+msgstr "Uyku kipi düğmesine basıldığında uygulanacak eylem."
 
-#: ../data/mate-power-manager.schemas.in.h:84
-msgid "The default graph type to show in the statistics window"
-msgstr "İstatistik penceresinde gösterilecek öntanımlı grafik türü"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:45
+msgid "Power button action"
+msgstr "Güç düğmesi eylemi"
 
-#: ../data/mate-power-manager.schemas.in.h:85
-msgid "The default graph type to show in the statistics window."
-msgstr "İstatistik penceresinde gösterilecek öntanımlı grafik türü."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:46
+msgid "The action to take when the system power button is pressed."
+msgstr "Sistem güç düğmesine basıldığında uygulanacak eylem."
 
-#: ../data/mate-power-manager.schemas.in.h:86
-msgid "The maximum duration of time displayed on the x-axis of the graph."
-msgstr "Grafikte x ekseni üzerinde zamanın gösterileceği azami süre."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:47
+msgid "Laptop lid close action on battery"
+msgstr "Pil gücü ile çalışırken dizüstü kapağı kapatma eylemi"
 
-#: ../data/mate-power-manager.schemas.in.h:87
-msgid "The maximum time displayed on the graph"
-msgstr "Grafikte gösterilen azami zaman"
-
-#: ../data/mate-power-manager.schemas.in.h:88
+#: ../data/org.mate.power-manager.gschema.xml.in.h:48
 msgid ""
-"The number of seconds of inactivity to spin down the disks when on AC power."
-msgstr "AC gücü ile çalışırken disklerin dönmesini durdurmak için hareketsiz saniye miktarı."
+"The action to take when the laptop lid is closed and the laptop is on "
+"battery power."
+msgstr "Pil gücü ile çalışırken dizüstü kapağı kapatıldığında uygulanacak eylem."
 
-#: ../data/mate-power-manager.schemas.in.h:89
+#: ../data/org.mate.power-manager.gschema.xml.in.h:49
+msgid "Laptop lid close action when on AC"
+msgstr "AC gücü ile çalışırken dizüstü kapağı kapatma eylemi"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:50
 msgid ""
-"The number of seconds of inactivity to spin down the disks when on battery "
+"The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
-msgstr "Pil gücü ile çalışırken disklerin dönmesini durdurmak için hareketsiz saniye miktarı."
+msgstr "AC gücü ile çalışırken dizüstü kapağı kapatıldığında uygulanacak eylem."
 
-#: ../data/mate-power-manager.schemas.in.h:90
+#: ../data/org.mate.power-manager.gschema.xml.in.h:51
+msgid "Whether to use time-based notifications"
+msgstr "Zaman temelli bildirimler yapılsın"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:52
 msgid ""
-"The percentage of the battery when it is considered critical. Only valid "
-"when use_time_for_policy is false."
-msgstr "Pilin tehlikeli biçimde düşük sayılacağı yüzde. Sadece use_time_for_policy anahtarı yanlış olarak işaretliyse geçerlidir."
+"If time based notifications should be used. If set to false, then the "
+"percentage change is used instead, which may fix a broken ACPI BIOS."
+msgstr "Zaman temelli bildirimler yapılsın. Yanlış olarak işaretlenirse, yerine yüzde değişimi kullanılır, sorunlu bir ACPI BIOS'u için yararlı olabilir."
 
-#: ../data/mate-power-manager.schemas.in.h:91
-msgid ""
-"The percentage of the battery when it is considered low. Only valid when "
-"use_time_for_policy is false."
-msgstr "Pilin düşük sayılacağı yüzde. Sadece use_time_for_policy anahtarı yanlış olarak işaretliyse geçerlidir."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:53
+msgid "Check CPU load before sleeping"
+msgstr "Uyutmadan önce işlemci yükünü denetle"
 
-#: ../data/mate-power-manager.schemas.in.h:92
-msgid ""
-"The percentage of the battery when the critical action is performed. Only "
-"valid when use_time_for_policy is false."
-msgstr "Pil bitme tehlikesi eyleminin uygulanacağı yüzde. Sadece use_time_for_policy anahtarı yanlış olarak işaretliyse geçerlidir."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:54
+msgid "If the CPU load should be checked before doing the idle action."
+msgstr "Atıl eylemini gerçekleştirmeden önce işlemci yükü kontrol edilsin."
 
-#: ../data/mate-power-manager.schemas.in.h:93
-msgid ""
-"The time remaining in seconds of the battery when critical action is taken. "
-"Only valid when use_time_for_policy is true."
-msgstr "Pil bitme tehlikesi eyleminin uygulanacağı kalan pil zamanı (saniye cinsinden). Sadece use_time_for_policy anahtarı doğru olarak işaretliyse geçerlidir."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:55
+msgid "Whether NetworkManager should be connected and disconnected on sleep."
+msgstr "NetworkManager uyku zamanı bağlantıyı kesip tekrar bağlansın."
 
-#: ../data/mate-power-manager.schemas.in.h:94
-msgid ""
-"The time remaining in seconds of the battery when it is considered critical."
-" Only valid when use_time_for_policy is true."
-msgstr "Pilin tehlikeli biçimde düşük sayılacağı kalan pil zamanı (saniye·cinsinden). Sadece use_time_for_policy anahtarı doğru olarak işaretliyse geçerlidir."
-
-#: ../data/mate-power-manager.schemas.in.h:95
-msgid ""
-"The time remaining in seconds of the battery when it is considered low. Only"
-" valid when use_time_for_policy is true."
-msgstr "Pilin düşük sayılacağı kalan pil zamanı (saniye cinsinden). Sadece use_time_for_policy anahtarı doğru olarak işaretliyse geçerlidir."
-
-#: ../data/mate-power-manager.schemas.in.h:96
-msgid "The time remaining when action is taken"
-msgstr "Eylem uygulanacağı zaman kalan zaman"
-
-#: ../data/mate-power-manager.schemas.in.h:97
-msgid "The time remaining when critical"
-msgstr "Tehlikeli biçimde düşükken kalan zaman"
-
-#: ../data/mate-power-manager.schemas.in.h:98
-msgid "The time remaining when low"
-msgstr "Düşükken kalan zaman"
-
-#: ../data/mate-power-manager.schemas.in.h:99
-msgid ""
-"The type of sleeping that should be performed when the computer is inactive."
-" Possible values are \"hibernate\", \"suspend\" and \"nothing\"."
-msgstr "Bilgisayar hareketsiz iken uygulanacak uyku tipi. Olası değerler \"hibernate\", \"suspend\" ve \"nothing\"."
-
-#: ../data/mate-power-manager.schemas.in.h:100
-msgid ""
-"The version of the installed version of the schema. Do not edit this value, "
-"it is used so that configure changes between versions can be detected."
-msgstr "Kurulu olan şemanın kurulum sürümü. Bu değeri değiştirmeyin, sürümler arasındaki yapılandırma değişimlerini tespit etmek için kullanılır."
-
-#: ../data/mate-power-manager.schemas.in.h:101
-msgid ""
-"This is the laptop panel screen brightness used when the session is idle. "
-"Only valid when use_time_for_policy is true."
-msgstr "Oturum boşta iken kullanılacak dizüstü paneli parlaklığı. Sadece use_time_for_policy anahtarı doğru olarak işaretliyse geçerlidir."
-
-#: ../data/mate-power-manager.schemas.in.h:102
-msgid "UPS critical low action"
-msgstr "UPS tehlikeli biçimde düşük güç eylemi"
-
-#: ../data/mate-power-manager.schemas.in.h:103
-msgid "UPS low power action"
-msgstr "UPS düşük güç eylemi"
-
-#: ../data/mate-power-manager.schemas.in.h:104
-msgid "Use mate-screensaver lock setting"
-msgstr "mate-screensave kilitleme ayarını kullan"
-
-#: ../data/mate-power-manager.schemas.in.h:105
-msgid ""
-"When sleep fails we can show the user a button to help fix the situation. "
-"Leave this blank if the button should not be shown."
-msgstr "Uyku başarısız olduğunda durumu düzeltmeye yardım olması için kullanıcıya bir düğme gösterebiliriz. Eğer düğme görüntülenmemeliyse bunu boş bırakın. "
-
-#: ../data/mate-power-manager.schemas.in.h:106
-msgid "When to show the notification icon"
-msgstr "Uyarı simgesinin ne zaman gösterileceği"
-
-#: ../data/mate-power-manager.schemas.in.h:107
-msgid "Whether NetworkManager should be connected and disconnected on sleep"
-msgstr "NetworkManager programının bekleme sırasında bağlanıp bağlanmayacağını ya da bağlantıyı kesip kesmeyeceğini belirler"
-
-#: ../data/mate-power-manager.schemas.in.h:108
+#: ../data/org.mate.power-manager.gschema.xml.in.h:56
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
 msgstr "NetworkManager askıya alma veya uyku kipi öncesi bağlantıyı kesip uyanmadan sonra bağlansın."
 
-#: ../data/mate-power-manager.schemas.in.h:109
-msgid ""
-"Whether the MATE keyring is locked before the computer enters hibernate. "
-"This means the keyring will have to be unlocked on resume."
-msgstr "Bilgisayar uyku kipine geçmeden önce MATE anahtarlığının kilitlenmesi. Bu uyanıldığında anahtarlığın kilidinin açılması gerektiği anlamına gelir."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:57
+msgid "Use mate-screensaver lock setting"
+msgstr "mate-screensave kilitleme ayarını kullan"
 
-#: ../data/mate-power-manager.schemas.in.h:110
-msgid ""
-"Whether the MATE keyring is locked before the computer enters suspend. This "
-"means the keyring will have to be unlocked on resume."
-msgstr "Bilgisayar askıya alınmadan önce MATE anahtarlığının kilitlenmesi. Bu uyanıldığında anahtarlığın kilidinin açılması gerektiği anlamına gelir."
-
-#: ../data/mate-power-manager.schemas.in.h:111
-msgid ""
-"Whether the screen is locked when the computer wakes up from a hibernate. "
-"Only used if lock_use_screensaver_settings is false."
-msgstr "Bilgisayar uku kipinden geri döndüğünde ekran kilitlensin. Sadece lock_use_screensaver_settings anahtarı yanlış olarak işaretliyse kullanılır."
-
-#: ../data/mate-power-manager.schemas.in.h:112
-msgid ""
-"Whether the screen is locked when the computer wakes up from a suspend. Only"
-" used if lock_use_screensaver_settings is false."
-msgstr "Bilgisayar bir askıya almadan sonra uyandığında ekran kilitlensin. Sadece lock_use_screensaver_settings anahtarı yanlış olarak ayarlanmışsa kullanılır."
-
-#: ../data/mate-power-manager.schemas.in.h:113
-msgid ""
-"Whether the screen is locked when the screen is turned off. Only used if "
-"lock_use_screensaver_settings is false."
-msgstr "Ekran kapatıldığında ekran kilitlensin. Sadece lock_use_screensaver_settings anahtarı yanlış olarak işaretliyse kullanılır."
-
-#: ../data/mate-power-manager.schemas.in.h:114
-msgid "Whether to hibernate, suspend or do nothing when inactive"
-msgstr "Hareketsiz iken uyku kipine geçmme, askıya alma ya da hiçbir şeyin yapılmaması"
-
-#: ../data/mate-power-manager.schemas.in.h:115
+#: ../data/org.mate.power-manager.gschema.xml.in.h:58
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
 msgstr "Bir uyku kipi, askıya alma veya boş ekrandan sonra ekranı kilitleyip kilitlememesine karar verirken mate ekran koruyucusu ekran kilitleme ayarı esas alınsın."
 
-#: ../data/mate-power-manager.schemas.in.h:116
-msgid "Whether to use time-based notifications"
-msgstr "Zaman temelli bildirimler yapılsın"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:59
+msgid "Lock screen when blanked"
+msgstr "Boş ekranda ekranı kilitle"
 
-#: ../data/mate-power-manager.schemas.in.h:117
-msgid "Whether we should show the axis labels in the statistics window"
-msgstr "İstatistik penceresinde eksen isimleri gösterilsin"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:60
+msgid ""
+"Whether the screen is locked when the screen is turned off. Only used if "
+"lock-use-screensaver is false."
+msgstr "Ekran kapatıldığında ekran kilitlensin. Sadece lock_use_screensaver_settings anahtarı yanlış olarak işaretliyse kullanılır."
 
-#: ../data/mate-power-manager.schemas.in.h:118
-msgid "Whether we should show the axis labels in the statistics window."
-msgstr "İstatistik penceresinde eksen isimleri gösterilsin."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:61
+msgid "Lock screen on suspend"
+msgstr "Beklemede ekranı kilitle"
 
-#: ../data/mate-power-manager.schemas.in.h:119
-msgid "Whether we should show the events in the statistics window"
-msgstr "İstatistik penceresinde olaylar gösterilsin"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:62
+msgid ""
+"Whether the screen is locked when the computer wakes up from a suspend. Only"
+" used if lock-use-screensaver is false."
+msgstr "Bilgisayar askıya almadan sonra uyandığında ekran kilitlensin. Sadece lock_use_screensaver_settings anahtarı yanlış olarak ayarlanmışsa kullanılır."
 
-#: ../data/mate-power-manager.schemas.in.h:120
-msgid "Whether we should show the events in the statistics window."
-msgstr "İstatistik penceresinde olaylar gösterilsin."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:63
+msgid "Lock screen on hibernate"
+msgstr "Uyku kipinde ekranı kilitle"
 
-#: ../data/mate-power-manager.schemas.in.h:121
-msgid "Whether we should smooth the data in the graph"
-msgstr "Grafikte verilerin yuvarlanması"
+#: ../data/org.mate.power-manager.gschema.xml.in.h:64
+msgid ""
+"Whether the screen is locked when the computer wakes up from a hibernate. "
+"Only used if lock-use-screensaver is false."
+msgstr "Bilgisayar uyku kipinden geri döndüğünde ekran kilitlensin. Sadece lock_use_screensaver_settings anahtarı yanlış olarak işaretliyse kullanılır."
 
-#: ../data/mate-power-manager.schemas.in.h:122
-msgid "Whether we should smooth the data in the graph."
-msgstr "Grafikte verilerin yuvarlanması."
+#: ../data/org.mate.power-manager.gschema.xml.in.h:65
+msgid "Lock GNOME keyring on sleep"
+msgstr "Uykudayken GNOME anahtarlığını kilitle"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:66
+msgid ""
+"Whether the GNOME keyring is locked before the computer enters suspend. This"
+" means the keyring will have to be unlocked on resume."
+msgstr "Bilgisayar askıya alınmadan önce GNOME anahtarlığının kilitlenmesi. Bu sistem uyandığında anahtarlık kilidinin açılması gerektiği anlamına gelir."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:67
+msgid ""
+"Whether the GNOME keyring is locked before the computer enters hibernate. "
+"This means the keyring will have to be unlocked on resume."
+msgstr "Bilgisayar uyku kipine geçmeden önce GNOME anahtarlığının kilitlenmesi. Bu sistem uyandığında anahtarlık kilidinin açılması gerektiği anlamına gelir."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:68
+msgid "If we should show the low capacity warning for a broken battery"
+msgstr "Bozuk bir pil için hatırlatıcı düşük kapasite uyarısı gösterilsin"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:69
+msgid "If we should show the low capacity warning for a broken battery."
+msgstr "Bozuk bir pil için hatırlatıcı düşük kapasite uyarısı gösterilsin."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:70
+msgid "Notify when AC adapter is disconnected"
+msgstr "AC adaptörü ayrıldığında bildir"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:71
+msgid "If the user should be notified when the AC adapter is disconnected."
+msgstr "AC gücü kesildiğinde kullanıcıya bildirim yapılsın."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:72
+msgid "Notify when fully charged"
+msgstr "Pil tam dolduğunda bildir"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:73
+msgid ""
+"If a notification message should be displayed when the battery is fully "
+"charged."
+msgstr "Pil tam olarak dolduğunda bir uyarı iletisi gösterilsin."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:74
+msgid "Notify on a sleep failure"
+msgstr "Uyku başarısızlığını bildir"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:75
+msgid ""
+"If a notification message should be displayed after suspend or hibernate "
+"failed."
+msgstr "Bekleme veya uyku kipi başarısız olduğunda bir uyarı iletisi gösterilsin."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:76
+msgid "The URI to show to the user on sleep failure"
+msgstr "Uyuma hatasında kullanıcıya göstermek için URI"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:77
+msgid ""
+"When sleep fails we can show the user a button to help fix the situation. "
+"Leave this blank if the button should not be shown."
+msgstr "Uyku başarısız olduğunda durumu düzeltmeye yardım olması için kullanıcıya bir düğme gösterebiliriz. Eğer düğme görüntülenmemeliyse bunu boş bırakın. "
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:78
+msgid "Notify on a low power"
+msgstr "Düşük güç durumunu bildir"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:79
+msgid ""
+"If a notification message should be displayed when the battery is getting "
+"low."
+msgstr "Pil gücü azalırken bir uyarı iletisi gösterilsin."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:80
+msgid "Whether we should show the history data points"
+msgstr "Veri noktalarının tarihçesinin gösterilmesi"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:81
+msgid ""
+"Whether we should show the history data points in the statistics window."
+msgstr "İstatistikler penceresinde geçmiş veri noktalarının gösterilip gösterilmeyeceği."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:82
+msgid "Whether we should smooth the history data"
+msgstr "Tarihçe verilerinin yumuşatılması"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:83
+msgid "Whether we should smooth the history data in the graph."
+msgstr "Tarihçe verilerinin grafikte yumuşatılıp yumuşatılmayacağını ayarlar."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:84
+msgid "The default graph type to show for history"
+msgstr "Tarihçe için gösterilecek varsayılan grafik türü"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:85
+msgid "The default graph type to show in the history window."
+msgstr "Tarihçe penceresinde gösterilecek varsayılan grafik türü."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:86
+msgid "The maximum time displayed for history"
+msgstr "Tarihçe için gösterilecek azami süre"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:87
+msgid ""
+"The maximum duration of time displayed on the x-axis of the history graph."
+msgstr "Geçmiş grafiğinin x ekseni üzerinde gösterilecek azami süre."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:88
+msgid "Whether we should show the stats data points"
+msgstr "İstatistik veri noktalarının gösterilip gösterilmeyeceği"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:89
+msgid "Whether we should show the stats data points in the statistics window."
+msgstr "İstatistikler penceresinde istatistik veri noktalarının gösterilip gösterilmeyeceği."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:90
+msgid "Whether we should smooth the stats data"
+msgstr "İstatistik verilerinin yumuşatılması"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:91
+msgid "Whether we should smooth the stats data in the graph."
+msgstr "Grafikteki istatistik verlerinin yumuşatılıp yumuşatılmayacağını ayarlar."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:92
+msgid "The default graph type to show for stats"
+msgstr "İstatistikler için gösterilecek varsayılan grafik türü"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:93
+msgid "The default graph type to show in the stats window."
+msgstr "İstatistikler penceresinde gösterilecek varsayılan grafik türü."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:94
+msgid "The index of the page number to show by default"
+msgstr "Varsayılan olarak gösterilecek sayfa numarasının indisi"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:95
+msgid ""
+"The index of the page number to show by default which is used to return "
+"focus to the correct page."
+msgstr "Odağı doğru sayfaya geri döndürmek için kullanılan varsayılan olarak gösterilecek sayfa numarasının indisi."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:96
+msgid "The ID of the last device selected"
+msgstr "Son seçilen cihazın kimliği"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:97
+msgid ""
+"The identifier of the last device which is used to return focus to the "
+"correct device."
+msgstr "Odağı doğru cihaza geri döndürmek için kullanılan son aygıtın tanımlayıcısı."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:98
+msgid "Percentage considered low"
+msgstr "Düşük sayılan yüzde"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:99
+msgid ""
+"The percentage of the battery when it is considered low. Only valid when "
+"use-time-for-policy is false."
+msgstr "Pilin düşük sayılacağı yüzde. Sadece use_time_for_policy anahtarı yanlış olarak işaretliyse geçerlidir."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:100
+msgid "Percentage considered critical"
+msgstr "Tehlikeli biçimde düşük sayılan yüzde"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:101
+msgid ""
+"The percentage of the battery when it is considered critical. Only valid "
+"when use-time-for-policy is false."
+msgstr "Pilin tehlikeli biçimde düşük sayılacağı yüzde. Sadece use_time_for_policy anahtarı yanlış olarak işaretliyse geçerlidir."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:102
+msgid "Percentage action is taken"
+msgstr "Eylem için yüzde"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:103
+msgid ""
+"The percentage of the battery when the critical action is performed. Only "
+"valid when use-time-for-policy is false."
+msgstr "Pil bitme tehlikesi eyleminin uygulanacağı yüzde. Sadece use_time_for_policy anahtarı yanlış olarak işaretliyse geçerlidir."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:104
+msgid "The time remaining when low"
+msgstr "Düşükken kalan zaman"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:105
+msgid ""
+"The time remaining in seconds of the battery when it is considered low. Only"
+" valid when use-time-for-policy is true."
+msgstr "Pilin düşük sayılacağı kalan pil zamanı (saniye cinsinden). Sadece use_time_for_policy anahtarı doğru olarak işaretliyse geçerlidir."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:106
+msgid "The time remaining when critical"
+msgstr "Tehlikeli biçimde düşükken kalan zaman"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:107
+msgid ""
+"The time remaining in seconds of the battery when it is considered critical."
+" Only valid when use-time-for-policy is true."
+msgstr "Pilin tehlikeli biçimde düşük sayılacağı kalan pil zamanı (saniye cinsinden). Sadece use_time_for_policy anahtarı doğru olarak işaretliyse geçerlidir."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:108
+msgid "The time remaining when action is taken"
+msgstr "Eylem uygulanacağı zaman kalan zaman"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:109
+msgid ""
+"The time remaining in seconds of the battery when critical action is taken. "
+"Only valid when use-time-for-policy is true."
+msgstr "Pil bitme tehlikesi eyleminin uygulanacağı kalan pil zamanı (saniye cinsinden). Sadece use_time_for_policy anahtarı doğru olarak işaretliyse geçerlidir."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:110
+msgid "Sleep timeout computer when on battery"
+msgstr "Pil gücü ile çalışırken bilgisayar için uyku zaman aşımı"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:111
+msgid ""
+"The amount of time in seconds the computer on battery power needs to be "
+"inactive before it goes to sleep."
+msgstr "Pil gücü ile çalışırken bilgisayarın uyutulması için gereken hareketsizlik süresi. (saniye·cinsinden)."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:112
+msgid "Sleep timeout computer when on AC"
+msgstr "AC gücü ile çalışırken bilgisayar için uyku zaman aşımı"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:113
+msgid ""
+"The amount of time in seconds the computer on AC power needs to be inactive "
+"before it goes to sleep."
+msgstr "AC gücü ile çalışırken bilgisayarın uyutulması için gereken hareketsizlik süresi. (saniye cinsinden)."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:114
+msgid "Sleep timeout computer when on UPS"
+msgstr "UPS ile çalışırken bilgisayar için uyku zaman aşımı"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:115
+msgid ""
+"The amount of time in seconds the computer on UPS power needs to be inactive"
+" before it goes to sleep."
+msgstr "UPS ile çalışırken bilgisayarın uyutulması için gereken saniye cinsinden hareketsizlik süresi."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:116
+msgid "Sleep timeout display when on AC"
+msgstr "AC gücü ile çalışırken ekran için uyku zaman aşımı"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:117
+msgid ""
+"The amount of time in seconds before the display goes to sleep when the "
+"computer is on AC power."
+msgstr "AC gücü ile çalışırken ekranın uyutulması için gereken zaman aşımı. (saniye cinsinden)."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:118
+msgid "Sleep timeout display when on battery"
+msgstr "Pil gücü ile çalışırken ekran için uyku zaman aşımı"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:119
+msgid ""
+"The amount of time in seconds the computer on battery power needs to be "
+"inactive before the display goes to sleep."
+msgstr "Pil gücü ile çalışırken ekranın uyutulması için gereken zaman aşımı. (saniye·cinsinden)."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:120
+msgid "Sleep timeout display when on UPS"
+msgstr "UPS ile çalışırken ekran için uyku zaman aşımı"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:121
+msgid ""
+"The amount of time in seconds the computer on UPS power needs to be inactive"
+" before the display goes to sleep."
+msgstr "UPS ile çalışırken ekranın uyutulması için gereken saniye·cinsinden zaman aşımı."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:122
+msgid "If sounds should be used"
+msgstr "Seslerin kullanılması"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:123
+msgid ""
+"If sounds should be used when the power is critically low, or inhibit "
+"requests have stopped the policy action."
+msgstr "Pil düzeyi tehlikeli biçimde düşükken veya önleme istekleri kural eylemine engel olduğunda seslerin kullanılması."
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:124
+msgid ""
+"If preferences and statistics items should be shown in the context menu"
+msgstr "Tercihler ve istatistik unsurlarının bağlam menüsünde gösterilip gösterilmeyeceği"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:125
+msgid "When to show the notification icon"
+msgstr "Uyarı simgesinin ne zaman gösterileceği"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:126
+msgid "Display options for the notification icon."
+msgstr "Uyarı simgesi için görüntüleme seçenekleri."
 
 #: ../data/mate-power-preferences.desktop.in.in.h:1
-msgid "Configure power management"
-msgstr "Güç yönetimini yapılandır"
-
-#: ../data/mate-power-preferences.desktop.in.in.h:2
 msgid "Power Management"
 msgstr "Güç Yönetimi"
 
-#: ../data/mate-power-statistics.desktop.in.in.h:1
-msgid "Observe power management"
-msgstr "Güç yönetimini izle"
+#: ../data/mate-power-preferences.desktop.in.in.h:2
+msgid "Configure power management"
+msgstr "Güç yönetimini yapılandır"
 
 #. TRANSLATORS: shown on the titlebar
 #. TRANSLATORS: the program name
-#: ../data/mate-power-statistics.desktop.in.in.h:2
-#: ../data/gpm-statistics.ui.h:6 ../src/gpm-statistics.c:1092
-#: ../src/gpm-statistics.c:1579
+#: ../data/mate-power-statistics.desktop.in.in.h:1
+#: ../data/gpm-statistics.ui.h:1 ../src/gpm-statistics.c:1091
+#: ../src/gpm-statistics.c:1598
 msgid "Power Statistics"
 msgstr "Güç İstatistikleri"
+
+#: ../data/mate-power-statistics.desktop.in.in.h:2
+msgid "Observe power management"
+msgstr "Güç yönetimini izle"
 
 #: ../data/gpm-feedback-widget.ui.h:1
 msgid "Brightness"
 msgstr "Parlaklık"
 
-#: ../data/gpm-statistics.ui.h:1
-msgid "0"
-msgstr "0"
-
-#: ../data/gpm-statistics.ui.h:2
-msgid "Data length:"
-msgstr "Veri uzunluğu:"
-
-#: ../data/gpm-statistics.ui.h:3 ../src/gpm-statistics.c:210
+#: ../data/gpm-statistics.ui.h:2 ../src/gpm-statistics.c:209
 msgid "Details"
-msgstr "Aytıntılar"
+msgstr "Ayrıntılar"
 
-#: ../data/gpm-statistics.ui.h:4
+#: ../data/gpm-statistics.ui.h:3
 msgid "Graph type:"
 msgstr "Grafik türü:"
 
+#: ../data/gpm-statistics.ui.h:4
+msgid "Data length:"
+msgstr "Veri uzunluğu:"
+
 #: ../data/gpm-statistics.ui.h:5
-msgid "History"
-msgstr "Geçmiş"
+msgid "There is no data to display."
+msgstr "Gösterilecek veri yok."
+
+#: ../data/gpm-statistics.ui.h:6
+msgid "Use smoothed line"
+msgstr "Yumuşatılmış çizgi kullan"
 
 #: ../data/gpm-statistics.ui.h:7
-msgid "Processor wakeups per second:"
-msgstr "İslemcinin saniye başına uyanması:"
-
-#: ../data/gpm-statistics.ui.h:8
 msgid "Show data points"
 msgstr "Veri noktalarını göster"
+
+#: ../data/gpm-statistics.ui.h:8
+msgid "History"
+msgstr "Geçmiş"
 
 #: ../data/gpm-statistics.ui.h:9
 msgid "Statistics"
 msgstr "İstatistikler"
 
 #: ../data/gpm-statistics.ui.h:10
-msgid "There is no data to display."
-msgstr "Gösterilecek veri yok."
+msgid "Processor wakeups per second:"
+msgstr "İşlemcinin saniye başına uyanması:"
 
 #: ../data/gpm-statistics.ui.h:11
-msgid "Use smoothed line"
-msgstr "Yumuşatılmış çizgi kullan"
+msgid "0"
+msgstr "0"
 
-#: ../data/gpm-statistics.ui.h:12 ../src/gpm-statistics.c:196
+#: ../data/gpm-statistics.ui.h:12 ../src/gpm-statistics.c:195
 msgid "Wakeups"
 msgstr "Uyanmalar"
 
 #: ../data/gpm-prefs.ui.h:1
-msgid "<b>Actions</b>"
-msgstr "<b>Eylemler</b>"
-
-#: ../data/gpm-prefs.ui.h:2
-msgid "<b>Display</b>"
-msgstr "<b>Ekran</b>"
-
-#: ../data/gpm-prefs.ui.h:3
-msgid "<b>Notification Area</b>"
-msgstr "<b>Uyarı Alanı</b>"
-
-#: ../data/gpm-prefs.ui.h:4
-msgid "Closes the program"
-msgstr "Programı kapatır"
-
-#: ../data/gpm-prefs.ui.h:5
-msgid "Di_m display when idle"
-msgstr "Boştayken _ekranı karart"
-
-#: ../data/gpm-prefs.ui.h:6
-msgid "General"
-msgstr "Genel"
-
-#: ../data/gpm-prefs.ui.h:7
-msgid "Make Default"
-msgstr "Ö_ntanımlı Yap"
-
-#: ../data/gpm-prefs.ui.h:8
-msgid "On AC Power"
-msgstr "AC Gücünde"
-
-#: ../data/gpm-prefs.ui.h:9
-msgid "On Battery Power"
-msgstr "Pil Gücünde"
-
-#: ../data/gpm-prefs.ui.h:10
-msgid "On UPS Power"
-msgstr "UPS Gücünde"
-
-#: ../data/gpm-prefs.ui.h:11
-msgid "Only display an icon when a battery is p_resent"
-msgstr "Sadece pil mevcut iken bir simge göste_rilsin"
-
-#: ../data/gpm-prefs.ui.h:12
-msgid "Only display an icon when charging or _discharging"
-msgstr "Sadece pil _doluyor veya boşalıyorsa bir simge gösterilsin"
-
-#: ../data/gpm-prefs.ui.h:13
 msgid "Power Management Preferences"
 msgstr "Güç Yönetimi Tercihleri"
 
-#: ../data/gpm-prefs.ui.h:14
-msgid "Provides help about this program"
-msgstr "Program hakkında yardım sunar"
+#: ../data/gpm-prefs.ui.h:2
+msgid "<b>Actions</b>"
+msgstr "<b>Eylemler</b>"
 
-#: ../data/gpm-prefs.ui.h:15
-msgid "Put _display to sleep when inactive for:"
-msgstr "_Ekranın uyuması için etkisiz geçmesi gereken süre:"
-
-#: ../data/gpm-prefs.ui.h:16
+#: ../data/gpm-prefs.ui.h:3
 msgid "Put computer to _sleep when inactive for:"
 msgstr "_Bilgisayarın uyuması için etkisiz geçmesi gereken süre:"
 
-#: ../data/gpm-prefs.ui.h:17
-msgid "Set display _brightness to:"
-msgstr "Görüntü parlaklığının _değeri:"
-
-#: ../data/gpm-prefs.ui.h:18
-msgid "Sets this policy to be used by all users"
-msgstr "Bu kuralı tüm kullanıcılar için ayarlar"
-
-#: ../data/gpm-prefs.ui.h:19
-msgid "Sp_in down hard disks when possible"
-msgstr "Mümkün olduğunda sabit diskin dönmesini _durdur"
-
-#: ../data/gpm-prefs.ui.h:20
-msgid "When UPS power is _critically low:"
-msgstr "UPS _gücü tehlikeli biçimde düştüğünde:"
-
-#: ../data/gpm-prefs.ui.h:21
-msgid "When UPS power is l_ow:"
-msgstr "_UPS gücü düştüğünde:"
-
-#: ../data/gpm-prefs.ui.h:22
-msgid "When battery po_wer is critically low:"
-msgstr "_Pil gücü tehlikeli biçimde düştüğünde:"
-
-#: ../data/gpm-prefs.ui.h:23
+#: ../data/gpm-prefs.ui.h:4
 msgid "When laptop lid is cl_osed:"
 msgstr "_Dizüstü kapağı kapatıldığında:"
 
-#: ../data/gpm-prefs.ui.h:24
-msgid "When the _suspend button is pressed:"
-msgstr "_Askıya alma düğmesine basıldığında:"
+#: ../data/gpm-prefs.ui.h:5
+msgid "<b>Display</b>"
+msgstr "<b>Ekran</b>"
 
-#: ../data/gpm-prefs.ui.h:25
-msgid "When the power _button is pressed:"
-msgstr "Güç düğmesine _basıldığında:"
+#: ../data/gpm-prefs.ui.h:6
+msgid "Put _display to sleep when inactive for:"
+msgstr "_Ekranın uyuması için etkisiz geçmesi gereken süre:"
 
-#: ../data/gpm-prefs.ui.h:26
-msgid "_Always display an icon"
-msgstr "Her z_aman bir simge göster"
+#: ../data/gpm-prefs.ui.h:7
+msgid "Set display _brightness to:"
+msgstr "Görüntü parlaklığının _değeri:"
 
-#: ../data/gpm-prefs.ui.h:27
-msgid "_Never display an icon"
-msgstr "Hiçbir _zaman bir simge gösterme"
+#: ../data/gpm-prefs.ui.h:8
+msgid "Di_m display when idle"
+msgstr "Boştayken _ekranı karart"
 
-#: ../data/gpm-prefs.ui.h:28
-msgid "_Only display an icon when battery power is low"
-msgstr "_Sadece pil düşük iken bir simge gösterilsin"
+#: ../data/gpm-prefs.ui.h:9
+msgid "On AC Power"
+msgstr "AC Gücünde"
 
-#: ../data/gpm-prefs.ui.h:29
+#: ../data/gpm-prefs.ui.h:10
+msgid "When battery po_wer is critically low:"
+msgstr "_Pil gücü tehlikeli biçimde düştüğünde:"
+
+#: ../data/gpm-prefs.ui.h:11
 msgid "_Reduce backlight brightness"
 msgstr "_Arka ışık parlaklığını azalt"
 
+#: ../data/gpm-prefs.ui.h:12
+msgid "On Battery Power"
+msgstr "Pil Gücünde"
+
+#: ../data/gpm-prefs.ui.h:13
+msgid "When UPS power is l_ow:"
+msgstr "_UPS gücü düştüğünde:"
+
+#: ../data/gpm-prefs.ui.h:14
+msgid "When UPS power is _critically low:"
+msgstr "UPS _gücü tehlikeli biçimde düştüğünde:"
+
+#: ../data/gpm-prefs.ui.h:15
+msgid "On UPS Power"
+msgstr "UPS Gücünde"
+
+#: ../data/gpm-prefs.ui.h:16
+msgid "When the power _button is pressed:"
+msgstr "Güç düğmesine _basıldığında:"
+
+#: ../data/gpm-prefs.ui.h:17
+msgid "When the _suspend button is pressed:"
+msgstr "_Askıya alma düğmesine basıldığında:"
+
+#: ../data/gpm-prefs.ui.h:18
+msgid "<b>Notification Area</b>"
+msgstr "<b>Uyarı Alanı</b>"
+
+#: ../data/gpm-prefs.ui.h:19
+msgid "_Never display an icon"
+msgstr "Hiçbir _zaman bir simge gösterme"
+
+#: ../data/gpm-prefs.ui.h:20
+msgid "_Only display an icon when battery power is low"
+msgstr "_Sadece pil düşük iken bir simge gösterilsin"
+
+#: ../data/gpm-prefs.ui.h:21
+msgid "Only display an icon when charging or _discharging"
+msgstr "Sadece pil _doluyor veya boşalıyorsa bir simge gösterilsin"
+
+#: ../data/gpm-prefs.ui.h:22
+msgid "Only display an icon when a battery is p_resent"
+msgstr "Sadece pil mevcut iken bir simge göste_rilsin"
+
+#: ../data/gpm-prefs.ui.h:23
+msgid "_Always display an icon"
+msgstr "Her z_aman bir simge göster"
+
+#: ../data/gpm-prefs.ui.h:24
+msgid "General"
+msgstr "Genel"
+
+#: ../data/gpm-prefs.ui.h:25
+msgid "Provides help about this program"
+msgstr "Program hakkında yardım sunar"
+
+#: ../data/gpm-prefs.ui.h:26
+msgid "Make Default"
+msgstr "Ö_ntanımlı Yap"
+
+#: ../data/gpm-prefs.ui.h:27
+msgid "Sets this policy to be used by all users"
+msgstr "Bu kuralı tüm kullanıcılar için ayarlar"
+
+#: ../data/gpm-prefs.ui.h:28
+msgid "Closes the program"
+msgstr "Programı kapatır"
+
 #. command line argument
-#: ../src/gpm-backlight-helper.c:161
+#: ../src/gpm-backlight-helper.c:166
 msgid "Set the current brightness"
 msgstr "Güncel parlaklığı ayarla"
 
 #. command line argument
-#: ../src/gpm-backlight-helper.c:164
+#: ../src/gpm-backlight-helper.c:169
 msgid "Get the current brightness"
 msgstr "Güncel parlaklık değerini al"
 
 #. command line argument
-#: ../src/gpm-backlight-helper.c:167
+#: ../src/gpm-backlight-helper.c:172
 msgid "Get the number of brightness levels supported"
 msgstr "Desteklenen parlaklık seviyeleri sayısını al"
 
 #. TRANSLATORS: tool that is used when copying profiles system-wide
-#: ../src/gpm-backlight-helper.c:182
+#: ../src/gpm-backlight-helper.c:184
 msgid "MATE Power Manager Backlight Helper"
 msgstr "MATE Güç Yönetimi Arkaışık Yardımcısı"
 
 #. TRANSLATORS: user did not specify valid options
-#: ../src/gpm-backlight-helper.c:190
+#: ../src/gpm-backlight-helper.c:192
 msgid "No valid option was specified"
 msgstr "Geçerli bir seçenek belirtilmedi"
 
 #. TRANSLATORS: no backlights found
-#: ../src/gpm-backlight-helper.c:199
+#: ../src/gpm-backlight-helper.c:201
 msgid "No backlights were found on your system"
 msgstr "Sisteminizde hiçbir arkaışık bulunamadı"
 
 #. TRANSLATORS: failed to access backlight file
-#: ../src/gpm-backlight-helper.c:210
+#: ../src/gpm-backlight-helper.c:212
 msgid "Could not get the value of the backlight"
 msgstr "Arkaışık değeri alınamadı"
 
 #. TRANSLATORS: failed to access backlight file
-#: ../src/gpm-backlight-helper.c:228
+#: ../src/gpm-backlight-helper.c:230
 msgid "Could not get the maximum value of the backlight"
 msgstr "Arkaışığın azami değeri alınamadı"
 
 #. TRANSLATORS: only able to install profiles as root
-#: ../src/gpm-backlight-helper.c:245
+#: ../src/gpm-backlight-helper.c:247
 msgid "This program can only be used by the root user"
 msgstr "Bu program sadece root tarafından kullanılabilir"
 
 #. TRANSLATORS: the program must never be directly run
-#: ../src/gpm-backlight-helper.c:254
+#: ../src/gpm-backlight-helper.c:256
 msgid "This program must only be run through pkexec"
 msgstr "Bu program sadece pkexec vasıtasıyla çalıştırılmalıdır"
 
 #. TRANSLATORS: failed to access backlight file
-#: ../src/gpm-backlight-helper.c:265
+#: ../src/gpm-backlight-helper.c:267
 msgid "Could not set the value of the backlight"
 msgstr "Arkaışığın değeri ayarlanamadı"
 
@@ -984,12 +987,14 @@ msgstr "Bilinmeyen zaman"
 msgid "%i minute"
 msgid_plural "%i minutes"
 msgstr[0] "%i dakika"
+msgstr[1] "%i dakika"
 
 #: ../src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
 msgstr[0] "%i saat"
+msgstr[1] "%i saat"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -1002,74 +1007,76 @@ msgstr "%i %s, %i %s"
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] "saat"
+msgstr[1] "saat"
 
 #: ../src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
 msgstr[0] "dakika"
+msgstr[1] "dakika"
 
 #. Translators: This is %i days
-#: ../src/gpm-graph-widget.c:434
+#: ../src/gpm-graph-widget.c:446
 #, c-format
 msgid "%id"
 msgstr "%id"
 
 #. Translators: This is %i days %02i hours
-#: ../src/gpm-graph-widget.c:437
+#: ../src/gpm-graph-widget.c:449
 #, c-format
 msgid "%id%02ih"
 msgstr "%ig%02is"
 
 #. Translators: This is %i hours
-#: ../src/gpm-graph-widget.c:442
+#: ../src/gpm-graph-widget.c:454
 #, c-format
 msgid "%ih"
 msgstr "%is"
 
 #. Translators: This is %i hours %02i minutes
-#: ../src/gpm-graph-widget.c:445
+#: ../src/gpm-graph-widget.c:457
 #, c-format
 msgid "%ih%02im"
 msgstr "%is%02id"
 
 #. Translators: This is %2i minutes
-#: ../src/gpm-graph-widget.c:450
+#: ../src/gpm-graph-widget.c:462
 #, c-format
 msgid "%2im"
 msgstr "%2id"
 
 #. Translators: This is %2i minutes %02i seconds
-#: ../src/gpm-graph-widget.c:453
+#: ../src/gpm-graph-widget.c:465
 #, c-format
 msgid "%2im%02i"
 msgstr "%2id%02i"
 
 #. Translators: This is %2i seconds
-#: ../src/gpm-graph-widget.c:457
+#: ../src/gpm-graph-widget.c:469
 #, c-format
 msgid "%2is"
 msgstr "%2is"
 
 #. Translators: This is %i Percentage
-#: ../src/gpm-graph-widget.c:461
+#: ../src/gpm-graph-widget.c:473
 #, c-format
 msgid "%i%%"
 msgstr "%%%i"
 
 #. Translators: This is %.1f Watts
-#: ../src/gpm-graph-widget.c:464
+#: ../src/gpm-graph-widget.c:476
 #, c-format
 msgid "%.1fW"
 msgstr "%.1fW"
 
 #. Translators: This is %.1f Volts
-#: ../src/gpm-graph-widget.c:469
+#: ../src/gpm-graph-widget.c:481
 #, c-format
 msgid "%.1fV"
 msgstr "%.1fV"
 
 #. TRANSLATORS: show verbose debugging
-#: ../src/gpm-main.c:171 ../src/gpm-prefs.c:90 ../src/gpm-statistics.c:1559
+#: ../src/gpm-main.c:171 ../src/gpm-prefs.c:90 ../src/gpm-statistics.c:1581
 msgid "Show extra debugging information"
 msgstr "Ek hata ayıklama bilgisi göster"
 
@@ -1085,7 +1092,7 @@ msgstr "Küçük bir beklemeden sonra çık (hata ayıklama için)"
 msgid "Exit after the manager has loaded (for debugging)"
 msgstr "Yönetici yüklendikten sonra çık (hata ayıklama için)"
 
-#: ../src/gpm-main.c:191 ../src/gpm-main.c:195
+#: ../src/gpm-main.c:188 ../src/gpm-main.c:192
 msgid "MATE Power Manager"
 msgstr "MATE Güç Yöneticisi"
 
@@ -1170,57 +1177,34 @@ msgid "Visit help page"
 msgstr "Yardım sayfasına bakın"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:868
+#: ../src/gpm-manager.c:851
 msgid "Display DPMS activated"
 msgstr "Görüntü DPMS'i etkinleştirildi"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:887
+#: ../src/gpm-manager.c:870
 msgid "On battery power"
 msgstr "Pil gücü ile çalışıyor"
 
-#: ../src/gpm-manager.c:905
+#: ../src/gpm-manager.c:888
 msgid "Laptop lid is closed"
 msgstr "Dizüstü kapağı kapatıldı"
 
-#: ../src/gpm-manager.c:943
+#: ../src/gpm-manager.c:926
 msgid "Power Information"
 msgstr "Güç Bilgisi"
-
-#. TRANSLATORS: the battery may be recalled by it's vendor
-#: ../src/gpm-manager.c:1191
-msgid "Battery may be recalled"
-msgstr "Pil geri çağırılmış olabilir"
-
-#: ../src/gpm-manager.c:1192
-#, c-format
-msgid ""
-"A battery in your computer may have been recalled by %s and you may be at risk.\n"
-"\n"
-"For more information visit the battery recall website."
-msgstr "Bilgisayarınızdaki bir pil %s tarafından geri çağrılmış olabilir ve bir risk altında olabilirsiniz.\n\nDaha fazla bilgi için pil toplama sitesini ziyaret ediniz."
-
-#. TRANSLATORS: button text, visit the manufacturers recall website
-#: ../src/gpm-manager.c:1202
-msgid "Visit recall website"
-msgstr "Geri çağırma web sitesini ziyaret et"
-
-#. TRANSLATORS: button text, do not show this bubble again
-#: ../src/gpm-manager.c:1205
-msgid "Do not show me this again"
-msgstr "Bu iletiyi tekrar gösterme"
 
 #. We should notify the user if the battery has a low capacity,
 #. * where capacity is the ratio of the last_full capacity with that of
 #. * the design capacity. (#326740)
 #. TRANSLATORS: battery is old or broken
-#: ../src/gpm-manager.c:1290
+#: ../src/gpm-manager.c:1113
 msgid "Battery may be broken"
 msgstr "Pil bozuk olabilir"
 
 #. TRANSLATORS: notify the user that that battery is broken as the capacity is
 #. very low
-#: ../src/gpm-manager.c:1293
+#: ../src/gpm-manager.c:1116
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
@@ -1228,203 +1212,204 @@ msgid ""
 msgstr "Pilin kapasitesi çok düşük (%1.1f%%), ki bu bozuk ya da eski olduğu anlamına gelir."
 
 #. TRANSLATORS: show the charged notification
-#: ../src/gpm-manager.c:1342
+#: ../src/gpm-manager.c:1165
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] "Pil Doldu"
+msgstr[1] "Pil Doldu"
 
 #. TRANSLATORS: laptop battery is now discharging
-#: ../src/gpm-manager.c:1388
+#: ../src/gpm-manager.c:1211
 msgid "Battery Discharging"
 msgstr "Pil Boşalıyor"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1392
+#: ../src/gpm-manager.c:1215
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr "%s kalmıştır pil şarjından (%.0f%%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-manager.c:1395 ../src/gpm-manager.c:1407
+#: ../src/gpm-manager.c:1218 ../src/gpm-manager.c:1230
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr "%s şarj boşalıyor (%.0f%%)"
 
 #. TRANSLATORS: UPS is now discharging
-#: ../src/gpm-manager.c:1400
+#: ../src/gpm-manager.c:1223
 msgid "UPS Discharging"
 msgstr "UPS Boşalıyor"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1404
+#: ../src/gpm-manager.c:1227
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr "%s yedek UPS (Kesintisiz güç kaynağı) gücü kalmıştır (%.0f%%)"
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
-#: ../src/gpm-manager.c:1488
+#: ../src/gpm-manager.c:1311
 msgid "Battery low"
 msgstr "Pil zayıf"
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
-#: ../src/gpm-manager.c:1491
+#: ../src/gpm-manager.c:1314
 msgid "Laptop battery low"
 msgstr "Dizüstü pili zayıf"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1497
+#: ../src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "Yaklaşık <b>%s</b> kaldı (%.0f%%)"
 
 #. TRANSLATORS: UPS is starting to get a little low
-#: ../src/gpm-manager.c:1501
+#: ../src/gpm-manager.c:1324
 msgid "UPS low"
 msgstr "UPS zayıf"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1505
+#: ../src/gpm-manager.c:1328
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr "Yaklaşık <b>%s</b> için UPS yedek gücü kaldı (%.0f%%)"
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1509 ../src/gpm-manager.c:1648
+#: ../src/gpm-manager.c:1332 ../src/gpm-manager.c:1466
 msgid "Mouse battery low"
 msgstr "Fare pili zayıf"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1512
+#: ../src/gpm-manager.c:1335
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr "Telsiz farenin pili zayıf (%.0f%%)"
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1516 ../src/gpm-manager.c:1656
+#: ../src/gpm-manager.c:1339 ../src/gpm-manager.c:1474
 msgid "Keyboard battery low"
 msgstr "Klavye pil zayıf"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1519
+#: ../src/gpm-manager.c:1342
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr "Telsiz klavyenin pili zayıf (%.0f%%)"
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1523 ../src/gpm-manager.c:1665
+#: ../src/gpm-manager.c:1346 ../src/gpm-manager.c:1483
 msgid "PDA battery low"
 msgstr "PDA pili zayıf"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1526
+#: ../src/gpm-manager.c:1349
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr "PDA pili zayıf (%.0f%%)"
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1530 ../src/gpm-manager.c:1675
-#: ../src/gpm-manager.c:1686
+#: ../src/gpm-manager.c:1353 ../src/gpm-manager.c:1493
+#: ../src/gpm-manager.c:1503
 msgid "Cell phone battery low"
 msgstr "Cep telefonu pili zayıf"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1533
+#: ../src/gpm-manager.c:1356
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "Cep telefonunun pili zayıf (%.0f%%)"
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1538
+#: ../src/gpm-manager.c:1360
 msgid "Media player battery low"
 msgstr "Medya oynatıcısının pili zayıf"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1541
+#: ../src/gpm-manager.c:1363
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr "Medya oynatıcısının pili zayıf (%.0f%%)"
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1545 ../src/gpm-manager.c:1695
+#: ../src/gpm-manager.c:1367 ../src/gpm-manager.c:1512
 msgid "Tablet battery low"
 msgstr "Tabletin pili zayıf"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1548
+#: ../src/gpm-manager.c:1370
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "Tabletin pili zayıf (%.0f%%)"
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1552 ../src/gpm-manager.c:1704
+#: ../src/gpm-manager.c:1374 ../src/gpm-manager.c:1521
 msgid "Attached computer battery low"
 msgstr "Bağlı bilgisayarın pili zayıf"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1555
+#: ../src/gpm-manager.c:1377
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "Bağlı bilgisayarın pili zayıf (%.0f%%)"
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
-#: ../src/gpm-manager.c:1605
+#: ../src/gpm-manager.c:1425
 msgid "Battery critically low"
 msgstr "Pil gücü tehlikeli biçimde düşük"
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1608 ../src/gpm-manager.c:1765
+#: ../src/gpm-manager.c:1428 ../src/gpm-manager.c:1580
 msgid "Laptop battery critically low"
 msgstr "Dizüstü pil gücü tehlikeli biçimde düşük"
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
-#: ../src/gpm-manager.c:1618
+#: ../src/gpm-manager.c:1437
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr "Veri kaybı yaşamamak için AC adaptörünü fişe takın."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1622
+#: ../src/gpm-manager.c:1441
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr "Elektrik şebekesine bağlanmazsa çok yakında bilgisayar beklemeye alınacaktır."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1626
+#: ../src/gpm-manager.c:1445
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr "Elektrik şebekesine bağlanmazsa çok yakında bilgisayar hazırda beklemeye alınacaktır."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1630
+#: ../src/gpm-manager.c:1449
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr "Elektrik şebekesine bağlanmazsa çok yakında bilgisayar kapanacaktır."
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1638 ../src/gpm-manager.c:1803
+#: ../src/gpm-manager.c:1456 ../src/gpm-manager.c:1615
 msgid "UPS critically low"
 msgstr "UPS tehlikeli biçimde zayıf"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1642
+#: ../src/gpm-manager.c:1460
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
-msgstr "Yaklaşık <b>%s</b> UPS (Kesintisiz güç kaynağı) gücü kaldı (%.0f%%). Veri kaybına mani olmak için bilgisyarınızı alternatif akıma (AC) bağlayınız."
+msgstr "Yaklaşık <b>%s</b> UPS (Kesintisiz güç kaynağı) gücü kaldı (%.0f%%). Veri kaybına mani olmak için bilgisayarınızı alternatif akıma (AC) bağlayınız."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1651
+#: ../src/gpm-manager.c:1469
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
@@ -1432,7 +1417,7 @@ msgid ""
 msgstr "Telsiz farenin pili çok zayıf (%.0f%%). Şarj edilmezse bu cihaz yakında duracaktır."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1659
+#: ../src/gpm-manager.c:1477
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
@@ -1440,7 +1425,7 @@ msgid ""
 msgstr "Telsiz klavyenin pili çok zayıf (%.0f%%). Şarj edilmezse bu cihaz çok yakında duracaktır."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1668
+#: ../src/gpm-manager.c:1486
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
@@ -1448,7 +1433,7 @@ msgid ""
 msgstr "PDA pili çok zayıf (%.0f%%). Şarj edilmezse bu cihaz çok yakında duracaktır."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1678
+#: ../src/gpm-manager.c:1496
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
@@ -1456,7 +1441,7 @@ msgid ""
 msgstr "Cep telefonunun pili çok zayıf (%.0f%%). Şarj edilmezse bu cihaz çok yakında duracaktır."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1689
+#: ../src/gpm-manager.c:1506
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
@@ -1464,7 +1449,7 @@ msgid ""
 msgstr "Medya oynatıcısının pili çok zayıf (%.0f%%). Şarj edilmezse bu cihaz çok yakında duracaktır."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1698
+#: ../src/gpm-manager.c:1515
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
@@ -1472,7 +1457,7 @@ msgid ""
 msgstr "Tabletin pili çok zayıf (%.0f%%). Şarj edilmezse bu cihaz çok yakında duracaktır."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1707
+#: ../src/gpm-manager.c:1524
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
@@ -1480,14 +1465,14 @@ msgid ""
 msgstr "Bağlı bilgisayarın pili çok zayıf (%.0f%%). Şarj edilmezse bu cihaz çok yakında duracaktır."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1774
+#: ../src/gpm-manager.c:1588
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
 msgstr "Pil gücü tehlikeli sınırın altında ve bu bilgisayar pil tamamen boşaldığında <b>kapanacak</b>."
 
 #. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1780
+#: ../src/gpm-manager.c:1594
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
@@ -1495,221 +1480,213 @@ msgid ""
 msgstr "Pil gücü tehlikeli sınırın altında ve bu bilgisayar askıya alınmak üzere.<br><b>NOT:</b> Bilgisayarınızı askıda tutmak için az miktarda bir güç yeterlidir."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1787
+#: ../src/gpm-manager.c:1601
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr "Pil gücü tehlikeli seviyenin altında ve bu bilgisayar uyku kipine geçmek üzere."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1792
+#: ../src/gpm-manager.c:1606
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr "Pil gücü tehlikeli seviyenin altında ve bu bilgisayar kapatılmak üzere."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1812
+#: ../src/gpm-manager.c:1623
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
 msgstr "UPS tehlikeli seviyenin altında ve bu bilgisayar UPS tamamen boşaldığında <b>kapanacak</b>."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1818
+#: ../src/gpm-manager.c:1629
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr "UPS tehlikeli seviyenin altında ve bu bilgisayar uyku kipine geçmek üzere."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1823
+#: ../src/gpm-manager.c:1634
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr "UPS tehlikeli seviyenin altında ve bu bilgisayar kapatılmak üzere."
-
-#. TRANSLATORS: there was in install problem
-#: ../src/gpm-manager.c:1961
-msgid "Install problem!"
-msgstr "Kurulum problemi !"
-
-#. TRANSLATORS: the MateConf schema was not installed properly
-#: ../src/gpm-manager.c:1963
-msgid ""
-"The configuration defaults for MATE Power Manager have not been installed correctly.\n"
-"Please contact your computer administrator."
-msgstr "MATE Güç Yöneticisi için öntanımlı yapılandırma düzgün olarak kurulu değil.\nLütfen bilgisayar yöneticisi ile bağlantıya geçin."
 
 #: ../src/gpm-prefs.c:94
 msgid "MATE Power Preferences"
 msgstr "MATE Güç Tercihleri"
 
-#: ../src/gpm-prefs-core.c:364 ../src/gpm-prefs-core.c:367
+#: ../src/gpm-prefs-core.c:241
 msgid "Shutdown"
 msgstr "Kapat"
 
-#: ../src/gpm-prefs-core.c:376 ../src/gpm-prefs-core.c:379
+#: ../src/gpm-prefs-core.c:248
 msgid "Suspend"
 msgstr "Askıya al"
 
-#: ../src/gpm-prefs-core.c:384 ../src/gpm-prefs-core.c:387
+#: ../src/gpm-prefs-core.c:251
 msgid "Hibernate"
 msgstr "Uyku kipi"
 
-#: ../src/gpm-prefs-core.c:392 ../src/gpm-prefs-core.c:395
+#: ../src/gpm-prefs-core.c:254
 msgid "Blank screen"
 msgstr "Boş ekran"
 
-#: ../src/gpm-prefs-core.c:400 ../src/gpm-prefs-core.c:403
+#: ../src/gpm-prefs-core.c:257
 msgid "Ask me"
 msgstr "Bana sor"
 
-#: ../src/gpm-prefs-core.c:410 ../src/gpm-prefs-core.c:413
+#: ../src/gpm-prefs-core.c:260
 msgid "Do nothing"
 msgstr "Hiçbir şey yapma"
 
-#: ../src/gpm-prefs-core.c:483 ../src/gpm-prefs-core.c:485
+#: ../src/gpm-prefs-core.c:320
 msgid "Never"
 msgstr "Asla"
 
 #. TRANSLATORS: the rate of discharge for the device
-#: ../src/gpm-statistics.c:80 ../src/gpm-statistics.c:468
+#: ../src/gpm-statistics.c:79 ../src/gpm-statistics.c:467
 msgid "Rate"
 msgstr "Oran"
 
-#: ../src/gpm-statistics.c:81
+#: ../src/gpm-statistics.c:80
 msgid "Charge"
 msgstr "Şarj"
 
-#: ../src/gpm-statistics.c:82 ../src/gpm-statistics.c:482
+#: ../src/gpm-statistics.c:81 ../src/gpm-statistics.c:481
 msgid "Time to full"
 msgstr "Dolma zamanı"
 
-#: ../src/gpm-statistics.c:83 ../src/gpm-statistics.c:487
+#: ../src/gpm-statistics.c:82 ../src/gpm-statistics.c:486
 msgid "Time to empty"
 msgstr "Boşalma zamanı"
 
-#: ../src/gpm-statistics.c:90
+#: ../src/gpm-statistics.c:89
 msgid "10 minutes"
 msgstr "10 dakika"
 
-#: ../src/gpm-statistics.c:91
+#: ../src/gpm-statistics.c:90
 msgid "2 hours"
 msgstr "2 saat"
 
-#: ../src/gpm-statistics.c:92
+#: ../src/gpm-statistics.c:91
 msgid "6 hours"
 msgstr "6 saat"
 
-#: ../src/gpm-statistics.c:93
+#: ../src/gpm-statistics.c:92
 msgid "1 day"
 msgstr "1 gün"
 
-#: ../src/gpm-statistics.c:94
+#: ../src/gpm-statistics.c:93
 msgid "1 week"
 msgstr "1 hafta"
 
 #. TRANSLATORS: what we've observed about the device
-#: ../src/gpm-statistics.c:103
+#: ../src/gpm-statistics.c:102
 msgid "Charge profile"
 msgstr "Dolum profili"
 
-#: ../src/gpm-statistics.c:104
+#: ../src/gpm-statistics.c:103
 msgid "Discharge profile"
 msgstr "Boşalma profili"
 
 #. TRANSLATORS: how accurately we can predict the time remaining of the
 #. battery
-#: ../src/gpm-statistics.c:106
+#: ../src/gpm-statistics.c:105
 msgid "Charge accuracy"
 msgstr "Dolum doğruluğu"
 
-#: ../src/gpm-statistics.c:107
+#: ../src/gpm-statistics.c:106
 msgid "Discharge accuracy"
 msgstr "Boşalma doğruluğu"
 
-#: ../src/gpm-statistics.c:134
+#: ../src/gpm-statistics.c:133
 msgid "Attribute"
 msgstr "Öznitelik"
 
-#: ../src/gpm-statistics.c:141
+#: ../src/gpm-statistics.c:140
 msgid "Value"
 msgstr "Değer"
 
-#: ../src/gpm-statistics.c:158
+#: ../src/gpm-statistics.c:157
 msgid "Image"
 msgstr "Resim"
 
-#: ../src/gpm-statistics.c:164
+#: ../src/gpm-statistics.c:163
 msgid "Description"
 msgstr "Tanım"
 
-#: ../src/gpm-statistics.c:183 ../src/gpm-statistics.c:407
+#: ../src/gpm-statistics.c:182 ../src/gpm-statistics.c:406
 msgid "Type"
 msgstr "Tür"
 
-#: ../src/gpm-statistics.c:189
+#: ../src/gpm-statistics.c:188
 msgid "ID"
 msgstr "ID"
 
-#: ../src/gpm-statistics.c:203
+#: ../src/gpm-statistics.c:202
 msgid "Command"
 msgstr "Komut"
 
 #. TRANSLATORS: this is when the stats time is not known
-#: ../src/gpm-statistics.c:288
+#: ../src/gpm-statistics.c:287
 msgid "Unknown"
 msgstr "Bilinmiyor"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:292
+#: ../src/gpm-statistics.c:291
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
 msgstr[0] "%.0f saniye"
+msgstr[1] "%.0f saniye"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:297
+#: ../src/gpm-statistics.c:296
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
 msgstr[0] "%.1f dakika"
+msgstr[1] "%.1f dakika"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:302
+#: ../src/gpm-statistics.c:301
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
 msgstr[0] "%.1f saat"
+msgstr[1] "%.1f saat"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:306
+#: ../src/gpm-statistics.c:305
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
 msgstr[0] "%.1f gün"
+msgstr[1] "%.1f gün"
 
-#: ../src/gpm-statistics.c:315
+#: ../src/gpm-statistics.c:314
 msgid "Yes"
 msgstr "Evet"
 
-#: ../src/gpm-statistics.c:315
+#: ../src/gpm-statistics.c:314
 msgid "No"
 msgstr "Hayır"
 
 #. TRANSLATORS: the device ID of the current device, e.g. "battery0"
-#: ../src/gpm-statistics.c:404
+#: ../src/gpm-statistics.c:403
 msgid "Device"
 msgstr "Aygıt"
 
-#: ../src/gpm-statistics.c:409
+#: ../src/gpm-statistics.c:408
 msgid "Vendor"
 msgstr "Üretici"
 
-#: ../src/gpm-statistics.c:411
+#: ../src/gpm-statistics.c:410
 msgid "Model"
 msgstr "Model"
 
-#: ../src/gpm-statistics.c:413
+#: ../src/gpm-statistics.c:412
 msgid "Serial number"
 msgstr "Seri numarası"
 
@@ -1717,138 +1694,139 @@ msgstr "Seri numarası"
 #. * main power for the computer. For instance, an AC adapter or laptop
 #. battery
 #. * would be TRUE,  but a mobile phone or mouse taking power is FALSE
-#: ../src/gpm-statistics.c:418
+#: ../src/gpm-statistics.c:417
 msgid "Supply"
 msgstr "Kaynak"
 
-#: ../src/gpm-statistics.c:421
+#: ../src/gpm-statistics.c:420
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d saniye"
+msgstr[1] "%d saniye"
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
-#: ../src/gpm-statistics.c:425
+#: ../src/gpm-statistics.c:424
 msgid "Refreshed"
 msgstr "Tazelendi"
 
 #. TRANSLATORS: Present is whether the device is currently attached
 #. * to the computer, as some devices (e.g. laptop batteries) can
 #. * be removed, but still observed as devices on the system
-#: ../src/gpm-statistics.c:435
+#: ../src/gpm-statistics.c:434
 msgid "Present"
 msgstr "Mevcut"
 
 #. TRANSLATORS: If the device can be recharged, e.g. lithium
 #. * batteries rather than alkaline ones
-#: ../src/gpm-statistics.c:442
+#: ../src/gpm-statistics.c:441
 msgid "Rechargeable"
 msgstr "Şarj edilebilir"
 
 #. TRANSLATORS: The state of the device, e.g. "Changing" or "Fully charged"
-#: ../src/gpm-statistics.c:448
+#: ../src/gpm-statistics.c:447
 msgid "State"
 msgstr "Durum"
 
-#: ../src/gpm-statistics.c:452
+#: ../src/gpm-statistics.c:451
 msgid "Energy"
 msgstr "Enerji"
 
-#: ../src/gpm-statistics.c:455
+#: ../src/gpm-statistics.c:454
 msgid "Energy when empty"
 msgstr "Boş enerjisi"
 
-#: ../src/gpm-statistics.c:458
+#: ../src/gpm-statistics.c:457
 msgid "Energy when full"
 msgstr "Dolu Enerjisi"
 
-#: ../src/gpm-statistics.c:461
+#: ../src/gpm-statistics.c:460
 msgid "Energy (design)"
 msgstr "Enerji (tasarım)"
 
-#: ../src/gpm-statistics.c:475
+#: ../src/gpm-statistics.c:474
 msgid "Voltage"
 msgstr "Gerilim"
 
 #. TRANSLATORS: the amount of charge the cell contains
-#: ../src/gpm-statistics.c:497
+#: ../src/gpm-statistics.c:496
 msgid "Percentage"
 msgstr "Yüzde"
 
 #. TRANSLATORS: the capacity of the device, which is basically a measure
 #. * of how full it can get, relative to the design capacity
-#: ../src/gpm-statistics.c:504
+#: ../src/gpm-statistics.c:503
 msgid "Capacity"
 msgstr "Kapasite"
 
 #. TRANSLATORS: the type of battery, e.g. lithium or nikel metal hydroxide
-#: ../src/gpm-statistics.c:509
+#: ../src/gpm-statistics.c:508
 msgid "Technology"
 msgstr "Teknoloji"
 
 #. TRANSLATORS: this is when the device is plugged in, typically
 #. * only shown for the ac adaptor device
-#: ../src/gpm-statistics.c:514
+#: ../src/gpm-statistics.c:513
 msgid "Online"
-msgstr "Çevirimiçi"
+msgstr "Çevrimiçi"
 
 #. TRANSLATORS: the command line was not provided
-#: ../src/gpm-statistics.c:826
+#: ../src/gpm-statistics.c:825
 msgid "No data"
 msgstr "Veri yok"
 
 #. TRANSLATORS: kernel module, usually a device driver
-#: ../src/gpm-statistics.c:833 ../src/gpm-statistics.c:838
+#: ../src/gpm-statistics.c:832 ../src/gpm-statistics.c:837
 msgid "Kernel module"
 msgstr "Çekirdek modülü"
 
 #. TRANSLATORS: kernel housekeeping
-#: ../src/gpm-statistics.c:843
+#: ../src/gpm-statistics.c:842
 msgid "Kernel core"
 msgstr "Çekirdek temeli"
 
 #. TRANSLATORS: interrupt between processors
-#: ../src/gpm-statistics.c:848
+#: ../src/gpm-statistics.c:847
 msgid "Interprocessor interrupt"
 msgstr "İşlemci arası kesme"
 
 #. TRANSLATORS: unknown interrupt
-#: ../src/gpm-statistics.c:853
+#: ../src/gpm-statistics.c:852
 msgid "Interrupt"
 msgstr "Kesme"
 
 #. TRANSLATORS: the keyboard and mouse device event
-#: ../src/gpm-statistics.c:900
+#: ../src/gpm-statistics.c:899
 msgid "PS/2 keyboard/mouse/touchpad"
 msgstr "PS/2 klavye/fare/touchpad"
 
 #. TRANSLATORS: ACPI, the Intel power standard on laptops and desktops
-#: ../src/gpm-statistics.c:903
+#: ../src/gpm-statistics.c:902
 msgid "ACPI"
 msgstr "ACPI"
 
 #. TRANSLATORS: serial ATA is a new style of hard disk interface
-#: ../src/gpm-statistics.c:906
+#: ../src/gpm-statistics.c:905
 msgid "Serial ATA"
 msgstr "Seri ATA"
 
 #. TRANSLATORS: this is the old-style ATA interface
-#: ../src/gpm-statistics.c:909
+#: ../src/gpm-statistics.c:908
 msgid "ATA host controller"
 msgstr "ATA host controller"
 
 #. TRANSLATORS: 802.11 wireless adaptor
-#: ../src/gpm-statistics.c:912
+#: ../src/gpm-statistics.c:911
 msgid "Intel wireless adaptor"
 msgstr "Intel kablosuz adaptör"
 
 #. TRANSLATORS: a timer is something that fires periodically.
 #. * The parameter is a process name, e.g. "firefox-bin".
 #. * This is shown when the timer wakes up.
-#: ../src/gpm-statistics.c:919 ../src/gpm-statistics.c:924
-#: ../src/gpm-statistics.c:929 ../src/gpm-statistics.c:934
-#: ../src/gpm-statistics.c:939
+#: ../src/gpm-statistics.c:918 ../src/gpm-statistics.c:923
+#: ../src/gpm-statistics.c:928 ../src/gpm-statistics.c:933
+#: ../src/gpm-statistics.c:938
 #, c-format
 msgid "Timer %s"
 msgstr "Zamanlayıcı %s"
@@ -1856,125 +1834,136 @@ msgstr "Zamanlayıcı %s"
 #. TRANSLATORS: the parameter is the name of task that's woken up from
 #. sleeping.
 #. * This is shown when the task wakes up.
-#: ../src/gpm-statistics.c:943
+#: ../src/gpm-statistics.c:942
 #, c-format
 msgid "Sleep %s"
 msgstr "Uyku %s"
 
 #. TRANSLATORS: this is the name of a new realtime task.
-#: ../src/gpm-statistics.c:946
+#: ../src/gpm-statistics.c:945
 #, c-format
 msgid "New task %s"
 msgstr "Yeni görev %s"
 
 #. TRANSLATORS: this is the name of a task that's woken to check state.
 #. * This is shown when the task wakes up.
-#: ../src/gpm-statistics.c:950
+#: ../src/gpm-statistics.c:949
 #, c-format
 msgid "Wait %s"
 msgstr "Bekleme %s"
 
 #. TRANSLATORS: this is the name of a work queue.
 #. * A work queue is a list of work that has to be done.
-#: ../src/gpm-statistics.c:954 ../src/gpm-statistics.c:958
+#: ../src/gpm-statistics.c:953 ../src/gpm-statistics.c:957
 #, c-format
 msgid "Work queue %s"
 msgstr "Bekleme sırası %s"
 
 #. TRANSLATORS: this is when the networking subsystem clears out old entries
-#: ../src/gpm-statistics.c:961
+#: ../src/gpm-statistics.c:960
 #, c-format
 msgid "Network route flush %s"
 msgstr "Ağ yönlenme temizliği %s"
 
 #. TRANSLATORS: this is the name of an activity on the USB bus
-#: ../src/gpm-statistics.c:964
+#: ../src/gpm-statistics.c:963
 #, c-format
 msgid "USB activity %s"
 msgstr "USB etkinliği %s"
 
 #. TRANSLATORS: we've timed out of an aligned timer, with the name
-#: ../src/gpm-statistics.c:967
+#: ../src/gpm-statistics.c:966
 #, c-format
 msgid "Wakeup %s"
 msgstr "Uyanma %s"
 
 #. TRANSLATORS: interupts on the system required for basic operation
-#: ../src/gpm-statistics.c:970
+#: ../src/gpm-statistics.c:969
 msgid "Local interrupts"
 msgstr "Yerel kesmeler"
 
 #. TRANSLATORS: interrupts when a task gets moved from one core to another
-#: ../src/gpm-statistics.c:973
+#: ../src/gpm-statistics.c:972
 msgid "Rescheduling interrupts"
 msgstr "Kesmeleri erteleme"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1082
+#: ../src/gpm-statistics.c:1081
 msgid "Device Information"
 msgstr "Aygıt Bilgisi"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1084
+#: ../src/gpm-statistics.c:1083
 msgid "Device History"
 msgstr "Aygıt Geçmişi"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1086
+#: ../src/gpm-statistics.c:1085
 msgid "Device Profile"
 msgstr "Aygıt Profili"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1088
+#: ../src/gpm-statistics.c:1087
 msgid "Processor Wakeups"
 msgstr "Kesmeleri Erteleme"
 
 #. TRANSLATORS: this is the X axis on the graph
-#: ../src/gpm-statistics.c:1298 ../src/gpm-statistics.c:1304
-#: ../src/gpm-statistics.c:1310 ../src/gpm-statistics.c:1316
+#: ../src/gpm-statistics.c:1347 ../src/gpm-statistics.c:1353
+#: ../src/gpm-statistics.c:1359 ../src/gpm-statistics.c:1365
 msgid "Time elapsed"
 msgstr "Geçen süre"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1300
+#: ../src/gpm-statistics.c:1349
 msgid "Power"
 msgstr "Güç"
 
 #. TRANSLATORS: this is the Y axis on the graph for the whole battery device
 #. TRANSLATORS: this is the X axis on the graph for the whole battery device
-#: ../src/gpm-statistics.c:1306 ../src/gpm-statistics.c:1353
-#: ../src/gpm-statistics.c:1359 ../src/gpm-statistics.c:1365
-#: ../src/gpm-statistics.c:1371
+#: ../src/gpm-statistics.c:1355 ../src/gpm-statistics.c:1399
+#: ../src/gpm-statistics.c:1405 ../src/gpm-statistics.c:1411
+#: ../src/gpm-statistics.c:1417
 msgid "Cell charge"
 msgstr "Hücre doluluğu"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1312 ../src/gpm-statistics.c:1318
+#: ../src/gpm-statistics.c:1361 ../src/gpm-statistics.c:1367
 msgid "Predicted time"
 msgstr "Tahmini süre"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1355 ../src/gpm-statistics.c:1367
+#: ../src/gpm-statistics.c:1401 ../src/gpm-statistics.c:1413
 msgid "Correction factor"
 msgstr "Düzeltme çarpanı"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1361 ../src/gpm-statistics.c:1373
+#: ../src/gpm-statistics.c:1407 ../src/gpm-statistics.c:1419
 msgid "Prediction accuracy"
 msgstr "Tahmin doğruluğu"
 
 #. TRANSLATORS: show a device by default
-#: ../src/gpm-statistics.c:1562
+#: ../src/gpm-statistics.c:1584
 msgid "Select this device at startup"
 msgstr "Başlangıçta bu cihazı seç"
 
 #. TRANSLATORS: the icon for the CPU
-#: ../src/gpm-statistics.c:1832
+#: ../src/gpm-statistics.c:1839
 msgid "Processor"
 msgstr "İşlemci"
 
+#: ../src/gpm-tray-icon.c:189
+msgid "Copyright © 2011-2014 MATE developers"
+msgstr "Telif Hakkı © 2011-2014 MATE geliştiricileri"
+
+#. Translators should localize the following string
+#. * which will be displayed at the bottom of the about
+#. * box to give credit to the translator(s).
+#: ../src/gpm-tray-icon.c:195
+msgid "translator-credits"
+msgstr "Çevirmenler"
+
 #. preferences
-#: ../src/gpm-tray-icon.c:297
+#: ../src/gpm-tray-icon.c:330
 msgid "_Preferences"
 msgstr "_Tercihler"
 
@@ -2057,17 +2046,17 @@ msgid "Missing"
 msgstr "Eksik"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:364 ../src/gpm-upower.c:645
+#: ../src/gpm-upower.c:364 ../src/gpm-upower.c:641
 msgid "Charged"
 msgstr "Pil Doldu"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:367 ../src/gpm-upower.c:633
+#: ../src/gpm-upower.c:367 ../src/gpm-upower.c:629
 msgid "Charging"
 msgstr "Doluyor"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:370 ../src/gpm-upower.c:637
+#: ../src/gpm-upower.c:370 ../src/gpm-upower.c:633
 msgid "Discharging"
 msgstr "Boşalıyor"
 
@@ -2149,123 +2138,129 @@ msgstr "Dolum hızı:"
 msgid "AC adapter"
 msgid_plural "AC adapters"
 msgstr[0] "AC adaptörü"
+msgstr[1] "AC adaptörü"
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/gpm-upower.c:482
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
 msgstr[0] "Dizüstü pili"
+msgstr[1] "Dizüstü pili"
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/gpm-upower.c:486
 msgid "UPS"
 msgid_plural "UPSs"
 msgstr[0] "UPS"
+msgstr[1] "UPS"
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/gpm-upower.c:490
 msgid "Monitor"
 msgid_plural "Monitors"
 msgstr[0] "Ekran"
+msgstr[1] "Ekran"
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/gpm-upower.c:494
 msgid "Mouse"
 msgid_plural "Mice"
 msgstr[0] "Fare"
+msgstr[1] "Fare"
 
 #. TRANSLATORS: wireless keyboard with internal battery
 #: ../src/gpm-upower.c:498
 msgid "Keyboard"
 msgid_plural "Keyboards"
 msgstr[0] "Klavye"
+msgstr[1] "Klavye"
 
 #. TRANSLATORS: portable device
 #: ../src/gpm-upower.c:502
 msgid "PDA"
 msgid_plural "PDAs"
 msgstr[0] "PDA"
+msgstr[1] "PDA"
 
 #. TRANSLATORS: cell phone (mobile...)
 #: ../src/gpm-upower.c:506
 msgid "Cell phone"
 msgid_plural "Cell phones"
 msgstr[0] "Cep telefonu"
+msgstr[1] "Cep telefonu"
 
 #. TRANSLATORS: media player, mp3 etc
-#: ../src/gpm-upower.c:511
+#: ../src/gpm-upower.c:510
 msgid "Media player"
 msgid_plural "Media players"
 msgstr[0] "Medya oynatıcı"
+msgstr[1] "Medya oynatıcı"
 
 #. TRANSLATORS: tablet device
-#: ../src/gpm-upower.c:515
+#: ../src/gpm-upower.c:514
 msgid "Tablet"
 msgid_plural "Tablets"
 msgstr[0] "Tablet"
+msgstr[1] "Tablet"
 
 #. TRANSLATORS: tablet device
-#: ../src/gpm-upower.c:519
+#: ../src/gpm-upower.c:518
 msgid "Computer"
 msgid_plural "Computers"
 msgstr[0] "Bilgisayar"
+msgstr[1] "Bilgisayar"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:589
+#: ../src/gpm-upower.c:585
 msgid "Lithium Ion"
 msgstr "Lityum İyon"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:593
+#: ../src/gpm-upower.c:589
 msgid "Lithium Polymer"
 msgstr "Lityum Polimer"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:597
+#: ../src/gpm-upower.c:593
 msgid "Lithium Iron Phosphate"
 msgstr "Lityum Demir Fosfat"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:601
+#: ../src/gpm-upower.c:597
 msgid "Lead acid"
 msgstr "Kurşun asit"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:605
+#: ../src/gpm-upower.c:601
 msgid "Nickel Cadmium"
 msgstr "Nikel Kadmiyum"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:609
+#: ../src/gpm-upower.c:605
 msgid "Nickel metal hydride"
 msgstr "Nikel metal hidrit"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:613
+#: ../src/gpm-upower.c:609
 msgid "Unknown technology"
 msgstr "Bilinmeyen teknoloji"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:641
+#: ../src/gpm-upower.c:637
 msgid "Empty"
 msgstr "Boş"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:649
+#: ../src/gpm-upower.c:645
 msgid "Waiting to charge"
 msgstr "Şarj olmayı bekliyor"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:653
+#: ../src/gpm-upower.c:649
 msgid "Waiting to discharge"
 msgstr "Şarjın boşalmasını bekliyor"
 
-#: ../applets/brightness/MATE_BrightnessApplet.xml.h:1
-#: ../applets/inhibit/MATE_InhibitApplet.xml.h:1
-msgid "_About"
-msgstr "_Hakkında"
-
-#: ../applets/brightness/MATE_BrightnessApplet.xml.h:2
-#: ../applets/inhibit/MATE_InhibitApplet.xml.h:2
-msgid "_Help"
-msgstr "_Yardım"
+#. TRANSLATORS: battery state
+#: ../src/gpm-upower.c:653
+msgid "Unknown state"
+msgstr "Bİlinmeyen durum"

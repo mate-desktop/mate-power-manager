@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 13:07+0200\n"
-"PO-Revision-Date: 2015-11-02 17:03+0000\n"
+"PO-Revision-Date: 2015-11-12 14:05+0000\n"
 "Last-Translator: Siranush <ss.m.95@mail.ru>\n"
 "Language-Team: Armenian (http://www.transifex.com/mate/MATE/language/hy/)\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../applets/brightness/brightness-applet.c:115
 msgid "Power Manager Brightness Applet"
-msgstr ""
+msgstr "Հզորության Ղեկավարման Պայծառության Ենթածրագիր"
 
 #: ../applets/brightness/brightness-applet.c:116
 msgid "Adjusts laptop panel brightness."
@@ -33,7 +33,7 @@ msgstr "Հնարավոր չէ միացնել mate-հզորության-մենե�
 
 #: ../applets/brightness/brightness-applet.c:419
 msgid "Cannot get laptop panel brightness"
-msgstr ""
+msgstr "Հնարավոր չէ ստանալ դյուրակիր համակարգչի վահանակի պայծառությունը"
 
 #: ../applets/brightness/brightness-applet.c:421
 #, c-format
@@ -43,7 +43,7 @@ msgstr "LCD պայծառություն : %d%%"
 #: ../applets/brightness/brightness-applet.c:809
 #: ../applets/inhibit/inhibit-applet.c:478
 msgid "Licensed under the GNU General Public License Version 2"
-msgstr ""
+msgstr "Լիցենզավորված է ԳՆՈՒ Համընդհանուր Հանրային Արտոնագրի Տարբերակ 2֊ի տակ"
 
 #: ../applets/brightness/brightness-applet.c:810
 #: ../applets/inhibit/inhibit-applet.c:479
@@ -100,15 +100,15 @@ msgstr "Պայծառության Ապլետը"
 
 #: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:4
 msgid "Adjusts Laptop panel brightness"
-msgstr ""
+msgstr "Դյուրակիր Համակարգչի վահանակի պայծառության կարգաբերում"
 
 #: ../applets/inhibit/inhibit-applet.c:97
 msgid "Power Manager Inhibit Applet"
-msgstr ""
+msgstr "Հզորության Ղեկավարման Արգելափակման Ենթածրագիր"
 
 #: ../applets/inhibit/inhibit-applet.c:98
 msgid "Allows user to inhibit automatic power saving."
-msgstr ""
+msgstr "Թույլ է տալիս օգտագործողին արգելել ավտոմատ հզորության պահպանում:"
 
 #: ../applets/inhibit/inhibit-applet.c:412
 msgid "Automatic sleep inhibited"
@@ -132,7 +132,7 @@ msgstr "Արգելել Ապլետի Գործարանը"
 
 #: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:2
 msgid "Factory for Inhibit Applet"
-msgstr ""
+msgstr "Ենթածրագրի արգելափակման համար գործարան"
 
 #: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:3
 msgid "Inhibit Applet"
@@ -140,7 +140,7 @@ msgstr "Արգելակման Ապլետ"
 
 #: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:4
 msgid "Allows user to inhibit automatic power saving"
-msgstr ""
+msgstr "Թույլ է տալիս օգտագործողին արգելել ավտոմատ հզորության պահպանում։"
 
 #: ../data/mate-power-manager.desktop.in.in.h:1 ../src/gpm-tray-icon.c:186
 msgid "Power Manager"
@@ -190,15 +190,15 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:9
 msgid "UPS low power action"
-msgstr ""
+msgstr "Չընդհատվող լարման աղբյուրի ցածր հզորության գործողություն "
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:10
 msgid "The action to take when the UPS is low."
-msgstr ""
+msgstr "Գործողությունը տեղի է ունոնու, երբ չընդհատվող լարման աղբյուրը ցածր է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:11
 msgid "Allow backlight brightness adjustment"
-msgstr ""
+msgstr "Թույլ տալ լուսավորութան պայծառության ճշգրտում"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:12
 msgid ""
@@ -208,7 +208,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:13
 msgid "Reduce the backlight brightness when on battery power"
-msgstr ""
+msgstr "Կրճատել լուսավորության պայծառությունը, երբ մարտկոցը գործարկվում է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:14
 msgid ""
@@ -218,7 +218,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:15
 msgid "Reduce the keyboard backlight when on battery power"
-msgstr ""
+msgstr "Կրճատել ստեղնաշարի լուսավորությունը, երբ մարտկոցը գործարկվում է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:16
 msgid ""
@@ -238,7 +238,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:19
 msgid "Percent to reduce keyboard backlight by when on battery power."
-msgstr ""
+msgstr "Ստեղնաշարի լուսավորության տոկոսը նվազեցնել, երբ մարտկոցը գործարկվում է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:21
 #, no-c-format
@@ -250,7 +250,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
-msgstr ""
+msgstr "Ստեղնաշարի լուսավորության տոկոսը նվազեցնել, երբ անգործ է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:24
 #, no-c-format
@@ -262,7 +262,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:25
 msgid "The brightness of the screen when idle"
-msgstr ""
+msgstr "էկրանի պայծառությունը, երբ անգործ է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:26
 msgid ""
@@ -809,7 +809,7 @@ msgstr ""
 
 #: ../data/gpm-prefs.ui.h:1
 msgid "Power Management Preferences"
-msgstr ""
+msgstr "Հզորության Կառավարման Նախընտրանքներ"
 
 #: ../data/gpm-prefs.ui.h:2
 msgid "<b>Actions</b>"
@@ -821,7 +821,7 @@ msgstr ""
 
 #: ../data/gpm-prefs.ui.h:4
 msgid "When laptop lid is cl_osed:"
-msgstr ""
+msgstr "Երբ համակարգչի կափարիչը փակված է։"
 
 #: ../data/gpm-prefs.ui.h:5
 msgid "<b>Display</b>"
@@ -837,7 +837,7 @@ msgstr ""
 
 #: ../data/gpm-prefs.ui.h:8
 msgid "Di_m display when idle"
-msgstr ""
+msgstr "Աղ_ոտ ցուցադրել, երբ անգործ է"
 
 #: ../data/gpm-prefs.ui.h:9
 msgid "On AC Power"
@@ -845,35 +845,35 @@ msgstr ""
 
 #: ../data/gpm-prefs.ui.h:10
 msgid "When battery po_wer is critically low:"
-msgstr ""
+msgstr "Երբ մարտկոցի հզորությունը կրիտիկական ցածր է։"
 
 #: ../data/gpm-prefs.ui.h:11
 msgid "_Reduce backlight brightness"
-msgstr ""
+msgstr "_Կրճատել լուսավորության պայծառությունը"
 
 #: ../data/gpm-prefs.ui.h:12
 msgid "On Battery Power"
-msgstr ""
+msgstr "Մարտկոցի Հզորության վրա"
 
 #: ../data/gpm-prefs.ui.h:13
 msgid "When UPS power is l_ow:"
-msgstr ""
+msgstr "Երբ ՉԼԱ հզորությունը ց_ածր։"
 
 #: ../data/gpm-prefs.ui.h:14
 msgid "When UPS power is _critically low:"
-msgstr ""
+msgstr "Երբ ՉԼԱ հզորությունը  _կրիտրկական ցածր է։"
 
 #: ../data/gpm-prefs.ui.h:15
 msgid "On UPS Power"
-msgstr ""
+msgstr "Չընդհատվող լարման աղբյուրի հզորություն"
 
 #: ../data/gpm-prefs.ui.h:16
 msgid "When the power _button is pressed:"
-msgstr ""
+msgstr "Երբ հզորություն _կոճակը սեղմված է։ "
 
 #: ../data/gpm-prefs.ui.h:17
 msgid "When the _suspend button is pressed:"
-msgstr ""
+msgstr "Երբ  _կասեցնել կոճակը սեղմված է։ "
 
 #: ../data/gpm-prefs.ui.h:18
 msgid "<b>Notification Area</b>"
@@ -881,23 +881,23 @@ msgstr "<b>Ծանուցման Տարածք</b>"
 
 #: ../data/gpm-prefs.ui.h:19
 msgid "_Never display an icon"
-msgstr ""
+msgstr "_Երբեք ցույց չտալ պատկերանշանը"
 
 #: ../data/gpm-prefs.ui.h:20
 msgid "_Only display an icon when battery power is low"
-msgstr ""
+msgstr "_Միայն ցույց պատկերանշանը, երբ մարտկոցի հզորությունը ցածր է"
 
 #: ../data/gpm-prefs.ui.h:21
 msgid "Only display an icon when charging or _discharging"
-msgstr ""
+msgstr "Միայն ցուցադրել պատկերանշանը, երբ լիցքավորվում կամ _լիցքաթափվում է"
 
 #: ../data/gpm-prefs.ui.h:22
 msgid "Only display an icon when a battery is p_resent"
-msgstr ""
+msgstr "Միայն ցույց պատկերանշանը, երբ մարտկոցը ներկա է"
 
 #: ../data/gpm-prefs.ui.h:23
 msgid "_Always display an icon"
-msgstr ""
+msgstr "_Միշտ ցուցադրել պատկերանշանը"
 
 #: ../data/gpm-prefs.ui.h:24
 msgid "General"
@@ -905,7 +905,7 @@ msgstr "Ընդհանուր"
 
 #: ../data/gpm-prefs.ui.h:25
 msgid "Provides help about this program"
-msgstr ""
+msgstr "Ապահովում է օգնություն այս ծրագրի մասին "
 
 #: ../data/gpm-prefs.ui.h:26
 msgid "Make Default"
@@ -917,17 +917,17 @@ msgstr ""
 
 #: ../data/gpm-prefs.ui.h:28
 msgid "Closes the program"
-msgstr ""
+msgstr "Փակել ծրագիրը"
 
 #. command line argument
 #: ../src/gpm-backlight-helper.c:166
 msgid "Set the current brightness"
-msgstr ""
+msgstr "Սահմանել ներկայիս պայծառությունը"
 
 #. command line argument
 #: ../src/gpm-backlight-helper.c:169
 msgid "Get the current brightness"
-msgstr ""
+msgstr "Ստացեք ներկայիս պայծառությունը"
 
 #. command line argument
 #: ../src/gpm-backlight-helper.c:172
@@ -937,12 +937,12 @@ msgstr ""
 #. TRANSLATORS: tool that is used when copying profiles system-wide
 #: ../src/gpm-backlight-helper.c:184
 msgid "MATE Power Manager Backlight Helper"
-msgstr ""
+msgstr "MATE Հզորության Կառավարիչ Լուսավորման Օգնական"
 
 #. TRANSLATORS: user did not specify valid options
 #: ../src/gpm-backlight-helper.c:192
 msgid "No valid option was specified"
-msgstr ""
+msgstr "Ոչ հիմնավոր ընտրանքը տրված չէր"
 
 #. TRANSLATORS: no backlights found
 #: ../src/gpm-backlight-helper.c:201
@@ -952,12 +952,12 @@ msgstr ""
 #. TRANSLATORS: failed to access backlight file
 #: ../src/gpm-backlight-helper.c:212
 msgid "Could not get the value of the backlight"
-msgstr ""
+msgstr "Չհաջողվեց ստանալ լուսավորության արժեքը "
 
 #. TRANSLATORS: failed to access backlight file
 #: ../src/gpm-backlight-helper.c:230
 msgid "Could not get the maximum value of the backlight"
-msgstr ""
+msgstr "Չհաջողվեց ստանալ առավելագույն արժեքի լուսավորություն"
 
 #. TRANSLATORS: only able to install profiles as root
 #: ../src/gpm-backlight-helper.c:247
@@ -1100,22 +1100,22 @@ msgstr "Մարտկոցը շատ ցածր է"
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:273
 msgid "Power plugged in"
-msgstr ""
+msgstr "Միացված հզորություն"
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:277
 msgid "Power unplugged"
-msgstr ""
+msgstr "Հոսանքից չանջատված հզորություն"
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:281
 msgid "Lid has opened"
-msgstr ""
+msgstr "Կափարիչը բացվել է"
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:285
 msgid "Lid has closed"
-msgstr ""
+msgstr "Կափարիչը փակվել է"
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:289
@@ -1130,7 +1130,7 @@ msgstr "Մարտկոցը լիքն է"
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:301
 msgid "Suspend started"
-msgstr ""
+msgstr "Կասեցումը սկսվել է"
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:305
@@ -1140,17 +1140,17 @@ msgstr "Վերսկսեց"
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:309
 msgid "Suspend failed"
-msgstr ""
+msgstr "Կասեցումը ձախողվել է"
 
 #. TRANSLATORS: message text
 #: ../src/gpm-manager.c:579
 msgid "Computer failed to suspend."
-msgstr ""
+msgstr "Համակարգիչ չկարողացավ կասեցնել։"
 
 #. TRANSLATORS: title text
 #: ../src/gpm-manager.c:581
 msgid "Failed to suspend"
-msgstr ""
+msgstr "Չհաջողվեց կասեցնել"
 
 #. TRANSLATORS: message text
 #: ../src/gpm-manager.c:585
@@ -1180,7 +1180,7 @@ msgstr ""
 #. TRANSLATORS: this is the mate-screensaver throttle
 #: ../src/gpm-manager.c:870
 msgid "On battery power"
-msgstr ""
+msgstr "Մարտկոցի հզորության վրա"
 
 #: ../src/gpm-manager.c:888
 msgid "Laptop lid is closed"
@@ -1234,7 +1234,7 @@ msgstr "%s լիցքաթափում  (%.0f%%)"
 #. TRANSLATORS: UPS is now discharging
 #: ../src/gpm-manager.c:1223
 msgid "UPS Discharging"
-msgstr ""
+msgstr "ՉԼԱ Լիցքաթափում"
 
 #. TRANSLATORS: tell the user how much time they have got
 #: ../src/gpm-manager.c:1227
@@ -1250,7 +1250,7 @@ msgstr "Մարտկոցը ցածր է"
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
 #: ../src/gpm-manager.c:1314
 msgid "Laptop battery low"
-msgstr ""
+msgstr "Պլանշետի մարտկոցը ցածր է"
 
 #. TRANSLATORS: tell the user how much time they have got
 #: ../src/gpm-manager.c:1320
@@ -1261,7 +1261,7 @@ msgstr ""
 #. TRANSLATORS: UPS is starting to get a little low
 #: ../src/gpm-manager.c:1324
 msgid "UPS low"
-msgstr ""
+msgstr "Չընդհատվող լարման աղբյուրը ցածր է"
 
 #. TRANSLATORS: tell the user how much time they have got
 #: ../src/gpm-manager.c:1328
@@ -1273,37 +1273,37 @@ msgstr ""
 #. TRANSLATORS: the mouse battery is very low
 #: ../src/gpm-manager.c:1332 ../src/gpm-manager.c:1466
 msgid "Mouse battery low"
-msgstr ""
+msgstr "Մկնիկի մարտկոցը ցածր է"
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1335
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
-msgstr ""
+msgstr "Անլար մկնիկի հղորությունը ցածր է (%.0f%%)"
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
 #: ../src/gpm-manager.c:1339 ../src/gpm-manager.c:1474
 msgid "Keyboard battery low"
-msgstr ""
+msgstr "Ստեղնաշարի մարտկոցը ցածր է"
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1342
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
-msgstr ""
+msgstr "Անլար ստեղնաշարի հզորությունը ցածր է (%.0f%%)"
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
 #: ../src/gpm-manager.c:1346 ../src/gpm-manager.c:1483
 msgid "PDA battery low"
-msgstr ""
+msgstr "PDA մարտկոցը ցածր է"
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1349
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
-msgstr ""
+msgstr "PDA հզորույունը ցածր է (%.0f%%)"
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
@@ -1316,36 +1316,36 @@ msgstr "Բջջային հեռախոսի մարտկոցը ցածր է"
 #: ../src/gpm-manager.c:1356
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
-msgstr ""
+msgstr "Բջջային հեռախոսի հղորությունը ցածր է (%.0f%%)"
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
 #: ../src/gpm-manager.c:1360
 msgid "Media player battery low"
-msgstr ""
+msgstr "Մեդիա նվագարկիչի մարտկոցը ցածր է"
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1363
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
-msgstr ""
+msgstr "Մեդիա նվագարկիչի հզորությունը ցածր է (%.0f%%)"
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
 #: ../src/gpm-manager.c:1367 ../src/gpm-manager.c:1512
 msgid "Tablet battery low"
-msgstr ""
+msgstr "Պլանշետի մարտկոցը ցածր է"
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1370
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
-msgstr ""
+msgstr "Պլանշետ հզորությունը ցածր է (%.0f%%)"
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
 #: ../src/gpm-manager.c:1374 ../src/gpm-manager.c:1521
 msgid "Attached computer battery low"
-msgstr ""
+msgstr "Կցված համակարգչային մարտկոցը ցածր է"
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1377
@@ -1357,14 +1357,14 @@ msgstr ""
 #. battery
 #: ../src/gpm-manager.c:1425
 msgid "Battery critically low"
-msgstr ""
+msgstr "Մարտկոցը կրիտիկական ցածր է"
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
 #: ../src/gpm-manager.c:1428 ../src/gpm-manager.c:1580
 msgid "Laptop battery critically low"
-msgstr ""
+msgstr "Կրիտիկական ցածր դյուրակիր համակագչի մարտկոց"
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
@@ -1394,7 +1394,7 @@ msgstr ""
 #. TRANSLATORS: UPS is really, really, low
 #: ../src/gpm-manager.c:1456 ../src/gpm-manager.c:1615
 msgid "UPS critically low"
-msgstr ""
+msgstr "Չըդհատվող լարման աղբյուրը կրիտիկական ցածր է"
 
 #. TRANSLATORS: give the user a ultimatum
 #: ../src/gpm-manager.c:1460
@@ -1551,11 +1551,11 @@ msgstr "Լիցքավորել"
 
 #: ../src/gpm-statistics.c:81 ../src/gpm-statistics.c:481
 msgid "Time to full"
-msgstr ""
+msgstr "Լցնելու ժամանակ"
 
 #: ../src/gpm-statistics.c:82 ../src/gpm-statistics.c:486
 msgid "Time to empty"
-msgstr ""
+msgstr "Դատարկելու ժամանակ"
 
 #: ../src/gpm-statistics.c:89
 msgid "10 minutes"
@@ -1580,11 +1580,11 @@ msgstr "1 շաբաթ"
 #. TRANSLATORS: what we've observed about the device
 #: ../src/gpm-statistics.c:102
 msgid "Charge profile"
-msgstr ""
+msgstr "Լիցքավորել պրոֆիլ"
 
 #: ../src/gpm-statistics.c:103
 msgid "Discharge profile"
-msgstr ""
+msgstr "Լիցքաթափել պրոֆիլ"
 
 #. TRANSLATORS: how accurately we can predict the time remaining of the
 #. battery
@@ -1785,7 +1785,7 @@ msgstr "Միջուկի էությունը"
 #. TRANSLATORS: interrupt between processors
 #: ../src/gpm-statistics.c:847
 msgid "Interprocessor interrupt"
-msgstr ""
+msgstr "Ինտերպրոցեսորի ընդհատում"
 
 #. TRANSLATORS: unknown interrupt
 #: ../src/gpm-statistics.c:852
@@ -1795,7 +1795,7 @@ msgstr "Ընդհատել"
 #. TRANSLATORS: the keyboard and mouse device event
 #: ../src/gpm-statistics.c:899
 msgid "PS/2 keyboard/mouse/touchpad"
-msgstr ""
+msgstr " PS/2 ստեղնաշար/մկնիկ/դյուրակիր համակագիչ"
 
 #. TRANSLATORS: ACPI, the Intel power standard on laptops and desktops
 #: ../src/gpm-statistics.c:902
@@ -1805,7 +1805,7 @@ msgstr "ACPI"
 #. TRANSLATORS: serial ATA is a new style of hard disk interface
 #: ../src/gpm-statistics.c:905
 msgid "Serial ATA"
-msgstr ""
+msgstr "Սերիական ԱՏԱ"
 
 #. TRANSLATORS: this is the old-style ATA interface
 #: ../src/gpm-statistics.c:908
@@ -1859,7 +1859,7 @@ msgstr "Աշխատանքային հերթ %s"
 #: ../src/gpm-statistics.c:960
 #, c-format
 msgid "Network route flush %s"
-msgstr ""
+msgstr "Ցանցի երթուղին լցվել է %s"
 
 #. TRANSLATORS: this is the name of an activity on the USB bus
 #: ../src/gpm-statistics.c:963
@@ -1940,7 +1940,7 @@ msgstr "Ճշտության Կանխատեսում"
 #. TRANSLATORS: show a device by default
 #: ../src/gpm-statistics.c:1584
 msgid "Select this device at startup"
-msgstr ""
+msgstr "Ընտրիր այս սարքի մեկնարկի ժամանակը"
 
 #. TRANSLATORS: the icon for the CPU
 #: ../src/gpm-statistics.c:1839
@@ -1988,7 +1988,7 @@ msgstr "%s ամբողջովին լրցքավորված է"
 #: ../src/gpm-upower.c:249
 #, c-format
 msgid "%s %s remaining (%.1f%%)"
-msgstr ""
+msgstr "%s %s մնում է (%.1f%%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
 #: ../src/gpm-upower.c:254
@@ -2015,7 +2015,7 @@ msgstr " %s %s մինչ լիցքավորվելը (%.1f%%)"
 #: ../src/gpm-upower.c:292
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
-msgstr ""
+msgstr "լ%s իցքաթափման սպասում (%.1f%%)"
 
 #. TRANSLATORS: this is only shown for laptops with multiple batteries
 #: ../src/gpm-upower.c:298
@@ -2127,7 +2127,7 @@ msgstr "Լիցքավորման դիզայն։"
 
 #: ../src/gpm-upower.c:443
 msgid "Charge rate:"
-msgstr ""
+msgstr "Լիցքավորմանմակարդակը։"
 
 #. TRANSLATORS: system power cord
 #: ../src/gpm-upower.c:478
@@ -2189,15 +2189,15 @@ msgstr[1] "Բջջային հեռախոսներ"
 #: ../src/gpm-upower.c:510
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Միջավայրի նվագակրչ"
+msgstr[1] "Միջավայրի նվագակրչներ"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:514
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Պլանշետ"
+msgstr[1] "Պլանշետներ"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:518
