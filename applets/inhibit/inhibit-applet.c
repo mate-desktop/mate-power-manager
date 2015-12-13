@@ -165,37 +165,6 @@ gpm_applet_uninhibit (GpmInhibitApplet *applet,
 
 	return ret;
 }
-#if 0
-static gboolean
-gpm_applet_has_inhibit (GpmInhibitApplet *applet,
-			gboolean        *has_inhibit)
-{
-	GError  *error = NULL;
-	gboolean ret;
-	DBusGProxy *proxy;
-
-	proxy = egg_dbus_proxy_get_proxy (applet->gproxy);
-	if (proxy == NULL) {
-		g_warning ("not connected");
-		return FALSE;
-	}
-
-	ret = dbus_g_proxy_call (proxy, "HasInhibit", &error,
-				 G_TYPE_INVALID,
-				 G_TYPE_BOOLEAN, has_inhibit,
-				 G_TYPE_INVALID);
-	if (error) {
-		g_debug ("ERROR: %s", error->message);
-		g_error_free (error);
-	}
-	if (!ret) {
-		/* abort as the DBUS method failed */
-		g_warning ("HasInhibit failed!");
-	}
-
-	return ret;
-}
-#endif
 
 /**
  * gpm_applet_get_icon:
