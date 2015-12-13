@@ -76,6 +76,10 @@ typedef struct{
 GType                gpm_brightness_applet_get_type  (void);
 
 
+#define	GPM_DBUS_SERVICE		        "org.mate.PowerManager"
+#define	GPM_DBUS_PATH_BACKLIGHT		    "/org/mate/PowerManager/Backlight"
+#define	GPM_DBUS_INTERFACE_BACKLIGHT	"org.mate.PowerManager.Backlight"
+
 static void      gpm_brightness_applet_class_init (GpmBrightnessAppletClass *klass);
 static void      gpm_brightness_applet_init       (GpmBrightnessApplet *applet);
 
@@ -928,7 +932,7 @@ gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 	mate_about_dialog_set_translator_credits (about, translator_credits);
 	mate_about_dialog_set_logo (about, logo);
 	mate_about_dialog_set_license (about, license_trans);
-	mate_about_dialog_set_website (about, GPM_HOMEPAGE_URL);
+	mate_about_dialog_set_website (about, "http://www.mate-desktop.org/");
 
 	g_signal_connect (G_OBJECT(about), "response",
 			  G_CALLBACK(gtk_widget_destroy), NULL);
