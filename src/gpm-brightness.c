@@ -846,7 +846,12 @@ gpm_brightness_update_cache (GpmBrightness *brightness)
 		}
 
 		root = RootWindow (brightness->priv->dpy, screen);
+
+		gdk_error_trap_push ();
 		resource = XRRGetScreenResourcesCurrent (brightness->priv->dpy, root);
+		if (gdk_error_trap_pop () || resource == NULL) {
+			egg_warning ("failed to XRRGetScreenResourcesCurrent");
+		}
 
 		if (resource != NULL) {
 			egg_debug ("adding resource %p", resource);
