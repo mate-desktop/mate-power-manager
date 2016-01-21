@@ -650,10 +650,18 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
 
 	/* slider */
 	if (MATE_PANEL_APPLET_VERTICAL(orientation)) {
+#if GTK_CHECK_VERSION (3, 0, 0)
+		applet->slider = gtk_scale_new_with_range (GTK_ORIENTATION_HORIZONTAL, 0, 100, 1);
+#else
 		applet->slider = gtk_hscale_new_with_range (0, 100, 1);
+#endif
 		gtk_widget_set_size_request (applet->slider, 100, -1);
 	} else {
+#if GTK_CHECK_VERSION (3, 0, 0)
+		applet->slider = gtk_scale_new_with_range (GTK_ORIENTATION_VERTICAL, 0, 100, 1);
+#else
 		applet->slider = gtk_vscale_new_with_range (0, 100, 1);
+#endif
 		gtk_widget_set_size_request (applet->slider, -1, 100);
 	}
 	gtk_range_set_inverted (GTK_RANGE(applet->slider), TRUE);
@@ -675,9 +683,17 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
 
 	/* box */
 	if (MATE_PANEL_APPLET_VERTICAL(orientation)) {
+#if GTK_CHECK_VERSION (3, 0, 0)
+		box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 1);
+#else
 		box = gtk_hbox_new (FALSE, 1);
+#endif
 	} else {
+#if GTK_CHECK_VERSION (3, 0, 0)
+		box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 1);
+#else
 		box = gtk_vbox_new (FALSE, 1);
+#endif
 	}
 	gtk_box_pack_start (GTK_BOX(box), applet->btn_plus, FALSE, FALSE, 0);
 	gtk_box_pack_start (GTK_BOX(box), applet->slider, TRUE, TRUE, 0);
