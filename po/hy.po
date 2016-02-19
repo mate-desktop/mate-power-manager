@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Siranush <ss.m.95@mail.ru>, 2015
+# Siranush <ss.m.95@mail.ru>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 13:07+0200\n"
-"PO-Revision-Date: 2015-11-12 14:05+0000\n"
+"PO-Revision-Date: 2016-02-03 12:45+0000\n"
 "Last-Translator: Siranush <ss.m.95@mail.ru>\n"
 "Language-Team: Armenian (http://www.transifex.com/mate/MATE/language/hy/)\n"
 "MIME-Version: 1.0\n"
@@ -52,7 +52,7 @@ msgid ""
 "modify it under the terms of the GNU General Public License\n"
 "as published by the Free Software Foundation; either version 2\n"
 "of the License, or (at your option) any later version."
-msgstr ""
+msgstr "Հզորության Կառավարիչը ազատ ծրագրային ապահովում է, դուք կարող եք վերաբաշխել և/կամ\n ձևափոխել այն՝ համաձայն GNU Համընդհանուր Հանրային Արտոնագրի պայմանների\n ինչպես հրապարակվել է Ազատ Ծրագրային Ապահովության Հիմնադրամում\n կամ տարբերակ 2 լիցենզիայի, կամ (ձեր ընտրությամբ) ցանկացած ավելի ուշ տարբերակը։ "
 
 #: ../applets/brightness/brightness-applet.c:814
 #: ../applets/inhibit/inhibit-applet.c:483
@@ -61,7 +61,7 @@ msgid ""
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
 "GNU General Public License for more details."
-msgstr ""
+msgstr "Հզորության Կառավարիչը տարածվում է այն հույսով, որ օգտակար կլինի\n սակայն ԱՌԱՆՑ ՈՐԵՒԷ ԵՐԱՇԽԻՔՆԵՐԻ; բացակայում են նույնիսկ\nՎԱՃԱՌՔԻ ՀՆԱՐԱՎՈՐՈՒԹՅՈՒՆՆԵՐԸ, ԲԱՎԱՐԱՐ ՈՐԱԿԸ կամ ՈՐՈՇ ՆՊԱՏԱԿՈՎ ԿԻՐԱՌԵԼԻՈՒԹՅՈՒՆԸ։\n Մանրամասները տեսեք GNU համընդհանուր հանրային արտոնագրի մեջ։"
 
 #: ../applets/brightness/brightness-applet.c:818
 #: ../applets/inhibit/inhibit-applet.c:487
@@ -70,7 +70,7 @@ msgid ""
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
-msgstr ""
+msgstr "Դուք պետք է ընդունեք GNU համընդհանուր հանրային արտոնագրի պատճենը\n այս ծրագրի հետ համատեղ, եթե ոչ, ապա գրեք Ազատ Ծրագրային Ապահովման Հիմնադրամ,\n Inc., 51 Franklin փողոց, Հինգերորդ հարկ, Boston, MA\n02110-1301 USA"
 
 #: ../applets/brightness/brightness-applet.c:832
 msgid "Copyright © 2006 Benjamin Canou"
@@ -152,12 +152,12 @@ msgstr "Հզորության կառավարման օժանդակ ծրագիր"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:1
 msgid "Whether to hibernate, suspend or do nothing when inactive"
-msgstr ""
+msgstr "Արդյոք ձմեռել, կասեցնել կամ ոչինչ չանել, երբ պասիվ է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:2
 msgid ""
 "The type of sleeping that should be performed when the computer is inactive."
-msgstr ""
+msgstr "Քնելու տեսակը, որը պետք է իրականացվի այն ժամանակ, երբ համակարգիչը ակտիվ է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:3
 msgid "Battery critical low action"
@@ -165,20 +165,20 @@ msgstr "Մարտկոցի կրիտիկական ցածր գործողությու�
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:4
 msgid "The action to take when the battery is critically low."
-msgstr ""
+msgstr "Գործողությունը պետք է վերցնել այն ժամանակ, երբ մարտկոցը քննադատորեն ցածր է:"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:5
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
-msgstr ""
+msgstr "Մարտկոցի ազդանշանը պետք է տեղի ունենա, երբ կափարիչը փակվում է կամ էներգիան անջատված է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:6
 msgid ""
 "If the battery lid close event should occur (for example 'Suspend when lid "
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
-msgstr ""
+msgstr "Եթե մարտկոցի կափարիչը փակ է ազդանշանը պետք է տեղի ունենա (օրինակի համար 'Suspend when lid closed on battery'), երբ կափարիչը նախապես փակ է և AC էներգիան անջատվել է ավելի շուտ։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:7
 msgid "UPS critical low action"
@@ -186,7 +186,7 @@ msgstr "UPS կրիտիկական ցածր գործողություն"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:8
 msgid "The action to take when the UPS is critically low."
-msgstr ""
+msgstr "Գործողությունը տեղի կունենա, երբ UPS քննադատորեն ցածր է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:9
 msgid "UPS low power action"
@@ -204,7 +204,7 @@ msgstr "Թույլ տալ լուսավորութան պայծառության ճ
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
-msgstr ""
+msgstr "Էկրանի պայծառությունը պետք է փոփոխել, երբ փախանջատվում է ՓՀ֊ի և մարտկոցի էներգիայի մեջև։ "
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:13
 msgid "Reduce the backlight brightness when on battery power"
@@ -214,7 +214,7 @@ msgstr "Կրճատել լուսավորության պայծառությունը
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
-msgstr ""
+msgstr "Էկրանի պայծառությունը պետք է կրճատվի, երբ համակարգիչը գտնվում է մարտկոցի էներգիայի վրա։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:15
 msgid "Reduce the keyboard backlight when on battery power"
@@ -224,17 +224,17 @@ msgstr "Կրճատել ստեղնաշարի լուսավորությունը, ե
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
-msgstr ""
+msgstr "Ստեղնաշարի լուսավորության պայծառությունը պետք է կրճատվի, երբ համակարգիչը գտնվում է մարտկոցի էներգիայի վրա։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:17
 msgid "Keyboard backlight brightness when on AC power."
-msgstr ""
+msgstr "Ստեղնաշարի լուսավորության պայծառությունը, երբ գործարկվում է ՓՀ֊ի վրա։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:18
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
-msgstr ""
+msgstr "Պայծառության տոկոսային հարաբերությունը սահմանել ստեղնաշարի լուսավորության համար, երբ գործարկվում է ՓՀ֊ի վրա։ Լեգալ արժեքներն են՝ 0 և 100 միջակայքում։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:19
 msgid "Percent to reduce keyboard backlight by when on battery power."
@@ -246,7 +246,7 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
-msgstr ""
+msgstr "Ստեղնաշարի լուսավորության տոկոսը նվազեցնել, երբ գտնվում է մարտկոցի էներգիայի վրա։ Օրինակի համար, եթե սահմանված է  '60', ապա լուսավորությունը կկրճատվի 40%֊ով մարտկոցի էներգիայի վրա։ Լեգալ արժեքներն են՝ 0 և 100 միջակայքում։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
@@ -258,7 +258,7 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
-msgstr ""
+msgstr "Ստեղնաշարի լուսավորության տոկոսը նվազեցնել, երբ գտնվում է պարաօուրդի մեջ։ Օրինակի համար, եթե սահմանված է  '60', ապա լուսավորությունը կկրճատվի 40%֊ով , երբ պարապուրդի մեջ է։ Լեգալ արժեքներն են՝ 0 և 100 միջակայքում։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:25
 msgid "The brightness of the screen when idle"
@@ -268,71 +268,71 @@ msgstr "էկրանի պայծառությունը, երբ անգործ է"
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "Նոուտբուք այս էկրանի պայծառության վահանակը օգտագործվում է այն ժամանակ, երբ նիստն պարապ է։ Միմիայն վավերական է, երբ use-time-for-policy ճիշտ է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:27
 msgid "Dim the screen after a period of inactivity when on battery power"
-msgstr ""
+msgstr "Էկրանը աղոտանում է անգործության ժամանակահատվածից հետո, երբ գտնվում է մարտկոցի էներգիայի վրա։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:28
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
-msgstr ""
+msgstr "Էկրանը պետք է լինի աղոտացած էներգիայի պահպանման համար, երբ համակարգիչը պարապ է գտնվում մարտկոցի էներգիայի վրա։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:29
 msgid "The default amount of time to dim the screen after idle"
-msgstr ""
+msgstr "Պարապ մնալուց հետո էկրանի նախնական գումարային ժամանակը աղոտանալու համար"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:30
 msgid "The default amount of time to dim the screen after idle."
-msgstr ""
+msgstr "Պարապ մնալուց հետո էկրանի նախնական գումարային ժամանակը աղոտանալու համար։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:31
 msgid "LCD dimming amount when on battery"
-msgstr ""
+msgstr "LCD աղոտացման գումարային ժամանակը, երբ մարտկոցի վրա է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:32
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
-msgstr ""
+msgstr "Պայծառության աղոտացման ցուցադրման գումարային ժամանակը, երբ գտնվում է մարտկոցի էներգիայի վրա։ Հնարավոր արժեքներն 0 և 100 միջակայնքում են։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:33
 msgid "Dim the screen after a period of inactivity when on AC power"
-msgstr ""
+msgstr "Էկրանը աղոտանում է անգործության ժամանակահատվածից հետո, երբ գործարկվում է ՓՀ֊ի վրա"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:34
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on AC power."
-msgstr ""
+msgstr "Էկրանը պետք է լինի աղոտացած էներգիայի պահպանման համար, երբ համակարգիչը պարապ է գտնվում ՓՀ վրա։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:35
 msgid "Method used to blank screen on AC"
-msgstr ""
+msgstr "Մեթոդ օգտագործվում է դատարկ էկրանի վրա AC"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:36
 msgid "The DPMS method used to blank the screen when on AC power."
-msgstr ""
+msgstr "DPMS մեթոդը օգտագործվում է դատարկ էկրանի համար, երբ գտնվում է ՓՀ վրա։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:37
 msgid "Method used to blank screen on battery"
-msgstr ""
+msgstr "Մեթոդ օգտագործվում է դատարկ էկրանի մարտկոցի վրա"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:38
 msgid "The DPMS method used to blank the screen when on battery power."
-msgstr ""
+msgstr "DPMS մեթոդը օգտագործվում է դատարկ էկրանի համար, երբ գտնվում է մարտկոցի հզորության վրա։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:39
 msgid "LCD brightness when on AC"
-msgstr ""
+msgstr "LCD պայծառությունը, երբ ՓՀ֊ի վրա է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:40
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
-msgstr ""
+msgstr "Ցուցադրման պայծառությունը, երբ  ՓՀ վրա է։ Հնարավոր արժեքներն են՝  0.0 և 100.0 միջև։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:41
 msgid "Suspend button action"
@@ -340,15 +340,15 @@ msgstr "Կասեցնել կոճակի գործողություն"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:42
 msgid "The action to take when the system suspend button is pressed."
-msgstr ""
+msgstr "Գործողությունը պետք է վերցնել այն ժամանակ, երբ այդ համակարգի կասեցնել կոճակը սեղմված է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:43
 msgid "Hibernate button action"
-msgstr ""
+msgstr "Ձմեռել կոճակի գործողություն"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:44
 msgid "The action to take when the system hibernate button is pressed."
-msgstr ""
+msgstr "Գործողությունը պետք է վերցնել այն ժամանակ, երբ այդ համակարգի  hibernate կոճակը սեղմված է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:45
 msgid "Power button action"
@@ -356,55 +356,55 @@ msgstr "Հզորություն կոճակի գուրծողություն"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:46
 msgid "The action to take when the system power button is pressed."
-msgstr ""
+msgstr "Գործողությունը պետք է վերցնել այն ժամանակ, երբ այդ համակարգի էներգիա կոճակը սեղմված է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:47
 msgid "Laptop lid close action on battery"
-msgstr ""
+msgstr "Դյուրակիր համակարգչի կափարիչը փակելու գործողությունը մարտկոցի վրա"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:48
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
-msgstr ""
+msgstr "Գործողությունը պետք է վերցնել այն ժամանակ, երբ դյուրակիր համակարգչի կափարիչը փակված է և դյուրակիր համակարգիչը մարտկոցի հզորության վրա է:"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:49
 msgid "Laptop lid close action when on AC"
-msgstr ""
+msgstr "Դյուրակիր համակարգչի կափարիչը փակելու գործողությունը, երբ ՓՀ֊ի վրա է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:50
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
-msgstr ""
+msgstr "Գործողությունը պետք է վերցնել այն ժամանակ, երբ դյուրակիր համակարգչի կափարիչը փակված է և դյուրակիր համակարգիչը ՓՀ֊ի վրա է:"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:51
 msgid "Whether to use time-based notifications"
-msgstr ""
+msgstr "Արդյոք օգտագործել ժամանակի վրա հիմնված ծանուցումները"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:52
 msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
-msgstr ""
+msgstr "Եթե ժամանակի վրա հիմնված ծանուցումները պետք է օգտագործված լինեն։ Եթե սահմանված է կեղծ է, ապա տոկոսային փոփոխությունը օգտագործված է, այլ ոչ թե որը կարող ուղղել կոտրված ACPI BIOS։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:53
 msgid "Check CPU load before sleeping"
-msgstr ""
+msgstr "Ստուգեք CPU բեռնավորումը, մինչ քնած է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:54
 msgid "If the CPU load should be checked before doing the idle action."
-msgstr ""
+msgstr "Եթե CPU բեռնավորումը կարող է ստուգել մինչև կատարվում է պարապուրդի գործողությունը։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:55
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
-msgstr ""
+msgstr "Արդյոք Ցանցային Կառավարիչը պետք է միացված և անջատված լինի քնի վրա։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:56
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
-msgstr ""
+msgstr "Արդյոք Ցանցային Կառավարիչը պետք է անջատել նախքան կասեցումը կամ կանգնեցումը և միացնել վերսկսման վրա։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:57
 msgid "Use mate-screensaver lock setting"
@@ -414,69 +414,69 @@ msgstr "Օգտագործել mate-Էկրանապահի արգելափակմկա�
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
-msgstr ""
+msgstr "Արդյոք օգտագործել mate-screensaver էկրանի արգելափակման պարամետրերը որոշելու համար, եթե էկրանը արգելափակված է կանգնեցնելուց, կասեցնելուց և էկրանի բացթողումից հետո։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:59
 msgid "Lock screen when blanked"
-msgstr ""
+msgstr "Արգելափակել էկրանը, երբ բացթողված է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:60
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
-msgstr ""
+msgstr "Արդյոք արգելափակել էկրանը, երբ էկրանը անջատված է։ Միայն օգտագործվում է, եթե lock-use-screensaver սխալ է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:61
 msgid "Lock screen on suspend"
-msgstr ""
+msgstr "Արգելափակել էկրանը կասեցնելու վրա"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:62
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
-msgstr ""
+msgstr "Արդյոք արգելափակել էկրանը, երբ համարակգիչը արթնանում է կասեցված վիճակից։ Միայն օգտագործվում է, եթե lock-use-screensaver սխալ է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:63
 msgid "Lock screen on hibernate"
-msgstr ""
+msgstr "Արգելափակել էկրանը կանգնեցնելու վրա"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:64
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
-msgstr ""
+msgstr "Արդյոք արգելափակել էկրանը, երբ համարագիչը արթնանում է կանգնեցված վիճակից։ Միայն օգտագործվում է, եթե lock-use-screensaver սխալ է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:65
 msgid "Lock GNOME keyring on sleep"
-msgstr ""
+msgstr "Արգելափակել GNOME keyring քնից"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:66
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
-msgstr ""
+msgstr "Արդյոք GNOME keyring արգելափակված է, մինչ համակարգիչը մուտքագրում է կասեցումը։ Սա նշանակում է, որ keyring պետք է ապաարգելափակվի վերսկսումից։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:67
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
-msgstr ""
+msgstr "Արդյոք GNOME keyring արգելափակված է, մինչ համակարգիչը մուտքագրում է կանգնեցումը։ Սա նշանակում է, որ keyring պետք է ապաարգելափակվի վերսկսումից։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:68
 msgid "If we should show the low capacity warning for a broken battery"
-msgstr ""
+msgstr "Եթե մենք պետք է ցույց տանք, ցածր հզորության նախազգուշացումը կոտրված մարտկոցի համար"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:69
 msgid "If we should show the low capacity warning for a broken battery."
-msgstr ""
+msgstr "Եթե մենք պետք է ցույց տանք, ցածր հզորության նախազգուշացումը կոտրված մարտկոցի համար։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:70
 msgid "Notify when AC adapter is disconnected"
-msgstr ""
+msgstr "Տեղեկացնել, երբ ՓՀ֊ի ադապտեր անջատված է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:71
 msgid "If the user should be notified when the AC adapter is disconnected."
-msgstr ""
+msgstr "Եթե օգտագործողը պետք է տեղեկացնի, երբ ՓՀ֊ի ադապտերը անջատված է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:72
 msgid "Notify when fully charged"
@@ -486,7 +486,7 @@ msgstr "Տեղեկացնել երբ ամբողջովին լիցքավորված 
 msgid ""
 "If a notification message should be displayed when the battery is fully "
 "charged."
-msgstr ""
+msgstr "Եթե ծանուցման հաղորդագրություն պետք է ցուցադրվի, երբ մարտկոցը լրիվ լիցքավորված է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:74
 msgid "Notify on a sleep failure"
@@ -496,240 +496,240 @@ msgstr "Քնի ձախողման ծանուցում"
 msgid ""
 "If a notification message should be displayed after suspend or hibernate "
 "failed."
-msgstr ""
+msgstr "Եթե ծանուցման հաղորդագրություն պետք է ցուցադրվի, երբ կասեցումը կամ կանգնեցումը ձախողվում է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:76
 msgid "The URI to show to the user on sleep failure"
-msgstr ""
+msgstr "URI ցույց տալ օգտագործողի համար "
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:77
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
-msgstr ""
+msgstr "Երբ քուն ձախողվի, մենք կարող ենք ցուցադրել օգտագործողի կոճակը օգնել շտկել իրավիճակը: Թողնել այս դաշտը դատարկ, եթե կոճակը պետք չէ է ցույց տալ:"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:78
 msgid "Notify on a low power"
-msgstr ""
+msgstr "Ծանուցել ցածր հզորությունը"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:79
 msgid ""
 "If a notification message should be displayed when the battery is getting "
 "low."
-msgstr ""
+msgstr "Ծանուցումն հաղորդագրությունը պետք է ցուցադրվեն, երբ մարտկոցը լիցքաթափվում է:"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:80
 msgid "Whether we should show the history data points"
-msgstr ""
+msgstr "Արդյոք մենք պետք է ցույց տանք պատմության տվյալների կետերը"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:81
 msgid ""
 "Whether we should show the history data points in the statistics window."
-msgstr ""
+msgstr "Արդյոք մենք պետք է ցույց տանք պատմության տվյալների կետերը վիճակագրության պատուհանի մեջ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:82
 msgid "Whether we should smooth the history data"
-msgstr ""
+msgstr "Արդյոք մենք պետք է հարթենք պատմության տվյալներ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:83
 msgid "Whether we should smooth the history data in the graph."
-msgstr ""
+msgstr "Արդյոք մենք պետք է հարթենք պատմության տվյալներ գրաֆիկում։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:84
 msgid "The default graph type to show for history"
-msgstr ""
+msgstr "Նախնական գրաֆիկի տիպը ցույց տալ պատմության համար"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:85
 msgid "The default graph type to show in the history window."
-msgstr ""
+msgstr "Նախնական գրաֆիկի տիպը ցույց տալ պատմության պատուհանի մեջ։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:86
 msgid "The maximum time displayed for history"
-msgstr ""
+msgstr "Առավելագույն ժամանակը ցուցադրեց պատմության համար"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:87
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
-msgstr ""
+msgstr "Առավելագույն տևողությունը ցուցադրվող ժամանակի x առանցքի պատմության գրաֆիկի վրա։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:88
 msgid "Whether we should show the stats data points"
-msgstr ""
+msgstr "Արդյոք մենք պետք է ցույց տանք վիճակագրության տվյալների կետերը"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:89
 msgid "Whether we should show the stats data points in the statistics window."
-msgstr ""
+msgstr "Արդյոք մենք պետք է ցույց տանք վիճակագրության տվյալների կետերը վիճակագրության պատուհանի մեջ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:90
 msgid "Whether we should smooth the stats data"
-msgstr ""
+msgstr "Արդյոք մենք պետք է հարթել վիճակագրության տվյալներ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:91
 msgid "Whether we should smooth the stats data in the graph."
-msgstr ""
+msgstr "Արդյոք մենք պետք է հարթել վիճակագրության տվյալներ գրաֆիկի մեջ։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:92
 msgid "The default graph type to show for stats"
-msgstr ""
+msgstr "Նախնական գրաֆիկի տիպը ցույց տալ կարգավիճակների համար"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:93
 msgid "The default graph type to show in the stats window."
-msgstr ""
+msgstr "Նախնական գրաֆիկի տիպը ցույց տալ կարգավիճակների պատուհանի մեջ։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:94
 msgid "The index of the page number to show by default"
-msgstr ""
+msgstr "Այդ ցուցանիշը Էջի համարը ցույց տալ ըստ նախնականի"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:95
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
-msgstr ""
+msgstr "Էջի համարի ցուցանիշը ցույց տալ ընս նախնականի, որն օգտագործվում է կենտրոնացումը վերադարձնելու համար ճիշտ էջում:"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
-msgstr ""
+msgstr "Վեջին ընտրված սարքի ID֊ն"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:97
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
-msgstr ""
+msgstr "Վերջին սարքի նույնականացումը, որը օգտագործվում է կենտրոնացումը վերադարձնելու համար ճիշտ էջում:"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:98
 msgid "Percentage considered low"
-msgstr ""
+msgstr "Ցածր քննարկված տոկոսային հարաբերությունը"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:99
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
-msgstr ""
+msgstr "Մարտկոցի տոկոսայնի հարաբերությունը, երբ այն համարվում է ցածր: Միայն այն ուժի մեջ է, երբ use-time-for-policy սխալ է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:100
 msgid "Percentage considered critical"
-msgstr ""
+msgstr "Տոկոսային հարաբերությունը համարվում է կրիտիկական"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:101
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
-msgstr ""
+msgstr "Մարտկոցի տոկոսային հարաբերությունը, երբ համարվում է կրիտիկական։ Միայն այն ուժի մեջ է, երբ use-time-for-policy սխալ է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:102
 msgid "Percentage action is taken"
-msgstr ""
+msgstr "Գործողության տոկոսային հարաբերությունը վերցված է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:103
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
-msgstr ""
+msgstr "Մարտկոցի տոկոսային հարաբերությունը, երբ կրիտիկական գործողությունը իրականացված է։ Միայն այն ուժի մեջ է, երբ use-time-for-policy սխալ է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:104
 msgid "The time remaining when low"
-msgstr ""
+msgstr "Մնացած ժամանակը, երբ ցածր է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:105
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
-msgstr ""
+msgstr " Մարտկոցի մնացած ժամանակը վարկյաններով, երբ այն համարվում է ցածր։ Միայն այն ուժի մեջ է, երբ use-time-for-policy սխալ է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:106
 msgid "The time remaining when critical"
-msgstr ""
+msgstr "Մնացած ժամանակը, երբ կրիտիկական է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:107
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "Մարտկոցի մնացած ժամանակը վարկյաններով, երբ այն համարվում է կրիտիկական։ Միայն այն ուժի մեջ է, երբ use-time-for-policy ճիշտ է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:108
 msgid "The time remaining when action is taken"
-msgstr ""
+msgstr "Մնացած ժամանակը, երբ գործողությունը վերցված է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:109
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "Մարտկոցի մնացած ժամանակը վարկյաններով, երբ կրիտիկական գործողությունը վերցված է։ Միայն այն ուժի մեջ է, երբ use-time-for-policy ճիշտ է։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:110
 msgid "Sleep timeout computer when on battery"
-msgstr ""
+msgstr "Քնելու ժամանակի սպառումը համակարգիչը, երբ մարտկոցի վրա"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:111
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before it goes to sleep."
-msgstr ""
+msgstr "Գումար ժամանակը վայրկյաններով, երբ համակարգիչը մարտկոցից պետք է լինի պասիվ, նախքան այն գնում է քուն:"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:112
 msgid "Sleep timeout computer when on AC"
-msgstr ""
+msgstr "Քնելու ժամանակի սպառումը համակարգիչը, երբ AC վրա"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:113
 msgid ""
 "The amount of time in seconds the computer on AC power needs to be inactive "
 "before it goes to sleep."
-msgstr ""
+msgstr "Գումար ժամանակը վայրկյաններով, երբ համակարգիչը պետք է լինի AC վրա պասիվ, նախքան այն գնում է քուն:"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:114
 msgid "Sleep timeout computer when on UPS"
-msgstr ""
+msgstr "Քնելու ժամանակի սպառումը համակարգիչը, երբ UPS  վրա"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:115
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before it goes to sleep."
-msgstr ""
+msgstr "Գումար ժամանակը վայրկյաններով, երբ համակարգիչը պետք է լինի UPS վրա պասիվ, նախքան այն գնում է քուն:"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:116
 msgid "Sleep timeout display when on AC"
-msgstr ""
+msgstr "Քնելու ցուցադրման ժամանակի սպառումը երբ AC վրա է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:117
 msgid ""
 "The amount of time in seconds before the display goes to sleep when the "
 "computer is on AC power."
-msgstr ""
+msgstr "Գումար ժամանակը վայրկյաններով, երբ ցուցադրվում է քնելը երբ համակարգիչը AC վրա է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:118
 msgid "Sleep timeout display when on battery"
-msgstr ""
+msgstr "Քնելու ցուցադրման ժամանակի սպառումը երբ մարտկոցի վրա է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:119
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
-msgstr ""
+msgstr "Գումար ժամանակը վայրկյաններով, համակարգիչը մարտկոցից սնուցվելիս պետք է լինի պասիվ, մինչև էկրան գնում է քուն:"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:120
 msgid "Sleep timeout display when on UPS"
-msgstr ""
+msgstr "Քնելու ժամանակի ցուցադրումը, երբ UPS վրա է"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:121
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before the display goes to sleep."
-msgstr ""
+msgstr "Այն գումարային ժամանակը վարկյաններով, որ համակարգչի UPS հզորության վրա հարկավոր է լինի պասիվ, մինչ ցուցադրումը գնում է քնելու։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:122
 msgid "If sounds should be used"
-msgstr ""
+msgstr "Եթե հնչյունները պետք է օգտագործել"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:123
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
-msgstr ""
+msgstr "Եթե հնչունները պետք է օգտագործվի, երբ հզորությունը կրիտիկականից ցածր է կամ արգելակման հարցումները դադարեցնում են քաղաքականության գործողությունը։"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:124
 msgid ""
 "If preferences and statistics items should be shown in the context menu"
-msgstr ""
+msgstr "Նախապատվությունների և վիճակագրությունների տարրերը պետք է ցույց տալ համատեքստի մենյուի մեջ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:125
 msgid "When to show the notification icon"
@@ -737,7 +737,7 @@ msgstr "Երբ ցույց տալ  ծանուցման պատկերակը"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:126
 msgid "Display options for the notification icon."
-msgstr ""
+msgstr "Ցուցադրել ծանուցման պատկերանշանի տարբերակները։"
 
 #: ../data/mate-power-preferences.desktop.in.in.h:1
 msgid "Power Management"
@@ -757,7 +757,7 @@ msgstr "Սնուցման Վիճակագրություն"
 
 #: ../data/mate-power-statistics.desktop.in.in.h:2
 msgid "Observe power management"
-msgstr ""
+msgstr "Դիտարկել էներգիայի կառավարումը"
 
 #: ../data/gpm-feedback-widget.ui.h:1
 msgid "Brightness"
@@ -785,7 +785,7 @@ msgstr "Օգտագորել հարթոցված գիծը"
 
 #: ../data/gpm-statistics.ui.h:7
 msgid "Show data points"
-msgstr ""
+msgstr "Ցույց տուր տվյալների կետերը"
 
 #: ../data/gpm-statistics.ui.h:8
 msgid "History"
@@ -797,7 +797,7 @@ msgstr "Վիճակագրություն"
 
 #: ../data/gpm-statistics.ui.h:10
 msgid "Processor wakeups per second:"
-msgstr ""
+msgstr "Պրոցեսորն արթնանում է վայրկյանում․"
 
 #: ../data/gpm-statistics.ui.h:11
 msgid "0"
@@ -805,7 +805,7 @@ msgstr "0"
 
 #: ../data/gpm-statistics.ui.h:12 ../src/gpm-statistics.c:195
 msgid "Wakeups"
-msgstr ""
+msgstr "Արթնանալ"
 
 #: ../data/gpm-prefs.ui.h:1
 msgid "Power Management Preferences"
@@ -817,7 +817,7 @@ msgstr "<b>Գործողություններ</b>"
 
 #: ../data/gpm-prefs.ui.h:3
 msgid "Put computer to _sleep when inactive for:"
-msgstr ""
+msgstr "Ներդնել  համակարգիչը _քնելու համար, երբ ոչ ակտիվ է․"
 
 #: ../data/gpm-prefs.ui.h:4
 msgid "When laptop lid is cl_osed:"
@@ -829,11 +829,11 @@ msgstr "<b>Ցուցադրել</b>"
 
 #: ../data/gpm-prefs.ui.h:6
 msgid "Put _display to sleep when inactive for:"
-msgstr ""
+msgstr "Ներդնել  _ցուցադրումը քնելու համար, երբ ոչ ակտիվ է․"
 
 #: ../data/gpm-prefs.ui.h:7
 msgid "Set display _brightness to:"
-msgstr ""
+msgstr "Սահմանել ցուցադրման _պայծառությունը․"
 
 #: ../data/gpm-prefs.ui.h:8
 msgid "Di_m display when idle"
@@ -841,7 +841,7 @@ msgstr "Աղ_ոտ ցուցադրել, երբ անգործ է"
 
 #: ../data/gpm-prefs.ui.h:9
 msgid "On AC Power"
-msgstr ""
+msgstr "AC Հզորություն"
 
 #: ../data/gpm-prefs.ui.h:10
 msgid "When battery po_wer is critically low:"
@@ -913,7 +913,7 @@ msgstr "Դարձնել Հիմնական"
 
 #: ../data/gpm-prefs.ui.h:27
 msgid "Sets this policy to be used by all users"
-msgstr ""
+msgstr "Սահմանում, որ այս քաղաքականությունը կարելի է օգտագործել բոլոր օգտվողների կողմից"
 
 #: ../data/gpm-prefs.ui.h:28
 msgid "Closes the program"
@@ -932,7 +932,7 @@ msgstr "Ստացեք ներկայիս պայծառությունը"
 #. command line argument
 #: ../src/gpm-backlight-helper.c:172
 msgid "Get the number of brightness levels supported"
-msgstr ""
+msgstr "Ստանալ պայծառության աջակցված մակարդակների թիվը"
 
 #. TRANSLATORS: tool that is used when copying profiles system-wide
 #: ../src/gpm-backlight-helper.c:184
@@ -947,7 +947,7 @@ msgstr "Ոչ հիմնավոր ընտրանքը տրված չէր"
 #. TRANSLATORS: no backlights found
 #: ../src/gpm-backlight-helper.c:201
 msgid "No backlights were found on your system"
-msgstr ""
+msgstr "Ոչ մի լուսավորում ձեր համակարգի վրա չգտնվեցին"
 
 #. TRANSLATORS: failed to access backlight file
 #: ../src/gpm-backlight-helper.c:212
@@ -962,12 +962,12 @@ msgstr "Չհաջողվեց ստանալ առավելագույն արժեքի լ
 #. TRANSLATORS: only able to install profiles as root
 #: ../src/gpm-backlight-helper.c:247
 msgid "This program can only be used by the root user"
-msgstr ""
+msgstr "Այս ծրագիրը կարող է օգտագործվել միայն օգտագործողի root֊ի կողմից"
 
 #. TRANSLATORS: the program must never be directly run
 #: ../src/gpm-backlight-helper.c:256
 msgid "This program must only be run through pkexec"
-msgstr ""
+msgstr "Այս ծրագիրը պետք է գործարկվի միայն pkexec֊ի միջոցով"
 
 #. TRANSLATORS: failed to access backlight file
 #: ../src/gpm-backlight-helper.c:267
@@ -1074,19 +1074,19 @@ msgstr "%.1fV"
 #. TRANSLATORS: show verbose debugging
 #: ../src/gpm-main.c:171 ../src/gpm-prefs.c:90 ../src/gpm-statistics.c:1581
 msgid "Show extra debugging information"
-msgstr ""
+msgstr "Ցույց տալ լրացուցիչ կարգաբերման տեղեկատվություն"
 
 #: ../src/gpm-main.c:173
 msgid "Show version of installed program and exit"
-msgstr ""
+msgstr "Ցույց տալ տեղադրված ծրագրի տարբերակը և ելք"
 
 #: ../src/gpm-main.c:175
 msgid "Exit after a small delay (for debugging)"
-msgstr ""
+msgstr "Ելք, մի փոքր ուշացումից հետո (կարգաբերման համար)"
 
 #: ../src/gpm-main.c:177
 msgid "Exit after the manager has loaded (for debugging)"
-msgstr ""
+msgstr "Ելք այն բանից հետո, երբ կառավարիչը բեռնված է (կարգաբերման համար)"
 
 #: ../src/gpm-main.c:188 ../src/gpm-main.c:192
 msgid "MATE Power Manager"
@@ -1155,17 +1155,17 @@ msgstr "Չհաջողվեց կասեցնել"
 #. TRANSLATORS: message text
 #: ../src/gpm-manager.c:585
 msgid "Computer failed to hibernate."
-msgstr ""
+msgstr "Համակարգիչը չկարողացավ ձմեռել։"
 
 #. TRANSLATORS: title text
 #: ../src/gpm-manager.c:587
 msgid "Failed to hibernate"
-msgstr ""
+msgstr "Չհաջողվեց ձմեռել"
 
 #. TRANSLATORS: message text
 #: ../src/gpm-manager.c:592
 msgid "Failure was reported as:"
-msgstr ""
+msgstr "Ձախողումը հաղորդվում է որպես․"
 
 #. TRANSLATORS: button text, visit the suspend help website
 #: ../src/gpm-manager.c:605
@@ -1175,7 +1175,7 @@ msgstr "Այցելել օգնությունը էջը"
 #. TRANSLATORS: this is the mate-screensaver throttle
 #: ../src/gpm-manager.c:851
 msgid "Display DPMS activated"
-msgstr ""
+msgstr "Ցուցադրել ակտիվացված DPMS"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
 #: ../src/gpm-manager.c:870
@@ -1184,7 +1184,7 @@ msgstr "Մարտկոցի հզորության վրա"
 
 #: ../src/gpm-manager.c:888
 msgid "Laptop lid is closed"
-msgstr ""
+msgstr "Նոութբուքի կափարիչը փակ է"
 
 #: ../src/gpm-manager.c:926
 msgid "Power Information"
@@ -1205,7 +1205,7 @@ msgstr "Մարտկոցը կարող է կոտրվել"
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
 " broken."
-msgstr ""
+msgstr "Մարտկոցը ունի շատ ցածր հզորություն (%1.1f%%), ինչը նշանակում է, որ դա կարող է լինել հին կամ կոտրված։"
 
 #. TRANSLATORS: show the charged notification
 #: ../src/gpm-manager.c:1165
@@ -1223,7 +1223,7 @@ msgstr "Մարտկոցի Լիցքաթափում"
 #: ../src/gpm-manager.c:1215
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
-msgstr ""
+msgstr "մնում է մարտկոցի %s հզորություն (%.0f%%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
 #: ../src/gpm-manager.c:1218 ../src/gpm-manager.c:1230
@@ -1240,7 +1240,7 @@ msgstr "ՉԼԱ Լիցքաթափում"
 #: ../src/gpm-manager.c:1227
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
-msgstr ""
+msgstr "%s մնում է UPS֊ի պահեստավորված հզորություն (%.0f%%)"
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
 #: ../src/gpm-manager.c:1311
@@ -1256,7 +1256,7 @@ msgstr "Պլանշետի մարտկոցը ցածր է"
 #: ../src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
-msgstr ""
+msgstr "Մոտավորապես մնում է <b>%s</b> (%.0f%%)"
 
 #. TRANSLATORS: UPS is starting to get a little low
 #: ../src/gpm-manager.c:1324
@@ -1267,7 +1267,7 @@ msgstr "Չընդհատվող լարման աղբյուրը ցածր է"
 #: ../src/gpm-manager.c:1328
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
-msgstr ""
+msgstr "Մոտավորապես մնում է <b>%s</b> UPS պահեստավորված հզորություն (%.0f%%)"
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
@@ -1351,7 +1351,7 @@ msgstr "Կցված համակարգչային մարտկոցը ցածր է"
 #: ../src/gpm-manager.c:1377
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
-msgstr ""
+msgstr "Կցված համակարգչային մարտկոցը ցածր է (%.0f%%)"
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
@@ -1370,25 +1370,25 @@ msgstr "Կրիտիկական ցածր դյուրակիր համակագչի մա
 #. anything
 #: ../src/gpm-manager.c:1437
 msgid "Plug in your AC adapter to avoid losing data."
-msgstr ""
+msgstr "Միացրեք Ձեր AC ադապտերը տվյալներ կորցնելուց խուսափելու համար։"
 
 #. TRANSLATORS: give the user a ultimatum
 #: ../src/gpm-manager.c:1441
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
-msgstr ""
+msgstr "Համակարգիչը շատ շուտով կկասեցվի, եթե այն միացված է։"
 
 #. TRANSLATORS: give the user a ultimatum
 #: ../src/gpm-manager.c:1445
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
-msgstr ""
+msgstr "Համակարգիչը շատ շուտով կձմեռի, եթե այն միացված է։"
 
 #. TRANSLATORS: give the user a ultimatum
 #: ../src/gpm-manager.c:1449
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
-msgstr ""
+msgstr "Համակարգիչը շատ շուտով կանջատվի, եթե այն միացված է։"
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
@@ -1402,7 +1402,7 @@ msgstr "Չըդհատվող լարման աղբյուրը կրիտիկական ց
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
-msgstr ""
+msgstr "Մոտավորապես մնում է <b>%s</b> UPS֊ի հզորություն (%.0f%%)։ Վերականգնիր AC հզորությունը տվյալները կորցնելուց խուսափելու համար։"
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1469
@@ -1410,7 +1410,7 @@ msgstr ""
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr ""
+msgstr "Անլար մկնիկի հզորությունը շատ ցածր է (%.0f%%)։ Սարքը շուտով կդադարի գործել, եթե չլիցքավորվի:"
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1477
@@ -1418,7 +1418,7 @@ msgstr ""
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr ""
+msgstr "Անլար ստեղնաշարի հզորությունը շատ ցածր է (%.0f%%)։ Սարքը շուտով կդադարի գործել, եթե չլիցքավորվի:"
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1486
@@ -1426,7 +1426,7 @@ msgstr ""
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
 " not charged."
-msgstr ""
+msgstr "PDA  հզորությունը շատ ցածր է (%.0f%%)։ Սարքը շուտով կդադարի գործել, եթե չլիցքավորվի:"
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1496
@@ -1434,7 +1434,7 @@ msgstr ""
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr ""
+msgstr "Բջջային հեռախոսի հզորությունը շատ ցածր է (%.0f%%)։ Սարքը շուտով կդադարի գործել, եթե չլիցքավորվի:"
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1506
@@ -1442,7 +1442,7 @@ msgstr ""
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr ""
+msgstr "Մեդիանվագարկիչի հզորությունը շատ ցածր է (%.0f%%)։ Սարքը շուտով կդադարի գործել, եթե չլիցքավորվի:"
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1515
@@ -1450,7 +1450,7 @@ msgstr ""
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
-msgstr ""
+msgstr "Պլանշետի հզորությունը շատ ցածր է (%.0f%%)։ Սարքը շուտով կդադարի գործել, եթե չլիցքավորվի:"
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1524
@@ -1458,14 +1458,14 @@ msgstr ""
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
-msgstr ""
+msgstr "Կցված համակարգչի հզորությունը շատ ցածր է (%.0f%%)։Սարքը շուտով կանջատվի, եթե չլիցքավորվի:"
 
 #. TRANSLATORS: computer will shutdown without saving data
 #: ../src/gpm-manager.c:1588
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
-msgstr ""
+msgstr "Մարտկոցը կրիտիրկական մակարդակից ցածր է և այս համակարգիչը պետք է <b>power-off</b>, երբ մարտկոցը կդառնա ամբողջովին դատարկ։"
 
 #. TRANSLATORS: computer will suspend
 #: ../src/gpm-manager.c:1594
@@ -1473,40 +1473,40 @@ msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
-msgstr ""
+msgstr "Մարտկոցը կրիտիրկական մակարդակից ցածր է և այս համակարգիչը պատրաստվում է կասեցվել։ <br><b>NOTE:</b> Մի փոքր քանակությամբ հզորություն է պահանջվում Ձեր համակարգիչը դադարեցված վիճակում պահելու համար։"
 
 #. TRANSLATORS: computer will hibernate
 #: ../src/gpm-manager.c:1601
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
-msgstr ""
+msgstr "Մարտկոցը կրիտիրկական մակարդակից ցածր է և այս համակարգիչը պատրաստվում է ձմեռել։"
 
 #. TRANSLATORS: computer will just shutdown
 #: ../src/gpm-manager.c:1606
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
-msgstr ""
+msgstr "Մարտկոցը կրիտիրկական մակարդակից ցածր է և այս համակարգիչը պատրաստվում է անջատվել։"
 
 #. TRANSLATORS: computer will shutdown without saving data
 #: ../src/gpm-manager.c:1623
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
-msgstr ""
+msgstr "UPS֊ի մակարդակը կրիտիկականից ցածր է և այս համակարգիչը պետք է <b>power-off</b>, երբ UPS֊ը դառնում է ամբողջովին դատարկ։"
 
 #. TRANSLATORS: computer will hibernate
 #: ../src/gpm-manager.c:1629
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
-msgstr ""
+msgstr "UPS֊ի մակարդակը կրիտիկականից ցածր է և այս համակարգիչը պատրաստվում է ձմեռել:"
 
 #. TRANSLATORS: computer will just shutdown
 #: ../src/gpm-manager.c:1634
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
-msgstr ""
+msgstr "UPS֊ի մակարդակը կրիտիկականից ցածր է և այս համակարգիչը պատրաստվում է անջատվել։"
 
 #: ../src/gpm-prefs.c:94
 msgid "MATE Power Preferences"
@@ -1522,7 +1522,7 @@ msgstr "Կասեցնել"
 
 #: ../src/gpm-prefs-core.c:251
 msgid "Hibernate"
-msgstr ""
+msgstr "Ձմեռել"
 
 #: ../src/gpm-prefs-core.c:254
 msgid "Blank screen"
@@ -1731,11 +1731,11 @@ msgstr "էներգիա"
 
 #: ../src/gpm-statistics.c:454
 msgid "Energy when empty"
-msgstr ""
+msgstr "Երբ էներգիան դատարկ է"
 
 #: ../src/gpm-statistics.c:457
 msgid "Energy when full"
-msgstr ""
+msgstr "Երբ էներգիան ամբողջական է"
 
 #: ../src/gpm-statistics.c:460
 msgid "Energy (design)"
@@ -1810,7 +1810,7 @@ msgstr "Սերիական ԱՏԱ"
 #. TRANSLATORS: this is the old-style ATA interface
 #: ../src/gpm-statistics.c:908
 msgid "ATA host controller"
-msgstr ""
+msgstr "ATA հյուրընկալող վերահսկիչ"
 
 #. TRANSLATORS: 802.11 wireless adaptor
 #: ../src/gpm-statistics.c:911
@@ -1871,7 +1871,7 @@ msgstr " USB֊ի ակտիվություն %s"
 #: ../src/gpm-statistics.c:966
 #, c-format
 msgid "Wakeup %s"
-msgstr ""
+msgstr "Արթնանալ %s"
 
 #. TRANSLATORS: interupts on the system required for basic operation
 #: ../src/gpm-statistics.c:969
@@ -1881,7 +1881,7 @@ msgstr "Տեղային ընդհատում"
 #. TRANSLATORS: interrupts when a task gets moved from one core to another
 #: ../src/gpm-statistics.c:972
 msgid "Rescheduling interrupts"
-msgstr ""
+msgstr "Rescheduling ընդհատում"
 
 #. TRANSLATORS: shown on the titlebar
 #: ../src/gpm-statistics.c:1081
@@ -1901,7 +1901,7 @@ msgstr "Սարքի Պրոֆիլ"
 #. TRANSLATORS: shown on the titlebar
 #: ../src/gpm-statistics.c:1087
 msgid "Processor Wakeups"
-msgstr ""
+msgstr "Պրոցեսորի Wakeups"
 
 #. TRANSLATORS: this is the X axis on the graph
 #: ../src/gpm-statistics.c:1347 ../src/gpm-statistics.c:1353
@@ -2119,7 +2119,7 @@ msgstr "Ընթացիկ լիցքավորում:"
 
 #: ../src/gpm-upower.c:432
 msgid "Last full charge:"
-msgstr ""
+msgstr "Վերջին լրիվ լիցքավորումը․"
 
 #: ../src/gpm-upower.c:438 ../src/gpm-upower.c:456
 msgid "Design charge:"

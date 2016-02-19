@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 13:07+0200\n"
-"PO-Revision-Date: 2015-11-12 16:46+0000\n"
-"Last-Translator: Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>\n"
+"PO-Revision-Date: 2016-02-04 19:56+0000\n"
+"Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/mate/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -148,7 +148,7 @@ msgstr "Дозволяє користувачу притримувати авт�
 
 #: ../data/mate-power-manager.desktop.in.in.h:1 ../src/gpm-tray-icon.c:186
 msgid "Power Manager"
-msgstr "Менеджер живлення"
+msgstr "Керування живленням"
 
 #: ../data/mate-power-manager.desktop.in.in.h:2 ../src/gpm-tray-icon.c:188
 msgid "Power management daemon"
@@ -222,27 +222,27 @@ msgstr "Чи зменшувати яскравість екрану для зб�
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:15
 msgid "Reduce the keyboard backlight when on battery power"
-msgstr "Зменшити підсвітку клавіатури при живленні від батареї"
+msgstr "Зменшити підсвітку клавіятури при живленні від батареї"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:16
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
-msgstr "Чи зменшувати підсвітку клавіатури при живленні від батареї"
+msgstr "Чи зменшувати підсвітку клавіятури при живленні від батареї"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:17
 msgid "Keyboard backlight brightness when on AC power."
-msgstr "Яскравість підсвітки клавіатури при живленні від мережі."
+msgstr "Яскравість підсвітки клавіятури при живленні від мережі."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:18
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
-msgstr "Відсоток яскравості підсвітки клавіатури при живленні від мережі. Можливі значення між 0 та 100."
+msgstr "Відсоток яскравості підсвітки клавіятури при живленні від мережі. Можливі значення між 0 та 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:19
 msgid "Percent to reduce keyboard backlight by when on battery power."
-msgstr "Відсоток зменшення підсвітки клавіатури при живленні від батареї."
+msgstr "Відсоток зменшення підсвітки клавіятури при живленні від батареї."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:21
 #, no-c-format
@@ -250,11 +250,11 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
-msgstr "Відсоток зменшення підсвітки клавіатури при живленні від батареї. Наприклад, якщо встановлено \"60\", підсвітка зменшиться на 40% при живленні від батареї. Можливі значення між 0 та 100."
+msgstr "Відсоток зменшення підсвітки клавіятури при живленні від батареї. Наприклад, якщо встановлено \"60\", підсвітка зменшиться на 40% при живленні від батареї. Можливі значення між 0 та 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
-msgstr "Відсоток зменшення підсвітки клавіатури при простої."
+msgstr "Відсоток зменшення підсвітки клавіятури при простої."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:24
 #, no-c-format
@@ -262,7 +262,7 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
-msgstr "Відсоток зменшення підсвітки клавіатури при живленні від батареї. Наприклад, якщо встановлено \"60\", підсвітка зменшиться на 40% при живленні від батареї. Можливі значення між 0 та 100."
+msgstr "Відсоток зменшення підсвітки клавіятури при живленні від батареї. Наприклад, якщо встановлено \"60\", підсвітка зменшиться на 40% при живленні від батареї. Можливі значення між 0 та 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:25
 msgid "The brightness of the screen when idle"
@@ -813,7 +813,7 @@ msgstr "Пробудження"
 
 #: ../data/gpm-prefs.ui.h:1
 msgid "Power Management Preferences"
-msgstr "Параметри менеджера живлення"
+msgstr "Параметри керування живленням"
 
 #: ../data/gpm-prefs.ui.h:2
 msgid "<b>Actions</b>"
@@ -1098,7 +1098,7 @@ msgstr "Завершити роботу після завантаження ме
 
 #: ../src/gpm-main.c:188 ../src/gpm-main.c:192
 msgid "MATE Power Manager"
-msgstr "Менеджер живлення MATE"
+msgstr "Керування живленням MATE"
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:223 ../src/gpm-manager.c:293
@@ -1963,7 +1963,7 @@ msgstr "Процесор"
 
 #: ../src/gpm-tray-icon.c:189
 msgid "Copyright © 2011-2014 MATE developers"
-msgstr "Copyright © 2011-2014 MATE developers"
+msgstr "Авторське право © 2011-2014 розробники MATE"
 
 #. Translators should localize the following string
 #. * which will be displayed at the bottom of the about
@@ -2187,9 +2187,9 @@ msgstr[2] "Мишок"
 #: ../src/gpm-upower.c:498
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] "Клавіатура"
-msgstr[1] "Клавіатури"
-msgstr[2] "Клавіатур"
+msgstr[0] "Клавіятура"
+msgstr[1] "Клавіятури"
+msgstr[2] "Клавіятур"
 
 #. TRANSLATORS: portable device
 #: ../src/gpm-upower.c:502

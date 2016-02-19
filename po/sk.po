@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Ján Ďanovský <dagsoftware@yahoo.com>, 2013,2015
+# Dušan Kazik <prescott66@gmail.com>, 2015
+# Ján Ďanovský <dagsoftware@yahoo.com>, 2013,2015-2016
 # Tibor Kaputa <tibbbi2@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 13:07+0200\n"
-"PO-Revision-Date: 2015-09-08 11:49+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"PO-Revision-Date: 2016-02-13 17:06+0000\n"
+"Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/mate/MATE/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -179,7 +180,7 @@ msgid ""
 "If the battery lid close event should occur (for example 'Suspend when lid "
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
-msgstr "Určuje, či má nastať udalosť batérie pre zavretie krytu (napríklad 'Uspať, ak systém beží z batérie a zavrie sa kryt'), ak bol predtým kryt zatvorený a napájanie zo siete neskôr odpojené."
+msgstr "Určuje, či má nastať udalosť batérie pre zavretie krytu (napríklad „Uspať, ak systém beží z batérie a zavrie sa kryt“), ak bol predtým kryt zatvorený a napájanie zo siete neskôr odpojené."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:7
 msgid "UPS critical low action"
@@ -219,27 +220,27 @@ msgstr "Určuje, či sa má znižovať jas obrazovky na úsporu energie v čase,
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:15
 msgid "Reduce the keyboard backlight when on battery power"
-msgstr ""
+msgstr "Znížiť podsvietenie klávesnice pri napájaní z batérie"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:16
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
-msgstr ""
+msgstr "Či má byť znížený jas podsvietenia klávesnice, keď je počítač napájaný z batérie"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:17
 msgid "Keyboard backlight brightness when on AC power."
-msgstr ""
+msgstr "Jas podsvietenia klávesnice pri napájaní zo siete"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:18
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
-msgstr ""
+msgstr "Percento jasu podsvietenia klávesnice, ktoré sa má nastaviť pri napájaní zo siete. Platné hodnoty sú v rozmedzí 0 a 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:19
 msgid "Percent to reduce keyboard backlight by when on battery power."
-msgstr ""
+msgstr "Percento zníženia podsvietenia klávesnice pri napájaní z batérie."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:21
 #, no-c-format
@@ -247,11 +248,11 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
-msgstr ""
+msgstr "Percento zníženia podsvietenia klávesnice pri napájaní z batérie. Napríklad, ak je nastavené na „60“, podsvietenie bude znížené o 40% pri napájaní z batérie. Platné hodnoty sú v rozmedzí 0 a 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
-msgstr ""
+msgstr "Percento zníženia podsvietenia klávesnice pri nečinnosti."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:24
 #, no-c-format
@@ -259,7 +260,7 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
-msgstr ""
+msgstr "Percento zníženia podsvietenia klávesnice pri nečinnosti. Napríklad, ak je nastavené na „60“, podsvietenie bude znížené o 40% pri nečinnosti. Platné hodnoty sú v rozmedzí 0 a 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:25
 msgid "The brightness of the screen when idle"
@@ -449,19 +450,19 @@ msgstr "Určuje, či má byť obrazovka uzamykaná, keď sa počítač zobúdza 
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:65
 msgid "Lock GNOME keyring on sleep"
-msgstr ""
+msgstr "Uzamknúť zväzok kľúčov GNOME pri uspaní"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:66
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
-msgstr ""
+msgstr "Určuje, či sa má uzamknúť zväzok kľúčov GNOME pred prejdením počítača do režimu spánku. To znamená, že zväzok kľúčov bude treba odomknúť po prebudení z režimu spánku."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:67
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
-msgstr ""
+msgstr "Určuje, či sa má uzamknúť zväzok kľúčov GNOME pred prejdením počítača do režimu hibernácie. To znamená, že zväzok kľúčov bude treba odomknúť po prebudení z hibernácie."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:68
 msgid "If we should show the low capacity warning for a broken battery"
@@ -538,11 +539,11 @@ msgstr "Určuje, či sa má vyhladzovať grafu histórie."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:84
 msgid "The default graph type to show for history"
-msgstr "Východzí typ grafu, ktorý sa zobrazí pre históriu"
+msgstr "Predvolený typ grafu, ktorý sa zobrazí pre históriu"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:85
 msgid "The default graph type to show in the history window."
-msgstr "Východzí typ grafu, ktorý sa zobrazí v okne histórie."
+msgstr "Predvolený typ grafu, ktorý sa zobrazí v okne histórie."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:86
 msgid "The maximum time displayed for history"
@@ -571,21 +572,21 @@ msgstr "Určuje, či sa majú vyhladzovať štatistické údaje v grafe."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:92
 msgid "The default graph type to show for stats"
-msgstr "Východzí typ grafu, ktorý sa zobrazuje pre štatistiku."
+msgstr "Predvolený typ grafu, pre zobrazenie štatistík."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:93
 msgid "The default graph type to show in the stats window."
-msgstr "Východzí typ grafu, ktorý sa zobrazuje v štatistickom okne."
+msgstr "Predvolený typ grafu, ktorý sa zobrazuje v okne štatistík."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:94
 msgid "The index of the page number to show by default"
-msgstr "Východzí index čísla strany"
+msgstr "Index čísla strany zobraziť v predvolenom stave."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:95
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
-msgstr "Index čísla strany, ktorý je východzie použitý na vrátenie zamerania správnej strany."
+msgstr "Index čísla strany zobraziť v predvolenom stave, ktorý je použitý na vrátenie zamerania správnej strany."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
@@ -1135,7 +1136,7 @@ msgstr "Batéria je nabitá"
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:301
 msgid "Suspend started"
-msgstr "Uspanie naštartované"
+msgstr "Uspanie spustené"
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:305
@@ -1960,14 +1961,14 @@ msgstr "Procesor"
 
 #: ../src/gpm-tray-icon.c:189
 msgid "Copyright © 2011-2014 MATE developers"
-msgstr ""
+msgstr "Autorské práva © 2011-2014 Vývojári prostredia MATE"
 
 #. Translators should localize the following string
 #. * which will be displayed at the bottom of the about
 #. * box to give credit to the translator(s).
 #: ../src/gpm-tray-icon.c:195
 msgid "translator-credits"
-msgstr ""
+msgstr "Ján Ďanovský <dagsoftware@yahoo.com>\nTibor Kaputa <tibbbi2@gmail.com>\nDušan Kazik <prescott66@gmail.com>"
 
 #. preferences
 #: ../src/gpm-tray-icon.c:330
@@ -2281,4 +2282,4 @@ msgstr "Čaká na vybíjanie"
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:653
 msgid "Unknown state"
-msgstr ""
+msgstr "Neznámy stav"
