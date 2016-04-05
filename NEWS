@@ -3,10 +3,11 @@ Version 1.13.0
 Released: 2016-01-26
 
 * News:
- - GTK+3 brightness applet: fix deprecated usage of Gtk{H,V}{Box,Scale}
- - drop MateConf migration script
- - don't crash when XRRGetScreenResourcesCurrent fails
- - some code clean up
+ - Drop MateConf migration script
+ - Fix possible crash when an Xorg function call fails
+ - GTK+3: fix deprecations in brightness applet
+ - Some more fixes and cleanups
+ - Translations update
 
 Version 1.12.1
 ~~~~~~~~~~~~~~
