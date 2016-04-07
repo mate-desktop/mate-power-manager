@@ -4,15 +4,17 @@
 # 
 # Translators:
 # Falu.Me, 2015
+# Faludi Zoltán, 2015
 # István Szőllősi <szollosi.istv4n@gmail.com>, 2014
+# kami911 <kami911@gmail.com>, 2015
 # Rezső Páder <rezso@rezso.net>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 13:07+0200\n"
-"PO-Revision-Date: 2015-10-10 18:52+0000\n"
-"Last-Translator: Falu.Me\n"
+"PO-Revision-Date: 2015-12-12 23:07+0000\n"
+"Last-Translator: kami911 <kami911@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/mate/MATE/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -220,27 +222,27 @@ msgstr "Akkumulátoros tápellátás esetén csökkenjen-e a képernyő fényere
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:15
 msgid "Reduce the keyboard backlight when on battery power"
-msgstr ""
+msgstr "A billentyűzet háttérvilágítás fényerejének csökkentése akkumulátoros tápellátás esetén"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:16
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
-msgstr ""
+msgstr "Akkumulátoros tápellátás esetén csökkenjen-e a billentyűzet háttérvilágításának fényereje"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:17
 msgid "Keyboard backlight brightness when on AC power."
-msgstr ""
+msgstr "A Billentyűzet háttérvilágítás fényerejének csökkentése akkumulátoros tápellátás esetén."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:18
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
-msgstr ""
+msgstr "A billentyűzet háttérvilágításának fényereje hálózati tápellátás esetén. A lehetséges értékek 0 és 100 között vannak."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:19
 msgid "Percent to reduce keyboard backlight by when on battery power."
-msgstr ""
+msgstr "A billentyűzet háttérvilágítás fényerejének csökkentése – százalékban megadva – akkumulátoros tápellátás esetén."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:21
 #, no-c-format
@@ -248,11 +250,11 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
-msgstr ""
+msgstr "A billentyűzet háttérvilágítás fényerejének csökkentése, amikor a számítógép akkumulátoros tápellátást használ. Például ha ezt az értéket „60”-ra állítja, akkor 40%-kal kisebb lesz a háttérvilágítás fényereje. A lehetséges értékek 0 és 100 között vannak."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
-msgstr ""
+msgstr "A billentyűzet háttérvilágítás fényerejének csökkentése – százalékban megadva – ha a számítógép tétlen."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:24
 #, no-c-format
@@ -260,7 +262,7 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
-msgstr ""
+msgstr "A billentyűzet háttérvilágítás fényerejének csökkentése, amikor a számítógép tétlen. Például ha ezt az értéket „60”-ra állítja, akkor 40%-kal kisebb lesz a háttérvilágítás fényereje. A lehetséges értékek 0 és 100 között vannak."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:25
 msgid "The brightness of the screen when idle"
@@ -456,13 +458,13 @@ msgstr "A GNOME kulcstartó zárolása energiatakarékos módba váltáskor"
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
-msgstr ""
+msgstr "A MATE kulcstartó zárolásra kerüljön-e a számítógép felfüggesztése előtt. Ez azt jelenti, hogy folytatáskor fel kell oldania a kulcstartó zárolását."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:67
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
-msgstr ""
+msgstr "A MATE kulcstartó zárolásra kerüljön-e a számítógép hibernálása előtt. Ez azt jelenti, hogy folytatáskor fel kell oldania a kulcstartó zárolását."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:68
 msgid "If we should show the low capacity warning for a broken battery"

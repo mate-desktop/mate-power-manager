@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Erik, 2014
+# Erik, 2014-2015
+# Henrik Mattsson-Mårn <h@reglage.net>, 2016
 # Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 13:07+0200\n"
-"PO-Revision-Date: 2015-09-08 11:49+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"PO-Revision-Date: 2016-01-03 11:21+0000\n"
+"Last-Translator: Henrik Mattsson-Mårn <h@reglage.net>\n"
 "Language-Team: Swedish (http://www.transifex.com/mate/MATE/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -158,7 +159,7 @@ msgstr "Huruvida viloläge, vänteläge eller ingenting ska användas vid inakti
 #: ../data/org.mate.power-manager.gschema.xml.in.h:2
 msgid ""
 "The type of sleeping that should be performed when the computer is inactive."
-msgstr ""
+msgstr "Den sortens viloläge som ska aktiveras när datorn är inaktiv."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:3
 msgid "Battery critical low action"
@@ -187,7 +188,7 @@ msgstr "Åtgärd vid kritisk låg UPS-kapacitet"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:8
 msgid "The action to take when the UPS is critically low."
-msgstr ""
+msgstr "Den åtgärd som ska vidtas när UPS-kapaciteten är kritiskt låg."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:9
 msgid "UPS low power action"
@@ -219,27 +220,27 @@ msgstr "Om skärmen ska ha minskad ljusstyrka när datorn använder batteriet."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:15
 msgid "Reduce the keyboard backlight when on battery power"
-msgstr ""
+msgstr "Minska tangentbordets bakgrundsbelysning vid batteridrift"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:16
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
-msgstr ""
+msgstr "Om styrkan i tangentbordets bakgrundsbelysning ska minskas när datorn använder batteriet"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:17
 msgid "Keyboard backlight brightness when on AC power."
-msgstr ""
+msgstr "Ljusstyrka för tangentbordets bakgrundsbelysning när datorn är ansluten till ett vägguttag."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:18
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
-msgstr ""
+msgstr "Ljusstyrka för tangentbordets bakgrundsbelysning i procent när datorn är ansluten till ett vägguttag. Tillåtna värden mellan 0 och 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:19
 msgid "Percent to reduce keyboard backlight by when on battery power."
-msgstr ""
+msgstr "Antal procent att minska tangentbordets bakgrundsbelysning med vid batteridrift."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:21
 #, no-c-format
@@ -251,7 +252,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
-msgstr ""
+msgstr "Antal procent att minska tangentbordets bakgrundsbelysning med när datorn inte används."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:24
 #, no-c-format
@@ -349,7 +350,7 @@ msgstr "Åtgärd för vilolägesknapp"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:44
 msgid "The action to take when the system hibernate button is pressed."
-msgstr ""
+msgstr "Åtgärd som ska vidtas när man trycker på vilolägesknappen."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:45
 msgid "Power button action"
@@ -357,7 +358,7 @@ msgstr "Åtgärd för strömknapp"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:46
 msgid "The action to take when the system power button is pressed."
-msgstr ""
+msgstr "Åtgärd som ska vidtas när man trycker på av- och påknappen."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:47
 msgid "Laptop lid close action on battery"
@@ -367,7 +368,7 @@ msgstr "Åtgärd vid stängning av locket på bärbar dator på batteridrift"
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
-msgstr ""
+msgstr "Åtgärd som ska vidtas när man stänger datorns lock vid batteridrift."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:49
 msgid "Laptop lid close action when on AC"
@@ -377,7 +378,7 @@ msgstr "Åtgärd vid stängning av locket på bärbar dator när strömadaptern 
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
-msgstr ""
+msgstr "Åtgärd som ska vidtas när man stänger datorns lock och datorn är ansluten till ett vägguttag."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:51
 msgid "Whether to use time-based notifications"
@@ -2260,4 +2261,4 @@ msgstr "Väntar på urladdning"
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:653
 msgid "Unknown state"
-msgstr ""
+msgstr "Okänt stadie"

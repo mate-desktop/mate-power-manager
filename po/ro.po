@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Daniel <danny34ever@yahoo.com>, 2015
+# Daniel <danny34ever@yahoo.com>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 13:07+0200\n"
-"PO-Revision-Date: 2015-11-04 04:38+0000\n"
+"PO-Revision-Date: 2016-03-08 18:29+0000\n"
 "Last-Translator: Daniel <danny34ever@yahoo.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/mate/MATE/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -246,7 +246,7 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
-msgstr ""
+msgstr "Procentul cu care să fie redusă lumina de fundal a tastaturii la alimentarea din acumulator. De exemplu, dacă este definit la „60„, lumina de fundal va fi redusă cu 40% la alimentarea din acumulator. Valorile acceptate sunt între 0 și 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
@@ -258,7 +258,7 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
-msgstr ""
+msgstr "Procentul cu care să fie redusă lumina de fundal a tastaturii la inactivitate. De exemplu, dacă este definit la „60„, lumina de fundal va fi redusă cu 40% la inactivitate. Valorile acceptate sunt între 0 și 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:25
 msgid "The brightness of the screen when idle"
@@ -268,7 +268,7 @@ msgstr "Luminozitatea ecranului când calculatorul este inactiv"
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "Aceasta este luminozitatea ecranului folosită atunci când sesiunea este inactivă. Validă doar atunci când use_time_for policy este „true”."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:27
 msgid "Dim the screen after a period of inactivity when on battery power"
@@ -424,7 +424,7 @@ msgstr "Blochează ecranul la golire"
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
-msgstr ""
+msgstr "Dacă ecranul să fie blocat atunci când este închis. Se folosește numai când lock_use_screensaver_settings este „false”."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:61
 msgid "Lock screen on suspend"
@@ -454,13 +454,13 @@ msgstr "Blochează inelul de chei GNOME la suspendare"
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
-msgstr ""
+msgstr "Dacă inelul de chei GNOME este blocat înainte de suspendarea calculatorului. Aceasta înseamnă că inelul va trebui deblocat, la revenire."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:67
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
-msgstr ""
+msgstr "Dacă inelul de chei GNOME este blocat înainte de hibernarea calculatorului. Aceasta înseamnă că inelul va trebui deblocat, la revenire."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:68
 msgid "If we should show the low capacity warning for a broken battery"
@@ -525,7 +525,7 @@ msgstr "Dacă să fie afișate puncte date în istoric"
 #: ../data/org.mate.power-manager.gschema.xml.in.h:81
 msgid ""
 "Whether we should show the history data points in the statistics window."
-msgstr ""
+msgstr "Dacă să fie afișate puncte date istoric în fereastra de statistici."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:82
 msgid "Whether we should smooth the history data"
@@ -541,7 +541,7 @@ msgstr "Tipul implicit de grafic care să fie afișat în istoric"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:85
 msgid "The default graph type to show in the history window."
-msgstr ""
+msgstr "Tipul implicit de grafic care să fie afișat în fereastra istoric."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:86
 msgid "The maximum time displayed for history"
@@ -550,15 +550,15 @@ msgstr "Durata de timp maximă afișată pentru istoric"
 #: ../data/org.mate.power-manager.gschema.xml.in.h:87
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
-msgstr ""
+msgstr "Durata maximă de timp afișată pe axa x a istoricului."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:88
 msgid "Whether we should show the stats data points"
-msgstr ""
+msgstr "Dacă să fie afișate puncte date statistici"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:89
 msgid "Whether we should show the stats data points in the statistics window."
-msgstr ""
+msgstr "Dacă să fie afișate puncte date în fereastra de statistici."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:90
 msgid "Whether we should smooth the stats data"
@@ -566,7 +566,7 @@ msgstr "Dacă datele din statistici să fie netezite"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:91
 msgid "Whether we should smooth the stats data in the graph."
-msgstr ""
+msgstr "Dacă să fie netazite datele statisticilor din grafic."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:92
 msgid "The default graph type to show for stats"
@@ -574,17 +574,17 @@ msgstr "Tipul implicit de grafic pentru afișarea statisticilor"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:93
 msgid "The default graph type to show in the stats window."
-msgstr ""
+msgstr "Tipul implicit de grafic afișat în fereastra de statistici."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:94
 msgid "The index of the page number to show by default"
-msgstr ""
+msgstr "Indexul numărului paginii afișate implicit"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:95
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
-msgstr ""
+msgstr "Indexul numărului paginii afișate implicit care este folosit pentru a întoarce focalizarea la pagina corectă."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
@@ -594,7 +594,7 @@ msgstr "The ID-ul ultimului dispozitiv selectat"
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
-msgstr ""
+msgstr "Identificatorul ultimului dispozitiv care este folosit pentru a întoarce focalizarea la dispozitivul corect."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:98
 msgid "Percentage considered low"
@@ -922,12 +922,12 @@ msgstr "Închide programul"
 #. command line argument
 #: ../src/gpm-backlight-helper.c:166
 msgid "Set the current brightness"
-msgstr "Definiți nivelul curent al luminozității"
+msgstr "Definiți nivelul actual al luminozității"
 
 #. command line argument
 #: ../src/gpm-backlight-helper.c:169
 msgid "Get the current brightness"
-msgstr "Obține nivelul curent al luminozității"
+msgstr "Obține nivelul actual al luminozității"
 
 #. command line argument
 #: ../src/gpm-backlight-helper.c:172
@@ -937,7 +937,7 @@ msgstr "Obține numărul de nivele de luminozitate suportate"
 #. TRANSLATORS: tool that is used when copying profiles system-wide
 #: ../src/gpm-backlight-helper.c:184
 msgid "MATE Power Manager Backlight Helper"
-msgstr ""
+msgstr "Ajutor lumină de fundal pentru Administratorul consum MATE"
 
 #. TRANSLATORS: user did not specify valid options
 #: ../src/gpm-backlight-helper.c:192
@@ -2125,7 +2125,7 @@ msgstr "Capacitate:"
 
 #: ../src/gpm-upower.c:426 ../src/gpm-upower.c:451
 msgid "Current charge:"
-msgstr "Încărcare curentă:"
+msgstr "Încărcare actuală:"
 
 #: ../src/gpm-upower.c:432
 msgid "Last full charge:"

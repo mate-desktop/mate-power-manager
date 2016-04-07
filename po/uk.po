@@ -6,14 +6,14 @@
 # Микола Ткач <Stuartlittle1970@gmail.com>, 2013
 # zubr139, 2012
 # zubr139, 2012
-# Микола Ткач <Stuartlittle1970@gmail.com>, 2014-2015
+# Микола Ткач <Stuartlittle1970@gmail.com>, 2014-2016
 # Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 13:07+0200\n"
-"PO-Revision-Date: 2016-02-04 19:56+0000\n"
+"PO-Revision-Date: 2016-03-28 15:10+0000\n"
 "Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/mate/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr ""
 
 #: ../applets/brightness/brightness-applet.c:115
 msgid "Power Manager Brightness Applet"
-msgstr "Аплет менеджера живлення для керування яскравістю"
+msgstr "Аплет керівника живленням для керування яскравістю"
 
 #: ../applets/brightness/brightness-applet.c:116
 msgid "Adjusts laptop panel brightness."
@@ -37,7 +37,7 @@ msgstr "Не вдається з'єднатися з mate-power-manager"
 
 #: ../applets/brightness/brightness-applet.c:419
 msgid "Cannot get laptop panel brightness"
-msgstr "Не вдається отримати значення яскравості екрану"
+msgstr "Не вдається отримати значення яскравости екрану"
 
 #: ../applets/brightness/brightness-applet.c:421
 #, c-format
@@ -56,7 +56,7 @@ msgid ""
 "modify it under the terms of the GNU General Public License\n"
 "as published by the Free Software Foundation; either version 2\n"
 "of the License, or (at your option) any later version."
-msgstr "\"Менеджер живлення є вільною проґрамою; дозволяється \"\"розповсюджувати та/або змінювати її за умовами ліцензії GNU General Public \"\"License, що оголошена Free Software Foundation; версії 2 цієї ліцензії, \"\"або (за вашим бажанням) будь-якої старшої версії.\""
+msgstr "Керівник живленням є вільною проґрамою; дозволяється розповсюджувати та/або змінювати її за умовами ліцензії GNU General Public \"\"License, що оголошена Free Software Foundation; версії 2 цієї ліцензії, \"\"або (за вашим бажанням) будь-якої старшої версії.\""
 
 #: ../applets/brightness/brightness-applet.c:814
 #: ../applets/inhibit/inhibit-applet.c:483
@@ -65,7 +65,7 @@ msgid ""
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
 "GNU General Public License for more details."
-msgstr "Менеджер живлення поширюється зі сподіванням, що він буде корисним,але БЕЗ БУДЬ-ЯКИХ ГАРАНТІЙ; навіть без гарантії КОРИСНОСТІ чи ПРИДАТНОСТІ ДЛЯ ПЕВНОЇ КОНКРЕТНОЇ МЕТИ. Дивіться GNU General Public License для отримання детальнішої інформації."
+msgstr "Керівник живленням поширюється зі сподіванням, що він буде корисним,але БЕЗ БУДЬ-ЯКИХ ЗАПОРУК; навіть без запоруки КОРИСНОСТИ чи ПРИДАТНОСТИ ДЛЯ ПЕВНОЇ КОНКРЕТНОЇ МЕТИ. Дивіться GNU General Public License для отримання докладнішої інформації."
 
 #: ../applets/brightness/brightness-applet.c:818
 #: ../applets/inhibit/inhibit-applet.c:487
@@ -92,15 +92,15 @@ msgstr "_Довідка"
 
 #: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:1
 msgid "Brightness Applet Factory"
-msgstr "Фабрика аплету зміни яскравості"
+msgstr "Фабрика аплету зміни яскравости"
 
 #: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:2
 msgid "Factory for Brightness Applet"
-msgstr "Фабрика аплету зміни яскравості"
+msgstr "Фабрика аплету зміни яскравости"
 
 #: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:3
 msgid "Brightness Applet"
-msgstr "Аплет зміни яскравості"
+msgstr "Аплет зміни яскравости"
 
 #: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:4
 msgid "Adjusts Laptop panel brightness"
@@ -156,12 +156,12 @@ msgstr "Служба керування живленням"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:1
 msgid "Whether to hibernate, suspend or do nothing when inactive"
-msgstr "Дія при неактивності: \"hibernate\"(режим сну), \"suspend\"(призупиняти), або \"nothing\" нічого не робити"
+msgstr "Дія при неактивности: \"hibernate\"(режим сну), \"suspend\"(призупиняти), або \"nothing\" нічого не робити"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:2
 msgid ""
 "The type of sleeping that should be performed when the computer is inactive."
-msgstr "Тип призупинення комп’ютера після періоду бездіяльності."
+msgstr "Тип призупинення комп’ютера після періоду бездіяльности."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:3
 msgid "Battery critical low action"
@@ -198,7 +198,7 @@ msgstr "Дія при критично низькому рівні живлен�
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:10
 msgid "The action to take when the UPS is low."
-msgstr "Дія, що виконується при розряженому UPS."
+msgstr "Дія, що виконується при розрядженому UPS."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:11
 msgid "Allow backlight brightness adjustment"
@@ -222,27 +222,27 @@ msgstr "Чи зменшувати яскравість екрану для зб�
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:15
 msgid "Reduce the keyboard backlight when on battery power"
-msgstr "Зменшити підсвітку клавіятури при живленні від батареї"
+msgstr "Зменшити підсвітку набірниці при живленні від батареї"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:16
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
-msgstr "Чи зменшувати підсвітку клавіятури при живленні від батареї"
+msgstr "Чи зменшувати підсвітку набірниці при живленні від батареї"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:17
 msgid "Keyboard backlight brightness when on AC power."
-msgstr "Яскравість підсвітки клавіятури при живленні від мережі."
+msgstr "Яскравість підсвітки набірниці при живленні від мережі."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:18
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
-msgstr "Відсоток яскравості підсвітки клавіятури при живленні від мережі. Можливі значення між 0 та 100."
+msgstr "Відсоток яскравости підсвітки набірниці при живленні від мережі. Можливі значення між 0 та 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:19
 msgid "Percent to reduce keyboard backlight by when on battery power."
-msgstr "Відсоток зменшення підсвітки клавіятури при живленні від батареї."
+msgstr "Відсоток зменшення підсвітки набірниці при живленні від батареї."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:21
 #, no-c-format
@@ -250,11 +250,11 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
-msgstr "Відсоток зменшення підсвітки клавіятури при живленні від батареї. Наприклад, якщо встановлено \"60\", підсвітка зменшиться на 40% при живленні від батареї. Можливі значення між 0 та 100."
+msgstr "Відсоток зменшення підсвітки набірниці при живленні від батареї. Наприклад, якщо встановлено \"60\", підсвітка зменшиться на 40% при живленні від батареї. Можливі значення між 0 та 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
-msgstr "Відсоток зменшення підсвітки клавіятури при простої."
+msgstr "Відсоток зменшення підсвітки набірниці при простої."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:24
 #, no-c-format
@@ -262,7 +262,7 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
-msgstr "Відсоток зменшення підсвітки клавіятури при живленні від батареї. Наприклад, якщо встановлено \"60\", підсвітка зменшиться на 40% при живленні від батареї. Можливі значення між 0 та 100."
+msgstr "Відсоток зменшення підсвітки набірниці при живленні від батареї. Наприклад, якщо встановлено \"60\", підсвітка зменшиться на 40% при живленні від батареї. Можливі значення між 0 та 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:25
 msgid "The brightness of the screen when idle"
@@ -272,11 +272,11 @@ msgstr "Яскравість екрану у стані простою"
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
-msgstr "Значення яскравості панелі ноутбука при простої сеансу. Діє лише коли встановлено ключ use-time-for-policy."
+msgstr "Значення яскравости панелі ноутбука при простої сеансу. Діє лише коли встановлено ключ use-time-for-policy."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:27
 msgid "Dim the screen after a period of inactivity when on battery power"
-msgstr "Зменшувати яскравість після періоду неактивності при живленні від акумулятора"
+msgstr "Зменшувати яскравість після періоду неактивности при живленні від акумулятора"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:28
 msgid ""
@@ -300,11 +300,11 @@ msgstr "Згасання LCD при живленні від акумулятор
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
-msgstr "Величина згасання яскравості дисплею при живленні від акумулятора. Можливі значення від 0 до 100. "
+msgstr "Величина згасання яскравости дисплею при живленні від акумулятора. Можливі значення від 0 до 100. "
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:33
 msgid "Dim the screen after a period of inactivity when on AC power"
-msgstr "Зменшувати яскравість після періоду неактивності при живленні від мережі"
+msgstr "Зменшувати яскравість після періоду неактивности при живленні від мережі"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:34
 msgid ""
@@ -352,7 +352,7 @@ msgstr "Дія при натисканні кнопки сну"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:44
 msgid "The action to take when the system hibernate button is pressed."
-msgstr "Дія, що виконується при натиснутій кнопці режиму гібернації."
+msgstr "Дія, що виконується при натиснутій кнопці режиму сну."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:45
 msgid "Power button action"
@@ -394,11 +394,11 @@ msgstr "Чи використовувати сповіщення про час. 
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:53
 msgid "Check CPU load before sleeping"
-msgstr "Перед засипанням перевіряти завантаження CPU"
+msgstr "Перед засипанням перевіряти завантаження ЦПП"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:54
 msgid "If the CPU load should be checked before doing the idle action."
-msgstr "Чи слід перевіряти завантаження ЦП перед зміною режиму роботи при простої."
+msgstr "Чи слід перевіряти завантаження ЦПП перед зміною режиму роботи при простої."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:55
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
@@ -728,7 +728,7 @@ msgstr "Чи використовувати динамік PC"
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
-msgstr "Чи використовувати динамік PC для сигналізації низького рівню живлення, або коли запити стримування зупиняють заплановану дію."
+msgstr "Чи використовувати динамік PC для сигналізації низького рівню живлення, або коли запити стримування зупиняють запляновану дію."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:124
 msgid ""
@@ -881,7 +881,7 @@ msgstr "При натисканні кнопки _призупинення:"
 
 #: ../data/gpm-prefs.ui.h:18
 msgid "<b>Notification Area</b>"
-msgstr "<b>Область сповіщення</b>"
+msgstr "<b>Ділянка сповіщення</b>"
 
 #: ../data/gpm-prefs.ui.h:19
 msgid "_Never display an icon"
@@ -897,7 +897,7 @@ msgstr "Показувати піктограму лише при заряджа
 
 #: ../data/gpm-prefs.ui.h:22
 msgid "Only display an icon when a battery is p_resent"
-msgstr "Показувати піктограму лише за наявності _акумулятора"
+msgstr "Показувати піктограму лише за наявности _акумулятора"
 
 #: ../data/gpm-prefs.ui.h:23
 msgid "_Always display an icon"
@@ -926,17 +926,17 @@ msgstr "Закриває проґраму"
 #. command line argument
 #: ../src/gpm-backlight-helper.c:166
 msgid "Set the current brightness"
-msgstr "Встановити значення поточної яскравості"
+msgstr "Встановити значення поточної яскравости"
 
 #. command line argument
 #: ../src/gpm-backlight-helper.c:169
 msgid "Get the current brightness"
-msgstr "Отримати значення поточної яскравості"
+msgstr "Отримати значення поточної яскравости"
 
 #. command line argument
 #: ../src/gpm-backlight-helper.c:172
 msgid "Get the number of brightness levels supported"
-msgstr "Отримати підтримувану кількість рівнів яскравості"
+msgstr "Отримати підтримувану кількість рівнів яскравости"
 
 #. TRANSLATORS: tool that is used when copying profiles system-wide
 #: ../src/gpm-backlight-helper.c:184
@@ -1082,7 +1082,7 @@ msgstr "%.1fВ"
 #. TRANSLATORS: show verbose debugging
 #: ../src/gpm-main.c:171 ../src/gpm-prefs.c:90 ../src/gpm-statistics.c:1581
 msgid "Show extra debugging information"
-msgstr "Показати додаткову налагоджувальну інформацію"
+msgstr "Показати додаткову зневаджувальну інформацію"
 
 #: ../src/gpm-main.c:173
 msgid "Show version of installed program and exit"
@@ -1090,11 +1090,11 @@ msgstr "Вивести версію встановленої проґрами т
 
 #: ../src/gpm-main.c:175
 msgid "Exit after a small delay (for debugging)"
-msgstr "Вийти після невеликої призупинки (для налагодження)"
+msgstr "Вийти після невеликої призупинки (для зневадження)"
 
 #: ../src/gpm-main.c:177
 msgid "Exit after the manager has loaded (for debugging)"
-msgstr "Завершити роботу після завантаження менеджера (для налагодження)"
+msgstr "Завершити роботу після завантаження керівника (для зневадження)"
 
 #: ../src/gpm-main.c:188 ../src/gpm-main.c:192
 msgid "MATE Power Manager"
@@ -1294,13 +1294,13 @@ msgstr "Бездротова миша незабаром розрядиться 
 #. TRANSLATORS: the keyboard battery is very low
 #: ../src/gpm-manager.c:1339 ../src/gpm-manager.c:1474
 msgid "Keyboard battery low"
-msgstr "Низький заряд акумулятора клавіятури"
+msgstr "Низький заряд акумулятора набірниці"
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1342
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
-msgstr "Бездротова клавіятура незабаром розрядиться (%.0f%%)"
+msgstr "Бездротова набірниця незабаром розрядиться (%.0f%%)"
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
@@ -1342,13 +1342,13 @@ msgstr "Медіяпрогравач незабаром розрядиться (
 #. TRANSLATORS: the cell battery is very low
 #: ../src/gpm-manager.c:1367 ../src/gpm-manager.c:1512
 msgid "Tablet battery low"
-msgstr "Низький заряд акумулятора планшета"
+msgstr "Низький заряд акумулятора пляншета"
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1370
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
-msgstr "Планшет незабаром розрядиться (%.0f%%)"
+msgstr "Пляншет незабаром розрядиться (%.0f%%)"
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
@@ -1411,7 +1411,7 @@ msgstr "Заряд UPS критично низький"
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
-msgstr "Залишилося приблизно <b>%s</b> заряду UPS (%.0f%%). Відновіть живлення вашого комп’ютера, щоб запобігти втраті даних."
+msgstr "Залишилося приблизно <b>%s</b> заряду UPS (%.0f%%). Відновіть живлення Вашого комп’ютера, щоб запобігти втраті даних."
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1469
@@ -1427,7 +1427,7 @@ msgstr "Бездротова миша незабаром розрядиться 
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Бездротова клавіятура незабаром розрядиться (%.0f%%). Цей пристрій незабаром припинить роботу, якщо не зарядити."
+msgstr "Бездротова набірниця незабаром розрядиться (%.0f%%). Цей пристрій незабаром припинить роботу, якщо не зарядити."
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1486
@@ -1459,7 +1459,7 @@ msgstr "Медіяпрогравач незабаром розрядиться (
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
-msgstr "Планшет незабаром розрядиться (%.0f%%). Цей пристрій незабаром припинить роботу, якщо не зарядити."
+msgstr "Пляншет незабаром розрядиться (%.0f%%). Цей пристрій незабаром припинить роботу, якщо не зарядити."
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1524
@@ -1482,7 +1482,7 @@ msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
-msgstr "Рівень заряду акумулятора нижчий критичного і комп'ютер буде призупинено. <br><b>ПРИМІТКА:</b> Для підтримання комп'ютера у стані призупинення потрібна невелика потужність."
+msgstr "Рівень заряду акумулятора нижчий критичного і комп'ютер буде призупинено. <br><b>НОТАТКА:</b> Для підтримання комп'ютера у стані призупинення потрібна невелика потужність."
 
 #. TRANSLATORS: computer will hibernate
 #: ../src/gpm-manager.c:1601
@@ -1599,11 +1599,11 @@ msgstr "Профіль часу розряду"
 #. battery
 #: ../src/gpm-statistics.c:105
 msgid "Charge accuracy"
-msgstr "Профіль точності визначення часу заряду"
+msgstr "Профіль точности визначення часу заряду"
 
 #: ../src/gpm-statistics.c:106
 msgid "Discharge accuracy"
-msgstr "Профіль точності визначення часу розряду"
+msgstr "Профіль точности визначення часу розряду"
 
 #: ../src/gpm-statistics.c:133
 msgid "Attribute"
@@ -1809,7 +1809,7 @@ msgstr "Переривання"
 #. TRANSLATORS: the keyboard and mouse device event
 #: ../src/gpm-statistics.c:899
 msgid "PS/2 keyboard/mouse/touchpad"
-msgstr "PS/2 клавіятура/миша/точпад"
+msgstr "PS/2 набірниця/миша/точпад"
 
 #. TRANSLATORS: ACPI, the Intel power standard on laptops and desktops
 #: ../src/gpm-statistics.c:902
@@ -1895,12 +1895,12 @@ msgstr "Переривання"
 #. TRANSLATORS: interrupts when a task gets moved from one core to another
 #: ../src/gpm-statistics.c:972
 msgid "Rescheduling interrupts"
-msgstr "Перепланування завдань"
+msgstr "Переплянування завдань"
 
 #. TRANSLATORS: shown on the titlebar
 #: ../src/gpm-statistics.c:1081
 msgid "Device Information"
-msgstr "Відомості про пристрій"
+msgstr "Відомости про пристрій"
 
 #. TRANSLATORS: shown on the titlebar
 #: ../src/gpm-statistics.c:1083
@@ -1939,7 +1939,7 @@ msgstr "Заряд комірки"
 #. TRANSLATORS: this is the Y axis on the graph
 #: ../src/gpm-statistics.c:1361 ../src/gpm-statistics.c:1367
 msgid "Predicted time"
-msgstr "Оціночний час"
+msgstr "Оцінковий час"
 
 #. TRANSLATORS: this is the Y axis on the graph
 #: ../src/gpm-statistics.c:1401 ../src/gpm-statistics.c:1413
@@ -2137,7 +2137,7 @@ msgstr "Останній повний заряд:"
 
 #: ../src/gpm-upower.c:438 ../src/gpm-upower.c:456
 msgid "Design charge:"
-msgstr "Плановий заряд:"
+msgstr "Пляновий заряд:"
 
 #: ../src/gpm-upower.c:443
 msgid "Charge rate:"
@@ -2187,9 +2187,9 @@ msgstr[2] "Мишок"
 #: ../src/gpm-upower.c:498
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] "Клавіятура"
-msgstr[1] "Клавіятури"
-msgstr[2] "Клавіятур"
+msgstr[0] "Набірниця"
+msgstr[1] "Набірниці"
+msgstr[2] "Набірниць"
 
 #. TRANSLATORS: portable device
 #: ../src/gpm-upower.c:502
@@ -2219,9 +2219,9 @@ msgstr[2] "Медіяпрогравачів"
 #: ../src/gpm-upower.c:514
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "Планшет"
-msgstr[1] "Планшети"
-msgstr[2] "Планшетів"
+msgstr[0] "Пляншет"
+msgstr[1] "Пляншети"
+msgstr[2] "Пляншетів"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:518
