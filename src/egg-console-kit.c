@@ -108,6 +108,54 @@ egg_console_kit_stop (EggConsoleKit *console, GError **error)
 }
 
 /**
+ * egg_console_kit_suspend:
+ **/
+gboolean
+egg_console_kit_suspend (EggConsoleKit *console, GError **error)
+{
+	gboolean ret;
+	GError *error_local = NULL;
+
+	g_return_val_if_fail (EGG_IS_CONSOLE_KIT (console), FALSE);
+	g_return_val_if_fail (console->priv->proxy_manager != NULL, FALSE);
+
+	ret = dbus_g_proxy_call (console->priv->proxy_manager, "Suspend", &error_local,
+				 G_TYPE_BOOLEAN, TRUE,
+				 G_TYPE_INVALID, G_TYPE_INVALID);
+	if (!ret) {
+		egg_warning ("Couldn't suspend: %s", error_local->message);
+		if (error != NULL)
+			*error = g_error_new (1, 0, "%s", error_local->message);
+		g_error_free (error_local);
+	}
+	return ret;
+}
+
+/**
+ * egg_console_kit_hibernate:
+ **/
+gboolean
+egg_console_kit_hibernate (EggConsoleKit *console, GError **error)
+{
+	gboolean ret;
+	GError *error_local = NULL;
+
+	g_return_val_if_fail (EGG_IS_CONSOLE_KIT (console), FALSE);
+	g_return_val_if_fail (console->priv->proxy_manager != NULL, FALSE);
+
+	ret = dbus_g_proxy_call (console->priv->proxy_manager, "Hibernate", &error_local,
+				 G_TYPE_BOOLEAN, TRUE,
+				 G_TYPE_INVALID, G_TYPE_INVALID);
+	if (!ret) {
+		egg_warning ("Couldn't hibernate: %s", error_local->message);
+		if (error != NULL)
+			*error = g_error_new (1, 0, "%s", error_local->message);
+		g_error_free (error_local);
+	}
+	return ret;
+}
+
+/**
  * egg_console_kit_can_stop:
  **/
 gboolean
@@ -158,6 +206,65 @@ egg_console_kit_can_restart (EggConsoleKit *console, gboolean *can_restart, GErr
 		 * so assume true if this failed */
 		*can_restart = TRUE;
 	}
+	return ret;
+}
+
+/**
+ * egg_console_kit_can_suspend:
+ **/
+gboolean
+egg_console_kit_can_suspend (EggConsoleKit *console, gboolean *can_suspend, GError **error)
+{
+	GError *error_local = NULL;
+	gboolean ret;
+	gchar  *retval;
+
+	g_return_val_if_fail (EGG_IS_CONSOLE_KIT (console), FALSE);
+	g_return_val_if_fail (console->priv->proxy_manager != NULL, FALSE);
+
+	ret = dbus_g_proxy_call (console->priv->proxy_manager, "CanSuspend", &error_local,
+				 G_TYPE_INVALID,
+				 G_TYPE_STRING, &retval, G_TYPE_INVALID);
+	if (!ret) {
+		egg_warning ("Couldn't do CanSuspend: %s", error_local->message);
+		if (error != NULL)
+			*error = g_error_new (1, 0, "%s", error_local->message);
+		g_error_free (error_local);
+	}
+
+	*can_suspend = g_strcmp0 (retval, "yes") == 0 ||
+		       g_strcmp0 (retval, "challenge") == 0;
+
+	g_free (retval);
+	return ret;
+}
+
+/**
+ * egg_console_kit_can_hibernate:
+ **/
+
+gboolean
+egg_console_kit_can_hibernate (EggConsoleKit *console, gboolean *can_hibernate, GError **error)
+{
+	GError *error_local = NULL;
+	gboolean ret;
+	gchar  *retval;
+
+	g_return_val_if_fail (EGG_IS_CONSOLE_KIT (console), FALSE);
+	g_return_val_if_fail (console->priv->proxy_manager != NULL, FALSE);
+
+	ret = dbus_g_proxy_call (console->priv->proxy_manager, "CanHibernate", &error_local,
+				 G_TYPE_INVALID,
+				 G_TYPE_STRING, &retval, G_TYPE_INVALID);
+	if (!ret) {
+		egg_warning ("Couldn't do CanHibernate: %s", error_local->message);
+		if (error != NULL)
+			*error = g_error_new (1, 0, "%s", error_local->message);
+		g_error_free (error_local);
+	}
+
+	*can_hibernate = g_strcmp0 (retval, "yes") == 0 ||
+	                 g_strcmp0 (retval, "challenge") == 0;
 	return ret;
 }
 
