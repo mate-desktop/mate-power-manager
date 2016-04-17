@@ -755,13 +755,10 @@ gpm_prefs_init (GpmPrefs *prefs)
 		g_object_unref(proxy);
 	}
 	else {
-		/* are we allowed to shutdown? */
+		/* Get values from ConsoleKit */
 		egg_console_kit_can_stop (prefs->priv->console, &prefs->priv->can_shutdown, NULL);
-#if !UP_CHECK_VERSION(0, 99, 0)
-		/* get values from UpClient */
-		prefs->priv->can_suspend = up_client_get_can_suspend (prefs->priv->client);
-		prefs->priv->can_hibernate = up_client_get_can_hibernate (prefs->priv->client);
-#endif
+		egg_console_kit_can_suspend (prefs->priv->console, &prefs->priv->can_suspend, NULL);
+		egg_console_kit_can_hibernate (prefs->priv->console, &prefs->priv->can_hibernate, NULL);
 	}
 
 	if (LOGIND_RUNNING()) {

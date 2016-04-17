@@ -36,9 +36,8 @@
 #include <unistd.h>
 #endif /* HAVE_UNISTD_H */
 
+#include <gio/gio.h>
 #include <glib/gi18n.h>
-#define UPOWER_ENABLE_DEPRECATED
-#include <libupower-glib/upower.h>
 
 #ifdef WITH_KEYRING
 #include <gnome-keyring.h>
@@ -57,7 +56,6 @@
 struct GpmControlPrivate
 {
 	GSettings		*settings;
-	UpClient		*client;
 };
 
 enum {
@@ -210,6 +208,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
 	gboolean ret = FALSE;
 	gboolean do_lock;
 	gboolean nm_sleep;
+	EggConsoleKit *console;
 	GpmScreensaver *screensaver;
 	guint32 throttle_cookie = 0;
 #ifdef WITH_KEYRING
@@ -224,9 +223,10 @@ gpm_control_suspend (GpmControl *control, GError **error)
 	screensaver = gpm_screensaver_new ();
 
 	if (!LOGIND_RUNNING()) {
-		g_object_get (control->priv->client,
-			      "can-suspend", &allowed,
-			      NULL);
+		console = egg_console_kit_new ();
+		egg_console_kit_can_suspend (console, &allowed, NULL);
+		g_object_unref (console);
+
 		if (!allowed) {
 			egg_debug ("cannot suspend as not allowed from policy");
 			g_set_error_literal (error, GPM_CONTROL_ERROR, GPM_CONTROL_ERROR_GENERAL, "Cannot suspend");
@@ -292,11 +292,12 @@ gpm_control_suspend (GpmControl *control, GError **error)
 		}
 		g_object_unref(proxy);
 	}
-#if !UP_CHECK_VERSION(0, 99, 0)
 	else {
-		ret = up_client_suspend_sync (control->priv->client, NULL, error);
+		console = egg_console_kit_new ();
+		ret = egg_console_kit_suspend (console, error);
+		g_object_unref (console);
 	}
-#endif
+
 	egg_debug ("emitting resume");
 	g_signal_emit (control, signals [RESUME], 0, GPM_CONTROL_ACTION_SUSPEND);
 
@@ -325,6 +326,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 	gboolean ret = FALSE;
 	gboolean do_lock;
 	gboolean nm_sleep;
+	EggConsoleKit *console;
 	GpmScreensaver *screensaver;
 	guint32 throttle_cookie = 0;
 #ifdef WITH_KEYRING
@@ -339,9 +341,10 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 	screensaver = gpm_screensaver_new ();
 
 	if (!LOGIND_RUNNING()) {
-		g_object_get (control->priv->client,
-			      "can-hibernate", &allowed,
-			      NULL);
+		console = egg_console_kit_new ();
+		egg_console_kit_can_hibernate (console, &allowed, NULL);
+		g_object_unref (console);
+
 		if (!allowed) {
 			egg_debug ("cannot hibernate as not allowed from policy");
 			g_set_error_literal (error, GPM_CONTROL_ERROR, GPM_CONTROL_ERROR_GENERAL, "Cannot hibernate");
@@ -406,11 +409,12 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 			ret = TRUE;
 		}
 	}
-#if !UP_CHECK_VERSION(0, 99, 0)
 	else {
-		ret = up_client_hibernate_sync (control->priv->client, NULL, error);
+		console = egg_console_kit_new ();
+		ret = egg_console_kit_hibernate (console, error);
+		g_object_unref (console);
 	}
-#endif
+
 	egg_debug ("emitting resume");
 	g_signal_emit (control, signals [RESUME], 0, GPM_CONTROL_ACTION_HIBERNATE);
 
@@ -442,7 +446,6 @@ gpm_control_finalize (GObject *object)
 	control = GPM_CONTROL (object);
 
 	g_object_unref (control->priv->settings);
-	g_object_unref (control->priv->client);
 
 	g_return_if_fail (control->priv != NULL);
 	G_OBJECT_CLASS (gpm_control_parent_class)->finalize (object);
@@ -488,7 +491,6 @@ gpm_control_init (GpmControl *control)
 {
 	control->priv = GPM_CONTROL_GET_PRIVATE (control);
 
-	control->priv->client = up_client_new ();
 	control->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
 }
 
