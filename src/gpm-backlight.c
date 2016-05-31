@@ -38,6 +38,7 @@
 #endif /* HAVE_UNISTD_H */
 
 #include <glib/gi18n.h>
+#include <gtk/gtk.h>
 #include <dbus/dbus-glib.h>
 #include <libupower-glib/upower.h>
 
@@ -53,6 +54,10 @@
 #include "gpm-marshal.h"
 #include "gpm-stock-icons.h"
 #include "egg-console-kit.h"
+
+#if !GTK_CHECK_VERSION(3,0,0)
+#define gtk_widget_get_preferred_size(x,y,z) gtk_widget_size_request(x,y)
+#endif
 
 #define GPM_BACKLIGHT_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_BACKLIGHT, GpmBacklightPrivate))
 
@@ -216,7 +221,7 @@ gpm_backlight_dialog_show (GpmBacklight *backlight)
 	 * know its true size, yet, so we need to jump through hoops
 	 */
 	gtk_window_get_default_size (GTK_WINDOW (backlight->priv->popup), &orig_w, &orig_h);
-	gtk_widget_size_request (backlight->priv->popup, &win_req);
+	gtk_widget_get_preferred_size (backlight->priv->popup, NULL, &win_req);
 
 	if (win_req.width > orig_w) {
 		orig_w = win_req.width;
