@@ -500,6 +500,22 @@ msd_osd_window_real_realize (GtkWidget *widget)
 }
 
 static void
+#if GTK_CHECK_VERSION (3, 0, 0)
+msd_osd_window_style_updated (GtkWidget *widget)
+{
+        GtkStyleContext *style;
+
+        GTK_WIDGET_CLASS (msd_osd_window_parent_class)->style_updated (widget);
+
+        /* We set our border width to 12 (per the MATE standard), plus the
+         * thickness of the frame that we draw in our expose handler.  This will
+         * make our child be 12 pixels away from the frame.
+         */
+
+        style = gtk_widget_get_style_context (widget);
+        gtk_container_set_border_width (GTK_CONTAINER (widget), 12);
+}
+#else
 msd_osd_window_style_set (GtkWidget *widget,
                           GtkStyle  *previous_style)
 {
@@ -515,6 +531,7 @@ msd_osd_window_style_set (GtkWidget *widget,
         style = gtk_widget_get_style (widget);
         gtk_container_set_border_width (GTK_CONTAINER (widget), 12 + MAX (style->xthickness, style->ythickness));
 }
+#endif
 
 #if GTK_CHECK_VERSION (3, 0, 0)
 static void
@@ -522,16 +539,16 @@ msd_osd_window_get_preferred_width (GtkWidget *widget,
                                     gint *minimum_width,
                                     gint *natural_width)
 {
-        GtkStyle *style;
+        GtkStyleContext *style;
 
         GTK_WIDGET_CLASS (msd_osd_window_parent_class)->get_preferred_width (widget, minimum_width, natural_width);
 
-        /* See the comment in msd_osd_window_style_set() for why we add the thickness here */
+        /* See the comment in msd_osd_window_style_updated() for why we add the thickness here */
 
-        style = gtk_widget_get_style (widget);
+        style = gtk_widget_get_style_context (widget);
 
-        *minimum_width += style->xthickness;
-        *natural_width += style->xthickness;
+        *minimum_width += 12;
+        *natural_width += 12;
 }
 
 static void
@@ -539,16 +556,16 @@ msd_osd_window_get_preferred_height (GtkWidget *widget,
                                      gint *minimum_height,
                                      gint *natural_height)
 {
-        GtkStyle *style;
+        GtkStyleContext *style;
 
         GTK_WIDGET_CLASS (msd_osd_window_parent_class)->get_preferred_height (widget, minimum_height, natural_height);
 
-        /* See the comment in msd_osd_window_style_set() for why we add the thickness here */
+        /* See the comment in msd_osd_window_style_updated() for why we add the thickness here */
 
-        style = gtk_widget_get_style (widget);
+        style = gtk_widget_get_style_context (widget);
 
-        *minimum_height += style->ythickness;
-        *natural_height += style->ythickness;
+        *minimum_height += 12;
+        *natural_height += 12;
 }
 #else
 static void
@@ -605,12 +622,13 @@ msd_osd_window_class_init (MsdOsdWindowClass *klass)
         widget_class->show = msd_osd_window_real_show;
         widget_class->hide = msd_osd_window_real_hide;
         widget_class->realize = msd_osd_window_real_realize;
-        widget_class->style_set = msd_osd_window_style_set;
 #if GTK_CHECK_VERSION (3, 0, 0)
+        widget_class->style_updated = msd_osd_window_style_updated;
         widget_class->get_preferred_width = msd_osd_window_get_preferred_width;
         widget_class->get_preferred_height = msd_osd_window_get_preferred_height;
         widget_class->draw = msd_osd_window_draw;
 #else
+        widget_class->style_set = msd_osd_window_style_set;
         widget_class->size_request = msd_osd_window_size_request;
         widget_class->expose_event = msd_osd_window_expose_event;
 #endif
