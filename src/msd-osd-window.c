@@ -503,17 +503,19 @@ static void
 #if GTK_CHECK_VERSION (3, 0, 0)
 msd_osd_window_style_updated (GtkWidget *widget)
 {
-        GtkStyleContext *style;
+        GtkStyleContext *context;
+        GtkBorder padding;
 
         GTK_WIDGET_CLASS (msd_osd_window_parent_class)->style_updated (widget);
 
         /* We set our border width to 12 (per the MATE standard), plus the
-         * thickness of the frame that we draw in our expose handler.  This will
+         * padding of the frame that we draw in our expose handler.  This will
          * make our child be 12 pixels away from the frame.
          */
 
-        style = gtk_widget_get_style_context (widget);
-        gtk_container_set_border_width (GTK_CONTAINER (widget), 12);
+        context = gtk_widget_get_style_context (widget);
+        gtk_style_context_get_padding (context, GTK_STATE_FLAG_NORMAL, &padding);
+        gtk_container_set_border_width (GTK_CONTAINER (widget), 12 + MAX (padding.left, padding.top));
 }
 #else
 msd_osd_window_style_set (GtkWidget *widget,
@@ -536,36 +538,40 @@ msd_osd_window_style_set (GtkWidget *widget,
 #if GTK_CHECK_VERSION (3, 0, 0)
 static void
 msd_osd_window_get_preferred_width (GtkWidget *widget,
-                                    gint *minimum_width,
-                                    gint *natural_width)
+                                    gint      *minimum,
+                                    gint      *natural)
 {
-        GtkStyleContext *style;
+        GtkStyleContext *context;
+        GtkBorder padding;
 
-        GTK_WIDGET_CLASS (msd_osd_window_parent_class)->get_preferred_width (widget, minimum_width, natural_width);
+        GTK_WIDGET_CLASS (msd_osd_window_parent_class)->get_preferred_width (widget, minimum, natural);
 
-        /* See the comment in msd_osd_window_style_updated() for why we add the thickness here */
+        /* See the comment in msd_osd_window_style_updated() for why we add the padding here */
 
-        style = gtk_widget_get_style_context (widget);
+        context = gtk_widget_get_style_context (widget);
+        gtk_style_context_get_padding (context, GTK_STATE_FLAG_NORMAL, &padding);
 
-        *minimum_width += 12;
-        *natural_width += 12;
+        *minimum += padding.left;
+        *natural += padding.left;
 }
 
 static void
 msd_osd_window_get_preferred_height (GtkWidget *widget,
-                                     gint *minimum_height,
-                                     gint *natural_height)
+                                     gint      *minimum,
+                                     gint      *natural)
 {
-        GtkStyleContext *style;
+        GtkStyleContext *context;
+        GtkBorder padding;
 
-        GTK_WIDGET_CLASS (msd_osd_window_parent_class)->get_preferred_height (widget, minimum_height, natural_height);
+        GTK_WIDGET_CLASS (msd_osd_window_parent_class)->get_preferred_height (widget, minimum, natural);
 
-        /* See the comment in msd_osd_window_style_updated() for why we add the thickness here */
+        /* See the comment in msd_osd_window_style_updated() for why we add the padding here */
 
-        style = gtk_widget_get_style_context (widget);
+        context = gtk_widget_get_style_context (widget);
+        gtk_style_context_get_padding (context, GTK_STATE_FLAG_NORMAL, &padding);
 
-        *minimum_height += 12;
-        *natural_height += 12;
+        *minimum += padding.top;
+        *natural += padding.top;
 }
 #else
 static void
