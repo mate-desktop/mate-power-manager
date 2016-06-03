@@ -532,7 +532,11 @@ gpm_applet_key_press_cb (GpmBrightnessApplet *applet, GdkEventKey *event)
 			gdk_keyboard_ungrab (GDK_CURRENT_TIME);
 			gdk_pointer_ungrab (GDK_CURRENT_TIME);
 			gtk_grab_remove (GTK_WIDGET(applet));
+#if GTK_CHECK_VERSION (3, 0, 0)
+			gtk_widget_set_state_flags (GTK_WIDGET(applet), GTK_STATE_FLAG_NORMAL, TRUE);
+#else
 			gtk_widget_set_state (GTK_WIDGET(applet), GTK_STATE_NORMAL);
+#endif
 			gtk_widget_hide (applet->popup);
 			applet->popped = FALSE;
 			gpm_applet_draw_cb (applet);
