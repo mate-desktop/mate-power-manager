@@ -55,7 +55,11 @@ struct MsdOsdWindowPrivate
 };
 
 enum {
+#if GTK_CHECK_VERSION (3, 0, 0)
+        DRAW_WHEN_COMPOSITED,
+#else
         EXPOSE_WHEN_COMPOSITED,
+#endif
         LAST_SIGNAL
 };
 
@@ -139,6 +143,7 @@ add_hide_timeout (MsdOsdWindow *window)
                                                        window);
 }
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 void
 msd_osd_window_draw_rounded_rectangle (cairo_t* cr,
                                        gdouble  aspect,
@@ -191,7 +196,6 @@ msd_osd_window_draw_rounded_rectangle (cairo_t* cr,
         cairo_close_path (cr);
 }
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
 void
 msd_osd_window_color_reverse (const GdkColor *a,
                               GdkColor       *b)
@@ -229,7 +233,7 @@ msd_osd_window_color_reverse (const GdkColor *a,
  */
 static void
 #if GTK_CHECK_VERSION (3, 0, 0)
-draw_when_composited (GtkWidget *widget, cairo_t *context)
+draw_when_composited (GtkWidget *widget, cairo_t *orig_cr)
 #else
 expose_when_composited (GtkWidget *widget, GdkEventExpose *event)
 #endif
@@ -243,7 +247,7 @@ expose_when_composited (GtkWidget *widget, GdkEventExpose *event)
         int              width;
         int              height;
 #if GTK_CHECK_VERSION (3, 0, 0)
-        GtkStyleContext *style;
+        GtkStyleContext *context;
 #else
         GtkStyle        *style;
         GdkColor         color;
@@ -257,14 +261,19 @@ expose_when_composited (GtkWidget *widget, GdkEventExpose *event)
 #endif
 
 #if GTK_CHECK_VERSION (3, 0, 0)
-        style = gtk_widget_get_style_context (widget);
+        context = gtk_widget_get_style_context (widget);
+        cairo_set_operator (orig_cr, CAIRO_OPERATOR_SOURCE);
 #else
         style = gtk_widget_get_style (widget);
-#endif
         cairo_set_operator (context, CAIRO_OPERATOR_SOURCE);
+#endif
         gtk_window_get_size (GTK_WINDOW (widget), &width, &height);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+        surface = cairo_surface_create_similar (cairo_get_target (orig_cr),
+#else
         surface = cairo_surface_create_similar (cairo_get_target (context),
+#endif
                                                 CAIRO_CONTENT_COLOR_ALPHA,
                                                 width,
                                                 height);
@@ -284,7 +293,8 @@ expose_when_composited (GtkWidget *widget, GdkEventExpose *event)
 #endif
 
 #if GTK_CHECK_VERSION (3, 0, 0)
-        gtk_render_background (style, cr, 0, 0, width, height);
+        gtk_render_background (context, cr, 0, 0, width, height);
+        gtk_render_frame (context, cr, 0, 0, width, height);
 #else
         /* draw a box */
         msd_osd_window_draw_rounded_rectangle (cr, 1.0, 0.5, 0.5, height / 10, width-1, height-1);
@@ -304,17 +314,30 @@ expose_when_composited (GtkWidget *widget, GdkEventExpose *event)
         cairo_stroke (cr);
 #endif
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+        g_signal_emit (window, signals[DRAW_WHEN_COMPOSITED], 0, cr);
+#else
         g_signal_emit (window, signals[EXPOSE_WHEN_COMPOSITED], 0, cr);
+#endif
 
         cairo_destroy (cr);
 
         /* Make sure we have a transparent background */
+#if GTK_CHECK_VERSION (3, 0, 0)
+        cairo_rectangle (orig_cr, 0, 0, width, height);
+        cairo_set_source_rgba (orig_cr, 0.0, 0.0, 0.0, 0.0);
+        cairo_fill (orig_cr);
+
+        cairo_set_source_surface (orig_cr, surface, 0, 0);
+        cairo_paint_with_alpha (orig_cr, window->priv->fade_out_alpha);
+#else
         cairo_rectangle (context, 0, 0, width, height);
         cairo_set_source_rgba (context, 0.0, 0.0, 0.0, 0.0);
         cairo_fill (context);
 
         cairo_set_source_surface (context, surface, 0, 0);
         cairo_paint_with_alpha (context, window->priv->fade_out_alpha);
+#endif
 
  done:
         if (surface != NULL) {
@@ -325,44 +348,40 @@ expose_when_composited (GtkWidget *widget, GdkEventExpose *event)
 #endif
 }
 
-/* This is our expose-event handler when the window is *not* in a compositing manager.
+/* This is our expose/draw-event handler when the window is *not* in a compositing manager.
  * We just draw a rectangular frame by hand.  We do this with hardcoded drawing code,
  * instead of GtkFrame, to avoid changing the window's internal widget hierarchy:  in
  * either case (composited or non-composited), callers can assume that this works
  * identically to a GtkWindow without any intermediate widgetry.
  */
+#if GTK_CHECK_VERSION (3, 0, 0)
 static void
-#if GTK_CHECK_VERSION (3, 0, 0)
 draw_when_not_composited (GtkWidget *widget, cairo_t *cr)
-#else
-expose_when_not_composited (GtkWidget *widget, GdkEventExpose *event)
-#endif
 {
-	MsdOsdWindow *window;
-#if GTK_CHECK_VERSION (3, 0, 0)
-	int width;
-	int height;
+        GtkStyleContext *context;
+        int width;
+        int height;
+
+        width = gtk_widget_get_allocated_width (widget);
+        height = gtk_widget_get_allocated_width (widget);
+        context = gtk_widget_get_style_context (widget);
+
+        gtk_style_context_set_state (context, GTK_STATE_FLAG_ACTIVE);
+        gtk_render_frame (context,
+                          cr,
+                          0,
+                          0,
+                          width,
+                          height);
+}
 #else
+static void
+expose_when_not_composited (GtkWidget *widget, GdkEventExpose *event)
+{
 	GtkAllocation allocation;
-#endif
 
-	window = MSD_OSD_WINDOW (widget);
-
-#if GTK_CHECK_VERSION (3, 0, 0)
-	width = gtk_widget_get_allocated_width (widget);
-	height = gtk_widget_get_allocated_width (widget);
-#else
 	gtk_widget_get_allocation (widget, &allocation);
-#endif
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-	gtk_render_frame (gtk_widget_get_style_context (widget),
-			  cr,
-			  0,
-			  0,
-			  width,
-			  height);
-#else
 	gtk_paint_shadow (gtk_widget_get_style (widget),
 			  gtk_widget_get_window (widget),
 			  gtk_widget_get_state (widget),
@@ -374,45 +393,52 @@ expose_when_not_composited (GtkWidget *widget, GdkEventExpose *event)
 			  0,
 			  allocation.width,
 			  allocation.height);
-#endif
 }
-
-static gboolean
-#if GTK_CHECK_VERSION (3, 0, 0)
-msd_osd_window_draw (GtkWidget *widget,
-                     cairo_t *cr)
-#else
-msd_osd_window_expose_event (GtkWidget          *widget,
-                             GdkEventExpose     *event)
 #endif
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+static gboolean
+msd_osd_window_draw (GtkWidget *widget,
+                     cairo_t   *cr)
 {
 	MsdOsdWindow *window;
 	GtkWidget *child;
 
 	window = MSD_OSD_WINDOW (widget);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	if (window->priv->is_composited)
 		draw_when_composited (widget, cr);
 	else
 		draw_when_not_composited (widget, cr);
+
+	child = gtk_bin_get_child (GTK_BIN (window));
+	if (child)
+		gtk_container_propagate_draw (GTK_CONTAINER (window), child, cr);
+
+	return FALSE;
+}
 #else
+static gboolean
+msd_osd_window_expose_event (GtkWidget          *widget,
+                             GdkEventExpose     *event)
+{
+	MsdOsdWindow *window;
+	GtkWidget *child;
+
+	window = MSD_OSD_WINDOW (widget);
+
 	if (window->priv->is_composited)
 		expose_when_composited (widget, event);
 	else
 		expose_when_not_composited (widget, event);
-#endif
 
 	child = gtk_bin_get_child (GTK_BIN (window));
 	if (child)
-#if GTK_CHECK_VERSION (3, 0, 0)
-		gtk_container_propagate_draw (GTK_CONTAINER (window), child, cr);
-#else
 		gtk_container_propagate_expose (GTK_CONTAINER (window), child, event);
-#endif
 
-        return FALSE;
+	return FALSE;
 }
+#endif
 
 static void
 msd_osd_window_real_show (GtkWidget *widget)
@@ -448,39 +474,40 @@ msd_osd_window_real_realize (GtkWidget *widget)
         GdkScreen *screen;
         GdkVisual *visual;
         cairo_region_t *region;
-#else
-        GdkColormap *colormap;
-        GtkAllocation allocation;
-        GdkBitmap *mask;
-        cairo_t *cr;
-#endif
 
-#if GTK_CHECK_VERSION (3, 0, 0)
         screen = gtk_widget_get_screen (widget);
         visual = gdk_screen_get_rgba_visual (screen);
 
         if (visual == NULL) {
                 visual = gdk_screen_get_system_visual (screen);
         }
-        gtk_widget_set_visual (widget, visual);
-#else
-        colormap = gdk_screen_get_rgba_colormap (gtk_widget_get_screen (widget));
 
-        if (colormap != NULL) {
-                gtk_widget_set_colormap (widget, colormap);
-        }
-#endif
+        gtk_widget_set_visual (widget, visual);
 
         if (GTK_WIDGET_CLASS (msd_osd_window_parent_class)->realize) {
                 GTK_WIDGET_CLASS (msd_osd_window_parent_class)->realize (widget);
         }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
         /* make the whole window ignore events */
         region = cairo_region_create ();
         gtk_widget_input_shape_combine_region (widget, region);
         cairo_region_destroy (region);
 #else
+        GdkColormap *colormap;
+        GtkAllocation allocation;
+        GdkBitmap *mask;
+        cairo_t *cr;
+
+        colormap = gdk_screen_get_rgba_colormap (gtk_widget_get_screen (widget));
+
+        if (colormap != NULL) {
+                gtk_widget_set_colormap (widget, colormap);
+        }
+
+        if (GTK_WIDGET_CLASS (msd_osd_window_parent_class)->realize) {
+                GTK_WIDGET_CLASS (msd_osd_window_parent_class)->realize (widget);
+        }
+
         gtk_widget_get_allocation (widget, &allocation);
         mask = gdk_pixmap_new (gtk_widget_get_window (widget),
                                allocation.width,
@@ -498,9 +525,8 @@ msd_osd_window_real_realize (GtkWidget *widget)
         cairo_destroy (cr);
 #endif
 }
-
-static void
 #if GTK_CHECK_VERSION (3, 0, 0)
+static void
 msd_osd_window_style_updated (GtkWidget *widget)
 {
         GtkStyleContext *context;
@@ -518,6 +544,7 @@ msd_osd_window_style_updated (GtkWidget *widget)
         gtk_container_set_border_width (GTK_CONTAINER (widget), 12 + MAX (padding.left, padding.top));
 }
 #else
+static void
 msd_osd_window_style_set (GtkWidget *widget,
                           GtkStyle  *previous_style)
 {
@@ -534,7 +561,6 @@ msd_osd_window_style_set (GtkWidget *widget,
         gtk_container_set_border_width (GTK_CONTAINER (widget), 12 + MAX (style->xthickness, style->ythickness));
 }
 #endif
-
 #if GTK_CHECK_VERSION (3, 0, 0)
 static void
 msd_osd_window_get_preferred_width (GtkWidget *widget,
@@ -640,7 +666,7 @@ msd_osd_window_class_init (MsdOsdWindowClass *klass)
 #endif
 
 #if GTK_CHECK_VERSION (3, 0, 0)
-        signals[EXPOSE_WHEN_COMPOSITED] = g_signal_new ("draw-when-composited",
+        signals[DRAW_WHEN_COMPOSITED] = g_signal_new ("draw-when-composited",
 #else
         signals[EXPOSE_WHEN_COMPOSITED] = g_signal_new ("expose-when-composited",
 #endif

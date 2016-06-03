@@ -84,6 +84,7 @@ gboolean              msd_osd_window_is_composited     (MsdOsdWindow      *windo
 gboolean              msd_osd_window_is_valid          (MsdOsdWindow      *window);
 void                  msd_osd_window_update_and_hide   (MsdOsdWindow      *window);
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 void                  msd_osd_window_draw_rounded_rectangle (cairo_t *cr,
                                                              gdouble  aspect,
                                                              gdouble  x,
@@ -92,7 +93,6 @@ void                  msd_osd_window_draw_rounded_rectangle (cairo_t *cr,
                                                              gdouble  width,
                                                              gdouble  height);
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
 void                  msd_osd_window_color_reverse          (const GdkColor *a,
                                                              GdkColor       *b);
 #endif
