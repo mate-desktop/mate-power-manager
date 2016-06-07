@@ -30,11 +30,6 @@
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define MATE_DESKTOP_USE_UNSTABLE_API
-#include <libmate-desktop/mate-desktop-utils.h>
-#endif
-
 #include "gsd-media-keys-window.h"
 
 #define MSD_MEDIA_KEYS_WINDOW_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), MSD_TYPE_MEDIA_KEYS_WINDOW, MsdMediaKeysWindowPrivate))
@@ -397,6 +392,26 @@ render_speaker (MsdMediaKeysWindow *window,
         return TRUE;
 }
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+static void
+msd_get_background_color (GtkStyleContext *context,
+                          GtkStateFlags    state,
+                          GdkRGBA         *color)
+{
+    GdkRGBA *c;
+
+    g_return_if_fail (color != NULL);
+    g_return_if_fail (GTK_IS_STYLE_CONTEXT (context));
+
+    gtk_style_context_get (context,
+                           state,
+                           "background-color", &c,
+                           NULL);
+    *color = *c;
+    gdk_rgba_free (c);
+}
+#endif
+
 static void
 draw_volume_boxes (MsdMediaKeysWindow *window,
                    cairo_t            *cr,
@@ -408,32 +423,52 @@ draw_volume_boxes (MsdMediaKeysWindow *window,
 {
         gdouble   x1;
 #if GTK_CHECK_VERSION (3, 0, 0)
-        GdkRGBA   color;
-        GtkStyleContext *style;
+        GtkStyleContext *context;
+        GdkRGBA   acolor;
 #else
         GdkColor  color;
         double    r, g, b;
         GtkStyle *style;
 #endif
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
         _x0 += 0.5;
         _y0 += 0.5;
+#endif
         height = round (height) - 1;
         width = round (width) - 1;
         x1 = round ((width - 1) * percentage);
-
 #if GTK_CHECK_VERSION (3, 0, 0)
-        style = gtk_widget_get_style_context (GTK_WIDGET (window));
+        context = gtk_widget_get_style_context (GTK_WIDGET (window));
 #else
         style = gtk_widget_get_style (GTK_WIDGET (window));
 #endif
 
         /* bar background */
-        msd_osd_window_draw_rounded_rectangle (cr, 1.0, _x0, _y0, height / 6, width, height);
 #if GTK_CHECK_VERSION (3, 0, 0)
-        mate_desktop_gtk_style_get_dark_color (style, GTK_STATE_FLAG_NORMAL, &color);
-        cairo_set_operator (cr, CAIRO_OPERATOR_DIFFERENCE);
-        cairo_set_source_rgba (cr, color.red, color.green, color.blue, MSD_OSD_WINDOW_FG_ALPHA / 2);
+        gtk_style_context_save (context);
+        gtk_style_context_add_class (context, GTK_STYLE_CLASS_TROUGH);
+        msd_get_background_color (context, GTK_STATE_FLAG_NORMAL, &acolor);
+        gtk_render_frame (context, cr, _x0, _y0, width, height);
+
+        msd_osd_window_draw_rounded_rectangle (cr, 1.0, _x0, _y0, height / 6, width, height);
+        gdk_cairo_set_source_rgba (cr, &acolor);
+        cairo_fill (cr);
+
+        gtk_style_context_restore (context);
+
+        /* bar progress */
+        if (percentage < 0.01)
+                return;
+        gtk_style_context_save (context);
+        gtk_style_context_add_class (context, GTK_STYLE_CLASS_PROGRESSBAR);
+        msd_get_background_color (context, GTK_STATE_FLAG_NORMAL, &acolor);
+
+        msd_osd_window_draw_rounded_rectangle (cr, 1.0, _x0 + 0.5, _y0 + 0.5, height / 6 - 0.5, x1, height - 1);
+        gdk_cairo_set_source_rgba (cr, &acolor);
+        cairo_fill (cr);
+
+        gtk_style_context_restore (context);
 #else
         msd_osd_window_color_reverse (&style->dark[GTK_STATE_NORMAL], &color);
         r = (float)color.red / 65535.0;
@@ -441,41 +476,28 @@ draw_volume_boxes (MsdMediaKeysWindow *window,
         b = (float)color.blue / 65535.0;
         msd_osd_window_draw_rounded_rectangle (cr, 1.0, _x0, _y0, height / 6, width, height);
         cairo_set_source_rgba (cr, r, g, b, MSD_OSD_WINDOW_FG_ALPHA / 2);
-#endif
         cairo_fill_preserve (cr);
 
         /* bar border */
-#if GTK_CHECK_VERSION (3, 0, 0)
-        mate_desktop_gtk_style_get_light_color (style, GTK_STATE_FLAG_NORMAL, &color);
-        cairo_set_operator (cr, CAIRO_OPERATOR_DIFFERENCE);
-        cairo_set_source_rgba (cr, color.red, color.green, color.blue, MSD_OSD_WINDOW_FG_ALPHA / 2);
-#else
         msd_osd_window_color_reverse (&style->light[GTK_STATE_NORMAL], &color);
         r = (float)color.red / 65535.0;
         g = (float)color.green / 65535.0;
         b = (float)color.blue / 65535.0;
         cairo_set_source_rgba (cr, r, g, b, MSD_OSD_WINDOW_FG_ALPHA / 2);
-#endif
         cairo_set_line_width (cr, 1);
         cairo_stroke (cr);
 
         /* bar progress */
         if (percentage < 0.01)
                 return;
-
-        msd_osd_window_draw_rounded_rectangle (cr, 1.0, _x0 + 0.5, _y0 + 0.5, height / 6 - 0.5, x1, height - 1);
-#if GTK_CHECK_VERSION (3, 0, 0)
-        gtk_style_context_get (style, GTK_STATE_FLAG_NORMAL, GTK_STYLE_PROPERTY_COLOR, &color, NULL);
-        cairo_set_operator (cr, CAIRO_OPERATOR_DIFFERENCE);
-        cairo_set_source_rgba (cr, color.red, color.green, color.blue, MSD_OSD_WINDOW_FG_ALPHA);
-#else
         color = style->bg[GTK_STATE_NORMAL];
         r = (float)color.red / 65535.0;
         g = (float)color.green / 65535.0;
         b = (float)color.blue / 65535.0;
+        msd_osd_window_draw_rounded_rectangle (cr, 1.0, _x0 + 0.5, _y0 + 0.5, height / 6 - 0.5, x1, height - 1);
         cairo_set_source_rgba (cr, r, g, b, MSD_OSD_WINDOW_FG_ALPHA);
-#endif
         cairo_fill (cr);
+#endif
 }
 
 static void
@@ -520,6 +542,14 @@ draw_action_volume (MsdMediaKeysWindow *window,
                 speaker_height = icon_box_height * 0.75;
                 speaker_cx = icon_box_x0 + speaker_width / 2;
                 speaker_cy = icon_box_y0 + speaker_height / 2;
+
+#if 0
+                g_message ("speaker box: w=%f h=%f cx=%f cy=%f",
+                           speaker_width,
+                           speaker_height,
+                           speaker_cx,
+                           speaker_cy);
+#endif
 
                 /* draw speaker symbol */
                 draw_speaker (cr, speaker_cx, speaker_cy, speaker_width, speaker_height);
@@ -621,6 +651,19 @@ draw_action_custom (MsdMediaKeysWindow *window,
         icon_box_y0 = (window_height - icon_box_height - bright_box_height) / 2;
         bright_box_x0 = round (icon_box_x0);
         bright_box_y0 = round (icon_box_height + icon_box_y0);
+
+#if 0
+        g_message ("icon box: w=%f h=%f _x0=%f _y0=%f",
+                   icon_box_width,
+                   icon_box_height,
+                   icon_box_x0,
+                   icon_box_y0);
+        g_message ("brightness box: w=%f h=%f _x0=%f _y0=%f",
+                   bright_box_width,
+                   bright_box_height,
+                   bright_box_x0,
+                   bright_box_y0);
+#endif
 
         res = render_custom (window,
                              cr,
