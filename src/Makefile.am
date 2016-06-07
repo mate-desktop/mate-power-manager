@@ -172,7 +172,7 @@ mate_power_manager_SOURCES =				\
 	gpm-session.c					\
 	gpm-networkmanager.h				\
 	gpm-networkmanager.c				\
-	gpm-stock-icons.h				\
+	gpm-icon-names.h				\
 	gsd-media-keys-window.h				\
 	gsd-media-keys-window.c				\
 	msd-osd-window.h				\

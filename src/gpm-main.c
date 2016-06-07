@@ -36,7 +36,7 @@
 #include <dbus/dbus-glib.h>
 #include <dbus/dbus-glib-lowlevel.h>
 
-#include "gpm-stock-icons.h"
+#include "gpm-icon-names.h"
 #include "gpm-common.h"
 #include "gpm-manager.h"
 #include "gpm-session.h"

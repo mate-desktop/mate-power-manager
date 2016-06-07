@@ -52,7 +52,7 @@
 #include "gpm-dpms.h"
 #include "gpm-idle.h"
 #include "gpm-marshal.h"
-#include "gpm-stock-icons.h"
+#include "gpm-icon-names.h"
 #include "egg-console-kit.h"
 
 #if !GTK_CHECK_VERSION(3,0,0)

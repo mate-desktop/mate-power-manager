@@ -39,7 +39,7 @@
 #include "gpm-tray-icon.h"
 #include "gpm-common.h"
 #include "gpm-prefs-core.h"
-#include "gpm-stock-icons.h"
+#include "gpm-icon-names.h"
 #include "gpm-brightness.h"
 
 static void gpm_prefs_finalize (GObject *object);
@@ -842,7 +842,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 
 	/* Hide window first so that the dialogue resizes itself without redrawing */
 	gtk_widget_hide (main_window);
-	gtk_window_set_default_icon_name (GPM_STOCK_APP_ICON);
+	gtk_window_set_default_icon_name (GPM_ICON_APP_ICON);
 
 	/* Get the main window quit */
 	g_signal_connect (main_window, "delete_event",
