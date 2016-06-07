@@ -467,6 +467,7 @@ draw_volume_boxes (MsdMediaKeysWindow *window,
         msd_osd_window_draw_rounded_rectangle (cr, 1.0, _x0 + 0.5, _y0 + 0.5, height / 6 - 0.5, x1, height - 1);
         gdk_cairo_set_source_rgba (cr, &acolor);
         cairo_fill (cr);
+        gtk_render_background (context, cr, _x0 + 0.5, _y0 + 0.5, x1, height - 1);
 
         gtk_style_context_restore (context);
 #else
