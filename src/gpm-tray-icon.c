@@ -427,6 +427,7 @@ gpm_tray_icon_init (GpmTrayIcon *icon)
 			  G_CALLBACK (gpm_tray_icon_settings_changed_cb), icon);
 
 	icon->priv->status_icon = gtk_status_icon_new ();
+	gpm_tray_icon_show (icon, FALSE);
 	g_signal_connect_object (G_OBJECT (icon->priv->status_icon),
 				 "popup_menu",
 				 G_CALLBACK (gpm_tray_icon_popup_menu_cb),
