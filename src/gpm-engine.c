@@ -32,7 +32,7 @@
 #include "gpm-upower.h"
 #include "gpm-marshal.h"
 #include "gpm-engine.h"
-#include "gpm-stock-icons.h"
+#include "gpm-icon-names.h"
 #include "gpm-phone.h"
 
 static void     gpm_engine_finalize   (GObject	  *object);
@@ -443,7 +443,7 @@ gpm_engine_get_icon (GpmEngine *engine)
 
 	/* we fallback to the ac_adapter icon */
 	egg_debug ("Using fallback");
-	return g_strdup (GPM_STOCK_AC_ADAPTER);
+	return g_strdup (GPM_ICON_AC_ADAPTER);
 }
 
 /**

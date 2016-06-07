@@ -36,7 +36,7 @@
 #include "egg-unique.h"
 
 #include "gpm-common.h"
-#include "gpm-stock-icons.h"
+#include "gpm-icon-names.h"
 #include "gpm-upower.h"
 #include "gpm-graph-widget.h"
 
@@ -1642,7 +1642,7 @@ main (int argc, char *argv[])
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "dialog_stats"));
 	gtk_window_set_default_size (GTK_WINDOW(widget), 800, 500);
-	gtk_window_set_default_icon_name (GPM_STOCK_APP_ICON);
+	gtk_window_set_default_icon_name (GPM_ICON_APP_ICON);
 
 	/* Get the main window quit */
 	g_signal_connect_swapped (widget, "delete_event", G_CALLBACK (gtk_main_quit), NULL);

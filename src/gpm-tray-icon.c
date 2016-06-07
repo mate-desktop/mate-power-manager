@@ -46,7 +46,7 @@
 #include "gpm-upower.h"
 #include "gpm-engine.h"
 #include "gpm-common.h"
-#include "gpm-stock-icons.h"
+#include "gpm-icon-names.h"
 #include "gpm-tray-icon.h"
 
 static void     gpm_tray_icon_finalize   (GObject	   *object);
@@ -111,20 +111,21 @@ gpm_tray_icon_get_status_icon (GpmTrayIcon *icon)
 }
 
 /**
- * gpm_tray_icon_set_image_from_stock:
- * @filename: The icon name, e.g. GPM_STOCK_APP_ICON, or NULL to remove.
+ * gpm_tray_icon_set_icon:
+ * @icon_name: The icon name, e.g. GPM_ICON_APP_ICON, or NULL to remove.
  *
- * Loads a pixmap from disk, and sets as the tooltip icon
+ * Loads a pixmap from disk, and sets as the tooltip icon.
  **/
 gboolean
-gpm_tray_icon_set_icon (GpmTrayIcon *icon, const gchar *filename)
+gpm_tray_icon_set_icon (GpmTrayIcon *icon, const gchar *icon_name)
 {
 	g_return_val_if_fail (icon != NULL, FALSE);
 	g_return_val_if_fail (GPM_IS_TRAY_ICON (icon), FALSE);
 
-	if (filename != NULL) {
-		egg_debug ("Setting icon to %s", filename);
-		gtk_status_icon_set_from_icon_name (icon->priv->status_icon, filename);
+	if (icon_name != NULL) {
+		egg_debug ("Setting icon to %s", icon_name);
+		gtk_status_icon_set_from_icon_name (icon->priv->status_icon,
+		                                    icon_name);
 
 		/* make sure that we are visible */
 		gpm_tray_icon_show (icon, TRUE);
@@ -328,7 +329,7 @@ gpm_tray_icon_create_menu (GpmTrayIcon *icon, guint32 timestamp)
 
 	/* preferences */
 	item = gtk_image_menu_item_new_with_mnemonic (_("_Preferences"));
-	image = gtk_image_new_from_icon_name (GTK_STOCK_PREFERENCES, GTK_ICON_SIZE_MENU);
+	image = gtk_image_new_from_icon_name ("preferences-system", GTK_ICON_SIZE_MENU);
 	gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (item), image);
 	g_signal_connect (G_OBJECT (item), "activate",
 			  G_CALLBACK (gpm_tray_icon_show_preferences_cb), icon);

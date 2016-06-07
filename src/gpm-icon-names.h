@@ -21,21 +21,21 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#ifndef __GPM_STOCK_ICONS_H
-#define __GPM_STOCK_ICONS_H
+#ifndef __GPM_ICON_NAMES_H
+#define __GPM_ICON_NAMES_H
 
 G_BEGIN_DECLS
 
-#define GPM_STOCK_APP_ICON			"mate-power-manager"
-#define GPM_STOCK_AC_ADAPTER			"gpm-ac-adapter"
-#define GPM_STOCK_BATTERY_CHARGED		"gpm-primary-charged"
-#define GPM_STOCK_HIBERNATE			"gpm-hibernate"
-#define GPM_STOCK_SUSPEND			"gpm-suspend"
-#define GPM_STOCK_STATISTICS			"mate-power-statistics"
-#define GPM_STOCK_BRIGHTNESS_LCD		"gpm-brightness-lcd"
-#define GPM_STOCK_BRIGHTNESS_KBD		"gpm-brightness-kbd"
-#define GPM_STOCK_INHIBIT			"gpm-inhibit"
+#define GPM_ICON_APP_ICON			"mate-power-manager"
+#define GPM_ICON_AC_ADAPTER			"gpm-ac-adapter"
+#define GPM_ICON_BATTERY_CHARGED		"gpm-primary-charged"
+#define GPM_ICON_SUSPEND			"gpm-suspend"
+#define GPM_ICON_HIBERNATE			"gpm-hibernate"
+#define GPM_ICON_STATISTICS			"mate-power-statistics"
+#define GPM_ICON_BRIGHTNESS_LCD			"gpm-brightness-lcd"
+#define GPM_ICON_BRIGHTNESS_KBD			"gpm-brightness-kbd"
+#define GPM_ICON_INHIBIT			"gpm-inhibit"
 
 G_END_DECLS
 
-#endif /* __GPM_STOCK_ICONS_H */
+#endif /* __GPM_ICON_NAMES_H */

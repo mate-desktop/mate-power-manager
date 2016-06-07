@@ -56,7 +56,7 @@
 #include "gpm-backlight.h"
 #include "gpm-kbd-backlight.h"
 #include "gpm-session.h"
-#include "gpm-stock-icons.h"
+#include "gpm-icon-names.h"
 #include "gpm-tray-icon.h"
 #include "gpm-engine.h"
 #include "gpm-upower.h"
@@ -579,13 +579,13 @@ gpm_manager_sleep_failure (GpmManager *manager, gboolean is_suspend, const gchar
 		g_string_append (string, _("Computer failed to suspend."));
 		/* TRANSLATORS: title text */
 		title = _("Failed to suspend");
-		icon = GPM_STOCK_SUSPEND;
+		icon = GPM_ICON_SUSPEND;
 	} else {
 		/* TRANSLATORS: message text */
 		g_string_append (string, _("Computer failed to hibernate."));
 		/* TRANSLATORS: title text */
 		title = _("Failed to hibernate");
-		icon = GPM_STOCK_HIBERNATE;
+		icon = GPM_ICON_HIBERNATE;
 	}
 
 	/* TRANSLATORS: message text */
@@ -926,7 +926,7 @@ gpm_manager_button_pressed_cb (GpmButton *button, const gchar *type, GpmManager 
 				    _("Power Information"),
 				    message,
 				    GPM_MANAGER_NOTIFY_TIMEOUT_LONG,
-				    GTK_STOCK_DIALOG_INFO,
+				    "dialog-information",
 				    NOTIFY_URGENCY_NORMAL);
 		g_free (message);
 	}
@@ -1116,7 +1116,7 @@ gpm_manager_engine_low_capacity_cb (GpmEngine *engine, UpDevice *device, GpmMana
 	message = g_strdup_printf (_("Battery has a very low capacity (%1.1f%%), "
 				     "which means that it may be old or broken."), capacity);
 	gpm_manager_notify (manager, &manager->priv->notification_general, title, message, GPM_MANAGER_NOTIFY_TIMEOUT_SHORT,
-			    GTK_STOCK_DIALOG_INFO, NOTIFY_URGENCY_LOW);
+			    "dialog-information", NOTIFY_URGENCY_LOW);
 out:
 	g_free (message);
 }
@@ -1165,7 +1165,7 @@ gpm_manager_engine_fully_charged_cb (GpmEngine *engine, UpDevice *device, GpmMan
 		title = ngettext ("Battery Charged", "Batteries Charged", plural);
 		gpm_manager_notify (manager, &manager->priv->notification_fully_charged,
 				    title, NULL, GPM_MANAGER_NOTIFY_TIMEOUT_SHORT,
-				    GTK_STOCK_DIALOG_INFO, NOTIFY_URGENCY_LOW);
+				    "dialog-information", NOTIFY_URGENCY_LOW);
 	}
 out:
 	g_free (native_path);
@@ -1790,7 +1790,6 @@ static void
 gpm_manager_init (GpmManager *manager)
 {
 	gboolean check_type_cpu;
-	gint timeout;
 	DBusGConnection *connection;
 	GDBusConnection *g_connection;
 	GError *error = NULL;
