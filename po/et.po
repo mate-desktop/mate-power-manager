@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Ivar Smolin <okul@linux.ee>, 2014-2015
+# Tõnis Rand, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 13:07+0200\n"
-"PO-Revision-Date: 2015-12-31 02:11+0000\n"
-"Last-Translator: Ivar Smolin <okul@linux.ee>\n"
+"PO-Revision-Date: 2016-05-05 15:24+0000\n"
+"Last-Translator: Tõnis Rand\n"
 "Language-Team: Estonian (http://www.transifex.com/mate/MATE/language/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -366,7 +367,7 @@ msgstr "Tegevus akutoitel oleva sülearvuti kaane sulgemisel"
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
-msgstr ""
+msgstr "Akutoitel sülearvuti kaane sulgemisel sooritatav tegevus."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:49
 msgid "Laptop lid close action when on AC"
@@ -376,7 +377,7 @@ msgstr "Tegevus võrgutoitel oleva sülearvuti kaane sulgemisel"
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
-msgstr ""
+msgstr "Võrgutoitel sülearvuti kaane sulgemisel sooritatav tegevus."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:51
 msgid "Whether to use time-based notifications"
@@ -624,7 +625,7 @@ msgstr "Täituvusprotsent, mille juures tegevus sooritatakse"
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
-msgstr ""
+msgstr "Aku täituvus protsentides, mille puhul sooritatakse kriitilise täituvuse tegevus. Kehtib ainult siis, kui use-time-for-policy pole tõene."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:104
 msgid "The time remaining when low"
@@ -654,7 +655,7 @@ msgstr "Pärast tegevust jääv aeg"
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "Aku järelejäänud aeg sekundites, millal sooritatakse kriitilise täituvuse tegevus. Kehtib ainult siis, kui use-time-for-policy on tõene."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:110
 msgid "Sleep timeout computer when on battery"
