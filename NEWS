@@ -1,3 +1,21 @@
+Version 1.15.0
+~~~~~~~~~~~~~~
+Released: 2016-06-08
+
+ - Translations update
+ - GTK+3: fix having an icon space with having no battery
+ - rely less on GtkStock
+ - GTK+3 media-keys: sync code with m-s-d and drop include mate-desktop-utils.h
+ - GTK+3 gpm-kbd-backlight: replace deprecated gdk_display_get_pointer
+ - GTK+3: replace gdk_error_trap_pop () with gdk_error_trap_pop_ignored ()
+ - GTK+3 gpm-backlight: replace deprecated gdk_display_get_pointer
+ - GTK+3 brightness applet: use the right gtk state flag
+ - GTK+3 msd-osd-window: improve style_updated function
+ - GTK+3 msd-osd-window: port everything to GtkStyleContext
+ - GTK+3 gpm-tray-icon: fix a Wincompatible-pointer-types build warning
+ - GTK+3: do not use deprecated gtk_widget_size_request
+ - GTK+3: css themes for MsdOsdWindow
+
 Version 1.14.0
 ~~~~~~~~~~~~~~
 Released: 2016-04-07
