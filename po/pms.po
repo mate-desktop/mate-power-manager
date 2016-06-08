@@ -3,49 +3,47 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Alexei Sorokin <sor.alexei@meowr.ru>, 2013
-# Дмитрий Михирев <bizdelnick@gmail.com>, 2015
-# Cyber Tailor <cybertailor@gmail.com>, 2015
+# Randy Ichinose <randyichinose@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-09 13:07+0200\n"
-"PO-Revision-Date: 2015-12-14 12:30+0000\n"
-"Last-Translator: Дмитрий Михирев <bizdelnick@gmail.com>\n"
-"Language-Team: Russian (http://www.transifex.com/mate/MATE/language/ru/)\n"
+"PO-Revision-Date: 2016-05-09 10:45+0000\n"
+"Last-Translator: Randy Ichinose <randyichinose@gmail.com>\n"
+"Language-Team: Piemontese (http://www.transifex.com/mate/MATE/language/pms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Language: pms\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../applets/brightness/brightness-applet.c:115
 msgid "Power Manager Brightness Applet"
-msgstr "Апплет управления яркостью"
+msgstr ""
 
 #: ../applets/brightness/brightness-applet.c:116
 msgid "Adjusts laptop panel brightness."
-msgstr "Устанавливает яркость монитора ноутбука."
+msgstr ""
 
 #: ../applets/brightness/brightness-applet.c:417
 #: ../applets/inhibit/inhibit-applet.c:409
 msgid "Cannot connect to mate-power-manager"
-msgstr "Не удалось соединиться с сервисом mate-power-manager"
+msgstr ""
 
 #: ../applets/brightness/brightness-applet.c:419
 msgid "Cannot get laptop panel brightness"
-msgstr "Не удалось установить яркость монитора ноутбука"
+msgstr ""
 
 #: ../applets/brightness/brightness-applet.c:421
 #, c-format
 msgid "LCD brightness : %d%%"
-msgstr "Яркость LCD: %d%%"
+msgstr ""
 
 #: ../applets/brightness/brightness-applet.c:809
 #: ../applets/inhibit/inhibit-applet.c:478
 msgid "Licensed under the GNU General Public License Version 2"
-msgstr "Лицензировано на условиях GNU General Public License версии 2"
+msgstr ""
 
 #: ../applets/brightness/brightness-applet.c:810
 #: ../applets/inhibit/inhibit-applet.c:479
@@ -54,7 +52,7 @@ msgid ""
 "modify it under the terms of the GNU General Public License\n"
 "as published by the Free Software Foundation; either version 2\n"
 "of the License, or (at your option) any later version."
-msgstr "Power Manager — свободное программное обеспечение, вы можете\nраспространять и/или модифицировать его на условиях\nУниверсальной общественной лицензии GNU,\nопубликованной Фондом Свободного Программного\nОбеспечения, версии 2 или (на ваше усмотрение) более поздней."
+msgstr ""
 
 #: ../applets/brightness/brightness-applet.c:814
 #: ../applets/inhibit/inhibit-applet.c:483
@@ -63,7 +61,7 @@ msgid ""
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
 "GNU General Public License for more details."
-msgstr "Power Manager распространяется в надежде, что он может \nбыть полезен, но БЕЗ КАКОГО-ЛИБО ВИДА ГАРАНТИЙ,\nВЫРАЖЕННЫХ ЯВНО ИЛИ ПОДРАЗУМЕВАЕМЫХ,\nВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ ПОДРАЗУМЕВАЕМЫМИ\n ГАРАНТИЯМИ КОММЕРЧЕСКОЙ ЦЕННОСТИ И\nПРИГОДНОСТИ ДЛЯ КОНКРЕТНОЙ ЦЕЛИ. Для получения\nдополнительных сведений обратитесь к Универсальной Общественной Лицензии GNU."
+msgstr ""
 
 #: ../applets/brightness/brightness-applet.c:818
 #: ../applets/inhibit/inhibit-applet.c:487
@@ -72,175 +70,175 @@ msgid ""
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
-msgstr "Вы должны были получить копию лицензии GNU c этой программой.\nЕсли лицензия не была получена, известите об этом Фонд свободного\nпрограммного обеспечения по адресу Free Software Foundation, Inc.,\n51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
+msgstr ""
 
 #: ../applets/brightness/brightness-applet.c:832
 msgid "Copyright © 2006 Benjamin Canou"
-msgstr "Авторское право © 2006 Benjamin Canou"
+msgstr "Copyright © 2006 Benjamin Canou"
 
 #: ../applets/brightness/brightness-applet.c:1074
 #: ../applets/inhibit/inhibit-applet.c:714
 msgid "_About"
-msgstr "_О программе"
+msgstr "_Al rësgard"
 
 #: ../applets/brightness/brightness-applet.c:1077
 #: ../applets/inhibit/inhibit-applet.c:717
 msgid "_Help"
-msgstr "_Справка"
+msgstr "_Agiut"
 
 #: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:1
 msgid "Brightness Applet Factory"
-msgstr "Фабрика апплетов установки яркости"
+msgstr ""
 
 #: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:2
 msgid "Factory for Brightness Applet"
-msgstr "Фабрика апплета установки яркости"
+msgstr ""
 
 #: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:3
 msgid "Brightness Applet"
-msgstr "Апплет установки яркости"
+msgstr ""
 
 #: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:4
 msgid "Adjusts Laptop panel brightness"
-msgstr "Устанавливает яркость монитора ноутбука"
+msgstr ""
 
 #: ../applets/inhibit/inhibit-applet.c:97
 msgid "Power Manager Inhibit Applet"
-msgstr "Апплет блокировки управления питанием"
+msgstr ""
 
 #: ../applets/inhibit/inhibit-applet.c:98
 msgid "Allows user to inhibit automatic power saving."
-msgstr "Позволяет пользователю блокировать автоматические действия по сохранению питания."
+msgstr ""
 
 #: ../applets/inhibit/inhibit-applet.c:412
 msgid "Automatic sleep inhibited"
-msgstr "Спящий режим блокирован"
+msgstr ""
 
 #: ../applets/inhibit/inhibit-applet.c:414
 msgid "Automatic sleep enabled"
-msgstr "Спящий режим включён"
+msgstr ""
 
 #: ../applets/inhibit/inhibit-applet.c:442
 msgid "Manual inhibit"
-msgstr "Ручная блокировка"
+msgstr ""
 
 #: ../applets/inhibit/inhibit-applet.c:501
 msgid "Copyright © 2006-2007 Richard Hughes"
-msgstr "Авторское право © 2006-2007 Richard Hughes"
+msgstr "Copyright © 2006-2007 Richard Hughes"
 
 #: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:1
 msgid "Inhibit Applet Factory"
-msgstr "Фабрика апплета блокировки"
+msgstr ""
 
 #: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:2
 msgid "Factory for Inhibit Applet"
-msgstr "Фабрика для апплета блокировки"
+msgstr ""
 
 #: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:3
 msgid "Inhibit Applet"
-msgstr "Апплет блокировки"
+msgstr ""
 
 #: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:4
 msgid "Allows user to inhibit automatic power saving"
-msgstr "Позволяет пользователю блокировать автоматические действия по сохранению питания"
+msgstr ""
 
 #: ../data/mate-power-manager.desktop.in.in.h:1 ../src/gpm-tray-icon.c:186
 msgid "Power Manager"
-msgstr "Управление питанием"
+msgstr ""
 
 #: ../data/mate-power-manager.desktop.in.in.h:2 ../src/gpm-tray-icon.c:188
 msgid "Power management daemon"
-msgstr "Служба управления питанием"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:1
 msgid "Whether to hibernate, suspend or do nothing when inactive"
-msgstr "Перейти в спящий режим, ждущий режим или ничего не делать после периода бездействия"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:2
 msgid ""
 "The type of sleeping that should be performed when the computer is inactive."
-msgstr "Тип приостановки компьютера после периода бездействия."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:3
 msgid "Battery critical low action"
-msgstr "Действие при критическом разряде батареи"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:4
 msgid "The action to take when the battery is critically low."
-msgstr "Действие, выполняемое при критическом уровне заряда батареи."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:5
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
-msgstr "Должно ли происходить событие батареи, когда панель закрыта и питание отключено"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:6
 msgid ""
 "If the battery lid close event should occur (for example 'Suspend when lid "
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
-msgstr "Генерировать ли событие закрывания панели ноутбука (например, ждущий режим когда панель закрыта на батарее), когда панель была закрыта, а источник питания отключён позже."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:7
 msgid "UPS critical low action"
-msgstr "Действие при критическом разряде ИБП"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:8
 msgid "The action to take when the UPS is critically low."
-msgstr "Действие, выполняемое при критическом уровне заряда UPS."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:9
 msgid "UPS low power action"
-msgstr "Действие при разряде ИБП"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:10
 msgid "The action to take when the UPS is low."
-msgstr "Действие, выполняемое при разряженном UPS."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:11
 msgid "Allow backlight brightness adjustment"
-msgstr "Позволяет управлять яркостью ламп монитора"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:12
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
-msgstr "Должна ли изменяться яркость экрана при переключении питания между сетью и батареей."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:13
 msgid "Reduce the backlight brightness when on battery power"
-msgstr "Приглушать яркость ламп монитора при питании от батареи"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:14
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
-msgstr "Должна ли приглушаться яркость экрана для сохранения энергии при работе от батареи."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:15
 msgid "Reduce the keyboard backlight when on battery power"
-msgstr "Приглушать яркость ламп монитора при питании от батареи"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:16
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
-msgstr "Должна ли приглушаться яркость подсветки клавиатуры при работе от батареи"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:17
 msgid "Keyboard backlight brightness when on AC power."
-msgstr "Яркость подсветки клавиатуры при работе от сети."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:18
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
-msgstr "Значение яркости, которое должно быть установлено для подсветки клавиатуры, в процентах. Допустимые значения — от 0 до 100."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:19
 msgid "Percent to reduce keyboard backlight by when on battery power."
-msgstr "Процент, до которого снижать яркость подсветки клавиатуры при питании от батареи."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:21
 #, no-c-format
@@ -248,11 +246,11 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
-msgstr "Значение, до которого должна быть понижена яркость клавиатуры при питании от батареи, в процентах. Например, если установить значение «60», подсветка будет уменьшена на 40% при питании от батареи. Допустимые значения — от 0 до 100."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
-msgstr "Процент, до которого снижать яркость подсветки клавиатуры при простое."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:24
 #, no-c-format
@@ -260,494 +258,494 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
-msgstr "Значение, до которого должна быть понижена яркость клавиатуры при простое, в процентах. Например, если установить значение «60», при простое подсветка будет уменьшена на 40%. Допустимые значения — от 0 до 100."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:25
 msgid "The brightness of the screen when idle"
-msgstr "Яркость экрана при простое"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:26
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
-msgstr "Значение яркости панели ноутбука при простое сеанса. Действует только когда установлен ключ use-time-for-policy."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:27
 msgid "Dim the screen after a period of inactivity when on battery power"
-msgstr "Приглушать яркость экрана при бездействии при питании от батареи"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:28
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
-msgstr "Должна ли приглушаться яркость экрана для сохранения энергии при бездействии компьютера и работе от батареи."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:29
 msgid "The default amount of time to dim the screen after idle"
-msgstr "Время погасания экрана при бездействии по умолчанию"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:30
 msgid "The default amount of time to dim the screen after idle."
-msgstr "Время погасания экрана при бездействии по умолчанию."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:31
 msgid "LCD dimming amount when on battery"
-msgstr "Снижение яркости LCD при питании от батареи"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:32
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
-msgstr "Уменьшение яркости дисплея при питании от батарей. Возможные значения - от 0 до 100."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:33
 msgid "Dim the screen after a period of inactivity when on AC power"
-msgstr "Приглушать яркость экрана при бездействии при питании от сети"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:34
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on AC power."
-msgstr "Должна ли приглушаться яркость экрана для сохранения энергии при бездействии компьютера и работе от сети."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:35
 msgid "Method used to blank screen on AC"
-msgstr "Метод, используемый для сохранения экрана при работы от сети"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:36
 msgid "The DPMS method used to blank the screen when on AC power."
-msgstr "Метод DPMS, используемый при очистке экрана при питании от сети."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:37
 msgid "Method used to blank screen on battery"
-msgstr "Метод, используемый для сохранения экрана при работе на батарее"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:38
 msgid "The DPMS method used to blank the screen when on battery power."
-msgstr "Метод DPMS, используемый при очистке экрана при питании от батареи."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:39
 msgid "LCD brightness when on AC"
-msgstr "Яркость LCD при питании от сети"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:40
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
-msgstr "Яркость дисплея при питании от сети. Возможные значения: от 0.0 до 100.0."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:41
 msgid "Suspend button action"
-msgstr "Действие кнопки «Suspend»"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:42
 msgid "The action to take when the system suspend button is pressed."
-msgstr "Действие, выполняемое при нажатой кнопке ждущего режима."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:43
 msgid "Hibernate button action"
-msgstr "Действие кнопки «Hibernate»"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:44
 msgid "The action to take when the system hibernate button is pressed."
-msgstr "Действие, выполняемое при нажатой кнопке режима гибернации."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:45
 msgid "Power button action"
-msgstr "Действие кнопки «Power»"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:46
 msgid "The action to take when the system power button is pressed."
-msgstr "Действие, выполняемое при нажатой кнопке питания."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:47
 msgid "Laptop lid close action on battery"
-msgstr "Действие закрытия панели при питании от батареи"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:48
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
-msgstr "Действие, выполняемое при закрытии панели ноутбука, питающегося от батареи."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:49
 msgid "Laptop lid close action when on AC"
-msgstr "Действие закрытия панели при питании от сети"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:50
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
-msgstr "Действие, выполняемое при закрытии панели ноутбука, питающегося от сети. "
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:51
 msgid "Whether to use time-based notifications"
-msgstr "Использовать ли уведомления на основании времени"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:52
 msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
-msgstr "Должны ли использоваться уведомления на основе времени. Если этот параметр не установлен, вместо времени будет использоваться процент заряда батареи, что может исправить проблему с испорченными ACPI BIOS."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:53
 msgid "Check CPU load before sleeping"
-msgstr "Проверять загрузку ЦП перед приостановкой"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:54
 msgid "If the CPU load should be checked before doing the idle action."
-msgstr "Проверять ли загрузку ЦП перед выполнением действия простоя."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:55
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
-msgstr "Должен ли NetworkManager разрывать соединение при переходе в спящий режим."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:56
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
-msgstr "Должен ли NetworkManager разрывать соединение перед переходом в ждущий или спящий режим и восстанавливать его при возврате в обычный режим работы."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:57
 msgid "Use mate-screensaver lock setting"
-msgstr "Использовать параметр блокировки программы mate-screensaver"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:58
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
-msgstr "Использовать ли параметр блокировки экрана программы mate-screensaver чтобы определить, нужно ли блокировать экран после ждущего режима, спящего режима или отключения дисплея"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:59
 msgid "Lock screen when blanked"
-msgstr "Блокировать экран при активировании сохранения экрана"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:60
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
-msgstr "Блокировать ли экран при отключении. Используется только в случае, если не установлен параметр lock-use-screensaver."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:61
 msgid "Lock screen on suspend"
-msgstr "Блокировать экран при переходе в ждущий режим"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:62
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
-msgstr "Блокировать ли экран после восстановления компьютера из ждущего режима. Используется только в случае, если не установлен параметр lock-use-screensaver."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:63
 msgid "Lock screen on hibernate"
-msgstr "Блокировать экран при переходе в спящий режим"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:64
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
-msgstr "Блокировать ли экран после восстановления компьютера из спящего режима. Используется только в случае, если не установлен параметр lock-use-screensaver."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:65
 msgid "Lock GNOME keyring on sleep"
-msgstr "Блокировать связку ключей GNOME при переходе в спящий режим"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:66
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
-msgstr "Блокировать ли связку ключей GNOME во время входа в ждущий режим. Связку ключей необходимо разблокировать после возврата к работе."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:67
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
-msgstr "Блокировать ли связку ключей GNOME во время входа в спящий режим. Связку ключей необходимо разблокировать после возврата к работе."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:68
 msgid "If we should show the low capacity warning for a broken battery"
-msgstr "Показывать предупреждение о малом заряде для сломанных батарей"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:69
 msgid "If we should show the low capacity warning for a broken battery."
-msgstr "Показывать предупреждение о малом заряде для сломанных батарей."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:70
 msgid "Notify when AC adapter is disconnected"
-msgstr "Извещать при отключении сетевого адаптера"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:71
 msgid "If the user should be notified when the AC adapter is disconnected."
-msgstr "Уведомлять ли пользователя об отключении сетевого адаптера."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:72
 msgid "Notify when fully charged"
-msgstr "Извещать при полном заряде"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:73
 msgid ""
 "If a notification message should be displayed when the battery is fully "
 "charged."
-msgstr "Отображать ли сообщение, уведомляющее о полном заряде батареи."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:74
 msgid "Notify on a sleep failure"
-msgstr "Извещать об ошибках выхода в спящий режим"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:75
 msgid ""
 "If a notification message should be displayed after suspend or hibernate "
 "failed."
-msgstr "Отображать ли сообщение, уведомляющее о сбое перехода в ждущий или спящий режим."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:76
 msgid "The URI to show to the user on sleep failure"
-msgstr "URI для показа пользователю в случае ошибки ждущего режима."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:77
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
-msgstr "При неудачном переходе в ждущий режим можно предложить пользователю кнопку для отправки сообщения об ошибке. Оставьте пустым, чтобы не показывать кнопку."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:78
 msgid "Notify on a low power"
-msgstr "Извещать о недостаточном питании"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:79
 msgid ""
 "If a notification message should be displayed when the battery is getting "
 "low."
-msgstr "Отображать ли сообщение, уведомляющее о разряде батареи."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:80
 msgid "Whether we should show the history data points"
-msgstr "Показывать ли пункты истории данных"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:81
 msgid ""
 "Whether we should show the history data points in the statistics window."
-msgstr "Показывать ли пункты истории данных в окне статистики."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:82
 msgid "Whether we should smooth the history data"
-msgstr "Сглаживать ли историю данных"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:83
 msgid "Whether we should smooth the history data in the graph."
-msgstr "Сглаживать ли историю данных на графике."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:84
 msgid "The default graph type to show for history"
-msgstr "Тип графика для истории по умолчанию"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:85
 msgid "The default graph type to show in the history window."
-msgstr "Тип графика в окне истории по умолчанию."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:86
 msgid "The maximum time displayed for history"
-msgstr "Максимальное время, отображаемое для истории"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:87
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
-msgstr "Максимальная продолжительность времени по оси X графика истории."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:88
 msgid "Whether we should show the stats data points"
-msgstr "Показывать ли точки данных статистики"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:89
 msgid "Whether we should show the stats data points in the statistics window."
-msgstr "Показывать ли точки данных статистики в окне статистики."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:90
 msgid "Whether we should smooth the stats data"
-msgstr "Сглаживать ли статистические данные"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:91
 msgid "Whether we should smooth the stats data in the graph."
-msgstr "Сглаживать ли статистические данные на графике."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:92
 msgid "The default graph type to show for stats"
-msgstr "Тип графика для статистики по умолчанию"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:93
 msgid "The default graph type to show in the stats window."
-msgstr "Тип показываемого графика по умолчанию в окне статистики."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:94
 msgid "The index of the page number to show by default"
-msgstr "Значение номера страницы по умолчанию"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:95
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
-msgstr "Значение номера страницы по умолчанию, которое используется для возвращения фокуса нужной странице."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
-msgstr "ID для последнего выбранного устройства"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:97
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
-msgstr "Идентификатор последнего устройства, который используется для возвращения фокуса нужному устройству."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:98
 msgid "Percentage considered low"
-msgstr "Процент заряда, воспринимаемый как низкий"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:99
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
-msgstr "Процент заряда батареи, воспринимаемый как низкий. Действителен только если не установлен параметр use-time-for-policy."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:100
 msgid "Percentage considered critical"
-msgstr "Процент заряда, воспринимаемый как критический"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:101
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
-msgstr "Процент заряда батареи, воспринимаемый как критический. Параметр действителен только в том случае, если не установлен ключ use-time-for-policy."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:102
 msgid "Percentage action is taken"
-msgstr "Действие выполняется по проценту заряда"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:103
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
-msgstr "Процент заряда батареи, при котором выполняется критическое действие. Действителен только если не установлен параметр use-time-for-policy."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:104
 msgid "The time remaining when low"
-msgstr "Оставшееся время, воспринимаемое как низкое"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:105
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
-msgstr "Оставшееся время работы на батарее в секундах, воспринимаемое как низкое. Действительно только в случае, когда установлен параметр use-time-for-policy."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:106
 msgid "The time remaining when critical"
-msgstr "Оставшееся время, воспринимаемое как критическое"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:107
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
-msgstr "Оставшееся время работы на батарее в секундах, воспринимаемое как критическое. Действительно только в случае, когда установлен параметр use-time-for-policy."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:108
 msgid "The time remaining when action is taken"
-msgstr "Оставшееся время, когда выполняется действие"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:109
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
-msgstr "Оставшееся время работы на батарее в секундах, когда выполняется критическое действие. Действительно только в случае, когда установлен параметр use-time-for-policy."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:110
 msgid "Sleep timeout computer when on battery"
-msgstr "Задержка приостановки компьютера при питании от батареи"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:111
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before it goes to sleep."
-msgstr "Сколько секунд компьютер должен простаивать при питании от батарей перед приостановкой."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:112
 msgid "Sleep timeout computer when on AC"
-msgstr "Задержка приостановки компьютера при питании от сети"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:113
 msgid ""
 "The amount of time in seconds the computer on AC power needs to be inactive "
 "before it goes to sleep."
-msgstr "Сколько секунд компьютер должен простаивать при питании от сети перед приостановкой."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:114
 msgid "Sleep timeout computer when on UPS"
-msgstr "Задержка приостановки компьютера при питании ИБП"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:115
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before it goes to sleep."
-msgstr "Сколько секунд компьютер должен простаивать перед приостановкой при питании от ИБП."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:116
 msgid "Sleep timeout display when on AC"
-msgstr "Задержка отключения дисплея при питании от сети"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:117
 msgid ""
 "The amount of time in seconds before the display goes to sleep when the "
 "computer is on AC power."
-msgstr "Время бездействия в секундах, по истечении которого дисплей будет отключён при работе от сети."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:118
 msgid "Sleep timeout display when on battery"
-msgstr "Задержка отключения дисплея при питании от батареи"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:119
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
-msgstr "Сколько секунд компьютер должен простаивать при питании от батарей перед отключением дисплея."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:120
 msgid "Sleep timeout display when on UPS"
-msgstr "Задержка отключения дисплея при питании от ИБП"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:121
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before the display goes to sleep."
-msgstr "Сколько секунд компьютер должен простаивать перед отключением дисплея при питании от ИБП."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:122
 msgid "If sounds should be used"
-msgstr "Использовать ли звуковые уведомления"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:123
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
-msgstr "Должны ли использоваться звуковые уведомления для извещения о низком уровне батарей или о том, что блокирующие запросы остановили запланированное действие."
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:124
 msgid ""
 "If preferences and statistics items should be shown in the context menu"
-msgstr "Должны ли параметры и элементы статистики отображаться в контекстном меню"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:125
 msgid "When to show the notification icon"
-msgstr "Когда отображать значок уведомления"
+msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:126
 msgid "Display options for the notification icon."
-msgstr "Показать опции для иконки уведомления."
+msgstr ""
 
 #: ../data/mate-power-preferences.desktop.in.in.h:1
 msgid "Power Management"
-msgstr "Управление питанием"
+msgstr ""
 
 #: ../data/mate-power-preferences.desktop.in.in.h:2
 msgid "Configure power management"
-msgstr "Настройка управления питанием"
+msgstr ""
 
 #. TRANSLATORS: shown on the titlebar
 #. TRANSLATORS: the program name
@@ -755,450 +753,442 @@ msgstr "Настройка управления питанием"
 #: ../data/gpm-statistics.ui.h:1 ../src/gpm-statistics.c:1091
 #: ../src/gpm-statistics.c:1598
 msgid "Power Statistics"
-msgstr "История потребления"
+msgstr ""
 
 #: ../data/mate-power-statistics.desktop.in.in.h:2
 msgid "Observe power management"
-msgstr "Обзор системы управления питанием"
+msgstr ""
 
 #: ../data/gpm-feedback-widget.ui.h:1
 msgid "Brightness"
-msgstr "Яркость"
+msgstr ""
 
 #: ../data/gpm-statistics.ui.h:2 ../src/gpm-statistics.c:209
 msgid "Details"
-msgstr "Подробности"
+msgstr ""
 
 #: ../data/gpm-statistics.ui.h:3
 msgid "Graph type:"
-msgstr "Тип графика:"
+msgstr ""
 
 #: ../data/gpm-statistics.ui.h:4
 msgid "Data length:"
-msgstr "Продолжительность:"
+msgstr ""
 
 #: ../data/gpm-statistics.ui.h:5
 msgid "There is no data to display."
-msgstr "Нет сведений для отображения."
+msgstr ""
 
 #: ../data/gpm-statistics.ui.h:6
 msgid "Use smoothed line"
-msgstr "Использовать сглаживание"
+msgstr ""
 
 #: ../data/gpm-statistics.ui.h:7
 msgid "Show data points"
-msgstr "Показывать отсчёты"
+msgstr ""
 
 #: ../data/gpm-statistics.ui.h:8
 msgid "History"
-msgstr "История"
+msgstr ""
 
 #: ../data/gpm-statistics.ui.h:9
 msgid "Statistics"
-msgstr "Статистика"
+msgstr ""
 
 #: ../data/gpm-statistics.ui.h:10
 msgid "Processor wakeups per second:"
-msgstr "Пробуждений процессора в секунду:"
+msgstr ""
 
 #: ../data/gpm-statistics.ui.h:11
 msgid "0"
-msgstr "0"
+msgstr ""
 
 #: ../data/gpm-statistics.ui.h:12 ../src/gpm-statistics.c:195
 msgid "Wakeups"
-msgstr "Пробуждения"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:1
 msgid "Power Management Preferences"
-msgstr "Параметры управления питанием"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:2
 msgid "<b>Actions</b>"
-msgstr "<b>Действия</b>"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:3
 msgid "Put computer to _sleep when inactive for:"
-msgstr "_Приостанавливать компьютер при бездействии через:"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:4
 msgid "When laptop lid is cl_osed:"
-msgstr "При _закрытии крышки ноутбука:"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:5
 msgid "<b>Display</b>"
-msgstr "<b>Отображение</b>"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:6
 msgid "Put _display to sleep when inactive for:"
-msgstr "Отключать _дисплей при бездействии через:"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:7
 msgid "Set display _brightness to:"
-msgstr "Установить _яркость дисплея:"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:8
 msgid "Di_m display when idle"
-msgstr "При_глушать яркость при бездействии"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:9
 msgid "On AC Power"
-msgstr "От сети"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:10
 msgid "When battery po_wer is critically low:"
-msgstr "При критическом разряде батар_еи:"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:11
 msgid "_Reduce backlight brightness"
-msgstr "Сниж_ать яркость ламп монитора"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:12
 msgid "On Battery Power"
-msgstr "От батареи"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:13
 msgid "When UPS power is l_ow:"
-msgstr "При разр_яде ИБП:"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:14
 msgid "When UPS power is _critically low:"
-msgstr "При _критическом разряде ИБП:"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:15
 msgid "On UPS Power"
-msgstr "От ИБП"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:16
 msgid "When the power _button is pressed:"
-msgstr "При нажатии _кнопки питания:"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:17
 msgid "When the _suspend button is pressed:"
-msgstr "При нажатии _кнопки перехода в ждущий режим:"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:18
 msgid "<b>Notification Area</b>"
-msgstr "<b>Область уведомления</b>"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:19
 msgid "_Never display an icon"
-msgstr "_Никогда не отображать значок"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:20
 msgid "_Only display an icon when battery power is low"
-msgstr "Отображать только при _низком заряде батареи"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:21
 msgid "Only display an icon when charging or _discharging"
-msgstr "Отображать значок только при заряде или _разряде"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:22
 msgid "Only display an icon when a battery is p_resent"
-msgstr "Отображать значок только при _наличии батареи"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:23
 msgid "_Always display an icon"
-msgstr "_Всегда отображать значок"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:24
 msgid "General"
-msgstr "Общие"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:25
 msgid "Provides help about this program"
-msgstr "Предоставляет справку об этой программе"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:26
 msgid "Make Default"
-msgstr "Установить по умолчанию"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:27
 msgid "Sets this policy to be used by all users"
-msgstr "Устанавливает эту политику для всех пользователей"
+msgstr ""
 
 #: ../data/gpm-prefs.ui.h:28
 msgid "Closes the program"
-msgstr "Закрыть программу"
+msgstr ""
 
 #. command line argument
 #: ../src/gpm-backlight-helper.c:166
 msgid "Set the current brightness"
-msgstr "Установить значение текущей яркости"
+msgstr ""
 
 #. command line argument
 #: ../src/gpm-backlight-helper.c:169
 msgid "Get the current brightness"
-msgstr "Получить значение текущий яркости"
+msgstr ""
 
 #. command line argument
 #: ../src/gpm-backlight-helper.c:172
 msgid "Get the number of brightness levels supported"
-msgstr "Получить поддерживаемое количество уровней яркости"
+msgstr ""
 
 #. TRANSLATORS: tool that is used when copying profiles system-wide
 #: ../src/gpm-backlight-helper.c:184
 msgid "MATE Power Manager Backlight Helper"
-msgstr "Помощник управления подсветкой диспетчера питания MATE"
+msgstr ""
 
 #. TRANSLATORS: user did not specify valid options
 #: ../src/gpm-backlight-helper.c:192
 msgid "No valid option was specified"
-msgstr "Не указано ни одного допустимого параметра"
+msgstr ""
 
 #. TRANSLATORS: no backlights found
 #: ../src/gpm-backlight-helper.c:201
 msgid "No backlights were found on your system"
-msgstr "В системе не найдены средства подсветки"
+msgstr ""
 
 #. TRANSLATORS: failed to access backlight file
 #: ../src/gpm-backlight-helper.c:212
 msgid "Could not get the value of the backlight"
-msgstr "Не удалось получить значение подсветки"
+msgstr ""
 
 #. TRANSLATORS: failed to access backlight file
 #: ../src/gpm-backlight-helper.c:230
 msgid "Could not get the maximum value of the backlight"
-msgstr "Не удалось установить максимальное значение подсветки"
+msgstr ""
 
 #. TRANSLATORS: only able to install profiles as root
 #: ../src/gpm-backlight-helper.c:247
 msgid "This program can only be used by the root user"
-msgstr "Этой программой может пользоваться только пользователь root"
+msgstr ""
 
 #. TRANSLATORS: the program must never be directly run
 #: ../src/gpm-backlight-helper.c:256
 msgid "This program must only be run through pkexec"
-msgstr "Эту программу можно запускать только через pkexec"
+msgstr ""
 
 #. TRANSLATORS: failed to access backlight file
 #: ../src/gpm-backlight-helper.c:267
 msgid "Could not set the value of the backlight"
-msgstr "Не удалось установить значение подсветки"
+msgstr ""
 
 #: ../src/gpm-common.c:53
 msgid "Unknown time"
-msgstr "Время неизвестно"
+msgstr ""
 
 #: ../src/gpm-common.c:58
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] "%i минута"
-msgstr[1] "%i минуты"
-msgstr[2] "%i минут"
-msgstr[3] "%i минут"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] "%i час"
-msgstr[1] "%i часа"
-msgstr[2] "%i часов"
-msgstr[3] "%i часов"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
 #: ../src/gpm-common.c:75
 #, c-format
 msgid "%i %s %i %s"
-msgstr "%i %s, %i %s"
+msgstr ""
 
 #: ../src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] "час"
-msgstr[1] "часа"
-msgstr[2] "часов"
-msgstr[3] "часов"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] "минута"
-msgstr[1] "минуты"
-msgstr[2] "минут"
-msgstr[3] "минут"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Translators: This is %i days
 #: ../src/gpm-graph-widget.c:446
 #, c-format
 msgid "%id"
-msgstr "%iд"
+msgstr ""
 
 #. Translators: This is %i days %02i hours
 #: ../src/gpm-graph-widget.c:449
 #, c-format
 msgid "%id%02ih"
-msgstr "%iд%02iч"
+msgstr ""
 
 #. Translators: This is %i hours
 #: ../src/gpm-graph-widget.c:454
 #, c-format
 msgid "%ih"
-msgstr "%iч"
+msgstr ""
 
 #. Translators: This is %i hours %02i minutes
 #: ../src/gpm-graph-widget.c:457
 #, c-format
 msgid "%ih%02im"
-msgstr "%iч%02iм"
+msgstr ""
 
 #. Translators: This is %2i minutes
 #: ../src/gpm-graph-widget.c:462
 #, c-format
 msgid "%2im"
-msgstr "%2iм"
+msgstr ""
 
 #. Translators: This is %2i minutes %02i seconds
 #: ../src/gpm-graph-widget.c:465
 #, c-format
 msgid "%2im%02i"
-msgstr "%2iм%02i"
+msgstr ""
 
 #. Translators: This is %2i seconds
 #: ../src/gpm-graph-widget.c:469
 #, c-format
 msgid "%2is"
-msgstr "%2iс"
+msgstr ""
 
 #. Translators: This is %i Percentage
 #: ../src/gpm-graph-widget.c:473
 #, c-format
 msgid "%i%%"
-msgstr "%i%%"
+msgstr ""
 
 #. Translators: This is %.1f Watts
 #: ../src/gpm-graph-widget.c:476
 #, c-format
 msgid "%.1fW"
-msgstr "%.1fВт"
+msgstr ""
 
 #. Translators: This is %.1f Volts
 #: ../src/gpm-graph-widget.c:481
 #, c-format
 msgid "%.1fV"
-msgstr "%.1fВ"
+msgstr ""
 
 #. TRANSLATORS: show verbose debugging
 #: ../src/gpm-main.c:171 ../src/gpm-prefs.c:90 ../src/gpm-statistics.c:1581
 msgid "Show extra debugging information"
-msgstr "Показывать отладочную информацию"
+msgstr ""
 
 #: ../src/gpm-main.c:173
 msgid "Show version of installed program and exit"
-msgstr "Вывести версию установленной программы и выйти"
+msgstr ""
 
 #: ../src/gpm-main.c:175
 msgid "Exit after a small delay (for debugging)"
-msgstr "Выйти после небольшой задержки (для отладки)"
+msgstr ""
 
 #: ../src/gpm-main.c:177
 msgid "Exit after the manager has loaded (for debugging)"
-msgstr "Выйти после полной загрузки (для отладки)"
+msgstr ""
 
 #: ../src/gpm-main.c:188 ../src/gpm-main.c:192
 msgid "MATE Power Manager"
-msgstr "Управление питанием среды MATE"
+msgstr ""
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:223 ../src/gpm-manager.c:293
 msgid "Battery is very low"
-msgstr "Уровень заряда батареи критический"
+msgstr ""
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:273
 msgid "Power plugged in"
-msgstr "Питание подключено"
+msgstr ""
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:277
 msgid "Power unplugged"
-msgstr "Питание отключено"
+msgstr ""
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:281
 msgid "Lid has opened"
-msgstr "Панель открыта"
+msgstr ""
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:285
 msgid "Lid has closed"
-msgstr "Панель закрыта"
+msgstr ""
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:289
 msgid "Battery is low"
-msgstr "Уровень заряда батареи низкий"
+msgstr ""
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:297
 msgid "Battery is full"
-msgstr "Батарея полностью заряжена"
+msgstr ""
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:301
 msgid "Suspend started"
-msgstr "Начат переход в ждущий режим"
+msgstr ""
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:305
 msgid "Resumed"
-msgstr "Работа продолжена"
+msgstr ""
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:309
 msgid "Suspend failed"
-msgstr "Не удалось перейти в ждущий режим"
+msgstr ""
 
 #. TRANSLATORS: message text
 #: ../src/gpm-manager.c:579
 msgid "Computer failed to suspend."
-msgstr "Не удалось перевести компьютер в ждущий режим."
+msgstr ""
 
 #. TRANSLATORS: title text
 #: ../src/gpm-manager.c:581
 msgid "Failed to suspend"
-msgstr "Сбой перехода в ждущий режим"
+msgstr ""
 
 #. TRANSLATORS: message text
 #: ../src/gpm-manager.c:585
 msgid "Computer failed to hibernate."
-msgstr "Не удалось перевести компьютер в спящий режим."
+msgstr ""
 
 #. TRANSLATORS: title text
 #: ../src/gpm-manager.c:587
 msgid "Failed to hibernate"
-msgstr "Сбой перехода в спящий режим"
+msgstr ""
 
 #. TRANSLATORS: message text
 #: ../src/gpm-manager.c:592
 msgid "Failure was reported as:"
-msgstr "Сообщение об ошибке:"
+msgstr ""
 
 #. TRANSLATORS: button text, visit the suspend help website
 #: ../src/gpm-manager.c:605
 msgid "Visit help page"
-msgstr "Посетите страницу справки"
+msgstr ""
 
 #. TRANSLATORS: this is the mate-screensaver throttle
 #: ../src/gpm-manager.c:851
 msgid "Display DPMS activated"
-msgstr "Управление питанием дисплея активировано"
+msgstr ""
 
 #. TRANSLATORS: this is the mate-screensaver throttle
 #: ../src/gpm-manager.c:870
 msgid "On battery power"
-msgstr "При питании от батареи"
+msgstr ""
 
 #: ../src/gpm-manager.c:888
 msgid "Laptop lid is closed"
-msgstr "Панель ноутбука закрыта"
+msgstr ""
 
 #: ../src/gpm-manager.c:926
 msgid "Power Information"
-msgstr "Электропитание"
+msgstr ""
 
 #. We should notify the user if the battery has a low capacity,
 #. * where capacity is the ratio of the last_full capacity with that of
@@ -1206,7 +1196,7 @@ msgstr "Электропитание"
 #. TRANSLATORS: battery is old or broken
 #: ../src/gpm-manager.c:1113
 msgid "Battery may be broken"
-msgstr "Возможно, батарея вышла из строя"
+msgstr ""
 
 #. TRANSLATORS: notify the user that that battery is broken as the capacity is
 #. very low
@@ -1215,198 +1205,196 @@ msgstr "Возможно, батарея вышла из строя"
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
 " broken."
-msgstr "У батареи очень низкая ёмкость (%1.1f%%); вероятно, батарея слишком старая или вышла из строя."
+msgstr ""
 
 #. TRANSLATORS: show the charged notification
 #: ../src/gpm-manager.c:1165
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] "Батарея заряжена"
-msgstr[1] "Батареи заряжены"
-msgstr[2] "Батарей заряжены"
-msgstr[3] "Батарей заряжены"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: laptop battery is now discharging
 #: ../src/gpm-manager.c:1211
 msgid "Battery Discharging"
-msgstr "Батарея разряжается"
+msgstr ""
 
 #. TRANSLATORS: tell the user how much time they have got
 #: ../src/gpm-manager.c:1215
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
-msgstr "Осталось %s заряда батареи (%.0f%%)"
+msgstr ""
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
 #: ../src/gpm-manager.c:1218 ../src/gpm-manager.c:1230
 #, c-format
 msgid "%s discharging (%.0f%%)"
-msgstr "%s разряжается (%.0f%%)"
+msgstr ""
 
 #. TRANSLATORS: UPS is now discharging
 #: ../src/gpm-manager.c:1223
 msgid "UPS Discharging"
-msgstr "ИБП разряжается"
+msgstr ""
 
 #. TRANSLATORS: tell the user how much time they have got
 #: ../src/gpm-manager.c:1227
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
-msgstr "Осталось %s заряда ИБП (%.0f%%)"
+msgstr ""
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
 #: ../src/gpm-manager.c:1311
 msgid "Battery low"
-msgstr "Уровень заряда батареи низкий"
+msgstr ""
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
 #: ../src/gpm-manager.c:1314
 msgid "Laptop battery low"
-msgstr "Батарея ноутбука разряжена"
+msgstr ""
 
 #. TRANSLATORS: tell the user how much time they have got
 #: ../src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
-msgstr "Осталось примерно <b>%s</b> (%.0f%%)"
+msgstr ""
 
 #. TRANSLATORS: UPS is starting to get a little low
 #: ../src/gpm-manager.c:1324
 msgid "UPS low"
-msgstr "Батарея ИБП разряжена"
+msgstr ""
 
 #. TRANSLATORS: tell the user how much time they have got
 #: ../src/gpm-manager.c:1328
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
-msgstr "Осталось примерно <b>%s</b> заряда ИБП (%.0f%%)"
+msgstr ""
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
 #: ../src/gpm-manager.c:1332 ../src/gpm-manager.c:1466
 msgid "Mouse battery low"
-msgstr "Батарея мыши разряжена"
+msgstr ""
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1335
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
-msgstr "Беспроводная мышь скоро разрядится (%.0f%%)"
+msgstr ""
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
 #: ../src/gpm-manager.c:1339 ../src/gpm-manager.c:1474
 msgid "Keyboard battery low"
-msgstr "Батарея клавиатуры разряжена"
+msgstr ""
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1342
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
-msgstr "Беспроводная клавиатура скоро разрядится (%.0f%%)"
+msgstr ""
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
 #: ../src/gpm-manager.c:1346 ../src/gpm-manager.c:1483
 msgid "PDA battery low"
-msgstr "Батарея КПК разряжена"
+msgstr ""
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1349
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
-msgstr "КПК скоро разрядится (%.0f%%)"
+msgstr ""
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
 #: ../src/gpm-manager.c:1353 ../src/gpm-manager.c:1493
 #: ../src/gpm-manager.c:1503
 msgid "Cell phone battery low"
-msgstr "Батарея мобильного телефона разряжена"
+msgstr ""
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1356
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
-msgstr "Мобильный телефон скоро разрядится (%.0f%%)"
+msgstr ""
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
 #: ../src/gpm-manager.c:1360
 msgid "Media player battery low"
-msgstr "Батарея медиаплеера разряжена"
+msgstr ""
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1363
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
-msgstr "Медиаплеер скоро разрядится (%.0f%%)"
+msgstr ""
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
 #: ../src/gpm-manager.c:1367 ../src/gpm-manager.c:1512
 msgid "Tablet battery low"
-msgstr "Батарея планшета разряжена"
+msgstr ""
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1370
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
-msgstr "Планшет скоро разрядится (%.0f%%)"
+msgstr ""
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
 #: ../src/gpm-manager.c:1374 ../src/gpm-manager.c:1521
 msgid "Attached computer battery low"
-msgstr "Батарея подключенного компьютера разряжена"
+msgstr ""
 
 #. TRANSLATORS: tell user more details
 #: ../src/gpm-manager.c:1377
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
-msgstr "Подключенный компьютер скоро разрядится (%.0f%%)"
+msgstr ""
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
 #: ../src/gpm-manager.c:1425
 msgid "Battery critically low"
-msgstr "Уровень заряда батареи критический"
+msgstr ""
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
 #: ../src/gpm-manager.c:1428 ../src/gpm-manager.c:1580
 msgid "Laptop battery critically low"
-msgstr "Уровень заряда батареи критический"
+msgstr ""
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
 #: ../src/gpm-manager.c:1437
 msgid "Plug in your AC adapter to avoid losing data."
-msgstr "Включите адаптер питания в сеть, чтобы избежать потери данных."
+msgstr ""
 
 #. TRANSLATORS: give the user a ultimatum
 #: ../src/gpm-manager.c:1441
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
-msgstr "Компьютер очень скоро перейдёт в ждущий режим, если его не включить в электросеть."
+msgstr ""
 
 #. TRANSLATORS: give the user a ultimatum
 #: ../src/gpm-manager.c:1445
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
-msgstr "Компьютер очень скоро перейдёт в спящий режим, если его не включить в электросеть."
+msgstr ""
 
 #. TRANSLATORS: give the user a ultimatum
 #: ../src/gpm-manager.c:1449
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
-msgstr "Компьютер очень скоро выключится, если его не включить в электросеть."
+msgstr ""
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
 #: ../src/gpm-manager.c:1456 ../src/gpm-manager.c:1615
 msgid "UPS critically low"
-msgstr "ИБП критически разряжен"
+msgstr ""
 
 #. TRANSLATORS: give the user a ultimatum
 #: ../src/gpm-manager.c:1460
@@ -1414,7 +1402,7 @@ msgstr "ИБП критически разряжен"
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
-msgstr "Осталось примерно <b>%s</b> заряда ИБП (%.0f%%). Восстановите питание вашего компьютера, чтобы избежать потери данных."
+msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1469
@@ -1422,7 +1410,7 @@ msgstr "Осталось примерно <b>%s</b> заряда ИБП (%.0f%%)
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Беспроводная мышь скоро разрядится (%.0f%%). Это устройство скоро прекратит работу, если не будет заряжено."
+msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1477
@@ -1430,7 +1418,7 @@ msgstr "Беспроводная мышь скоро разрядится (%.0f%
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Беспроводная клавиатура скоро разрядится (%.0f%%). Это устройство скоро прекратит работу, если не будет заряжено."
+msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1486
@@ -1438,7 +1426,7 @@ msgstr "Беспроводная клавиатура скоро разряди�
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
 " not charged."
-msgstr "КПК скоро разрядится (%.0f%%). Это устройство скоро прекратит работу, если не будет заряжено."
+msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1496
@@ -1446,7 +1434,7 @@ msgstr "КПК скоро разрядится (%.0f%%). Это устройст
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Мобильный телефон скоро разрядится (%.0f%%). Это устройство скоро прекратит работу, если не будет заряжено."
+msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1506
@@ -1454,7 +1442,7 @@ msgstr "Мобильный телефон скоро разрядится (%.0f%
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Медиаплеер скоро разрядится (%.0f%%). Это устройство скоро прекратит работу, если не будет заряжено."
+msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1515
@@ -1462,7 +1450,7 @@ msgstr "Медиаплеер скоро разрядится (%.0f%%). Это у
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
-msgstr "Планшет скоро разрядится (%.0f%%). Это устройство скоро прекратит работу, если не будет заряжено."
+msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1524
@@ -1470,14 +1458,14 @@ msgstr "Планшет скоро разрядится (%.0f%%). Это устр
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
-msgstr "Подключенный компьютер скоро разрядится (%.0f%%). Устройство скоро выключится, если не будет заряжено."
+msgstr ""
 
 #. TRANSLATORS: computer will shutdown without saving data
 #: ../src/gpm-manager.c:1588
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
-msgstr "Уровень заряда батареи ниже критического, компьютер <b>будет выключен</b> при полном разряде батареи."
+msgstr ""
 
 #. TRANSLATORS: computer will suspend
 #: ../src/gpm-manager.c:1594
@@ -1485,226 +1473,218 @@ msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
-msgstr "Уровень заряда батареи ниже критического, компьютер сейчас будет переведён в ждущий режим. <br><b>Внимание:</b> Для поддержания работы компьютера в ждущем режиме необходимо небольшое количество энергии."
+msgstr ""
 
 #. TRANSLATORS: computer will hibernate
 #: ../src/gpm-manager.c:1601
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
-msgstr "Уровень заряда батареи ниже критического, компьютер сейчас будет переведён в спящий режим."
+msgstr ""
 
 #. TRANSLATORS: computer will just shutdown
 #: ../src/gpm-manager.c:1606
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
-msgstr "Уровень заряда батареи ниже критического, компьютер сейчас будет выключен."
+msgstr ""
 
 #. TRANSLATORS: computer will shutdown without saving data
 #: ../src/gpm-manager.c:1623
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
-msgstr "Уровень заряда ИБП ниже критического, компьютер <b>будет выключен</b> при полном разряде батареи."
+msgstr ""
 
 #. TRANSLATORS: computer will hibernate
 #: ../src/gpm-manager.c:1629
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
-msgstr "Уровень заряда ИБП ниже критического, компьютер сейчас будет переведён в спящий режим."
+msgstr ""
 
 #. TRANSLATORS: computer will just shutdown
 #: ../src/gpm-manager.c:1634
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
-msgstr "Уровень заряда ИБП ниже критического, компьютер сейчас будет выключен."
+msgstr ""
 
 #: ../src/gpm-prefs.c:94
 msgid "MATE Power Preferences"
-msgstr "Параметры управления питанием"
+msgstr ""
 
 #: ../src/gpm-prefs-core.c:241
 msgid "Shutdown"
-msgstr "Завершение работы"
+msgstr ""
 
 #: ../src/gpm-prefs-core.c:248
 msgid "Suspend"
-msgstr "Ждущий режим"
+msgstr ""
 
 #: ../src/gpm-prefs-core.c:251
 msgid "Hibernate"
-msgstr "Спящий режим"
+msgstr ""
 
 #: ../src/gpm-prefs-core.c:254
 msgid "Blank screen"
-msgstr "Заблокировать экран"
+msgstr ""
 
 #: ../src/gpm-prefs-core.c:257
 msgid "Ask me"
-msgstr "Запрашивать"
+msgstr "Ciam-me"
 
 #: ../src/gpm-prefs-core.c:260
 msgid "Do nothing"
-msgstr "Ничего не делать"
+msgstr ""
 
 #: ../src/gpm-prefs-core.c:320
 msgid "Never"
-msgstr "Никогда"
+msgstr ""
 
 #. TRANSLATORS: the rate of discharge for the device
 #: ../src/gpm-statistics.c:79 ../src/gpm-statistics.c:467
 msgid "Rate"
-msgstr "Скорость"
+msgstr ""
 
 #: ../src/gpm-statistics.c:80
 msgid "Charge"
-msgstr "Зарядка"
+msgstr ""
 
 #: ../src/gpm-statistics.c:81 ../src/gpm-statistics.c:481
 msgid "Time to full"
-msgstr "Время до полной зарядки"
+msgstr ""
 
 #: ../src/gpm-statistics.c:82 ../src/gpm-statistics.c:486
 msgid "Time to empty"
-msgstr "Время до полной разрядки"
+msgstr ""
 
 #: ../src/gpm-statistics.c:89
 msgid "10 minutes"
-msgstr "10 минут"
+msgstr ""
 
 #: ../src/gpm-statistics.c:90
 msgid "2 hours"
-msgstr "2 часа"
+msgstr ""
 
 #: ../src/gpm-statistics.c:91
 msgid "6 hours"
-msgstr "6 часов"
+msgstr ""
 
 #: ../src/gpm-statistics.c:92
 msgid "1 day"
-msgstr "1 день"
+msgstr ""
 
 #: ../src/gpm-statistics.c:93
 msgid "1 week"
-msgstr "1 неделя"
+msgstr ""
 
 #. TRANSLATORS: what we've observed about the device
 #: ../src/gpm-statistics.c:102
 msgid "Charge profile"
-msgstr "Профиль времени зарядки"
+msgstr ""
 
 #: ../src/gpm-statistics.c:103
 msgid "Discharge profile"
-msgstr "Профиль времени разрядки"
+msgstr ""
 
 #. TRANSLATORS: how accurately we can predict the time remaining of the
 #. battery
 #: ../src/gpm-statistics.c:105
 msgid "Charge accuracy"
-msgstr "Профиль точности определения времени зарядки"
+msgstr ""
 
 #: ../src/gpm-statistics.c:106
 msgid "Discharge accuracy"
-msgstr "Профиль точности определения времени разрядки"
+msgstr ""
 
 #: ../src/gpm-statistics.c:133
 msgid "Attribute"
-msgstr "Атрибут"
+msgstr ""
 
 #: ../src/gpm-statistics.c:140
 msgid "Value"
-msgstr "Значение"
+msgstr ""
 
 #: ../src/gpm-statistics.c:157
 msgid "Image"
-msgstr "Значок"
+msgstr ""
 
 #: ../src/gpm-statistics.c:163
 msgid "Description"
-msgstr "Описание"
+msgstr ""
 
 #: ../src/gpm-statistics.c:182 ../src/gpm-statistics.c:406
 msgid "Type"
-msgstr "Тип"
+msgstr ""
 
 #: ../src/gpm-statistics.c:188
 msgid "ID"
-msgstr "Идентификатор"
+msgstr ""
 
 #: ../src/gpm-statistics.c:202
 msgid "Command"
-msgstr "Команда"
+msgstr ""
 
 #. TRANSLATORS: this is when the stats time is not known
 #: ../src/gpm-statistics.c:287
 msgid "Unknown"
-msgstr "Неизвестно"
+msgstr ""
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:291
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] "%.0f секунда"
-msgstr[1] "%.0f секунды"
-msgstr[2] "%.0f секунд"
-msgstr[3] "%.0f секунд"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:296
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] "%.1f минута"
-msgstr[1] "%.1f минуты"
-msgstr[2] "%.1f минут"
-msgstr[3] "%.1f минут"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:301
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] "%.1f час"
-msgstr[1] "%.1f часа"
-msgstr[2] "%.1f часов"
-msgstr[3] "%.1f часов"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:305
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] "%.1f день"
-msgstr[1] "%.1f дня"
-msgstr[2] "%.1f дней"
-msgstr[3] "%.1f дней"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/gpm-statistics.c:314
 msgid "Yes"
-msgstr "Да"
+msgstr ""
 
 #: ../src/gpm-statistics.c:314
 msgid "No"
-msgstr "Нет"
+msgstr ""
 
 #. TRANSLATORS: the device ID of the current device, e.g. "battery0"
 #: ../src/gpm-statistics.c:403
 msgid "Device"
-msgstr "Устройство"
+msgstr ""
 
 #: ../src/gpm-statistics.c:408
 msgid "Vendor"
-msgstr "Производитель"
+msgstr ""
 
 #: ../src/gpm-statistics.c:410
 msgid "Model"
-msgstr "Модель"
+msgstr ""
 
 #: ../src/gpm-statistics.c:412
 msgid "Serial number"
-msgstr "Серийный номер"
+msgstr ""
 
 #. TRANSLATORS: a boolean attribute that means if the device is supplying the
 #. * main power for the computer. For instance, an AC adapter or laptop
@@ -1712,132 +1692,130 @@ msgstr "Серийный номер"
 #. * would be TRUE,  but a mobile phone or mouse taking power is FALSE
 #: ../src/gpm-statistics.c:417
 msgid "Supply"
-msgstr "Поставщик энергии"
+msgstr ""
 
 #: ../src/gpm-statistics.c:420
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d секунда"
-msgstr[1] "%d секунды"
-msgstr[2] "%d секунд"
-msgstr[3] "%d секунд"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
 #: ../src/gpm-statistics.c:424
 msgid "Refreshed"
-msgstr "Обновлено"
+msgstr ""
 
 #. TRANSLATORS: Present is whether the device is currently attached
 #. * to the computer, as some devices (e.g. laptop batteries) can
 #. * be removed, but still observed as devices on the system
 #: ../src/gpm-statistics.c:434
 msgid "Present"
-msgstr "Присутствует"
+msgstr ""
 
 #. TRANSLATORS: If the device can be recharged, e.g. lithium
 #. * batteries rather than alkaline ones
 #: ../src/gpm-statistics.c:441
 msgid "Rechargeable"
-msgstr "Перезаряжаемо"
+msgstr ""
 
 #. TRANSLATORS: The state of the device, e.g. "Changing" or "Fully charged"
 #: ../src/gpm-statistics.c:447
 msgid "State"
-msgstr "Состояние"
+msgstr ""
 
 #: ../src/gpm-statistics.c:451
 msgid "Energy"
-msgstr "Энергия"
+msgstr ""
 
 #: ../src/gpm-statistics.c:454
 msgid "Energy when empty"
-msgstr "Энергия при опустошении"
+msgstr ""
 
 #: ../src/gpm-statistics.c:457
 msgid "Energy when full"
-msgstr "Энергия при заполнении"
+msgstr ""
 
 #: ../src/gpm-statistics.c:460
 msgid "Energy (design)"
-msgstr "Энергия (исходная)"
+msgstr ""
 
 #: ../src/gpm-statistics.c:474
 msgid "Voltage"
-msgstr "Напряжение"
+msgstr ""
 
 #. TRANSLATORS: the amount of charge the cell contains
 #: ../src/gpm-statistics.c:496
 msgid "Percentage"
-msgstr "Процент"
+msgstr ""
 
 #. TRANSLATORS: the capacity of the device, which is basically a measure
 #. * of how full it can get, relative to the design capacity
 #: ../src/gpm-statistics.c:503
 msgid "Capacity"
-msgstr "Ёмкость"
+msgstr ""
 
 #. TRANSLATORS: the type of battery, e.g. lithium or nikel metal hydroxide
 #: ../src/gpm-statistics.c:508
 msgid "Technology"
-msgstr "Технология"
+msgstr ""
 
 #. TRANSLATORS: this is when the device is plugged in, typically
 #. * only shown for the ac adaptor device
 #: ../src/gpm-statistics.c:513
 msgid "Online"
-msgstr "Подключено"
+msgstr ""
 
 #. TRANSLATORS: the command line was not provided
 #: ../src/gpm-statistics.c:825
 msgid "No data"
-msgstr "Нет данных"
+msgstr ""
 
 #. TRANSLATORS: kernel module, usually a device driver
 #: ../src/gpm-statistics.c:832 ../src/gpm-statistics.c:837
 msgid "Kernel module"
-msgstr "Модуль ядра"
+msgstr ""
 
 #. TRANSLATORS: kernel housekeeping
 #: ../src/gpm-statistics.c:842
 msgid "Kernel core"
-msgstr "Ядро"
+msgstr ""
 
 #. TRANSLATORS: interrupt between processors
 #: ../src/gpm-statistics.c:847
 msgid "Interprocessor interrupt"
-msgstr "Межпроцессорное прерывание"
+msgstr ""
 
 #. TRANSLATORS: unknown interrupt
 #: ../src/gpm-statistics.c:852
 msgid "Interrupt"
-msgstr "Прерывание"
+msgstr ""
 
 #. TRANSLATORS: the keyboard and mouse device event
 #: ../src/gpm-statistics.c:899
 msgid "PS/2 keyboard/mouse/touchpad"
-msgstr "Клавиатура/Мышь/Сенсорная панель"
+msgstr ""
 
 #. TRANSLATORS: ACPI, the Intel power standard on laptops and desktops
 #: ../src/gpm-statistics.c:902
 msgid "ACPI"
-msgstr "ACPI"
+msgstr ""
 
 #. TRANSLATORS: serial ATA is a new style of hard disk interface
 #: ../src/gpm-statistics.c:905
 msgid "Serial ATA"
-msgstr "Serial ATA"
+msgstr ""
 
 #. TRANSLATORS: this is the old-style ATA interface
 #: ../src/gpm-statistics.c:908
 msgid "ATA host controller"
-msgstr "Контроллер ATA"
+msgstr ""
 
 #. TRANSLATORS: 802.11 wireless adaptor
 #: ../src/gpm-statistics.c:911
 msgid "Intel wireless adaptor"
-msgstr "Беспроводной адаптер Intel"
+msgstr ""
 
 #. TRANSLATORS: a timer is something that fires periodically.
 #. * The parameter is a process name, e.g. "firefox-bin".
@@ -1847,7 +1825,7 @@ msgstr "Беспроводной адаптер Intel"
 #: ../src/gpm-statistics.c:938
 #, c-format
 msgid "Timer %s"
-msgstr "Периодическая активность %s"
+msgstr ""
 
 #. TRANSLATORS: the parameter is the name of task that's woken up from
 #. sleeping.
@@ -1855,86 +1833,86 @@ msgstr "Периодическая активность %s"
 #: ../src/gpm-statistics.c:942
 #, c-format
 msgid "Sleep %s"
-msgstr "Пробуждение %s"
+msgstr ""
 
 #. TRANSLATORS: this is the name of a new realtime task.
 #: ../src/gpm-statistics.c:945
 #, c-format
 msgid "New task %s"
-msgstr "Новая задача %s"
+msgstr ""
 
 #. TRANSLATORS: this is the name of a task that's woken to check state.
 #. * This is shown when the task wakes up.
 #: ../src/gpm-statistics.c:949
 #, c-format
 msgid "Wait %s"
-msgstr "Ожидание %s"
+msgstr ""
 
 #. TRANSLATORS: this is the name of a work queue.
 #. * A work queue is a list of work that has to be done.
 #: ../src/gpm-statistics.c:953 ../src/gpm-statistics.c:957
 #, c-format
 msgid "Work queue %s"
-msgstr "Очередь заданий %s"
+msgstr ""
 
 #. TRANSLATORS: this is when the networking subsystem clears out old entries
 #: ../src/gpm-statistics.c:960
 #, c-format
 msgid "Network route flush %s"
-msgstr "Очистка сетевых маршрутов %s"
+msgstr ""
 
 #. TRANSLATORS: this is the name of an activity on the USB bus
 #: ../src/gpm-statistics.c:963
 #, c-format
 msgid "USB activity %s"
-msgstr "Активность USB %s"
+msgstr ""
 
 #. TRANSLATORS: we've timed out of an aligned timer, with the name
 #: ../src/gpm-statistics.c:966
 #, c-format
 msgid "Wakeup %s"
-msgstr "Пробуждение периодического задания %s"
+msgstr ""
 
 #. TRANSLATORS: interupts on the system required for basic operation
 #: ../src/gpm-statistics.c:969
 msgid "Local interrupts"
-msgstr "Прерывания"
+msgstr ""
 
 #. TRANSLATORS: interrupts when a task gets moved from one core to another
 #: ../src/gpm-statistics.c:972
 msgid "Rescheduling interrupts"
-msgstr "Перепланировка задач"
+msgstr ""
 
 #. TRANSLATORS: shown on the titlebar
 #: ../src/gpm-statistics.c:1081
 msgid "Device Information"
-msgstr "Сведения об устройстве"
+msgstr ""
 
 #. TRANSLATORS: shown on the titlebar
 #: ../src/gpm-statistics.c:1083
 msgid "Device History"
-msgstr "История устройства"
+msgstr ""
 
 #. TRANSLATORS: shown on the titlebar
 #: ../src/gpm-statistics.c:1085
 msgid "Device Profile"
-msgstr "Профиль устройства"
+msgstr ""
 
 #. TRANSLATORS: shown on the titlebar
 #: ../src/gpm-statistics.c:1087
 msgid "Processor Wakeups"
-msgstr "Пробуждения процессора"
+msgstr ""
 
 #. TRANSLATORS: this is the X axis on the graph
 #: ../src/gpm-statistics.c:1347 ../src/gpm-statistics.c:1353
 #: ../src/gpm-statistics.c:1359 ../src/gpm-statistics.c:1365
 msgid "Time elapsed"
-msgstr "Среднее время до окончания"
+msgstr ""
 
 #. TRANSLATORS: this is the Y axis on the graph
 #: ../src/gpm-statistics.c:1349
 msgid "Power"
-msgstr "Питание"
+msgstr ""
 
 #. TRANSLATORS: this is the Y axis on the graph for the whole battery device
 #. TRANSLATORS: this is the X axis on the graph for the whole battery device
@@ -1942,55 +1920,55 @@ msgstr "Питание"
 #: ../src/gpm-statistics.c:1405 ../src/gpm-statistics.c:1411
 #: ../src/gpm-statistics.c:1417
 msgid "Cell charge"
-msgstr "Заряд ячейки"
+msgstr ""
 
 #. TRANSLATORS: this is the Y axis on the graph
 #: ../src/gpm-statistics.c:1361 ../src/gpm-statistics.c:1367
 msgid "Predicted time"
-msgstr "Ожидаемое время"
+msgstr ""
 
 #. TRANSLATORS: this is the Y axis on the graph
 #: ../src/gpm-statistics.c:1401 ../src/gpm-statistics.c:1413
 msgid "Correction factor"
-msgstr "Коррекция"
+msgstr ""
 
 #. TRANSLATORS: this is the Y axis on the graph
 #: ../src/gpm-statistics.c:1407 ../src/gpm-statistics.c:1419
 msgid "Prediction accuracy"
-msgstr "Точность предсказания"
+msgstr ""
 
 #. TRANSLATORS: show a device by default
 #: ../src/gpm-statistics.c:1584
 msgid "Select this device at startup"
-msgstr "Выбрать это устройство при запуске"
+msgstr ""
 
 #. TRANSLATORS: the icon for the CPU
 #: ../src/gpm-statistics.c:1839
 msgid "Processor"
-msgstr "Процессор"
+msgstr ""
 
 #: ../src/gpm-tray-icon.c:189
 msgid "Copyright © 2011-2014 MATE developers"
-msgstr "Копирайт © 2011-2014 Разработчики MATE"
+msgstr "Copyright © 2011-2014 MATE developers"
 
 #. Translators should localize the following string
 #. * which will be displayed at the bottom of the about
 #. * box to give credit to the translator(s).
 #: ../src/gpm-tray-icon.c:195
 msgid "translator-credits"
-msgstr "Дмитрий Михирев"
+msgstr ""
 
 #. preferences
 #: ../src/gpm-tray-icon.c:330
 msgid "_Preferences"
-msgstr "_Параметры"
+msgstr ""
 
 #. TRANSLATORS: a phone is charging
 #. TRANSLATORS: device is charging, but we only have a percentage
 #: ../src/gpm-upower.c:221 ../src/gpm-upower.c:285
 #, c-format
 msgid "%s charging (%.1f%%)"
-msgstr "%s заряжается (%.1f%%)"
+msgstr ""
 
 #. TRANSLATORS: The laptop battery is fully charged, and we know a time
 #: ../src/gpm-upower.c:236
@@ -1998,25 +1976,25 @@ msgstr "%s заряжается (%.1f%%)"
 msgid ""
 "Battery is fully charged.\n"
 "Provides %s laptop runtime"
-msgstr "Батарея полностью заряжена.\nОбеспечивает %s времени работы ноутбука"
+msgstr ""
 
 #. TRANSLATORS: the device is fully charged
 #: ../src/gpm-upower.c:241
 #, c-format
 msgid "%s is fully charged"
-msgstr "%s полностью заряжена"
+msgstr ""
 
 #. TRANSLATORS: the device is discharging, and we have a time remaining
 #: ../src/gpm-upower.c:249
 #, c-format
 msgid "%s %s remaining (%.1f%%)"
-msgstr "%s %s осталось (%.1f%%)"
+msgstr ""
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
 #: ../src/gpm-upower.c:254
 #, c-format
 msgid "%s discharging (%.1f%%)"
-msgstr "%s разряжается (%.1f%%)"
+msgstr ""
 
 #. TRANSLATORS: the device is charging, and we have a time to full and empty
 #: ../src/gpm-upower.c:268
@@ -2024,31 +2002,31 @@ msgstr "%s разряжается (%.1f%%)"
 msgid ""
 "%s %s until charged (%.1f%%)\n"
 "Provides %s battery runtime"
-msgstr "%s %s до полного заряда (%.1f%%)\nОбеспечивает %s времени работы батареи"
+msgstr ""
 
 #. TRANSLATORS: device is charging, and we have a time to full and a
 #. percentage
 #: ../src/gpm-upower.c:279
 #, c-format
 msgid "%s %s until charged (%.1f%%)"
-msgstr "%s %s до полного заряда (%.1f%%)"
+msgstr ""
 
 #. TRANSLATORS: this is only shown for laptops with multiple batteries
 #: ../src/gpm-upower.c:292
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
-msgstr "%s ожидает разрядки (%.1f%%)"
+msgstr ""
 
 #. TRANSLATORS: this is only shown for laptops with multiple batteries
 #: ../src/gpm-upower.c:298
 #, c-format
 msgid "%s waiting to charge (%.1f%%)"
-msgstr "%s ожидает зарядки (%.1f%%)"
+msgstr ""
 
 #. TRANSLATORS: the type of data, e.g. Laptop battery
 #: ../src/gpm-upower.c:357
 msgid "Product:"
-msgstr "Продукт:"
+msgstr ""
 
 #. TRANSLATORS: device is missing
 #. TRANSLATORS: device is charged
@@ -2057,250 +2035,228 @@ msgstr "Продукт:"
 #: ../src/gpm-upower.c:361 ../src/gpm-upower.c:364 ../src/gpm-upower.c:367
 #: ../src/gpm-upower.c:370
 msgid "Status:"
-msgstr "Состояние:"
+msgstr ""
 
 #: ../src/gpm-upower.c:361
 msgid "Missing"
-msgstr "Не найдена"
+msgstr "Mancant"
 
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:364 ../src/gpm-upower.c:641
 msgid "Charged"
-msgstr "Заряжена"
+msgstr ""
 
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:367 ../src/gpm-upower.c:629
 msgid "Charging"
-msgstr "Заряжается"
+msgstr ""
 
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:370 ../src/gpm-upower.c:633
 msgid "Discharging"
-msgstr "Разряжается"
+msgstr ""
 
 #. TRANSLATORS: percentage
 #: ../src/gpm-upower.c:375
 msgid "Percentage charge:"
-msgstr "Процент заряда:"
+msgstr ""
 
 #. TRANSLATORS: manufacturer
 #: ../src/gpm-upower.c:379
 msgid "Vendor:"
-msgstr "Производитель:"
+msgstr ""
 
 #. TRANSLATORS: how the battery is made, e.g. Lithium Ion
 #: ../src/gpm-upower.c:384
 msgid "Technology:"
-msgstr "Технология:"
+msgstr ""
 
 #. TRANSLATORS: serial number of the battery
 #: ../src/gpm-upower.c:388
 msgid "Serial number:"
-msgstr "Серийный номер:"
+msgstr ""
 
 #. TRANSLATORS: model number of the battery
 #: ../src/gpm-upower.c:392
 msgid "Model:"
-msgstr "Модель:"
+msgstr ""
 
 #. TRANSLATORS: time to fully charged
 #: ../src/gpm-upower.c:397
 msgid "Charge time:"
-msgstr "Время зарядки:"
+msgstr ""
 
 #. TRANSLATORS: time to empty
 #: ../src/gpm-upower.c:403
 msgid "Discharge time:"
-msgstr "Время разрядки:"
+msgstr ""
 
 #. TRANSLATORS: Excellent, Good, Fair and Poor are all related to battery
 #. Capacity
 #: ../src/gpm-upower.c:410
 msgid "Excellent"
-msgstr "отличная"
+msgstr ""
 
 #: ../src/gpm-upower.c:412
 msgid "Good"
-msgstr "хорошая"
+msgstr ""
 
 #: ../src/gpm-upower.c:414
 msgid "Fair"
-msgstr "удовлетворительная"
+msgstr ""
 
 #: ../src/gpm-upower.c:416
 msgid "Poor"
-msgstr "плохая"
+msgstr ""
 
 #: ../src/gpm-upower.c:420
 msgid "Capacity:"
-msgstr "Ёмкость:"
+msgstr ""
 
 #: ../src/gpm-upower.c:426 ../src/gpm-upower.c:451
 msgid "Current charge:"
-msgstr "Текущий заряд:"
+msgstr ""
 
 #: ../src/gpm-upower.c:432
 msgid "Last full charge:"
-msgstr "Последний полный заряд:"
+msgstr ""
 
 #: ../src/gpm-upower.c:438 ../src/gpm-upower.c:456
 msgid "Design charge:"
-msgstr "Предусмотренный заряд:"
+msgstr ""
 
 #: ../src/gpm-upower.c:443
 msgid "Charge rate:"
-msgstr "Уровень заряда:"
+msgstr ""
 
 #. TRANSLATORS: system power cord
 #: ../src/gpm-upower.c:478
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] "Сетевой адаптер"
-msgstr[1] "Сетевых адаптера"
-msgstr[2] "Сетевых адаптеров"
-msgstr[3] "Сетевых адаптеров"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/gpm-upower.c:482
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "Батарея ноутбука"
-msgstr[1] "Батареи ноутбука"
-msgstr[2] "Батарей ноутбука"
-msgstr[3] "Батарей ноутбука"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/gpm-upower.c:486
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] "Блок бесперебойного питания"
-msgstr[1] "Блока бесперебойного питания"
-msgstr[2] "Блоков бесперебойного питания"
-msgstr[3] "Блоков бесперебойного питания"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/gpm-upower.c:490
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] "Монитор"
-msgstr[1] "Монитора"
-msgstr[2] "Мониторов"
-msgstr[3] "Мониторов"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/gpm-upower.c:494
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] "Мышь"
-msgstr[1] "Мыши"
-msgstr[2] "Мышей"
-msgstr[3] "Мышей"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: wireless keyboard with internal battery
 #: ../src/gpm-upower.c:498
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] "Клавиатура"
-msgstr[1] "Клавиатуры"
-msgstr[2] "Клавиатур"
-msgstr[3] "Клавиатур"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: portable device
 #: ../src/gpm-upower.c:502
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] "КПК"
-msgstr[1] "КПК"
-msgstr[2] "КПК"
-msgstr[3] "КПК"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: cell phone (mobile...)
 #: ../src/gpm-upower.c:506
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] "Мобильный телефон"
-msgstr[1] "Мобильных телефона"
-msgstr[2] "Мобильный телефонов"
-msgstr[3] "Мобильный телефонов"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: media player, mp3 etc
 #: ../src/gpm-upower.c:510
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] "Медиаплеер"
-msgstr[1] "Медиаплеера"
-msgstr[2] "Медиаплееров"
-msgstr[3] "Медиаплееров"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:514
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "Планшет"
-msgstr[1] "Планшета"
-msgstr[2] "Планшетов"
-msgstr[3] "Планшетов"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:518
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] "Компьютер"
-msgstr[1] "Компьютера"
-msgstr[2] "Компьютеров"
-msgstr[3] "Компьютеров"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:585
 msgid "Lithium Ion"
-msgstr "Литий-ионная"
+msgstr ""
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:589
 msgid "Lithium Polymer"
-msgstr "Литий-полимерная"
+msgstr ""
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:593
 msgid "Lithium Iron Phosphate"
-msgstr "Литий-фосфатная"
+msgstr ""
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:597
 msgid "Lead acid"
-msgstr "Свинцово-кислотная"
+msgstr ""
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:601
 msgid "Nickel Cadmium"
-msgstr "Никель-кадмиевая"
+msgstr ""
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:605
 msgid "Nickel metal hydride"
-msgstr "Никелевая металгидридная"
+msgstr ""
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:609
 msgid "Unknown technology"
-msgstr "Неизвестная технология"
+msgstr ""
 
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:637
 msgid "Empty"
-msgstr "Пустая"
+msgstr ""
 
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:645
 msgid "Waiting to charge"
-msgstr "Ожидание зарядки"
+msgstr ""
 
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:649
 msgid "Waiting to discharge"
-msgstr "Ожидание разрядки"
+msgstr ""
 
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:653
 msgid "Unknown state"
-msgstr "Неизвестное состояние"
+msgstr ""
