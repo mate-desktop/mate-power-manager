@@ -174,7 +174,6 @@ PKG_CHECK_MODULES(DBUS,[
 
 PKG_CHECK_MODULES(MATE, [
  gtk+-$GTK_API_VERSION >= $GTK_REQUIRED
- mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED
  cairo >= $CAIRO_REQUIRED])
 
 PKG_CHECK_MODULES(GDK, [
@@ -279,7 +278,8 @@ have_applets=no
 if test x$enable_applets = xyes ; then
     have_applets=yes
 
-    PKG_CHECK_MODULES(PANEL, [libmatepanelapplet-4.0 >= $LIBPANEL_REQUIRED])
+    PKG_CHECK_MODULES(PANEL, [libmatepanelapplet-4.0 >= $LIBPANEL_REQUIRED
+                              mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED])
     AC_DEFINE(HAVE_APPLETS, 1, [Define if we are building applets])
 fi
 AC_MSG_RESULT([$have_applets])
