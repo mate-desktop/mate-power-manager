@@ -39,9 +39,6 @@
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include <libupower-glib/upower.h>
-#if !GTK_CHECK_VERSION (3, 0, 0)
-#include <libmate-desktop/mate-aboutdialog.h>
-#endif
 
 #include "egg-debug.h"
 
@@ -185,11 +182,7 @@ gpm_tray_icon_show_about_cb (GtkMenuItem *item, gpointer data)
 		NULL
 	};
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	gtk_show_about_dialog (NULL,
-#else
-	mate_show_about_dialog (NULL,
-#endif
 				"program-name", _("Power Manager"),
 				"version", VERSION,
 				"comments", _("Power management daemon"),
