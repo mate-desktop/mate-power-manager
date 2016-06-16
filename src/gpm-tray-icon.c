@@ -39,7 +39,9 @@
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include <libupower-glib/upower.h>
+#if !GTK_CHECK_VERSION (3, 0, 0)
 #include <libmate-desktop/mate-aboutdialog.h>
+#endif
 
 #include "egg-debug.h"
 
@@ -183,20 +185,24 @@ gpm_tray_icon_show_about_cb (GtkMenuItem *item, gpointer data)
 		NULL
 	};
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gtk_show_about_dialog (NULL,
+#else
 	mate_show_about_dialog (NULL,
-							"program-name", _("Power Manager"),
-							"version", VERSION,
-							"comments", _("Power management daemon"),
-							"copyright", _("Copyright \xC2\xA9 2011-2014 MATE developers"),
-							"authors", authors,
-							/* Translators should localize the following string
-							* which will be displayed at the bottom of the about
-							* box to give credit to the translator(s).
-							*/
-							"translator-credits", _("translator-credits"),
-							"logo-icon-name", "mate-power-manager",
-							"website", "http://www.mate-desktop.org",
-							NULL);
+#endif
+				"program-name", _("Power Manager"),
+				"version", VERSION,
+				"comments", _("Power management daemon"),
+				"copyright", _("Copyright \xC2\xA9 2011-2016 MATE developers"),
+				"authors", authors,
+				/* Translators should localize the following string
+				* which will be displayed at the bottom of the about
+				* box to give credit to the translator(s).
+				*/
+				"translator-credits", _("translator-credits"),
+				"logo-icon-name", "mate-power-manager",
+				"website", "http://www.mate-desktop.org",
+				NULL);
 }
 
 /**
