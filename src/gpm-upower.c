@@ -203,10 +203,13 @@ gpm_upower_get_device_summary (UpDevice *device)
 		      "time-to-empty", &time_to_empty,
 		      NULL);
 
-	if (!is_present)
-		return NULL;
-
 	kind_desc = gpm_device_kind_to_localised_string (kind, 1);
+
+	/* not installed */
+	if (!is_present) {
+		/* TRANSLATORS: device not present */
+		return g_strdup_printf (_("%s not present"), kind_desc);
+	}
 
 	/* don't display all the extra stuff for keyboards and mice */
 	if (kind == UP_DEVICE_KIND_MOUSE ||
