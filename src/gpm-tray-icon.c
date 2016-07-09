@@ -199,21 +199,6 @@ gpm_tray_icon_show_about_cb (GtkMenuItem *item, gpointer data)
 }
 
 /**
- * gpm_tray_icon_popup_cleared_cd:
- * @widget: The popup Gtkwidget
- *
- * We have to re-enable the tooltip when the popup is removed
- **/
-static void
-gpm_tray_icon_popup_cleared_cd (GtkWidget *widget, GpmTrayIcon *icon)
-{
-	g_return_if_fail (GPM_IS_TRAY_ICON (icon));
-	egg_debug ("clear tray");
-	g_object_ref_sink (widget);
-	g_object_unref (widget);
-}
-
-/**
  * gpm_tray_icon_class_init:
  **/
 static void
@@ -292,10 +277,10 @@ gpm_tray_icon_add_device (GpmTrayIcon *icon, GtkMenu *menu, const GPtrArray *arr
 /**
  * gpm_tray_icon_create_menu:
  *
- * Display the popup menu.
+ * Create the popup menu.
  **/
-static void
-gpm_tray_icon_create_menu (GpmTrayIcon *icon, guint32 timestamp)
+static GtkMenu *
+gpm_tray_icon_create_menu (GpmTrayIcon *icon)
 {
 	GtkMenu *menu = (GtkMenu*) gtk_menu_new ();
 	GtkWidget *item;
@@ -355,6 +340,36 @@ gpm_tray_icon_create_menu (GpmTrayIcon *icon, guint32 timestamp)
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
 
 skip_prefs:
+	return menu;
+}
+
+/**
+ * gpm_tray_icon_popup_cleared_cd:
+ * @widget: The popup Gtkwidget
+ *
+ * We have to re-enable the tooltip when the popup is removed
+ **/
+static void
+gpm_tray_icon_popup_cleared_cd (GtkWidget *widget, GpmTrayIcon *icon)
+{
+	g_return_if_fail (GPM_IS_TRAY_ICON (icon));
+	egg_debug ("clear tray");
+	g_object_ref_sink (widget);
+	g_object_unref (widget);
+}
+
+/**
+ * gpm_tray_icon_popup_menu:
+ *
+ * Display the popup menu.
+ **/
+static void
+gpm_tray_icon_popup_menu (GpmTrayIcon *icon, guint32 timestamp)
+{
+	GtkMenu *menu;
+
+	menu = gpm_tray_icon_create_menu (icon);
+
 	/* show the menu */
 	gtk_widget_show_all (GTK_WIDGET (menu));
 	gtk_menu_popup (GTK_MENU (menu), NULL, NULL,
@@ -374,7 +389,7 @@ static void
 gpm_tray_icon_popup_menu_cb (GtkStatusIcon *status_icon, guint button, guint32 timestamp, GpmTrayIcon *icon)
 {
 	egg_debug ("icon right clicked");
-	gpm_tray_icon_create_menu (icon, timestamp);
+	gpm_tray_icon_popup_menu (icon, timestamp);
 }
 
 
@@ -388,7 +403,7 @@ static void
 gpm_tray_icon_activate_cb (GtkStatusIcon *status_icon, GpmTrayIcon *icon)
 {
 	egg_debug ("icon left clicked");
-	gpm_tray_icon_create_menu (icon, gtk_get_current_event_time());
+	gpm_tray_icon_popup_menu (icon, gtk_get_current_event_time());
 }
 
 /**
