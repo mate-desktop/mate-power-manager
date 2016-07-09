@@ -1075,6 +1075,43 @@ gpm_graph_widget_legend_calculate_size (GpmGraphWidget *graph, cairo_t *cr,
 	return TRUE;
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+/**
+ * gpm_graph_widget_draw:
+ * @graph: This class instance
+ * @event: The expose event
+ *
+ * Just repaint the entire graph widget on expose.
+ **/
+static gboolean
+gpm_graph_widget_draw (GtkWidget *widget, cairo_t *cr)
+{
+	GtkAllocation allocation;
+	gint legend_x = 0;
+	gint legend_y = 0;
+	guint legend_height = 0;
+	guint legend_width = 0;
+	gfloat data_x;
+	gfloat data_y;
+
+	GpmGraphWidget *graph = (GpmGraphWidget*) widget;
+	g_return_val_if_fail (graph != NULL, FALSE);
+	g_return_val_if_fail (GPM_IS_GRAPH_WIDGET (graph), FALSE);
+
+	gpm_graph_widget_legend_calculate_size (graph, cr, &legend_width, &legend_height);
+	cairo_save (cr);
+
+	/* we need this so we know the y text */
+	if (graph->priv->autorange_x)
+		gpm_graph_widget_autorange_x (graph);
+	if (graph->priv->autorange_y)
+		gpm_graph_widget_autorange_y (graph);
+
+	graph->priv->box_x = gpm_graph_widget_get_y_label_max_width (graph, cr) + 10;
+	graph->priv->box_y = 5;
+
+	gtk_widget_get_allocation (widget, &allocation);
+#else
 /**
  * gpm_graph_widget_draw_graph:
  * @graph: This class instance
@@ -1110,6 +1147,7 @@ gpm_graph_widget_draw_graph (GtkWidget *graph_widget, cairo_t *cr)
 	graph->priv->box_y = 5;
 
 	gtk_widget_get_allocation (graph_widget, &allocation);
+#endif
 	graph->priv->box_height = allocation.height - (20 + graph->priv->box_y);
 
 	/* make size adjustment for legend */
@@ -1142,8 +1180,12 @@ gpm_graph_widget_draw_graph (GtkWidget *graph_widget, cairo_t *cr)
 		gpm_graph_widget_draw_legend (graph, legend_x, legend_y, legend_width, legend_height);
 
 	cairo_restore (cr);
+#if GTK_CHECK_VERSION (3, 0, 0)
+	return FALSE;
+#endif
 }
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 /**
  * gpm_graph_widget_expose:
  * @graph: This class instance
@@ -1152,25 +1194,8 @@ gpm_graph_widget_draw_graph (GtkWidget *graph_widget, cairo_t *cr)
  * Just repaint the entire graph widget on expose.
  **/
 static gboolean
-#if GTK_CHECK_VERSION (3, 0, 0)
-gpm_graph_widget_draw (GtkWidget *graph, cairo_t *cr)
-#else
 gpm_graph_widget_expose (GtkWidget *graph, GdkEventExpose *event)
-#endif
 {
-#if GTK_CHECK_VERSION (3, 0, 0)
-	GdkRectangle area;
-	gdouble x1, y1, x2, y2;
-
-	cairo_clip_extents (cr, &x1, &y1, &x2, &y2);
-	area.x = floor (x1);
-	area.y = floor (y1);
-	area.width = ceil (x2) - area.x;
-	area.height = ceil (y2) - area.y;
-	cairo_rectangle (cr,
-			 area.x, area.y,
-			 area.width, area.height);
-#else
 	cairo_t *cr;
 
 	/* get a cairo_t */
@@ -1178,17 +1203,15 @@ gpm_graph_widget_expose (GtkWidget *graph, GdkEventExpose *event)
 	cairo_rectangle (cr,
 			 event->area.x, event->area.y,
 			 event->area.width, event->area.height);
-#endif
 	cairo_clip (cr);
 	((GpmGraphWidget *)graph)->priv->cr = cr;
 
 	gpm_graph_widget_draw_graph (graph, cr);
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
 	cairo_destroy (cr);
-#endif
 	return FALSE;
 }
+#endif
 
 /**
  * gpm_graph_widget_new:
