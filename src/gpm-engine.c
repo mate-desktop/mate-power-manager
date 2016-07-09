@@ -72,6 +72,7 @@ enum {
 	CHARGE_ACTION,
 	DISCHARGING,
 	LOW_CAPACITY,
+	DEVICES_CHANGED,
 	LAST_SIGNAL
 };
 
@@ -536,6 +537,8 @@ gpm_engine_recalculate_state (GpmEngine *engine)
 
 	gpm_engine_recalculate_state_icon (engine);
 	gpm_engine_recalculate_state_summary (engine);
+
+	g_signal_emit (engine, signals [DEVICES_CHANGED], 0);
 }
 
 /**
@@ -1234,6 +1237,13 @@ gpm_engine_class_init (GpmEngineClass *klass)
 			      G_STRUCT_OFFSET (GpmEngineClass, charge_critical),
 			      NULL, NULL, g_cclosure_marshal_VOID__POINTER,
 			      G_TYPE_NONE, 1, G_TYPE_POINTER);
+	signals [DEVICES_CHANGED] =
+		g_signal_new ("devices-changed",
+			      G_TYPE_FROM_CLASS (object_class),
+			      G_SIGNAL_RUN_LAST,
+			      G_STRUCT_OFFSET (GpmEngineClass, devices_changed),
+			      NULL, NULL, g_cclosure_marshal_VOID__VOID,
+			      G_TYPE_NONE, 0);
 }
 
 /**
