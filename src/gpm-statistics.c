@@ -1813,8 +1813,6 @@ main (int argc, char *argv[])
 #else
 	g_signal_connect (client, "device-added", G_CALLBACK (gpm_stats_device_added_cb), NULL);
 	g_signal_connect (client, "device-removed", G_CALLBACK (gpm_stats_device_removed_cb), NULL);
-#endif
-#if !UP_CHECK_VERSION(0, 99, 0)
 	g_signal_connect (client, "device-changed", G_CALLBACK (gpm_stats_device_changed_cb), NULL);
 #endif
 
