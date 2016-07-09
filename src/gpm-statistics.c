@@ -403,7 +403,7 @@ gpm_stats_update_info_page_details (UpDevice *device)
 	gpm_stats_add_info_data (_("Device"), device_path);
 	g_free (device_path);
 
-	gpm_stats_add_info_data (_("Type"), gpm_device_kind_to_localised_text (kind, 1));
+	gpm_stats_add_info_data (_("Type"), gpm_device_kind_to_localised_string (kind, 1));
 	if (vendor != NULL && vendor[0] != '\0')
 		gpm_stats_add_info_data (_("Vendor"), vendor);
 	if (model != NULL && model[0] != '\0')
@@ -1238,7 +1238,7 @@ gpm_stats_add_device (UpDevice *device)
 		label = g_strdup_printf ("%s %s", vendor, model);
 	}
 	else {
-		label = g_strdup_printf ("%s", gpm_device_kind_to_localised_text (kind, 1));
+		label = g_strdup_printf ("%s", gpm_device_kind_to_localised_string (kind, 1));
 	}
 	icon = gpm_upower_get_device_icon (device);
 

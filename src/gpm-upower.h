@@ -27,7 +27,7 @@
 
 G_BEGIN_DECLS
 
-const gchar	*gpm_device_kind_to_localised_text	(UpDeviceKind	 kind,
+const gchar	*gpm_device_kind_to_localised_string	(UpDeviceKind	 kind,
 							 guint		 number);
 const gchar	*gpm_device_kind_to_icon		(UpDeviceKind	 kind);
 const gchar	*gpm_device_technology_to_localised_string (UpDeviceTechnology technology_enum);

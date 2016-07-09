@@ -1204,7 +1204,7 @@ gpm_manager_engine_discharging_cb (GpmEngine *engine, UpDevice *device, GpmManag
 	/* only show text if there is a valid time */
 	if (time_to_empty > 0)
 		remaining_text = gpm_get_timestring (time_to_empty);
-	kind_desc = gpm_device_kind_to_localised_text (kind, 1);
+	kind_desc = gpm_device_kind_to_localised_string (kind, 1);
 
 	if (kind == UP_DEVICE_KIND_BATTERY) {
 		/* TRANSLATORS: laptop battery is now discharging */
