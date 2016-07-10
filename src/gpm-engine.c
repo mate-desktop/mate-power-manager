@@ -1012,6 +1012,50 @@ gpm_engine_get_devices (GpmEngine *engine)
 }
 
 /**
+ * gpm_engine_get_primary_device:
+ *
+ * Return value: the #UpDevice, free with g_object_unref()
+ **/
+UpDevice *
+gpm_engine_get_primary_device (GpmEngine *engine)
+{
+	guint i;
+	UpDevice *device = NULL;
+	UpDevice *device_tmp;
+	UpDeviceKind kind;
+	UpDeviceState state;
+	gboolean is_present;
+
+	for (i=0; i<engine->priv->array->len; i++) {
+		device_tmp = g_ptr_array_index (engine->priv->array, i);
+
+		/* get device properties */
+		g_object_get (device_tmp,
+			      "kind", &kind,
+			      "state", &state,
+			      "is-present", &is_present,
+			      NULL);
+
+		/* not present */
+		if (!is_present)
+			continue;
+
+		/* not discharging */
+		if (state != UP_DEVICE_STATE_DISCHARGING)
+			continue;
+
+		/* not battery */
+		if (kind != UP_DEVICE_KIND_BATTERY)
+			continue;
+
+		/* use composite device to cope with multiple batteries */
+		device = g_object_ref (gpm_engine_get_composite_device (engine, device_tmp));
+		break;
+	}
+	return device;
+}
+
+/**
  * phone_device_added_cb:
  **/
 static void

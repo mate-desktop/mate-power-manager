@@ -275,6 +275,33 @@ gpm_tray_icon_add_device (GpmTrayIcon *icon, GtkMenu *menu, const GPtrArray *arr
 }
 
 /**
+ * gpm_tray_icon_add_primary_device:
+ **/
+static void
+gpm_tray_icon_add_primary_device (GpmTrayIcon *icon, GtkMenu *menu, UpDevice *device)
+{
+	GtkWidget *item;
+	gchar *time_str;
+	gchar *string;
+	gint64 time_to_empty = 0;
+
+	/* get details */
+	g_object_get (device,
+		      "time-to-empty", &time_to_empty,
+		      NULL);
+
+	/* convert time to string */
+	time_str = gpm_get_timestring (time_to_empty);
+
+	/* TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes" */
+	string = g_strdup_printf (_("%s remaining"), time_str);
+	item = gtk_image_menu_item_new_with_label (string);
+	gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
+	g_free (time_str);
+	g_free (string);
+}
+
+/**
  * gpm_tray_icon_create_menu:
  *
  * Create the popup menu.
@@ -287,6 +314,15 @@ gpm_tray_icon_create_menu (GpmTrayIcon *icon)
 	GtkWidget *image;
 	guint dev_cnt = 0;
 	GPtrArray *array;
+	UpDevice *device = NULL;
+
+	/* show the primary device time remaining */
+	device = gpm_engine_get_primary_device (icon->priv->engine);
+	if (device != NULL) {
+		gpm_tray_icon_add_primary_device (icon, menu, device);
+		item = gtk_separator_menu_item_new ();
+		gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
+	}
 
 	/* add all device types to the drop down menu */
 	array = gpm_engine_get_devices (icon->priv->engine);
@@ -340,6 +376,8 @@ gpm_tray_icon_create_menu (GpmTrayIcon *icon)
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
 
 skip_prefs:
+	if (device != NULL)
+		g_object_unref (device);
 	return menu;
 }
 
