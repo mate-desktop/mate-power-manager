@@ -300,11 +300,17 @@ gpm_upower_get_device_summary (UpDevice *device)
 		/* TRANSLATORS: this is only shown for laptops with multiple batteries */
 		description = g_strdup_printf (_("%s waiting to charge (%.1f%%)"), kind_desc, percentage);
 
+	} else if (state == UP_DEVICE_STATE_EMPTY) {
+
+		/* TRANSLATORS: when the device has no charge left */
+		description = g_strdup_printf (_("%s empty"), kind_desc);
+
 	} else {
 		egg_warning ("in an undefined state we are not charging or "
 			     "discharging and the batteries are also not charged");
 		description = g_strdup_printf ("%s (%.1f%%)", kind_desc, percentage);
 	}
+
 	return description;
 }
 
