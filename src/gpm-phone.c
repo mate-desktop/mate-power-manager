@@ -24,13 +24,12 @@
 #include <string.h>
 #include <glib.h>
 #include <glib/gi18n.h>
+#include <gio/gio.h>
 #include <dbus/dbus-glib.h>
 
 #include "gpm-phone.h"
 #include "egg-debug.h"
 #include "gpm-marshal.h"
-
-#include "egg-dbus-monitor.h"
 
 static void     gpm_phone_finalize   (GObject	    *object);
 
@@ -40,7 +39,7 @@ struct GpmPhonePrivate
 {
 	DBusGProxy		*proxy;
 	DBusGConnection		*connection;
-	EggDbusMonitor		*monitor;
+	guint			 watch_id;
 	gboolean		 present;
 	guint			 percentage;
 	gboolean		 onac;	 
@@ -225,15 +224,16 @@ gpm_phone_class_init (GpmPhoneClass *klass)
 }
 
 /**
- * gpm_phone_dbus_connect:
- **/
-static gboolean
-gpm_phone_dbus_connect (GpmPhone *phone)
+ * gpm_phone_service_appeared_cb:
+ */
+static void
+gpm_phone_service_appeared_cb (GDBusConnection *connection,
+			       const gchar *name, const gchar *name_owner,
+			       GpmPhone *phone)
 {
 	GError *error = NULL;
 
-	g_return_val_if_fail (phone != NULL, FALSE);
-	g_return_val_if_fail (GPM_IS_PHONE (phone), FALSE);
+	g_return_if_fail (GPM_IS_PHONE (phone));
 
 	if (phone->priv->connection == NULL) {
 		egg_debug ("get connection");
@@ -243,7 +243,7 @@ gpm_phone_dbus_connect (GpmPhone *phone)
 			egg_warning ("Could not connect to DBUS daemon: %s", error->message);
 			g_error_free (error);
 			phone->priv->connection = NULL;
-			return FALSE;
+			return;
 		}
 	}
 	if (phone->priv->proxy == NULL) {
@@ -258,7 +258,7 @@ gpm_phone_dbus_connect (GpmPhone *phone)
 			egg_warning ("Cannot connect, maybe the daemon is not running: %s", error->message);
 			g_error_free (error);
 			phone->priv->proxy = NULL;
-			return FALSE;
+			return;
 		}
 
 		/* complicated type. ick */
@@ -281,17 +281,17 @@ gpm_phone_dbus_connect (GpmPhone *phone)
 					     phone, NULL);
 
 	}
-	return TRUE;
 }
 
 /**
- * gpm_phone_dbus_disconnect:
- **/
-static gboolean
-gpm_phone_dbus_disconnect (GpmPhone *phone)
+ * gpm_phone_service_vanished_cb:
+ */
+static void
+gpm_phone_service_vanished_cb (GDBusConnection *connection,
+			        const gchar *name,
+			        GpmPhone *phone)
 {
-	g_return_val_if_fail (phone != NULL, FALSE);
-	g_return_val_if_fail (GPM_IS_PHONE (phone), FALSE);
+	g_return_if_fail (GPM_IS_PHONE (phone));
 
 	if (phone->priv->proxy != NULL) {
 		egg_debug ("removing proxy");
@@ -304,24 +304,7 @@ gpm_phone_dbus_disconnect (GpmPhone *phone)
 			g_signal_emit (phone, signals [DEVICE_REMOVED], 0, 0);
 		}
 	}
-	return TRUE;
-}
-
-/**
- * monitor_connection_cb:
- * @proxy: The dbus raw proxy
- * @status: The status of the service, where TRUE is connected
- * @screensaver: This class instance
- **/
-static void
-monitor_connection_cb (EggDbusMonitor *monitor,
-		     gboolean   status,
-		     GpmPhone  *phone)
-{
-	if (status)
-		gpm_phone_dbus_connect (phone);
-	else
-		gpm_phone_dbus_disconnect (phone);
+	return;
 }
 
 /**
@@ -331,7 +314,6 @@ monitor_connection_cb (EggDbusMonitor *monitor,
 static void
 gpm_phone_init (GpmPhone *phone)
 {
-	DBusGConnection *connection;
 	phone->priv = GPM_PHONE_GET_PRIVATE (phone);
 
 	phone->priv->connection = NULL;
@@ -340,12 +322,12 @@ gpm_phone_init (GpmPhone *phone)
 	phone->priv->percentage = 0;
 	phone->priv->onac = FALSE;
 
-	phone->priv->monitor = egg_dbus_monitor_new ();
-	g_signal_connect (phone->priv->monitor, "connection-changed",
-			  G_CALLBACK (monitor_connection_cb), phone);
-	connection = dbus_g_bus_get (DBUS_BUS_SESSION, NULL);
-	egg_dbus_monitor_assign (phone->priv->monitor, connection, MATE_PHONE_MANAGER_DBUS_SERVICE);
-	gpm_phone_dbus_connect (phone);
+	phone->priv->watch_id = g_bus_watch_name (G_BUS_TYPE_SESSION,
+						  MATE_PHONE_MANAGER_DBUS_SERVICE,
+						  G_BUS_NAME_WATCHER_FLAGS_NONE,
+						  (GBusNameAppearedCallback) gpm_phone_service_appeared_cb,
+						  (GBusNameVanishedCallback) gpm_phone_service_vanished_cb,
+						  phone, NULL);
 }
 
 /**
@@ -356,15 +338,14 @@ static void
 gpm_phone_finalize (GObject *object)
 {
 	GpmPhone *phone;
-	g_return_if_fail (object != NULL);
 	g_return_if_fail (GPM_IS_PHONE (object));
 
 	phone = GPM_PHONE (object);
 	phone->priv = GPM_PHONE_GET_PRIVATE (phone);
 
-	gpm_phone_dbus_disconnect (phone);
-	if (phone->priv->monitor != NULL)
-		g_object_unref (phone->priv->monitor);
+	if (phone->priv->proxy != NULL)
+		g_object_unref (phone->priv->proxy);
+	g_bus_unwatch_name (phone->priv->watch_id);
 
 	G_OBJECT_CLASS (gpm_phone_parent_class)->finalize (object);
 }
