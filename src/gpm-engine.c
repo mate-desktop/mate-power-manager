@@ -1159,6 +1159,7 @@ gpm_engine_init (GpmEngine *engine)
 	GPtrArray *array = NULL;
 	guint i;
 #endif
+	guint idle_id;
 	engine->priv = GPM_ENGINE_GET_PRIVATE (engine);
 
 	engine->priv->array = g_ptr_array_new_with_free_func (g_object_unref);
@@ -1223,7 +1224,8 @@ gpm_engine_init (GpmEngine *engine)
 	else
 		egg_debug ("Using percentage notification policy");
 
-	g_idle_add ((GSourceFunc) gpm_engine_coldplug_idle_cb, engine);
+	idle_id = g_idle_add ((GSourceFunc) gpm_engine_coldplug_idle_cb, engine);
+	g_source_set_name_by_id (idle_id, "[GpmEngine] coldplug");
 }
 
 /**

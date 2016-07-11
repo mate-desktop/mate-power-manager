@@ -239,6 +239,8 @@ gpm_manager_play_loop_start (GpmManager *manager, GpmManagerSound action, gboole
 									  (GSourceFunc) gpm_manager_play_loop_timeout_cb,
 									  manager);
 
+	g_source_set_name_by_id (manager->priv->critical_alert_timeout_id, "[GpmManager] play-loop");
+
 	/* play the sound, using sounds from the naming spec */
 	context = ca_gtk_context_get_for_screen (gdk_screen_get_default ());
 	retval = ca_context_play (context, 0,
@@ -1560,6 +1562,7 @@ gpm_manager_engine_charge_action_cb (GpmEngine *engine, UpDevice *device, GpmMan
 	gchar *icon = NULL;
 	UpDeviceKind kind;
 	GpmActionPolicy policy;
+	guint timer_id;
 
 	/* get device properties */
 	g_object_get (device,
@@ -1608,7 +1611,8 @@ gpm_manager_engine_charge_action_cb (GpmEngine *engine, UpDevice *device, GpmMan
 		}
 
 		/* wait 20 seconds for user-panic */
-		g_timeout_add_seconds (20, (GSourceFunc) manager_critical_action_do, manager);
+		timer_id = g_timeout_add_seconds (20, (GSourceFunc) manager_critical_action_do, manager);
+		g_source_set_name_by_id (timer_id, "[GpmManager] battery critical-action");
 
 	} else if (kind == UP_DEVICE_KIND_UPS) {
 		/* TRANSLATORS: UPS is really, really, low */
@@ -1636,7 +1640,8 @@ gpm_manager_engine_charge_action_cb (GpmEngine *engine, UpDevice *device, GpmMan
 		}
 
 		/* wait 20 seconds for user-panic */
-		g_timeout_add_seconds (20, (GSourceFunc) manager_critical_action_do, manager);
+		timer_id = g_timeout_add_seconds (20, (GSourceFunc) manager_critical_action_do, manager);
+		g_source_set_name_by_id (timer_id, "[GpmManager] ups critical-action");
 
 	}
 
@@ -1708,8 +1713,10 @@ gpm_manager_reset_just_resumed_cb (gpointer user_data)
 static void
 gpm_manager_control_resume_cb (GpmControl *control, GpmControlAction action, GpmManager *manager)
 {
+	guint timer_id;
 	manager->priv->just_resumed = TRUE;
-	g_timeout_add_seconds (1, gpm_manager_reset_just_resumed_cb, manager);
+	timer_id = g_timeout_add_seconds (1, gpm_manager_reset_just_resumed_cb, manager);
+	g_source_set_name_by_id (timer_id, "[GpmManager] just-resumed");
 }
 
 /**

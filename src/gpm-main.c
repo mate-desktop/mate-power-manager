@@ -165,6 +165,7 @@ main (int argc, char *argv[])
 	GError *error = NULL;
 	GOptionContext *context;
 	gint ret;
+	guint timer_id;
 
 	const GOptionEntry options[] = {
 		{ "verbose", '\0', 0, G_OPTION_ARG_NONE, &verbose,
@@ -264,7 +265,8 @@ main (int argc, char *argv[])
 	/* Only timeout and close the mainloop if we have specified it
 	 * on the command line */
 	if (timed_exit) {
-		g_timeout_add_seconds (20, (GSourceFunc) timed_exit_cb, loop);
+		timer_id = g_timeout_add_seconds (20, (GSourceFunc) timed_exit_cb, loop);
+		g_source_set_name_by_id (timer_id, "[GpmMain] timed-exit");
 	}
 
 	if (immediate_exit == FALSE) {
