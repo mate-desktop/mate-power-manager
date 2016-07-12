@@ -39,7 +39,6 @@
 #include <libmate-desktop/mate-aboutdialog.h>
 
 #include "egg-debug.h"
-#include "egg-dbus-monitor.h"
 #include "gpm-common.h"
 
 #define GPM_TYPE_INHIBIT_APPLET		(gpm_inhibit_applet_get_type ())
@@ -59,7 +58,7 @@ typedef struct{
 	/* connection to g-p-m */
 	DBusGProxy *proxy;
 	DBusGConnection *connection;
-	EggDbusMonitor *monitor;
+	guint bus_watch_id;
 	guint level;
 	/* a cache for panel size */
 	gint size;
@@ -505,12 +504,9 @@ gpm_applet_destroy_cb (GtkWidget *widget)
 {
 	GpmInhibitApplet *applet = GPM_INHIBIT_APPLET(widget);
 
-	if (applet->monitor != NULL) {
-		g_object_unref (applet->monitor);
-	}
-	if (applet->icon != NULL) {
+	g_bus_unwatch_name (applet->bus_watch_id);
+	if (applet->icon != NULL)
 		g_object_unref (applet->icon);
-	}
 }
 
 /**
@@ -578,27 +574,32 @@ gpm_inhibit_applet_dbus_disconnect (GpmInhibitApplet *applet)
 }
 
 /**
- * monitor_connection_cb:
- * @proxy: The dbus raw proxy
- * @status: The status of the service, where TRUE is connected
- * @screensaver: This class instance
+ * gpm_inhibit_applet_name_appeared_cb:
  **/
 static void
-monitor_connection_cb (EggDbusMonitor           *monitor,
-		     gboolean	          status,
-		     GpmInhibitApplet *applet)
+gpm_inhibit_applet_name_appeared_cb (GDBusConnection *connection,
+				     const gchar *name,
+				     const gchar *name_owner,
+				     GpmInhibitApplet *applet)
 {
-	if (status) {
-		gpm_inhibit_applet_dbus_connect (applet);
-		gpm_applet_update_tooltip (applet);
-		gpm_applet_get_icon (applet);
-		gpm_applet_draw_cb (applet);
-	} else {
-		gpm_inhibit_applet_dbus_disconnect (applet);
-		gpm_applet_update_tooltip (applet);
-		gpm_applet_get_icon (applet);
-		gpm_applet_draw_cb (applet);
-	}
+	gpm_inhibit_applet_dbus_connect (applet);
+	gpm_applet_update_tooltip (applet);
+	gpm_applet_get_icon (applet);
+	gpm_applet_draw_cb (applet);
+}
+
+/**
+ * gpm_inhibit_applet_name_vanished_cb:
+ **/
+void
+gpm_inhibit_applet_name_vanished_cb (GDBusConnection *connection,
+				     const gchar *name,
+				     GpmInhibitApplet *applet)
+{
+	gpm_inhibit_applet_dbus_disconnect (applet);
+	gpm_applet_update_tooltip (applet);
+	gpm_applet_get_icon (applet);
+	gpm_applet_draw_cb (applet);
 }
 
 /**
@@ -621,12 +622,14 @@ gpm_inhibit_applet_init (GpmInhibitApplet *applet)
 	gtk_icon_theme_append_search_path (gtk_icon_theme_get_default (),
                                            GPM_DATA G_DIR_SEPARATOR_S "icons");
 
-	applet->monitor = egg_dbus_monitor_new ();
-	g_signal_connect (applet->monitor, "connection-changed",
-			  G_CALLBACK (monitor_connection_cb), applet);
-	connection = dbus_g_bus_get (DBUS_BUS_SESSION, NULL);
-	egg_dbus_monitor_assign (applet->monitor, connection, GS_DBUS_SERVICE);
-	gpm_inhibit_applet_dbus_connect (applet);
+	/* monitor the daemon */
+	applet->bus_watch_id =
+		g_bus_watch_name (G_BUS_TYPE_SESSION,
+				  GS_DBUS_SERVICE,
+				  G_BUS_NAME_WATCHER_FLAGS_NONE,
+				  (GBusNameAppearedCallback) gpm_inhibit_applet_name_appeared_cb,
+				  (GBusNameVanishedCallback) gpm_inhibit_applet_name_vanished_cb,
+				  applet, NULL);
 
 	/* prepare */
 	mate_panel_applet_set_flags (MATE_PANEL_APPLET (applet), MATE_PANEL_APPLET_EXPAND_MINOR);

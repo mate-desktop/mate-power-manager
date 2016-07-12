@@ -27,8 +27,6 @@ libexec_PROGRAMS=mate-inhibit-applet
 
 mate_inhibit_applet_SOURCES =					\
 	inhibit-applet.c					\
-	egg-dbus-monitor.c					\
-	egg-dbus-monitor.h					\
 	egg-debug.c						\
 	egg-debug.h						\
 	gpm-common.c						\
