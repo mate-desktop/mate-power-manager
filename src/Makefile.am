@@ -205,8 +205,6 @@ mate_power_self_test_SOURCES =				\
 	egg-test.c					\
 	egg-debug.h					\
 	egg-debug.c					\
-	egg-dbus-monitor.h				\
-	egg-dbus-monitor.c				\
 	egg-precision.h					\
 	egg-precision.c					\
 	egg-idletime.h					\
