@@ -32,10 +32,11 @@ DISTCLEANFILES =					\
 	intltool-update					\
 	mate-power-manager-*.tar.gz
 
-DISTCHECK_CONFIGURE_FLAGS = 				\
-	--disable-schemas-install			\
-	--disable-applets				\
-	--disable-tests
+DISTCHECK_CONFIGURE_FLAGS =   \
+	--disable-schemas-install \
+	--disable-applets         \
+	--disable-tests \
+	--with-gtk=$(GTK_API_VERSION)
 
 # Build ChangeLog from GIT  history
 ChangeLog:
