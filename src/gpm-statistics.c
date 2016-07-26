@@ -33,7 +33,9 @@
 #include "egg-debug.h"
 #include "egg-color.h"
 #include "egg-array-float.h"
+#if !GTK_CHECK_VERSION (3, 0, 0)
 #include "egg-unique.h"
+#endif
 
 #include "gpm-common.h"
 #include "gpm-icon-names.h"
@@ -1175,7 +1177,11 @@ gpm_stats_devices_treeview_clicked_cb (GtkTreeSelection *selection, gboolean dat
  * gpm_stats_window_activated_cb
  **/
 static void
+#if GTK_CHECK_VERSION (3, 0, 0)
+gpm_stats_window_activated_cb (GtkApplication *app, gpointer data)
+#else
 gpm_stats_window_activated_cb (EggUnique *egg_unique, gpointer data)
+#endif
 {
 	GtkWidget *widget;
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "dialog_stats"));
@@ -1562,7 +1568,11 @@ main (int argc, char *argv[])
 	GtkBox *box;
 	GtkWidget *widget;
 	GtkTreeSelection *selection;
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GtkApplication *app;
+#else
 	EggUnique *egg_unique;
+#endif
 	gboolean ret;
 	UpClient *client;
 	GPtrArray *devices = NULL;
@@ -1603,12 +1613,21 @@ main (int argc, char *argv[])
 	egg_debug_init (verbose);
 	gtk_init (&argc, &argv);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	app = gtk_application_new ("org.mate.PowerManager.Statistics", 0);
+#else
 	/* are we already activated? */
 	egg_unique = egg_unique_new ();
 	ret = egg_unique_assign (egg_unique, "org.mate.PowerManager.Statistics");
 	if (!ret)
 		goto unique_out;
+#endif
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_signal_connect (app, "activate",
+#else
 	g_signal_connect (egg_unique, "activated",
+#endif
 			  G_CALLBACK (gpm_stats_window_activated_cb), NULL);
 
 	/* add application specific icons to search path */
@@ -1863,8 +1882,12 @@ out:
 	g_object_unref (wakeups);
 	g_object_unref (builder);
 	g_object_unref (list_store_info);
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_object_unref (app);
+#else
 unique_out:
 	g_object_unref (egg_unique);
+#endif
 	g_free (last_device);
 	return 0;
 }

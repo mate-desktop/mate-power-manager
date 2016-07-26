@@ -31,7 +31,9 @@
 #include <gtk/gtk.h>
 
 /* local .la */
+#if !GTK_CHECK_VERSION (3, 0, 0)
 #include <egg-unique.h>
+#endif
 
 #include "gpm-common.h"
 #include "egg-debug.h"
@@ -68,7 +70,11 @@ gpm_prefs_close_cb (GpmPrefs *prefs)
  * We have been asked to show the window
  **/
 static void
+#if GTK_CHECK_VERSION (3, 0, 0)
+gpm_prefs_activated_cb (GtkApplication *app, GpmPrefs *prefs)
+#else
 gpm_prefs_activated_cb (EggUnique *egg_unique, GpmPrefs *prefs)
+#endif
 {
 	gpm_prefs_activate_window (prefs);
 }
@@ -83,7 +89,11 @@ main (int argc, char **argv)
 	GOptionContext *context;
 	GpmPrefs *prefs = NULL;
 	gboolean ret;
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GtkApplication *app;
+#else
 	EggUnique *egg_unique;
+#endif
 
 	const GOptionEntry options[] = {
 		{ "verbose", '\0', 0, G_OPTION_ARG_NONE, &verbose,
@@ -105,16 +115,24 @@ main (int argc, char **argv)
 	gtk_init (&argc, &argv);
 	egg_debug_init (verbose);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	app = gtk_application_new("org.mate.PowerManager.Preferences", 0);
+#else
 	/* are we already activated? */
 	egg_unique = egg_unique_new ();
 	ret = egg_unique_assign (egg_unique, "org.mate.PowerManager.Preferences");
 	if (!ret) {
 		goto unique_out;
 	}
+#endif
 
 	prefs = gpm_prefs_new ();
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_signal_connect (app, "activate",
+#else
 	g_signal_connect (egg_unique, "activated",
+#endif
 			  G_CALLBACK (gpm_prefs_activated_cb), prefs);
 	g_signal_connect (prefs, "action-help",
 			  G_CALLBACK (gpm_prefs_help_cb), prefs);
@@ -123,8 +141,12 @@ main (int argc, char **argv)
 	gtk_main ();
 	g_object_unref (prefs);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_object_unref (app);
+#else
 unique_out:
 	g_object_unref (egg_unique);
+#endif
 
 /* seems to not work...
 	g_option_context_free (context); */
