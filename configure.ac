@@ -156,10 +156,10 @@ case "$with_gtk" in
 	3.0) GTK_API_VERSION=3.0
 		GTK_REQUIRED=3.0.0
 		CANBERRA_GTK=libcanberra-gtk3
-		LIBUNIQUE_VERSION=3.0
 		;;
 esac
 
+AM_CONDITIONAL([GTK3], [test $GTK_REQUIRED = 3.0.0])
 AC_SUBST(GTK_API_VERSION)
 
 dnl ---------------------------------------------------------------------------
@@ -190,6 +190,7 @@ PKG_CHECK_MODULES(X11, x11 xrender)
 
 PKG_CHECK_MODULES(LIBNOTIFY, libnotify >= $LIBNOTIFY_REQUIRED)
 
+if test "$GTK_REQUIRED" != "3.0.0"; then
 PKG_CHECK_MODULES(UNIQUE, unique-$LIBUNIQUE_VERSION)
 
 AC_SUBST([UNIQUE_CFLAGS])
@@ -199,6 +200,8 @@ AC_SUBST([UNIQUE_LIBS])
 # but it's still not removed upstream in unique 1.x, so leaving it alone
 # just in case.
 UNIQUE_CFLAGS="$UNIQUE_CFLAGS -DG_CONST_RETURN=const"
+fi
+
 
 PKG_CHECK_MODULES(UPOWER, upower-glib >= $UPOWER_REQUIRED)
 

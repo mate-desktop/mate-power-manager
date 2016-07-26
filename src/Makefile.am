@@ -15,7 +15,6 @@ AM_CPPFLAGS =						\
 	$(DBUS_CFLAGS)					\
 	$(MATE_CFLAGS)					\
 	$(KEYRING_CFLAGS)				\
-	$(UNIQUE_CFLAGS)				\
 	$(X11_CFLAGS)					\
 	$(LIBNOTIFY_CFLAGS)				\
 	$(CANBERRA_CFLAGS)				\
@@ -38,8 +37,13 @@ AM_CPPFLAGS =						\
 	-DEGG_LOGGING="\"GPM_LOGGING\""			\
 	-DEGG_CONSOLE="\"GPM_CONSOLE\""			\
 	-I$(top_srcdir)					\
-	$(DISABLE_DEPRECATED)				\
-	$(NULL)
+	$(DISABLE_DEPRECATED)
+
+if !GTK3
+AM_CPPFLAGS +=	$(UNIQUE_CFLAGS)
+endif
+
+AM_CPPFLAGS += $(NULL)
 
 bin_PROGRAMS =						\
 	mate-power-manager				\
@@ -62,8 +66,6 @@ libgpmshared_a_SOURCES =				\
 	egg-color.h					\
 	egg-debug.h					\
 	egg-debug.c					\
-	egg-unique.h					\
-	egg-unique.c					\
 	egg-precision.h					\
 	egg-precision.c					\
 	egg-array-float.c				\
@@ -81,8 +83,13 @@ libgpmshared_a_SOURCES =				\
 	gpm-marshal.h					\
 	gpm-marshal.c					\
 	gpm-upower.c					\
-	gpm-upower.h					\
-	$(NULL)
+	gpm-upower.h
+
+if !GTK3
+libgpmshared_a_SOURCES +=	egg-unique.h egg-unique.c
+endif
+
+libgpmshared_a_SOURCES += $(NULL)
 
 mate_power_backlight_helper_SOURCES =			\
 	gpm-backlight-helper.c				\
@@ -111,9 +118,12 @@ mate_power_statistics_LDADD =				\
 	$(X11_LIBS)					\
 	$(UPOWER_LIBS)					\
 	$(MATE_LIBS)					\
-	$(UNIQUE_LIBS)					\
 	$(DBUS_LIBS)					\
 	-lm
+
+if !GTK3
+mate_power_statistics_LDADD += $(UNIQUE_LIBS)
+endif
 
 mate_power_statistics_CFLAGS =				\
 	$(WARNINGFLAGS)					\
@@ -131,10 +141,13 @@ mate_power_preferences_LDADD =				\
 	$(X11_LIBS)					\
 	$(MATE_LIBS)					\
 	$(DBUS_LIBS)					\
-	$(UNIQUE_LIBS)					\
 	$(GPM_EXTRA_LIBS)				\
 	$(UPOWER_LIBS)					\
 	-lm
+
+if !GTK3
+mate_power_preferences_LDADD += $(UNIQUE_LIBS)
+endif
 
 mate_power_preferences_CFLAGS =			\
 	$(WARNINGFLAGS)					\

@@ -31,7 +31,9 @@
 #include <gtk/gtk.h>
 
 /* local .la */
+#if !GTK_CHECK_VERSION (3, 0, 0)
 #include <egg-unique.h>
+#endif
 
 #include "gpm-common.h"
 #include "egg-debug.h"
@@ -50,28 +52,23 @@ gpm_prefs_help_cb (GpmPrefs *prefs)
 }
 
 /**
- * gpm_prefs_close_cb
- * @prefs: This prefs class instance
- *
- * What to do when we are asked to close for whatever reason
- **/
-static void
-gpm_prefs_close_cb (GpmPrefs *prefs)
-{
-	gtk_main_quit ();
-}
-
-/**
  * gpm_prefs_activated_cb
  * @prefs: This prefs class instance
  *
  * We have been asked to show the window
  **/
 static void
+#if GTK_CHECK_VERSION (3, 0, 0)
+gpm_prefs_activated_cb (GtkApplication *app, GpmPrefs *prefs)
+{
+	gpm_prefs_activate_window (app, prefs);
+}
+#else
 gpm_prefs_activated_cb (EggUnique *egg_unique, GpmPrefs *prefs)
 {
 	gpm_prefs_activate_window (prefs);
 }
+#endif
 
 /**
  * main:
@@ -83,7 +80,13 @@ main (int argc, char **argv)
 	GOptionContext *context;
 	GpmPrefs *prefs = NULL;
 	gboolean ret;
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GtkApplication *app;
+	GtkWidget *window;
+	gint status;
+#else
 	EggUnique *egg_unique;
+#endif
 
 	const GOptionEntry options[] = {
 		{ "verbose", '\0', 0, G_OPTION_ARG_NONE, &verbose,
@@ -102,32 +105,62 @@ main (int argc, char **argv)
 	g_option_context_add_group (context, gtk_get_option_group (FALSE));
 	g_option_context_parse (context, &argc, &argv, NULL);
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	gtk_init (&argc, &argv);
+#endif
 	egg_debug_init (verbose);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gdk_init (&argc, &argv);
+	app = gtk_application_new("org.mate.PowerManager.Preferences", 0);
+#else
 	/* are we already activated? */
 	egg_unique = egg_unique_new ();
 	ret = egg_unique_assign (egg_unique, "org.mate.PowerManager.Preferences");
 	if (!ret) {
 		goto unique_out;
 	}
+#endif
 
 	prefs = gpm_prefs_new ();
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	window = gpm_window (prefs);
+	g_signal_connect (app, "activate",
+#else
 	g_signal_connect (egg_unique, "activated",
+#endif
 			  G_CALLBACK (gpm_prefs_activated_cb), prefs);
 	g_signal_connect (prefs, "action-help",
 			  G_CALLBACK (gpm_prefs_help_cb), prefs);
-	g_signal_connect (prefs, "action-close",
-			  G_CALLBACK (gpm_prefs_close_cb), prefs);
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_signal_connect_swapped (prefs, "action-close",
+			  G_CALLBACK (gtk_widget_destroy), window);
+#else
+	g_signal_connect_swapped (prefs, "action-close",
+			  G_CALLBACK (gtk_main_quit), NULL);
+#endif
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+	status = g_application_run (G_APPLICATION (app), argc, argv);
+#else
 	gtk_main ();
+#endif
 	g_object_unref (prefs);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_object_unref (app);
+#else
 unique_out:
 	g_object_unref (egg_unique);
+#endif
 
 /* seems to not work...
 	g_option_context_free (context); */
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	return status;
+#else
 	return 0;
+#endif
 }

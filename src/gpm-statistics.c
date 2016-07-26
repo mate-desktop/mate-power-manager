@@ -33,7 +33,9 @@
 #include "egg-debug.h"
 #include "egg-color.h"
 #include "egg-array-float.h"
+#if !GTK_CHECK_VERSION (3, 0, 0)
 #include "egg-unique.h"
+#endif
 
 #include "gpm-common.h"
 #include "gpm-icon-names.h"
@@ -1175,10 +1177,17 @@ gpm_stats_devices_treeview_clicked_cb (GtkTreeSelection *selection, gboolean dat
  * gpm_stats_window_activated_cb
  **/
 static void
+#if GTK_CHECK_VERSION (3, 0, 0)
+gpm_stats_window_activated_cb (GtkApplication *app, gpointer data)
+#else
 gpm_stats_window_activated_cb (EggUnique *egg_unique, gpointer data)
+#endif
 {
 	GtkWidget *widget;
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "dialog_stats"));
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gtk_application_add_window (GTK_APPLICATION (app), GTK_WINDOW (widget));
+#endif
 	gtk_window_present (GTK_WINDOW (widget));
 }
 
@@ -1560,9 +1569,14 @@ main (int argc, char *argv[])
 	gboolean verbose = FALSE;
 	GOptionContext *context;
 	GtkBox *box;
-	GtkWidget *widget;
+	GtkWidget *widget, *window;
 	GtkTreeSelection *selection;
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GtkApplication *app;
+	gint status;
+#else
 	EggUnique *egg_unique;
+#endif
 	gboolean ret;
 	UpClient *client;
 	GPtrArray *devices = NULL;
@@ -1603,12 +1617,21 @@ main (int argc, char *argv[])
 	egg_debug_init (verbose);
 	gtk_init (&argc, &argv);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	app = gtk_application_new ("org.mate.PowerManager.Statistics", 0);
+#else
 	/* are we already activated? */
 	egg_unique = egg_unique_new ();
 	ret = egg_unique_assign (egg_unique, "org.mate.PowerManager.Statistics");
 	if (!ret)
 		goto unique_out;
+#endif
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_signal_connect (app, "activate",
+#else
 	g_signal_connect (egg_unique, "activated",
+#endif
 			  G_CALLBACK (gpm_stats_window_activated_cb), NULL);
 
 	/* add application specific icons to search path */
@@ -1640,15 +1663,19 @@ main (int argc, char *argv[])
 	gtk_widget_set_size_request (graph_statistics, 400, 250);
 	gtk_widget_show (graph_statistics);
 
-	widget = GTK_WIDGET (gtk_builder_get_object (builder, "dialog_stats"));
-	gtk_window_set_default_size (GTK_WINDOW(widget), 800, 500);
+	window = GTK_WIDGET (gtk_builder_get_object (builder, "dialog_stats"));
+	gtk_window_set_default_size (GTK_WINDOW(window), 800, 500);
 	gtk_window_set_default_icon_name (GPM_ICON_APP_ICON);
 
 	/* Get the main window quit */
-	g_signal_connect_swapped (widget, "delete_event", G_CALLBACK (gtk_main_quit), NULL);
-
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "button_close"));
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_signal_connect_swapped (window, "delete_event", G_CALLBACK (gtk_widget_destroy), window);
+	g_signal_connect_swapped (widget, "clicked", G_CALLBACK (gtk_widget_destroy), window);
+#else
+	g_signal_connect_swapped (window, "delete_event", G_CALLBACK (gtk_main_quit), NULL);
 	g_signal_connect_swapped (widget, "clicked", G_CALLBACK (gtk_main_quit), NULL);
+#endif
 	gtk_widget_grab_default (widget);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "button_help"));
@@ -1849,9 +1876,13 @@ main (int argc, char *argv[])
 	gpm_stats_type_combo_changed_cb (widget, NULL);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "dialog_stats"));
-	gtk_widget_show (widget);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	status = g_application_run (G_APPLICATION (app), argc, argv);
+#else
+	gtk_widget_show (widget);
 	gtk_main ();
+#endif
 #if !UP_CHECK_VERSION(0, 99, 0)
 out:
 #endif
@@ -1863,8 +1894,16 @@ out:
 	g_object_unref (wakeups);
 	g_object_unref (builder);
 	g_object_unref (list_store_info);
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_object_unref (app);
+#else
 unique_out:
 	g_object_unref (egg_unique);
+#endif
 	g_free (last_device);
+#if GTK_CHECK_VERSION (3, 0, 0)
+	return status;
+#else
 	return 0;
+#endif
 }

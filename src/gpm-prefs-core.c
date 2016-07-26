@@ -110,10 +110,17 @@ gpm_prefs_class_init (GpmPrefsClass *klass)
  * Activates (shows) the window.
  **/
 void
+#if GTK_CHECK_VERSION (3, 0, 0)
+gpm_prefs_activate_window (GtkApplication *app, GpmPrefs *prefs)
+#else
 gpm_prefs_activate_window (GpmPrefs *prefs)
+#endif
 {
 	GtkWindow *window;
 	window = GTK_WINDOW (gtk_builder_get_object (prefs->priv->builder, "dialog_preferences"));
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gtk_application_add_window (GTK_APPLICATION (app), window);
+#endif
 	gtk_window_present (window);
 }
 
@@ -865,7 +872,9 @@ gpm_prefs_init (GpmPrefs *prefs)
 	prefs_setup_general (prefs);
 	prefs_setup_notification (prefs);
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	gtk_widget_show (main_window);
+#endif
 }
 
 /**
@@ -900,4 +909,14 @@ gpm_prefs_new (void)
 	GpmPrefs *prefs;
 	prefs = g_object_new (GPM_TYPE_PREFS, NULL);
 	return GPM_PREFS (prefs);
+}
+
+/**
+ * gpm_window:
+ * Return value: Prefs window widget.
+ **/
+GtkWidget *
+gpm_window (GpmPrefs *prefs)
+{
+	return GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "dialog_preferences"));
 }
