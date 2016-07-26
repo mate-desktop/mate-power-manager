@@ -109,6 +109,7 @@ main (int argc, char **argv)
 	gboolean ret;
 #if GTK_CHECK_VERSION (3, 0, 0)
 	GtkApplication *app;
+	gint status;
 #else
 	EggUnique *egg_unique;
 #endif
@@ -161,7 +162,7 @@ main (int argc, char **argv)
 			  G_CALLBACK (gpm_prefs_close_cb), prefs);
 
 #if GTK_CHECK_VERSION (3, 0, 0)
-	g_application_run (G_APPLICATION (app), argc, argv);
+	status = g_application_run (G_APPLICATION (app), argc, argv);
 #else
 	gtk_main ();
 #endif
@@ -177,5 +178,9 @@ unique_out:
 /* seems to not work...
 	g_option_context_free (context); */
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	return status;
+#else
 	return 0;
+#endif
 }
