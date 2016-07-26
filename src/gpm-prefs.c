@@ -60,7 +60,22 @@ gpm_prefs_help_cb (GpmPrefs *prefs)
 static void
 gpm_prefs_close_cb (GpmPrefs *prefs)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GList *list, *next;
+	GtkWindow *win;
+
+	list = gtk_application_get_windows (GTK_APPLICATION (g_application_get_default ()));
+
+	while (list)
+	{
+		win = list->data;
+		next = list->next;
+		gtk_widget_destroy (GTK_WIDGET (win));
+		list = next;
+	}
+#else
 	gtk_main_quit ();
+#endif
 }
 
 /**
@@ -72,12 +87,15 @@ gpm_prefs_close_cb (GpmPrefs *prefs)
 static void
 #if GTK_CHECK_VERSION (3, 0, 0)
 gpm_prefs_activated_cb (GtkApplication *app, GpmPrefs *prefs)
+{
+	gpm_prefs_activate_window (app, prefs);
+}
 #else
 gpm_prefs_activated_cb (EggUnique *egg_unique, GpmPrefs *prefs)
-#endif
 {
 	gpm_prefs_activate_window (prefs);
 }
+#endif
 
 /**
  * main:
@@ -112,10 +130,13 @@ main (int argc, char **argv)
 	g_option_context_add_group (context, gtk_get_option_group (FALSE));
 	g_option_context_parse (context, &argc, &argv, NULL);
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	gtk_init (&argc, &argv);
+#endif
 	egg_debug_init (verbose);
 
 #if GTK_CHECK_VERSION (3, 0, 0)
+	gdk_init (&argc, &argv);
 	app = gtk_application_new("org.mate.PowerManager.Preferences", 0);
 #else
 	/* are we already activated? */
@@ -138,7 +159,12 @@ main (int argc, char **argv)
 			  G_CALLBACK (gpm_prefs_help_cb), prefs);
 	g_signal_connect (prefs, "action-close",
 			  G_CALLBACK (gpm_prefs_close_cb), prefs);
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_application_run (G_APPLICATION (app), argc, argv);
+#else
 	gtk_main ();
+#endif
 	g_object_unref (prefs);
 
 #if GTK_CHECK_VERSION (3, 0, 0)

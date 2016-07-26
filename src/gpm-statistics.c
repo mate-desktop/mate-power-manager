@@ -1185,6 +1185,9 @@ gpm_stats_window_activated_cb (EggUnique *egg_unique, gpointer data)
 {
 	GtkWidget *widget;
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "dialog_stats"));
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gtk_application_add_window (GTK_APPLICATION (app), GTK_WINDOW (widget));
+#endif
 	gtk_window_present (GTK_WINDOW (widget));
 }
 
@@ -1469,6 +1472,29 @@ gpm_stats_range_combo_changed (GtkWidget *widget, gpointer data)
 }
 
 /**
+ * gpm_stats_close_cb:
+ * @widget: The GtkWidget object
+ **/
+#if GTK_CHECK_VERSION (3, 0, 0)
+static void
+gpm_stats_close_cb (GtkWidget *widget)
+{
+	GList *list, *next;
+	GtkWindow *win;
+
+	list = gtk_application_get_windows (GTK_APPLICATION (g_application_get_default ()));
+
+	while (list)
+	{
+		win = list->data;
+		next = list->next;
+		gtk_widget_destroy (GTK_WIDGET (win));
+		list = next;
+	}
+}
+#endif
+
+/**
  * gpm_stats_smooth_checkbox_history_cb:
  * @widget: The GtkWidget object
  **/
@@ -1667,7 +1693,11 @@ main (int argc, char *argv[])
 	g_signal_connect_swapped (widget, "delete_event", G_CALLBACK (gtk_main_quit), NULL);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "button_close"));
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_signal_connect_swapped (widget, "clicked", G_CALLBACK (gpm_stats_close_cb), NULL);
+#else
 	g_signal_connect_swapped (widget, "clicked", G_CALLBACK (gtk_main_quit), NULL);
+#endif
 	gtk_widget_grab_default (widget);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "button_help"));
@@ -1870,7 +1900,11 @@ main (int argc, char *argv[])
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "dialog_stats"));
 	gtk_widget_show (widget);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_application_run (G_APPLICATION (app), argc, argv);
+#else
 	gtk_main ();
+#endif
 #if !UP_CHECK_VERSION(0, 99, 0)
 out:
 #endif
