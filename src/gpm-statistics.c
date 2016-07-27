@@ -1899,11 +1899,11 @@ main (int argc, char *argv[])
 	gpm_stats_type_combo_changed_cb (widget, NULL);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "dialog_stats"));
-	gtk_widget_show (widget);
 
 #if GTK_CHECK_VERSION (3, 0, 0)
 	status = g_application_run (G_APPLICATION (app), argc, argv);
 #else
+	gtk_widget_show (widget);
 	gtk_main ();
 #endif
 #if !UP_CHECK_VERSION(0, 99, 0)

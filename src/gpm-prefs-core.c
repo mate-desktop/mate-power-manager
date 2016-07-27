@@ -872,7 +872,9 @@ gpm_prefs_init (GpmPrefs *prefs)
 	prefs_setup_general (prefs);
 	prefs_setup_notification (prefs);
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	gtk_widget_show (main_window);
+#endif
 }
 
 /**
