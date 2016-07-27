@@ -465,7 +465,7 @@ gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 	about = (GtkAboutDialog*) gtk_about_dialog_new ();
 	gtk_about_dialog_set_program_name (about, GPM_INHIBIT_APPLET_NAME);
 	gtk_about_dialog_set_version (about, VERSION);
-	gtk_about_dialog_set_copyright (about, _("Copyright \xc2\xa9 2006-2007 Richard Hughes"));
+	gtk_about_dialog_set_copyright (about, _("Copyright \xc2\xa9 2011-2016 MATE Developer"));
 	gtk_about_dialog_set_comments (about, GPM_INHIBIT_APPLET_DESC);
 	gtk_about_dialog_set_authors (about, authors);
 	gtk_about_dialog_set_documenters (about, documenters);
