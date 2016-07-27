@@ -131,7 +131,6 @@ LIBPANEL_REQUIRED=1.5.0
 XRANDR_REQUIRED=1.3.0
 CANBERRA_REQUIRED=0.10
 UPOWER_REQUIRED=0.9.5
-MATE_DESKTOP_REQUIRED=1.9.0
 
 dnl ----------------------------------------------------------------------------
 dnl GTK library version
@@ -174,7 +173,7 @@ PKG_CHECK_MODULES(DBUS,[
  dbus-1 >= $DBUS_REQUIRED
  gthread-2.0])
 
-PKG_CHECK_MODULES(MATE, [
+PKG_CHECK_MODULES(CAIRO, [
  gtk+-$GTK_API_VERSION >= $GTK_REQUIRED
  cairo >= $CAIRO_REQUIRED])
 
@@ -283,8 +282,7 @@ have_applets=no
 if test x$enable_applets = xyes ; then
     have_applets=yes
 
-    PKG_CHECK_MODULES(PANEL, [libmatepanelapplet-4.0 >= $LIBPANEL_REQUIRED
-                              mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED])
+    PKG_CHECK_MODULES(PANEL, [libmatepanelapplet-4.0 >= $LIBPANEL_REQUIRED])
     AC_DEFINE(HAVE_APPLETS, 1, [Define if we are building applets])
 fi
 AC_MSG_RESULT([$have_applets])
