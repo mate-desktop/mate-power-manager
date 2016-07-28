@@ -1472,29 +1472,6 @@ gpm_stats_range_combo_changed (GtkWidget *widget, gpointer data)
 }
 
 /**
- * gpm_stats_close_cb:
- * @widget: The GtkWidget object
- **/
-#if GTK_CHECK_VERSION (3, 0, 0)
-static void
-gpm_stats_close_cb (GtkWidget *widget)
-{
-	GList *list, *next;
-	GtkWindow *win;
-
-	list = gtk_application_get_windows (GTK_APPLICATION (g_application_get_default ()));
-
-	while (list)
-	{
-		win = list->data;
-		next = list->next;
-		gtk_widget_destroy (GTK_WIDGET (win));
-		list = next;
-	}
-}
-#endif
-
-/**
  * gpm_stats_smooth_checkbox_history_cb:
  * @widget: The GtkWidget object
  **/
@@ -1592,7 +1569,7 @@ main (int argc, char *argv[])
 	gboolean verbose = FALSE;
 	GOptionContext *context;
 	GtkBox *box;
-	GtkWidget *widget;
+	GtkWidget *widget, *window;
 	GtkTreeSelection *selection;
 #if GTK_CHECK_VERSION (3, 0, 0)
 	GtkApplication *app;
@@ -1686,16 +1663,16 @@ main (int argc, char *argv[])
 	gtk_widget_set_size_request (graph_statistics, 400, 250);
 	gtk_widget_show (graph_statistics);
 
-	widget = GTK_WIDGET (gtk_builder_get_object (builder, "dialog_stats"));
-	gtk_window_set_default_size (GTK_WINDOW(widget), 800, 500);
+	window = GTK_WIDGET (gtk_builder_get_object (builder, "dialog_stats"));
+	gtk_window_set_default_size (GTK_WINDOW(window), 800, 500);
 	gtk_window_set_default_icon_name (GPM_ICON_APP_ICON);
 
 	/* Get the main window quit */
-	g_signal_connect_swapped (widget, "delete_event", G_CALLBACK (gtk_main_quit), NULL);
+	g_signal_connect_swapped (window, "delete_event", G_CALLBACK (gtk_main_quit), NULL);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "button_close"));
 #if GTK_CHECK_VERSION (3, 0, 0)
-	g_signal_connect_swapped (widget, "clicked", G_CALLBACK (gpm_stats_close_cb), NULL);
+	g_signal_connect_swapped (widget, "clicked", G_CALLBACK (gtk_widget_destroy), window);
 #else
 	g_signal_connect_swapped (widget, "clicked", G_CALLBACK (gtk_main_quit), NULL);
 #endif
