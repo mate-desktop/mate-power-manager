@@ -910,3 +910,13 @@ gpm_prefs_new (void)
 	prefs = g_object_new (GPM_TYPE_PREFS, NULL);
 	return GPM_PREFS (prefs);
 }
+
+/**
+ * gpm_window:
+ * Return value: Prefs window widget.
+ **/
+GtkWidget *
+gpm_window (GpmPrefs *prefs)
+{
+	return GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "dialog_preferences"));
+}

@@ -1668,12 +1668,12 @@ main (int argc, char *argv[])
 	gtk_window_set_default_icon_name (GPM_ICON_APP_ICON);
 
 	/* Get the main window quit */
-	g_signal_connect_swapped (window, "delete_event", G_CALLBACK (gtk_main_quit), NULL);
-
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "button_close"));
 #if GTK_CHECK_VERSION (3, 0, 0)
+	g_signal_connect_swapped (window, "delete_event", G_CALLBACK (gtk_widget_destroy), window);
 	g_signal_connect_swapped (widget, "clicked", G_CALLBACK (gtk_widget_destroy), window);
 #else
+	g_signal_connect_swapped (window, "delete_event", G_CALLBACK (gtk_main_quit), NULL);
 	g_signal_connect_swapped (widget, "clicked", G_CALLBACK (gtk_main_quit), NULL);
 #endif
 	gtk_widget_grab_default (widget);

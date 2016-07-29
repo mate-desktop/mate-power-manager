@@ -52,33 +52,6 @@ gpm_prefs_help_cb (GpmPrefs *prefs)
 }
 
 /**
- * gpm_prefs_close_cb
- * @prefs: This prefs class instance
- *
- * What to do when we are asked to close for whatever reason
- **/
-static void
-gpm_prefs_close_cb (GpmPrefs *prefs)
-{
-#if GTK_CHECK_VERSION (3, 0, 0)
-	GList *list, *next;
-	GtkWindow *win;
-
-	list = gtk_application_get_windows (GTK_APPLICATION (g_application_get_default ()));
-
-	while (list)
-	{
-		win = list->data;
-		next = list->next;
-		gtk_widget_destroy (GTK_WIDGET (win));
-		list = next;
-	}
-#else
-	gtk_main_quit ();
-#endif
-}
-
-/**
  * gpm_prefs_activated_cb
  * @prefs: This prefs class instance
  *
@@ -109,6 +82,7 @@ main (int argc, char **argv)
 	gboolean ret;
 #if GTK_CHECK_VERSION (3, 0, 0)
 	GtkApplication *app;
+	GtkWidget *window;
 	gint status;
 #else
 	EggUnique *egg_unique;
@@ -151,6 +125,7 @@ main (int argc, char **argv)
 	prefs = gpm_prefs_new ();
 
 #if GTK_CHECK_VERSION (3, 0, 0)
+	window = gpm_window (prefs);
 	g_signal_connect (app, "activate",
 #else
 	g_signal_connect (egg_unique, "activated",
@@ -158,8 +133,13 @@ main (int argc, char **argv)
 			  G_CALLBACK (gpm_prefs_activated_cb), prefs);
 	g_signal_connect (prefs, "action-help",
 			  G_CALLBACK (gpm_prefs_help_cb), prefs);
-	g_signal_connect (prefs, "action-close",
-			  G_CALLBACK (gpm_prefs_close_cb), prefs);
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_signal_connect_swapped (prefs, "action-close",
+			  G_CALLBACK (gtk_widget_destroy), window);
+#else
+	g_signal_connect_swapped (prefs, "action-close",
+			  G_CALLBACK (gtk_main_quit), NULL);
+#endif
 
 #if GTK_CHECK_VERSION (3, 0, 0)
 	status = g_application_run (G_APPLICATION (app), argc, argv);
