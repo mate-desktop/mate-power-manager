@@ -1,5 +1,24 @@
 Version 1.15.1
 
+ - update CFLAGS and LIBS, MATE to CAIRO
+ - applets: update Copyright
+ - applets: use GtkAbout and drop dependency to libmate-desktop
+ - Port from libunique to GtkApplication
+ - remove dbus-monitor from tests in make file
+ - applets: remove egg-dbus-proxy and use the provided functions in GDBus
+ - remove egg-dbus-proxy and use the provided functions in GDBus
+ - Show the primary device time remaining as the first entry in the context menu
+ - Do not issue a console warning when laptop batteries are empty
+ - allow non-battery devices to be used for gpm_engine_update_composite_device()
+ - Reorganize the tray icon code to make it easier for AppIndicator
+ - Add a ::devices-changed signal to GpmEngine that helper code may want
+ - rename a function to match upstream
+ - distcheck: explicitly use currently selected GTK+ version
+ - drop unused code
+ - GTK+-3 gpm-tray-icon: use About dialog from GTK+ instead of forked one from libmate-desktop
+ - don't include removed gnome files in dist
+ - remove ancient gnome files
+
 Version 1.15.0
 ~~~~~~~~~~~~~~
 Released: 2016-06-08
