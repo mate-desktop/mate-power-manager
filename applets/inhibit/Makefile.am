@@ -19,7 +19,6 @@ AM_CPPFLAGS =							\
 	-DEGG_VERBOSE="\"GPM_VERBOSE\""				\
 	-DEGG_LOGGING="\"GPM_LOGGING\""				\
 	-DEGG_CONSOLE="\"GPM_CONSOLE\""				\
-	-I$(top_srcdir)/libdbus-glib				\
 	$(DISABLE_DEPRECATED)					\
 	$(NULL)
 

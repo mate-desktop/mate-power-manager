@@ -19,7 +19,6 @@ AM_CPPFLAGS =							\
 	-DEGG_VERBOSE="\"GPM_VERBOSE\""				\
 	-DEGG_LOGGING="\"GPM_LOGGING\""				\
 	-DEGG_CONSOLE="\"GPM_CONSOLE\""				\
-	-I$(top_srcdir)/libdbus-glib				\
 	$(DISABLE_DEPRECATED)
 	$(NULL)
 
@@ -36,7 +35,6 @@ mate_brightness_applet_LDADD =					\
 	$(DBUS_LIBS)						\
 	$(CAIRO_LIBS)						\
 	$(PANEL_LIBS)
-
 
 appletdir       = $(datadir)/mate-panel/applets
 applet_in_files = org.mate.BrightnessApplet.mate-panel-applet.in
