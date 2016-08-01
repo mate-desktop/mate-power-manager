@@ -25,9 +25,6 @@
 #  include <config.h>
 #endif
 
-/* FIXME: gdk_gc_* needs porting to cairo */
-#undef GDK_DISABLE_DEPRECATED
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
