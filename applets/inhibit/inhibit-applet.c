@@ -438,6 +438,11 @@ gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 		"Richard Hughes <richard@hughsie.com>",
 		NULL
 	};
+
+	char copyright[] = \
+		"Copyright \xc2\xa9 2012-2016 MATE developers\n"
+		"Copyright \xc2\xa9 2006-2007 Richard Hughes";
+
 	const char *documenters [] = {
 		NULL
 	};
@@ -465,7 +470,7 @@ gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 	about = (GtkAboutDialog*) gtk_about_dialog_new ();
 	gtk_about_dialog_set_program_name (about, GPM_INHIBIT_APPLET_NAME);
 	gtk_about_dialog_set_version (about, VERSION);
-	gtk_about_dialog_set_copyright (about, _("Copyright \xc2\xa9 2011-2016 MATE Developer"));
+	gtk_about_dialog_set_copyright (about, copyright);
 	gtk_about_dialog_set_comments (about, GPM_INHIBIT_APPLET_DESC);
 	gtk_about_dialog_set_authors (about, authors);
 	gtk_about_dialog_set_documenters (about, documenters);
