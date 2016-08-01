@@ -13,7 +13,7 @@ EXTRA_DIST =						\
 AM_CPPFLAGS =						\
 	$(GLIB_CFLAGS)					\
 	$(DBUS_CFLAGS)					\
-	$(MATE_CFLAGS)					\
+	$(CAIRO_CFLAGS)					\
 	$(KEYRING_CFLAGS)				\
 	$(X11_CFLAGS)					\
 	$(LIBNOTIFY_CFLAGS)				\
@@ -117,7 +117,7 @@ mate_power_statistics_LDADD =				\
 	$(GLIB_LIBS)					\
 	$(X11_LIBS)					\
 	$(UPOWER_LIBS)					\
-	$(MATE_LIBS)					\
+	$(CAIRO_LIBS)					\
 	$(DBUS_LIBS)					\
 	-lm
 
@@ -139,7 +139,7 @@ mate_power_preferences_LDADD =				\
 	libgpmshared.a					\
 	$(GLIB_LIBS)					\
 	$(X11_LIBS)					\
-	$(MATE_LIBS)					\
+	$(CAIRO_LIBS)					\
 	$(DBUS_LIBS)					\
 	$(GPM_EXTRA_LIBS)				\
 	$(UPOWER_LIBS)					\
@@ -195,7 +195,7 @@ mate_power_manager_LDADD =				\
 	$(GLIB_LIBS)					\
 	$(X11_LIBS)				\
 	$(GSTREAMER_LIBS)				\
-	$(MATE_LIBS)					\
+	$(CAIRO_LIBS)					\
 	$(KEYRING_LIBS)					\
 	$(DBUS_LIBS)					\
 	$(X11_LIBS)						\
@@ -259,7 +259,7 @@ mate_power_self_test_SOURCES =				\
 mate_power_self_test_LDADD =				\
 	$(GLIB_LIBS)					\
 	$(X11_LIBS)					\
-	$(MATE_LIBS)					\
+	$(CAIRO_LIBS)					\
 	$(KEYRING_LIBS)					\
 	$(GSTREAMER_LIBS)				\
 	$(UPOWER_LIBS)					\

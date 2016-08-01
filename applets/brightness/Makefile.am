@@ -2,7 +2,7 @@ AM_CPPFLAGS =							\
 	-I. -I$(srcdir) 					\
 	$(GLIB_CFLAGS)						\
 	$(DBUS_CFLAGS)						\
-	$(MATE_CFLAGS)						\
+	$(CAIRO_CFLAGS)						\
 	$(PANEL_CFLAGS)						\
 	$(LIBNOTIFY_CFLAGS)					\
 	$(GTKUNIQUE_CFLAGS)					\
@@ -34,7 +34,7 @@ mate_brightness_applet_SOURCES =				\
 
 mate_brightness_applet_LDADD =					\
 	$(DBUS_LIBS)						\
-	$(MATE_LIBS)						\
+	$(CAIRO_LIBS)						\
 	$(PANEL_LIBS)
 
 
