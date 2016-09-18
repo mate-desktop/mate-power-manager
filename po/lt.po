@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 13:07+0200\n"
-"PO-Revision-Date: 2016-03-17 17:13+0000\n"
+"POT-Creation-Date: 2016-08-01 17:44+0300\n"
+"PO-Revision-Date: 2016-09-07 13:46+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -19,35 +19,35 @@ msgstr ""
 "Language: lt\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../applets/brightness/brightness-applet.c:115
+#: ../applets/brightness/brightness-applet.c:117
 msgid "Power Manager Brightness Applet"
 msgstr "Energijos tvarkytuvės ryškumo įtaisas"
 
-#: ../applets/brightness/brightness-applet.c:116
+#: ../applets/brightness/brightness-applet.c:118
 msgid "Adjusts laptop panel brightness."
 msgstr "Reguliuoja nešiojamojo kompiuterio skydelio ryškumą."
 
-#: ../applets/brightness/brightness-applet.c:417
-#: ../applets/inhibit/inhibit-applet.c:409
+#: ../applets/brightness/brightness-applet.c:419
+#: ../applets/inhibit/inhibit-applet.c:376
 msgid "Cannot connect to mate-power-manager"
 msgstr "Nepavyko prisijungti prie mate-power-manager"
 
-#: ../applets/brightness/brightness-applet.c:419
+#: ../applets/brightness/brightness-applet.c:421
 msgid "Cannot get laptop panel brightness"
 msgstr "Nepavyko gauti nešiojamojo kompiuterio skydelio ryškumo"
 
-#: ../applets/brightness/brightness-applet.c:421
+#: ../applets/brightness/brightness-applet.c:423
 #, c-format
 msgid "LCD brightness : %d%%"
 msgstr "LCD ryškumas: %d%%"
 
-#: ../applets/brightness/brightness-applet.c:809
-#: ../applets/inhibit/inhibit-applet.c:478
+#: ../applets/brightness/brightness-applet.c:928
+#: ../applets/inhibit/inhibit-applet.c:450
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "Licencijuota GNU Genereal Public Licence Version 2 sąlygomis"
 
-#: ../applets/brightness/brightness-applet.c:810
-#: ../applets/inhibit/inhibit-applet.c:479
+#: ../applets/brightness/brightness-applet.c:929
+#: ../applets/inhibit/inhibit-applet.c:451
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -55,8 +55,8 @@ msgid ""
 "of the License, or (at your option) any later version."
 msgstr "Energijos tvarkytuvė yra laisva programinė įranga; galite ją\nplatinti ir/ar modifikuoti GNU bendrosios viešosios licencijos\nsąlygomis, paskelbtomis Laisvosios programinės įrangos fondo; 2-osios\narba (Jūsų pasirinkimu) bet kurios vėlesnės licencijos versijos sąlygomis."
 
-#: ../applets/brightness/brightness-applet.c:814
-#: ../applets/inhibit/inhibit-applet.c:483
+#: ../applets/brightness/brightness-applet.c:933
+#: ../applets/inhibit/inhibit-applet.c:455
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -64,8 +64,8 @@ msgid ""
 "GNU General Public License for more details."
 msgstr "Energijos tvarkytuvė platinama tikintis, kad ji bus naudinga, bet\nBE JOKIŲ GARANTIJŲ; netgi be numanomų PARDAVIMO arba TINKAMUMO\nKONKREČIAM TIKSLUI garantijų. Dėl išsamesnės informacijos žiūrėkite GNU\nbendrąją viešąją licenciją."
 
-#: ../applets/brightness/brightness-applet.c:818
-#: ../applets/inhibit/inhibit-applet.c:487
+#: ../applets/brightness/brightness-applet.c:937
+#: ../applets/inhibit/inhibit-applet.c:459
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -73,17 +73,13 @@ msgid ""
 "02110-1301, USA."
 msgstr "Jūs turėjote gauti GNU bendrosios viešosios licencijos kopiją kartu su\nMATE energijos tvarkytuve; jeigu negavote, rašykite Free Software Foundation,\nInc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 
-#: ../applets/brightness/brightness-applet.c:832
-msgid "Copyright © 2006 Benjamin Canou"
-msgstr "Autorinės teisės priklauso © 2006 Benjamin Canou"
-
-#: ../applets/brightness/brightness-applet.c:1074
-#: ../applets/inhibit/inhibit-applet.c:714
+#: ../applets/brightness/brightness-applet.c:1197
+#: ../applets/inhibit/inhibit-applet.c:690
 msgid "_About"
 msgstr "_Apie"
 
-#: ../applets/brightness/brightness-applet.c:1077
-#: ../applets/inhibit/inhibit-applet.c:717
+#: ../applets/brightness/brightness-applet.c:1200
+#: ../applets/inhibit/inhibit-applet.c:693
 msgid "_Help"
 msgstr "_Žinynas"
 
@@ -103,29 +99,25 @@ msgstr "Ryškumo įtaisas"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Reguliuoja nešiojamojo kompiuterio skydelio ryškumą."
 
-#: ../applets/inhibit/inhibit-applet.c:97
+#: ../applets/inhibit/inhibit-applet.c:95
 msgid "Power Manager Inhibit Applet"
 msgstr "Energijos tvarkytuvės uždraudimo įtaisas"
 
-#: ../applets/inhibit/inhibit-applet.c:98
+#: ../applets/inhibit/inhibit-applet.c:96
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Leidžia naudotojui išvengti automatinio energijos taupymo."
 
-#: ../applets/inhibit/inhibit-applet.c:412
+#: ../applets/inhibit/inhibit-applet.c:379
 msgid "Automatic sleep inhibited"
 msgstr "Automatinis užmigimas išjungtas"
 
-#: ../applets/inhibit/inhibit-applet.c:414
+#: ../applets/inhibit/inhibit-applet.c:381
 msgid "Automatic sleep enabled"
 msgstr "Automatinis užmigimas įjungtas"
 
-#: ../applets/inhibit/inhibit-applet.c:442
+#: ../applets/inhibit/inhibit-applet.c:409
 msgid "Manual inhibit"
 msgstr "Rankinis uždraudimas"
-
-#: ../applets/inhibit/inhibit-applet.c:501
-msgid "Copyright © 2006-2007 Richard Hughes"
-msgstr "Autorinės teisės priklauso © 2006-2007 Richard Hughes"
 
 #: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:1
 msgid "Inhibit Applet Factory"
@@ -595,7 +587,7 @@ msgstr "Paskutinio pasirinkto prietaiso kodas"
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
-msgstr "Paskutinio prietaiso identifikatorius, skirtas grąžini į teisingą prietaisą"
+msgstr "Paskutinio prietaiso identifikatorius, skirtas grąžinti į teisingą prietaisą"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:98
 msgid "Percentage considered low"
@@ -751,8 +743,8 @@ msgstr "Konfigūruokite energijos valdymą"
 #. TRANSLATORS: shown on the titlebar
 #. TRANSLATORS: the program name
 #: ../data/mate-power-statistics.desktop.in.in.h:1
-#: ../data/gpm-statistics.ui.h:1 ../src/gpm-statistics.c:1091
-#: ../src/gpm-statistics.c:1598
+#: ../data/gpm-statistics.ui.h:1 ../src/gpm-statistics.c:1093
+#: ../src/gpm-statistics.c:1612
 msgid "Power Statistics"
 msgstr "Energijos statistika"
 
@@ -764,7 +756,7 @@ msgstr "Stebėkite energijos valdymą"
 msgid "Brightness"
 msgstr "Šviesumas"
 
-#: ../data/gpm-statistics.ui.h:2 ../src/gpm-statistics.c:209
+#: ../data/gpm-statistics.ui.h:2 ../src/gpm-statistics.c:211
 msgid "Details"
 msgstr "Išsami informacija"
 
@@ -804,7 +796,7 @@ msgstr "Procesoriaus pabudimų per sekundę:"
 msgid "0"
 msgstr "0"
 
-#: ../data/gpm-statistics.ui.h:12 ../src/gpm-statistics.c:195
+#: ../data/gpm-statistics.ui.h:12 ../src/gpm-statistics.c:197
 msgid "Wakeups"
 msgstr "Pabudimai"
 
@@ -1077,121 +1069,121 @@ msgid "%.1fV"
 msgstr "%.1fV"
 
 #. TRANSLATORS: show verbose debugging
-#: ../src/gpm-main.c:171 ../src/gpm-prefs.c:90 ../src/gpm-statistics.c:1581
+#: ../src/gpm-main.c:172 ../src/gpm-prefs.c:93 ../src/gpm-statistics.c:1595
 msgid "Show extra debugging information"
 msgstr "Rodyti papildomą derinimo informaciją"
 
-#: ../src/gpm-main.c:173
+#: ../src/gpm-main.c:174
 msgid "Show version of installed program and exit"
 msgstr "Parodyti įdiegtos programos versiją ir išeiti"
 
-#: ../src/gpm-main.c:175
+#: ../src/gpm-main.c:176
 msgid "Exit after a small delay (for debugging)"
 msgstr "Išeiti po trumpos pauzės (klaidoms ieškoti)"
 
-#: ../src/gpm-main.c:177
+#: ../src/gpm-main.c:178
 msgid "Exit after the manager has loaded (for debugging)"
 msgstr "Išeiti įkėlus tvarkytuvę (klaidoms ieškoti)"
 
-#: ../src/gpm-main.c:188 ../src/gpm-main.c:192
+#: ../src/gpm-main.c:189 ../src/gpm-main.c:193
 msgid "MATE Power Manager"
 msgstr "MATE energijos tvarkytuvė"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:223 ../src/gpm-manager.c:293
+#: ../src/gpm-manager.c:223 ../src/gpm-manager.c:295
 msgid "Battery is very low"
 msgstr "Baterijos energijos lygis kritiškai mažas"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:273
+#: ../src/gpm-manager.c:275
 msgid "Power plugged in"
 msgstr "Maitinimas prijungtas"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:277
+#: ../src/gpm-manager.c:279
 msgid "Power unplugged"
 msgstr "Maitinimas atjungtas"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:281
+#: ../src/gpm-manager.c:283
 msgid "Lid has opened"
 msgstr "Dangtis atvožtas"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:285
+#: ../src/gpm-manager.c:287
 msgid "Lid has closed"
 msgstr "Dangtis užvožtas"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:289
+#: ../src/gpm-manager.c:291
 msgid "Battery is low"
 msgstr "Baterijos energijos lygis mažas"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:297
+#: ../src/gpm-manager.c:299
 msgid "Battery is full"
 msgstr "Baterija įkrauta"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:301
+#: ../src/gpm-manager.c:303
 msgid "Suspend started"
 msgstr "Pristabdymas pradėtas"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:305
+#: ../src/gpm-manager.c:307
 msgid "Resumed"
 msgstr "Pabudimas"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:309
+#: ../src/gpm-manager.c:311
 msgid "Suspend failed"
 msgstr "Pristabdymas nesėkmingas"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:579
+#: ../src/gpm-manager.c:581
 msgid "Computer failed to suspend."
 msgstr "Kompiuterio pristabdyti nepavyko."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:581
+#: ../src/gpm-manager.c:583
 msgid "Failed to suspend"
 msgstr "Nepavyko pristabdyti"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:585
+#: ../src/gpm-manager.c:587
 msgid "Computer failed to hibernate."
 msgstr "Kompiuterio nepavyko užmigdyti."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:587
+#: ../src/gpm-manager.c:589
 msgid "Failed to hibernate"
 msgstr "Nepavyko užmigdyti"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:592
+#: ../src/gpm-manager.c:594
 msgid "Failure was reported as:"
 msgstr "Problemos pranešimas:"
 
 #. TRANSLATORS: button text, visit the suspend help website
-#: ../src/gpm-manager.c:605
+#: ../src/gpm-manager.c:607
 msgid "Visit help page"
 msgstr "Aplankyti pagalbos puslapį"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:851
+#: ../src/gpm-manager.c:853
 msgid "Display DPMS activated"
 msgstr "Aktyvuotas ekrano DPMS"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:870
+#: ../src/gpm-manager.c:872
 msgid "On battery power"
 msgstr "Naudoja baterijos energiją"
 
-#: ../src/gpm-manager.c:888
+#: ../src/gpm-manager.c:890
 msgid "Laptop lid is closed"
 msgstr "Užvertas nešiojamojo kompiuterio dangtis"
 
-#: ../src/gpm-manager.c:926
+#: ../src/gpm-manager.c:928
 msgid "Power Information"
 msgstr "Energijos informacija"
 
@@ -1199,13 +1191,13 @@ msgstr "Energijos informacija"
 #. * where capacity is the ratio of the last_full capacity with that of
 #. * the design capacity. (#326740)
 #. TRANSLATORS: battery is old or broken
-#: ../src/gpm-manager.c:1113
+#: ../src/gpm-manager.c:1115
 msgid "Battery may be broken"
 msgstr "Baterija gali būti susidėvėjusi"
 
 #. TRANSLATORS: notify the user that that battery is broken as the capacity is
 #. very low
-#: ../src/gpm-manager.c:1116
+#: ../src/gpm-manager.c:1118
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
@@ -1213,7 +1205,7 @@ msgid ""
 msgstr "Jūsų baterijos talpa labai sumažėjo (%1.1f%%), tai gali reikšti, kad ji paseno arba sugedo."
 
 #. TRANSLATORS: show the charged notification
-#: ../src/gpm-manager.c:1165
+#: ../src/gpm-manager.c:1167
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] "Baterija įkrauta"
@@ -1221,189 +1213,189 @@ msgstr[1] "Baterijos įkrautos"
 msgstr[2] "Baterijos įkrautos"
 
 #. TRANSLATORS: laptop battery is now discharging
-#: ../src/gpm-manager.c:1211
+#: ../src/gpm-manager.c:1213
 msgid "Battery Discharging"
 msgstr "Baterija iškraunama"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1215
+#: ../src/gpm-manager.c:1217
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr "liko %s (%.0f%%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-manager.c:1218 ../src/gpm-manager.c:1230
+#: ../src/gpm-manager.c:1220 ../src/gpm-manager.c:1232
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr "%s iškraunama (%.0f%%)"
 
 #. TRANSLATORS: UPS is now discharging
-#: ../src/gpm-manager.c:1223
+#: ../src/gpm-manager.c:1225
 msgid "UPS Discharging"
 msgstr "Nenutrūkstamo maitinimo šaltinis iškraunamas"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1227
+#: ../src/gpm-manager.c:1229
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr "liko %s nenutrūkstamo maitinimo šaltinio įkrovos (%.0f%%)"
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
-#: ../src/gpm-manager.c:1311
+#: ../src/gpm-manager.c:1313
 msgid "Battery low"
 msgstr "Senka baterija"
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
-#: ../src/gpm-manager.c:1314
+#: ../src/gpm-manager.c:1316
 msgid "Laptop battery low"
 msgstr "Senka nešiojamojo kompiuterio baterija"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1320
+#: ../src/gpm-manager.c:1322
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "Liko maždaug <b>%s</b> (%.0f%%)"
 
 #. TRANSLATORS: UPS is starting to get a little low
-#: ../src/gpm-manager.c:1324
+#: ../src/gpm-manager.c:1326
 msgid "UPS low"
 msgstr "Senka nenutrūkstamo maitinimo šaltinis"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1328
+#: ../src/gpm-manager.c:1330
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr "Liko maždaug <b>%s</b> iki išsikraus nenutrūkstamo maitinimo šaltinis (%.0f%%)"
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1332 ../src/gpm-manager.c:1466
+#: ../src/gpm-manager.c:1334 ../src/gpm-manager.c:1468
 msgid "Mouse battery low"
 msgstr "Senka pelės baterija"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1335
+#: ../src/gpm-manager.c:1337
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr "Žemas belaidės pelės įkrovos lygis (%.0f%%)"
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1339 ../src/gpm-manager.c:1474
+#: ../src/gpm-manager.c:1341 ../src/gpm-manager.c:1476
 msgid "Keyboard battery low"
 msgstr "Senka klaviatūros baterija"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1342
+#: ../src/gpm-manager.c:1344
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr "Žemas belaidės klaviatūros įkrovos lygis (%.0f%%)"
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1346 ../src/gpm-manager.c:1483
+#: ../src/gpm-manager.c:1348 ../src/gpm-manager.c:1485
 msgid "PDA battery low"
 msgstr "Senka delninuko akumuliatorius"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1349
+#: ../src/gpm-manager.c:1351
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr "Žemas delninuko įkrovos lygis (%.0f%%)"
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1353 ../src/gpm-manager.c:1493
-#: ../src/gpm-manager.c:1503
+#: ../src/gpm-manager.c:1355 ../src/gpm-manager.c:1495
+#: ../src/gpm-manager.c:1505
 msgid "Cell phone battery low"
 msgstr "Senka mobiliojo telefono akumuliatorius"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1356
+#: ../src/gpm-manager.c:1358
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "Žemas mobiliojo telefono įkrovos lygis (%.0f%%)"
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1360
+#: ../src/gpm-manager.c:1362
 msgid "Media player battery low"
 msgstr "Senka grotuvo akumuliatorius"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1363
+#: ../src/gpm-manager.c:1365
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr "Žemas grotuvo įkrovos lygis  (%.0f%%)"
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1367 ../src/gpm-manager.c:1512
+#: ../src/gpm-manager.c:1369 ../src/gpm-manager.c:1514
 msgid "Tablet battery low"
 msgstr "Senka planšetinio kompiuterio baterija"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1370
+#: ../src/gpm-manager.c:1372
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "Žemas planšetinio kompiuterio įkrovos lygis (%.0f%%)"
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1374 ../src/gpm-manager.c:1521
+#: ../src/gpm-manager.c:1376 ../src/gpm-manager.c:1523
 msgid "Attached computer battery low"
 msgstr "Senka prijungto kompiuterio baterija"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1377
+#: ../src/gpm-manager.c:1379
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "Žemas prijungto kompiuterio baterijos įkrovos lygis (%.0f%%)"
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
-#: ../src/gpm-manager.c:1425
+#: ../src/gpm-manager.c:1427
 msgid "Battery critically low"
 msgstr "Baterijos įkrovos lygis kritiškai žemas"
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1428 ../src/gpm-manager.c:1580
+#: ../src/gpm-manager.c:1430 ../src/gpm-manager.c:1583
 msgid "Laptop battery critically low"
 msgstr "Kritinis nešiojamojo kompiuterio baterijos įkrovos lygis"
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
-#: ../src/gpm-manager.c:1437
+#: ../src/gpm-manager.c:1439
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr "Prijunkite kompiuterį prie kintamosios srovės šaltinio, idant neprarastumėte duomenų."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1441
+#: ../src/gpm-manager.c:1443
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr "Kompiuteris labai greitai bus pristabdytas, jei nebus prijungtas prie maitinimo."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1445
+#: ../src/gpm-manager.c:1447
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr "Kompiuteris labai greitai bus užmigdytas, jei nebus prijungtas prie maitinimo."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1449
+#: ../src/gpm-manager.c:1451
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr "Kompiuteris labai greitai išsijungs, jei nebus prijungtas prie maitinimo."
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1456 ../src/gpm-manager.c:1615
+#: ../src/gpm-manager.c:1458 ../src/gpm-manager.c:1619
 msgid "UPS critically low"
 msgstr "Kritiškai mažas NMŠ energijos lygis"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1460
+#: ../src/gpm-manager.c:1462
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
@@ -1411,23 +1403,23 @@ msgid ""
 msgstr "Liko maždaug <b>%s</b> iki išsikraus nenutrūkstamo maitinimo šaltinis (%.0f%%). Norėdami išvengti duomenų praradimo, prijunkite kompiuterį prie kintamosios srovės šaltinio."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1469
+#: ../src/gpm-manager.c:1471
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Belaidė pelė baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos veikti, jei jo neįkrausite."
+msgstr "Belaidė pelė baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos veikti, jeigu jo neįkrausite."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1477
+#: ../src/gpm-manager.c:1479
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Belaidė klaviatūra baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos veikti, jei jo neįkrausite."
+msgstr "Belaidė klaviatūra baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos veikti, jeigu jo neįkrausite."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1486
+#: ../src/gpm-manager.c:1488
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
@@ -1435,7 +1427,7 @@ msgid ""
 msgstr "Delninukas baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos veikti, jei jo neįkrausite."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1496
+#: ../src/gpm-manager.c:1498
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
@@ -1443,7 +1435,7 @@ msgid ""
 msgstr "Mobilusis telefonas baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos veikti, jei jo neįkrausite."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1506
+#: ../src/gpm-manager.c:1508
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
@@ -1451,7 +1443,7 @@ msgid ""
 msgstr "Grotuvas baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos veikti, jei jo neįkrausite."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1515
+#: ../src/gpm-manager.c:1517
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
@@ -1459,7 +1451,7 @@ msgid ""
 msgstr "Planšetinis kompiuteris baigia išsikrauti  (%.0f%%). Šis įrenginys netrukus nustos veikti, jei jo neįkrausite."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1524
+#: ../src/gpm-manager.c:1526
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
@@ -1467,14 +1459,14 @@ msgid ""
 msgstr "Prijungtas kompiuteris baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos veikti, jei jo neįkrausite."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1588
+#: ../src/gpm-manager.c:1591
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
 msgstr "Baterijos energijos lygis yra žemiau kritinio lygio ir kompiuteris <b>išsijungs</b>, kai baterija visiškai išsikraus."
 
 #. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1594
+#: ../src/gpm-manager.c:1597
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
@@ -1482,161 +1474,161 @@ msgid ""
 msgstr "Baterijos energijos lygis yra žemiau kritinio lygio ir kompiuteris bus pristabdytas.<br><b>PASTABA:</b> norint kompiuterį palaikyti pristabdymo būsenoje, pakanka nedaug energijos."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1601
+#: ../src/gpm-manager.c:1604
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr "Baterijos energijos lygis yra žemiau kritinio lygio ir šis kompiuteris bus užmigdytas."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1606
+#: ../src/gpm-manager.c:1609
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr "Baterijos energijos lygis yra žemiau kritinio lygio ir šis kompiuteris bus išjungtas."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1623
+#: ../src/gpm-manager.c:1627
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
 msgstr "NMŠ energijos lygis yra žemiau kritinio lygio ir kompiuteris <b>išsijungs</b>, kai baterija visiškai išsikraus."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1629
+#: ../src/gpm-manager.c:1633
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr "NMŠ energijos lygis yra žemiau kritinio lygio ir šis kompiuteris bus užmigdytas."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1634
+#: ../src/gpm-manager.c:1638
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr "NMŠ energijos lygis yra žemiau kritinio lygio ir šis kompiuteris bus išjungtas."
 
-#: ../src/gpm-prefs.c:94
+#: ../src/gpm-prefs.c:97
 msgid "MATE Power Preferences"
 msgstr "MATE energijos nuostatos"
 
-#: ../src/gpm-prefs-core.c:241
+#: ../src/gpm-prefs-core.c:248
 msgid "Shutdown"
 msgstr "Išjungti"
 
-#: ../src/gpm-prefs-core.c:248
+#: ../src/gpm-prefs-core.c:255
 msgid "Suspend"
 msgstr "Pristabdyti"
 
-#: ../src/gpm-prefs-core.c:251
+#: ../src/gpm-prefs-core.c:258
 msgid "Hibernate"
 msgstr "Užmigdyti"
 
-#: ../src/gpm-prefs-core.c:254
+#: ../src/gpm-prefs-core.c:261
 msgid "Blank screen"
 msgstr "Užtemdyti ekraną"
 
-#: ../src/gpm-prefs-core.c:257
+#: ../src/gpm-prefs-core.c:264
 msgid "Ask me"
 msgstr "Paklausti manęs"
 
-#: ../src/gpm-prefs-core.c:260
+#: ../src/gpm-prefs-core.c:267
 msgid "Do nothing"
 msgstr "Nieko nedaryti"
 
-#: ../src/gpm-prefs-core.c:320
+#: ../src/gpm-prefs-core.c:327
 msgid "Never"
 msgstr "Niekada"
 
 #. TRANSLATORS: the rate of discharge for the device
-#: ../src/gpm-statistics.c:79 ../src/gpm-statistics.c:467
+#: ../src/gpm-statistics.c:81 ../src/gpm-statistics.c:469
 msgid "Rate"
 msgstr "Greitis"
 
-#: ../src/gpm-statistics.c:80
+#: ../src/gpm-statistics.c:82
 msgid "Charge"
 msgstr "Įkrova"
 
-#: ../src/gpm-statistics.c:81 ../src/gpm-statistics.c:481
+#: ../src/gpm-statistics.c:83 ../src/gpm-statistics.c:483
 msgid "Time to full"
 msgstr "Laikas iki pilnos įkrovos"
 
-#: ../src/gpm-statistics.c:82 ../src/gpm-statistics.c:486
+#: ../src/gpm-statistics.c:84 ../src/gpm-statistics.c:488
 msgid "Time to empty"
 msgstr "Laikas iki iškrovimo"
 
-#: ../src/gpm-statistics.c:89
+#: ../src/gpm-statistics.c:91
 msgid "10 minutes"
 msgstr "10 minučių"
 
-#: ../src/gpm-statistics.c:90
+#: ../src/gpm-statistics.c:92
 msgid "2 hours"
 msgstr "2 valandos"
 
-#: ../src/gpm-statistics.c:91
+#: ../src/gpm-statistics.c:93
 msgid "6 hours"
 msgstr "6 valandos"
 
-#: ../src/gpm-statistics.c:92
+#: ../src/gpm-statistics.c:94
 msgid "1 day"
 msgstr "1 diena"
 
-#: ../src/gpm-statistics.c:93
+#: ../src/gpm-statistics.c:95
 msgid "1 week"
 msgstr "1 savaitė"
 
 #. TRANSLATORS: what we've observed about the device
-#: ../src/gpm-statistics.c:102
+#: ../src/gpm-statistics.c:104
 msgid "Charge profile"
 msgstr "Įkrovos laiko profilis"
 
-#: ../src/gpm-statistics.c:103
+#: ../src/gpm-statistics.c:105
 msgid "Discharge profile"
 msgstr "Iškrovos profilis"
 
 #. TRANSLATORS: how accurately we can predict the time remaining of the
 #. battery
-#: ../src/gpm-statistics.c:105
+#: ../src/gpm-statistics.c:107
 msgid "Charge accuracy"
 msgstr "Įkrovos tikslumas"
 
-#: ../src/gpm-statistics.c:106
+#: ../src/gpm-statistics.c:108
 msgid "Discharge accuracy"
 msgstr "Iškrovos tikslumas"
 
-#: ../src/gpm-statistics.c:133
+#: ../src/gpm-statistics.c:135
 msgid "Attribute"
 msgstr "Atributas"
 
-#: ../src/gpm-statistics.c:140
+#: ../src/gpm-statistics.c:142
 msgid "Value"
 msgstr "Reikšmė"
 
-#: ../src/gpm-statistics.c:157
+#: ../src/gpm-statistics.c:159
 msgid "Image"
-msgstr "Paveikslėlis"
+msgstr "Paveikslas"
 
-#: ../src/gpm-statistics.c:163
+#: ../src/gpm-statistics.c:165
 msgid "Description"
 msgstr "Aprašymas"
 
-#: ../src/gpm-statistics.c:182 ../src/gpm-statistics.c:406
+#: ../src/gpm-statistics.c:184 ../src/gpm-statistics.c:408
 msgid "Type"
 msgstr "Tipas"
 
-#: ../src/gpm-statistics.c:188
+#: ../src/gpm-statistics.c:190
 msgid "ID"
 msgstr "ID"
 
-#: ../src/gpm-statistics.c:202
+#: ../src/gpm-statistics.c:204
 msgid "Command"
 msgstr "Komanda"
 
 #. TRANSLATORS: this is when the stats time is not known
-#: ../src/gpm-statistics.c:287
+#: ../src/gpm-statistics.c:289
 msgid "Unknown"
 msgstr "Nežinomas"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:291
+#: ../src/gpm-statistics.c:293
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
@@ -1645,7 +1637,7 @@ msgstr[1] "%.0f sekundės"
 msgstr[2] "%.0f sekundžių"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:296
+#: ../src/gpm-statistics.c:298
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
@@ -1654,7 +1646,7 @@ msgstr[1] "%.1f minutės"
 msgstr[2] "%.1f minučių"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:301
+#: ../src/gpm-statistics.c:303
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
@@ -1663,7 +1655,7 @@ msgstr[1] "%.1f valandos"
 msgstr[2] "%.1f valandų"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:305
+#: ../src/gpm-statistics.c:307
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
@@ -1671,28 +1663,28 @@ msgstr[0] "%.1f diena"
 msgstr[1] "%.1f dienos"
 msgstr[2] "%.1f dienų"
 
-#: ../src/gpm-statistics.c:314
+#: ../src/gpm-statistics.c:316
 msgid "Yes"
 msgstr "Taip"
 
-#: ../src/gpm-statistics.c:314
+#: ../src/gpm-statistics.c:316
 msgid "No"
 msgstr "Ne"
 
 #. TRANSLATORS: the device ID of the current device, e.g. "battery0"
-#: ../src/gpm-statistics.c:403
+#: ../src/gpm-statistics.c:405
 msgid "Device"
 msgstr "Įrenginys"
 
-#: ../src/gpm-statistics.c:408
+#: ../src/gpm-statistics.c:410
 msgid "Vendor"
 msgstr "Gamintojas"
 
-#: ../src/gpm-statistics.c:410
+#: ../src/gpm-statistics.c:412
 msgid "Model"
 msgstr "Modelis"
 
-#: ../src/gpm-statistics.c:412
+#: ../src/gpm-statistics.c:414
 msgid "Serial number"
 msgstr "Serijos numeris"
 
@@ -1700,11 +1692,11 @@ msgstr "Serijos numeris"
 #. * main power for the computer. For instance, an AC adapter or laptop
 #. battery
 #. * would be TRUE,  but a mobile phone or mouse taking power is FALSE
-#: ../src/gpm-statistics.c:417
+#: ../src/gpm-statistics.c:419
 msgid "Supply"
 msgstr "Maitinimas"
 
-#: ../src/gpm-statistics.c:420
+#: ../src/gpm-statistics.c:422
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -1714,126 +1706,126 @@ msgstr[2] "%d sekundžių"
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
-#: ../src/gpm-statistics.c:424
+#: ../src/gpm-statistics.c:426
 msgid "Refreshed"
 msgstr "Atnaujinta"
 
 #. TRANSLATORS: Present is whether the device is currently attached
 #. * to the computer, as some devices (e.g. laptop batteries) can
 #. * be removed, but still observed as devices on the system
-#: ../src/gpm-statistics.c:434
+#: ../src/gpm-statistics.c:436
 msgid "Present"
 msgstr "Yra"
 
 #. TRANSLATORS: If the device can be recharged, e.g. lithium
 #. * batteries rather than alkaline ones
-#: ../src/gpm-statistics.c:441
+#: ../src/gpm-statistics.c:443
 msgid "Rechargeable"
 msgstr "Įkraunama"
 
 #. TRANSLATORS: The state of the device, e.g. "Changing" or "Fully charged"
-#: ../src/gpm-statistics.c:447
+#: ../src/gpm-statistics.c:449
 msgid "State"
 msgstr "Būsena"
 
-#: ../src/gpm-statistics.c:451
+#: ../src/gpm-statistics.c:453
 msgid "Energy"
 msgstr "Energija"
 
-#: ../src/gpm-statistics.c:454
+#: ../src/gpm-statistics.c:456
 msgid "Energy when empty"
 msgstr "Energija, kai tuščia"
 
-#: ../src/gpm-statistics.c:457
+#: ../src/gpm-statistics.c:459
 msgid "Energy when full"
 msgstr "Energija, kai pilna"
 
-#: ../src/gpm-statistics.c:460
+#: ../src/gpm-statistics.c:462
 msgid "Energy (design)"
 msgstr "Energija (projektinė)"
 
-#: ../src/gpm-statistics.c:474
+#: ../src/gpm-statistics.c:476
 msgid "Voltage"
 msgstr "Įtampa"
 
 #. TRANSLATORS: the amount of charge the cell contains
-#: ../src/gpm-statistics.c:496
+#: ../src/gpm-statistics.c:498
 msgid "Percentage"
 msgstr "Įkrova nuošimčiais"
 
 #. TRANSLATORS: the capacity of the device, which is basically a measure
 #. * of how full it can get, relative to the design capacity
-#: ../src/gpm-statistics.c:503
+#: ../src/gpm-statistics.c:505
 msgid "Capacity"
 msgstr "Talpa"
 
 #. TRANSLATORS: the type of battery, e.g. lithium or nikel metal hydroxide
-#: ../src/gpm-statistics.c:508
+#: ../src/gpm-statistics.c:510
 msgid "Technology"
 msgstr "Technologija"
 
 #. TRANSLATORS: this is when the device is plugged in, typically
 #. * only shown for the ac adaptor device
-#: ../src/gpm-statistics.c:513
+#: ../src/gpm-statistics.c:515
 msgid "Online"
 msgstr "Prijungta"
 
 #. TRANSLATORS: the command line was not provided
-#: ../src/gpm-statistics.c:825
+#: ../src/gpm-statistics.c:827
 msgid "No data"
 msgstr "Nėra duomenų"
 
 #. TRANSLATORS: kernel module, usually a device driver
-#: ../src/gpm-statistics.c:832 ../src/gpm-statistics.c:837
+#: ../src/gpm-statistics.c:834 ../src/gpm-statistics.c:839
 msgid "Kernel module"
 msgstr "Branduolio modulis"
 
 #. TRANSLATORS: kernel housekeeping
-#: ../src/gpm-statistics.c:842
+#: ../src/gpm-statistics.c:844
 msgid "Kernel core"
 msgstr "Branduolys"
 
 #. TRANSLATORS: interrupt between processors
-#: ../src/gpm-statistics.c:847
+#: ../src/gpm-statistics.c:849
 msgid "Interprocessor interrupt"
 msgstr "Tarpprocesorinis pertraukimas"
 
 #. TRANSLATORS: unknown interrupt
-#: ../src/gpm-statistics.c:852
+#: ../src/gpm-statistics.c:854
 msgid "Interrupt"
 msgstr "Pertraukimas"
 
 #. TRANSLATORS: the keyboard and mouse device event
-#: ../src/gpm-statistics.c:899
+#: ../src/gpm-statistics.c:901
 msgid "PS/2 keyboard/mouse/touchpad"
 msgstr "PS/2 klaviatūra/pelė/paliesties lentelė"
 
 #. TRANSLATORS: ACPI, the Intel power standard on laptops and desktops
-#: ../src/gpm-statistics.c:902
+#: ../src/gpm-statistics.c:904
 msgid "ACPI"
 msgstr "ACPI"
 
 #. TRANSLATORS: serial ATA is a new style of hard disk interface
-#: ../src/gpm-statistics.c:905
+#: ../src/gpm-statistics.c:907
 msgid "Serial ATA"
 msgstr "Serial ATA"
 
 #. TRANSLATORS: this is the old-style ATA interface
-#: ../src/gpm-statistics.c:908
+#: ../src/gpm-statistics.c:910
 msgid "ATA host controller"
 msgstr "ATA valdiklis"
 
 #. TRANSLATORS: 802.11 wireless adaptor
-#: ../src/gpm-statistics.c:911
+#: ../src/gpm-statistics.c:913
 msgid "Intel wireless adaptor"
-msgstr "Intel bevielis adapteris"
+msgstr "Intel belaidis adapteris"
 
 #. TRANSLATORS: a timer is something that fires periodically.
 #. * The parameter is a process name, e.g. "firefox-bin".
 #. * This is shown when the timer wakes up.
-#: ../src/gpm-statistics.c:918 ../src/gpm-statistics.c:923
-#: ../src/gpm-statistics.c:928 ../src/gpm-statistics.c:933
-#: ../src/gpm-statistics.c:938
+#: ../src/gpm-statistics.c:920 ../src/gpm-statistics.c:925
+#: ../src/gpm-statistics.c:930 ../src/gpm-statistics.c:935
+#: ../src/gpm-statistics.c:940
 #, c-format
 msgid "Timer %s"
 msgstr "Laikrodis %s"
@@ -1841,126 +1833,126 @@ msgstr "Laikrodis %s"
 #. TRANSLATORS: the parameter is the name of task that's woken up from
 #. sleeping.
 #. * This is shown when the task wakes up.
-#: ../src/gpm-statistics.c:942
+#: ../src/gpm-statistics.c:944
 #, c-format
 msgid "Sleep %s"
 msgstr "Miega %s"
 
 #. TRANSLATORS: this is the name of a new realtime task.
-#: ../src/gpm-statistics.c:945
+#: ../src/gpm-statistics.c:947
 #, c-format
 msgid "New task %s"
 msgstr "Nauja užduotis %s"
 
 #. TRANSLATORS: this is the name of a task that's woken to check state.
 #. * This is shown when the task wakes up.
-#: ../src/gpm-statistics.c:949
+#: ../src/gpm-statistics.c:951
 #, c-format
 msgid "Wait %s"
 msgstr "Laukia %s"
 
 #. TRANSLATORS: this is the name of a work queue.
 #. * A work queue is a list of work that has to be done.
-#: ../src/gpm-statistics.c:953 ../src/gpm-statistics.c:957
+#: ../src/gpm-statistics.c:955 ../src/gpm-statistics.c:959
 #, c-format
 msgid "Work queue %s"
 msgstr "Darbo eilė %s"
 
 #. TRANSLATORS: this is when the networking subsystem clears out old entries
-#: ../src/gpm-statistics.c:960
+#: ../src/gpm-statistics.c:962
 #, c-format
 msgid "Network route flush %s"
 msgstr "Tinklo maršruto išvalymas %s"
 
 #. TRANSLATORS: this is the name of an activity on the USB bus
-#: ../src/gpm-statistics.c:963
+#: ../src/gpm-statistics.c:965
 #, c-format
 msgid "USB activity %s"
 msgstr "USB veikla %s"
 
 #. TRANSLATORS: we've timed out of an aligned timer, with the name
-#: ../src/gpm-statistics.c:966
+#: ../src/gpm-statistics.c:968
 #, c-format
 msgid "Wakeup %s"
 msgstr "Pabudimas %s"
 
 #. TRANSLATORS: interupts on the system required for basic operation
-#: ../src/gpm-statistics.c:969
+#: ../src/gpm-statistics.c:971
 msgid "Local interrupts"
 msgstr "Vietiniai pertraukimai"
 
 #. TRANSLATORS: interrupts when a task gets moved from one core to another
-#: ../src/gpm-statistics.c:972
+#: ../src/gpm-statistics.c:974
 msgid "Rescheduling interrupts"
 msgstr "Perplanuojami pertraukimai"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1081
+#: ../src/gpm-statistics.c:1083
 msgid "Device Information"
 msgstr "Informacija apie įrenginį"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1083
+#: ../src/gpm-statistics.c:1085
 msgid "Device History"
 msgstr "Energijos retrospektyva"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1085
+#: ../src/gpm-statistics.c:1087
 msgid "Device Profile"
 msgstr "Įrenginio profilis"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1087
+#: ../src/gpm-statistics.c:1089
 msgid "Processor Wakeups"
 msgstr "Procesoriaus pabudimai"
 
 #. TRANSLATORS: this is the X axis on the graph
-#: ../src/gpm-statistics.c:1347 ../src/gpm-statistics.c:1353
-#: ../src/gpm-statistics.c:1359 ../src/gpm-statistics.c:1365
+#: ../src/gpm-statistics.c:1356 ../src/gpm-statistics.c:1362
+#: ../src/gpm-statistics.c:1368 ../src/gpm-statistics.c:1374
 msgid "Time elapsed"
 msgstr "Praėjo laiko"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1349
+#: ../src/gpm-statistics.c:1358
 msgid "Power"
 msgstr "Energija"
 
 #. TRANSLATORS: this is the Y axis on the graph for the whole battery device
 #. TRANSLATORS: this is the X axis on the graph for the whole battery device
-#: ../src/gpm-statistics.c:1355 ../src/gpm-statistics.c:1399
-#: ../src/gpm-statistics.c:1405 ../src/gpm-statistics.c:1411
-#: ../src/gpm-statistics.c:1417
+#: ../src/gpm-statistics.c:1364 ../src/gpm-statistics.c:1408
+#: ../src/gpm-statistics.c:1414 ../src/gpm-statistics.c:1420
+#: ../src/gpm-statistics.c:1426
 msgid "Cell charge"
 msgstr "Esama įkrova"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1361 ../src/gpm-statistics.c:1367
+#: ../src/gpm-statistics.c:1370 ../src/gpm-statistics.c:1376
 msgid "Predicted time"
 msgstr "Prognozuojamas laikas"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1401 ../src/gpm-statistics.c:1413
+#: ../src/gpm-statistics.c:1410 ../src/gpm-statistics.c:1422
 msgid "Correction factor"
 msgstr "Kompensavimo koeficientas"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1407 ../src/gpm-statistics.c:1419
+#: ../src/gpm-statistics.c:1416 ../src/gpm-statistics.c:1428
 msgid "Prediction accuracy"
 msgstr "Spėjimo tikslumas"
 
 #. TRANSLATORS: show a device by default
-#: ../src/gpm-statistics.c:1584
+#: ../src/gpm-statistics.c:1598
 msgid "Select this device at startup"
 msgstr "Pasirinkti šį įrenginį įkrovus sistemą"
 
 #. TRANSLATORS: the icon for the CPU
-#: ../src/gpm-statistics.c:1839
+#: ../src/gpm-statistics.c:1864
 msgid "Processor"
 msgstr "Procesorius"
 
 #: ../src/gpm-tray-icon.c:189
-msgid "Copyright © 2011-2014 MATE developers"
-msgstr "Autorių Teisės © 2011-2014 MATE kūrėjai"
+msgid "Copyright © 2011-2016 MATE developers"
+msgstr "Autorių Teisės © 2011-2016 MATE kūrėjai"
 
 #. Translators should localize the following string
 #. * which will be displayed at the bottom of the about
@@ -1969,20 +1961,32 @@ msgstr "Autorių Teisės © 2011-2014 MATE kūrėjai"
 msgid "translator-credits"
 msgstr "Algimantas Markevičius <margevicius.algimantas@gmail.com>\nAurimas Černius <aurisc4@gmail.com>\nRimas Kudelis <rq@akl.lt>\nŽygimantas Beručka <uid0@akl.lt>\nJustina Klingaitė <justina.klingaite@gmail.com>\nGintautas Miliauskas <gintas@akl.lt>\nTomas Kuliavas <tokul@users.sourceforge.net>\nGediminas Paulauskas <menesis@chatsubo.lt>\nMoo"
 
+#. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
+#: ../src/gpm-tray-icon.c:297
+#, c-format
+msgid "%s remaining"
+msgstr "Liko %s"
+
 #. preferences
-#: ../src/gpm-tray-icon.c:330
+#: ../src/gpm-tray-icon.c:351
 msgid "_Preferences"
 msgstr "_Nuostatos"
 
+#. TRANSLATORS: device not present
+#: ../src/gpm-upower.c:211
+#, c-format
+msgid "%s not present"
+msgstr "%s nėra"
+
 #. TRANSLATORS: a phone is charging
 #. TRANSLATORS: device is charging, but we only have a percentage
-#: ../src/gpm-upower.c:221 ../src/gpm-upower.c:285
+#: ../src/gpm-upower.c:224 ../src/gpm-upower.c:288
 #, c-format
 msgid "%s charging (%.1f%%)"
 msgstr "%s įkraunama (%.1f%%)"
 
 #. TRANSLATORS: The laptop battery is fully charged, and we know a time
-#: ../src/gpm-upower.c:236
+#: ../src/gpm-upower.c:239
 #, c-format
 msgid ""
 "Battery is fully charged.\n"
@@ -1990,25 +1994,25 @@ msgid ""
 msgstr "Baterija visiškai įkrauta.\nSuteikia %s kompiuterio veikimo laiko"
 
 #. TRANSLATORS: the device is fully charged
-#: ../src/gpm-upower.c:241
+#: ../src/gpm-upower.c:244
 #, c-format
 msgid "%s is fully charged"
 msgstr "%s visiškai įkrauta (-as)"
 
 #. TRANSLATORS: the device is discharging, and we have a time remaining
-#: ../src/gpm-upower.c:249
+#: ../src/gpm-upower.c:252
 #, c-format
 msgid "%s %s remaining (%.1f%%)"
 msgstr "liko %s %s (%.1f%%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-upower.c:254
+#: ../src/gpm-upower.c:257
 #, c-format
 msgid "%s discharging (%.1f%%)"
 msgstr "%s iškraunama (%.1f%%)"
 
 #. TRANSLATORS: the device is charging, and we have a time to full and empty
-#: ../src/gpm-upower.c:268
+#: ../src/gpm-upower.c:271
 #, c-format
 msgid ""
 "%s %s until charged (%.1f%%)\n"
@@ -2017,25 +2021,31 @@ msgstr "%s %s iki įkrovimo (%.1f%%)\nSuteikia %s baterijos veikimo laiko"
 
 #. TRANSLATORS: device is charging, and we have a time to full and a
 #. percentage
-#: ../src/gpm-upower.c:279
+#: ../src/gpm-upower.c:282
 #, c-format
 msgid "%s %s until charged (%.1f%%)"
 msgstr "%s %s iki įkrovimo (%.1f%%)"
 
 #. TRANSLATORS: this is only shown for laptops with multiple batteries
-#: ../src/gpm-upower.c:292
+#: ../src/gpm-upower.c:295
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
 msgstr "%s laukia iškrovimo (%.1f%%)"
 
 #. TRANSLATORS: this is only shown for laptops with multiple batteries
-#: ../src/gpm-upower.c:298
+#: ../src/gpm-upower.c:301
 #, c-format
 msgid "%s waiting to charge (%.1f%%)"
 msgstr "%s laukia įkrovimo (%.1f%%)"
 
+#. TRANSLATORS: when the device has no charge left
+#: ../src/gpm-upower.c:306
+#, c-format
+msgid "%s empty"
+msgstr "%s tuščias"
+
 #. TRANSLATORS: the type of data, e.g. Laptop battery
-#: ../src/gpm-upower.c:357
+#: ../src/gpm-upower.c:366
 msgid "Product:"
 msgstr "Gaminys:"
 
@@ -2043,105 +2053,105 @@ msgstr "Gaminys:"
 #. TRANSLATORS: device is charged
 #. TRANSLATORS: device is charging
 #. TRANSLATORS: device is discharging
-#: ../src/gpm-upower.c:361 ../src/gpm-upower.c:364 ../src/gpm-upower.c:367
-#: ../src/gpm-upower.c:370
+#: ../src/gpm-upower.c:370 ../src/gpm-upower.c:373 ../src/gpm-upower.c:376
+#: ../src/gpm-upower.c:379
 msgid "Status:"
 msgstr "Būsena:"
 
-#: ../src/gpm-upower.c:361
+#: ../src/gpm-upower.c:370
 msgid "Missing"
 msgstr "Nerasta"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:364 ../src/gpm-upower.c:641
+#: ../src/gpm-upower.c:373 ../src/gpm-upower.c:650
 msgid "Charged"
 msgstr "Įkrauta"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:367 ../src/gpm-upower.c:629
+#: ../src/gpm-upower.c:376 ../src/gpm-upower.c:638
 msgid "Charging"
 msgstr "Kraunama"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:370 ../src/gpm-upower.c:633
+#: ../src/gpm-upower.c:379 ../src/gpm-upower.c:642
 msgid "Discharging"
 msgstr "Iškraunama"
 
 #. TRANSLATORS: percentage
-#: ../src/gpm-upower.c:375
+#: ../src/gpm-upower.c:384
 msgid "Percentage charge:"
 msgstr "Įkrova procentais:"
 
 #. TRANSLATORS: manufacturer
-#: ../src/gpm-upower.c:379
+#: ../src/gpm-upower.c:388
 msgid "Vendor:"
 msgstr "Gamintojas:"
 
 #. TRANSLATORS: how the battery is made, e.g. Lithium Ion
-#: ../src/gpm-upower.c:384
+#: ../src/gpm-upower.c:393
 msgid "Technology:"
 msgstr "Technologija:"
 
 #. TRANSLATORS: serial number of the battery
-#: ../src/gpm-upower.c:388
+#: ../src/gpm-upower.c:397
 msgid "Serial number:"
 msgstr "Serijos numeris:"
 
 #. TRANSLATORS: model number of the battery
-#: ../src/gpm-upower.c:392
+#: ../src/gpm-upower.c:401
 msgid "Model:"
 msgstr "Modelis:"
 
 #. TRANSLATORS: time to fully charged
-#: ../src/gpm-upower.c:397
+#: ../src/gpm-upower.c:406
 msgid "Charge time:"
 msgstr "Įkrovos laikas:"
 
 #. TRANSLATORS: time to empty
-#: ../src/gpm-upower.c:403
+#: ../src/gpm-upower.c:412
 msgid "Discharge time:"
 msgstr "Iškrovos laikas:"
 
 #. TRANSLATORS: Excellent, Good, Fair and Poor are all related to battery
 #. Capacity
-#: ../src/gpm-upower.c:410
+#: ../src/gpm-upower.c:419
 msgid "Excellent"
 msgstr "Puiki"
 
-#: ../src/gpm-upower.c:412
+#: ../src/gpm-upower.c:421
 msgid "Good"
 msgstr "Gera"
 
-#: ../src/gpm-upower.c:414
+#: ../src/gpm-upower.c:423
 msgid "Fair"
 msgstr "Normali"
 
-#: ../src/gpm-upower.c:416
+#: ../src/gpm-upower.c:425
 msgid "Poor"
 msgstr "Prasta"
 
-#: ../src/gpm-upower.c:420
+#: ../src/gpm-upower.c:429
 msgid "Capacity:"
 msgstr "Talpa:"
 
-#: ../src/gpm-upower.c:426 ../src/gpm-upower.c:451
+#: ../src/gpm-upower.c:435 ../src/gpm-upower.c:460
 msgid "Current charge:"
 msgstr "Esama įkrova:"
 
-#: ../src/gpm-upower.c:432
+#: ../src/gpm-upower.c:441
 msgid "Last full charge:"
 msgstr "Paskutinioji pilna įkrova:"
 
-#: ../src/gpm-upower.c:438 ../src/gpm-upower.c:456
+#: ../src/gpm-upower.c:447 ../src/gpm-upower.c:465
 msgid "Design charge:"
 msgstr "Projektinė įkrova:"
 
-#: ../src/gpm-upower.c:443
+#: ../src/gpm-upower.c:452
 msgid "Charge rate:"
 msgstr "Krovimo greitis:"
 
 #. TRANSLATORS: system power cord
-#: ../src/gpm-upower.c:478
+#: ../src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
 msgstr[0] "Kintamosios srovės adapteris"
@@ -2149,7 +2159,7 @@ msgstr[1] "Kintamosios srovės adapteriai"
 msgstr[2] "Kintamosios srovės adapterių"
 
 #. TRANSLATORS: laptop primary battery
-#: ../src/gpm-upower.c:482
+#: ../src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
 msgstr[0] "Nešiojamojo kompiuterio baterija"
@@ -2157,7 +2167,7 @@ msgstr[1] "Nešiojamojo kompiuterio baterijos"
 msgstr[2] "Nešiojamojo kompiuterio baterijų"
 
 #. TRANSLATORS: battery-backed AC power source
-#: ../src/gpm-upower.c:486
+#: ../src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
 msgstr[0] "Nenutrūkstamo maitinimo šaltinis"
@@ -2165,7 +2175,7 @@ msgstr[1] "Nenutrūkstamo maitinimo šaltiniai"
 msgstr[2] "Nenutrūkstamo maitinimo šaltiniai"
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
-#: ../src/gpm-upower.c:490
+#: ../src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
 msgstr[0] "Monitorius"
@@ -2173,7 +2183,7 @@ msgstr[1] "Monitoriai"
 msgstr[2] "Monitorių"
 
 #. TRANSLATORS: wireless mice with internal batteries
-#: ../src/gpm-upower.c:494
+#: ../src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
 msgstr[0] "Pelė"
@@ -2181,7 +2191,7 @@ msgstr[1] "Pelės"
 msgstr[2] "Pelių"
 
 #. TRANSLATORS: wireless keyboard with internal battery
-#: ../src/gpm-upower.c:498
+#: ../src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
 msgstr[0] "Klaviatūra"
@@ -2189,7 +2199,7 @@ msgstr[1] "Klaviatūros"
 msgstr[2] "Klaviatūrų"
 
 #. TRANSLATORS: portable device
-#: ../src/gpm-upower.c:502
+#: ../src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
 msgstr[0] "Delninukas"
@@ -2197,7 +2207,7 @@ msgstr[1] "Delninukai"
 msgstr[2] "Delninukų"
 
 #. TRANSLATORS: cell phone (mobile...)
-#: ../src/gpm-upower.c:506
+#: ../src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
 msgstr[0] "Mobilusis telefonas"
@@ -2205,7 +2215,7 @@ msgstr[1] "Mobilieji telefonai"
 msgstr[2] "Mobiliųjų telefonų"
 
 #. TRANSLATORS: media player, mp3 etc
-#: ../src/gpm-upower.c:510
+#: ../src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
 msgstr[0] "Grotuvas"
@@ -2213,7 +2223,7 @@ msgstr[1] "Grotuvai"
 msgstr[2] "Grotuvų"
 
 #. TRANSLATORS: tablet device
-#: ../src/gpm-upower.c:514
+#: ../src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
 msgstr[0] "Planšetinis kompiuteris"
@@ -2221,7 +2231,7 @@ msgstr[1] "Planšetiniai kompiuteriai"
 msgstr[2] "Planšetinių kompiuterių"
 
 #. TRANSLATORS: tablet device
-#: ../src/gpm-upower.c:518
+#: ../src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
 msgstr[0] "Kompiuteris"
@@ -2229,56 +2239,56 @@ msgstr[1] "Kompiuteriai"
 msgstr[2] "Kompiuterių"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:585
+#: ../src/gpm-upower.c:594
 msgid "Lithium Ion"
 msgstr "Ličio jonų"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:589
+#: ../src/gpm-upower.c:598
 msgid "Lithium Polymer"
 msgstr "Ličio polimerų"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:593
+#: ../src/gpm-upower.c:602
 msgid "Lithium Iron Phosphate"
 msgstr "Ličio geležies fosfato"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:597
+#: ../src/gpm-upower.c:606
 msgid "Lead acid"
 msgstr "Švino rūgšties"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:601
+#: ../src/gpm-upower.c:610
 msgid "Nickel Cadmium"
 msgstr "Nikelio kadmio"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:605
+#: ../src/gpm-upower.c:614
 msgid "Nickel metal hydride"
 msgstr "Nikelio metalo hidrido"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:609
+#: ../src/gpm-upower.c:618
 msgid "Unknown technology"
 msgstr "Nežinoma technologija"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:637
+#: ../src/gpm-upower.c:646
 msgid "Empty"
 msgstr "Tuščia"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:645
+#: ../src/gpm-upower.c:654
 msgid "Waiting to charge"
 msgstr "Laukia įkrovimo"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:649
+#: ../src/gpm-upower.c:658
 msgid "Waiting to discharge"
 msgstr "Laukia iškrovimo"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:653
+#: ../src/gpm-upower.c:662
 msgid "Unknown state"
 msgstr "Nežinoma būsena"

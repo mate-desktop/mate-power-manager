@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 13:07+0200\n"
-"PO-Revision-Date: 2015-11-03 03:40+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"POT-Creation-Date: 2016-08-01 17:44+0300\n"
+"PO-Revision-Date: 2016-08-01 14:45+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Japanese (http://www.transifex.com/mate/MATE/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,35 +20,35 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../applets/brightness/brightness-applet.c:115
+#: ../applets/brightness/brightness-applet.c:117
 msgid "Power Manager Brightness Applet"
 msgstr "明るさの調節アプレット"
 
-#: ../applets/brightness/brightness-applet.c:116
+#: ../applets/brightness/brightness-applet.c:118
 msgid "Adjusts laptop panel brightness."
 msgstr "ラップトップ画面の明るさを調節します"
 
-#: ../applets/brightness/brightness-applet.c:417
-#: ../applets/inhibit/inhibit-applet.c:409
+#: ../applets/brightness/brightness-applet.c:419
+#: ../applets/inhibit/inhibit-applet.c:376
 msgid "Cannot connect to mate-power-manager"
 msgstr "MATE 電源管理デーモンに接続できませんでした"
 
-#: ../applets/brightness/brightness-applet.c:419
+#: ../applets/brightness/brightness-applet.c:421
 msgid "Cannot get laptop panel brightness"
 msgstr "液晶画面の明るさを取得できません"
 
-#: ../applets/brightness/brightness-applet.c:421
+#: ../applets/brightness/brightness-applet.c:423
 #, c-format
 msgid "LCD brightness : %d%%"
 msgstr "液晶の明るさ: %d%%"
 
-#: ../applets/brightness/brightness-applet.c:809
-#: ../applets/inhibit/inhibit-applet.c:478
+#: ../applets/brightness/brightness-applet.c:928
+#: ../applets/inhibit/inhibit-applet.c:450
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "GNU 一般公衆利用許諾契約書の第二版に基づいてライセンスされています。"
 
-#: ../applets/brightness/brightness-applet.c:810
-#: ../applets/inhibit/inhibit-applet.c:479
+#: ../applets/brightness/brightness-applet.c:929
+#: ../applets/inhibit/inhibit-applet.c:451
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -56,8 +56,8 @@ msgid ""
 "of the License, or (at your option) any later version."
 msgstr "MATE 電源管理はフリーソフトウェアです;\nフリーソフトウェア財団が発行する GNU 一般公衆利用許諾契約書の\n第二版、あるいはそれ以降の版が定める条項の下で本プログラムを\n再頒布または変更することができます。"
 
-#: ../applets/brightness/brightness-applet.c:814
-#: ../applets/inhibit/inhibit-applet.c:483
+#: ../applets/brightness/brightness-applet.c:933
+#: ../applets/inhibit/inhibit-applet.c:455
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -65,8 +65,8 @@ msgid ""
 "GNU General Public License for more details."
 msgstr "MATE 電源管理は何かの役に立つことを期待して配布されているものですが、\n完全に無保証です。商用利用または特定の目的における適合性の保証はありません。\n詳細は GNU 一般公衆利用許諾契約書をご覧ください。"
 
-#: ../applets/brightness/brightness-applet.c:818
-#: ../applets/inhibit/inhibit-applet.c:487
+#: ../applets/brightness/brightness-applet.c:937
+#: ../applets/inhibit/inhibit-applet.c:459
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -74,17 +74,13 @@ msgid ""
 "02110-1301, USA."
 msgstr "あなたは本プログラムと一緒に GNU 一般公衆利用許諾契約書の写しを\n受け取っているはずです。そうでない場合は、Free Software Foundation, \nInc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, \nUSA まで連絡してください。"
 
-#: ../applets/brightness/brightness-applet.c:832
-msgid "Copyright © 2006 Benjamin Canou"
-msgstr "Copyright © 2006 Benjamin Canou"
-
-#: ../applets/brightness/brightness-applet.c:1074
-#: ../applets/inhibit/inhibit-applet.c:714
+#: ../applets/brightness/brightness-applet.c:1197
+#: ../applets/inhibit/inhibit-applet.c:690
 msgid "_About"
 msgstr "情報(_A)"
 
-#: ../applets/brightness/brightness-applet.c:1077
-#: ../applets/inhibit/inhibit-applet.c:717
+#: ../applets/brightness/brightness-applet.c:1200
+#: ../applets/inhibit/inhibit-applet.c:693
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
@@ -104,29 +100,25 @@ msgstr "明るさの調整アプレット"
 msgid "Adjusts Laptop panel brightness"
 msgstr "ラップトップ画面の明るさを調節します"
 
-#: ../applets/inhibit/inhibit-applet.c:97
+#: ../applets/inhibit/inhibit-applet.c:95
 msgid "Power Manager Inhibit Applet"
 msgstr "省電力制御アプレット"
 
-#: ../applets/inhibit/inhibit-applet.c:98
+#: ../applets/inhibit/inhibit-applet.c:96
 msgid "Allows user to inhibit automatic power saving."
 msgstr "電源の消費を自動的に制御できるようにします。"
 
-#: ../applets/inhibit/inhibit-applet.c:412
+#: ../applets/inhibit/inhibit-applet.c:379
 msgid "Automatic sleep inhibited"
 msgstr "自動的にはスリープしないようになっています"
 
-#: ../applets/inhibit/inhibit-applet.c:414
+#: ../applets/inhibit/inhibit-applet.c:381
 msgid "Automatic sleep enabled"
 msgstr "自動的にスリープするようになっています"
 
-#: ../applets/inhibit/inhibit-applet.c:442
+#: ../applets/inhibit/inhibit-applet.c:409
 msgid "Manual inhibit"
 msgstr "手動で制御します"
-
-#: ../applets/inhibit/inhibit-applet.c:501
-msgid "Copyright © 2006-2007 Richard Hughes"
-msgstr "Copyright © 2006-2007 Richard Hughes"
 
 #: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:1
 msgid "Inhibit Applet Factory"
@@ -752,8 +744,8 @@ msgstr "電源管理の設定を行います"
 #. TRANSLATORS: shown on the titlebar
 #. TRANSLATORS: the program name
 #: ../data/mate-power-statistics.desktop.in.in.h:1
-#: ../data/gpm-statistics.ui.h:1 ../src/gpm-statistics.c:1091
-#: ../src/gpm-statistics.c:1598
+#: ../data/gpm-statistics.ui.h:1 ../src/gpm-statistics.c:1093
+#: ../src/gpm-statistics.c:1612
 msgid "Power Statistics"
 msgstr "電源使用率の統計"
 
@@ -765,7 +757,7 @@ msgstr "電源管理を監視します"
 msgid "Brightness"
 msgstr "明るさ"
 
-#: ../data/gpm-statistics.ui.h:2 ../src/gpm-statistics.c:209
+#: ../data/gpm-statistics.ui.h:2 ../src/gpm-statistics.c:211
 msgid "Details"
 msgstr "詳細"
 
@@ -805,7 +797,7 @@ msgstr "プロセッサが1秒間に起床する回数:"
 msgid "0"
 msgstr "0"
 
-#: ../data/gpm-statistics.ui.h:12 ../src/gpm-statistics.c:195
+#: ../data/gpm-statistics.ui.h:12 ../src/gpm-statistics.c:197
 msgid "Wakeups"
 msgstr "CPUの起床"
 
@@ -1070,121 +1062,121 @@ msgid "%.1fV"
 msgstr "%.1fV"
 
 #. TRANSLATORS: show verbose debugging
-#: ../src/gpm-main.c:171 ../src/gpm-prefs.c:90 ../src/gpm-statistics.c:1581
+#: ../src/gpm-main.c:172 ../src/gpm-prefs.c:93 ../src/gpm-statistics.c:1595
 msgid "Show extra debugging information"
 msgstr "デバッグ情報を表示する"
 
-#: ../src/gpm-main.c:173
+#: ../src/gpm-main.c:174
 msgid "Show version of installed program and exit"
 msgstr "バージョンを表示して終了する"
 
-#: ../src/gpm-main.c:175
+#: ../src/gpm-main.c:176
 msgid "Exit after a small delay (for debugging)"
 msgstr "少し遅延して終了する (デバッグ用)"
 
-#: ../src/gpm-main.c:177
+#: ../src/gpm-main.c:178
 msgid "Exit after the manager has loaded (for debugging)"
 msgstr "デーモンを起動した後に終了する (デバッグ用)"
 
-#: ../src/gpm-main.c:188 ../src/gpm-main.c:192
+#: ../src/gpm-main.c:189 ../src/gpm-main.c:193
 msgid "MATE Power Manager"
 msgstr "MATE 電源管理"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:223 ../src/gpm-manager.c:293
+#: ../src/gpm-manager.c:223 ../src/gpm-manager.c:295
 msgid "Battery is very low"
 msgstr "バッテリーの残量が深刻です"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:273
+#: ../src/gpm-manager.c:275
 msgid "Power plugged in"
 msgstr "電源プラグを差した"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:277
+#: ../src/gpm-manager.c:279
 msgid "Power unplugged"
 msgstr "電源プラグを外した"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:281
+#: ../src/gpm-manager.c:283
 msgid "Lid has opened"
 msgstr "ノート PC を開いた"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:285
+#: ../src/gpm-manager.c:287
 msgid "Lid has closed"
 msgstr "ノート PC を閉じた"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:289
+#: ../src/gpm-manager.c:291
 msgid "Battery is low"
 msgstr "バッテリーの残量が少ないです"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:297
+#: ../src/gpm-manager.c:299
 msgid "Battery is full"
 msgstr "バッテリーは充電済です"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:301
+#: ../src/gpm-manager.c:303
 msgid "Suspend started"
 msgstr "サスペンドを開始しました"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:305
+#: ../src/gpm-manager.c:307
 msgid "Resumed"
 msgstr "レジューム中"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:309
+#: ../src/gpm-manager.c:311
 msgid "Suspend failed"
 msgstr "サスペンドに失敗しました"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:579
+#: ../src/gpm-manager.c:581
 msgid "Computer failed to suspend."
 msgstr "コンピューターはサスペンドに失敗しました。"
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:581
+#: ../src/gpm-manager.c:583
 msgid "Failed to suspend"
 msgstr "サスペンドに失敗しました"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:585
+#: ../src/gpm-manager.c:587
 msgid "Computer failed to hibernate."
 msgstr "コンピューターはハイバネートに失敗しました。"
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:587
+#: ../src/gpm-manager.c:589
 msgid "Failed to hibernate"
 msgstr "ハイバネートに失敗しました"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:592
+#: ../src/gpm-manager.c:594
 msgid "Failure was reported as:"
 msgstr "失敗の内容が報告されています:"
 
 #. TRANSLATORS: button text, visit the suspend help website
-#: ../src/gpm-manager.c:605
+#: ../src/gpm-manager.c:607
 msgid "Visit help page"
 msgstr "ヘルプページを開く"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:851
+#: ../src/gpm-manager.c:853
 msgid "Display DPMS activated"
 msgstr "ディスプレイの DPMS を実行中です"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:870
+#: ../src/gpm-manager.c:872
 msgid "On battery power"
 msgstr "バッテリー使用時"
 
-#: ../src/gpm-manager.c:888
+#: ../src/gpm-manager.c:890
 msgid "Laptop lid is closed"
 msgstr "ノート PC を閉じた時"
 
-#: ../src/gpm-manager.c:926
+#: ../src/gpm-manager.c:928
 msgid "Power Information"
 msgstr "電源の情報"
 
@@ -1192,13 +1184,13 @@ msgstr "電源の情報"
 #. * where capacity is the ratio of the last_full capacity with that of
 #. * the design capacity. (#326740)
 #. TRANSLATORS: battery is old or broken
-#: ../src/gpm-manager.c:1113
+#: ../src/gpm-manager.c:1115
 msgid "Battery may be broken"
 msgstr "バッテリーが壊れているようです"
 
 #. TRANSLATORS: notify the user that that battery is broken as the capacity is
 #. very low
-#: ../src/gpm-manager.c:1116
+#: ../src/gpm-manager.c:1118
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
@@ -1206,195 +1198,195 @@ msgid ""
 msgstr "お使いのバッテリーの容量が少なすぎます (%1.1f%%)。バッテリーが古いか、壊れている可能性があります。"
 
 #. TRANSLATORS: show the charged notification
-#: ../src/gpm-manager.c:1165
+#: ../src/gpm-manager.c:1167
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] "充電が完了しました"
 
 #. TRANSLATORS: laptop battery is now discharging
-#: ../src/gpm-manager.c:1211
+#: ../src/gpm-manager.c:1213
 msgid "Battery Discharging"
 msgstr "バッテリーの放電中"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1215
+#: ../src/gpm-manager.c:1217
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr "%s のバッテリー電力が残っています (%.0f%%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-manager.c:1218 ../src/gpm-manager.c:1230
+#: ../src/gpm-manager.c:1220 ../src/gpm-manager.c:1232
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr "%s 放電中 (%.0f%%)"
 
 #. TRANSLATORS: UPS is now discharging
-#: ../src/gpm-manager.c:1223
+#: ../src/gpm-manager.c:1225
 msgid "UPS Discharging"
 msgstr "UPS の放電中"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1227
+#: ../src/gpm-manager.c:1229
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr "%s の of UPS 電源容量が残っています (%.0f%%)"
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
-#: ../src/gpm-manager.c:1311
+#: ../src/gpm-manager.c:1313
 msgid "Battery low"
 msgstr "バッテリーの残量わずか"
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
-#: ../src/gpm-manager.c:1314
+#: ../src/gpm-manager.c:1316
 msgid "Laptop battery low"
 msgstr "バッテリーの残量が少なくなっています"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1320
+#: ../src/gpm-manager.c:1322
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "残量はおよそ <b>%s</b> (%.0f%%) です"
 
 #. TRANSLATORS: UPS is starting to get a little low
-#: ../src/gpm-manager.c:1324
+#: ../src/gpm-manager.c:1326
 msgid "UPS low"
 msgstr "UPS の残量が少なくなっています"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1328
+#: ../src/gpm-manager.c:1330
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr "UPS のバックアップ電力の残量はおよそ <b>%s</b> (%.0f%%) です"
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1332 ../src/gpm-manager.c:1466
+#: ../src/gpm-manager.c:1334 ../src/gpm-manager.c:1468
 msgid "Mouse battery low"
 msgstr "マウスのバッテリー残量が少なくなっています"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1335
+#: ../src/gpm-manager.c:1337
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr "無線式マウスのバッテリー残量が少なくなっています (%.0f%%)"
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1339 ../src/gpm-manager.c:1474
+#: ../src/gpm-manager.c:1341 ../src/gpm-manager.c:1476
 msgid "Keyboard battery low"
 msgstr "キーボードのバッテリー残量が少なくなっています"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1342
+#: ../src/gpm-manager.c:1344
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr "無線式キーボードのバッテリー残量が少なくなっています (%.0f%%)"
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1346 ../src/gpm-manager.c:1483
+#: ../src/gpm-manager.c:1348 ../src/gpm-manager.c:1485
 msgid "PDA battery low"
 msgstr "PDA のバッテリー残量が少なくなっています"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1349
+#: ../src/gpm-manager.c:1351
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr "PDA のバッテリー残量が少なくなっています (%.0f%%)"
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1353 ../src/gpm-manager.c:1493
-#: ../src/gpm-manager.c:1503
+#: ../src/gpm-manager.c:1355 ../src/gpm-manager.c:1495
+#: ../src/gpm-manager.c:1505
 msgid "Cell phone battery low"
 msgstr "携帯電話機のバッテリー残量が少なくなっています"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1356
+#: ../src/gpm-manager.c:1358
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "携帯電話機のバッテリー残量が少なくなっています (%.0f%%)"
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1360
+#: ../src/gpm-manager.c:1362
 msgid "Media player battery low"
 msgstr "メディアプレイヤーの残量わずか"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1363
+#: ../src/gpm-manager.c:1365
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr "メディアプレイヤーのバッテリー残量が少なくなっています (%.0f%%)"
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1367 ../src/gpm-manager.c:1512
+#: ../src/gpm-manager.c:1369 ../src/gpm-manager.c:1514
 msgid "Tablet battery low"
 msgstr "タブレットバッテリー低下"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1370
+#: ../src/gpm-manager.c:1372
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "タブレットのバッテリー残量が少なくなっています (%.0f%%)"
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1374 ../src/gpm-manager.c:1521
+#: ../src/gpm-manager.c:1376 ../src/gpm-manager.c:1523
 msgid "Attached computer battery low"
 msgstr "接続コンピュータバッテリー低下"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1377
+#: ../src/gpm-manager.c:1379
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "接続されているコンピュータのバッテリー残量が少なくなっています (%.0f%%)"
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
-#: ../src/gpm-manager.c:1425
+#: ../src/gpm-manager.c:1427
 msgid "Battery critically low"
 msgstr "バッテリーの残量が深刻です"
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1428 ../src/gpm-manager.c:1580
+#: ../src/gpm-manager.c:1430 ../src/gpm-manager.c:1583
 msgid "Laptop battery critically low"
 msgstr "バッテリーの残量が深刻です"
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
-#: ../src/gpm-manager.c:1437
+#: ../src/gpm-manager.c:1439
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr "Plug in your AC adapter to avoid losing data."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1441
+#: ../src/gpm-manager.c:1443
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr "充電を開始しない場合、サスペンド状態に入ります。"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1445
+#: ../src/gpm-manager.c:1447
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr "充電を開始しない場合、ハイバネート状態に入ります。"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1449
+#: ../src/gpm-manager.c:1451
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr "充電を開始しない場合、シャットダウンします。"
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1456 ../src/gpm-manager.c:1615
+#: ../src/gpm-manager.c:1458 ../src/gpm-manager.c:1619
 msgid "UPS critically low"
 msgstr "UPS の残量が深刻な状態になりました"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1460
+#: ../src/gpm-manager.c:1462
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
@@ -1402,7 +1394,7 @@ msgid ""
 msgstr "UPS の残量はおよそ <b>%s</b> (%.0f%%) です。データ損失を防ぐため、 AC 電源に接続してください。"
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1469
+#: ../src/gpm-manager.c:1471
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
@@ -1410,7 +1402,7 @@ msgid ""
 msgstr "無線型マウスのバッテリー残量が非常に少なくなっています (%.0f%%)。充電しないと、このデバイスはまもなく停止します。"
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1477
+#: ../src/gpm-manager.c:1479
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
@@ -1418,7 +1410,7 @@ msgid ""
 msgstr "無線型キーボードのバッテリー残量が非常に少なくなっています (%.0f%%)。充電しないと、このデバイスはまもなく停止します。"
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1486
+#: ../src/gpm-manager.c:1488
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
@@ -1426,7 +1418,7 @@ msgid ""
 msgstr "PDAのバッテリー残量が非常に少なくなっています (%.0f%%)。充電しないと、このデバイスはまもなく停止します。"
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1496
+#: ../src/gpm-manager.c:1498
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
@@ -1434,7 +1426,7 @@ msgid ""
 msgstr "携帯電話機のバッテリー残量が非常に少なくなっています (%.0f%%)。充電しないと、このデバイスはまもなく停止します。"
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1506
+#: ../src/gpm-manager.c:1508
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
@@ -1442,7 +1434,7 @@ msgid ""
 msgstr "メディアプレイヤーのバッテリー残量が非常に少なくなっています (%.0f%%)。充電しないと、このデバイスはまもなく停止します。"
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1515
+#: ../src/gpm-manager.c:1517
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
@@ -1450,7 +1442,7 @@ msgid ""
 msgstr "タブレットのバッテリー残量が非常に少なくなっています (%.0f%%)。充電しないと、このデバイスはまもなく停止します。"
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1524
+#: ../src/gpm-manager.c:1526
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
@@ -1458,14 +1450,14 @@ msgid ""
 msgstr "接続されたコンピュータのバッテリー残量が非常に少なくなっています (%.0f%%)。充電しないと、このデバイスはまもなく停止します。"
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1588
+#: ../src/gpm-manager.c:1591
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
 msgstr "次に示すように、バッテリーの残量が深刻な状態です。このままバッテリーが空になると<b>システムの電源が落ちます</b>。"
 
 #. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1594
+#: ../src/gpm-manager.c:1597
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
@@ -1473,209 +1465,209 @@ msgid ""
 msgstr "次に示すように、バッテリーの残量が深刻な状態でサスペンドに入ろうとしています。<br><b>注意:</b> サスペンドの状態を維持するには、微量ながらも電力が必要です。"
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1601
+#: ../src/gpm-manager.c:1604
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr "次に示すように、バッテリーの残量が深刻な状態でハイバーネートに入ろうとしています。"
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1606
+#: ../src/gpm-manager.c:1609
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr "次に示すように、バッテリーの残量が深刻な状態でシャットダウンしようとしています。"
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1623
+#: ../src/gpm-manager.c:1627
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
 msgstr "次に示すように、UPS の残量が深刻な状態です。このままバッテリが空になると<b>システムの電源が落ちます</b>。"
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1629
+#: ../src/gpm-manager.c:1633
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr "次に示すように、UPS の残量が深刻な状態でハイバーネートに入ろうとしています。"
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1634
+#: ../src/gpm-manager.c:1638
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr "次に示すように、UPS の残量が深刻な状態でシャットダウンしようとしています。"
 
-#: ../src/gpm-prefs.c:94
+#: ../src/gpm-prefs.c:97
 msgid "MATE Power Preferences"
 msgstr "電源管理の設定"
 
-#: ../src/gpm-prefs-core.c:241
+#: ../src/gpm-prefs-core.c:248
 msgid "Shutdown"
 msgstr "停止する"
 
-#: ../src/gpm-prefs-core.c:248
+#: ../src/gpm-prefs-core.c:255
 msgid "Suspend"
 msgstr "サスペンドにする"
 
-#: ../src/gpm-prefs-core.c:251
+#: ../src/gpm-prefs-core.c:258
 msgid "Hibernate"
 msgstr "ハイバーネートにする"
 
-#: ../src/gpm-prefs-core.c:254
+#: ../src/gpm-prefs-core.c:261
 msgid "Blank screen"
 msgstr "ブランク・スクリーンにする"
 
-#: ../src/gpm-prefs-core.c:257
+#: ../src/gpm-prefs-core.c:264
 msgid "Ask me"
 msgstr "ダイアログを表示する"
 
-#: ../src/gpm-prefs-core.c:260
+#: ../src/gpm-prefs-core.c:267
 msgid "Do nothing"
 msgstr "何もしない"
 
-#: ../src/gpm-prefs-core.c:320
+#: ../src/gpm-prefs-core.c:327
 msgid "Never"
 msgstr "しない"
 
 #. TRANSLATORS: the rate of discharge for the device
-#: ../src/gpm-statistics.c:79 ../src/gpm-statistics.c:467
+#: ../src/gpm-statistics.c:81 ../src/gpm-statistics.c:469
 msgid "Rate"
 msgstr "率"
 
-#: ../src/gpm-statistics.c:80
+#: ../src/gpm-statistics.c:82
 msgid "Charge"
 msgstr "充電"
 
-#: ../src/gpm-statistics.c:81 ../src/gpm-statistics.c:481
+#: ../src/gpm-statistics.c:83 ../src/gpm-statistics.c:483
 msgid "Time to full"
 msgstr "充電完了までの時間"
 
-#: ../src/gpm-statistics.c:82 ../src/gpm-statistics.c:486
+#: ../src/gpm-statistics.c:84 ../src/gpm-statistics.c:488
 msgid "Time to empty"
 msgstr "空になるまでの時間"
 
-#: ../src/gpm-statistics.c:89
+#: ../src/gpm-statistics.c:91
 msgid "10 minutes"
 msgstr "10 分間"
 
-#: ../src/gpm-statistics.c:90
+#: ../src/gpm-statistics.c:92
 msgid "2 hours"
 msgstr "2 時間"
 
-#: ../src/gpm-statistics.c:91
+#: ../src/gpm-statistics.c:93
 msgid "6 hours"
 msgstr "6 時間"
 
-#: ../src/gpm-statistics.c:92
+#: ../src/gpm-statistics.c:94
 msgid "1 day"
 msgstr "1 日"
 
-#: ../src/gpm-statistics.c:93
+#: ../src/gpm-statistics.c:95
 msgid "1 week"
 msgstr "1 週間"
 
 #. TRANSLATORS: what we've observed about the device
-#: ../src/gpm-statistics.c:102
+#: ../src/gpm-statistics.c:104
 msgid "Charge profile"
 msgstr "充電時間のプロファイル"
 
-#: ../src/gpm-statistics.c:103
+#: ../src/gpm-statistics.c:105
 msgid "Discharge profile"
 msgstr "放電時間のプロファイル"
 
 #. TRANSLATORS: how accurately we can predict the time remaining of the
 #. battery
-#: ../src/gpm-statistics.c:105
+#: ../src/gpm-statistics.c:107
 msgid "Charge accuracy"
 msgstr "充電時間の精度"
 
-#: ../src/gpm-statistics.c:106
+#: ../src/gpm-statistics.c:108
 msgid "Discharge accuracy"
 msgstr "放電時間の精度"
 
-#: ../src/gpm-statistics.c:133
+#: ../src/gpm-statistics.c:135
 msgid "Attribute"
 msgstr "属性"
 
-#: ../src/gpm-statistics.c:140
+#: ../src/gpm-statistics.c:142
 msgid "Value"
 msgstr "値"
 
-#: ../src/gpm-statistics.c:157
+#: ../src/gpm-statistics.c:159
 msgid "Image"
 msgstr "画像"
 
-#: ../src/gpm-statistics.c:163
+#: ../src/gpm-statistics.c:165
 msgid "Description"
 msgstr "説明"
 
-#: ../src/gpm-statistics.c:182 ../src/gpm-statistics.c:406
+#: ../src/gpm-statistics.c:184 ../src/gpm-statistics.c:408
 msgid "Type"
 msgstr "種類"
 
-#: ../src/gpm-statistics.c:188
+#: ../src/gpm-statistics.c:190
 msgid "ID"
 msgstr "ID"
 
-#: ../src/gpm-statistics.c:202
+#: ../src/gpm-statistics.c:204
 msgid "Command"
 msgstr "コマンド"
 
 #. TRANSLATORS: this is when the stats time is not known
-#: ../src/gpm-statistics.c:287
+#: ../src/gpm-statistics.c:289
 msgid "Unknown"
 msgstr "不明"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:291
+#: ../src/gpm-statistics.c:293
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
 msgstr[0] "%.0f 秒"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:296
+#: ../src/gpm-statistics.c:298
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
 msgstr[0] "%.1f 分"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:301
+#: ../src/gpm-statistics.c:303
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
 msgstr[0] "%.1f 時間"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:305
+#: ../src/gpm-statistics.c:307
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
 msgstr[0] "%.1f 日"
 
-#: ../src/gpm-statistics.c:314
+#: ../src/gpm-statistics.c:316
 msgid "Yes"
 msgstr "はい"
 
-#: ../src/gpm-statistics.c:314
+#: ../src/gpm-statistics.c:316
 msgid "No"
 msgstr "いいえ"
 
 #. TRANSLATORS: the device ID of the current device, e.g. "battery0"
-#: ../src/gpm-statistics.c:403
+#: ../src/gpm-statistics.c:405
 msgid "Device"
 msgstr "デバイス"
 
-#: ../src/gpm-statistics.c:408
+#: ../src/gpm-statistics.c:410
 msgid "Vendor"
 msgstr "製造元"
 
-#: ../src/gpm-statistics.c:410
+#: ../src/gpm-statistics.c:412
 msgid "Model"
 msgstr "型式"
 
-#: ../src/gpm-statistics.c:412
+#: ../src/gpm-statistics.c:414
 msgid "Serial number"
 msgstr "シリアル番号"
 
@@ -1683,11 +1675,11 @@ msgstr "シリアル番号"
 #. * main power for the computer. For instance, an AC adapter or laptop
 #. battery
 #. * would be TRUE,  but a mobile phone or mouse taking power is FALSE
-#: ../src/gpm-statistics.c:417
+#: ../src/gpm-statistics.c:419
 msgid "Supply"
 msgstr "供給元"
 
-#: ../src/gpm-statistics.c:420
+#: ../src/gpm-statistics.c:422
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -1695,126 +1687,126 @@ msgstr[0] "%d 秒"
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
-#: ../src/gpm-statistics.c:424
+#: ../src/gpm-statistics.c:426
 msgid "Refreshed"
 msgstr "リフレッシュ済"
 
 #. TRANSLATORS: Present is whether the device is currently attached
 #. * to the computer, as some devices (e.g. laptop batteries) can
 #. * be removed, but still observed as devices on the system
-#: ../src/gpm-statistics.c:434
+#: ../src/gpm-statistics.c:436
 msgid "Present"
 msgstr "現在"
 
 #. TRANSLATORS: If the device can be recharged, e.g. lithium
 #. * batteries rather than alkaline ones
-#: ../src/gpm-statistics.c:441
+#: ../src/gpm-statistics.c:443
 msgid "Rechargeable"
 msgstr "再充電可能"
 
 #. TRANSLATORS: The state of the device, e.g. "Changing" or "Fully charged"
-#: ../src/gpm-statistics.c:447
+#: ../src/gpm-statistics.c:449
 msgid "State"
 msgstr "状態"
 
-#: ../src/gpm-statistics.c:451
+#: ../src/gpm-statistics.c:453
 msgid "Energy"
 msgstr "エネルギー"
 
-#: ../src/gpm-statistics.c:454
+#: ../src/gpm-statistics.c:456
 msgid "Energy when empty"
 msgstr "空の時のエネルギー"
 
-#: ../src/gpm-statistics.c:457
+#: ../src/gpm-statistics.c:459
 msgid "Energy when full"
 msgstr "フルの時のエネルギー"
 
-#: ../src/gpm-statistics.c:460
+#: ../src/gpm-statistics.c:462
 msgid "Energy (design)"
 msgstr "エネルギー (設計段階)"
 
-#: ../src/gpm-statistics.c:474
+#: ../src/gpm-statistics.c:476
 msgid "Voltage"
 msgstr "電圧"
 
 #. TRANSLATORS: the amount of charge the cell contains
-#: ../src/gpm-statistics.c:496
+#: ../src/gpm-statistics.c:498
 msgid "Percentage"
 msgstr "充電/放電率"
 
 #. TRANSLATORS: the capacity of the device, which is basically a measure
 #. * of how full it can get, relative to the design capacity
-#: ../src/gpm-statistics.c:503
+#: ../src/gpm-statistics.c:505
 msgid "Capacity"
 msgstr "容量"
 
 #. TRANSLATORS: the type of battery, e.g. lithium or nikel metal hydroxide
-#: ../src/gpm-statistics.c:508
+#: ../src/gpm-statistics.c:510
 msgid "Technology"
 msgstr "使用技術"
 
 #. TRANSLATORS: this is when the device is plugged in, typically
 #. * only shown for the ac adaptor device
-#: ../src/gpm-statistics.c:513
+#: ../src/gpm-statistics.c:515
 msgid "Online"
 msgstr "オンライン"
 
 #. TRANSLATORS: the command line was not provided
-#: ../src/gpm-statistics.c:825
+#: ../src/gpm-statistics.c:827
 msgid "No data"
 msgstr "データなし"
 
 #. TRANSLATORS: kernel module, usually a device driver
-#: ../src/gpm-statistics.c:832 ../src/gpm-statistics.c:837
+#: ../src/gpm-statistics.c:834 ../src/gpm-statistics.c:839
 msgid "Kernel module"
 msgstr "Kernel のモジュール"
 
 #. TRANSLATORS: kernel housekeeping
-#: ../src/gpm-statistics.c:842
+#: ../src/gpm-statistics.c:844
 msgid "Kernel core"
 msgstr "Kernel のコア"
 
 #. TRANSLATORS: interrupt between processors
-#: ../src/gpm-statistics.c:847
+#: ../src/gpm-statistics.c:849
 msgid "Interprocessor interrupt"
 msgstr "プロセッサ間の割り込み"
 
 #. TRANSLATORS: unknown interrupt
-#: ../src/gpm-statistics.c:852
+#: ../src/gpm-statistics.c:854
 msgid "Interrupt"
 msgstr "割り込み"
 
 #. TRANSLATORS: the keyboard and mouse device event
-#: ../src/gpm-statistics.c:899
+#: ../src/gpm-statistics.c:901
 msgid "PS/2 keyboard/mouse/touchpad"
 msgstr "PS/2 キーボード/マウス/タッチパッド"
 
 #. TRANSLATORS: ACPI, the Intel power standard on laptops and desktops
-#: ../src/gpm-statistics.c:902
+#: ../src/gpm-statistics.c:904
 msgid "ACPI"
 msgstr "ACPI"
 
 #. TRANSLATORS: serial ATA is a new style of hard disk interface
-#: ../src/gpm-statistics.c:905
+#: ../src/gpm-statistics.c:907
 msgid "Serial ATA"
 msgstr "シリアル ATA"
 
 #. TRANSLATORS: this is the old-style ATA interface
-#: ../src/gpm-statistics.c:908
+#: ../src/gpm-statistics.c:910
 msgid "ATA host controller"
 msgstr "ATA のホスト・コントローラ"
 
 #. TRANSLATORS: 802.11 wireless adaptor
-#: ../src/gpm-statistics.c:911
+#: ../src/gpm-statistics.c:913
 msgid "Intel wireless adaptor"
 msgstr "Intel の無線アダプタ"
 
 #. TRANSLATORS: a timer is something that fires periodically.
 #. * The parameter is a process name, e.g. "firefox-bin".
 #. * This is shown when the timer wakes up.
-#: ../src/gpm-statistics.c:918 ../src/gpm-statistics.c:923
-#: ../src/gpm-statistics.c:928 ../src/gpm-statistics.c:933
-#: ../src/gpm-statistics.c:938
+#: ../src/gpm-statistics.c:920 ../src/gpm-statistics.c:925
+#: ../src/gpm-statistics.c:930 ../src/gpm-statistics.c:935
+#: ../src/gpm-statistics.c:940
 #, c-format
 msgid "Timer %s"
 msgstr "タイマー %s"
@@ -1822,125 +1814,125 @@ msgstr "タイマー %s"
 #. TRANSLATORS: the parameter is the name of task that's woken up from
 #. sleeping.
 #. * This is shown when the task wakes up.
-#: ../src/gpm-statistics.c:942
+#: ../src/gpm-statistics.c:944
 #, c-format
 msgid "Sleep %s"
 msgstr "スリープ %s"
 
 #. TRANSLATORS: this is the name of a new realtime task.
-#: ../src/gpm-statistics.c:945
+#: ../src/gpm-statistics.c:947
 #, c-format
 msgid "New task %s"
 msgstr "新しいタスク %s"
 
 #. TRANSLATORS: this is the name of a task that's woken to check state.
 #. * This is shown when the task wakes up.
-#: ../src/gpm-statistics.c:949
+#: ../src/gpm-statistics.c:951
 #, c-format
 msgid "Wait %s"
 msgstr "待機 %s"
 
 #. TRANSLATORS: this is the name of a work queue.
 #. * A work queue is a list of work that has to be done.
-#: ../src/gpm-statistics.c:953 ../src/gpm-statistics.c:957
+#: ../src/gpm-statistics.c:955 ../src/gpm-statistics.c:959
 #, c-format
 msgid "Work queue %s"
 msgstr "作業キュー %s"
 
 #. TRANSLATORS: this is when the networking subsystem clears out old entries
-#: ../src/gpm-statistics.c:960
+#: ../src/gpm-statistics.c:962
 #, c-format
 msgid "Network route flush %s"
 msgstr "ネットワーク経路のクリア %s"
 
 #. TRANSLATORS: this is the name of an activity on the USB bus
-#: ../src/gpm-statistics.c:963
+#: ../src/gpm-statistics.c:965
 #, c-format
 msgid "USB activity %s"
 msgstr "USB の稼働 %s"
 
 #. TRANSLATORS: we've timed out of an aligned timer, with the name
-#: ../src/gpm-statistics.c:966
+#: ../src/gpm-statistics.c:968
 #, c-format
 msgid "Wakeup %s"
 msgstr "起床 %s"
 
 #. TRANSLATORS: interupts on the system required for basic operation
-#: ../src/gpm-statistics.c:969
+#: ../src/gpm-statistics.c:971
 msgid "Local interrupts"
 msgstr "ローカルの割り込み"
 
 #. TRANSLATORS: interrupts when a task gets moved from one core to another
-#: ../src/gpm-statistics.c:972
+#: ../src/gpm-statistics.c:974
 msgid "Rescheduling interrupts"
 msgstr "割り込みの再スケジューリング"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1081
+#: ../src/gpm-statistics.c:1083
 msgid "Device Information"
 msgstr "デバイスの情報"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1083
+#: ../src/gpm-statistics.c:1085
 msgid "Device History"
 msgstr "デバイスの履歴"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1085
+#: ../src/gpm-statistics.c:1087
 msgid "Device Profile"
 msgstr "デバイスのプロファイル"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1087
+#: ../src/gpm-statistics.c:1089
 msgid "Processor Wakeups"
 msgstr "プロセッサの起床"
 
 #. TRANSLATORS: this is the X axis on the graph
-#: ../src/gpm-statistics.c:1347 ../src/gpm-statistics.c:1353
-#: ../src/gpm-statistics.c:1359 ../src/gpm-statistics.c:1365
+#: ../src/gpm-statistics.c:1356 ../src/gpm-statistics.c:1362
+#: ../src/gpm-statistics.c:1368 ../src/gpm-statistics.c:1374
 msgid "Time elapsed"
 msgstr "経過時間"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1349
+#: ../src/gpm-statistics.c:1358
 msgid "Power"
 msgstr "電力"
 
 #. TRANSLATORS: this is the Y axis on the graph for the whole battery device
 #. TRANSLATORS: this is the X axis on the graph for the whole battery device
-#: ../src/gpm-statistics.c:1355 ../src/gpm-statistics.c:1399
-#: ../src/gpm-statistics.c:1405 ../src/gpm-statistics.c:1411
-#: ../src/gpm-statistics.c:1417
+#: ../src/gpm-statistics.c:1364 ../src/gpm-statistics.c:1408
+#: ../src/gpm-statistics.c:1414 ../src/gpm-statistics.c:1420
+#: ../src/gpm-statistics.c:1426
 msgid "Cell charge"
 msgstr "携帯の充電"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1361 ../src/gpm-statistics.c:1367
+#: ../src/gpm-statistics.c:1370 ../src/gpm-statistics.c:1376
 msgid "Predicted time"
 msgstr "予定時間"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1401 ../src/gpm-statistics.c:1413
+#: ../src/gpm-statistics.c:1410 ../src/gpm-statistics.c:1422
 msgid "Correction factor"
 msgstr "修正の要因"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1407 ../src/gpm-statistics.c:1419
+#: ../src/gpm-statistics.c:1416 ../src/gpm-statistics.c:1428
 msgid "Prediction accuracy"
 msgstr "予測精度"
 
 #. TRANSLATORS: show a device by default
-#: ../src/gpm-statistics.c:1584
+#: ../src/gpm-statistics.c:1598
 msgid "Select this device at startup"
 msgstr "起動時にこのデバイスを選択する"
 
 #. TRANSLATORS: the icon for the CPU
-#: ../src/gpm-statistics.c:1839
+#: ../src/gpm-statistics.c:1864
 msgid "Processor"
 msgstr "プロセッサ"
 
 #: ../src/gpm-tray-icon.c:189
-msgid "Copyright © 2011-2014 MATE developers"
+msgid "Copyright © 2011-2016 MATE developers"
 msgstr ""
 
 #. Translators should localize the following string
@@ -1950,20 +1942,32 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 
+#. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
+#: ../src/gpm-tray-icon.c:297
+#, c-format
+msgid "%s remaining"
+msgstr ""
+
 #. preferences
-#: ../src/gpm-tray-icon.c:330
+#: ../src/gpm-tray-icon.c:351
 msgid "_Preferences"
 msgstr "設定(_P)"
 
+#. TRANSLATORS: device not present
+#: ../src/gpm-upower.c:211
+#, c-format
+msgid "%s not present"
+msgstr ""
+
 #. TRANSLATORS: a phone is charging
 #. TRANSLATORS: device is charging, but we only have a percentage
-#: ../src/gpm-upower.c:221 ../src/gpm-upower.c:285
+#: ../src/gpm-upower.c:224 ../src/gpm-upower.c:288
 #, c-format
 msgid "%s charging (%.1f%%)"
 msgstr "%sの充電が %.1f%% 完了しました"
 
 #. TRANSLATORS: The laptop battery is fully charged, and we know a time
-#: ../src/gpm-upower.c:236
+#: ../src/gpm-upower.c:239
 #, c-format
 msgid ""
 "Battery is fully charged.\n"
@@ -1971,25 +1975,25 @@ msgid ""
 msgstr "充電が完了しました。\\n%s 動作します。"
 
 #. TRANSLATORS: the device is fully charged
-#: ../src/gpm-upower.c:241
+#: ../src/gpm-upower.c:244
 #, c-format
 msgid "%s is fully charged"
 msgstr "%s の充電が完了しました"
 
 #. TRANSLATORS: the device is discharging, and we have a time remaining
-#: ../src/gpm-upower.c:249
+#: ../src/gpm-upower.c:252
 #, c-format
 msgid "%s %s remaining (%.1f%%)"
 msgstr "%sの残量は %s (%.1f%%) です"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-upower.c:254
+#: ../src/gpm-upower.c:257
 #, c-format
 msgid "%s discharging (%.1f%%)"
 msgstr "%sは放電中で残り %.1f%% です"
 
 #. TRANSLATORS: the device is charging, and we have a time to full and empty
-#: ../src/gpm-upower.c:268
+#: ../src/gpm-upower.c:271
 #, c-format
 msgid ""
 "%s %s until charged (%.1f%%)\n"
@@ -1998,25 +2002,31 @@ msgstr "%sは充電完了まで %s あります (現在 %.1f%% 完了)\nバッ�
 
 #. TRANSLATORS: device is charging, and we have a time to full and a
 #. percentage
-#: ../src/gpm-upower.c:279
+#: ../src/gpm-upower.c:282
 #, c-format
 msgid "%s %s until charged (%.1f%%)"
 msgstr "%sは充電完了まで %s あります (現在 %.1f%% 完了)"
 
 #. TRANSLATORS: this is only shown for laptops with multiple batteries
-#: ../src/gpm-upower.c:292
+#: ../src/gpm-upower.c:295
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
 msgstr "%s 放電待ち (%.1f%%)"
 
 #. TRANSLATORS: this is only shown for laptops with multiple batteries
-#: ../src/gpm-upower.c:298
+#: ../src/gpm-upower.c:301
 #, c-format
 msgid "%s waiting to charge (%.1f%%)"
 msgstr "%s 充電待ち (%.1f%%)"
 
+#. TRANSLATORS: when the device has no charge left
+#: ../src/gpm-upower.c:306
+#, c-format
+msgid "%s empty"
+msgstr ""
+
 #. TRANSLATORS: the type of data, e.g. Laptop battery
-#: ../src/gpm-upower.c:357
+#: ../src/gpm-upower.c:366
 msgid "Product:"
 msgstr "製品:"
 
@@ -2024,220 +2034,220 @@ msgstr "製品:"
 #. TRANSLATORS: device is charged
 #. TRANSLATORS: device is charging
 #. TRANSLATORS: device is discharging
-#: ../src/gpm-upower.c:361 ../src/gpm-upower.c:364 ../src/gpm-upower.c:367
-#: ../src/gpm-upower.c:370
+#: ../src/gpm-upower.c:370 ../src/gpm-upower.c:373 ../src/gpm-upower.c:376
+#: ../src/gpm-upower.c:379
 msgid "Status:"
 msgstr "状態:"
 
-#: ../src/gpm-upower.c:361
+#: ../src/gpm-upower.c:370
 msgid "Missing"
 msgstr "充電不足"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:364 ../src/gpm-upower.c:641
+#: ../src/gpm-upower.c:373 ../src/gpm-upower.c:650
 msgid "Charged"
 msgstr "充電完了"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:367 ../src/gpm-upower.c:629
+#: ../src/gpm-upower.c:376 ../src/gpm-upower.c:638
 msgid "Charging"
 msgstr "充電中"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:370 ../src/gpm-upower.c:633
+#: ../src/gpm-upower.c:379 ../src/gpm-upower.c:642
 msgid "Discharging"
 msgstr "放電中"
 
 #. TRANSLATORS: percentage
-#: ../src/gpm-upower.c:375
+#: ../src/gpm-upower.c:384
 msgid "Percentage charge:"
 msgstr "充電率:"
 
 #. TRANSLATORS: manufacturer
-#: ../src/gpm-upower.c:379
+#: ../src/gpm-upower.c:388
 msgid "Vendor:"
 msgstr "製造元:"
 
 #. TRANSLATORS: how the battery is made, e.g. Lithium Ion
-#: ../src/gpm-upower.c:384
+#: ../src/gpm-upower.c:393
 msgid "Technology:"
 msgstr "使用技術:"
 
 #. TRANSLATORS: serial number of the battery
-#: ../src/gpm-upower.c:388
+#: ../src/gpm-upower.c:397
 msgid "Serial number:"
 msgstr "シリアル番号:"
 
 #. TRANSLATORS: model number of the battery
-#: ../src/gpm-upower.c:392
+#: ../src/gpm-upower.c:401
 msgid "Model:"
 msgstr "型式:"
 
 #. TRANSLATORS: time to fully charged
-#: ../src/gpm-upower.c:397
+#: ../src/gpm-upower.c:406
 msgid "Charge time:"
 msgstr "充電時間:"
 
 #. TRANSLATORS: time to empty
-#: ../src/gpm-upower.c:403
+#: ../src/gpm-upower.c:412
 msgid "Discharge time:"
 msgstr "放電時間:"
 
 #. TRANSLATORS: Excellent, Good, Fair and Poor are all related to battery
 #. Capacity
-#: ../src/gpm-upower.c:410
+#: ../src/gpm-upower.c:419
 msgid "Excellent"
 msgstr "良好"
 
-#: ../src/gpm-upower.c:412
+#: ../src/gpm-upower.c:421
 msgid "Good"
 msgstr "良い"
 
-#: ../src/gpm-upower.c:414
+#: ../src/gpm-upower.c:423
 msgid "Fair"
 msgstr "充分"
 
-#: ../src/gpm-upower.c:416
+#: ../src/gpm-upower.c:425
 msgid "Poor"
 msgstr "わずか"
 
-#: ../src/gpm-upower.c:420
+#: ../src/gpm-upower.c:429
 msgid "Capacity:"
 msgstr "容量:"
 
-#: ../src/gpm-upower.c:426 ../src/gpm-upower.c:451
+#: ../src/gpm-upower.c:435 ../src/gpm-upower.c:460
 msgid "Current charge:"
 msgstr "現在の充電:"
 
-#: ../src/gpm-upower.c:432
+#: ../src/gpm-upower.c:441
 msgid "Last full charge:"
 msgstr "最後の完全充電:"
 
-#: ../src/gpm-upower.c:438 ../src/gpm-upower.c:456
+#: ../src/gpm-upower.c:447 ../src/gpm-upower.c:465
 msgid "Design charge:"
 msgstr "出荷時充電容量:"
 
-#: ../src/gpm-upower.c:443
+#: ../src/gpm-upower.c:452
 msgid "Charge rate:"
 msgstr "充電率:"
 
 #. TRANSLATORS: system power cord
-#: ../src/gpm-upower.c:478
+#: ../src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
 msgstr[0] "AC アダプタ"
 
 #. TRANSLATORS: laptop primary battery
-#: ../src/gpm-upower.c:482
+#: ../src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
 msgstr[0] "ノート PC のバッテリー"
 
 #. TRANSLATORS: battery-backed AC power source
-#: ../src/gpm-upower.c:486
+#: ../src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
 msgstr[0] "UPS"
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
-#: ../src/gpm-upower.c:490
+#: ../src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
 msgstr[0] "モニタ"
 
 #. TRANSLATORS: wireless mice with internal batteries
-#: ../src/gpm-upower.c:494
+#: ../src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
 msgstr[0] "マウス"
 
 #. TRANSLATORS: wireless keyboard with internal battery
-#: ../src/gpm-upower.c:498
+#: ../src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
 msgstr[0] "キーボード"
 
 #. TRANSLATORS: portable device
-#: ../src/gpm-upower.c:502
+#: ../src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
 msgstr[0] "PDA"
 
 #. TRANSLATORS: cell phone (mobile...)
-#: ../src/gpm-upower.c:506
+#: ../src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
 msgstr[0] "携帯電話機"
 
 #. TRANSLATORS: media player, mp3 etc
-#: ../src/gpm-upower.c:510
+#: ../src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
 msgstr[0] "メディアプレイヤー"
 
 #. TRANSLATORS: tablet device
-#: ../src/gpm-upower.c:514
+#: ../src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
 msgstr[0] "タブレット"
 
 #. TRANSLATORS: tablet device
-#: ../src/gpm-upower.c:518
+#: ../src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
 msgstr[0] "コンピュータ"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:585
+#: ../src/gpm-upower.c:594
 msgid "Lithium Ion"
 msgstr "リチウム・イオン"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:589
+#: ../src/gpm-upower.c:598
 msgid "Lithium Polymer"
 msgstr "リチウム・ポリマー"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:593
+#: ../src/gpm-upower.c:602
 msgid "Lithium Iron Phosphate"
 msgstr "リン酸鉄リチウム"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:597
+#: ../src/gpm-upower.c:606
 msgid "Lead acid"
 msgstr "鉛蓄電池"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:601
+#: ../src/gpm-upower.c:610
 msgid "Nickel Cadmium"
 msgstr "ニッケル・カドミウム"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:605
+#: ../src/gpm-upower.c:614
 msgid "Nickel metal hydride"
 msgstr "ニッケル金属ハイブリッド"
 
 #. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:609
+#: ../src/gpm-upower.c:618
 msgid "Unknown technology"
 msgstr "不明"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:637
+#: ../src/gpm-upower.c:646
 msgid "Empty"
 msgstr "空"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:645
+#: ../src/gpm-upower.c:654
 msgid "Waiting to charge"
 msgstr "充電待ち"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:649
+#: ../src/gpm-upower.c:658
 msgid "Waiting to discharge"
 msgstr "放電待ち"
 
 #. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:653
+#: ../src/gpm-upower.c:662
 msgid "Unknown state"
 msgstr ""
