@@ -339,7 +339,7 @@ expose_when_composited (GtkWidget *widget, GdkEventExpose *event)
         cairo_paint_with_alpha (context, window->priv->fade_out_alpha);
 #endif
 
- done:
+done:
         if (surface != NULL) {
                 cairo_surface_destroy (surface);
         }

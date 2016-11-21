@@ -22,7 +22,7 @@
  */
 
 #ifdef HAVE_CONFIG_H
-#  include <config.h>
+#include <config.h>
 #endif
 
 #include <stdio.h>
@@ -71,8 +71,8 @@ typedef struct{
 GType                gpm_brightness_applet_get_type  (void);
 
 
-#define	GPM_DBUS_SERVICE		        "org.mate.PowerManager"
-#define	GPM_DBUS_PATH_BACKLIGHT		    "/org/mate/PowerManager/Backlight"
+#define	GPM_DBUS_SERVICE		"org.mate.PowerManager"
+#define	GPM_DBUS_PATH_BACKLIGHT		"/org/mate/PowerManager/Backlight"
 #define	GPM_DBUS_INTERFACE_BACKLIGHT	"org.mate.PowerManager.Backlight"
 
 static void      gpm_brightness_applet_class_init (GpmBrightnessAppletClass *klass);
