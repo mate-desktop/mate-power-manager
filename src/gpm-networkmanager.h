@@ -22,6 +22,8 @@
 #ifndef __GPM_NETWORKMANAGER_H
 #define __GPM_NETWORKMANAGER_H
 
+#include <glib.h>
+
 G_BEGIN_DECLS
 
 gboolean	gpm_networkmanager_sleep		(void);
