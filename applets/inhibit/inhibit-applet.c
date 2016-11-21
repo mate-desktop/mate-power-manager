@@ -248,26 +248,15 @@ static gboolean
 gpm_applet_draw_cb (GpmInhibitApplet *applet)
 {
 	gint w, h, bg_type;
-#if GTK_CHECK_VERSION (3, 0, 0)
 	GdkRGBA color;
 	cairo_t *cr;
 	cairo_pattern_t *pattern;
 	GtkStyleContext *context;
-#else
-	GdkColor color;
-	GdkGC *gc;
-	GdkPixmap *background;
-#endif
 	GtkAllocation allocation;
 
 	if (gtk_widget_get_window (GTK_WIDGET(applet)) == NULL) {
 		return FALSE;
 	}
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	/* Clear the window so we can draw on it later */
-	gdk_window_clear(gtk_widget_get_window (GTK_WIDGET (applet)));
-#endif
 
 	/* retrieve applet size */
 	gpm_applet_get_icon (applet);
@@ -285,58 +274,29 @@ gpm_applet_draw_cb (GpmInhibitApplet *applet)
 	w = allocation.width;
 	h = allocation.height;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	cr = gdk_cairo_create (gtk_widget_get_window (GTK_WIDGET(applet)));
-#else
-	gc = gdk_gc_new (gtk_widget_get_window (GTK_WIDGET(applet)));
-#endif
 
 	/* draw pixmap background */
-#if GTK_CHECK_VERSION (3, 0, 0)
 	bg_type = mate_panel_applet_get_background (MATE_PANEL_APPLET (applet), &color, &pattern);
-#else
-	bg_type = mate_panel_applet_get_background (MATE_PANEL_APPLET (applet), &color, &background);
-#endif
 	if (bg_type == PANEL_PIXMAP_BACKGROUND) {
 		/* fill with given background pixmap */
-#if GTK_CHECK_VERSION (3, 0, 0)
 		cairo_set_source (cr, pattern);
 		cairo_rectangle (cr, 0, 0, w, h);
 		cairo_fill (cr);
-#else
-		gdk_draw_drawable (gtk_widget_get_window (GTK_WIDGET(applet)), gc, background, 0, 0, 0, 0, w, h);
-#endif
 	}
 	
 	/* draw color background */
 	if (bg_type == PANEL_COLOR_BACKGROUND) {
-#if GTK_CHECK_VERSION (3, 0, 0)
 		gdk_cairo_set_source_rgba (cr, &color);
 		cairo_rectangle (cr, 0, 0, w, h);
 		cairo_fill (cr);
-#else
-		gdk_gc_set_rgb_fg_color (gc,&color);
-		gdk_gc_set_fill (gc,GDK_SOLID);
-		gdk_draw_rectangle (gtk_widget_get_window (GTK_WIDGET(applet)), gc, TRUE, 0, 0, w, h);
-#endif
 	}
 
 	/* draw icon at center */
-#if GTK_CHECK_VERSION (3, 0, 0)
 	gdk_cairo_set_source_pixbuf (cr, applet->icon, (w - applet->icon_width)/2, (h - applet->icon_height)/2);
 	cairo_paint (cr);
-#else
-	gdk_draw_pixbuf (gtk_widget_get_window (GTK_WIDGET(applet)), gc, applet->icon,
-			 0, 0, (w - applet->icon_width)/2, (h - applet->icon_height)/2,
-			 applet->icon_width, applet->icon_height,
-			 GDK_RGB_DITHER_NONE, 0, 0);
-#endif
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	cairo_destroy (cr);
-#else
-	g_object_unref (gc);
-#endif
 
 	return TRUE;
 }
@@ -349,11 +309,7 @@ gpm_applet_draw_cb (GpmInhibitApplet *applet)
 static void
 gpm_applet_change_background_cb (GpmInhibitApplet *applet,
 				 MatePanelAppletBackgroundType arg1,
-#if GTK_CHECK_VERSION (3, 0, 0)
 				 cairo_pattern_t *arg2,
-#else
-				 GdkColor *arg2, GdkPixmap *arg3,
-#endif
 				 gpointer data)
 {
 	gtk_widget_queue_draw (GTK_WIDGET (applet));
@@ -645,13 +601,8 @@ gpm_inhibit_applet_init (GpmInhibitApplet *applet)
 	g_signal_connect (G_OBJECT(applet), "button-press-event",
 			  G_CALLBACK(gpm_applet_click_cb), NULL);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	g_signal_connect (G_OBJECT(applet), "draw",
 			  G_CALLBACK(gpm_applet_draw_cb), NULL);
-#else
-	g_signal_connect (G_OBJECT(applet), "expose-event",
-			  G_CALLBACK(gpm_applet_draw_cb), NULL);
-#endif
 
 	/* We use g_signal_connect_after because letting the panel draw
 	 * the background is the only way to have the correct

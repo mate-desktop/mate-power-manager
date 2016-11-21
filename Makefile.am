@@ -35,8 +35,7 @@ DISTCLEANFILES =					\
 DISTCHECK_CONFIGURE_FLAGS =   \
 	--disable-schemas-install \
 	--disable-applets         \
-	--disable-tests \
-	--with-gtk=$(GTK_API_VERSION)
+	--disable-tests
 
 # Build ChangeLog from GIT  history
 ChangeLog:

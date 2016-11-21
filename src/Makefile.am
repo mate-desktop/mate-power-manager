@@ -39,10 +39,6 @@ AM_CPPFLAGS =						\
 	-I$(top_srcdir)					\
 	$(DISABLE_DEPRECATED)
 
-if !GTK3
-AM_CPPFLAGS +=	$(UNIQUE_CFLAGS)
-endif
-
 AM_CPPFLAGS += $(NULL)
 
 bin_PROGRAMS =						\
@@ -85,12 +81,6 @@ libgpmshared_a_SOURCES =				\
 	gpm-upower.c					\
 	gpm-upower.h
 
-if !GTK3
-libgpmshared_a_SOURCES +=	egg-unique.h egg-unique.c
-endif
-
-libgpmshared_a_SOURCES += $(NULL)
-
 mate_power_backlight_helper_SOURCES =			\
 	gpm-backlight-helper.c				\
 	$(NULL)
@@ -121,10 +111,6 @@ mate_power_statistics_LDADD =				\
 	$(DBUS_LIBS)					\
 	-lm
 
-if !GTK3
-mate_power_statistics_LDADD += $(UNIQUE_LIBS)
-endif
-
 mate_power_statistics_CFLAGS =				\
 	$(WARNINGFLAGS)					\
 	$(NULL)
@@ -144,10 +130,6 @@ mate_power_preferences_LDADD =				\
 	$(GPM_EXTRA_LIBS)				\
 	$(UPOWER_LIBS)					\
 	-lm
-
-if !GTK3
-mate_power_preferences_LDADD += $(UNIQUE_LIBS)
-endif
 
 mate_power_preferences_CFLAGS =			\
 	$(WARNINGFLAGS)					\

@@ -50,12 +50,8 @@ typedef struct
 
 GType		 gpm_prefs_get_type			(void);
 GpmPrefs	*gpm_prefs_new				(void);
-#if GTK_CHECK_VERSION (3, 0, 0)
 GtkWidget	*gpm_window				(GpmPrefs	*prefs);
 void		 gpm_prefs_activate_window		(GtkApplication *app, GpmPrefs	*prefs);
-#else
-void		 gpm_prefs_activate_window		(GpmPrefs	*prefs);
-#endif
 
 G_END_DECLS
 

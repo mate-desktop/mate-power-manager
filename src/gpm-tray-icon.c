@@ -355,7 +355,6 @@ gpm_tray_icon_create_menu (GpmTrayIcon *icon)
 			  G_CALLBACK (gpm_tray_icon_show_preferences_cb), icon);
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
 	
-#if GTK_CHECK_VERSION (3, 0, 0)
 	/*Set up custom panel menu theme support-gtk3 only */
 	GtkWidget *toplevel = gtk_widget_get_toplevel (GTK_WIDGET (menu));
 	/* Fix any failures of compiz/other wm's to communicate with gtk for transparency in menu theme */
@@ -367,7 +366,6 @@ gpm_tray_icon_create_menu (GpmTrayIcon *icon)
 	context = gtk_widget_get_style_context (GTK_WIDGET(toplevel));
 	gtk_style_context_add_class(context,"gnome-panel-menu-bar");
 	gtk_style_context_add_class(context,"mate-panel-menu-bar");
-#endif
 
 	/* about */
 	item = gtk_image_menu_item_new_from_stock (GTK_STOCK_ABOUT, NULL);

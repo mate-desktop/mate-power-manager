@@ -1,6 +1,6 @@
 AC_PREREQ(2.63)
 
-AC_INIT([mate-power-manager], [1.16.0], [http://www.mate-desktop.org/])
+AC_INIT([mate-power-manager], [1.17.0], [http://www.mate-desktop.org/])
 AC_CONFIG_SRCDIR(src)
 AM_INIT_AUTOMAKE([1.9 no-dist-gzip dist-xz check-news tar-ustar])
 AC_CONFIG_HEADERS([config.h])
@@ -120,53 +120,24 @@ dnl - Library dependencies
 dnl ----------------------------------------------------------------------------
 GLIB_REQUIRED=2.36.0
 GIO_REQUIRED=2.36.0
-GDK_REQUIRED=2.11.0
+GDK_REQUIRED=3.14.0
+GTK_REQUIRED=3.14.0
 GNOME_KEYRING_REQUIRED=3.0.0
 DBUS_REQUIRED=1.0
 DBUS_GLIB_REQUIRED=0.70
 LIBNOTIFY_REQUIRED=0.7.0
 CAIRO_REQUIRED=1.0.0
-UNIQUE_REQUIRED=0.9.4
-LIBPANEL_REQUIRED=1.5.0
+LIBPANEL_REQUIRED=1.17.0
 XRANDR_REQUIRED=1.3.0
 CANBERRA_REQUIRED=0.10
 UPOWER_REQUIRED=0.9.5
-
-dnl ----------------------------------------------------------------------------
-dnl GTK library version
-dnl ----------------------------------------------------------------------------
-
-AC_MSG_CHECKING([which gtk+ version to compile against])
-AC_ARG_WITH([gtk],
-	[AS_HELP_STRING([--with-gtk=2.0|3.0],[which gtk+ version to compile against (default: 2.0)])],
-	[case "$with_gtk" in
-		2.0|3.0) ;;
-		*) AC_MSG_ERROR([invalid gtk version specified]) ;;
-	 esac],
-	[with_gtk=2.0])
-AC_MSG_RESULT([$with_gtk])
-
-case "$with_gtk" in
-	2.0) GTK_API_VERSION=2.0
-		GTK_REQUIRED=2.24.0
-		CANBERRA_GTK=libcanberra-gtk
-		LIBUNIQUE_VERSION=1.0
-		;;
-	3.0) GTK_API_VERSION=3.0
-		GTK_REQUIRED=3.0.0
-		CANBERRA_GTK=libcanberra-gtk3
-		;;
-esac
-
-AM_CONDITIONAL([GTK3], [test $GTK_REQUIRED = 3.0.0])
-AC_SUBST(GTK_API_VERSION)
 
 dnl ---------------------------------------------------------------------------
 dnl - Check library dependencies
 dnl ---------------------------------------------------------------------------
 PKG_CHECK_MODULES(GLIB, glib-2.0 >= $GLIB_REQUIRED gobject-2.0 gio-2.0 >= $GIO_REQUIRED gio-unix-2.0)
 
-PKG_CHECK_MODULES(CANBERRA, $CANBERRA_GTK >= $CANBERRA_REQUIRED)
+PKG_CHECK_MODULES(CANBERRA, libcanberra-gtk3 >= $CANBERRA_REQUIRED)
 
 PKG_CHECK_MODULES(DBUS,[
  dbus-glib-1 >= $DBUS_GLIB_REQUIRED
@@ -174,12 +145,12 @@ PKG_CHECK_MODULES(DBUS,[
  gthread-2.0])
 
 PKG_CHECK_MODULES(CAIRO, [
- gtk+-$GTK_API_VERSION >= $GTK_REQUIRED
+ gtk+-3.0 >= $GTK_REQUIRED
  cairo >= $CAIRO_REQUIRED])
 
 PKG_CHECK_MODULES(GDK, [
- gdk-$GTK_API_VERSION >= $GDK_REQUIRED
- gdk-x11-$GTK_API_VERSION >= $GDK_REQUIRED])
+ gdk-3.0 >= $GDK_REQUIRED
+ gdk-x11-3.0 >= $GDK_REQUIRED])
 
 PKG_CHECK_MODULES(X11, [
  xrandr >= $XRANDR_REQUIRED
@@ -188,19 +159,6 @@ PKG_CHECK_MODULES(X11, [
 PKG_CHECK_MODULES(X11, x11 xrender)
 
 PKG_CHECK_MODULES(LIBNOTIFY, libnotify >= $LIBNOTIFY_REQUIRED)
-
-if test "$GTK_REQUIRED" != "3.0.0"; then
-PKG_CHECK_MODULES(UNIQUE, unique-$LIBUNIQUE_VERSION)
-
-AC_SUBST([UNIQUE_CFLAGS])
-AC_SUBST([UNIQUE_LIBS])
-
-# this deprecated stuff should be removed from unique in most distros
-# but it's still not removed upstream in unique 1.x, so leaving it alone
-# just in case.
-UNIQUE_CFLAGS="$UNIQUE_CFLAGS -DG_CONST_RETURN=const"
-fi
-
 
 PKG_CHECK_MODULES(UPOWER, upower-glib >= $UPOWER_REQUIRED)
 
@@ -401,7 +359,6 @@ echo "
         gnome-keyring support:     ${with_keyring}
         Building extra applets:    ${enable_applets}
         Self test support:         ${have_tests}
-        GTK+ API version:          ${GTK_API_VERSION}
         Docbook support:           ${enable_docbook_docs}
         documentation dir:         $DOCDIR
         dbus-1 services dir:       $DBUS_SERVICES_DIR

@@ -171,11 +171,7 @@ gpm_button_grab_keystring (GpmButton *button, guint64 keycode)
 
 	/* we are not processing the error */
 	gdk_flush ();
-#if GTK_CHECK_VERSION (3, 0, 0)
 	gdk_error_trap_pop_ignored ();
-#else
-	gdk_error_trap_pop ();
-#endif
 
 	egg_debug ("Grabbed modmask=%x, keycode=%li", modmask, (long int) keycode);
 	return TRUE;

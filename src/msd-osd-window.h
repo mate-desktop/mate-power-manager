@@ -70,11 +70,7 @@ struct MsdOsdWindow {
 struct MsdOsdWindowClass {
         GtkWindowClass parent_class;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
         void (* draw_when_composited) (MsdOsdWindow *window, cairo_t *cr);
-#else
-        void (* expose_when_composited) (MsdOsdWindow *window, cairo_t *cr);
-#endif
 };
 
 GType                 msd_osd_window_get_type          (void);
@@ -83,19 +79,6 @@ GtkWidget *           msd_osd_window_new               (void);
 gboolean              msd_osd_window_is_composited     (MsdOsdWindow      *window);
 gboolean              msd_osd_window_is_valid          (MsdOsdWindow      *window);
 void                  msd_osd_window_update_and_hide   (MsdOsdWindow      *window);
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-void                  msd_osd_window_draw_rounded_rectangle (cairo_t *cr,
-                                                             gdouble  aspect,
-                                                             gdouble  x,
-                                                             gdouble  y,
-                                                             gdouble  corner_radius,
-                                                             gdouble  width,
-                                                             gdouble  height);
-
-void                  msd_osd_window_color_reverse          (const GdkColor *a,
-                                                             GdkColor       *b);
-#endif
 
 #ifdef __cplusplus
 }

@@ -5,7 +5,6 @@ AM_CPPFLAGS =							\
 	$(CAIRO_CFLAGS)						\
 	$(PANEL_CFLAGS)						\
 	$(LIBNOTIFY_CFLAGS)					\
-	$(GTKUNIQUE_CFLAGS)					\
 	-DBINDIR=\"$(bindir)\"			 		\
 	-DMATELOCALEDIR=\""$(datadir)/locale"\"	 	\
 	-DDATADIR=\"$(datadir)\"				\

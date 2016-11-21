@@ -36,7 +36,6 @@
 
 #include <glib.h>
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
 
 #include "egg-debug.h"
 #include "egg-idletime.h"

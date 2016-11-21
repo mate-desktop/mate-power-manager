@@ -402,29 +402,14 @@ draw_volume_boxes (MsdMediaKeysWindow *window,
                    double              height)
 {
         gdouble   x1;
-#if GTK_CHECK_VERSION (3, 0, 0)
         GtkStyleContext *context;
-#else
-        GdkColor  color;
-        double    r, g, b;
-        GtkStyle *style;
-#endif
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
-        _x0 += 0.5;
-        _y0 += 0.5;
-#endif
         height = round (height) - 1;
         width = round (width) - 1;
         x1 = round ((width - 1) * percentage);
-#if GTK_CHECK_VERSION (3, 0, 0)
         context = gtk_widget_get_style_context (GTK_WIDGET (window));
-#else
-        style = gtk_widget_get_style (GTK_WIDGET (window));
-#endif
 
         /* bar background */
-#if GTK_CHECK_VERSION (3, 0, 0)
         gtk_style_context_save (context);
         gtk_style_context_add_class (context, GTK_STYLE_CLASS_TROUGH);
 
@@ -444,35 +429,6 @@ draw_volume_boxes (MsdMediaKeysWindow *window,
         gtk_render_frame (context, cr, _x0 + 0.5, _y0 + 0.5, x1, height -1 );
 
         gtk_style_context_restore (context);
-#else
-        msd_osd_window_color_reverse (&style->dark[GTK_STATE_NORMAL], &color);
-        r = (float)color.red / 65535.0;
-        g = (float)color.green / 65535.0;
-        b = (float)color.blue / 65535.0;
-        msd_osd_window_draw_rounded_rectangle (cr, 1.0, _x0, _y0, height / 6, width, height);
-        cairo_set_source_rgba (cr, r, g, b, MSD_OSD_WINDOW_FG_ALPHA / 2);
-        cairo_fill_preserve (cr);
-
-        /* bar border */
-        msd_osd_window_color_reverse (&style->light[GTK_STATE_NORMAL], &color);
-        r = (float)color.red / 65535.0;
-        g = (float)color.green / 65535.0;
-        b = (float)color.blue / 65535.0;
-        cairo_set_source_rgba (cr, r, g, b, MSD_OSD_WINDOW_FG_ALPHA / 2);
-        cairo_set_line_width (cr, 1);
-        cairo_stroke (cr);
-
-        /* bar progress */
-        if (percentage < 0.01)
-                return;
-        color = style->bg[GTK_STATE_NORMAL];
-        r = (float)color.red / 65535.0;
-        g = (float)color.green / 65535.0;
-        b = (float)color.blue / 65535.0;
-        msd_osd_window_draw_rounded_rectangle (cr, 1.0, _x0 + 0.5, _y0 + 0.5, height / 6 - 0.5, x1, height - 1);
-        cairo_set_source_rgba (cr, r, g, b, MSD_OSD_WINDOW_FG_ALPHA);
-        cairo_fill (cr);
-#endif
 }
 
 static void
@@ -664,11 +620,7 @@ draw_action_custom (MsdMediaKeysWindow *window,
 }
 
 static void
-#if GTK_CHECK_VERSION (3, 0, 0)
 msd_media_keys_window_draw_when_composited (MsdOsdWindow *osd_window,
-#else
-msd_media_keys_window_expose_when_composited (MsdOsdWindow *osd_window,
-#endif
                                               cairo_t      *cr)
 {
         MsdMediaKeysWindow *window = MSD_MEDIA_KEYS_WINDOW (osd_window);
@@ -690,11 +642,7 @@ msd_media_keys_window_class_init (MsdMediaKeysWindowClass *klass)
 {
         MsdOsdWindowClass *osd_window_class = MSD_OSD_WINDOW_CLASS (klass);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
         osd_window_class->draw_when_composited = msd_media_keys_window_draw_when_composited;
-#else
-        osd_window_class->expose_when_composited = msd_media_keys_window_expose_when_composited;
-#endif
 
         g_type_class_add_private (klass, sizeof (MsdMediaKeysWindowPrivate));
 }

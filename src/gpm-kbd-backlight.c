@@ -32,10 +32,6 @@
 #include "gpm-kbd-backlight.h"
 #include "gsd-media-keys-window.h"
 
-#if !GTK_CHECK_VERSION(3,0,0)
-#define gtk_widget_get_preferred_size(x,y,z) gtk_widget_size_request(x,y)
-#endif
-
 #define GPM_KBD_BACKLIGHT_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_KBD_BACKLIGHT, GpmKbdBacklightPrivate))
 
 struct GpmKbdBacklightPrivate
@@ -190,11 +186,9 @@ gpm_kbd_backlight_dialog_show (GpmKbdBacklight *backlight)
 	GdkScreen     *pointer_screen;
 	GdkRectangle   geometry;
 	int            monitor;
-#if GTK_CHECK_VERSION(3,0,0)
         GdkDisplay    *display;
         GdkDeviceManager *device_manager;
         GdkDevice     *device;
-#endif
 
 	/*
 	 * get the window size
@@ -212,7 +206,6 @@ gpm_kbd_backlight_dialog_show (GpmKbdBacklight *backlight)
 	}
 
 	pointer_screen = NULL;
-#if GTK_CHECK_VERSION(3,0,0)
         display = gtk_widget_get_display (backlight->priv->popup);
         device_manager = gdk_display_get_device_manager (display);
         device = gdk_device_manager_get_client_pointer (device_manager);
@@ -220,13 +213,7 @@ gpm_kbd_backlight_dialog_show (GpmKbdBacklight *backlight)
 				 &pointer_screen,
 				 &pointer_x,
 				 &pointer_y);
-#else
-	gdk_display_get_pointer (gtk_widget_get_display (backlight->priv->popup),
-				 &pointer_screen,
-				 &pointer_x,
-				 &pointer_y,
-				 NULL);
-#endif
+
 	monitor = gdk_screen_get_monitor_at_point (pointer_screen,
 						   pointer_x,
 						   pointer_y);
