@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Kiril Kirilov <cybercop_montana@abv.bg>, 2013
+# Любомир Василев, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-01 17:44+0300\n"
-"PO-Revision-Date: 2016-08-01 14:45+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>\n"
+"PO-Revision-Date: 2016-11-07 14:44+0000\n"
+"Last-Translator: Любомир Василев\n"
 "Language-Team: Bulgarian (http://www.transifex.com/mate/MATE/language/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +21,7 @@ msgstr ""
 
 #: ../applets/brightness/brightness-applet.c:117
 msgid "Power Manager Brightness Applet"
-msgstr "Аплет за захранването за управление на яркостта"
+msgstr "Аплет за захранването и управление на яркостта"
 
 #: ../applets/brightness/brightness-applet.c:118
 msgid "Adjusts laptop panel brightness."
@@ -149,7 +150,7 @@ msgstr "Дали компютърът да се приспива, дълбоко
 #: ../data/org.mate.power-manager.gschema.xml.in.h:2
 msgid ""
 "The type of sleeping that should be performed when the computer is inactive."
-msgstr ""
+msgstr "Видът на приспиването при бездействие на компютъра."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:3
 msgid "Battery critical low action"
@@ -210,27 +211,27 @@ msgstr "Дали екранът на компютъра да бъде затъм
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:15
 msgid "Reduce the keyboard backlight when on battery power"
-msgstr ""
+msgstr "Затъмняване на подсветката на клавиатурата при захранване от батерии"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:16
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
-msgstr ""
+msgstr "Дали подсветката на клавиатурата да бъде затъмнена когато компютърът се захранва от батерии."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:17
 msgid "Keyboard backlight brightness when on AC power."
-msgstr ""
+msgstr "Яркост на подсветката на клавиатурата при захранване от ел. мрежа."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:18
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
-msgstr ""
+msgstr "Яркост (в проценти) на подстветката на клавиатурата когато компютърът се захранва от ел. мрежа. Възможните стойности са между 0 и 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:19
 msgid "Percent to reduce keyboard backlight by when on battery power."
-msgstr ""
+msgstr "Процент на затъмняване на подсветката на клавиатурата при захранване от батерии."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:21
 #, no-c-format
@@ -238,11 +239,11 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
-msgstr ""
+msgstr "Процент на затъмняване на подсветката на клавиатурата при захранване от батерии. Ако например стойността е „60“, то яркостта на подсветката ще бъде намалена с 40% при захранване от батерии. Възможните стойности са между 0 и 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
-msgstr ""
+msgstr "Процент на затъмняване на подсветката на клавиатурата при бездействие."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:24
 #, no-c-format
@@ -250,7 +251,7 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
-msgstr ""
+msgstr "Процент на затъмняване на подсветката на клавиатурата при бездействие. Ако например стойността е „60“, то яркостта на подсветката ще бъде намалена с 40% при бездействие. Възможните стойности са между 0 и 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:25
 msgid "The brightness of the screen when idle"
@@ -260,7 +261,7 @@ msgstr "Яркост на екрана при бездействие"
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "Яркост на екрана на преносимия компютър при бездействие. Тази стойност е се използва, само ако „use-time-for-policy“ е вярно."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:27
 msgid "Dim the screen after a period of inactivity when on battery power"
@@ -306,7 +307,7 @@ msgstr "Метод за изчистване на екрана при захра
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:36
 msgid "The DPMS method used to blank the screen when on AC power."
-msgstr ""
+msgstr "Метод (по DPMS) за изчистване на екрана при захранване от ел. мрежа."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:37
 msgid "Method used to blank screen on battery"
@@ -314,7 +315,7 @@ msgstr "Метод за изчистване на екрана при захра
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:38
 msgid "The DPMS method used to blank the screen when on battery power."
-msgstr ""
+msgstr "Метод (по DPMS) за изчистване на екрана при захранване от батерии."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:39
 msgid "LCD brightness when on AC"
@@ -324,7 +325,7 @@ msgstr "Яркост на екрана при захранване от ел. м
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
-msgstr ""
+msgstr "Яркост на екрана при захранване от ел. мрежа. Възможните стойности са между 0.0 и 100.0."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:41
 msgid "Suspend button action"
@@ -332,7 +333,7 @@ msgstr "Действие на бутона за приспиване"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:42
 msgid "The action to take when the system suspend button is pressed."
-msgstr ""
+msgstr "Действието, което да се изпълни при натискане на бутона за приспиване."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:43
 msgid "Hibernate button action"
@@ -340,7 +341,7 @@ msgstr "Действие на бутона за дълбоко приспива�
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:44
 msgid "The action to take when the system hibernate button is pressed."
-msgstr ""
+msgstr "Действието, което да се изпълни при натискане на бутона за дълбоко приспиване."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:45
 msgid "Power button action"
@@ -348,27 +349,27 @@ msgstr "Действие на бутона за включване/изключ�
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:46
 msgid "The action to take when the system power button is pressed."
-msgstr ""
+msgstr "Действието, което да се изпълни при натискане на бутона за включване/изключване."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:47
 msgid "Laptop lid close action on battery"
-msgstr "Действие при затваряне на екрана и захранване от батерии"
+msgstr "Действие при затваряне на капака при захранване от батерии"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:48
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
-msgstr ""
+msgstr "Действие при затваряне на капака на преносимия компютър, ако той се захранва от батерии."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:49
 msgid "Laptop lid close action when on AC"
-msgstr "Действие при затваряне на екрана и захранване от ел. мрежа"
+msgstr "Действие при затваряне на капака при захранване от ел. мрежа"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:50
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
-msgstr ""
+msgstr "Действие при затваряне на капака на преносимия компютър, ако той се захранва от ел. мрежа."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:51
 msgid "Whether to use time-based notifications"
@@ -390,13 +391,13 @@ msgstr "Проверка на натоварването на процесора
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:55
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
-msgstr ""
+msgstr "Дали програмата „NetworkManager“ трябва да прекъсва връзките при приспиване и да ги възстановява при събуждане"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:56
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
-msgstr "Дали програмата NetworkManager трябва да прекъсва връзките при приспиване или дълбоко приспиване и наново да ги установява при събуждане."
+msgstr "Дали програмата „NetworkManager“ трябва да прекъсва връзките при приспиване и дълбоко приспиване и наново да ги установява при събуждане."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:57
 msgid "Use mate-screensaver lock setting"
@@ -416,7 +417,7 @@ msgstr "Заключване на екрана при изчистването �
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
-msgstr ""
+msgstr "Дали екранът се заключва след като се изгаси. Използва се, само когато „lock-use-screensaver“ е невярно."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:61
 msgid "Lock screen on suspend"
@@ -426,7 +427,7 @@ msgstr "Заключване на екрана при приспиване"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
-msgstr ""
+msgstr "Дали екранът се заключва след като компютърът се събуди от приспиване. Използва се, само когато „lock-use-screensaver“ е невярно."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:63
 msgid "Lock screen on hibernate"
@@ -436,23 +437,23 @@ msgstr "Заключване на екрана при дълбоко присп�
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
-msgstr ""
+msgstr "Дали екранът се заключва след като компютърът се събуди от дълбоко приспиване. Използва се, само когато „lock-use-screensaver“ е невярно."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:65
 msgid "Lock GNOME keyring on sleep"
-msgstr ""
+msgstr "Заключване на ключодържателя на GNOME при приспиване"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:66
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
-msgstr ""
+msgstr "Дали ключодържателят на GNOME се заключва при приспиване на компютъра. Това означава, че при събуждането ключодържателят ще трябва да бъде отключен."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:67
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
-msgstr ""
+msgstr "Дали ключодържателят на GNOME се заключва при дълбоко приспиване на компютъра. Това означава, че при събуждането ключодържателят ще трябва да бъде отключен."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:68
 msgid "If we should show the low capacity warning for a broken battery"
@@ -512,81 +513,81 @@ msgstr "Дали да се предупреждава при нисък заря
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:80
 msgid "Whether we should show the history data points"
-msgstr ""
+msgstr "Дали да се показват точките с данни от историята"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:81
 msgid ""
 "Whether we should show the history data points in the statistics window."
-msgstr ""
+msgstr "Дали да се показват точките с данни от историята в прозореца със статистиката."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:82
 msgid "Whether we should smooth the history data"
-msgstr ""
+msgstr "Дали данните от историята да се заглаждат"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:83
 msgid "Whether we should smooth the history data in the graph."
-msgstr ""
+msgstr "Дали данните от историята да се заглаждат в графиката."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:84
 msgid "The default graph type to show for history"
-msgstr ""
+msgstr "Стандартен вид на графиката за историята"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:85
 msgid "The default graph type to show in the history window."
-msgstr ""
+msgstr "Стандартен вид на графиката в прозореца с историята."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:86
 msgid "The maximum time displayed for history"
-msgstr ""
+msgstr "Максималното време, показвано за историята"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:87
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
-msgstr ""
+msgstr "Максималната продължителност време, показвано на оста X на графиката за историята."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:88
 msgid "Whether we should show the stats data points"
-msgstr ""
+msgstr "Дали да се показват точките с данни за статистиката"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:89
 msgid "Whether we should show the stats data points in the statistics window."
-msgstr ""
+msgstr "Дали да се показват точките с данни за статистиката в прозореца със статистиката."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:90
 msgid "Whether we should smooth the stats data"
-msgstr ""
+msgstr "Дали данните от статистиката да се заглаждат"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:91
 msgid "Whether we should smooth the stats data in the graph."
-msgstr ""
+msgstr "Дали данните от статистиката да се заглаждат в графиката."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:92
 msgid "The default graph type to show for stats"
-msgstr ""
+msgstr "Стандартен вид на графиката за статистиката"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:93
 msgid "The default graph type to show in the stats window."
-msgstr ""
+msgstr "Стандартен вид на графиката в прозореца за статистика."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:94
 msgid "The index of the page number to show by default"
-msgstr ""
+msgstr "Номерът на страницата, която да се показва по подразбиране"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:95
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
-msgstr ""
+msgstr "Номерът на страницата, която да се показва по подразбиране. Това се използва за връщане на фокуса към правилната страница."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
-msgstr "ID на последното избрано устройство"
+msgstr "Ид. на последно избраното устройство"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:97
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
-msgstr ""
+msgstr "Идентификаторът на последното устройство. Това се използва за връщане на фокуса към правилното устройство."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:98
 msgid "Percentage considered low"
@@ -596,7 +597,7 @@ msgstr "Зарядът, който се счита за нисък"
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
-msgstr ""
+msgstr "Процентът на заряда на батерията, който се счита за нисък. Тази стойност се използва, само ако „use-time-for-policy“ е невярно."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:100
 msgid "Percentage considered critical"
@@ -606,7 +607,7 @@ msgstr "Зарядът, който се счита за критично нис�
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
-msgstr ""
+msgstr "Процентът на заряда на батерията, който се счита за критично нисък. Тази стойност се използва, само ако „use-time-for-policy“ е невярно."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:102
 msgid "Percentage action is taken"
@@ -616,7 +617,7 @@ msgstr "Предприето е действие при достигане на 
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
-msgstr ""
+msgstr "Процентът на заряда на батерията, когато се предприема действие за критично нисък заряд. Тази стойност се използва, само ако „use-time-for-policy“ е невярно."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:104
 msgid "The time remaining when low"
@@ -626,7 +627,7 @@ msgstr "Оставащото време, за да е ниско"
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
-msgstr ""
+msgstr "Оставащото време на батерията в секунди, което се счита за ниско. Тази стойност се използва, само ако „use-time-for-policy“ е вярно."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:106
 msgid "The time remaining when critical"
@@ -636,7 +637,7 @@ msgstr "Оставащото време, за да е критично ниск�
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "Оставащото време на батерията в секунди, което се счита за критично ниско. Тази стойност се използва, само ако „use-time-for-policy“ е вярно."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:108
 msgid "The time remaining when action is taken"
@@ -646,7 +647,7 @@ msgstr "Оставащото време при предприемане на д�
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "Оставащото време на батерията в секунди, когато се предприема действие за критично нисък заряд. Тази стойност се използва, само ако „use-time-for-policy“ е вярно."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:110
 msgid "Sleep timeout computer when on battery"
@@ -725,11 +726,11 @@ msgstr "Дали елементите за настройките и стати�
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:125
 msgid "When to show the notification icon"
-msgstr "Кога да се показва иконата за уведомяване"
+msgstr "Кога да се показва иконката за уведомяване"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:126
 msgid "Display options for the notification icon."
-msgstr "Покажи опциите на иконата за уведомяване."
+msgstr "Показване на опциите на иконката за уведомяване."
 
 #: ../data/mate-power-preferences.desktop.in.in.h:1
 msgid "Power Management"
@@ -845,7 +846,7 @@ msgstr "_Затъмняване на екрана"
 
 #: ../data/gpm-prefs.ui.h:12
 msgid "On Battery Power"
-msgstr "От батерии"
+msgstr "На батерии"
 
 #: ../data/gpm-prefs.ui.h:13
 msgid "When UPS power is l_ow:"
@@ -873,7 +874,7 @@ msgstr "<b>Област за уведомяване</b>"
 
 #: ../data/gpm-prefs.ui.h:19
 msgid "_Never display an icon"
-msgstr "_Никога да не се показва икона"
+msgstr "_Никога да не се показва иконка"
 
 #: ../data/gpm-prefs.ui.h:20
 msgid "_Only display an icon when battery power is low"
@@ -881,15 +882,15 @@ msgstr "Показване само при _ниско ниво на батер�
 
 #: ../data/gpm-prefs.ui.h:21
 msgid "Only display an icon when charging or _discharging"
-msgstr "Показване на икона само при зареждане или _разреждане"
+msgstr "Показване на иконка само при зареждане или _разреждане"
 
 #: ../data/gpm-prefs.ui.h:22
 msgid "Only display an icon when a battery is p_resent"
-msgstr "Показване на икона само при _наличие на батерии"
+msgstr "Показване на иконка само при _наличие на батерия"
 
 #: ../data/gpm-prefs.ui.h:23
 msgid "_Always display an icon"
-msgstr "В_инаги да се показва икона"
+msgstr "В_инаги да се показва иконка"
 
 #: ../data/gpm-prefs.ui.h:24
 msgid "General"
@@ -1172,7 +1173,7 @@ msgstr "Управлението на захранването на екрана
 #. TRANSLATORS: this is the mate-screensaver throttle
 #: ../src/gpm-manager.c:872
 msgid "On battery power"
-msgstr "От батерии"
+msgstr "На батерии"
 
 #: ../src/gpm-manager.c:890
 msgid "Laptop lid is closed"
@@ -1941,20 +1942,20 @@ msgstr "Процесор"
 
 #: ../src/gpm-tray-icon.c:189
 msgid "Copyright © 2011-2016 MATE developers"
-msgstr ""
+msgstr "© 2011-2016 Екипът по разработка на MATE"
 
 #. Translators should localize the following string
 #. * which will be displayed at the bottom of the about
 #. * box to give credit to the translator(s).
 #: ../src/gpm-tray-icon.c:195
 msgid "translator-credits"
-msgstr ""
+msgstr "Александър Шопов <ash@kambanaria.org>\nЯвор Доганов <yavor@gnu.org>\nВладимир Петков <vpetkov@i-space.org>\nРостислав Райков <zbrox@i-space.org>\nЯнко Канети <yaneti@declera.com>\nБорислав Александров <B.Aleksandrov@cnsys.bg>\nКрасимир „bfaf“ Чонов <mk2616@abv.bg>\nЛюбомир Василев <lyubomirv@abv.bg>\n\nПроектът за превод на MATE има нужда от подкрепа.\nНаучете повече за нас на http://mate.cult.bg\nДокладвайте за грешки на http://mate.cult.bg/bugs"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
 #: ../src/gpm-tray-icon.c:297
 #, c-format
 msgid "%s remaining"
-msgstr ""
+msgstr "Остават %s"
 
 #. preferences
 #: ../src/gpm-tray-icon.c:351
@@ -1965,7 +1966,7 @@ msgstr "_Настройки"
 #: ../src/gpm-upower.c:211
 #, c-format
 msgid "%s not present"
-msgstr ""
+msgstr "%s не е на разположение"
 
 #. TRANSLATORS: a phone is charging
 #. TRANSLATORS: device is charging, but we only have a percentage
@@ -2031,7 +2032,7 @@ msgstr "%s изчаква зареждане (%.1f %%)"
 #: ../src/gpm-upower.c:306
 #, c-format
 msgid "%s empty"
-msgstr ""
+msgstr "%s няма заряд"
 
 #. TRANSLATORS: the type of data, e.g. Laptop battery
 #: ../src/gpm-upower.c:366
@@ -2269,4 +2270,4 @@ msgstr "Изчаква разреждане"
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:662
 msgid "Unknown state"
-msgstr ""
+msgstr "Неизвестно състояние"
