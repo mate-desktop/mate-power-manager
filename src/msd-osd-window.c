@@ -207,11 +207,11 @@ draw_when_not_composited (GtkWidget *widget, cairo_t *cr)
         int width;
         int height;
 
-        width = gtk_widget_get_allocated_width (widget);
-        height = gtk_widget_get_allocated_width (widget);
+        gtk_window_get_size (GTK_WINDOW (widget), &width, &height);
         context = gtk_widget_get_style_context (widget);
 
         gtk_style_context_set_state (context, GTK_STATE_FLAG_ACTIVE);
+        gtk_style_context_add_class(context,"msd-osd-window-solid");
         gtk_render_frame (context,
                           cr,
                           0,
