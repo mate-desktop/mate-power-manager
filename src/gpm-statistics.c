@@ -1131,6 +1131,10 @@ static void
 gpm_stats_button_update_ui (void)
 {
 	UpDevice *device;
+
+	if (current_device == NULL)
+		return;
+
 	device = up_device_new ();
 	up_device_set_object_path_sync (device, current_device, NULL, NULL);
 	gpm_stats_update_info_data (device);
