@@ -607,7 +607,7 @@ gpm_inhibit_applet_init (GpmInhibitApplet *applet)
 	/* We use g_signal_connect_after because letting the panel draw
 	 * the background is the only way to have the correct
 	 * background when a theme defines a background picture. */
-	g_signal_connect_after (G_OBJECT(applet), "expose-event",
+	g_signal_connect_after (G_OBJECT(applet), "draw",
 				G_CALLBACK(gpm_applet_draw_cb), NULL);
 
 	g_signal_connect (G_OBJECT(applet), "change-background",
