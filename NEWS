@@ -1,129 +1,91 @@
-Version 1.17.0
+### mate-power-manager 1.17.0
 
- - Translations update
- - move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
+  * Translations update
+  * move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
 
-Version 1.16.0
-~~~~~~~~~~~~~~
-Released: 2016-09-19
+### mate-power-manager 1.16.0
 
-* News:
- - Use GtkAboutDialog instead of MateAboutDialog
- - Drop dependency on libmate-desktop
- - Show the primary device time remaining as the first entry in
+  * Use GtkAboutDialog instead of MateAboutDialog
+  * Drop dependency on libmate-desktop
+  * Show the primary device time remaining as the first entry in
    the context menu
- - Do not issue a console warning when laptop batteries are empty
- - GTK+3: port from libunique to GtkApplication
- - GTK+3: add css theming for OSD (MsdOsdWindow)
- - GTK+3: fix empty space in tray when system has no battery
- - GTK+3: fix lots of deprecations
- - Some more fixes and cleanups
- - Translations update
- - Make distcheck use currently selected GTK+ version
+  * Do not issue a console warning when laptop batteries are empty
+  * GTK+3: port from libunique to GtkApplication
+  * GTK+3: add css theming for OSD (MsdOsdWindow)
+  * GTK+3: fix empty space in tray when system has no battery
+  * GTK+3: fix lots of deprecations
+  * Some more fixes and cleanups
+  * Translations update
+  * Make distcheck use currently selected GTK+ version
 
-Version 1.14.0
-~~~~~~~~~~~~~~
-Released: 2016-04-07
+### mate-power-manager 1.14.0
 
-* News:
- - Drop MateConf migration script
- - Fix possible crash when an Xorg function call fails
- - GTK+3: fix deprecations in brightness applet
- - Some more fixes and cleanups
- - Translations update
- - Fix Changelog generation
+  * Drop MateConf migration script
+  * Fix possible crash when an Xorg function call fails
+  * GTK+3: fix deprecations in brightness applet
+  * Some more fixes and cleanups
+  * Translations update
+  * Fix Changelog generation
 
-Version 1.12.1
-~~~~~~~~~~~~~~
-Released: 2015-11-30
+### mate-power-manager 1.12.1
 
-* News:
- - Allow disabling of power button
- - Multiple backlight fixes
- - GTK+3: don't remove slider background in brightness applet
+  * Allow disabling of power button
+  * Multiple backlight fixes
+  * GTK+3: don't remove slider background in brightness applet
    (fixes background in some themes)
- - Translations update
+  * Translations update
 
-Version 1.12.0
-~~~~~~~~~~~~~~
-Released: 2015-10-31
+### mate-power-manager 1.12.0
 
-* News:
- - Require xrandr 1.3
- - Retrieve strings directly from gschema (requires intltool 0.50.1)
- - Switch to org.gnome.SessionManager
- - Show vendor/model information for devices
- - Fix backlight adjustment on Macbook Pro
- - GTK+3: support custom themes
- - GTK+3: fix brightness applet behavior
- - Some fixes and cleanups
+  * Require xrandr 1.3
+  * Retrieve strings directly from gschema (requires intltool 0.50.1)
+  * Switch to org.gnome.SessionManager
+  * Show vendor/model information for devices
+  * Fix backlight adjustment on Macbook Pro
+  * GTK+3: support custom themes
+  * GTK+3: fix brightness applet behavior
+  * Some fixes and cleanups
 
-Version 1.10.2
-~~~~~~~~~~~~~~
-Released: 2015-09-01
+### mate-power-manager 1.10.2
 
-* News:
- - Fixed keyboard backlight adjustment for laptops with
-   non-standard levels
- - Some bugfixes
+  * Fixed keyboard backlight adjustment for laptops with non-standard levels
+  * Some bugfixes
 
-Version 1.10.1
-~~~~~~~~~~~~~~
-Released: 2015-07-14
+### mate-power-manager 1.10.1
 
-* News:
- - Multiple help fixes
- - Some bugfixes
- - Translations update
+  * Multiple help fixes
+  * Some bugfixes
+  * Translations update
 
-Version 1.10.0
-~~~~~~~~~~~~~~
-Released: 2015-05-04
+### mate-power-manager 1.10.0
 
-* News:
- - Add support for UPower 0.99
+  * Add support for UPower 0.99
 
-Version 1.8.0
-~~~~~~~~~~~~~
-Released: 2014-03-01
+### mate-power-manager 1.8.0
 
-* News:
- - Use yelp-tools instead of mate-doc-utils
- - Fix systemd support
- - Switch to libgnome-keyring
+  * Use yelp-tools instead of mate-doc-utils
+  * Fix systemd support
+  * Switch to libgnome-keyring
 
-Version 1.6.2
-~~~~~~~~~~~~~
-Released: 2013-07-24
+### mate-power-manager 1.6.2
 
-* Features:
- - Removed systemd-daemon dependency and check at runtime if
-   systemd-logind is running
- - Improved systemd-logind support
+  * Removed systemd-daemon dependency and check at runtime if
+    systemd-logind is running
+  * Improved systemd-logind support
+  * Dont rely only on consolekit for button pressed event
 
-* Bug fixes:
- - Dont rely only on consolekit for button pressed event
+### mate-power-manager 1.6.1
 
-Version 1.6.1
-~~~~~~~~~~~~~
-Released: 2013-05-02
+  * Use 'make dist' for tarball
+  * Add support to use systemd logind for suspend and hibernate instead
+    of upower
+  * Dont print an error if keyboard backlight is missing
 
-* Features:
- - Use 'make dist' for tarball
- - Add support to use systemd logind for suspend and hibernate instead
-   of upower
+### mate-power-manager 1.6.0
 
-* Bug fixes:
- - Dont print an error if keyboard backlight is missing
-
-Version 1.6.0
-~~~~~~~~~~~~~~~
-Released: 2013-04-01
-
-* Features:
- - Migration to GSettings
- - Show always "do nothing" option in prefs
- - Add keyboard backlight support
- - Add systemd inhibit support
- - mate-keyring support now optional
- - replace libmatenotify with libnotify
+  * Migration to GSettings
+  * Show always "do nothing" option in prefs
+  * Add keyboard backlight support
+  * Add systemd inhibit support
+  * mate-keyring support now optional
+  * replace libmatenotify with libnotify
