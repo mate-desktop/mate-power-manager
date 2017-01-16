@@ -247,29 +247,6 @@ AC_MSG_RESULT([$have_applets])
 AM_CONDITIONAL([HAVE_APPLETS], [test $have_applets = yes])
 
 dnl ---------------------------------------------------------------------------
-dnl - DocBook Documentation
-dnl ---------------------------------------------------------------------------
-AC_ARG_ENABLE(docbook-docs,
-              AS_HELP_STRING([--enable-docbook-docs],
-                             [build documentation (requires xmlto)]),
-              enable_docbook_docs=$enableval,enable_docbook_docs=auto)
-
-AC_PATH_PROG(XMLTO, xmlto, no)
-AC_MSG_CHECKING([whether to build DocBook documentation])
-if test x$enable_docbook_docs = xauto ; then
-    if test x$XMLTO = xno ; then
-        enable_docbook_docs=no
-    else
-        enable_docbook_docs=yes
-    fi
-fi
-if test x$enable_docbook_docs = xyes -a x$XMLTO = xno; then
-	AC_MSG_ERROR([Building DocBook docs explicitly required, but DocBook not found])
-fi
-AM_CONDITIONAL(DOCBOOK_DOCS_ENABLED, test x$enable_docbook_docs = xyes)
-AC_MSG_RESULT(yes)
-
-dnl ---------------------------------------------------------------------------
 dnl - Are we specifying a different dbus root ?
 dnl ---------------------------------------------------------------------------
 AC_ARG_WITH(dbus-services,
@@ -308,7 +285,6 @@ src/Makefile
 applets/Makefile
 applets/brightness/Makefile
 applets/inhibit/Makefile
-docs/Makefile
 man/Makefile
 help/Makefile
 po/Makefile.in
@@ -359,7 +335,6 @@ echo "
         gnome-keyring support:     ${with_keyring}
         Building extra applets:    ${enable_applets}
         Self test support:         ${have_tests}
-        Docbook support:           ${enable_docbook_docs}
         documentation dir:         $DOCDIR
         dbus-1 services dir:       $DBUS_SERVICES_DIR
 "
