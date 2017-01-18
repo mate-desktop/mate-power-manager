@@ -1,3 +1,17 @@
+### mate-power-manager 1.17.1
+
+  * Check both the "Backlight" and "BACKLIGHT" xrandr properties for a 
+    backlight.
+  * po: don't mention non-existent files in POTFILES.skip
+  * remove man page for non-existent bugreport tool
+  * remove docs dir which doesn't have any actual docs
+  * Replace no longer valid "expose-event" with "draw" expose-event is not 
+    available in GTK3, draw is its replacement. Stops warnings from inhibit 
+    applet when mate-panel is started/restarted
+  * statistics: don't call upower function on a NULL device path
+  * Brightness: fix OSD rendering when not composited
+  * po: actually add new language from Transifex
+
 ### mate-power-manager 1.17.0
 
   * Translations update
