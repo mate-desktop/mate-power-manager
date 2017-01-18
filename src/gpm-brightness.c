@@ -270,11 +270,15 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 		egg_debug ("RandR version %d.%d too old", major, minor);
 		return FALSE;
 	}
-	/* can we support BACKLIGHT */
-	brightness->priv->backlight = XInternAtom (brightness->priv->dpy, "BACKLIGHT", True);
+	/* Can we support "Backlight" */
+	brightness->priv->backlight = XInternAtom (brightness->priv->dpy, "Backlight", True);
 	if (brightness->priv->backlight == None) {
-		egg_debug ("No outputs have backlight property");
-		return FALSE;
+		/* Do we support "BACKLIGHT" (legacy) */
+		brightness->priv->backlight = XInternAtom (brightness->priv->dpy, "BACKLIGHT", True);
+		if (brightness->priv->backlight == None) {
+			egg_debug ("No outputs have backlight property");
+			return FALSE;
+		}
 	}
 	return TRUE;
 }
