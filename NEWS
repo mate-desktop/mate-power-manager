@@ -1,3 +1,15 @@
+Version 1.16.1
+~~~~~~~~~~~~~~
+Released: 2017-01-24
+
+* News:
+ - Check both the "Backlight" and "BACKLIGHT" xrandr properties
+   (fixes inability to adjust screen backlight on some systems)
+ - Statistics: stop runtime warnings spam on desktop systems
+ - GTK+3: fix runtime warning in inhibit applet
+ - GTK+3: fix OSD rendering on non-composited desktop
+ - GTK+3: add OSD style class for non-composited desktop
+
 Version 1.16.0
 ~~~~~~~~~~~~~~
 Released: 2016-09-19
