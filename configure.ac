@@ -154,9 +154,7 @@ PKG_CHECK_MODULES(GDK, [
 
 PKG_CHECK_MODULES(X11, [
  xrandr >= $XRANDR_REQUIRED
- xrender x11 xext xproto])
-
-PKG_CHECK_MODULES(X11, x11 xrender)
+ x11 xext xproto])
 
 PKG_CHECK_MODULES(LIBNOTIFY, libnotify >= $LIBNOTIFY_REQUIRED)
 
