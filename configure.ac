@@ -183,16 +183,6 @@ AC_SUBST(BINDIR, $bindir)
 AC_SUBST(SBINDIR, $sbindir)
 
 dnl ---------------------------------------------------------------------------
-dnl - Where should we put documentation ?
-dnl ---------------------------------------------------------------------------
-AC_ARG_WITH(doc-dir,
-            AS_HELP_STRING([--with-doc-dir=<dir>],
-                           [directory to install documentation]),
-            [DOCDIR="$with_doc_dir/mate-power-manager-$VERSION"],
-            [DOCDIR="$DATADIR/doc/mate-power-manager-$VERSION"])
-AC_SUBST(DOCDIR)
-
-dnl ---------------------------------------------------------------------------
 dnl - Build self tests
 dnl ---------------------------------------------------------------------------
 AC_ARG_ENABLE(tests,
@@ -335,7 +325,6 @@ echo "
         gnome-keyring support:     ${with_keyring}
         Building extra applets:    ${enable_applets}
         Self test support:         ${have_tests}
-        documentation dir:         $DOCDIR
         dbus-1 services dir:       $DBUS_SERVICES_DIR
 "
 if [[ "${prefix}" != "/usr" ]] ; then
