@@ -129,6 +129,7 @@ LIBNOTIFY_REQUIRED=0.7.0
 CAIRO_REQUIRED=1.0.0
 LIBPANEL_REQUIRED=1.17.0
 XRANDR_REQUIRED=1.3.0
+XPROTO_REQUIRED=7.0.15
 CANBERRA_REQUIRED=0.10
 UPOWER_REQUIRED=0.9.5
 
@@ -154,23 +155,11 @@ PKG_CHECK_MODULES(GDK, [
 
 PKG_CHECK_MODULES(X11, [
  xrandr >= $XRANDR_REQUIRED
- x11 xext xproto])
+ x11 xext xproto >= XPROTO_REQUIRED])
 
 PKG_CHECK_MODULES(LIBNOTIFY, libnotify >= $LIBNOTIFY_REQUIRED)
 
 PKG_CHECK_MODULES(UPOWER, upower-glib >= $UPOWER_REQUIRED)
-
-dnl ---------------------------------------------------------------------------
-dnl - Check XF86XK_Keys
-dnl ---------------------------------------------------------------------------
-PKG_CHECK_EXISTS(
- [xproto >= 7.0.14],
- [AC_DEFINE(HAVE_XF86XK_BATTERY, 1, [Define if XF86XK_Battery is available])])
-
-PKG_CHECK_EXISTS(
- [xproto >= 7.0.15],
- [AC_DEFINE(HAVE_XF86XK_SUSPEND, 1, [Define if XF86XK_Suspend is available])
-  AC_DEFINE(HAVE_XF86XK_HIBERNATE, 1, [Define if XF86XK_Hibernate is available])])
 
 dnl ---------------------------------------------------------------------------
 dnl - Make paths available for source files
