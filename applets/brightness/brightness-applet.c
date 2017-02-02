@@ -560,21 +560,21 @@ on_popup_button_press (GtkWidget      *widget,
                        GdkEventButton *event,
                        GpmBrightnessApplet *applet)
 {
-        GtkWidget *event_widget;
+	GtkWidget *event_widget;
 
-        if (event->type != GDK_BUTTON_PRESS) {
-                return FALSE;
-        }
-        event_widget = gtk_get_event_widget ((GdkEvent *)event);
-        g_debug ("Button press: %p dock=%p", event_widget, widget);
-        if (event_widget == widget) {
-                gtk_widget_hide (applet->popup);
-                applet->popped = FALSE;
-                gpm_applet_update_tooltip (applet);
-                return TRUE;
-        }
+	if (event->type != GDK_BUTTON_PRESS) {
+		return FALSE;
+	}
+	event_widget = gtk_get_event_widget ((GdkEvent *)event);
+	g_debug ("Button press: %p dock=%p", event_widget, widget);
+	if (event_widget == widget) {
+		gtk_widget_hide (applet->popup);
+		applet->popped = FALSE;
+		gpm_applet_update_tooltip (applet);
+		return TRUE;
+	}
 
-        return FALSE;
+	return FALSE;
 }
 
 /**
@@ -636,12 +636,12 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
 	gtk_window_set_type_hint (GTK_WINDOW(applet->popup), GDK_WINDOW_TYPE_HINT_UTILITY);
 	gtk_container_add (GTK_CONTAINER(applet->popup), frame);
 
-        /* window events */
-        g_signal_connect (G_OBJECT(applet->popup), "button-press-event",
-                          G_CALLBACK (on_popup_button_press), applet);
+	/* window events */
+	g_signal_connect (G_OBJECT(applet->popup), "button-press-event",
+	                  G_CALLBACK (on_popup_button_press), applet);
 
-        g_signal_connect (G_OBJECT(applet->popup), "key-press-event",
-                          G_CALLBACK(gpm_applet_key_press_cb), applet);
+	g_signal_connect (G_OBJECT(applet->popup), "key-press-event",
+	                  G_CALLBACK(gpm_applet_key_press_cb), applet);
 
 	/* Set volume control frame, slider and toplevel window to follow panel volume control theme */
 	GtkWidget *toplevel = gtk_widget_get_toplevel (frame);
@@ -998,8 +998,7 @@ gpm_brightness_applet_init (GpmBrightnessApplet *applet)
 
 	/* Add application specific icons to search path */
 	gtk_icon_theme_append_search_path (gtk_icon_theme_get_default (),
-                                           GPM_DATA G_DIR_SEPARATOR_S "icons");
-
+	                                   GPM_DATA G_DIR_SEPARATOR_S "icons");
 
 	/* monitor the daemon */
 	applet->bus_watch_id =
