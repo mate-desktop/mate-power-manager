@@ -93,7 +93,7 @@ static void      gpm_applet_update_tooltip        (GpmBrightnessApplet *applet);
 static void      gpm_applet_update_popup_level    (GpmBrightnessApplet *applet);
 static gboolean  gpm_applet_plus_cb               (GtkWidget *w, GpmBrightnessApplet *applet);
 static gboolean  gpm_applet_minus_cb              (GtkWidget *w, GpmBrightnessApplet *applet);
-static gboolean  gpm_applet_key_press_cb          (GpmBrightnessApplet *applet, GdkEventKey *event);
+static gboolean  gpm_applet_key_press_cb          (GtkWidget *popup, GdkEventKey *event, GpmBrightnessApplet *applet);
 static gboolean  gpm_applet_scroll_cb             (GpmBrightnessApplet *applet, GdkEventScroll *event);
 static gboolean  gpm_applet_slide_cb              (GtkWidget *w, GpmBrightnessApplet *applet);
 static void      gpm_applet_create_popup          (GpmBrightnessApplet *applet);
@@ -344,9 +344,10 @@ static gboolean
 gpm_applet_destroy_popup_cb (GpmBrightnessApplet *applet)
 {
 	if (applet->popup != NULL) {
-		gtk_widget_set_parent (applet->popup, NULL);
 		gtk_widget_destroy (applet->popup);
 		applet->popup = NULL;
+		applet->popped = FALSE;
+		gpm_applet_update_tooltip (applet);
 	}
 	return TRUE;
 }
@@ -460,7 +461,7 @@ gpm_applet_slide_cb (GtkWidget *w, GpmBrightnessApplet *applet)
  * mainly escape to unpop and arrows to change brightness
  **/
 static gboolean
-gpm_applet_key_press_cb (GpmBrightnessApplet *applet, GdkEventKey *event)
+gpm_applet_key_press_cb (GtkWidget *popup, GdkEventKey *event, GpmBrightnessApplet *applet)
 {
 	int i;
 	
@@ -472,15 +473,10 @@ gpm_applet_key_press_cb (GpmBrightnessApplet *applet, GdkEventKey *event)
 	case GDK_KEY_space:
 	case GDK_KEY_KP_Space:
 	case GDK_KEY_Escape:
-		/* if yet popped, release focus and hide then redraw applet unselected */
+		/* if yet popped, hide */
 		if (applet->popped) {
-			gdk_keyboard_ungrab (GDK_CURRENT_TIME);
-			gdk_pointer_ungrab (GDK_CURRENT_TIME);
-			gtk_grab_remove (GTK_WIDGET(applet));
-			gtk_widget_set_state_flags (GTK_WIDGET(applet), GTK_STATE_FLAG_NORMAL, TRUE);
 			gtk_widget_hide (applet->popup);
 			applet->popped = FALSE;
-			gpm_applet_draw_cb (applet);
 			gpm_applet_update_tooltip (applet);
 			return TRUE;
 		} else {
@@ -676,7 +672,7 @@ gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 		return FALSE;
 	}
 
-	/* if yet popped, release focus and hide then redraw applet unselected */
+	/* if yet popped, release focus and hide */
 	if (applet->popped) {
 		gtk_widget_hide (applet->popup);
 		applet->popped = FALSE;
@@ -1028,9 +1024,6 @@ gpm_brightness_applet_init (GpmBrightnessApplet *applet)
 
 	g_signal_connect (G_OBJECT(applet), "scroll-event",
 			  G_CALLBACK(gpm_applet_scroll_cb), NULL);
-
-	g_signal_connect (G_OBJECT(applet), "key-press-event",
-			  G_CALLBACK(gpm_applet_key_press_cb), NULL);
 
 	/* We use g_signal_connect_after because letting the panel draw
 	 * the background is the only way to have the correct
