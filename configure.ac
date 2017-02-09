@@ -27,29 +27,6 @@ AC_DEFINE([GLIB_VERSION_MIN_REQUIRED], [GLIB_VERSION_2_36],
 
 AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
 
-dnl ---------------------------------------------------------------------------
-dnl - Use strict options (default enabled for devs, disabled in releases)
-dnl ---------------------------------------------------------------------------
-dnl if .git directory is present, considering we are working in the repository
-if test -d ".git"; then
-	default_strict=yes
-else
-	default_strict=no
-fi
-
-AC_ARG_ENABLE(strict, AS_HELP_STRING([--enable-strict],
-		[Enable strict compilation options]), enable_strict=$enableval,
-		enable_strict=$default_strict)
-if test x$enable_strict != xno; then
-	CPPFLAGS="$CPPFLAGS -DG_DISABLE_SINGLE_INCLUDES -DGTK_DISABLE_SINGLE_INCLUDES"
-	CPPFLAGS="$CPPFLAGS -DG_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED"
-	CPPFLAGS="$CPPFLAGS -DGDK_MULTIHEAD_SAFE -DGTK_MULTIHEAD_SAFE"
-	CPPFLAGS="$CPPFLAGS -DGSEAL_ENABLE"
-	if test "$GCC" = "yes"; then
-		WARNINGFLAGS="$WARNINGFLAGS -Werror"
-	fi
-fi
-
 AC_ARG_ENABLE(deprecated,
         [AS_HELP_STRING([--enable-deprecated],
                 [Warn about deprecated usages [default=no]])],,
