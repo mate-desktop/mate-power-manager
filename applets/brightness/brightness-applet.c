@@ -1142,6 +1142,9 @@ gpm_brightness_applet_init (GpmBrightnessApplet *applet)
 
 	/* prepare */
 	mate_panel_applet_set_flags (MATE_PANEL_APPLET (applet), MATE_PANEL_APPLET_EXPAND_MINOR);
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gtk_widget_set_events (GTK_WIDGET (applet), GDK_SCROLL_MASK);
+#endif
 
 	/* show */
 	gtk_widget_show_all (GTK_WIDGET(applet));
