@@ -1,3 +1,15 @@
+Version 1.16.2
+~~~~~~~~~~~~~~
+Released: 2017-02-16
+
+* News:
+ - Build: remove strict options, they just get in the way
+ - GTK+3: properly hide brightness applet popup on pressing
+   Esc/Enter/Space keys (fixes popup becoming wide instead
+   and random applet crashes)
+ - GTK+3: fix mouse scroll over brightness applet icon when
+   no popup is shown
+
 Version 1.16.1
 ~~~~~~~~~~~~~~
 Released: 2017-01-24
