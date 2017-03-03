@@ -208,7 +208,7 @@ gpm_control_get_lock_policy (GpmControl *control, const gchar *policy)
 gboolean
 gpm_control_suspend (GpmControl *control, GError **error)
 {
-	gboolean allowed;
+	gboolean allowed = FALSE;
 	gboolean ret = FALSE;
 	gboolean do_lock;
 	gboolean nm_sleep;
@@ -322,7 +322,7 @@ out:
 gboolean
 gpm_control_hibernate (GpmControl *control, GError **error)
 {
-	gboolean allowed;
+	gboolean allowed = FALSE;
 	gboolean ret = FALSE;
 	gboolean do_lock;
 	gboolean nm_sleep;
