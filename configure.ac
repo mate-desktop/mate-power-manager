@@ -222,15 +222,6 @@ AC_CHECK_LIB(kstat, kstat_open,
 AC_SUBST(GPM_EXTRA_LIBS)
 
 dnl ---------------------------------------------------------------------------
-dnl - Is docbook2man available?
-dnl ---------------------------------------------------------------------------
-AC_PATH_PROG(DOCBOOK2MAN, docbook2man, no)
-if test "$DOCBOOK2MAN" = "no" ; then
-	AC_MSG_WARN([docbook2man not found, will not be able to build man documentation])
-fi
-AM_CONDITIONAL(HAVE_DOCBOOK2MAN, [test "$DOCBOOK2MAN" != "no"])
-
-dnl ---------------------------------------------------------------------------
 dnl - Makefiles, etc.
 dnl ---------------------------------------------------------------------------
 AC_CONFIG_FILES([
@@ -239,7 +230,6 @@ src/Makefile
 applets/Makefile
 applets/brightness/Makefile
 applets/inhibit/Makefile
-man/Makefile
 help/Makefile
 po/Makefile.in
 policy/Makefile

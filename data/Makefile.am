@@ -30,12 +30,19 @@ pkgdata_DATA =						\
 	gpm-prefs.ui					\
 	acme.ui
 
+man_MANS =				\
+	mate-power-manager.1		\
+	mate-power-backlight-helper.1	\
+	mate-power-statistics.1		\
+	mate-power-preferences.1
+
 EXTRA_DIST =						\
 	$(service_in_files)				\
 	$(autostart_in_files)				\
 	$(desktop_in_files)				\
 	$(gsettings_schemas_in_files)	\
-	$(pkgdata_DATA)
+	$(pkgdata_DATA)			\
+	$(man_MANS)
 
 clean-local :
 	rm -f *~
