@@ -273,7 +273,8 @@ gpm_control_suspend (GpmControl *control, GError **error)
 		if (proxy == NULL) {
 			egg_error("Error connecting to dbus - %s", dbus_error->message);
 			g_error_free (dbus_error);
-			return -1;
+			ret = FALSE;
+			goto out;
 		}
 		res = g_dbus_proxy_call_sync (proxy, "Suspend",
 					      g_variant_new( "(b)",FALSE),
@@ -387,7 +388,8 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 		if (proxy == NULL) {
 			egg_error("Error connecting to dbus - %s", dbus_error->message);
 			g_error_free (dbus_error);
-			return -1;
+			ret = FALSE;
+			goto out;
 		}
 		res = g_dbus_proxy_call_sync (proxy, "Hibernate",
 					      g_variant_new( "(b)",FALSE),
