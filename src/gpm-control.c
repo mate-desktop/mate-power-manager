@@ -39,7 +39,6 @@
 #include <glib/gi18n.h>
 #include <dbus/dbus-glib.h>
 #include <dbus/dbus-glib-lowlevel.h>
-#define UPOWER_ENABLE_DEPRECATED
 #include <libupower-glib/upower.h>
 
 #ifdef WITH_KEYRING
@@ -212,6 +211,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
 	gboolean ret = FALSE;
 	gboolean do_lock;
 	gboolean nm_sleep;
+	EggConsoleKit *console;
 	GpmScreensaver *screensaver;
 	guint32 throttle_cookie = 0;
 #ifdef WITH_KEYRING
@@ -293,11 +293,12 @@ gpm_control_suspend (GpmControl *control, GError **error)
 		}
 		g_object_unref(proxy);
 	}
-#if !UP_CHECK_VERSION(0, 99, 0)
 	else {
-		ret = up_client_suspend_sync (control->priv->client, NULL, error);
+		console = egg_console_kit_new ();
+		ret = egg_console_kit_suspend (console, error);
+		g_object_unref (console);
 	}
-#endif
+
 	egg_debug ("emitting resume");
 	g_signal_emit (control, signals [RESUME], 0, GPM_CONTROL_ACTION_SUSPEND);
 
@@ -326,6 +327,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 	gboolean ret = FALSE;
 	gboolean do_lock;
 	gboolean nm_sleep;
+	EggConsoleKit *console;
 	GpmScreensaver *screensaver;
 	guint32 throttle_cookie = 0;
 #ifdef WITH_KEYRING
@@ -406,11 +408,12 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 			ret = TRUE;
 		}
 	}
-#if !UP_CHECK_VERSION(0, 99, 0)
 	else {
-		ret = up_client_hibernate_sync (control->priv->client, NULL, error);
+		console = egg_console_kit_new ();
+		ret = egg_console_kit_hibernate (console, error);
+		g_object_unref (console);
 	}
-#endif
+
 	egg_debug ("emitting resume");
 	g_signal_emit (control, signals [RESUME], 0, GPM_CONTROL_ACTION_HIBERNATE);
 

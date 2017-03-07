@@ -58,10 +58,20 @@ gboolean	 egg_console_kit_stop			(EggConsoleKit	*console,
 							 GError		**error);
 gboolean	 egg_console_kit_restart		(EggConsoleKit	*console,
 							 GError		**error);
+gboolean	 egg_console_kit_suspend		(EggConsoleKit	*console,
+							 GError		**error);
+gboolean	 egg_console_kit_hibernate		(EggConsoleKit	*console,
+							 GError		**error);
 gboolean	 egg_console_kit_can_stop		(EggConsoleKit	*console,
 							 gboolean	*can_stop,
 							 GError		**error);
 gboolean	 egg_console_kit_can_restart		(EggConsoleKit	*console,
+							 gboolean	*can_restart,
+							 GError		**error);
+gboolean	 egg_console_kit_can_suspend		(EggConsoleKit	*console,
+							 gboolean	*can_restart,
+							 GError		**error);
+gboolean	 egg_console_kit_can_hibernate		(EggConsoleKit	*console,
 							 gboolean	*can_restart,
 							 GError		**error);
 
