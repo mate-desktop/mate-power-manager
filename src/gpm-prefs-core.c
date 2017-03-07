@@ -27,7 +27,6 @@
 #include <glib/gi18n.h>
 
 #include <gtk/gtk.h>
-#include <dbus/dbus-glib.h>
 #include <math.h>
 #include <string.h>
 #define UPOWER_ENABLE_DEPRECATED

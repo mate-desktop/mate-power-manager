@@ -37,8 +37,6 @@
 #endif /* HAVE_UNISTD_H */
 
 #include <glib/gi18n.h>
-#include <dbus/dbus-glib.h>
-#include <dbus/dbus-glib-lowlevel.h>
 #define UPOWER_ENABLE_DEPRECATED
 #include <libupower-glib/upower.h>
 
