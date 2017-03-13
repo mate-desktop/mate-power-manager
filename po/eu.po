@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-01 17:44+0300\n"
+"POT-Creation-Date: 2016-12-06 00:54+0300\n"
 "PO-Revision-Date: 2016-08-01 14:45+0000\n"
 "Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Basque (http://www.transifex.com/mate/MATE/language/eu/)\n"
@@ -19,35 +19,35 @@ msgstr ""
 "Language: eu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../applets/brightness/brightness-applet.c:117
+#: ../applets/brightness/brightness-applet.c:110
 msgid "Power Manager Brightness Applet"
 msgstr "Energia kudeatzeko distiraren miniaplikazioa"
 
-#: ../applets/brightness/brightness-applet.c:118
+#: ../applets/brightness/brightness-applet.c:111
 msgid "Adjusts laptop panel brightness."
 msgstr "Eramangarriaren pantailaren distira doitzen du."
 
-#: ../applets/brightness/brightness-applet.c:419
-#: ../applets/inhibit/inhibit-applet.c:376
+#: ../applets/brightness/brightness-applet.c:366
+#: ../applets/inhibit/inhibit-applet.c:329
 msgid "Cannot connect to mate-power-manager"
 msgstr "Ezin izan da mate-power-manager programarekin konektatu."
 
-#: ../applets/brightness/brightness-applet.c:421
+#: ../applets/brightness/brightness-applet.c:368
 msgid "Cannot get laptop panel brightness"
 msgstr "Ezin da eramangarriaren pantailaren distira lortu"
 
-#: ../applets/brightness/brightness-applet.c:423
+#: ../applets/brightness/brightness-applet.c:370
 #, c-format
 msgid "LCD brightness : %d%%"
 msgstr "LCD distira : %%%d"
 
-#: ../applets/brightness/brightness-applet.c:928
-#: ../applets/inhibit/inhibit-applet.c:450
+#: ../applets/brightness/brightness-applet.c:811
+#: ../applets/inhibit/inhibit-applet.c:403
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "GNU Lizentzia Publiko Orokorraren 2. bertsioan lizentziatua"
 
-#: ../applets/brightness/brightness-applet.c:929
-#: ../applets/inhibit/inhibit-applet.c:451
+#: ../applets/brightness/brightness-applet.c:812
+#: ../applets/inhibit/inhibit-applet.c:404
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -55,8 +55,8 @@ msgid ""
 "of the License, or (at your option) any later version."
 msgstr "Energia kudeatzailea (mate-power-manager) software librea da; birbana \neta/edo alda dezakezu Software Foundation-ek argitaratutako GNU Lizentzia \nPubliko Orokorraren 2. bertsioan, edo (nahiago baduzu) beste berriago\nbatean, jasotako baldintzak betez gero."
 
-#: ../applets/brightness/brightness-applet.c:933
-#: ../applets/inhibit/inhibit-applet.c:455
+#: ../applets/brightness/brightness-applet.c:816
+#: ../applets/inhibit/inhibit-applet.c:408
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -64,8 +64,8 @@ msgid ""
 "GNU General Public License for more details."
 msgstr "Energia kudeatzailea (mate-power-manager) erabilgarria izango delakoan \nbanatzen da, baina, INOLAKO BERMERIK GABE; era berean, ez da bermatzen \nberaren EGOKITASUNA MERKATURATZEKO edo HELBURU PARTIKULARRETARAKO \nERABILTZEKO. Argibide gehiago nahi izanez gero, ikus GNU Lizentzia \nPubliko Orokorra."
 
-#: ../applets/brightness/brightness-applet.c:937
-#: ../applets/inhibit/inhibit-applet.c:459
+#: ../applets/brightness/brightness-applet.c:820
+#: ../applets/inhibit/inhibit-applet.c:412
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -73,13 +73,13 @@ msgid ""
 "02110-1301, USA."
 msgstr "Programa honekin batera GNU Lizentzia Publiko Orokorraren kopia bat jasoko \nzenuen; hala ez bada, idatzi hona: Free Software Foundation, Inc., \n51 Franklin Street, Fifth Floor, Boston, MA\n02110-1301, USA."
 
-#: ../applets/brightness/brightness-applet.c:1197
-#: ../applets/inhibit/inhibit-applet.c:690
+#: ../applets/brightness/brightness-applet.c:1075
+#: ../applets/inhibit/inhibit-applet.c:638
 msgid "_About"
 msgstr "Honi _buruz"
 
-#: ../applets/brightness/brightness-applet.c:1200
-#: ../applets/inhibit/inhibit-applet.c:693
+#: ../applets/brightness/brightness-applet.c:1078
+#: ../applets/inhibit/inhibit-applet.c:641
 msgid "_Help"
 msgstr "_Laguntza"
 
@@ -99,23 +99,23 @@ msgstr "Distira miniaplikazioa"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Eramangarriaren panelaren distira doitzen du"
 
-#: ../applets/inhibit/inhibit-applet.c:95
+#: ../applets/inhibit/inhibit-applet.c:92
 msgid "Power Manager Inhibit Applet"
 msgstr "Energia kudeatzailea galarazteko miniaplikazioa"
 
-#: ../applets/inhibit/inhibit-applet.c:96
+#: ../applets/inhibit/inhibit-applet.c:93
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Erabiltzaileak energia automatikoki aurreztea galarazi dezake."
 
-#: ../applets/inhibit/inhibit-applet.c:379
+#: ../applets/inhibit/inhibit-applet.c:332
 msgid "Automatic sleep inhibited"
 msgstr "Automatikoki lo egitea galarazita"
 
-#: ../applets/inhibit/inhibit-applet.c:381
+#: ../applets/inhibit/inhibit-applet.c:334
 msgid "Automatic sleep enabled"
 msgstr "Automatikoki lo egitea gaituta"
 
-#: ../applets/inhibit/inhibit-applet.c:409
+#: ../applets/inhibit/inhibit-applet.c:362
 msgid "Manual inhibit"
 msgstr "Galarazi eskuz"
 
@@ -743,8 +743,8 @@ msgstr "Konfiguratu energia kudeatzailea"
 #. TRANSLATORS: shown on the titlebar
 #. TRANSLATORS: the program name
 #: ../data/mate-power-statistics.desktop.in.in.h:1
-#: ../data/gpm-statistics.ui.h:1 ../src/gpm-statistics.c:1093
-#: ../src/gpm-statistics.c:1612
+#: ../data/gpm-statistics.ui.h:1 ../src/gpm-statistics.c:1090
+#: ../src/gpm-statistics.c:1599
 msgid "Power Statistics"
 msgstr "Energiaren estatistikak"
 
@@ -756,7 +756,7 @@ msgstr "Begiratu energia kudeatzailea"
 msgid "Brightness"
 msgstr "Distira"
 
-#: ../data/gpm-statistics.ui.h:2 ../src/gpm-statistics.c:211
+#: ../data/gpm-statistics.ui.h:2 ../src/gpm-statistics.c:208
 msgid "Details"
 msgstr "Xehetasunak"
 
@@ -796,7 +796,7 @@ msgstr "Prozesagailuaren esnatzeak segundoko:"
 msgid "0"
 msgstr "0"
 
-#: ../data/gpm-statistics.ui.h:12 ../src/gpm-statistics.c:197
+#: ../data/gpm-statistics.ui.h:12 ../src/gpm-statistics.c:194
 msgid "Wakeups"
 msgstr "Esnatzeak"
 
@@ -1005,67 +1005,67 @@ msgstr[0] "minutu"
 msgstr[1] "minutu"
 
 #. Translators: This is %i days
-#: ../src/gpm-graph-widget.c:446
+#: ../src/gpm-graph-widget.c:435
 #, c-format
 msgid "%id"
 msgstr "%iegu."
 
 #. Translators: This is %i days %02i hours
-#: ../src/gpm-graph-widget.c:449
+#: ../src/gpm-graph-widget.c:438
 #, c-format
 msgid "%id%02ih"
 msgstr "%iegu.%02iord."
 
 #. Translators: This is %i hours
-#: ../src/gpm-graph-widget.c:454
+#: ../src/gpm-graph-widget.c:443
 #, c-format
 msgid "%ih"
 msgstr "%i ord."
 
 #. Translators: This is %i hours %02i minutes
-#: ../src/gpm-graph-widget.c:457
+#: ../src/gpm-graph-widget.c:446
 #, c-format
 msgid "%ih%02im"
 msgstr "%iord. %02imin."
 
 #. Translators: This is %2i minutes
-#: ../src/gpm-graph-widget.c:462
+#: ../src/gpm-graph-widget.c:451
 #, c-format
 msgid "%2im"
 msgstr "%2imin."
 
 #. Translators: This is %2i minutes %02i seconds
-#: ../src/gpm-graph-widget.c:465
+#: ../src/gpm-graph-widget.c:454
 #, c-format
 msgid "%2im%02i"
 msgstr "%2imin%02i"
 
 #. Translators: This is %2i seconds
-#: ../src/gpm-graph-widget.c:469
+#: ../src/gpm-graph-widget.c:458
 #, c-format
 msgid "%2is"
 msgstr "%2iseg."
 
 #. Translators: This is %i Percentage
-#: ../src/gpm-graph-widget.c:473
+#: ../src/gpm-graph-widget.c:462
 #, c-format
 msgid "%i%%"
 msgstr "%%%i"
 
 #. Translators: This is %.1f Watts
-#: ../src/gpm-graph-widget.c:476
+#: ../src/gpm-graph-widget.c:465
 #, c-format
 msgid "%.1fW"
 msgstr "%.1fW"
 
 #. Translators: This is %.1f Volts
-#: ../src/gpm-graph-widget.c:481
+#: ../src/gpm-graph-widget.c:470
 #, c-format
 msgid "%.1fV"
 msgstr "%.1fV"
 
 #. TRANSLATORS: show verbose debugging
-#: ../src/gpm-main.c:172 ../src/gpm-prefs.c:93 ../src/gpm-statistics.c:1595
+#: ../src/gpm-main.c:172 ../src/gpm-prefs.c:77 ../src/gpm-statistics.c:1582
 msgid "Show extra debugging information"
 msgstr "Erakutsi arazketako datu gehigarriak"
 
@@ -1501,129 +1501,129 @@ msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr "UPS maila larriaren azpitik dabil eta ordenagailua itzali egingo da."
 
-#: ../src/gpm-prefs.c:97
+#: ../src/gpm-prefs.c:81
 msgid "MATE Power Preferences"
 msgstr "MATEren energia hobespenak"
 
-#: ../src/gpm-prefs-core.c:248
+#: ../src/gpm-prefs-core.c:242
 msgid "Shutdown"
 msgstr "Itzali"
 
-#: ../src/gpm-prefs-core.c:255
+#: ../src/gpm-prefs-core.c:249
 msgid "Suspend"
 msgstr "Eseki"
 
-#: ../src/gpm-prefs-core.c:258
+#: ../src/gpm-prefs-core.c:252
 msgid "Hibernate"
 msgstr "Hibernatu"
 
-#: ../src/gpm-prefs-core.c:261
+#: ../src/gpm-prefs-core.c:255
 msgid "Blank screen"
 msgstr "Belztu pantaila"
 
-#: ../src/gpm-prefs-core.c:264
+#: ../src/gpm-prefs-core.c:258
 msgid "Ask me"
 msgstr "Galdetu niri"
 
-#: ../src/gpm-prefs-core.c:267
+#: ../src/gpm-prefs-core.c:261
 msgid "Do nothing"
 msgstr "Ez egin ezer"
 
-#: ../src/gpm-prefs-core.c:327
+#: ../src/gpm-prefs-core.c:321
 msgid "Never"
 msgstr "Inoiz ere ez"
 
 #. TRANSLATORS: the rate of discharge for the device
-#: ../src/gpm-statistics.c:81 ../src/gpm-statistics.c:469
+#: ../src/gpm-statistics.c:78 ../src/gpm-statistics.c:466
 msgid "Rate"
 msgstr "Tasa"
 
-#: ../src/gpm-statistics.c:82
+#: ../src/gpm-statistics.c:79
 msgid "Charge"
 msgstr "Karga"
 
-#: ../src/gpm-statistics.c:83 ../src/gpm-statistics.c:483
+#: ../src/gpm-statistics.c:80 ../src/gpm-statistics.c:480
 msgid "Time to full"
 msgstr "Denbora betetzeko"
 
-#: ../src/gpm-statistics.c:84 ../src/gpm-statistics.c:488
+#: ../src/gpm-statistics.c:81 ../src/gpm-statistics.c:485
 msgid "Time to empty"
 msgstr "Denbora hustutzeko"
 
-#: ../src/gpm-statistics.c:91
+#: ../src/gpm-statistics.c:88
 msgid "10 minutes"
 msgstr "10 minutu"
 
-#: ../src/gpm-statistics.c:92
+#: ../src/gpm-statistics.c:89
 msgid "2 hours"
 msgstr "2 ordu"
 
-#: ../src/gpm-statistics.c:93
+#: ../src/gpm-statistics.c:90
 msgid "6 hours"
 msgstr "6 ordu"
 
-#: ../src/gpm-statistics.c:94
+#: ../src/gpm-statistics.c:91
 msgid "1 day"
 msgstr "Egun 1"
 
-#: ../src/gpm-statistics.c:95
+#: ../src/gpm-statistics.c:92
 msgid "1 week"
 msgstr "Aste 1"
 
 #. TRANSLATORS: what we've observed about the device
-#: ../src/gpm-statistics.c:104
+#: ../src/gpm-statistics.c:101
 msgid "Charge profile"
 msgstr "Kargaren profila"
 
-#: ../src/gpm-statistics.c:105
+#: ../src/gpm-statistics.c:102
 msgid "Discharge profile"
 msgstr "Deskargaren profila"
 
 #. TRANSLATORS: how accurately we can predict the time remaining of the
 #. battery
-#: ../src/gpm-statistics.c:107
+#: ../src/gpm-statistics.c:104
 msgid "Charge accuracy"
 msgstr "Kargaren doitasuna"
 
-#: ../src/gpm-statistics.c:108
+#: ../src/gpm-statistics.c:105
 msgid "Discharge accuracy"
 msgstr "Deskargaren doitasuna"
 
-#: ../src/gpm-statistics.c:135
+#: ../src/gpm-statistics.c:132
 msgid "Attribute"
 msgstr "Atributua"
 
-#: ../src/gpm-statistics.c:142
+#: ../src/gpm-statistics.c:139
 msgid "Value"
 msgstr "Balioa"
 
-#: ../src/gpm-statistics.c:159
+#: ../src/gpm-statistics.c:156
 msgid "Image"
 msgstr "Irudia"
 
-#: ../src/gpm-statistics.c:165
+#: ../src/gpm-statistics.c:162
 msgid "Description"
 msgstr "Azalpena"
 
-#: ../src/gpm-statistics.c:184 ../src/gpm-statistics.c:408
+#: ../src/gpm-statistics.c:181 ../src/gpm-statistics.c:405
 msgid "Type"
 msgstr "Mota"
 
-#: ../src/gpm-statistics.c:190
+#: ../src/gpm-statistics.c:187
 msgid "ID"
 msgstr "IDa"
 
-#: ../src/gpm-statistics.c:204
+#: ../src/gpm-statistics.c:201
 msgid "Command"
 msgstr "Komandoa"
 
 #. TRANSLATORS: this is when the stats time is not known
-#: ../src/gpm-statistics.c:289
+#: ../src/gpm-statistics.c:286
 msgid "Unknown"
 msgstr "Ezezaguna"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:293
+#: ../src/gpm-statistics.c:290
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
@@ -1631,7 +1631,7 @@ msgstr[0] "segundo %.0f"
 msgstr[1] "%.0f segundo"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:298
+#: ../src/gpm-statistics.c:295
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
@@ -1639,7 +1639,7 @@ msgstr[0] "minutu %.1f"
 msgstr[1] "%.1f minutu"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:303
+#: ../src/gpm-statistics.c:300
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
@@ -1647,35 +1647,35 @@ msgstr[0] "ordu %.1f"
 msgstr[1] "%.1f ordu"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:307
+#: ../src/gpm-statistics.c:304
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
 msgstr[0] "egun %.1f"
 msgstr[1] "%.1f egun"
 
-#: ../src/gpm-statistics.c:316
+#: ../src/gpm-statistics.c:313
 msgid "Yes"
 msgstr "Bai"
 
-#: ../src/gpm-statistics.c:316
+#: ../src/gpm-statistics.c:313
 msgid "No"
 msgstr "Ez"
 
 #. TRANSLATORS: the device ID of the current device, e.g. "battery0"
-#: ../src/gpm-statistics.c:405
+#: ../src/gpm-statistics.c:402
 msgid "Device"
 msgstr "Gailua"
 
-#: ../src/gpm-statistics.c:410
+#: ../src/gpm-statistics.c:407
 msgid "Vendor"
 msgstr "Hornitzailea"
 
-#: ../src/gpm-statistics.c:412
+#: ../src/gpm-statistics.c:409
 msgid "Model"
 msgstr "Modeloa"
 
-#: ../src/gpm-statistics.c:414
+#: ../src/gpm-statistics.c:411
 msgid "Serial number"
 msgstr "Serie-zenbakia"
 
@@ -1683,11 +1683,11 @@ msgstr "Serie-zenbakia"
 #. * main power for the computer. For instance, an AC adapter or laptop
 #. battery
 #. * would be TRUE,  but a mobile phone or mouse taking power is FALSE
-#: ../src/gpm-statistics.c:419
+#: ../src/gpm-statistics.c:416
 msgid "Supply"
 msgstr "Hornitu"
 
-#: ../src/gpm-statistics.c:422
+#: ../src/gpm-statistics.c:419
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -1696,126 +1696,126 @@ msgstr[1] "%d segundo"
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
-#: ../src/gpm-statistics.c:426
+#: ../src/gpm-statistics.c:423
 msgid "Refreshed"
 msgstr "Freskatuta"
 
 #. TRANSLATORS: Present is whether the device is currently attached
 #. * to the computer, as some devices (e.g. laptop batteries) can
 #. * be removed, but still observed as devices on the system
-#: ../src/gpm-statistics.c:436
+#: ../src/gpm-statistics.c:433
 msgid "Present"
 msgstr "Unekoa"
 
 #. TRANSLATORS: If the device can be recharged, e.g. lithium
 #. * batteries rather than alkaline ones
-#: ../src/gpm-statistics.c:443
+#: ../src/gpm-statistics.c:440
 msgid "Rechargeable"
 msgstr "Birkargagarria"
 
 #. TRANSLATORS: The state of the device, e.g. "Changing" or "Fully charged"
-#: ../src/gpm-statistics.c:449
+#: ../src/gpm-statistics.c:446
 msgid "State"
 msgstr "Egoera"
 
-#: ../src/gpm-statistics.c:453
+#: ../src/gpm-statistics.c:450
 msgid "Energy"
 msgstr "Energia"
 
-#: ../src/gpm-statistics.c:456
+#: ../src/gpm-statistics.c:453
 msgid "Energy when empty"
 msgstr "Energia hustuta dagoenean"
 
-#: ../src/gpm-statistics.c:459
+#: ../src/gpm-statistics.c:456
 msgid "Energy when full"
 msgstr "Energia beteta dagoenean"
 
-#: ../src/gpm-statistics.c:462
+#: ../src/gpm-statistics.c:459
 msgid "Energy (design)"
 msgstr "Energia (teorikoa)"
 
-#: ../src/gpm-statistics.c:476
+#: ../src/gpm-statistics.c:473
 msgid "Voltage"
 msgstr "Tentsioa"
 
 #. TRANSLATORS: the amount of charge the cell contains
-#: ../src/gpm-statistics.c:498
+#: ../src/gpm-statistics.c:495
 msgid "Percentage"
 msgstr "Ehunekoa"
 
 #. TRANSLATORS: the capacity of the device, which is basically a measure
 #. * of how full it can get, relative to the design capacity
-#: ../src/gpm-statistics.c:505
+#: ../src/gpm-statistics.c:502
 msgid "Capacity"
 msgstr "Edukiera"
 
 #. TRANSLATORS: the type of battery, e.g. lithium or nikel metal hydroxide
-#: ../src/gpm-statistics.c:510
+#: ../src/gpm-statistics.c:507
 msgid "Technology"
 msgstr "Teknologia"
 
 #. TRANSLATORS: this is when the device is plugged in, typically
 #. * only shown for the ac adaptor device
-#: ../src/gpm-statistics.c:515
+#: ../src/gpm-statistics.c:512
 msgid "Online"
 msgstr "Linean"
 
 #. TRANSLATORS: the command line was not provided
-#: ../src/gpm-statistics.c:827
+#: ../src/gpm-statistics.c:824
 msgid "No data"
 msgstr "Daturik ez"
 
 #. TRANSLATORS: kernel module, usually a device driver
-#: ../src/gpm-statistics.c:834 ../src/gpm-statistics.c:839
+#: ../src/gpm-statistics.c:831 ../src/gpm-statistics.c:836
 msgid "Kernel module"
 msgstr "Nukleo-modulua"
 
 #. TRANSLATORS: kernel housekeeping
-#: ../src/gpm-statistics.c:844
+#: ../src/gpm-statistics.c:841
 msgid "Kernel core"
 msgstr "Nukleoa"
 
 #. TRANSLATORS: interrupt between processors
-#: ../src/gpm-statistics.c:849
+#: ../src/gpm-statistics.c:846
 msgid "Interprocessor interrupt"
 msgstr "Prozesuen arteko etendurak"
 
 #. TRANSLATORS: unknown interrupt
-#: ../src/gpm-statistics.c:854
+#: ../src/gpm-statistics.c:851
 msgid "Interrupt"
 msgstr "Etendura"
 
 #. TRANSLATORS: the keyboard and mouse device event
-#: ../src/gpm-statistics.c:901
+#: ../src/gpm-statistics.c:898
 msgid "PS/2 keyboard/mouse/touchpad"
 msgstr "PS/2 teklatua/sagua/touchpad"
 
 #. TRANSLATORS: ACPI, the Intel power standard on laptops and desktops
-#: ../src/gpm-statistics.c:904
+#: ../src/gpm-statistics.c:901
 msgid "ACPI"
 msgstr "ACPI"
 
 #. TRANSLATORS: serial ATA is a new style of hard disk interface
-#: ../src/gpm-statistics.c:907
+#: ../src/gpm-statistics.c:904
 msgid "Serial ATA"
 msgstr "Serieko ATA"
 
 #. TRANSLATORS: this is the old-style ATA interface
-#: ../src/gpm-statistics.c:910
+#: ../src/gpm-statistics.c:907
 msgid "ATA host controller"
 msgstr "Ostalariko ATA kontrolatzailea"
 
 #. TRANSLATORS: 802.11 wireless adaptor
-#: ../src/gpm-statistics.c:913
+#: ../src/gpm-statistics.c:910
 msgid "Intel wireless adaptor"
 msgstr "Intel-en haririk gabeko moldagailua"
 
 #. TRANSLATORS: a timer is something that fires periodically.
 #. * The parameter is a process name, e.g. "firefox-bin".
 #. * This is shown when the timer wakes up.
-#: ../src/gpm-statistics.c:920 ../src/gpm-statistics.c:925
-#: ../src/gpm-statistics.c:930 ../src/gpm-statistics.c:935
-#: ../src/gpm-statistics.c:940
+#: ../src/gpm-statistics.c:917 ../src/gpm-statistics.c:922
+#: ../src/gpm-statistics.c:927 ../src/gpm-statistics.c:932
+#: ../src/gpm-statistics.c:937
 #, c-format
 msgid "Timer %s"
 msgstr "%s tenporizadorea"
@@ -1823,120 +1823,120 @@ msgstr "%s tenporizadorea"
 #. TRANSLATORS: the parameter is the name of task that's woken up from
 #. sleeping.
 #. * This is shown when the task wakes up.
-#: ../src/gpm-statistics.c:944
+#: ../src/gpm-statistics.c:941
 #, c-format
 msgid "Sleep %s"
 msgstr "%s lotan"
 
 #. TRANSLATORS: this is the name of a new realtime task.
-#: ../src/gpm-statistics.c:947
+#: ../src/gpm-statistics.c:944
 #, c-format
 msgid "New task %s"
 msgstr "%s ataza berria"
 
 #. TRANSLATORS: this is the name of a task that's woken to check state.
 #. * This is shown when the task wakes up.
-#: ../src/gpm-statistics.c:951
+#: ../src/gpm-statistics.c:948
 #, c-format
 msgid "Wait %s"
 msgstr "%s itxoiten"
 
 #. TRANSLATORS: this is the name of a work queue.
 #. * A work queue is a list of work that has to be done.
-#: ../src/gpm-statistics.c:955 ../src/gpm-statistics.c:959
+#: ../src/gpm-statistics.c:952 ../src/gpm-statistics.c:956
 #, c-format
 msgid "Work queue %s"
 msgstr "%s lan-ilara"
 
 #. TRANSLATORS: this is when the networking subsystem clears out old entries
-#: ../src/gpm-statistics.c:962
+#: ../src/gpm-statistics.c:959
 #, c-format
 msgid "Network route flush %s"
 msgstr "%s sareko bideratze-garbiketa"
 
 #. TRANSLATORS: this is the name of an activity on the USB bus
-#: ../src/gpm-statistics.c:965
+#: ../src/gpm-statistics.c:962
 #, c-format
 msgid "USB activity %s"
 msgstr "%s USBaren jarduera"
 
 #. TRANSLATORS: we've timed out of an aligned timer, with the name
-#: ../src/gpm-statistics.c:968
+#: ../src/gpm-statistics.c:965
 #, c-format
 msgid "Wakeup %s"
 msgstr "%s esnatzea"
 
 #. TRANSLATORS: interupts on the system required for basic operation
-#: ../src/gpm-statistics.c:971
+#: ../src/gpm-statistics.c:968
 msgid "Local interrupts"
 msgstr "Etendura lokalak"
 
 #. TRANSLATORS: interrupts when a task gets moved from one core to another
-#: ../src/gpm-statistics.c:974
+#: ../src/gpm-statistics.c:971
 msgid "Rescheduling interrupts"
 msgstr "Etendurak birplanifikatzen"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1083
+#: ../src/gpm-statistics.c:1080
 msgid "Device Information"
 msgstr "Gailuaren informazioa"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1085
+#: ../src/gpm-statistics.c:1082
 msgid "Device History"
 msgstr "Gailuaren historia"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1087
+#: ../src/gpm-statistics.c:1084
 msgid "Device Profile"
 msgstr "Gailuaren profila"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1089
+#: ../src/gpm-statistics.c:1086
 msgid "Processor Wakeups"
 msgstr "Prozesagailuaren esnatzea"
 
 #. TRANSLATORS: this is the X axis on the graph
-#: ../src/gpm-statistics.c:1356 ../src/gpm-statistics.c:1362
-#: ../src/gpm-statistics.c:1368 ../src/gpm-statistics.c:1374
+#: ../src/gpm-statistics.c:1347 ../src/gpm-statistics.c:1353
+#: ../src/gpm-statistics.c:1359 ../src/gpm-statistics.c:1365
 msgid "Time elapsed"
 msgstr "Igarotako denbora"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1358
+#: ../src/gpm-statistics.c:1349
 msgid "Power"
 msgstr "Energia"
 
 #. TRANSLATORS: this is the Y axis on the graph for the whole battery device
 #. TRANSLATORS: this is the X axis on the graph for the whole battery device
-#: ../src/gpm-statistics.c:1364 ../src/gpm-statistics.c:1408
-#: ../src/gpm-statistics.c:1414 ../src/gpm-statistics.c:1420
-#: ../src/gpm-statistics.c:1426
+#: ../src/gpm-statistics.c:1355 ../src/gpm-statistics.c:1399
+#: ../src/gpm-statistics.c:1405 ../src/gpm-statistics.c:1411
+#: ../src/gpm-statistics.c:1417
 msgid "Cell charge"
 msgstr "Gelaxkaren karga"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1370 ../src/gpm-statistics.c:1376
+#: ../src/gpm-statistics.c:1361 ../src/gpm-statistics.c:1367
 msgid "Predicted time"
 msgstr "Aurresandako denbora"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1410 ../src/gpm-statistics.c:1422
+#: ../src/gpm-statistics.c:1401 ../src/gpm-statistics.c:1413
 msgid "Correction factor"
 msgstr "Zuzenketaren faktorea"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1416 ../src/gpm-statistics.c:1428
+#: ../src/gpm-statistics.c:1407 ../src/gpm-statistics.c:1419
 msgid "Prediction accuracy"
 msgstr "Aurresate-doitasuna"
 
 #. TRANSLATORS: show a device by default
-#: ../src/gpm-statistics.c:1598
+#: ../src/gpm-statistics.c:1585
 msgid "Select this device at startup"
 msgstr "Hautatu gailu hau abioan"
 
 #. TRANSLATORS: the icon for the CPU
-#: ../src/gpm-statistics.c:1864
+#: ../src/gpm-statistics.c:1834
 msgid "Processor"
 msgstr "Prozesagailua"
 

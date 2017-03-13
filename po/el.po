@@ -8,13 +8,14 @@
 # Efstathios Iosifidis <iosifidis@opensuse.org>, 2013
 # thunk <thunk77@gmail.com>, 2014
 # Timos Zacharatos <kokkinopioupiou@hotmail.com>, 2016
+# Γιώργος Μηντζιλώνης, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-01 17:44+0300\n"
-"PO-Revision-Date: 2016-09-14 20:10+0000\n"
-"Last-Translator: Timos Zacharatos <kokkinopioupiou@hotmail.com>\n"
+"POT-Creation-Date: 2016-12-06 00:54+0300\n"
+"PO-Revision-Date: 2017-02-07 20:15+0000\n"
+"Last-Translator: Αλέξανδρος Καπετάνιος <alexandros@gnugr.org>\n"
 "Language-Team: Greek (http://www.transifex.com/mate/MATE/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,35 +23,35 @@ msgstr ""
 "Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../applets/brightness/brightness-applet.c:117
+#: ../applets/brightness/brightness-applet.c:110
 msgid "Power Manager Brightness Applet"
 msgstr "Διαχείριση Φωτεινότητας της Διαχείρισης Ενέργειας"
 
-#: ../applets/brightness/brightness-applet.c:118
+#: ../applets/brightness/brightness-applet.c:111
 msgid "Adjusts laptop panel brightness."
 msgstr "Ρυθμίζει τη φωτεινότητα της οθόνης του φορητού υπολογιστή."
 
-#: ../applets/brightness/brightness-applet.c:419
-#: ../applets/inhibit/inhibit-applet.c:376
+#: ../applets/brightness/brightness-applet.c:366
+#: ../applets/inhibit/inhibit-applet.c:329
 msgid "Cannot connect to mate-power-manager"
 msgstr "Αδυναμία σύνδεσης στο mate-power-manager"
 
-#: ../applets/brightness/brightness-applet.c:421
+#: ../applets/brightness/brightness-applet.c:368
 msgid "Cannot get laptop panel brightness"
 msgstr "Αδυναμία λήψης της τιμής φωτεινότητας της οθόνης"
 
-#: ../applets/brightness/brightness-applet.c:423
+#: ../applets/brightness/brightness-applet.c:370
 #, c-format
 msgid "LCD brightness : %d%%"
 msgstr "Φωτεινότητα LCD : %d%%"
 
-#: ../applets/brightness/brightness-applet.c:928
-#: ../applets/inhibit/inhibit-applet.c:450
+#: ../applets/brightness/brightness-applet.c:811
+#: ../applets/inhibit/inhibit-applet.c:403
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "Διανέμεται υπό τους όρους της Γενικής Άδειας Δημόσιας Χρήσης GNU (GPL), έκδοσης 2"
 
-#: ../applets/brightness/brightness-applet.c:929
-#: ../applets/inhibit/inhibit-applet.c:451
+#: ../applets/brightness/brightness-applet.c:812
+#: ../applets/inhibit/inhibit-applet.c:404
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -58,8 +59,8 @@ msgid ""
 "of the License, or (at your option) any later version."
 msgstr "Ο Power Manager είναι ελεύθερο λογισμικό· επιτρέπεται η αναδιανομή \nή/και τροποποίησή του υπό τους όρους της Γενικής Άδειας Δημόσιας \nΧρήσης GNU (GPL), όπως αυτή έχει δημοσιευτεί από το Ίδρυμα \nΕλεύθερου Λογισμικού (FSF) — είτε της έκδοσης 2 της Άδειας, είτε \n(κατ' επιλογήν σας) οποιασδήποτε μεταγενέστερης έκδοσης."
 
-#: ../applets/brightness/brightness-applet.c:933
-#: ../applets/inhibit/inhibit-applet.c:455
+#: ../applets/brightness/brightness-applet.c:816
+#: ../applets/inhibit/inhibit-applet.c:408
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -67,8 +68,8 @@ msgid ""
 "GNU General Public License for more details."
 msgstr "Ο Power Manager διανέμεται με την ελπίδα ότι θα αποδειχθεί χρήσιμος, \nπαρόλα αυτά ΧΩΡΙΣ ΚΑΜΙΑ ΕΓΓΥΗΣΗ — χωρίς ούτε και την σιωπηρή εγγύηση \nΕΜΠΟΡΕΥΣΙΜΟΤΗΤΑΣ ή ΚΑΤΑΛΛΗΛΟΤΗΤΑΣ ΓΙΑ ΕΙΔΙΚΟ ΣΚΟΠΟ. \nΓια περισσότερες λεπτομέρειες ανατρέξτε στη Γενική Άδεια Δημόσιας Χρήσης GNU (GPL)."
 
-#: ../applets/brightness/brightness-applet.c:937
-#: ../applets/inhibit/inhibit-applet.c:459
+#: ../applets/brightness/brightness-applet.c:820
+#: ../applets/inhibit/inhibit-applet.c:412
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -76,13 +77,13 @@ msgid ""
 "02110-1301, USA."
 msgstr "Θα πρέπει να έχετε λάβει αντίγραφο της Γενικής Άδειας Δημόσιας \nΧρήσης GNU (GPL) μαζί με το πρόγραμμα. Αν όχι, γράψτε στο \nFree Software Foundation, Inc., 59 Temple Place, Suite 330, \nBoston, MA  02111-1307  USA"
 
-#: ../applets/brightness/brightness-applet.c:1197
-#: ../applets/inhibit/inhibit-applet.c:690
+#: ../applets/brightness/brightness-applet.c:1075
+#: ../applets/inhibit/inhibit-applet.c:638
 msgid "_About"
 msgstr "Π_ερί"
 
-#: ../applets/brightness/brightness-applet.c:1200
-#: ../applets/inhibit/inhibit-applet.c:693
+#: ../applets/brightness/brightness-applet.c:1078
+#: ../applets/inhibit/inhibit-applet.c:641
 msgid "_Help"
 msgstr "_Βοήθεια"
 
@@ -102,23 +103,23 @@ msgstr "Διαχείριση φωτεινότητας"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Ρυθμίζει τη φωτεινότητα της οθόνης του υπολογιστή"
 
-#: ../applets/inhibit/inhibit-applet.c:95
+#: ../applets/inhibit/inhibit-applet.c:92
 msgid "Power Manager Inhibit Applet"
 msgstr "Μικροεφαρμογή αποτροπής διαχείρισης ενέργειας"
 
-#: ../applets/inhibit/inhibit-applet.c:96
+#: ../applets/inhibit/inhibit-applet.c:93
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Επιτρέπει στο χρήστη να αποτρέπει την αυτόματη εξοικονόμηση ενέργειας."
 
-#: ../applets/inhibit/inhibit-applet.c:379
+#: ../applets/inhibit/inhibit-applet.c:332
 msgid "Automatic sleep inhibited"
 msgstr "Έχει αποτραπεί η αυτόματη αναστολή"
 
-#: ../applets/inhibit/inhibit-applet.c:381
+#: ../applets/inhibit/inhibit-applet.c:334
 msgid "Automatic sleep enabled"
 msgstr "Είναι ενεργή η αυτόματη αναστολή"
 
-#: ../applets/inhibit/inhibit-applet.c:409
+#: ../applets/inhibit/inhibit-applet.c:362
 msgid "Manual inhibit"
 msgstr "Χειροκίνητη αποτροπή"
 
@@ -450,13 +451,13 @@ msgstr "Κλείδωσε την GNOME κλειδοθήκη όταν γίνετα
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
-msgstr ""
+msgstr "Αν θα κλειδώνεται η κλειδοθήκη του MATE όταν ο υπολογιστής αναστέλλεται. Αν ναι, η κλειδοθήκη θα πρέπει να ξεκλειδωθεί κατά την επαναφορά."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:67
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
-msgstr ""
+msgstr "Αν θα κλειδώνεται η κλειδοθήκη του MATE όταν ο υπολογιστής αδρανοποιείται. Αν ναι, η κλειδοθήκη θα πρέπει να ξεκλειδωθεί κατά την επαναφορά."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:68
 msgid "If we should show the low capacity warning for a broken battery"
@@ -746,8 +747,8 @@ msgstr "Ρύθμιση διαχείρισης ενέργειας"
 #. TRANSLATORS: shown on the titlebar
 #. TRANSLATORS: the program name
 #: ../data/mate-power-statistics.desktop.in.in.h:1
-#: ../data/gpm-statistics.ui.h:1 ../src/gpm-statistics.c:1093
-#: ../src/gpm-statistics.c:1612
+#: ../data/gpm-statistics.ui.h:1 ../src/gpm-statistics.c:1090
+#: ../src/gpm-statistics.c:1599
 msgid "Power Statistics"
 msgstr "Στατιστικά ενέργειας"
 
@@ -759,7 +760,7 @@ msgstr "Παρακολούθηση διαχείρισης ενέργειας"
 msgid "Brightness"
 msgstr "Φωτεινότητα"
 
-#: ../data/gpm-statistics.ui.h:2 ../src/gpm-statistics.c:211
+#: ../data/gpm-statistics.ui.h:2 ../src/gpm-statistics.c:208
 msgid "Details"
 msgstr "Λεπτομέρειες"
 
@@ -799,7 +800,7 @@ msgstr "Αφυπνίσεις επεξεργαστή ανά δευτερόλεπ�
 msgid "0"
 msgstr "0"
 
-#: ../data/gpm-statistics.ui.h:12 ../src/gpm-statistics.c:197
+#: ../data/gpm-statistics.ui.h:12 ../src/gpm-statistics.c:194
 msgid "Wakeups"
 msgstr "Αφυπνίσεις"
 
@@ -1008,67 +1009,67 @@ msgstr[0] "λεπτό"
 msgstr[1] "λεπτά"
 
 #. Translators: This is %i days
-#: ../src/gpm-graph-widget.c:446
+#: ../src/gpm-graph-widget.c:435
 #, c-format
 msgid "%id"
 msgstr "%id"
 
 #. Translators: This is %i days %02i hours
-#: ../src/gpm-graph-widget.c:449
+#: ../src/gpm-graph-widget.c:438
 #, c-format
 msgid "%id%02ih"
 msgstr "%id%02ih"
 
 #. Translators: This is %i hours
-#: ../src/gpm-graph-widget.c:454
+#: ../src/gpm-graph-widget.c:443
 #, c-format
 msgid "%ih"
 msgstr "%ih"
 
 #. Translators: This is %i hours %02i minutes
-#: ../src/gpm-graph-widget.c:457
+#: ../src/gpm-graph-widget.c:446
 #, c-format
 msgid "%ih%02im"
 msgstr "%ih%02im"
 
 #. Translators: This is %2i minutes
-#: ../src/gpm-graph-widget.c:462
+#: ../src/gpm-graph-widget.c:451
 #, c-format
 msgid "%2im"
 msgstr "%2im"
 
 #. Translators: This is %2i minutes %02i seconds
-#: ../src/gpm-graph-widget.c:465
+#: ../src/gpm-graph-widget.c:454
 #, c-format
 msgid "%2im%02i"
 msgstr "%2im%02i"
 
 #. Translators: This is %2i seconds
-#: ../src/gpm-graph-widget.c:469
+#: ../src/gpm-graph-widget.c:458
 #, c-format
 msgid "%2is"
 msgstr "%2is"
 
 #. Translators: This is %i Percentage
-#: ../src/gpm-graph-widget.c:473
+#: ../src/gpm-graph-widget.c:462
 #, c-format
 msgid "%i%%"
 msgstr "%i%%"
 
 #. Translators: This is %.1f Watts
-#: ../src/gpm-graph-widget.c:476
+#: ../src/gpm-graph-widget.c:465
 #, c-format
 msgid "%.1fW"
 msgstr "%.1fW"
 
 #. Translators: This is %.1f Volts
-#: ../src/gpm-graph-widget.c:481
+#: ../src/gpm-graph-widget.c:470
 #, c-format
 msgid "%.1fV"
 msgstr "%.1fV"
 
 #. TRANSLATORS: show verbose debugging
-#: ../src/gpm-main.c:172 ../src/gpm-prefs.c:93 ../src/gpm-statistics.c:1595
+#: ../src/gpm-main.c:172 ../src/gpm-prefs.c:77 ../src/gpm-statistics.c:1582
 msgid "Show extra debugging information"
 msgstr "Προβολή επιπρόσθετων πληροφοριών αποσφαλμάτωσης"
 
@@ -1504,129 +1505,129 @@ msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr "Το φορτίο του UPS είναι εξαιρετικά χαμηλό. Ο υπολογιστής θα τερματιστεί."
 
-#: ../src/gpm-prefs.c:97
+#: ../src/gpm-prefs.c:81
 msgid "MATE Power Preferences"
 msgstr "Προτιμήσεις ενέργειας του MATE"
 
-#: ../src/gpm-prefs-core.c:248
+#: ../src/gpm-prefs-core.c:242
 msgid "Shutdown"
 msgstr "Τερματισμός υπολογιστή"
 
-#: ../src/gpm-prefs-core.c:255
+#: ../src/gpm-prefs-core.c:249
 msgid "Suspend"
 msgstr "Αναστολή"
 
-#: ../src/gpm-prefs-core.c:258
+#: ../src/gpm-prefs-core.c:252
 msgid "Hibernate"
 msgstr "Αδρανοποίηση"
 
-#: ../src/gpm-prefs-core.c:261
+#: ../src/gpm-prefs-core.c:255
 msgid "Blank screen"
 msgstr "Κενή οθόνη"
 
-#: ../src/gpm-prefs-core.c:264
+#: ../src/gpm-prefs-core.c:258
 msgid "Ask me"
 msgstr "Ερώτηση"
 
-#: ../src/gpm-prefs-core.c:267
+#: ../src/gpm-prefs-core.c:261
 msgid "Do nothing"
 msgstr "Καμία ενέργεια"
 
-#: ../src/gpm-prefs-core.c:327
+#: ../src/gpm-prefs-core.c:321
 msgid "Never"
 msgstr "Ποτέ"
 
 #. TRANSLATORS: the rate of discharge for the device
-#: ../src/gpm-statistics.c:81 ../src/gpm-statistics.c:469
+#: ../src/gpm-statistics.c:78 ../src/gpm-statistics.c:466
 msgid "Rate"
 msgstr "Ταχύτητα"
 
-#: ../src/gpm-statistics.c:82
+#: ../src/gpm-statistics.c:79
 msgid "Charge"
 msgstr "Φορτίο"
 
-#: ../src/gpm-statistics.c:83 ../src/gpm-statistics.c:483
+#: ../src/gpm-statistics.c:80 ../src/gpm-statistics.c:480
 msgid "Time to full"
 msgstr "Χρόνος για πλήρη φόρτιση"
 
-#: ../src/gpm-statistics.c:84 ../src/gpm-statistics.c:488
+#: ../src/gpm-statistics.c:81 ../src/gpm-statistics.c:485
 msgid "Time to empty"
 msgstr "Χρόνος για πλήρη εκφόρτιση"
 
-#: ../src/gpm-statistics.c:91
+#: ../src/gpm-statistics.c:88
 msgid "10 minutes"
 msgstr "10 λεπτά"
 
-#: ../src/gpm-statistics.c:92
+#: ../src/gpm-statistics.c:89
 msgid "2 hours"
 msgstr "2 ώρες"
 
-#: ../src/gpm-statistics.c:93
+#: ../src/gpm-statistics.c:90
 msgid "6 hours"
 msgstr "6 ώρες"
 
-#: ../src/gpm-statistics.c:94
+#: ../src/gpm-statistics.c:91
 msgid "1 day"
 msgstr "1 ημέρα"
 
-#: ../src/gpm-statistics.c:95
+#: ../src/gpm-statistics.c:92
 msgid "1 week"
 msgstr "1 εβδομάδα"
 
 #. TRANSLATORS: what we've observed about the device
-#: ../src/gpm-statistics.c:104
+#: ../src/gpm-statistics.c:101
 msgid "Charge profile"
 msgstr "Προφίλ φόρτισης"
 
-#: ../src/gpm-statistics.c:105
+#: ../src/gpm-statistics.c:102
 msgid "Discharge profile"
 msgstr "Προφίλ εκφόρτισης"
 
 #. TRANSLATORS: how accurately we can predict the time remaining of the
 #. battery
-#: ../src/gpm-statistics.c:107
+#: ../src/gpm-statistics.c:104
 msgid "Charge accuracy"
 msgstr "Ακρίβεια φόρτισης"
 
-#: ../src/gpm-statistics.c:108
+#: ../src/gpm-statistics.c:105
 msgid "Discharge accuracy"
 msgstr "Ακρίβεια εκφόρτισης"
 
-#: ../src/gpm-statistics.c:135
+#: ../src/gpm-statistics.c:132
 msgid "Attribute"
 msgstr "Γνώρισμα"
 
-#: ../src/gpm-statistics.c:142
+#: ../src/gpm-statistics.c:139
 msgid "Value"
 msgstr "Τιμή"
 
-#: ../src/gpm-statistics.c:159
+#: ../src/gpm-statistics.c:156
 msgid "Image"
 msgstr "Εικόνα"
 
-#: ../src/gpm-statistics.c:165
+#: ../src/gpm-statistics.c:162
 msgid "Description"
 msgstr "Περιγραφή"
 
-#: ../src/gpm-statistics.c:184 ../src/gpm-statistics.c:408
+#: ../src/gpm-statistics.c:181 ../src/gpm-statistics.c:405
 msgid "Type"
 msgstr "Τύπος"
 
-#: ../src/gpm-statistics.c:190
+#: ../src/gpm-statistics.c:187
 msgid "ID"
 msgstr "ID"
 
-#: ../src/gpm-statistics.c:204
+#: ../src/gpm-statistics.c:201
 msgid "Command"
 msgstr "Εντολή"
 
 #. TRANSLATORS: this is when the stats time is not known
-#: ../src/gpm-statistics.c:289
+#: ../src/gpm-statistics.c:286
 msgid "Unknown"
 msgstr "Άγνωστο"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:293
+#: ../src/gpm-statistics.c:290
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
@@ -1634,7 +1635,7 @@ msgstr[0] "%.0f δευτερόλεπτο"
 msgstr[1] "%.0f δευτερόλεπτα"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:298
+#: ../src/gpm-statistics.c:295
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
@@ -1642,7 +1643,7 @@ msgstr[0] "%.1f λεπτό"
 msgstr[1] "%.1f λεπτά"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:303
+#: ../src/gpm-statistics.c:300
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
@@ -1650,35 +1651,35 @@ msgstr[0] "%.1f ώρα"
 msgstr[1] "%.1f ώρες"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:307
+#: ../src/gpm-statistics.c:304
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
 msgstr[0] "%.1f ημέρα"
 msgstr[1] "%.1f ημέρες"
 
-#: ../src/gpm-statistics.c:316
+#: ../src/gpm-statistics.c:313
 msgid "Yes"
 msgstr "Ναι"
 
-#: ../src/gpm-statistics.c:316
+#: ../src/gpm-statistics.c:313
 msgid "No"
 msgstr "Όχι"
 
 #. TRANSLATORS: the device ID of the current device, e.g. "battery0"
-#: ../src/gpm-statistics.c:405
+#: ../src/gpm-statistics.c:402
 msgid "Device"
 msgstr "Συσκευή"
 
-#: ../src/gpm-statistics.c:410
+#: ../src/gpm-statistics.c:407
 msgid "Vendor"
 msgstr "Κατασκευαστής"
 
-#: ../src/gpm-statistics.c:412
+#: ../src/gpm-statistics.c:409
 msgid "Model"
 msgstr "Μοντέλο"
 
-#: ../src/gpm-statistics.c:414
+#: ../src/gpm-statistics.c:411
 msgid "Serial number"
 msgstr "Σειριακός αριθμός"
 
@@ -1686,11 +1687,11 @@ msgstr "Σειριακός αριθμός"
 #. * main power for the computer. For instance, an AC adapter or laptop
 #. battery
 #. * would be TRUE,  but a mobile phone or mouse taking power is FALSE
-#: ../src/gpm-statistics.c:419
+#: ../src/gpm-statistics.c:416
 msgid "Supply"
 msgstr "Παροχή"
 
-#: ../src/gpm-statistics.c:422
+#: ../src/gpm-statistics.c:419
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -1699,126 +1700,126 @@ msgstr[1] "%d δευτερόλεπτα"
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
-#: ../src/gpm-statistics.c:426
+#: ../src/gpm-statistics.c:423
 msgid "Refreshed"
 msgstr "Ανανεωμένη"
 
 #. TRANSLATORS: Present is whether the device is currently attached
 #. * to the computer, as some devices (e.g. laptop batteries) can
 #. * be removed, but still observed as devices on the system
-#: ../src/gpm-statistics.c:436
+#: ../src/gpm-statistics.c:433
 msgid "Present"
 msgstr "Παρούσα"
 
 #. TRANSLATORS: If the device can be recharged, e.g. lithium
 #. * batteries rather than alkaline ones
-#: ../src/gpm-statistics.c:443
+#: ../src/gpm-statistics.c:440
 msgid "Rechargeable"
 msgstr "Επαναφορτιζόμενη"
 
 #. TRANSLATORS: The state of the device, e.g. "Changing" or "Fully charged"
-#: ../src/gpm-statistics.c:449
+#: ../src/gpm-statistics.c:446
 msgid "State"
 msgstr "Κατάσταση"
 
-#: ../src/gpm-statistics.c:453
+#: ../src/gpm-statistics.c:450
 msgid "Energy"
 msgstr "Ενέργεια"
 
-#: ../src/gpm-statistics.c:456
+#: ../src/gpm-statistics.c:453
 msgid "Energy when empty"
 msgstr "Ενέργεια σε πλήρη εκφόρτιση"
 
-#: ../src/gpm-statistics.c:459
+#: ../src/gpm-statistics.c:456
 msgid "Energy when full"
 msgstr "Ενέργεια σε πλήρη φόρτιση"
 
-#: ../src/gpm-statistics.c:462
+#: ../src/gpm-statistics.c:459
 msgid "Energy (design)"
 msgstr "Ενέργεια (προδιαγραφές)"
 
-#: ../src/gpm-statistics.c:476
+#: ../src/gpm-statistics.c:473
 msgid "Voltage"
 msgstr "Τάση"
 
 #. TRANSLATORS: the amount of charge the cell contains
-#: ../src/gpm-statistics.c:498
+#: ../src/gpm-statistics.c:495
 msgid "Percentage"
 msgstr "Ποσοστό"
 
 #. TRANSLATORS: the capacity of the device, which is basically a measure
 #. * of how full it can get, relative to the design capacity
-#: ../src/gpm-statistics.c:505
+#: ../src/gpm-statistics.c:502
 msgid "Capacity"
 msgstr "Χωρητικότητα"
 
 #. TRANSLATORS: the type of battery, e.g. lithium or nikel metal hydroxide
-#: ../src/gpm-statistics.c:510
+#: ../src/gpm-statistics.c:507
 msgid "Technology"
 msgstr "Τεχνολογία"
 
 #. TRANSLATORS: this is when the device is plugged in, typically
 #. * only shown for the ac adaptor device
-#: ../src/gpm-statistics.c:515
+#: ../src/gpm-statistics.c:512
 msgid "Online"
 msgstr "Σε σύνδεση"
 
 #. TRANSLATORS: the command line was not provided
-#: ../src/gpm-statistics.c:827
+#: ../src/gpm-statistics.c:824
 msgid "No data"
 msgstr "Δεν υπάρχουν δεδομένα"
 
 #. TRANSLATORS: kernel module, usually a device driver
-#: ../src/gpm-statistics.c:834 ../src/gpm-statistics.c:839
+#: ../src/gpm-statistics.c:831 ../src/gpm-statistics.c:836
 msgid "Kernel module"
 msgstr "Άρθρωμα πυρήνα"
 
 #. TRANSLATORS: kernel housekeeping
-#: ../src/gpm-statistics.c:844
+#: ../src/gpm-statistics.c:841
 msgid "Kernel core"
 msgstr "Κέντρο πυρήνα"
 
 #. TRANSLATORS: interrupt between processors
-#: ../src/gpm-statistics.c:849
+#: ../src/gpm-statistics.c:846
 msgid "Interprocessor interrupt"
 msgstr "Διακοπή μεταξύ επεξεργαστών"
 
 #. TRANSLATORS: unknown interrupt
-#: ../src/gpm-statistics.c:854
+#: ../src/gpm-statistics.c:851
 msgid "Interrupt"
 msgstr "Διακοπή"
 
 #. TRANSLATORS: the keyboard and mouse device event
-#: ../src/gpm-statistics.c:901
+#: ../src/gpm-statistics.c:898
 msgid "PS/2 keyboard/mouse/touchpad"
 msgstr "PS/2 πληκτρολόγιο/ποντίκι/touchpad"
 
 #. TRANSLATORS: ACPI, the Intel power standard on laptops and desktops
-#: ../src/gpm-statistics.c:904
+#: ../src/gpm-statistics.c:901
 msgid "ACPI"
 msgstr "ACPI"
 
 #. TRANSLATORS: serial ATA is a new style of hard disk interface
-#: ../src/gpm-statistics.c:907
+#: ../src/gpm-statistics.c:904
 msgid "Serial ATA"
 msgstr "SATA"
 
 #. TRANSLATORS: this is the old-style ATA interface
-#: ../src/gpm-statistics.c:910
+#: ../src/gpm-statistics.c:907
 msgid "ATA host controller"
 msgstr "ATA host controller"
 
 #. TRANSLATORS: 802.11 wireless adaptor
-#: ../src/gpm-statistics.c:913
+#: ../src/gpm-statistics.c:910
 msgid "Intel wireless adaptor"
 msgstr "Ασύρματος προσαρμογέας Intel"
 
 #. TRANSLATORS: a timer is something that fires periodically.
 #. * The parameter is a process name, e.g. "firefox-bin".
 #. * This is shown when the timer wakes up.
-#: ../src/gpm-statistics.c:920 ../src/gpm-statistics.c:925
-#: ../src/gpm-statistics.c:930 ../src/gpm-statistics.c:935
-#: ../src/gpm-statistics.c:940
+#: ../src/gpm-statistics.c:917 ../src/gpm-statistics.c:922
+#: ../src/gpm-statistics.c:927 ../src/gpm-statistics.c:932
+#: ../src/gpm-statistics.c:937
 #, c-format
 msgid "Timer %s"
 msgstr "Χρονοδιακόπτης %s"
@@ -1826,120 +1827,120 @@ msgstr "Χρονοδιακόπτης %s"
 #. TRANSLATORS: the parameter is the name of task that's woken up from
 #. sleeping.
 #. * This is shown when the task wakes up.
-#: ../src/gpm-statistics.c:944
+#: ../src/gpm-statistics.c:941
 #, c-format
 msgid "Sleep %s"
 msgstr "Αναστολή %s"
 
 #. TRANSLATORS: this is the name of a new realtime task.
-#: ../src/gpm-statistics.c:947
+#: ../src/gpm-statistics.c:944
 #, c-format
 msgid "New task %s"
 msgstr "Νέα εργασία %s"
 
 #. TRANSLATORS: this is the name of a task that's woken to check state.
 #. * This is shown when the task wakes up.
-#: ../src/gpm-statistics.c:951
+#: ../src/gpm-statistics.c:948
 #, c-format
 msgid "Wait %s"
 msgstr "Αναμονή %s"
 
 #. TRANSLATORS: this is the name of a work queue.
 #. * A work queue is a list of work that has to be done.
-#: ../src/gpm-statistics.c:955 ../src/gpm-statistics.c:959
+#: ../src/gpm-statistics.c:952 ../src/gpm-statistics.c:956
 #, c-format
 msgid "Work queue %s"
 msgstr "Ουρά εργασιών %s"
 
 #. TRANSLATORS: this is when the networking subsystem clears out old entries
-#: ../src/gpm-statistics.c:962
+#: ../src/gpm-statistics.c:959
 #, c-format
 msgid "Network route flush %s"
 msgstr "Εκκαθάριση δρομολογίων δικτύου %s"
 
 #. TRANSLATORS: this is the name of an activity on the USB bus
-#: ../src/gpm-statistics.c:965
+#: ../src/gpm-statistics.c:962
 #, c-format
 msgid "USB activity %s"
 msgstr "Δραστηριότητα USB %s"
 
 #. TRANSLATORS: we've timed out of an aligned timer, with the name
-#: ../src/gpm-statistics.c:968
+#: ../src/gpm-statistics.c:965
 #, c-format
 msgid "Wakeup %s"
 msgstr "Αφύπνιση %s"
 
 #. TRANSLATORS: interupts on the system required for basic operation
-#: ../src/gpm-statistics.c:971
+#: ../src/gpm-statistics.c:968
 msgid "Local interrupts"
 msgstr "Τοπικές διακοπές"
 
 #. TRANSLATORS: interrupts when a task gets moved from one core to another
-#: ../src/gpm-statistics.c:974
+#: ../src/gpm-statistics.c:971
 msgid "Rescheduling interrupts"
 msgstr "Επαναπρογραμματισμός διακοπών"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1083
+#: ../src/gpm-statistics.c:1080
 msgid "Device Information"
 msgstr "Πληροφορίες συσκευής"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1085
+#: ../src/gpm-statistics.c:1082
 msgid "Device History"
 msgstr "Ιστορικό συσκευής"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1087
+#: ../src/gpm-statistics.c:1084
 msgid "Device Profile"
 msgstr "Προφίλ συσκευής"
 
 #. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1089
+#: ../src/gpm-statistics.c:1086
 msgid "Processor Wakeups"
 msgstr "Αφυπνίσεις επεξεργαστή"
 
 #. TRANSLATORS: this is the X axis on the graph
-#: ../src/gpm-statistics.c:1356 ../src/gpm-statistics.c:1362
-#: ../src/gpm-statistics.c:1368 ../src/gpm-statistics.c:1374
+#: ../src/gpm-statistics.c:1347 ../src/gpm-statistics.c:1353
+#: ../src/gpm-statistics.c:1359 ../src/gpm-statistics.c:1365
 msgid "Time elapsed"
 msgstr "Χρόνος"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1358
+#: ../src/gpm-statistics.c:1349
 msgid "Power"
 msgstr "Ισχύς"
 
 #. TRANSLATORS: this is the Y axis on the graph for the whole battery device
 #. TRANSLATORS: this is the X axis on the graph for the whole battery device
-#: ../src/gpm-statistics.c:1364 ../src/gpm-statistics.c:1408
-#: ../src/gpm-statistics.c:1414 ../src/gpm-statistics.c:1420
-#: ../src/gpm-statistics.c:1426
+#: ../src/gpm-statistics.c:1355 ../src/gpm-statistics.c:1399
+#: ../src/gpm-statistics.c:1405 ../src/gpm-statistics.c:1411
+#: ../src/gpm-statistics.c:1417
 msgid "Cell charge"
 msgstr "Φορτίο στοιχείων"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1370 ../src/gpm-statistics.c:1376
+#: ../src/gpm-statistics.c:1361 ../src/gpm-statistics.c:1367
 msgid "Predicted time"
 msgstr "Προβλεπόμενος χρόνος"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1410 ../src/gpm-statistics.c:1422
+#: ../src/gpm-statistics.c:1401 ../src/gpm-statistics.c:1413
 msgid "Correction factor"
 msgstr "Συντελεστής διόρθωσης"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1416 ../src/gpm-statistics.c:1428
+#: ../src/gpm-statistics.c:1407 ../src/gpm-statistics.c:1419
 msgid "Prediction accuracy"
 msgstr "Ακρίβεια πρόβλεψης"
 
 #. TRANSLATORS: show a device by default
-#: ../src/gpm-statistics.c:1598
+#: ../src/gpm-statistics.c:1585
 msgid "Select this device at startup"
 msgstr "Επιλογή αυτής της συσκευής κατά την εκκίνηση"
 
 #. TRANSLATORS: the icon for the CPU
-#: ../src/gpm-statistics.c:1864
+#: ../src/gpm-statistics.c:1834
 msgid "Processor"
 msgstr "Επεξεργαστής"
 
@@ -1969,7 +1970,7 @@ msgstr "_Προτιμήσεις"
 #: ../src/gpm-upower.c:211
 #, c-format
 msgid "%s not present"
-msgstr ""
+msgstr "%s δεν υπάρχει"
 
 #. TRANSLATORS: a phone is charging
 #. TRANSLATORS: device is charging, but we only have a percentage
@@ -2035,7 +2036,7 @@ msgstr "%s: σε αναμονή φόρτισης (%.1f%%)"
 #: ../src/gpm-upower.c:306
 #, c-format
 msgid "%s empty"
-msgstr ""
+msgstr "%s κενό"
 
 #. TRANSLATORS: the type of data, e.g. Laptop battery
 #: ../src/gpm-upower.c:366
