@@ -1,30 +1,42 @@
-### mate-power-manager 1.17.2
+### mate-power-manager 1.18.0
 
-### mate-power-manager 1.17.1
-
-  * Check both the "Backlight" and "BACKLIGHT" xrandr properties for a 
-    backlight.
-  * po: don't mention non-existent files in POTFILES.skip
-  * remove man page for non-existent bugreport tool
-  * remove docs dir which doesn't have any actual docs
-  * Replace no longer valid "expose-event" with "draw" expose-event is not 
-    available in GTK3, draw is its replacement. Stops warnings from inhibit 
-    applet when mate-panel is started/restarted
-  * statistics: don't call upower function on a NULL device path
-  * Brightness: fix OSD rendering when not composited
-  * po: actually add new language from Transifex
-
-### mate-power-manager 1.17.0
-
+  * NEWS: use consistent, project wide, markdown-like formatting
+    to make generating release announcements easier
+  * Build: require xproto >= 7.0.15
+  * Build: require mate-panel >= 1.17
+  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and
+    --with-gtk build option
+  * Replace deprecated upower suspend/hibernate functions with
+    ConsoleKit2 equivalents
+  * Use manpages as is instead of generating them from sgml (and
+    don't require docbook2man for build anymore)
+  * Some more fixes and cleanups
   * Translations update
-  * move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
+
+### mate-power-manager 1.16.2
+
+  * Build: remove strict options, they just get in the way
+  * GTK+3: properly hide brightness applet popup on pressing
+    Esc/Enter/Space keys (fixes popup becoming wide instead
+    and random applet crashes)
+  * GTK+3: fix mouse scroll over brightness applet icon when
+    no popup is shown
+
+### mate-power-manager 1.16.1
+
+  * Check both the "Backlight" and "BACKLIGHT" xrandr properties
+    (fixes inability to adjust screen backlight on some systems)
+  * Statistics: stop runtime warnings spam on desktop systems
+  * GTK+3: fix runtime warning in inhibit applet
+  * GTK+3: fix OSD rendering on non-composited desktop
+  * GTK+3: add OSD style class for non-composited desktop
 
 ### mate-power-manager 1.16.0
 
   * Use GtkAboutDialog instead of MateAboutDialog
   * Drop dependency on libmate-desktop
   * Show the primary device time remaining as the first entry in
-   the context menu
+    the context menu
   * Do not issue a console warning when laptop batteries are empty
   * GTK+3: port from libunique to GtkApplication
   * GTK+3: add css theming for OSD (MsdOsdWindow)
@@ -48,7 +60,7 @@
   * Allow disabling of power button
   * Multiple backlight fixes
   * GTK+3: don't remove slider background in brightness applet
-   (fixes background in some themes)
+    (fixes background in some themes)
   * Translations update
 
 ### mate-power-manager 1.12.0
