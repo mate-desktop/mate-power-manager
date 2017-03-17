@@ -108,7 +108,6 @@ LIBPANEL_REQUIRED=1.17.0
 XRANDR_REQUIRED=1.3.0
 XPROTO_REQUIRED=7.0.15
 CANBERRA_REQUIRED=0.10
-UPOWER_REQUIRED=0.9.5
 
 dnl ---------------------------------------------------------------------------
 dnl - Check library dependencies
@@ -135,8 +134,6 @@ PKG_CHECK_MODULES(X11, [
  x11 xext xproto >= XPROTO_REQUIRED])
 
 PKG_CHECK_MODULES(LIBNOTIFY, libnotify >= $LIBNOTIFY_REQUIRED)
-
-PKG_CHECK_MODULES(UPOWER, upower-glib >= $UPOWER_REQUIRED)
 
 dnl ---------------------------------------------------------------------------
 dnl - Make paths available for source files
