@@ -1789,6 +1789,20 @@ gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
     return r;
 }
 
+static void
+on_icon_theme_change (GtkSettings *settings,
+                      GParamSpec  *pspec,
+                      GpmManager  *manager)
+{
+	gchar *icon = gpm_engine_get_icon (manager->priv->engine);
+	if (icon == NULL) {
+		return;
+	}
+
+	gpm_tray_icon_set_icon (manager->priv->tray_icon, icon);
+	g_free (icon);
+}
+
 /**
  * gpm_manager_init:
  * @manager: This class instance
@@ -1920,6 +1934,11 @@ gpm_manager_init (GpmManager *manager)
 	g_signal_connect (manager->priv->engine, "charge-action",
 			  G_CALLBACK (gpm_manager_engine_charge_action_cb), manager);
 
+	g_signal_connect (gtk_settings_get_default (),
+	                  "notify::gtk-icon-theme-name",
+	                  G_CALLBACK (on_icon_theme_change),
+	                  manager);
+
 	/* update ac throttle */
 	gpm_manager_update_ac_throttle (manager);
 }
@@ -1956,6 +1975,10 @@ gpm_manager_finalize (GObject *object)
 		g_source_remove (manager->priv->critical_alert_timeout_id);
 		manager->priv->critical_alert_timeout_id = 0;
 	}
+
+	g_signal_handlers_disconnect_by_func (gtk_settings_get_default (),
+	                                      on_icon_theme_change,
+	                                      manager);
 
 	g_object_unref (manager->priv->settings);
 	g_object_unref (manager->priv->dpms);
