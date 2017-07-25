@@ -45,7 +45,11 @@ gpm_help_display (const gchar *link_id)
 	else
 		uri = g_strdup ("help:mate-power-manager");
 
+#if GTK_CHECK_VERSION (3, 22, 0)
+	gtk_show_uri_on_window (NULL, uri, GDK_CURRENT_TIME, &error);
+#else
 	gtk_show_uri (NULL, uri, GDK_CURRENT_TIME, &error);
+#endif
 
 	if (error != NULL) {
 		GtkWidget *d;
