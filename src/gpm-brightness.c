@@ -821,7 +821,6 @@ static void
 gpm_brightness_update_cache (GpmBrightness *brightness)
 {
 	guint length;
-	gint screen;
 	Window root;
 	GdkScreen *gscreen;
 	GdkDisplay *display;
@@ -834,33 +833,28 @@ gpm_brightness_update_cache (GpmBrightness *brightness)
 	if (length > 0)
 		g_ptr_array_set_size (brightness->priv->resources, 0);
 
-	/* do for each screen */
 	display = gdk_display_get_default ();
-	length = ScreenCount (brightness->priv->dpy);
-	for (screen = 0; screen < (gint) length; screen++) {
-		egg_debug ("screen %i of %i", screen+1, length);
-		gscreen = gdk_display_get_screen (display, screen);
+	gscreen = gdk_display_get_default_screen (display);
 
-		/* if we have not setup the changed on the monitor, set it here */
-		if (g_object_get_data (G_OBJECT (gscreen), "gpk-set-monitors-changed") == NULL) {
-			egg_debug ("watching ::monitors_changed on %p", gscreen);
-			g_object_set_data (G_OBJECT (gscreen), "gpk-set-monitors-changed", (gpointer) "true");
-			g_signal_connect (G_OBJECT (gscreen), "monitors_changed",
-					  G_CALLBACK (gpm_brightness_monitors_changed), brightness);
-		}
+	/* if we have not setup the changed on the monitor, set it here */
+	if (g_object_get_data (G_OBJECT (gscreen), "gpk-set-monitors-changed") == NULL) {
+		egg_debug ("watching ::monitors_changed on %p", gscreen);
+		g_object_set_data (G_OBJECT (gscreen), "gpk-set-monitors-changed", (gpointer) "true");
+		g_signal_connect (G_OBJECT (gscreen), "monitors_changed",
+				  G_CALLBACK (gpm_brightness_monitors_changed), brightness);
+	}
 
-		root = RootWindow (brightness->priv->dpy, screen);
+	root = RootWindow (brightness->priv->dpy, 0);
 
-		gdk_error_trap_push ();
-		resource = XRRGetScreenResourcesCurrent (brightness->priv->dpy, root);
-		if (gdk_error_trap_pop () || resource == NULL) {
-			egg_warning ("failed to XRRGetScreenResourcesCurrent");
-		}
+	gdk_error_trap_push ();
+	resource = XRRGetScreenResourcesCurrent (brightness->priv->dpy, root);
+	if (gdk_error_trap_pop () || resource == NULL) {
+		egg_warning ("failed to XRRGetScreenResourcesCurrent");
+	}
 
-		if (resource != NULL) {
-			egg_debug ("adding resource %p", resource);
-			g_ptr_array_add (brightness->priv->resources, resource);
-		}
+	if (resource != NULL) {
+		egg_debug ("adding resource %p", resource);
+		g_ptr_array_add (brightness->priv->resources, resource);
 	}
 }
 
