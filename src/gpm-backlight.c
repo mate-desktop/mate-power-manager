@@ -208,7 +208,11 @@ gpm_backlight_dialog_show (GpmBacklight *backlight)
 	GtkRequisition win_req;
 	GdkScreen     *pointer_screen;
 	GdkRectangle   geometry;
+#if GTK_CHECK_VERSION (3, 22, 0)
+	GdkMonitor    *monitor;
+#else
 	int            monitor;
+#endif
         GdkDisplay    *display;
         GdkDeviceManager *device_manager;
         GdkDevice     *device;
@@ -237,6 +241,13 @@ gpm_backlight_dialog_show (GpmBacklight *backlight)
 				 &pointer_x,
 				 &pointer_y);
 
+#if GTK_CHECK_VERSION (3, 22, 0)
+	monitor = gdk_display_get_monitor_at_point (gdk_screen_get_display (pointer_screen),
+						    pointer_x,
+						    pointer_y);
+
+	gdk_monitor_get_geometry (monitor, &geometry);
+#else
 	monitor = gdk_screen_get_monitor_at_point (pointer_screen,
 						   pointer_x,
 						   pointer_y);
@@ -244,6 +255,7 @@ gpm_backlight_dialog_show (GpmBacklight *backlight)
 	gdk_screen_get_monitor_geometry (pointer_screen,
 					 monitor,
 					 &geometry);
+#endif
 
 	screen_w = geometry.width;
 	screen_h = geometry.height;
