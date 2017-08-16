@@ -326,7 +326,7 @@ gpm_kbd_backlight_on_dbus_signal (GDBusProxy *proxy,
        return;
    }
 
-   g_assert_not_reached ();
+   g_debug ("signal '%s' not handled!", signal_name);
 }
 
 /**
