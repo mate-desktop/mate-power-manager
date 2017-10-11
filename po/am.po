@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-06 00:54+0300\n"
-"PO-Revision-Date: 2017-03-10 23:20+0000\n"
-"Last-Translator: samson <sambelet@yahoo.com>\n"
+"POT-Creation-Date: 2017-10-07 14:00+0300\n"
+"PO-Revision-Date: 2017-10-07 11:02+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Amharic (http://www.transifex.com/mate/MATE/language/am/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,26 +26,26 @@ msgstr "የ ብሩህነት አፕሌት ሐይል አስተዳዳሪ"
 msgid "Adjusts laptop panel brightness."
 msgstr "የ ላፕቶፕ ክፍል ብሩህነት ማሰናጃ"
 
-#: ../applets/brightness/brightness-applet.c:366
+#: ../applets/brightness/brightness-applet.c:367
 #: ../applets/inhibit/inhibit-applet.c:329
 msgid "Cannot connect to mate-power-manager"
 msgstr "ከ ሜት የ ብርሀን አስተዳዳሪ ጋር መገናኘት አልተቻለም"
 
-#: ../applets/brightness/brightness-applet.c:368
+#: ../applets/brightness/brightness-applet.c:369
 msgid "Cannot get laptop panel brightness"
 msgstr "የ ላፕቶፕ ክፍል ብሩህነት ማግኘት አልተቻለም"
 
-#: ../applets/brightness/brightness-applet.c:370
+#: ../applets/brightness/brightness-applet.c:371
 #, c-format
 msgid "LCD brightness : %d%%"
 msgstr "የ LCD ብሩህነት : %d%%"
 
-#: ../applets/brightness/brightness-applet.c:811
+#: ../applets/brightness/brightness-applet.c:807
 #: ../applets/inhibit/inhibit-applet.c:403
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "Licensed under the GNU General Public License Version 2"
 
-#: ../applets/brightness/brightness-applet.c:812
+#: ../applets/brightness/brightness-applet.c:808
 #: ../applets/inhibit/inhibit-applet.c:404
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
@@ -54,7 +54,7 @@ msgid ""
 "of the License, or (at your option) any later version."
 msgstr "Pየ ሐይል አስተዳዳሪ ነፃ ሶፍትዌር ነው; እርስዎ ማሰራጨት ይችላሉ እና/ወይንም \nማሻሻል በዚህ ደንብ መሰረት በ GNU General Public License\nas published by the Free Software Foundation; either version 2\nof the License, or (at your option) any later version."
 
-#: ../applets/brightness/brightness-applet.c:816
+#: ../applets/brightness/brightness-applet.c:812
 #: ../applets/inhibit/inhibit-applet.c:408
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
@@ -63,7 +63,7 @@ msgid ""
 "GNU General Public License for more details."
 msgstr ""
 
-#: ../applets/brightness/brightness-applet.c:820
+#: ../applets/brightness/brightness-applet.c:816
 #: ../applets/inhibit/inhibit-applet.c:412
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
@@ -72,12 +72,12 @@ msgid ""
 "02110-1301, USA."
 msgstr ""
 
-#: ../applets/brightness/brightness-applet.c:1075
+#: ../applets/brightness/brightness-applet.c:1068
 #: ../applets/inhibit/inhibit-applet.c:638
 msgid "_About"
 msgstr "_ሰለ "
 
-#: ../applets/brightness/brightness-applet.c:1078
+#: ../applets/brightness/brightness-applet.c:1071
 #: ../applets/inhibit/inhibit-applet.c:641
 msgid "_Help"
 msgstr "_እርዳታ"
@@ -163,7 +163,7 @@ msgstr "ባትሪ በጣም ዝቅተኛ በሚሆን ጊዜ የሚወሰደው 
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
-msgstr ""
+msgstr "የ ባትሪው ሁኔታ ይታይ እንደሆን መወሰኛ ክዳኑ በሚዘጋ ጊዜ እና ሐይል በሚለያይ ጊዜ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:6
 msgid ""
@@ -178,7 +178,7 @@ msgstr "UPS አደገኛ ዝቅተኛ ተግባር"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:8
 msgid "The action to take when the UPS is critically low."
-msgstr ""
+msgstr "ይህ UPS በጣም አደገኛ ሁኔእታ ላይ ሲሆን የሚወሰደው ተግባር"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:9
 msgid "UPS low power action"
@@ -206,7 +206,7 @@ msgstr "የ መደብ ብርሀን ብሩህነት መቀነሻ በ ባትሪ �
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
-msgstr ""
+msgstr "የ መመልከቻው ብሩህነት ይቀነስ እንደሆን መወሰኛ ኮምፒዩተሩ በ ባትሪ በሚሰራ ጊዜ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:15
 msgid "Reduce the keyboard backlight when on battery power"
@@ -226,11 +226,11 @@ msgstr "በ ኤሌክትሪክ ሀይል በሚሰራ ጊዜ የ ፊደል ገ�
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
-msgstr ""
+msgstr "ለ ፊደል ገበታ ብሩህነት በ ፐርሰንት ማሰናጃ: በ AC ሐይል በሚሰራ ጊዜ: ሕጋዊ ዋጋ በ 0 እና በ 100 መካከል ነው"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:19
 msgid "Percent to reduce keyboard backlight by when on battery power."
-msgstr ""
+msgstr "የ ፊደል ገበታ መደብ ብሩህነት በ ፐርሰንት ኮምፒዩተሩ በ ባትሪ በሚሰራ ጊዜ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:21
 #, no-c-format
@@ -238,11 +238,11 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
-msgstr ""
+msgstr "ለ ፊደል ገበታ የ መደብ ብርሀን መቀነሻ: በ ባትሪ ሐይል በሚሰራ ጊዜ: ለምሳሌ: ከ ተሰናዳ '60', የ መደብ ብርሀን ይቀነሳል በ 40% በ ባትሪ ሐይል በሚሰራ ጊዜ: ሕጋዊ ዋጋ በ 0 እና በ 100 መካከል ነው"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
-msgstr ""
+msgstr "የ ፊደል ገበታ መደብ ብሩህነት የሚቀነሰው በ ፐርሰንት ኮምፒዩተሩ በማይሰራ ጊዜ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:24
 #, no-c-format
@@ -250,7 +250,7 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
-msgstr ""
+msgstr "ለ ፊደል ገበታ የ መደብ ብርሀን መቀነሻ: በማይሰራ ጊዜ: ለምሳሌ: ከ ተሰናዳ '60', የ መደብ ብርሀን ይቀነሳል በ 40% በ ባትሪ ሐይል በሚሰራ ጊዜ: ሕጋዊ ዋጋ በ 0 እና በ 100 መካከል ነው"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:25
 msgid "The brightness of the screen when idle"
@@ -270,7 +270,7 @@ msgstr "በ ባትሪ ሀይል በሚሰራ ጊዜ ምንም እንቅስቃሴ
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
-msgstr ""
+msgstr "መመልከቻው ይፈዝ እንደሆን ሐይል ለማዳን ኮምፒዩተሩ በማይሰራ ጊዜ: በ ባትሪ ሐይ በሚሆንበት ጊዜ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:29
 msgid "The default amount of time to dim the screen after idle"
@@ -292,7 +292,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:33
 msgid "Dim the screen after a period of inactivity when on AC power"
-msgstr ""
+msgstr "ምንም እንቅስቃሴ በማይኖር ጊዜ መመልከቻውን ማፍዘዣ በ AC ሐይል በሚሰራ ጊዜ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:34
 msgid ""
@@ -306,7 +306,7 @@ msgstr "በ ኤሌክትሪክ በሚሰራ ጊዜ መመልከቻውን ባዶ 
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:36
 msgid "The DPMS method used to blank the screen when on AC power."
-msgstr ""
+msgstr "የ DPMS ዘደ በሚጠቀሙ ጊዜ መመልከቻውን ባዶ ለማድረግ በ AC ሐይል በሚሰራ ጊዜ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:37
 msgid "Method used to blank screen on battery"
@@ -314,7 +314,7 @@ msgstr "በ ባትሪ ሀይል በሚሰራ ጊዜ መመልከቻውን ባዶ
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:38
 msgid "The DPMS method used to blank the screen when on battery power."
-msgstr ""
+msgstr "የ DPMS ዘደ በሚጠቀሙ ጊዜ መመልከቻውን ባዶ ለማድረግ በ ባትሪ ሐይል በሚሰራ ጊዜ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:39
 msgid "LCD brightness when on AC"
@@ -324,7 +324,7 @@ msgstr "የ LCD ብሩህነት በ ኤሌክትሪክ በሚሆን ጊዜ"
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
-msgstr ""
+msgstr "የ ማሳያው ብሩህነት በ AC ሐይል በሚሰራ ጊዜ: የሚቻለው ዋጋ በ 0.0 እና በ 100.0. መካከል ነው"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:41
 msgid "Suspend button action"
@@ -332,7 +332,7 @@ msgstr "የማገጃ ቁልፍ ተግባር"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:42
 msgid "The action to take when the system suspend button is pressed."
-msgstr ""
+msgstr "የሚወሰደው ተግባር የ ስርአቱን የ ማገጃ ቁልፍ በሚጫኑ ጊዜ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:43
 msgid "Hibernate button action"
@@ -340,7 +340,7 @@ msgstr "የማስተኛ ቁልፍ ምርጫዎች"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:44
 msgid "The action to take when the system hibernate button is pressed."
-msgstr ""
+msgstr "የሚወሰደው ተግባር የ ስርአቱ የ ማስተኛ ቁልፍ በሚጫኑ ጊዜ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:45
 msgid "Power button action"
@@ -348,7 +348,7 @@ msgstr "የ ሐይል ቁልፍ ተግባር"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:46
 msgid "The action to take when the system power button is pressed."
-msgstr ""
+msgstr "የሚወሰደው ተግባር የ ስርአቱ የ ሐይል ቁልፍ በሚጫኑ ጊዜ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:47
 msgid "Laptop lid close action on battery"
@@ -358,11 +358,11 @@ msgstr "የ ላፕቶፕ ክዳን በሚዘጋ ጊዜ በ ባትሪ ላይ የ�
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
-msgstr ""
+msgstr "የ ላፕቶፕ ክዳን በሚዘጋ ጊዜ እና ላፕቶፕ በ ባትሪ ሐይል በሚሰራ ጊዜ የሚወሰደው ተግባር"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:49
 msgid "Laptop lid close action when on AC"
-msgstr ""
+msgstr "የ ላፕቶፕ ክዳን በሚዘጋ ጊዜ የሚወሰደው ተግባር በ AC በሚሰራ ጊዜ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:50
 msgid ""
@@ -372,7 +372,7 @@ msgstr "የ ላፕቶፕ ክዳን በሚዘጋ ጊዜ በ ኤሌክትሪክ �
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:51
 msgid "Whether to use time-based notifications"
-msgstr ""
+msgstr "ጊዜ-መሰረት ያደረገ ማስታወቂያ መጠቀሚያ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:52
 msgid ""
@@ -382,11 +382,11 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:53
 msgid "Check CPU load before sleeping"
-msgstr ""
+msgstr "የ ሲፒዩ ጭነት መመርመሪያ ከ መተኛቱ በፊት"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:54
 msgid "If the CPU load should be checked before doing the idle action."
-msgstr ""
+msgstr "የ ሲፒዩ ጭነት መመርመር አለበት ከ መተኛቱ ተግባር በፊት"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:55
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
@@ -456,7 +456,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:68
 msgid "If we should show the low capacity warning for a broken battery"
-msgstr ""
+msgstr "ለ ተሰበረ ባትሪ የ ዝቅተኛ ምልክት ይታይ እንደሆን መወሰኛ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:69
 msgid "If we should show the low capacity warning for a broken battery."
@@ -529,11 +529,11 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:84
 msgid "The default graph type to show for history"
-msgstr ""
+msgstr "ለ ታሪክ ነባር የ ግራፍ አይነት ማሳያ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:85
 msgid "The default graph type to show in the history window."
-msgstr ""
+msgstr "የ ታሪክ መስኮት በ ነባር የ ግራፍ አይነት ማሳያ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:86
 msgid "The maximum time displayed for history"
@@ -546,7 +546,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:88
 msgid "Whether we should show the stats data points"
-msgstr ""
+msgstr "የ ዳታ ነጥብ ሁኔታ ማሳያ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:89
 msgid "Whether we should show the stats data points in the statistics window."
@@ -554,19 +554,19 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:90
 msgid "Whether we should smooth the stats data"
-msgstr ""
+msgstr "የ ዳታው ሁኔታ ይለሰልስ እንደሆን መወሰኛ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:91
 msgid "Whether we should smooth the stats data in the graph."
-msgstr ""
+msgstr "የ ዳታው ሁኔታ በ ግራፍ ይለሰልስ እንደሆን መወሰኛ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:92
 msgid "The default graph type to show for stats"
-msgstr ""
+msgstr "ለ ሁኔታው የ ግራፍ አይነት ይታይ እንደሆን መወሰኛ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:93
 msgid "The default graph type to show in the stats window."
-msgstr ""
+msgstr "በ ሁኔታው መስኮት ውስጥ የ ግራፍ አይነት ይታይ እንደሆን መወሰኛ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:94
 msgid "The index of the page number to show by default"
@@ -580,7 +580,7 @@ msgstr "በ ነባር የሚታየው የ ገጽ ቁጥር ለ ማውጫ የሚ�
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
-msgstr ""
+msgstr "መጨረሻ የ ተረጠው አካል መለያ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:97
 msgid ""
@@ -596,7 +596,7 @@ msgstr "ዝቅተኛ የሚባለው በ ፐርሰንት"
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
-msgstr ""
+msgstr "የ ባትሪው ሐይል በ ፐርሰንት ዝቅተኛ ሲሆን: ዋጋ የሚኖረው የሚጠቀሙት-ጊዜ-ለ-አሰራር ሀሰት ነው"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:100
 msgid "Percentage considered critical"
@@ -640,13 +640,13 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:108
 msgid "The time remaining when action is taken"
-msgstr ""
+msgstr "ተግባር ሲወሰድ የ ቀረው ጊዜ "
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:109
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "የ ቀረው ጊዜ በ ሰከንዶች ባትሪው አደገኛ ዝቅተኛ ላይ ሲሆን የሚወሰደው ተግባር: ዋጋ የሚኖረው የሚጠቀሙት-ጊዜ-ለ-አሰራር እውነት ሲሆን ነው"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:110
 msgid "Sleep timeout computer when on battery"
@@ -696,7 +696,7 @@ msgstr ""
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
-msgstr ""
+msgstr " የ ቀረው ጊዜ በ ሰከንዶች የ ኮምፒዩተሩ ባትሪ አደገኛ ዝቅተኛ ላይ ሲሆን የሚወሰደው ተግባር: ማሳያው ከ መተኛቱ በፊት"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:120
 msgid "Sleep timeout display when on UPS"
@@ -729,7 +729,7 @@ msgstr "የ ማስታወቂያ ምልክት መቼ ይታይ"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:126
 msgid "Display options for the notification icon."
-msgstr ""
+msgstr "ለ ማስታወቂያ ምልክት ማሳያ ምርጫ"
 
 #: ../data/mate-power-preferences.desktop.in.in.h:1
 msgid "Power Management"
@@ -743,7 +743,7 @@ msgstr "የ ሐይል አስተዳዳሪ ማሰናጃ"
 #. TRANSLATORS: the program name
 #: ../data/mate-power-statistics.desktop.in.in.h:1
 #: ../data/gpm-statistics.ui.h:1 ../src/gpm-statistics.c:1090
-#: ../src/gpm-statistics.c:1599
+#: ../src/gpm-statistics.c:1603
 msgid "Power Statistics"
 msgstr "የ ሐይል ስታትስቲክስ"
 
@@ -789,7 +789,7 @@ msgstr "ስታትስቲክስ"
 
 #: ../data/gpm-statistics.ui.h:10
 msgid "Processor wakeups per second:"
-msgstr ""
+msgstr "የሚነቃው ሂደት በ ሰከንድ ውስጥ:"
 
 #: ../data/gpm-statistics.ui.h:11
 msgid "0"
@@ -821,7 +821,7 @@ msgstr "<b>ማሳያ</b>"
 
 #: ../data/gpm-prefs.ui.h:6
 msgid "Put _display to sleep when inactive for:"
-msgstr ""
+msgstr "ንቁ በማይሆን ጊዜ _ማስያውን ማስተኛ:"
 
 #: ../data/gpm-prefs.ui.h:7
 msgid "Set display _brightness to:"
@@ -861,7 +861,7 @@ msgstr "በ UPS ሀይል"
 
 #: ../data/gpm-prefs.ui.h:16
 msgid "When the power _button is pressed:"
-msgstr ""
+msgstr "የ ሐይል _ቁልፍ በሚጫኑ ጊዜ:"
 
 #: ../data/gpm-prefs.ui.h:17
 msgid "When the _suspend button is pressed:"
@@ -1064,7 +1064,7 @@ msgid "%.1fV"
 msgstr "%.1fV"
 
 #. TRANSLATORS: show verbose debugging
-#: ../src/gpm-main.c:172 ../src/gpm-prefs.c:77 ../src/gpm-statistics.c:1582
+#: ../src/gpm-main.c:172 ../src/gpm-prefs.c:77 ../src/gpm-statistics.c:1586
 msgid "Show extra debugging information"
 msgstr ""
 
@@ -1074,11 +1074,11 @@ msgstr "የ ተገጠመውን ፕሮግራም እትም ማሳያ እና መው
 
 #: ../src/gpm-main.c:176
 msgid "Exit after a small delay (for debugging)"
-msgstr ""
+msgstr "ከ ትንሽ ማዘግየት በኋላ መውጫ (ለ ማስተካከያ)"
 
 #: ../src/gpm-main.c:178
 msgid "Exit after the manager has loaded (for debugging)"
-msgstr ""
+msgstr "አስተዳዳሪ ከ ተጫነ በኋላ መውጫ (ለ ማስተካከያ)"
 
 #: ../src/gpm-main.c:189 ../src/gpm-main.c:193
 msgid "MATE Power Manager"
@@ -1135,50 +1135,50 @@ msgid "Suspend failed"
 msgstr "ማገድ አልተቻለም"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:581
+#: ../src/gpm-manager.c:587
 msgid "Computer failed to suspend."
 msgstr "ኮምፒዩተሩን ማገድ አልተቻለም"
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:583
+#: ../src/gpm-manager.c:589
 msgid "Failed to suspend"
 msgstr "ማገድ አልተቻለም "
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:587
+#: ../src/gpm-manager.c:593
 msgid "Computer failed to hibernate."
 msgstr "ኮምፒዩተሩን ማስተኛት አልተቻለም"
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:589
+#: ../src/gpm-manager.c:595
 msgid "Failed to hibernate"
 msgstr "ማስተኛት አልተቻለም"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:594
+#: ../src/gpm-manager.c:600
 msgid "Failure was reported as:"
 msgstr "ውድቀቱን አሳውቀዋል እንደ:"
 
 #. TRANSLATORS: button text, visit the suspend help website
-#: ../src/gpm-manager.c:607
+#: ../src/gpm-manager.c:613
 msgid "Visit help page"
 msgstr "የእርዳታውን ገጽ ይጎብኙ "
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:853
+#: ../src/gpm-manager.c:859
 msgid "Display DPMS activated"
-msgstr ""
+msgstr "የ DPMS ማስጀመሪያ ማሳያ"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:872
+#: ../src/gpm-manager.c:878
 msgid "On battery power"
 msgstr "በ ባትሪ ሐይል"
 
-#: ../src/gpm-manager.c:890
+#: ../src/gpm-manager.c:896
 msgid "Laptop lid is closed"
 msgstr "የ ላፕቶፑ ክዳኑ ተዘግቷል"
 
-#: ../src/gpm-manager.c:928
+#: ../src/gpm-manager.c:934
 msgid "Power Information"
 msgstr "የ ሐይል መረጃ"
 
@@ -1186,13 +1186,13 @@ msgstr "የ ሐይል መረጃ"
 #. * where capacity is the ratio of the last_full capacity with that of
 #. * the design capacity. (#326740)
 #. TRANSLATORS: battery is old or broken
-#: ../src/gpm-manager.c:1115
+#: ../src/gpm-manager.c:1121
 msgid "Battery may be broken"
 msgstr "ባትሪው ምናልባት የተሰበረ ነው"
 
 #. TRANSLATORS: notify the user that that battery is broken as the capacity is
 #. very low
-#: ../src/gpm-manager.c:1118
+#: ../src/gpm-manager.c:1124
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
@@ -1200,252 +1200,252 @@ msgid ""
 msgstr "ባትሪው እጅግ በጣም ዝቅተኛ ነው (%1.1f%%), ይህ ማለት በጣም አሮጌ ይሆናል ወይንም ተሰብሯል"
 
 #. TRANSLATORS: show the charged notification
-#: ../src/gpm-manager.c:1167
+#: ../src/gpm-manager.c:1173
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] "ባትሪው ሞልቷል "
 msgstr[1] "ባትሪው ሞልቷል"
 
 #. TRANSLATORS: laptop battery is now discharging
-#: ../src/gpm-manager.c:1213
+#: ../src/gpm-manager.c:1219
 msgid "Battery Discharging"
 msgstr "ባትሪ እያለቀ ነው"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1217
+#: ../src/gpm-manager.c:1223
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr "%s ባትሪው የሚቀረው ሐይል (%.0f%%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-manager.c:1220 ../src/gpm-manager.c:1232
+#: ../src/gpm-manager.c:1226 ../src/gpm-manager.c:1238
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr "%s እያለቀ ነው (%.0f%%)"
 
 #. TRANSLATORS: UPS is now discharging
-#: ../src/gpm-manager.c:1225
+#: ../src/gpm-manager.c:1231
 msgid "UPS Discharging"
 msgstr "UPS እያለቀ ነው"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1229
+#: ../src/gpm-manager.c:1235
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
-msgstr ""
+msgstr "%s of UPS ተተኪ የቀረው ሐይል (%.0f%%)"
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
-#: ../src/gpm-manager.c:1313
+#: ../src/gpm-manager.c:1319
 msgid "Battery low"
 msgstr "ባትሪው ዝቅተኛ ነው"
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
-#: ../src/gpm-manager.c:1316
+#: ../src/gpm-manager.c:1322
 msgid "Laptop battery low"
 msgstr "የ ላፕቶፕ ባትሪ ዝቅተኛ ነው"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1322
+#: ../src/gpm-manager.c:1328
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "በግምት <b>%s</b> የቀረው (%.0f%%)"
 
 #. TRANSLATORS: UPS is starting to get a little low
-#: ../src/gpm-manager.c:1326
+#: ../src/gpm-manager.c:1332
 msgid "UPS low"
 msgstr "UPS ዝቅተኛ ነው"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1330
+#: ../src/gpm-manager.c:1336
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
-msgstr ""
+msgstr "በግምት <b>%s</b> የ ቀረው UPS ተተኪ ሐይል (%.0f%%)"
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1334 ../src/gpm-manager.c:1468
+#: ../src/gpm-manager.c:1340 ../src/gpm-manager.c:1474
 msgid "Mouse battery low"
 msgstr "የ አይጥ ባትሪ ዝቅተኛ ነው"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1337
+#: ../src/gpm-manager.c:1343
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr "የ ሽቦ አልባ አይጥ ሀይል ዝቅተኛ ነው (%.0f%%)"
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1341 ../src/gpm-manager.c:1476
+#: ../src/gpm-manager.c:1347 ../src/gpm-manager.c:1482
 msgid "Keyboard battery low"
 msgstr "የ ፊደል ገበታ ባትሪ ዝቅተኛ ነው"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1344
+#: ../src/gpm-manager.c:1350
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr "የ ሽቦ አልባ ፊደል ገበታ ባትሪ ዝቅተኛ ነው (%.0f%%)"
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1348 ../src/gpm-manager.c:1485
+#: ../src/gpm-manager.c:1354 ../src/gpm-manager.c:1491
 msgid "PDA battery low"
 msgstr "የ PDA ባትሪ ዝቅተኛ ነው"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1351
+#: ../src/gpm-manager.c:1357
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr "የ PDA ሀይል ዝቅተኛ ነው (%.0f%%)"
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1355 ../src/gpm-manager.c:1495
-#: ../src/gpm-manager.c:1505
+#: ../src/gpm-manager.c:1361 ../src/gpm-manager.c:1501
+#: ../src/gpm-manager.c:1511
 msgid "Cell phone battery low"
 msgstr "የ ሴል ፎን ባትሪ ዝቅተኛ ነው"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1358
+#: ../src/gpm-manager.c:1364
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "የ ሴል ፎን ሀይል ዝቅተኛ ነው (%.0f%%)"
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1362
+#: ../src/gpm-manager.c:1368
 msgid "Media player battery low"
 msgstr "የ መገናኛ ማጫወቻ ባትሪ ዝቅተኛ ነው"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1365
+#: ../src/gpm-manager.c:1371
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr "የ መገናኛ ማጫወቻ ሀይል ዝቅተኛ ነው (%.0f%%)"
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1369 ../src/gpm-manager.c:1514
+#: ../src/gpm-manager.c:1375 ../src/gpm-manager.c:1520
 msgid "Tablet battery low"
 msgstr "የ ታብሌት ባትሪ ዝቅተኛ ነው"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1372
+#: ../src/gpm-manager.c:1378
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "የ ታብሌት ባትሪ ዝቅተኛ ነው (%.0f%%)"
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1376 ../src/gpm-manager.c:1523
+#: ../src/gpm-manager.c:1382 ../src/gpm-manager.c:1529
 msgid "Attached computer battery low"
 msgstr "የ ተያያዘው ኮምፒዩተር ባትሪ ዝቅተኛ ነው"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1379
+#: ../src/gpm-manager.c:1385
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "የ ተያያዘው ኮምፒዩተር ባትሪ ዝቅተኛ ነው (%.0f%%)"
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
-#: ../src/gpm-manager.c:1427
+#: ../src/gpm-manager.c:1433
 msgid "Battery critically low"
 msgstr "ባትሪው በጣም ዝቅተኛ ነው"
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1430 ../src/gpm-manager.c:1583
+#: ../src/gpm-manager.c:1436 ../src/gpm-manager.c:1589
 msgid "Laptop battery critically low"
 msgstr "የ ላፕቶፕ ባትሪ በጣም ዝቅተኛ ነው"
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
-#: ../src/gpm-manager.c:1439
+#: ../src/gpm-manager.c:1445
 msgid "Plug in your AC adapter to avoid losing data."
-msgstr ""
+msgstr "የ እርስዎ ዳታ እንዳይጠፋ የ AC ተሰኪ ይሰኩ "
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1443
+#: ../src/gpm-manager.c:1449
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr "ኮምፒዩተሩ ካልተሰካ በ ቅርቡ ይታገዳል"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1447
+#: ../src/gpm-manager.c:1453
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr "ኮምፒዩተሩ ካልተሰካ በ ቅርቡ ያንቀላፋል"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1451
+#: ../src/gpm-manager.c:1457
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr "ኮምፒዩተሩ ካልተሰካ በ ቅርቡ ይጠፋል"
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1458 ../src/gpm-manager.c:1619
+#: ../src/gpm-manager.c:1464 ../src/gpm-manager.c:1625
 msgid "UPS critically low"
 msgstr "UPS አደገኛ ዝቅተኛ ላይ ነው"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1462
+#: ../src/gpm-manager.c:1468
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
-msgstr ""
+msgstr "በግምት <b>%s</b> የ ቀረው UPS ሐይል (%.0f%%). እንደ ነበር መመለሻ የ AC ሐይል ወደ እርስዎ ኮምፒዩተር ዳታ እንዳይጠፋ"
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1471
+#: ../src/gpm-manager.c:1477
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr ""
+msgstr "የ ሽቦ አልባ አይጥ ሐይል በጣም ዝቅተኛ ነው (%.0f%%). ይህ አካል በ ትክክል መስራቱን ያቆማል እንደገና ካልተሞላ"
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1479
+#: ../src/gpm-manager.c:1485
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr ""
+msgstr "የ ሽቦ አልባ ፊደል ገበት ሐይል በጣም ዝቅተኛ ነው (%.0f%%). ይህ አካል በ ትክክል መስራቱን ያቆማል እንደገና ካልተሞላ"
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1488
+#: ../src/gpm-manager.c:1494
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
 " not charged."
-msgstr ""
+msgstr "PDA ሐይል በጣም ዝቅተኛ ነው (%.0f%%). ይህ አካል በ ትክክል መስራቱን ያቆማል እንደገና ካልተሞላ"
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1498
+#: ../src/gpm-manager.c:1504
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr ""
+msgstr "የ ተንቀሳቃሽ ስልክ ሐይል በጣም ዝቅተኛ ነው (%.0f%%). ይህ አካል በ ትክክል መስራቱን ያቆማል እንደገና ካልተሞላ"
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1508
+#: ../src/gpm-manager.c:1514
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr ""
+msgstr "የ ብዙሀን መገናኛ ሐይል በጣም ዝቅተኛ ነው (%.0f%%). ይህ አካል በ ትክክል መስራቱን ያቆማል እንደገና ካልተሞላ"
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1517
+#: ../src/gpm-manager.c:1523
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
-msgstr ""
+msgstr "የ ታብሌት ሐይል በጣም ዝቅተኛ ነው (%.0f%%). ይህ አካል በ ትክክል መስራቱን ያቆማል እንደገና ካልተሞላ"
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1526
+#: ../src/gpm-manager.c:1532
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
@@ -1453,14 +1453,14 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1591
+#: ../src/gpm-manager.c:1597
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
 msgstr ""
 
 #. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1597
+#: ../src/gpm-manager.c:1603
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
@@ -1468,34 +1468,34 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1604
+#: ../src/gpm-manager.c:1610
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr ""
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1609
+#: ../src/gpm-manager.c:1615
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr ""
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1627
+#: ../src/gpm-manager.c:1633
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
 msgstr ""
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1633
+#: ../src/gpm-manager.c:1639
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr ""
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1638
+#: ../src/gpm-manager.c:1644
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr ""
@@ -1504,31 +1504,31 @@ msgstr ""
 msgid "MATE Power Preferences"
 msgstr "የ ሜት የ ሐይል ምርጫዎች"
 
-#: ../src/gpm-prefs-core.c:242
+#: ../src/gpm-prefs-core.c:241
 msgid "Shutdown"
 msgstr "ማጥፊያ "
 
-#: ../src/gpm-prefs-core.c:249
+#: ../src/gpm-prefs-core.c:248
 msgid "Suspend"
 msgstr "ማገጃ "
 
-#: ../src/gpm-prefs-core.c:252
+#: ../src/gpm-prefs-core.c:251
 msgid "Hibernate"
 msgstr "ማስተኛ "
 
-#: ../src/gpm-prefs-core.c:255
+#: ../src/gpm-prefs-core.c:254
 msgid "Blank screen"
 msgstr "ባዶ መመልከቻ"
 
-#: ../src/gpm-prefs-core.c:258
+#: ../src/gpm-prefs-core.c:257
 msgid "Ask me"
 msgstr "ጠይቀኝ "
 
-#: ../src/gpm-prefs-core.c:261
+#: ../src/gpm-prefs-core.c:260
 msgid "Do nothing"
 msgstr "ምንም አትስራ "
 
-#: ../src/gpm-prefs-core.c:321
+#: ../src/gpm-prefs-core.c:320
 msgid "Never"
 msgstr "በፍጹም "
 
@@ -1807,7 +1807,7 @@ msgstr ""
 #. TRANSLATORS: 802.11 wireless adaptor
 #: ../src/gpm-statistics.c:910
 msgid "Intel wireless adaptor"
-msgstr ""
+msgstr "የ ኢንቴል ሽቦ አልባ ተሰኪ"
 
 #. TRANSLATORS: a timer is something that fires periodically.
 #. * The parameter is a process name, e.g. "firefox-bin".
@@ -1896,52 +1896,52 @@ msgid "Processor Wakeups"
 msgstr ""
 
 #. TRANSLATORS: this is the X axis on the graph
-#: ../src/gpm-statistics.c:1347 ../src/gpm-statistics.c:1353
-#: ../src/gpm-statistics.c:1359 ../src/gpm-statistics.c:1365
+#: ../src/gpm-statistics.c:1351 ../src/gpm-statistics.c:1357
+#: ../src/gpm-statistics.c:1363 ../src/gpm-statistics.c:1369
 msgid "Time elapsed"
 msgstr ""
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1349
+#: ../src/gpm-statistics.c:1353
 msgid "Power"
 msgstr "ሐይል "
 
 #. TRANSLATORS: this is the Y axis on the graph for the whole battery device
 #. TRANSLATORS: this is the X axis on the graph for the whole battery device
-#: ../src/gpm-statistics.c:1355 ../src/gpm-statistics.c:1399
-#: ../src/gpm-statistics.c:1405 ../src/gpm-statistics.c:1411
-#: ../src/gpm-statistics.c:1417
+#: ../src/gpm-statistics.c:1359 ../src/gpm-statistics.c:1403
+#: ../src/gpm-statistics.c:1409 ../src/gpm-statistics.c:1415
+#: ../src/gpm-statistics.c:1421
 msgid "Cell charge"
 msgstr "ክፍል መቀየሪያ"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1361 ../src/gpm-statistics.c:1367
+#: ../src/gpm-statistics.c:1365 ../src/gpm-statistics.c:1371
 msgid "Predicted time"
 msgstr "በ  ግምት የሚፈጀው ጊዜ"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1401 ../src/gpm-statistics.c:1413
+#: ../src/gpm-statistics.c:1405 ../src/gpm-statistics.c:1417
 msgid "Correction factor"
 msgstr ""
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1407 ../src/gpm-statistics.c:1419
+#: ../src/gpm-statistics.c:1411 ../src/gpm-statistics.c:1423
 msgid "Prediction accuracy"
 msgstr "የ ግምት ትክክለኛነት"
 
 #. TRANSLATORS: show a device by default
-#: ../src/gpm-statistics.c:1585
+#: ../src/gpm-statistics.c:1589
 msgid "Select this device at startup"
 msgstr "ይህን አካል ሲጀምር ይምረጡ"
 
 #. TRANSLATORS: the icon for the CPU
-#: ../src/gpm-statistics.c:1834
+#: ../src/gpm-statistics.c:1838
 msgid "Processor"
-msgstr ""
+msgstr "ሂደት"
 
 #: ../src/gpm-tray-icon.c:189
-msgid "Copyright © 2011-2016 MATE developers"
-msgstr "Copyright © 2011-2016 MATE developers"
+msgid "Copyright © 2011-2017 MATE developers"
+msgstr ""
 
 #. Translators should localize the following string
 #. * which will be displayed at the bottom of the about
@@ -2143,8 +2143,8 @@ msgstr "የሞላው መጠን"
 #: ../src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "AC ተሰኪ"
+msgstr[1] "AC ተሰኪዎች"
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/gpm-upower.c:491
