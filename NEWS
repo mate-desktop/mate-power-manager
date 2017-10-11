@@ -1,5 +1,17 @@
 ### mate-power-manager 1.19.0
 
+  * Translations update
+  * update copyright year
+  * gtk 3.22: avoid deprecated gdk_screen_get_monitor... functions:
+  * don't abort on unknown DBus signal name
+  * avoid deprecated gdk_screen_get_width/height
+  * avoid deprecated gdk_display_get_screen
+  * don't use deprecated gtk_show_uri
+  * refresh tray icon on icon theme change
+  * Restore Polish translation credits from GNOME
+  * actually check the $XPROTO_REQUIRED variable's value
+  * statistics UI: add style class mpm-statistics
+
 ### mate-power-manager 1.18.0
 
   * NEWS: use consistent, project wide, markdown-like formatting
