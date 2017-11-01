@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-07 14:00+0300\n"
-"PO-Revision-Date: 2017-10-07 15:11+0000\n"
+"PO-Revision-Date: 2017-10-18 07:31+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/mate/MATE/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -145,7 +145,7 @@ msgstr "Dimoni del gestor d'energia"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:1
 msgid "Whether to hibernate, suspend or do nothing when inactive"
-msgstr "Si quan s'entra en un període d'inactivitat s'ha d'hibernar, aturar temporalment o no fer res"
+msgstr "Si quan s'entra en un període d'inactivitat s'ha d'hibernar, suspendre o no fer res"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:2
 msgid ""
@@ -171,7 +171,7 @@ msgid ""
 "If the battery lid close event should occur (for example 'Suspend when lid "
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
-msgstr "Si l'esdeveniment de tancament de la tapa hauria d'ocórrer (per exemple «atura temporalment en plegar la tapa quan s'estigui utilitzant la bateria») quan la tapa ja estigui plegada i posteriorment es desconnecti de la xarxa elèctrica."
+msgstr "Si l'esdeveniment de tancament de la tapa hauria d'ocórrer (per exemple «suspèn en plegar la tapa quan s'estigui utilitzant la bateria») quan la tapa ja estigui plegada i posteriorment es desconnecti de la xarxa elèctrica."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:7
 msgid "UPS critical low action"
@@ -329,11 +329,11 @@ msgstr "La brillantor de la pantalla amb alimentació de la xarxa elèctrica. El
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:41
 msgid "Suspend button action"
-msgstr "Acció del botó d'aturada temporal"
+msgstr "Acció del botó de suspensió"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:42
 msgid "The action to take when the system suspend button is pressed."
-msgstr "L'acció a dur a terme quan es premi el botó d'aturada temporal del sistema."
+msgstr "L'acció a dur a terme quan es premi el botó de suspensió del sistema."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:43
 msgid "Hibernate button action"
@@ -397,7 +397,7 @@ msgstr "Si NetworkManager s'ha de connectar i desconnectar amb baix consum."
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
-msgstr "Si NetworkManager s'ha de desconnectar abans d'aturar temporalment o d'hibernar, i connectar-se de nou en reprendre."
+msgstr "Si NetworkManager s'ha de desconnectar abans de suspendre o d'hibernar, i connectar-se de nou en reprendre."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:57
 msgid "Use mate-screensaver lock setting"
@@ -407,7 +407,7 @@ msgstr "Utilitza l'ajust del bloqueig de l'estalvi de pantalla de MATE"
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
-msgstr "Si s'utilitza l'ajust del bloqueig de pantalla de l'estalvi de pantalla de MATE per decidir si s'ha de bloquejar la pantalla després d'una hibernació, d'una aturada temporal o d'un enfosquiment de la pantalla."
+msgstr "Si s'utilitza l'ajust del bloqueig de pantalla de l'estalvi de pantalla de MATE per decidir si s'ha de bloquejar la pantalla després d'una hibernació, d'una suspensió o d'un enfosquiment de la pantalla."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:59
 msgid "Lock screen when blanked"
@@ -421,13 +421,13 @@ msgstr "Si es bloqueja la pantalla en apagar-la. Només s'utilitza si «lock-use
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:61
 msgid "Lock screen on suspend"
-msgstr "Bloqueja la pantalla en aturar temporalment"
+msgstr "Bloqueja la pantalla en suspendre"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:62
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
-msgstr "Si es bloqueja la pantalla quan l'ordinador es reactiva després d'una aturada temporal. Només s'utilitza quan «lock-use-screensaver» és fals."
+msgstr "Si es bloqueja la pantalla quan l'ordinador es reactiva després d'una suspensió. Només s'utilitza quan «lock-use-screensaver» és fals."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:63
 msgid "Lock screen on hibernate"
@@ -447,7 +447,7 @@ msgstr "Bloqueja l'anell de claus de GNOME en entrar al mode de baix consum"
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
-msgstr "Si l'anell de claus de GNOME està bloquejat abans que l'ordinador entri en l'estat d'aturada temporal. Això implica que l'anell de claus s'haurà de desbloquejar en reprendre."
+msgstr "Si l'anell de claus de GNOME està bloquejat abans que l'ordinador entri en l'estat de suspensió. Això implica que l'anell de claus s'haurà de desbloquejar en reprendre."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:67
 msgid ""
@@ -489,7 +489,7 @@ msgstr "Notifica en una fallada del mode de baix consum"
 msgid ""
 "If a notification message should be displayed after suspend or hibernate "
 "failed."
-msgstr "Si s'ha de mostrar una notificació després que l'aturada temporal o la hibernació hagin fallat."
+msgstr "Si s'ha de mostrar una notificació després que la suspensió o la hibernació hagin fallat."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:76
 msgid "The URI to show to the user on sleep failure"
@@ -866,7 +866,7 @@ msgstr "En p_rémer el botó d'arrencada:"
 
 #: ../data/gpm-prefs.ui.h:17
 msgid "When the _suspend button is pressed:"
-msgstr "En prémer el _botó d'aturada temporal:"
+msgstr "En prémer el _botó de suspensió"
 
 #: ../data/gpm-prefs.ui.h:18
 msgid "<b>Notification Area</b>"
@@ -1123,7 +1123,7 @@ msgstr "La bateria està totalment carregada"
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:303
 msgid "Suspend started"
-msgstr "S'ha iniciat l'aturada temporal"
+msgstr "S'ha iniciat la suspensió"
 
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:307
@@ -1133,17 +1133,17 @@ msgstr "S'ha reprès"
 #. TRANSLATORS: this is the sound description
 #: ../src/gpm-manager.c:311
 msgid "Suspend failed"
-msgstr "No s'ha pogut aturar temporalment"
+msgstr "No s'ha pogut suspendre"
 
 #. TRANSLATORS: message text
 #: ../src/gpm-manager.c:587
 msgid "Computer failed to suspend."
-msgstr "Ha fallat l'aturada temporal de l'ordinador."
+msgstr "Ha fallat la suspensió de l'ordinador."
 
 #. TRANSLATORS: title text
 #: ../src/gpm-manager.c:589
 msgid "Failed to suspend"
-msgstr "Ha fallat l'aturada temporal"
+msgstr "Ha fallat la suspensió"
 
 #. TRANSLATORS: message text
 #: ../src/gpm-manager.c:593
@@ -1369,7 +1369,7 @@ msgstr "Hauríeu de connectar-vos a la xarxa elèctrica per evitar la pèrdua de
 #: ../src/gpm-manager.c:1449
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
-msgstr "Aquest ordinador s'aturarà temporalment d'aquí a molt poc temps si no l'endolleu."
+msgstr "Aquest ordinador se suspendrà d'aquí a molt poc temps si no l'endolleu."
 
 #. TRANSLATORS: give the user a ultimatum
 #: ../src/gpm-manager.c:1453
@@ -1466,7 +1466,7 @@ msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
-msgstr "La bateria està per sota del nivell crític i l'ordinador està a punt d'aturar-se temporalment.<br><b>NOTA:</b> Es necessita una mica d'energia per mantenir l'ordinador en estat d'aturada temporal."
+msgstr "La bateria està per sota del nivell crític i l'ordinador està a punt de suspendre.<br><b>NOTA:</b> Es necessita una mica d'energia per mantenir l'ordinador en estat de suspensió."
 
 #. TRANSLATORS: computer will hibernate
 #: ../src/gpm-manager.c:1610
@@ -1511,7 +1511,7 @@ msgstr "Apaga"
 
 #: ../src/gpm-prefs-core.c:248
 msgid "Suspend"
-msgstr "Atura temporalment"
+msgstr "Suspèn"
 
 #: ../src/gpm-prefs-core.c:251
 msgid "Hibernate"
