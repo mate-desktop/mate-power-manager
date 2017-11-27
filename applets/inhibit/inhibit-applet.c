@@ -524,7 +524,7 @@ gpm_inhibit_applet_dbus_disconnect (GpmInhibitApplet *applet)
 		egg_debug ("removing proxy\n");
 		g_object_unref (applet->proxy);
 		applet->proxy = NULL;
-		/* we have no inhibit, these are not persistant across reboots */
+		/* we have no inhibit, these are not persistent across reboots */
 		applet->cookie = 0;
 	}
 	return TRUE;
