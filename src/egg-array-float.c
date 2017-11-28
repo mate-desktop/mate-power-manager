@@ -300,7 +300,7 @@ powfi (gfloat base, guint n)
  * Return value: Data with outliers removed
  *
  * Compares local sections of the data, removing outliers if they fall
- * ouside of sigma, and using the average of the other points in it's place.
+ * outside of sigma, and using the average of the other points in its place.
  **/
 EggArrayFloat *
 egg_array_float_remove_outliers (EggArrayFloat *data, guint length, gfloat sigma)

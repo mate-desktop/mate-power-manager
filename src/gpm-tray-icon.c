@@ -261,7 +261,7 @@ gpm_tray_icon_add_device (GpmTrayIcon *icon, GtkMenu *menu, const GPtrArray *arr
 		gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (item), image);
 		gtk_image_menu_item_set_always_show_image (GTK_IMAGE_MENU_ITEM (item), TRUE);
 
-		/* callback and add the the menu */
+		/* set callback and add the menu */
 		g_signal_connect (G_OBJECT (item), "activate", G_CALLBACK (gpm_tray_icon_show_info_cb), icon);
 		g_object_set_data (G_OBJECT (item), "object-path", (gpointer) object_path);
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
@@ -341,7 +341,7 @@ gpm_tray_icon_create_menu (GpmTrayIcon *icon)
 	if (!icon->priv->show_actions)
 		goto skip_prefs;
 
-	/* only do the seporator if we have at least one device */
+	/* only do the separator if we have at least one device */
 	if (dev_cnt != 0) {
 		item = gtk_separator_menu_item_new ();
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
@@ -361,7 +361,7 @@ gpm_tray_icon_create_menu (GpmTrayIcon *icon)
 	GdkScreen *screen = gtk_widget_get_screen(GTK_WIDGET(toplevel));
 	GdkVisual *visual = gdk_screen_get_rgba_visual(screen);
 	gtk_widget_set_visual(GTK_WIDGET(toplevel), visual);
-	/* Set menu and it's toplevel window to follow panel theme */
+	/* Set menu and its toplevel window to follow panel theme */
 	GtkStyleContext *context;
 	context = gtk_widget_get_style_context (GTK_WIDGET(toplevel));
 	gtk_style_context_add_class(context,"gnome-panel-menu-bar");
