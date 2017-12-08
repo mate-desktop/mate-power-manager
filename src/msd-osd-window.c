@@ -35,6 +35,7 @@
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
+#include <gdk/gdkx.h>
 
 #include "msd-osd-window.h"
 
@@ -444,7 +445,6 @@ msd_osd_window_init (MsdOsdWindow *window)
 
         if (window->priv->is_composited) {
                 gdouble scalew, scaleh, scale;
-                gint sc_width, sc_height;
                 gint size;
 
                 gtk_window_set_decorated (GTK_WINDOW (window), FALSE);
@@ -454,12 +454,8 @@ msd_osd_window_init (MsdOsdWindow *window)
                 gtk_style_context_add_class (style, "window-frame");
 
                 /* assume 130x130 on a 640x480 display and scale from there */
-
-                gdk_window_get_geometry (gdk_screen_get_root_window (screen), NULL, NULL,
-                                         &sc_width, &sc_height);
-
-                scalew = sc_width / 640.0;
-                scaleh = sc_height / 480.0;
+                scalew = WidthOfScreen (gdk_x11_screen_get_xscreen (screen)) / 640.0;
+                scaleh = HeightOfScreen (gdk_x11_screen_get_xscreen (screen)) / 480.0;
                 scale = MIN (scalew, scaleh);
                 size = 130 * MAX (1, scale);
 
