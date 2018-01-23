@@ -48,8 +48,9 @@ typedef struct{
 	MatePanelApplet parent;
 	/* applet state */
 	guint cookie;
-	/* the icon and a cache for size*/
+	/* the icon, a GtkImage for it, and a cache for size*/
 	GdkPixbuf *icon;
+	GtkWidget *image;
 	gint icon_width, icon_height;
 	/* connection to g-p-m */
 	DBusGProxy *proxy;
@@ -193,7 +194,7 @@ gpm_applet_get_icon (GpmInhibitApplet *applet)
 	applet->icon = gtk_icon_theme_load_icon (gtk_icon_theme_get_default (),
 						 icon,
 						 applet->size - 2,
-						 0,
+						 GTK_ICON_LOOKUP_FORCE_SIZE, /*prevent oversize icons*/
 						 NULL);
 
 	/* update size cache */
@@ -247,13 +248,6 @@ gpm_applet_check_size (GpmInhibitApplet *applet)
 static gboolean
 gpm_applet_draw_cb (GpmInhibitApplet *applet)
 {
-	gint w, h, bg_type;
-	GdkRGBA color;
-	cairo_t *cr;
-	cairo_pattern_t *pattern;
-	GtkStyleContext *context;
-	GtkAllocation allocation;
-
 	if (gtk_widget_get_window (GTK_WIDGET(applet)) == NULL) {
 		return FALSE;
 	}
@@ -270,33 +264,10 @@ gpm_applet_draw_cb (GpmInhibitApplet *applet)
 		return FALSE;
 	}
 
-	gtk_widget_get_allocation (GTK_WIDGET (applet), &allocation);
-	w = allocation.width;
-	h = allocation.height;
+	/*draw icon */
 
-	cr = gdk_cairo_create (gtk_widget_get_window (GTK_WIDGET(applet)));
-
-	/* draw pixmap background */
-	bg_type = mate_panel_applet_get_background (MATE_PANEL_APPLET (applet), &color, &pattern);
-	if (bg_type == PANEL_PIXMAP_BACKGROUND) {
-		/* fill with given background pixmap */
-		cairo_set_source (cr, pattern);
-		cairo_rectangle (cr, 0, 0, w, h);
-		cairo_fill (cr);
-	}
-	
-	/* draw color background */
-	if (bg_type == PANEL_COLOR_BACKGROUND) {
-		gdk_cairo_set_source_rgba (cr, &color);
-		cairo_rectangle (cr, 0, 0, w, h);
-		cairo_fill (cr);
-	}
-
-	/* draw icon at center */
-	gdk_cairo_set_source_pixbuf (cr, applet->icon, (w - applet->icon_width)/2, (h - applet->icon_height)/2);
-	cairo_paint (cr);
-
-	cairo_destroy (cr);
+	gtk_image_set_from_pixbuf(GTK_IMAGE(applet->image),applet->icon);
+	gtk_widget_show(GTK_WIDGET(applet->image));
 
 	return TRUE;
 }
@@ -574,6 +545,7 @@ gpm_inhibit_applet_init (GpmInhibitApplet *applet)
 	applet->cookie = 0;
 	applet->connection = NULL;
 	applet->proxy = NULL;
+	applet->image = gtk_image_new();
 
 	/* Add application specific icons to search path */
 	gtk_icon_theme_append_search_path (gtk_icon_theme_get_default (),
@@ -591,18 +563,18 @@ gpm_inhibit_applet_init (GpmInhibitApplet *applet)
 	/* prepare */
 	mate_panel_applet_set_flags (MATE_PANEL_APPLET (applet), MATE_PANEL_APPLET_EXPAND_MINOR);
 
-	/* show */
-	gtk_widget_show_all (GTK_WIDGET(applet));
-
 	/* set appropriate size and load icon accordingly */
 	gpm_applet_draw_cb (applet);
+
+	/*pack*/
+	gtk_container_add(GTK_CONTAINER(applet), applet->image);
+
+	/* show */
+	gtk_widget_show_all (GTK_WIDGET(applet));
 
 	/* connect */
 	g_signal_connect (G_OBJECT(applet), "button-press-event",
 			  G_CALLBACK(gpm_applet_click_cb), NULL);
-
-	g_signal_connect (G_OBJECT(applet), "draw",
-			  G_CALLBACK(gpm_applet_draw_cb), NULL);
 
 	/* We use g_signal_connect_after because letting the panel draw
 	 * the background is the only way to have the correct
