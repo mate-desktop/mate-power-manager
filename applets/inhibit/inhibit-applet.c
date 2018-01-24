@@ -267,7 +267,7 @@ gpm_applet_draw_cb (GpmInhibitApplet *applet)
 	/*draw icon */
 
 	gtk_image_set_from_pixbuf(GTK_IMAGE(applet->image),applet->icon);
-	gtk_widget_show(GTK_WIDGET(applet->icon));
+	gtk_widget_show(GTK_WIDGET(applet->image));
 
 	return TRUE;
 }
