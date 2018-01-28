@@ -19,12 +19,6 @@ IT_PROG_INTLTOOL([0.50.1])
 MATE_COMPILE_WARNINGS
 YELP_HELP_INIT
 
-# GLib min/max required versions
-AC_DEFINE([GLIB_VERSION_MAX_ALLOWED], [GLIB_VERSION_2_36],
-	[Warn on use of APIs added after GLib 2.36])
-AC_DEFINE([GLIB_VERSION_MIN_REQUIRED], [GLIB_VERSION_2_36],
-	[Warn on use of APIs deprecated before GLib 2.36])
-
 AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
 
 AC_ARG_ENABLE(deprecated,
@@ -95,10 +89,10 @@ GLIB_GSETTINGS
 dnl ----------------------------------------------------------------------------
 dnl - Library dependencies
 dnl ----------------------------------------------------------------------------
-GLIB_REQUIRED=2.36.0
-GIO_REQUIRED=2.36.0
-GDK_REQUIRED=3.14.0
-GTK_REQUIRED=3.14.0
+GLIB_REQUIRED=2.50.0
+GIO_REQUIRED=2.50.0
+GDK_REQUIRED=3.22.0
+GTK_REQUIRED=3.22.0
 GNOME_KEYRING_REQUIRED=3.0.0
 DBUS_REQUIRED=1.0
 DBUS_GLIB_REQUIRED=0.70
