@@ -528,9 +528,6 @@ out:
 static void
 gpm_manager_sleep_failure_response_cb (GtkDialog *dialog, gint response_id, GpmManager *manager)
 {
-#if !GTK_CHECK_VERSION (3, 22, 0)
-	GdkScreen *screen;
-#endif
 	GtkWidget *dialog_error;
 	GError *error = NULL;
 	gboolean ret;
@@ -539,12 +536,7 @@ gpm_manager_sleep_failure_response_cb (GtkDialog *dialog, gint response_id, GpmM
 	/* user clicked the help button */
 	if (response_id == GTK_RESPONSE_HELP) {
 		uri = g_settings_get_string (manager->priv->settings, GPM_SETTINGS_NOTIFY_SLEEP_FAILED_URI);
-#if GTK_CHECK_VERSION (3, 22, 0)
 		ret = gtk_show_uri_on_window (GTK_WINDOW (dialog), uri, gtk_get_current_event_time (), &error);
-#else
-		screen = gdk_screen_get_default();
-		ret = gtk_show_uri (screen, uri, gtk_get_current_event_time (), &error);
-#endif
 		if (!ret) {
 			dialog_error = gtk_message_dialog_new (NULL, GTK_DIALOG_MODAL, GTK_MESSAGE_INFO, GTK_BUTTONS_OK,
 							       "Failed to show uri %s", error->message);
