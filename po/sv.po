@@ -7,13 +7,14 @@
 # Henrik Mattsson-Mårn <h@reglage.net>, 2016
 # Jonatan Nyberg, 2016
 # Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>, 2015-2016
+# Tobias Lekare <lekare@linux.com>, 2017-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 14:50+0100\n"
-"PO-Revision-Date: 2017-10-07 11:02+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2018-01-09 22:24+0300\n"
+"PO-Revision-Date: 2018-01-11 11:42+0000\n"
+"Last-Translator: Tobias Lekare <lekare@linux.com>\n"
 "Language-Team: Swedish (http://www.transifex.com/mate/MATE/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -241,7 +242,7 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
-msgstr ""
+msgstr "Procentandelen att minska bakgrundsbelysning på tangentbordet vid batteridrift. Till exempel om den är inställd på '60' kommer bakgrundsbelysningen att sänkas med 40% vid batteridrift. Tillåtna värden är mellan 0 och 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
@@ -253,7 +254,7 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
-msgstr ""
+msgstr "Procentandelen att minska bakgrundsbelysning på tangentbordet vid inaktiv. Till exempel om den är inställd på '60' kommer bakgrundsbelysningen att sänkas med 40% vid inaktiv. Tillåtna värden är mellan 0 och 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:25
 msgid "The brightness of the screen when idle"
@@ -263,7 +264,7 @@ msgstr "Ljusstyrkan på skärmen när skärmen är inaktiv"
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "Detta är ljusstyrkan som används på bärbara datorns skärm när sessionen är inaktiv. Endast giltig när use-time-for-policy är inställd till true."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:27
 msgid "Dim the screen after a period of inactivity when on battery power"
@@ -309,7 +310,7 @@ msgstr "Metod att använda för att släcka skärmen när strömadaptern använd
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:36
 msgid "The DPMS method used to blank the screen when on AC power."
-msgstr ""
+msgstr "DPMS-metoden som används för att tömma skärmen vid strömadapter."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:37
 msgid "Method used to blank screen on battery"
@@ -317,7 +318,7 @@ msgstr "Metod att använda för att släcka skärmen vid batteridrift"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:38
 msgid "The DPMS method used to blank the screen when on battery power."
-msgstr ""
+msgstr "DPMS-metoden som används för att tömma skärmen vid batteridrift."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:39
 msgid "LCD brightness when on AC"
@@ -327,7 +328,7 @@ msgstr "Ljusstyrka för plattskärm när ansluten till strömadapter"
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
-msgstr ""
+msgstr "Ljusstyrkan för skärmen när strömadaptern används. Möjliga värden är mellan 0.0 och 100.0."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:41
 msgid "Suspend button action"
@@ -335,7 +336,7 @@ msgstr "Åtgärd för väntelägesknapp"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:42
 msgid "The action to take when the system suspend button is pressed."
-msgstr ""
+msgstr "Åtgärd som ska vidtas när man trycker på vänteläges-knappen."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:43
 msgid "Hibernate button action"
@@ -393,7 +394,7 @@ msgstr "Huruvida vi ska kontrollera processorbelastning före inaktivitetshände
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:55
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
-msgstr ""
+msgstr "Huruvida Nätverkshanterare ska anslutas och kopplas från vid sömn."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:56
 msgid ""
@@ -419,7 +420,7 @@ msgstr "Lås skärmen när den släcks"
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
-msgstr ""
+msgstr "Huruvida skärmen är låst när skärmen stängs av. Används endast om lock-use-screensaver-settings är satt till falskt."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:61
 msgid "Lock screen on suspend"
@@ -439,23 +440,23 @@ msgstr "Lås skärm vid viloläge"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
-msgstr ""
+msgstr "Om skärmen är låst när datorn vaknar upp från vänteläge. Användas endast om lock-use-screensaver är satt till falskt."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:65
 msgid "Lock GNOME keyring on sleep"
-msgstr ""
+msgstr "Lås GNOME-nyckelring vid sömn"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:66
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
-msgstr ""
+msgstr "Huruvida GNOME-nyckelringen är låst innan datorn går i vänteläge. Det här betyder att nyckelringen kommer att behöva låsas upp när datorn återgår till normal drift."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:67
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
-msgstr ""
+msgstr "Huruvida GNOME-nyckelringen är låst innan datorn går i viloläge. Det här betyder att nyckelringen kommer att behöva låsas upp när datorn återgår till normal drift."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:68
 msgid "If we should show the low capacity warning for a broken battery"
@@ -515,61 +516,61 @@ msgstr "Om ett meddelande ska visas när batterispänningen är på väg att bli
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:80
 msgid "Whether we should show the history data points"
-msgstr ""
+msgstr "Huruvida vi ska visa historikdatapunkter"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:81
 msgid ""
 "Whether we should show the history data points in the statistics window."
-msgstr ""
+msgstr "Huruvida vi ska visa historikdatapunkter i statistikfönstret."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:82
 msgid "Whether we should smooth the history data"
-msgstr ""
+msgstr "Huruvida vi ska snygga till historikdatat"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:83
 msgid "Whether we should smooth the history data in the graph."
-msgstr ""
+msgstr "Huruvida vi ska snygga till historikdatat i diagrammet."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:84
 msgid "The default graph type to show for history"
-msgstr ""
+msgstr "Standrarddiagram att visa för historik"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:85
 msgid "The default graph type to show in the history window."
-msgstr ""
+msgstr "Standarddiagram att visa i historikfönstret."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:86
 msgid "The maximum time displayed for history"
-msgstr ""
+msgstr "Den maximala tiden som visas för historik"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:87
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
-msgstr ""
+msgstr "Den maximala tidslängden som visas på x-axeln i historikdiagrammet."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:88
 msgid "Whether we should show the stats data points"
-msgstr ""
+msgstr "Huruvida vi ska visa statistikdatapunkterna"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:89
 msgid "Whether we should show the stats data points in the statistics window."
-msgstr ""
+msgstr "Huruvida vi ska visa statistikdatats punkter i statistikfönstret."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:90
 msgid "Whether we should smooth the stats data"
-msgstr ""
+msgstr "Huruvida vi ska snygga till statistikdatat"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:91
 msgid "Whether we should smooth the stats data in the graph."
-msgstr ""
+msgstr "Huruvida vi ska snygga till statistikdatat i diagrammet."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:92
 msgid "The default graph type to show for stats"
-msgstr ""
+msgstr "Standarddiagram för att visa statistik"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:93
 msgid "The default graph type to show in the stats window."
-msgstr ""
+msgstr "Standarddiagram att visa i statistikfönstret."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:94
 msgid "The index of the page number to show by default"
@@ -579,17 +580,17 @@ msgstr "Indexet av sidnumret att visa som standard"
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
-msgstr ""
+msgstr "Indexet för sidnumret att visa som standard för att returnera fokus till rätt sida."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
-msgstr ""
+msgstr "ID för den sista valda enheten"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:97
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
-msgstr ""
+msgstr "Identifieraren för den sista enheten som används för att returnera fokus till rätt enhet."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:98
 msgid "Percentage considered low"
@@ -599,7 +600,7 @@ msgstr "Procenttal som anses som lågt"
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
-msgstr ""
+msgstr "Procentandel av batteriet när det anses vara lågt. Endast giltig när use-time-for-policy är inställd till falskt."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:100
 msgid "Percentage considered critical"
@@ -609,7 +610,7 @@ msgstr "Procenttal som anses som kritiskt"
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
-msgstr ""
+msgstr "Procentandelen av batteriet när det anses som kritiskt lågt. Endast giltig när use-time-for-policy är inställd till falskt."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:102
 msgid "Percentage action is taken"
@@ -619,7 +620,7 @@ msgstr "Procenttalsåtgärd genomförs"
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
-msgstr ""
+msgstr "Procentandelen av batteriet när kritiska åtgärder genomförs. Endast giltig när use-time-for-policy är inställd till falskt."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:104
 msgid "The time remaining when low"
@@ -629,7 +630,7 @@ msgstr "Tiden som återstår när låg"
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
-msgstr ""
+msgstr "Tiden som återstår (i sekunder) av batteriet när det anses som lågt. Endast giltig när use-time-for-policy är sant."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:106
 msgid "The time remaining when critical"
@@ -639,7 +640,7 @@ msgstr "Tiden som återstår när kritisk"
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "Tiden som återstår (i sekunder) av batteriet när det anses som kritiskt. Endast giltig när use-time-for-policy är sant."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:108
 msgid "The time remaining when action is taken"
@@ -649,7 +650,7 @@ msgstr "Tiden som återstår när åtgärd genomförs"
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
-msgstr ""
+msgstr "Tiden som återstår (i sekunder) av batteriet när den kritiska åtgärden genomförs. Endast giltig när use-time-for-policy är sant."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:110
 msgid "Sleep timeout computer when on battery"
@@ -732,7 +733,7 @@ msgstr "När notifieringsikonen ska visas"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:126
 msgid "Display options for the notification icon."
-msgstr ""
+msgstr "Visningsalternativ för aviseringsikonen."
 
 #: ../data/mate-power-preferences.desktop.in.in.h:1
 msgid "Power Management"
@@ -1943,8 +1944,8 @@ msgid "Processor"
 msgstr "Processor"
 
 #: ../src/gpm-tray-icon.c:189
-msgid "Copyright © 2011-2017 MATE developers"
-msgstr ""
+msgid "Copyright © 2011-2018 MATE developers"
+msgstr "Copyright © 2011-2018 MATE utvecklare"
 
 #. Translators should localize the following string
 #. * which will be displayed at the bottom of the about
@@ -1957,7 +1958,7 @@ msgstr "Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>"
 #: ../src/gpm-tray-icon.c:297
 #, c-format
 msgid "%s remaining"
-msgstr ""
+msgstr "%s återstår"
 
 #. preferences
 #: ../src/gpm-tray-icon.c:351
@@ -1968,7 +1969,7 @@ msgstr "_Inställningar"
 #: ../src/gpm-upower.c:211
 #, c-format
 msgid "%s not present"
-msgstr ""
+msgstr "%s ej närvarande"
 
 #. TRANSLATORS: a phone is charging
 #. TRANSLATORS: device is charging, but we only have a percentage
