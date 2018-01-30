@@ -368,7 +368,7 @@ gpm_tray_icon_create_menu (GpmTrayIcon *icon)
 	gtk_style_context_add_class(context,"mate-panel-menu-bar");
 
 	/* about */
-	item = gtk_image_menu_item_new_from_stock (GTK_STOCK_ABOUT, NULL);
+	item = gtk_image_menu_item_new_from_stock ("gtk-about", NULL);
 	g_signal_connect (G_OBJECT (item), "activate",
 			  G_CALLBACK (gpm_tray_icon_show_about_cb), icon);
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
