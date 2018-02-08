@@ -323,6 +323,13 @@ msd_osd_window_get_preferred_width (GtkWidget *widget,
 
         GTK_WIDGET_CLASS (msd_osd_window_parent_class)->get_preferred_width (widget, minimum, natural);
 
+        if (msd_osd_window_is_composited (MSD_OSD_WINDOW (widget))) {
+                gint scale_factor;
+                scale_factor = gtk_widget_get_scale_factor (widget);
+                *minimum /= scale_factor;
+                *natural /= scale_factor;
+        }
+
         /* See the comment in msd_osd_window_style_updated() for why we add the padding here */
 
         context = gtk_widget_get_style_context (widget);
@@ -341,6 +348,13 @@ msd_osd_window_get_preferred_height (GtkWidget *widget,
         GtkBorder padding;
 
         GTK_WIDGET_CLASS (msd_osd_window_parent_class)->get_preferred_height (widget, minimum, natural);
+
+        if (msd_osd_window_is_composited (MSD_OSD_WINDOW (widget))) {
+                gint scale_factor;
+                scale_factor = gtk_widget_get_scale_factor (widget);
+                *minimum /= scale_factor;
+                *natural /= scale_factor;
+        }
 
         /* See the comment in msd_osd_window_style_updated() for why we add the padding here */
 
@@ -443,7 +457,7 @@ msd_osd_window_init (MsdOsdWindow *window)
         window->priv->is_composited = gdk_screen_is_composited (screen);
 
         if (window->priv->is_composited) {
-                gdouble scalew, scaleh, scale;
+                gdouble scalew, scaleh, scale, scale_factor;
                 gint size;
 
                 gtk_window_set_decorated (GTK_WINDOW (window), FALSE);
@@ -453,8 +467,9 @@ msd_osd_window_init (MsdOsdWindow *window)
                 gtk_style_context_add_class (style, "window-frame");
 
                 /* assume 130x130 on a 640x480 display and scale from there */
-                scalew = WidthOfScreen (gdk_x11_screen_get_xscreen (screen)) / 640.0;
-                scaleh = HeightOfScreen (gdk_x11_screen_get_xscreen (screen)) / 480.0;
+                scale_factor = (gdouble) gtk_widget_get_scale_factor (GTK_WIDGET (window));
+                scalew = WidthOfScreen (gdk_x11_screen_get_xscreen (screen)) / (640.0 * scale_factor);
+                scaleh = HeightOfScreen (gdk_x11_screen_get_xscreen (screen)) / (480.0 * scale_factor);
                 scale = MIN (scalew, scaleh);
                 size = 130 * MAX (1, scale);
 
