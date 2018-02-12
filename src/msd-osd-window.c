@@ -53,6 +53,7 @@ struct MsdOsdWindowPrivate
         guint                    hide_timeout_id;
         guint                    fade_timeout_id;
         double                   fade_out_alpha;
+        gint                     scale_factor;
 };
 
 enum {
@@ -422,13 +423,16 @@ msd_osd_window_is_composited (MsdOsdWindow *window)
  * @window: a #MsdOsdWindow
  *
  * Return value: TRUE if the @window's idea of being composited matches whether
- * its current screen is actually composited.
+ * its current screen is actually composited and whether the scale factor has
+ * not changed since last draw.
  */
 gboolean
 msd_osd_window_is_valid (MsdOsdWindow *window)
 {
         GdkScreen *screen = gtk_widget_get_screen (GTK_WIDGET (window));
-        return gdk_screen_is_composited (screen) == window->priv->is_composited;
+        gint scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
+        return gdk_screen_is_composited (screen) == window->priv->is_composited
+            && scale_factor == window->priv->scale_factor;
 }
 
 static void
@@ -441,6 +445,7 @@ msd_osd_window_init (MsdOsdWindow *window)
         screen = gtk_widget_get_screen (GTK_WIDGET (window));
 
         window->priv->is_composited = gdk_screen_is_composited (screen);
+        window->priv->scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
 
         if (window->priv->is_composited) {
                 gdouble scalew, scaleh, scale;
@@ -453,8 +458,8 @@ msd_osd_window_init (MsdOsdWindow *window)
                 gtk_style_context_add_class (style, "window-frame");
 
                 /* assume 130x130 on a 640x480 display and scale from there */
-                scalew = WidthOfScreen (gdk_x11_screen_get_xscreen (screen)) / 640.0;
-                scaleh = HeightOfScreen (gdk_x11_screen_get_xscreen (screen)) / 480.0;
+                scalew = WidthOfScreen (gdk_x11_screen_get_xscreen (screen)) / (640.0 * window->priv->scale_factor);
+                scaleh = HeightOfScreen (gdk_x11_screen_get_xscreen (screen)) / (480.0 * window->priv->scale_factor);
                 scale = MIN (scalew, scaleh);
                 size = 130 * MAX (1, scale);
 
@@ -462,7 +467,7 @@ msd_osd_window_init (MsdOsdWindow *window)
 
                 window->priv->fade_out_alpha = 1.0;
         } else {
-		gtk_container_set_border_width (GTK_CONTAINER (window), 12);
+                gtk_container_set_border_width (GTK_CONTAINER (window), 12);
         }
 }
 
