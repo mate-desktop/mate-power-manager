@@ -91,8 +91,8 @@ static void      gpm_applet_stop_scroll_events_cb (GtkWidget *widget, GdkEvent  
 static gboolean  gpm_applet_destroy_popup_cb      (GpmBrightnessApplet *applet);
 static void      gpm_applet_update_tooltip        (GpmBrightnessApplet *applet);
 static void      gpm_applet_update_popup_level    (GpmBrightnessApplet *applet);
-static gboolean  gpm_applet_plus_cb               (GtkWidget *w, GpmBrightnessApplet *applet);
-static gboolean  gpm_applet_minus_cb              (GtkWidget *w, GpmBrightnessApplet *applet);
+static gboolean  gpm_applet_plus_cb               (GtkWidget *w, GpmBrightnessApplet *applet, int value);
+static gboolean  gpm_applet_minus_cb              (GtkWidget *w, GpmBrightnessApplet *applet, int value);
 static gboolean  gpm_applet_key_press_cb          (GtkWidget *popup, GdkEventKey *event, GpmBrightnessApplet *applet);
 static gboolean  gpm_applet_scroll_cb             (GpmBrightnessApplet *applet, GdkEventScroll *event);
 static gboolean  gpm_applet_slide_cb              (GtkWidget *w, GpmBrightnessApplet *applet);
@@ -408,10 +408,14 @@ gpm_applet_update_popup_level (GpmBrightnessApplet *applet)
  * callback for the plus button
  **/
 static gboolean
-gpm_applet_plus_cb (GtkWidget *w, GpmBrightnessApplet *applet)
+gpm_applet_plus_cb (GtkWidget *w, GpmBrightnessApplet *applet, int value)
 {
 	if (applet->level < 100) {
-		applet->level++;
+		if (applet->level + value > 100) {
+			applet->level = 100;
+		} else {
+			applet->level += value;
+		}
 	}
 	applet->call_worked = gpm_applet_set_brightness (applet);
 	gpm_applet_update_popup_level (applet);
@@ -426,10 +430,14 @@ gpm_applet_plus_cb (GtkWidget *w, GpmBrightnessApplet *applet)
  * callback for the minus button
  **/
 static gboolean
-gpm_applet_minus_cb (GtkWidget *w, GpmBrightnessApplet *applet)
+gpm_applet_minus_cb (GtkWidget *w, GpmBrightnessApplet *applet, int value)
 {
 	if (applet->level > 0) {
-		applet->level--;
+		if (applet->level - value < 0) {
+			applet->level = 0;
+		} else {
+			applet->level -= value;
+		}
 	}
 	applet->call_worked = gpm_applet_set_brightness (applet);
 	gpm_applet_update_popup_level (applet);
@@ -484,25 +492,21 @@ gpm_applet_key_press_cb (GtkWidget *popup, GdkEventKey *event, GpmBrightnessAppl
 		}
 		break;
 	case GDK_KEY_Page_Up:
-		for (i = 0;i < 10;i++) {
-			gpm_applet_plus_cb (NULL, applet);
-		}
+		gpm_applet_plus_cb (NULL, applet, 10);
 		return TRUE;
 		break;
 	case GDK_KEY_Left:
 	case GDK_KEY_Up:
-		gpm_applet_plus_cb (NULL, applet);
+		gpm_applet_plus_cb (NULL, applet, 5);
 		return TRUE;
 		break;
 	case GDK_KEY_Page_Down:
-		for (i = 0;i < 10;i++) {
-			gpm_applet_minus_cb (NULL, applet);
-		}
+		gpm_applet_minus_cb (NULL, applet, 10);
 		return TRUE;
 		break;
 	case GDK_KEY_Right:
 	case GDK_KEY_Down:
-		gpm_applet_minus_cb (NULL, applet);
+		gpm_applet_minus_cb (NULL, applet, 5);
 		return TRUE;
 		break;
 	default:
@@ -529,14 +533,9 @@ gpm_applet_scroll_cb (GpmBrightnessApplet *applet, GdkEventScroll *event)
 
 	if (event->type == GDK_SCROLL) {
 		if (event->direction == GDK_SCROLL_UP) {
-			for (i = 0;i < 5;i++) {
-				gpm_applet_plus_cb (NULL, applet);
-			}
-			
+			gpm_applet_plus_cb (NULL, applet, 5);
 		} else {
-			for (i = 0;i < 5;i++) {
-				gpm_applet_minus_cb (NULL, applet);
-			}
+			gpm_applet_minus_cb (NULL, applet, 5);
 		}
 		return TRUE;
 	}
