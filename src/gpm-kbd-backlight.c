@@ -49,6 +49,7 @@ struct GpmKbdBacklightPrivate
     guint            brightness;
     guint            max_brightness;
     guint            brightness_percent;
+    guint            brightness_percent_save;
     GDBusProxy      *upower_proxy;
     GDBusConnection     *bus_connection;
     guint            bus_object_id;
@@ -595,11 +596,14 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
 
    if (mode == GPM_IDLE_MODE_NORMAL) {
         egg_debug("GPM_IDLE_MODE_NORMAL");
-       backlight->priv->master_percentage = 100;
-       gpm_kbd_backlight_evaluate_power_source_and_set (backlight);
+       /* restore saved brightness */
+       gpm_kbd_backlight_set (backlight, backlight->priv->brightness_percent_save);
    } else if (mode == GPM_IDLE_MODE_DIM) {
        egg_debug("GPM_IDLE_MODE_DIM");
        brightness = backlight->priv->master_percentage;
+       /* save state */
+       backlight->priv->brightness_percent_save = backlight->priv->master_percentage;
+
        value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_IDLE);
 
        if (value > 100) {
@@ -753,6 +757,7 @@ gpm_kbd_backlight_init (GpmKbdBacklight *backlight)
 err:
    backlight->priv->brightness = 0;
    backlight->priv->brightness_percent = 100;
+   backlight->priv->brightness_percent_save = 100;
    backlight->priv->max_brightness = 0;
 
 noerr:
