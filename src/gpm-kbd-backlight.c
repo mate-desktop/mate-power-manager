@@ -757,12 +757,12 @@ gpm_kbd_backlight_init (GpmKbdBacklight *backlight)
 err:
    backlight->priv->brightness = 0;
    backlight->priv->brightness_percent = 100;
-   backlight->priv->brightness_percent_save = 100;
    backlight->priv->max_brightness = 0;
 
 noerr:
    /* Initialize the master to full power. It will get scaled if needed */
    backlight->priv->master_percentage = 100u;
+   backlight->priv->brightness_percent_save = 100u;
 
    backlight->priv->idle_timer = g_timer_new ();
    backlight->priv->can_dim = backlight->priv->max_brightness > 1;
