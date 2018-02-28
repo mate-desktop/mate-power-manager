@@ -410,12 +410,9 @@ gpm_applet_update_popup_level (GpmBrightnessApplet *applet)
 static gboolean
 gpm_applet_plus_cb (GtkWidget *w, GpmBrightnessApplet *applet, int value)
 {
-	if (applet->level < 100) {
-		if (applet->level + value > 100) {
-			applet->level = 100;
-		} else {
-			applet->level += value;
-		}
+	applet->level += value;
+	if (applet->level > 100) {
+    		applet->level = 100;
 	}
 	applet->call_worked = gpm_applet_set_brightness (applet);
 	gpm_applet_update_popup_level (applet);
@@ -432,12 +429,9 @@ gpm_applet_plus_cb (GtkWidget *w, GpmBrightnessApplet *applet, int value)
 static gboolean
 gpm_applet_minus_cb (GtkWidget *w, GpmBrightnessApplet *applet, int value)
 {
-	if (applet->level > 0) {
-		if (applet->level - value < 0) {
-			applet->level = 0;
-		} else {
-			applet->level -= value;
-		}
+	applet->level -= value;
+	if (applet->level < 0) {
+    		applet->level = 0;
 	}
 	applet->call_worked = gpm_applet_set_brightness (applet);
 	gpm_applet_update_popup_level (applet);
