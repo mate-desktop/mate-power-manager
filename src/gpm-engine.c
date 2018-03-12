@@ -604,45 +604,25 @@ gpm_engine_device_check_capacity (GpmEngine *engine, UpDevice *device)
 static UpDevice *
 gpm_engine_get_composite_device (GpmEngine *engine, UpDevice *original_device)
 {
-#if UP_CHECK_VERSION (0, 99, 0)
-	return engine->priv->battery_composite;
-#else
 	guint battery_devices = 0;
-	GPtrArray *array;
+	GPtrArray *array = engine->priv->array;
 	UpDevice *device;
 	UpDeviceKind kind;
-	UpDeviceKind original_kind;
 	guint i;
 
-	/* get the type of the original device */
-	g_object_get (original_device,
-		      "kind", &original_kind,
-		      NULL);
-
 	/* find out how many batteries in the system */
-	array = engine->priv->array;
-	for (i=0;i<array->len;i++) {
-		device = g_ptr_array_index (engine->priv->array, i);
-		g_object_get (device,
-			      "kind", &kind,
-			      NULL);
-		if (kind == original_kind)
+	for (i = 0; i < array->len; i++) {
+		device = g_ptr_array_index (array, i);
+		g_object_get (device, "kind", &kind, NULL);
+		if (kind == UP_DEVICE_KIND_BATTERY)
 			battery_devices++;
 	}
 
-	/* just use the original device if only one primary battery */
 	if (battery_devices <= 1) {
-		egg_debug ("using original device as only one primary battery");
-		device = original_device;
-		goto out;
+		return original_device;
 	}
 
-	/* use the composite device */
-	device = engine->priv->battery_composite;
-out:
-	/* return composite device or original device */
-	return device;
-#endif
+	return engine->priv->battery_composite;
 }
 
 /**
@@ -653,15 +633,16 @@ gpm_engine_update_composite_device (GpmEngine *engine, UpDevice *original_device
 {
 #if UP_CHECK_VERSION (0, 99, 0)
 	gchar *text;
+	UpDevice *composite = gpm_engine_get_composite_device(engine, original_device);
 
-	text = up_device_to_text (engine->priv->battery_composite);
+	text = up_device_to_text (composite);
 	egg_debug ("composite:\n%s", text);
 	g_free (text);
 
 	/* force update of icon */
 	gpm_engine_recalculate_state_icon (engine);
 
-	return engine->priv->battery_composite;
+	return composite;
 #else
 	guint i;
 	gdouble percentage = 0.0;
