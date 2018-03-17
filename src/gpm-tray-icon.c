@@ -193,6 +193,7 @@ gpm_tray_icon_show_about_cb (GtkMenuItem *item, gpointer data)
 				* box to give credit to the translator(s).
 				*/
 				"translator-credits", _("translator-credits"),
+				"icon-name", "mate-power-manager",
 				"logo-icon-name", "mate-power-manager",
 				"website", "http://www.mate-desktop.org",
 				NULL);
