@@ -836,6 +836,8 @@ gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 	gtk_about_dialog_set_license (about, license_trans);
 	gtk_about_dialog_set_website (about, "http://www.mate-desktop.org/");
 
+	gtk_window_set_icon_name (GTK_WINDOW (about), GPM_BRIGHTNESS_APPLET_ICON);
+
 	g_signal_connect (G_OBJECT(about), "response",
 			  G_CALLBACK(gtk_widget_destroy), NULL);
 
