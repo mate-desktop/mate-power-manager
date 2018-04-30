@@ -48,10 +48,8 @@ typedef struct{
 	MatePanelApplet parent;
 	/* applet state */
 	guint cookie;
-	/* the icon, a GtkImage for it, and a cache for size*/
-	GdkPixbuf *icon;
+	/* the icon */
 	GtkWidget *image;
-	gint icon_width, icon_height;
 	/* connection to g-p-m */
 	DBusGProxy *proxy;
 	DBusGConnection *connection;
@@ -76,9 +74,8 @@ static void      gpm_inhibit_applet_init       (GpmInhibitApplet *applet);
 
 G_DEFINE_TYPE (GpmInhibitApplet, gpm_inhibit_applet, PANEL_TYPE_APPLET)
 
-static void	gpm_applet_get_icon		(GpmInhibitApplet *applet);
-static void	gpm_applet_check_size		(GpmInhibitApplet *applet);
-static gboolean	gpm_applet_draw_cb		(GpmInhibitApplet *applet);
+static void	gpm_applet_update_icon		(GpmInhibitApplet *applet);
+static void	gpm_applet_size_allocate_cb     (GtkWidget *widget, GdkRectangle *allocation);;
 static void	gpm_applet_update_tooltip	(GpmInhibitApplet *applet);
 static gboolean	gpm_applet_click_cb		(GpmInhibitApplet *applet, GdkEventButton *event);
 static void	gpm_applet_dialog_about_cb	(GtkAction *action, gpointer data);
@@ -163,25 +160,15 @@ gpm_applet_uninhibit (GpmInhibitApplet *applet,
 }
 
 /**
- * gpm_applet_get_icon:
+ * gpm_applet_update_icon:
  * @applet: Inhibit applet instance
  *
- * retrieve an icon from stock with a size adapted to panel
+ * sets an icon from stock
  **/
 static void
-gpm_applet_get_icon (GpmInhibitApplet *applet)
+gpm_applet_update_icon (GpmInhibitApplet *applet)
 {
 	const gchar *icon;
-
-	/* free */
-	if (applet->icon != NULL) {
-		g_object_unref (applet->icon);
-		applet->icon = NULL;
-	}
-
-	if (applet->size <= 2) {
-		return;
-	}
 
 	/* get icon */
 	if (applet->proxy == NULL) {
@@ -191,100 +178,41 @@ gpm_applet_get_icon (GpmInhibitApplet *applet)
 	} else {
 		icon = GPM_INHIBIT_APPLET_ICON_UNINHIBIT;
 	}
-	applet->icon = gtk_icon_theme_load_icon (gtk_icon_theme_get_default (),
-						 icon,
-						 applet->size - 2,
-						 GTK_ICON_LOOKUP_FORCE_SIZE, /*prevent oversize icons*/
-						 NULL);
-
-	/* update size cache */
-	applet->icon_height = gdk_pixbuf_get_height (applet->icon);
-	applet->icon_width = gdk_pixbuf_get_width (applet->icon);
+	gtk_image_set_from_icon_name (GTK_IMAGE(applet->image),
+				      icon,
+				      GTK_ICON_SIZE_BUTTON);
 }
 
 /**
- * gpm_applet_check_size:
+ * gpm_applet_size_allocate_cb:
  * @applet: Inhibit applet instance
  *
- * check if panel size has changed and applet adapt size
+ * resize icon when panel size changed
  **/
 static void
-gpm_applet_check_size (GpmInhibitApplet *applet)
+gpm_applet_size_allocate_cb (GtkWidget    *widget,
+                             GdkRectangle *allocation)
 {
-	GtkAllocation allocation;
+	GpmInhibitApplet *applet = GPM_INHIBIT_APPLET (widget);
+	int               size = 0;
 
-	/* we don't use the size function here, but the yet allocated size because the
-	   size value is false (kind of rounded) */
-	gtk_widget_get_allocation (GTK_WIDGET (applet), &allocation);
-	if (MATE_PANEL_APPLET_VERTICAL(mate_panel_applet_get_orient (MATE_PANEL_APPLET (applet)))) {
-		if (applet->size != allocation.width) {
-			applet->size = allocation.width;
-			gpm_applet_get_icon (applet);
-			gtk_widget_set_size_request (GTK_WIDGET(applet), applet->size, applet->icon_height + 2);
-		}
-		/* Adjusting incase the icon size has changed */
-		if (allocation.height < applet->icon_height + 2) {
-			gtk_widget_set_size_request (GTK_WIDGET(applet), applet->size, applet->icon_height + 2);
-		}
-	} else {
-		if (applet->size != allocation.height) {
-			applet->size = allocation.height;
-			gpm_applet_get_icon (applet);
-			gtk_widget_set_size_request (GTK_WIDGET(applet), applet->icon_width + 2, applet->size);
-		}
-		/* Adjusting incase the icon size has changed */
-		if (allocation.width < applet->icon_width + 2) {
-			gtk_widget_set_size_request (GTK_WIDGET(applet), applet->icon_width + 2, applet->size);
-		}
+	switch (mate_panel_applet_get_orient (MATE_PANEL_APPLET (applet))) {
+		case MATE_PANEL_APPLET_ORIENT_LEFT:
+		case MATE_PANEL_APPLET_ORIENT_RIGHT:
+			size = allocation->width;
+			break;
+
+		case MATE_PANEL_APPLET_ORIENT_UP:
+		case MATE_PANEL_APPLET_ORIENT_DOWN:
+			size = allocation->height;
+			break;
 	}
+
+	/* Scale to the actual size of the applet, don't quantize to original icon size */
+	/* GtkImage already contains a check to do nothing if it's the same */
+	gtk_image_set_pixel_size (GTK_IMAGE(applet->image), size);
 }
 
-/**
- * gpm_applet_draw_cb:
- * @applet: Inhibit applet instance
- *
- * draws applet content (background + icon)
- **/
-static gboolean
-gpm_applet_draw_cb (GpmInhibitApplet *applet)
-{
-	if (gtk_widget_get_window (GTK_WIDGET(applet)) == NULL) {
-		return FALSE;
-	}
-
-	/* retrieve applet size */
-	gpm_applet_get_icon (applet);
-	gpm_applet_check_size (applet);
-	if (applet->size <= 2) {
-		return FALSE;
-	}
-
-	/* if no icon, then don't try to display */
-	if (applet->icon == NULL) {
-		return FALSE;
-	}
-
-	/*draw icon */
-
-	gtk_image_set_from_pixbuf(GTK_IMAGE(applet->image),applet->icon);
-	gtk_widget_show(GTK_WIDGET(applet->image));
-
-	return TRUE;
-}
-
-/**
- * gpm_applet_change_background_cb:
- *
- * Enqueues an expose event (don't know why it's not the default behaviour)
- **/
-static void
-gpm_applet_change_background_cb (GpmInhibitApplet *applet,
-				 MatePanelAppletBackgroundType arg1,
-				 cairo_pattern_t *arg2,
-				 gpointer data)
-{
-	gtk_widget_queue_draw (GTK_WIDGET (applet));
-}
 
 /**
  * gpm_applet_update_tooltip:
@@ -334,10 +262,8 @@ gpm_applet_click_cb (GpmInhibitApplet *applet, GdkEventButton *event)
 					  &(applet->cookie));
 	}
 	/* update icon */
-	gpm_applet_get_icon (applet);
-	gpm_applet_check_size (applet);
+	gpm_applet_update_icon (applet);
 	gpm_applet_update_tooltip (applet);
-	gpm_applet_draw_cb (applet);
 
 	return TRUE;
 }
@@ -435,8 +361,6 @@ gpm_applet_destroy_cb (GtkWidget *widget)
 	GpmInhibitApplet *applet = GPM_INHIBIT_APPLET(widget);
 
 	g_bus_unwatch_name (applet->bus_watch_id);
-	if (applet->icon != NULL)
-		g_object_unref (applet->icon);
 }
 
 /**
@@ -514,8 +438,7 @@ gpm_inhibit_applet_name_appeared_cb (GDBusConnection *connection,
 {
 	gpm_inhibit_applet_dbus_connect (applet);
 	gpm_applet_update_tooltip (applet);
-	gpm_applet_get_icon (applet);
-	gpm_applet_draw_cb (applet);
+	gpm_applet_update_icon (applet);;
 }
 
 /**
@@ -528,8 +451,7 @@ gpm_inhibit_applet_name_vanished_cb (GDBusConnection *connection,
 {
 	gpm_inhibit_applet_dbus_disconnect (applet);
 	gpm_applet_update_tooltip (applet);
-	gpm_applet_get_icon (applet);
-	gpm_applet_draw_cb (applet);
+	gpm_applet_update_icon (applet);
 }
 
 /**
@@ -542,12 +464,10 @@ gpm_inhibit_applet_init (GpmInhibitApplet *applet)
 	DBusGConnection *connection;
 
 	/* initialize fields */
-	applet->size = 0;
-	applet->icon = NULL;
+	applet->image = NULL;
 	applet->cookie = 0;
 	applet->connection = NULL;
 	applet->proxy = NULL;
-	applet->image = gtk_image_new();
 
 	/* Add application specific icons to search path */
 	gtk_icon_theme_append_search_path (gtk_icon_theme_get_default (),
@@ -564,12 +484,11 @@ gpm_inhibit_applet_init (GpmInhibitApplet *applet)
 
 	/* prepare */
 	mate_panel_applet_set_flags (MATE_PANEL_APPLET (applet), MATE_PANEL_APPLET_EXPAND_MINOR);
+	applet->image = gtk_image_new();
+	gtk_container_add (GTK_CONTAINER (applet), applet->image);
 
 	/* set appropriate size and load icon accordingly */
-	gpm_applet_draw_cb (applet);
-
-	/*pack*/
-	gtk_container_add(GTK_CONTAINER(applet), applet->image);
+	gtk_widget_queue_draw (GTK_WIDGET (applet));
 
 	/* show */
 	gtk_widget_show_all (GTK_WIDGET(applet));
@@ -578,17 +497,8 @@ gpm_inhibit_applet_init (GpmInhibitApplet *applet)
 	g_signal_connect (G_OBJECT(applet), "button-press-event",
 			  G_CALLBACK(gpm_applet_click_cb), NULL);
 
-	/* We use g_signal_connect_after because letting the panel draw
-	 * the background is the only way to have the correct
-	 * background when a theme defines a background picture. */
-	g_signal_connect_after (G_OBJECT(applet), "draw",
-				G_CALLBACK(gpm_applet_draw_cb), NULL);
-
-	g_signal_connect (G_OBJECT(applet), "change-background",
-			  G_CALLBACK(gpm_applet_change_background_cb), NULL);
-
-	g_signal_connect (G_OBJECT(applet), "change-orient",
-			  G_CALLBACK(gpm_applet_draw_cb), NULL);
+	g_signal_connect (G_OBJECT(applet), "size-allocate",
+			  G_CALLBACK(gpm_applet_size_allocate_cb), NULL);
 
 	g_signal_connect (G_OBJECT(applet), "destroy",
 			  G_CALLBACK(gpm_applet_destroy_cb), NULL);
@@ -632,7 +542,6 @@ gpm_applet_cb (MatePanelApplet *_applet, const gchar *iid, gpointer data)
 	g_free (ui_path);
 	g_object_unref (action_group);
 
-	gpm_applet_draw_cb (applet);
 	return TRUE;
 }
 
