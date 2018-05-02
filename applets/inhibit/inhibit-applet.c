@@ -208,18 +208,7 @@ gpm_applet_size_allocate_cb (GtkWidget    *widget,
 			break;
 	}
 
-	/* copied from button-widget.c in the panel */
-	if (size < 22)
-		size = 16;
-	else if (size < 24)
-		size = 22;
-	else if (size < 32)
-		size = 24;
-	else if (size < 48)
-		size = 32;
-	else
-		size = 48;
-
+	/* Scale to the actual size of the applet, don't quantize to original icon size */
 	/* GtkImage already contains a check to do nothing if it's the same */
 	gtk_image_set_pixel_size (GTK_IMAGE(applet->image), size);
 }
