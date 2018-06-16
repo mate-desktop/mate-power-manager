@@ -1,19 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Alban <nofbname@gmail.com>, 2012
-# oltjano <apple.doctor92@yahoo.com>, 2012
-# Indrit Bashkimi <indrit.bashkimi@gmail.com>, 2015
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 22:24+0300\n"
-"PO-Revision-Date: 2018-01-09 19:25+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Albanian (http://www.transifex.com/mate/MATE/language/sq/)\n"
+"POT-Creation-Date: 2018-03-17 14:58+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Alban <nofbname@gmail.com>, 2018\n"
+"Language-Team: Albanian (https://www.transifex.com/mate/teams/13566/sq/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,7 +27,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "Rregullon panelin e ndricimit te laptopit"
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:329
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Cannot connect to mate-power-manager"
 msgstr "Nuk  mund te lidhet me mate-power-manager"
 
@@ -43,44 +41,56 @@ msgid "LCD brightness : %d%%"
 msgstr ""
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:403
+#: ../applets/inhibit/inhibit-applet.c:374
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "Licensuar  nen licensen GNU General Public License Version 2"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:404
+#: ../applets/inhibit/inhibit-applet.c:375
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
 "as published by the Free Software Foundation; either version 2\n"
 "of the License, or (at your option) any later version."
-msgstr "Menaxheri i energjisë është software open source; ju mund ta shpërndani atë   ose\nta modifikoni  sipas kushteve të GNU General Public License \nbotuar nga Fondacioni Free Software; sipas versionit\ntë Liçencës, ose (sipas dëshirës suaj) çdo versioni mëvonshem."
+msgstr ""
+"Menaxheri i energjisë është software open source; ju mund ta shpërndani atë   ose\n"
+"ta modifikoni  sipas kushteve të GNU General Public License \n"
+"botuar nga Fondacioni Free Software; sipas versionit\n"
+"të Liçencës, ose (sipas dëshirës suaj) çdo versioni mëvonshem."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:408
+#: ../applets/inhibit/inhibit-applet.c:379
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
 "GNU General Public License for more details."
-msgstr "Power Manager shpërndahet me shpresën se  do të jetë i dobishëm,\npor pa asnje lloj garancie; pa  garancinë e shprehur të\ntregetise  apo PËRDORIM PËR NJË QËLLIM TË CAKTUAR. Shikoni\nLejen e Përgjithshme Publike GNU për më shumë detaje."
+msgstr ""
+"Power Manager shpërndahet me shpresën se  do të jetë i dobishëm,\n"
+"por pa asnje lloj garancie; pa  garancinë e shprehur të\n"
+"tregetise  apo PËRDORIM PËR NJË QËLLIM TË CAKTUAR. Shikoni\n"
+"Lejen e Përgjithshme Publike GNU për më shumë detaje."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:412
+#: ../applets/inhibit/inhibit-applet.c:383
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
-msgstr "Ju duhet të keni marrë një kopje të Liçencës Publike të Përgjithshme GNU \nsë bashku me këtë program, nëse jo, shkruani tek Fondacioni Free Software \n Inc, 51 RR.Franklin,kati i peste, Boston, MA \n02110-1301, USA."
+msgstr ""
+"Ju duhet të keni marrë një kopje të Liçencës Publike të Përgjithshme GNU \n"
+"së bashku me këtë program, nëse jo, shkruani tek Fondacioni Free Software \n"
+" Inc, 51 RR.Franklin,kati i peste, Boston, MA \n"
+"02110-1301, USA."
 
 #: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:638
+#: ../applets/inhibit/inhibit-applet.c:610
 msgid "_About"
 msgstr "_Rreth"
 
 #: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:641
+#: ../applets/inhibit/inhibit-applet.c:613
 msgid "_Help"
 msgstr "_Ndihmë"
 
@@ -100,23 +110,23 @@ msgstr "Brightness Applet"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Rregullon panelin  e ndriçimit  "
 
-#: ../applets/inhibit/inhibit-applet.c:92
+#: ../applets/inhibit/inhibit-applet.c:93
 msgid "Power Manager Inhibit Applet"
 msgstr "Power Manager Inhibit Applet"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:94
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Lejon përdoruesin të pengojë kursimin  automatik të energjisë"
 
-#: ../applets/inhibit/inhibit-applet.c:332
+#: ../applets/inhibit/inhibit-applet.c:303
 msgid "Automatic sleep inhibited"
 msgstr "Gjumi Automatik   u ndalua"
 
-#: ../applets/inhibit/inhibit-applet.c:334
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid "Automatic sleep enabled"
 msgstr "'Gjumi automatik'  u aktivizua"
 
-#: ../applets/inhibit/inhibit-applet.c:362
+#: ../applets/inhibit/inhibit-applet.c:333
 msgid "Manual inhibit"
 msgstr "Pengim manual"
 
@@ -198,7 +208,9 @@ msgstr "Lejon  rregullim te shkelqimit"
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
-msgstr "Nëse shkëlqimi ekranit duhet të ndryshohet kur behet kalimi  nga AC ne fuqinë e baterisë."
+msgstr ""
+"Nëse shkëlqimi ekranit duhet të ndryshohet kur behet kalimi  nga AC ne "
+"fuqinë e baterisë."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:13
 msgid "Reduce the backlight brightness when on battery power"
@@ -208,7 +220,9 @@ msgstr ""
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
-msgstr "Neqoftese ekranit duhet ti  ulet ndricimi kur kompjuteri po punon  me  fuqine e baterise"
+msgstr ""
+"Neqoftese ekranit duhet ti  ulet ndricimi kur kompjuteri po punon  me  "
+"fuqine e baterise"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:15
 msgid "Reduce the keyboard backlight when on battery power"
@@ -266,13 +280,17 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:27
 msgid "Dim the screen after a period of inactivity when on battery power"
-msgstr "Zbeh ekranin  pas një periudhe inaktiviteti te tij  kur kompjuteri eshte duke punuar nën  fuqinë e baterisë"
+msgstr ""
+"Zbeh ekranin  pas një periudhe inaktiviteti te tij  kur kompjuteri eshte "
+"duke punuar nën  fuqinë e baterisë"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:28
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
-msgstr "Neqoftese ekrani duhet te shuhet  per re ruajtur energji kur ai  eshte duke  punuar me ane te baterise."
+msgstr ""
+"Neqoftese ekrani duhet te shuhet  per re ruajtur energji kur ai  eshte duke"
+"  punuar me ane te baterise."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:29
 msgid "The default amount of time to dim the screen after idle"
@@ -294,13 +312,17 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:33
 msgid "Dim the screen after a period of inactivity when on AC power"
-msgstr "Zbeh ekranin  pas një periudhe inaktiviteti te tij  kur kompjuteri eshte duke punuar nën  fuqinë  AC"
+msgstr ""
+"Zbeh ekranin  pas një periudhe inaktiviteti te tij  kur kompjuteri eshte "
+"duke punuar nën  fuqinë  AC"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:34
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on AC power."
-msgstr "Neqoftese ekrani duhet te shuhet  per re ruajtur energji kur ai  eshte duke  punuar me  ane te AC power"
+msgstr ""
+"Neqoftese ekrani duhet te shuhet  per re ruajtur energji kur ai  eshte duke"
+"  punuar me  ane te AC power"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:35
 msgid "Method used to blank screen on AC"
@@ -480,7 +502,8 @@ msgstr ""
 msgid ""
 "If a notification message should be displayed when the battery is fully "
 "charged."
-msgstr "Nëse një mesazh  duhet të shfaqet kur bateria është plotësisht e  ushqyer."
+msgstr ""
+"Nëse një mesazh  duhet të shfaqet kur bateria është plotësisht e  ushqyer."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:74
 msgid "Notify on a sleep failure"
@@ -490,7 +513,9 @@ msgstr ""
 msgid ""
 "If a notification message should be displayed after suspend or hibernate "
 "failed."
-msgstr "Nëse një mesazh njoftim duhet të shfaqet pas  pezullimit ose deshtimit te hibernate "
+msgstr ""
+"Nëse një mesazh njoftim duhet të shfaqet pas  pezullimit ose deshtimit te "
+"hibernate "
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:76
 msgid "The URI to show to the user on sleep failure"
@@ -510,7 +535,8 @@ msgstr ""
 msgid ""
 "If a notification message should be displayed when the battery is getting "
 "low."
-msgstr "Nëse një mesazh  duhet të shfaqet kur bateria është   shume e shkarkuar."
+msgstr ""
+"Nëse një mesazh  duhet të shfaqet kur bateria është   shume e shkarkuar."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:80
 msgid "Whether we should show the history data points"
@@ -759,7 +785,7 @@ msgstr ""
 
 #: ../data/gpm-statistics.ui.h:2 ../src/gpm-statistics.c:208
 msgid "Details"
-msgstr ""
+msgstr "Detaje:"
 
 #: ../data/gpm-statistics.ui.h:3
 msgid "Graph type:"
@@ -783,7 +809,7 @@ msgstr ""
 
 #: ../data/gpm-statistics.ui.h:8
 msgid "History"
-msgstr ""
+msgstr "Kronollogjia"
 
 #: ../data/gpm-statistics.ui.h:9
 msgid "Statistics"
@@ -795,7 +821,7 @@ msgstr ""
 
 #: ../data/gpm-statistics.ui.h:11
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../data/gpm-statistics.ui.h:12 ../src/gpm-statistics.c:194
 msgid "Wakeups"
@@ -895,7 +921,7 @@ msgstr ""
 
 #: ../data/gpm-prefs.ui.h:24
 msgid "General"
-msgstr ""
+msgstr "Të përgjithshme"
 
 #: ../data/gpm-prefs.ui.h:25
 msgid "Provides help about this program"
@@ -1137,50 +1163,50 @@ msgid "Suspend failed"
 msgstr ""
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:587
+#: ../src/gpm-manager.c:579
 msgid "Computer failed to suspend."
 msgstr ""
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:589
+#: ../src/gpm-manager.c:581
 msgid "Failed to suspend"
 msgstr ""
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:593
+#: ../src/gpm-manager.c:585
 msgid "Computer failed to hibernate."
 msgstr ""
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:595
+#: ../src/gpm-manager.c:587
 msgid "Failed to hibernate"
 msgstr ""
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:600
+#: ../src/gpm-manager.c:592
 msgid "Failure was reported as:"
 msgstr ""
 
 #. TRANSLATORS: button text, visit the suspend help website
-#: ../src/gpm-manager.c:613
+#: ../src/gpm-manager.c:605
 msgid "Visit help page"
 msgstr ""
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:859
+#: ../src/gpm-manager.c:851
 msgid "Display DPMS activated"
 msgstr ""
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:878
+#: ../src/gpm-manager.c:870
 msgid "On battery power"
 msgstr ""
 
-#: ../src/gpm-manager.c:896
+#: ../src/gpm-manager.c:888
 msgid "Laptop lid is closed"
 msgstr ""
 
-#: ../src/gpm-manager.c:934
+#: ../src/gpm-manager.c:926
 msgid "Power Information"
 msgstr ""
 
@@ -1188,13 +1214,13 @@ msgstr ""
 #. * where capacity is the ratio of the last_full capacity with that of
 #. * the design capacity. (#326740)
 #. TRANSLATORS: battery is old or broken
-#: ../src/gpm-manager.c:1121
+#: ../src/gpm-manager.c:1113
 msgid "Battery may be broken"
 msgstr ""
 
 #. TRANSLATORS: notify the user that that battery is broken as the capacity is
 #. very low
-#: ../src/gpm-manager.c:1124
+#: ../src/gpm-manager.c:1116
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
@@ -1202,196 +1228,196 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: show the charged notification
-#: ../src/gpm-manager.c:1173
+#: ../src/gpm-manager.c:1165
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] ""
 msgstr[1] ""
 
 #. TRANSLATORS: laptop battery is now discharging
-#: ../src/gpm-manager.c:1219
+#: ../src/gpm-manager.c:1211
 msgid "Battery Discharging"
 msgstr ""
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1223
+#: ../src/gpm-manager.c:1215
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-manager.c:1226 ../src/gpm-manager.c:1238
+#: ../src/gpm-manager.c:1218 ../src/gpm-manager.c:1230
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: UPS is now discharging
-#: ../src/gpm-manager.c:1231
+#: ../src/gpm-manager.c:1223
 msgid "UPS Discharging"
 msgstr ""
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1235
+#: ../src/gpm-manager.c:1227
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
-#: ../src/gpm-manager.c:1319
+#: ../src/gpm-manager.c:1311
 msgid "Battery low"
 msgstr ""
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
-#: ../src/gpm-manager.c:1322
+#: ../src/gpm-manager.c:1314
 msgid "Laptop battery low"
 msgstr ""
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1328
+#: ../src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: UPS is starting to get a little low
-#: ../src/gpm-manager.c:1332
+#: ../src/gpm-manager.c:1324
 msgid "UPS low"
 msgstr ""
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1336
+#: ../src/gpm-manager.c:1328
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1340 ../src/gpm-manager.c:1474
+#: ../src/gpm-manager.c:1332 ../src/gpm-manager.c:1466
 msgid "Mouse battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1343
+#: ../src/gpm-manager.c:1335
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1347 ../src/gpm-manager.c:1482
+#: ../src/gpm-manager.c:1339 ../src/gpm-manager.c:1474
 msgid "Keyboard battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1350
+#: ../src/gpm-manager.c:1342
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1354 ../src/gpm-manager.c:1491
+#: ../src/gpm-manager.c:1346 ../src/gpm-manager.c:1483
 msgid "PDA battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1357
+#: ../src/gpm-manager.c:1349
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1361 ../src/gpm-manager.c:1501
-#: ../src/gpm-manager.c:1511
+#: ../src/gpm-manager.c:1353 ../src/gpm-manager.c:1493
+#: ../src/gpm-manager.c:1503
 msgid "Cell phone battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1364
+#: ../src/gpm-manager.c:1356
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1368
+#: ../src/gpm-manager.c:1360
 msgid "Media player battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1371
+#: ../src/gpm-manager.c:1363
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1375 ../src/gpm-manager.c:1520
+#: ../src/gpm-manager.c:1367 ../src/gpm-manager.c:1512
 msgid "Tablet battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1378
+#: ../src/gpm-manager.c:1370
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1382 ../src/gpm-manager.c:1529
+#: ../src/gpm-manager.c:1374 ../src/gpm-manager.c:1521
 msgid "Attached computer battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1385
+#: ../src/gpm-manager.c:1377
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
-#: ../src/gpm-manager.c:1433
+#: ../src/gpm-manager.c:1425
 msgid "Battery critically low"
 msgstr ""
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1436 ../src/gpm-manager.c:1589
+#: ../src/gpm-manager.c:1428 ../src/gpm-manager.c:1581
 msgid "Laptop battery critically low"
 msgstr ""
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
-#: ../src/gpm-manager.c:1445
+#: ../src/gpm-manager.c:1437
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr ""
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1449
+#: ../src/gpm-manager.c:1441
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr ""
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1453
+#: ../src/gpm-manager.c:1445
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr ""
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1457
+#: ../src/gpm-manager.c:1449
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr ""
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1464 ../src/gpm-manager.c:1625
+#: ../src/gpm-manager.c:1456 ../src/gpm-manager.c:1617
 msgid "UPS critically low"
 msgstr ""
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1468
+#: ../src/gpm-manager.c:1460
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
@@ -1399,7 +1425,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1477
+#: ../src/gpm-manager.c:1469
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
@@ -1407,7 +1433,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1485
+#: ../src/gpm-manager.c:1477
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
@@ -1415,7 +1441,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1494
+#: ../src/gpm-manager.c:1486
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
@@ -1423,7 +1449,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1504
+#: ../src/gpm-manager.c:1496
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
@@ -1431,7 +1457,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1514
+#: ../src/gpm-manager.c:1506
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
@@ -1439,7 +1465,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1523
+#: ../src/gpm-manager.c:1515
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
@@ -1447,7 +1473,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1532
+#: ../src/gpm-manager.c:1524
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
@@ -1455,14 +1481,14 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1597
+#: ../src/gpm-manager.c:1589
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
 msgstr ""
 
 #. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1603
+#: ../src/gpm-manager.c:1595
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
@@ -1470,34 +1496,34 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1610
+#: ../src/gpm-manager.c:1602
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr ""
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1615
+#: ../src/gpm-manager.c:1607
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr ""
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1633
+#: ../src/gpm-manager.c:1625
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
 msgstr ""
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1639
+#: ../src/gpm-manager.c:1631
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr ""
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1644
+#: ../src/gpm-manager.c:1636
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr ""
@@ -1520,7 +1546,7 @@ msgstr ""
 
 #: ../src/gpm-prefs-core.c:254
 msgid "Blank screen"
-msgstr ""
+msgstr "Ekran bosh"
 
 #: ../src/gpm-prefs-core.c:257
 msgid "Ask me"
@@ -1532,12 +1558,12 @@ msgstr ""
 
 #: ../src/gpm-prefs-core.c:320
 msgid "Never"
-msgstr ""
+msgstr "Kurrë"
 
 #. TRANSLATORS: the rate of discharge for the device
 #: ../src/gpm-statistics.c:78 ../src/gpm-statistics.c:466
 msgid "Rate"
-msgstr ""
+msgstr "Taksa"
 
 #: ../src/gpm-statistics.c:79
 msgid "Charge"
@@ -1596,32 +1622,32 @@ msgstr ""
 
 #: ../src/gpm-statistics.c:139
 msgid "Value"
-msgstr ""
+msgstr "Vlera"
 
 #: ../src/gpm-statistics.c:156
 msgid "Image"
-msgstr ""
+msgstr "Figura"
 
 #: ../src/gpm-statistics.c:162
 msgid "Description"
-msgstr ""
+msgstr "Përshkrimi"
 
 #: ../src/gpm-statistics.c:181 ../src/gpm-statistics.c:405
 msgid "Type"
-msgstr ""
+msgstr "Lloji"
 
 #: ../src/gpm-statistics.c:187
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: ../src/gpm-statistics.c:201
 msgid "Command"
-msgstr ""
+msgstr "Komanda"
 
 #. TRANSLATORS: this is when the stats time is not known
 #: ../src/gpm-statistics.c:286
 msgid "Unknown"
-msgstr ""
+msgstr "Panjohur"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:290
@@ -1657,16 +1683,16 @@ msgstr[1] ""
 
 #: ../src/gpm-statistics.c:313
 msgid "Yes"
-msgstr ""
+msgstr "Po"
 
 #: ../src/gpm-statistics.c:313
 msgid "No"
-msgstr ""
+msgstr "Jo"
 
 #. TRANSLATORS: the device ID of the current device, e.g. "battery0"
 #: ../src/gpm-statistics.c:402
 msgid "Device"
-msgstr ""
+msgstr "Dispozitivi"
 
 #: ../src/gpm-statistics.c:407
 msgid "Vendor"
@@ -1939,7 +1965,7 @@ msgstr ""
 #. TRANSLATORS: the icon for the CPU
 #: ../src/gpm-statistics.c:1838
 msgid "Processor"
-msgstr ""
+msgstr "Proçesori"
 
 #: ../src/gpm-tray-icon.c:189
 msgid "Copyright © 2011-2018 MATE developers"
@@ -1951,6 +1977,9 @@ msgstr ""
 #: ../src/gpm-tray-icon.c:195
 msgid "translator-credits"
 msgstr ""
+"Elian Myftiu <elian@alblinux.net>\n"
+"Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
+"Laurent Dhima <laurenti@alblinux.net>"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
 #: ../src/gpm-tray-icon.c:297
@@ -1961,7 +1990,7 @@ msgstr ""
 #. preferences
 #: ../src/gpm-tray-icon.c:351
 msgid "_Preferences"
-msgstr ""
+msgstr "_Preferenca"
 
 #. TRANSLATORS: device not present
 #: ../src/gpm-upower.c:211
@@ -2256,7 +2285,7 @@ msgstr ""
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:646
 msgid "Empty"
-msgstr ""
+msgstr "Bosh"
 
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:654

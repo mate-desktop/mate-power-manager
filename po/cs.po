@@ -1,29 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# LiberteCzech <liberte.czech@gmail.com>, 2015
-# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2013
-# LiberteCzech <liberte.czech@gmail.com>, 2015-2016
-# LiberteCzech <liberte.czech@gmail.com>, 2015
-# Michal <sinope@seznam.cz>, 2013
-# Ondřej Kolín <ondrej.kolin@gmail.com>, 2013
-# Stanislav Kučera <inactive+kacernator@transifex.com>, 2015
-# Stanislav Kučera <inactive+kacernator@transifex.com>, 2015
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 22:24+0300\n"
-"PO-Revision-Date: 2018-01-14 13:49+0000\n"
-"Last-Translator: ToMáš Marný\n"
-"Language-Team: Czech (http://www.transifex.com/mate/MATE/language/cs/)\n"
+"POT-Creation-Date: 2018-03-17 14:58+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Lucas Lommer <drom@kdyne.net>, 2018\n"
+"Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: cs\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: ../applets/brightness/brightness-applet.c:110
 msgid "Power Manager Brightness Applet"
@@ -34,7 +27,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "Upravuje jas displeje notebooku."
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:329
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Cannot connect to mate-power-manager"
 msgstr "Nelze se připojit ke Správci napájení"
 
@@ -48,46 +41,57 @@ msgid "LCD brightness : %d%%"
 msgstr "Jas LCD: %d%%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:403
+#: ../applets/inhibit/inhibit-applet.c:374
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "Licencováno pod licencí GNU General Public Licence Verze 2"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:404
+#: ../applets/inhibit/inhibit-applet.c:375
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
 "as published by the Free Software Foundation; either version 2\n"
 "of the License, or (at your option) any later version."
-msgstr "Správce napájení je svobodný software; můžete jej dále šířit a/nebo upravovat za podmínek licence GNU General Public License v podobě, v jaké ji vydala Free Software Foundation, a to buď ve verzi 2 této licence nebo (dle vaší volby) v libovolné novější verzi."
+msgstr ""
+"Správce napájení je svobodný software; můžete jej dále šířit a/nebo "
+"upravovat za podmínek licence GNU General Public License v podobě, v jaké ji"
+" vydala Free Software Foundation, a to buď ve verzi 2 této licence nebo (dle"
+" vaší volby) v libovolné novější verzi."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:408
+#: ../applets/inhibit/inhibit-applet.c:379
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
 "GNU General Public License for more details."
-msgstr "Správce napájení je šířen ve víře, že bude užitečný, ale BEZ JAKÝCHKOLIV ZÁRUK, a to i bez předpokládané záruky na PRODEJNOST nebo VHODNOST PRO KONKRÉTNÍ ÚČEL. Více podrobností najdete přímo v licenci GNU General Public License."
+msgstr ""
+"Správce napájení je šířen ve víře, že bude užitečný, ale BEZ JAKÝCHKOLIV "
+"ZÁRUK, a to i bez předpokládané záruky na PRODEJNOST nebo VHODNOST PRO "
+"KONKRÉTNÍ ÚČEL. Více podrobností najdete přímo v licenci GNU General Public "
+"License."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:412
+#: ../applets/inhibit/inhibit-applet.c:383
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
-msgstr "Spolu s tímto programem byste měli obdržet kopii licence GNU General Public License. Pokud se tak nestalo, napište o ni Free Software\nFoundation, Inc., 51 Franklin Street, Fifth Floor, Boston,\nMA 02110-1301, USA."
+msgstr ""
+"Spolu s tímto programem byste měli obdržet kopii licence GNU General Public License. Pokud se tak nestalo, napište o ni Free Software\n"
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,\n"
+"MA 02110-1301, USA."
 
 #: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:638
+#: ../applets/inhibit/inhibit-applet.c:610
 msgid "_About"
 msgstr "O _aplikaci"
 
 #: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:641
+#: ../applets/inhibit/inhibit-applet.c:613
 msgid "_Help"
-msgstr "Nápo_věda"
+msgstr "_Nápověda"
 
 #: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:1
 msgid "Brightness Applet Factory"
@@ -105,23 +109,23 @@ msgstr "Nastavení jasu"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Nastavuje jas displeje notebooku"
 
-#: ../applets/inhibit/inhibit-applet.c:92
+#: ../applets/inhibit/inhibit-applet.c:93
 msgid "Power Manager Inhibit Applet"
 msgstr "Zákaz šetření energií"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:94
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Umožňuje uživateli zakázat automatické šetření energií."
 
-#: ../applets/inhibit/inhibit-applet.c:332
+#: ../applets/inhibit/inhibit-applet.c:303
 msgid "Automatic sleep inhibited"
 msgstr "Zakázáno automatické uspávání"
 
-#: ../applets/inhibit/inhibit-applet.c:334
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid "Automatic sleep enabled"
 msgstr "Povoleno automatické uspávání"
 
-#: ../applets/inhibit/inhibit-applet.c:362
+#: ../applets/inhibit/inhibit-applet.c:333
 msgid "Manual inhibit"
 msgstr "Manuální zákaz"
 
@@ -151,7 +155,9 @@ msgstr "Démon správy napájení"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:1
 msgid "Whether to hibernate, suspend or do nothing when inactive"
-msgstr "Zda při neaktivním stavu počítač uspat na disk, uspat do paměti či nedělat nic"
+msgstr ""
+"Zda při neaktivním stavu počítač uspat na disk, uspat do paměti či nedělat "
+"nic"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:2
 msgid ""
@@ -170,14 +176,18 @@ msgstr "Akce k provedení, pokud je úroveň nabití baterie kriticky nízká."
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
-msgstr "Zda provést akci při napájení z baterie, když bylo předtím víko zavřeno při napájení ze sítě"
+msgstr ""
+"Zda provést akci při napájení z baterie, když bylo předtím víko zavřeno při "
+"napájení ze sítě"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:6
 msgid ""
 "If the battery lid close event should occur (for example 'Suspend when lid "
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
-msgstr "Zda se má provést akce při napájení z baterie (např. uspat počítač při zavření víka), když bylo ještě předtím víko zavřeno při napájení ze sítě."
+msgstr ""
+"Zda se má provést akce při napájení z baterie (např. uspat počítač při "
+"zavření víka), když bylo ještě předtím víko zavřeno při napájení ze sítě."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:7
 msgid "UPS critical low action"
@@ -203,7 +213,9 @@ msgstr "Povolit úpravu jasu podsvícení"
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
-msgstr "Zda automaticky upravit jas obrazovky při přechodu mezi síťovým napájení a napájením z baterie."
+msgstr ""
+"Zda automaticky upravit jas obrazovky při přechodu mezi síťovým napájení a "
+"napájením z baterie."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:13
 msgid "Reduce the backlight brightness when on battery power"
@@ -223,7 +235,9 @@ msgstr "Zeslabit jas podsvícení klávesnice při napájení z baterie"
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
-msgstr "Pokud zařízení dosponuje podsvícením klávesnice, měl by být jas snížen, pakliže je počítač napájen z baterie"
+msgstr ""
+"Pokud zařízení dosponuje podsvícením klávesnice, měl by být jas snížen, "
+"pakliže je počítač napájen z baterie"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:17
 msgid "Keyboard backlight brightness when on AC power."
@@ -233,11 +247,14 @@ msgstr "Jas podsvícení klávesnice při napájení ze sítě."
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
-msgstr "Nastavení podsvícení klávesnice, při napájení ze sítě. Platné hodnoty se jsou mezi 0 a 100 procenty."
+msgstr ""
+"Nastavení podsvícení klávesnice, při napájení ze sítě. Platné hodnoty se "
+"jsou mezi 0 a 100 procenty."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:19
 msgid "Percent to reduce keyboard backlight by when on battery power."
-msgstr "O kolik procent se má snížit podsvícení klávesnice, při napájení z baterie."
+msgstr ""
+"O kolik procent se má snížit podsvícení klávesnice, při napájení z baterie."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:21
 #, no-c-format
@@ -245,7 +262,10 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
-msgstr "Procentuální snížení podsvícení klávesnice, při napájení z baterie. Například, pokud je nastaveno na \"60\", podsvícení bude sníženo o 40%, při napájení z baterie. Platné hodnoty se pohybují mezi 0 a 100 procenty."
+msgstr ""
+"Procentuální snížení podsvícení klávesnice, při napájení z baterie. "
+"Například, pokud je nastaveno na \"60\", podsvícení bude sníženo o 40%, při "
+"napájení z baterie. Platné hodnoty se pohybují mezi 0 a 100 procenty."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
@@ -257,7 +277,10 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
-msgstr "Procentuální snížení podsvícení klávesnice v nečinnosti. Například, pokud je nastaveno na \"60\", podsvícení bude sníženo o 40% v nečinnosti. Platné hodnoty se pohybují mezi 0 a 100 procenty."
+msgstr ""
+"Procentuální snížení podsvícení klávesnice v nečinnosti. Například, pokud je"
+" nastaveno na \"60\", podsvícení bude sníženo o 40% v nečinnosti. Platné "
+"hodnoty se pohybují mezi 0 a 100 procenty."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:25
 msgid "The brightness of the screen when idle"
@@ -267,7 +290,9 @@ msgstr "Jas obrazovky během nečinnosti"
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
-msgstr "Jas displeje notebooku během nečinného sezení. Používáno pouze, máte-li zaškrtnuto use_time_for_policy."
+msgstr ""
+"Jas displeje notebooku během nečinného sezení. Používáno pouze, máte-li "
+"zaškrtnuto use_time_for_policy."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:27
 msgid "Dim the screen after a period of inactivity when on battery power"
@@ -277,15 +302,19 @@ msgstr "Ztmavit obrazovku po době nečinnosti při napájení z baterie"
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
-msgstr "Zda se má ztmavit obrazovka, je-li sezení delší dobu nečinné při napájení z baterie."
+msgstr ""
+"Zda se má ztmavit obrazovka, je-li sezení delší dobu nečinné při napájení z "
+"baterie."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:29
 msgid "The default amount of time to dim the screen after idle"
-msgstr "Doba prodlevy v sekundách před ztmavením obrazovky, když je sezení nečinné"
+msgstr ""
+"Doba prodlevy v sekundách před ztmavením obrazovky, když je sezení nečinné"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:30
 msgid "The default amount of time to dim the screen after idle."
-msgstr "Doba prodlevy v sekundách před ztmavením obrazovky, když je sezení nečinné."
+msgstr ""
+"Doba prodlevy v sekundách před ztmavením obrazovky, když je sezení nečinné."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:31
 msgid "LCD dimming amount when on battery"
@@ -295,7 +324,9 @@ msgstr "Míra ztmavení LCD při napájení z baterie"
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
-msgstr "O kolik ztmavit jas displeje při napájení z baterie. Možné jsou hodnoty v rozsahu 0 až 100."
+msgstr ""
+"O kolik ztmavit jas displeje při napájení z baterie. Možné jsou hodnoty v "
+"rozsahu 0 až 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:33
 msgid "Dim the screen after a period of inactivity when on AC power"
@@ -305,7 +336,9 @@ msgstr "Ztmavit obrazovku po době nečinnosti při napájení ze sítě"
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on AC power."
-msgstr "Zda se má ztmavit obrazovka, je-li sezení delší dobu nečinné při napájení ze sítě."
+msgstr ""
+"Zda se má ztmavit obrazovka, je-li sezení delší dobu nečinné při napájení ze"
+" sítě."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:35
 msgid "Method used to blank screen on AC"
@@ -331,7 +364,9 @@ msgstr "Jas LCD při napájení ze sítě"
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
-msgstr "Jas displeje při napájení ze sítě. Možné jsou hodnoty v rozsahu 0.0 až 100.0."
+msgstr ""
+"Jas displeje při napájení ze sítě. Možné jsou hodnoty v rozsahu 0.0 až "
+"100.0."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:41
 msgid "Suspend button action"
@@ -385,7 +420,10 @@ msgstr "Kdy zobrazit oznamovací ikonu"
 msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
-msgstr "Zda mají být používána upozornění založená na čase. Je-li nastaveno negativně, budou používány procentuální změny, což může pomoci v případě vadného ACPI BIOS."
+msgstr ""
+"Zda mají být používána upozornění založená na čase. Je-li nastaveno "
+"negativně, budou používány procentuální změny, což může pomoci v případě "
+"vadného ACPI BIOS."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:53
 msgid "Check CPU load before sleeping"
@@ -397,13 +435,17 @@ msgstr "Zda se má zkontrolovat zátěž procesoru před zahájením nečinnosti
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:55
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
-msgstr "Zda má být při uspávání připojována a odpojována síť aplikací NetworkManager."
+msgstr ""
+"Zda má být při uspávání připojována a odpojována síť aplikací "
+"NetworkManager."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:56
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
-msgstr "Zda má NetworkManager před uspáním odpojit síť a po probuzení ji zase připojit."
+msgstr ""
+"Zda má NetworkManager před uspáním odpojit síť a po probuzení ji zase "
+"připojit."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:57
 msgid "Use mate-screensaver lock setting"
@@ -413,7 +455,9 @@ msgstr "Používat nastavení zamykání šetřiče obrazovky MATE"
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
-msgstr "Zda používat nastavení mate-screensaver ke zjištění, jestli má být obrazovka uzamčena při uspání počítače nebo obrazovky."
+msgstr ""
+"Zda používat nastavení mate-screensaver ke zjištění, jestli má být obrazovka"
+" uzamčena při uspání počítače nebo obrazovky."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:59
 msgid "Lock screen when blanked"
@@ -423,7 +467,9 @@ msgstr "Uzamknout obrazovku při jejím smazání"
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
-msgstr "Zda má být obrazovka uzamčena při vypnutí. Používáno pouze, není-li zaškrtnuto lock_use_screensaver_settings."
+msgstr ""
+"Zda má být obrazovka uzamčena při vypnutí. Používáno pouze, není-li "
+"zaškrtnuto lock_use_screensaver_settings."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:61
 msgid "Lock screen on suspend"
@@ -433,7 +479,9 @@ msgstr "Uzamknout obrazovku při uspání do paměti"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
-msgstr "Zda má být po probuzení počítače z uspání do paměti uzamčena obrazovka. Používáno pouze, není-li zaškrtnuto lock_use_screensaver."
+msgstr ""
+"Zda má být po probuzení počítače z uspání do paměti uzamčena obrazovka. "
+"Používáno pouze, není-li zaškrtnuto lock_use_screensaver."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:63
 msgid "Lock screen on hibernate"
@@ -443,7 +491,9 @@ msgstr "Uzamknout obrazovku při uspání počítače na disk"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
-msgstr "Zda má být po probuzení počítače z uspání na disk uzamčena obrazovka. Používáno pouze, není-li zaškrtnuto lock_use_screensaver."
+msgstr ""
+"Zda má být po probuzení počítače z uspání na disk uzamčena obrazovka. "
+"Používáno pouze, není-li zaškrtnuto lock_use_screensaver."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:65
 msgid "Lock GNOME keyring on sleep"
@@ -453,13 +503,17 @@ msgstr "Při usnutí uzamknout klíčenku GNOME"
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
-msgstr "Zda při uspání do paměti neboli RAM, uzamknout klíčenku GNOME. Klíčenka se při probuzení odemkne."
+msgstr ""
+"Zda při uspání do paměti neboli RAM, uzamknout klíčenku GNOME. Klíčenka se "
+"při probuzení odemkne."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:67
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
-msgstr "Zda při uspání na disk neboli hibernaci, uzamknout klíčenku GNOME. Klíčenka se při probuzení odemkne."
+msgstr ""
+"Zda při uspání na disk neboli hibernaci, uzamknout klíčenku GNOME. Klíčenka "
+"se při probuzení odemkne."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:68
 msgid "If we should show the low capacity warning for a broken battery"
@@ -495,7 +549,8 @@ msgstr "Upozornit na chybu při uspání"
 msgid ""
 "If a notification message should be displayed after suspend or hibernate "
 "failed."
-msgstr "Zda se má zobrazit varování, jestliže uspání do paměti nebo na disk selhalo."
+msgstr ""
+"Zda se má zobrazit varování, jestliže uspání do paměti nebo na disk selhalo."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:76
 msgid "The URI to show to the user on sleep failure"
@@ -505,7 +560,9 @@ msgstr "Adresa URI, která se zobrazí uživateli při chybě"
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
-msgstr "Pokud se nezdaří uspání počítače, lze uživateli zobrazit tlačítko pro řešení situace. Pokud jej nechcete zobrazovat, nechte pole prázdné."
+msgstr ""
+"Pokud se nezdaří uspání počítače, lze uživateli zobrazit tlačítko pro řešení"
+" situace. Pokud jej nechcete zobrazovat, nechte pole prázdné."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:78
 msgid "Notify on a low power"
@@ -583,7 +640,9 @@ msgstr "Index čísel stránek zobrazit ve výchozím nastavení"
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
-msgstr "Index čísla stránky zobrazený ve výchozím nastavení, který je použit k návratu na správnou stránku."
+msgstr ""
+"Index čísla stránky zobrazený ve výchozím nastavení, který je použit k "
+"návratu na správnou stránku."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
@@ -593,7 +652,9 @@ msgstr "ID posledního vybraného zařízení"
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
-msgstr "Identifikátor posledního zařízení, který je použit k návratu ke správnému zařízení."
+msgstr ""
+"Identifikátor posledního zařízení, který je použit k návratu ke správnému "
+"zařízení."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:98
 msgid "Percentage considered low"
@@ -603,7 +664,9 @@ msgstr "Procento považované za nízké"
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
-msgstr "Procento nabití baterie považované za nízké. Používáno pouze, není-li zaškrtnuto use_time_for_policy."
+msgstr ""
+"Procento nabití baterie považované za nízké. Používáno pouze, není-li "
+"zaškrtnuto use_time_for_policy."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:100
 msgid "Percentage considered critical"
@@ -613,7 +676,9 @@ msgstr "Procento považované za kritické"
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
-msgstr "Procento nabití baterie považované za kritické. Používáno pouze, není-li zaškrtnuto use_time_for_policy."
+msgstr ""
+"Procento nabití baterie považované za kritické. Používáno pouze, není-li "
+"zaškrtnuto use_time_for_policy."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:102
 msgid "Percentage action is taken"
@@ -623,7 +688,9 @@ msgstr "Je vykonána akce založená na procentech"
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
-msgstr "Procento nabití baterie, při kterém je provedena kritická akce. Používáno pouze, není-li zaškrtnuto use_time_for_policy."
+msgstr ""
+"Procento nabití baterie, při kterém je provedena kritická akce. Používáno "
+"pouze, není-li zaškrtnuto use_time_for_policy."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:104
 msgid "The time remaining when low"
@@ -633,7 +700,9 @@ msgstr "Zbývající čas při nízkém stavu"
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
-msgstr "Zbývající čas v sekundách, je-li baterie téměř vybitá. Používáno pouze, je-li zaškrtnuto use_time_for_policy."
+msgstr ""
+"Zbývající čas v sekundách, je-li baterie téměř vybitá. Používáno pouze, je-"
+"li zaškrtnuto use_time_for_policy."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:106
 msgid "The time remaining when critical"
@@ -643,7 +712,9 @@ msgstr "Zbývající čas při kritickém stavu"
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
-msgstr "Zbývající čas v sekundách, je-li baterie v kriticky nízkém stavu. Používáno pouze, pokud je zaškrtnuto use_time_for_policy."
+msgstr ""
+"Zbývající čas v sekundách, je-li baterie v kriticky nízkém stavu. Používáno "
+"pouze, pokud je zaškrtnuto use_time_for_policy."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:108
 msgid "The time remaining when action is taken"
@@ -653,7 +724,9 @@ msgstr "Zbývající čas při vykonání akce"
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
-msgstr "Zbývající čas v sekundách, než se provede akce při kriticky nízkém stavu baterie. Používáno pouze, je-li zaškrtnuto use_time_for_policy."
+msgstr ""
+"Zbývající čas v sekundách, než se provede akce při kriticky nízkém stavu "
+"baterie. Používáno pouze, je-li zaškrtnuto use_time_for_policy."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:110
 msgid "Sleep timeout computer when on battery"
@@ -663,7 +736,9 @@ msgstr "Čas pro uspání počítače při napájení z baterie"
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before it goes to sleep."
-msgstr "Doba prodlevy v sekundách před tím, než se počítač pokusí přejít do režimu spánku, je-li napájen z baterie."
+msgstr ""
+"Doba prodlevy v sekundách před tím, než se počítač pokusí přejít do režimu "
+"spánku, je-li napájen z baterie."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:112
 msgid "Sleep timeout computer when on AC"
@@ -673,7 +748,9 @@ msgstr "Čas pro uspání počítače při napájení ze sítě"
 msgid ""
 "The amount of time in seconds the computer on AC power needs to be inactive "
 "before it goes to sleep."
-msgstr "Doba prodlevy v sekundách před tím, než se počítač pokusí přejít do režimu spánku, je-li napájen ze sítě."
+msgstr ""
+"Doba prodlevy v sekundách před tím, než se počítač pokusí přejít do režimu "
+"spánku, je-li napájen ze sítě."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:114
 msgid "Sleep timeout computer when on UPS"
@@ -683,7 +760,9 @@ msgstr "Čas pro uspání počítače při napájení ze záložního zdroje"
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before it goes to sleep."
-msgstr "Doba prodlevy v sekundách před tím, než se počítač pokusí přejít do režimu spánku, je-li napájen ze záložního zdroje."
+msgstr ""
+"Doba prodlevy v sekundách před tím, než se počítač pokusí přejít do režimu "
+"spánku, je-li napájen ze záložního zdroje."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:116
 msgid "Sleep timeout display when on AC"
@@ -693,7 +772,9 @@ msgstr "Čas pro uspání displeje při napájení ze sítě"
 msgid ""
 "The amount of time in seconds before the display goes to sleep when the "
 "computer is on AC power."
-msgstr "Doba prodlevy v sekundách před tím, než se displej pokusí přejít do režimu spánku, je-li napájen ze sítě."
+msgstr ""
+"Doba prodlevy v sekundách před tím, než se displej pokusí přejít do režimu "
+"spánku, je-li napájen ze sítě."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:118
 msgid "Sleep timeout display when on battery"
@@ -703,7 +784,9 @@ msgstr "Čas pro uspání displeje při napájení z baterie"
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
-msgstr "Doba prodlevy v sekundách před tím, než se displej pokusí přejít do režimu spánku, je-li počítač napájen z baterie."
+msgstr ""
+"Doba prodlevy v sekundách před tím, než se displej pokusí přejít do režimu "
+"spánku, je-li počítač napájen z baterie."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:120
 msgid "Sleep timeout display when on UPS"
@@ -713,7 +796,9 @@ msgstr "Čas pro uspání displeje při napájení ze záložního zdroje"
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before the display goes to sleep."
-msgstr "Doba prodlevy v sekundách před tím, než se displej pokusí přejít do režimu spánku, je-li počítač napájen ze záložního zdroje."
+msgstr ""
+"Doba prodlevy v sekundách před tím, než se displej pokusí přejít do režimu "
+"spánku, je-li počítač napájen ze záložního zdroje."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:122
 msgid "If sounds should be used"
@@ -723,12 +808,16 @@ msgstr "Zda má být používán zvuk"
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
-msgstr "Zda se má přehrát zvuk při kriticky nízkém stavu nabití nebo při zákazu šetření energií."
+msgstr ""
+"Zda se má přehrát zvuk při kriticky nízkém stavu nabití nebo při zákazu "
+"šetření energií."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:124
 msgid ""
 "If preferences and statistics items should be shown in the context menu"
-msgstr "Zda by měly být v kontextové nabídce zobrazené položky pro předvolby a statistiky."
+msgstr ""
+"Zda by měly být v kontextové nabídce zobrazené položky pro předvolby a "
+"statistiky."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:125
 msgid "When to show the notification icon"
@@ -900,7 +989,7 @@ msgstr "_Vždy zobrazit ikonu"
 
 #: ../data/gpm-prefs.ui.h:24
 msgid "General"
-msgstr "Obecné"
+msgstr "Obecný"
 
 #: ../data/gpm-prefs.ui.h:25
 msgid "Provides help about this program"
@@ -961,7 +1050,7 @@ msgstr "Nebylo možné získat maximální hodnotu úrovně podsvícení"
 #. TRANSLATORS: only able to install profiles as root
 #: ../src/gpm-backlight-helper.c:247
 msgid "This program can only be used by the root user"
-msgstr "Tento program může používat pouze uživatel root"
+msgstr "Tento program může být použit pouze uživatelem root"
 
 #. TRANSLATORS: the program must never be directly run
 #: ../src/gpm-backlight-helper.c:256
@@ -984,6 +1073,7 @@ msgid_plural "%i minutes"
 msgstr[0] "%i minuta"
 msgstr[1] "%i minuty"
 msgstr[2] "%i minut"
+msgstr[3] "%i minut"
 
 #: ../src/gpm-common.c:69
 #, c-format
@@ -992,6 +1082,7 @@ msgid_plural "%i hours"
 msgstr[0] "%i hodina"
 msgstr[1] "%i hodiny"
 msgstr[2] "%i hodin"
+msgstr[3] "%i hodin"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -1006,6 +1097,7 @@ msgid_plural "hours"
 msgstr[0] "hodina"
 msgstr[1] "hodiny"
 msgstr[2] "hodin"
+msgstr[3] "hodin"
 
 #: ../src/gpm-common.c:77
 msgid "minute"
@@ -1013,6 +1105,7 @@ msgid_plural "minutes"
 msgstr[0] "minuta"
 msgstr[1] "minuty"
 msgstr[2] "minut"
+msgstr[3] "minut"
 
 #. Translators: This is %i days
 #: ../src/gpm-graph-widget.c:435
@@ -1146,50 +1239,50 @@ msgid "Suspend failed"
 msgstr "Uspání selhalo"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:587
+#: ../src/gpm-manager.c:579
 msgid "Computer failed to suspend."
 msgstr "Selhalo uspání počítače do paměti."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:589
+#: ../src/gpm-manager.c:581
 msgid "Failed to suspend"
 msgstr "Selhalo uspání do paměti"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:593
+#: ../src/gpm-manager.c:585
 msgid "Computer failed to hibernate."
 msgstr "Selhalo uspání počítač na disk."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:595
+#: ../src/gpm-manager.c:587
 msgid "Failed to hibernate"
 msgstr "Selhalo uspání na disk"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:600
+#: ../src/gpm-manager.c:592
 msgid "Failure was reported as:"
 msgstr "Selhání bylo nahlášeno jako:"
 
 #. TRANSLATORS: button text, visit the suspend help website
-#: ../src/gpm-manager.c:613
+#: ../src/gpm-manager.c:605
 msgid "Visit help page"
 msgstr "Navštívit stránku nápovědy"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:859
+#: ../src/gpm-manager.c:851
 msgid "Display DPMS activated"
 msgstr "Správa napájení displeje aktivní"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:878
+#: ../src/gpm-manager.c:870
 msgid "On battery power"
 msgstr "Při napájení z baterie"
 
-#: ../src/gpm-manager.c:896
+#: ../src/gpm-manager.c:888
 msgid "Laptop lid is closed"
 msgstr "Víko notebooku zavřeno"
 
-#: ../src/gpm-manager.c:934
+#: ../src/gpm-manager.c:926
 msgid "Power Information"
 msgstr "Informace o napájení"
 
@@ -1197,320 +1290,351 @@ msgstr "Informace o napájení"
 #. * where capacity is the ratio of the last_full capacity with that of
 #. * the design capacity. (#326740)
 #. TRANSLATORS: battery is old or broken
-#: ../src/gpm-manager.c:1121
+#: ../src/gpm-manager.c:1113
 msgid "Battery may be broken"
 msgstr "Baterie může být poškozena"
 
 #. TRANSLATORS: notify the user that that battery is broken as the capacity is
 #. very low
-#: ../src/gpm-manager.c:1124
+#: ../src/gpm-manager.c:1116
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
 " broken."
-msgstr "Baterie má velmi malou kapacitu (%1.1f%%), což znamená, že může být stará nebo poškozená."
+msgstr ""
+"Baterie má velmi malou kapacitu (%1.1f%%), což znamená, že může být stará "
+"nebo poškozená."
 
 #. TRANSLATORS: show the charged notification
-#: ../src/gpm-manager.c:1173
+#: ../src/gpm-manager.c:1165
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] "Baterie dobita"
-msgstr[1] "Baterie dobity"
-msgstr[2] "Baterie dobity"
+msgstr[0] "Baterie nabita"
+msgstr[1] "Baterie nabity"
+msgstr[2] "Baterie nabity"
+msgstr[3] "Baterie nabity"
 
 #. TRANSLATORS: laptop battery is now discharging
-#: ../src/gpm-manager.c:1219
+#: ../src/gpm-manager.c:1211
 msgid "Battery Discharging"
 msgstr "Baterie se vybíjí"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1223
+#: ../src/gpm-manager.c:1215
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr "Zbývá %s provozu na baterie (%.0f%%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-manager.c:1226 ../src/gpm-manager.c:1238
+#: ../src/gpm-manager.c:1218 ../src/gpm-manager.c:1230
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr "%s se vybíjí (%.0f%%)"
 
 #. TRANSLATORS: UPS is now discharging
-#: ../src/gpm-manager.c:1231
+#: ../src/gpm-manager.c:1223
 msgid "UPS Discharging"
 msgstr "Záložní zdroj se vybíjí"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1235
+#: ../src/gpm-manager.c:1227
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr "Zbývá %s provozu na záložní zdroj (%.0f%%)"
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
-#: ../src/gpm-manager.c:1319
+#: ../src/gpm-manager.c:1311
 msgid "Battery low"
 msgstr "Nízký stav baterie"
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
-#: ../src/gpm-manager.c:1322
+#: ../src/gpm-manager.c:1314
 msgid "Laptop battery low"
 msgstr "Baterie notebooku je téměř vybitá"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1328
+#: ../src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "Zbývá přibližně <b>%s</b> (%.0f%%)"
 
 #. TRANSLATORS: UPS is starting to get a little low
-#: ../src/gpm-manager.c:1332
+#: ../src/gpm-manager.c:1324
 msgid "UPS low"
 msgstr "Záložní zdroj je téměř vybitý"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1336
+#: ../src/gpm-manager.c:1328
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr "Zbývá vám přibližně <b>%s</b> výkonu záložního zdroje (%.0f%%)"
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1340 ../src/gpm-manager.c:1474
+#: ../src/gpm-manager.c:1332 ../src/gpm-manager.c:1466
 msgid "Mouse battery low"
 msgstr "Baterie v myši je téměř vybitá"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1343
+#: ../src/gpm-manager.c:1335
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr "Bezdrátová myš je téměř vybitá (%.0f%%)"
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1347 ../src/gpm-manager.c:1482
+#: ../src/gpm-manager.c:1339 ../src/gpm-manager.c:1474
 msgid "Keyboard battery low"
 msgstr "Baterie v klávesnici je téměř vybitá"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1350
+#: ../src/gpm-manager.c:1342
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr "Bezdrátová klávesnice je téměř vybitá (%.0f%%)"
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1354 ../src/gpm-manager.c:1491
+#: ../src/gpm-manager.c:1346 ../src/gpm-manager.c:1483
 msgid "PDA battery low"
 msgstr "Baterie v PDA je téměř vybitá"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1357
+#: ../src/gpm-manager.c:1349
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr "PDA je téměř vybité (%.0f%%)"
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1361 ../src/gpm-manager.c:1501
-#: ../src/gpm-manager.c:1511
+#: ../src/gpm-manager.c:1353 ../src/gpm-manager.c:1493
+#: ../src/gpm-manager.c:1503
 msgid "Cell phone battery low"
 msgstr "Baterie mobilního telefonu je téměř vybitá"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1364
+#: ../src/gpm-manager.c:1356
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "Mobilní telefon je téměř vybitý (%.0f%%)"
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1368
+#: ../src/gpm-manager.c:1360
 msgid "Media player battery low"
 msgstr "Baterie přenosného přehrávače je téměř vybitá"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1371
+#: ../src/gpm-manager.c:1363
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr "Přenosný přehrávač je téměř vybitý (%.0f%%)"
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1375 ../src/gpm-manager.c:1520
+#: ../src/gpm-manager.c:1367 ../src/gpm-manager.c:1512
 msgid "Tablet battery low"
 msgstr "Baterie tabletu je téměř vybitá"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1378
+#: ../src/gpm-manager.c:1370
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "Tablet je téměř vybitý (%.0f%%)"
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1382 ../src/gpm-manager.c:1529
+#: ../src/gpm-manager.c:1374 ../src/gpm-manager.c:1521
 msgid "Attached computer battery low"
 msgstr "Baterie připojeného počítače je téměř vybitá"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1385
+#: ../src/gpm-manager.c:1377
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "Připojený počítač je téměř vybitý (%.0f%%)"
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
-#: ../src/gpm-manager.c:1433
+#: ../src/gpm-manager.c:1425
 msgid "Battery critically low"
 msgstr "Kriticky nízký stav baterie"
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1436 ../src/gpm-manager.c:1589
+#: ../src/gpm-manager.c:1428 ../src/gpm-manager.c:1581
 msgid "Laptop battery critically low"
 msgstr "Kriticky nízký stav baterie notebooku"
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
-#: ../src/gpm-manager.c:1445
+#: ../src/gpm-manager.c:1437
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr "Připojte svůj síťový adaptér, abyste zabránili ztrátě dat."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1449
+#: ../src/gpm-manager.c:1441
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
-msgstr "Pokud počítač nepřipojíte k napájení, bude velmi brzy uspán do paměti."
+msgstr ""
+"Pokud počítač nepřipojíte k napájení, bude velmi brzy uspán do paměti."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1453
+#: ../src/gpm-manager.c:1445
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr "Pokud počítač nepřipojíte k napájení, bude velmi brzy uspán na disk."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1457
+#: ../src/gpm-manager.c:1449
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr "Pokud počítač nepřipojíte k napájení, bude velmi brzy vypnut."
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1464 ../src/gpm-manager.c:1625
+#: ../src/gpm-manager.c:1456 ../src/gpm-manager.c:1617
 msgid "UPS critically low"
 msgstr "Kriticky nízký stav záložního zdroje"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1468
+#: ../src/gpm-manager.c:1460
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
-msgstr "Zbývá vám přibližně <b>%s</b> výkonu záložního zdroje (%.0f%%). Obnovte napájení z elektrické sítě, abyste předešli ztrátě dat."
+msgstr ""
+"Zbývá vám přibližně <b>%s</b> výkonu záložního zdroje (%.0f%%). Obnovte "
+"napájení z elektrické sítě, abyste předešli ztrátě dat."
+
+#. TRANSLATORS: the device is just going to stop working
+#: ../src/gpm-manager.c:1469
+#, c-format
+msgid ""
+"Wireless mouse is very low in power (%.0f%%). This device will soon stop "
+"functioning if not charged."
+msgstr ""
+"Bezdrátová myš je téměř vybitá (%.0f%%). Jestliže ji nenabijete, přestane "
+"brzy pracovat."
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1477
 #, c-format
 msgid ""
-"Wireless mouse is very low in power (%.0f%%). This device will soon stop "
-"functioning if not charged."
-msgstr "Bezdrátová myš je téměř vybitá (%.0f%%). Jestliže ji nenabijete, přestane brzy pracovat."
-
-#. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1485
-#, c-format
-msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Bezdrátová klávesnice je téměř vybitá (%.0f%%). Jestliže ji nenabijete, přestane brzy pracovat."
+msgstr ""
+"Bezdrátová klávesnice je téměř vybitá (%.0f%%). Jestliže ji nenabijete, "
+"přestane brzy pracovat."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1494
+#: ../src/gpm-manager.c:1486
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
 " not charged."
-msgstr "PDA je téměř vybité (%.0f%%). Jestliže jej nenabijete, přestane brzy pracovat."
+msgstr ""
+"PDA je téměř vybité (%.0f%%). Jestliže jej nenabijete, přestane brzy "
+"pracovat."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1504
+#: ../src/gpm-manager.c:1496
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Mobilní telefon je téměř vybitý (%.0f%%). Jestliže jej nenabijete, přestane brzy pracovat."
+msgstr ""
+"Mobilní telefon je téměř vybitý (%.0f%%). Jestliže jej nenabijete, přestane "
+"brzy pracovat."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1514
+#: ../src/gpm-manager.c:1506
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Připojený počítač je téměř vybitý (%.0f%%). Jestliže jej nenabijete, přestane brzy pracovat."
+msgstr ""
+"Připojený počítač je téměř vybitý (%.0f%%). Jestliže jej nenabijete, "
+"přestane brzy pracovat."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1523
+#: ../src/gpm-manager.c:1515
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
-msgstr "Tablet je téměř vybitý (%.0f%%). Jestliže jej nenabijete, přestane brzy pracovat."
+msgstr ""
+"Tablet je téměř vybitý (%.0f%%). Jestliže jej nenabijete, přestane brzy "
+"pracovat."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1532
+#: ../src/gpm-manager.c:1524
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
-msgstr "Připojený počítač je téměř vybitý (%.0f%%). Jestliže jej nenabijete, přestane brzy pracovat."
+msgstr ""
+"Připojený počítač je téměř vybitý (%.0f%%). Jestliže jej nenabijete, "
+"přestane brzy pracovat."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1597
+#: ../src/gpm-manager.c:1589
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
-msgstr "Baterie je pod kritickou úrovní; jakmile se baterie zcela vyprázdní, bude <b>přerušeno napájení</b> počítače."
+msgstr ""
+"Baterie je pod kritickou úrovní; jakmile se baterie zcela vyprázdní, bude "
+"<b>přerušeno napájení</b> počítače."
 
 #. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1603
+#: ../src/gpm-manager.c:1595
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
-msgstr "Baterie je pod kritickou úrovní a počítač bude uspán do paměti.<br><b>POZOR:</b> K udržení počítače v uspaném stavu je třeba stálý přísun malého množství energie."
+msgstr ""
+"Baterie je pod kritickou úrovní a počítač bude uspán do "
+"paměti.<br><b>POZOR:</b> K udržení počítače v uspaném stavu je třeba stálý "
+"přísun malého množství energie."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1610
+#: ../src/gpm-manager.c:1602
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr "Baterie je pod kritickou úrovní a počítač bude uspán na disk."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1615
+#: ../src/gpm-manager.c:1607
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr "Baterie je pod kritickou úrovní a počítač bude vypnut."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1633
+#: ../src/gpm-manager.c:1625
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
-msgstr "Záložní zdroj UPS je pod kritickou úrovní. Jakmile se záložní zdroj zcela vybije, bude <b>přerušeno napájení</b> počítač."
+msgstr ""
+"Záložní zdroj UPS je pod kritickou úrovní. Jakmile se záložní zdroj zcela "
+"vybije, bude <b>přerušeno napájení</b> počítač."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1639
+#: ../src/gpm-manager.c:1631
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
-msgstr "Záložní zdroj UPS je pod kritickou úrovní nabití a tento počítač bude záhy uspán na disk."
+msgstr ""
+"Záložní zdroj UPS je pod kritickou úrovní nabití a tento počítač bude záhy "
+"uspán na disk."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1644
+#: ../src/gpm-manager.c:1636
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
-msgstr "Záložní zdroj UPS je pod kritickou úrovní nabití a tento počítač bude záhy vypnut."
+msgstr ""
+"Záložní zdroj UPS je pod kritickou úrovní nabití a tento počítač bude záhy "
+"vypnut."
 
 #: ../src/gpm-prefs.c:81
 msgid "MATE Power Preferences"
@@ -1530,7 +1654,7 @@ msgstr "Uspat na disk"
 
 #: ../src/gpm-prefs-core.c:254
 msgid "Blank screen"
-msgstr "Spustit šetřič obrazovky"
+msgstr "Prázdná obrazovka"
 
 #: ../src/gpm-prefs-core.c:257
 msgid "Ask me"
@@ -1547,7 +1671,7 @@ msgstr "Nikdy"
 #. TRANSLATORS: the rate of discharge for the device
 #: ../src/gpm-statistics.c:78 ../src/gpm-statistics.c:466
 msgid "Rate"
-msgstr "Stupeň"
+msgstr "Rate"
 
 #: ../src/gpm-statistics.c:79
 msgid "Charge"
@@ -1618,7 +1742,7 @@ msgstr "Popis"
 
 #: ../src/gpm-statistics.c:181 ../src/gpm-statistics.c:405
 msgid "Type"
-msgstr "Typ"
+msgstr "Druh"
 
 #: ../src/gpm-statistics.c:187
 msgid "ID"
@@ -1641,6 +1765,7 @@ msgid_plural "%.0f seconds"
 msgstr[0] "%.0f sekunda"
 msgstr[1] "%.0f sekundy"
 msgstr[2] "%.0f sekund"
+msgstr[3] "%.0f sekund"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:295
@@ -1650,6 +1775,7 @@ msgid_plural "%.1f minutes"
 msgstr[0] "%.1f minuta"
 msgstr[1] "%.1f minuty"
 msgstr[2] "%.1f minut"
+msgstr[3] "%.1f minut"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:300
@@ -1659,6 +1785,7 @@ msgid_plural "%.1f hours"
 msgstr[0] "%.1f hodina"
 msgstr[1] "%.1f hodiny"
 msgstr[2] "%.1f hodin"
+msgstr[3] "%.1f hodin"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:304
@@ -1667,7 +1794,8 @@ msgid "%.1f day"
 msgid_plural "%.1f days"
 msgstr[0] "%.1f den"
 msgstr[1] "%.1f dny"
-msgstr[2] "%.1f dní"
+msgstr[2] "%.1f dnů"
+msgstr[3] "%.1f dnů"
 
 #: ../src/gpm-statistics.c:313
 msgid "Yes"
@@ -1709,6 +1837,7 @@ msgid_plural "%d seconds"
 msgstr[0] "%d sekunda"
 msgstr[1] "%d sekundy"
 msgstr[2] "%d sekund"
+msgstr[3] "%d sekund"
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
@@ -1732,7 +1861,7 @@ msgstr "Dobíjitelný"
 #. TRANSLATORS: The state of the device, e.g. "Changing" or "Fully charged"
 #: ../src/gpm-statistics.c:446
 msgid "State"
-msgstr "Stav"
+msgstr "Stát"
 
 #: ../src/gpm-statistics.c:450
 msgid "Energy"
@@ -1921,7 +2050,7 @@ msgstr "Uplynulý čas"
 #. TRANSLATORS: this is the Y axis on the graph
 #: ../src/gpm-statistics.c:1353
 msgid "Power"
-msgstr "Spotřeba"
+msgstr "Mocnina"
 
 #. TRANSLATORS: this is the Y axis on the graph for the whole battery device
 #. TRANSLATORS: this is the X axis on the graph for the whole battery device
@@ -1965,7 +2094,14 @@ msgstr "Copyright © 2011-2018 Vývojáři MATE"
 #. * box to give credit to the translator(s).
 #: ../src/gpm-tray-icon.c:195
 msgid "translator-credits"
-msgstr "O překlad se zasloužili"
+msgstr ""
+"Stanislav Brabec <utx@penguin.cz>\n"
+"Michal Bukovjan <bukm@centrum.cz>\n"
+"Miloslav Trmač <mitr@volny.cz>\n"
+"Petr Tomeš <ptomes@gmail.com>\n"
+"Jakub Friedl <jfriedl@suse.cz>\n"
+"Lucas Lommer <llommer@svn.gnome.org>\n"
+"Petr Kovář <pknbe@volny.cz>"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
 #: ../src/gpm-tray-icon.c:297
@@ -1976,7 +2112,7 @@ msgstr "%s zbývající"
 #. preferences
 #: ../src/gpm-tray-icon.c:351
 msgid "_Preferences"
-msgstr "_Předvolby"
+msgstr "Nastavení"
 
 #. TRANSLATORS: device not present
 #: ../src/gpm-upower.c:211
@@ -1997,7 +2133,9 @@ msgstr "%s se nabíjí (%.1f%%)"
 msgid ""
 "Battery is fully charged.\n"
 "Provides %s laptop runtime"
-msgstr "Baterie je plně dobita.\nUmožňuje notebooku %s provozu"
+msgstr ""
+"Baterie je plně dobita.\n"
+"Umožňuje notebooku %s provozu"
 
 #. TRANSLATORS: the device is fully charged
 #: ../src/gpm-upower.c:244
@@ -2023,7 +2161,9 @@ msgstr "%s se vybíjí (%.1f%%)"
 msgid ""
 "%s %s until charged (%.1f%%)\n"
 "Provides %s battery runtime"
-msgstr "%s se bude dobíjet %s (%.1f%%)\nPoskytne %s běhu na baterie"
+msgstr ""
+"%s se bude dobíjet %s (%.1f%%)\n"
+"Poskytne %s běhu na baterie"
 
 #. TRANSLATORS: device is charging, and we have a time to full and a
 #. percentage
@@ -2134,7 +2274,7 @@ msgstr "Slušná"
 
 #: ../src/gpm-upower.c:425
 msgid "Poor"
-msgstr "Špatná"
+msgstr "Mizerný"
 
 #: ../src/gpm-upower.c:429
 msgid "Capacity:"
@@ -2163,6 +2303,7 @@ msgid_plural "AC adapters"
 msgstr[0] "Síťový adaptér"
 msgstr[1] "Síťové adaptéry"
 msgstr[2] "Síťové adaptéry"
+msgstr[3] "Síťové adaptéry"
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/gpm-upower.c:491
@@ -2171,6 +2312,7 @@ msgid_plural "Laptop batteries"
 msgstr[0] "Baterie notebooku"
 msgstr[1] "Baterie notebooku"
 msgstr[2] "Baterie notebooku"
+msgstr[3] "Baterie notebooku"
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/gpm-upower.c:495
@@ -2179,6 +2321,7 @@ msgid_plural "UPSs"
 msgstr[0] "Záložní zdroj"
 msgstr[1] "Záložní zdroje"
 msgstr[2] "Záložní zdroje"
+msgstr[3] "Záložní zdroje"
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/gpm-upower.c:499
@@ -2187,6 +2330,7 @@ msgid_plural "Monitors"
 msgstr[0] "Monitor"
 msgstr[1] "Monitory"
 msgstr[2] "Monitory"
+msgstr[3] "Monitory"
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/gpm-upower.c:503
@@ -2195,6 +2339,7 @@ msgid_plural "Mice"
 msgstr[0] "Myš"
 msgstr[1] "Myši"
 msgstr[2] "Myši"
+msgstr[3] "Myši"
 
 #. TRANSLATORS: wireless keyboard with internal battery
 #: ../src/gpm-upower.c:507
@@ -2203,14 +2348,16 @@ msgid_plural "Keyboards"
 msgstr[0] "Klávesnice"
 msgstr[1] "Klávesnice"
 msgstr[2] "Klávesnice"
+msgstr[3] "Klávesnice"
 
 #. TRANSLATORS: portable device
 #: ../src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] "PDA"
-msgstr[1] "PDA"
-msgstr[2] "PDA"
+msgstr[0] "Zařízení PDA"
+msgstr[1] "Zařízení PDA"
+msgstr[2] "Zařízení PDA"
+msgstr[3] "Zařízení PDA"
 
 #. TRANSLATORS: cell phone (mobile...)
 #: ../src/gpm-upower.c:515
@@ -2219,6 +2366,7 @@ msgid_plural "Cell phones"
 msgstr[0] "Mobilní telefon"
 msgstr[1] "Mobilní telefony"
 msgstr[2] "Mobilní telefony"
+msgstr[3] "Mobilní telefony"
 
 #. TRANSLATORS: media player, mp3 etc
 #: ../src/gpm-upower.c:519
@@ -2227,6 +2375,7 @@ msgid_plural "Media players"
 msgstr[0] "Přenosný přehrávač"
 msgstr[1] "Přenosné přehrávače"
 msgstr[2] "Přenosné přehrávače"
+msgstr[3] "Přenosné přehrávače"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:523
@@ -2235,6 +2384,7 @@ msgid_plural "Tablets"
 msgstr[0] "Tablet"
 msgstr[1] "Tablety"
 msgstr[2] "Tablety"
+msgstr[3] "Tablety"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:527
@@ -2243,6 +2393,7 @@ msgid_plural "Computers"
 msgstr[0] "Počítač"
 msgstr[1] "Počítače"
 msgstr[2] "Počítače"
+msgstr[3] "Počítače"
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:594
@@ -2282,7 +2433,7 @@ msgstr "Neznámá technologie"
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:646
 msgid "Empty"
-msgstr "Vybito"
+msgstr "Prázdné"
 
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:654

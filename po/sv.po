@@ -1,21 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Erik, 2014-2015
-# Henrik Mattsson-Mårn <h@reglage.net>, 2016
-# Jonatan Nyberg, 2016
-# Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>, 2015-2016
-# Tobias Lekare <lekare@linux.com>, 2017-2018
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 22:24+0300\n"
-"PO-Revision-Date: 2018-01-11 11:42+0000\n"
-"Last-Translator: Tobias Lekare <lekare@linux.com>\n"
-"Language-Team: Swedish (http://www.transifex.com/mate/MATE/language/sv/)\n"
+"POT-Creation-Date: 2018-03-17 14:58+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Daniel Gullbransen <daniel@llama.nu>, 2018\n"
+"Language-Team: Swedish (https://www.transifex.com/mate/teams/13566/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,7 +27,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "Justerar ljusstyrkan på skärmen."
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:329
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Cannot connect to mate-power-manager"
 msgstr "Kan inte ansluta till mate-power-manager"
 
@@ -45,44 +41,55 @@ msgid "LCD brightness : %d%%"
 msgstr "LCD-ljusstyrka : %d%%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:403
+#: ../applets/inhibit/inhibit-applet.c:374
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "Licensierat under GNU General Public License version 2"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:404
+#: ../applets/inhibit/inhibit-applet.c:375
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
 "as published by the Free Software Foundation; either version 2\n"
 "of the License, or (at your option) any later version."
-msgstr "Strömhanteraren är fri programvara. Du kan distribuera det och/eller\nmodifiera det under villkoren i GNU General Public License, publicerad\nav Free Software Foundation, antingen version 2 eller (om du så vill)\nnågon senare version."
+msgstr ""
+"Strömhanteraren är fri programvara. Du kan distribuera det och/eller\n"
+"modifiera det under villkoren i GNU General Public License, publicerad\n"
+"av Free Software Foundation, antingen version 2 eller (om du så vill)\n"
+"någon senare version."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:408
+#: ../applets/inhibit/inhibit-applet.c:379
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
 "GNU General Public License for more details."
-msgstr "Strömhanteraren distribueras i hopp om att det ska vara användbart,\nmen UTAN NÅGON SOM HELST GARANTI, även utan underförstådd garanti\nom SÄLJBARHET eller LÄMPLIGHET FÖR NÅGOT SPECIELLT ÄNDAMÅL. Se GNU\nGeneral Public License för ytterligare information."
+msgstr ""
+"Strömhanteraren distribueras i hopp om att det ska vara användbart,\n"
+"men UTAN NÅGON SOM HELST GARANTI, även utan underförstådd garanti\n"
+"om SÄLJBARHET eller LÄMPLIGHET FÖR NÅGOT SPECIELLT ÄNDAMÅL. Se GNU\n"
+"General Public License för ytterligare information."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:412
+#: ../applets/inhibit/inhibit-applet.c:383
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
-msgstr "Du bör ha fått en kopia av GNU General Public License tillsammans\nmed detta program. Om inte, skriv till Free Software Foundation, Inc.,\n51 Franklin Street, Fifth Floor, Boston, MA 02111-1307, USA."
+msgstr ""
+"Du bör ha fått en kopia av GNU General Public License tillsammans\n"
+"med detta program. Om inte, skriv till Free Software Foundation, Inc.,\n"
+"51 Franklin Street, Fifth Floor, Boston, MA 02111-1307, USA."
 
 #: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:638
+#: ../applets/inhibit/inhibit-applet.c:610
 msgid "_About"
 msgstr "_Om"
 
 #: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:641
+#: ../applets/inhibit/inhibit-applet.c:613
 msgid "_Help"
 msgstr "_Hjälp"
 
@@ -102,23 +109,23 @@ msgstr "Panelprogram för justering av ljusstyrka"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Justerar skärmens ljusstyrka på bärbar dator"
 
-#: ../applets/inhibit/inhibit-applet.c:92
+#: ../applets/inhibit/inhibit-applet.c:93
 msgid "Power Manager Inhibit Applet"
 msgstr "Panelprogram för hindring av strömsparning"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:94
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Tillåter användaren att förhindra automatisk strömsparning."
 
-#: ../applets/inhibit/inhibit-applet.c:332
+#: ../applets/inhibit/inhibit-applet.c:303
 msgid "Automatic sleep inhibited"
 msgstr "Automatisk sömn förhindras"
 
-#: ../applets/inhibit/inhibit-applet.c:334
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid "Automatic sleep enabled"
 msgstr "Automatisk sömn aktiverad"
 
-#: ../applets/inhibit/inhibit-applet.c:362
+#: ../applets/inhibit/inhibit-applet.c:333
 msgid "Manual inhibit"
 msgstr "Manuell förhindring"
 
@@ -148,7 +155,8 @@ msgstr "Strömhanteringsdemon"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:1
 msgid "Whether to hibernate, suspend or do nothing when inactive"
-msgstr "Huruvida viloläge, vänteläge eller ingenting ska användas vid inaktivitet"
+msgstr ""
+"Huruvida viloläge, vänteläge eller ingenting ska användas vid inaktivitet"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:2
 msgid ""
@@ -167,14 +175,19 @@ msgstr "Åtgärd som ska vidtas nät batterinivån är kritiskt låg."
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
-msgstr "Huruvida batterihändelsen bör inträffa när locket är stängt och strömmen frånkopplad"
+msgstr ""
+"Huruvida batterihändelsen bör inträffa när locket är stängt och strömmen "
+"frånkopplad"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:6
 msgid ""
 "If the battery lid close event should occur (for example 'Suspend when lid "
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
-msgstr "Huruvida lockstängningshändelsen ska inträffa vid batteridrift (till exempel \"Vänteläge när locket stängs vid batteridrift\") när locket tidigare stängts och strömadaptern kopplats från vid en senare tidpunkt."
+msgstr ""
+"Huruvida lockstängningshändelsen ska inträffa vid batteridrift (till exempel"
+" \"Vänteläge när locket stängs vid batteridrift\") när locket tidigare "
+"stängts och strömadaptern kopplats från vid en senare tidpunkt."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:7
 msgid "UPS critical low action"
@@ -200,7 +213,9 @@ msgstr "Tillåt justering av bakgrundsbelysningens ljusstyrka"
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
-msgstr "Om skärmens ljusstyrka ska ändras vid byte mellan extern strömkälla och batteridrift."
+msgstr ""
+"Om skärmens ljusstyrka ska ändras vid byte mellan extern strömkälla och "
+"batteridrift."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:13
 msgid "Reduce the backlight brightness when on battery power"
@@ -220,21 +235,29 @@ msgstr "Minska tangentbordets bakgrundsbelysning vid batteridrift"
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
-msgstr "Om styrkan i tangentbordets bakgrundsbelysning ska minskas när datorn använder batteriet"
+msgstr ""
+"Om styrkan i tangentbordets bakgrundsbelysning ska minskas när datorn "
+"använder batteriet"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:17
 msgid "Keyboard backlight brightness when on AC power."
-msgstr "Ljusstyrka för tangentbordets bakgrundsbelysning när datorn är ansluten till ett vägguttag."
+msgstr ""
+"Ljusstyrka för tangentbordets bakgrundsbelysning när datorn är ansluten till"
+" ett vägguttag."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:18
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
-msgstr "Ljusstyrka för tangentbordets bakgrundsbelysning i procent när datorn är ansluten till ett vägguttag. Tillåtna värden mellan 0 och 100."
+msgstr ""
+"Ljusstyrka för tangentbordets bakgrundsbelysning i procent när datorn är "
+"ansluten till ett vägguttag. Tillåtna värden mellan 0 och 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:19
 msgid "Percent to reduce keyboard backlight by when on battery power."
-msgstr "Antal procent att minska tangentbordets bakgrundsbelysning med vid batteridrift."
+msgstr ""
+"Antal procent att minska tangentbordets bakgrundsbelysning med vid "
+"batteridrift."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:21
 #, no-c-format
@@ -242,11 +265,17 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
-msgstr "Procentandelen att minska bakgrundsbelysning på tangentbordet vid batteridrift. Till exempel om den är inställd på '60' kommer bakgrundsbelysningen att sänkas med 40% vid batteridrift. Tillåtna värden är mellan 0 och 100."
+msgstr ""
+"Procentandelen att minska bakgrundsbelysning på tangentbordet vid "
+"batteridrift. Till exempel om den är inställd på '60' kommer "
+"bakgrundsbelysningen att sänkas med 40% vid batteridrift. Tillåtna värden är"
+" mellan 0 och 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
-msgstr "Antal procent att minska tangentbordets bakgrundsbelysning med när datorn inte används."
+msgstr ""
+"Antal procent att minska tangentbordets bakgrundsbelysning med när datorn "
+"inte används."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:24
 #, no-c-format
@@ -254,7 +283,10 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
-msgstr "Procentandelen att minska bakgrundsbelysning på tangentbordet vid inaktiv. Till exempel om den är inställd på '60' kommer bakgrundsbelysningen att sänkas med 40% vid inaktiv. Tillåtna värden är mellan 0 och 100."
+msgstr ""
+"Procentandelen att minska bakgrundsbelysning på tangentbordet vid inaktiv. "
+"Till exempel om den är inställd på '60' kommer bakgrundsbelysningen att "
+"sänkas med 40% vid inaktiv. Tillåtna värden är mellan 0 och 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:25
 msgid "The brightness of the screen when idle"
@@ -264,7 +296,9 @@ msgstr "Ljusstyrkan på skärmen när skärmen är inaktiv"
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
-msgstr "Detta är ljusstyrkan som används på bärbara datorns skärm när sessionen är inaktiv. Endast giltig när use-time-for-policy är inställd till true."
+msgstr ""
+"Detta är ljusstyrkan som används på bärbara datorns skärm när sessionen är "
+"inaktiv. Endast giltig när use-time-for-policy är inställd till true."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:27
 msgid "Dim the screen after a period of inactivity when on battery power"
@@ -274,15 +308,19 @@ msgstr "Dämpa skärmen efter en stunds inaktivitet vid batteridrift"
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
-msgstr "Om skärmen ska dämpas för att spara ström när datorn är inaktiv och vid batteridrift."
+msgstr ""
+"Om skärmen ska dämpas för att spara ström när datorn är inaktiv och vid "
+"batteridrift."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:29
 msgid "The default amount of time to dim the screen after idle"
-msgstr "Standardvärdet för tidsintervallet innan skärmen dämpas efter inaktivitet"
+msgstr ""
+"Standardvärdet för tidsintervallet innan skärmen dämpas efter inaktivitet"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:30
 msgid "The default amount of time to dim the screen after idle."
-msgstr "Standardvärdet för tidsintervallet innan skärmen dämpas efter inaktivitet."
+msgstr ""
+"Standardvärdet för tidsintervallet innan skärmen dämpas efter inaktivitet."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:31
 msgid "LCD dimming amount when on battery"
@@ -292,7 +330,9 @@ msgstr "Ljusdämpning för LCD-skärm vid batteridrift"
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
-msgstr "Dämpning av ljusstyrkan för skärmen vid batteridrift. Möjliga värden är mellan 0 och 100."
+msgstr ""
+"Dämpning av ljusstyrkan för skärmen vid batteridrift. Möjliga värden är "
+"mellan 0 och 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:33
 msgid "Dim the screen after a period of inactivity when on AC power"
@@ -302,7 +342,9 @@ msgstr "Dämpa skärmen efter en stunds inaktivitet när strömadaptern används
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on AC power."
-msgstr "Om skärmen ska dämpas för att spara ström när datorn är inaktiv och strömadaptern används."
+msgstr ""
+"Om skärmen ska dämpas för att spara ström när datorn är inaktiv och "
+"strömadaptern används."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:35
 msgid "Method used to blank screen on AC"
@@ -328,7 +370,9 @@ msgstr "Ljusstyrka för plattskärm när ansluten till strömadapter"
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
-msgstr "Ljusstyrkan för skärmen när strömadaptern används. Möjliga värden är mellan 0.0 och 100.0."
+msgstr ""
+"Ljusstyrkan för skärmen när strömadaptern används. Möjliga värden är mellan "
+"0.0 och 100.0."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:41
 msgid "Suspend button action"
@@ -366,13 +410,16 @@ msgstr "Åtgärd som ska vidtas när man stänger datorns lock vid batteridrift.
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:49
 msgid "Laptop lid close action when on AC"
-msgstr "Åtgärd vid stängning av locket på bärbar dator när strömadaptern används"
+msgstr ""
+"Åtgärd vid stängning av locket på bärbar dator när strömadaptern används"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:50
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
-msgstr "Åtgärd som ska vidtas när man stänger datorns lock och datorn är ansluten till ett vägguttag."
+msgstr ""
+"Åtgärd som ska vidtas när man stänger datorns lock och datorn är ansluten "
+"till ett vägguttag."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:51
 msgid "Whether to use time-based notifications"
@@ -382,7 +429,10 @@ msgstr "Huruvida tidsbaserade notifieringar ska användas"
 msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
-msgstr "Huruvida tidsbaserade notifieringar ska användas eller inte. Om inställd till falskt kommer procentändringen att användas istället, vilket kan rätta till ett trasigt ACPI BIOS."
+msgstr ""
+"Huruvida tidsbaserade notifieringar ska användas eller inte. Om inställd "
+"till falskt kommer procentändringen att användas istället, vilket kan rätta "
+"till ett trasigt ACPI BIOS."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:53
 msgid "Check CPU load before sleeping"
@@ -390,7 +440,9 @@ msgstr "Kontrollera CPU-belastning före sömn"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:54
 msgid "If the CPU load should be checked before doing the idle action."
-msgstr "Huruvida vi ska kontrollera processorbelastning före inaktivitetshändelsen sker."
+msgstr ""
+"Huruvida vi ska kontrollera processorbelastning före inaktivitetshändelsen "
+"sker."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:55
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
@@ -400,7 +452,9 @@ msgstr "Huruvida Nätverkshanterare ska anslutas och kopplas från vid sömn."
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
-msgstr "Huruvida Nätverkshanterare ska kopplas från innan vänte- eller viloläge och anslutas vid uppvaknande."
+msgstr ""
+"Huruvida Nätverkshanterare ska kopplas från innan vänte- eller viloläge och "
+"anslutas vid uppvaknande."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:57
 msgid "Use mate-screensaver lock setting"
@@ -410,7 +464,9 @@ msgstr "Använd mate-screensavers låsinställning"
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
-msgstr "Huruvida skärmlåsningsinställningen för mate-screensaver ska bestämma om skärmen är låst efter återgång från viloläge, vänteläge eller släckt skärm."
+msgstr ""
+"Huruvida skärmlåsningsinställningen för mate-screensaver ska bestämma om "
+"skärmen är låst efter återgång från viloläge, vänteläge eller släckt skärm."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:59
 msgid "Lock screen when blanked"
@@ -420,7 +476,9 @@ msgstr "Lås skärmen när den släcks"
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
-msgstr "Huruvida skärmen är låst när skärmen stängs av. Används endast om lock-use-screensaver-settings är satt till falskt."
+msgstr ""
+"Huruvida skärmen är låst när skärmen stängs av. Används endast om lock-use-"
+"screensaver-settings är satt till falskt."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:61
 msgid "Lock screen on suspend"
@@ -430,7 +488,9 @@ msgstr "Lås skärm vid vänteläge"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
-msgstr "Om skärmen är låst när datorn vaknar upp från vänteläge. Användas endast om lock-use-screensaver är false."
+msgstr ""
+"Om skärmen är låst när datorn vaknar upp från vänteläge. Användas endast om "
+"lock-use-screensaver är false."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:63
 msgid "Lock screen on hibernate"
@@ -440,7 +500,9 @@ msgstr "Lås skärm vid viloläge"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
-msgstr "Om skärmen är låst när datorn vaknar upp från vänteläge. Användas endast om lock-use-screensaver är satt till falskt."
+msgstr ""
+"Om skärmen är låst när datorn vaknar upp från vänteläge. Användas endast om "
+"lock-use-screensaver är satt till falskt."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:65
 msgid "Lock GNOME keyring on sleep"
@@ -450,13 +512,19 @@ msgstr "Lås GNOME-nyckelring vid sömn"
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
-msgstr "Huruvida GNOME-nyckelringen är låst innan datorn går i vänteläge. Det här betyder att nyckelringen kommer att behöva låsas upp när datorn återgår till normal drift."
+msgstr ""
+"Huruvida GNOME-nyckelringen är låst innan datorn går i vänteläge. Det här "
+"betyder att nyckelringen kommer att behöva låsas upp när datorn återgår till"
+" normal drift."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:67
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
-msgstr "Huruvida GNOME-nyckelringen är låst innan datorn går i viloläge. Det här betyder att nyckelringen kommer att behöva låsas upp när datorn återgår till normal drift."
+msgstr ""
+"Huruvida GNOME-nyckelringen är låst innan datorn går i viloläge. Det här "
+"betyder att nyckelringen kommer att behöva låsas upp när datorn återgår till"
+" normal drift."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:68
 msgid "If we should show the low capacity warning for a broken battery"
@@ -472,7 +540,8 @@ msgstr "Notifiera när nätadaptern kopplas bort"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:71
 msgid "If the user should be notified when the AC adapter is disconnected."
-msgstr "Huruvida användaren ska notifieras när nätadaptern kopplas från eller inte."
+msgstr ""
+"Huruvida användaren ska notifieras när nätadaptern kopplas från eller inte."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:72
 msgid "Notify when fully charged"
@@ -482,7 +551,9 @@ msgstr "Notifiera vid fullständigt uppladdat"
 msgid ""
 "If a notification message should be displayed when the battery is fully "
 "charged."
-msgstr "Huruvida ett meddelande ska visas eller inte när batteriet är fullständigt uppladdat."
+msgstr ""
+"Huruvida ett meddelande ska visas eller inte när batteriet är fullständigt "
+"uppladdat."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:74
 msgid "Notify on a sleep failure"
@@ -492,7 +563,9 @@ msgstr "Notifiera vid sömnproblem"
 msgid ""
 "If a notification message should be displayed after suspend or hibernate "
 "failed."
-msgstr "Om ett meddelande ska visas eller inte efter att vänte- eller viloläget misslyckats."
+msgstr ""
+"Om ett meddelande ska visas eller inte efter att vänte- eller viloläget "
+"misslyckats."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:76
 msgid "The URI to show to the user on sleep failure"
@@ -502,7 +575,9 @@ msgstr "URI:n att visa till användaren vid fel att sova"
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
-msgstr "Vid fel att sova så kan vi visa användaren en knapp för att hjälpa lösa problemet. Lämna denna tom om knappen inte ska visas."
+msgstr ""
+"Vid fel att sova så kan vi visa användaren en knapp för att hjälpa lösa "
+"problemet. Lämna denna tom om knappen inte ska visas."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:78
 msgid "Notify on a low power"
@@ -512,7 +587,8 @@ msgstr "Notifiera vid låg strömspänning"
 msgid ""
 "If a notification message should be displayed when the battery is getting "
 "low."
-msgstr "Om ett meddelande ska visas när batterispänningen är på väg att bli låg."
+msgstr ""
+"Om ett meddelande ska visas när batterispänningen är på väg att bli låg."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:80
 msgid "Whether we should show the history data points"
@@ -580,7 +656,9 @@ msgstr "Indexet av sidnumret att visa som standard"
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
-msgstr "Indexet för sidnumret att visa som standard för att returnera fokus till rätt sida."
+msgstr ""
+"Indexet för sidnumret att visa som standard för att returnera fokus till "
+"rätt sida."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
@@ -590,7 +668,9 @@ msgstr "ID för den sista valda enheten"
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
-msgstr "Identifieraren för den sista enheten som används för att returnera fokus till rätt enhet."
+msgstr ""
+"Identifieraren för den sista enheten som används för att returnera fokus "
+"till rätt enhet."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:98
 msgid "Percentage considered low"
@@ -600,7 +680,9 @@ msgstr "Procenttal som anses som lågt"
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
-msgstr "Procentandel av batteriet när det anses vara lågt. Endast giltig när use-time-for-policy är inställd till falskt."
+msgstr ""
+"Procentandel av batteriet när det anses vara lågt. Endast giltig när use-"
+"time-for-policy är inställd till falskt."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:100
 msgid "Percentage considered critical"
@@ -610,7 +692,9 @@ msgstr "Procenttal som anses som kritiskt"
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
-msgstr "Procentandelen av batteriet när det anses som kritiskt lågt. Endast giltig när use-time-for-policy är inställd till falskt."
+msgstr ""
+"Procentandelen av batteriet när det anses som kritiskt lågt. Endast giltig "
+"när use-time-for-policy är inställd till falskt."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:102
 msgid "Percentage action is taken"
@@ -620,7 +704,9 @@ msgstr "Procenttalsåtgärd genomförs"
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
-msgstr "Procentandelen av batteriet när kritiska åtgärder genomförs. Endast giltig när use-time-for-policy är inställd till falskt."
+msgstr ""
+"Procentandelen av batteriet när kritiska åtgärder genomförs. Endast giltig "
+"när use-time-for-policy är inställd till falskt."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:104
 msgid "The time remaining when low"
@@ -630,7 +716,9 @@ msgstr "Tiden som återstår när låg"
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
-msgstr "Tiden som återstår (i sekunder) av batteriet när det anses som lågt. Endast giltig när use-time-for-policy är sant."
+msgstr ""
+"Tiden som återstår (i sekunder) av batteriet när det anses som lågt. Endast "
+"giltig när use-time-for-policy är sant."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:106
 msgid "The time remaining when critical"
@@ -640,7 +728,9 @@ msgstr "Tiden som återstår när kritisk"
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
-msgstr "Tiden som återstår (i sekunder) av batteriet när det anses som kritiskt. Endast giltig när use-time-for-policy är sant."
+msgstr ""
+"Tiden som återstår (i sekunder) av batteriet när det anses som kritiskt. "
+"Endast giltig när use-time-for-policy är sant."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:108
 msgid "The time remaining when action is taken"
@@ -650,7 +740,9 @@ msgstr "Tiden som återstår när åtgärd genomförs"
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
-msgstr "Tiden som återstår (i sekunder) av batteriet när den kritiska åtgärden genomförs. Endast giltig när use-time-for-policy är sant."
+msgstr ""
+"Tiden som återstår (i sekunder) av batteriet när den kritiska åtgärden "
+"genomförs. Endast giltig när use-time-for-policy är sant."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:110
 msgid "Sleep timeout computer when on battery"
@@ -660,7 +752,9 @@ msgstr "Tid innan datorn ska somna när batteridrift används"
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before it goes to sleep."
-msgstr "Mängden inaktiv tid (i sekunder) innan datorn går tills sömns vid batteridrift."
+msgstr ""
+"Mängden inaktiv tid (i sekunder) innan datorn går tills sömns vid "
+"batteridrift."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:112
 msgid "Sleep timeout computer when on AC"
@@ -670,7 +764,9 @@ msgstr "Tid innan datorn ska somna när strömadaptern används"
 msgid ""
 "The amount of time in seconds the computer on AC power needs to be inactive "
 "before it goes to sleep."
-msgstr "Mängden inaktiv tid (i sekunder) innan datorn går tills sömns när den använder strömadaptern."
+msgstr ""
+"Mängden inaktiv tid (i sekunder) innan datorn går tills sömns när den "
+"använder strömadaptern."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:114
 msgid "Sleep timeout computer when on UPS"
@@ -680,7 +776,9 @@ msgstr "Tidsgräns innan datorn ska somna när UPS används"
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before it goes to sleep."
-msgstr "Tidsperiod av inaktivitet (i sekunder) innan datorn går tills sömns när den använder UPS."
+msgstr ""
+"Tidsperiod av inaktivitet (i sekunder) innan datorn går tills sömns när den "
+"använder UPS."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:116
 msgid "Sleep timeout display when on AC"
@@ -690,7 +788,9 @@ msgstr "Tid innan skärmen ska somna när strömadaptern används"
 msgid ""
 "The amount of time in seconds before the display goes to sleep when the "
 "computer is on AC power."
-msgstr "Mängden tid (i sekunder) innan skärmen går tills sömns när datorn använder strömadaptern."
+msgstr ""
+"Mängden tid (i sekunder) innan skärmen går tills sömns när datorn använder "
+"strömadaptern."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:118
 msgid "Sleep timeout display when on battery"
@@ -700,7 +800,9 @@ msgstr "Tid innan skärmen ska somna när batteridrift används"
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
-msgstr "Mängden inaktiv tid (i sekunder) innan skärmen går tills sömns vid batteridrift."
+msgstr ""
+"Mängden inaktiv tid (i sekunder) innan skärmen går tills sömns vid "
+"batteridrift."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:120
 msgid "Sleep timeout display when on UPS"
@@ -710,7 +812,9 @@ msgstr "Tidsgräns innan skärmen ska somna när UPS används"
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before the display goes to sleep."
-msgstr "Tidsperiod av inaktivitet (i sekunder) innan skärmen går tills sömns när den använder UPS."
+msgstr ""
+"Tidsperiod av inaktivitet (i sekunder) innan skärmen går tills sömns när den"
+" använder UPS."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:122
 msgid "If sounds should be used"
@@ -720,7 +824,9 @@ msgstr "Om ljud ska användas"
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
-msgstr "Om ljud ska användas när strömmen är kritiskt låg, eller om förhindringsbegäran har stoppat policyåtgärden."
+msgstr ""
+"Om ljud ska användas när strömmen är kritiskt låg, eller om "
+"förhindringsbegäran har stoppat policyåtgärden."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:124
 msgid ""
@@ -905,7 +1011,7 @@ msgstr "Tillhandahåller hjälp om detta program"
 
 #: ../data/gpm-prefs.ui.h:26
 msgid "Make Default"
-msgstr "Gör till standard"
+msgstr "Ange som standard"
 
 #: ../data/gpm-prefs.ui.h:27
 msgid "Sets this policy to be used by all users"
@@ -978,15 +1084,15 @@ msgstr "Okänd tid"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] "%i minut"
-msgstr[1] "%i minuter"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] "%i timme"
-msgstr[1] "%i timmar"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -998,14 +1104,14 @@ msgstr "%i %s %i %s"
 #: ../src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] "timme"
-msgstr[1] "timmar"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] "minut"
-msgstr[1] "minuter"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Translators: This is %i days
 #: ../src/gpm-graph-widget.c:435
@@ -1139,50 +1245,50 @@ msgid "Suspend failed"
 msgstr "Vänteläge misslyckades"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:587
+#: ../src/gpm-manager.c:579
 msgid "Computer failed to suspend."
 msgstr "Datorn misslyckades med att gå i vänteläge."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:589
+#: ../src/gpm-manager.c:581
 msgid "Failed to suspend"
 msgstr "Misslyckades med att gå i vänteläge"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:593
+#: ../src/gpm-manager.c:585
 msgid "Computer failed to hibernate."
 msgstr "Datorn misslyckades med att gå i viloläge."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:595
+#: ../src/gpm-manager.c:587
 msgid "Failed to hibernate"
 msgstr "Misslyckades med att gå i viloläge"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:600
+#: ../src/gpm-manager.c:592
 msgid "Failure was reported as:"
 msgstr "Felet rapporterades som:"
 
 #. TRANSLATORS: button text, visit the suspend help website
-#: ../src/gpm-manager.c:613
+#: ../src/gpm-manager.c:605
 msgid "Visit help page"
 msgstr "Besök hjälpsidan"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:859
+#: ../src/gpm-manager.c:851
 msgid "Display DPMS activated"
 msgstr "Visa DPMS aktiverat"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:878
+#: ../src/gpm-manager.c:870
 msgid "On battery power"
 msgstr "Batteridrift"
 
-#: ../src/gpm-manager.c:896
+#: ../src/gpm-manager.c:888
 msgid "Laptop lid is closed"
 msgstr "Locket på bärbar dator är stängd"
 
-#: ../src/gpm-manager.c:934
+#: ../src/gpm-manager.c:926
 msgid "Power Information"
 msgstr "Ströminformation"
 
@@ -1190,319 +1296,358 @@ msgstr "Ströminformation"
 #. * where capacity is the ratio of the last_full capacity with that of
 #. * the design capacity. (#326740)
 #. TRANSLATORS: battery is old or broken
-#: ../src/gpm-manager.c:1121
+#: ../src/gpm-manager.c:1113
 msgid "Battery may be broken"
 msgstr "Batteriet kan vara trasigt"
 
 #. TRANSLATORS: notify the user that that battery is broken as the capacity is
 #. very low
-#: ../src/gpm-manager.c:1124
+#: ../src/gpm-manager.c:1116
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
 " broken."
-msgstr "Batteriet har mycket låg kapacitet (%1.1f%%) vilket betyder att det kan vara gammalt eller trasigt."
+msgstr ""
+"Batteriet har mycket låg kapacitet (%1.1f%%) vilket betyder att det kan vara"
+" gammalt eller trasigt."
 
 #. TRANSLATORS: show the charged notification
-#: ../src/gpm-manager.c:1173
+#: ../src/gpm-manager.c:1165
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] "Batteriet är uppladdat"
-msgstr[1] "Batterier är uppladdade"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: laptop battery is now discharging
-#: ../src/gpm-manager.c:1219
+#: ../src/gpm-manager.c:1211
 msgid "Battery Discharging"
 msgstr "Batteriet laddar ur"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1223
+#: ../src/gpm-manager.c:1215
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr "%s av batteriströmmen återstår (%.0f%%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-manager.c:1226 ../src/gpm-manager.c:1238
+#: ../src/gpm-manager.c:1218 ../src/gpm-manager.c:1230
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr "%s laddar ur (%.0f%%)"
 
 #. TRANSLATORS: UPS is now discharging
-#: ../src/gpm-manager.c:1231
+#: ../src/gpm-manager.c:1223
 msgid "UPS Discharging"
 msgstr "UPS:en laddar ur"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1235
+#: ../src/gpm-manager.c:1227
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr "%s av UPS-reservströmmen återstår (%.0f%%)"
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
-#: ../src/gpm-manager.c:1319
+#: ../src/gpm-manager.c:1311
 msgid "Battery low"
 msgstr "Batterispänningen är låg"
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
-#: ../src/gpm-manager.c:1322
+#: ../src/gpm-manager.c:1314
 msgid "Laptop battery low"
 msgstr "Batterispänning i bärbar dator är låg"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1328
+#: ../src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "Ungefär <b>%s</b> återstår (%.0f%%)"
 
 #. TRANSLATORS: UPS is starting to get a little low
-#: ../src/gpm-manager.c:1332
+#: ../src/gpm-manager.c:1324
 msgid "UPS low"
 msgstr "UPS-reservström är låg"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1336
+#: ../src/gpm-manager.c:1328
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr "Ungefär <b>%s</b> återstår av UPS-reservströmmen (%.0f%%)"
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1340 ../src/gpm-manager.c:1474
+#: ../src/gpm-manager.c:1332 ../src/gpm-manager.c:1466
 msgid "Mouse battery low"
 msgstr "Batterispänning i mus är låg"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1343
+#: ../src/gpm-manager.c:1335
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr "Trådlösa musen har låg strömspänning (%.0f%%)"
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1347 ../src/gpm-manager.c:1482
+#: ../src/gpm-manager.c:1339 ../src/gpm-manager.c:1474
 msgid "Keyboard battery low"
 msgstr "Batterispänning i tangentbord är låg"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1350
+#: ../src/gpm-manager.c:1342
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr "Trådlösa tangentbordet har låg strömspänning (%.0f%%)"
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1354 ../src/gpm-manager.c:1491
+#: ../src/gpm-manager.c:1346 ../src/gpm-manager.c:1483
 msgid "PDA battery low"
 msgstr "Batterispänning i handdator är låg"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1357
+#: ../src/gpm-manager.c:1349
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr "Handdatorn har låg strömspänning (%.0f%%)"
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1361 ../src/gpm-manager.c:1501
-#: ../src/gpm-manager.c:1511
+#: ../src/gpm-manager.c:1353 ../src/gpm-manager.c:1493
+#: ../src/gpm-manager.c:1503
 msgid "Cell phone battery low"
 msgstr "Batterispänning i mobiltelefon är låg"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1364
+#: ../src/gpm-manager.c:1356
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "Mobiltelefonen har låg strömspänning (%.0f%%)"
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1368
+#: ../src/gpm-manager.c:1360
 msgid "Media player battery low"
 msgstr "Batterispänning i mediaspelaren är låg"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1371
+#: ../src/gpm-manager.c:1363
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr "Mediaspelaren har låg strömspänning (%.0f%%)"
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1375 ../src/gpm-manager.c:1520
+#: ../src/gpm-manager.c:1367 ../src/gpm-manager.c:1512
 msgid "Tablet battery low"
 msgstr "Batterispänning i pekdatorn är låg"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1378
+#: ../src/gpm-manager.c:1370
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "Pekdatorn har låg strömspänning (%.0f%%)"
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1382 ../src/gpm-manager.c:1529
+#: ../src/gpm-manager.c:1374 ../src/gpm-manager.c:1521
 msgid "Attached computer battery low"
 msgstr "Batterispänning i datorn är låg"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1385
+#: ../src/gpm-manager.c:1377
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "Datorn har låg strömspänning (%.0f%%)"
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
-#: ../src/gpm-manager.c:1433
+#: ../src/gpm-manager.c:1425
 msgid "Battery critically low"
 msgstr "Batterispänningen är kritiskt lågt"
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1436 ../src/gpm-manager.c:1589
+#: ../src/gpm-manager.c:1428 ../src/gpm-manager.c:1581
 msgid "Laptop battery critically low"
 msgstr "Batterispänning i bärbar dator är kritiskt låg"
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
-#: ../src/gpm-manager.c:1445
+#: ../src/gpm-manager.c:1437
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr "Anslut din strömadapter för att undvika att förlora data."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1449
+#: ../src/gpm-manager.c:1441
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
-msgstr "Datorn kommer mycket snart att försättas i vänteläge om den inte ansluts till extern ström."
+msgstr ""
+"Datorn kommer mycket snart att försättas i vänteläge om den inte ansluts "
+"till extern ström."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1453
+#: ../src/gpm-manager.c:1445
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
-msgstr "Datorn kommer mycket snart att försättas i viloläge om den inte ansluts till extern ström."
+msgstr ""
+"Datorn kommer mycket snart att försättas i viloläge om den inte ansluts till"
+" extern ström."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1457
+#: ../src/gpm-manager.c:1449
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
-msgstr "Datorn kommer mycket snart att stängas av om den inte ansluts till extern ström."
+msgstr ""
+"Datorn kommer mycket snart att stängas av om den inte ansluts till extern "
+"ström."
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1464 ../src/gpm-manager.c:1625
+#: ../src/gpm-manager.c:1456 ../src/gpm-manager.c:1617
 msgid "UPS critically low"
 msgstr "UPS-reservström är kritiskt låg"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1468
+#: ../src/gpm-manager.c:1460
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
-msgstr "Ungefär <b>%s</b> återstår av UPS-reservströmmen (%.0f%%). Anslut strömadaptern till din dator för att undvika att förlora data."
+msgstr ""
+"Ungefär <b>%s</b> återstår av UPS-reservströmmen (%.0f%%). Anslut "
+"strömadaptern till din dator för att undvika att förlora data."
+
+#. TRANSLATORS: the device is just going to stop working
+#: ../src/gpm-manager.c:1469
+#, c-format
+msgid ""
+"Wireless mouse is very low in power (%.0f%%). This device will soon stop "
+"functioning if not charged."
+msgstr ""
+"Trådlösa musen har mycket låg strömspänning (%.0f%%). Enheten kommer inom "
+"kort att sluta fungera om den inte laddas upp."
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1477
 #, c-format
 msgid ""
-"Wireless mouse is very low in power (%.0f%%). This device will soon stop "
-"functioning if not charged."
-msgstr "Trådlösa musen har mycket låg strömspänning (%.0f%%). Enheten kommer inom kort att sluta fungera om den inte laddas upp."
-
-#. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1485
-#, c-format
-msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Trådlösa tangentbordet har mycket låg strömspänning (%.0f%%). Enheten kommer inom kort att sluta fungera om den inte laddas upp."
+msgstr ""
+"Trådlösa tangentbordet har mycket låg strömspänning (%.0f%%). Enheten kommer"
+" inom kort att sluta fungera om den inte laddas upp."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1494
+#: ../src/gpm-manager.c:1486
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
 " not charged."
-msgstr "Handdatorn har mycket låg strömspänning (%.0f%%). Enheten kommer inom kort att sluta fungera om den inte laddas upp."
+msgstr ""
+"Handdatorn har mycket låg strömspänning (%.0f%%). Enheten kommer inom kort "
+"att sluta fungera om den inte laddas upp."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1504
+#: ../src/gpm-manager.c:1496
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Mobiltelefonen har mycket låg strömspänning (%.0f%%). Enheten kommer inom kort att sluta fungera om den inte laddas upp."
+msgstr ""
+"Mobiltelefonen har mycket låg strömspänning (%.0f%%). Enheten kommer inom "
+"kort att sluta fungera om den inte laddas upp."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1514
+#: ../src/gpm-manager.c:1506
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Mediaspelaren har mycket låg strömspänning (%.0f%%). Enheten kommer inom kort att sluta fungera om den inte laddas upp."
+msgstr ""
+"Mediaspelaren har mycket låg strömspänning (%.0f%%). Enheten kommer inom "
+"kort att sluta fungera om den inte laddas upp."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1523
+#: ../src/gpm-manager.c:1515
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
-msgstr "Pekdatorn har mycket låg strömspänning (%.0f%%). Enheten kommer inom kort att sluta fungera om den inte laddas upp."
+msgstr ""
+"Pekdatorn har mycket låg strömspänning (%.0f%%). Enheten kommer inom kort "
+"att sluta fungera om den inte laddas upp."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1532
+#: ../src/gpm-manager.c:1524
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
-msgstr "Datorn har mycket låg strömspänning (%.0f%%). Enheten kommer inom kort att stängas av om den inte laddas upp."
+msgstr ""
+"Datorn har mycket låg strömspänning (%.0f%%). Enheten kommer inom kort att "
+"stängas av om den inte laddas upp."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1597
+#: ../src/gpm-manager.c:1589
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
-msgstr "Batteriet är under den kritiska nivån och den här datorn kommer att <b>stängas av</b> när batteriet blir helt tomt."
+msgstr ""
+"Batteriet är under den kritiska nivån och den här datorn kommer att "
+"<b>stängas av</b> när batteriet blir helt tomt."
 
 #. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1603
+#: ../src/gpm-manager.c:1595
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
-msgstr "Batteriet är under den kritiska nivån och den här datorn kommer att försättas i vänteläge.<br><b>OBSERVERA:</b> En liten mängd ström krävs för att hålla din dator i ett väntande tillstånd."
+msgstr ""
+"Batteriet är under den kritiska nivån och den här datorn kommer att "
+"försättas i vänteläge.<br><b>OBSERVERA:</b> En liten mängd ström krävs för "
+"att hålla din dator i ett väntande tillstånd."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1610
+#: ../src/gpm-manager.c:1602
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
-msgstr "Batteriet är under den kritiska nivån och den här datorn kommer att försättas i viloläge."
+msgstr ""
+"Batteriet är under den kritiska nivån och den här datorn kommer att "
+"försättas i viloläge."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1615
+#: ../src/gpm-manager.c:1607
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
-msgstr "Batteriet är under den kritiska nivån och den här datorn kommer att stängas av."
+msgstr ""
+"Batteriet är under den kritiska nivån och den här datorn kommer att stängas "
+"av."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1633
+#: ../src/gpm-manager.c:1625
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
-msgstr "UPS-reservströmmen är under den kritiska nivån och den här datorn kommer <b>stängas av</b> när UPS:en blir helt tom."
+msgstr ""
+"UPS-reservströmmen är under den kritiska nivån och den här datorn kommer "
+"<b>stängas av</b> när UPS:en blir helt tom."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1639
+#: ../src/gpm-manager.c:1631
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
-msgstr "UPS-reservströmmen är under den kritiska nivån och den här datorn kommer att försättas i viloläge."
+msgstr ""
+"UPS-reservströmmen är under den kritiska nivån och den här datorn kommer att"
+" försättas i viloläge."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1644
+#: ../src/gpm-manager.c:1636
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
-msgstr "UPS-reservströmmen är under den kritiska nivån och den här datorn kommer inom kort att stängas av."
+msgstr ""
+"UPS-reservströmmen är under den kritiska nivån och den här datorn kommer "
+"inom kort att stängas av."
 
 #: ../src/gpm-prefs.c:81
 msgid "MATE Power Preferences"
@@ -1522,7 +1667,7 @@ msgstr "Viloläge"
 
 #: ../src/gpm-prefs-core.c:254
 msgid "Blank screen"
-msgstr "Svart skärm"
+msgstr "Blank skärm"
 
 #: ../src/gpm-prefs-core.c:257
 msgid "Ask me"
@@ -1539,7 +1684,7 @@ msgstr "Aldrig"
 #. TRANSLATORS: the rate of discharge for the device
 #: ../src/gpm-statistics.c:78 ../src/gpm-statistics.c:466
 msgid "Rate"
-msgstr "Frekvens"
+msgstr "Sats"
 
 #: ../src/gpm-statistics.c:79
 msgid "Charge"
@@ -1630,32 +1775,32 @@ msgstr "Okänt"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] "%.0f sekund"
-msgstr[1] "%.0f sekunder"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:295
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] "%.1f minut"
-msgstr[1] "%.1f minuter"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:300
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] "%.1f timme"
-msgstr[1] "%.1f timmar"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:304
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] "%.1f dag"
-msgstr[1] "%.1f dagar"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/gpm-statistics.c:313
 msgid "Yes"
@@ -1663,7 +1808,7 @@ msgstr "Ja"
 
 #: ../src/gpm-statistics.c:313
 msgid "No"
-msgstr "No"
+msgstr "Nej"
 
 #. TRANSLATORS: the device ID of the current device, e.g. "battery0"
 #: ../src/gpm-statistics.c:402
@@ -1694,8 +1839,8 @@ msgstr "Matning"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d sekund"
-msgstr[1] "%d sekunder"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
@@ -1719,7 +1864,7 @@ msgstr "Uppladdningsbar"
 #. TRANSLATORS: The state of the device, e.g. "Changing" or "Fully charged"
 #: ../src/gpm-statistics.c:446
 msgid "State"
-msgstr "Tillstånd"
+msgstr "Län"
 
 #: ../src/gpm-statistics.c:450
 msgid "Energy"
@@ -1908,7 +2053,7 @@ msgstr "Tid åtgången"
 #. TRANSLATORS: this is the Y axis on the graph
 #: ../src/gpm-statistics.c:1353
 msgid "Power"
-msgstr "Effekt"
+msgstr "Exponent"
 
 #. TRANSLATORS: this is the Y axis on the graph for the whole battery device
 #. TRANSLATORS: this is the X axis on the graph for the whole battery device
@@ -1984,7 +2129,9 @@ msgstr "%s laddar upp (%.1f%%)"
 msgid ""
 "Battery is fully charged.\n"
 "Provides %s laptop runtime"
-msgstr "Batteriet är fullständigt uppladdat.\nGer %s vid körning på batteri"
+msgstr ""
+"Batteriet är fullständigt uppladdat.\n"
+"Ger %s vid körning på batteri"
 
 #. TRANSLATORS: the device is fully charged
 #: ../src/gpm-upower.c:244
@@ -2010,7 +2157,9 @@ msgstr "%s laddar ur (%.1f%%)"
 msgid ""
 "%s %s until charged (%.1f%%)\n"
 "Provides %s battery runtime"
-msgstr "%s %s tills uppladdat (%.1f%%)\nGer %s vid körning på batteri"
+msgstr ""
+"%s %s tills uppladdat (%.1f%%)\n"
+"Ger %s vid körning på batteri"
 
 #. TRANSLATORS: device is charging, and we have a time to full and a
 #. percentage
@@ -2147,78 +2296,78 @@ msgstr "Laddningseffekt:"
 #: ../src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] "Strömadapter"
-msgstr[1] "Strömadaptrar"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "Batteri i bärbar dator"
-msgstr[1] "Batterier i bärbar dator"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] "UPS"
-msgstr[1] "UPS:er"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] "Skärm"
-msgstr[1] "Skärmar"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] "Mus"
-msgstr[1] "Möss"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: wireless keyboard with internal battery
 #: ../src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] "Tangentbord"
-msgstr[1] "Tangentbord"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: portable device
 #: ../src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] "Handdator"
-msgstr[1] "Handdatorer"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: cell phone (mobile...)
 #: ../src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] "Mobiltelefon"
-msgstr[1] "Mobiltelefoner"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: media player, mp3 etc
 #: ../src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] "Mediaspelare"
-msgstr[1] "Mediaspelare"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "Pekdator"
-msgstr[1] "Pekdatorer"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] "Dator"
-msgstr[1] "Datorer"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:594
@@ -2258,7 +2407,7 @@ msgstr "Okänd teknik"
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:646
 msgid "Empty"
-msgstr "Tomt"
+msgstr "Tom"
 
 #. TRANSLATORS: battery state
 #: ../src/gpm-upower.c:654

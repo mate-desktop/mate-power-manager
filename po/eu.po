@@ -1,18 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Asier Iturralde Sarasola <asier.iturralde@gmail.com>, 2012,2014
-# Egoitz Rodriguez Obieta <egoitzro@gmail.com>, 2015
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 22:24+0300\n"
-"PO-Revision-Date: 2018-01-09 19:25+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Basque (http://www.transifex.com/mate/MATE/language/eu/)\n"
+"POT-Creation-Date: 2018-03-17 14:58+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Egoitz Rodriguez Obieta <egoitzro@gmail.com>, 2018\n"
+"Language-Team: Basque (https://www.transifex.com/mate/teams/13566/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,7 +27,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "Eramangarriaren pantailaren distira doitzen du."
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:329
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Cannot connect to mate-power-manager"
 msgstr "Ezin izan da mate-power-manager programarekin konektatu."
 
@@ -42,44 +41,57 @@ msgid "LCD brightness : %d%%"
 msgstr "LCD distira : %%%d"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:403
+#: ../applets/inhibit/inhibit-applet.c:374
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "GNU Lizentzia Publiko Orokorraren 2. bertsioan lizentziatua"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:404
+#: ../applets/inhibit/inhibit-applet.c:375
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
 "as published by the Free Software Foundation; either version 2\n"
 "of the License, or (at your option) any later version."
-msgstr "Energia kudeatzailea (mate-power-manager) software librea da; birbana \neta/edo alda dezakezu Software Foundation-ek argitaratutako GNU Lizentzia \nPubliko Orokorraren 2. bertsioan, edo (nahiago baduzu) beste berriago\nbatean, jasotako baldintzak betez gero."
+msgstr ""
+"Energia kudeatzailea (mate-power-manager) software librea da; birbana \n"
+"eta/edo alda dezakezu Software Foundation-ek argitaratutako GNU Lizentzia \n"
+"Publiko Orokorraren 2. bertsioan, edo (nahiago baduzu) beste berriago\n"
+"batean, jasotako baldintzak betez gero."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:408
+#: ../applets/inhibit/inhibit-applet.c:379
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
 "GNU General Public License for more details."
-msgstr "Energia kudeatzailea (mate-power-manager) erabilgarria izango delakoan \nbanatzen da, baina, INOLAKO BERMERIK GABE; era berean, ez da bermatzen \nberaren EGOKITASUNA MERKATURATZEKO edo HELBURU PARTIKULARRETARAKO \nERABILTZEKO. Argibide gehiago nahi izanez gero, ikus GNU Lizentzia \nPubliko Orokorra."
+msgstr ""
+"Energia kudeatzailea (mate-power-manager) erabilgarria izango delakoan \n"
+"banatzen da, baina, INOLAKO BERMERIK GABE; era berean, ez da bermatzen \n"
+"beraren EGOKITASUNA MERKATURATZEKO edo HELBURU PARTIKULARRETARAKO \n"
+"ERABILTZEKO. Argibide gehiago nahi izanez gero, ikus GNU Lizentzia \n"
+"Publiko Orokorra."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:412
+#: ../applets/inhibit/inhibit-applet.c:383
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
-msgstr "Programa honekin batera GNU Lizentzia Publiko Orokorraren kopia bat jasoko \nzenuen; hala ez bada, idatzi hona: Free Software Foundation, Inc., \n51 Franklin Street, Fifth Floor, Boston, MA\n02110-1301, USA."
+msgstr ""
+"Programa honekin batera GNU Lizentzia Publiko Orokorraren kopia bat jasoko \n"
+"zenuen; hala ez bada, idatzi hona: Free Software Foundation, Inc., \n"
+"51 Franklin Street, Fifth Floor, Boston, MA\n"
+"02110-1301, USA."
 
 #: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:638
+#: ../applets/inhibit/inhibit-applet.c:610
 msgid "_About"
 msgstr "Honi _buruz"
 
 #: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:641
+#: ../applets/inhibit/inhibit-applet.c:613
 msgid "_Help"
 msgstr "_Laguntza"
 
@@ -99,23 +111,23 @@ msgstr "Distira miniaplikazioa"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Eramangarriaren panelaren distira doitzen du"
 
-#: ../applets/inhibit/inhibit-applet.c:92
+#: ../applets/inhibit/inhibit-applet.c:93
 msgid "Power Manager Inhibit Applet"
 msgstr "Energia kudeatzailea galarazteko miniaplikazioa"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:94
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Erabiltzaileak energia automatikoki aurreztea galarazi dezake."
 
-#: ../applets/inhibit/inhibit-applet.c:332
+#: ../applets/inhibit/inhibit-applet.c:303
 msgid "Automatic sleep inhibited"
 msgstr "Automatikoki lo egitea galarazita"
 
-#: ../applets/inhibit/inhibit-applet.c:334
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid "Automatic sleep enabled"
 msgstr "Automatikoki lo egitea gaituta"
 
-#: ../applets/inhibit/inhibit-applet.c:362
+#: ../applets/inhibit/inhibit-applet.c:333
 msgid "Manual inhibit"
 msgstr "Galarazi eskuz"
 
@@ -164,14 +176,19 @@ msgstr ""
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
-msgstr "Bateriaren gertaerak gertatu behar duen tapa ixtean eta indarra deskonektatzean."
+msgstr ""
+"Bateriaren gertaerak gertatu behar duen tapa ixtean eta indarra "
+"deskonektatzean."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:6
 msgid ""
 "If the battery lid close event should occur (for example 'Suspend when lid "
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
-msgstr "Bateriaren tapa ixtean gertaerarik landu behar den (adibidez, 'Eseki tapa ixtean (bateriarekin)') aurrez tapa itxita badago eta entxufea beranduago kentzen bada."
+msgstr ""
+"Bateriaren tapa ixtean gertaerarik landu behar den (adibidez, 'Eseki tapa "
+"ixtean (bateriarekin)') aurrez tapa itxita badago eta entxufea beranduago "
+"kentzen bada."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:7
 msgid "UPS critical low action"
@@ -197,7 +214,9 @@ msgstr "Baimendu atzeko argitasunaren distira doitzea"
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
-msgstr "Pantailaren distira aldatu behar den entxufea eta bateriaren energia artean aldatzean."
+msgstr ""
+"Pantailaren distira aldatu behar den entxufea eta bateriaren energia artean "
+"aldatzean."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:13
 msgid "Reduce the backlight brightness when on battery power"
@@ -207,7 +226,9 @@ msgstr "Pantaila ilundu ordenagailua bateriaren energiarekin dagoenean"
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
-msgstr "Pantaila ilundu egin behar den ordenagailua bateriaren energiarekin dagoenean."
+msgstr ""
+"Pantaila ilundu egin behar den ordenagailua bateriaren energiarekin "
+"dagoenean."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:15
 msgid "Reduce the keyboard backlight when on battery power"
@@ -271,7 +292,9 @@ msgstr "Ilundu pantaila inaktibitate denbora baten ondoren (bateriarekin)"
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
-msgstr "Pantaila ilundu egin behar den energia aurrezteko ordenagailua inaktibo dagoenean bateriaren energiarekin."
+msgstr ""
+"Pantaila ilundu egin behar den energia aurrezteko ordenagailua inaktibo "
+"dagoenean bateriaren energiarekin."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:29
 msgid "The default amount of time to dim the screen after idle"
@@ -279,7 +302,8 @@ msgstr "Denbora-kopuru lehenetsia pantaila iluntzeko inaktibitatearen ondoren"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:30
 msgid "The default amount of time to dim the screen after idle."
-msgstr "Denbora-kopuru lehenetsia pantaila iluntzeko inaktibitatearen ondoren."
+msgstr ""
+"Denbora-kopuru lehenetsia pantaila iluntzeko inaktibitatearen ondoren."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:31
 msgid "LCD dimming amount when on battery"
@@ -289,7 +313,9 @@ msgstr "LCDa iluntzeko kopurua (bateriarekin)"
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
-msgstr "Pantailaren distira iluntzeko kopurua bateriarekin dagoenean. Balio erabilgarriak: 0 eta 100 bitartekoak."
+msgstr ""
+"Pantailaren distira iluntzeko kopurua bateriarekin dagoenean. Balio "
+"erabilgarriak: 0 eta 100 bitartekoak."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:33
 msgid "Dim the screen after a period of inactivity when on AC power"
@@ -299,7 +325,9 @@ msgstr "Ilundu pantaila inaktibitate denbora baten ondoren (entxufatuta)"
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on AC power."
-msgstr "Pantaila ilundu egin behar den energia aurrezteko ordenagailua inaktibo dagoenean entxufatuta."
+msgstr ""
+"Pantaila ilundu egin behar den energia aurrezteko ordenagailua inaktibo "
+"dagoenean entxufatuta."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:35
 msgid "Method used to blank screen on AC"
@@ -325,7 +353,9 @@ msgstr "LCD distira (entxufatuta)"
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
-msgstr "Pantailaren distira entxufatuta dagoenean. Balio erabilgarriak: 0 eta 100 bitartekoak."
+msgstr ""
+"Pantailaren distira entxufatuta dagoenean. Balio erabilgarriak: 0 eta 100 "
+"bitartekoak."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:41
 msgid "Suspend button action"
@@ -379,7 +409,10 @@ msgstr "Denboran oinarritutako jakinarazpenak erabili edo ez"
 msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
-msgstr "Denboran oinarritutako jakinarazpenak erabili behar diren. Faltsua bezala ezartzen bada, aldaketa ehunekotan adieraziko da, hondatutako BIOSeko ACPI finka dezake."
+msgstr ""
+"Denboran oinarritutako jakinarazpenak erabili behar diren. Faltsua bezala "
+"ezartzen bada, aldaketa ehunekotan adieraziko da, hondatutako BIOSeko ACPI "
+"finka dezake."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:53
 msgid "Check CPU load before sleeping"
@@ -397,7 +430,9 @@ msgstr ""
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
-msgstr "NetworkManager deskonektatu behar den eseki edo lo egin aurretik eta konektatu jarraitzean, edo ez."
+msgstr ""
+"NetworkManager deskonektatu behar den eseki edo lo egin aurretik eta "
+"konektatu jarraitzean, edo ez."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:57
 msgid "Use mate-screensaver lock setting"
@@ -407,7 +442,10 @@ msgstr "Erabili 'mate-screensaver'eko blokeo-ezarpena"
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
-msgstr "mate-screensaver aplikazioko pantailaren blokeoaren ezarpenak erabili behar diren pantaila blokeatzeko hibernatu, eseki edo pantaila beltz baten ondoren."
+msgstr ""
+"mate-screensaver aplikazioko pantailaren blokeoaren ezarpenak erabili behar "
+"diren pantaila blokeatzeko hibernatu, eseki edo pantaila beltz baten "
+"ondoren."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:59
 msgid "Lock screen when blanked"
@@ -457,11 +495,15 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:68
 msgid "If we should show the low capacity warning for a broken battery"
-msgstr "Bateriak energia baxua duenean jakinarazpena bistaratu behar den hondatutako bateriaren aurrean"
+msgstr ""
+"Bateriak energia baxua duenean jakinarazpena bistaratu behar den hondatutako"
+" bateriaren aurrean"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:69
 msgid "If we should show the low capacity warning for a broken battery."
-msgstr "Bateriak energia baxua duenean jakinarazpena bistaratu behar den hondatutako bateriaren aurrean."
+msgstr ""
+"Bateriak energia baxua duenean jakinarazpena bistaratu behar den hondatutako"
+" bateriaren aurrean."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:70
 msgid "Notify when AC adapter is disconnected"
@@ -479,7 +521,8 @@ msgstr "Jakinarazi erabat kargatzean"
 msgid ""
 "If a notification message should be displayed when the battery is fully "
 "charged."
-msgstr "Jakinarazpeneko mezua bistaratu behar den bateria erabat kargatu ondoren."
+msgstr ""
+"Jakinarazpeneko mezua bistaratu behar den bateria erabat kargatu ondoren."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:74
 msgid "Notify on a sleep failure"
@@ -489,7 +532,9 @@ msgstr "Jakinarazi lo egiteak huts egitean"
 msgid ""
 "If a notification message should be displayed after suspend or hibernate "
 "failed."
-msgstr "Jakinarazpeneko mezua bistaratu behar den esekitzeak edo hibernatzeak huts egin ondoren."
+msgstr ""
+"Jakinarazpeneko mezua bistaratu behar den esekitzeak edo hibernatzeak huts "
+"egin ondoren."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:76
 msgid "The URI to show to the user on sleep failure"
@@ -499,7 +544,9 @@ msgstr "URIa erabiltzaileari erakusteko lo egiteak hutsegiten badu"
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
-msgstr "Lo egiteak huts egiten duenean erabiltzaileari botoi bat erakuts dezaiokegu egoera finkatzeko. Utzi eremu hau hutsik botoia ez erakusteko."
+msgstr ""
+"Lo egiteak huts egiten duenean erabiltzaileari botoi bat erakuts dezaiokegu "
+"egoera finkatzeko. Utzi eremu hau hutsik botoia ez erakusteko."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:78
 msgid "Notify on a low power"
@@ -657,7 +704,9 @@ msgstr "Lo egotearen denbora (bateriarekin)"
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before it goes to sleep."
-msgstr "Denbora-kopurua (segundotan) inaktibitatean egon beharrekoa ordenagailuak lo hartu aurretik, bateriarekin dagoenean."
+msgstr ""
+"Denbora-kopurua (segundotan) inaktibitatean egon beharrekoa ordenagailuak lo"
+" hartu aurretik, bateriarekin dagoenean."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:112
 msgid "Sleep timeout computer when on AC"
@@ -667,7 +716,9 @@ msgstr "Lo egotearen denbora (entxufatuta)"
 msgid ""
 "The amount of time in seconds the computer on AC power needs to be inactive "
 "before it goes to sleep."
-msgstr "Denbora-kopurua (segundotan) inaktibitatean egon beharrekoa ordenagailuak lo hartu aurretik, entxufatuta dagoenean."
+msgstr ""
+"Denbora-kopurua (segundotan) inaktibitatean egon beharrekoa ordenagailuak lo"
+" hartu aurretik, entxufatuta dagoenean."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:114
 msgid "Sleep timeout computer when on UPS"
@@ -677,7 +728,9 @@ msgstr "Lo egotearen denbora (SAI/UPSa erabiltzean)"
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before it goes to sleep."
-msgstr "Denbora-kopurua (segundotan) inaktibitatean egon beharrekoa ordenagailuak lo hartu aurretik, SAI/UPSarekin dabilenean."
+msgstr ""
+"Denbora-kopurua (segundotan) inaktibitatean egon beharrekoa ordenagailuak lo"
+" hartu aurretik, SAI/UPSarekin dabilenean."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:116
 msgid "Sleep timeout display when on AC"
@@ -687,7 +740,9 @@ msgstr "Pantaila lo egotearen denbora (entxufatuta)"
 msgid ""
 "The amount of time in seconds before the display goes to sleep when the "
 "computer is on AC power."
-msgstr "Denbora-kopurua (segundotan) pantailak lo hartu aurretik, entxufatuta dagoenean."
+msgstr ""
+"Denbora-kopurua (segundotan) pantailak lo hartu aurretik, entxufatuta "
+"dagoenean."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:118
 msgid "Sleep timeout display when on battery"
@@ -697,7 +752,9 @@ msgstr "Pantaila lo egotearen denbora (bateriarekin)"
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
-msgstr "Denbora-kopurua (segundotan) inaktibitatean egon beharrekoa pantailak lo hartu aurretik, bateriarekin dagoenean."
+msgstr ""
+"Denbora-kopurua (segundotan) inaktibitatean egon beharrekoa pantailak lo "
+"hartu aurretik, bateriarekin dagoenean."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:120
 msgid "Sleep timeout display when on UPS"
@@ -707,7 +764,9 @@ msgstr "Pantaila lo egotearen denbora (SAI/UPSa erabiltzean)"
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before the display goes to sleep."
-msgstr "Denbora-kopurua (segundotan) inaktibitatean egon beharrekoa pantailak lo hartu aurretik, SAI/UPSarekin dabilenean."
+msgstr ""
+"Denbora-kopurua (segundotan) inaktibitatean egon beharrekoa pantailak lo "
+"hartu aurretik, SAI/UPSarekin dabilenean."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:122
 msgid "If sounds should be used"
@@ -717,12 +776,16 @@ msgstr "Soinuak erabili behar diren"
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
-msgstr "Soinuak erabili behar diren energia oso baxua denean, edo galarazteko eskaerak arauaren ekintza gelditu badu."
+msgstr ""
+"Soinuak erabili behar diren energia oso baxua denean, edo galarazteko "
+"eskaerak arauaren ekintza gelditu badu."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:124
 msgid ""
 "If preferences and statistics items should be shown in the context menu"
-msgstr "Hobespenen eta estatistiken elementuak testuinguruko menuan erakutsi behar diren ala ez"
+msgstr ""
+"Hobespenen eta estatistiken elementuak testuinguruko menuan erakutsi behar "
+"diren ala ez"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:125
 msgid "When to show the notification icon"
@@ -975,15 +1038,15 @@ msgstr "Denbora ezezaguna"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] "minutu %i"
-msgstr[1] "%i minutu"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] "ordu %i"
-msgstr[1] "%i ordu"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -995,14 +1058,14 @@ msgstr "%i %s, %i %s"
 #: ../src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] "ordu"
-msgstr[1] "ordu"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] "minutu"
-msgstr[1] "minutu"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Translators: This is %i days
 #: ../src/gpm-graph-widget.c:435
@@ -1136,50 +1199,50 @@ msgid "Suspend failed"
 msgstr "Huts egin du esekitzean"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:587
+#: ../src/gpm-manager.c:579
 msgid "Computer failed to suspend."
 msgstr "Ordenagailuak huts egin du esekitzean."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:589
+#: ../src/gpm-manager.c:581
 msgid "Failed to suspend"
 msgstr "Huts egin du du esekitzean"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:593
+#: ../src/gpm-manager.c:585
 msgid "Computer failed to hibernate."
 msgstr "Ordenagailuak huts egin du hibernatzean."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:595
+#: ../src/gpm-manager.c:587
 msgid "Failed to hibernate"
 msgstr "Huts egin du hibernatzean"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:600
+#: ../src/gpm-manager.c:592
 msgid "Failure was reported as:"
 msgstr ""
 
 #. TRANSLATORS: button text, visit the suspend help website
-#: ../src/gpm-manager.c:613
+#: ../src/gpm-manager.c:605
 msgid "Visit help page"
 msgstr "Bisitatu laguntzako orrialdea"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:859
+#: ../src/gpm-manager.c:851
 msgid "Display DPMS activated"
 msgstr "Pantailaren DPMS aktibatua"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:878
+#: ../src/gpm-manager.c:870
 msgid "On battery power"
 msgstr "Bateriaren energiarekin"
 
-#: ../src/gpm-manager.c:896
+#: ../src/gpm-manager.c:888
 msgid "Laptop lid is closed"
 msgstr "Eramangarriaren tapa itxita"
 
-#: ../src/gpm-manager.c:934
+#: ../src/gpm-manager.c:926
 msgid "Power Information"
 msgstr "Energiaren datuak"
 
@@ -1187,13 +1250,13 @@ msgstr "Energiaren datuak"
 #. * where capacity is the ratio of the last_full capacity with that of
 #. * the design capacity. (#326740)
 #. TRANSLATORS: battery is old or broken
-#: ../src/gpm-manager.c:1121
+#: ../src/gpm-manager.c:1113
 msgid "Battery may be broken"
 msgstr "Bateria hondatuta egon daiteke"
 
 #. TRANSLATORS: notify the user that that battery is broken as the capacity is
 #. very low
-#: ../src/gpm-manager.c:1124
+#: ../src/gpm-manager.c:1116
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
@@ -1201,196 +1264,196 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: show the charged notification
-#: ../src/gpm-manager.c:1173
+#: ../src/gpm-manager.c:1165
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] "Bateria kargatuta"
-msgstr[1] "Bateriak kargatuta"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: laptop battery is now discharging
-#: ../src/gpm-manager.c:1219
+#: ../src/gpm-manager.c:1211
 msgid "Battery Discharging"
 msgstr "Bateria deskargatzen"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1223
+#: ../src/gpm-manager.c:1215
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-manager.c:1226 ../src/gpm-manager.c:1238
+#: ../src/gpm-manager.c:1218 ../src/gpm-manager.c:1230
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: UPS is now discharging
-#: ../src/gpm-manager.c:1231
+#: ../src/gpm-manager.c:1223
 msgid "UPS Discharging"
 msgstr "UPS deskargatzen"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1235
+#: ../src/gpm-manager.c:1227
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
-#: ../src/gpm-manager.c:1319
+#: ../src/gpm-manager.c:1311
 msgid "Battery low"
 msgstr "Bateria baxua"
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
-#: ../src/gpm-manager.c:1322
+#: ../src/gpm-manager.c:1314
 msgid "Laptop battery low"
 msgstr "Eramangarriaren bateria baxua"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1328
+#: ../src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: UPS is starting to get a little low
-#: ../src/gpm-manager.c:1332
+#: ../src/gpm-manager.c:1324
 msgid "UPS low"
 msgstr "UPS baxua"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1336
+#: ../src/gpm-manager.c:1328
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1340 ../src/gpm-manager.c:1474
+#: ../src/gpm-manager.c:1332 ../src/gpm-manager.c:1466
 msgid "Mouse battery low"
 msgstr "Saguaren bateria baxua"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1343
+#: ../src/gpm-manager.c:1335
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1347 ../src/gpm-manager.c:1482
+#: ../src/gpm-manager.c:1339 ../src/gpm-manager.c:1474
 msgid "Keyboard battery low"
 msgstr "Teklatuaren bateria baxua"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1350
+#: ../src/gpm-manager.c:1342
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1354 ../src/gpm-manager.c:1491
+#: ../src/gpm-manager.c:1346 ../src/gpm-manager.c:1483
 msgid "PDA battery low"
 msgstr "PDAren bateria baxua"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1357
+#: ../src/gpm-manager.c:1349
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1361 ../src/gpm-manager.c:1501
-#: ../src/gpm-manager.c:1511
+#: ../src/gpm-manager.c:1353 ../src/gpm-manager.c:1493
+#: ../src/gpm-manager.c:1503
 msgid "Cell phone battery low"
 msgstr "Telefono mugikorraren bateria baxua"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1364
+#: ../src/gpm-manager.c:1356
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1368
+#: ../src/gpm-manager.c:1360
 msgid "Media player battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1371
+#: ../src/gpm-manager.c:1363
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1375 ../src/gpm-manager.c:1520
+#: ../src/gpm-manager.c:1367 ../src/gpm-manager.c:1512
 msgid "Tablet battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1378
+#: ../src/gpm-manager.c:1370
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1382 ../src/gpm-manager.c:1529
+#: ../src/gpm-manager.c:1374 ../src/gpm-manager.c:1521
 msgid "Attached computer battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1385
+#: ../src/gpm-manager.c:1377
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
-#: ../src/gpm-manager.c:1433
+#: ../src/gpm-manager.c:1425
 msgid "Battery critically low"
 msgstr "Bateria larriki baxua"
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1436 ../src/gpm-manager.c:1589
+#: ../src/gpm-manager.c:1428 ../src/gpm-manager.c:1581
 msgid "Laptop battery critically low"
 msgstr "Eramangarriaren bateria larriki baxua"
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
-#: ../src/gpm-manager.c:1445
+#: ../src/gpm-manager.c:1437
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr "Entxufatu datuak galtzea saihesteko."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1449
+#: ../src/gpm-manager.c:1441
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr "Ordenagailua berehala esekituko da, ez bada entxufatzen."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1453
+#: ../src/gpm-manager.c:1445
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr "Ordenagailua berehala hibernatuko da, ez bada entxufatzen."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1457
+#: ../src/gpm-manager.c:1449
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr "Ordenagailua berehala itzaliko da, ez bada entxufatzen."
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1464 ../src/gpm-manager.c:1625
+#: ../src/gpm-manager.c:1456 ../src/gpm-manager.c:1617
 msgid "UPS critically low"
 msgstr "UPS larriki baxua"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1468
+#: ../src/gpm-manager.c:1460
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
@@ -1398,7 +1461,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1477
+#: ../src/gpm-manager.c:1469
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
@@ -1406,7 +1469,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1485
+#: ../src/gpm-manager.c:1477
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
@@ -1414,7 +1477,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1494
+#: ../src/gpm-manager.c:1486
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
@@ -1422,7 +1485,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1504
+#: ../src/gpm-manager.c:1496
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
@@ -1430,7 +1493,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1514
+#: ../src/gpm-manager.c:1506
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
@@ -1438,7 +1501,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1523
+#: ../src/gpm-manager.c:1515
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
@@ -1446,7 +1509,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1532
+#: ../src/gpm-manager.c:1524
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
@@ -1454,49 +1517,59 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1597
+#: ../src/gpm-manager.c:1589
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
-msgstr "Bateria maila larriaren azpitik dabil eta ordenagailua <b>itzali</b> egingo da bateria erabat hustutzean."
+msgstr ""
+"Bateria maila larriaren azpitik dabil eta ordenagailua <b>itzali</b> egingo "
+"da bateria erabat hustutzean."
 
 #. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1603
+#: ../src/gpm-manager.c:1595
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
-msgstr "Bateria maila larriaren azpitik dabil eta ordenagailua eseki egingo da. <br><b>Oharra:</b> energia kopuru txiki bat behar da ordenagailua esekitako egoeran mantentzeko."
+msgstr ""
+"Bateria maila larriaren azpitik dabil eta ordenagailua eseki egingo da. "
+"<br><b>Oharra:</b> energia kopuru txiki bat behar da ordenagailua esekitako "
+"egoeran mantentzeko."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1610
+#: ../src/gpm-manager.c:1602
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
-msgstr "Bateria maila larriaren azpitik dabil eta ordenagailua hibernatu egingo da."
+msgstr ""
+"Bateria maila larriaren azpitik dabil eta ordenagailua hibernatu egingo da."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1615
+#: ../src/gpm-manager.c:1607
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
-msgstr "Bateria maila larriaren azpitik dabil eta ordenagailua itzali egingo da."
+msgstr ""
+"Bateria maila larriaren azpitik dabil eta ordenagailua itzali egingo da."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1633
+#: ../src/gpm-manager.c:1625
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
-msgstr "UPS maila larriaren azpitik dabil eta ordenagailua <b>itzali</b> egingo da UPS erabat hustutzen denean."
+msgstr ""
+"UPS maila larriaren azpitik dabil eta ordenagailua <b>itzali</b> egingo da "
+"UPS erabat hustutzen denean."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1639
+#: ../src/gpm-manager.c:1631
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
-msgstr "UPS maila larriaren azpitik dabil eta ordenagailua hibernatu egingo da."
+msgstr ""
+"UPS maila larriaren azpitik dabil eta ordenagailua hibernatu egingo da."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1644
+#: ../src/gpm-manager.c:1636
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr "UPS maila larriaren azpitik dabil eta ordenagailua itzali egingo da."
@@ -1519,7 +1592,7 @@ msgstr "Hibernatu"
 
 #: ../src/gpm-prefs-core.c:254
 msgid "Blank screen"
-msgstr "Belztu pantaila"
+msgstr "Pantaila beltza"
 
 #: ../src/gpm-prefs-core.c:257
 msgid "Ask me"
@@ -1531,7 +1604,7 @@ msgstr "Ez egin ezer"
 
 #: ../src/gpm-prefs-core.c:320
 msgid "Never"
-msgstr "Inoiz ere ez"
+msgstr "Inoiz ez"
 
 #. TRANSLATORS: the rate of discharge for the device
 #: ../src/gpm-statistics.c:78 ../src/gpm-statistics.c:466
@@ -1603,7 +1676,7 @@ msgstr "Irudia"
 
 #: ../src/gpm-statistics.c:162
 msgid "Description"
-msgstr "Azalpena"
+msgstr "Deskribapena"
 
 #: ../src/gpm-statistics.c:181 ../src/gpm-statistics.c:405
 msgid "Type"
@@ -1627,32 +1700,32 @@ msgstr "Ezezaguna"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] "segundo %.0f"
-msgstr[1] "%.0f segundo"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:295
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] "minutu %.1f"
-msgstr[1] "%.1f minutu"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:300
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] "ordu %.1f"
-msgstr[1] "%.1f ordu"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:304
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] "egun %.1f"
-msgstr[1] "%.1f egun"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/gpm-statistics.c:313
 msgid "Yes"
@@ -1691,8 +1764,8 @@ msgstr "Hornitu"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d segundo"
-msgstr[1] "%d segundo"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
@@ -1716,7 +1789,7 @@ msgstr "Birkargagarria"
 #. TRANSLATORS: The state of the device, e.g. "Changing" or "Fully charged"
 #: ../src/gpm-statistics.c:446
 msgid "State"
-msgstr "Egoera"
+msgstr "Herrialdea"
 
 #: ../src/gpm-statistics.c:450
 msgid "Energy"
@@ -1905,7 +1978,7 @@ msgstr "Igarotako denbora"
 #. TRANSLATORS: this is the Y axis on the graph
 #: ../src/gpm-statistics.c:1353
 msgid "Power"
-msgstr "Energia"
+msgstr "Berredura"
 
 #. TRANSLATORS: this is the Y axis on the graph for the whole battery device
 #. TRANSLATORS: this is the X axis on the graph for the whole battery device
@@ -1938,7 +2011,7 @@ msgstr "Hautatu gailu hau abioan"
 #. TRANSLATORS: the icon for the CPU
 #: ../src/gpm-statistics.c:1838
 msgid "Processor"
-msgstr "Prozesagailua"
+msgstr "Prozesadorea"
 
 #: ../src/gpm-tray-icon.c:189
 msgid "Copyright © 2011-2018 MATE developers"
@@ -1950,6 +2023,8 @@ msgstr ""
 #: ../src/gpm-tray-icon.c:195
 msgid "translator-credits"
 msgstr ""
+"Asier Iturralde Sarasola <asier.iturralde@gmail.com>\n"
+"Aritz Jorge Sánchez"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
 #: ../src/gpm-tray-icon.c:297
@@ -1981,7 +2056,9 @@ msgstr "%s kargatzen (%% %.1f)"
 msgid ""
 "Battery is fully charged.\n"
 "Provides %s laptop runtime"
-msgstr "Bateria erabat kargatuta\nEskainiko duen denbora: %s"
+msgstr ""
+"Bateria erabat kargatuta\n"
+"Eskainiko duen denbora: %s"
 
 #. TRANSLATORS: the device is fully charged
 #: ../src/gpm-upower.c:244
@@ -2007,7 +2084,9 @@ msgstr "%s deskargatzen (%% %.1f)"
 msgid ""
 "%s %s until charged (%.1f%%)\n"
 "Provides %s battery runtime"
-msgstr "%s %s kargatu arte (%% %.1f)\nEskainiko duen bateriaren denbora: %s"
+msgstr ""
+"%s %s kargatu arte (%% %.1f)\n"
+"Eskainiko duen bateriaren denbora: %s"
 
 #. TRANSLATORS: device is charging, and we have a time to full and a
 #. percentage
@@ -2118,7 +2197,7 @@ msgstr "Arrunta"
 
 #: ../src/gpm-upower.c:425
 msgid "Poor"
-msgstr "Baxua"
+msgstr "Ahula"
 
 #: ../src/gpm-upower.c:429
 msgid "Capacity:"
@@ -2144,57 +2223,57 @@ msgstr "Kargaren tasa:"
 #: ../src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] "AC moldagailua"
-msgstr[1] "AC moldagailuak"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "Eramangarriaren bateria"
-msgstr[1] "Eramangarriaren bateriak"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] "UPS"
-msgstr[1] "UPSak"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] "Pantaila"
-msgstr[1] "Pantailak"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] "Sagua"
-msgstr[1] "Saguak"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: wireless keyboard with internal battery
 #: ../src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] "Teklatua"
-msgstr[1] "Teklatuak"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: portable device
 #: ../src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] "PDA"
-msgstr[1] "PDAk"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: cell phone (mobile...)
 #: ../src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] "Telefono mugikorra"
-msgstr[1] "Telefono mugikorrak"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: media player, mp3 etc
 #: ../src/gpm-upower.c:519
@@ -2207,15 +2286,15 @@ msgstr[1] ""
 #: ../src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "Tableta"
-msgstr[1] "Tabletak"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] "Ordenagailua"
-msgstr[1] "Ordenagailuak"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:594

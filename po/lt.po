@@ -1,23 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2014,2017
-# Moo, 2015-2018
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 22:24+0300\n"
-"PO-Revision-Date: 2018-01-09 19:52+0000\n"
-"Last-Translator: Moo\n"
-"Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
+"POT-Creation-Date: 2018-03-17 14:58+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Audrius Meskauskas, 2018\n"
+"Language-Team: Lithuanian (https://www.transifex.com/mate/teams/13566/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: lt\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
 #: ../applets/brightness/brightness-applet.c:110
 msgid "Power Manager Brightness Applet"
@@ -28,7 +27,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "Reguliuoja nešiojamojo kompiuterio skydelio ryškumą."
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:329
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Cannot connect to mate-power-manager"
 msgstr "Nepavyko prisijungti prie mate-power-manager"
 
@@ -42,44 +41,55 @@ msgid "LCD brightness : %d%%"
 msgstr "LCD ryškumas: %d%%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:403
+#: ../applets/inhibit/inhibit-applet.c:374
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "Licencijuota GNU Genereal Public Licence Version 2 sąlygomis"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:404
+#: ../applets/inhibit/inhibit-applet.c:375
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
 "as published by the Free Software Foundation; either version 2\n"
 "of the License, or (at your option) any later version."
-msgstr "Energijos tvarkytuvė yra laisva programinė įranga; galite ją\nplatinti ir/ar modifikuoti GNU bendrosios viešosios licencijos\nsąlygomis, paskelbtomis Laisvosios programinės įrangos fondo (Free Software Foundation); 2-osios\narba (jūsų pasirinkimu) bet kurios vėlesnės licencijos versijos sąlygomis."
+msgstr ""
+"Energijos tvarkytuvė yra laisva programinė įranga; galite ją\n"
+"platinti ir/ar modifikuoti GNU bendrosios viešosios licencijos\n"
+"sąlygomis, paskelbtomis Laisvosios programinės įrangos fondo (Free Software Foundation); 2-osios\n"
+"arba (jūsų pasirinkimu) bet kurios vėlesnės licencijos versijos sąlygomis."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:408
+#: ../applets/inhibit/inhibit-applet.c:379
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
 "GNU General Public License for more details."
-msgstr "Energijos tvarkytuvė platinama tikintis, kad ji bus naudinga, bet\nBE JOKIŲ GARANTIJŲ; netgi be numanomų PARDAVIMO arba TINKAMUMO\nKONKREČIAM TIKSLUI garantijų. Dėl išsamesnės informacijos žiūrėkite GNU\nbendrąją viešąją licenciją."
+msgstr ""
+"Energijos tvarkytuvė platinama tikintis, kad ji bus naudinga, bet\n"
+"BE JOKIŲ GARANTIJŲ; netgi be numanomų PARDAVIMO arba TINKAMUMO\n"
+"KONKREČIAM TIKSLUI garantijų. Dėl išsamesnės informacijos žiūrėkite GNU\n"
+"bendrąją viešąją licenciją."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:412
+#: ../applets/inhibit/inhibit-applet.c:383
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
-msgstr "Jūs turėjote gauti GNU bendrosios viešosios licencijos kopiją kartu su\nMATE energijos tvarkytuve; jeigu negavote, rašykite Free Software Foundation,\nInc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
+msgstr ""
+"Jūs turėjote gauti GNU bendrosios viešosios licencijos kopiją kartu su\n"
+"MATE energijos tvarkytuve; jeigu negavote, rašykite Free Software Foundation,\n"
+"Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 
 #: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:638
+#: ../applets/inhibit/inhibit-applet.c:610
 msgid "_About"
 msgstr "_Apie"
 
 #: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:641
+#: ../applets/inhibit/inhibit-applet.c:613
 msgid "_Help"
 msgstr "_Žinynas"
 
@@ -99,23 +109,23 @@ msgstr "Ryškumo įtaisas"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Reguliuoja nešiojamojo kompiuterio skydelio ryškumą."
 
-#: ../applets/inhibit/inhibit-applet.c:92
+#: ../applets/inhibit/inhibit-applet.c:93
 msgid "Power Manager Inhibit Applet"
 msgstr "Energijos tvarkytuvės uždraudimo įtaisas"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:94
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Leidžia naudotojui išvengti automatinio energijos taupymo."
 
-#: ../applets/inhibit/inhibit-applet.c:332
+#: ../applets/inhibit/inhibit-applet.c:303
 msgid "Automatic sleep inhibited"
 msgstr "Automatinis užmigimas išjungtas"
 
-#: ../applets/inhibit/inhibit-applet.c:334
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid "Automatic sleep enabled"
 msgstr "Automatinis užmigimas įjungtas"
 
-#: ../applets/inhibit/inhibit-applet.c:362
+#: ../applets/inhibit/inhibit-applet.c:333
 msgid "Manual inhibit"
 msgstr "Rankinis uždraudimas"
 
@@ -158,36 +168,48 @@ msgstr "Veiksmas, vykdytinas esant kritiškai mažai įkrovai"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:4
 msgid "The action to take when the battery is critically low."
-msgstr "Veiksmas, vykdytinas esant kritiškai mažam baterijos energijos lygiui."
+msgstr ""
+"Veiksmas, vykdytinas esant kritiškai mažam baterijos energijos lygiui."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:5
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
-msgstr "Ar baterijos įvykis turėtų būti aktyvuojamas, kai kompiuteris užvertas ir atjungtas nuo elektros tinklo"
+msgstr ""
+"Ar baterijos įvykis turėtų būti aktyvuojamas, kai kompiuteris užvertas ir "
+"atjungtas nuo elektros tinklo"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:6
 msgid ""
 "If the battery lid close event should occur (for example 'Suspend when lid "
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
-msgstr "Ar baterijos įvykis (pavyzdžiui, „Pristabdyti, kai dangtis uždarytas ir maitinamasi iš baterijos“) turėtų būti aktyvuojamas, kai kompiuterio dangtis buvo anksčiau užvertas ir tik po to atjungtas nuo elektros tinklo."
+msgstr ""
+"Ar baterijos įvykis (pavyzdžiui, „Pristabdyti, kai dangtis uždarytas ir "
+"maitinamasi iš baterijos“) turėtų būti aktyvuojamas, kai kompiuterio dangtis"
+" buvo anksčiau užvertas ir tik po to atjungtas nuo elektros tinklo."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:7
 msgid "UPS critical low action"
-msgstr "Veiksmas, vykdytinas esant kritiškai mažai nenutrūkstamo maitinimo šaltinio įkrovai"
+msgstr ""
+"Veiksmas, vykdytinas esant kritiškai mažai nenutrūkstamo maitinimo šaltinio "
+"įkrovai"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:8
 msgid "The action to take when the UPS is critically low."
-msgstr "Veiksmas, vykdytinas esant kritiškai mažam nenutrūkstamo maitinimo šaltinio energijos lygiui."
+msgstr ""
+"Veiksmas, vykdytinas esant kritiškai mažam nenutrūkstamo maitinimo šaltinio "
+"energijos lygiui."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:9
 msgid "UPS low power action"
-msgstr "Veiksmas, vykdytinas esant mažai nenutrūkstamo maitinimo šaltinio įkrovai"
+msgstr ""
+"Veiksmas, vykdytinas esant mažai nenutrūkstamo maitinimo šaltinio įkrovai"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:10
 msgid "The action to take when the UPS is low."
-msgstr "Veiksmas, vykdytinas esant mažam nenutrūkstamo maitinimo šaltinio lygiui."
+msgstr ""
+"Veiksmas, vykdytinas esant mažam nenutrūkstamo maitinimo šaltinio lygiui."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:11
 msgid "Allow backlight brightness adjustment"
@@ -197,7 +219,9 @@ msgstr "Leisti keisti foninio apšvietimo ryškumą"
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
-msgstr "Ar keisti ekrano ryškumą persijungiant tarp kintamosios srovės ir baterijos energijos."
+msgstr ""
+"Ar keisti ekrano ryškumą persijungiant tarp kintamosios srovės ir baterijos "
+"energijos."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:13
 msgid "Reduce the backlight brightness when on battery power"
@@ -207,31 +231,42 @@ msgstr "Mažinti foninio apšvietimo ryškumą, kai naudojama baterijos energija
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
-msgstr "Ar užtemdyti ekraną taupant energiją, kai kompiuteris naudoja baterijos energiją."
+msgstr ""
+"Ar užtemdyti ekraną taupant energiją, kai kompiuteris naudoja baterijos "
+"energiją."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:15
 msgid "Reduce the keyboard backlight when on battery power"
-msgstr "Mažinti klaviatūros foninį apšvietimą, kai naudojama baterijos energija"
+msgstr ""
+"Mažinti klaviatūros foninį apšvietimą, kai naudojama baterijos energija"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:16
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
-msgstr "Ar klaviatūros foninio apšvietimo ryškumas turėtų būti mažinamas, kai kompiuteris naudoja baterijos energiją"
+msgstr ""
+"Ar klaviatūros foninio apšvietimo ryškumas turėtų būti mažinamas, kai "
+"kompiuteris naudoja baterijos energiją"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:17
 msgid "Keyboard backlight brightness when on AC power."
-msgstr "Klaviatūros foninio apšvietimo ryškumas, kai naudojama elektros lizdo energija."
+msgstr ""
+"Klaviatūros foninio apšvietimo ryškumas, kai naudojama elektros lizdo "
+"energija."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:18
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
-msgstr "Klaviatūros foninio apšvietimo ryškumo procentas, kai naudojama elektros lizdo energija. Tinkamos reikšmės yra tarp 0 ir 100."
+msgstr ""
+"Klaviatūros foninio apšvietimo ryškumo procentas, kai naudojama elektros "
+"lizdo energija. Tinkamos reikšmės yra tarp 0 ir 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:19
 msgid "Percent to reduce keyboard backlight by when on battery power."
-msgstr "Klaviatūros foninio apšvietimo mažinimo procentas, kai naudojama baterijos energija."
+msgstr ""
+"Klaviatūros foninio apšvietimo mažinimo procentas, kai naudojama baterijos "
+"energija."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:21
 #, no-c-format
@@ -239,11 +274,16 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
-msgstr "Klaviatūros foninio apšvietimo mažinimo procentas, kai naudojama baterijos energija. Pavyzdžiui, naudojant baterijos energiją, jei nustatyta \"60\", foninis apšvietimas bus sumažintas 40%. Tinkamos reikšmės yra tarp 0 ir 100."
+msgstr ""
+"Klaviatūros foninio apšvietimo mažinimo procentas, kai naudojama baterijos "
+"energija. Pavyzdžiui, naudojant baterijos energiją, jei nustatyta \"60\", "
+"foninis apšvietimas bus sumažintas 40%. Tinkamos reikšmės yra tarp 0 ir 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
-msgstr "Klaviatūros foninio apšvietimo sumažinimo procentinė reikšmė, kai kompiuteris yra neaktyvus."
+msgstr ""
+"Klaviatūros foninio apšvietimo sumažinimo procentinė reikšmė, kai "
+"kompiuteris yra neaktyvus."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:24
 #, no-c-format
@@ -251,7 +291,11 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
-msgstr "Klaviatūros foninio apšvietimo sumažinimo procentinė reikšmė, kai kompiuteris yra neaktyvus. Pavyzdžiui, jeigu nustatyta \"60\", foninis apšvietimas bus sumažintas 40%, kai kompiuteris bus neaktyvus. Tinkamos reikšmės yra tarp 0 ir 100."
+msgstr ""
+"Klaviatūros foninio apšvietimo sumažinimo procentinė reikšmė, kai "
+"kompiuteris yra neaktyvus. Pavyzdžiui, jeigu nustatyta \"60\", foninis "
+"apšvietimas bus sumažintas 40%, kai kompiuteris bus neaktyvus. Tinkamos "
+"reikšmės yra tarp 0 ir 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:25
 msgid "The brightness of the screen when idle"
@@ -261,17 +305,23 @@ msgstr "Ekrano ryškumas, kai kompiuteris neveiklus"
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
-msgstr "Tai nešiojamojo kompiuterio ekrano ryškumas naudojamas, kai seansas neaktyvus. Naudojama tik, kai use-time-for-policy reikšmė teigiama."
+msgstr ""
+"Tai nešiojamojo kompiuterio ekrano ryškumas naudojamas, kai seansas "
+"neaktyvus. Naudojama tik, kai use-time-for-policy reikšmė teigiama."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:27
 msgid "Dim the screen after a period of inactivity when on battery power"
-msgstr "Užtemdyti ekraną po tam tikro neaktyvumo periodo, kai naudojama baterijos energija"
+msgstr ""
+"Užtemdyti ekraną po tam tikro neaktyvumo periodo, kai naudojama baterijos "
+"energija"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:28
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
-msgstr "Ar užtemdyti ekraną taupant energiją, kai kompiuteris neveiklus ir naudoja baterijos energiją."
+msgstr ""
+"Ar užtemdyti ekraną taupant energiją, kai kompiuteris neveiklus ir naudoja "
+"baterijos energiją."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:29
 msgid "The default amount of time to dim the screen after idle"
@@ -289,25 +339,34 @@ msgstr "LCD tamsinimas naudojant baterijos energiją"
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
-msgstr "Ekrano tamsinimas, kai naudojama baterijos energija. Tinkamos reikšmės yra tarp 0 ir 100."
+msgstr ""
+"Ekrano tamsinimas, kai naudojama baterijos energija. Tinkamos reikšmės yra "
+"tarp 0 ir 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:33
 msgid "Dim the screen after a period of inactivity when on AC power"
-msgstr "Užtemdyti ekraną po tam tikro neaktyvumo periodo, kai naudojamas kintamosios srovės šaltinis"
+msgstr ""
+"Užtemdyti ekraną po tam tikro neaktyvumo periodo, kai naudojamas kintamosios"
+" srovės šaltinis"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:34
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on AC power."
-msgstr "Ar užtemdyti ekraną taupant energiją, kai kompiuteris neveiklus ir prijungtas prie elektros tinklo."
+msgstr ""
+"Ar užtemdyti ekraną taupant energiją, kai kompiuteris neveiklus ir "
+"prijungtas prie elektros tinklo."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:35
 msgid "Method used to blank screen on AC"
-msgstr "Ekrano užtemdymo metodas, kai kompiuteris prijungtas prie elektros tinklo"
+msgstr ""
+"Ekrano užtemdymo metodas, kai kompiuteris prijungtas prie elektros tinklo"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:36
 msgid "The DPMS method used to blank the screen when on AC power."
-msgstr "DPMS ekrano užtemdymo metodas, kai kompiuteris prijungtas prie elektros tinklo."
+msgstr ""
+"DPMS ekrano užtemdymo metodas, kai kompiuteris prijungtas prie elektros "
+"tinklo."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:37
 msgid "Method used to blank screen on battery"
@@ -325,7 +384,9 @@ msgstr "LCD ryškumas naudojant kintančiosios srovės energiją"
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
-msgstr "Ekrano ryškumas, naudojant kintamos srovės šaltinį. Tinkamos reikšmės yra tarp 0,0 ir 100,0."
+msgstr ""
+"Ekrano ryškumas, naudojant kintamosios srovės šaltinį. Tinkamos reikšmės yra"
+" tarp 0,0 ir 100,0."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:41
 msgid "Suspend button action"
@@ -353,23 +414,31 @@ msgstr "Veiksmas, vykdytinas nuspaudus maitinimo mygtuką."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:47
 msgid "Laptop lid close action on battery"
-msgstr "Veiksmas, uždarius nešiojamojo kompiuterio dangtį naudojant baterijos energiją"
+msgstr ""
+"Veiksmas, uždarius nešiojamojo kompiuterio dangtį naudojant baterijos "
+"energiją"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:48
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
-msgstr "Veiksmas, vykdytinas uždarius nešiojamojo kompiuterio dangtį, kai kompiuteris naudoja baterijos energiją."
+msgstr ""
+"Veiksmas, vykdytinas uždarius nešiojamojo kompiuterio dangtį, kai "
+"kompiuteris naudoja baterijos energiją."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:49
 msgid "Laptop lid close action when on AC"
-msgstr "Veiksmas, uždarius nešiojamojo kompiuterio dangtį naudojant kintamos srovės energiją"
+msgstr ""
+"Veiksmas, uždarius nešiojamojo kompiuterio dangtį naudojant kintamosios "
+"srovės energiją"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:50
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
-msgstr "Veiksmas, vykdytinas uždarius nešiojamojo kompiuterio dangtį, kai naudojamas kintamos srovės energijos šalitnis."
+msgstr ""
+"Veiksmas, vykdytinas uždarius nešiojamojo kompiuterio dangtį, kai naudojamas"
+" kintamosios srovės energijos šaltinis."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:51
 msgid "Whether to use time-based notifications"
@@ -379,7 +448,9 @@ msgstr "Ar naudoti laiku paremtus pranešimus"
 msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
-msgstr "Ar naudoti laiku paremtus pranešimus. Jei reikšmė neigiama, tada naudojamas procentinis pokytis. Tai gali padėi apeiti kai kuriuos klaidingus ACPI BIOS."
+msgstr ""
+"Ar naudoti laiku paremtus pranešimus. Jei reikšmė neigiama, tada naudojamas "
+"procentinis pokytis. Tai gali padėi apeiti kai kuriuos klaidingus ACPI BIOS."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:53
 msgid "Check CPU load before sleeping"
@@ -397,7 +468,9 @@ msgstr "Ar NetworkManager turėtų prisijungti ir atsijungti užmiegant."
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
-msgstr "Ar NetworkManager turėtų atsijungti prieš pristabdant ar užmigdant, bei prisijungti tęsiant."
+msgstr ""
+"Ar NetworkManager turėtų atsijungti prieš pristabdant ar užmigdant, bei "
+"prisijungti tęsiant."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:57
 msgid "Use mate-screensaver lock setting"
@@ -407,7 +480,9 @@ msgstr "Naudoti mate-screensaver užrakinimo nustatymus"
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
-msgstr "Ar naudoti mate-screensaver ekrano užrakinimo nustatymus sprendžiant, ar užrakinti ekraną po užmigdymo, pristabdymo ar ekrano užtemdymo."
+msgstr ""
+"Ar naudoti mate-screensaver ekrano užrakinimo nustatymus sprendžiant, ar "
+"užrakinti ekraną po užmigdymo, pristabdymo ar ekrano užtemdymo."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:59
 msgid "Lock screen when blanked"
@@ -417,7 +492,9 @@ msgstr "Užrakinti ekraną, kai jis užtemdytas"
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
-msgstr "Ar ekranas užrakinamas jį išjungus. Šis parametras naudojamas tik jei lock-use-screensave rakto reikšmė neigiama."
+msgstr ""
+"Ar ekranas užrakinamas jį išjungus. Šis parametras naudojamas tik jei lock-"
+"use-screensave rakto reikšmė neigiama."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:61
 msgid "Lock screen on suspend"
@@ -427,7 +504,9 @@ msgstr "Pristabdant užrakinti ekraną"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
-msgstr "Ar užrakinti ekraną, kai kompiuteris sugrąžinamas iš pristabdymo. Naudojama tik tada, kai rakto lock-use-screensaver reikšmė neigiama."
+msgstr ""
+"Ar užrakinti ekraną, kai kompiuteris sugrąžinamas iš pristabdymo. Naudojama "
+"tik tada, kai rakto lock-use-screensaver reikšmė neigiama."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:63
 msgid "Lock screen on hibernate"
@@ -437,7 +516,9 @@ msgstr "Užmigdant, užrakinti ekraną"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
-msgstr "Ar užrakinti ekraną, kai kompiuteris pažadinamas iš užmigdymo. Parametras naudojamas tik tada, kai rakto lock-use-screensaver reikšmė neigiama."
+msgstr ""
+"Ar užrakinti ekraną, kai kompiuteris pažadinamas iš užmigdymo. Parametras "
+"naudojamas tik tada, kai rakto lock-use-screensaver reikšmė neigiama."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:65
 msgid "Lock GNOME keyring on sleep"
@@ -447,29 +528,36 @@ msgstr "Užmigdant, užrakinti GNOME raktinę"
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
-msgstr "Ar GNOME raktinė užrakinama prieš pristabdymą. Tai reiškia, kad pratęsus, reikės vėl atrakinti raktinę."
+msgstr ""
+"Ar GNOME raktinė užrakinama prieš pristabdymą. Tai reiškia, kad pratęsus, "
+"reikės vėl atrakinti raktinę."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:67
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
-msgstr "Ar GNOME raktinė užrakinama prieš užmigdymą. Tai reiškia, kad nubudus reikės vėl atrakinti raktinę."
+msgstr ""
+"Ar GNOME raktinė užrakinama prieš užmigdymą. Tai reiškia, kad nubudus reikės"
+" vėl atrakinti raktinę."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:68
 msgid "If we should show the low capacity warning for a broken battery"
-msgstr "Ar turėtų būti rodomas pranešimas apie mažą talpą, kai baterija sugedusi"
+msgstr ""
+"Ar turėtų būti rodomas pranešimas apie mažą talpą, kai baterija sugedusi"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:69
 msgid "If we should show the low capacity warning for a broken battery."
-msgstr "Ar turėtų būti rodomas pranešimas apie mažą talpą, kai baterija sugedusi."
+msgstr ""
+"Ar turėtų būti rodomas pranešimas apie mažą talpą, kai baterija sugedusi."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:70
 msgid "Notify when AC adapter is disconnected"
-msgstr "Pranešti, kai atjungiama nuo kintamos srovės šaltinio"
+msgstr "Pranešti, kai atjungiama nuo kintamosios srovės šaltinio"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:71
 msgid "If the user should be notified when the AC adapter is disconnected."
-msgstr "Ar pranešti naudotojui, kad kompiuteris buvo atjungtas nuo elektros tinklo."
+msgstr ""
+"Ar pranešti naudotojui, kad kompiuteris buvo atjungtas nuo elektros tinklo."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:72
 msgid "Notify when fully charged"
@@ -499,7 +587,10 @@ msgstr "URI, rodomas naudotojui, jei nepavyksta užmigdyti kompiuterio."
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
-msgstr "Kai nepavyksta užmigdyti kompiuterio, galima parodyti naudotojui mygtuką, padedantį pataisyti problemą. Palikite reikšmę tuščią, jei mygtukas neturėtų būti rodomas"
+msgstr ""
+"Kai nepavyksta užmigdyti kompiuterio, galima parodyti naudotojui mygtuką, "
+"padedantį pataisyti problemą. Palikite reikšmę tuščią, jei mygtukas neturėtų"
+" būti rodomas"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:78
 msgid "Notify on a low power"
@@ -577,7 +668,9 @@ msgstr "Įprastai rodoma puslapių numerių rodyklė"
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
-msgstr "Įprastai rodoma puslapių numerių rodyklė, skirta grąžinti į teisingą puslapį."
+msgstr ""
+"Įprastai rodoma puslapių numerių rodyklė, skirta grąžinti į teisingą "
+"puslapį."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
@@ -587,7 +680,8 @@ msgstr "Paskutinio pasirinkto prietaiso kodas"
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
-msgstr "Paskutinio prietaiso identifikatorius, skirtas grąžinti į teisingą prietaisą"
+msgstr ""
+"Paskutinio prietaiso identifikatorius, skirtas grąžinti į teisingą prietaisą"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:98
 msgid "Percentage considered low"
@@ -597,7 +691,9 @@ msgstr "Procentai, kai laikoma maža"
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
-msgstr "Baterijos įkrova procentais, kai ši laikoma maža. Naudojama tik, kai use-time-for-policy reikšmė neigiama."
+msgstr ""
+"Baterijos įkrova procentais, kai ši laikoma maža. Naudojama tik, kai use-"
+"time-for-policy reikšmė neigiama."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:100
 msgid "Percentage considered critical"
@@ -607,7 +703,9 @@ msgstr "Procentai, kai laikoma kritiška"
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
-msgstr "Baterijos įkrova procentais, kai ši laikoma kritiška. Naudojama tik, kai use-time-for-policy reikšmė neigiama."
+msgstr ""
+"Baterijos įkrova procentais, kai ši laikoma kritiška. Naudojama tik, kai "
+"use-time-for-policy reikšmė neigiama."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:102
 msgid "Percentage action is taken"
@@ -617,7 +715,9 @@ msgstr "Procentai, kada vykdomas veiksmas"
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
-msgstr "Baterijos įkrova procentais, kai vykdomas kritinis veiksmas. Naudojama tik, kai use-time-for-policy reikšmė neigiama."
+msgstr ""
+"Baterijos įkrova procentais, kai vykdomas kritinis veiksmas. Naudojama tik, "
+"kai use-time-for-policy reikšmė neigiama."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:104
 msgid "The time remaining when low"
@@ -627,7 +727,9 @@ msgstr "Likęs laikas, kai maža įkrova"
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
-msgstr "Likęs laikas sekundėmis, iki įkrovos lygio laikymo mažu. Naudojama tik, kai use-time-for-policy reikšmė teigiama."
+msgstr ""
+"Likęs laikas sekundėmis, iki įkrovos lygio laikymo mažu. Naudojama tik, kai "
+"use-time-for-policy reikšmė teigiama."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:106
 msgid "The time remaining when critical"
@@ -637,7 +739,9 @@ msgstr "Likęs laikas, kai kritiškai maža įkrova"
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
-msgstr "Likęs laikas sekundėmis, iki įkrovos lygio laikymo kritišku. Naudojama tik, kai use-time-for-policy reikšmė teigiama."
+msgstr ""
+"Likęs laikas sekundėmis, iki įkrovos lygio laikymo kritišku. Naudojama tik, "
+"kai use-time-for-policy reikšmė teigiama."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:108
 msgid "The time remaining when action is taken"
@@ -647,7 +751,9 @@ msgstr "Likęs laikas, kai vykdomas veiksmas"
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
-msgstr "Likęs laikas sekundėmis, iki kritiško veiksmo vykdymo. Naudojama tik, kai use-time-for-policy reikšmė teigiama."
+msgstr ""
+"Likęs laikas sekundėmis, iki kritiško veiksmo vykdymo. Naudojama tik, kai "
+"use-time-for-policy reikšmė teigiama."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:110
 msgid "Sleep timeout computer when on battery"
@@ -657,37 +763,48 @@ msgstr "Laikotarpis iki kompiuterio užmigdymo naudojant bateriją"
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before it goes to sleep."
-msgstr "Neaktyvumo laikotarpis sekundėmis iki kompiuterio užmigdymo, kai naudojama baterijos energija."
+msgstr ""
+"Neaktyvumo laikotarpis sekundėmis iki kompiuterio užmigdymo, kai naudojama "
+"baterijos energija."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:112
 msgid "Sleep timeout computer when on AC"
-msgstr "Laikotarpis iki kompiuterio užmigdymo naudojant kintamos srovės šaltinį"
+msgstr ""
+"Laikotarpis iki kompiuterio užmigdymo naudojant kintamosios srovės šaltinį"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:113
 msgid ""
 "The amount of time in seconds the computer on AC power needs to be inactive "
 "before it goes to sleep."
-msgstr "Neaktyvumo laikotarpis sekundėmis iki kompiuterio užmigdymo, kai naudojama kintamos srovės energija."
+msgstr ""
+"Neaktyvumo laikotarpis sekundėmis iki kompiuterio užmigdymo, kai naudojama "
+"kintamosios srovės energija."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:114
 msgid "Sleep timeout computer when on UPS"
-msgstr "Laikotarpis iki kompiuterio užmigdymo naudojant nenutrūkstamo maitinimo šaltinį"
+msgstr ""
+"Laikotarpis iki kompiuterio užmigdymo naudojant nenutrūkstamo maitinimo "
+"šaltinį"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:115
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before it goes to sleep."
-msgstr "Neaktyvumo laikotarpis sekundėmis iki kompiuterio užmigdymo, kai naudojamas nenutrūkstamo maitinimo šaltinis."
+msgstr ""
+"Neaktyvumo laikotarpis sekundėmis iki kompiuterio užmigdymo, kai naudojamas "
+"nenutrūkstamo maitinimo šaltinis."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:116
 msgid "Sleep timeout display when on AC"
-msgstr "Laikotarpis iki ekrano užmigdymo naudojant kintamos srovės šaltinį"
+msgstr "Laikotarpis iki ekrano užmigdymo naudojant kintamosios srovės šaltinį"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:117
 msgid ""
 "The amount of time in seconds before the display goes to sleep when the "
 "computer is on AC power."
-msgstr "Laikotarpis sekundėmis iki ekrano užmigdymo, kai naudojama kintamos srovės energija."
+msgstr ""
+"Laikotarpis sekundėmis iki ekrano užmigdymo, kai naudojama kintamosios "
+"srovės energija."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:118
 msgid "Sleep timeout display when on battery"
@@ -697,17 +814,22 @@ msgstr "Laikotarpis iki ekrano užmigdymo naudojant bateriją"
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
-msgstr "Laikotarpis sekundėmis iki ekrano užmigdymo, kai naudojama baterijos energija."
+msgstr ""
+"Laikotarpis sekundėmis iki ekrano užmigdymo, kai naudojama baterijos "
+"energija."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:120
 msgid "Sleep timeout display when on UPS"
-msgstr "Laikotarpis iki ekrano užmigdymo naudojant nenutrūkstamo maitinimo šaltinį"
+msgstr ""
+"Laikotarpis iki ekrano užmigdymo naudojant nenutrūkstamo maitinimo šaltinį"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:121
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before the display goes to sleep."
-msgstr "Laikotarpis sekundėmis iki ekrano užmigdymo, kai naudojamas nenutrūkstamo maitinimo šaltinis."
+msgstr ""
+"Laikotarpis sekundėmis iki ekrano užmigdymo, kai naudojamas nenutrūkstamo "
+"maitinimo šaltinis."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:122
 msgid "If sounds should be used"
@@ -717,7 +839,9 @@ msgstr "Ar naudoti garsus"
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
-msgstr "Ar naudoti garsus, kai energijos lygis kritiškai mažas arba slopinimo užklausos sustabdė veiksmą."
+msgstr ""
+"Ar naudoti garsus, kai energijos lygis kritiškai mažas arba slopinimo "
+"užklausos sustabdė veiksmą."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:124
 msgid ""
@@ -758,7 +882,7 @@ msgstr "Šviesumas"
 
 #: ../data/gpm-statistics.ui.h:2 ../src/gpm-statistics.c:208
 msgid "Details"
-msgstr "Išsami informacija"
+msgstr "Detalės"
 
 #: ../data/gpm-statistics.ui.h:3
 msgid "Graph type:"
@@ -782,7 +906,7 @@ msgstr "Rodyti duomenų taškus"
 
 #: ../data/gpm-statistics.ui.h:8
 msgid "History"
-msgstr "Retrospektyva"
+msgstr "Žurnalas"
 
 #: ../data/gpm-statistics.ui.h:9
 msgid "Statistics"
@@ -834,7 +958,7 @@ msgstr "Prite_mdyti ekraną, kai nenaudojamas"
 
 #: ../data/gpm-prefs.ui.h:9
 msgid "On AC Power"
-msgstr "Naudojant kintamą srovę"
+msgstr "Naudojant kintamąją srovę"
 
 #: ../data/gpm-prefs.ui.h:10
 msgid "When battery po_wer is critically low:"
@@ -894,7 +1018,7 @@ msgstr "_Visada rodyti piktogramą"
 
 #: ../data/gpm-prefs.ui.h:24
 msgid "General"
-msgstr "Bendri"
+msgstr "Bendra"
 
 #: ../data/gpm-prefs.ui.h:25
 msgid "Provides help about this program"
@@ -902,7 +1026,7 @@ msgstr "Pateikia programos žinyną"
 
 #: ../data/gpm-prefs.ui.h:26
 msgid "Make Default"
-msgstr "Padaryti numatytaisiais"
+msgstr "Padaryti numatytuoju"
 
 #: ../data/gpm-prefs.ui.h:27
 msgid "Sets this policy to be used by all users"
@@ -955,7 +1079,7 @@ msgstr "Nepavyko gauti didžiausios foninio apšvietimo reikšmės"
 #. TRANSLATORS: only able to install profiles as root
 #: ../src/gpm-backlight-helper.c:247
 msgid "This program can only be used by the root user"
-msgstr "Šią programą naudoti gali tik root naudotojas"
+msgstr "Šią programą gali paleisti tik root naudotojas"
 
 #. TRANSLATORS: the program must never be directly run
 #: ../src/gpm-backlight-helper.c:256
@@ -975,17 +1099,19 @@ msgstr "Nežinomas laikas"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] "%i minutė"
-msgstr[1] "%i minutės"
-msgstr[2] "%i minučių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: ../src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] "%i valanda"
-msgstr[1] "%i valandos"
-msgstr[2] "%i valandų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -997,16 +1123,18 @@ msgstr "%i %s, %i %s"
 #: ../src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] "valanda"
-msgstr[1] "valandos"
-msgstr[2] "valandų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: ../src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] "minutė"
-msgstr[1] "minutės"
-msgstr[2] "minučių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. Translators: This is %i days
 #: ../src/gpm-graph-widget.c:435
@@ -1140,50 +1268,50 @@ msgid "Suspend failed"
 msgstr "Pristabdymas nesėkmingas"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:587
+#: ../src/gpm-manager.c:579
 msgid "Computer failed to suspend."
 msgstr "Kompiuterio pristabdyti nepavyko."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:589
+#: ../src/gpm-manager.c:581
 msgid "Failed to suspend"
 msgstr "Nepavyko pristabdyti"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:593
+#: ../src/gpm-manager.c:585
 msgid "Computer failed to hibernate."
 msgstr "Kompiuterio nepavyko užmigdyti."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:595
+#: ../src/gpm-manager.c:587
 msgid "Failed to hibernate"
 msgstr "Nepavyko užmigdyti"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:600
+#: ../src/gpm-manager.c:592
 msgid "Failure was reported as:"
 msgstr "Problemos pranešimas:"
 
 #. TRANSLATORS: button text, visit the suspend help website
-#: ../src/gpm-manager.c:613
+#: ../src/gpm-manager.c:605
 msgid "Visit help page"
 msgstr "Aplankyti pagalbos puslapį"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:859
+#: ../src/gpm-manager.c:851
 msgid "Display DPMS activated"
 msgstr "Aktyvuotas ekrano DPMS"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:878
+#: ../src/gpm-manager.c:870
 msgid "On battery power"
 msgstr "Naudoja baterijos energiją"
 
-#: ../src/gpm-manager.c:896
+#: ../src/gpm-manager.c:888
 msgid "Laptop lid is closed"
 msgstr "Užvertas nešiojamojo kompiuterio dangtis"
 
-#: ../src/gpm-manager.c:934
+#: ../src/gpm-manager.c:926
 msgid "Power Information"
 msgstr "Energijos informacija"
 
@@ -1191,320 +1319,364 @@ msgstr "Energijos informacija"
 #. * where capacity is the ratio of the last_full capacity with that of
 #. * the design capacity. (#326740)
 #. TRANSLATORS: battery is old or broken
-#: ../src/gpm-manager.c:1121
+#: ../src/gpm-manager.c:1113
 msgid "Battery may be broken"
 msgstr "Baterija gali būti susidėvėjusi"
 
 #. TRANSLATORS: notify the user that that battery is broken as the capacity is
 #. very low
-#: ../src/gpm-manager.c:1124
+#: ../src/gpm-manager.c:1116
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
 " broken."
-msgstr "Jūsų baterijos talpa labai sumažėjo (%1.1f%%), tai gali reikšti, kad ji paseno arba sugedo."
+msgstr ""
+"Jūsų baterijos talpa labai sumažėjo (%1.1f%%), tai gali reikšti, kad ji "
+"paseno arba sugedo."
 
 #. TRANSLATORS: show the charged notification
-#: ../src/gpm-manager.c:1173
+#: ../src/gpm-manager.c:1165
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] "Baterija įkrauta"
-msgstr[1] "Baterijos įkrautos"
-msgstr[2] "Baterijos įkrautos"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: laptop battery is now discharging
-#: ../src/gpm-manager.c:1219
+#: ../src/gpm-manager.c:1211
 msgid "Battery Discharging"
 msgstr "Baterija iškraunama"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1223
+#: ../src/gpm-manager.c:1215
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr "liko %s (%.0f%%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-manager.c:1226 ../src/gpm-manager.c:1238
+#: ../src/gpm-manager.c:1218 ../src/gpm-manager.c:1230
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr "%s iškraunama (%.0f%%)"
 
 #. TRANSLATORS: UPS is now discharging
-#: ../src/gpm-manager.c:1231
+#: ../src/gpm-manager.c:1223
 msgid "UPS Discharging"
 msgstr "Nenutrūkstamo maitinimo šaltinis iškraunamas"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1235
+#: ../src/gpm-manager.c:1227
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr "liko %s nenutrūkstamo maitinimo šaltinio įkrovos (%.0f%%)"
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
-#: ../src/gpm-manager.c:1319
+#: ../src/gpm-manager.c:1311
 msgid "Battery low"
 msgstr "Senka baterija"
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
-#: ../src/gpm-manager.c:1322
+#: ../src/gpm-manager.c:1314
 msgid "Laptop battery low"
 msgstr "Senka nešiojamojo kompiuterio baterija"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1328
+#: ../src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "Liko maždaug <b>%s</b> (%.0f%%)"
 
 #. TRANSLATORS: UPS is starting to get a little low
-#: ../src/gpm-manager.c:1332
+#: ../src/gpm-manager.c:1324
 msgid "UPS low"
 msgstr "Senka nenutrūkstamo maitinimo šaltinis"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1336
+#: ../src/gpm-manager.c:1328
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
-msgstr "Liko maždaug <b>%s</b> iki išsikraus nenutrūkstamo maitinimo šaltinis (%.0f%%)"
+msgstr ""
+"Liko maždaug <b>%s</b> iki išsikraus nenutrūkstamo maitinimo šaltinis "
+"(%.0f%%)"
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1340 ../src/gpm-manager.c:1474
+#: ../src/gpm-manager.c:1332 ../src/gpm-manager.c:1466
 msgid "Mouse battery low"
 msgstr "Senka pelės baterija"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1343
+#: ../src/gpm-manager.c:1335
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr "Žemas belaidės pelės įkrovos lygis (%.0f%%)"
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1347 ../src/gpm-manager.c:1482
+#: ../src/gpm-manager.c:1339 ../src/gpm-manager.c:1474
 msgid "Keyboard battery low"
 msgstr "Senka klaviatūros baterija"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1350
+#: ../src/gpm-manager.c:1342
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr "Žemas belaidės klaviatūros įkrovos lygis (%.0f%%)"
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1354 ../src/gpm-manager.c:1491
+#: ../src/gpm-manager.c:1346 ../src/gpm-manager.c:1483
 msgid "PDA battery low"
 msgstr "Senka delninuko akumuliatorius"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1357
+#: ../src/gpm-manager.c:1349
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr "Žemas delninuko įkrovos lygis (%.0f%%)"
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1361 ../src/gpm-manager.c:1501
-#: ../src/gpm-manager.c:1511
+#: ../src/gpm-manager.c:1353 ../src/gpm-manager.c:1493
+#: ../src/gpm-manager.c:1503
 msgid "Cell phone battery low"
 msgstr "Senka mobiliojo telefono akumuliatorius"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1364
+#: ../src/gpm-manager.c:1356
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "Žemas mobiliojo telefono įkrovos lygis (%.0f%%)"
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1368
+#: ../src/gpm-manager.c:1360
 msgid "Media player battery low"
 msgstr "Senka grotuvo akumuliatorius"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1371
+#: ../src/gpm-manager.c:1363
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr "Žemas grotuvo įkrovos lygis  (%.0f%%)"
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1375 ../src/gpm-manager.c:1520
+#: ../src/gpm-manager.c:1367 ../src/gpm-manager.c:1512
 msgid "Tablet battery low"
 msgstr "Senka planšetinio kompiuterio baterija"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1378
+#: ../src/gpm-manager.c:1370
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "Žemas planšetinio kompiuterio įkrovos lygis (%.0f%%)"
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1382 ../src/gpm-manager.c:1529
+#: ../src/gpm-manager.c:1374 ../src/gpm-manager.c:1521
 msgid "Attached computer battery low"
 msgstr "Senka prijungto kompiuterio baterija"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1385
+#: ../src/gpm-manager.c:1377
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "Žemas prijungto kompiuterio baterijos įkrovos lygis (%.0f%%)"
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
-#: ../src/gpm-manager.c:1433
+#: ../src/gpm-manager.c:1425
 msgid "Battery critically low"
 msgstr "Baterijos įkrovos lygis kritiškai žemas"
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1436 ../src/gpm-manager.c:1589
+#: ../src/gpm-manager.c:1428 ../src/gpm-manager.c:1581
 msgid "Laptop battery critically low"
 msgstr "Kritinis nešiojamojo kompiuterio baterijos įkrovos lygis"
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
-#: ../src/gpm-manager.c:1445
+#: ../src/gpm-manager.c:1437
 msgid "Plug in your AC adapter to avoid losing data."
-msgstr "Prijunkite kompiuterį prie kintamosios srovės šaltinio, idant neprarastumėte duomenų."
+msgstr ""
+"Prijunkite kompiuterį prie kintamosios srovės šaltinio, idant neprarastumėte"
+" duomenų."
+
+#. TRANSLATORS: give the user a ultimatum
+#: ../src/gpm-manager.c:1441
+#, c-format
+msgid "Computer will suspend very soon unless it is plugged in."
+msgstr ""
+"Kompiuteris labai greitai bus pristabdytas, jei nebus prijungtas prie "
+"maitinimo."
+
+#. TRANSLATORS: give the user a ultimatum
+#: ../src/gpm-manager.c:1445
+#, c-format
+msgid "Computer will hibernate very soon unless it is plugged in."
+msgstr ""
+"Kompiuteris labai greitai bus užmigdytas, jei nebus prijungtas prie "
+"maitinimo."
 
 #. TRANSLATORS: give the user a ultimatum
 #: ../src/gpm-manager.c:1449
 #, c-format
-msgid "Computer will suspend very soon unless it is plugged in."
-msgstr "Kompiuteris labai greitai bus pristabdytas, jei nebus prijungtas prie maitinimo."
-
-#. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1453
-#, c-format
-msgid "Computer will hibernate very soon unless it is plugged in."
-msgstr "Kompiuteris labai greitai bus užmigdytas, jei nebus prijungtas prie maitinimo."
-
-#. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1457
-#, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
-msgstr "Kompiuteris labai greitai išsijungs, jei nebus prijungtas prie maitinimo."
+msgstr ""
+"Kompiuteris labai greitai išsijungs, jei nebus prijungtas prie maitinimo."
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1464 ../src/gpm-manager.c:1625
+#: ../src/gpm-manager.c:1456 ../src/gpm-manager.c:1617
 msgid "UPS critically low"
 msgstr "Kritiškai mažas NMŠ energijos lygis"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1468
+#: ../src/gpm-manager.c:1460
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
-msgstr "Liko maždaug <b>%s</b> iki išsikraus nenutrūkstamo maitinimo šaltinis (%.0f%%). Norėdami išvengti duomenų praradimo, prijunkite kompiuterį prie kintamosios srovės šaltinio."
+msgstr ""
+"Liko maždaug <b>%s</b> iki išsikraus nenutrūkstamo maitinimo šaltinis "
+"(%.0f%%). Norėdami išvengti duomenų praradimo, prijunkite kompiuterį prie "
+"kintamosios srovės šaltinio."
+
+#. TRANSLATORS: the device is just going to stop working
+#: ../src/gpm-manager.c:1469
+#, c-format
+msgid ""
+"Wireless mouse is very low in power (%.0f%%). This device will soon stop "
+"functioning if not charged."
+msgstr ""
+"Belaidė pelė baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos "
+"veikti, jeigu jo neįkrausite."
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1477
 #, c-format
 msgid ""
-"Wireless mouse is very low in power (%.0f%%). This device will soon stop "
-"functioning if not charged."
-msgstr "Belaidė pelė baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos veikti, jeigu jo neįkrausite."
-
-#. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1485
-#, c-format
-msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Belaidė klaviatūra baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos veikti, jeigu jo neįkrausite."
+msgstr ""
+"Belaidė klaviatūra baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos"
+" veikti, jeigu jo neįkrausite."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1494
+#: ../src/gpm-manager.c:1486
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
 " not charged."
-msgstr "Delninukas baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos veikti, jei jo neįkrausite."
+msgstr ""
+"Delninukas baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos veikti,"
+" jei jo neįkrausite."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1504
+#: ../src/gpm-manager.c:1496
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Mobilusis telefonas baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos veikti, jei jo neįkrausite."
+msgstr ""
+"Mobilusis telefonas baigia išsikrauti (%.0f%%). Šis įrenginys netrukus "
+"nustos veikti, jei jo neįkrausite."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1514
+#: ../src/gpm-manager.c:1506
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Grotuvas baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos veikti, jei jo neįkrausite."
+msgstr ""
+"Grotuvas baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos veikti, "
+"jei jo neįkrausite."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1523
+#: ../src/gpm-manager.c:1515
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
-msgstr "Planšetinis kompiuteris baigia išsikrauti  (%.0f%%). Šis įrenginys netrukus nustos veikti, jei jo neįkrausite."
+msgstr ""
+"Planšetinis kompiuteris baigia išsikrauti  (%.0f%%). Šis įrenginys netrukus "
+"nustos veikti, jei jo neįkrausite."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1532
+#: ../src/gpm-manager.c:1524
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
-msgstr "Prijungtas kompiuteris baigia išsikrauti (%.0f%%). Šis įrenginys netrukus nustos veikti, jei jo neįkrausite."
+msgstr ""
+"Prijungtas kompiuteris baigia išsikrauti (%.0f%%). Šis įrenginys netrukus "
+"nustos veikti, jei jo neįkrausite."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1597
+#: ../src/gpm-manager.c:1589
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
-msgstr "Baterijos energijos lygis yra žemiau kritinio lygio ir kompiuteris <b>išsijungs</b>, kai baterija visiškai išsikraus."
+msgstr ""
+"Baterijos energijos lygis yra žemiau kritinio lygio ir kompiuteris "
+"<b>išsijungs</b>, kai baterija visiškai išsikraus."
 
 #. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1603
+#: ../src/gpm-manager.c:1595
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
-msgstr "Baterijos energijos lygis yra žemiau kritinio lygio ir kompiuteris bus pristabdytas.<br><b>PASTABA:</b> norint kompiuterį palaikyti pristabdymo būsenoje, pakanka nedaug energijos."
+msgstr ""
+"Baterijos energijos lygis yra žemiau kritinio lygio ir kompiuteris bus "
+"pristabdytas.<br><b>PASTABA:</b> norint kompiuterį palaikyti pristabdymo "
+"būsenoje, pakanka nedaug energijos."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1610
+#: ../src/gpm-manager.c:1602
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
-msgstr "Baterijos energijos lygis yra žemiau kritinio lygio ir šis kompiuteris bus užmigdytas."
+msgstr ""
+"Baterijos energijos lygis yra žemiau kritinio lygio ir šis kompiuteris bus "
+"užmigdytas."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1615
+#: ../src/gpm-manager.c:1607
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
-msgstr "Baterijos energijos lygis yra žemiau kritinio lygio ir šis kompiuteris bus išjungtas."
+msgstr ""
+"Baterijos energijos lygis yra žemiau kritinio lygio ir šis kompiuteris bus "
+"išjungtas."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1633
+#: ../src/gpm-manager.c:1625
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
-msgstr "NMŠ energijos lygis yra žemiau kritinio lygio ir kompiuteris <b>išsijungs</b>, kai baterija visiškai išsikraus."
+msgstr ""
+"NMŠ energijos lygis yra žemiau kritinio lygio ir kompiuteris "
+"<b>išsijungs</b>, kai baterija visiškai išsikraus."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1639
+#: ../src/gpm-manager.c:1631
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
-msgstr "NMŠ energijos lygis yra žemiau kritinio lygio ir šis kompiuteris bus užmigdytas."
+msgstr ""
+"NMŠ energijos lygis yra žemiau kritinio lygio ir šis kompiuteris bus "
+"užmigdytas."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1644
+#: ../src/gpm-manager.c:1636
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
-msgstr "NMŠ energijos lygis yra žemiau kritinio lygio ir šis kompiuteris bus išjungtas."
+msgstr ""
+"NMŠ energijos lygis yra žemiau kritinio lygio ir šis kompiuteris bus "
+"išjungtas."
 
 #: ../src/gpm-prefs.c:81
 msgid "MATE Power Preferences"
@@ -1524,7 +1696,7 @@ msgstr "Užmigdyti"
 
 #: ../src/gpm-prefs-core.c:254
 msgid "Blank screen"
-msgstr "Užtemdyti ekraną"
+msgstr "Tuščias ekranas"
 
 #: ../src/gpm-prefs-core.c:257
 msgid "Ask me"
@@ -1541,7 +1713,7 @@ msgstr "Niekada"
 #. TRANSLATORS: the rate of discharge for the device
 #: ../src/gpm-statistics.c:78 ../src/gpm-statistics.c:466
 msgid "Rate"
-msgstr "Greitis"
+msgstr "Proc"
 
 #: ../src/gpm-statistics.c:79
 msgid "Charge"
@@ -1625,43 +1797,47 @@ msgstr "Komanda"
 #. TRANSLATORS: this is when the stats time is not known
 #: ../src/gpm-statistics.c:286
 msgid "Unknown"
-msgstr "Nežinomas"
+msgstr "Nežinoma"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:290
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] "%.0f sekundė"
-msgstr[1] "%.0f sekundės"
-msgstr[2] "%.0f sekundžių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:295
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] "%.1f minutė"
-msgstr[1] "%.1f minutės"
-msgstr[2] "%.1f minučių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:300
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] "%.1f valanda"
-msgstr[1] "%.1f valandos"
-msgstr[2] "%.1f valandų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:304
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] "%.1f diena"
-msgstr[1] "%.1f dienos"
-msgstr[2] "%.1f dienų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: ../src/gpm-statistics.c:313
 msgid "Yes"
@@ -1700,9 +1876,10 @@ msgstr "Maitinimas"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d sekundė"
-msgstr[1] "%d sekundės"
-msgstr[2] "%d sekundžių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
@@ -1726,7 +1903,7 @@ msgstr "Įkraunama"
 #. TRANSLATORS: The state of the device, e.g. "Changing" or "Fully charged"
 #: ../src/gpm-statistics.c:446
 msgid "State"
-msgstr "Būsena"
+msgstr "Valstija"
 
 #: ../src/gpm-statistics.c:450
 msgid "Energy"
@@ -1915,7 +2092,7 @@ msgstr "Praėjo laiko"
 #. TRANSLATORS: this is the Y axis on the graph
 #: ../src/gpm-statistics.c:1353
 msgid "Power"
-msgstr "Energija"
+msgstr "Kelti laipsniu"
 
 #. TRANSLATORS: this is the Y axis on the graph for the whole battery device
 #. TRANSLATORS: this is the X axis on the graph for the whole battery device
@@ -1959,7 +2136,17 @@ msgstr "Autorių teisės © 2011-2018 MATE kūrėjai"
 #. * box to give credit to the translator(s).
 #: ../src/gpm-tray-icon.c:195
 msgid "translator-credits"
-msgstr "Algimantas Markevičius <margevicius.algimantas@gmail.com>\nAurimas Černius <aurisc4@gmail.com>\nRimas Kudelis <rq@akl.lt>\nŽygimantas Beručka <uid0@akl.lt>\nJustina Klingaitė <justina.klingaite@gmail.com>\nGintautas Miliauskas <gintas@akl.lt>\nTomas Kuliavas <tokul@users.sourceforge.net>\nGediminas Paulauskas <menesis@chatsubo.lt>\nMoo"
+msgstr ""
+"Vertėjai:\n"
+"Algimantas Margevičius <margevicius.algimantas@gmail.com>\n"
+"Aurimas Černius <aurisc4@gmail.com>\n"
+"Rimas Kudelis <rq@akl.lt>\n"
+"Žygimantas Beručka <uid0@akl.lt>\n"
+"Justina Klingaitė <justina.klingaite@gmail.com>\n"
+"Gintautas Miliauskas <gintas@akl.lt>\n"
+"Tomas Kuliavas <tokul@users.sourceforge.net>\n"
+"Gediminas Paulauskas <menesis@chatsubo.lt>\n"
+"Moo"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
 #: ../src/gpm-tray-icon.c:297
@@ -1991,7 +2178,9 @@ msgstr "%s įkraunama (%.1f%%)"
 msgid ""
 "Battery is fully charged.\n"
 "Provides %s laptop runtime"
-msgstr "Baterija visiškai įkrauta.\nSuteikia %s kompiuterio veikimo laiko"
+msgstr ""
+"Baterija visiškai įkrauta.\n"
+"Suteikia %s kompiuterio veikimo laiko"
 
 #. TRANSLATORS: the device is fully charged
 #: ../src/gpm-upower.c:244
@@ -2017,7 +2206,9 @@ msgstr "%s iškraunama (%.1f%%)"
 msgid ""
 "%s %s until charged (%.1f%%)\n"
 "Provides %s battery runtime"
-msgstr "%s %s iki įkrovimo (%.1f%%)\nSuteikia %s baterijos veikimo laiko"
+msgstr ""
+"%s %s iki įkrovimo (%.1f%%)\n"
+"Suteikia %s baterijos veikimo laiko"
 
 #. TRANSLATORS: device is charging, and we have a time to full and a
 #. percentage
@@ -2128,7 +2319,7 @@ msgstr "Normali"
 
 #: ../src/gpm-upower.c:425
 msgid "Poor"
-msgstr "Prasta"
+msgstr "Prastas"
 
 #: ../src/gpm-upower.c:429
 msgid "Capacity:"
@@ -2154,89 +2345,100 @@ msgstr "Krovimo greitis:"
 #: ../src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] "Kintamosios srovės adapteris"
-msgstr[1] "Kintamosios srovės adapteriai"
-msgstr[2] "Kintamosios srovės adapterių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "Nešiojamojo kompiuterio baterija"
-msgstr[1] "Nešiojamojo kompiuterio baterijos"
-msgstr[2] "Nešiojamojo kompiuterio baterijų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] "Nenutrūkstamo maitinimo šaltinis"
-msgstr[1] "Nenutrūkstamo maitinimo šaltiniai"
-msgstr[2] "Nenutrūkstamo maitinimo šaltiniai"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] "Monitorius"
-msgstr[1] "Monitoriai"
-msgstr[2] "Monitorių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] "Pelė"
-msgstr[1] "Pelės"
-msgstr[2] "Pelių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: wireless keyboard with internal battery
 #: ../src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] "Klaviatūra"
-msgstr[1] "Klaviatūros"
-msgstr[2] "Klaviatūrų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: portable device
 #: ../src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] "Delninukas"
-msgstr[1] "Delninukai"
-msgstr[2] "Delninukų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: cell phone (mobile...)
 #: ../src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] "Mobilusis telefonas"
-msgstr[1] "Mobilieji telefonai"
-msgstr[2] "Mobiliųjų telefonų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: media player, mp3 etc
 #: ../src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] "Grotuvas"
-msgstr[1] "Grotuvai"
-msgstr[2] "Grotuvų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "Planšetinis kompiuteris"
-msgstr[1] "Planšetiniai kompiuteriai"
-msgstr[2] "Planšetinių kompiuterių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] "Kompiuteris"
-msgstr[1] "Kompiuteriai"
-msgstr[2] "Kompiuterių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:594
