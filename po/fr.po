@@ -1,21 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Charles Monzat <superboa@hotmail.fr>, 2017
-# Étienne Deparis <etienne@depar.is>, 2015-2016,2018
-# mauron, 2013
-# mauron, 2012
-# yoplait <yoplait@tememe.org>, 2015
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 22:24+0300\n"
-"PO-Revision-Date: 2018-01-11 15:08+0000\n"
-"Last-Translator: Étienne Deparis <etienne@depar.is>\n"
-"Language-Team: French (http://www.transifex.com/mate/MATE/language/fr/)\n"
+"POT-Creation-Date: 2018-03-17 15:02+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Charles Monzat <superboa@hotmail.fr>, 2018\n"
+"Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,7 +27,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "Ajuste la luminosité de l'écran du portable."
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:329
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Cannot connect to mate-power-manager"
 msgstr "Impossible de se connecter à mate-power-manager."
 
@@ -45,46 +41,59 @@ msgid "LCD brightness : %d%%"
 msgstr "Luminosité LCD : %d %%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:403
+#: ../applets/inhibit/inhibit-applet.c:374
 msgid "Licensed under the GNU General Public License Version 2"
-msgstr "Distribué sous les termes de la Licence Publique Générale GNU Version 2"
+msgstr ""
+"Distribué sous les termes de la Licence Publique Générale GNU Version 2"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:404
+#: ../applets/inhibit/inhibit-applet.c:375
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
 "as published by the Free Software Foundation; either version 2\n"
 "of the License, or (at your option) any later version."
-msgstr "Le gestionnaire d'énergie MATE est un logiciel libre ; vous pouvez le\ndistribuer et/ou le modifier sous les termes de la Licence Publique\nGénérale GNU tel que publiée par la Free Software Foundation ; soit la\nversion 2 de la licence, ou (à votre discrétion), toutes versions ultérieures."
+msgstr ""
+"Le gestionnaire d'énergie MATE est un logiciel libre ; vous pouvez le\n"
+"distribuer et/ou le modifier sous les termes de la Licence Publique\n"
+"Générale GNU tel que publiée par la Free Software Foundation ; soit la\n"
+"version 2 de la licence, ou (à votre discrétion), toutes versions ultérieures."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:408
+#: ../applets/inhibit/inhibit-applet.c:379
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
 "GNU General Public License for more details."
-msgstr "Le gestionnaire d'énergie MATE est distribué dans l'espoir qu'il puisse\nêtre utile mais SANS AUCUNE GARANTIE ; sans même une garantie implicite de\nVALEUR MARCHANDE ou d'ADÉQUATION À UN BESOIN PARTICULIER. Voir la Licence\nPublique Générale GNU pour plus d'informations."
+msgstr ""
+"Le gestionnaire d'énergie MATE est distribué dans l'espoir qu'il puisse\n"
+"être utile mais SANS AUCUNE GARANTIE ; sans même une garantie implicite de\n"
+"VALEUR MARCHANDE ou d'ADÉQUATION À UN BESOIN PARTICULIER. Voir la Licence\n"
+"Publique Générale GNU pour plus d'informations."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:412
+#: ../applets/inhibit/inhibit-applet.c:383
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
-msgstr "Vous devriez avoir reçu une copie de la Licence Publique Générale GNU\navec ce programme ; si ce n'est pas le cas, écrivez à la\nFree Software Foundation, Inc., 51 Franklin Street, Fifth Floor,\nBoston, MA 02110-1301 USA."
+msgstr ""
+"Vous devriez avoir reçu une copie de la Licence Publique Générale GNU\n"
+"avec ce programme ; si ce n'est pas le cas, écrivez à la\n"
+"Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,\n"
+"Boston, MA 02110-1301 USA."
 
 #: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:638
+#: ../applets/inhibit/inhibit-applet.c:610
 msgid "_About"
-msgstr "À _propos"
+msgstr "_À propos"
 
 #: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:641
+#: ../applets/inhibit/inhibit-applet.c:613
 msgid "_Help"
-msgstr "Aid_e"
+msgstr "_Aide"
 
 #: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:1
 msgid "Brightness Applet Factory"
@@ -102,23 +111,23 @@ msgstr "Applet de luminosité"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Ajuste la luminosité de l'écran du portable."
 
-#: ../applets/inhibit/inhibit-applet.c:92
+#: ../applets/inhibit/inhibit-applet.c:93
 msgid "Power Manager Inhibit Applet"
 msgstr "Applet d'inhibition du gestionnaire d'énergie"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:94
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Permet à l'utilisateur d'inhiber l'économie d'énergie automatique."
 
-#: ../applets/inhibit/inhibit-applet.c:332
+#: ../applets/inhibit/inhibit-applet.c:303
 msgid "Automatic sleep inhibited"
 msgstr "Mise en veille automatique inhibée"
 
-#: ../applets/inhibit/inhibit-applet.c:334
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid "Automatic sleep enabled"
 msgstr "Mise en veille automatique activée"
 
-#: ../applets/inhibit/inhibit-applet.c:362
+#: ../applets/inhibit/inhibit-applet.c:333
 msgid "Manual inhibit"
 msgstr "Inhibition manuelle"
 
@@ -148,12 +157,16 @@ msgstr "Moniteur du gestionnaire d'énergie"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:1
 msgid "Whether to hibernate, suspend or do nothing when inactive"
-msgstr "Indique s'il faut hiberner, mettre en veille ou ne rien faire en cas d'inactivité"
+msgstr ""
+"Indique s'il faut hiberner, mettre en veille ou ne rien faire en cas "
+"d'inactivité"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:2
 msgid ""
 "The type of sleeping that should be performed when the computer is inactive."
-msgstr "Le type de mise en veille qui doit être effectué lorsque l'ordinateur est inactif."
+msgstr ""
+"Le type de mise en veille qui doit être effectué lorsque l'ordinateur est "
+"inactif."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:3
 msgid "Battery critical low action"
@@ -161,20 +174,28 @@ msgstr "Action sur un niveau critique de la batterie"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:4
 msgid "The action to take when the battery is critically low."
-msgstr "L'action à effectuer lorsque le niveau de la batterie est critiquement faible."
+msgstr ""
+"L'action à effectuer lorsque le niveau de la batterie est critiquement "
+"faible."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:5
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
-msgstr "Indique si l'événement batterie doit survenir quand l'écran du portable est rabattu et l'alimentation déconnectée"
+msgstr ""
+"Indique si l'événement batterie doit survenir quand l'écran du portable est "
+"rabattu et l'alimentation déconnectée"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:6
 msgid ""
 "If the battery lid close event should occur (for example 'Suspend when lid "
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
-msgstr "Indique si l'événement « batterie avec écran rabattu » doit survenir (par exemple « Mise en veille avec écran rabattu et sur batterie ») alors que l'écran été rabattu dans un premier temps puis l'alimentation secteur débranchée par la suite."
+msgstr ""
+"Indique si l'événement « batterie avec écran rabattu » doit survenir (par "
+"exemple « Mise en veille avec écran rabattu et sur batterie ») alors que "
+"l'écran été rabattu dans un premier temps puis l'alimentation secteur "
+"débranchée par la suite."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:7
 msgid "UPS critical low action"
@@ -182,7 +203,9 @@ msgstr "Action sur un niveau critique de l'onduleur"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:8
 msgid "The action to take when the UPS is critically low."
-msgstr "L'action à effectuer lorsque le niveau de l'onduleur est critiquement faible."
+msgstr ""
+"L'action à effectuer lorsque le niveau de l'onduleur est critiquement "
+"faible."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:9
 msgid "UPS low power action"
@@ -200,7 +223,9 @@ msgstr "Autorise les ajustements de la luminosité du rétro-éclairage"
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
-msgstr "Indique si la luminosité de l'écran doit être modifiée lors d'un basculement entre l'alimentation secteur et la batterie."
+msgstr ""
+"Indique si la luminosité de l'écran doit être modifiée lors d'un basculement"
+" entre l'alimentation secteur et la batterie."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:13
 msgid "Reduce the backlight brightness when on battery power"
@@ -210,7 +235,9 @@ msgstr "Réduire la luminosité du rétro-éclairage sur batterie"
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
-msgstr "Indique si la luminosité de l'écran doit être atténuée quand l'ordinateur est branché sur batterie."
+msgstr ""
+"Indique si la luminosité de l'écran doit être atténuée quand l'ordinateur "
+"est branché sur batterie."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:15
 msgid "Reduce the keyboard backlight when on battery power"
@@ -220,7 +247,9 @@ msgstr "Réduire la luminosité du rétro-éclairage sur batterie"
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
-msgstr "Indique si le rétro-éclairage du clavier doit être réduit quand l'ordinateur est sur batterie."
+msgstr ""
+"Indique si le rétro-éclairage du clavier doit être réduit quand l'ordinateur"
+" est sur batterie."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:17
 msgid "Keyboard backlight brightness when on AC power."
@@ -230,7 +259,9 @@ msgstr "Luminosité du rétro-éclairage du clavier branché sur secteur."
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
-msgstr "Pourcentage de luminosité du rétro-éclairage du clavier quand l'ordinateur est branché sur secteur. Doit être compris entre 0 et 100."
+msgstr ""
+"Pourcentage de luminosité du rétro-éclairage du clavier quand l'ordinateur "
+"est branché sur secteur. Doit être compris entre 0 et 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:19
 msgid "Percent to reduce keyboard backlight by when on battery power."
@@ -242,11 +273,15 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
-msgstr "Le pourcentage de réduction du rétro-éclairage du clavier sur secteur. Par exemple, si il est fixé à '60', le rétro-éclairage sera de 40% sur batterie. Doit être compris entre 0 et 100."
+msgstr ""
+"Le pourcentage de réduction du rétro-éclairage du clavier sur secteur. Par "
+"exemple, si il est fixé à '60', le rétro-éclairage sera de 40% sur batterie."
+" Doit être compris entre 0 et 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
-msgstr "Pourcentage de réduction de rétro-éclairage du clavier quand il est inactif."
+msgstr ""
+"Pourcentage de réduction de rétro-éclairage du clavier quand il est inactif."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:24
 #, no-c-format
@@ -254,7 +289,10 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
-msgstr "Le pourcentage de réduction du rétro-éclairage du clavier quand il est inactif. Par exemple, si il est fixé à '60', le rétro-éclairage sera de 40% quand il est inactif. Doit être compris entre 0 et 100."
+msgstr ""
+"Le pourcentage de réduction du rétro-éclairage du clavier quand il est "
+"inactif. Par exemple, si il est fixé à '60', le rétro-éclairage sera de 40% "
+"quand il est inactif. Doit être compris entre 0 et 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:25
 msgid "The brightness of the screen when idle"
@@ -264,25 +302,34 @@ msgstr "Luminosité de l'écran en cas d'inactivité"
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
-msgstr "Luminosité de l'écran utilisée quand la session est inactive. Uniquement valide quand use_time_for_policy est activé."
+msgstr ""
+"Luminosité de l'écran utilisée quand la session est inactive. Uniquement "
+"valide quand use_time_for_policy est activé."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:27
 msgid "Dim the screen after a period of inactivity when on battery power"
-msgstr "Atténue la luminosité de l'écran après une période d'inactivité sur batterie"
+msgstr ""
+"Atténue la luminosité de l'écran après une période d'inactivité sur batterie"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:28
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
-msgstr "Indique si la luminosité de l'écran doit être atténuée afin d'économiser l'énergie quand l'ordinateur est inactif et sur batterie."
+msgstr ""
+"Indique si la luminosité de l'écran doit être atténuée afin d'économiser "
+"l'énergie quand l'ordinateur est inactif et sur batterie."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:29
 msgid "The default amount of time to dim the screen after idle"
-msgstr "La durée par défaut avant d'atténuer la luminosité de l'écran en cas d'inactivité"
+msgstr ""
+"La durée par défaut avant d'atténuer la luminosité de l'écran en cas "
+"d'inactivité"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:30
 msgid "The default amount of time to dim the screen after idle."
-msgstr "La durée par défaut avant d'atténuer la luminosité de l'écran en cas d'inactivité."
+msgstr ""
+"La durée par défaut avant d'atténuer la luminosité de l'écran en cas "
+"d'inactivité."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:31
 msgid "LCD dimming amount when on battery"
@@ -292,17 +339,22 @@ msgstr "Quantité de réduction de luminosité de l'écran sur batterie"
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
-msgstr "Quantité de réduction de luminosité de l'affichage quand l'ordinateur est sur batterie. Les valeurs doivent être comprises entre 0 et 100."
+msgstr ""
+"Quantité de réduction de luminosité de l'affichage quand l'ordinateur est "
+"sur batterie. Les valeurs doivent être comprises entre 0 et 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:33
 msgid "Dim the screen after a period of inactivity when on AC power"
-msgstr "Atténue la luminosité de l'écran après une période d'inactivité sur secteur"
+msgstr ""
+"Atténue la luminosité de l'écran après une période d'inactivité sur secteur"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:34
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on AC power."
-msgstr "Indique si la luminosité de l'écran doit être atténuée afin d'économiser l'énergie quand l'ordinateur est inactif et sur secteur."
+msgstr ""
+"Indique si la luminosité de l'écran doit être atténuée afin d'économiser "
+"l'énergie quand l'ordinateur est inactif et sur secteur."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:35
 msgid "Method used to blank screen on AC"
@@ -328,7 +380,9 @@ msgstr "Luminosité de l'écran sur secteur"
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
-msgstr "Luminosité de l'affichage quand l'ordinateur est sur secteur. Les valeurs doivent être comprises entre 0.0 et 100.0."
+msgstr ""
+"Luminosité de l'affichage quand l'ordinateur est sur secteur. Les valeurs "
+"doivent être comprises entre 0.0 et 100.0."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:41
 msgid "Suspend button action"
@@ -336,7 +390,9 @@ msgstr "Action lors de l'appui sur le bouton de mise en veille"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:42
 msgid "The action to take when the system suspend button is pressed."
-msgstr "L'action à effectuer lors que le bouton de mise en veille du système est actionné."
+msgstr ""
+"L'action à effectuer lors que le bouton de mise en veille du système est "
+"actionné."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:43
 msgid "Hibernate button action"
@@ -344,7 +400,9 @@ msgstr "Action sur appui du bouton d'hibernation"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:44
 msgid "The action to take when the system hibernate button is pressed."
-msgstr "L'action à effectuer lorsque le bouton d'hibernation du système est actionné."
+msgstr ""
+"L'action à effectuer lorsque le bouton d'hibernation du système est "
+"actionné."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:45
 msgid "Power button action"
@@ -352,7 +410,9 @@ msgstr "Action lors de l'appui sur le bouton de mise sous tension"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:46
 msgid "The action to take when the system power button is pressed."
-msgstr "L'action à effectuer lorsque le bouton de mise sous tension du système est actionné."
+msgstr ""
+"L'action à effectuer lorsque le bouton de mise sous tension du système est "
+"actionné."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:47
 msgid "Laptop lid close action on battery"
@@ -362,7 +422,9 @@ msgstr "Action quand l'écran du portable sur batterie est rabattu"
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
-msgstr "L'action à effectuer lorsque l'écran du portable est rabattu et que le fonctionnement se fait sur batteries."
+msgstr ""
+"L'action à effectuer lorsque l'écran du portable est rabattu et que le "
+"fonctionnement se fait sur batteries."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:49
 msgid "Laptop lid close action when on AC"
@@ -372,17 +434,23 @@ msgstr "Action quand l'écran du portable sur secteur est rabattu"
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
-msgstr "L'action à effectuer lorsque l'écran du portable est rabattu et que le l'alimentation se fait sur secteur."
+msgstr ""
+"L'action à effectuer lorsque l'écran du portable est rabattu et que le "
+"l'alimentation se fait sur secteur."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:51
 msgid "Whether to use time-based notifications"
-msgstr "Indique si les notifications basées sur le temps doivent être utilisées"
+msgstr ""
+"Indique si les notifications basées sur le temps doivent être utilisées"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:52
 msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
-msgstr "Indique s'il faut utiliser des notifications basées sur le temps. À défaut, la variation en pourcentage sera utilisée. Cela peut permettre de corriger le fonctionnement de certains BIOS ACPI défectueux."
+msgstr ""
+"Indique s'il faut utiliser des notifications basées sur le temps. À défaut, "
+"la variation en pourcentage sera utilisée. Cela peut permettre de corriger "
+"le fonctionnement de certains BIOS ACPI défectueux."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:53
 msgid "Check CPU load before sleeping"
@@ -390,17 +458,23 @@ msgstr "Contrôle la charge du processeur avant la mise en veille"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:54
 msgid "If the CPU load should be checked before doing the idle action."
-msgstr "Indique si la charge du processeur doit être contrôlée avant d'effectuer l'action définie en cas d'inactivité."
+msgstr ""
+"Indique si la charge du processeur doit être contrôlée avant d'effectuer "
+"l'action définie en cas d'inactivité."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:55
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
-msgstr "Indique si NetworkManager doit être connecté et déconnecté sur une mise en veille."
+msgstr ""
+"Indique si NetworkManager doit être connecté et déconnecté sur une mise en "
+"veille."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:56
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
-msgstr "Indique si NetworkManager doit être déconnecté avant la mise en veille ou l'hibernation puis connecté au réveil."
+msgstr ""
+"Indique si NetworkManager doit être déconnecté avant la mise en veille ou "
+"l'hibernation puis connecté au réveil."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:57
 msgid "Use mate-screensaver lock setting"
@@ -410,7 +484,10 @@ msgstr "Utiliser les paramètres de verrouillage de l'économiseur d'écran"
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
-msgstr "Indique si les préférences de l'économiseur d'écran doivent être utilisées pour verrouiller l'écran suite à une hibernation, une mise en veille ou une extinction de l'écran."
+msgstr ""
+"Indique si les préférences de l'économiseur d'écran doivent être utilisées "
+"pour verrouiller l'écran suite à une hibernation, une mise en veille ou une "
+"extinction de l'écran."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:59
 msgid "Lock screen when blanked"
@@ -420,7 +497,9 @@ msgstr "Verrouille l'écran lors de son extinction"
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
-msgstr "Indique si l'écran doit être verrouillé à l'extinction. Uniquement utilisé si lock_use_screensaver_settings est désactivé."
+msgstr ""
+"Indique si l'écran doit être verrouillé à l'extinction. Uniquement utilisé "
+"si lock_use_screensaver_settings est désactivé."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:61
 msgid "Lock screen on suspend"
@@ -430,7 +509,9 @@ msgstr "Verrouille l'écran lors de la mise en veille"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
-msgstr "Indique si l'écran doit être verrouillé lorsque l'ordinateur sort d'une mise en veille. Uniquement utilisé si lock-use-screensaver est désactivé."
+msgstr ""
+"Indique si l'écran doit être verrouillé lorsque l'ordinateur sort d'une mise"
+" en veille. Uniquement utilisé si lock-use-screensaver est désactivé."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:63
 msgid "Lock screen on hibernate"
@@ -440,7 +521,9 @@ msgstr "Verrouille l'écran lors de l'hibernation"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
-msgstr "Indique si l'écran doit être verrouillé lorsque l'ordinateur sort de l'hibernation. Uniquement utilisé si lock-use-screensaver est désactivé."
+msgstr ""
+"Indique si l'écran doit être verrouillé lorsque l'ordinateur sort de "
+"l'hibernation. Uniquement utilisé si lock-use-screensaver est désactivé."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:65
 msgid "Lock GNOME keyring on sleep"
@@ -450,21 +533,30 @@ msgstr "Verrouille le trousseau de clef GNOME en veille."
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
-msgstr "Indique si le trousseau de clé GNOME est verrouillé avant la mise en veille de l'ordinateur. Cela signifie que le trousseau devra être déverrouillé au réveil."
+msgstr ""
+"Indique si le trousseau de clé GNOME est verrouillé avant la mise en veille "
+"de l'ordinateur. Cela signifie que le trousseau devra être déverrouillé au "
+"réveil."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:67
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
-msgstr "Indique si le trousseau de clef GNOME est verrouillé avant l'hibernation de l'ordinateur. Cela signifie qu'il devra être déverrouillé au réveil."
+msgstr ""
+"Indique si le trousseau de clef GNOME est verrouillé avant l'hibernation de "
+"l'ordinateur. Cela signifie qu'il devra être déverrouillé au réveil."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:68
 msgid "If we should show the low capacity warning for a broken battery"
-msgstr "Indique s'il faut afficher l'avertissement de faible capacité à l'utilisation d'une batterie défectueuse"
+msgstr ""
+"Indique s'il faut afficher l'avertissement de faible capacité à "
+"l'utilisation d'une batterie défectueuse"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:69
 msgid "If we should show the low capacity warning for a broken battery."
-msgstr "Indique s'il faut afficher l'avertissement de faible capacité à l'utilisation d'une batterie défectueuse."
+msgstr ""
+"Indique s'il faut afficher l'avertissement de faible capacité à "
+"l'utilisation d'une batterie défectueuse."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:70
 msgid "Notify when AC adapter is disconnected"
@@ -472,7 +564,9 @@ msgstr "Avertir si l'adaptateur secteur est débranché"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:71
 msgid "If the user should be notified when the AC adapter is disconnected."
-msgstr "Indique si l'utilisateur doit être averti quand l'adaptateur secteur est débranché."
+msgstr ""
+"Indique si l'utilisateur doit être averti quand l'adaptateur secteur est "
+"débranché."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:72
 msgid "Notify when fully charged"
@@ -482,7 +576,9 @@ msgstr "Avertir si la batterie est complètement rechargée"
 msgid ""
 "If a notification message should be displayed when the battery is fully "
 "charged."
-msgstr "Indique si un message de notification doit être affiché quand la batterie est complètement rechargée."
+msgstr ""
+"Indique si un message de notification doit être affiché quand la batterie "
+"est complètement rechargée."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:74
 msgid "Notify on a sleep failure"
@@ -492,7 +588,9 @@ msgstr "Avertir en cas d'échec de la mise en veille"
 msgid ""
 "If a notification message should be displayed after suspend or hibernate "
 "failed."
-msgstr "Indique si un message de notification doit être affiché suite à un échec de l'hibernation ou de la mise en veille."
+msgstr ""
+"Indique si un message de notification doit être affiché suite à un échec de "
+"l'hibernation ou de la mise en veille."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:76
 msgid "The URI to show to the user on sleep failure"
@@ -502,7 +600,10 @@ msgstr "L'URI affiché pour l'utilisateur en cas d'échec de mise en veille"
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
-msgstr "Lorsque l'hibernation échoue, il est possible d'afficher un bouton pour aider l'utilisateur à résoudre le problème. Laisser vide si le bouton ne doit pas être affiché."
+msgstr ""
+"Lorsque l'hibernation échoue, il est possible d'afficher un bouton pour "
+"aider l'utilisateur à résoudre le problème. Laisser vide si le bouton ne "
+"doit pas être affiché."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:78
 msgid "Notify on a low power"
@@ -512,16 +613,21 @@ msgstr "Avertir si l'alimentation est faible"
 msgid ""
 "If a notification message should be displayed when the battery is getting "
 "low."
-msgstr "Indique si un message de notification doit être affiché quand la batterie est faible."
+msgstr ""
+"Indique si un message de notification doit être affiché quand la batterie "
+"est faible."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:80
 msgid "Whether we should show the history data points"
-msgstr "Indique si les points de données de l'historique doivent être affichés"
+msgstr ""
+"Indique si les points de données de l'historique doivent être affichés"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:81
 msgid ""
 "Whether we should show the history data points in the statistics window."
-msgstr "Indique si les points de données de l'historique doivent être affichés dans la fenêtre des statistiques."
+msgstr ""
+"Indique si les points de données de l'historique doivent être affichés dans "
+"la fenêtre des statistiques."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:82
 msgid "Whether we should smooth the history data"
@@ -529,7 +635,9 @@ msgstr "Indique si les données de l'historique doivent être lissées"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:83
 msgid "Whether we should smooth the history data in the graph."
-msgstr "Indique si les données de l'historique doivent être lissées sur le graphique."
+msgstr ""
+"Indique si les données de l'historique doivent être lissées sur le "
+"graphique."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:84
 msgid "The default graph type to show for history"
@@ -537,7 +645,8 @@ msgstr "Le type de graphique par défaut à afficher pour l'historique"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:85
 msgid "The default graph type to show in the history window."
-msgstr "Le type de graphique par défaut à afficher dans la fenêtre de l'historique."
+msgstr ""
+"Le type de graphique par défaut à afficher dans la fenêtre de l'historique."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:86
 msgid "The maximum time displayed for history"
@@ -546,15 +655,20 @@ msgstr "Durée maximale affichée sur l'historique"
 #: ../data/org.mate.power-manager.gschema.xml.in.h:87
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
-msgstr "Durée maximale affichée sur l'axe des abscisses du graphique de l'historique."
+msgstr ""
+"Durée maximale affichée sur l'axe des abscisses du graphique de "
+"l'historique."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:88
 msgid "Whether we should show the stats data points"
-msgstr "Indique si les points de données des statistiques doivent être affichés"
+msgstr ""
+"Indique si les points de données des statistiques doivent être affichés"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:89
 msgid "Whether we should show the stats data points in the statistics window."
-msgstr "Indique si les points de données des statistiques doivent être affichés dans la fenêtre des statistiques."
+msgstr ""
+"Indique si les points de données des statistiques doivent être affichés dans"
+" la fenêtre des statistiques."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:90
 msgid "Whether we should smooth the stats data"
@@ -562,7 +676,9 @@ msgstr "Indique si les données de statistiques doivent être lissées"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:91
 msgid "Whether we should smooth the stats data in the graph."
-msgstr "Indique si les données de statistiques doivent être lissées sur le graphique."
+msgstr ""
+"Indique si les données de statistiques doivent être lissées sur le "
+"graphique."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:92
 msgid "The default graph type to show for stats"
@@ -570,7 +686,8 @@ msgstr "Le type de graphique par défaut à afficher pour les statistiques"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:93
 msgid "The default graph type to show in the stats window."
-msgstr "Le type de graphique par défaut à afficher dans la fenêtre des statistiques."
+msgstr ""
+"Le type de graphique par défaut à afficher dans la fenêtre des statistiques."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:94
 msgid "The index of the page number to show by default"
@@ -580,7 +697,9 @@ msgstr "L'indice du numéro de page à afficher par défaut"
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
-msgstr "L'indice du numéro de page à afficher par défaut qui est utilisé pour redonner le focus à la bonne page."
+msgstr ""
+"L'indice du numéro de page à afficher par défaut qui est utilisé pour "
+"redonner le focus à la bonne page."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
@@ -590,7 +709,9 @@ msgstr "L'ID du dernier périphérique sélectionné"
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
-msgstr "L'identifiant du dernier périphérique qui est utilisé pour redonner le focus vers le bon périphérique."
+msgstr ""
+"L'identifiant du dernier périphérique qui est utilisé pour redonner le focus"
+" vers le bon périphérique."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:98
 msgid "Percentage considered low"
@@ -600,7 +721,9 @@ msgstr "Pourcentage considéré comme faible"
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
-msgstr "Pourcentage de la batterie considéré comme « faible ». Valide uniquement quand use-time-for-policy est désactivé."
+msgstr ""
+"Pourcentage de la batterie considéré comme « faible ». Valide uniquement "
+"quand use-time-for-policy est désactivé."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:100
 msgid "Percentage considered critical"
@@ -610,7 +733,9 @@ msgstr "Pourcentage considéré comme critique"
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
-msgstr "Pourcentage de la batterie considéré comme « critique ». Valide uniquement quand use-time-for-policy est désactivé."
+msgstr ""
+"Pourcentage de la batterie considéré comme « critique ». Valide uniquement "
+"quand use-time-for-policy est désactivé."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:102
 msgid "Percentage action is taken"
@@ -620,7 +745,9 @@ msgstr "Pourcentage où l'action est effectuée"
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
-msgstr "Pourcentage de la batterie au-dessous duquel l'action critique est effectuée. Valide uniquement quand use-time-for-policy est désactivé."
+msgstr ""
+"Pourcentage de la batterie au-dessous duquel l'action critique est "
+"effectuée. Valide uniquement quand use-time-for-policy est désactivé."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:104
 msgid "The time remaining when low"
@@ -630,7 +757,9 @@ msgstr "Le temps restant quand faible"
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
-msgstr "Temps restant en secondes sur la batterie considéré comme « faible ». Uniquement valide quand use_time_for_policy est activé."
+msgstr ""
+"Temps restant en secondes sur la batterie considéré comme « faible ». "
+"Uniquement valide quand use_time_for_policy est activé."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:106
 msgid "The time remaining when critical"
@@ -640,7 +769,9 @@ msgstr "Le temps restant quand critique"
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
-msgstr "Temps restant en secondes sur la batterie considéré comme « critique ». Uniquement valide quand use_time_for_policy est activé."
+msgstr ""
+"Temps restant en secondes sur la batterie considéré comme « critique ». "
+"Uniquement valide quand use_time_for_policy est activé."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:108
 msgid "The time remaining when action is taken"
@@ -650,7 +781,10 @@ msgstr "Le temps restant quand l'action est effectuée"
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
-msgstr "Temps restant en secondes sur la batterie au-dessous duquel l'action critique est effectuée. Uniquement valide quand use_time_for_policy est activé."
+msgstr ""
+"Temps restant en secondes sur la batterie au-dessous duquel l'action "
+"critique est effectuée. Uniquement valide quand use_time_for_policy est "
+"activé."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:110
 msgid "Sleep timeout computer when on battery"
@@ -660,57 +794,79 @@ msgstr "Temps avant mise en veille de l'ordinateur sur batterie"
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before it goes to sleep."
-msgstr "Nombre de secondes d'inactivité avant que l'ordinateur ne soit mis en veille quand il est branché sur batterie."
+msgstr ""
+"Nombre de secondes d'inactivité avant que l'ordinateur ne soit mis en veille"
+" quand il est branché sur batterie."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:112
 msgid "Sleep timeout computer when on AC"
-msgstr "Temps avant mise en veille de l'ordinateur lorsque l'alimentation provient du secteur"
+msgstr ""
+"Temps avant mise en veille de l'ordinateur lorsque l'alimentation provient "
+"du secteur"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:113
 msgid ""
 "The amount of time in seconds the computer on AC power needs to be inactive "
 "before it goes to sleep."
-msgstr "Nombre de secondes d'inactivité avant que l'ordinateur ne soit mis en veille quand il est branché sur secteur."
+msgstr ""
+"Nombre de secondes d'inactivité avant que l'ordinateur ne soit mis en veille"
+" quand il est branché sur secteur."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:114
 msgid "Sleep timeout computer when on UPS"
-msgstr "Temps avant mise en veille de l'ordinateur lorsque l'alimentation provient d'un onduleur"
+msgstr ""
+"Temps avant mise en veille de l'ordinateur lorsque l'alimentation provient "
+"d'un onduleur"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:115
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before it goes to sleep."
-msgstr "Nombre de secondes d'inactivité avant que l'ordinateur ne soit mis en hibernation quand il est alimenté par un onduleur."
+msgstr ""
+"Nombre de secondes d'inactivité avant que l'ordinateur ne soit mis en "
+"hibernation quand il est alimenté par un onduleur."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:116
 msgid "Sleep timeout display when on AC"
-msgstr "Délai d'attente avant mise en veille de l'écran lorsque l'alimentation provient du secteur"
+msgstr ""
+"Délai d'attente avant mise en veille de l'écran lorsque l'alimentation "
+"provient du secteur"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:117
 msgid ""
 "The amount of time in seconds before the display goes to sleep when the "
 "computer is on AC power."
-msgstr "Nombre de secondes d'inactivité avant que l'écran ne soit mis en veille quand l'ordinateur est branché sur secteur."
+msgstr ""
+"Nombre de secondes d'inactivité avant que l'écran ne soit mis en veille "
+"quand l'ordinateur est branché sur secteur."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:118
 msgid "Sleep timeout display when on battery"
-msgstr "Délai d'attente avant de mettre en veille l'écran lorsque l'alimentation provient de batteries"
+msgstr ""
+"Délai d'attente avant de mettre en veille l'écran lorsque l'alimentation "
+"provient de batteries"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:119
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
-msgstr "Nombre de secondes d'inactivité avant que l'écran ne soit mis en veille quand l'ordinateur est branché sur batterie."
+msgstr ""
+"Nombre de secondes d'inactivité avant que l'écran ne soit mis en veille "
+"quand l'ordinateur est branché sur batterie."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:120
 msgid "Sleep timeout display when on UPS"
-msgstr "Délai d'attente avant de mettre en veille l'écran lorsque l'alimentation provient d'un onduleur"
+msgstr ""
+"Délai d'attente avant de mettre en veille l'écran lorsque l'alimentation "
+"provient d'un onduleur"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:121
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before the display goes to sleep."
-msgstr "Nombre de secondes d'inactivité avant que l'écran ne soit mis en veille quand l'ordinateur est alimenté par un onduleur."
+msgstr ""
+"Nombre de secondes d'inactivité avant que l'écran ne soit mis en veille "
+"quand l'ordinateur est alimenté par un onduleur."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:122
 msgid "If sounds should be used"
@@ -720,12 +876,17 @@ msgstr "Indique si des sons doivent être émis"
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
-msgstr "Indique si des sons doivent être émis quand l'alimentation est faible, ou quand les requêtes d'inhibition ont empêché une action de la politique énergétique."
+msgstr ""
+"Indique si des sons doivent être émis quand l'alimentation est faible, ou "
+"quand les requêtes d'inhibition ont empêché une action de la politique "
+"énergétique."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:124
 msgid ""
 "If preferences and statistics items should be shown in the context menu"
-msgstr "Indique si les préférences et statistiques doivent être affichées dans le menu contextuel"
+msgstr ""
+"Indique si les préférences et statistiques doivent être affichées dans le "
+"menu contextuel"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:125
 msgid "When to show the notification icon"
@@ -905,7 +1066,7 @@ msgstr "Fournit de l'aide sur ce programme"
 
 #: ../data/gpm-prefs.ui.h:26
 msgid "Make Default"
-msgstr "Définir par défaut"
+msgstr "Définir comme valeur par défaut"
 
 #: ../data/gpm-prefs.ui.h:27
 msgid "Sets this policy to be used by all users"
@@ -958,7 +1119,7 @@ msgstr "Impossible d'obtenir la valeur maximale du rétroéclairage"
 #. TRANSLATORS: only able to install profiles as root
 #: ../src/gpm-backlight-helper.c:247
 msgid "This program can only be used by the root user"
-msgstr "Ce programme ne peut être utilisé que par l'utilisateur root"
+msgstr "Ce programme ne peut être utilisé que par l'utilisateur root"
 
 #. TRANSLATORS: the program must never be directly run
 #: ../src/gpm-backlight-helper.c:256
@@ -1139,50 +1300,50 @@ msgid "Suspend failed"
 msgstr "Échec de la mise en veille"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:587
+#: ../src/gpm-manager.c:579
 msgid "Computer failed to suspend."
 msgstr "L'ordinateur n'a pas réussi à se mettre en veille."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:589
+#: ../src/gpm-manager.c:581
 msgid "Failed to suspend"
 msgstr "Échec de mise en veille"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:593
+#: ../src/gpm-manager.c:585
 msgid "Computer failed to hibernate."
 msgstr "L'ordinateur n'a pas réussi à hiberner."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:595
+#: ../src/gpm-manager.c:587
 msgid "Failed to hibernate"
 msgstr "Échec de mise en hibernation"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:600
+#: ../src/gpm-manager.c:592
 msgid "Failure was reported as:"
 msgstr "L'erreur a été signalée comme :"
 
 #. TRANSLATORS: button text, visit the suspend help website
-#: ../src/gpm-manager.c:613
+#: ../src/gpm-manager.c:605
 msgid "Visit help page"
 msgstr "Consultez la page d'aide"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:859
+#: ../src/gpm-manager.c:851
 msgid "Display DPMS activated"
 msgstr "Affichage DPMS activé"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:878
+#: ../src/gpm-manager.c:870
 msgid "On battery power"
 msgstr "Alimenté par batterie"
 
-#: ../src/gpm-manager.c:896
+#: ../src/gpm-manager.c:888
 msgid "Laptop lid is closed"
 msgstr "L'écran du portable est rabattu"
 
-#: ../src/gpm-manager.c:934
+#: ../src/gpm-manager.c:926
 msgid "Power Information"
 msgstr "Informations sur l'alimentation"
 
@@ -1190,319 +1351,357 @@ msgstr "Informations sur l'alimentation"
 #. * where capacity is the ratio of the last_full capacity with that of
 #. * the design capacity. (#326740)
 #. TRANSLATORS: battery is old or broken
-#: ../src/gpm-manager.c:1121
+#: ../src/gpm-manager.c:1113
 msgid "Battery may be broken"
 msgstr "La batterie est peut être défectueuse"
 
 #. TRANSLATORS: notify the user that that battery is broken as the capacity is
 #. very low
-#: ../src/gpm-manager.c:1124
+#: ../src/gpm-manager.c:1116
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
 " broken."
-msgstr "La batterie dispose d'une très faible capacité (%1.1f %%), celle-ci est probablement ancienne ou défectueuse."
+msgstr ""
+"La batterie dispose d'une très faible capacité (%1.1f %%), celle-ci est "
+"probablement ancienne ou défectueuse."
 
 #. TRANSLATORS: show the charged notification
-#: ../src/gpm-manager.c:1173
+#: ../src/gpm-manager.c:1165
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] "Batterie chargée"
 msgstr[1] "Batteries chargées"
 
 #. TRANSLATORS: laptop battery is now discharging
-#: ../src/gpm-manager.c:1219
+#: ../src/gpm-manager.c:1211
 msgid "Battery Discharging"
 msgstr "La batterie se décharge"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1223
+#: ../src/gpm-manager.c:1215
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr "La batterie contient encore %s d'énergie (%.0f %%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-manager.c:1226 ../src/gpm-manager.c:1238
+#: ../src/gpm-manager.c:1218 ../src/gpm-manager.c:1230
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr "%s : en décharge (%.0f %%)"
 
 #. TRANSLATORS: UPS is now discharging
-#: ../src/gpm-manager.c:1231
+#: ../src/gpm-manager.c:1223
 msgid "UPS Discharging"
 msgstr "L'onduleur se décharge"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1235
+#: ../src/gpm-manager.c:1227
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr "L'onduleur contient encore %s d'énergie (%.0f %%)"
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
-#: ../src/gpm-manager.c:1319
+#: ../src/gpm-manager.c:1311
 msgid "Battery low"
 msgstr "Batterie faible"
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
-#: ../src/gpm-manager.c:1322
+#: ../src/gpm-manager.c:1314
 msgid "Laptop battery low"
 msgstr "La batterie du portable est faible"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1328
+#: ../src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "Il reste environ <b>%s</b> d'énergie (%.0f %%)"
 
 #. TRANSLATORS: UPS is starting to get a little low
-#: ../src/gpm-manager.c:1332
+#: ../src/gpm-manager.c:1324
 msgid "UPS low"
 msgstr "L'onduleur est faible"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1336
+#: ../src/gpm-manager.c:1328
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
-msgstr "Il reste environ <b>%s</b> d'énergie de réserve sur l'onduleur (%.0f %%)."
+msgstr ""
+"Il reste environ <b>%s</b> d'énergie de réserve sur l'onduleur (%.0f %%)."
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1340 ../src/gpm-manager.c:1474
+#: ../src/gpm-manager.c:1332 ../src/gpm-manager.c:1466
 msgid "Mouse battery low"
 msgstr "La batterie de la souris est faible"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1343
+#: ../src/gpm-manager.c:1335
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr "La puissance de la souris sans fil est faible (%.0f %%)"
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1347 ../src/gpm-manager.c:1482
+#: ../src/gpm-manager.c:1339 ../src/gpm-manager.c:1474
 msgid "Keyboard battery low"
 msgstr "La batterie du clavier est faible"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1350
+#: ../src/gpm-manager.c:1342
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr "La puissance du clavier sans fil est faible (%.0f %%)"
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1354 ../src/gpm-manager.c:1491
+#: ../src/gpm-manager.c:1346 ../src/gpm-manager.c:1483
 msgid "PDA battery low"
 msgstr "La batterie de l'assistant personnel est faible"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1357
+#: ../src/gpm-manager.c:1349
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr "La puissance de l'assistant personnel est faible (%.0f %%)"
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1361 ../src/gpm-manager.c:1501
-#: ../src/gpm-manager.c:1511
+#: ../src/gpm-manager.c:1353 ../src/gpm-manager.c:1493
+#: ../src/gpm-manager.c:1503
 msgid "Cell phone battery low"
 msgstr "La batterie du téléphone portable est faible"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1364
+#: ../src/gpm-manager.c:1356
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "La puissance du téléphone portable est faible (%.0f %%)"
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1368
+#: ../src/gpm-manager.c:1360
 msgid "Media player battery low"
 msgstr "La batterie du lecteur multimédia est faible"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1371
+#: ../src/gpm-manager.c:1363
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr "La puissance de lecteur multimédia est faible (%.0f %%)"
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1375 ../src/gpm-manager.c:1520
+#: ../src/gpm-manager.c:1367 ../src/gpm-manager.c:1512
 msgid "Tablet battery low"
 msgstr "La batterie de la tablette est faible"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1378
+#: ../src/gpm-manager.c:1370
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "La puissance de la tablette est faible (%.0f %%)"
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1382 ../src/gpm-manager.c:1529
+#: ../src/gpm-manager.c:1374 ../src/gpm-manager.c:1521
 msgid "Attached computer battery low"
 msgstr "La batterie de l'ordinateur est faible"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1385
+#: ../src/gpm-manager.c:1377
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "La puissance de l'ordinateur est faible (%.0f %%)"
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
-#: ../src/gpm-manager.c:1433
+#: ../src/gpm-manager.c:1425
 msgid "Battery critically low"
 msgstr "Niveau de batterie très bas"
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1436 ../src/gpm-manager.c:1589
+#: ../src/gpm-manager.c:1428 ../src/gpm-manager.c:1581
 msgid "Laptop battery critically low"
 msgstr "Le niveau de la batterie du portable est très faible"
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
-#: ../src/gpm-manager.c:1445
+#: ../src/gpm-manager.c:1437
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr "Branchez votre adaptateur secteur pour éviter de perdre des données."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1449
+#: ../src/gpm-manager.c:1441
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
-msgstr "L'ordinateur va se mettre en veille dans peu de temps s'il n'est pas branché."
+msgstr ""
+"L'ordinateur va se mettre en veille dans peu de temps s'il n'est pas "
+"branché."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1453
+#: ../src/gpm-manager.c:1445
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
-msgstr "L'ordinateur va se mettre en hibernation dans peu de temps s'il n'est pas branché."
+msgstr ""
+"L'ordinateur va se mettre en hibernation dans peu de temps s'il n'est pas "
+"branché."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1457
+#: ../src/gpm-manager.c:1449
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr "L'ordinateur va s'éteindre dans peu de temps s'il n'est pas branché."
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1464 ../src/gpm-manager.c:1625
+#: ../src/gpm-manager.c:1456 ../src/gpm-manager.c:1617
 msgid "UPS critically low"
 msgstr "Le niveau de l'onduleur est critique"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1468
+#: ../src/gpm-manager.c:1460
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
-msgstr "Il reste environ <b>%s</b> d'énergie sur l'onduleur (%.0f %%). Rétablissez votre alimentation secteur pour éviter de perdre des données."
+msgstr ""
+"Il reste environ <b>%s</b> d'énergie sur l'onduleur (%.0f %%). Rétablissez "
+"votre alimentation secteur pour éviter de perdre des données."
+
+#. TRANSLATORS: the device is just going to stop working
+#: ../src/gpm-manager.c:1469
+#, c-format
+msgid ""
+"Wireless mouse is very low in power (%.0f%%). This device will soon stop "
+"functioning if not charged."
+msgstr ""
+"La puissance de votre souris sans fil est très faible (%.0f %%). Ce "
+"périphérique s'arrêtera de fonctionner s'il n'est pas mis en charge."
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1477
 #, c-format
 msgid ""
-"Wireless mouse is very low in power (%.0f%%). This device will soon stop "
-"functioning if not charged."
-msgstr "La puissance de votre souris sans fil est très faible (%.0f %%). Ce périphérique s'arrêtera de fonctionner s'il n'est pas mis en charge."
-
-#. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1485
-#, c-format
-msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "La puissance du clavier sans fil est très faible (%.0f %%). Ce périphérique s'arrêtera de fonctionner s'il n'est pas mis en charge."
+msgstr ""
+"La puissance du clavier sans fil est très faible (%.0f %%). Ce périphérique "
+"s'arrêtera de fonctionner s'il n'est pas mis en charge."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1494
+#: ../src/gpm-manager.c:1486
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
 " not charged."
-msgstr "La puissance de l'assistant personnel est très faible (%.0f %%). Ce périphérique s'arrêtera de fonctionner s'il n'est pas mis en charge."
+msgstr ""
+"La puissance de l'assistant personnel est très faible (%.0f %%). Ce "
+"périphérique s'arrêtera de fonctionner s'il n'est pas mis en charge."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1504
+#: ../src/gpm-manager.c:1496
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "La puissance du téléphone portable est très faible (%.0f %%). Ce périphérique s'arrêtera de fonctionner s'il n'est pas mis en charge."
+msgstr ""
+"La puissance du téléphone portable est très faible (%.0f %%). Ce "
+"périphérique s'arrêtera de fonctionner s'il n'est pas mis en charge."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1514
+#: ../src/gpm-manager.c:1506
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "La puissance du lecteur multimédia est très faible (%.0f %%). Ce périphérique s'arrêtera de fonctionner s'il n'est pas mis en charge."
+msgstr ""
+"La puissance du lecteur multimédia est très faible (%.0f %%). Ce "
+"périphérique s'arrêtera de fonctionner s'il n'est pas mis en charge."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1523
+#: ../src/gpm-manager.c:1515
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
-msgstr "La puissance de la tablette est très faible (%.0f %%). Ce périphérique s'arrêtera de fonctionner s'il n'est pas mis en charge."
+msgstr ""
+"La puissance de la tablette est très faible (%.0f %%). Ce périphérique "
+"s'arrêtera de fonctionner s'il n'est pas mis en charge."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1532
+#: ../src/gpm-manager.c:1524
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
-msgstr "La puissance de l'ordinateur est très faible (%.1f %%). Ce périphérique s'arrêtera de fonctionner s'il n'est pas mis en charge."
+msgstr ""
+"La puissance de l'ordinateur est très faible (%.1f %%). Ce périphérique "
+"s'arrêtera de fonctionner s'il n'est pas mis en charge."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1597
+#: ../src/gpm-manager.c:1589
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
-msgstr "La batterie est en dessous de son niveau critique ; l'ordinateur va <b>s'éteindre</b> quand la batterie sera complètement déchargée."
+msgstr ""
+"La batterie est en dessous de son niveau critique ; l'ordinateur va "
+"<b>s'éteindre</b> quand la batterie sera complètement déchargée."
 
 #. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1603
+#: ../src/gpm-manager.c:1595
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
-msgstr "La batterie est en dessous de son niveau critique ; l'ordinateur va <b>être mis en veille</b>.<br><b>Note :</b> une petite quantité d'énergie est requise pour maintenir l'ordinateur en état de veille."
+msgstr ""
+"La batterie est en dessous de son niveau critique ; l'ordinateur va <b>être "
+"mis en veille</b>.<br><b>Note :</b> une petite quantité d'énergie est "
+"requise pour maintenir l'ordinateur en état de veille."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1610
+#: ../src/gpm-manager.c:1602
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
-msgstr "La batterie est en dessous de son niveau critique ; l'ordinateur va <b>hiberner</b>."
+msgstr ""
+"La batterie est en dessous de son niveau critique ; l'ordinateur va "
+"<b>hiberner</b>."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1615
+#: ../src/gpm-manager.c:1607
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
-msgstr "La batterie est en dessous de son niveau critique ; l'ordinateur va <b>s'éteindre</b>."
+msgstr ""
+"La batterie est en dessous de son niveau critique ; l'ordinateur va "
+"<b>s'éteindre</b>."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1633
+#: ../src/gpm-manager.c:1625
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
-msgstr "L'onduleur est en dessous de son niveau critique ; l'ordinateur va <b>s'éteindre</b> quand l'onduleur sera complètement déchargé."
+msgstr ""
+"L'onduleur est en dessous de son niveau critique ; l'ordinateur va "
+"<b>s'éteindre</b> quand l'onduleur sera complètement déchargé."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1639
+#: ../src/gpm-manager.c:1631
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
-msgstr "L'onduleur est en dessous de son niveau critique ; l'ordinateur va <b>hiberner</b>."
+msgstr ""
+"L'onduleur est en dessous de son niveau critique ; l'ordinateur va "
+"<b>hiberner</b>."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1644
+#: ../src/gpm-manager.c:1636
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
-msgstr "L'onduleur est en dessous de son niveau critique ; l'ordinateur va <b>s'éteindre</b>."
+msgstr ""
+"L'onduleur est en dessous de son niveau critique ; l'ordinateur va "
+"<b>s'éteindre</b>."
 
 #: ../src/gpm-prefs.c:81
 msgid "MATE Power Preferences"
@@ -1522,7 +1721,7 @@ msgstr "Hiberner"
 
 #: ../src/gpm-prefs-core.c:254
 msgid "Blank screen"
-msgstr "Éteindre l'écran"
+msgstr "Écran vide"
 
 #: ../src/gpm-prefs-core.c:257
 msgid "Ask me"
@@ -1739,7 +1938,7 @@ msgstr "Énergie (théorique)"
 
 #: ../src/gpm-statistics.c:473
 msgid "Voltage"
-msgstr "Tension"
+msgstr "tension"
 
 #. TRANSLATORS: the amount of charge the cell contains
 #: ../src/gpm-statistics.c:495
@@ -1908,7 +2107,7 @@ msgstr "Temps"
 #. TRANSLATORS: this is the Y axis on the graph
 #: ../src/gpm-statistics.c:1353
 msgid "Power"
-msgstr "Alimentation"
+msgstr "Puissance"
 
 #. TRANSLATORS: this is the Y axis on the graph for the whole battery device
 #. TRANSLATORS: this is the X axis on the graph for the whole battery device
@@ -1952,7 +2151,21 @@ msgstr "Copyright © 2011-2018 Développeurs MATE"
 #. * box to give credit to the translator(s).
 #: ../src/gpm-tray-icon.c:195
 msgid "translator-credits"
-msgstr "Crédits-traducteurs."
+msgstr ""
+"Contributeurs au projet MATE :\n"
+"Voir https://www.transifex.com/mate/teams/13566/fr/\n"
+"\n"
+"Contributeurs au projet GNOME :\n"
+"Vincent Renardias <vincent@ldsol.com>, 1998-2000.\n"
+"Joaquim Fellmann <joaquim@hrnet.fr>, 2000.\n"
+"Christophe Merlet <redfox@redfoxcenter.org>, 2000-2006.\n"
+"Christophe Fergeau <teuf@users.sourceforge.net>, 2002-2003.\n"
+"Sun G11n <gnome_int_l10n@ireland.sun.com>, 2002.\n"
+"Robert-André Mauchin <zebob.m@pengzone.org>, 2006-2008.\n"
+"Stéphane Raimbault <stephane.raimbault@gmail.com>, 2007.\n"
+"Yannick Tailliez <ytdispatch-libre@yahoo.com>, 2008.\n"
+"Claude Paroz <claude@2xlibre.net>, 2008-2010.\n"
+"Gérard Baylard <gerard dot b at bbox dot fr>, 2010"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
 #: ../src/gpm-tray-icon.c:297
@@ -1984,7 +2197,9 @@ msgstr "%s : en charge (%.1f %%)"
 msgid ""
 "Battery is fully charged.\n"
 "Provides %s laptop runtime"
-msgstr "La batterie est complètement chargée.\nElle peut fournir %s d'autonomie"
+msgstr ""
+"La batterie est complètement chargée.\n"
+"Elle peut fournir %s d'autonomie"
 
 #. TRANSLATORS: the device is fully charged
 #: ../src/gpm-upower.c:244
@@ -2010,7 +2225,9 @@ msgstr "%s : en décharge (%.1f %%)"
 msgid ""
 "%s %s until charged (%.1f%%)\n"
 "Provides %s battery runtime"
-msgstr "%s, %s avant l'état chargé (%.1f %%)\nL'autonomie est de %s"
+msgstr ""
+"%s, %s avant l'état chargé (%.1f %%)\n"
+"L'autonomie est de %s"
 
 #. TRANSLATORS: device is charging, and we have a time to full and a
 #. percentage
@@ -2121,7 +2338,7 @@ msgstr "moyenne"
 
 #: ../src/gpm-upower.c:425
 msgid "Poor"
-msgstr "faible"
+msgstr "Médiocre"
 
 #: ../src/gpm-upower.c:429
 msgid "Capacity:"
@@ -2154,8 +2371,8 @@ msgstr[1] "Adaptateurs secteur"
 #: ../src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "Batterie de l'ordinateur"
-msgstr[1] "Batteries de l'ordinateur"
+msgstr[0] "Batterie de l'ordinateur portable"
+msgstr[1] "Batteries de l'ordinateur portable"
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/gpm-upower.c:495

@@ -1,18 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# abuyop <abuyop@gmail.com>, 2013,2015-2018
-# Puretech <terjemah.puretech@gmail.com>, 2012
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 22:24+0300\n"
-"PO-Revision-Date: 2018-02-05 22:14+0000\n"
-"Last-Translator: abuyop <abuyop@gmail.com>\n"
-"Language-Team: Malay (http://www.transifex.com/mate/MATE/language/ms/)\n"
+"POT-Creation-Date: 2018-03-17 15:02+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Puretech <terjemah.puretech@gmail.com>, 2018\n"
+"Language-Team: Malay (https://www.transifex.com/mate/teams/13566/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,7 +27,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "Laras kecerahan panel komputer riba."
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:329
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Cannot connect to mate-power-manager"
 msgstr "Tidak dapat sambung ke mate-power-manager"
 
@@ -42,44 +41,56 @@ msgid "LCD brightness : %d%%"
 msgstr "Kecerahan LCD : %d%%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:403
+#: ../applets/inhibit/inhibit-applet.c:374
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "Dilesenkan dibawah GNU General Public License Versi 2"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:404
+#: ../applets/inhibit/inhibit-applet.c:375
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
 "as published by the Free Software Foundation; either version 2\n"
 "of the License, or (at your option) any later version."
-msgstr "Power Manager adalah perisian bebas; anda boleh mengedarkannya semula dan/atau\nmengubah suai di bawah syarat-syarat GNU General Public License\nseperti yang diterbitkan oleh Free Software Foundation; sama ada Lesen versi 2\natau (atas pilihan anda) mana-mana versi selepas ini."
+msgstr ""
+"Power Manager adalah perisian bebas; anda boleh mengedarkannya semula dan/atau\n"
+"mengubah suai di bawah syarat-syarat GNU General Public License\n"
+"seperti yang diterbitkan oleh Free Software Foundation; sama ada Lesen versi 2\n"
+"atau (atas pilihan anda) mana-mana versi selepas ini."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:408
+#: ../applets/inhibit/inhibit-applet.c:379
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
 "GNU General Public License for more details."
-msgstr "Power Manager diedarkan dengan harapan ia akan menjadi berguna\ntetapi TANPA SEBARANG WARANTI; tanpa jaminan yang tersirat\nKEBOLEHDAGANGAN atau KESESUAIAN UNTUK TUJUAN TERTENTU.  Lihat\nLesen Awam Am GNU untuk maklumat lanjut."
+msgstr ""
+"Power Manager diedarkan dengan harapan ia akan menjadi berguna\n"
+"tetapi TANPA SEBARANG WARANTI; tanpa jaminan yang tersirat\n"
+"KEBOLEHDAGANGAN atau KESESUAIAN UNTUK TUJUAN TERTENTU.  Lihat\n"
+"Lesen Awam Am GNU untuk maklumat lanjut."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:412
+#: ../applets/inhibit/inhibit-applet.c:383
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
-msgstr "Anda sepatutnya sudah menerima satu salinan GNU General Public License\nbersama-sama dengan program ini; jika tidak, tulis kepada Free Software\nFoundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n02110-1301, USA."
+msgstr ""
+"Anda sepatutnya sudah menerima satu salinan GNU General Public License\n"
+"bersama-sama dengan program ini; jika tidak, tulis kepada Free Software\n"
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
+"02110-1301, USA."
 
 #: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:638
+#: ../applets/inhibit/inhibit-applet.c:610
 msgid "_About"
-msgstr "_Perihal"
+msgstr "Perih_al"
 
 #: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:641
+#: ../applets/inhibit/inhibit-applet.c:613
 msgid "_Help"
 msgstr "_Bantuan"
 
@@ -99,23 +110,23 @@ msgstr "Aplet Kecerahan"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Laras kecerahan panel komputer riba"
 
-#: ../applets/inhibit/inhibit-applet.c:92
+#: ../applets/inhibit/inhibit-applet.c:93
 msgid "Power Manager Inhibit Applet"
 msgstr "Aplet Perencat Pengurus Kuasa"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:94
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Benarkan pengguna merencat penjimatan kuasa secara automatik."
 
-#: ../applets/inhibit/inhibit-applet.c:332
+#: ../applets/inhibit/inhibit-applet.c:303
 msgid "Automatic sleep inhibited"
 msgstr "Rencatkan tidur secara automatik"
 
-#: ../applets/inhibit/inhibit-applet.c:334
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid "Automatic sleep enabled"
 msgstr "Tidur automatik dibenarkan"
 
-#: ../applets/inhibit/inhibit-applet.c:362
+#: ../applets/inhibit/inhibit-applet.c:333
 msgid "Manual inhibit"
 msgstr "Rencat secara manual"
 
@@ -145,7 +156,9 @@ msgstr "Daemon pengurusan kuasa"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:1
 msgid "Whether to hibernate, suspend or do nothing when inactive"
-msgstr "Sama ada hendak berhibernasi, menangguh atau tidak berbuat apa-apa ketika tidak aktif"
+msgstr ""
+"Sama ada hendak berhibernasi, menangguh atau tidak berbuat apa-apa ketika "
+"tidak aktif"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:2
 msgid ""
@@ -164,14 +177,19 @@ msgstr "Tindakan untuk diambil bila kuasa bateri sangat rendah."
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
-msgstr "Jika peristiwa bateri patut berlaku ketika penutup ditutup dan kuasa diputuskan"
+msgstr ""
+"Jika peristiwa bateri patut berlaku ketika penutup ditutup dan kuasa "
+"diputuskan"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:6
 msgid ""
 "If the battery lid close event should occur (for example 'Suspend when lid "
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
-msgstr "Jika peristiwa penutup bateri ditutup sepatutnya berlaku (contoh 'Tangguh ketika penutup ditutup ketika menggunakan kuasa bateri') ketika penutup sebelum ini ditutup dan kuasa AC diputuskan pada masa lain."
+msgstr ""
+"Jika peristiwa penutup bateri ditutup sepatutnya berlaku (contoh 'Tangguh "
+"ketika penutup ditutup ketika menggunakan kuasa bateri') ketika penutup "
+"sebelum ini ditutup dan kuasa AC diputuskan pada masa lain."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:7
 msgid "UPS critical low action"
@@ -197,7 +215,9 @@ msgstr "Benarkan pelarasan kecerahan cahaya latar"
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
-msgstr "Jika kecerahan skrin patut diubah bila menukar antara kuasa AC dengan kuasa bateri."
+msgstr ""
+"Jika kecerahan skrin patut diubah bila menukar antara kuasa AC dengan kuasa "
+"bateri."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:13
 msgid "Reduce the backlight brightness when on battery power"
@@ -207,17 +227,22 @@ msgstr "Kurangkan kecerahan cahaya latar ketika menggunakan kuasa bateri"
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
-msgstr "Jika skrin patut mengurangkan kecerahannya ketika menggunakan kuasa bateri."
+msgstr ""
+"Jika skrin patut mengurangkan kecerahannya ketika menggunakan kuasa bateri."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:15
 msgid "Reduce the keyboard backlight when on battery power"
-msgstr "Kurangkan kecerahan cahaya latar papan kekunci ketika menggunakan kuasa bateri"
+msgstr ""
+"Kurangkan kecerahan cahaya latar papan kekunci ketika menggunakan kuasa "
+"bateri"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:16
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
-msgstr "Jika kecerahan cahaya latar papan kekunci patut dikurangkan bila komputer menggunakan kuasa bateri."
+msgstr ""
+"Jika kecerahan cahaya latar papan kekunci patut dikurangkan bila komputer "
+"menggunakan kuasa bateri."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:17
 msgid "Keyboard backlight brightness when on AC power."
@@ -227,11 +252,15 @@ msgstr "Kecerahan cahaya latar papan kekunci ketika menggunakan kuasa AC."
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
-msgstr "Peratus kecerahan yang ditetapkan pada cahaya latar papan kekunci menggunakan kuasa AC. Nilai yang  sah diantara 0 hingga 100."
+msgstr ""
+"Peratus kecerahan yang ditetapkan pada cahaya latar papan kekunci "
+"menggunakan kuasa AC. Nilai yang  sah diantara 0 hingga 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:19
 msgid "Percent to reduce keyboard backlight by when on battery power."
-msgstr "Peratus mengurangan cahaya latar papan kekunci ketika menggunakan kuasa bateri."
+msgstr ""
+"Peratus mengurangan cahaya latar papan kekunci ketika menggunakan kuasa "
+"bateri."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:21
 #, no-c-format
@@ -239,7 +268,11 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
-msgstr "Peratus mengurangan cahaya latar papan kekunci ketika menggunakan kuasa bateri. Contohnya, jika ditetapkan pada '60', cahaya latar akan dipotong sebanyak 40% ketika menggunakan kuasa bateri. Nilai yang sah diantara 0 hingga 100."
+msgstr ""
+"Peratus mengurangan cahaya latar papan kekunci ketika menggunakan kuasa "
+"bateri. Contohnya, jika ditetapkan pada '60', cahaya latar akan dipotong "
+"sebanyak 40% ketika menggunakan kuasa bateri. Nilai yang sah diantara 0 "
+"hingga 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:22
 msgid "Percent to reduce keyboard backlight by when idle."
@@ -251,7 +284,10 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
-msgstr "Peratus mengurangan cahaya latar papan kekunci ketika melahu. Contohnya, jika ditetapkan pada '60', cahaya latar akan dipotong sebanyak 40% ketika melahu. Nilai yang sah diantara 0 hingga 100."
+msgstr ""
+"Peratus mengurangan cahaya latar papan kekunci ketika melahu. Contohnya, "
+"jika ditetapkan pada '60', cahaya latar akan dipotong sebanyak 40% ketika "
+"melahu. Nilai yang sah diantara 0 hingga 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:25
 msgid "The brightness of the screen when idle"
@@ -261,17 +297,22 @@ msgstr "Kecerahan skrin ketika melahu"
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
-msgstr "Ini adalah kecerahan skrin panel komputer riba yang digunakan bila sesi melahu. Hanya sah bila use-time-for-policy adalah benar."
+msgstr ""
+"Ini adalah kecerahan skrin panel komputer riba yang digunakan bila sesi "
+"melahu. Hanya sah bila use-time-for-policy adalah benar."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:27
 msgid "Dim the screen after a period of inactivity when on battery power"
-msgstr "Malapkan skrin selepas tempoh tidak aktif ketika menggunakan kuasa bateri"
+msgstr ""
+"Malapkan skrin selepas tempoh tidak aktif ketika menggunakan kuasa bateri"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:28
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
-msgstr "Jika skrin patut dimalapkan untuk menjimatkan kuasa semasa komputer melahu ketika menggunakan kuasa bateri."
+msgstr ""
+"Jika skrin patut dimalapkan untuk menjimatkan kuasa semasa komputer melahu "
+"ketika menggunakan kuasa bateri."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:29
 msgid "The default amount of time to dim the screen after idle"
@@ -289,7 +330,9 @@ msgstr "Amaun kemalapan LCD ketika menggunakan bateri"
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
-msgstr "Jumlah kemalapan kecerahan paparan ketika menggunakan kuasa bateri. Nilai yang mungkin antara 0 hingga 100."
+msgstr ""
+"Jumlah kemalapan kecerahan paparan ketika menggunakan kuasa bateri. Nilai "
+"yang mungkin antara 0 hingga 100."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:33
 msgid "Dim the screen after a period of inactivity when on AC power"
@@ -299,7 +342,9 @@ msgstr "Malapkan skrin selepas tempoh tidak aktif ketika menggunakan kuasa AC"
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on AC power."
-msgstr "Jika skrin patut dimalapkan untuk menjimatkan kuasa semasa komputer melahu ketika menggunakan kuasa AC."
+msgstr ""
+"Jika skrin patut dimalapkan untuk menjimatkan kuasa semasa komputer melahu "
+"ketika menggunakan kuasa AC."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:35
 msgid "Method used to blank screen on AC"
@@ -307,7 +352,8 @@ msgstr "Kaedah digunakan untuk gelapkan skrin ketika menggunakan kuasa AC"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:36
 msgid "The DPMS method used to blank the screen when on AC power."
-msgstr "Kaedah DPMS yang digunakan untuk gelapkan skrin bila menggunakan kuasa AC."
+msgstr ""
+"Kaedah DPMS yang digunakan untuk gelapkan skrin bila menggunakan kuasa AC."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:37
 msgid "Method used to blank screen on battery"
@@ -315,7 +361,9 @@ msgstr "Kaedah digunakan untuk gelapkan skrin ketika menggunakan kuasa bateri"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:38
 msgid "The DPMS method used to blank the screen when on battery power."
-msgstr "Kaedah DPMS yang digunakan untuk gelapkan skrin bila menggunakan kuasa bateri."
+msgstr ""
+"Kaedah DPMS yang digunakan untuk gelapkan skrin bila menggunakan kuasa "
+"bateri."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:39
 msgid "LCD brightness when on AC"
@@ -325,7 +373,9 @@ msgstr "Kecerahan LCD ketika menggunakan kuasa AC"
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
-msgstr "Kecerahan paparan bila menggunakan kuasa AC. Nilai yang mungkin adalah diantara 0.0 hingga 100.0."
+msgstr ""
+"Kecerahan paparan bila menggunakan kuasa AC. Nilai yang mungkin adalah "
+"diantara 0.0 hingga 100.0."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:41
 msgid "Suspend button action"
@@ -359,7 +409,9 @@ msgstr "Tindakan menutup penutup komputer riba ketika menggunakan bateri"
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
-msgstr "Tindakan untuk diambil apabila penutup komputer riba ditutup dan komputer riba menggunakan kuasa bateri."
+msgstr ""
+"Tindakan untuk diambil apabila penutup komputer riba ditutup dan komputer "
+"riba menggunakan kuasa bateri."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:49
 msgid "Laptop lid close action when on AC"
@@ -369,7 +421,9 @@ msgstr "Tindakan menutup penutup komputer riba ketika menggunakan kuasa AC"
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
-msgstr "Tindakan untuk diambil apabila penutup komputer riba ditutup dan komputer riba menggunakan kuasa AC."
+msgstr ""
+"Tindakan untuk diambil apabila penutup komputer riba ditutup dan komputer "
+"riba menggunakan kuasa AC."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:51
 msgid "Whether to use time-based notifications"
@@ -379,7 +433,10 @@ msgstr "Sama ada hendak gunakan pemberitahuan berasaskan masa"
 msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
-msgstr "Jika pemberitahuan berasaskan masa harus digunakan. Jika ditetapkan kepada palsu, maka perubahan peratusan digunakan sebaliknya, yang mungkin dapat membaiki BIOS ACPI rosak."
+msgstr ""
+"Jika pemberitahuan berasaskan masa harus digunakan. Jika ditetapkan kepada "
+"palsu, maka perubahan peratusan digunakan sebaliknya, yang mungkin dapat "
+"membaiki BIOS ACPI rosak."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:53
 msgid "Check CPU load before sleeping"
@@ -397,7 +454,9 @@ msgstr "Sama ada NetworkManager patut menyambung dan putuskan ketika tidur"
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
-msgstr "Sama ada NetworkManager patut putuskan sebelum menangguh atau berhibernasi dan sambung semasa menyambung semula."
+msgstr ""
+"Sama ada NetworkManager patut putuskan sebelum menangguh atau berhibernasi "
+"dan sambung semasa menyambung semula."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:57
 msgid "Use mate-screensaver lock setting"
@@ -407,7 +466,9 @@ msgstr "Guna tetapan kunci mate-screensaver"
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
-msgstr "Sama ada menggunakan tetapan kunci skrin mate-screensaver untuk tentukan sekiranya skrin dikunci selepas hibernasi, tangguh atau skrin gelap."
+msgstr ""
+"Sama ada menggunakan tetapan kunci skrin mate-screensaver untuk tentukan "
+"sekiranya skrin dikunci selepas hibernasi, tangguh atau skrin gelap."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:59
 msgid "Lock screen when blanked"
@@ -417,7 +478,9 @@ msgstr "Kunci skrin ketika menjadi gelap"
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
-msgstr "Sama ada skrin dikunci ketika skrin dimatikan. Hanya digunakan jika lock_use_screensaver_settings adalah palsu."
+msgstr ""
+"Sama ada skrin dikunci ketika skrin dimatikan. Hanya digunakan jika "
+"lock_use_screensaver_settings adalah palsu."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:61
 msgid "Lock screen on suspend"
@@ -427,7 +490,9 @@ msgstr "Kunci skrin ketika tangguh"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
-msgstr "Sama ada skrin dikunci ketika komputer bangun dari tangguh. Hanya digunakan jika lock_use_screensaver adalah palsu."
+msgstr ""
+"Sama ada skrin dikunci ketika komputer bangun dari tangguh. Hanya digunakan "
+"jika lock_use_screensaver adalah palsu."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:63
 msgid "Lock screen on hibernate"
@@ -437,7 +502,9 @@ msgstr "Kunci skrin ketika hibernasi"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
-msgstr "Sama ada skrin dikunci ketika komputer bangun dari hibernasi. Hanya digunakan jika lock_use_screensaver adalah palsu."
+msgstr ""
+"Sama ada skrin dikunci ketika komputer bangun dari hibernasi. Hanya "
+"digunakan jika lock_use_screensaver adalah palsu."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:65
 msgid "Lock GNOME keyring on sleep"
@@ -447,13 +514,17 @@ msgstr "Kunci keyring GNOME ketika tidur"
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
-msgstr "Sama ada keyring GNOME dikunci sebelum komputer ditangguh. Ini bermakna keyring perlu dibuka ketika sambung semula."
+msgstr ""
+"Sama ada keyring GNOME dikunci sebelum komputer ditangguh. Ini bermakna "
+"keyring perlu dibuka ketika sambung semula."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:67
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
-msgstr "Sama ada keyring GNOME dikunci sebelum komputer berhibernasi. Ini bermakna keyring perlu dibuka ketika sambung semula."
+msgstr ""
+"Sama ada keyring GNOME dikunci sebelum komputer berhibernasi. Ini bermakna "
+"keyring perlu dibuka ketika sambung semula."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:68
 msgid "If we should show the low capacity warning for a broken battery"
@@ -479,7 +550,8 @@ msgstr "Maklumkan bila sudah dicas sepenuhnya"
 msgid ""
 "If a notification message should be displayed when the battery is fully "
 "charged."
-msgstr "JIka mesej pemberitahuan apatut dipaparkan bila bateri telah dicas penuh."
+msgstr ""
+"JIka mesej pemberitahuan apatut dipaparkan bila bateri telah dicas penuh."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:74
 msgid "Notify on a sleep failure"
@@ -489,7 +561,9 @@ msgstr "Maklumkan ketika gagal tidur"
 msgid ""
 "If a notification message should be displayed after suspend or hibernate "
 "failed."
-msgstr "Jika mesej pemberitahuan patut dipaparkan selepas tangguh atau hibernasi gagal."
+msgstr ""
+"Jika mesej pemberitahuan patut dipaparkan selepas tangguh atau hibernasi "
+"gagal."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:76
 msgid "The URI to show to the user on sleep failure"
@@ -499,7 +573,9 @@ msgstr "URI dipaparkan pada pengguna bila gagal tidur"
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
-msgstr "Apabila tidur gagal kita boleh tunjukkan butang kepada pengguna untuk bantu membaiki situasi. Biarkan ia gelap jika tidak mahu ditunjukkan."
+msgstr ""
+"Apabila tidur gagal kita boleh tunjukkan butang kepada pengguna untuk bantu "
+"membaiki situasi. Biarkan ia gelap jika tidak mahu ditunjukkan."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:78
 msgid "Notify on a low power"
@@ -518,7 +594,8 @@ msgstr "Sama ada kita patut tunjukkan titik data sejarah"
 #: ../data/org.mate.power-manager.gschema.xml.in.h:81
 msgid ""
 "Whether we should show the history data points in the statistics window."
-msgstr "Sama ada kita patut tunjukkan titik data sejarah dalam tetingkap statistik."
+msgstr ""
+"Sama ada kita patut tunjukkan titik data sejarah dalam tetingkap statistik."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:82
 msgid "Whether we should smooth the history data"
@@ -551,7 +628,8 @@ msgstr "Sama ada kita patut tunjukkan titik data stat"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:89
 msgid "Whether we should show the stats data points in the statistics window."
-msgstr "Sama ada kita patut tunjukkan titik data stat dalam tetingkap statistik."
+msgstr ""
+"Sama ada kita patut tunjukkan titik data stat dalam tetingkap statistik."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:90
 msgid "Whether we should smooth the stats data"
@@ -577,7 +655,9 @@ msgstr "Indeks nombor halaman yang ditunjukkan secara lalai"
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
-msgstr "Indeks nombor halaman untuk ditunjukkan secara lalai yang digunakan untuk kembali fokus ke halaman yang betul."
+msgstr ""
+"Indeks nombor halaman untuk ditunjukkan secara lalai yang digunakan untuk "
+"kembali fokus ke halaman yang betul."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid "The ID of the last device selected"
@@ -587,7 +667,9 @@ msgstr "ID bagi peranti terakhir dipilih"
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
-msgstr "Pengenalpasti peranti terakhir yang digunakan untuk kembali fokus ke peranti yang betul."
+msgstr ""
+"Pengenalpasti peranti terakhir yang digunakan untuk kembali fokus ke peranti"
+" yang betul."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:98
 msgid "Percentage considered low"
@@ -597,7 +679,9 @@ msgstr "Peratus dianggap lemah"
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
-msgstr "Peratusan bateri apabila ia dianggap lemah. Hanya sah ketika use-time-for-policy adalah false."
+msgstr ""
+"Peratusan bateri apabila ia dianggap lemah. Hanya sah ketika use-time-for-"
+"policy adalah false."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:100
 msgid "Percentage considered critical"
@@ -607,7 +691,9 @@ msgstr "Peratus dianggap kritikal"
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
-msgstr "Peratusan bateri apabila ia dianggap kritikal. Hanya sah ketika use-time-for-policy adalah false."
+msgstr ""
+"Peratusan bateri apabila ia dianggap kritikal. Hanya sah ketika use-time-"
+"for-policy adalah false."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:102
 msgid "Percentage action is taken"
@@ -617,7 +703,9 @@ msgstr "Peratus tindakan diambil"
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
-msgstr "Peratusan bateri apabila langkah kritikal dilaksanakan. Hanya sah ketika use-time-for-policy adalah palsu."
+msgstr ""
+"Peratusan bateri apabila langkah kritikal dilaksanakan. Hanya sah ketika "
+"use-time-for-policy adalah palsu."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:104
 msgid "The time remaining when low"
@@ -627,7 +715,9 @@ msgstr "Masa berbaki ketika lemah"
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
-msgstr "Baki masa dalam saat bagi bateri dianggap lemah. Hanya sah apabila use-time-for-policy adalah benar."
+msgstr ""
+"Baki masa dalam saat bagi bateri dianggap lemah. Hanya sah apabila use-time-"
+"for-policy adalah benar."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:106
 msgid "The time remaining when critical"
@@ -637,7 +727,9 @@ msgstr "Masa berbaki ketika kritikal"
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
-msgstr "Baki masa dalam saat bagi bateri dianggap kritikal. Hanya sah apabila use-time-for-policy adalah benar."
+msgstr ""
+"Baki masa dalam saat bagi bateri dianggap kritikal. Hanya sah apabila use-"
+"time-for-policy adalah benar."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:108
 msgid "The time remaining when action is taken"
@@ -647,7 +739,9 @@ msgstr "Masa berbaki ketika tindakan diambil"
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
-msgstr "Baki masa dalam saat bagi bateri ketika tindakan kritikal diambil. Hanya sah apabila use-time-for-policy adalah benar."
+msgstr ""
+"Baki masa dalam saat bagi bateri ketika tindakan kritikal diambil. Hanya sah"
+" apabila use-time-for-policy adalah benar."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:110
 msgid "Sleep timeout computer when on battery"
@@ -657,7 +751,9 @@ msgstr "Had tamat masa tidur komputer ketika menggunakan kuasa bateri"
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before it goes to sleep."
-msgstr "Jumlah masa dalam saat komputer ketika menggunakan kuasa bateri perlu menjadi tidak aktif sebelum tidur."
+msgstr ""
+"Jumlah masa dalam saat komputer ketika menggunakan kuasa bateri perlu "
+"menjadi tidak aktif sebelum tidur."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:112
 msgid "Sleep timeout computer when on AC"
@@ -667,7 +763,9 @@ msgstr "Had tamat masa tidur komputer ketika menggunakan kuasa AC"
 msgid ""
 "The amount of time in seconds the computer on AC power needs to be inactive "
 "before it goes to sleep."
-msgstr "Amaun masa dalam saat bila komputer gunakan kuasa AC perlu menjadi tidak aktif sebelum tidur."
+msgstr ""
+"Amaun masa dalam saat bila komputer gunakan kuasa AC perlu menjadi tidak "
+"aktif sebelum tidur."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:114
 msgid "Sleep timeout computer when on UPS"
@@ -677,7 +775,9 @@ msgstr "had tamat masa tidur komputer ketika menggunakan kuasa UPS"
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before it goes to sleep."
-msgstr "Jumlah masa dalam saat komputer ketika menggunakan kuasa UPS perlu menjadi tidak aktif sebelum tidur."
+msgstr ""
+"Jumlah masa dalam saat komputer ketika menggunakan kuasa UPS perlu menjadi "
+"tidak aktif sebelum tidur."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:116
 msgid "Sleep timeout display when on AC"
@@ -687,7 +787,9 @@ msgstr "Paparan had tamat masa ketika menggunakan kuasa AC"
 msgid ""
 "The amount of time in seconds before the display goes to sleep when the "
 "computer is on AC power."
-msgstr "Amaun masa dalam saat sebelum paparan tidur bila komputer menggunakan kuasa AC."
+msgstr ""
+"Amaun masa dalam saat sebelum paparan tidur bila komputer menggunakan kuasa "
+"AC."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:118
 msgid "Sleep timeout display when on battery"
@@ -697,7 +799,9 @@ msgstr "Paparan had tamat masa ketika menggunakan kuasa bateri"
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
-msgstr "Jumlah masa dalam saat komputer ketika menggunakan kuasa bateri perlu menjadi tidak aktif sebelum paparan tidur."
+msgstr ""
+"Jumlah masa dalam saat komputer ketika menggunakan kuasa bateri perlu "
+"menjadi tidak aktif sebelum paparan tidur."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:120
 msgid "Sleep timeout display when on UPS"
@@ -707,7 +811,9 @@ msgstr "Paparan had tamat masa ketika menggunakan kuasa UPS"
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before the display goes to sleep."
-msgstr "Jumlah masa dalam saat komputer ketika menggunakan kuasa UPS perlu menjadi tidak aktif sebelum paparan tidur."
+msgstr ""
+"Jumlah masa dalam saat komputer ketika menggunakan kuasa UPS perlu menjadi "
+"tidak aktif sebelum paparan tidur."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:122
 msgid "If sounds should be used"
@@ -717,12 +823,15 @@ msgstr "Jika bunyi patut digunakan"
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
-msgstr "Jika bunyi patut digunakan ketika kuasa tersangat lemah, atau perencat pinta untuk hentikan polisi tindakan."
+msgstr ""
+"Jika bunyi patut digunakan ketika kuasa tersangat lemah, atau perencat pinta"
+" untuk hentikan polisi tindakan."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:124
 msgid ""
 "If preferences and statistics items should be shown in the context menu"
-msgstr "Jika keutamaan dan item statistik patut ditunjukkan dalam konteks menu"
+msgstr ""
+"Jika keutamaan dan item statistik patut ditunjukkan dalam konteks menu"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:125
 msgid "When to show the notification icon"
@@ -1132,50 +1241,50 @@ msgid "Suspend failed"
 msgstr "Tangguh gagal"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:587
+#: ../src/gpm-manager.c:579
 msgid "Computer failed to suspend."
 msgstr "Komputer gagal ditangguh."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:589
+#: ../src/gpm-manager.c:581
 msgid "Failed to suspend"
 msgstr "Gagal ditangguh"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:593
+#: ../src/gpm-manager.c:585
 msgid "Computer failed to hibernate."
 msgstr "Komputer gagal dihibernasikan."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:595
+#: ../src/gpm-manager.c:587
 msgid "Failed to hibernate"
 msgstr "Gagal berhibernasi"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:600
+#: ../src/gpm-manager.c:592
 msgid "Failure was reported as:"
 msgstr "Kegagalan dilaporkan sebagai:"
 
 #. TRANSLATORS: button text, visit the suspend help website
-#: ../src/gpm-manager.c:613
+#: ../src/gpm-manager.c:605
 msgid "Visit help page"
 msgstr "Lawat halaman bantuan"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:859
+#: ../src/gpm-manager.c:851
 msgid "Display DPMS activated"
 msgstr "Paparan DPMS diaktifkan"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:878
+#: ../src/gpm-manager.c:870
 msgid "On battery power"
 msgstr "Menggunakan kuasa bateri"
 
-#: ../src/gpm-manager.c:896
+#: ../src/gpm-manager.c:888
 msgid "Laptop lid is closed"
 msgstr "Penutup komputer riba ditutup"
 
-#: ../src/gpm-manager.c:934
+#: ../src/gpm-manager.c:926
 msgid "Power Information"
 msgstr "Maklumat kuasa"
 
@@ -1183,315 +1292,340 @@ msgstr "Maklumat kuasa"
 #. * where capacity is the ratio of the last_full capacity with that of
 #. * the design capacity. (#326740)
 #. TRANSLATORS: battery is old or broken
-#: ../src/gpm-manager.c:1121
+#: ../src/gpm-manager.c:1113
 msgid "Battery may be broken"
 msgstr "Bateri mungkin rosak"
 
 #. TRANSLATORS: notify the user that that battery is broken as the capacity is
 #. very low
-#: ../src/gpm-manager.c:1124
+#: ../src/gpm-manager.c:1116
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
 " broken."
-msgstr "Bateri mempunyai kapasiti sangat lemah (%1.1f%%), bermakna mungkin telah lama atau rosak."
+msgstr ""
+"Bateri mempunyai kapasiti sangat lemah (%1.1f%%), bermakna mungkin telah "
+"lama atau rosak."
 
 #. TRANSLATORS: show the charged notification
-#: ../src/gpm-manager.c:1173
+#: ../src/gpm-manager.c:1165
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] "Bateri telah dicas"
+msgstr[0] "Bateri telah Dicas"
 
 #. TRANSLATORS: laptop battery is now discharging
-#: ../src/gpm-manager.c:1219
+#: ../src/gpm-manager.c:1211
 msgid "Battery Discharging"
 msgstr "Bateri dinyahcas"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1223
+#: ../src/gpm-manager.c:1215
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr "%s dari bateri berbaki (%.0f%%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-manager.c:1226 ../src/gpm-manager.c:1238
+#: ../src/gpm-manager.c:1218 ../src/gpm-manager.c:1230
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr "%s menyahcas (%.0f%%)"
 
 #. TRANSLATORS: UPS is now discharging
-#: ../src/gpm-manager.c:1231
+#: ../src/gpm-manager.c:1223
 msgid "UPS Discharging"
 msgstr "Menyahcas UPS"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1235
+#: ../src/gpm-manager.c:1227
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr "%s dari kuasa sandar UPS berbaki (%.0f%%)"
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
-#: ../src/gpm-manager.c:1319
+#: ../src/gpm-manager.c:1311
 msgid "Battery low"
 msgstr "Bateri lemah"
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
-#: ../src/gpm-manager.c:1322
+#: ../src/gpm-manager.c:1314
 msgid "Laptop battery low"
 msgstr "Bateri komputer riba lemah"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1328
+#: ../src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "Lebih kurang <b>%s</b> berbaki (%.0f%%)"
 
 #. TRANSLATORS: UPS is starting to get a little low
-#: ../src/gpm-manager.c:1332
+#: ../src/gpm-manager.c:1324
 msgid "UPS low"
 msgstr "UPS lemah"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1336
+#: ../src/gpm-manager.c:1328
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr "Lebih kurang <b>%s</b> kuasa sandar UPS berbaki (%.0f%%)"
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1340 ../src/gpm-manager.c:1474
+#: ../src/gpm-manager.c:1332 ../src/gpm-manager.c:1466
 msgid "Mouse battery low"
 msgstr "Bateri tetikus lemah"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1343
+#: ../src/gpm-manager.c:1335
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr "Kuasa tetikus tanpa wayar lemah (%.0f%%)"
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1347 ../src/gpm-manager.c:1482
+#: ../src/gpm-manager.c:1339 ../src/gpm-manager.c:1474
 msgid "Keyboard battery low"
 msgstr "Bateri papan kekunci lemah"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1350
+#: ../src/gpm-manager.c:1342
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr "Kuasa papan kekunci tanpa wayar lemah (%.0f%%)"
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1354 ../src/gpm-manager.c:1491
+#: ../src/gpm-manager.c:1346 ../src/gpm-manager.c:1483
 msgid "PDA battery low"
 msgstr "Bateri PDA lemah"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1357
+#: ../src/gpm-manager.c:1349
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr "Kuasa PDA lemah (%.0f%%)"
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1361 ../src/gpm-manager.c:1501
-#: ../src/gpm-manager.c:1511
+#: ../src/gpm-manager.c:1353 ../src/gpm-manager.c:1493
+#: ../src/gpm-manager.c:1503
 msgid "Cell phone battery low"
 msgstr "Kuasa telefon mudah alih lemah"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1364
+#: ../src/gpm-manager.c:1356
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "Kuasa telefon mudah alih lemah (%.0f%%)"
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1368
+#: ../src/gpm-manager.c:1360
 msgid "Media player battery low"
 msgstr "Kuasa pemain media lemah"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1371
+#: ../src/gpm-manager.c:1363
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr "Kuasa pemain media lemah (%.0f%%)"
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1375 ../src/gpm-manager.c:1520
+#: ../src/gpm-manager.c:1367 ../src/gpm-manager.c:1512
 msgid "Tablet battery low"
 msgstr "Bateri tablet lemah"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1378
+#: ../src/gpm-manager.c:1370
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "Kuasa tablet lemah (%.0f%%)"
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1382 ../src/gpm-manager.c:1529
+#: ../src/gpm-manager.c:1374 ../src/gpm-manager.c:1521
 msgid "Attached computer battery low"
 msgstr "Komputer bersambung lemah"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1385
+#: ../src/gpm-manager.c:1377
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "Kuasa komputer bersambung lemah (%.0f%%)"
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
-#: ../src/gpm-manager.c:1433
+#: ../src/gpm-manager.c:1425
 msgid "Battery critically low"
 msgstr "Bateri lemah kritikal"
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1436 ../src/gpm-manager.c:1589
+#: ../src/gpm-manager.c:1428 ../src/gpm-manager.c:1581
 msgid "Laptop battery critically low"
 msgstr "Bateri komputer riba lemah kritikal"
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
-#: ../src/gpm-manager.c:1445
+#: ../src/gpm-manager.c:1437
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr "Palamkan penyesuai AC untuk mengelak kehilangan data."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1449
+#: ../src/gpm-manager.c:1441
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr "Komputer akan ditangguh sebentar lagi kecuali ia dipalamkan."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1453
+#: ../src/gpm-manager.c:1445
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr "Komputer akan dihibernasikan sebentar lagi kecuali ia dipalamkan."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1457
+#: ../src/gpm-manager.c:1449
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr "Komputer akan dimatikan sebentar lagi kecuali ia dipalamkan."
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1464 ../src/gpm-manager.c:1625
+#: ../src/gpm-manager.c:1456 ../src/gpm-manager.c:1617
 msgid "UPS critically low"
 msgstr "UPS lemah kritikal"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1468
+#: ../src/gpm-manager.c:1460
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
-msgstr "Lebih kurang <b>%s</b> kuasa UPS berbkai (%.0f%%). Kembalikan kuasa AC ke komputer untuk mengelak kehilangan data."
+msgstr ""
+"Lebih kurang <b>%s</b> kuasa UPS berbkai (%.0f%%). Kembalikan kuasa AC ke "
+"komputer untuk mengelak kehilangan data."
+
+#. TRANSLATORS: the device is just going to stop working
+#: ../src/gpm-manager.c:1469
+#, c-format
+msgid ""
+"Wireless mouse is very low in power (%.0f%%). This device will soon stop "
+"functioning if not charged."
+msgstr ""
+"Kuasa tetikus tanpa wayar sangat lemah (%.0f%%). Peranti ini akan berhenti "
+"berfungsi jika tidak dicaskan."
 
 #. TRANSLATORS: the device is just going to stop working
 #: ../src/gpm-manager.c:1477
 #, c-format
 msgid ""
-"Wireless mouse is very low in power (%.0f%%). This device will soon stop "
-"functioning if not charged."
-msgstr "Kuasa tetikus tanpa wayar sangat lemah (%.0f%%). Peranti ini akan berhenti berfungsi jika tidak dicaskan."
-
-#. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1485
-#, c-format
-msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Kuasa papan kekunci tanpa wayar sangat lemah (%.0f%%). Peranti ini akan berhenti berfungsi jika tidak dicaskan."
+msgstr ""
+"Kuasa papan kekunci tanpa wayar sangat lemah (%.0f%%). Peranti ini akan "
+"berhenti berfungsi jika tidak dicaskan."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1494
+#: ../src/gpm-manager.c:1486
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
 " not charged."
-msgstr "Kuasa PDA sangat lemah (%.0f%%). Peranti ini akan berhenti berfungsi jika tidak dicaskan."
+msgstr ""
+"Kuasa PDA sangat lemah (%.0f%%). Peranti ini akan berhenti berfungsi jika "
+"tidak dicaskan."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1504
+#: ../src/gpm-manager.c:1496
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Kuasa telefon mudah alih sangat lemah (%.0f%%). Peranti ini akan berhenti berfungsi jika tidak dicaskan."
+msgstr ""
+"Kuasa telefon mudah alih sangat lemah (%.0f%%). Peranti ini akan berhenti "
+"berfungsi jika tidak dicaskan."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1514
+#: ../src/gpm-manager.c:1506
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "Kuasa pemain media sangat lemah (%.0f%%). Peranti ini akan berhenti berfungsi jika tidak dicaskan."
+msgstr ""
+"Kuasa pemain media sangat lemah (%.0f%%). Peranti ini akan berhenti "
+"berfungsi jika tidak dicaskan."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1523
+#: ../src/gpm-manager.c:1515
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
-msgstr "Kuasa tablet sangat lemah (%.0f%%). Peranti ini akan berhenti berfungsi jika tidak dicaskan."
+msgstr ""
+"Kuasa tablet sangat lemah (%.0f%%). Peranti ini akan berhenti berfungsi jika"
+" tidak dicaskan."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1532
+#: ../src/gpm-manager.c:1524
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
-msgstr "Kuasa komputer disambungkan sangat lemah (%.0f%%). Peranti ini akan berhenti berfungsi jika tidak dicaskan."
+msgstr ""
+"Kuasa komputer disambungkan sangat lemah (%.0f%%). Peranti ini akan berhenti"
+" berfungsi jika tidak dicaskan."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1597
+#: ../src/gpm-manager.c:1589
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
-msgstr "Bateri dibawah tahap kritikal dan komputer akan <b>dimatikan</b> apabila bateri habis sepenuhnya."
+msgstr ""
+"Bateri dibawah tahap kritikal dan komputer akan <b>dimatikan</b> apabila "
+"bateri habis sepenuhnya."
 
 #. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1603
+#: ../src/gpm-manager.c:1595
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
-msgstr "Bateri dibawah tahap kritikal dan komputer akan ditangguh.<br><b>PERHATIAN:</b> Sejumlah kecil kuasa diperlukan untuk membolehkan komputer dalam keadaan ditangguh."
+msgstr ""
+"Bateri dibawah tahap kritikal dan komputer akan "
+"ditangguh.<br><b>PERHATIAN:</b> Sejumlah kecil kuasa diperlukan untuk "
+"membolehkan komputer dalam keadaan ditangguh."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1610
+#: ../src/gpm-manager.c:1602
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr "Bateri dibawah tahap kritikal dan komputer akan dihibernasi."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1615
+#: ../src/gpm-manager.c:1607
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr "Bateri dibawah tahap kritikal dan komputer akan dimatikan."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1633
+#: ../src/gpm-manager.c:1625
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
-msgstr "UPS dibawah tahap kritikal dan komputer akan <b>dimatikan</b> apabila UPS habis sepenuhnya."
+msgstr ""
+"UPS dibawah tahap kritikal dan komputer akan <b>dimatikan</b> apabila UPS "
+"habis sepenuhnya."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1639
+#: ../src/gpm-manager.c:1631
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr "UPS dibawah tahap kritikal dan komputer akan dihibernasi."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1644
+#: ../src/gpm-manager.c:1636
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr "UPS dibawah tahap kritikal dan komputer akan dimatikan."
@@ -1615,7 +1749,7 @@ msgstr "Perintah"
 #. TRANSLATORS: this is when the stats time is not known
 #: ../src/gpm-statistics.c:286
 msgid "Unknown"
-msgstr "Tidak Diketahui"
+msgstr "Tidak diketahui"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:290
@@ -1971,7 +2105,9 @@ msgstr "%s mengecas (%.1f%%)"
 msgid ""
 "Battery is fully charged.\n"
 "Provides %s laptop runtime"
-msgstr "Bateri telah dicas sepenuhnya.\nMenyediakan %s masa berjalan komputer riba"
+msgstr ""
+"Bateri telah dicas sepenuhnya.\n"
+"Menyediakan %s masa berjalan komputer riba"
 
 #. TRANSLATORS: the device is fully charged
 #: ../src/gpm-upower.c:244
@@ -1997,7 +2133,9 @@ msgstr "%s nyahcas (%.1f%%)"
 msgid ""
 "%s %s until charged (%.1f%%)\n"
 "Provides %s battery runtime"
-msgstr "%s %s sehingga dicas (%.1f%%)\nMemberikan %s masa berjalan bateri"
+msgstr ""
+"%s %s sehingga dicas (%.1f%%)\n"
+"Memberikan %s masa berjalan bateri"
 
 #. TRANSLATORS: device is charging, and we have a time to full and a
 #. percentage
@@ -2108,7 +2246,7 @@ msgstr "Sederhana"
 
 #: ../src/gpm-upower.c:425
 msgid "Poor"
-msgstr "Kurang baik"
+msgstr "Lemah"
 
 #: ../src/gpm-upower.c:429
 msgid "Capacity:"

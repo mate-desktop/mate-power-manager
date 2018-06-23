@@ -1,16 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 22:24+0300\n"
-"PO-Revision-Date: 2018-01-09 19:25+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Icelandic (http://www.transifex.com/mate/MATE/language/is/)\n"
+"POT-Creation-Date: 2018-03-17 15:02+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Language-Team: Icelandic (https://www.transifex.com/mate/teams/13566/is/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,7 +27,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "Stillir birtu fartölvuskjás"
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:329
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Cannot connect to mate-power-manager"
 msgstr "Get ekki tengst mate-power-manager"
 
@@ -40,44 +41,56 @@ msgid "LCD brightness : %d%%"
 msgstr "Birta vökvakristallaskjás : %d%%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:403
+#: ../applets/inhibit/inhibit-applet.c:374
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "Leyft samkvæmt almenna GNU almennings hugbúnaðarleyfinu útgáfu 2"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:404
+#: ../applets/inhibit/inhibit-applet.c:375
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
 "as published by the Free Software Foundation; either version 2\n"
 "of the License, or (at your option) any later version."
-msgstr "Aflstjóri er frír hugbúnaður; þú mátt dreifa honum og/eða\nbreyta honum samkvæmt skilmálum í almenna GNU almennings hugbúnaðarleyfinu\neins og það er gefið út af Frjálsu hugbúnaðarstofnuninni; annaðhvort útgáfu 2\naf leyfinu, eða (ef þér sýnist svo) einhverja nýrri útgáfu."
+msgstr ""
+"Aflstjóri er frír hugbúnaður; þú mátt dreifa honum og/eða\n"
+"breyta honum samkvæmt skilmálum í almenna GNU almennings hugbúnaðarleyfinu\n"
+"eins og það er gefið út af Frjálsu hugbúnaðarstofnuninni; annaðhvort útgáfu 2\n"
+"af leyfinu, eða (ef þér sýnist svo) einhverja nýrri útgáfu."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:408
+#: ../applets/inhibit/inhibit-applet.c:379
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
 "GNU General Public License for more details."
-msgstr "Aflstjóra er dreyft í þeirri von að hann verði til gagns,\nen ÁN ALLRAR ÁBYRGÐAR; einnig án þeirrar ábyrgðar sem gefin er í skyn með\nSELJANLEIKA eða EGINLEIKA TIL TILTEKINNA NOTA.  Sjá\nalmenna GNU almennings hugbúnaðarleyfið fyrir nánari upplýsingar"
+msgstr ""
+"Aflstjóra er dreyft í þeirri von að hann verði til gagns,\n"
+"en ÁN ALLRAR ÁBYRGÐAR; einnig án þeirrar ábyrgðar sem gefin er í skyn með\n"
+"SELJANLEIKA eða EGINLEIKA TIL TILTEKINNA NOTA.  Sjá\n"
+"almenna GNU almennings hugbúnaðarleyfið fyrir nánari upplýsingar"
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:412
+#: ../applets/inhibit/inhibit-applet.c:383
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
-msgstr "Það ætti að hafa fylgt afrit af almenna GNU almennings hugbúnaðarleyfinu\nmeð forritinu; ef ekki skrifið þá Fjálsu hugbúnarstofnuninni: Free Software\nFoundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n02110-1301, USA."
+msgstr ""
+"Það ætti að hafa fylgt afrit af almenna GNU almennings hugbúnaðarleyfinu\n"
+"með forritinu; ef ekki skrifið þá Fjálsu hugbúnarstofnuninni: Free Software\n"
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
+"02110-1301, USA."
 
 #: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:638
+#: ../applets/inhibit/inhibit-applet.c:610
 msgid "_About"
 msgstr "_Um"
 
 #: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:641
+#: ../applets/inhibit/inhibit-applet.c:613
 msgid "_Help"
 msgstr "_Hjálp"
 
@@ -97,23 +110,23 @@ msgstr ""
 msgid "Adjusts Laptop panel brightness"
 msgstr "Breytir birtustigi skjás"
 
-#: ../applets/inhibit/inhibit-applet.c:92
+#: ../applets/inhibit/inhibit-applet.c:93
 msgid "Power Manager Inhibit Applet"
 msgstr "Hindrunarforrit aflstjóra"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:94
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Leyfir notanda að hindra sjálfvirkan aflsparnað"
 
-#: ../applets/inhibit/inhibit-applet.c:332
+#: ../applets/inhibit/inhibit-applet.c:303
 msgid "Automatic sleep inhibited"
 msgstr "Sjálfvirkur svefn hindraður"
 
-#: ../applets/inhibit/inhibit-applet.c:334
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid "Automatic sleep enabled"
 msgstr "Sjálfvirkur svefn virkjaður"
 
-#: ../applets/inhibit/inhibit-applet.c:362
+#: ../applets/inhibit/inhibit-applet.c:333
 msgid "Manual inhibit"
 msgstr "Handvirk hindrun"
 
@@ -162,14 +175,19 @@ msgstr ""
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
-msgstr "Hvort rafhlöðuatburður á að eiga sér stað þegar lokið er lokað og veituspenna aftengd"
+msgstr ""
+"Hvort rafhlöðuatburður á að eiga sér stað þegar lokið er lokað og "
+"veituspenna aftengd"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:6
 msgid ""
 "If the battery lid close event should occur (for example 'Suspend when lid "
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
-msgstr "Hvort virkni tengd fartölvuloki þegar rafhlaða er í notkun á að eiga sér stað (td ,Hvíla þegar lok lokast') þegar lokið er þegar lokað og veituspennan er aftengd síðar"
+msgstr ""
+"Hvort virkni tengd fartölvuloki þegar rafhlaða er í notkun á að eiga sér "
+"stað (td ,Hvíla þegar lok lokast') þegar lokið er þegar lokað og "
+"veituspennan er aftengd síðar"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:7
 msgid "UPS critical low action"
@@ -205,7 +223,8 @@ msgstr "Minnka baklýsingu þegar vélin er ekki í samband"
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
-msgstr "Hvort deyfa eigi birtustig skjásins þegar tölvan er að nota rafhlöðuna."
+msgstr ""
+"Hvort deyfa eigi birtustig skjásins þegar tölvan er að nota rafhlöðuna."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:15
 msgid "Reduce the keyboard backlight when on battery power"
@@ -269,7 +288,9 @@ msgstr "Dimma skjá eftir tímabil óvirkni þegar notuð er rafhlaða"
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
-msgstr "Hvort dimma á skjáinn til að spara rafmagn þegar tölvan er í tómgangi og notuð er rafhlaða."
+msgstr ""
+"Hvort dimma á skjáinn til að spara rafmagn þegar tölvan er í tómgangi og "
+"notuð er rafhlaða."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:29
 msgid "The default amount of time to dim the screen after idle"
@@ -297,7 +318,9 @@ msgstr "Dimma skjá eftir tímabil óvirkni þegar notuð er veituspenna"
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on AC power."
-msgstr "Hvort dimma á skjáinn til að spara rafmagn þegar tölvan er í tómgangi og notuð er veituspenna."
+msgstr ""
+"Hvort dimma á skjáinn til að spara rafmagn þegar tölvan er í tómgangi og "
+"notuð er veituspenna."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:35
 msgid "Method used to blank screen on AC"
@@ -377,7 +400,9 @@ msgstr "Hvort nota eigi tilkynningar byggðar á tíma"
 msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
-msgstr "Hvort nota eigi tilkynningar byggðar á tíma. Ef ekki virkjað þá er notaðar prósentubreytingar, sem gæti hjálpað með bilaða ACPI BIOSa."
+msgstr ""
+"Hvort nota eigi tilkynningar byggðar á tíma. Ef ekki virkjað þá er notaðar "
+"prósentubreytingar, sem gæti hjálpað með bilaða ACPI BIOSa."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:53
 msgid "Check CPU load before sleeping"
@@ -385,7 +410,8 @@ msgstr "Athuga álag á örgjörva fyrir svefn"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:54
 msgid "If the CPU load should be checked before doing the idle action."
-msgstr "Hvort álag á örgjörva  sé kannað áður en gripið er til óvirkniaðgerða."
+msgstr ""
+"Hvort álag á örgjörva  sé kannað áður en gripið er til óvirkniaðgerða."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:55
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
@@ -455,11 +481,13 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:68
 msgid "If we should show the low capacity warning for a broken battery"
-msgstr "Hvort sýna eigi viðvörunina um lélega afkastagetu á biluðum rafhlöðum."
+msgstr ""
+"Hvort sýna eigi viðvörunina um lélega afkastagetu á biluðum rafhlöðum."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:69
 msgid "If we should show the low capacity warning for a broken battery."
-msgstr "Hvort sýna eigi viðvörunina um lélega afkastagetu á biluðum rafhlöðum."
+msgstr ""
+"Hvort sýna eigi viðvörunina um lélega afkastagetu á biluðum rafhlöðum."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:70
 msgid "Notify when AC adapter is disconnected"
@@ -487,7 +515,9 @@ msgstr "Tilkynna þegar klikkar að svæfa"
 msgid ""
 "If a notification message should be displayed after suspend or hibernate "
 "failed."
-msgstr "Ef að tilkynning ætti að vera sýnd eftir að það klikkar að setja tölvuna í dvala eða svefn."
+msgstr ""
+"Ef að tilkynning ætti að vera sýnd eftir að það klikkar að setja tölvuna í "
+"dvala eða svefn."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:76
 msgid "The URI to show to the user on sleep failure"
@@ -655,7 +685,9 @@ msgstr "Tími þar til tölvan fer í hvíld þegar notuð er rafhlaða"
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before it goes to sleep."
-msgstr "Fjöldi sekúndna sem tölva sem notar rafhlöðu þarf að vera óvirk áður en hún fer að sofa."
+msgstr ""
+"Fjöldi sekúndna sem tölva sem notar rafhlöðu þarf að vera óvirk áður en hún "
+"fer að sofa."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:112
 msgid "Sleep timeout computer when on AC"
@@ -665,7 +697,9 @@ msgstr "Tími þar til tölvan fer í hvíld þegar notuð er veituspenna"
 msgid ""
 "The amount of time in seconds the computer on AC power needs to be inactive "
 "before it goes to sleep."
-msgstr "Fjöldi sekúndna sem tölva sem notar veituspennu þarf að vera óvirk áður en hún fer að sofa."
+msgstr ""
+"Fjöldi sekúndna sem tölva sem notar veituspennu þarf að vera óvirk áður en "
+"hún fer að sofa."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:114
 msgid "Sleep timeout computer when on UPS"
@@ -685,7 +719,8 @@ msgstr "Tími þar til skjárinn fer í hvíld þegar notuð er veituspenna"
 msgid ""
 "The amount of time in seconds before the display goes to sleep when the "
 "computer is on AC power."
-msgstr "Fjöldi sekúndna þar til skjárinn fer að sofa þegar tölvan notar veituspennu."
+msgstr ""
+"Fjöldi sekúndna þar til skjárinn fer að sofa þegar tölvan notar veituspennu."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:118
 msgid "Sleep timeout display when on battery"
@@ -695,7 +730,9 @@ msgstr "Tími þar til skjárinn fer í hvíld notuð er rafhlaða"
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
-msgstr "Fjöldi sekúndna sem tölva sem notar rafhlöðu þarf að vera óvirk áður en skjárinn fer að sofa."
+msgstr ""
+"Fjöldi sekúndna sem tölva sem notar rafhlöðu þarf að vera óvirk áður en "
+"skjárinn fer að sofa."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:120
 msgid "Sleep timeout display when on UPS"
@@ -715,7 +752,9 @@ msgstr "Hvort nota á hljóð"
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
-msgstr "Hvort hljóð sé notað þegar aflið er varhugavert lítið, eða þegar hömlunarbeiðnir hafa stöðvað stenfuaðgerðir."
+msgstr ""
+"Hvort hljóð sé notað þegar aflið er varhugavert lítið, eða þegar "
+"hömlunarbeiðnir hafa stöðvað stenfuaðgerðir."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:124
 msgid ""
@@ -780,7 +819,7 @@ msgstr ""
 
 #: ../data/gpm-statistics.ui.h:8
 msgid "History"
-msgstr ""
+msgstr "Ferill"
 
 #: ../data/gpm-statistics.ui.h:9
 msgid "Statistics"
@@ -973,15 +1012,15 @@ msgstr "Óþekktur tími"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] "%i mínúta"
-msgstr[1] "%i mínútur"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] "%i klukkustund"
-msgstr[1] "%i klukkustundir"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -993,8 +1032,8 @@ msgstr ""
 #: ../src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] "klukkustund"
-msgstr[1] "klukkustundir"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/gpm-common.c:77
 msgid "minute"
@@ -1134,50 +1173,50 @@ msgid "Suspend failed"
 msgstr ""
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:587
+#: ../src/gpm-manager.c:579
 msgid "Computer failed to suspend."
 msgstr ""
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:589
+#: ../src/gpm-manager.c:581
 msgid "Failed to suspend"
 msgstr ""
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:593
+#: ../src/gpm-manager.c:585
 msgid "Computer failed to hibernate."
 msgstr ""
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:595
+#: ../src/gpm-manager.c:587
 msgid "Failed to hibernate"
 msgstr ""
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:600
+#: ../src/gpm-manager.c:592
 msgid "Failure was reported as:"
 msgstr ""
 
 #. TRANSLATORS: button text, visit the suspend help website
-#: ../src/gpm-manager.c:613
+#: ../src/gpm-manager.c:605
 msgid "Visit help page"
 msgstr ""
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:859
+#: ../src/gpm-manager.c:851
 msgid "Display DPMS activated"
 msgstr ""
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:878
+#: ../src/gpm-manager.c:870
 msgid "On battery power"
 msgstr "Nota afl frá rafhlöðum"
 
-#: ../src/gpm-manager.c:896
+#: ../src/gpm-manager.c:888
 msgid "Laptop lid is closed"
 msgstr "Fartölvulok er lokað"
 
-#: ../src/gpm-manager.c:934
+#: ../src/gpm-manager.c:926
 msgid "Power Information"
 msgstr "Aflupplýsingar"
 
@@ -1185,13 +1224,13 @@ msgstr "Aflupplýsingar"
 #. * where capacity is the ratio of the last_full capacity with that of
 #. * the design capacity. (#326740)
 #. TRANSLATORS: battery is old or broken
-#: ../src/gpm-manager.c:1121
+#: ../src/gpm-manager.c:1113
 msgid "Battery may be broken"
 msgstr ""
 
 #. TRANSLATORS: notify the user that that battery is broken as the capacity is
 #. very low
-#: ../src/gpm-manager.c:1124
+#: ../src/gpm-manager.c:1116
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
@@ -1199,196 +1238,196 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: show the charged notification
-#: ../src/gpm-manager.c:1173
+#: ../src/gpm-manager.c:1165
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] ""
 msgstr[1] ""
 
 #. TRANSLATORS: laptop battery is now discharging
-#: ../src/gpm-manager.c:1219
+#: ../src/gpm-manager.c:1211
 msgid "Battery Discharging"
 msgstr ""
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1223
+#: ../src/gpm-manager.c:1215
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-manager.c:1226 ../src/gpm-manager.c:1238
+#: ../src/gpm-manager.c:1218 ../src/gpm-manager.c:1230
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: UPS is now discharging
-#: ../src/gpm-manager.c:1231
+#: ../src/gpm-manager.c:1223
 msgid "UPS Discharging"
 msgstr ""
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1235
+#: ../src/gpm-manager.c:1227
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
-#: ../src/gpm-manager.c:1319
+#: ../src/gpm-manager.c:1311
 msgid "Battery low"
 msgstr ""
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
-#: ../src/gpm-manager.c:1322
+#: ../src/gpm-manager.c:1314
 msgid "Laptop battery low"
 msgstr ""
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1328
+#: ../src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: UPS is starting to get a little low
-#: ../src/gpm-manager.c:1332
+#: ../src/gpm-manager.c:1324
 msgid "UPS low"
 msgstr ""
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1336
+#: ../src/gpm-manager.c:1328
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1340 ../src/gpm-manager.c:1474
+#: ../src/gpm-manager.c:1332 ../src/gpm-manager.c:1466
 msgid "Mouse battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1343
+#: ../src/gpm-manager.c:1335
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1347 ../src/gpm-manager.c:1482
+#: ../src/gpm-manager.c:1339 ../src/gpm-manager.c:1474
 msgid "Keyboard battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1350
+#: ../src/gpm-manager.c:1342
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1354 ../src/gpm-manager.c:1491
+#: ../src/gpm-manager.c:1346 ../src/gpm-manager.c:1483
 msgid "PDA battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1357
+#: ../src/gpm-manager.c:1349
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1361 ../src/gpm-manager.c:1501
-#: ../src/gpm-manager.c:1511
+#: ../src/gpm-manager.c:1353 ../src/gpm-manager.c:1493
+#: ../src/gpm-manager.c:1503
 msgid "Cell phone battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1364
+#: ../src/gpm-manager.c:1356
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1368
+#: ../src/gpm-manager.c:1360
 msgid "Media player battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1371
+#: ../src/gpm-manager.c:1363
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1375 ../src/gpm-manager.c:1520
+#: ../src/gpm-manager.c:1367 ../src/gpm-manager.c:1512
 msgid "Tablet battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1378
+#: ../src/gpm-manager.c:1370
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1382 ../src/gpm-manager.c:1529
+#: ../src/gpm-manager.c:1374 ../src/gpm-manager.c:1521
 msgid "Attached computer battery low"
 msgstr ""
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1385
+#: ../src/gpm-manager.c:1377
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr ""
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
-#: ../src/gpm-manager.c:1433
+#: ../src/gpm-manager.c:1425
 msgid "Battery critically low"
 msgstr ""
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1436 ../src/gpm-manager.c:1589
+#: ../src/gpm-manager.c:1428 ../src/gpm-manager.c:1581
 msgid "Laptop battery critically low"
 msgstr ""
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
-#: ../src/gpm-manager.c:1445
+#: ../src/gpm-manager.c:1437
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr ""
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1449
+#: ../src/gpm-manager.c:1441
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr ""
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1453
+#: ../src/gpm-manager.c:1445
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr ""
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1457
+#: ../src/gpm-manager.c:1449
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr ""
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1464 ../src/gpm-manager.c:1625
+#: ../src/gpm-manager.c:1456 ../src/gpm-manager.c:1617
 msgid "UPS critically low"
 msgstr ""
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1468
+#: ../src/gpm-manager.c:1460
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
@@ -1396,7 +1435,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1477
+#: ../src/gpm-manager.c:1469
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
@@ -1404,7 +1443,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1485
+#: ../src/gpm-manager.c:1477
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
@@ -1412,7 +1451,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1494
+#: ../src/gpm-manager.c:1486
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
@@ -1420,7 +1459,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1504
+#: ../src/gpm-manager.c:1496
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
@@ -1428,7 +1467,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1514
+#: ../src/gpm-manager.c:1506
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
@@ -1436,7 +1475,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1523
+#: ../src/gpm-manager.c:1515
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
@@ -1444,7 +1483,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1532
+#: ../src/gpm-manager.c:1524
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
@@ -1452,52 +1491,67 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1597
+#: ../src/gpm-manager.c:1589
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
-msgstr "Hleðsla rafhlöðunnar er fyrir neðan varhugavert lág mörk og tölvan mun <b>slökkva á sér</b> þegar rafhlaðan tæmist alveg."
+msgstr ""
+"Hleðsla rafhlöðunnar er fyrir neðan varhugavert lág mörk og tölvan mun "
+"<b>slökkva á sér</b> þegar rafhlaðan tæmist alveg."
 
 #. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1603
+#: ../src/gpm-manager.c:1595
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
-msgstr "Hleðsla rafhlöðunnar er fyrir neðan varhugavert lág mörk og tölvan er að fara í hvíld.<br><b>ATH:</b> Örlítið afl þarf til þess að halda tölvunni í hvíld."
+msgstr ""
+"Hleðsla rafhlöðunnar er fyrir neðan varhugavert lág mörk og tölvan er að "
+"fara í hvíld.<br><b>ATH:</b> Örlítið afl þarf til þess að halda tölvunni í "
+"hvíld."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1610
+#: ../src/gpm-manager.c:1602
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
-msgstr "Hleðsla rafhlöðunnar er fyrir neðan varhugavert lág mörk og tölvan er að fara að leggjast í dvala."
+msgstr ""
+"Hleðsla rafhlöðunnar er fyrir neðan varhugavert lág mörk og tölvan er að "
+"fara að leggjast í dvala."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1615
+#: ../src/gpm-manager.c:1607
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
-msgstr "Hleðsla rafhlöðunnar er fyrir neðan varhugavert lág mörk og tölvan er að fara að ganga frá."
+msgstr ""
+"Hleðsla rafhlöðunnar er fyrir neðan varhugavert lág mörk og tölvan er að "
+"fara að ganga frá."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1633
+#: ../src/gpm-manager.c:1625
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
-msgstr "Hleðsla UPS búnaðarins er fyrir neðan varhugavert lág mörk og tölvan mun <b>slökkva á sér</b> þegar hann tæmist alveg."
+msgstr ""
+"Hleðsla UPS búnaðarins er fyrir neðan varhugavert lág mörk og tölvan mun "
+"<b>slökkva á sér</b> þegar hann tæmist alveg."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1639
+#: ../src/gpm-manager.c:1631
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
-msgstr "Hleðsla UPS búnaðarins er fyrir neðan varhugavert lág mörk og tölvan er að fara að leggjast í dvala."
+msgstr ""
+"Hleðsla UPS búnaðarins er fyrir neðan varhugavert lág mörk og tölvan er að "
+"fara að leggjast í dvala."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1644
+#: ../src/gpm-manager.c:1636
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
-msgstr "Hleðsla UPS búnaðarins er fyrir neðan varhugavert lág mörk og tölvan er að fara ganga frá."
+msgstr ""
+"Hleðsla UPS búnaðarins er fyrir neðan varhugavert lág mörk og tölvan er að "
+"fara ganga frá."
 
 #: ../src/gpm-prefs.c:81
 msgid "MATE Power Preferences"
@@ -1601,11 +1655,11 @@ msgstr "Mynd"
 
 #: ../src/gpm-statistics.c:162
 msgid "Description"
-msgstr ""
+msgstr "Lýsing"
 
 #: ../src/gpm-statistics.c:181 ../src/gpm-statistics.c:405
 msgid "Type"
-msgstr ""
+msgstr "Tegund"
 
 #: ../src/gpm-statistics.c:187
 msgid "ID"
@@ -1936,7 +1990,7 @@ msgstr ""
 #. TRANSLATORS: the icon for the CPU
 #: ../src/gpm-statistics.c:1838
 msgid "Processor"
-msgstr ""
+msgstr "Örgjörvi"
 
 #: ../src/gpm-tray-icon.c:189
 msgid "Copyright © 2011-2018 MATE developers"
@@ -1947,7 +2001,10 @@ msgstr ""
 #. * box to give credit to the translator(s).
 #: ../src/gpm-tray-icon.c:195
 msgid "translator-credits"
-msgstr "Samúel Jón Gunnarsson <sammi@techattack.nu>, 2003\nSveinn í Felli <sv1@fellsnet.is>, 2012-2015\nAðrir FOSS íslenskuþýðendur"
+msgstr ""
+"Samúel Jón Gunnarsson <sammi@techattack.nu>, 2003\n"
+"Sveinn í Felli <sv1@fellsnet.is>, 2012-2016\n"
+"Aðrir FOSS íslenskuþýðendur"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
 #: ../src/gpm-tray-icon.c:297
