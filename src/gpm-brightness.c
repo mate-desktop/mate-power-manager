@@ -225,17 +225,20 @@ gpm_brightness_output_get_internal (GpmBrightness *brightness, RROutput output, 
 static gboolean
 gpm_brightness_output_set_internal (GpmBrightness *brightness, RROutput output, guint value)
 {
+	GdkDisplay *display;
+
 	gboolean ret = TRUE;
 
 	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
 
 	/* don't abort on error */
-	gdk_error_trap_push ();
+	display = gdk_display_get_default ();
+	gdk_x11_display_error_trap_push (display);
 	XRRChangeOutputProperty (brightness->priv->dpy, output, brightness->priv->backlight, XA_INTEGER, 32,
 				 PropModeReplace, (unsigned char *) &value, 1);
 	XFlush (brightness->priv->dpy);
-	gdk_flush ();
-	if (gdk_error_trap_pop ()) {
+	gdk_display_flush (display);
+	if (gdk_x11_display_error_trap_pop (display)) {
 		egg_warning ("failed to XRRChangeOutputProperty for brightness %i", value);
 		ret = FALSE;
 	}
@@ -846,9 +849,9 @@ gpm_brightness_update_cache (GpmBrightness *brightness)
 
 	root = RootWindow (brightness->priv->dpy, 0);
 
-	gdk_error_trap_push ();
+	gdk_x11_display_error_trap_push (display);
 	resource = XRRGetScreenResourcesCurrent (brightness->priv->dpy, root);
-	if (gdk_error_trap_pop () || resource == NULL) {
+	if (gdk_x11_display_error_trap_pop (display) || resource == NULL) {
 		egg_warning ("failed to XRRGetScreenResourcesCurrent");
 	}
 
@@ -952,13 +955,13 @@ gpm_brightness_init (GpmBrightness *brightness)
 			       gpm_brightness_filter_xevents, brightness);
 
 	/* don't abort on error */
-	gdk_error_trap_push ();
+	gdk_x11_display_error_trap_push (display);
 	XRRSelectInput (GDK_DISPLAY_XDISPLAY (gdk_display_get_default()),
 			GDK_WINDOW_XID (brightness->priv->root_window),
 			RRScreenChangeNotifyMask |
 			RROutputPropertyNotifyMask); /* <--- the only one we need, but see rh:345551 */
-	gdk_flush ();
-	if (gdk_error_trap_pop ())
+	gdk_display_flush (display);
+	if (gdk_x11_display_error_trap_pop (display))
 		egg_warning ("failed to select XRRSelectInput");
 
 	/* create cache of XRRScreenResources as XRRGetScreenResources() is slow */
