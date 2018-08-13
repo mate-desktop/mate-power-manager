@@ -141,13 +141,15 @@ gpm_button_grab_keystring (GpmButton *button, guint64 keycode)
 {
 	guint modmask = AnyModifier;
 	Display *display;
+	GdkDisplay *gdkdisplay;
 	gint ret;
 
 	/* get the current X Display */
 	display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
 
 	/* don't abort on error */
-	gdk_error_trap_push ();
+	gdkdisplay = gdk_display_get_default ();
+	gdk_x11_display_error_trap_push (gdkdisplay);
 
 	/* grab the key if possible */
 	ret = XGrabKey (display, keycode, modmask,
@@ -170,8 +172,8 @@ gpm_button_grab_keystring (GpmButton *button, guint64 keycode)
 	}
 
 	/* we are not processing the error */
-	gdk_flush ();
-	gdk_error_trap_pop_ignored ();
+	gdk_display_flush (gdkdisplay);
+	gdk_x11_display_error_trap_pop_ignored (gdkdisplay);
 
 	egg_debug ("Grabbed modmask=%x, keycode=%li", modmask, (long int) keycode);
 	return TRUE;
