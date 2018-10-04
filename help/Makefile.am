@@ -17,4 +17,8 @@ HELP_MEDIA = \
 	figures/gpm-unplugged.png \
 	figures/gs-prefs.png
 
-HELP_LINGUAS = ca de el en_GB es eu fi fr hu it oc pa ru sv zh_CN
+# Add linguas to be ignored, e.g. IGNORE_HELP_LINGUAS = ca de es fr
+IGNORE_HELP_LINGUAS =
+HELP_LINGUAS = $(if $(IGNORE_HELP_LINGUAS), \
+	$(filter-out $(IGNORE_HELP_LINGUAS),$(subst /,,$(dir $(wildcard */*.po)))), \
+	$(subst /,,$(dir $(wildcard */*.po))) )
