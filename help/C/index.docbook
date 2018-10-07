@@ -263,7 +263,7 @@
   <section id="notify-suspend-failure">
   <title>Suspend Failure</title>
     <para>
-      When a suspend failure occurs you may get this following warning.
+      When a Suspend Failure occurs you may get this following warning.
       The most common reason for this notification is that the current user does
       not have permission to suspend or hibernate the computer.
     </para>
@@ -321,7 +321,7 @@
   <section id="statistics-charge">
     <title>Charge History</title>
     <para>
-      This graph shows the percentage charge available for the composite primary
+      This graph shows the available percentage of charge for the composite primary
       battery, so if you have a main laptop battery and an auxiliary battery
       then only the averaged value will be shown.
       A legend is not shown with this graph.
@@ -591,7 +591,7 @@
   <section id="applets-inhibit">
     <title>Inhibit Applet</title>
     <para>
-      The inhibit applet allows the user to prevent the computer
+      The <application>Inhibit Applet</application> allows the user to prevent the computer
       auto-sleeping when inactive. This may be required with old or
       proprietary programs such as VMWare or Matlab.
       Just click the icon for the auto-suspend to be inhibited,
@@ -612,8 +612,8 @@
     <note>
       <para>
         Don't use this applet if you just use MATE software, instead
-        file a bug to make the application use the Inhibit() and
-        UnInhibit() methods as this should 'just work'.
+        file a bug to make the application use the <function>Inhibit()</function> and
+        <function>UnInhibit()</function> methods as this should 'just work'.
       </para>
     </note>
   </section>
@@ -649,7 +649,7 @@
     <title>What's the difference between suspend and hibernate?</title>
     <para>
       The Suspend state is a power saving feature which is the lowest level of
-      power consumption that preserves program data in the computer's memory.
+      power consumption that preserves program data on the computer's memory.
       When your computer is in the Suspended state, computation will not be
       performed until normal activity is resumed.
       It will not resume until signaled by an external event such as a keyboard
@@ -735,7 +735,7 @@
     <itemizedlist>
       <listitem>
         <para>
-          HAL might not be running the addon that captures the ACPI event.
+          HAL might not be running the add-on that captures the ACPI event.
         </para>
       </listitem>
       <listitem>
