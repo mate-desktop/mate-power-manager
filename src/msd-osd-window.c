@@ -457,11 +457,11 @@ msd_osd_window_init (MsdOsdWindow *window)
                 GtkStyleContext *style = gtk_widget_get_style_context (GTK_WIDGET (window));
                 gtk_style_context_add_class (style, "window-frame");
 
-                /* assume 130x130 on a 640x480 display and scale from there */
+                /* assume 110x110 on a 640x480 display and scale from there */
                 scalew = WidthOfScreen (gdk_x11_screen_get_xscreen (screen)) / (640.0 * window->priv->scale_factor);
                 scaleh = HeightOfScreen (gdk_x11_screen_get_xscreen (screen)) / (480.0 * window->priv->scale_factor);
                 scale = MIN (scalew, scaleh);
-                size = 130 * MAX (1, scale);
+                size = 110 * MAX (1, scale);
 
                 gtk_window_set_default_size (GTK_WINDOW (window), size, size);
 
