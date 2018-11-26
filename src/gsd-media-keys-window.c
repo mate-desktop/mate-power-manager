@@ -34,6 +34,8 @@
 
 #define MSD_MEDIA_KEYS_WINDOW_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), MSD_TYPE_MEDIA_KEYS_WINDOW, MsdMediaKeysWindowPrivate))
 
+#define ICON_SCALE 0.65           /* size of the icon compared to the whole OSD */
+
 struct MsdMediaKeysWindowPrivate
 {
         MsdMediaKeysWindowAction action;
@@ -449,8 +451,8 @@ draw_action_volume (MsdMediaKeysWindow *window,
 
         gtk_window_get_size (GTK_WINDOW (window), &window_width, &window_height);
 
-        icon_box_width = round (window_width * 0.65);
-        icon_box_height = round (window_height * 0.65);
+        icon_box_width = round (window_width * ICON_SCALE);
+        icon_box_height = round (window_height * ICON_SCALE);
         volume_box_width = icon_box_width;
         volume_box_height = round (window_height * 0.05);
 
@@ -573,8 +575,8 @@ draw_action_custom (MsdMediaKeysWindow *window,
 
         gtk_window_get_size (GTK_WINDOW (window), &window_width, &window_height);
 
-        icon_box_width = round (window_width * 0.65);
-        icon_box_height = round (window_height * 0.65);
+        icon_box_width = round (window_width * ICON_SCALE);
+        icon_box_height = round (window_height * ICON_SCALE);
         bright_box_width = round (icon_box_width);
         bright_box_height = round (window_height * 0.05);
 
