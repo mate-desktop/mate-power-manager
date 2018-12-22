@@ -3,14 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018
+# Youngbin Han <sukso96100@gmail.com>, 2018
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 14:58+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Youngbin Han <sukso96100@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-10-04 17:46+0200\n"
+"PO-Revision-Date: 2018-03-11 20:38+0000\n"
+"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>, 2018\n"
 "Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +33,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "노트북 패널 밝기를 조정합니다."
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:300
+#: ../applets/inhibit/inhibit-applet.c:228
 msgid "Cannot connect to mate-power-manager"
 msgstr "마테 전원 관리자에 연결할 수 없습니다"
 
@@ -41,12 +47,12 @@ msgid "LCD brightness : %d%%"
 msgstr "LCD 밝기 : %d%%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:374
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "GNU 일반 공중 사용 허가서 2판 조항에 따라 사용을 허가합니다"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:375
+#: ../applets/inhibit/inhibit-applet.c:301
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -58,7 +64,7 @@ msgstr ""
 "조항에 따라 자유롭게 재배포 및 수정할 수 있습니다."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:379
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -71,7 +77,7 @@ msgstr ""
 "보십시오."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:383
+#: ../applets/inhibit/inhibit-applet.c:309
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -82,13 +88,13 @@ msgstr ""
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
 
-#: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:610
+#: ../applets/brightness/brightness-applet.c:1070
+#: ../applets/inhibit/inhibit-applet.c:522
 msgid "_About"
 msgstr "정보(_A)"
 
-#: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:613
+#: ../applets/brightness/brightness-applet.c:1073
+#: ../applets/inhibit/inhibit-applet.c:525
 msgid "_Help"
 msgstr "도움말(_H)"
 
@@ -108,23 +114,23 @@ msgstr "밝기 애플릿"
 msgid "Adjusts Laptop panel brightness"
 msgstr "노트북 화면 밝기를 조정합니다"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:90
 msgid "Power Manager Inhibit Applet"
 msgstr "전원 관리 금지 애플릿"
 
-#: ../applets/inhibit/inhibit-applet.c:94
+#: ../applets/inhibit/inhibit-applet.c:91
 msgid "Allows user to inhibit automatic power saving."
 msgstr "사용자가 전원 절약이 자동으로 실행되는 걸 금지할 수 있습니다."
 
-#: ../applets/inhibit/inhibit-applet.c:303
+#: ../applets/inhibit/inhibit-applet.c:231
 msgid "Automatic sleep inhibited"
 msgstr "자동 절전을 금지했습니다"
 
-#: ../applets/inhibit/inhibit-applet.c:305
+#: ../applets/inhibit/inhibit-applet.c:233
 msgid "Automatic sleep enabled"
 msgstr "자동 절전을 사용합니다"
 
-#: ../applets/inhibit/inhibit-applet.c:333
+#: ../applets/inhibit/inhibit-applet.c:261
 msgid "Manual inhibit"
 msgstr "수동 금지"
 
@@ -1985,13 +1991,13 @@ msgstr ""
 "MATE Desktop Environment Team <https://www.transifex.com/mate/teams/13566/ko/>"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
-#: ../src/gpm-tray-icon.c:297
+#: ../src/gpm-tray-icon.c:298
 #, c-format
 msgid "%s remaining"
 msgstr "%s 남음"
 
 #. preferences
-#: ../src/gpm-tray-icon.c:351
+#: ../src/gpm-tray-icon.c:352
 msgid "_Preferences"
 msgstr "기본 설정(_P)"
 

@@ -3,14 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Mingye Wang <arthur200126@gmail.com>, 2018
+# Wylmer Wang, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Mingcong Bai <jeffbai@aosc.xyz>, 2018
+# liushuyu011 <liushuyu011@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 14:58+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Mingye Wang <arthur200126@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-10-04 17:46+0200\n"
+"PO-Revision-Date: 2018-03-11 20:38+0000\n"
+"Last-Translator: liushuyu011 <liushuyu011@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +34,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "调整笔记本屏幕亮度。"
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:300
+#: ../applets/inhibit/inhibit-applet.c:228
 msgid "Cannot connect to mate-power-manager"
 msgstr "无法连接到 MATE 电源管理器"
 
@@ -41,12 +48,12 @@ msgid "LCD brightness : %d%%"
 msgstr "LCD 亮度：%d%%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:374
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "在 GNU 通用公共许可证 版本 2下授权"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:375
+#: ../applets/inhibit/inhibit-applet.c:301
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -58,7 +65,7 @@ msgstr ""
 "您可以选择使用 GPL 第二版，或(按照您的意愿)任何更新的版本。"
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:379
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -71,7 +78,7 @@ msgstr ""
 "请查阅 GNU 通用公共许可证以获得更多信息。"
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:383
+#: ../applets/inhibit/inhibit-applet.c:309
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -82,13 +89,13 @@ msgstr ""
 "如果没有，请写信至：Free Software Foundation, Inc.，\n"
 "51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA"
 
-#: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:610
+#: ../applets/brightness/brightness-applet.c:1070
+#: ../applets/inhibit/inhibit-applet.c:522
 msgid "_About"
 msgstr "关于(_A)"
 
-#: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:613
+#: ../applets/brightness/brightness-applet.c:1073
+#: ../applets/inhibit/inhibit-applet.c:525
 msgid "_Help"
 msgstr "帮助（_H）"
 
@@ -108,23 +115,23 @@ msgstr "亮度小程序"
 msgid "Adjusts Laptop panel brightness"
 msgstr "调整笔记本屏幕亮度"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:90
 msgid "Power Manager Inhibit Applet"
 msgstr "电源管理器阻止管理小程序"
 
-#: ../applets/inhibit/inhibit-applet.c:94
+#: ../applets/inhibit/inhibit-applet.c:91
 msgid "Allows user to inhibit automatic power saving."
 msgstr "允许用户阻止自动节电。"
 
-#: ../applets/inhibit/inhibit-applet.c:303
+#: ../applets/inhibit/inhibit-applet.c:231
 msgid "Automatic sleep inhibited"
 msgstr "已阻止自动休眠"
 
-#: ../applets/inhibit/inhibit-applet.c:305
+#: ../applets/inhibit/inhibit-applet.c:233
 msgid "Automatic sleep enabled"
 msgstr "自动休眠被启用"
 
-#: ../applets/inhibit/inhibit-applet.c:333
+#: ../applets/inhibit/inhibit-applet.c:261
 msgid "Manual inhibit"
 msgstr "人工阻止"
 
@@ -1961,13 +1968,13 @@ msgstr ""
 "刘子兴 <liushuyu@aosc.xyz>, 2015-2016"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
-#: ../src/gpm-tray-icon.c:297
+#: ../src/gpm-tray-icon.c:298
 #, c-format
 msgid "%s remaining"
 msgstr "剩余 %s"
 
 #. preferences
-#: ../src/gpm-tray-icon.c:351
+#: ../src/gpm-tray-icon.c:352
 msgid "_Preferences"
 msgstr "属性(_P)"
 

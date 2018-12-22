@@ -3,14 +3,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Mikko Harhanen <gitti@mikkoharhanen.fi>, 2018
+# Eslam Ali <talvikahvi@gmail.com>, 2018
+# Lasse Liehu <larso@gmx.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Ammuu5, 2018
+# nomen omen, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 14:58+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Eslam Ali <talvikahvi@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-10-04 17:46+0200\n"
+"PO-Revision-Date: 2018-03-11 20:38+0000\n"
+"Last-Translator: nomen omen, 2018\n"
 "Language-Team: Finnish (https://www.transifex.com/mate/teams/13566/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +35,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "Säädä näytön kirkkautta."
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:300
+#: ../applets/inhibit/inhibit-applet.c:228
 msgid "Cannot connect to mate-power-manager"
 msgstr "MATEn virrankäytön hallintaan ei saada yhteyttä"
 
@@ -41,12 +49,12 @@ msgid "LCD brightness : %d%%"
 msgstr "Näytön kirkkaus: %d %%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:374
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "Lisensoitu GNU General Public Licensen versiolla 2"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:375
+#: ../applets/inhibit/inhibit-applet.c:301
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -60,7 +68,7 @@ msgstr ""
 "tahansa myöhemmän version mukaisesti."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:379
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -73,7 +81,7 @@ msgstr ""
 " tiettyyn tarkoitukseen.  Katso GPL-lisenssistä lisää yksityiskohtia."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:383
+#: ../applets/inhibit/inhibit-applet.c:309
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -84,13 +92,13 @@ msgstr ""
 "ei ole, kirjoita osoitteeseen Free Software Foundation Inc., 59 Temple\n"
 "Place – Suite 330, Boston, MA 02111-1307, USA."
 
-#: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:610
+#: ../applets/brightness/brightness-applet.c:1070
+#: ../applets/inhibit/inhibit-applet.c:522
 msgid "_About"
 msgstr "_Tietoja"
 
-#: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:613
+#: ../applets/brightness/brightness-applet.c:1073
+#: ../applets/inhibit/inhibit-applet.c:525
 msgid "_Help"
 msgstr "_Ohje"
 
@@ -110,23 +118,23 @@ msgstr "Kirkkaudensäätösovelma"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Säätää näytön kirkkautta"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:90
 msgid "Power Manager Inhibit Applet"
 msgstr "Virransäästön estosovelma"
 
-#: ../applets/inhibit/inhibit-applet.c:94
+#: ../applets/inhibit/inhibit-applet.c:91
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Sallii käyttäjän estää automaattinen virranhallinta."
 
-#: ../applets/inhibit/inhibit-applet.c:303
+#: ../applets/inhibit/inhibit-applet.c:231
 msgid "Automatic sleep inhibited"
 msgstr "Automaattinen valmiustilaan siirtyminen estetty"
 
-#: ../applets/inhibit/inhibit-applet.c:305
+#: ../applets/inhibit/inhibit-applet.c:233
 msgid "Automatic sleep enabled"
 msgstr "Automaattinen valmiustilaan siirtyminen käytössä"
 
-#: ../applets/inhibit/inhibit-applet.c:333
+#: ../applets/inhibit/inhibit-applet.c:261
 msgid "Manual inhibit"
 msgstr "Estetty käsin"
 
@@ -2022,13 +2030,13 @@ msgstr ""
 "Johanna Makkonen, 2003"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
-#: ../src/gpm-tray-icon.c:297
+#: ../src/gpm-tray-icon.c:298
 #, c-format
 msgid "%s remaining"
 msgstr ""
 
 #. preferences
-#: ../src/gpm-tray-icon.c:351
+#: ../src/gpm-tray-icon.c:352
 msgid "_Preferences"
 msgstr "_Asetukset"
 

@@ -3,14 +3,23 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Simone Centonze <mypythonit@gmail.com>, 2018
+# Marco Mangiacavalli, 2018
+# Emanuele Antonio Faraone (FaraOne) <emanueleant03@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Giuseppe Pignataro (Fastbyte01) <rogepix@gmail.com>, 2018
+# Marco Bartolucci <nap.84@live.it>, 2018
+# l3nn4rt, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 14:58+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: lennart fsm, 2018\n"
+"POT-Creation-Date: 2018-10-04 17:46+0200\n"
+"PO-Revision-Date: 2018-03-11 20:38+0000\n"
+"Last-Translator: l3nn4rt, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +36,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "Modifica la luminosità del pannello LCD."
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:300
+#: ../applets/inhibit/inhibit-applet.c:228
 msgid "Cannot connect to mate-power-manager"
 msgstr "Impossibile connettersi a mate-power-manager"
 
@@ -41,12 +50,12 @@ msgid "LCD brightness : %d%%"
 msgstr "Luminosità LCD: %d%%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:374
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "Rilasciato nei termini della GNU General Public License Versione 2"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:375
+#: ../applets/inhibit/inhibit-applet.c:301
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -59,7 +68,7 @@ msgstr ""
 "(a scelta) una versione più recente."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:379
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -72,7 +81,7 @@ msgstr ""
 "Per maggiori dettagli consultare la GNU General Public License."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:383
+#: ../applets/inhibit/inhibit-applet.c:309
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -85,13 +94,13 @@ msgstr ""
 "  51 Franklin Street, Fifth Floor, Boston, MA\n"
 "  02111-1301, USA"
 
-#: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:610
+#: ../applets/brightness/brightness-applet.c:1070
+#: ../applets/inhibit/inhibit-applet.c:522
 msgid "_About"
 msgstr "_Informazioni"
 
-#: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:613
+#: ../applets/brightness/brightness-applet.c:1073
+#: ../applets/inhibit/inhibit-applet.c:525
 msgid "_Help"
 msgstr "_Aiuto"
 
@@ -111,23 +120,23 @@ msgstr "Applet luminosità"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Regola la luminosità del pannello LCD"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:90
 msgid "Power Manager Inhibit Applet"
 msgstr "Applet di inibizione di Gestore alimentazione"
 
-#: ../applets/inhibit/inhibit-applet.c:94
+#: ../applets/inhibit/inhibit-applet.c:91
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Permette all'utente di impedire il risparmio energetico automatico."
 
-#: ../applets/inhibit/inhibit-applet.c:303
+#: ../applets/inhibit/inhibit-applet.c:231
 msgid "Automatic sleep inhibited"
 msgstr "Pausa automatica disabilitata"
 
-#: ../applets/inhibit/inhibit-applet.c:305
+#: ../applets/inhibit/inhibit-applet.c:233
 msgid "Automatic sleep enabled"
 msgstr "Pausa automatica abilitata"
 
-#: ../applets/inhibit/inhibit-applet.c:333
+#: ../applets/inhibit/inhibit-applet.c:261
 msgid "Manual inhibit"
 msgstr "Inibizione manuale"
 
@@ -2143,13 +2152,13 @@ msgid "translator-credits"
 msgstr "Riconoscimenti-traduzione"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
-#: ../src/gpm-tray-icon.c:297
+#: ../src/gpm-tray-icon.c:298
 #, c-format
 msgid "%s remaining"
 msgstr "%s rimanenti"
 
 #. preferences
-#: ../src/gpm-tray-icon.c:351
+#: ../src/gpm-tray-icon.c:352
 msgid "_Preferences"
 msgstr "_Preferenze"
 

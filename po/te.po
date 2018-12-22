@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# ప్రవీణ్ ఇళ్ళ <mail2ipn@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 14:58+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-10-04 17:46+0200\n"
+"PO-Revision-Date: 2018-03-11 20:38+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Telugu (https://www.transifex.com/mate/teams/13566/te/)\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +31,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "లాప్‌టాప్ ఫలకం కాంతిప్రకాశం సర్దుబాటుచేయుము"
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:300
+#: ../applets/inhibit/inhibit-applet.c:228
 msgid "Cannot connect to mate-power-manager"
 msgstr "mate-power-manager కు అనుసంధానం కాలేదు"
 
@@ -41,12 +45,12 @@ msgid "LCD brightness : %d%%"
 msgstr "LCD కాంతిప్రకాశం : %d%%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:374
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "GNU జనరల్ పబ్లిక్ లైసెన్సు వర్షన్ 2 క్రింద లైసెన్సు పొందబడిఉంది"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:375
+#: ../applets/inhibit/inhibit-applet.c:301
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -59,7 +63,7 @@ msgstr ""
 "(మీ ఐచ్చికం వద్ద) దాని తరువాతి వర్షన్ కాని."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:379
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -72,7 +76,7 @@ msgstr ""
 "చూడండి."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:383
+#: ../applets/inhibit/inhibit-applet.c:309
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -83,13 +87,13 @@ msgstr ""
 "పొందకపోతే, Free Software Foundation, Inc., 51 Franklin Street, Fifth\n"
 "Floor, Boston. MA02110-1301, USA కు వ్రాయండి."
 
-#: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:610
+#: ../applets/brightness/brightness-applet.c:1070
+#: ../applets/inhibit/inhibit-applet.c:522
 msgid "_About"
 msgstr "గురించి (_A)"
 
-#: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:613
+#: ../applets/brightness/brightness-applet.c:1073
+#: ../applets/inhibit/inhibit-applet.c:525
 msgid "_Help"
 msgstr "సహాయం (_H)"
 
@@ -109,23 +113,23 @@ msgstr "కాంతిప్రకాశం ఆప్లెట్"
 msgid "Adjusts Laptop panel brightness"
 msgstr "లాప్‌టాప్ ఫలకం కాంతిప్రకాశం ను సర్దుబాటుచేయుము"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:90
 msgid "Power Manager Inhibit Applet"
 msgstr "పవర్ నిర్వాహకి ఆటంక ఆప్లెట్"
 
-#: ../applets/inhibit/inhibit-applet.c:94
+#: ../applets/inhibit/inhibit-applet.c:91
 msgid "Allows user to inhibit automatic power saving."
 msgstr "స్వయంచాలకంగా పవర్ దాయుటను వినియోగదారి ఆంటకపరుచుటకు అనుమతినివ్వుము."
 
-#: ../applets/inhibit/inhibit-applet.c:303
+#: ../applets/inhibit/inhibit-applet.c:231
 msgid "Automatic sleep inhibited"
 msgstr "స్వయంచాలక నిద్ర ఆటంకపరచబడింది"
 
-#: ../applets/inhibit/inhibit-applet.c:305
+#: ../applets/inhibit/inhibit-applet.c:233
 msgid "Automatic sleep enabled"
 msgstr "స్వయంచాలక నిద్ర చేతనం చేయబడింది"
 
-#: ../applets/inhibit/inhibit-applet.c:333
+#: ../applets/inhibit/inhibit-applet.c:261
 msgid "Manual inhibit"
 msgstr "మానవీయ ఆటకం"
 
@@ -2016,13 +2020,13 @@ msgid "translator-credits"
 msgstr "Praveen Illa <mail2ipn@gmail.com>, 2014"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
-#: ../src/gpm-tray-icon.c:297
+#: ../src/gpm-tray-icon.c:298
 #, c-format
 msgid "%s remaining"
 msgstr ""
 
 #. preferences
-#: ../src/gpm-tray-icon.c:351
+#: ../src/gpm-tray-icon.c:352
 msgid "_Preferences"
 msgstr "అభిరుచులు (_P)"
 

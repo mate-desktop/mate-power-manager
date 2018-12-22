@@ -3,14 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Pere O. <gotrunks@gmail.com>, 2018
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 14:58+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Pere O. <gotrunks@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-10-04 17:46+0200\n"
+"PO-Revision-Date: 2018-03-11 20:38+0000\n"
+"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2018\n"
 "Language-Team: Catalan (https://www.transifex.com/mate/teams/13566/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +32,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "Ajusteu la brillantor de la pantalla de l'ordinador portàtil."
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:300
+#: ../applets/inhibit/inhibit-applet.c:228
 msgid "Cannot connect to mate-power-manager"
 msgstr "No es pot connectar amb el gestor d'energia de MATE"
 
@@ -42,12 +47,12 @@ msgid "LCD brightness : %d%%"
 msgstr "Brillantor de la pantalla LCD: %d%%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:374
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "Sota la Llicència Pública General GNU, versió 2"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:375
+#: ../applets/inhibit/inhibit-applet.c:301
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -60,20 +65,20 @@ msgstr ""
 "llicència, o (si ho preferiu) qualsevol versió posterior."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:379
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
 "GNU General Public License for more details."
 msgstr ""
-"El gestor d'energia es distribueix amb l'expectativa que serà útil, \n"
-"però SENSE CAP GARANTIA; ni tan sols la garantia implícita\n"
-"de COMERCIALITZACIÓ o ADEQUACIÓ PER A UN PROPÒSIT PARTICULAR.\n"
-"Vegeu la Llicència Pública General GNU per obtenir-ne més detalls."
+"El gestor d'energia es distribueix amb l'expectativa que serà útil, però\n"
+"SENSE CAP GARANTIA; ni tan sols la garantia implícita de\n"
+"COMERCIALITZACIÓ o ADEQUACIÓ PER A UN PROPÒSIT PARTICULAR.\n"
+"Per obtenir més informació, consulteu la Llicència Pública General de GNU."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:383
+#: ../applets/inhibit/inhibit-applet.c:309
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -85,13 +90,13 @@ msgstr ""
 "Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,\n"
 "MA 02110-1301, USA."
 
-#: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:610
+#: ../applets/brightness/brightness-applet.c:1070
+#: ../applets/inhibit/inhibit-applet.c:522
 msgid "_About"
 msgstr "_Quant a"
 
-#: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:613
+#: ../applets/brightness/brightness-applet.c:1073
+#: ../applets/inhibit/inhibit-applet.c:525
 msgid "_Help"
 msgstr "_Ajuda"
 
@@ -111,23 +116,23 @@ msgstr "Miniaplicació de la brillantor"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Ajusta la brillantor de la pantalla de l'ordinador portàtil"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:90
 msgid "Power Manager Inhibit Applet"
 msgstr "Miniaplicació d'inhabilitació del gestor d'energia"
 
-#: ../applets/inhibit/inhibit-applet.c:94
+#: ../applets/inhibit/inhibit-applet.c:91
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Permet a l'usuari inhabilitar la gestió automàtica de l'energia."
 
-#: ../applets/inhibit/inhibit-applet.c:303
+#: ../applets/inhibit/inhibit-applet.c:231
 msgid "Automatic sleep inhibited"
 msgstr "Mode de baix consum automàtic inhabilitat"
 
-#: ../applets/inhibit/inhibit-applet.c:305
+#: ../applets/inhibit/inhibit-applet.c:233
 msgid "Automatic sleep enabled"
 msgstr "Mode de baix consum automàtic habilitat"
 
-#: ../applets/inhibit/inhibit-applet.c:333
+#: ../applets/inhibit/inhibit-applet.c:261
 msgid "Manual inhibit"
 msgstr "Inhabilitació manual"
 
@@ -1049,7 +1054,7 @@ msgstr "En prémer el _botó de suspensió"
 
 #: ../data/gpm-prefs.ui.h:18
 msgid "<b>Notification Area</b>"
-msgstr "<b>Àrea de notificació</b>"
+msgstr "<b>Àrea de notificacions</b>"
 
 #: ../data/gpm-prefs.ui.h:19
 msgid "_Never display an icon"
@@ -1672,7 +1677,7 @@ msgid ""
 "computer in a suspended state."
 msgstr ""
 "La bateria està per sota del nivell crític i l'ordinador està a punt de "
-"suspendre.<br><b>NOTA:</b> Es necessita una mica d'energia per mantenir "
+"suspendre.<br><b>NOTA:</b> es necessita una mica d'energia per mantenir "
 "l'ordinador en estat de suspensió."
 
 #. TRANSLATORS: computer will hibernate
@@ -2166,13 +2171,13 @@ msgid "translator-credits"
 msgstr "Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
-#: ../src/gpm-tray-icon.c:297
+#: ../src/gpm-tray-icon.c:298
 #, c-format
 msgid "%s remaining"
 msgstr "%s restants"
 
 #. preferences
-#: ../src/gpm-tray-icon.c:351
+#: ../src/gpm-tray-icon.c:352
 msgid "_Preferences"
 msgstr "_Preferències"
 
