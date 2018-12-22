@@ -1,11 +1,29 @@
+### mate-power-manager 1.21.1
+
+  * Translations update
+  * disable deprecation warnings for distcheck
+  * gpm-control: avoid deprecated 'g_settings_list_schemas'
+  * media-keys: always round the render coordinates for media icons
+  * media-keys: Tweak the OSD's bright bar position
+  * osd-window: make the window smaller
+  * media-keys: Make icon smaller in OSD
+  * media-keys: Use constant for icon size in OSD
+  * Fix spelling and grammar mistakes
+  * Use make functions for HELP_LINGUAS
+  * add m-p-m user-guide to transifex config
+  * gpm-kbd-backlight: replace deprecated GDK_DEVICE_MANAGER
+  * gpm-backlight: replace deprecated GDK_DEVICE_MANAGER
+  * gpm-button: replace deprecated Gdk functions
+  * gpm-brightness: replace deprecated Gdk functions
+
 ### mate-power-manager 1.21.0
 
-    sync with transifex
-    inhibit: always scale icon to match panel size
-    Inhibit Applet: Fix excessive CPU use
-    add missing window icon to About dialogs
-    Scale OSD size correctly on HiDPI displays (#246)
-    Grammar fix
+  * Translations update
+  * inhibit: always scale icon to match panel size
+  * Inhibit Applet: Fix excessive CPU use
+  * add missing window icon to About dialogs
+  * Scale OSD size correctly on HiDPI displays (#246)
+  * Grammar fix
 
 ### mate-power-manager 1.20.0
 
