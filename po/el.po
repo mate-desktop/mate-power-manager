@@ -3,14 +3,24 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Angelos Chraniotis <chraniotis@gmail.com>, 2018
+# Timos Zacharatos <kokkinopioupiou@hotmail.com>, 2018
+# 437c9d6e19936ed69f57bed9e0fe4716, 2018
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# thunk <thunk77@gmail.com>, 2018
+# Αλέξανδρος Καπετάνιος <alexandros@gnugr.org>, 2018
+# Constantinos Tsakiris, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:02+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Angelos Chraniotis <chraniotis@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-10-04 17:35+0200\n"
+"PO-Revision-Date: 2018-03-11 20:39+0000\n"
+"Last-Translator: Constantinos Tsakiris, 2018\n"
 "Language-Team: Greek (https://www.transifex.com/mate/teams/13566/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +37,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "Ρυθμίζει τη φωτεινότητα της οθόνης του φορητού υπολογιστή."
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:300
+#: ../applets/inhibit/inhibit-applet.c:228
 msgid "Cannot connect to mate-power-manager"
 msgstr "Αδυναμία σύνδεσης στο mate-power-manager"
 
@@ -41,14 +51,14 @@ msgid "LCD brightness : %d%%"
 msgstr "Φωτεινότητα LCD : %d%%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:374
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr ""
 "Διανέμεται υπό τους όρους της Γενικής Άδειας Δημόσιας Χρήσης GNU (GPL), "
 "έκδοσης 2"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:375
+#: ../applets/inhibit/inhibit-applet.c:301
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -62,7 +72,7 @@ msgstr ""
 "(κατ' επιλογήν σας) οποιασδήποτε μεταγενέστερης έκδοσης."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:379
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -75,7 +85,7 @@ msgstr ""
 "Για περισσότερες λεπτομέρειες ανατρέξτε στη Γενική Άδεια Δημόσιας Χρήσης GNU (GPL)."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:383
+#: ../applets/inhibit/inhibit-applet.c:309
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -87,13 +97,13 @@ msgstr ""
 "Free Software Foundation, Inc., 59 Temple Place, Suite 330, \n"
 "Boston, MA  02111-1307  USA"
 
-#: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:610
+#: ../applets/brightness/brightness-applet.c:1070
+#: ../applets/inhibit/inhibit-applet.c:522
 msgid "_About"
 msgstr "Πε_ρί"
 
-#: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:613
+#: ../applets/brightness/brightness-applet.c:1073
+#: ../applets/inhibit/inhibit-applet.c:525
 msgid "_Help"
 msgstr "_Βοήθεια"
 
@@ -113,24 +123,24 @@ msgstr "Διαχείριση φωτεινότητας"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Ρυθμίζει τη φωτεινότητα της οθόνης του υπολογιστή"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:90
 msgid "Power Manager Inhibit Applet"
 msgstr "Μικροεφαρμογή αποτροπής διαχείρισης ενέργειας"
 
-#: ../applets/inhibit/inhibit-applet.c:94
+#: ../applets/inhibit/inhibit-applet.c:91
 msgid "Allows user to inhibit automatic power saving."
 msgstr ""
 "Επιτρέπει στο χρήστη να αποτρέπει την αυτόματη εξοικονόμηση ενέργειας."
 
-#: ../applets/inhibit/inhibit-applet.c:303
+#: ../applets/inhibit/inhibit-applet.c:231
 msgid "Automatic sleep inhibited"
 msgstr "Έχει αποτραπεί η αυτόματη αναστολή"
 
-#: ../applets/inhibit/inhibit-applet.c:305
+#: ../applets/inhibit/inhibit-applet.c:233
 msgid "Automatic sleep enabled"
 msgstr "Είναι ενεργή η αυτόματη αναστολή"
 
-#: ../applets/inhibit/inhibit-applet.c:333
+#: ../applets/inhibit/inhibit-applet.c:261
 msgid "Manual inhibit"
 msgstr "Χειροκίνητη αποτροπή"
 
@@ -2183,13 +2193,13 @@ msgstr ""
 "Για περισσότερες πληροφορίες, επισκεφθείτε την σελίδα http://www.mate.gr/"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
-#: ../src/gpm-tray-icon.c:297
+#: ../src/gpm-tray-icon.c:298
 #, c-format
 msgid "%s remaining"
 msgstr "%s απομένει"
 
 #. preferences
-#: ../src/gpm-tray-icon.c:351
+#: ../src/gpm-tray-icon.c:352
 msgid "_Preferences"
 msgstr "_Προτιμήσεις"
 

@@ -3,14 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# zubr139, 2018
+# Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Микола Ткач <znadibnyk@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:02+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-10-04 17:35+0200\n"
+"PO-Revision-Date: 2018-03-11 20:39+0000\n"
+"Last-Translator: Микола Ткач <znadibnyk@gmail.com>, 2018\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +33,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "Змінює яскравість екрану ноутбука."
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:300
+#: ../applets/inhibit/inhibit-applet.c:228
 msgid "Cannot connect to mate-power-manager"
 msgstr "Не вдається з'єднатися з mate-power-manager"
 
@@ -41,13 +47,13 @@ msgid "LCD brightness : %d%%"
 msgstr "Яскравість LCD : %d%%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:374
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr ""
 "Ця проґрама розповсюджується за умовами GNU General Public License Version 2"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:375
+#: ../applets/inhibit/inhibit-applet.c:301
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -60,7 +66,7 @@ msgstr ""
 "вашим бажанням) будь-якої старшої версії.\""
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:379
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -73,7 +79,7 @@ msgstr ""
 "докладнішої інформації."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:383
+#: ../applets/inhibit/inhibit-applet.c:309
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -84,13 +90,13 @@ msgstr ""
 "якщо це не так, напишіть у Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301, USA."
 
-#: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:610
+#: ../applets/brightness/brightness-applet.c:1070
+#: ../applets/inhibit/inhibit-applet.c:522
 msgid "_About"
 msgstr "_Про проґраму"
 
-#: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:613
+#: ../applets/brightness/brightness-applet.c:1073
+#: ../applets/inhibit/inhibit-applet.c:525
 msgid "_Help"
 msgstr "_Допомога"
 
@@ -110,24 +116,24 @@ msgstr "Аплет зміни яскравости"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Змінює яскравість екрану ноутбука"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:90
 msgid "Power Manager Inhibit Applet"
 msgstr "Аплет стримування зберігання живлення"
 
-#: ../applets/inhibit/inhibit-applet.c:94
+#: ../applets/inhibit/inhibit-applet.c:91
 msgid "Allows user to inhibit automatic power saving."
 msgstr ""
 "Дозволяє користувачу притримувати автоматичний запуск збереження енергії."
 
-#: ../applets/inhibit/inhibit-applet.c:303
+#: ../applets/inhibit/inhibit-applet.c:231
 msgid "Automatic sleep inhibited"
 msgstr "Автоматичне засипання вимкнено "
 
-#: ../applets/inhibit/inhibit-applet.c:305
+#: ../applets/inhibit/inhibit-applet.c:233
 msgid "Automatic sleep enabled"
 msgstr "Автоматичне засипання увімкнено"
 
-#: ../applets/inhibit/inhibit-applet.c:333
+#: ../applets/inhibit/inhibit-applet.c:261
 msgid "Manual inhibit"
 msgstr "Ручне стримання"
 
@@ -1091,19 +1097,19 @@ msgstr "Час невідомий"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%i хвилина"
+msgstr[1] "%i хвилини"
+msgstr[2] "%i хвилин"
+msgstr[3] "%i хвилин"
 
 #: ../src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%i година"
+msgstr[1] "%i години"
+msgstr[2] "%i годин"
+msgstr[3] "%i годин"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -1115,18 +1121,18 @@ msgstr "%i %s %i %s"
 #: ../src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "година"
+msgstr[1] "години"
+msgstr[2] "годин"
+msgstr[3] "годин"
 
 #: ../src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "хвилина"
+msgstr[1] "хвилини"
+msgstr[2] "хвилин"
+msgstr[3] "хвилин"
 
 #. Translators: This is %i days
 #: ../src/gpm-graph-widget.c:435
@@ -1330,10 +1336,10 @@ msgstr ""
 #: ../src/gpm-manager.c:1165
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Батарея заряджена"
+msgstr[1] "Батареї заряджені"
+msgstr[2] "Батареї заряджені"
+msgstr[3] "Батареї заряджені"
 
 #. TRANSLATORS: laptop battery is now discharging
 #: ../src/gpm-manager.c:1211
@@ -1787,40 +1793,40 @@ msgstr "Невідомий"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%.0f секунда"
+msgstr[1] "%.0f секунди"
+msgstr[2] "%.0f секунд"
+msgstr[3] "%.0f секунд"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:295
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%.1f хвилина"
+msgstr[1] "%.1f хвилини"
+msgstr[2] "%.1f хвилин"
+msgstr[3] "%.1f хвилин"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:300
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%.1f година"
+msgstr[1] "%.1f години"
+msgstr[2] "%.1f годин"
+msgstr[3] "%.1f годин"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:304
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%.1f день"
+msgstr[1] "%.1f дні"
+msgstr[2] "%.1f днів"
+msgstr[3] "%.1f днів"
 
 #: ../src/gpm-statistics.c:313
 msgid "Yes"
@@ -1859,10 +1865,10 @@ msgstr "Постачальник енергії"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%d секунда"
+msgstr[1] "%d секунди"
+msgstr[2] "%d секунд"
+msgstr[3] "%d секунд"
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
@@ -2112,7 +2118,7 @@ msgstr "Процесор"
 
 #: ../src/gpm-tray-icon.c:189
 msgid "Copyright © 2011-2018 MATE developers"
-msgstr ""
+msgstr "Авторське право © 2011-2016 Розробники MATE"
 
 #. Translators should localize the following string
 #. * which will be displayed at the bottom of the about
@@ -2125,13 +2131,13 @@ msgstr ""
 "Oleh Tsyupka <myr4yk@gmail.com>"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
-#: ../src/gpm-tray-icon.c:297
+#: ../src/gpm-tray-icon.c:298
 #, c-format
 msgid "%s remaining"
 msgstr "%s залишилося"
 
 #. preferences
-#: ../src/gpm-tray-icon.c:351
+#: ../src/gpm-tray-icon.c:352
 msgid "_Preferences"
 msgstr "_Налаштування"
 
@@ -2321,100 +2327,100 @@ msgstr "Відсоток заряду:"
 #: ../src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Мережний адаптер"
+msgstr[1] "Мережні адаптери"
+msgstr[2] "Мережних адаптерів"
+msgstr[3] "Мережних адаптерів"
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Батарея ноутбука"
+msgstr[1] "Батареї ноутбука"
+msgstr[2] "Батареї ноутбука"
+msgstr[3] "Батареї ноутбука"
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Блок безперебійного живлення"
+msgstr[1] "Блоки безперебійного живлення"
+msgstr[2] "Блоків безперебійного живлення"
+msgstr[3] "Блоків безперебійного живлення"
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Монітор"
+msgstr[1] "Монітори"
+msgstr[2] "Моніторів"
+msgstr[3] "Моніторів"
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Мишка"
+msgstr[1] "Мишки"
+msgstr[2] "Мишок"
+msgstr[3] "Мишок"
 
 #. TRANSLATORS: wireless keyboard with internal battery
 #: ../src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Набірниця"
+msgstr[1] "Набірниці"
+msgstr[2] "Набірниць"
+msgstr[3] "Набірниць"
 
 #. TRANSLATORS: portable device
 #: ../src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "КПК"
+msgstr[1] "КПК"
+msgstr[2] "КПК"
+msgstr[3] "КПК"
 
 #. TRANSLATORS: cell phone (mobile...)
 #: ../src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Мобільний телефон"
+msgstr[1] "Мобільні телефони"
+msgstr[2] "Мобільних телефонів"
+msgstr[3] "Мобільних телефонів"
 
 #. TRANSLATORS: media player, mp3 etc
 #: ../src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Медіяпрогравач"
+msgstr[1] "Медіяпрогравачі"
+msgstr[2] "Медіяпрогравачів"
+msgstr[3] "Медіяпрогравачів"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Пляншет"
+msgstr[1] "Пляншети"
+msgstr[2] "Пляншетів"
+msgstr[3] "Пляншетів"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Комп’ютер"
+msgstr[1] "Комп’ютери"
+msgstr[2] "Комп’ютерів"
+msgstr[3] "Комп’ютерів"
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:594

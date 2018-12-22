@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:02+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-10-04 17:35+0200\n"
+"PO-Revision-Date: 2018-03-11 20:39+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Malayalam (https://www.transifex.com/mate/teams/13566/ml/)\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +32,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "ലാപ്‌ടോപ് പാനലിന്റെ തെളിച്ചം ക്രമപ്പെടുത്തുന്നു."
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:300
+#: ../applets/inhibit/inhibit-applet.c:228
 msgid "Cannot connect to mate-power-manager"
 msgstr "ഗ്നോമിന്റെ വൈദ്യുതി നടത്തിപ്പുകാരനുമായി ബന്ധപ്പെടാന്‍ സാധിയ്ക്കില്ല"
 
@@ -43,12 +46,12 @@ msgid "LCD brightness : %d%%"
 msgstr "എല്‍സിഡി യുടെ തെളിച്ചം : %d%%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:374
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "ഗ്നു ജനറല്‍ പബ്ലിക് ലൈസന്‍സ് ലക്കം 2 പ്രകാരം അനുമതിയുളളതു്"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:375
+#: ../applets/inhibit/inhibit-applet.c:301
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -61,7 +64,7 @@ msgstr ""
 "ഏതെങ്കിലും ലക്കമോ ഉപയോഗിക്കാം."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:379
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -74,7 +77,7 @@ msgstr ""
 "ഗ്നു ജനറല്‍ പബ്ലിക് ലൈസന്‍സ് കാണുക."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:383
+#: ../applets/inhibit/inhibit-applet.c:309
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -86,13 +89,13 @@ msgstr ""
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
 
-#: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:610
+#: ../applets/brightness/brightness-applet.c:1070
+#: ../applets/inhibit/inhibit-applet.c:522
 msgid "_About"
 msgstr "_സംബന്ധിച്ച്"
 
-#: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:613
+#: ../applets/brightness/brightness-applet.c:1073
+#: ../applets/inhibit/inhibit-applet.c:525
 msgid "_Help"
 msgstr "_സഹായം"
 
@@ -112,23 +115,23 @@ msgstr "തെളിച്ചത്തിനുള്ള ലഘുപ്രയ�
 msgid "Adjusts Laptop panel brightness"
 msgstr "ലാപ്‌ടോപ് പാനലിന്റെ തെളിച്ചം ക്രമപ്പെടുത്തുന്നു"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:90
 msgid "Power Manager Inhibit Applet"
 msgstr "വൈദ്യുതി നടത്തിപ്പുകാരന്റെ ഭാഗമായ തടയുന്നതിനുള്ള ലഘുപ്രയോഗം"
 
-#: ../applets/inhibit/inhibit-applet.c:94
+#: ../applets/inhibit/inhibit-applet.c:91
 msgid "Allows user to inhibit automatic power saving."
 msgstr "സ്വയമുള്ള വൈദ്യുതി മിതവിനിയോഗം തടയാന്‍ ഉപയോക്താവിനെ അനുവദിയ്ക്കുന്നു."
 
-#: ../applets/inhibit/inhibit-applet.c:303
+#: ../applets/inhibit/inhibit-applet.c:231
 msgid "Automatic sleep inhibited"
 msgstr "സ്വയനിദ്ര തടഞ്ഞിരിയ്ക്കുന്നു"
 
-#: ../applets/inhibit/inhibit-applet.c:305
+#: ../applets/inhibit/inhibit-applet.c:233
 msgid "Automatic sleep enabled"
 msgstr "സ്വയനിദ്ര പ്രാവര്‍ത്തികമാക്കിയിരിയ്ക്കുന്നു"
 
-#: ../applets/inhibit/inhibit-applet.c:333
+#: ../applets/inhibit/inhibit-applet.c:261
 msgid "Manual inhibit"
 msgstr "തന്നത്താന്‍ തടയുക"
 
@@ -2077,13 +2080,13 @@ msgstr ""
 "പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയില്‍ <pravi.a@gmail.com>"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
-#: ../src/gpm-tray-icon.c:297
+#: ../src/gpm-tray-icon.c:298
 #, c-format
 msgid "%s remaining"
 msgstr ""
 
 #. preferences
-#: ../src/gpm-tray-icon.c:351
+#: ../src/gpm-tray-icon.c:352
 msgid "_Preferences"
 msgstr "മുന്‍ഗണനകള്‍"
 

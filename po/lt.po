@@ -3,14 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# brennus <jonas.ska@gmail.com>, 2018
+# Audrius Meskauskas, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Moo, 2018
+# Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:02+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Audrius Meskauskas, 2018\n"
+"POT-Creation-Date: 2018-10-04 17:35+0200\n"
+"PO-Revision-Date: 2018-03-11 20:39+0000\n"
+"Last-Translator: Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2018\n"
 "Language-Team: Lithuanian (https://www.transifex.com/mate/teams/13566/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +34,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "Reguliuoja nešiojamojo kompiuterio skydelio ryškumą."
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:300
+#: ../applets/inhibit/inhibit-applet.c:228
 msgid "Cannot connect to mate-power-manager"
 msgstr "Nepavyko prisijungti prie mate-power-manager"
 
@@ -41,12 +48,12 @@ msgid "LCD brightness : %d%%"
 msgstr "LCD ryškumas: %d%%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:374
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "Licencijuota GNU Genereal Public Licence Version 2 sąlygomis"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:375
+#: ../applets/inhibit/inhibit-applet.c:301
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -59,7 +66,7 @@ msgstr ""
 "arba (jūsų pasirinkimu) bet kurios vėlesnės licencijos versijos sąlygomis."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:379
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -72,7 +79,7 @@ msgstr ""
 "bendrąją viešąją licenciją."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:383
+#: ../applets/inhibit/inhibit-applet.c:309
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -83,13 +90,13 @@ msgstr ""
 "MATE energijos tvarkytuve; jeigu negavote, rašykite Free Software Foundation,\n"
 "Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 
-#: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:610
+#: ../applets/brightness/brightness-applet.c:1070
+#: ../applets/inhibit/inhibit-applet.c:522
 msgid "_About"
 msgstr "_Apie"
 
-#: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:613
+#: ../applets/brightness/brightness-applet.c:1073
+#: ../applets/inhibit/inhibit-applet.c:525
 msgid "_Help"
 msgstr "_Žinynas"
 
@@ -109,23 +116,23 @@ msgstr "Ryškumo įtaisas"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Reguliuoja nešiojamojo kompiuterio skydelio ryškumą."
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:90
 msgid "Power Manager Inhibit Applet"
 msgstr "Energijos tvarkytuvės uždraudimo įtaisas"
 
-#: ../applets/inhibit/inhibit-applet.c:94
+#: ../applets/inhibit/inhibit-applet.c:91
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Leidžia naudotojui išvengti automatinio energijos taupymo."
 
-#: ../applets/inhibit/inhibit-applet.c:303
+#: ../applets/inhibit/inhibit-applet.c:231
 msgid "Automatic sleep inhibited"
 msgstr "Automatinis užmigimas išjungtas"
 
-#: ../applets/inhibit/inhibit-applet.c:305
+#: ../applets/inhibit/inhibit-applet.c:233
 msgid "Automatic sleep enabled"
 msgstr "Automatinis užmigimas įjungtas"
 
-#: ../applets/inhibit/inhibit-applet.c:333
+#: ../applets/inhibit/inhibit-applet.c:261
 msgid "Manual inhibit"
 msgstr "Rankinis uždraudimas"
 
@@ -2146,16 +2153,17 @@ msgstr ""
 "Gintautas Miliauskas <gintas@akl.lt>\n"
 "Tomas Kuliavas <tokul@users.sourceforge.net>\n"
 "Gediminas Paulauskas <menesis@chatsubo.lt>\n"
-"Moo"
+"Moo\n"
+"Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
-#: ../src/gpm-tray-icon.c:297
+#: ../src/gpm-tray-icon.c:298
 #, c-format
 msgid "%s remaining"
 msgstr "Liko %s"
 
 #. preferences
-#: ../src/gpm-tray-icon.c:351
+#: ../src/gpm-tray-icon.c:352
 msgid "_Preferences"
 msgstr "_Nustatymai"
 
@@ -2345,100 +2353,100 @@ msgstr "Krovimo greitis:"
 #: ../src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Kintamosios srovės adapteris"
+msgstr[1] "Kintamosios srovės adapteriai"
+msgstr[2] "Kintamosios srovės adapterių"
+msgstr[3] "Kintamosios srovės adapterių"
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Nešiojamojo kompiuterio baterija"
+msgstr[1] "Nešiojamojo kompiuterio baterijos"
+msgstr[2] "Nešiojamojo kompiuterio baterijų"
+msgstr[3] "Nešiojamojo kompiuterio baterijų"
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Nenutrūkstamo maitinimo šaltinis"
+msgstr[1] "Nenutrūkstamo maitinimo šaltiniai"
+msgstr[2] "Nenutrūkstamo maitinimo šaltinių"
+msgstr[3] "Nenutrūkstamo maitinimo šaltinių"
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Monitorius"
+msgstr[1] "Monitoriai"
+msgstr[2] "Monitorių"
+msgstr[3] "Monitorių"
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Pelė"
+msgstr[1] "Pelės"
+msgstr[2] "Pelių"
+msgstr[3] "Pelių"
 
 #. TRANSLATORS: wireless keyboard with internal battery
 #: ../src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Klaviatūra"
+msgstr[1] "Klaviatūros"
+msgstr[2] "Klaviatūrų"
+msgstr[3] "Klaviatūrų"
 
 #. TRANSLATORS: portable device
 #: ../src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Kišeninis kompiuteris"
+msgstr[1] "Kišeniniai kompiuteriai"
+msgstr[2] "Kišeninių kompiuterių"
+msgstr[3] "Kišeninių kompiuterių"
 
 #. TRANSLATORS: cell phone (mobile...)
 #: ../src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Mobilusis telefonas"
+msgstr[1] "Mobilieji telefonai"
+msgstr[2] "Mobiliųjų telefonų"
+msgstr[3] "Mobiliųjų telefonų"
 
 #. TRANSLATORS: media player, mp3 etc
 #: ../src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Medijos grotuvas"
+msgstr[1] "Medijos grotuvai"
+msgstr[2] "Medijos grotuvų"
+msgstr[3] "Medijos grotuvų"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Planšetė"
+msgstr[1] "Planšetės"
+msgstr[2] "Planšečių"
+msgstr[3] "Planšečių"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Kompiuteris"
+msgstr[1] "Kompiuteriai"
+msgstr[2] "Kompiuterių"
+msgstr[3] "Kompiuterių"
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:594

@@ -3,14 +3,25 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Henrik Mattsson-Mårn <h@reglage.net>, 2018
+# Jonatan Nyberg, 2018
+# Kristoffer Grundström <hamnisdude@gmail.com>, 2018
+# Patrik Nilsson <asavartzeth@gmail.com>, 2018
+# Daniel Gullbransen <daniel@llama.nu>, 2018
+# Erik, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Tobias Lekare <lekare@linux.com>, 2018
+# Philip Andersen <renegadevi@codeofmagi.net>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:02+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Daniel Gullbransen <daniel@llama.nu>, 2018\n"
+"POT-Creation-Date: 2018-10-04 17:35+0200\n"
+"PO-Revision-Date: 2018-03-11 20:39+0000\n"
+"Last-Translator: Philip Andersen <renegadevi@codeofmagi.net>, 2018\n"
 "Language-Team: Swedish (https://www.transifex.com/mate/teams/13566/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +38,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr "Justerar ljusstyrkan på skärmen."
 
 #: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:300
+#: ../applets/inhibit/inhibit-applet.c:228
 msgid "Cannot connect to mate-power-manager"
 msgstr "Kan inte ansluta till mate-power-manager"
 
@@ -41,12 +52,12 @@ msgid "LCD brightness : %d%%"
 msgstr "LCD-ljusstyrka : %d%%"
 
 #: ../applets/brightness/brightness-applet.c:807
-#: ../applets/inhibit/inhibit-applet.c:374
+#: ../applets/inhibit/inhibit-applet.c:300
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "Licensierat under GNU General Public License version 2"
 
 #: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:375
+#: ../applets/inhibit/inhibit-applet.c:301
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -59,7 +70,7 @@ msgstr ""
 "någon senare version."
 
 #: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:379
+#: ../applets/inhibit/inhibit-applet.c:305
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -72,7 +83,7 @@ msgstr ""
 "General Public License för ytterligare information."
 
 #: ../applets/brightness/brightness-applet.c:816
-#: ../applets/inhibit/inhibit-applet.c:383
+#: ../applets/inhibit/inhibit-applet.c:309
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -83,13 +94,13 @@ msgstr ""
 "med detta program. Om inte, skriv till Free Software Foundation, Inc.,\n"
 "51 Franklin Street, Fifth Floor, Boston, MA 02111-1307, USA."
 
-#: ../applets/brightness/brightness-applet.c:1068
-#: ../applets/inhibit/inhibit-applet.c:610
+#: ../applets/brightness/brightness-applet.c:1070
+#: ../applets/inhibit/inhibit-applet.c:522
 msgid "_About"
 msgstr "_Om"
 
-#: ../applets/brightness/brightness-applet.c:1071
-#: ../applets/inhibit/inhibit-applet.c:613
+#: ../applets/brightness/brightness-applet.c:1073
+#: ../applets/inhibit/inhibit-applet.c:525
 msgid "_Help"
 msgstr "_Hjälp"
 
@@ -109,23 +120,23 @@ msgstr "Panelprogram för justering av ljusstyrka"
 msgid "Adjusts Laptop panel brightness"
 msgstr "Justerar skärmens ljusstyrka på bärbar dator"
 
-#: ../applets/inhibit/inhibit-applet.c:93
+#: ../applets/inhibit/inhibit-applet.c:90
 msgid "Power Manager Inhibit Applet"
 msgstr "Panelprogram för hindring av strömsparning"
 
-#: ../applets/inhibit/inhibit-applet.c:94
+#: ../applets/inhibit/inhibit-applet.c:91
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Tillåter användaren att förhindra automatisk strömsparning."
 
-#: ../applets/inhibit/inhibit-applet.c:303
+#: ../applets/inhibit/inhibit-applet.c:231
 msgid "Automatic sleep inhibited"
 msgstr "Automatisk sömn förhindras"
 
-#: ../applets/inhibit/inhibit-applet.c:305
+#: ../applets/inhibit/inhibit-applet.c:233
 msgid "Automatic sleep enabled"
 msgstr "Automatisk sömn aktiverad"
 
-#: ../applets/inhibit/inhibit-applet.c:333
+#: ../applets/inhibit/inhibit-applet.c:261
 msgid "Manual inhibit"
 msgstr "Manuell förhindring"
 
@@ -1084,15 +1095,15 @@ msgstr "Okänd tid"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i minut"
+msgstr[1] "%i minuter"
 
 #: ../src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i timme"
+msgstr[1] "%i timmar"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -1104,14 +1115,14 @@ msgstr "%i %s %i %s"
 #: ../src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "timme"
+msgstr[1] "timmar"
 
 #: ../src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "minut"
+msgstr[1] "minuter"
 
 #. Translators: This is %i days
 #: ../src/gpm-graph-widget.c:435
@@ -1315,8 +1326,8 @@ msgstr ""
 #: ../src/gpm-manager.c:1165
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Batteri uppladdat"
+msgstr[1] "Batterier uppladdade"
 
 #. TRANSLATORS: laptop battery is now discharging
 #: ../src/gpm-manager.c:1211
@@ -1775,32 +1786,32 @@ msgstr "Okänt"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%.0f sekund"
+msgstr[1] "%.0f sekunder"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:295
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%.1f minut"
+msgstr[1] "%.1f minuter"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:300
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%.1f timme"
+msgstr[1] "%.1f timmar"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:304
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%.1f dag"
+msgstr[1] "%.1f dagar"
 
 #: ../src/gpm-statistics.c:313
 msgid "Yes"
@@ -1839,8 +1850,8 @@ msgstr "Matning"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d sekund"
+msgstr[1] "%d sekunder"
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
@@ -2100,13 +2111,13 @@ msgid "translator-credits"
 msgstr "Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
-#: ../src/gpm-tray-icon.c:297
+#: ../src/gpm-tray-icon.c:298
 #, c-format
 msgid "%s remaining"
 msgstr "%s återstår"
 
 #. preferences
-#: ../src/gpm-tray-icon.c:351
+#: ../src/gpm-tray-icon.c:352
 msgid "_Preferences"
 msgstr "_Inställningar"
 
@@ -2296,78 +2307,78 @@ msgstr "Laddningseffekt:"
 #: ../src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Strömadapter"
+msgstr[1] "Strömadaptrar"
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Batteri i bärbar dator"
+msgstr[1] "Batterier i bärbar dator"
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "UPS-enhet"
+msgstr[1] "UPS-enheter"
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Skärm"
+msgstr[1] "Skärmar"
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Mus"
+msgstr[1] "Möss"
 
 #. TRANSLATORS: wireless keyboard with internal battery
 #: ../src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Tangentbord"
+msgstr[1] "Tangentbord"
 
 #. TRANSLATORS: portable device
 #: ../src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Handdator"
+msgstr[1] "Handdatorer"
 
 #. TRANSLATORS: cell phone (mobile...)
 #: ../src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Mobiltelefon"
+msgstr[1] "Mobiltelefoner"
 
 #. TRANSLATORS: media player, mp3 etc
 #: ../src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Mediaspelare"
+msgstr[1] "Mediaspelare"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Pekdator"
+msgstr[1] "Pekdatorer"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Datorer"
+msgstr[1] "Datorer"
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:594
