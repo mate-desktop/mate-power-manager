@@ -33,7 +33,8 @@ DISTCLEANFILES =					\
 DISTCHECK_CONFIGURE_FLAGS =   \
 	--disable-schemas-install \
 	--disable-applets         \
-	--disable-tests
+	--disable-tests \
+	CFLAGS='-Wno-deprecated-declarations'
 
 # Build ChangeLog from GIT  history
 ChangeLog:
