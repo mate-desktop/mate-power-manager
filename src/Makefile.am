@@ -270,21 +270,21 @@ gpm-marshal.h: gpm-marshal.list
 	@GLIB_GENMARSHAL@ $< --prefix=gpm_marshal --header > $@
 
 org.mate.PowerManager.h: org.mate.PowerManager.xml
-	libtool --mode=execute dbus-binding-tool	\
+	$(LIBTOOL) --mode=execute dbus-binding-tool	\
 		--prefix=gpm_manager			\
 		--mode=glib-server			\
 		--output=org.mate.PowerManager.h	\
 		$(srcdir)/org.mate.PowerManager.xml
 
 org.mate.PowerManager.Backlight.h: org.mate.PowerManager.Backlight.xml
-	libtool --mode=execute dbus-binding-tool	\
+	$(LIBTOOL) --mode=execute dbus-binding-tool	\
 		--prefix=gpm_backlight			\
 		--mode=glib-server			\
 		--output=org.mate.PowerManager.Backlight.h	\
 		$(srcdir)/org.mate.PowerManager.Backlight.xml
 
 org.mate.PowerManager.KbdBacklight.h: org.mate.PowerManager.KbdBacklight.xml
-	libtool --mode=execute dbus-binding-tool	\
+	$(LIBTOOL) --mode=execute dbus-binding-tool	\
 		--prefix=gpm_kbd_backlight			\
 		--mode=glib-server			\
 		--output=org.mate.PowerManager.KbdBacklight.h	\
