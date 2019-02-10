@@ -7,7 +7,7 @@
 # Mattias Põldaru <mahfiaz@gmail.com>, 2018
 # Tõnis Rand, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Ivar Smolin <okul@linux.ee>, 2018
+# Ivar Smolin <okul@linux.ee>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-04 17:35+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Ivar Smolin <okul@linux.ee>, 2018\n"
+"Last-Translator: Ivar Smolin <okul@linux.ee>, 2019\n"
 "Language-Team: Estonian (https://www.transifex.com/mate/teams/13566/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1041,15 +1041,15 @@ msgstr "teadmata aeg"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i minut"
+msgstr[1] "%i minutit"
 
 #: ../src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i tund"
+msgstr[1] "%i tundi"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -1061,14 +1061,14 @@ msgstr "%i %s ja %i %s"
 #: ../src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "tund"
+msgstr[1] "tundi"
 
 #: ../src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "minut"
+msgstr[1] "minutit"
 
 #. Translators: This is %i days
 #: ../src/gpm-graph-widget.c:435
@@ -1722,32 +1722,32 @@ msgstr "Tundmatu"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%.0f sekund"
+msgstr[1] "%.0f sekundit"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:295
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%.1f minut"
+msgstr[1] "%.1f minutit"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:300
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%.1f tund"
+msgstr[1] "%.1f tundi"
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:304
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%.1f päev"
+msgstr[1] "%.1f päeva"
 
 #: ../src/gpm-statistics.c:313
 msgid "Yes"
@@ -1786,8 +1786,8 @@ msgstr "Toide"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d sekund"
+msgstr[1] "%d sekundit"
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
@@ -2055,7 +2055,7 @@ msgstr ""
 #: ../src/gpm-tray-icon.c:298
 #, c-format
 msgid "%s remaining"
-msgstr ""
+msgstr "jäänud 1%s"
 
 #. preferences
 #: ../src/gpm-tray-icon.c:352
@@ -2136,7 +2136,7 @@ msgstr "%s on laadimise ootel (%.1f%%)"
 #: ../src/gpm-upower.c:306
 #, c-format
 msgid "%s empty"
-msgstr ""
+msgstr "%s tühi"
 
 #. TRANSLATORS: the type of data, e.g. Laptop battery
 #: ../src/gpm-upower.c:366
@@ -2248,22 +2248,22 @@ msgstr "Laadimise kiirus:"
 #: ../src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Vooluadapter"
+msgstr[1] "Vooluadapterid"
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Sülearvuti aku"
+msgstr[1] "Sülearvuti akud"
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "UPS"
+msgstr[1] "UPS-id"
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/gpm-upower.c:499
@@ -2283,8 +2283,8 @@ msgstr[1] ""
 #: ../src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Klaviatuur"
+msgstr[1] "Klaviatuurid"
 
 #. TRANSLATORS: portable device
 #: ../src/gpm-upower.c:511
@@ -2318,8 +2318,8 @@ msgstr[1] ""
 #: ../src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Arvuti"
+msgstr[1] "Arvutid"
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:594

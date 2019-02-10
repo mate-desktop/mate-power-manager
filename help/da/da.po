@@ -1,13 +1,14 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Joe Hansen <joedalton2@yahoo.dk>, 2018
+# Wolfgang Ulbrich <mate@raveit.de>, 2019
+# Joe Hansen <joedalton2@yahoo.dk>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "POT-Creation-Date: 2018-10-04 17:35+0200\n"
 "PO-Revision-Date: 2018-10-04 15:52+0000\n"
-"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2018\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2019\n"
 "Language-Team: Danish (https://www.transifex.com/mate/teams/13566/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -374,11 +375,15 @@ msgid ""
 " from showing unwanted repeat notifications if the battery is incorrectly "
 "reporting the charged status."
 msgstr ""
+"Du får kun en gentagelsespåmindelse hvis din batteriprocent er under 95 % og"
+" når det igen er fuldt opladet. Dette forhindrer nogle maskiner i at vise "
+"uønskede gentagelsespåmindelser hvis batteriet rapporterer ukorrekt status "
+"for opladningen."
 
 #. (itstool) path: section/title
 #: C/index.docbook:221
 msgid "Power Low"
-msgstr ""
+msgstr "Lav strøm"
 
 #. (itstool) path: section/para
 #: C/index.docbook:222
@@ -386,11 +391,13 @@ msgid ""
 "When the battery is low, you will receive the following notification. You "
 "should consider switching to AC power really soon."
 msgstr ""
+"Når batteriet er ved at være tømt, så vil du modtage den følgende "
+"påmindelse. Du bør overveje at skifte til vekselstrøm snarest."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:227
 msgid "MATE Power Manager Notification when battery power is low"
-msgstr ""
+msgstr "Påmindelse fra MATE-strømhåndteringen når strømniveauet er lavt"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -410,6 +417,8 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-low-power</command>."
 msgstr ""
+"Du kan deaktivere denne påmindelse ved at ændre dconf-nøglen "
+"<command>org.mate.power-manager notify-low-power</command>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:245
@@ -451,7 +460,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:264
 msgid "Suspend Failure"
-msgstr ""
+msgstr "Fejl ved hvile"
 
 #. (itstool) path: section/para
 #: C/index.docbook:265
@@ -460,11 +469,14 @@ msgid ""
 "common reason for this notification is that the current user does not have "
 "permission to suspend or hibernate the computer."
 msgstr ""
+"Når der opstår en hvilefejl kan du modtage den følgende advarsel. Den mest "
+"gængse årsag for denne påmindelse er at den nuværende bruger ikke har "
+"tilladelse til at sætte computeren i hvile eller dvale."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:271
 msgid "MATE Power Manager Notification when suspend failure occurs"
-msgstr ""
+msgstr "Påmindelse for MATE-strømhåndteringen når hvilefejl opstår"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -486,6 +498,8 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-sleep-failed</command>."
 msgstr ""
+"Du kan deaktivere denne påmindelse ved at ændre dconf-nøglen "
+"<command>org.mate.power-manager notify-sleep-failed</command>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:290
@@ -498,6 +512,8 @@ msgid ""
 "The statistics program allows you to visualize the power consumption of your"
 " laptop hardware."
 msgstr ""
+"Statistikprogrammet gør det muligt at visualisere strømforbruget på din "
+"bærbare."
 
 #. (itstool) path: note/para
 #: C/index.docbook:296
@@ -507,11 +523,15 @@ msgid ""
 "internal IPC. This allows other applications to query and display the data "
 "if required."
 msgstr ""
+"Dette er blevet fjernet fra informationsvinduet for tidligere versioner af "
+"MATE-strømhåndteringen da datagrænsefladen nu bruger DBUS frem for intern "
+"IPC. Dette gør, at andre programmer kan forespørge og vise dataene hvis "
+"krævet."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:303
 msgid "Power History going from battery power to AC"
-msgstr ""
+msgstr "Strømhistorik gående fra batteri til strømforsyning"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -534,11 +554,15 @@ msgid ""
 "required hardware. You may also see other hardware not shown here (for "
 "example UPS devices) but these are treated the same way as other devices."
 msgstr ""
+"Du ser måske ikke nogle indstillinger eller grafer, hvis din computer ikke "
+"har det krævede udstyr. Du kan eventuelt også se andet udstyr ikke vist her "
+"(for eksempel UPS-enheder), men disse behandles på samme måde som andre "
+"enheder."
 
 #. (itstool) path: section/title
 #: C/index.docbook:322
 msgid "Charge History"
-msgstr ""
+msgstr "Opladningshistorik"
 
 #. (itstool) path: section/para
 #: C/index.docbook:323
@@ -548,11 +572,15 @@ msgid ""
 "only the averaged value will be shown. A legend is not shown with this "
 "graph."
 msgstr ""
+"Denne graf viser procentladningen tilgængelig for det sammensatte primære "
+"batteri, så hvis du har et hovedbatteri for den bærbare og et ekstra "
+"batteri, vil kun den gennemsnitlige værdi blive vist. En indskrift vises "
+"ikke med denne graf."
 
 #. (itstool) path: section/title
 #: C/index.docbook:332
 msgid "Power History"
-msgstr ""
+msgstr "Strømhistorik"
 
 #. (itstool) path: section/para
 #: C/index.docbook:333
@@ -574,11 +602,15 @@ msgid ""
 "limitations where the rate is only sent from the battery management chip, "
 "rather than the power management chip on the motherboard."
 msgstr ""
+"Du vil ikke modtage hastighedsdata fra din computer hvis den ikke lader "
+"eller aflader, eller hvis computeren er i hvile. Dette skyldes "
+"udstyrsbegrænsninger hvor hastigheden kun sendes fra batterihåndteringens "
+"chip, frem fra strømhåndteringens chip på bundkortet."
 
 #. (itstool) path: section/title
 #: C/index.docbook:357
 msgid "Estimated Time History"
-msgstr ""
+msgstr "Estimeret tidshistorik"
 
 #. (itstool) path: section/para
 #: C/index.docbook:358
@@ -598,17 +630,17 @@ msgstr "Præferencer"
 #. (itstool) path: section/para
 #: C/index.docbook:373
 msgid "The preferences window allows you to control:"
-msgstr ""
+msgstr "Præferencevinduet gør at du kan kontrollere:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:377
 msgid "The LCD brightness when on AC and battery power"
-msgstr ""
+msgstr "LCD-lysstyrken når på strømforsyning og batteri"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:382
 msgid "The idle time for the screen power-down and suspend action"
-msgstr ""
+msgstr "Inaktivt tidsrum før skærmen lukker ned eller går i hvile"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:387
@@ -618,7 +650,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:392
 msgid "The notification area icon policy"
-msgstr ""
+msgstr "Påmindelsesområdets ikonpolitik"
 
 #. (itstool) path: note/para
 #: C/index.docbook:399
@@ -631,12 +663,12 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:407
 msgid "AC Preferences"
-msgstr ""
+msgstr "Præferencer for strømforsyning"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:409
 msgid "MATE Power Manager AC tab"
-msgstr ""
+msgstr "MATES-strømstyrings faneblad for strømforsyningen"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -691,7 +723,7 @@ msgstr "Generelle præferencer"
 #. (itstool) path: figure/title
 #: C/index.docbook:441
 msgid "MATE Power Manager general tab"
-msgstr ""
+msgstr "MATE-strømstyringens generelle faneblad"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -710,7 +742,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:453
 msgid "Session and system idle times"
-msgstr ""
+msgstr "Sessionstider og ledige systemtider"
 
 #. (itstool) path: section/para
 #: C/index.docbook:454
@@ -772,7 +804,7 @@ msgstr "Avancerede præferencer"
 #. (itstool) path: section/title
 #: C/index.docbook:499
 msgid "Screen Dim Brightness"
-msgstr ""
+msgstr "Lysstyrke for skærmdæmpningen"
 
 #. (itstool) path: note/para
 #: C/index.docbook:501
@@ -780,11 +812,13 @@ msgid ""
 "You can change the idle laptop panel brightness by changing the dconf key "
 "<command>org.mate.power-manager idle-brightness</command>."
 msgstr ""
+"Du kan ændre lysstyrken for bærbarpanelet ved inaktivitet ved at ændre "
+"dconf-nøglen <command>org.mate.power-manager idle-brightness</command>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:509
 msgid "Screen Locking"
-msgstr ""
+msgstr "Skærmlås"
 
 #. (itstool) path: section/para
 #: C/index.docbook:510
@@ -794,6 +828,10 @@ msgid ""
 "screen\" in mate-screensaver when the lid is closed, or the system performs "
 "a suspend or hibernate action."
 msgstr ""
+"Som standard understøtter <application>MATE-strømhåndteringent</application>"
+" et simpelt låseskema. Dette betyder, at skærmen vil låse hvis angivet til "
+"»Lås skærm« i mate-screensaver, når låget lukkes eller systemet udfører en "
+"hvile eller dvale handling."
 
 #. (itstool) path: section/para
 #: C/index.docbook:516
@@ -836,11 +874,13 @@ msgid ""
 "The lock policy for mate-screensaver is ignored until the simple mode is re-"
 "enabled."
 msgstr ""
+"Låsepolitikken for mate-screensaver ignoreres indtil den simple tilstand er "
+"genaktiveret."
 
 #. (itstool) path: section/title
 #: C/index.docbook:562
 msgid "MATE Power Applets"
-msgstr ""
+msgstr "MATE-strømpanelprogrammer"
 
 #. (itstool) path: section/title
 #: C/index.docbook:565
@@ -878,7 +918,7 @@ msgstr ""
 #. (itstool) path: note/para
 #: C/index.docbook:585
 msgid "You will not get the slider if your hardware is not supported."
-msgstr ""
+msgstr "Du får ikke vist skyderen, hvis dit udstyr ikke er understøttet."
 
 #. (itstool) path: section/title
 #: C/index.docbook:592
@@ -942,6 +982,8 @@ msgid ""
 "Capacity is how much charge your battery can store compared to its "
 "manufacturer's guidelines."
 msgstr ""
+"Kapacitet er hvor stor ladning dit batteri kan lagre sammenlignet med dets "
+"leverandørs retningslinjer."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:634
@@ -949,6 +991,8 @@ msgid ""
 "This graph shows the capacity of a typical lithium ion battery over a few "
 "hundred charge-discharge cycles."
 msgstr ""
+"Denne graf viser kapaciteten for et typisk lithium ion-batteri over et par "
+"hundrede oplad-aflad cyklusser."
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -967,7 +1011,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:649
 msgid "What's the difference between suspend and hibernate?"
-msgstr ""
+msgstr "Hvad er forskellen mellem hvile og dvale?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:650
@@ -987,6 +1031,9 @@ msgid ""
 "recommended for the low power action. If you remove AC power on a desktop, "
 "or run out of battery power on a laptop then you will lose your work."
 msgstr ""
+"Du bruger stadig en lille mængde batteri når i dvale, så det anbefales ikke "
+"for handlingen lav strøm. Hvis du fjerner vekselstrøm på et skrivebord, "
+"eller batteriet er tomt på en bærbar, så vil du miste dit arbejde."
 
 #. (itstool) path: section/para
 #: C/index.docbook:667
@@ -1023,6 +1070,8 @@ msgid ""
 "My time to discharge is always incorrect due to a faulty battery, what can I"
 " do?"
 msgstr ""
+"Tidsangivelse for afladning er altid forkert på grund af et fejlramt "
+"batteri, hvad kan jeg gøre?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:698
@@ -1040,11 +1089,15 @@ msgid ""
 "This should get the policy actions working for you, but of course the time "
 "remaining will still be incorrect."
 msgstr ""
+"Dette bør få politikhandlingerne til at fungere for dig, men den "
+"tilbageværende tid vil selvfølgelig stadig være ukorrekt."
 
 #. (itstool) path: section/title
 #: C/index.docbook:715
 msgid "How do I make my application stop the computer auto-suspending?"
 msgstr ""
+"Hvordan får jeg mit program til at stoppe computerens automatiske "
+"hviletilstand?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:718
@@ -1065,12 +1118,12 @@ msgstr ""
 #. (itstool) path: section/para
 #: C/index.docbook:732
 msgid "One of two things might be the problem."
-msgstr ""
+msgstr "Et af to ting kan være problemet."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:737
 msgid "HAL might not be running the addon that captures the ACPI event."
-msgstr ""
+msgstr "HAL afvikler måske ikke udvidelsen, der optager ACPI-hændelsen."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:742
@@ -1078,6 +1131,8 @@ msgid ""
 "You BIOS could be faulty, and might need a work-around. Please send a bug "
 "report."
 msgstr ""
+"Din BIOS kan være fejlbehæftet og skal bruge en omgåelse. Indsend venligst "
+"en fejlrapport."
 
 #. (itstool) path: section/para
 #: C/index.docbook:748
@@ -1085,6 +1140,8 @@ msgid ""
 "For the first case, try to find the HAL processes that are running: "
 "<command>ps -eaf | grep hal</command>"
 msgstr ""
+"I det første tilfælde, prøv at finde HAL-processeren: <command>ps -eaf | "
+"grep hal</command>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:752
@@ -1110,6 +1167,12 @@ msgid ""
 "Manager</application> web page</ulink>. Origin power-manager was written by "
 "Richard Hughes <email>richard@hughsie.com</email>."
 msgstr ""
+"MATE-strømstyring blev skrevet af MATE-udvikling. For at få yderligere "
+"information om MATE-strømstyring, så besøg hjemmesiden <ulink "
+"url=\"https://github.com/mate-desktop/mate-power-manager\" "
+"type=\"http\"><application>MATE-strømstyring</application></ulink>. Det "
+"oprindelige program power-manager blev skrevet af Richard Hughes "
+"<email>richard@hughsie.com</email>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:772
@@ -1119,6 +1182,11 @@ msgid ""
 "desktop/mate-power-manager\" type=\"http\"> <application>MATE Power "
 "Manager</application> Bug Page</ulink>."
 msgstr ""
+"For at rapportere en fejl eller komme med et forslag jævnfør dette program "
+"eller denne manual, så følg retningslinjerne i <ulink "
+"url=\"https://github.com/mate-desktop/mate-power-manager\" "
+"type=\"http\"><application>MATE-strømhåndteringens</application> "
+"fejlside</ulink>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:778
@@ -1129,6 +1197,12 @@ msgid ""
 "can be found at this <ulink type=\"help\" url=\"help:gpl\">link</ulink>, or "
 "in the file COPYING included with the source code of this program."
 msgstr ""
+"Dette program er distribueret under betingelserne i GNU General Public-"
+"licensen, som udgivet af Free Software Foundation; enten version 2 af "
+"licensen, eller (efter dit vlag) enhver senere version. En kopi af denne "
+"licens kan ses via denne <ulink type=\"help\" "
+"url=\"help:gpl\">henvisning</ulink>, eller i filen COPYING inklusderet med "
+"kildekoden for dette program."
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
