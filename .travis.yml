@@ -30,17 +30,20 @@ env:
 requires:
   archlinux:
     # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/mate-power-manager
+    - dbus-glib
     - file
     - gcc
     - git
     - intltool
     - itstool
+    - libcanberra
     - libgnome-keyring
     - libnotify
     - make
     - mate-common
     - mate-panel
     - python
+    - upower
     - which
     - yelp-tools
 
