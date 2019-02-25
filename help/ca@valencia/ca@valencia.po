@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"POT-Creation-Date: 2018-10-04 17:35+0200\n"
+"POT-Creation-Date: 2019-02-10 13:34+0100\n"
 "PO-Revision-Date: 2018-10-04 15:52+0000\n"
 "Last-Translator: Empar Montoro <emontra2018@gmail.com>, 2018\n"
 "Language-Team: Catalan (Valencian) (https://www.transifex.com/mate/teams/13566/ca%40valencia/)\n"
@@ -420,7 +420,7 @@ msgstr ""
 #. (itstool) path: section/para
 #: C/index.docbook:265
 msgid ""
-"When a suspend failure occurs you may get this following warning. The most "
+"When a Suspend Failure occurs you may get this following warning. The most "
 "common reason for this notification is that the current user does not have "
 "permission to suspend or hibernate the computer."
 msgstr ""
@@ -503,10 +503,10 @@ msgstr ""
 #. (itstool) path: section/para
 #: C/index.docbook:323
 msgid ""
-"This graph shows the percentage charge available for the composite primary "
-"battery, so if you have a main laptop battery and an auxiliary battery then "
-"only the averaged value will be shown. A legend is not shown with this "
-"graph."
+"This graph shows the available percentage of charge for the composite "
+"primary battery, so if you have a main laptop battery and an auxiliary "
+"battery then only the averaged value will be shown. A legend is not shown "
+"with this graph."
 msgstr ""
 
 #. (itstool) path: section/title
@@ -839,10 +839,10 @@ msgstr "Miniaplicació d'inhabilitació"
 #. (itstool) path: section/para
 #: C/index.docbook:593
 msgid ""
-"The inhibit applet allows the user to prevent the computer auto-sleeping "
-"when inactive. This may be required with old or proprietary programs such as"
-" VMWare or Matlab. Just click the icon for the auto-suspend to be inhibited,"
-" and click it again for normal operation."
+"The <application>Inhibit Applet</application> allows the user to prevent the"
+" computer auto-sleeping when inactive. This may be required with old or "
+"proprietary programs such as VMWare or Matlab. Just click the icon for the "
+"auto-suspend to be inhibited, and click it again for normal operation."
 msgstr ""
 
 #. (itstool) path: figure/title
@@ -866,8 +866,8 @@ msgstr ""
 #: C/index.docbook:613
 msgid ""
 "Don't use this applet if you just use MATE software, instead file a bug to "
-"make the application use the Inhibit() and UnInhibit() methods as this "
-"should 'just work'."
+"make the application use the <function>Inhibit()</function> and "
+"<function>UnInhibit()</function> methods as this should 'just work'."
 msgstr ""
 
 #. (itstool) path: section/title
@@ -920,7 +920,7 @@ msgstr ""
 #: C/index.docbook:650
 msgid ""
 "The Suspend state is a power saving feature which is the lowest level of "
-"power consumption that preserves program data in the computer's memory. When"
+"power consumption that preserves program data on the computer's memory. When"
 " your computer is in the Suspended state, computation will not be performed "
 "until normal activity is resumed. It will not resume until signaled by an "
 "external event such as a keyboard button press. It generally takes a few "
@@ -1016,7 +1016,7 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:737
-msgid "HAL might not be running the addon that captures the ACPI event."
+msgid "HAL might not be running the add-on that captures the ACPI event."
 msgstr ""
 
 #. (itstool) path: listitem/para

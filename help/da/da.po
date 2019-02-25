@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"POT-Creation-Date: 2018-10-04 17:35+0200\n"
+"POT-Creation-Date: 2019-02-10 13:34+0100\n"
 "PO-Revision-Date: 2018-10-04 15:52+0000\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2019\n"
 "Language-Team: Danish (https://www.transifex.com/mate/teams/13566/da/)\n"
@@ -465,12 +465,12 @@ msgstr "Fejl ved hvile"
 #. (itstool) path: section/para
 #: C/index.docbook:265
 msgid ""
-"When a suspend failure occurs you may get this following warning. The most "
+"When a Suspend Failure occurs you may get this following warning. The most "
 "common reason for this notification is that the current user does not have "
 "permission to suspend or hibernate the computer."
 msgstr ""
-"Når der opstår en hvilefejl kan du modtage den følgende advarsel. Den mest "
-"gængse årsag for denne påmindelse er at den nuværende bruger ikke har "
+"Når der opstår en hvilefejl, kan du modtage den følgende advarsel. Den mest "
+"gængse årsag for denne påmindelse er, at den nuværende bruger ikke har "
 "tilladelse til at sætte computeren i hvile eller dvale."
 
 #. (itstool) path: figure/title
@@ -567,10 +567,10 @@ msgstr "Opladningshistorik"
 #. (itstool) path: section/para
 #: C/index.docbook:323
 msgid ""
-"This graph shows the percentage charge available for the composite primary "
-"battery, so if you have a main laptop battery and an auxiliary battery then "
-"only the averaged value will be shown. A legend is not shown with this "
-"graph."
+"This graph shows the available percentage of charge for the composite "
+"primary battery, so if you have a main laptop battery and an auxiliary "
+"battery then only the averaged value will be shown. A legend is not shown "
+"with this graph."
 msgstr ""
 "Denne graf viser procentladningen tilgængelig for det sammensatte primære "
 "batteri, så hvis du har et hovedbatteri for den bærbare og et ekstra "
@@ -593,6 +593,12 @@ msgid ""
 " is dimmed. A legend is shown with this graph when data events have been "
 "received."
 msgstr ""
+"Denne graf viser strømladningen historisk brugt af det sammensatte primære "
+"batteri. Denne linje repræsenterer mængden af strøm som enten bruges til at "
+"lade batterierne i systemet, eller strømme brugt af systemet fra "
+"batterierne. Du bør se linjen gå op når processorintensive opgaver udføres, "
+"og ned når systemet er ledigt, eller når skærmen er dæmpet. En indskrift "
+"vises med denne graf, når datahændelser er blevet modtaget."
 
 #. (itstool) path: note/para
 #: C/index.docbook:346
@@ -621,6 +627,11 @@ msgid ""
 "when the rate decreases and down when the rate increases. A legend is shown "
 "with this graph when data events have been received."
 msgstr ""
+"Denne graf viser den estimerede ladningshistorik for det sammensatte primære"
+" batteri. Denne linje repræsenterer tidsperioden krævet indtil ladet, eller "
+"mængden af tid indtil afladning. Denne linje bør gå proportionalt op når "
+"hastigheden sænkes og ned når hastigheden øges. En indskrift vises med denne"
+" graf, når datahændelser er blevet modtaget."
 
 #. (itstool) path: section/title
 #: C/index.docbook:371
@@ -645,7 +656,7 @@ msgstr "Inaktivt tidsrum før skærmen lukker ned eller går i hvile"
 #. (itstool) path: listitem/para
 #: C/index.docbook:387
 msgid "The actions to perform when the laptop lid is closed"
-msgstr ""
+msgstr "Handlingerne der udføres idet computerens låg lukkes"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:392
@@ -659,6 +670,9 @@ msgid ""
 "not writable. This allows administrators to lock-down the actions that a "
 "user can select."
 msgstr ""
+"Nogle skydere eller indstillingsbokse kan være deaktiveret hvis dconf-"
+"politiknøglerne ikke er skrivbare. Dette gør det muligt for administratorer "
+"at låse de handlinger en bruger kan vælge."
 
 #. (itstool) path: section/title
 #: C/index.docbook:407
@@ -714,6 +728,8 @@ msgid ""
 "This allows a powerful computer to reduce the power usage when idle, or when"
 " the full capabilities are not required."
 msgstr ""
+"Dette gør at en funktionsrig computer kan reducer strømforbruget når ledig, "
+"eller når fuld kapacitet ikke er krævet."
 
 #. (itstool) path: section/title
 #: C/index.docbook:439
@@ -755,6 +771,13 @@ msgid ""
 "Manager</application> performs all the session idle actions such as enabling"
 " low-power mode and lowering the laptop panel brightness."
 msgstr ""
+"<command>mate-screensaver</command> er en sessionsdæmon, der overvåger "
+"brugerindtastning, og hvis musen ikke har bevæget sig eller tastaturet er "
+"anvendt startes et tidsudløb. Når værdien af dette tidsudløb når værdien "
+"angivet i <command>mate-screensaver-preferences</command>, så markeres det "
+"aktuelle logind som »session ledig«. På dette tidspunkt udfører <application"
+">MATE-strømhåndtering</application> alle sessionens handlinger såsom "
+"aktivering af lav strøm-tilstand og sænkning af den bærbares panellysstyrke."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:466
@@ -762,6 +785,8 @@ msgid ""
 "Changing the session idle timeout in <command>mate-screensaver-"
 "preferences</command>"
 msgstr ""
+"Ændring af sessionens tidsudløb ved manglende brug i <command>mate-"
+"screensaver-preferences</command>"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -784,6 +809,11 @@ msgid ""
 "idle, then the idle action is performed, which is usually to turn off the "
 "screen, or to suspend or hibernate."
 msgstr ""
+"Så snart at sessionen er markeret som ledig, starter <application>MATE-"
+"strømstyring</application> sin egen systemtidstager. Når tidsudløbet angivet"
+" i <command>mate-power-preferences</command> er opfyldt og der ingen CPU-"
+"belastning er, så udføres handlingen ledig, som normalt indebærer at skærmen"
+" slukkes, eller går i hvile eller dvale."
 
 #. (itstool) path: section/para
 #: C/index.docbook:484
@@ -840,6 +870,9 @@ msgid ""
 "locking policy to change for the lid, suspend and hibernate actions. To "
 "enable this complex mode, you will have to disable the dconf key:"
 msgstr ""
+"Der er et kompleks låseskema tilgængelig for superbrugere, der tillader at "
+"låsepolitikken ændres for låget, hvile- og dvalehandlinger. For at aktivere "
+"denne komplekse tilstand skal du deaktivere dconf-nøglen:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:524
@@ -852,6 +885,8 @@ msgid ""
 "Then the policy keys can be set to force a mate-screensaver lock and unlock "
 "when the action is performed:"
 msgstr ""
+"Så kan politiknøglerne sættes til at fremtvinge en mate-screensaver-låsning "
+"og åbning når handlingen er udført:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:536
@@ -928,10 +963,10 @@ msgstr "Hindringspanelprogram"
 #. (itstool) path: section/para
 #: C/index.docbook:593
 msgid ""
-"The inhibit applet allows the user to prevent the computer auto-sleeping "
-"when inactive. This may be required with old or proprietary programs such as"
-" VMWare or Matlab. Just click the icon for the auto-suspend to be inhibited,"
-" and click it again for normal operation."
+"The <application>Inhibit Applet</application> allows the user to prevent the"
+" computer auto-sleeping when inactive. This may be required with old or "
+"proprietary programs such as VMWare or Matlab. Just click the icon for the "
+"auto-suspend to be inhibited, and click it again for normal operation."
 msgstr ""
 
 #. (itstool) path: figure/title
@@ -957,9 +992,13 @@ msgstr ""
 #: C/index.docbook:613
 msgid ""
 "Don't use this applet if you just use MATE software, instead file a bug to "
-"make the application use the Inhibit() and UnInhibit() methods as this "
-"should 'just work'."
+"make the application use the <function>Inhibit()</function> and "
+"<function>UnInhibit()</function> methods as this should 'just work'."
 msgstr ""
+"Brug ikke dette panelprogram hvis du bare bruger MATE-programmer, indsend i "
+"stedet for en fejlrapport så programmet bruger "
+"<function>imhibit()</function>- og "
+"<function>UnInhibit()</function>-metoderne, da dette bare bør fungere."
 
 #. (itstool) path: section/title
 #: C/index.docbook:623
@@ -1017,7 +1056,7 @@ msgstr "Hvad er forskellen mellem hvile og dvale?"
 #: C/index.docbook:650
 msgid ""
 "The Suspend state is a power saving feature which is the lowest level of "
-"power consumption that preserves program data in the computer's memory. When"
+"power consumption that preserves program data on the computer's memory. When"
 " your computer is in the Suspended state, computation will not be performed "
 "until normal activity is resumed. It will not resume until signaled by an "
 "external event such as a keyboard button press. It generally takes a few "
@@ -1053,6 +1092,8 @@ msgid ""
 "My monitor is broken and treats DPMS standby and off states as 'no-signal' "
 "which leaves the monitor powered on."
 msgstr ""
+"Min skærm er ødelagt og opfatter DPMS-standby og deaktiverede tilstande som "
+"»no-signal«, hvilket efterlader skærmen med strømmen tændt."
 
 #. (itstool) path: section/para
 #: C/index.docbook:684
@@ -1114,6 +1155,8 @@ msgid ""
 "I'm running ACPI. Why do events (such as removing the AC adapter) take so "
 "long to register?"
 msgstr ""
+"Jeg kører ACPI. Hvorfor er hændelser (såsom fjernelse af strømforsyningen) "
+"så lang tid om at blive registreret?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:732
@@ -1122,7 +1165,7 @@ msgstr "Et af to ting kan være problemet."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:737
-msgid "HAL might not be running the addon that captures the ACPI event."
+msgid "HAL might not be running the add-on that captures the ACPI event."
 msgstr "HAL afvikler måske ikke udvidelsen, der optager ACPI-hændelsen."
 
 #. (itstool) path: listitem/para
