@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
     "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
-  <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY GFDL  SYSTEM "fdl-appendix.xml">
   <!ENTITY app "MATE Power Manager">
   <!ENTITY application "<application>&app;</application>">
   <!ENTITY appversion "1.10.0">
@@ -57,10 +55,7 @@
       <publishername>Richard Hughes</publishername>
     </publisher>
 
-   &legal;
-   <!-- This file  contains link to license for the documentation (GNU FDL), and
-        other legal stuff such as "NO WARRANTY" statement. Please do not change
-        any of this. -->
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
 
     <authorgroup>
       <author role="maintainer"> 
