@@ -1328,6 +1328,11 @@ gpm_manager_engine_charge_low_cb (GpmEngine *engine, UpDevice *device, GpmManage
 		message = g_strdup_printf (_("Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"),
 					   remaining_text, percentage);
 	} else if (kind == UP_DEVICE_KIND_MOUSE) {
+		gboolean notify = g_settings_get_boolean (manager->priv->settings,
+				GPM_SETTINGS_NOTIFY_LOW_CAPACITY_MOUSE);
+		if(!notify)
+			goto out;
+
 		/* TRANSLATORS: mouse is getting a little low */
 		title = _("Mouse battery low");
 
@@ -1462,6 +1467,11 @@ gpm_manager_engine_charge_critical_cb (GpmEngine *engine, UpDevice *device, GpmM
 					   remaining_text, percentage);
 		g_free (remaining_text);
 	} else if (kind == UP_DEVICE_KIND_MOUSE) {
+		gboolean notify = g_settings_get_boolean (manager->priv->settings,
+				GPM_SETTINGS_NOTIFY_LOW_CAPACITY_MOUSE);
+		if(!notify)
+			goto out;
+
 		/* TRANSLATORS: the mouse battery is very low */
 		title = _("Mouse battery low");
 
