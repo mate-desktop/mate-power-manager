@@ -98,6 +98,7 @@ G_BEGIN_DECLS
 #define GPM_SETTINGS_NOTIFY_SLEEP_FAILED		"notify-sleep-failed"
 #define GPM_SETTINGS_NOTIFY_SLEEP_FAILED_URI		"notify-sleep-failed-uri"
 #define GPM_SETTINGS_NOTIFY_LOW_POWER			"notify-low-power"
+#define GPM_SETTINGS_NOTIFY_LOW_CAPACITY_MOUSE		"notify-low-capacity-mouse"
 
 /* thresholds */
 #define GPM_SETTINGS_PERCENTAGE_LOW			"percentage-low"
