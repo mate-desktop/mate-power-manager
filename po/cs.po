@@ -4,14 +4,14 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2018
-# Stanislav Kučera <inactive+kacernator@transifex.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Ondřej Kolín <ondrej.kolin@gmail.com>, 2018
-# ToMáš Marný, 2018
-# Michal <sinope@seznam.cz>, 2018
-# LiberteCzech <liberte.czech@gmail.com>, 2018
-# Lucas Lommer <drom@kdyne.net>, 2018
+# Honza Lafek <hlafek99@gmail.com>, 2019
+# Ondřej Kolín <ondrej.kolin@gmail.com>, 2019
+# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2019
+# Michal <sinope@seznam.cz>, 2019
+# Stanislav Kučera <inactive+kacernator@transifex.com>, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# LiberteCzech <liberte.czech@gmail.com>, 2019
+# ToMáš Marný, 2019
 # 
 #, fuzzy
 msgid ""
@@ -19,8 +19,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-04 17:35+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Lucas Lommer <drom@kdyne.net>, 2018\n"
+"PO-Revision-Date: 2019-03-14 17:12+0000\n"
+"Last-Translator: ToMáš Marný, 2019\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -213,7 +213,7 @@ msgstr "Akce při nízkého stavu baterie záložního zdroje"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:10
 msgid "The action to take when the UPS is low."
-msgstr "Jakou akci provést, pokud je UPS nízké"
+msgstr "Jakou akci provést, pokud je UPS nízké."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:11
 msgid "Allow backlight brightness adjustment"
@@ -356,7 +356,7 @@ msgstr "Metoda mazání obrazovky při napájení ze sítě"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:36
 msgid "The DPMS method used to blank the screen when on AC power."
-msgstr "Metoda DPMS použitá k mazání obrazovky, když je zapojeno napájení"
+msgstr "Metoda DPMS použitá k mazání obrazovky, když je zapojeno napájení."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:37
 msgid "Method used to blank screen on battery"
@@ -364,7 +364,7 @@ msgstr "Metoda mazání obrazovky při napájení z baterie"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:38
 msgid "The DPMS method used to blank the screen when on battery power."
-msgstr "DPMS metoda mazání obrazovky při napájení z baterie"
+msgstr "DPMS metoda mazání obrazovky při napájení z baterie."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:39
 msgid "LCD brightness when on AC"
@@ -384,7 +384,7 @@ msgstr "Akce při stisknutí tlačítka režimu spánku"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:42
 msgid "The action to take when the system suspend button is pressed."
-msgstr "Akce při stisku uspávacího tlačítka"
+msgstr "Akce při stisku uspávacího tlačítka."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:43
 msgid "Hibernate button action"
@@ -392,7 +392,7 @@ msgstr "Akce tlačítka uspání počítače na disk"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:44
 msgid "The action to take when the system hibernate button is pressed."
-msgstr "Akce při stisku hibernačního tlačítka"
+msgstr "Akce při stisku hibernačního tlačítka."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:45
 msgid "Power button action"
@@ -400,7 +400,7 @@ msgstr "Akce tlačítka napájení"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:46
 msgid "The action to take when the system power button is pressed."
-msgstr "Akce při stisku vypínacího tlačítka"
+msgstr "Akce při stisku vypínacího tlačítka."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:47
 msgid "Laptop lid close action on battery"
@@ -591,11 +591,11 @@ msgstr "Zda mají být zobrazována data z historie"
 #: ../data/org.mate.power-manager.gschema.xml.in.h:81
 msgid ""
 "Whether we should show the history data points in the statistics window."
-msgstr "Zda mají být zobrazována data z historie v okně statistiky"
+msgstr "Zda mají být zobrazována data z historie v okně statistiky."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:82
 msgid "Whether we should smooth the history data"
-msgstr "Zda mají být data historie v grafu vyhlazována."
+msgstr "Zda mají být data historie v grafu vyhlazována"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:83
 msgid "Whether we should smooth the history data in the graph."
@@ -628,7 +628,7 @@ msgstr "Zda má být zobrazována statistika datových bodů v okně statistiky.
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:90
 msgid "Whether we should smooth the stats data"
-msgstr "Zda mají být data statistiky vyhlazována. "
+msgstr "Zda mají být data statistiky vyhlazována"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:91
 msgid "Whether we should smooth the stats data in the graph."
@@ -827,7 +827,7 @@ msgid ""
 "If preferences and statistics items should be shown in the context menu"
 msgstr ""
 "Zda by měly být v kontextové nabídce zobrazené položky pro předvolby a "
-"statistiky."
+"statistiky"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:125
 msgid "When to show the notification icon"
@@ -835,7 +835,7 @@ msgstr "Kdy zobrazit oznamovací ikonu"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:126
 msgid "Display options for the notification icon."
-msgstr "Zobrazovat možnosti pro ikonu upozornění"
+msgstr "Zobrazovat možnosti pro ikonu upozornění."
 
 #: ../data/mate-power-preferences.desktop.in.in.h:1
 msgid "Power Management"
@@ -999,7 +999,7 @@ msgstr "_Vždy zobrazit ikonu"
 
 #: ../data/gpm-prefs.ui.h:24
 msgid "General"
-msgstr "Obecný"
+msgstr "Všeobecné"
 
 #: ../data/gpm-prefs.ui.h:25
 msgid "Provides help about this program"
@@ -1080,10 +1080,10 @@ msgstr "Neznámý čas"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] "%i minuta"
-msgstr[1] "%i minuty"
-msgstr[2] "%i minut"
-msgstr[3] "%i minut"
+msgstr[0] "%i minute"
+msgstr[1] "%i minutes"
+msgstr[2] "%i minutes"
+msgstr[3] "%i minutes"
 
 #: ../src/gpm-common.c:69
 #, c-format
@@ -1319,10 +1319,10 @@ msgstr ""
 #: ../src/gpm-manager.c:1165
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] "Baterie nabita"
-msgstr[1] "Baterie nabity"
-msgstr[2] "Baterie nabity"
-msgstr[3] "Baterie nabity"
+msgstr[0] "Nabitá baterie"
+msgstr[1] "Nabité baterie"
+msgstr[2] "Nabitých baterií"
+msgstr[3] "Nabitých baterií"
 
 #. TRANSLATORS: laptop battery is now discharging
 #: ../src/gpm-manager.c:1211
@@ -1752,7 +1752,7 @@ msgstr "Popis"
 
 #: ../src/gpm-statistics.c:181 ../src/gpm-statistics.c:405
 msgid "Type"
-msgstr "Druh"
+msgstr "Typ"
 
 #: ../src/gpm-statistics.c:187
 msgid "ID"
@@ -2111,7 +2111,11 @@ msgstr ""
 "Petr Tomeš <ptomes@gmail.com>\n"
 "Jakub Friedl <jfriedl@suse.cz>\n"
 "Lucas Lommer <llommer@svn.gnome.org>\n"
-"Petr Kovář <pknbe@volny.cz>"
+"Kamil Páral <ripper42@gmail.com>\n"
+"Petr Kovář <pknbe@volny.cz>\n"
+"Adrian Guniš <andygun696@gmail.com>\n"
+"Roman Horník <roman.hornik@debian-linux.cz>\n"
+"Jan Lafek <hlafek99@gmail.com>"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
 #: ../src/gpm-tray-icon.c:298
@@ -2122,7 +2126,7 @@ msgstr "%s zbývající"
 #. preferences
 #: ../src/gpm-tray-icon.c:352
 msgid "_Preferences"
-msgstr "Nastavení"
+msgstr "Př_edvolby"
 
 #. TRANSLATORS: device not present
 #: ../src/gpm-upower.c:211
@@ -2310,10 +2314,10 @@ msgstr "Stupeň nabití:"
 #: ../src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] "Síťový adaptér"
-msgstr[1] "Síťové adaptéry"
-msgstr[2] "Síťové adaptéry"
-msgstr[3] "Síťové adaptéry"
+msgstr[0] "AC adaptér"
+msgstr[1] "AC adaptéry"
+msgstr[2] "AC adaptérů"
+msgstr[3] "AC adaptérů"
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/gpm-upower.c:491
@@ -2321,17 +2325,17 @@ msgid "Laptop battery"
 msgid_plural "Laptop batteries"
 msgstr[0] "Baterie notebooku"
 msgstr[1] "Baterie notebooku"
-msgstr[2] "Baterie notebooku"
-msgstr[3] "Baterie notebooku"
+msgstr[2] "Baterií notebooku"
+msgstr[3] "Baterií notebooku"
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] "Záložní zdroj"
-msgstr[1] "Záložní zdroje"
-msgstr[2] "Záložní zdroje"
-msgstr[3] "Záložní zdroje"
+msgstr[0] "UPS"
+msgstr[1] "UPS"
+msgstr[2] "UPS"
+msgstr[3] "UPS"
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/gpm-upower.c:499
@@ -2339,8 +2343,8 @@ msgid "Monitor"
 msgid_plural "Monitors"
 msgstr[0] "Monitor"
 msgstr[1] "Monitory"
-msgstr[2] "Monitory"
-msgstr[3] "Monitory"
+msgstr[2] "Monitorů"
+msgstr[3] "Monitorů"
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/gpm-upower.c:503
@@ -2348,8 +2352,8 @@ msgid "Mouse"
 msgid_plural "Mice"
 msgstr[0] "Myš"
 msgstr[1] "Myši"
-msgstr[2] "Myši"
-msgstr[3] "Myši"
+msgstr[2] "Myší"
+msgstr[3] "Myší"
 
 #. TRANSLATORS: wireless keyboard with internal battery
 #: ../src/gpm-upower.c:507
@@ -2357,17 +2361,17 @@ msgid "Keyboard"
 msgid_plural "Keyboards"
 msgstr[0] "Klávesnice"
 msgstr[1] "Klávesnice"
-msgstr[2] "Klávesnice"
-msgstr[3] "Klávesnice"
+msgstr[2] "Klávesnic"
+msgstr[3] "Klávesnic"
 
 #. TRANSLATORS: portable device
 #: ../src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] "Zařízení PDA"
-msgstr[1] "Zařízení PDA"
-msgstr[2] "Zařízení PDA"
-msgstr[3] "Zařízení PDA"
+msgstr[0] "PDA"
+msgstr[1] "PDA"
+msgstr[2] "PDA"
+msgstr[3] "PDA"
 
 #. TRANSLATORS: cell phone (mobile...)
 #: ../src/gpm-upower.c:515
@@ -2375,17 +2379,17 @@ msgid "Cell phone"
 msgid_plural "Cell phones"
 msgstr[0] "Mobilní telefon"
 msgstr[1] "Mobilní telefony"
-msgstr[2] "Mobilní telefony"
-msgstr[3] "Mobilní telefony"
+msgstr[2] "Mobilních telefonů"
+msgstr[3] "Mobilních telefonů"
 
 #. TRANSLATORS: media player, mp3 etc
 #: ../src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] "Přenosný přehrávač"
-msgstr[1] "Přenosné přehrávače"
-msgstr[2] "Přenosné přehrávače"
-msgstr[3] "Přenosné přehrávače"
+msgstr[0] "Multimediální přehrávač"
+msgstr[1] "Multimediální přehrávače"
+msgstr[2] "Multimediálních přehrávačů"
+msgstr[3] "Multimediálních přehrávačů"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:523
@@ -2393,8 +2397,8 @@ msgid "Tablet"
 msgid_plural "Tablets"
 msgstr[0] "Tablet"
 msgstr[1] "Tablety"
-msgstr[2] "Tablety"
-msgstr[3] "Tablety"
+msgstr[2] "Tabletů"
+msgstr[3] "Tabletů"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:527
@@ -2402,8 +2406,8 @@ msgid "Computer"
 msgid_plural "Computers"
 msgstr[0] "Počítač"
 msgstr[1] "Počítače"
-msgstr[2] "Počítače"
-msgstr[3] "Počítače"
+msgstr[2] "Počítačů"
+msgstr[3] "Počítačů"
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:594

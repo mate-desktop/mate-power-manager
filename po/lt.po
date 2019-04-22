@@ -4,11 +4,11 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# brennus <jonas.ska@gmail.com>, 2018
-# Audrius Meskauskas, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Moo, 2018
-# Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2018
+# brennus <jonas.ska@gmail.com>, 2019
+# Audrius Meskauskas, 2019
+# Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# Moo, 2019
 # 
 #, fuzzy
 msgid ""
@@ -16,8 +16,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-04 17:35+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2018\n"
+"PO-Revision-Date: 2019-03-14 17:12+0000\n"
+"Last-Translator: Moo, 2019\n"
 "Language-Team: Lithuanian (https://www.transifex.com/mate/teams/13566/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,7 +50,7 @@ msgstr "LCD ryškumas: %d%%"
 #: ../applets/brightness/brightness-applet.c:807
 #: ../applets/inhibit/inhibit-applet.c:300
 msgid "Licensed under the GNU General Public License Version 2"
-msgstr "Licencijuota GNU Genereal Public Licence Version 2 sąlygomis"
+msgstr "Licencijuota GNU General Public Licence Version 2 sąlygomis"
 
 #: ../applets/brightness/brightness-applet.c:808
 #: ../applets/inhibit/inhibit-applet.c:301
@@ -1106,19 +1106,19 @@ msgstr "Nežinomas laikas"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] "%i minutė"
-msgstr[1] "%i minutės"
-msgstr[2] "%i minučių"
-msgstr[3] "%i minučių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: ../src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] "%i valanda"
-msgstr[1] "%i valandos"
-msgstr[2] "%i valandų"
-msgstr[3] "%i valandų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -1130,18 +1130,18 @@ msgstr "%i %s, %i %s"
 #: ../src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] "valandą"
-msgstr[1] "valandas"
-msgstr[2] "valandų"
-msgstr[3] "valandų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: ../src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] "minutę"
-msgstr[1] "minutes"
-msgstr[2] "minučių"
-msgstr[3] "minučių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. Translators: This is %i days
 #: ../src/gpm-graph-widget.c:435
@@ -1345,10 +1345,10 @@ msgstr ""
 #: ../src/gpm-manager.c:1165
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] "Baterija įkrauta"
-msgstr[1] "Baterijos įkrautos"
-msgstr[2] "Baterijos įkrautos"
-msgstr[3] "Baterijos įkrautos"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: laptop battery is now discharging
 #: ../src/gpm-manager.c:1211
@@ -1811,40 +1811,40 @@ msgstr "Nežinoma"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] "%.0f sekundė"
-msgstr[1] "%.0f sekundės"
-msgstr[2] "%.0f sekundžių"
-msgstr[3] "%.0f sekundžių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:295
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] "%.1f minutė"
-msgstr[1] "%.1f minutės"
-msgstr[2] "%.1f minučių"
-msgstr[3] "%.1f minučių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:300
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] "%.1f valanda"
-msgstr[1] "%.1f valandos"
-msgstr[2] "%.1f valandų"
-msgstr[3] "%.1f valandų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: this is a time value, usually to show on a graph
 #: ../src/gpm-statistics.c:304
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] "%.1f diena"
-msgstr[1] "%.1f dienos"
-msgstr[2] "%.1f dienų"
-msgstr[3] "%.1f dienų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: ../src/gpm-statistics.c:313
 msgid "Yes"
@@ -1883,10 +1883,10 @@ msgstr "Maitinimas"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d sekundė"
-msgstr[1] "%d sekundės"
-msgstr[2] "%d sekundžių"
-msgstr[3] "%d sekundžių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: when the device was last updated with new data. It's
 #. * usually a few seconds when a device is discharging or charging.
@@ -1910,7 +1910,7 @@ msgstr "Įkraunama"
 #. TRANSLATORS: The state of the device, e.g. "Changing" or "Fully charged"
 #: ../src/gpm-statistics.c:446
 msgid "State"
-msgstr "Valstija"
+msgstr "Būsena"
 
 #: ../src/gpm-statistics.c:450
 msgid "Energy"
@@ -2153,8 +2153,8 @@ msgstr ""
 "Gintautas Miliauskas <gintas@akl.lt>\n"
 "Tomas Kuliavas <tokul@users.sourceforge.net>\n"
 "Gediminas Paulauskas <menesis@chatsubo.lt>\n"
-"Moo\n"
-"Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>"
+"Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>\n"
+"Moo"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
 #: ../src/gpm-tray-icon.c:298
@@ -2353,100 +2353,100 @@ msgstr "Krovimo greitis:"
 #: ../src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] "Kintamosios srovės adapteris"
-msgstr[1] "Kintamosios srovės adapteriai"
-msgstr[2] "Kintamosios srovės adapterių"
-msgstr[3] "Kintamosios srovės adapterių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "Nešiojamojo kompiuterio baterija"
-msgstr[1] "Nešiojamojo kompiuterio baterijos"
-msgstr[2] "Nešiojamojo kompiuterio baterijų"
-msgstr[3] "Nešiojamojo kompiuterio baterijų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] "Nenutrūkstamo maitinimo šaltinis"
-msgstr[1] "Nenutrūkstamo maitinimo šaltiniai"
-msgstr[2] "Nenutrūkstamo maitinimo šaltinių"
-msgstr[3] "Nenutrūkstamo maitinimo šaltinių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] "Monitorius"
-msgstr[1] "Monitoriai"
-msgstr[2] "Monitorių"
-msgstr[3] "Monitorių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] "Pelė"
-msgstr[1] "Pelės"
-msgstr[2] "Pelių"
-msgstr[3] "Pelių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: wireless keyboard with internal battery
 #: ../src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] "Klaviatūra"
-msgstr[1] "Klaviatūros"
-msgstr[2] "Klaviatūrų"
-msgstr[3] "Klaviatūrų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: portable device
 #: ../src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] "Kišeninis kompiuteris"
-msgstr[1] "Kišeniniai kompiuteriai"
-msgstr[2] "Kišeninių kompiuterių"
-msgstr[3] "Kišeninių kompiuterių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: cell phone (mobile...)
 #: ../src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] "Mobilusis telefonas"
-msgstr[1] "Mobilieji telefonai"
-msgstr[2] "Mobiliųjų telefonų"
-msgstr[3] "Mobiliųjų telefonų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: media player, mp3 etc
 #: ../src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] "Medijos grotuvas"
-msgstr[1] "Medijos grotuvai"
-msgstr[2] "Medijos grotuvų"
-msgstr[3] "Medijos grotuvų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "Planšetė"
-msgstr[1] "Planšetės"
-msgstr[2] "Planšečių"
-msgstr[3] "Planšečių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] "Kompiuteris"
-msgstr[1] "Kompiuteriai"
-msgstr[2] "Kompiuterių"
-msgstr[3] "Kompiuterių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. TRANSLATORS: battery technology
 #: ../src/gpm-upower.c:594
