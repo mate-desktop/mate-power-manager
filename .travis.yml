@@ -176,10 +176,11 @@ variables:
     -enable-checker security.insecureAPI.strcpy"'
 
 build_scripts:
-  - ./autogen.sh
   - if [ ${DISTRO_NAME} == "debian" ];then
+  -     ./autogen.sh --without-keyring
   -     scan-build $CHECKERS ./configure --without-keyring
   - else
+  -     ./autogen.sh
   -     scan-build $CHECKERS ./configure
   - fi
   - if [ $CPU_COUNT -gt 1 ]; then
