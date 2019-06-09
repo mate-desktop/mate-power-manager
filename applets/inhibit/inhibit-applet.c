@@ -327,7 +327,7 @@ gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 	gtk_about_dialog_set_translator_credits (about, translator_credits);
 	gtk_about_dialog_set_logo (about, logo);
 	gtk_about_dialog_set_license (about, license_trans);
-	gtk_about_dialog_set_website (about, "http://www.mate-desktop.org/");
+	gtk_about_dialog_set_website (about, "https://mate-desktop.org/");
 
 	gtk_window_set_icon_name (GTK_WINDOW (about), GPM_INHIBIT_APPLET_ICON_INHIBIT);
 
