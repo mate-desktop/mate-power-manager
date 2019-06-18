@@ -4,10 +4,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Mattias Põldaru <mahfiaz@gmail.com>, 2018
 # Tõnis Rand, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Ivar Smolin <okul@linux.ee>, 2019
+# Mattias Põldaru <mahfiaz@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-04 17:35+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Ivar Smolin <okul@linux.ee>, 2019\n"
+"Last-Translator: Mattias Põldaru <mahfiaz@gmail.com>, 2019\n"
 "Language-Team: Estonian (https://www.transifex.com/mate/teams/13566/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -169,7 +169,7 @@ msgstr ""
 #: ../data/org.mate.power-manager.gschema.xml.in.h:2
 msgid ""
 "The type of sleeping that should be performed when the computer is inactive."
-msgstr ""
+msgstr "Kuidas arvuti jõudeoleku korral uinutatakse."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:3
 msgid "Battery critical low action"
@@ -293,6 +293,8 @@ msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
 msgstr ""
+"Sellist ekraaniheledust kasutatakse sessiooni jõudeoleku korral. Kehtib "
+"ainult siis, kui use-time-for-policy on tõene."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:27
 msgid "Dim the screen after a period of inactivity when on battery power"
@@ -434,6 +436,8 @@ msgstr "Kas enne uinumist peaks kontrollima protsessori koormust."
 #: ../data/org.mate.power-manager.gschema.xml.in.h:55
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
 msgstr ""
+"Kas võrguhaldur NetworkManager peaks enne uinakut lahti ühenduma ning "
+"naasmisel uuesti ühenduma."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:56
 msgid ""
@@ -487,7 +491,7 @@ msgstr ""
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:65
 msgid "Lock GNOME keyring on sleep"
-msgstr ""
+msgstr "GNOME võtmerõnga lukustamine uinumisel"
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:66
 msgid ""
@@ -579,11 +583,11 @@ msgstr "Kas graafikul näidatavaid ajaloo andmeid silutakse."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:84
 msgid "The default graph type to show for history"
-msgstr ""
+msgstr "Vaikimisi ajaloograafiku tüüp."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:85
 msgid "The default graph type to show in the history window."
-msgstr ""
+msgstr "Vaikimisi graafiku tüüp ajalooaknas."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:86
 msgid "The maximum time displayed for history"
@@ -1272,8 +1276,8 @@ msgstr ""
 #: ../src/gpm-manager.c:1165
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Aku laetud"
+msgstr[1] "Akud laetud"
 
 #. TRANSLATORS: laptop battery is now discharging
 #: ../src/gpm-manager.c:1211
@@ -2066,7 +2070,7 @@ msgstr "_Eelistused"
 #: ../src/gpm-upower.c:211
 #, c-format
 msgid "%s not present"
-msgstr ""
+msgstr "%s pole ühendatud"
 
 #. TRANSLATORS: a phone is charging
 #. TRANSLATORS: device is charging, but we only have a percentage
@@ -2269,15 +2273,15 @@ msgstr[1] "UPS-id"
 #: ../src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Monitor"
+msgstr[1] "Monitorid"
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Hiir"
+msgstr[1] "Hiired"
 
 #. TRANSLATORS: wireless keyboard with internal battery
 #: ../src/gpm-upower.c:507
@@ -2290,29 +2294,29 @@ msgstr[1] "Klaviatuurid"
 #: ../src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "PDA"
+msgstr[1] "PDAd"
 
 #. TRANSLATORS: cell phone (mobile...)
 #: ../src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Mobiiltelefon"
+msgstr[1] "Mobiiltelefonid"
 
 #. TRANSLATORS: media player, mp3 etc
 #: ../src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Meediaesitaja"
+msgstr[1] "Meediaesitajad"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Tahvelarvuti"
+msgstr[1] "Tahvelarvutid"
 
 #. TRANSLATORS: tablet device
 #: ../src/gpm-upower.c:527
