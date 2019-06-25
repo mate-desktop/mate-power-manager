@@ -115,6 +115,7 @@ requires:
     - cairo-devel
     - clang
     - clang-analyzer
+    - cppcheck-htmlreport
     - dbus-glib-devel
     - desktop-file-utils
     - gcc
@@ -198,7 +199,9 @@ after_scripts:
   -     bash ./debian.sh
   - fi
   - if [ ${DISTRO_NAME} == "fedora" ];then
-  -   ./gen-index -i https://github.com/${OWNER_NAME}/${REPO_NAME}/raw/master/data/icons/16x16/apps/mate-power-manager.png
+  -   cppcheck --xml --output-file=cppcheck.xml --enable=warning,style,performance,portability,information,missingInclude .
+  -   cppcheck-htmlreport --title=${REPO_NAME} --file=cppcheck.xml --report-dir=cppcheck-htmlreport
+  -   ./gen-index -l 20 -i https://github.com/${OWNER_NAME}/${REPO_NAME}/raw/master/data/icons/16x16/apps/mate-power-manager.png
   - fi
   - make distcheck
 
