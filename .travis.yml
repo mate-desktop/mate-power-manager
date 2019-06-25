@@ -198,7 +198,7 @@ after_scripts:
   -     bash ./debian.sh
   - fi
   - if [ ${DISTRO_NAME} == "fedora" ];then
-  -   ./gen-index
+  -   ./gen-index -i https://github.com/${OWNER_NAME}/${REPO_NAME}/raw/master/data/icons/16x16/apps/mate-power-manager.png
   - fi
   - make distcheck
 
