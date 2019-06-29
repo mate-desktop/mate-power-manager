@@ -484,7 +484,7 @@ prefs_setup_ac (GpmPrefs *prefs)
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_ac_brightness"));
 
 		gtk_widget_hide(widget);
-		
+
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_ac_display_dim"));
 
 		gtk_widget_hide(widget);
@@ -575,7 +575,8 @@ static void
 prefs_setup_ups (GpmPrefs *prefs)
 {
 	GtkWidget *widget;
-	GtkNotebook *notebook;
+	GtkWidget *notebook;
+	GtkWidget *window;
 	gint page;
 
 	const GpmActionPolicy ups_low_actions[] =
@@ -607,11 +608,17 @@ prefs_setup_ups (GpmPrefs *prefs)
 					GPM_SETTINGS_SLEEP_DISPLAY_UPS,
 					display_times);
 
+	window = gpm_window (prefs);
+	notebook = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "notebook_preferences"));
+	gtk_widget_add_events (notebook, GDK_SCROLL_MASK);
+	g_signal_connect (GTK_NOTEBOOK (notebook), "scroll-event",
+			  G_CALLBACK (gpm_dialog_page_scroll_event_cb),
+			  window);
+
 	if (prefs->priv->has_ups == FALSE) {
-		notebook = GTK_NOTEBOOK (gtk_builder_get_object (prefs->priv->builder, "notebook_preferences"));
 		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "vbox_ups"));
-		page = gtk_notebook_page_num (notebook, GTK_WIDGET (widget));
-		gtk_notebook_remove_page (notebook, page);
+		page = gtk_notebook_page_num (GTK_NOTEBOOK (notebook), GTK_WIDGET (widget));
+		gtk_notebook_remove_page (GTK_NOTEBOOK (notebook), page);
 		return;
 	}
 
@@ -721,7 +728,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 			g_error_free (error);
 		}
 
-		res = g_dbus_proxy_call_sync (proxy, "CanSuspend", 
+		res = g_dbus_proxy_call_sync (proxy, "CanSuspend",
 					      NULL,
 					      G_DBUS_CALL_FLAGS_NONE,
 					      -1,
@@ -737,7 +744,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 			g_error_free (error);
 		}
 
-		res = g_dbus_proxy_call_sync (proxy, "CanHibernate", 
+		res = g_dbus_proxy_call_sync (proxy, "CanHibernate",
 					      NULL,
 					      G_DBUS_CALL_FLAGS_NONE,
 					      -1,
@@ -776,8 +783,8 @@ gpm_prefs_init (GpmPrefs *prefs)
 			return;
 		}
 
-		res = g_dbus_proxy_call_sync (proxy, "Get", 
-					      g_variant_new( "(ss)", 
+		res = g_dbus_proxy_call_sync (proxy, "Get",
+					      g_variant_new( "(ss)",
 							     "org.freedesktop.UPower",
 							     "LidIsPresent"),
 					      G_DBUS_CALL_FLAGS_NONE,

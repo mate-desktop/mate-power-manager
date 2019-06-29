@@ -23,6 +23,7 @@
 #define __GPMCOMMON_H
 
 #include <glib.h>
+#include <gtk/gtk.h>
 
 #include <unistd.h>
 
@@ -154,14 +155,17 @@ typedef enum {
 	GPM_ACTION_POLICY_NOTHING
 } GpmActionPolicy;
 
-gchar		*gpm_get_timestring				(guint		 time);
-guint        gpm_discrete_from_percent          (guint       percentage,
-                                guint        levels);
-guint        gpm_discrete_to_percent            (guint       discrete,
-                                guint        levels);
-void 		 gpm_help_display				(const gchar	*link_id);
+gchar        *gpm_get_timestring                (guint time);
+guint        gpm_discrete_from_percent          (guint percentage,
+                                                 guint levels);
+guint        gpm_discrete_to_percent            (guint discrete,
+                                                 guint levels);
+void         gpm_help_display                   (const gchar    *link_id);
+gboolean     gpm_dialog_page_scroll_event_cb    (GtkWidget      *widget,
+                                                 GdkEventScroll *event,
+                                                 GtkWindow      *window);
 #ifdef EGG_TEST
-void		 gpm_common_test				(gpointer	 data);
+void         gpm_common_test                     (gpointer data);
 #endif
 
 G_END_DECLS
