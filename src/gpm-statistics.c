@@ -1342,9 +1342,9 @@ gpm_stats_history_type_combo_changed_cb (GtkWidget *widget, gpointer data)
 	guint active;
 	const gchar *axis_x = NULL;
 	const gchar *axis_y = NULL;
-	
+
 	active = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
-	
+
 	if (active == 0) {
 		history_type = GPM_HISTORY_RATE_VALUE;
 		/* TRANSLATORS: this is the X axis on the graph */
@@ -1394,9 +1394,9 @@ gpm_stats_type_combo_changed_cb (GtkWidget *widget, gpointer data)
 	guint active;
 	const gchar *axis_x = NULL;
 	const gchar *axis_y = NULL;
-	
+
 	active = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
-	
+
 	if (active == 0) {
 		stats_type = GPM_STATS_CHARGE_DATA_VALUE;
 		/* TRANSLATORS: this is the X axis on the graph for the whole battery device */
@@ -1444,9 +1444,9 @@ static void
 gpm_stats_range_combo_changed (GtkWidget *widget, gpointer data)
 {
 	guint active;
-	
+
 	active = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
-	
+
 	if (active == 0)
 		history_time = GPM_HISTORY_MINUTE_VALUE;
 	else if (active == 1)
@@ -1681,6 +1681,12 @@ main (int argc, char *argv[])
 			  G_CALLBACK (gpm_stats_points_checkbox_stats_cb), NULL);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "notebook1"));
+
+	gtk_widget_add_events (widget, GDK_SCROLL_MASK);
+	g_signal_connect (widget, "scroll-event",
+                      G_CALLBACK (gpm_dialog_page_scroll_event_cb),
+                      window);
+
 	page = g_settings_get_int (settings, GPM_SETTINGS_INFO_PAGE_NUMBER);
 	gtk_notebook_set_current_page (GTK_NOTEBOOK (widget), page);
 	g_signal_connect (widget, "switch-page",

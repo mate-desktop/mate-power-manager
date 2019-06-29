@@ -23,6 +23,7 @@
 #define __GPMCOMMON_H
 
 #include <glib.h>
+#include <gtk/gtk.h>
 
 #include <unistd.h>
 
@@ -160,6 +161,9 @@ guint        gpm_discrete_from_percent          (guint       percentage,
 guint        gpm_discrete_to_percent            (guint       discrete,
                                 guint        levels);
 void 		 gpm_help_display				(const gchar	*link_id);
+gboolean        gpm_dialog_page_scroll_event_cb                 (GtkWidget      *widget,
+                                                                 GdkEventScroll *event,
+                                                                 GtkWindow *window);
 #ifdef EGG_TEST
 void		 gpm_common_test				(gpointer	 data);
 #endif
