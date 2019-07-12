@@ -110,6 +110,9 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">Put computer to _sleep when inactive for:</property>
                                     <property name="use_underline">True</property>
+                                    <accessibility>
+                                      <relation type="label-for" target="combobox_ac_computer"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -119,6 +122,9 @@
                                 <child>
                                   <object class="GtkComboBoxText" id="combobox_ac_computer">
                                     <property name="visible">True</property>
+                                    <accessibility>
+                                      <relation type="labelled-by" target="label_ac_computer"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="position">1</property>
@@ -142,6 +148,9 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">When laptop lid is cl_osed:</property>
                                     <property name="use_underline">True</property>
+                                    <accessibility>
+                                      <relation type="label-for" target="combobox_ac_lid"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -151,6 +160,9 @@
                                 <child>
                                   <object class="GtkComboBoxText" id="combobox_ac_lid">
                                     <property name="visible">True</property>
+                                    <accessibility>
+                                      <relation type="labelled-by" target="label_ac_lid"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="position">1</property>
@@ -213,6 +225,9 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">Put _display to sleep when inactive for:</property>
                                     <property name="use_underline">True</property>
+                                    <accessibility>
+                                      <relation type="label-for" target="combobox_ac_display"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -222,6 +237,9 @@
                                 <child>
                                   <object class="GtkComboBoxText" id="combobox_ac_display">
                                     <property name="visible">True</property>
+                                    <accessibility>
+                                      <relation type="labelled-by" target="label_ac_display"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="position">1</property>
@@ -244,6 +262,9 @@
                                     <property name="label" translatable="yes">Set display _brightness to:</property>
                                     <property name="use_underline">True</property>
                                     <property name="mnemonic_widget">hscale_ac_brightness</property>
+                                    <accessibility>
+                                      <relation type="label-for" target="hscale_ac_brightness"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -350,6 +371,9 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">Put computer to _sleep when inactive for:</property>
                                     <property name="use_underline">True</property>
+                                    <accessibility>
+                                      <relation type="label-for" target="combobox_battery_computer"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -359,6 +383,9 @@
                                 <child>
                                   <object class="GtkComboBoxText" id="combobox_battery_computer">
                                     <property name="visible">True</property>
+                                    <accessibility>
+                                      <relation type="labelled-by" target="label_battery_computer"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="position">1</property>
@@ -382,6 +409,9 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">When laptop lid is cl_osed:</property>
                                     <property name="use_underline">True</property>
+                                    <accessibility>
+                                      <relation type="label-for" target="combobox_battery_lid"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -391,6 +421,9 @@
                                 <child>
                                   <object class="GtkComboBoxText" id="combobox_battery_lid">
                                     <property name="visible">True</property>
+                                    <accessibility>
+                                      <relation type="labelled-by" target="label_battery_lid"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="position">1</property>
@@ -412,6 +445,9 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">When battery po_wer is critically low:</property>
                                     <property name="use_underline">True</property>
+                                    <accessibility>
+                                      <relation type="label-for" target="combobox_battery_critical"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -421,6 +457,9 @@
                                 <child>
                                   <object class="GtkComboBoxText" id="combobox_battery_critical">
                                     <property name="visible">True</property>
+                                    <accessibility>
+                                      <relation type="labelled-by" target="label121"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="position">1</property>
@@ -483,6 +522,9 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">Put _display to sleep when inactive for:</property>
                                     <property name="use_underline">True</property>
+                                    <accessibility>
+                                      <relation type="label-for" target="combobox_battery_display"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -492,6 +534,9 @@
                                 <child>
                                   <object class="GtkComboBoxText" id="combobox_battery_display">
                                     <property name="visible">True</property>
+                                    <accessibility>
+                                      <relation type="labelled-by" target="label_battery_display"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="position">1</property>
@@ -604,6 +649,9 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">Put computer to _sleep when inactive for:</property>
                                     <property name="use_underline">True</property>
+                                    <accessibility>
+                                      <relation type="labelled-by" target="combobox_ups_computer"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -613,6 +661,9 @@
                                 <child>
                                   <object class="GtkComboBoxText" id="combobox_ups_computer">
                                     <property name="visible">True</property>
+                                    <accessibility>
+                                      <relation type="labelled-by" target="label_ups_computer"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="position">1</property>
@@ -636,6 +687,9 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">When UPS power is l_ow:</property>
                                     <property name="use_underline">True</property>
+                                    <accessibility>
+                                      <relation type="label-for" target="combobox_ups_low"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -645,6 +699,9 @@
                                 <child>
                                   <object class="GtkComboBoxText" id="combobox_ups_low">
                                     <property name="visible">True</property>
+                                    <accessibility>
+                                      <relation type="labelled-by" target="label_ups_low"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="position">1</property>
@@ -666,6 +723,9 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">When UPS power is _critically low:</property>
                                     <property name="use_underline">True</property>
+                                    <accessibility>
+                                      <relation type="label-for" target="combobox_ups_critical"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -675,6 +735,9 @@
                                 <child>
                                   <object class="GtkComboBoxText" id="combobox_ups_critical">
                                     <property name="visible">True</property>
+                                    <accessibility>
+                                      <relation type="labelled-by" target="label_ups_critical"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="position">1</property>
@@ -737,6 +800,9 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">Put _display to sleep when inactive for:</property>
                                     <property name="use_underline">True</property>
+                                    <accessibility>
+                                      <relation type="label-for" target="combobox_ups_display"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -746,6 +812,9 @@
                                 <child>
                                   <object class="GtkComboBoxText" id="combobox_ups_display">
                                     <property name="visible">True</property>
+                                    <accessibility>
+                                      <relation type="labelled-by" target="label_ups_display"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="position">1</property>
@@ -828,6 +897,9 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">When the power _button is pressed:</property>
                                     <property name="use_underline">True</property>
+                                    <accessibility>
+                                      <relation type="label-for" target="combobox_general_power"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -837,6 +909,9 @@
                                 <child>
                                   <object class="GtkComboBoxText" id="combobox_general_power">
                                     <property name="visible">True</property>
+                                    <accessibility>
+                                      <relation type="labelled-by" target="label_general_power"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="position">1</property>
@@ -860,6 +935,9 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">When the _suspend button is pressed:</property>
                                     <property name="use_underline">True</property>
+                                    <accessibility>
+                                      <relation type="label-for" target="combobox_general_suspend"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -869,6 +947,9 @@
                                 <child>
                                   <object class="GtkComboBoxText" id="combobox_general_suspend">
                                     <property name="visible">True</property>
+                                    <accessibility>
+                                      <relation type="labelled-by" target="label_general_suspend"/>
+                                    </accessibility>
                                   </object>
                                   <packing>
                                     <property name="position">1</property>
