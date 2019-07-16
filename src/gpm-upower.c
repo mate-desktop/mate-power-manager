@@ -219,7 +219,7 @@ gpm_upower_get_device_summary (UpDevice *device)
 
 	/* we care if we are on AC */
 	if (kind == UP_DEVICE_KIND_PHONE) {
-		if (state == UP_DEVICE_STATE_CHARGING || !state == UP_DEVICE_STATE_DISCHARGING) {
+		if (state == UP_DEVICE_STATE_CHARGING || !(state == UP_DEVICE_STATE_DISCHARGING)) {
 			/* TRANSLATORS: a phone is charging */
 			return g_strdup_printf (_("%s charging (%.1f%%)"), kind_desc, percentage);
 		}
