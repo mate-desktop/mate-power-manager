@@ -110,6 +110,7 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">Put computer to _sleep when inactive for:</property>
                                     <property name="use_underline">True</property>
+                                    <property name="mnemonic_widget">combobox_ac_computer</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -142,6 +143,7 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">When laptop lid is cl_osed:</property>
                                     <property name="use_underline">True</property>
+                                    <property name="mnemonic_widget">combobox_ac_lid</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -213,6 +215,7 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">Put _display to sleep when inactive for:</property>
                                     <property name="use_underline">True</property>
+                                    <property name="mnemonic_widget">combobox_ac_display</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -350,6 +353,7 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">Put computer to _sleep when inactive for:</property>
                                     <property name="use_underline">True</property>
+                                    <property name="mnemonic_widget">combobox_battery_computer</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -382,6 +386,7 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">When laptop lid is cl_osed:</property>
                                     <property name="use_underline">True</property>
+                                    <property name="mnemonic_widget">combobox_battery_lid</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -412,6 +417,7 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">When battery po_wer is critically low:</property>
                                     <property name="use_underline">True</property>
+                                    <property name="mnemonic_widget">combobox_battery_critical</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -483,6 +489,7 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">Put _display to sleep when inactive for:</property>
                                     <property name="use_underline">True</property>
+                                    <property name="mnemonic_widget">combobox_battery_display</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -604,6 +611,7 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">Put computer to _sleep when inactive for:</property>
                                     <property name="use_underline">True</property>
+                                    <property name="mnemonic_widget">combobox_ups_computer</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -636,6 +644,7 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">When UPS power is l_ow:</property>
                                     <property name="use_underline">True</property>
+                                    <property name="mnemonic_widget">combobox_ups_low</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -666,6 +675,7 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">When UPS power is _critically low:</property>
                                     <property name="use_underline">True</property>
+                                    <property name="mnemonic_widget">combobox_ups_critical</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -737,6 +747,7 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">Put _display to sleep when inactive for:</property>
                                     <property name="use_underline">True</property>
+                                    <property name="mnemonic_widget">combobox_ups_display</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -828,6 +839,7 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">When the power _button is pressed:</property>
                                     <property name="use_underline">True</property>
+                                    <property name="mnemonic_widget">combobox_general_power</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -860,6 +872,7 @@
                                     <property name="xalign">0</property>
                                     <property name="label" translatable="yes">When the _suspend button is pressed:</property>
                                     <property name="use_underline">True</property>
+                                    <property name="mnemonic_widget">combobox_general_suspend</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
