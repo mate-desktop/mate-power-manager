@@ -32,8 +32,6 @@
 
 #include "gsd-media-keys-window.h"
 
-#define MSD_MEDIA_KEYS_WINDOW_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), MSD_TYPE_MEDIA_KEYS_WINDOW, MsdMediaKeysWindowPrivate))
-
 #define ICON_SCALE 0.55           /* size of the icon compared to the whole OSD */
 
 struct MsdMediaKeysWindowPrivate
@@ -49,7 +47,7 @@ struct MsdMediaKeysWindowPrivate
         GtkWidget               *progress;
 };
 
-G_DEFINE_TYPE (MsdMediaKeysWindow, msd_media_keys_window, MSD_TYPE_OSD_WINDOW)
+G_DEFINE_TYPE_WITH_PRIVATE (MsdMediaKeysWindow, msd_media_keys_window, MSD_TYPE_OSD_WINDOW)
 
 static void
 volume_controls_set_visible (MsdMediaKeysWindow *window,
@@ -645,8 +643,6 @@ msd_media_keys_window_class_init (MsdMediaKeysWindowClass *klass)
         MsdOsdWindowClass *osd_window_class = MSD_OSD_WINDOW_CLASS (klass);
 
         osd_window_class->draw_when_composited = msd_media_keys_window_draw_when_composited;
-
-        g_type_class_add_private (klass, sizeof (MsdMediaKeysWindowPrivate));
 }
 
 static void
@@ -654,7 +650,7 @@ msd_media_keys_window_init (MsdMediaKeysWindow *window)
 {
         GdkScreen *screen;
 
-        window->priv = MSD_MEDIA_KEYS_WINDOW_GET_PRIVATE (window);
+        window->priv = msd_media_keys_window_get_instance_private (window);
 
         screen = gtk_widget_get_screen (GTK_WIDGET (window));
 
