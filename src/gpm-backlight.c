@@ -54,8 +54,6 @@
 #include "gpm-icon-names.h"
 #include "egg-console-kit.h"
 
-#define GPM_BACKLIGHT_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_BACKLIGHT, GpmBacklightPrivate))
-
 struct GpmBacklightPrivate
 {
 	UpClient		*client;
@@ -81,7 +79,7 @@ enum {
 
 static guint signals [LAST_SIGNAL] = { 0 };
 
-G_DEFINE_TYPE (GpmBacklight, gpm_backlight, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (GpmBacklight, gpm_backlight, G_TYPE_OBJECT)
 
 /**
  * gpm_backlight_error_quark:
@@ -723,8 +721,6 @@ gpm_backlight_class_init (GpmBacklightClass *klass)
 			      NULL, NULL,
 			      g_cclosure_marshal_VOID__UINT,
 			      G_TYPE_NONE, 1, G_TYPE_UINT);
-
-	g_type_class_add_private (klass, sizeof (GpmBacklightPrivate));
 }
 
 /**
@@ -738,7 +734,7 @@ gpm_backlight_class_init (GpmBacklightClass *klass)
 static void
 gpm_backlight_init (GpmBacklight *backlight)
 {
-	backlight->priv = GPM_BACKLIGHT_GET_PRIVATE (backlight);
+	backlight->priv = gpm_backlight_get_instance_private (backlight);
 
 	/* record our idle time */
 	backlight->priv->idle_timer = g_timer_new ();
