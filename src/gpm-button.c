@@ -38,8 +38,6 @@
 
 static void     gpm_button_finalize   (GObject	      *object);
 
-#define GPM_BUTTON_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_BUTTON, GpmButtonPrivate))
-
 struct GpmButtonPrivate
 {
 	GdkScreen		*screen;
@@ -59,7 +57,7 @@ enum {
 static guint signals [LAST_SIGNAL] = { 0 };
 static gpointer gpm_button_object = NULL;
 
-G_DEFINE_TYPE (GpmButton, gpm_button, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (GpmButton, gpm_button, G_TYPE_OBJECT)
 
 #define GPM_BUTTON_DUPLICATE_TIMEOUT	0.125f
 
@@ -239,7 +237,6 @@ gpm_button_class_init (GpmButtonClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 	object_class->finalize = gpm_button_finalize;
-	g_type_class_add_private (klass, sizeof (GpmButtonPrivate));
 
 	signals [BUTTON_PRESSED] =
 		g_signal_new ("button-pressed",
@@ -358,7 +355,7 @@ gpm_button_client_changed_cb (UpClient *client, GpmButton *button)
 static void
 gpm_button_init (GpmButton *button)
 {
-	button->priv = GPM_BUTTON_GET_PRIVATE (button);
+	button->priv = gpm_button_get_instance_private (button);
 
 	button->priv->screen = gdk_screen_get_default ();
 	button->priv->window = gdk_screen_get_root_window (button->priv->screen);
@@ -411,7 +408,7 @@ gpm_button_finalize (GObject *object)
 	g_return_if_fail (GPM_IS_BUTTON (object));
 
 	button = GPM_BUTTON (object);
-	button->priv = GPM_BUTTON_GET_PRIVATE (button);
+	button->priv = gpm_button_get_instance_private (button);
 
 	g_object_unref (button->priv->client);
 	g_free (button->priv->last_button);
