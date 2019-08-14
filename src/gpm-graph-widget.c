@@ -34,8 +34,6 @@
 #include "egg-color.h"
 #include "egg-precision.h"
 
-G_DEFINE_TYPE (GpmGraphWidget, gpm_graph_widget, GTK_TYPE_DRAWING_AREA);
-#define GPM_GRAPH_WIDGET_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_GRAPH_WIDGET, GpmGraphWidgetPrivate))
 #define GPM_GRAPH_WIDGET_FONT "Sans 8"
 
 struct GpmGraphWidgetPrivate
@@ -69,6 +67,8 @@ struct GpmGraphWidgetPrivate
 	GPtrArray		*data_list;
 	GPtrArray		*plot_list;
 };
+
+G_DEFINE_TYPE_WITH_PRIVATE (GpmGraphWidget, gpm_graph_widget, GTK_TYPE_DRAWING_AREA);
 
 static gboolean gpm_graph_widget_draw (GtkWidget *graph, cairo_t *cr);
 static void	gpm_graph_widget_finalize (GObject *object);
@@ -239,8 +239,6 @@ gpm_graph_widget_class_init (GpmGraphWidgetClass *class)
 	object_class->set_property = up_graph_set_property;
 	object_class->finalize = gpm_graph_widget_finalize;
 
-	g_type_class_add_private (class, sizeof (GpmGraphWidgetPrivate));
-
 	/* properties */
 	g_object_class_install_property (object_class,
 					 PROP_USE_LEGEND,
@@ -309,7 +307,7 @@ gpm_graph_widget_init (GpmGraphWidget *graph)
 	PangoContext *context;
 	PangoFontDescription *desc;
 
-	graph->priv = GPM_GRAPH_WIDGET_GET_PRIVATE (graph);
+	graph->priv = gpm_graph_widget_get_instance_private (graph);
 	graph->priv->start_x = 0;
 	graph->priv->start_y = 0;
 	graph->priv->stop_x = 60;
