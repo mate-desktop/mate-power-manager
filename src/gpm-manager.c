@@ -66,7 +66,6 @@
 
 static void     gpm_manager_finalize	(GObject	 *object);
 
-#define GPM_MANAGER_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_MANAGER, GpmManagerPrivate))
 #define GPM_MANAGER_NOTIFY_TIMEOUT_NEVER	0 /* ms */
 #define GPM_MANAGER_NOTIFY_TIMEOUT_SHORT	10 * 1000 /* ms */
 #define GPM_MANAGER_NOTIFY_TIMEOUT_LONG		30 * 1000 /* ms */
@@ -117,7 +116,7 @@ typedef enum {
 	GPM_MANAGER_SOUND_LAST
 } GpmManagerSound;
 
-G_DEFINE_TYPE (GpmManager, gpm_manager, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (GpmManager, gpm_manager, G_TYPE_OBJECT)
 
 /**
  * gpm_manager_error_quark:
@@ -1048,7 +1047,6 @@ gpm_manager_class_init (GpmManagerClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 	object_class->finalize = gpm_manager_finalize;
-	g_type_class_add_private (klass, sizeof (GpmManagerPrivate));
 }
 
 /**
@@ -1823,7 +1821,7 @@ gpm_manager_init (GpmManager *manager)
 	GDBusConnection *g_connection;
 	GError *error = NULL;
 
-	manager->priv = GPM_MANAGER_GET_PRIVATE (manager);
+	manager->priv = gpm_manager_get_instance_private (manager);
 	connection = dbus_g_bus_get (DBUS_BUS_SESSION, &error);
 	g_connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, &error);
 
