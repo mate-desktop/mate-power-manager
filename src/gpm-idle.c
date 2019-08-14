@@ -44,8 +44,6 @@
 #include "gpm-load.h"
 #include "gpm-session.h"
 
-#define GPM_IDLE_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_IDLE, GpmIdlePrivate))
-
 /* Sets the idle percent limit, i.e. how hard the computer can work
    while considered "at idle" */
 #define GPM_IDLE_CPU_LIMIT			5
@@ -74,7 +72,7 @@ enum {
 static guint signals [LAST_SIGNAL] = { 0 };
 static gpointer gpm_idle_object = NULL;
 
-G_DEFINE_TYPE (GpmIdle, gpm_idle, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (GpmIdle, gpm_idle, G_TYPE_OBJECT)
 
 /**
  * gpm_idle_mode_to_string:
@@ -451,8 +449,6 @@ gpm_idle_class_init (GpmIdleClass *klass)
 			      G_STRUCT_OFFSET (GpmIdleClass, idle_changed),
 			      NULL, NULL, g_cclosure_marshal_VOID__INT,
 			      G_TYPE_NONE, 1, G_TYPE_INT);
-
-	g_type_class_add_private (klass, sizeof (GpmIdlePrivate));
 }
 
 /**
@@ -465,7 +461,7 @@ gpm_idle_class_init (GpmIdleClass *klass)
 static void
 gpm_idle_init (GpmIdle *idle)
 {
-	idle->priv = GPM_IDLE_GET_PRIVATE (idle);
+	idle->priv = gpm_idle_get_instance_private (idle);
 
 	idle->priv->timeout_dim = G_MAXUINT;
 	idle->priv->timeout_blank = G_MAXUINT;
