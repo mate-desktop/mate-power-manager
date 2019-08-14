@@ -50,8 +50,6 @@
 
 static void     gpm_tray_icon_finalize   (GObject	   *object);
 
-#define GPM_TRAY_ICON_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_TRAY_ICON, GpmTrayIconPrivate))
-
 struct GpmTrayIconPrivate
 {
 	GSettings		*settings;
@@ -60,7 +58,7 @@ struct GpmTrayIconPrivate
 	gboolean		 show_actions;
 };
 
-G_DEFINE_TYPE (GpmTrayIcon, gpm_tray_icon, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (GpmTrayIcon, gpm_tray_icon, G_TYPE_OBJECT)
 
 /**
  * gpm_tray_icon_enable_actions:
@@ -208,7 +206,6 @@ gpm_tray_icon_class_init (GpmTrayIconClass *klass)
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
 	object_class->finalize = gpm_tray_icon_finalize;
-	g_type_class_add_private (klass, sizeof (GpmTrayIconPrivate));
 }
 
 /**
@@ -469,7 +466,7 @@ gpm_tray_icon_init (GpmTrayIcon *icon)
 {
 	gboolean allowed_in_menu;
 
-	icon->priv = GPM_TRAY_ICON_GET_PRIVATE (icon);
+	icon->priv = gpm_tray_icon_get_instance_private (icon);
 
 	icon->priv->engine = gpm_engine_new ();
 
