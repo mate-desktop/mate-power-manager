@@ -47,8 +47,6 @@
 
 static void     gpm_load_finalize   (GObject	  *object);
 
-#define GPM_LOAD_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_LOAD, GpmLoadPrivate))
-
 struct GpmLoadPrivate
 {
 	long unsigned	 old_idle;
@@ -57,7 +55,7 @@ struct GpmLoadPrivate
 
 static gpointer gpm_load_object = NULL;
 
-G_DEFINE_TYPE (GpmLoad, gpm_load, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (GpmLoad, gpm_load, G_TYPE_OBJECT)
 
 /**
  * gpm_load_class_init:
@@ -68,7 +66,6 @@ gpm_load_class_init (GpmLoadClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 	object_class->finalize = gpm_load_finalize;
-	g_type_class_add_private (klass, sizeof (GpmLoadPrivate));
 }
 
 #if defined(sun) && defined(__SVR4)
@@ -239,7 +236,7 @@ gpm_load_get_current (GpmLoad *load)
 static void
 gpm_load_init (GpmLoad *load)
 {
-	load->priv = GPM_LOAD_GET_PRIVATE (load);
+	load->priv = gpm_load_get_instance_private (load);
 
 	load->priv->old_idle = 0;
 	load->priv->old_total = 0;
