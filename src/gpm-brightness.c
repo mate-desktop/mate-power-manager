@@ -47,7 +47,6 @@
 #include "gpm-common.h"
 #include "gpm-marshal.h"
 
-#define GPM_BRIGHTNESS_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_BRIGHTNESS, GpmBrightnessPrivate))
 #define GPM_SOLE_SETTER_USE_CACHE	TRUE	/* this may be insanity */
 
 struct GpmBrightnessPrivate
@@ -80,7 +79,8 @@ typedef enum {
 	ACTION_BACKLIGHT_DEC
 } GpmXRandROp;
 
-G_DEFINE_TYPE (GpmBrightness, gpm_brightness, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (GpmBrightness, gpm_brightness, G_TYPE_OBJECT)
+
 static guint signals [LAST_SIGNAL] = { 0 };
 static gpointer gpm_brightness_object = NULL;
 
@@ -912,8 +912,6 @@ gpm_brightness_class_init (GpmBrightnessClass *klass)
 			      G_STRUCT_OFFSET (GpmBrightnessClass, brightness_changed),
 			      NULL, NULL, g_cclosure_marshal_VOID__UINT,
 			      G_TYPE_NONE, 1, G_TYPE_UINT);
-
-	g_type_class_add_private (klass, sizeof (GpmBrightnessPrivate));
 }
 
 /**
@@ -928,7 +926,7 @@ gpm_brightness_init (GpmBrightness *brightness)
 	int event_base;
 	int ignore;
 
-	brightness->priv = GPM_BRIGHTNESS_GET_PRIVATE (brightness);
+	brightness->priv = gpm_brightness_get_instance_private (brightness);
 
 	brightness->priv->cache_trusted = FALSE;
 	brightness->priv->has_changed_events = FALSE;
