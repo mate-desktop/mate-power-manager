@@ -45,8 +45,6 @@
 
 #define BG_ALPHA 0.75
 
-#define MSD_OSD_WINDOW_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), MSD_TYPE_OSD_WINDOW, MsdOsdWindowPrivate))
-
 struct MsdOsdWindowPrivate
 {
         guint                    is_composited : 1;
@@ -63,7 +61,7 @@ enum {
 
 static guint signals[LAST_SIGNAL] = { 0 };
 
-G_DEFINE_TYPE (MsdOsdWindow, msd_osd_window, GTK_TYPE_WINDOW)
+G_DEFINE_TYPE_WITH_PRIVATE (MsdOsdWindow, msd_osd_window, GTK_TYPE_WINDOW)
 
 static gboolean
 fade_timeout (MsdOsdWindow *window)
@@ -402,8 +400,6 @@ msd_osd_window_class_init (MsdOsdWindowClass *klass)
                                                         G_TYPE_POINTER);
 
         gtk_widget_class_set_css_name (widget_class, "MsdOsdWindow");
-
-        g_type_class_add_private (klass, sizeof (MsdOsdWindowPrivate));
 }
 
 /**
@@ -440,7 +436,7 @@ msd_osd_window_init (MsdOsdWindow *window)
 {
         GdkScreen *screen;
 
-        window->priv = MSD_OSD_WINDOW_GET_PRIVATE (window);
+        window->priv = msd_osd_window_get_instance_private (window);
 
         screen = gtk_widget_get_screen (GTK_WIDGET (window));
 
