@@ -33,8 +33,6 @@
 
 static void     gpm_session_finalize   (GObject		*object);
 
-#define GPM_SESSION_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_SESSION, GpmSessionPrivate))
-
 #define GPM_SESSION_MANAGER_SERVICE			"org.gnome.SessionManager"
 #define GPM_SESSION_MANAGER_PATH			"/org/gnome/SessionManager"
 #define GPM_SESSION_MANAGER_INTERFACE			"org.gnome.SessionManager"
@@ -82,7 +80,7 @@ enum {
 static guint signals [LAST_SIGNAL] = { 0 };
 static gpointer gpm_session_object = NULL;
 
-G_DEFINE_TYPE (GpmSession, gpm_session, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (GpmSession, gpm_session, G_TYPE_OBJECT)
 
 /**
  * gpm_session_logout:
@@ -398,7 +396,6 @@ gpm_session_class_init (GpmSessionClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 	object_class->finalize = gpm_session_finalize;
-	g_type_class_add_private (klass, sizeof (GpmSessionPrivate));
 
 	signals [IDLE_CHANGED] =
 		g_signal_new ("idle-changed",
@@ -454,7 +451,7 @@ gpm_session_init (GpmSession *session)
 	DBusGConnection *connection;
 	GError *error = NULL;
 
-	session->priv = GPM_SESSION_GET_PRIVATE (session);
+	session->priv = gpm_session_get_instance_private (session);
 	session->priv->is_idle_old = FALSE;
 	session->priv->is_idle_inhibited_old = FALSE;
 	session->priv->is_suspend_inhibited_old = FALSE;
@@ -523,7 +520,7 @@ gpm_session_finalize (GObject *object)
 	g_return_if_fail (GPM_IS_SESSION (object));
 
 	session = GPM_SESSION (object);
-	session->priv = GPM_SESSION_GET_PRIVATE (session);
+	session->priv = gpm_session_get_instance_private (session);
 
 	g_object_unref (session->priv->proxy);
 	g_object_unref (session->priv->proxy_presence);
