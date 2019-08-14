@@ -37,8 +37,6 @@
 
 static void     egg_idletime_finalize   (GObject       *object);
 
-#define EGG_IDLETIME_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), EGG_IDLETIME_TYPE, EggIdletimePrivate))
-
 struct EggIdletimePrivate
 {
 	gint			 sync_event;
@@ -71,7 +69,7 @@ typedef enum {
 static guint signals [LAST_SIGNAL] = { 0 };
 static gpointer egg_idletime_object = NULL;
 
-G_DEFINE_TYPE (EggIdletime, egg_idletime, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (EggIdletime, egg_idletime, G_TYPE_OBJECT)
 
 /**
  * egg_idletime_xsyncvalue_to_int64:
@@ -362,7 +360,6 @@ egg_idletime_class_init (EggIdletimeClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 	object_class->finalize = egg_idletime_finalize;
-	g_type_class_add_private (klass, sizeof (EggIdletimePrivate));
 
 	signals [SIGNAL_ALARM_EXPIRED] =
 		g_signal_new ("alarm-expired",
@@ -392,7 +389,7 @@ egg_idletime_init (EggIdletime *idletime)
 	EggIdletimeAlarm *alarm;
 	guint i;
 
-	idletime->priv = EGG_IDLETIME_GET_PRIVATE (idletime);
+	idletime->priv = egg_idletime_get_instance_private (idletime);
 
 	idletime->priv->array = g_ptr_array_new ();
 
@@ -443,7 +440,7 @@ egg_idletime_finalize (GObject *object)
 	g_return_if_fail (EGG_IS_IDLETIME (object));
 
 	idletime = EGG_IDLETIME (object);
-	idletime->priv = EGG_IDLETIME_GET_PRIVATE (idletime);
+	idletime->priv = egg_idletime_get_instance_private (idletime);
 
 	/* free all counters, including reset counter */
 	for (i=0; i<idletime->priv->array->len; i++) {
