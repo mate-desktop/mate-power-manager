@@ -45,8 +45,6 @@
 
 static void   gpm_dpms_finalize  (GObject   *object);
 
-#define GPM_DPMS_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_DPMS, GpmDpmsPrivate))
-
 /* until we get a nice event-emitting DPMS extension, we have to poll... */
 #define GPM_DPMS_POLL_TIME	10
 
@@ -66,7 +64,7 @@ enum {
 static guint signals [LAST_SIGNAL] = { 0 };
 static gpointer gpm_dpms_object = NULL;
 
-G_DEFINE_TYPE (GpmDpms, gpm_dpms, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (GpmDpms, gpm_dpms, G_TYPE_OBJECT)
 
 /**
  * gpm_dpms_error_quark:
@@ -285,8 +283,6 @@ gpm_dpms_class_init (GpmDpmsClass *klass)
 			      G_STRUCT_OFFSET (GpmDpmsClass, mode_changed),
 			      NULL, NULL, g_cclosure_marshal_VOID__UINT,
 			      G_TYPE_NONE, 1, G_TYPE_UINT);
-
-	g_type_class_add_private (klass, sizeof (GpmDpmsPrivate));
 }
 
 /**
@@ -295,7 +291,7 @@ gpm_dpms_class_init (GpmDpmsClass *klass)
 static void
 gpm_dpms_init (GpmDpms *dpms)
 {
-	dpms->priv = GPM_DPMS_GET_PRIVATE (dpms);
+	dpms->priv = gpm_dpms_get_instance_private (dpms);
 
 	/* DPMSCapable() can never change for a given display */
 	dpms->priv->display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
