@@ -32,8 +32,6 @@
 
 static void     gpm_screensaver_finalize   (GObject		*object);
 
-#define GPM_SCREENSAVER_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_SCREENSAVER, GpmScreensaverPrivate))
-
 #define GS_LISTENER_SERVICE	"org.mate.ScreenSaver"
 #define GS_LISTENER_PATH	"/"
 #define GS_LISTENER_INTERFACE	"org.mate.ScreenSaver"
@@ -46,7 +44,7 @@ struct GpmScreensaverPrivate
 
 static gpointer gpm_screensaver_object = NULL;
 
-G_DEFINE_TYPE (GpmScreensaver, gpm_screensaver, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (GpmScreensaver, gpm_screensaver, G_TYPE_OBJECT)
 
 /**
  * gpm_screensaver_lock
@@ -233,8 +231,6 @@ gpm_screensaver_class_init (GpmScreensaverClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 	object_class->finalize = gpm_screensaver_finalize;
-	g_type_class_add_private (klass, sizeof (GpmScreensaverPrivate));
-
 }
 
 /**
@@ -246,7 +242,7 @@ gpm_screensaver_init (GpmScreensaver *screensaver)
 {
 	DBusGConnection *connection;
 
-	screensaver->priv = GPM_SCREENSAVER_GET_PRIVATE (screensaver);
+	screensaver->priv = gpm_screensaver_get_instance_private (screensaver);
 
 	connection = dbus_g_bus_get (DBUS_BUS_SESSION, NULL);
 	screensaver->priv->proxy = dbus_g_proxy_new_for_name (connection,
@@ -267,7 +263,7 @@ gpm_screensaver_finalize (GObject *object)
 	g_return_if_fail (GPM_IS_SCREENSAVER (object));
 
 	screensaver = GPM_SCREENSAVER (object);
-	screensaver->priv = GPM_SCREENSAVER_GET_PRIVATE (screensaver);
+	screensaver->priv = gpm_screensaver_get_instance_private (screensaver);
 
 	g_object_unref (screensaver->priv->proxy);
 
