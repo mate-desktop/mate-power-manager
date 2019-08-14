@@ -51,8 +51,6 @@
 #include "gpm-control.h"
 #include "gpm-networkmanager.h"
 
-#define GPM_CONTROL_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_CONTROL, GpmControlPrivate))
-
 struct GpmControlPrivate
 {
 	GSettings		*settings;
@@ -67,7 +65,7 @@ enum {
 static guint signals [LAST_SIGNAL] = { 0 };
 static gpointer gpm_control_object = NULL;
 
-G_DEFINE_TYPE (GpmControl, gpm_control, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (GpmControl, gpm_control, G_TYPE_OBJECT)
 
 /**
  * gpm_control_error_quark:
@@ -480,8 +478,6 @@ gpm_control_class_init (GpmControlClass *klass)
 			      NULL,
 			      g_cclosure_marshal_VOID__INT,
 			      G_TYPE_NONE, 1, G_TYPE_INT);
-
-	g_type_class_add_private (klass, sizeof (GpmControlPrivate));
 }
 
 /**
@@ -491,7 +487,7 @@ gpm_control_class_init (GpmControlClass *klass)
 static void
 gpm_control_init (GpmControl *control)
 {
-	control->priv = GPM_CONTROL_GET_PRIVATE (control);
+	control->priv = gpm_control_get_instance_private (control);
 
 	control->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
 }
