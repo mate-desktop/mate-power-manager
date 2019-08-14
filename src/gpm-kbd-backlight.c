@@ -32,8 +32,6 @@
 #include "gpm-kbd-backlight.h"
 #include "gsd-media-keys-window.h"
 
-#define GPM_KBD_BACKLIGHT_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_KBD_BACKLIGHT, GpmKbdBacklightPrivate))
-
 struct GpmKbdBacklightPrivate
 {
     UpClient        *client;
@@ -62,7 +60,7 @@ enum {
 
 static guint signals [LAST_SIGNAL] = { 0 };
 
-G_DEFINE_TYPE (GpmKbdBacklight, gpm_kbd_backlight, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (GpmKbdBacklight, gpm_kbd_backlight, G_TYPE_OBJECT)
 
 /**
  * gpm_kbd_backlight_error_quark:
@@ -673,8 +671,6 @@ gpm_kbd_backlight_class_init (GpmKbdBacklightClass *klass)
                   G_TYPE_NONE,
                   1,
                   G_TYPE_UINT);
-
-   g_type_class_add_private (klass, sizeof (GpmKbdBacklightPrivate));
 }
 
 /**
@@ -690,7 +686,7 @@ gpm_kbd_backlight_init (GpmKbdBacklight *backlight)
    GVariant *u_max_brightness;
    GError   *error = NULL;
 
-   backlight->priv = GPM_KBD_BACKLIGHT_GET_PRIVATE (backlight);
+   backlight->priv = gpm_kbd_backlight_get_instance_private (backlight);
 
    backlight->priv->upower_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
                                       G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
