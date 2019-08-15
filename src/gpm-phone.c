@@ -33,8 +33,6 @@
 
 static void     gpm_phone_finalize   (GObject	    *object);
 
-#define GPM_PHONE_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_PHONE, GpmPhonePrivate))
-
 struct GpmPhonePrivate
 {
 	DBusGProxy		*proxy;
@@ -55,7 +53,7 @@ enum {
 static guint signals [LAST_SIGNAL] = { 0 };
 static gpointer gpm_phone_object = NULL;
 
-G_DEFINE_TYPE (GpmPhone, gpm_phone, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (GpmPhone, gpm_phone, G_TYPE_OBJECT)
 
 /**
  * gpm_phone_coldplug:
@@ -196,7 +194,6 @@ gpm_phone_class_init (GpmPhoneClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 	object_class->finalize = gpm_phone_finalize;
-	g_type_class_add_private (klass, sizeof (GpmPhonePrivate));
 
 	signals [DEVICE_ADDED] =
 		g_signal_new ("device-added",
@@ -314,7 +311,7 @@ gpm_phone_service_vanished_cb (GDBusConnection *connection,
 static void
 gpm_phone_init (GpmPhone *phone)
 {
-	phone->priv = GPM_PHONE_GET_PRIVATE (phone);
+	phone->priv = gpm_phone_get_instance_private (phone);
 
 	phone->priv->connection = NULL;
 	phone->priv->proxy = NULL;
@@ -341,7 +338,7 @@ gpm_phone_finalize (GObject *object)
 	g_return_if_fail (GPM_IS_PHONE (object));
 
 	phone = GPM_PHONE (object);
-	phone->priv = GPM_PHONE_GET_PRIVATE (phone);
+	phone->priv = gpm_phone_get_instance_private (phone);
 
 	if (phone->priv->proxy != NULL)
 		g_object_unref (phone->priv->proxy);
