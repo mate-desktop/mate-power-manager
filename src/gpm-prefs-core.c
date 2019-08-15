@@ -43,8 +43,6 @@
 
 static void gpm_prefs_finalize (GObject *object);
 
-#define GPM_PREFS_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_PREFS, GpmPrefsPrivate))
-
 struct GpmPrefsPrivate
 {
 	UpClient		*client;
@@ -69,7 +67,7 @@ enum {
 
 static guint signals [LAST_SIGNAL] = { 0 };
 
-G_DEFINE_TYPE (GpmPrefs, gpm_prefs, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (GpmPrefs, gpm_prefs, G_TYPE_OBJECT)
 
 /**
  * gpm_prefs_class_init:
@@ -80,7 +78,6 @@ gpm_prefs_class_init (GpmPrefsClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 	object_class->finalize = gpm_prefs_finalize;
-	g_type_class_add_private (klass, sizeof (GpmPrefsPrivate));
 
 	signals [ACTION_HELP] =
 		g_signal_new ("action-help",
@@ -685,7 +682,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 	GVariant *res, *inner;
 	gchar * r;
 
-	prefs->priv = GPM_PREFS_GET_PRIVATE (prefs);
+	prefs->priv = gpm_prefs_get_instance_private (prefs);
 
 	prefs->priv->client = up_client_new ();
 	prefs->priv->console = egg_console_kit_new ();
@@ -882,7 +879,7 @@ gpm_prefs_finalize (GObject *object)
 	g_return_if_fail (GPM_IS_PREFS (object));
 
 	prefs = GPM_PREFS (object);
-	prefs->priv = GPM_PREFS_GET_PRIVATE (prefs);
+	prefs->priv = gpm_prefs_get_instance_private (prefs);
 
 	g_object_unref (prefs->priv->settings);
 	g_object_unref (prefs->priv->client);
