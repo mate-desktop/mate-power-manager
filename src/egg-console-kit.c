@@ -33,8 +33,6 @@
 
 static void     egg_console_kit_finalize	(GObject		*object);
 
-#define EGG_CONSOLE_KIT_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), EGG_TYPE_CONSOLE_KIT, EggConsoleKitPrivate))
-
 #define CONSOLEKIT_NAME			"org.freedesktop.ConsoleKit"
 #define CONSOLEKIT_PATH			"/org/freedesktop/ConsoleKit"
 #define CONSOLEKIT_INTERFACE		"org.freedesktop.ConsoleKit"
@@ -59,7 +57,8 @@ enum {
 
 static gpointer egg_console_kit_object = NULL;
 static guint signals [EGG_CONSOLE_KIT_LAST_SIGNAL] = { 0 };
-G_DEFINE_TYPE (EggConsoleKit, egg_console_kit, G_TYPE_OBJECT)
+
+G_DEFINE_TYPE_WITH_PRIVATE (EggConsoleKit, egg_console_kit, G_TYPE_OBJECT)
 
 /**
  * egg_console_kit_restart:
@@ -357,7 +356,7 @@ egg_console_kit_class_init (EggConsoleKitClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 	object_class->finalize = egg_console_kit_finalize;
-	g_type_class_add_private (klass, sizeof (EggConsoleKitPrivate));
+
 	signals [EGG_CONSOLE_KIT_ACTIVE_CHANGED] =
 		g_signal_new ("active-changed",
 			      G_TYPE_FROM_CLASS (object_class), G_SIGNAL_RUN_LAST,
@@ -376,7 +375,7 @@ egg_console_kit_init (EggConsoleKit *console)
 	GError *error = NULL;
 	guint32 pid;
 
-	console->priv = EGG_CONSOLE_KIT_GET_PRIVATE (console);
+	console->priv = egg_console_kit_get_instance_private (console);
 	console->priv->proxy_manager = NULL;
 	console->priv->session_id = NULL;
 
