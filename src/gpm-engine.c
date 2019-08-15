@@ -37,7 +37,6 @@
 
 static void     gpm_engine_finalize   (GObject	  *object);
 
-#define GPM_ENGINE_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GPM_TYPE_ENGINE, GpmEnginePrivate))
 #define GPM_ENGINE_RESUME_DELAY		2*1000
 #define GPM_ENGINE_WARN_ACCURACY	20
 
@@ -79,7 +78,7 @@ enum {
 static guint signals [LAST_SIGNAL] = { 0 };
 static gpointer gpm_engine_object = NULL;
 
-G_DEFINE_TYPE (GpmEngine, gpm_engine, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (GpmEngine, gpm_engine, G_TYPE_OBJECT)
 
 static UpDevice *gpm_engine_get_composite_device (GpmEngine *engine, UpDevice *original_device);
 static UpDevice *gpm_engine_update_composite_device (GpmEngine *engine, UpDevice *original_device);
@@ -1160,7 +1159,7 @@ gpm_engine_init (GpmEngine *engine)
 	guint i;
 #endif
 	guint idle_id;
-	engine->priv = GPM_ENGINE_GET_PRIVATE (engine);
+	engine->priv = gpm_engine_get_instance_private (engine);
 
 	engine->priv->array = g_ptr_array_new_with_free_func (g_object_unref);
 	engine->priv->client = up_client_new ();
@@ -1237,7 +1236,6 @@ gpm_engine_class_init (GpmEngineClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 	object_class->finalize = gpm_engine_finalize;
-	g_type_class_add_private (klass, sizeof (GpmEnginePrivate));
 
 	signals [ICON_CHANGED] =
 		g_signal_new ("icon-changed",
@@ -1317,7 +1315,7 @@ gpm_engine_finalize (GObject *object)
 	g_return_if_fail (GPM_IS_ENGINE (object));
 
 	engine = GPM_ENGINE (object);
-	engine->priv = GPM_ENGINE_GET_PRIVATE (engine);
+	engine->priv = gpm_engine_get_instance_private (engine);
 
 	g_ptr_array_unref (engine->priv->array);
 	g_object_unref (engine->priv->client);
