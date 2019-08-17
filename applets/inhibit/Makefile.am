@@ -6,13 +6,13 @@ AM_CPPFLAGS =							\
 	$(PANEL_CFLAGS)						\
 	$(LIBNOTIFY_CFLAGS)					\
 	-DBINDIR=\"$(bindir)\"			 		\
-	-DMATELOCALEDIR=\""$(datadir)/locale"\"		\
+	-DMATELOCALEDIR=\""$(datadir)/locale"\"			\
 	-DDATADIR=\"$(datadir)\"				\
 	-DPREFIX=\""$(prefix)"\" 				\
 	-DSYSCONFDIR=\""$(sysconfdir)"\" 			\
 	-DLIBDIR=\""$(libdir)"\" 				\
 	-DVERSION="\"$(VERSION)\"" 				\
-	-DGPM_DATA=\"$(pkgdatadir)\"				\
+	-DGPM_ICONS_DATA=\"$(pkgdatadir)/icons\"		\
 	-DINHIBIT_MENU_UI_DIR=\""$(uidir)"\"			\
 	-DEGG_LOG_FILE=\""~/mate-power-manager.log"\"		\
 	-DEGG_VERBOSE="\"GPM_VERBOSE\""				\

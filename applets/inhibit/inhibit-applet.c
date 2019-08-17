@@ -471,7 +471,7 @@ gpm_inhibit_applet_init (GpmInhibitApplet *applet)
 
 	/* Add application specific icons to search path */
 	gtk_icon_theme_append_search_path (gtk_icon_theme_get_default (),
-                                           GPM_DATA G_DIR_SEPARATOR_S "icons");
+                                           GPM_ICONS_DATA);
 
 	/* monitor the daemon */
 	applet->bus_watch_id =
