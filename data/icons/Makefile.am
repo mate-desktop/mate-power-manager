@@ -1,4 +1,20 @@
-SUBDIRS = scalable 16x16 22x22 24x24 32x32 48x48
+actioniconsdir = $(pkgdatadir)/icons/hicolor
+appiconsdir = $(datadir)/icons/hicolor
+statusiconsdir = $(pkgdatadir)/icons/hicolor
+
+sizes = 16x16 22x22 24x24 32x32 48x48
+
+nobase_dist_actionicons_DATA = \
+	$(foreach size,$(sizes),$(wildcard $(size)/actions/*.png)) \
+	$(wildcard scalable/actions/*.svg)
+
+nobase_dist_appicons_DATA = \
+	$(foreach size,$(sizes),$(wildcard $(size)/apps/*.png)) \
+	$(wildcard scalable/apps/*.svg)
+
+nobase_dist_statusicons_DATA = \
+	$(foreach size,$(sizes),$(wildcard $(size)/status/*.png)) \
+	$(wildcard scalable/status/*.svg)
 
 gtk_update_icon_cache = gtk-update-icon-cache -f -t $(pkgdatadir)/icons/hicolor
 
@@ -12,4 +28,3 @@ update-icon-cache:
 		echo "*** Icon cache not updated.  After (un)install, run this:"; \
 		echo "***   $(gtk_update_icon_cache)"; \
 	fi
-
