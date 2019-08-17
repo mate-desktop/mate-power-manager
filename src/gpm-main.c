@@ -228,7 +228,7 @@ main (int argc, char *argv[])
 
 	/* add application specific icons to search path */
 	gtk_icon_theme_append_search_path (gtk_icon_theme_get_default (),
-                                           GPM_DATA G_DIR_SEPARATOR_S "icons");
+                                           GPM_ICONS_DATA);
 
 	loop = g_main_loop_new (NULL, FALSE);
 

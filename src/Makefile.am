@@ -22,16 +22,16 @@ AM_CPPFLAGS =						\
 	-DI_KNOW_THE_DEVICEKIT_POWER_API_IS_SUBJECT_TO_CHANGE \
 	$(UPOWER_CFLAGS)				\
 	-DBINDIR=\"$(bindir)\"			 	\
-	-DSBINDIR=\"$(sbindir)\"			 \
-	-DMATELOCALEDIR=\""$(datadir)/locale"\"	\
+	-DSBINDIR=\"$(sbindir)\"			\
+	-DMATELOCALEDIR=\""$(datadir)/locale"\"		\
 	-DDATADIR=\"$(datadir)\"			\
 	-DPREFIX=\""$(prefix)"\" 			\
 	-DSYSCONFDIR=\""$(sysconfdir)"\" 		\
 	-DLIBDIR=\""$(libdir)"\" 			\
 	-DVERSION="\"$(VERSION)\"" 			\
-	-DGPM_DATA=\"$(pkgdatadir)\"			\
+	-DGPM_ICONS_DATA=\"$(pkgdatadir)/icons\"	\
 	-DGTKBUILDERDIR=\"$(pkgdatadir)\"		\
-	-DUP_DISABLE_DEPRECATED			\
+	-DUP_DISABLE_DEPRECATED				\
 	-DEGG_LOG_FILE=\""/tmp/gpm.log"\"		\
 	-DEGG_VERBOSE="\"GPM_VERBOSE\""			\
 	-DEGG_LOGGING="\"GPM_LOGGING\""			\
@@ -94,7 +94,15 @@ mate_power_backlight_helper_CFLAGS =			\
 	$(WARNINGFLAGS)					\
 	$(NULL)
 
-mate_power_statistics_SOURCES =			\
+mate-power-statistics-resources.h mate-power-statistics-resources.c: $(srcdir)/../data/org.mate.power-manager.statistics.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir)/../data $(srcdir)/../data/org.mate.power-manager.statistics.gresource.xml)
+	$(AM_V_GEN) XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --sourcedir $(srcdir)/../data --generate --c-name statistics $<
+
+nodist_mate_power_statistics_SOURCES =			\
+	mate-power-statistics-resources.h		\
+	mate-power-statistics-resources.c		\
+	$(NULL)
+
+mate_power_statistics_SOURCES =				\
 	gpm-statistics.c				\
 	gpm-point-obj.c					\
 	gpm-point-obj.h					\
@@ -113,6 +121,14 @@ mate_power_statistics_LDADD =				\
 
 mate_power_statistics_CFLAGS =				\
 	$(WARNINGFLAGS)					\
+	$(NULL)
+
+mate-power-preferences-resources.h mate-power-preferences-resources.c: $(srcdir)/../data/org.mate.power-manager.preferences.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir)/../data $(srcdir)/../data/org.mate.power-manager.preferences.gresource.xml)
+	$(AM_V_GEN) XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --sourcedir $(srcdir)/../data --generate --c-name preferences $<
+
+nodist_mate_power_preferences_SOURCES =			\
+	mate-power-preferences-resources.h		\
+	mate-power-preferences-resources.c		\
 	$(NULL)
 
 mate_power_preferences_SOURCES =			\
@@ -294,7 +310,13 @@ clean-local:
 	rm -f *~
 	rm -f gpm-marshal.c gpm-marshal.h
 
-CLEANFILES = $(BUILT_SOURCES)
+CLEANFILES = \
+	$(BUILT_SOURCES)				\
+	mate-power-preferences-resources.h		\
+	mate-power-preferences-resources.c		\
+	mate-power-statistics-resources.h		\
+	mate-power-statistics-resources.c		\
+	$(NULL)
 
 if HAVE_TESTS
 TESTS = mate-power-self-test

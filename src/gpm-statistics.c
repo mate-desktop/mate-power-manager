@@ -1615,14 +1615,14 @@ main (int argc, char *argv[])
 
 	/* add application specific icons to search path */
 	gtk_icon_theme_append_search_path (gtk_icon_theme_get_default (),
-                                           GPM_DATA G_DIR_SEPARATOR_S "icons");
+                                           GPM_ICONS_DATA);
 
 	/* get data from the settings */
 	settings = g_settings_new (GPM_SETTINGS_SCHEMA);
 
 	/* get UI */
 	builder = gtk_builder_new ();
-	retval = gtk_builder_add_from_file (builder, GPM_DATA "/gpm-statistics.ui", &error);
+	retval = gtk_builder_add_from_resource (builder, "/org/mate/powermanager/statistics/gpm-statistics.ui", &error);
 
 	if (error) {
 		egg_error ("failed to load ui: %s", error->message);

@@ -24,31 +24,33 @@ $(service_DATA): $(service_in_files) Makefile
 gsettings_schemas_in_files = org.mate.power-manager.gschema.xml.in
 gsettings_SCHEMAS = $(gsettings_schemas_in_files:.xml.in=.xml)
 
-pkgdata_DATA =						\
-	gpm-statistics.ui				\
-	gpm-prefs.ui					\
+pkgdata_DATA =							\
 	acme.ui
 
-man_MANS =				\
-	mate-power-manager.1		\
-	mate-power-backlight-helper.1	\
-	mate-power-statistics.1		\
+man_MANS =							\
+	mate-power-manager.1					\
+	mate-power-backlight-helper.1				\
+	mate-power-statistics.1					\
 	mate-power-preferences.1
 
-EXTRA_DIST =						\
-	$(service_in_files)				\
-	$(autostart_in_files)				\
-	$(desktop_in_files)				\
-	$(gsettings_schemas_in_files)	\
-	$(pkgdata_DATA)			\
-	$(man_MANS)
+EXTRA_DIST =							\
+	$(service_in_files)					\
+	$(autostart_in_files)					\
+	$(desktop_in_files)					\
+	$(gsettings_schemas_in_files)				\
+	$(pkgdata_DATA)						\
+	$(man_MANS)						\
+	org.mate.power-manager.preferences.gresource.xml	\
+	org.mate.power-manager.statistics.gresource.xml		\
+	gpm-prefs.ui						\
+	gpm-statistics.ui
 
 clean-local :
 	rm -f *~
 
-DISTCLEANFILES =					\
-	mate-power-manager.desktop			\
-	mate-power-preferences.desktop			\
-	mate-power-statistics.desktop			\
-	org.mate.PowerManager.service			\
+DISTCLEANFILES =						\
+	mate-power-manager.desktop				\
+	mate-power-preferences.desktop				\
+	mate-power-statistics.desktop				\
+	org.mate.PowerManager.service				\
 	$(gsettings_SCHEMAS)
