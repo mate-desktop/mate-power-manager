@@ -26,7 +26,6 @@ gsettings_SCHEMAS = $(gsettings_schemas_in_files:.xml.in=.xml)
 
 pkgdata_DATA =						\
 	gpm-statistics.ui				\
-	gpm-feedback-widget.ui			\
 	gpm-prefs.ui					\
 	acme.ui
 
