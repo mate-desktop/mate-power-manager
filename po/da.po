@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Aputsiak Niels Janussen (Skjalden) <aj@isit.gl>, 2019
+# Aputsiak Niels Janussen <aj@isit.gl>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # Joe Hansen <joedalton2@yahoo.dk>, 2019
 # 
@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-04 17:35+0200\n"
+"POT-Creation-Date: 2019-04-22 23:14+0200\n"
 "PO-Revision-Date: 2019-03-14 17:12+0000\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2019\n"
 "Language-Team: Danish (https://www.transifex.com/mate/teams/13566/da/)\n"
@@ -591,68 +591,72 @@ msgid ""
 msgstr "Om en påmindelse skal vises når batteriniveauet bliver lavt."
 
 #: ../data/org.mate.power-manager.gschema.xml.in.h:80
+msgid "Notify on low capacity of mouse battery"
+msgstr "Advar om lavt batteriniveau for musen"
+
+#: ../data/org.mate.power-manager.gschema.xml.in.h:81
 msgid "Whether we should show the history data points"
 msgstr "Hvorvidt vi skal vise historikdatapunkterne"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:81
+#: ../data/org.mate.power-manager.gschema.xml.in.h:82
 msgid ""
 "Whether we should show the history data points in the statistics window."
 msgstr "Hvorvidt vi skal vise historikdatapunkterne i statistikvinduet."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:82
+#: ../data/org.mate.power-manager.gschema.xml.in.h:83
 msgid "Whether we should smooth the history data"
 msgstr "Hvorvidt historikdata skal udjævnes"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:83
+#: ../data/org.mate.power-manager.gschema.xml.in.h:84
 msgid "Whether we should smooth the history data in the graph."
 msgstr "Hvorvidt grafens historikdata skal udjævnes."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:84
+#: ../data/org.mate.power-manager.gschema.xml.in.h:85
 msgid "The default graph type to show for history"
 msgstr "Graftype der som standard vises for historik"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:85
+#: ../data/org.mate.power-manager.gschema.xml.in.h:86
 msgid "The default graph type to show in the history window."
 msgstr "Graftype der som standard vises i historikvinduet."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:86
+#: ../data/org.mate.power-manager.gschema.xml.in.h:87
 msgid "The maximum time displayed for history"
 msgstr "Maksimaltiden der vises for historik"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:87
+#: ../data/org.mate.power-manager.gschema.xml.in.h:88
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
 msgstr "Det maksimale tidsrum der vises på historikgrafens x-akse."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:88
+#: ../data/org.mate.power-manager.gschema.xml.in.h:89
 msgid "Whether we should show the stats data points"
 msgstr "Hvorvidt vi skal vise statistikdatapunkterne"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:89
+#: ../data/org.mate.power-manager.gschema.xml.in.h:90
 msgid "Whether we should show the stats data points in the statistics window."
 msgstr "Hvorvidt vi skal vise statistikdatapunkterne i statistikvinduet."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:90
+#: ../data/org.mate.power-manager.gschema.xml.in.h:91
 msgid "Whether we should smooth the stats data"
 msgstr "Hvorvidt vi skal udjævne statistikdataene"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:91
+#: ../data/org.mate.power-manager.gschema.xml.in.h:92
 msgid "Whether we should smooth the stats data in the graph."
 msgstr "Hvorvidt statistikgrafens data udjævnes."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:92
+#: ../data/org.mate.power-manager.gschema.xml.in.h:93
 msgid "The default graph type to show for stats"
 msgstr "Graftype der som standard vises for statitstik"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:93
+#: ../data/org.mate.power-manager.gschema.xml.in.h:94
 msgid "The default graph type to show in the stats window."
 msgstr "Graftype der som standard vises i statistikvinduet."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:94
+#: ../data/org.mate.power-manager.gschema.xml.in.h:95
 msgid "The index of the page number to show by default"
 msgstr "Indeks for sidenummer der skal vises som standard"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:95
+#: ../data/org.mate.power-manager.gschema.xml.in.h:96
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
@@ -660,11 +664,11 @@ msgstr ""
 "Indekset for sidenummer der skal vises som standard som bruges til at "
 "returnere fokus til den korrekte side."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:96
+#: ../data/org.mate.power-manager.gschema.xml.in.h:97
 msgid "The ID of the last device selected"
 msgstr "Id'et for den sidst valgte enhed"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:97
+#: ../data/org.mate.power-manager.gschema.xml.in.h:98
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
@@ -672,11 +676,11 @@ msgstr ""
 "Identifikation for den sidste enhed som bruges til at returnere fokus til "
 "den korrekte enhed."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:98
+#: ../data/org.mate.power-manager.gschema.xml.in.h:99
 msgid "Percentage considered low"
 msgstr "Niveauet der regnes for lavt"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:99
+#: ../data/org.mate.power-manager.gschema.xml.in.h:100
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
@@ -684,11 +688,11 @@ msgstr ""
 "Batteriniveauet i procent der regnes for lavt. Kun gyldig når "
 "use_time_for_policy er false (falsk)."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:100
+#: ../data/org.mate.power-manager.gschema.xml.in.h:101
 msgid "Percentage considered critical"
 msgstr "Niveauet der regnes for kritisk"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:101
+#: ../data/org.mate.power-manager.gschema.xml.in.h:102
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
@@ -696,11 +700,11 @@ msgstr ""
 "Batteriniveauet i procent der regnes for kritisk. Kun gyldig når "
 "use_time_for_policy er sat til false (falsk)."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:102
+#: ../data/org.mate.power-manager.gschema.xml.in.h:103
 msgid "Percentage action is taken"
 msgstr "Procentniveau-handlingen udføres"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:103
+#: ../data/org.mate.power-manager.gschema.xml.in.h:104
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
@@ -708,11 +712,11 @@ msgstr ""
 "Batteriniveauet i procent når handlingen for kritisk batteriniveau udføres. "
 "Kun gyldig når use_time_for_policy er false (falsk)."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:104
+#: ../data/org.mate.power-manager.gschema.xml.in.h:105
 msgid "The time remaining when low"
 msgstr "Resterende tid ved lavt niveau"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:105
+#: ../data/org.mate.power-manager.gschema.xml.in.h:106
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
@@ -720,11 +724,11 @@ msgstr ""
 "Den resterende batteritid i sekunder når batteriniveauet regnes for lavt. "
 "Kun gyldig når use_time_for_policy er true (sand)."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:106
+#: ../data/org.mate.power-manager.gschema.xml.in.h:107
 msgid "The time remaining when critical"
 msgstr "Resterende tid ved kritisk niveau"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:107
+#: ../data/org.mate.power-manager.gschema.xml.in.h:108
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
@@ -732,11 +736,11 @@ msgstr ""
 "Den resterende batteritid i sekunder når batteriniveauet regnes for kritisk."
 " Kun gyldig når use_time_for_policy er true (sand)."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:108
+#: ../data/org.mate.power-manager.gschema.xml.in.h:109
 msgid "The time remaining when action is taken"
 msgstr "Resterende tid idet handlingen udføres"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:109
+#: ../data/org.mate.power-manager.gschema.xml.in.h:110
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
@@ -744,22 +748,22 @@ msgstr ""
 "Den resterende batteritid i sekunder når handlingen for kritisk "
 "batteriniveau udføres. Kun gyldig når use_time_for_policy er true (sand)."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:110
+#: ../data/org.mate.power-manager.gschema.xml.in.h:111
 msgid "Sleep timeout computer when on battery"
 msgstr "Tomgangstid før sovetilstand ved batteridrift"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:111
+#: ../data/org.mate.power-manager.gschema.xml.in.h:112
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before it goes to sleep."
 msgstr ""
 "Tomgangstiden i sekunder før computeren går i sovetilstand ved batteridrift."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:112
+#: ../data/org.mate.power-manager.gschema.xml.in.h:113
 msgid "Sleep timeout computer when on AC"
 msgstr "Tomgangstid før sovetilstand på ekstern strømforsyning"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:113
+#: ../data/org.mate.power-manager.gschema.xml.in.h:114
 msgid ""
 "The amount of time in seconds the computer on AC power needs to be inactive "
 "before it goes to sleep."
@@ -767,22 +771,22 @@ msgstr ""
 "Tomgangstiden i sekunder før computeren går i sovetilstand på ekstern "
 "strømforsyning."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:114
+#: ../data/org.mate.power-manager.gschema.xml.in.h:115
 msgid "Sleep timeout computer when on UPS"
 msgstr "Tomgangstid før sovetilstand på nødstrøm"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:115
+#: ../data/org.mate.power-manager.gschema.xml.in.h:116
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before it goes to sleep."
 msgstr ""
 "Tomgangstiden i sekunder før computeren går i sovetilstand på nødstrøm."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:116
+#: ../data/org.mate.power-manager.gschema.xml.in.h:117
 msgid "Sleep timeout display when on AC"
 msgstr "Visning af tomgangstid ved brug af ekstern strømforsyning"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:117
+#: ../data/org.mate.power-manager.gschema.xml.in.h:118
 msgid ""
 "The amount of time in seconds before the display goes to sleep when the "
 "computer is on AC power."
@@ -790,32 +794,32 @@ msgstr ""
 "Tidsrummet i sekunder før skærmen går i sovetilstand på ekstern "
 "strømforsyning."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:118
+#: ../data/org.mate.power-manager.gschema.xml.in.h:119
 msgid "Sleep timeout display when on battery"
 msgstr "Visning af tomgangstid ved batteridrift"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:119
+#: ../data/org.mate.power-manager.gschema.xml.in.h:120
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
 msgstr ""
 "Tidsrummet i sekunder før skærmen går i sovetilstand ved batteridrift."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:120
+#: ../data/org.mate.power-manager.gschema.xml.in.h:121
 msgid "Sleep timeout display when on UPS"
 msgstr "Visning af tomgangstid ved brug af nødstrøm"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:121
+#: ../data/org.mate.power-manager.gschema.xml.in.h:122
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before the display goes to sleep."
 msgstr "Tidsrummet i sekunder før skærmen går i sovetilstand ved nødstrøm."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:122
+#: ../data/org.mate.power-manager.gschema.xml.in.h:123
 msgid "If sounds should be used"
 msgstr "Om lydeffekter er aktiveret"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:123
+#: ../data/org.mate.power-manager.gschema.xml.in.h:124
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
@@ -824,16 +828,16 @@ msgstr ""
 "hindringsforespørgsler har afbrudt en handling specificeret af "
 "strømstyringspolitikken."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:124
+#: ../data/org.mate.power-manager.gschema.xml.in.h:125
 msgid ""
 "If preferences and statistics items should be shown in the context menu"
 msgstr "Om indstillinger og statistikelementer skal vises i kontekstmenuen"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:125
+#: ../data/org.mate.power-manager.gschema.xml.in.h:126
 msgid "When to show the notification icon"
 msgstr "Hvornår meddelelsesikonet skal vises"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:126
+#: ../data/org.mate.power-manager.gschema.xml.in.h:127
 msgid "Display options for the notification icon."
 msgstr "Visningsindstillinger for påmindelsesikon."
 
@@ -1371,12 +1375,12 @@ msgstr "Der er omtrent <b>%s</b> resterende tid med nødstrøm (%.0f%%)"
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1332 ../src/gpm-manager.c:1466
+#: ../src/gpm-manager.c:1337 ../src/gpm-manager.c:1476
 msgid "Mouse battery low"
 msgstr "Musens batteriniveau lavt"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1335
+#: ../src/gpm-manager.c:1340
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr ""
@@ -1385,12 +1389,12 @@ msgstr ""
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1339 ../src/gpm-manager.c:1474
+#: ../src/gpm-manager.c:1344 ../src/gpm-manager.c:1484
 msgid "Keyboard battery low"
 msgstr "Tastaturets batteriniveau lavt"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1342
+#: ../src/gpm-manager.c:1347
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr ""
@@ -1399,12 +1403,12 @@ msgstr ""
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1346 ../src/gpm-manager.c:1483
+#: ../src/gpm-manager.c:1351 ../src/gpm-manager.c:1493
 msgid "PDA battery low"
 msgstr "PDA batteriniveau lavt"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1349
+#: ../src/gpm-manager.c:1354
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr ""
@@ -1412,13 +1416,13 @@ msgstr ""
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1353 ../src/gpm-manager.c:1493
-#: ../src/gpm-manager.c:1503
+#: ../src/gpm-manager.c:1358 ../src/gpm-manager.c:1503
+#: ../src/gpm-manager.c:1513
 msgid "Cell phone battery low"
 msgstr "Lavt batteriniveau for mobiltelefon"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1356
+#: ../src/gpm-manager.c:1361
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr ""
@@ -1426,85 +1430,85 @@ msgstr ""
 "(%.0f%%)"
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1360
+#: ../src/gpm-manager.c:1365
 msgid "Media player battery low"
 msgstr "Lavt batteriniveau for medieafspiller"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1363
+#: ../src/gpm-manager.c:1368
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr "Medieafspilleren har lavt batteriniveau (%.0f%%)"
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1367 ../src/gpm-manager.c:1512
+#: ../src/gpm-manager.c:1372 ../src/gpm-manager.c:1522
 msgid "Tablet battery low"
 msgstr "Tavle-pc'ens batteriniveau er lavt"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1370
+#: ../src/gpm-manager.c:1375
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "Tavle-pc'en har lavt batteriniveau (%.0f%%)"
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1374 ../src/gpm-manager.c:1521
+#: ../src/gpm-manager.c:1379 ../src/gpm-manager.c:1531
 msgid "Attached computer battery low"
 msgstr "Den tilsluttede computers batteriniveau er lavt"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1377
+#: ../src/gpm-manager.c:1382
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "Den tilsluttede computer har lavt batteriniveau (%.0f%%)"
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
-#: ../src/gpm-manager.c:1425
+#: ../src/gpm-manager.c:1430
 msgid "Battery critically low"
 msgstr "Kritisk lavt batteriniveau"
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1428 ../src/gpm-manager.c:1581
+#: ../src/gpm-manager.c:1433 ../src/gpm-manager.c:1591
 msgid "Laptop battery critically low"
 msgstr "Computeren har kritisk lavt batteriniveau"
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
-#: ../src/gpm-manager.c:1437
+#: ../src/gpm-manager.c:1442
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr "Tilslut ekstern strømforsyning for at undgå tab af data."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1441
+#: ../src/gpm-manager.c:1446
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr "Computeren vil gå i hvile meget snart, med mindre den får strøm."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1445
+#: ../src/gpm-manager.c:1450
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr "Computeren vil gå i dvale meget snart, med mindre den får strøm."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1449
+#: ../src/gpm-manager.c:1454
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr "Computeren vil lukke ned meget snart, med mindre den får strøm."
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1456 ../src/gpm-manager.c:1617
+#: ../src/gpm-manager.c:1461 ../src/gpm-manager.c:1627
 msgid "UPS critically low"
 msgstr "Nødstrøm på kritisk lavt niveau"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1460
+#: ../src/gpm-manager.c:1465
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
@@ -1514,7 +1518,7 @@ msgstr ""
 "ekstern strømforsyning for at undgå at miste data."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1469
+#: ../src/gpm-manager.c:1479
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
@@ -1524,7 +1528,7 @@ msgstr ""
 "snart ophøre med at fungere, såfremt den ikke oplades."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1477
+#: ../src/gpm-manager.c:1487
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
@@ -1534,7 +1538,7 @@ msgstr ""
 " snart ophøre med at fungere, såfremt den ikke oplades."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1486
+#: ../src/gpm-manager.c:1496
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
@@ -1544,7 +1548,7 @@ msgstr ""
 "med at fungere, såfremt den ikke oplades."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1496
+#: ../src/gpm-manager.c:1506
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
@@ -1554,7 +1558,7 @@ msgstr ""
 "snart ophøre med at fungere, såfremt den ikke oplades."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1506
+#: ../src/gpm-manager.c:1516
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
@@ -1564,7 +1568,7 @@ msgstr ""
 "snart ophøre med at fungere, såfremt den ikke oplades."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1515
+#: ../src/gpm-manager.c:1525
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
@@ -1574,7 +1578,7 @@ msgstr ""
 "ophøre med at fungere, såfremt den ikke oplades."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1524
+#: ../src/gpm-manager.c:1534
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
@@ -1584,7 +1588,7 @@ msgstr ""
 "vil snart lukke ned, såfremt den ikke oplades."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1589
+#: ../src/gpm-manager.c:1599
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
@@ -1593,7 +1597,7 @@ msgstr ""
 "løber helt tør for strøm."
 
 #. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1595
+#: ../src/gpm-manager.c:1605
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
@@ -1604,21 +1608,21 @@ msgstr ""
 "computeren i hviletilstand."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1602
+#: ../src/gpm-manager.c:1612
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr "Batteriniveauet er kritisk, og computeren vil snart gå i dvale."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1607
+#: ../src/gpm-manager.c:1617
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr "Batteriniveauet er kritisk, og computeren vil snart lukke ned."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1625
+#: ../src/gpm-manager.c:1635
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
@@ -1627,14 +1631,14 @@ msgstr ""
 " nødstrømmen er fuldstændigt opbrugt."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1631
+#: ../src/gpm-manager.c:1641
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr ""
 "Nødstrømmen har nået det kritiske niveau og computeren vil snart gå i dvale."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1636
+#: ../src/gpm-manager.c:1646
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr ""
