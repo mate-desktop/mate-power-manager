@@ -864,7 +864,7 @@ gpm_engine_coldplug_idle_cb (GpmEngine *engine)
 	gpm_engine_recalculate_state (engine);
 
 	/* add to database */
-	array = up_client_get_devices (engine->priv->client);
+	array = up_client_get_devices2 (engine->priv->client);
 	for (i=0;i<array->len;i++) {
 		device = g_ptr_array_index (array, i);
 		gpm_engine_device_add (engine, device);

@@ -818,7 +818,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 		g_error_free (error);
 	}
 #endif
-	devices = up_client_get_devices (prefs->priv->client);
+	devices = up_client_get_devices2 (prefs->priv->client);
 	for (i=0; i<devices->len; i++) {
 		device = g_ptr_array_index (devices, i);
 		g_object_get (device,

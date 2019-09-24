@@ -1796,7 +1796,7 @@ main (int argc, char *argv[])
 	if (!ret)
 		goto out;
 #endif
-	devices = up_client_get_devices (client);
+	devices = up_client_get_devices2 (client);
 
 	/* add devices in visually pleasing order */
 	for (j=0; j<UP_DEVICE_KIND_LAST; j++) {
