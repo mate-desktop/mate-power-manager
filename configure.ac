@@ -116,7 +116,7 @@ LIBPANEL_REQUIRED=1.17.0
 XRANDR_REQUIRED=1.3.0
 XPROTO_REQUIRED=7.0.15
 CANBERRA_REQUIRED=0.10
-UPOWER_REQUIRED=0.9.5
+UPOWER_REQUIRED=0.99.8
 
 dnl ---------------------------------------------------------------------------
 dnl - Check library dependencies
