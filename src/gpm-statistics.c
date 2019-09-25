@@ -1190,11 +1190,7 @@ gpm_stats_window_activated_cb (GtkApplication *app, gpointer data)
  * gpm_stats_device_changed_cb:
  **/
 static void
-#if UP_CHECK_VERSION(0, 99, 0)
 gpm_stats_device_changed_cb (UpDevice *device, GParamSpec *pspec, gpointer user_data)
-#else
-gpm_stats_device_changed_cb (UpClient *client, UpDevice *device, gpointer user_data)
-#endif
 {
 	const gchar *object_path;
 	object_path = up_device_get_object_path (device);
@@ -1209,11 +1205,7 @@ gpm_stats_device_changed_cb (UpClient *client, UpDevice *device, gpointer user_d
  * gpm_stats_add_device:
  **/
 static void
-#if UP_CHECK_VERSION(0, 99, 0)
 gpm_stats_add_device (UpDevice *device, GPtrArray *devices)
-#else
-gpm_stats_add_device (UpDevice *device)
-#endif
 {
 	const gchar *id;
 	GtkTreeIter iter;
@@ -1222,13 +1214,11 @@ gpm_stats_add_device (UpDevice *device)
 	UpDeviceKind kind;
 	gchar *label, *vendor, *model;
 
-#if UP_CHECK_VERSION(0, 99, 0)
 	if (devices != NULL)
 		g_ptr_array_add (devices, device);
 
 	g_signal_connect (device, "notify",
 	                  G_CALLBACK (gpm_stats_device_changed_cb), NULL);
-#endif
 
 	/* get device properties */
 	g_object_get (device,
@@ -1270,38 +1260,25 @@ gpm_stats_data_changed_cb (UpClient *client, gpointer user_data)
  * gpm_stats_device_added_cb:
  **/
 static void
-#if UP_CHECK_VERSION(0, 99, 0)
 gpm_stats_device_added_cb (UpClient *client, UpDevice *device, GPtrArray *devices)
-#else
-gpm_stats_device_added_cb (UpClient *client, UpDevice *device, gpointer user_data)
-#endif
 {
 	const gchar *object_path;
 	object_path = up_device_get_object_path (device);
 	egg_debug ("added:     %s", object_path);
 
-#if UP_CHECK_VERSION(0, 99, 0)
 	gpm_stats_add_device (device, devices);
-#else
-	gpm_stats_add_device (device);
-#endif
 }
 
 /**
  * gpm_stats_device_removed_cb:
  **/
 static void
-#if UP_CHECK_VERSION(0, 99, 0)
 gpm_stats_device_removed_cb (UpClient *client, const gchar *object_path, GPtrArray *devices)
-#else
-gpm_stats_device_removed_cb (UpClient *client, UpDevice *device, gpointer user_data)
-#endif
 {
 	GtkTreeIter iter;
 	gchar *id = NULL;
 	gboolean ret;
 
-#if UP_CHECK_VERSION(0, 99, 0)
 	UpDevice *device_tmp;
 	guint i;
 
@@ -1312,9 +1289,6 @@ gpm_stats_device_removed_cb (UpClient *client, UpDevice *device, gpointer user_d
 			break;
 		}
 	}
-#else
-	const gchar *object_path = up_device_get_object_path (device);
-#endif
 	egg_debug ("removed:   %s", object_path);
 	if (g_strcmp0 (current_device, object_path) == 0) {
 		gtk_list_store_clear (list_store_info);
@@ -1790,12 +1764,6 @@ main (int argc, char *argv[])
 
 	wakeups = up_wakeups_new ();
 	g_signal_connect (wakeups, "data-changed", G_CALLBACK (gpm_stats_data_changed_cb), NULL);
-#if !UP_CHECK_VERSION(0, 99, 0)
-	/* coldplug */
-	ret = up_client_enumerate_devices_sync (client, NULL, NULL);
-	if (!ret)
-		goto out;
-#endif
 	devices = up_client_get_devices2 (client);
 
 	/* add devices in visually pleasing order */
@@ -1804,24 +1772,14 @@ main (int argc, char *argv[])
 			device = g_ptr_array_index (devices, i);
 			g_object_get (device, "kind", &kind, NULL);
 			if (kind == j)
-#if UP_CHECK_VERSION(0, 99, 0)
 				/* NULL == do not add it to ptr array */
 				gpm_stats_add_device (device, NULL);
-#else
-				gpm_stats_add_device (device);
-#endif
 		}
 	}
 
 	/* connect now the coldplug is done */
-#if UP_CHECK_VERSION(0, 99, 0)
 	g_signal_connect (client, "device-added", G_CALLBACK (gpm_stats_device_added_cb), devices);
 	g_signal_connect (client, "device-removed", G_CALLBACK (gpm_stats_device_removed_cb), devices);
-#else
-	g_signal_connect (client, "device-added", G_CALLBACK (gpm_stats_device_added_cb), NULL);
-	g_signal_connect (client, "device-removed", G_CALLBACK (gpm_stats_device_removed_cb), NULL);
-	g_signal_connect (client, "device-changed", G_CALLBACK (gpm_stats_device_changed_cb), NULL);
-#endif
 
 	/* set current device */
 	if (devices->len > 0) {
@@ -1858,9 +1816,6 @@ main (int argc, char *argv[])
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "dialog_stats"));
 
 	status = g_application_run (G_APPLICATION (app), argc, argv);
-#if !UP_CHECK_VERSION(0, 99, 0)
-out:
-#endif
 	if (devices != NULL)
 		g_ptr_array_unref (devices);
 

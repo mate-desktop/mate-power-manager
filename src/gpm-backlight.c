@@ -412,11 +412,7 @@ gpm_settings_key_changed_cb (GSettings *settings, const gchar *key, GpmBacklight
  * Does the actions when the ac power source is inserted/removed.
  **/
 static void
-#if UP_CHECK_VERSION(0, 99, 0)
 gpm_backlight_client_changed_cb (UpClient *client, GParamSpec *pspec, GpmBacklight *backlight)
-#else
-gpm_backlight_client_changed_cb (UpClient *client, GpmBacklight *backlight)
-#endif
 {
 	gpm_backlight_brightness_evaluate_and_set (backlight, FALSE, TRUE);
 }
@@ -746,13 +742,8 @@ gpm_backlight_init (GpmBacklight *backlight)
 
 	/* we use up_client for the ac-adapter-changed signal */
 	backlight->priv->client = up_client_new ();
-#if UP_CHECK_VERSION(0, 99, 0)
 	g_signal_connect (backlight->priv->client, "notify",
 			  G_CALLBACK (gpm_backlight_client_changed_cb), backlight);
-#else
-	g_signal_connect (backlight->priv->client, "changed",
-			  G_CALLBACK (gpm_backlight_client_changed_cb), backlight);
-#endif
 
 	/* gets caps */
 	backlight->priv->can_dim = gpm_brightness_has_hw (backlight->priv->brightness);

@@ -323,11 +323,7 @@ gpm_button_reset_time (GpmButton *button)
  * gpm_button_client_changed_cb
  **/
 static void
-#if UP_CHECK_VERSION(0, 99, 0)
 gpm_button_client_changed_cb (UpClient *client, GParamSpec *pspec, GpmButton *button)
-#else
-gpm_button_client_changed_cb (UpClient *client, GpmButton *button)
-#endif
 {
 	gboolean lid_is_closed;
 
@@ -366,13 +362,8 @@ gpm_button_init (GpmButton *button)
 
 	button->priv->client = up_client_new ();
 	button->priv->lid_is_closed = up_client_get_lid_is_closed (button->priv->client);
-#if UP_CHECK_VERSION(0, 99, 0)
 	g_signal_connect (button->priv->client, "notify",
 			  G_CALLBACK (gpm_button_client_changed_cb), button);
-#else
-	g_signal_connect (button->priv->client, "changed",
-			  G_CALLBACK (gpm_button_client_changed_cb), button);
-#endif
 	/* register the brightness keys */
 	gpm_button_xevent_key (button, XF86XK_PowerOff, GPM_BUTTON_POWER);
 
