@@ -493,10 +493,8 @@ gpm_kbd_backlight_control_resume_cb (GpmControl *control,
  **/
 static void
 gpm_kbd_backlight_client_changed_cb (UpClient *client,
-#if UP_CHECK_VERSION(0, 99, 0)
-                    GParamSpec *pspec,
-#endif
-                    GpmKbdBacklight *backlight)
+                                     GParamSpec *pspec,
+                                     GpmKbdBacklight *backlight)
 {
    gpm_kbd_backlight_evaluate_power_source_and_set (backlight);
 }
@@ -760,13 +758,8 @@ noerr:
 
    /* Use upower for ac changed signal */
    backlight->priv->client = up_client_new ();
-#if UP_CHECK_VERSION(0, 99, 0)
    g_signal_connect (backlight->priv->client, "notify",
              G_CALLBACK (gpm_kbd_backlight_client_changed_cb), backlight);
-#else
-   g_signal_connect (backlight->priv->client, "changed",
-             G_CALLBACK (gpm_kbd_backlight_client_changed_cb), backlight);
-#endif
 
    backlight->priv->settings = g_settings_new (GPM_SETTINGS_SCHEMA);
 
