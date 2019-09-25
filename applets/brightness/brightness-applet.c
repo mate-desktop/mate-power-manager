@@ -663,9 +663,7 @@ gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 	gint orientation, x, y;
 	GdkWindow *window;
 	GdkDisplay *display;
-	GdkDeviceManager *device_manager;
-	GdkDevice *pointer;
-	GdkDevice *keyboard;
+	GdkSeat *seat;
 
 	/* react only to left mouse button */
 	if (event->button != 1) {
@@ -736,17 +734,15 @@ gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 	/* grab input */
 	window = gtk_widget_get_window (GTK_WIDGET (applet->popup));
 	display = gdk_window_get_display (window);
-	device_manager = gdk_display_get_device_manager (display);
-	pointer = gdk_device_manager_get_client_pointer (device_manager);
-	keyboard = gdk_device_get_associated_device (pointer);
-	gdk_device_grab (pointer, window,
-			 GDK_OWNERSHIP_NONE, TRUE,
-			 GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK,
-			 NULL, GDK_CURRENT_TIME);
-	gdk_device_grab (keyboard, window,
-			 GDK_OWNERSHIP_NONE, TRUE,
-			 GDK_KEY_PRESS_MASK | GDK_KEY_RELEASE_MASK,
-			 NULL, GDK_CURRENT_TIME);
+	seat = gdk_display_get_default_seat (display);
+	gdk_seat_grab (seat,
+	               window,
+	               GDK_SEAT_CAPABILITY_ALL,
+	               TRUE,
+	               NULL,
+	               NULL,
+	               NULL,
+	               NULL);
 
 	return TRUE;
 }
