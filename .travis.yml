@@ -64,6 +64,7 @@ env:
 requires:
   archlinux:
     # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/mate-power-manager
+    - autoconf-archive
     - clang
     - dbus-glib
     - file
@@ -85,6 +86,7 @@ requires:
   debian:
     # Useful URL: https://github.com/mate-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-mate-team/mate-power-manager
+    - autoconf-archive
     - clang
     - clang-tools
     - cppcheck
@@ -112,6 +114,7 @@ requires:
 
   fedora:
     # Useful URL: https://src.fedoraproject.org/cgit/rpms/mate-power-manager.git
+    - autoconf-archive
     - cairo-devel
     - clang
     - clang-analyzer
@@ -135,6 +138,7 @@ requires:
     - upower-devel
 
   ubuntu:
+    - autoconf-archive
     - clang
     - clang-tools
     - git
