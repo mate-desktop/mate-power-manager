@@ -1,3 +1,5 @@
+NULL =
+
 AM_CPPFLAGS =							\
 	-I. -I$(srcdir) 					\
 	$(GLIB_CFLAGS)						\
@@ -18,7 +20,8 @@ AM_CPPFLAGS =							\
 	-DEGG_VERBOSE="\"GPM_VERBOSE\""				\
 	-DEGG_LOGGING="\"GPM_LOGGING\""				\
 	-DEGG_CONSOLE="\"GPM_CONSOLE\""				\
-	$(DISABLE_DEPRECATED)
+	$(DISABLE_DEPRECATED)					\
+	$(WARN_CFLAGS)						\
 	$(NULL)
 
 libexec_PROGRAMS=mate-brightness-applet

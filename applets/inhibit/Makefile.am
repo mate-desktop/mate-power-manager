@@ -1,3 +1,5 @@
+NULL =
+
 AM_CPPFLAGS =							\
 	-I. -I$(srcdir) 					\
 	$(GLIB_CFLAGS)						\
@@ -19,6 +21,7 @@ AM_CPPFLAGS =							\
 	-DEGG_LOGGING="\"GPM_LOGGING\""				\
 	-DEGG_CONSOLE="\"GPM_CONSOLE\""				\
 	$(DISABLE_DEPRECATED)					\
+	$(WARN_CFLAGS)						\
 	$(NULL)
 
 libexec_PROGRAMS=mate-inhibit-applet

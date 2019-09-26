@@ -16,7 +16,7 @@ AC_PROG_INSTALL
 LT_INIT
 IT_PROG_INTLTOOL([0.50.1])
 
-MATE_COMPILE_WARNINGS
+MATE_COMPILE_WARNINGS([yes])
 YELP_HELP_INIT
 
 AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
@@ -44,45 +44,6 @@ if test "x$enable_deprecated" = "xyes"; then
 	DISABLE_DEPRECATED=""
 	CPPFLAGS="$CPPFLAGS $DISABLE_DEPRECATED"
 fi
-
-AC_ARG_ENABLE(extra-warn,
-        [AS_HELP_STRING([--enable-extra-warn],
-                [Enable extra warnings. gcc only. [default=no]])],,
-         [enable_extra_warn=no])
-
-if test "x$enable_extra_warn" = "xyes" && test "$GCC" = "yes"; then
-	WARNINGFLAGS="$WARNINGFLAGS -Wall"
-	WARNINGFLAGS="$WARNINGFLAGS -Wcast-align -Wno-uninitialized"
-	WARNINGFLAGS="$WARNINGFLAGS -Wmissing-declarations"
-#	WARNINGFLAGS="$WARNINGFLAGS -Wredundant-decls"
-#	WARNINGFLAGS="$WARNINGFLAGS -Wmissing-noreturn"
-	WARNINGFLAGS="$WARNINGFLAGS -Wpointer-arith"
-	WARNINGFLAGS="$WARNINGFLAGS -Wcast-align"
-	WARNINGFLAGS="$WARNINGFLAGS -Wwrite-strings"
-	WARNINGFLAGS="$WARNINGFLAGS -Winit-self"
-	WARNINGFLAGS="$WARNINGFLAGS -Wreturn-type"
-	WARNINGFLAGS="$WARNINGFLAGS -Wformat-nonliteral"
-	WARNINGFLAGS="$WARNINGFLAGS -Wformat-security"
-	WARNINGFLAGS="$WARNINGFLAGS -Wmissing-include-dirs"
-	WARNINGFLAGS="$WARNINGFLAGS -Wmissing-format-attribute"
-	WARNINGFLAGS="$WARNINGFLAGS -Wclobbered"
-	WARNINGFLAGS="$WARNINGFLAGS -Wempty-body"
-	WARNINGFLAGS="$WARNINGFLAGS -Wignored-qualifiers"
-#	WARNINGFLAGS="$WARNINGFLAGS -Wsign-compare"
-	WARNINGFLAGS="$WARNINGFLAGS -Wtype-limits"
-#	WARNINGFLAGS="$WARNINGFLAGS -Wuninitialized"
-#	WARNINGFLAGS="$WARNINGFLAGS -Waggregate-return"
-	WARNINGFLAGS="$WARNINGFLAGS -Wdeclaration-after-statement"
-	WARNINGFLAGS="$WARNINGFLAGS -Wshadow"
-	WARNINGFLAGS="$WARNINGFLAGS -Winline"
-#	WARNINGFLAGS="$WARNINGFLAGS -Wswitch-enum"
-	WARNINGFLAGS="$WARNINGFLAGS -Wmissing-parameter-type"
-	WARNINGFLAGS="$WARNINGFLAGS -Woverride-init"
-	WARNINGFLAGS="$WARNINGFLAGS -Wno-strict-aliasing"
-else
-	WARNINGFLAGS=""
-fi
-AC_SUBST(WARNINGFLAGS)
 
 dnl ---------------------------------------------------------------------------
 dnl - Debugging switches (uncomment this if you want to use gdb)
@@ -260,6 +221,7 @@ echo "
         datadir:                   ${datadir}
         compiler:                  ${CC}
         cflags:                    ${CFLAGS}
+        cwarnings:                 ${WARN_CFLAGS}
         gnome-keyring support:     ${with_keyring}
         Building extra applets:    ${enable_applets}
         Self test support:         ${have_tests}
