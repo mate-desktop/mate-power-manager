@@ -9,6 +9,8 @@ AC_CONFIG_MACRO_DIR([m4])
 # enable nice build output on automake1.11
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
+MATE_DEBUG_CHECK([no])
+
 AC_PROG_CC
 AM_PROG_CC_C_O
 
@@ -45,10 +47,6 @@ if test "x$enable_deprecated" = "xyes"; then
 	CPPFLAGS="$CPPFLAGS $DISABLE_DEPRECATED"
 fi
 
-dnl ---------------------------------------------------------------------------
-dnl - Debugging switches (uncomment this if you want to use gdb)
-dnl ---------------------------------------------------------------------------
-CPPFLAGS="$CPPFLAGS -g"
 CPPFLAGS="$CPPFLAGS -fexceptions"
 
 dnl ---------------------------------------------------------------------------
