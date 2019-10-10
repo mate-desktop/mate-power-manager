@@ -1,12 +1,11 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2019
 # Joe Hansen <joedalton2@yahoo.dk>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"POT-Creation-Date: 2019-03-20 16:48+0100\n"
+"POT-Creation-Date: 2019-06-18 16:29+0200\n"
 "PO-Revision-Date: 2018-10-04 15:52+0000\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2019\n"
 "Language-Team: Danish (https://www.transifex.com/mate/teams/13566/da/)\n"
@@ -43,8 +42,8 @@ msgstr ""
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
-msgid "<year>2015</year> <holder>MATE Documentation Team</holder>"
-msgstr "<year>2015</year> <holder>MATE-dokumentationsholdet</holder>"
+msgid "<year>2015-2019</year> <holder>MATE Documentation Team</holder>"
+msgstr "<year>2015-2019</year> <holder>MATE-dokumentationsholdet</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:34
@@ -1134,57 +1133,6 @@ msgstr ""
 "priivileges</command> i opstartsskriptet <command>haldaemon</command>. Et "
 "alternativ til dette er at bruge acpid, frem for kerneproc-filen."
 
-#. (itstool) path: section/title
-#: C/index.docbook:759
-msgid "About"
-msgstr "Om"
-
-#. (itstool) path: section/para
-#: C/index.docbook:760
-msgid ""
-"MATE Power Manager was written by Mate Development. To find more information"
-" about MATE Power Manager, please visit the <ulink url=\"https://github.com"
-"/mate-desktop/mate-power-manager\" type=\"http\"> <application>MATE Power "
-"Manager</application> web page</ulink>. Origin power-manager was written by "
-"Richard Hughes <email>richard@hughsie.com</email>."
-msgstr ""
-"MATE-strømstyring blev skrevet af MATE-udvikling. For at få yderligere "
-"information om MATE-strømstyring, så besøg hjemmesiden <ulink "
-"url=\"https://github.com/mate-desktop/mate-power-manager\" "
-"type=\"http\"><application>MATE-strømstyring</application></ulink>. Det "
-"oprindelige program power-manager blev skrevet af Richard Hughes "
-"<email>richard@hughsie.com</email>."
-
-#. (itstool) path: section/para
-#: C/index.docbook:767
-msgid ""
-"To report a bug or make a suggestion regarding this application or this "
-"manual, follow the directions at the <ulink url=\"https://github.com/mate-"
-"desktop/mate-power-manager\" type=\"http\"> <application>MATE Power "
-"Manager</application> Bug Page</ulink>."
-msgstr ""
-"For at rapportere en fejl eller komme med et forslag jævnfør dette program "
-"eller denne manual, så følg retningslinjerne i <ulink "
-"url=\"https://github.com/mate-desktop/mate-power-manager\" "
-"type=\"http\"><application>MATE-strømhåndteringens</application> "
-"fejlside</ulink>."
-
-#. (itstool) path: section/para
-#: C/index.docbook:773
-msgid ""
-"This program is distributed under the terms of the GNU General Public "
-"license as published by the Free Software Foundation; either version 2 of "
-"the License, or (at your option) any later version. A copy of this license "
-"can be found at this <ulink type=\"help\" url=\"help:gpl\">link</ulink>, or "
-"in the file COPYING included with the source code of this program."
-msgstr ""
-"Dette program er distribueret under betingelserne i GNU General Public-"
-"licensen, som udgivet af Free Software Foundation; enten version 2 af "
-"licensen, eller (efter dit vlag) enhver senere version. En kopi af denne "
-"licens kan ses via denne <ulink type=\"help\" "
-"url=\"help:gpl\">henvisning</ulink>, eller i filen COPYING inklusderet med "
-"kildekoden for dette program."
-
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
 msgid "link"
@@ -1298,3 +1246,45 @@ msgid ""
 msgstr ""
 "DOKUMENTET OG ÆNDREDE VERSIONER AF DOKUMENTET STILLES TIL RÅDIGHED UNDER GNU"
 " FREE DOCOMENTATION LICENSE MED FØLGENDE BETINGELSER: <_:orderedlist-1/>"
+
+#. (itstool) path: formalpara/title
+#: C/legal.xml:77
+msgid "Software Licence"
+msgstr "Programlicens"
+
+#. (itstool) path: formalpara/para
+#: C/legal.xml:78
+msgid ""
+"MATE Power Manager is free software; you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by the "
+"Free Software Foundation; either version 2 of the License, or (at your "
+"option) any later version."
+msgstr ""
+"MATE-strømstyring er et frit program; det kan distribueres og/eller ændres "
+"under betingelserne i GNU General Public License, som udgivet af Free "
+"Software Foundation; enten version 2 af licensen eller, (efter eget valg), "
+"enhver nyere version."
+
+#. (itstool) path: formalpara/para
+#: C/legal.xml:83
+msgid ""
+"MATE Power Manager is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
+"or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
+"more details."
+msgstr ""
+"MATE-strømstyring distribueres i håb om at det viser sig nyttigt, men UDEN "
+"NOGEN GARANTI; selv uden de underforståede garantier for SALGBARHED eller "
+"EGNETHED TIL ET BESTEMT FORMÅL. Se GNU General Public License for yderligere"
+" detaljer."
+
+#. (itstool) path: formalpara/para
+#: C/legal.xml:88
+msgid ""
+"You should have received a copy of the GNU General Public License along with"
+" MATE Power Manager; if not, write to the Free Software Foundation, Inc., 51"
+" Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
+msgstr ""
+"Du bør have modtaget en kopi af GNU General Public License sammen med MATE-"
+"strømstyring; er dette ikke tilfældet, så skriv til Free Software "
+"Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
