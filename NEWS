@@ -1,3 +1,39 @@
+### mate-power-manager 1.23.1
+
+  * Translations update
+  * brightness-applet: use GdkSeat operations
+  * Set compiler debug flags using MATE_DEBUG_CHECK
+  * Use WARN_CFLAGS which are only set with -enable-compiler-warnings
+  * drop obsolete version checks for upower
+  * require upower-0.99.8
+  * Use up_client_get_devices2()
+  * Use gresources for gpm-prefs.ui and gpm-statistics.ui
+  * egg-console-kit: avoid 'g_type_class_add_private'
+  * gpm-engine: avoid 'g_type_class_add_private'
+  * gpm-phone: avoid 'g_type_class_add_private'
+  * gpm-prefs-core: avoid 'g_type_class_add_private'
+  * gpm-screensaver: avoid 'g_type_class_add_private'
+  * gsd-media-keys-window: avoid 'g_type_class_add_private'
+  * gpm-tray-icon: avoid 'g_type_class_add_private'
+  * msd-osd-window: avoid 'g_type_class_add_private'
+  * gpm-load: avoid 'g_type_class_add_private'
+  * gpm-brightness: avoid 'g_type_class_add_private'
+  * gpm-manager: avoid 'g_type_class_add_private'
+  * gpm-kbd-backlight: avoid 'g_type_class_add_private'
+  * gpm-dpms: avoid 'g_type_class_add_private'
+  * gpm-button: avoid 'g_type_class_add_private'
+  * gpm-backlight: avoid 'g_type_class_add_private'
+  * egg-idletime: avoid 'g_type_class_add_private'
+  * gpm-graph-widget: avoid 'g_type_class_add_private'
+  * gpm-session: avoid 'g_type_class_add_private'
+  * gpm-idle: avoid 'g_type_class_add_private'
+  * gpm-control: avoid 'g_type_class_add_private'
+  * Simplify the installation process of the icons
+  * Remove unused UI file
+  * prefs: Fix mnemonic relationships
+  * gpm-upower: fix some build warnings
+  * Add scroll interface tabs with mouse wheel
+
 ### mate-power-manager 1.23.0
 
   * Translations update
