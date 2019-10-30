@@ -1,16 +1,15 @@
-[encoding: UTF-8]
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
 applets/brightness/brightness-applet.c
-[type: gettext/ini]applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in
+applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in
 applets/inhibit/inhibit-applet.c
-[type: gettext/ini]applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in
+applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in
 data/mate-power-manager.desktop.in.in
-[type: gettext/gsettings]data/org.mate.power-manager.gschema.xml.in
+data/org.mate.power-manager.gschema.xml.in
 data/mate-power-preferences.desktop.in.in
 data/mate-power-statistics.desktop.in.in
-[type: gettext/glade]data/gpm-statistics.ui
-[type: gettext/glade]data/gpm-prefs.ui
+data/gpm-statistics.ui
+data/gpm-prefs.ui
 policy/org.mate.power.policy.in2
 src/gpm-backlight.c
 src/gpm-backlight-helper.c

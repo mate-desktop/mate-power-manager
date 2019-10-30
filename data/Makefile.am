@@ -1,16 +1,18 @@
 SUBDIRS = icons
 
 
-@INTLTOOL_DESKTOP_RULE@
 desktopdir = $(datadir)/applications
 desktop_in_files = mate-power-preferences.desktop.in \
 		   mate-power-statistics.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+$(desktop_DATA): $(desktop_in_files)
+	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
-@INTLTOOL_DESKTOP_RULE@
 autostartdir = $(sysconfdir)/xdg/autostart
 autostart_in_files = mate-power-manager.desktop.in
 autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
+$(autostart_DATA): $(autostart_in_files)
+	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
 servicedir       = $(DBUS_SERVICES_DIR)
 service_in_files = org.mate.PowerManager.service.in
@@ -20,7 +22,6 @@ $(service_DATA): $(service_in_files) Makefile
 	@sed -e "s|\@servicedir\@|$(bindir)|" $< > $@
 
 @GSETTINGS_RULES@
-@INTLTOOL_XML_NOMERGE_RULE@
 gsettings_schemas_in_files = org.mate.power-manager.gschema.xml.in
 gsettings_SCHEMAS = $(gsettings_schemas_in_files:.xml.in=.xml)
 
