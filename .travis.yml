@@ -70,7 +70,6 @@ requires:
     - file
     - gcc
     - git
-    - intltool
     - itstool
     - libcanberra
     - libgnome-keyring
@@ -87,12 +86,12 @@ requires:
     # Useful URL: https://github.com/mate-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-mate-team/mate-power-manager
     - autoconf-archive
+    - autopoint
     - clang
     - clang-tools
     - cppcheck
     - gcc
     - git
-    - intltool
     - libcanberra-gtk3-dev
     - libdbus-glib-1-dev
     - libgcrypt20-dev
@@ -133,16 +132,17 @@ requires:
     - mate-panel-devel
     - mesa-libGL-devel
     - pangox-compat-devel
+    - polkit-devel
     - popt-devel
     - redhat-rpm-config
     - upower-devel
 
   ubuntu:
     - autoconf-archive
+    - autopoint
     - clang
     - clang-tools
     - git
-    - intltool
     - libcanberra-gtk3-dev
     - libdbus-glib-1-dev
     - libgcrypt20-dev
