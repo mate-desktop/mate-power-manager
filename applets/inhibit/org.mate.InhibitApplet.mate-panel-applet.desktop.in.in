@@ -1,12 +1,13 @@
 [Applet Factory]
 Id=InhibitAppletFactory
 Location=@LIBEXECDIR@/mate-inhibit-applet
-_Name=Inhibit Applet Factory
-_Description=Factory for Inhibit Applet
+Name=Inhibit Applet Factory
+Description=Factory for Inhibit Applet
 
 [InhibitApplet]
-_Name=Inhibit Applet
-_Description=Allows user to inhibit automatic power saving
+Name=Inhibit Applet
+Description=Allows user to inhibit automatic power saving
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=mate-inhibit-applet
 MateComponentId=OAFIID:MATE_InhibitApplet
 X-MATE-Bugzilla-Bugzilla=MATE

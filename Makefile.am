@@ -2,8 +2,8 @@
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 SUBDIRS = 						\
-	src						\
 	po						\
+	src						\
 	data						\
 	help						\
 	policy
@@ -13,10 +13,7 @@ SUBDIRS += applets
 endif
 
 EXTRA_DIST =						\
-	autogen.sh					\
-	intltool-extract.in				\
-	intltool-merge.in				\
-	intltool-update.in
+	autogen.sh
 
 clean-local :
 	rm -f *~
@@ -25,9 +22,6 @@ snapshot:
 	$(MAKE) dist distdir=$(PACKAGE)-$(VERSION)-`date +"%Y%m%d"`
 
 DISTCLEANFILES =					\
-	intltool-extract				\
-	intltool-merge					\
-	intltool-update					\
 	mate-power-manager-*.tar.gz
 
 DISTCHECK_CONFIGURE_FLAGS =   \

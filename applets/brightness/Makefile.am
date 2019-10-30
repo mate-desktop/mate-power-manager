@@ -39,16 +39,17 @@ mate_brightness_applet_LDADD =					\
 	$(PANEL_LIBS)
 
 appletdir       = $(datadir)/mate-panel/applets
-applet_in_files = org.mate.BrightnessApplet.mate-panel-applet.in
-applet_DATA     = $(applet_in_files:.mate-panel-applet.in=.mate-panel-applet)
+applet_in_files = org.mate.BrightnessApplet.mate-panel-applet.desktop.in
+applet_DATA     = $(applet_in_files:.mate-panel-applet.desktop.in=.mate-panel-applet)
 
-$(applet_in_files): $(applet_in_files).in Makefile
-	$(AM_V_GEN)sed \
+$(applet_DATA): $(applet_in_files)
+	$(AM_V_GEN) $(MSGFMT) --desktop --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
+
+$(applet_in_files): $(applet_in_files).in
+	$(AM_V_GEN) sed \
             -e "s|\@LIBEXECDIR\@|$(libexecdir)|" \
             -e "s|\@VERSION\@|$(PACKAGE_VERSION)|" \
             $< > $@
-
-%.mate-panel-applet: %.mate-panel-applet.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
 
 servicedir       = $(datadir)/dbus-1/services
 service_in_files = org.mate.panel.applet.BrightnessAppletFactory.service.in
@@ -62,7 +63,7 @@ org.mate.panel.applet.BrightnessAppletFactory.service: $(service_in_files)
 uidir   = $(datadir)/mate-power-manager/ui
 ui_DATA = brightness-applet-menu.xml
 
-EXTRA_DIST = org.mate.BrightnessApplet.mate-panel-applet.in.in $(ui_DATA) $(service_in_files)
+EXTRA_DIST = $(applet_in_files).in $(ui_DATA) $(service_in_files)
 
 DISTCLEANFILES =						\
 	$(applet_DATA) $(applet_DATA).in $(service_DATA)

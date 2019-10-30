@@ -1,12 +1,13 @@
 [Applet Factory]
 Id=BrightnessAppletFactory
 Location=@LIBEXECDIR@/mate-brightness-applet
-_Name=Brightness Applet Factory
-_Description=Factory for Brightness Applet
+Name=Brightness Applet Factory
+Description=Factory for Brightness Applet
 
 [BrightnessApplet]
-_Name=Brightness Applet
-_Description=Adjusts Laptop panel brightness
+Name=Brightness Applet
+Description=Adjusts Laptop panel brightness
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=mate-brightness-applet
 MateComponentId=OAFIID:MATE_BrightnessApplet
 X-MATE-Bugzilla-Bugzilla=MATE
