@@ -69,9 +69,6 @@ GType                gpm_inhibit_applet_get_type  (void);
 #define GS_DBUS_PATH		"/org/gnome/SessionManager"
 #define GS_DBUS_INTERFACE	"org.gnome.SessionManager"
 
-static void      gpm_inhibit_applet_class_init (GpmInhibitAppletClass *klass);
-static void      gpm_inhibit_applet_init       (GpmInhibitApplet *applet);
-
 G_DEFINE_TYPE (GpmInhibitApplet, gpm_inhibit_applet, PANEL_TYPE_APPLET)
 
 static void	gpm_applet_update_icon		(GpmInhibitApplet *applet);
