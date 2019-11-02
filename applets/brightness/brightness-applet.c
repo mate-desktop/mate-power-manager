@@ -75,9 +75,6 @@ GType                gpm_brightness_applet_get_type  (void);
 #define	GPM_DBUS_PATH_BACKLIGHT		"/org/mate/PowerManager/Backlight"
 #define	GPM_DBUS_INTERFACE_BACKLIGHT	"org.mate.PowerManager.Backlight"
 
-static void      gpm_brightness_applet_class_init (GpmBrightnessAppletClass *klass);
-static void      gpm_brightness_applet_init       (GpmBrightnessApplet *applet);
-
 G_DEFINE_TYPE (GpmBrightnessApplet, gpm_brightness_applet, PANEL_TYPE_APPLET)
 
 static void      gpm_applet_get_icon              (GpmBrightnessApplet *applet);
