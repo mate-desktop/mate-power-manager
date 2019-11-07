@@ -16,9 +16,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-18 16:29+0200\n"
+"POT-Creation-Date: 2019-10-10 13:56+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
 "Last-Translator: Constantinos Tsakiris, 2018\n"
 "Language-Team: Greek (https://www.transifex.com/mate/teams/13566/el/)\n"
@@ -50,14 +50,14 @@ msgstr "Αδυναμία λήψης της τιμής φωτεινότητας �
 msgid "LCD brightness : %d%%"
 msgstr "Φωτεινότητα LCD : %d%%"
 
-#: ../applets/brightness/brightness-applet.c:807
+#: ../applets/brightness/brightness-applet.c:803
 #: ../applets/inhibit/inhibit-applet.c:300
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr ""
 "Διανέμεται υπό τους όρους της Γενικής Άδειας Δημόσιας Χρήσης GNU (GPL), "
 "έκδοσης 2"
 
-#: ../applets/brightness/brightness-applet.c:808
+#: ../applets/brightness/brightness-applet.c:804
 #: ../applets/inhibit/inhibit-applet.c:301
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
@@ -71,7 +71,7 @@ msgstr ""
 "Ελεύθερου Λογισμικού (FSF) — είτε της έκδοσης 2 της Άδειας, είτε \n"
 "(κατ' επιλογήν σας) οποιασδήποτε μεταγενέστερης έκδοσης."
 
-#: ../applets/brightness/brightness-applet.c:812
+#: ../applets/brightness/brightness-applet.c:808
 #: ../applets/inhibit/inhibit-applet.c:305
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
@@ -84,7 +84,7 @@ msgstr ""
 "ΕΜΠΟΡΕΥΣΙΜΟΤΗΤΑΣ ή ΚΑΤΑΛΛΗΛΟΤΗΤΑΣ ΓΙΑ ΕΙΔΙΚΟ ΣΚΟΠΟ. \n"
 "Για περισσότερες λεπτομέρειες ανατρέξτε στη Γενική Άδεια Δημόσιας Χρήσης GNU (GPL)."
 
-#: ../applets/brightness/brightness-applet.c:816
+#: ../applets/brightness/brightness-applet.c:812
 #: ../applets/inhibit/inhibit-applet.c:309
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
@@ -97,12 +97,12 @@ msgstr ""
 "Free Software Foundation, Inc., 59 Temple Place, Suite 330, \n"
 "Boston, MA  02111-1307  USA"
 
-#: ../applets/brightness/brightness-applet.c:1070
+#: ../applets/brightness/brightness-applet.c:1066
 #: ../applets/inhibit/inhibit-applet.c:522
 msgid "_About"
 msgstr "Πε_ρί"
 
-#: ../applets/brightness/brightness-applet.c:1073
+#: ../applets/brightness/brightness-applet.c:1069
 #: ../applets/inhibit/inhibit-applet.c:525
 msgid "_Help"
 msgstr "_Βοήθεια"
@@ -160,11 +160,11 @@ msgstr "Αποτροπή εξοικονόμησης ενέργειας"
 msgid "Allows user to inhibit automatic power saving"
 msgstr "Επιτρέπει στο χρήστη να αποτρέπει την αυτόματη εξοικονόμηση ενέργειας"
 
-#: ../data/mate-power-manager.desktop.in.in.h:1 ../src/gpm-tray-icon.c:186
+#: ../data/mate-power-manager.desktop.in.in.h:1 ../src/gpm-tray-icon.c:184
 msgid "Power Manager"
 msgstr "Διαχείριση ενέργειας"
 
-#: ../data/mate-power-manager.desktop.in.in.h:2 ../src/gpm-tray-icon.c:188
+#: ../data/mate-power-manager.desktop.in.in.h:2 ../src/gpm-tray-icon.c:186
 msgid "Power management daemon"
 msgstr "Υπηρεσία διαχείρισης ενέργειας"
 
@@ -937,17 +937,13 @@ msgstr "Ρύθμιση διαχείρισης ενέργειας"
 #. TRANSLATORS: the program name
 #: ../data/mate-power-statistics.desktop.in.in.h:1
 #: ../data/gpm-statistics.ui.h:1 ../src/gpm-statistics.c:1090
-#: ../src/gpm-statistics.c:1603
+#: ../src/gpm-statistics.c:1577
 msgid "Power Statistics"
 msgstr "Στατιστικά ενέργειας"
 
 #: ../data/mate-power-statistics.desktop.in.in.h:2
 msgid "Observe power management"
 msgstr "Παρακολούθηση διαχείρισης ενέργειας"
-
-#: ../data/gpm-feedback-widget.ui.h:1
-msgid "Brightness"
-msgstr "Φωτεινότητα"
 
 #: ../data/gpm-statistics.ui.h:2 ../src/gpm-statistics.c:208
 msgid "Details"
@@ -1200,67 +1196,67 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. Translators: This is %i days
-#: ../src/gpm-graph-widget.c:435
+#: ../src/gpm-graph-widget.c:433
 #, c-format
 msgid "%id"
 msgstr "%id"
 
 #. Translators: This is %i days %02i hours
-#: ../src/gpm-graph-widget.c:438
+#: ../src/gpm-graph-widget.c:436
 #, c-format
 msgid "%id%02ih"
 msgstr "%id%02ih"
 
 #. Translators: This is %i hours
-#: ../src/gpm-graph-widget.c:443
+#: ../src/gpm-graph-widget.c:441
 #, c-format
 msgid "%ih"
 msgstr "%ih"
 
 #. Translators: This is %i hours %02i minutes
-#: ../src/gpm-graph-widget.c:446
+#: ../src/gpm-graph-widget.c:444
 #, c-format
 msgid "%ih%02im"
 msgstr "%ih%02im"
 
 #. Translators: This is %2i minutes
-#: ../src/gpm-graph-widget.c:451
+#: ../src/gpm-graph-widget.c:449
 #, c-format
 msgid "%2im"
 msgstr "%2im"
 
 #. Translators: This is %2i minutes %02i seconds
-#: ../src/gpm-graph-widget.c:454
+#: ../src/gpm-graph-widget.c:452
 #, c-format
 msgid "%2im%02i"
 msgstr "%2im%02i"
 
 #. Translators: This is %2i seconds
-#: ../src/gpm-graph-widget.c:458
+#: ../src/gpm-graph-widget.c:456
 #, c-format
 msgid "%2is"
 msgstr "%2is"
 
 #. Translators: This is %i Percentage
-#: ../src/gpm-graph-widget.c:462
+#: ../src/gpm-graph-widget.c:460
 #, c-format
 msgid "%i%%"
 msgstr "%i%%"
 
 #. Translators: This is %.1f Watts
-#: ../src/gpm-graph-widget.c:465
+#: ../src/gpm-graph-widget.c:463
 #, c-format
 msgid "%.1fW"
 msgstr "%.1fW"
 
 #. Translators: This is %.1f Volts
-#: ../src/gpm-graph-widget.c:470
+#: ../src/gpm-graph-widget.c:468
 #, c-format
 msgid "%.1fV"
 msgstr "%.1fV"
 
 #. TRANSLATORS: show verbose debugging
-#: ../src/gpm-main.c:172 ../src/gpm-prefs.c:77 ../src/gpm-statistics.c:1586
+#: ../src/gpm-main.c:172 ../src/gpm-prefs.c:77 ../src/gpm-statistics.c:1560
 msgid "Show extra debugging information"
 msgstr "Προβολή επιπρόσθετων πληροφοριών αποσφαλμάτωσης"
 
@@ -1281,100 +1277,100 @@ msgid "MATE Power Manager"
 msgstr "Διαχείριση ενέργειας MATE"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:223 ../src/gpm-manager.c:295
+#: ../src/gpm-manager.c:222 ../src/gpm-manager.c:294
 msgid "Battery is very low"
 msgstr "Το φορτίο της μπαταρίας είναι εξαιρετικά χαμηλό"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:275
+#: ../src/gpm-manager.c:274
 msgid "Power plugged in"
 msgstr "Έγινε σύνδεση στην παροχή ρεύματος"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:279
+#: ../src/gpm-manager.c:278
 msgid "Power unplugged"
 msgstr "Έγινε αποσύνδεση από την παροχή ρεύματος"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:283
+#: ../src/gpm-manager.c:282
 msgid "Lid has opened"
 msgstr "Το καπάκι έχει ανοίξει"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:287
+#: ../src/gpm-manager.c:286
 msgid "Lid has closed"
 msgstr "Το καπάκι έχει κλείσει"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:291
+#: ../src/gpm-manager.c:290
 msgid "Battery is low"
 msgstr "Το φορτίο της μπαταρίας είναι χαμηλό"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:299
+#: ../src/gpm-manager.c:298
 msgid "Battery is full"
 msgstr "Η μπαταρία είναι πλήρης"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:303
+#: ../src/gpm-manager.c:302
 msgid "Suspend started"
 msgstr "Ξεκίνησε η αναστολή"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:307
+#: ../src/gpm-manager.c:306
 msgid "Resumed"
 msgstr "Έγινε επαναφορά"
 
 #. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:311
+#: ../src/gpm-manager.c:310
 msgid "Suspend failed"
 msgstr "Αποτυχία αναστολής"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:579
+#: ../src/gpm-manager.c:578
 msgid "Computer failed to suspend."
 msgstr "Απέτυχε η αναστολή λειτουργίας του υπολογιστή σας."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:581
+#: ../src/gpm-manager.c:580
 msgid "Failed to suspend"
 msgstr "Απέτυχε η διαδικασία αναστολής"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:585
+#: ../src/gpm-manager.c:584
 msgid "Computer failed to hibernate."
 msgstr "Απέτυχε η αδρανοποίηση του υπολογιστή σας."
 
 #. TRANSLATORS: title text
-#: ../src/gpm-manager.c:587
+#: ../src/gpm-manager.c:586
 msgid "Failed to hibernate"
 msgstr "Απέτυχε η διαδικασία αδρανοποίησης"
 
 #. TRANSLATORS: message text
-#: ../src/gpm-manager.c:592
+#: ../src/gpm-manager.c:591
 msgid "Failure was reported as:"
 msgstr "Η αποτυχία αναφέρθηκε ως:"
 
 #. TRANSLATORS: button text, visit the suspend help website
-#: ../src/gpm-manager.c:605
+#: ../src/gpm-manager.c:604
 msgid "Visit help page"
 msgstr "Μετάβαση στην ιστοσελίδα βοήθειας"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:851
+#: ../src/gpm-manager.c:850
 msgid "Display DPMS activated"
 msgstr "Το DPMS οθόνης ενεργοποιήθηκε"
 
 #. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:870
+#: ../src/gpm-manager.c:869
 msgid "On battery power"
 msgstr "Τροφοδοσία από μπαταρία"
 
-#: ../src/gpm-manager.c:888
+#: ../src/gpm-manager.c:887
 msgid "Laptop lid is closed"
 msgstr "Το καπάκι του φορητού είναι κλειστό"
 
-#: ../src/gpm-manager.c:926
+#: ../src/gpm-manager.c:925
 msgid "Power Information"
 msgstr "Πληροφορίες ενέργειας"
 
@@ -1382,13 +1378,13 @@ msgstr "Πληροφορίες ενέργειας"
 #. * where capacity is the ratio of the last_full capacity with that of
 #. * the design capacity. (#326740)
 #. TRANSLATORS: battery is old or broken
-#: ../src/gpm-manager.c:1113
+#: ../src/gpm-manager.c:1107
 msgid "Battery may be broken"
 msgstr "Η μπαταρία μπορεί να έχει βλάβη"
 
 #. TRANSLATORS: notify the user that that battery is broken as the capacity is
 #. very low
-#: ../src/gpm-manager.c:1116
+#: ../src/gpm-manager.c:1110
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
@@ -1398,75 +1394,75 @@ msgstr ""
 " ή να έχει βλάβη."
 
 #. TRANSLATORS: show the charged notification
-#: ../src/gpm-manager.c:1165
+#: ../src/gpm-manager.c:1159
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] ""
 msgstr[1] ""
 
 #. TRANSLATORS: laptop battery is now discharging
-#: ../src/gpm-manager.c:1211
+#: ../src/gpm-manager.c:1205
 msgid "Battery Discharging"
 msgstr "Η μπαταρία άρχισε να εκφορτίζεται"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1215
+#: ../src/gpm-manager.c:1209
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr "Απομένουν %s λειτουργίας της μπαταρίας (%.1f%%)"
 
 #. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-manager.c:1218 ../src/gpm-manager.c:1230
+#: ../src/gpm-manager.c:1212 ../src/gpm-manager.c:1224
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr "%s εκφορτίζεται (%.0f%%)"
 
 #. TRANSLATORS: UPS is now discharging
-#: ../src/gpm-manager.c:1223
+#: ../src/gpm-manager.c:1217
 msgid "UPS Discharging"
 msgstr "Το UPS άρχισε να εκφορτίζεται"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1227
+#: ../src/gpm-manager.c:1221
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr "Απομένουν %s λειτουργίας του UPS (%.0f%%)"
 
 #. TRANSLATORS: laptop battery low, and we only have one battery
-#: ../src/gpm-manager.c:1311
+#: ../src/gpm-manager.c:1305
 msgid "Battery low"
 msgstr "Το φορτίο της μπαταρίας είναι χαμηλό"
 
 #. TRANSLATORS: laptop battery low, and we have more than one kind of battery
-#: ../src/gpm-manager.c:1314
+#: ../src/gpm-manager.c:1308
 msgid "Laptop battery low"
 msgstr "Το φορτίο της μπαταρίας του φορητού είναι χαμηλό"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1320
+#: ../src/gpm-manager.c:1314
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "Απομένουν περίπου <b>%s</b> (%.0f%%)"
 
 #. TRANSLATORS: UPS is starting to get a little low
-#: ../src/gpm-manager.c:1324
+#: ../src/gpm-manager.c:1318
 msgid "UPS low"
 msgstr "Το φορτίο του UPS είναι χαμηλό"
 
 #. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1328
+#: ../src/gpm-manager.c:1322
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr "Απομένουν περίπου <b>%s</b> λειτουργίας του UPS (%.0f%%)."
 
 #. TRANSLATORS: mouse is getting a little low
 #. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1337 ../src/gpm-manager.c:1476
+#: ../src/gpm-manager.c:1331 ../src/gpm-manager.c:1470
 msgid "Mouse battery low"
 msgstr "Το φορτίο της μπαταρίας του ποντικιού είναι χαμηλό"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1340
+#: ../src/gpm-manager.c:1334
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr ""
@@ -1474,12 +1470,12 @@ msgstr ""
 
 #. TRANSLATORS: keyboard is getting a little low
 #. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1344 ../src/gpm-manager.c:1484
+#: ../src/gpm-manager.c:1338 ../src/gpm-manager.c:1478
 msgid "Keyboard battery low"
 msgstr "Το φορτίο της μπαταρίας του πληκτρολογίου είναι χαμηλό"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1347
+#: ../src/gpm-manager.c:1341
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr ""
@@ -1487,38 +1483,38 @@ msgstr ""
 
 #. TRANSLATORS: PDA is getting a little low
 #. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1351 ../src/gpm-manager.c:1493
+#: ../src/gpm-manager.c:1345 ../src/gpm-manager.c:1487
 msgid "PDA battery low"
 msgstr "Το φορτίο της μπαταρίας του PDA είναι χαμηλό"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1354
+#: ../src/gpm-manager.c:1348
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr "Το επίπεδο φόρτισης του PDA σας είναι χαμηλό (%.0f%%)."
 
 #. TRANSLATORS: cell phone (mobile) is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1358 ../src/gpm-manager.c:1503
-#: ../src/gpm-manager.c:1513
+#: ../src/gpm-manager.c:1352 ../src/gpm-manager.c:1497
+#: ../src/gpm-manager.c:1507
 msgid "Cell phone battery low"
 msgstr "Το φορτίο της μπαταρίας του κινητού είναι χαμηλό"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1361
+#: ../src/gpm-manager.c:1355
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "Το επίπεδο φόρτισης του κινητού σας είναι χαμηλό (%.0f%%)."
 
 #. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1365
+#: ../src/gpm-manager.c:1359
 msgid "Media player battery low"
 msgstr ""
 "Το επίπεδο φόρτισης της μπαταρίας της φορητής σας συσκευής αναπαραγωγής "
 "είναι χαμηλό"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1368
+#: ../src/gpm-manager.c:1362
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr ""
@@ -1526,50 +1522,50 @@ msgstr ""
 
 #. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1372 ../src/gpm-manager.c:1522
+#: ../src/gpm-manager.c:1366 ../src/gpm-manager.c:1516
 msgid "Tablet battery low"
 msgstr "Το επίπεδο φόρτισης της πινακίδας σχεδίασης είναι χαμηλό"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1375
+#: ../src/gpm-manager.c:1369
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "Το επίπεδο φόρτισης της πινακίδας σας είναι χαμηλό (%.0f%%)."
 
 #. TRANSLATORS: computer, e.g. ipad is getting a little low
 #. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1379 ../src/gpm-manager.c:1531
+#: ../src/gpm-manager.c:1373 ../src/gpm-manager.c:1525
 msgid "Attached computer battery low"
 msgstr ""
 "Το επίπεδο φόρτισης της μπαταρίας του συνδεδεμένου υπολογιστή είναι χαμηλό"
 
 #. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1382
+#: ../src/gpm-manager.c:1376
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "Το επίπεδο φόρτισης του συνδεδεμένου υπολογιστή είναι χαμηλό (%.0f%%)"
 
 #. TRANSLATORS: laptop battery critically low, and only have one kind of
 #. battery
-#: ../src/gpm-manager.c:1430
+#: ../src/gpm-manager.c:1424
 msgid "Battery critically low"
 msgstr "Το φορτίο της μπαταρίας είναι εξαιρετικά χαμηλό"
 
 #. TRANSLATORS: laptop battery critically low, and we have more than one type
 #. of battery
 #. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1433 ../src/gpm-manager.c:1591
+#: ../src/gpm-manager.c:1427 ../src/gpm-manager.c:1585
 msgid "Laptop battery critically low"
 msgstr "Το φορτίο της μπαταρίας του φορητού είναι εξαιρετικά χαμηλό"
 
 #. TRANSLATORS: tell the use to insert the plug, as we're not going to do
 #. anything
-#: ../src/gpm-manager.c:1442
+#: ../src/gpm-manager.c:1436
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr "Συνδέστε το καλώδιο στην πρίζα για να μη χάσετε δεδομένα."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1446
+#: ../src/gpm-manager.c:1440
 #, c-format
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr ""
@@ -1577,7 +1573,7 @@ msgstr ""
 "σε πηγή ηλεκτρικού ρεύματος."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1450
+#: ../src/gpm-manager.c:1444
 #, c-format
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr ""
@@ -1585,7 +1581,7 @@ msgstr ""
 "συνδεθεί σε πηγή ηλεκτρικού ρεύματος."
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1454
+#: ../src/gpm-manager.c:1448
 #, c-format
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr ""
@@ -1594,12 +1590,12 @@ msgstr ""
 
 #. TRANSLATORS: the UPS is very low
 #. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1461 ../src/gpm-manager.c:1627
+#: ../src/gpm-manager.c:1455 ../src/gpm-manager.c:1621
 msgid "UPS critically low"
 msgstr "Το φορτίο του UPS είναι εξαιρετικά χαμηλό"
 
 #. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1465
+#: ../src/gpm-manager.c:1459
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
@@ -1609,7 +1605,7 @@ msgstr ""
 "καλώδιο στην πρίζα ρεύματος για να μη χάσετε δεδομένα."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1479
+#: ../src/gpm-manager.c:1473
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
@@ -1620,7 +1616,7 @@ msgstr ""
 "φορτιστεί."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1487
+#: ../src/gpm-manager.c:1481
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
@@ -1631,7 +1627,7 @@ msgstr ""
 "φορτιστεί."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1496
+#: ../src/gpm-manager.c:1490
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
@@ -1641,7 +1637,7 @@ msgstr ""
 " συσκευή θα σταματήσει να λειτουργεί, εκτός αν φορτιστεί."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1506
+#: ../src/gpm-manager.c:1500
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
@@ -1651,7 +1647,7 @@ msgstr ""
 "Σύντομα, η συσκευή θα σταματήσει να λειτουργεί, εκτός αν φορτιστεί."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1516
+#: ../src/gpm-manager.c:1510
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
@@ -1662,7 +1658,7 @@ msgstr ""
 "φορτιστεί."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1525
+#: ../src/gpm-manager.c:1519
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
@@ -1672,7 +1668,7 @@ msgstr ""
 "Σύντομα, η συσκευή θα σταματήσει να λειτουργεί, εκτός αν φορτιστεί."
 
 #. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1534
+#: ../src/gpm-manager.c:1528
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
@@ -1682,7 +1678,7 @@ msgstr ""
 "(%.0f%%). Σύντομα, η συσκευή θα σταματήσει να λειτουργεί αν δεν φορτιστεί."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1599
+#: ../src/gpm-manager.c:1593
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
@@ -1691,7 +1687,7 @@ msgstr ""
 "<b>κλείσει</b> όταν η μπαταρία αδειάσει τελείως."
 
 #. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1605
+#: ../src/gpm-manager.c:1599
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
@@ -1702,7 +1698,7 @@ msgstr ""
 "να διατηρήσει τον υπολογιστή σας σε αναστολή."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1612
+#: ../src/gpm-manager.c:1606
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
@@ -1711,7 +1707,7 @@ msgstr ""
 "αδρανοποιηθεί."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1617
+#: ../src/gpm-manager.c:1611
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
@@ -1720,7 +1716,7 @@ msgstr ""
 "τερματιστεί."
 
 #. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1635
+#: ../src/gpm-manager.c:1629
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
@@ -1729,14 +1725,14 @@ msgstr ""
 "όταν το UPS αδειάσει τελείως."
 
 #. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1641
+#: ../src/gpm-manager.c:1635
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr ""
 "Το φορτίο του UPS είναι εξαιρετικά χαμηλό. Ο υπολογιστής θα αδρανοποιηθεί."
 
 #. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1646
+#: ../src/gpm-manager.c:1640
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr ""
@@ -1746,31 +1742,31 @@ msgstr ""
 msgid "MATE Power Preferences"
 msgstr "Προτιμήσεις ενέργειας του MATE"
 
-#: ../src/gpm-prefs-core.c:241
+#: ../src/gpm-prefs-core.c:238
 msgid "Shutdown"
 msgstr "Τερματισμός υπολογιστή"
 
-#: ../src/gpm-prefs-core.c:248
+#: ../src/gpm-prefs-core.c:245
 msgid "Suspend"
 msgstr "Αναστολή"
 
-#: ../src/gpm-prefs-core.c:251
+#: ../src/gpm-prefs-core.c:248
 msgid "Hibernate"
 msgstr "Αδρανοποίηση"
 
-#: ../src/gpm-prefs-core.c:254
+#: ../src/gpm-prefs-core.c:251
 msgid "Blank screen"
 msgstr "Κενή οθόνη"
 
-#: ../src/gpm-prefs-core.c:257
+#: ../src/gpm-prefs-core.c:254
 msgid "Ask me"
 msgstr "Ερώτηση"
 
-#: ../src/gpm-prefs-core.c:260
+#: ../src/gpm-prefs-core.c:257
 msgid "Do nothing"
 msgstr "Καμία ενέργεια"
 
-#: ../src/gpm-prefs-core.c:320
+#: ../src/gpm-prefs-core.c:317
 msgid "Never"
 msgstr "Ποτέ"
 
@@ -2138,57 +2134,57 @@ msgid "Processor Wakeups"
 msgstr "Αφυπνίσεις επεξεργαστή"
 
 #. TRANSLATORS: this is the X axis on the graph
-#: ../src/gpm-statistics.c:1351 ../src/gpm-statistics.c:1357
-#: ../src/gpm-statistics.c:1363 ../src/gpm-statistics.c:1369
+#: ../src/gpm-statistics.c:1325 ../src/gpm-statistics.c:1331
+#: ../src/gpm-statistics.c:1337 ../src/gpm-statistics.c:1343
 msgid "Time elapsed"
 msgstr "Χρόνος"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1353
+#: ../src/gpm-statistics.c:1327
 msgid "Power"
 msgstr "Δύναμη"
 
 #. TRANSLATORS: this is the Y axis on the graph for the whole battery device
 #. TRANSLATORS: this is the X axis on the graph for the whole battery device
-#: ../src/gpm-statistics.c:1359 ../src/gpm-statistics.c:1403
-#: ../src/gpm-statistics.c:1409 ../src/gpm-statistics.c:1415
-#: ../src/gpm-statistics.c:1421
+#: ../src/gpm-statistics.c:1333 ../src/gpm-statistics.c:1377
+#: ../src/gpm-statistics.c:1383 ../src/gpm-statistics.c:1389
+#: ../src/gpm-statistics.c:1395
 msgid "Cell charge"
 msgstr "Φορτίο στοιχείων"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1365 ../src/gpm-statistics.c:1371
+#: ../src/gpm-statistics.c:1339 ../src/gpm-statistics.c:1345
 msgid "Predicted time"
 msgstr "Προβλεπόμενος χρόνος"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1405 ../src/gpm-statistics.c:1417
+#: ../src/gpm-statistics.c:1379 ../src/gpm-statistics.c:1391
 msgid "Correction factor"
 msgstr "Συντελεστής διόρθωσης"
 
 #. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1411 ../src/gpm-statistics.c:1423
+#: ../src/gpm-statistics.c:1385 ../src/gpm-statistics.c:1397
 msgid "Prediction accuracy"
 msgstr "Ακρίβεια πρόβλεψης"
 
 #. TRANSLATORS: show a device by default
-#: ../src/gpm-statistics.c:1589
+#: ../src/gpm-statistics.c:1563
 msgid "Select this device at startup"
 msgstr "Επιλογή αυτής της συσκευής κατά την εκκίνηση"
 
 #. TRANSLATORS: the icon for the CPU
-#: ../src/gpm-statistics.c:1838
+#: ../src/gpm-statistics.c:1802
 msgid "Processor"
 msgstr "Επεξεργαστής"
 
-#: ../src/gpm-tray-icon.c:189
+#: ../src/gpm-tray-icon.c:187
 msgid "Copyright © 2011-2018 MATE developers"
 msgstr "Πνευματική ιδιοκτησία © 2011-2018 MATE προγραμματιστές"
 
 #. Translators should localize the following string
 #. * which will be displayed at the bottom of the about
 #. * box to give credit to the translator(s).
-#: ../src/gpm-tray-icon.c:195
+#: ../src/gpm-tray-icon.c:193
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα MATE\n"
@@ -2197,13 +2193,13 @@ msgstr ""
 "Για περισσότερες πληροφορίες, επισκεφθείτε την σελίδα http://www.mate.gr/"
 
 #. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
-#: ../src/gpm-tray-icon.c:298
+#: ../src/gpm-tray-icon.c:295
 #, c-format
 msgid "%s remaining"
 msgstr "%s απομένει"
 
 #. preferences
-#: ../src/gpm-tray-icon.c:352
+#: ../src/gpm-tray-icon.c:349
 msgid "_Preferences"
 msgstr "_Προτιμήσεις"
 
