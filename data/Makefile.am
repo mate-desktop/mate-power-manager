@@ -5,7 +5,7 @@ desktopdir = $(datadir)/applications
 desktop_in_files = mate-power-preferences.desktop.in \
 		   mate-power-statistics.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
-$(desktop_DATA): $(desktop_in_files)
+%.desktop: %.desktop.in
 	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
 autostartdir = $(sysconfdir)/xdg/autostart
