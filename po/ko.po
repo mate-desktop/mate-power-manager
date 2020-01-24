@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the mate-power-manager package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,12 +9,11 @@
 # Youngbin Han <sukso96100@gmail.com>, 2018
 # 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-10 13:56+0200\n"
+"Project-Id-Version: mate-power-manager 1.23.1\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
+"POT-Creation-Date: 2019-11-12 15:22+0100\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
 "Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018\n"
 "Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
@@ -24,35 +23,35 @@ msgstr ""
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../applets/brightness/brightness-applet.c:110
+#: applets/brightness/brightness-applet.c:107
 msgid "Power Manager Brightness Applet"
 msgstr "전원 관리자 밝기 애플릿"
 
-#: ../applets/brightness/brightness-applet.c:111
+#: applets/brightness/brightness-applet.c:108
 msgid "Adjusts laptop panel brightness."
 msgstr "노트북 패널 밝기를 조정합니다."
 
-#: ../applets/brightness/brightness-applet.c:367
-#: ../applets/inhibit/inhibit-applet.c:228
+#: applets/brightness/brightness-applet.c:364
+#: applets/inhibit/inhibit-applet.c:225
 msgid "Cannot connect to mate-power-manager"
 msgstr "마테 전원 관리자에 연결할 수 없습니다"
 
-#: ../applets/brightness/brightness-applet.c:369
+#: applets/brightness/brightness-applet.c:366
 msgid "Cannot get laptop panel brightness"
 msgstr "노트북 패널 밝기를 알 수 없습니다"
 
-#: ../applets/brightness/brightness-applet.c:371
+#: applets/brightness/brightness-applet.c:368
 #, c-format
 msgid "LCD brightness : %d%%"
 msgstr "LCD 밝기 : %d%%"
 
-#: ../applets/brightness/brightness-applet.c:803
-#: ../applets/inhibit/inhibit-applet.c:300
+#: applets/brightness/brightness-applet.c:800
+#: applets/inhibit/inhibit-applet.c:297
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr "GNU 일반 공중 사용 허가서 2판 조항에 따라 사용을 허가합니다"
 
-#: ../applets/brightness/brightness-applet.c:804
-#: ../applets/inhibit/inhibit-applet.c:301
+#: applets/brightness/brightness-applet.c:801
+#: applets/inhibit/inhibit-applet.c:298
 msgid ""
 "Power Manager is free software; you can redistribute it and/or\n"
 "modify it under the terms of the GNU General Public License\n"
@@ -63,8 +62,8 @@ msgstr ""
 "발표한 GNU 일반 공중 사용허가서 2판 또는(선택에 따라) 그 이후 판의\n"
 "조항에 따라 자유롭게 재배포 및 수정할 수 있습니다."
 
-#: ../applets/brightness/brightness-applet.c:808
-#: ../applets/inhibit/inhibit-applet.c:305
+#: applets/brightness/brightness-applet.c:805
+#: applets/inhibit/inhibit-applet.c:302
 msgid ""
 "Power Manager is distributed in the hope that it will be useful,\n"
 "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
@@ -76,8 +75,8 @@ msgstr ""
 "조차도 하지 않습니다. 자세한 내용은 GNU 일반 공중 사용허가서를\n"
 "보십시오."
 
-#: ../applets/brightness/brightness-applet.c:812
-#: ../applets/inhibit/inhibit-applet.c:309
+#: applets/brightness/brightness-applet.c:809
+#: applets/inhibit/inhibit-applet.c:306
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
@@ -88,100 +87,105 @@ msgstr ""
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
 
-#: ../applets/brightness/brightness-applet.c:1066
-#: ../applets/inhibit/inhibit-applet.c:522
+#: applets/brightness/brightness-applet.c:1063
+#: applets/inhibit/inhibit-applet.c:519
 msgid "_About"
 msgstr "정보(_A)"
 
-#: ../applets/brightness/brightness-applet.c:1069
-#: ../applets/inhibit/inhibit-applet.c:525
+#: applets/brightness/brightness-applet.c:1066
+#: applets/inhibit/inhibit-applet.c:522
 msgid "_Help"
 msgstr "도움말(_H)"
 
-#: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:1
+#: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:5
 msgid "Brightness Applet Factory"
 msgstr "밝기 애플릿 팩토리"
 
-#: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:2
-msgid "Factory for Brightness Applet"
-msgstr "밝기 애플릿용 팩토리"
-
-#: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:3
+#: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:9
 msgid "Brightness Applet"
 msgstr "밝기 애플릿"
 
-#: ../applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.in.in.h:4
-msgid "Adjusts Laptop panel brightness"
-msgstr "노트북 화면 밝기를 조정합니다"
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:12
+msgid "mate-brightness-applet"
+msgstr ""
 
-#: ../applets/inhibit/inhibit-applet.c:90
+#: applets/inhibit/inhibit-applet.c:87
 msgid "Power Manager Inhibit Applet"
 msgstr "전원 관리 금지 애플릿"
 
-#: ../applets/inhibit/inhibit-applet.c:91
+#: applets/inhibit/inhibit-applet.c:88
 msgid "Allows user to inhibit automatic power saving."
 msgstr "사용자가 전원 절약이 자동으로 실행되는 걸 금지할 수 있습니다."
 
-#: ../applets/inhibit/inhibit-applet.c:231
+#: applets/inhibit/inhibit-applet.c:228
 msgid "Automatic sleep inhibited"
 msgstr "자동 절전을 금지했습니다"
 
-#: ../applets/inhibit/inhibit-applet.c:233
+#: applets/inhibit/inhibit-applet.c:230
 msgid "Automatic sleep enabled"
 msgstr "자동 절전을 사용합니다"
 
-#: ../applets/inhibit/inhibit-applet.c:261
+#: applets/inhibit/inhibit-applet.c:258
 msgid "Manual inhibit"
 msgstr "수동 금지"
 
-#: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:1
+#: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
 msgstr "금지 애플릿 팩토리"
 
-#: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:2
-msgid "Factory for Inhibit Applet"
-msgstr "금지 애플릿용 팩토리"
-
-#: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:3
+#: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:9
 msgid "Inhibit Applet"
 msgstr "금지 애플릿"
 
-#: ../applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.in.in.h:4
-msgid "Allows user to inhibit automatic power saving"
-msgstr "사용자가 자동 절전 기능을 금지하도록 허용"
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:12
+msgid "mate-inhibit-applet"
+msgstr ""
 
-#: ../data/mate-power-manager.desktop.in.in.h:1 ../src/gpm-tray-icon.c:184
+#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:184
 msgid "Power Manager"
 msgstr "전원 관리자"
 
-#: ../data/mate-power-manager.desktop.in.in.h:2 ../src/gpm-tray-icon.c:186
+#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:186
 msgid "Power management daemon"
 msgstr "전원 관리 데몬"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:1
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: data/mate-power-manager.desktop.in.in:6
+#: data/mate-power-preferences.desktop.in.in:6
+msgid "mate-power-manager"
+msgstr ""
+
+#: data/org.mate.power-manager.gschema.xml.in:26
+#: data/org.mate.power-manager.gschema.xml.in:41
 msgid "Whether to hibernate, suspend or do nothing when inactive"
 msgstr "비활성화 때 최대 절전, 절전 또는 아무 것도 안함의 여부"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:2
+#: data/org.mate.power-manager.gschema.xml.in:27
+#: data/org.mate.power-manager.gschema.xml.in:42
 msgid ""
 "The type of sleeping that should be performed when the computer is inactive."
 msgstr "컴퓨터가 비활성 상태일 경우 수행할 대기 동작의 형식입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:3
+#: data/org.mate.power-manager.gschema.xml.in:31
 msgid "Battery critical low action"
 msgstr "배터리 전원 매우 부족시 동작"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:4
+#: data/org.mate.power-manager.gschema.xml.in:32
 msgid "The action to take when the battery is critically low."
 msgstr "배터리 전원이 매우 부족할 때 취할 동작입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:5
+#: data/org.mate.power-manager.gschema.xml.in:36
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
 msgstr "노트북 덮개가 닫히고 전원이 빠진 경우에 배터리 이벤트를 발생할 지 여부."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:6
+#: data/org.mate.power-manager.gschema.xml.in:37
 msgid ""
 "If the battery lid close event should occur (for example 'Suspend when lid "
 "closed on battery') when the lid is previously shut and the AC power "
@@ -190,68 +194,67 @@ msgstr ""
 "노트북 덮개가 이전에 닫히고 교류 전원이 나중에 빠졌을 경우에, 배터리 덮개 닫힘 이벤트를(예를 들어 '배터리 전원 사용중에 노트북 덮개"
 " 닫힘') 발생할 지 여부."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:7
+#: data/org.mate.power-manager.gschema.xml.in:46
 msgid "UPS critical low action"
 msgstr "무정전 전원 장치 전원 매우 부족시 동작"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:8
+#: data/org.mate.power-manager.gschema.xml.in:47
 msgid "The action to take when the UPS is critically low."
 msgstr "무정전 전원 장치 전원이 매우 부족할 경우 이 동작을 취합니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:9
+#: data/org.mate.power-manager.gschema.xml.in:51
 msgid "UPS low power action"
 msgstr "무정전 전원 장치 전원 부족시 동작"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:10
+#: data/org.mate.power-manager.gschema.xml.in:52
 msgid "The action to take when the UPS is low."
 msgstr "무정전 전원 장치 전원이 부족할 경우 이 동작을 취합니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:11
+#: data/org.mate.power-manager.gschema.xml.in:56
 msgid "Allow backlight brightness adjustment"
 msgstr "백라이트 밝기 조정 허용"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:12
+#: data/org.mate.power-manager.gschema.xml.in:57
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
 msgstr "교류 전원과 배터리 전원을 바꿀 때, 화면 밝기를 바꿀 지 여부."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:13
+#: data/org.mate.power-manager.gschema.xml.in:61
 msgid "Reduce the backlight brightness when on battery power"
 msgstr "배터리를 사용할 때 백라이트 밝기 줄이기"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:14
+#: data/org.mate.power-manager.gschema.xml.in:62
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
 msgstr "컴퓨터가 배터리 전원을 사용할 때 화면을 어둡게 할 지 여부."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:15
+#: data/org.mate.power-manager.gschema.xml.in:66
 msgid "Reduce the keyboard backlight when on battery power"
 msgstr "배터리를 사용할 때 키보드 백라이트 밝기 줄이기"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:16
+#: data/org.mate.power-manager.gschema.xml.in:67
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
 msgstr "컴퓨터가 배터리 전원을 사용할 때 키보드 백라이트 밝기를 줄여야 할지 여부를 결정합니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:17
+#: data/org.mate.power-manager.gschema.xml.in:71
 msgid "Keyboard backlight brightness when on AC power."
 msgstr "AC 전원에 연결되었을 때 키보드 백라이트 밝기"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:18
+#: data/org.mate.power-manager.gschema.xml.in:72
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
 msgstr "AC 전원에 연결되었을 때 키보드 백라이트 밝기를 백분율로 설정합니다. 사용 가능한 값은 0부터 100사이입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:19
+#: data/org.mate.power-manager.gschema.xml.in:76
 msgid "Percent to reduce keyboard backlight by when on battery power."
 msgstr "배터리를 사용할 때 키보드 백라이트 밝기를 백분율로 설정합니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:21
-#, no-c-format
+#: data/org.mate.power-manager.gschema.xml.in:77
 msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
@@ -260,12 +263,11 @@ msgstr ""
 "배터리 사용 중 일  때 키보드 백라이트 밝기를 줄일 비율. 예로, '60'으로 설정하면, 배터리 전력에서 40%를 줄이게 됩니다. 사용"
 " 가능한 값은 0부터 100사이입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:22
+#: data/org.mate.power-manager.gschema.xml.in:81
 msgid "Percent to reduce keyboard backlight by when idle."
 msgstr "아이들 상태에서 키보드 백라이트 밝기 줄일 비율."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:24
-#, no-c-format
+#: data/org.mate.power-manager.gschema.xml.in:82
 msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
@@ -274,129 +276,129 @@ msgstr ""
 "아이들 상태에서 키보드 백라이트 밝기를 줄일 비율. 예로, '60'으로 설정하면, 배터리 전력에서 40%를 줄이게 됩니다. 사용 가능한 "
 "값은 0부터 100사이입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:25
+#: data/org.mate.power-manager.gschema.xml.in:86
 msgid "The brightness of the screen when idle"
 msgstr "입력이 없을 때 화면 밝기"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:26
+#: data/org.mate.power-manager.gschema.xml.in:87
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
 msgstr "세션이 대기중일 때 사용하는 랩톱 패널 화면 밝기입니다. use-time-for-policy값이 참일 경우만 유효합니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:27
+#: data/org.mate.power-manager.gschema.xml.in:91
 msgid "Dim the screen after a period of inactivity when on battery power"
 msgstr "배터리 전원을 사용할 때 비활성화 기간 후에 화면을 어둡게 함"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:28
+#: data/org.mate.power-manager.gschema.xml.in:92
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
 msgstr "배터리 전원을 사용할 때 컴퓨터에 입력이 없을 때 전원 절약을 위해 화면을 어둡게 할 지 여부입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:29
+#: data/org.mate.power-manager.gschema.xml.in:96
 msgid "The default amount of time to dim the screen after idle"
 msgstr "스크린을 어둡게 할 때까지 입력이 없는 시간"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:30
+#: data/org.mate.power-manager.gschema.xml.in:97
 msgid "The default amount of time to dim the screen after idle."
 msgstr "스크린을 어둡게 할 때까지 입력이 없는 시간입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:31
+#: data/org.mate.power-manager.gschema.xml.in:101
 msgid "LCD dimming amount when on battery"
 msgstr "배터리 사용할 때 LCD 어둡게 할 정도"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:32
+#: data/org.mate.power-manager.gschema.xml.in:102
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
 msgstr "배터리 전원을 사용할 때 화면을 어둡게 할 정도. 사용 가능한 값은 0에서 100 사이 입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:33
+#: data/org.mate.power-manager.gschema.xml.in:106
 msgid "Dim the screen after a period of inactivity when on AC power"
 msgstr "교류 전원을 사용할 때 비활성화 기간 후에 화면을 어둡게 함"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:34
+#: data/org.mate.power-manager.gschema.xml.in:107
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on AC power."
 msgstr "교류 전원을 사용할 때 컴퓨터에 입력이 없으면 전원절약을 위해 화면을 어둡게 할 지 여부입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:35
+#: data/org.mate.power-manager.gschema.xml.in:111
 msgid "Method used to blank screen on AC"
 msgstr "교류 전원에서 화면을 끌 때 사용할 동작"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:36
+#: data/org.mate.power-manager.gschema.xml.in:112
 msgid "The DPMS method used to blank the screen when on AC power."
 msgstr "교류 전원 연결시 화면을 끌 때 사용하는 DPMS 동작입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:37
+#: data/org.mate.power-manager.gschema.xml.in:116
 msgid "Method used to blank screen on battery"
 msgstr "배터리 전원에서 화면을 끌 때 사용할 동작"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:38
+#: data/org.mate.power-manager.gschema.xml.in:117
 msgid "The DPMS method used to blank the screen when on battery power."
 msgstr "배터리 전원에서 화면을 끌때 사용하는 DPMS 동작입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:39
+#: data/org.mate.power-manager.gschema.xml.in:121
 msgid "LCD brightness when on AC"
 msgstr "교류 전원일 때 LCD 밝기"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:40
+#: data/org.mate.power-manager.gschema.xml.in:122
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
 msgstr "교류 전원을 연결했을 때 화면 밝기입니다. 0.0부터 100.0까지의 값을 설정할 수 있습니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:41
+#: data/org.mate.power-manager.gschema.xml.in:126
 msgid "Suspend button action"
 msgstr "절전 단추 동작"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:42
+#: data/org.mate.power-manager.gschema.xml.in:127
 msgid "The action to take when the system suspend button is pressed."
 msgstr "시스템 절전 단추를 눌렀을 때 취할 동작입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:43
+#: data/org.mate.power-manager.gschema.xml.in:131
 msgid "Hibernate button action"
 msgstr "최대 절전 단추 동작"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:44
+#: data/org.mate.power-manager.gschema.xml.in:132
 msgid "The action to take when the system hibernate button is pressed."
 msgstr "시스템 최대 절전 단추를 눌렀을 때 취할 동작입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:45
+#: data/org.mate.power-manager.gschema.xml.in:136
 msgid "Power button action"
 msgstr "전원 단추 동작"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:46
+#: data/org.mate.power-manager.gschema.xml.in:137
 msgid "The action to take when the system power button is pressed."
 msgstr "시스템 전원 단추를 눌렀을 때 취할 동작입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:47
+#: data/org.mate.power-manager.gschema.xml.in:141
 msgid "Laptop lid close action on battery"
 msgstr "배터리 사용할 때 노트북 덮개 닫기 동작"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:48
+#: data/org.mate.power-manager.gschema.xml.in:142
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
 msgstr "배터리 사용할 때 랩톱이 켜져 있고 랩톱 뚜껑이 닫혔을 경우 취할 동작입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:49
+#: data/org.mate.power-manager.gschema.xml.in:146
 msgid "Laptop lid close action when on AC"
 msgstr "교류 전원을 사용할 때 노트북 덮개 닫기 동작"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:50
+#: data/org.mate.power-manager.gschema.xml.in:147
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
 msgstr "교류 전원을 사용할 때 랩톱이 켜져 있고 랩톱 뚜껑이 닫혔을 경우 취할 동작입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:51
+#: data/org.mate.power-manager.gschema.xml.in:151
 msgid "Whether to use time-based notifications"
 msgstr "시간에 따른 알림 사용의 여부"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:52
+#: data/org.mate.power-manager.gschema.xml.in:152
 msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
@@ -404,51 +406,51 @@ msgstr ""
 "시간 값에 따라 알림을 사용할 지 여부. 거짓일 경우, 퍼센트 값에 따라 사용합니다. 퍼센트 값에 따라 사용하면 잘못된 ACPI "
 "BIOS에서도 제대로 동작합니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:53
+#: data/org.mate.power-manager.gschema.xml.in:156
 msgid "Check CPU load before sleeping"
 msgstr "절전모드 전 CPU 부하 점검"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:54
+#: data/org.mate.power-manager.gschema.xml.in:157
 msgid "If the CPU load should be checked before doing the idle action."
 msgstr "입력 없음 동작을 하기 전에 CPU 사용량을 검사할 지 여부."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:55
+#: data/org.mate.power-manager.gschema.xml.in:161
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
 msgstr "대기 상태일 때 NetworkManager에서 연결을 해야 할지 말아야 할지 여부."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:56
+#: data/org.mate.power-manager.gschema.xml.in:162
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
 msgstr "절전 혹은 최대 절전 상태에 들어갈 때 네트워크 관리자에 연결을 끊고 돌아왔을 때 다시 연결할 지 여부."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:57
+#: data/org.mate.power-manager.gschema.xml.in:166
 msgid "Use mate-screensaver lock setting"
 msgstr "마테 화면 보호기 잠금 설정 사용"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:58
+#: data/org.mate.power-manager.gschema.xml.in:167
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
 msgstr ""
 "최대 절전, 절전 또는 화면이 꺼졌을 때 화면을 잠글 지 여부를 결정할 때, 마테 화면 보호기의 화면 잠그기 설정을 사용할 지 여부."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:59
+#: data/org.mate.power-manager.gschema.xml.in:171
 msgid "Lock screen when blanked"
 msgstr "화면 끌 때 화면 잠그기"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:60
+#: data/org.mate.power-manager.gschema.xml.in:172
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
 msgstr ""
 "화면을 껐을 경우 화면을 잠글지 말지에 대한 여부입니다. lock-use-screensaver값이 거짓일 경우에만 사용합니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:61
+#: data/org.mate.power-manager.gschema.xml.in:176
 msgid "Lock screen on suspend"
 msgstr "대기할 때 화면 잠그기"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:62
+#: data/org.mate.power-manager.gschema.xml.in:177
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
@@ -456,11 +458,11 @@ msgstr ""
 "컴퓨터가 절전 상태에서 돌아올 경우 화면을 잠글지 말지에 대한 여부입니다. lock-use-screensaver 값이 거짓일 경우에만 "
 "사용합니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:63
+#: data/org.mate.power-manager.gschema.xml.in:181
 msgid "Lock screen on hibernate"
 msgstr "최대 절전일 때 화면 잠그기"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:64
+#: data/org.mate.power-manager.gschema.xml.in:182
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
@@ -468,176 +470,178 @@ msgstr ""
 "컴퓨터가 최대 절전 상태에서 돌아올 경우 화면을 잠글지 말지에 대한 여부입니다. lock-use-screensaver 값이 거짓일 "
 "경우에만 사용합니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:65
+#: data/org.mate.power-manager.gschema.xml.in:186
+#: data/org.mate.power-manager.gschema.xml.in:191
 msgid "Lock GNOME keyring on sleep"
 msgstr "절전 상태 일 땐 GNOME 키 모음 잠그기"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:66
+#: data/org.mate.power-manager.gschema.xml.in:187
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
 msgstr "컴퓨터가 절전 상태에 들어갈 때 GNOME 키 모음을 잠글 지 여부. 원상복귀할 때 키 모음을 다시 풉니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:67
+#: data/org.mate.power-manager.gschema.xml.in:192
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
 msgstr "컴퓨터가 최대 절전 상태에 들어갈 때 GNOME 키 모음을 잠글 지 여부. 원상복귀할 때 키 모음을 다시 풉니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:68
+#: data/org.mate.power-manager.gschema.xml.in:196
 msgid "If we should show the low capacity warning for a broken battery"
 msgstr "손상된 배터리에 대해 용량 낮음 경고를 표시할 지 여부"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:69
+#: data/org.mate.power-manager.gschema.xml.in:197
 msgid "If we should show the low capacity warning for a broken battery."
 msgstr "손상된 배터리에 대해 용량 낮음 경고를 표시할 지 여부."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:70
+#: data/org.mate.power-manager.gschema.xml.in:201
 msgid "Notify when AC adapter is disconnected"
 msgstr "교류 전원 어댑터가 빠졌을 때 알리기"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:71
+#: data/org.mate.power-manager.gschema.xml.in:202
 msgid "If the user should be notified when the AC adapter is disconnected."
 msgstr "교류 전원 어댑터가 빠졌을 때 사용자에게 알릴 지 여부."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:72
+#: data/org.mate.power-manager.gschema.xml.in:206
 msgid "Notify when fully charged"
 msgstr "완전히 충전되었을 때 알리기"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:73
+#: data/org.mate.power-manager.gschema.xml.in:207
 msgid ""
 "If a notification message should be displayed when the battery is fully "
 "charged."
 msgstr "배터리를 완전히 충전했을 때 알림 메시지를 표시할 지 여부."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:74
+#: data/org.mate.power-manager.gschema.xml.in:211
 msgid "Notify on a sleep failure"
 msgstr "절전 기능이 실패할 때 알리기"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:75
+#: data/org.mate.power-manager.gschema.xml.in:212
 msgid ""
 "If a notification message should be displayed after suspend or hibernate "
 "failed."
 msgstr "절전 또는 최대 절전이 실패했을 때 알림 메시지를 표시할 지 여부."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:76
+#: data/org.mate.power-manager.gschema.xml.in:216
 msgid "The URI to show to the user on sleep failure"
 msgstr "절전이 실패했을 때 사용자에게 표시할 URI"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:77
+#: data/org.mate.power-manager.gschema.xml.in:217
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
 msgstr "절진이 실패할 때 상황을 바로잡을 수 있는 도움말 단추를 표시합니다. 단추를 표시하지 않으려면 이 값을 비워 두십시오."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:78
+#: data/org.mate.power-manager.gschema.xml.in:221
 msgid "Notify on a low power"
 msgstr "전원이 낮을 때 알리기"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:79
+#: data/org.mate.power-manager.gschema.xml.in:222
+#: data/org.mate.power-manager.gschema.xml.in:227
 msgid ""
 "If a notification message should be displayed when the battery is getting "
 "low."
 msgstr "배터리 전원이 떨어졌을 때 알림 메시지를 표시할 지 여부."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:80
+#: data/org.mate.power-manager.gschema.xml.in:226
 msgid "Notify on low capacity of mouse battery"
 msgstr ""
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:81
+#: data/org.mate.power-manager.gschema.xml.in:231
 msgid "Whether we should show the history data points"
 msgstr "기록 데이터 시점을 보여줄 것인지 여부"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:82
+#: data/org.mate.power-manager.gschema.xml.in:232
 msgid ""
 "Whether we should show the history data points in the statistics window."
 msgstr "통계 창에서 기록 데이터 시점을 보여줄지 여부입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:83
+#: data/org.mate.power-manager.gschema.xml.in:236
 msgid "Whether we should smooth the history data"
 msgstr "기록 데이터를 유연하게 표현할 것인지 여부"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:84
+#: data/org.mate.power-manager.gschema.xml.in:237
 msgid "Whether we should smooth the history data in the graph."
 msgstr "그래프에서 기록 데이터를 유연하게 표현할 것인지 여부입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:85
+#: data/org.mate.power-manager.gschema.xml.in:241
 msgid "The default graph type to show for history"
 msgstr "기록을 보여줄 기본 그래프 형식"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:86
+#: data/org.mate.power-manager.gschema.xml.in:242
 msgid "The default graph type to show in the history window."
 msgstr "기록 창에서 보여줄 기본 그래프 형식입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:87
+#: data/org.mate.power-manager.gschema.xml.in:246
 msgid "The maximum time displayed for history"
 msgstr "기록을 표시할 최대 시간 길이"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:88
+#: data/org.mate.power-manager.gschema.xml.in:247
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
 msgstr "기록 그래프의 X 축 에 표시할 최대 시간 간격입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:89
+#: data/org.mate.power-manager.gschema.xml.in:251
 msgid "Whether we should show the stats data points"
 msgstr "통계 데이터 시점을 보여줄지 여부"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:90
+#: data/org.mate.power-manager.gschema.xml.in:252
 msgid "Whether we should show the stats data points in the statistics window."
 msgstr "통계 창에서 통계 데이터 시점을 보여줄지에 대한 여부입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:91
+#: data/org.mate.power-manager.gschema.xml.in:256
 msgid "Whether we should smooth the stats data"
 msgstr "통계 데이터를 유연하게 표현할 것인지 여부"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:92
+#: data/org.mate.power-manager.gschema.xml.in:257
 msgid "Whether we should smooth the stats data in the graph."
 msgstr "그래프에서 통계를 유연하게 표현할 것인지 여부입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:93
+#: data/org.mate.power-manager.gschema.xml.in:261
 msgid "The default graph type to show for stats"
 msgstr "통계를 보여줄 기본 그래프 형식"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:94
+#: data/org.mate.power-manager.gschema.xml.in:262
 msgid "The default graph type to show in the stats window."
 msgstr "통계 창에서 보여줄 기본 그래프 형식입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:95
+#: data/org.mate.power-manager.gschema.xml.in:266
 msgid "The index of the page number to show by default"
 msgstr "기본으로 보여줄 페이지 수 인덱스"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:96
+#: data/org.mate.power-manager.gschema.xml.in:267
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
 msgstr "제대로 된 페이지에 주목하고 있는 위치를 반환하는데 어떤 값을 사용할지 기본으로 보여줄 페이지 번호 인덱스입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:97
+#: data/org.mate.power-manager.gschema.xml.in:271
 msgid "The ID of the last device selected"
 msgstr "마지막으로 선택한 장치 ID"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:98
+#: data/org.mate.power-manager.gschema.xml.in:272
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
 msgstr "올바른 장치로의 주목을 반환할 때 사용할 최종 장치의 식별자입니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:99
+#: data/org.mate.power-manager.gschema.xml.in:276
 msgid "Percentage considered low"
 msgstr "부족할 경우 백분율"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:100
+#: data/org.mate.power-manager.gschema.xml.in:277
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
 msgstr ""
 "배터리 전원이 부족하다고 간주 경우 배터리 전원의 백분율입니다. use-time-for-policy값이 거짓일 경우에만 유효합니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:101
+#: data/org.mate.power-manager.gschema.xml.in:281
 msgid "Percentage considered critical"
 msgstr "매우 부족할 경우 백분율"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:102
+#: data/org.mate.power-manager.gschema.xml.in:282
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
@@ -645,11 +649,11 @@ msgstr ""
 "배터리 전원 부족 상태가 매우 심각할 경우 배터리 전원의 백분율입니다. use-time-for-policy값이 거짓일 경우에만 "
 "유효합니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:103
+#: data/org.mate.power-manager.gschema.xml.in:286
 msgid "Percentage action is taken"
 msgstr "백분율에 따른 동작을 취했습니다"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:104
+#: data/org.mate.power-manager.gschema.xml.in:287
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
@@ -657,22 +661,22 @@ msgstr ""
 "배터리 전원 부족 상태가 매우 심각한 상황에서 동작을 취했을 경우 배터리 전원의 백분율입니다. use-time-for-policy값이 "
 "거짓일 경우에만 유효합니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:105
+#: data/org.mate.power-manager.gschema.xml.in:291
 msgid "The time remaining when low"
 msgstr "낮을 때 남은 시간"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:106
+#: data/org.mate.power-manager.gschema.xml.in:292
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
 msgstr ""
 "배터리 전원이 부족하다고 간주될 경우 남아있는 초 단위 시간입니다. use-time-for-policy값이 참일 경우에만 유효합니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:107
+#: data/org.mate.power-manager.gschema.xml.in:296
 msgid "The time remaining when critical"
 msgstr "위험할 때 남은 시간"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:108
+#: data/org.mate.power-manager.gschema.xml.in:297
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
@@ -680,11 +684,11 @@ msgstr ""
 "배터리 전원 부족 상태가 매우 심각할 경우 남아있는 초 단위 시간입니다. use-time-for-policy값이 참일 경우에만 "
 "유효합니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:109
+#: data/org.mate.power-manager.gschema.xml.in:301
 msgid "The time remaining when action is taken"
 msgstr "동작을 실행할 때 남은 시간"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:110
+#: data/org.mate.power-manager.gschema.xml.in:302
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
@@ -692,739 +696,663 @@ msgstr ""
 "배터리 전원 부족 상태가 매우 심각한 상황에서 동작을 취했을 경우 남아있는 초 단위 시간입니다. use-time-for-policy값이 "
 "참이 경우에만 유효합니다."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:111
+#: data/org.mate.power-manager.gschema.xml.in:306
 msgid "Sleep timeout computer when on battery"
 msgstr "배터리를 사용할 때 컴퓨터 절전 제한 시간"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:112
+#: data/org.mate.power-manager.gschema.xml.in:307
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before it goes to sleep."
 msgstr "컴퓨터가 배터리 전원을 사용할 때(절전 모드로 바꾸기 전에) 비활성화로 할 시간(초)."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:113
+#: data/org.mate.power-manager.gschema.xml.in:311
 msgid "Sleep timeout computer when on AC"
 msgstr "교류 전원을 사용할 때 컴퓨터 절전 제한 시간"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:114
+#: data/org.mate.power-manager.gschema.xml.in:312
 msgid ""
 "The amount of time in seconds the computer on AC power needs to be inactive "
 "before it goes to sleep."
 msgstr "컴퓨터가 교류 전원을 사용할 때(절전 모드로 바꾸기 전에) 비활성화로 할 시간(초)."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:115
+#: data/org.mate.power-manager.gschema.xml.in:316
 msgid "Sleep timeout computer when on UPS"
 msgstr "무정전 전원 장치를 사용할 때 컴퓨터 절전 제한 시간"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:116
+#: data/org.mate.power-manager.gschema.xml.in:317
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before it goes to sleep."
 msgstr "컴퓨터가 무정전 전원 장치 전원을 사용할 때(절전 모드로 바꾸기 전에) 비활성화로 할 시간(초)."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:117
+#: data/org.mate.power-manager.gschema.xml.in:321
 msgid "Sleep timeout display when on AC"
 msgstr "교류 전원을 사용할 때 디스플레이 절전 제한 시간"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:118
+#: data/org.mate.power-manager.gschema.xml.in:322
 msgid ""
 "The amount of time in seconds before the display goes to sleep when the "
 "computer is on AC power."
 msgstr "컴퓨터가 교류 전원을 사용할 때 디스플레이를 절전 모드로 바꿀 시간(초)."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:119
+#: data/org.mate.power-manager.gschema.xml.in:326
 msgid "Sleep timeout display when on battery"
 msgstr "배터리를 사용할 때 디스플레이 절전 제한 시간"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:120
+#: data/org.mate.power-manager.gschema.xml.in:327
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
 msgstr "컴퓨터가 배터리 전원을 사용할 때(디스플레이를 절전 모드로 바꾸기 전에) 비활성화로 할 시간(초)."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:121
+#: data/org.mate.power-manager.gschema.xml.in:331
 msgid "Sleep timeout display when on UPS"
 msgstr "무정전 전원 장치를 사용할 때 디스플레이 절전 제한 시간"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:122
+#: data/org.mate.power-manager.gschema.xml.in:332
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before the display goes to sleep."
 msgstr "컴퓨터가 무정전 전원 장치 전원을 사용할 때(화면을 절전 모드로 바꾸기 전에) 비활성화로 할 시간(초)."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:123
+#: data/org.mate.power-manager.gschema.xml.in:336
 msgid "If sounds should be used"
 msgstr "소리를 사용할 지 여부"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:124
+#: data/org.mate.power-manager.gschema.xml.in:337
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
 msgstr "전원이 위험하게 적을 경우 혹은 전원관리 금지 요청이 전원관리 정책 동작을 금지하는 경우, 소리를 사용할 지 여부."
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:125
+#: data/org.mate.power-manager.gschema.xml.in:341
 msgid ""
 "If preferences and statistics items should be shown in the context menu"
 msgstr "기본 설정 및 통계를 팝업 메뉴에 표시할지 여부"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:126
+#: data/org.mate.power-manager.gschema.xml.in:345
 msgid "When to show the notification icon"
 msgstr "알림 아이콘 보일 때"
 
-#: ../data/org.mate.power-manager.gschema.xml.in.h:127
+#: data/org.mate.power-manager.gschema.xml.in:346
 msgid "Display options for the notification icon."
 msgstr "알림 아이콘의 표시 옵션입니다."
 
-#: ../data/mate-power-preferences.desktop.in.in.h:1
+#: data/mate-power-preferences.desktop.in.in:3
 msgid "Power Management"
 msgstr "전원 관리"
 
-#: ../data/mate-power-preferences.desktop.in.in.h:2
+#: data/mate-power-preferences.desktop.in.in:4
 msgid "Configure power management"
 msgstr "전원 관리 설정"
 
-#. TRANSLATORS: shown on the titlebar
-#. TRANSLATORS: the program name
-#: ../data/mate-power-statistics.desktop.in.in.h:1
-#: ../data/gpm-statistics.ui.h:1 ../src/gpm-statistics.c:1090
-#: ../src/gpm-statistics.c:1577
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: data/mate-power-preferences.desktop.in.in:13
+msgid "MATE;power;management;preferences;settings;"
+msgstr ""
+
+#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:7
+#: src/gpm-statistics.c:1090 src/gpm-statistics.c:1577
 msgid "Power Statistics"
 msgstr "전원 통계"
 
-#: ../data/mate-power-statistics.desktop.in.in.h:2
+#: data/mate-power-statistics.desktop.in.in:4
 msgid "Observe power management"
 msgstr "전원 관리 관찰"
 
-#: ../data/gpm-statistics.ui.h:2 ../src/gpm-statistics.c:208
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: data/mate-power-statistics.desktop.in.in:6
+msgid "mate-power-statistics"
+msgstr ""
+
+#: data/gpm-statistics.ui:113 src/gpm-statistics.c:208
 msgid "Details"
 msgstr "상세 정보"
 
-#: ../data/gpm-statistics.ui.h:3
+#: data/gpm-statistics.ui:139 data/gpm-statistics.ui:342
 msgid "Graph type:"
 msgstr "그래프 종류:"
 
-#: ../data/gpm-statistics.ui.h:4
+#: data/gpm-statistics.ui:174
 msgid "Data length:"
 msgstr "데이터 크기:"
 
-#: ../data/gpm-statistics.ui.h:5
+#: data/gpm-statistics.ui:234 data/gpm-statistics.ui:395
 msgid "There is no data to display."
 msgstr "표시할 데이터가 없습니다."
 
-#: ../data/gpm-statistics.ui.h:6
+#: data/gpm-statistics.ui:276 data/gpm-statistics.ui:438
 msgid "Use smoothed line"
 msgstr "부드러운 선 사용"
 
-#: ../data/gpm-statistics.ui.h:7
+#: data/gpm-statistics.ui:291 data/gpm-statistics.ui:453
 msgid "Show data points"
 msgstr "데이터 지점 표시"
 
-#: ../data/gpm-statistics.ui.h:8
+#: data/gpm-statistics.ui:320
 msgid "History"
 msgstr "기록"
 
-#: ../data/gpm-statistics.ui.h:9
+#: data/gpm-statistics.ui:482
 msgid "Statistics"
 msgstr "통계"
 
-#: ../data/gpm-statistics.ui.h:10
+#: data/gpm-statistics.ui:504
 msgid "Processor wakeups per second:"
 msgstr "초당 프로세서 깨어나는 회수:"
 
-#: ../data/gpm-statistics.ui.h:11
+#: data/gpm-statistics.ui:516
 msgid "0"
 msgstr "0"
 
-#: ../data/gpm-statistics.ui.h:12 ../src/gpm-statistics.c:194
+#: data/gpm-statistics.ui:563 src/gpm-statistics.c:194
 msgid "Wakeups"
 msgstr "깨어나기"
 
-#: ../data/gpm-prefs.ui.h:1
+#: data/gpm-prefs.ui:55
 msgid "Power Management Preferences"
 msgstr "전원 관리 기본 설정"
 
-#: ../data/gpm-prefs.ui.h:2
+#: data/gpm-prefs.ui:84 data/gpm-prefs.ui:327 data/gpm-prefs.ui:585
+#: data/gpm-prefs.ui:813
 msgid "<b>Actions</b>"
 msgstr "<b>동작</b>"
 
-#: ../data/gpm-prefs.ui.h:3
+#: data/gpm-prefs.ui:111 data/gpm-prefs.ui:354 data/gpm-prefs.ui:612
 msgid "Put computer to _sleep when inactive for:"
 msgstr "다음 시간동안 입력이 없을 때 컴퓨터를 절전(_S):"
 
-#: ../data/gpm-prefs.ui.h:4
+#: data/gpm-prefs.ui:144 data/gpm-prefs.ui:387
 msgid "When laptop lid is cl_osed:"
 msgstr "노트북 덮개가 닫혔을 때(_O):"
 
-#: ../data/gpm-prefs.ui.h:5
+#: data/gpm-prefs.ui:189 data/gpm-prefs.ui:463 data/gpm-prefs.ui:721
 msgid "<b>Display</b>"
 msgstr "<b>표시</b>"
 
-#: ../data/gpm-prefs.ui.h:6
+#: data/gpm-prefs.ui:216 data/gpm-prefs.ui:490 data/gpm-prefs.ui:748
 msgid "Put _display to sleep when inactive for:"
 msgstr "다음 시간동안 입력이 없을 때 화면을 절전(_D):"
 
-#: ../data/gpm-prefs.ui.h:7
+#: data/gpm-prefs.ui:247
 msgid "Set display _brightness to:"
 msgstr "화면 밝기 값(_B):"
 
-#: ../data/gpm-prefs.ui.h:8
+#: data/gpm-prefs.ui:275 data/gpm-prefs.ui:529
 msgid "Di_m display when idle"
 msgstr "입력이 없을 때 화면 어둡게(_M)"
 
-#: ../data/gpm-prefs.ui.h:9
+#: data/gpm-prefs.ui:306
 msgid "On AC Power"
 msgstr "교류 전원 사용"
 
-#: ../data/gpm-prefs.ui.h:10
+#: data/gpm-prefs.ui:418
 msgid "When battery po_wer is critically low:"
 msgstr "배터리 전원이 위험하게 적을 때(_W):"
 
-#: ../data/gpm-prefs.ui.h:11
+#: data/gpm-prefs.ui:514
 msgid "_Reduce backlight brightness"
 msgstr "백라이트 밝기 낮추기(_R)"
 
-#: ../data/gpm-prefs.ui.h:12
+#: data/gpm-prefs.ui:563
 msgid "On Battery Power"
 msgstr "배터리 전원 사용"
 
-#: ../data/gpm-prefs.ui.h:13
+#: data/gpm-prefs.ui:645
 msgid "When UPS power is l_ow:"
 msgstr "무정전 전원 장치 전원이 부족할 때(_O):"
 
-#: ../data/gpm-prefs.ui.h:14
+#: data/gpm-prefs.ui:676
 msgid "When UPS power is _critically low:"
 msgstr "무정전 전원 장치 전원이 매우 부족할 때(_C):"
 
-#: ../data/gpm-prefs.ui.h:15
+#: data/gpm-prefs.ui:791
 msgid "On UPS Power"
 msgstr "무정전 전원 장치 전원 사용"
 
-#: ../data/gpm-prefs.ui.h:16
+#: data/gpm-prefs.ui:840
 msgid "When the power _button is pressed:"
 msgstr "전원 단추를 눌렀을 때(_B):"
 
-#: ../data/gpm-prefs.ui.h:17
+#: data/gpm-prefs.ui:873
 msgid "When the _suspend button is pressed:"
 msgstr "절전 모드 단추를 눌렀을 때(_S):"
 
-#: ../data/gpm-prefs.ui.h:18
+#: data/gpm-prefs.ui:918
 msgid "<b>Notification Area</b>"
 msgstr "<b>알림 영역</b>"
 
-#: ../data/gpm-prefs.ui.h:19
+#: data/gpm-prefs.ui:938
 msgid "_Never display an icon"
 msgstr "아이콘 표시 안함(_N)"
 
-#: ../data/gpm-prefs.ui.h:20
+#: data/gpm-prefs.ui:953
 msgid "_Only display an icon when battery power is low"
 msgstr "배터리 전원이 매우 부족할 경우에만 아이콘 표시(_O)"
 
-#: ../data/gpm-prefs.ui.h:21
+#: data/gpm-prefs.ui:969
 msgid "Only display an icon when charging or _discharging"
 msgstr "충전 또는 방전 중일 때만 아이콘 표시(_D)"
 
-#: ../data/gpm-prefs.ui.h:22
+#: data/gpm-prefs.ui:985
 msgid "Only display an icon when a battery is p_resent"
 msgstr "배터리가 있을 때에만 아이콘 표시(_R)"
 
-#: ../data/gpm-prefs.ui.h:23
+#: data/gpm-prefs.ui:1001
 msgid "_Always display an icon"
 msgstr "항상 아이콘 표시(_A)"
 
-#: ../data/gpm-prefs.ui.h:24
+#: data/gpm-prefs.ui:1036
 msgid "General"
 msgstr "일반"
 
-#: ../data/gpm-prefs.ui.h:25
+#: data/gpm-prefs.ui:1060
 msgid "Provides help about this program"
 msgstr "이 프로그램의 도움말을 표시합니다"
 
-#: ../data/gpm-prefs.ui.h:26
+#: data/gpm-prefs.ui:1072
 msgid "Make Default"
 msgstr "기본값으로 설정"
 
-#: ../data/gpm-prefs.ui.h:27
+#: data/gpm-prefs.ui:1076
 msgid "Sets this policy to be used by all users"
 msgstr "이 정책을 모든 사용자가 사용합니다"
 
-#: ../data/gpm-prefs.ui.h:28
+#: data/gpm-prefs.ui:1092
 msgid "Closes the program"
 msgstr "이 프로그램을 닫습니다"
 
-#. command line argument
-#: ../src/gpm-backlight-helper.c:166
+#: src/gpm-backlight-helper.c:166
 msgid "Set the current brightness"
 msgstr "현제 밝기  설정"
 
-#. command line argument
-#: ../src/gpm-backlight-helper.c:169
+#: src/gpm-backlight-helper.c:169
 msgid "Get the current brightness"
 msgstr "현제 밝기 값 얻기"
 
-#. command line argument
-#: ../src/gpm-backlight-helper.c:172
+#: src/gpm-backlight-helper.c:172
 msgid "Get the number of brightness levels supported"
 msgstr "지원하는 밝기 값을 가져옵니다"
 
-#. TRANSLATORS: tool that is used when copying profiles system-wide
-#: ../src/gpm-backlight-helper.c:184
+#: src/gpm-backlight-helper.c:184
 msgid "MATE Power Manager Backlight Helper"
 msgstr "마테 전원 관리자 백라이트 도우미"
 
-#. TRANSLATORS: user did not specify valid options
-#: ../src/gpm-backlight-helper.c:192
+#: src/gpm-backlight-helper.c:192
 msgid "No valid option was specified"
 msgstr "올바른 옵션이 지정되지 않았습니다"
 
-#. TRANSLATORS: no backlights found
-#: ../src/gpm-backlight-helper.c:201
+#: src/gpm-backlight-helper.c:201
 msgid "No backlights were found on your system"
 msgstr "시스템에서 백라이트를 찾을 수 없습니다"
 
-#. TRANSLATORS: failed to access backlight file
-#: ../src/gpm-backlight-helper.c:212
+#: src/gpm-backlight-helper.c:212
 msgid "Could not get the value of the backlight"
 msgstr "백라이트 값을 얻을 수 없습니다"
 
-#. TRANSLATORS: failed to access backlight file
-#: ../src/gpm-backlight-helper.c:230
+#: src/gpm-backlight-helper.c:230
 msgid "Could not get the maximum value of the backlight"
 msgstr "백라이트 최대 값을 얻을 수 없습니다"
 
-#. TRANSLATORS: only able to install profiles as root
-#: ../src/gpm-backlight-helper.c:247
+#: src/gpm-backlight-helper.c:247
 msgid "This program can only be used by the root user"
 msgstr "이 프로그램은 루트 사용자만 사용할 수 있습니다"
 
-#. TRANSLATORS: the program must never be directly run
-#: ../src/gpm-backlight-helper.c:256
+#: src/gpm-backlight-helper.c:256
 msgid "This program must only be run through pkexec"
 msgstr "이 프로그램은 반드시 pkexec로 실행해야 합니다."
 
-#. TRANSLATORS: failed to access backlight file
-#: ../src/gpm-backlight-helper.c:267
+#: src/gpm-backlight-helper.c:267
 msgid "Could not set the value of the backlight"
 msgstr "백라이트 값을 설정할 수 없습니다."
 
-#: ../src/gpm-common.c:53
+#: src/gpm-common.c:53
 msgid "Unknown time"
 msgstr "알 수 없는 시간"
 
-#: ../src/gpm-common.c:58
+#: src/gpm-common.c:58
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
 msgstr[0] "%i분"
 
-#: ../src/gpm-common.c:69
+#: src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
 msgstr[0] "%i시간"
 
-#. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
-#. * Swap order with "%2$s %2$i %1$s %1$i if needed
-#: ../src/gpm-common.c:75
+#: src/gpm-common.c:75
 #, c-format
 msgid "%i %s %i %s"
 msgstr "%i%s %i%s"
 
-#: ../src/gpm-common.c:76
+#: src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] "시간"
 
-#: ../src/gpm-common.c:77
+#: src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
 msgstr[0] "분"
 
 #. Translators: This is %i days
-#: ../src/gpm-graph-widget.c:433
+#: src/gpm-graph-widget.c:433
 #, c-format
 msgid "%id"
 msgstr "%i일"
 
 #. Translators: This is %i days %02i hours
-#: ../src/gpm-graph-widget.c:436
+#: src/gpm-graph-widget.c:436
 #, c-format
 msgid "%id%02ih"
 msgstr "%i일%02i시간"
 
 #. Translators: This is %i hours
-#: ../src/gpm-graph-widget.c:441
+#: src/gpm-graph-widget.c:441
 #, c-format
 msgid "%ih"
 msgstr "%i시간"
 
 #. Translators: This is %i hours %02i minutes
-#: ../src/gpm-graph-widget.c:444
+#: src/gpm-graph-widget.c:444
 #, c-format
 msgid "%ih%02im"
 msgstr "%i시간%02i분"
 
 #. Translators: This is %2i minutes
-#: ../src/gpm-graph-widget.c:449
+#: src/gpm-graph-widget.c:449
 #, c-format
 msgid "%2im"
 msgstr "%2i분"
 
 #. Translators: This is %2i minutes %02i seconds
-#: ../src/gpm-graph-widget.c:452
+#: src/gpm-graph-widget.c:452
 #, c-format
 msgid "%2im%02i"
 msgstr "%2i분%02i"
 
 #. Translators: This is %2i seconds
-#: ../src/gpm-graph-widget.c:456
+#: src/gpm-graph-widget.c:456
 #, c-format
 msgid "%2is"
 msgstr "%2i초"
 
 #. Translators: This is %i Percentage
-#: ../src/gpm-graph-widget.c:460
+#: src/gpm-graph-widget.c:460
 #, c-format
 msgid "%i%%"
 msgstr "%i%%"
 
 #. Translators: This is %.1f Watts
-#: ../src/gpm-graph-widget.c:463
+#: src/gpm-graph-widget.c:463
 #, c-format
 msgid "%.1fW"
 msgstr "%.1fW"
 
 #. Translators: This is %.1f Volts
-#: ../src/gpm-graph-widget.c:468
+#: src/gpm-graph-widget.c:468
 #, c-format
 msgid "%.1fV"
 msgstr "%.1fV"
 
-#. TRANSLATORS: show verbose debugging
-#: ../src/gpm-main.c:172 ../src/gpm-prefs.c:77 ../src/gpm-statistics.c:1560
+#: src/gpm-main.c:172 src/gpm-prefs.c:77 src/gpm-statistics.c:1560
 msgid "Show extra debugging information"
 msgstr "추가 디버깅 정보 보기"
 
-#: ../src/gpm-main.c:174
+#: src/gpm-main.c:174
 msgid "Show version of installed program and exit"
 msgstr "설치한 프로그램의 버전을 표시하고 끝냅니다"
 
-#: ../src/gpm-main.c:176
+#: src/gpm-main.c:176
 msgid "Exit after a small delay (for debugging)"
 msgstr "약간 시간을 끈 뒤에 끝냅니다(디버깅용)"
 
-#: ../src/gpm-main.c:178
+#: src/gpm-main.c:178
 msgid "Exit after the manager has loaded (for debugging)"
 msgstr "전원 관리자가 시작한 다음 끝냅니다(디버깅용)"
 
-#: ../src/gpm-main.c:189 ../src/gpm-main.c:193
+#: src/gpm-main.c:189 src/gpm-main.c:193
 msgid "MATE Power Manager"
 msgstr "마테 전원 관리자"
 
-#. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:222 ../src/gpm-manager.c:294
+#: src/gpm-manager.c:222 src/gpm-manager.c:294
 msgid "Battery is very low"
 msgstr "배터리 전원이 매우 부족합니다"
 
-#. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:274
+#: src/gpm-manager.c:274
 msgid "Power plugged in"
 msgstr "전원을 연결했습니다"
 
-#. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:278
+#: src/gpm-manager.c:278
 msgid "Power unplugged"
 msgstr "교류 전원이 빠졌습니다"
 
-#. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:282
+#: src/gpm-manager.c:282
 msgid "Lid has opened"
 msgstr "덮개를 열었습니다"
 
-#. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:286
+#: src/gpm-manager.c:286
 msgid "Lid has closed"
 msgstr "덮개를 닫았습니다"
 
-#. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:290
+#: src/gpm-manager.c:290
 msgid "Battery is low"
 msgstr "배터리 전원이 부족합니다"
 
-#. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:298
+#: src/gpm-manager.c:298
 msgid "Battery is full"
 msgstr "배터리를 완전히 충전했습니다"
 
-#. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:302
+#: src/gpm-manager.c:302
 msgid "Suspend started"
 msgstr "절전 시작"
 
-#. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:306
+#: src/gpm-manager.c:306
 msgid "Resumed"
 msgstr "원상복귀"
 
-#. TRANSLATORS: this is the sound description
-#: ../src/gpm-manager.c:310
+#: src/gpm-manager.c:310
 msgid "Suspend failed"
 msgstr "절전 실패"
 
-#. TRANSLATORS: message text
-#: ../src/gpm-manager.c:578
+#: src/gpm-manager.c:578
 msgid "Computer failed to suspend."
 msgstr "컴퓨터가 절전에 실패했습니다."
 
-#. TRANSLATORS: title text
-#: ../src/gpm-manager.c:580
+#: src/gpm-manager.c:580
 msgid "Failed to suspend"
 msgstr "절전 실패"
 
-#. TRANSLATORS: message text
-#: ../src/gpm-manager.c:584
+#: src/gpm-manager.c:584
 msgid "Computer failed to hibernate."
 msgstr "컴퓨터가 최대 절전에 실패했습니다."
 
-#. TRANSLATORS: title text
-#: ../src/gpm-manager.c:586
+#: src/gpm-manager.c:586
 msgid "Failed to hibernate"
 msgstr "최대 절전 실패"
 
-#. TRANSLATORS: message text
-#: ../src/gpm-manager.c:591
+#: src/gpm-manager.c:591
 msgid "Failure was reported as:"
 msgstr "실패를 아래와 같이 보고합니다:"
 
-#. TRANSLATORS: button text, visit the suspend help website
-#: ../src/gpm-manager.c:604
+#: src/gpm-manager.c:604
 msgid "Visit help page"
 msgstr "도움말 페이지 보기"
 
-#. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:850
+#: src/gpm-manager.c:850
 msgid "Display DPMS activated"
 msgstr "활성화환 DPMS 표시"
 
-#. TRANSLATORS: this is the mate-screensaver throttle
-#: ../src/gpm-manager.c:869
+#: src/gpm-manager.c:869
 msgid "On battery power"
 msgstr "배터리 전원 사용"
 
-#: ../src/gpm-manager.c:887
+#: src/gpm-manager.c:887
 msgid "Laptop lid is closed"
 msgstr "노트북 덮개를 닫았습니다"
 
-#: ../src/gpm-manager.c:925
+#: src/gpm-manager.c:925
 msgid "Power Information"
 msgstr "전원 정보"
 
-#. We should notify the user if the battery has a low capacity,
-#. * where capacity is the ratio of the last_full capacity with that of
-#. * the design capacity. (#326740)
-#. TRANSLATORS: battery is old or broken
-#: ../src/gpm-manager.c:1107
+#: src/gpm-manager.c:1107
 msgid "Battery may be broken"
 msgstr "배터리가 손상된 것 같습니다"
 
-#. TRANSLATORS: notify the user that that battery is broken as the capacity is
-#. very low
-#: ../src/gpm-manager.c:1110
+#: src/gpm-manager.c:1110
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
 " broken."
 msgstr "배터리 용량이 매우 부족합니다(%1.1f%%). 배터리가 오래되었거나 손상되었음을 의미합니다."
 
-#. TRANSLATORS: show the charged notification
-#: ../src/gpm-manager.c:1159
+#: src/gpm-manager.c:1159
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] "배터리 충전 완료"
 
-#. TRANSLATORS: laptop battery is now discharging
-#: ../src/gpm-manager.c:1205
+#: src/gpm-manager.c:1205
 msgid "Battery Discharging"
 msgstr "배터리 방전 중"
 
-#. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1209
+#: src/gpm-manager.c:1209
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr "%s의 배터리 전원 남은 용량(%.0f%%)"
 
-#. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-manager.c:1212 ../src/gpm-manager.c:1224
+#: src/gpm-manager.c:1212 src/gpm-manager.c:1224
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr "%s 방전중(%0.f%%)"
 
-#. TRANSLATORS: UPS is now discharging
-#: ../src/gpm-manager.c:1217
+#: src/gpm-manager.c:1217
 msgid "UPS Discharging"
 msgstr "무정전 전원 장치 방전 중"
 
-#. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1221
+#: src/gpm-manager.c:1221
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr "%s의 무정전 전원 장치 백업 전원 남은 용량(%.0f%%)"
 
-#. TRANSLATORS: laptop battery low, and we only have one battery
-#: ../src/gpm-manager.c:1305
+#: src/gpm-manager.c:1305
 msgid "Battery low"
 msgstr "배터리 전원 부족"
 
-#. TRANSLATORS: laptop battery low, and we have more than one kind of battery
-#: ../src/gpm-manager.c:1308
+#: src/gpm-manager.c:1308
 msgid "Laptop battery low"
 msgstr "노트북 배터리 전원 부족"
 
-#. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1314
+#: src/gpm-manager.c:1314
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "평균 <b>%s</b> 남은 용량(%.0f%%)"
 
-#. TRANSLATORS: UPS is starting to get a little low
-#: ../src/gpm-manager.c:1318
+#: src/gpm-manager.c:1318
 msgid "UPS low"
 msgstr "UPS 전원 부족"
 
-#. TRANSLATORS: tell the user how much time they have got
-#: ../src/gpm-manager.c:1322
+#: src/gpm-manager.c:1322
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr "평균 무정전 전원 장치 백업 전원 <b>%s</b> 남은 용량(%.0f%%)"
 
-#. TRANSLATORS: mouse is getting a little low
-#. TRANSLATORS: the mouse battery is very low
-#: ../src/gpm-manager.c:1331 ../src/gpm-manager.c:1470
+#: src/gpm-manager.c:1331 src/gpm-manager.c:1470
 msgid "Mouse battery low"
 msgstr "마우스 배터리 전원 부족"
 
-#. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1334
+#: src/gpm-manager.c:1334
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr "무선 마우스 전원이 부족합니다(%.0f%%)"
 
-#. TRANSLATORS: keyboard is getting a little low
-#. TRANSLATORS: the keyboard battery is very low
-#: ../src/gpm-manager.c:1338 ../src/gpm-manager.c:1478
+#: src/gpm-manager.c:1338 src/gpm-manager.c:1478
 msgid "Keyboard battery low"
 msgstr "키보드 배터리 전원 부족"
 
-#. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1341
+#: src/gpm-manager.c:1341
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr "무선 키보드 전원이 부족합니다(%.0f%%)"
 
-#. TRANSLATORS: PDA is getting a little low
-#. TRANSLATORS: the PDA battery is very low
-#: ../src/gpm-manager.c:1345 ../src/gpm-manager.c:1487
+#: src/gpm-manager.c:1345 src/gpm-manager.c:1487
 msgid "PDA battery low"
 msgstr "PDA 배터리 전원 부족"
 
-#. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1348
+#: src/gpm-manager.c:1348
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr "PDA 전원이 부족합니다(%.0f%%)"
 
-#. TRANSLATORS: cell phone (mobile) is getting a little low
-#. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1352 ../src/gpm-manager.c:1497
-#: ../src/gpm-manager.c:1507
+#: src/gpm-manager.c:1352 src/gpm-manager.c:1497 src/gpm-manager.c:1507
 msgid "Cell phone battery low"
 msgstr "휴대전화 배터리 전원 부족"
 
-#. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1355
+#: src/gpm-manager.c:1355
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "휴대전화 전원이 부족합니다(%.0f%%)"
 
-#. TRANSLATORS: media player, e.g. mp3 is getting a little low
-#: ../src/gpm-manager.c:1359
+#: src/gpm-manager.c:1359
 msgid "Media player battery low"
 msgstr "미디어 플레이어 배터리 전원 부족"
 
-#. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1362
+#: src/gpm-manager.c:1362
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr "미디어 플레이어 전원이 부족합니다(%.0f%%)"
 
-#. TRANSLATORS: graphics tablet, e.g. wacom is getting a little low
-#. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1366 ../src/gpm-manager.c:1516
+#: src/gpm-manager.c:1366 src/gpm-manager.c:1516
 msgid "Tablet battery low"
 msgstr "태블릿 배터리 전원 부족"
 
-#. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1369
+#: src/gpm-manager.c:1369
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "태블릿 전원이 부족합니다(%.0f%%)"
 
-#. TRANSLATORS: computer, e.g. ipad is getting a little low
-#. TRANSLATORS: the cell battery is very low
-#: ../src/gpm-manager.c:1373 ../src/gpm-manager.c:1525
+#: src/gpm-manager.c:1373 src/gpm-manager.c:1525
 msgid "Attached computer battery low"
 msgstr "연결된 컴퓨터 배터리 잔량이 낮음"
 
-#. TRANSLATORS: tell user more details
-#: ../src/gpm-manager.c:1376
+#: src/gpm-manager.c:1376
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "연결한 컴퓨터의 전원이 부족합니다(%.0f%%)"
 
-#. TRANSLATORS: laptop battery critically low, and only have one kind of
-#. battery
-#: ../src/gpm-manager.c:1424
+#: src/gpm-manager.c:1424
 msgid "Battery critically low"
 msgstr "배터리 전원 매우 부족"
 
-#. TRANSLATORS: laptop battery critically low, and we have more than one type
-#. of battery
-#. TRANSLATORS: laptop battery is really, really, low
-#: ../src/gpm-manager.c:1427 ../src/gpm-manager.c:1585
+#: src/gpm-manager.c:1427 src/gpm-manager.c:1585
 msgid "Laptop battery critically low"
 msgstr "노트북 배터리 전원 매우 부족"
 
-#. TRANSLATORS: tell the use to insert the plug, as we're not going to do
-#. anything
-#: ../src/gpm-manager.c:1436
+#: src/gpm-manager.c:1436
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr "데이터를 잃어버리지 않으려면 교류 전원 어댑터를 연결하십시오."
 
-#. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1440
-#, c-format
+#: src/gpm-manager.c:1440
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr "전원을 연결하지 않으면 곧 절전 상태가 됩니다."
 
-#. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1444
-#, c-format
+#: src/gpm-manager.c:1444
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr "전원을 연결하지 않으면 곧 최대 절전 상태가 됩니다."
 
-#. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1448
-#, c-format
+#: src/gpm-manager.c:1448
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr "전원을 연결하지 않으면 곧 컴퓨터를 끕니다."
 
-#. TRANSLATORS: the UPS is very low
-#. TRANSLATORS: UPS is really, really, low
-#: ../src/gpm-manager.c:1455 ../src/gpm-manager.c:1621
+#: src/gpm-manager.c:1455 src/gpm-manager.c:1621
 msgid "UPS critically low"
 msgstr "무정전 전원 장치 전원 매우 부족"
 
-#. TRANSLATORS: give the user a ultimatum
-#: ../src/gpm-manager.c:1459
+#: src/gpm-manager.c:1459
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
@@ -1432,71 +1360,62 @@ msgid ""
 msgstr ""
 "평균적으로 <b>%s</b>의 남은 무정전 전원 장치 전원입니다(%.0f%%). 데이터 손실을 방지하려면 교류 전원 상태를 복원하십시오."
 
-#. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1473
+#: src/gpm-manager.c:1473
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr "무선 마우스의 전원이 매우 부족합니다(%.0f%%). 충전하지 않으면 이 장치의 기능이 곧 멈춥니다."
 
-#. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1481
+#: src/gpm-manager.c:1481
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr "무선 키보드의 전원이 매우 부족합니다(%.0f%%). 충전하지 않으면 이 장치의 기능이 곧 멈춥니다."
 
-#. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1490
+#: src/gpm-manager.c:1490
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
 " not charged."
 msgstr "PDA의 전원이 매우 부족합니다(%.0f%%). 충전하지 않으면 이 장치의 기능이 곧 멈춥니다."
 
-#. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1500
+#: src/gpm-manager.c:1500
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr "휴대 전화의 전원이 매우 부족합니다(%.0f%%). 충전하지 않으면 이 장치의 기능이 곧 멈춥니다."
 
-#. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1510
+#: src/gpm-manager.c:1510
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr "미디어 플레이어의 전원이 매우 부족합니다(%.0f%%). 충전하지 않으면 이 장치의 기능이 곧 멈춥니다."
 
-#. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1519
+#: src/gpm-manager.c:1519
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
 msgstr "태블릿의 전원이 매우 부족합니다(%.0f%%). 충전하지 않으면 이 장치의 기능이 곧 멈춥니다."
 
-#. TRANSLATORS: the device is just going to stop working
-#: ../src/gpm-manager.c:1528
+#: src/gpm-manager.c:1528
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
 msgstr "연결한 컴퓨터의 전원이 매우 부족합니다(%.0f%%). 충전하지 않으면 이 장치가 곧 꺼집니다."
 
-#. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1593
+#: src/gpm-manager.c:1593
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
 msgstr "배터리가 위험한 수준보다 낮고 배터리가 완전히 방전되면 이 컴퓨터의 <b>전원이 꺼집니다</b>."
 
-#. TRANSLATORS: computer will suspend
-#: ../src/gpm-manager.c:1599
+#: src/gpm-manager.c:1599
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
@@ -1505,482 +1424,406 @@ msgstr ""
 "배터리가 위험한 수준보다 낮고 이 컴퓨터는 절전 상태입니다. <br><b>주의:</b> 컴퓨터를 절전 상태로 유지하려면 약간의 전원이 "
 "필요합니다."
 
-#. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1606
+#: src/gpm-manager.c:1606
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr "배터리 전원이 위험 수준보다 부족하여 이 컴퓨터를 최대 절전으로 둡니다."
 
-#. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1611
+#: src/gpm-manager.c:1611
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr "배터리 전원이 위험 수준보다 부족하여 이 컴퓨터를 끕니다."
 
-#. TRANSLATORS: computer will shutdown without saving data
-#: ../src/gpm-manager.c:1629
+#: src/gpm-manager.c:1629
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
 msgstr ""
 "무정전 전원 장치의 전원이 위험 수준보다 부족하여 무정전 전원 장치가 완전히 방전되면 이 컴퓨터의 <b>전원이 꺼집니다</b>."
 
-#. TRANSLATORS: computer will hibernate
-#: ../src/gpm-manager.c:1635
+#: src/gpm-manager.c:1635
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr "배터리 전원이 위험 수준보다 부족하여 이 컴퓨터는 최대 절전 상태가 됩니다."
 
-#. TRANSLATORS: computer will just shutdown
-#: ../src/gpm-manager.c:1640
+#: src/gpm-manager.c:1640
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr "배터리 전원이 위험 수준보다 부족하여 이 컴퓨터를 끕니다."
 
-#: ../src/gpm-prefs.c:81
+#: src/gpm-prefs.c:81
 msgid "MATE Power Preferences"
 msgstr "마테 전원 기본 설정"
 
-#: ../src/gpm-prefs-core.c:238
+#: src/gpm-prefs-core.c:238
 msgid "Shutdown"
 msgstr "시스템 종료"
 
-#: ../src/gpm-prefs-core.c:245
+#: src/gpm-prefs-core.c:245
 msgid "Suspend"
 msgstr "절전"
 
-#: ../src/gpm-prefs-core.c:248
+#: src/gpm-prefs-core.c:248
 msgid "Hibernate"
 msgstr "최대 절전"
 
-#: ../src/gpm-prefs-core.c:251
+#: src/gpm-prefs-core.c:251
 msgid "Blank screen"
 msgstr "빈 화면"
 
-#: ../src/gpm-prefs-core.c:254
+#: src/gpm-prefs-core.c:254
 msgid "Ask me"
 msgstr "확인 질문"
 
-#: ../src/gpm-prefs-core.c:257
+#: src/gpm-prefs-core.c:257
 msgid "Do nothing"
 msgstr "아무것도 안함"
 
-#: ../src/gpm-prefs-core.c:317
+#: src/gpm-prefs-core.c:317
 msgid "Never"
 msgstr "사용 안함"
 
-#. TRANSLATORS: the rate of discharge for the device
-#: ../src/gpm-statistics.c:78 ../src/gpm-statistics.c:466
+#: src/gpm-statistics.c:78 src/gpm-statistics.c:466
 msgid "Rate"
 msgstr "Rate"
 
-#: ../src/gpm-statistics.c:79
+#: src/gpm-statistics.c:79
 msgid "Charge"
 msgstr "충전"
 
-#: ../src/gpm-statistics.c:80 ../src/gpm-statistics.c:480
+#: src/gpm-statistics.c:80 src/gpm-statistics.c:480
 msgid "Time to full"
 msgstr "완전 충전까지 시간"
 
-#: ../src/gpm-statistics.c:81 ../src/gpm-statistics.c:485
+#: src/gpm-statistics.c:81 src/gpm-statistics.c:485
 msgid "Time to empty"
 msgstr "완전 방전까지 시간"
 
-#: ../src/gpm-statistics.c:88
+#: src/gpm-statistics.c:88
 msgid "10 minutes"
 msgstr "10분"
 
-#: ../src/gpm-statistics.c:89
+#: src/gpm-statistics.c:89
 msgid "2 hours"
 msgstr "2시간"
 
-#: ../src/gpm-statistics.c:90
+#: src/gpm-statistics.c:90
 msgid "6 hours"
 msgstr "6 시간"
 
-#: ../src/gpm-statistics.c:91
+#: src/gpm-statistics.c:91
 msgid "1 day"
 msgstr "1일"
 
-#: ../src/gpm-statistics.c:92
+#: src/gpm-statistics.c:92
 msgid "1 week"
 msgstr "1주"
 
-#. TRANSLATORS: what we've observed about the device
-#: ../src/gpm-statistics.c:101
+#: src/gpm-statistics.c:101
 msgid "Charge profile"
 msgstr "충전 프로파일"
 
-#: ../src/gpm-statistics.c:102
+#: src/gpm-statistics.c:102
 msgid "Discharge profile"
 msgstr "방전 프로파일"
 
-#. TRANSLATORS: how accurately we can predict the time remaining of the
-#. battery
-#: ../src/gpm-statistics.c:104
+#: src/gpm-statistics.c:104
 msgid "Charge accuracy"
 msgstr "충전 정확도"
 
-#: ../src/gpm-statistics.c:105
+#: src/gpm-statistics.c:105
 msgid "Discharge accuracy"
 msgstr "방전 정확도"
 
-#: ../src/gpm-statistics.c:132
+#: src/gpm-statistics.c:132
 msgid "Attribute"
 msgstr "속성"
 
-#: ../src/gpm-statistics.c:139
+#: src/gpm-statistics.c:139
 msgid "Value"
 msgstr "값"
 
-#: ../src/gpm-statistics.c:156
+#: src/gpm-statistics.c:156
 msgid "Image"
 msgstr "그림"
 
-#: ../src/gpm-statistics.c:162
+#: src/gpm-statistics.c:162
 msgid "Description"
 msgstr "설명"
 
-#: ../src/gpm-statistics.c:181 ../src/gpm-statistics.c:405
+#: src/gpm-statistics.c:181 src/gpm-statistics.c:405
 msgid "Type"
 msgstr "형식"
 
-#: ../src/gpm-statistics.c:187
+#: src/gpm-statistics.c:187
 msgid "ID"
 msgstr "ID"
 
-#: ../src/gpm-statistics.c:201
+#: src/gpm-statistics.c:201
 msgid "Command"
 msgstr "명령어"
 
-#. TRANSLATORS: this is when the stats time is not known
-#: ../src/gpm-statistics.c:286
+#: src/gpm-statistics.c:286
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:290
+#: src/gpm-statistics.c:290
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
 msgstr[0] "%.0f초"
 
-#. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:295
+#: src/gpm-statistics.c:295
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
 msgstr[0] "%.1f분"
 
-#. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:300
+#: src/gpm-statistics.c:300
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
 msgstr[0] "%.1f시간"
 
-#. TRANSLATORS: this is a time value, usually to show on a graph
-#: ../src/gpm-statistics.c:304
+#: src/gpm-statistics.c:304
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
 msgstr[0] "%.1f일"
 
-#: ../src/gpm-statistics.c:313
+#: src/gpm-statistics.c:313
 msgid "Yes"
 msgstr "예"
 
-#: ../src/gpm-statistics.c:313
+#: src/gpm-statistics.c:313
 msgid "No"
 msgstr "아니요"
 
-#. TRANSLATORS: the device ID of the current device, e.g. "battery0"
-#: ../src/gpm-statistics.c:402
+#: src/gpm-statistics.c:402
 msgid "Device"
 msgstr "장치"
 
-#: ../src/gpm-statistics.c:407
+#: src/gpm-statistics.c:407
 msgid "Vendor"
 msgstr "제조사"
 
-#: ../src/gpm-statistics.c:409
+#: src/gpm-statistics.c:409
 msgid "Model"
 msgstr "모델"
 
-#: ../src/gpm-statistics.c:411
+#: src/gpm-statistics.c:411
 msgid "Serial number"
 msgstr "일련 번호"
 
-#. TRANSLATORS: a boolean attribute that means if the device is supplying the
-#. * main power for the computer. For instance, an AC adapter or laptop
-#. battery
-#. * would be TRUE,  but a mobile phone or mouse taking power is FALSE
-#: ../src/gpm-statistics.c:416
+#: src/gpm-statistics.c:416
 msgid "Supply"
 msgstr "공급"
 
-#: ../src/gpm-statistics.c:419
+#: src/gpm-statistics.c:419
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d초"
 
-#. TRANSLATORS: when the device was last updated with new data. It's
-#. * usually a few seconds when a device is discharging or charging.
-#: ../src/gpm-statistics.c:423
+#: src/gpm-statistics.c:423
 msgid "Refreshed"
 msgstr "새로 고침"
 
-#. TRANSLATORS: Present is whether the device is currently attached
-#. * to the computer, as some devices (e.g. laptop batteries) can
-#. * be removed, but still observed as devices on the system
-#: ../src/gpm-statistics.c:433
+#: src/gpm-statistics.c:433
 msgid "Present"
 msgstr "현재"
 
-#. TRANSLATORS: If the device can be recharged, e.g. lithium
-#. * batteries rather than alkaline ones
-#: ../src/gpm-statistics.c:440
+#: src/gpm-statistics.c:440
 msgid "Rechargeable"
 msgstr "충전 가능"
 
-#. TRANSLATORS: The state of the device, e.g. "Changing" or "Fully charged"
-#: ../src/gpm-statistics.c:446
+#: src/gpm-statistics.c:446
 msgid "State"
 msgstr "주"
 
-#: ../src/gpm-statistics.c:450
+#: src/gpm-statistics.c:450
 msgid "Energy"
 msgstr "에너지"
 
-#: ../src/gpm-statistics.c:453
+#: src/gpm-statistics.c:453
 msgid "Energy when empty"
 msgstr "완전 방전 시 에너지"
 
-#: ../src/gpm-statistics.c:456
+#: src/gpm-statistics.c:456
 msgid "Energy when full"
 msgstr "완전 충전 시 에너지"
 
-#: ../src/gpm-statistics.c:459
+#: src/gpm-statistics.c:459
 msgid "Energy (design)"
 msgstr "에너지(설계)"
 
-#: ../src/gpm-statistics.c:473
+#: src/gpm-statistics.c:473
 msgid "Voltage"
 msgstr "전압"
 
-#. TRANSLATORS: the amount of charge the cell contains
-#: ../src/gpm-statistics.c:495
+#: src/gpm-statistics.c:495
 msgid "Percentage"
 msgstr "퍼센트"
 
-#. TRANSLATORS: the capacity of the device, which is basically a measure
-#. * of how full it can get, relative to the design capacity
-#: ../src/gpm-statistics.c:502
+#: src/gpm-statistics.c:502
 msgid "Capacity"
 msgstr "용량"
 
-#. TRANSLATORS: the type of battery, e.g. lithium or nikel metal hydroxide
-#: ../src/gpm-statistics.c:507
+#: src/gpm-statistics.c:507
 msgid "Technology"
 msgstr "기술"
 
-#. TRANSLATORS: this is when the device is plugged in, typically
-#. * only shown for the ac adaptor device
-#: ../src/gpm-statistics.c:512
+#: src/gpm-statistics.c:512
 msgid "Online"
 msgstr "연결"
 
-#. TRANSLATORS: the command line was not provided
-#: ../src/gpm-statistics.c:824
+#: src/gpm-statistics.c:824
 msgid "No data"
 msgstr "데이터 없음"
 
-#. TRANSLATORS: kernel module, usually a device driver
-#: ../src/gpm-statistics.c:831 ../src/gpm-statistics.c:836
+#: src/gpm-statistics.c:831 src/gpm-statistics.c:836
 msgid "Kernel module"
 msgstr "커널 모듈"
 
-#. TRANSLATORS: kernel housekeeping
-#: ../src/gpm-statistics.c:841
+#: src/gpm-statistics.c:841
 msgid "Kernel core"
 msgstr "커널 코어"
 
-#. TRANSLATORS: interrupt between processors
-#: ../src/gpm-statistics.c:846
+#: src/gpm-statistics.c:846
 msgid "Interprocessor interrupt"
 msgstr "인터프로세서 인터럽트"
 
-#. TRANSLATORS: unknown interrupt
-#: ../src/gpm-statistics.c:851
+#: src/gpm-statistics.c:851
 msgid "Interrupt"
 msgstr "인터럽트"
 
-#. TRANSLATORS: the keyboard and mouse device event
-#: ../src/gpm-statistics.c:898
+#: src/gpm-statistics.c:898
 msgid "PS/2 keyboard/mouse/touchpad"
 msgstr "PS/2 키보드/마우스/터치패드"
 
-#. TRANSLATORS: ACPI, the Intel power standard on laptops and desktops
-#: ../src/gpm-statistics.c:901
+#: src/gpm-statistics.c:901
 msgid "ACPI"
 msgstr "ACPI"
 
-#. TRANSLATORS: serial ATA is a new style of hard disk interface
-#: ../src/gpm-statistics.c:904
+#: src/gpm-statistics.c:904
 msgid "Serial ATA"
 msgstr "시리얼 ATA"
 
-#. TRANSLATORS: this is the old-style ATA interface
-#: ../src/gpm-statistics.c:907
+#: src/gpm-statistics.c:907
 msgid "ATA host controller"
 msgstr "ATA 호스트 컨트롤러"
 
-#. TRANSLATORS: 802.11 wireless adaptor
-#: ../src/gpm-statistics.c:910
+#: src/gpm-statistics.c:910
 msgid "Intel wireless adaptor"
 msgstr "인텔 무선 어댑터"
 
-#. TRANSLATORS: a timer is something that fires periodically.
-#. * The parameter is a process name, e.g. "firefox-bin".
-#. * This is shown when the timer wakes up.
-#: ../src/gpm-statistics.c:917 ../src/gpm-statistics.c:922
-#: ../src/gpm-statistics.c:927 ../src/gpm-statistics.c:932
-#: ../src/gpm-statistics.c:937
+#: src/gpm-statistics.c:917 src/gpm-statistics.c:922 src/gpm-statistics.c:927
+#: src/gpm-statistics.c:932 src/gpm-statistics.c:937
 #, c-format
 msgid "Timer %s"
 msgstr "%s 타이머"
 
-#. TRANSLATORS: the parameter is the name of task that's woken up from
-#. sleeping.
-#. * This is shown when the task wakes up.
-#: ../src/gpm-statistics.c:941
+#: src/gpm-statistics.c:941
 #, c-format
 msgid "Sleep %s"
 msgstr "%s 대기"
 
-#. TRANSLATORS: this is the name of a new realtime task.
-#: ../src/gpm-statistics.c:944
+#: src/gpm-statistics.c:944
 #, c-format
 msgid "New task %s"
 msgstr "새 작업 %s"
 
-#. TRANSLATORS: this is the name of a task that's woken to check state.
-#. * This is shown when the task wakes up.
-#: ../src/gpm-statistics.c:948
+#: src/gpm-statistics.c:948
 #, c-format
 msgid "Wait %s"
 msgstr "%s 대기"
 
-#. TRANSLATORS: this is the name of a work queue.
-#. * A work queue is a list of work that has to be done.
-#: ../src/gpm-statistics.c:952 ../src/gpm-statistics.c:956
+#: src/gpm-statistics.c:952 src/gpm-statistics.c:956
 #, c-format
 msgid "Work queue %s"
 msgstr "대기 큐 %s"
 
-#. TRANSLATORS: this is when the networking subsystem clears out old entries
-#: ../src/gpm-statistics.c:959
+#: src/gpm-statistics.c:959
 #, c-format
 msgid "Network route flush %s"
 msgstr "네트워크 라우팅 갱신 %s"
 
-#. TRANSLATORS: this is the name of an activity on the USB bus
-#: ../src/gpm-statistics.c:962
+#: src/gpm-statistics.c:962
 #, c-format
 msgid "USB activity %s"
 msgstr "USB 동작 %s"
 
-#. TRANSLATORS: we've timed out of an aligned timer, with the name
-#: ../src/gpm-statistics.c:965
+#: src/gpm-statistics.c:965
 #, c-format
 msgid "Wakeup %s"
 msgstr "%s 상태 복귀"
 
-#. TRANSLATORS: interupts on the system required for basic operation
-#: ../src/gpm-statistics.c:968
+#: src/gpm-statistics.c:968
 msgid "Local interrupts"
 msgstr "로컬 인터럽트"
 
-#. TRANSLATORS: interrupts when a task gets moved from one core to another
-#: ../src/gpm-statistics.c:971
+#: src/gpm-statistics.c:971
 msgid "Rescheduling interrupts"
 msgstr "인터럽트 다시 스케줄링"
 
-#. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1080
+#: src/gpm-statistics.c:1080
 msgid "Device Information"
 msgstr "장치 정보"
 
-#. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1082
+#: src/gpm-statistics.c:1082
 msgid "Device History"
 msgstr "장치 기록"
 
-#. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1084
+#: src/gpm-statistics.c:1084
 msgid "Device Profile"
 msgstr "장치 프로파일"
 
-#. TRANSLATORS: shown on the titlebar
-#: ../src/gpm-statistics.c:1086
+#: src/gpm-statistics.c:1086
 msgid "Processor Wakeups"
 msgstr "프로세서 상태 복귀"
 
-#. TRANSLATORS: this is the X axis on the graph
-#: ../src/gpm-statistics.c:1325 ../src/gpm-statistics.c:1331
-#: ../src/gpm-statistics.c:1337 ../src/gpm-statistics.c:1343
+#: src/gpm-statistics.c:1325 src/gpm-statistics.c:1331
+#: src/gpm-statistics.c:1337 src/gpm-statistics.c:1343
 msgid "Time elapsed"
 msgstr "경과 시간"
 
-#. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1327
+#: src/gpm-statistics.c:1327
 msgid "Power"
 msgstr "제곱"
 
-#. TRANSLATORS: this is the Y axis on the graph for the whole battery device
-#. TRANSLATORS: this is the X axis on the graph for the whole battery device
-#: ../src/gpm-statistics.c:1333 ../src/gpm-statistics.c:1377
-#: ../src/gpm-statistics.c:1383 ../src/gpm-statistics.c:1389
-#: ../src/gpm-statistics.c:1395
+#: src/gpm-statistics.c:1333 src/gpm-statistics.c:1377
+#: src/gpm-statistics.c:1383 src/gpm-statistics.c:1389
+#: src/gpm-statistics.c:1395
 msgid "Cell charge"
 msgstr "충전량"
 
-#. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1339 ../src/gpm-statistics.c:1345
+#: src/gpm-statistics.c:1339 src/gpm-statistics.c:1345
 msgid "Predicted time"
 msgstr "예상 시간"
 
-#. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1379 ../src/gpm-statistics.c:1391
+#: src/gpm-statistics.c:1379 src/gpm-statistics.c:1391
 msgid "Correction factor"
 msgstr "보정 계수"
 
-#. TRANSLATORS: this is the Y axis on the graph
-#: ../src/gpm-statistics.c:1385 ../src/gpm-statistics.c:1397
+#: src/gpm-statistics.c:1385 src/gpm-statistics.c:1397
 msgid "Prediction accuracy"
 msgstr "예측 정확도"
 
-#. TRANSLATORS: show a device by default
-#: ../src/gpm-statistics.c:1563
+#: src/gpm-statistics.c:1563
 msgid "Select this device at startup"
 msgstr "시작할 때 이 장치 선택"
 
-#. TRANSLATORS: the icon for the CPU
-#: ../src/gpm-statistics.c:1802
+#: src/gpm-statistics.c:1802
 msgid "Processor"
 msgstr "프로세서"
 
-#: ../src/gpm-tray-icon.c:187
+#: src/gpm-tray-icon.c:187
 msgid "Copyright © 2011-2018 MATE developers"
 msgstr "Copyright © 2011-2018 MATE developers"
 
-#. Translators should localize the following string
-#. * which will be displayed at the bottom of the about
-#. * box to give credit to the translator(s).
-#: ../src/gpm-tray-icon.c:193
+#: src/gpm-tray-icon.c:193
 msgid "translator-credits"
 msgstr ""
 "Elex https://launchpad.net/~mysticzizone\n"
@@ -1990,32 +1833,26 @@ msgstr ""
 "Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "MATE Desktop Environment Team <https://www.transifex.com/mate/teams/13566/ko/>"
 
-#. TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes"
-#: ../src/gpm-tray-icon.c:295
+#: src/gpm-tray-icon.c:295
 #, c-format
 msgid "%s remaining"
 msgstr "%s 남음"
 
-#. preferences
-#: ../src/gpm-tray-icon.c:349
+#: src/gpm-tray-icon.c:349
 msgid "_Preferences"
 msgstr "기본 설정(_P)"
 
-#. TRANSLATORS: device not present
-#: ../src/gpm-upower.c:211
+#: src/gpm-upower.c:211
 #, c-format
 msgid "%s not present"
 msgstr "%s 없음"
 
-#. TRANSLATORS: a phone is charging
-#. TRANSLATORS: device is charging, but we only have a percentage
-#: ../src/gpm-upower.c:224 ../src/gpm-upower.c:288
+#: src/gpm-upower.c:224 src/gpm-upower.c:288
 #, c-format
 msgid "%s charging (%.1f%%)"
 msgstr "%s 방전 중 (%.1f%%)"
 
-#. TRANSLATORS: The laptop battery is fully charged, and we know a time
-#: ../src/gpm-upower.c:239
+#: src/gpm-upower.c:239
 #, c-format
 msgid ""
 "Battery is fully charged.\n"
@@ -2024,26 +1861,22 @@ msgstr ""
 "배터리 완전히 충전.\n"
 "노트북 동작 시간 %s"
 
-#. TRANSLATORS: the device is fully charged
-#: ../src/gpm-upower.c:244
+#: src/gpm-upower.c:244
 #, c-format
 msgid "%s is fully charged"
 msgstr "%s 완전히 충전"
 
-#. TRANSLATORS: the device is discharging, and we have a time remaining
-#: ../src/gpm-upower.c:252
+#: src/gpm-upower.c:252
 #, c-format
 msgid "%s %s remaining (%.1f%%)"
 msgstr "%s %s 남음 (%.1f%%)"
 
-#. TRANSLATORS: the device is discharging, but we only have a percentage
-#: ../src/gpm-upower.c:257
+#: src/gpm-upower.c:257
 #, c-format
 msgid "%s discharging (%.1f%%)"
 msgstr "%s 방전 중 (%.1f%%)"
 
-#. TRANSLATORS: the device is charging, and we have a time to full and empty
-#: ../src/gpm-upower.c:271
+#: src/gpm-upower.c:271
 #, c-format
 msgid ""
 "%s %s until charged (%.1f%%)\n"
@@ -2052,254 +1885,210 @@ msgstr ""
 "%s 충전까지 %s (%.1f%%)\n"
 "배터리 지속 시간 %s"
 
-#. TRANSLATORS: device is charging, and we have a time to full and a
-#. percentage
-#: ../src/gpm-upower.c:282
+#: src/gpm-upower.c:282
 #, c-format
 msgid "%s %s until charged (%.1f%%)"
 msgstr "%s 충전까지 %s (%.1f%%)"
 
-#. TRANSLATORS: this is only shown for laptops with multiple batteries
-#: ../src/gpm-upower.c:295
+#: src/gpm-upower.c:295
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
 msgstr "%s 방전 대기 중 (%.1f%%)"
 
-#. TRANSLATORS: this is only shown for laptops with multiple batteries
-#: ../src/gpm-upower.c:301
+#: src/gpm-upower.c:301
 #, c-format
 msgid "%s waiting to charge (%.1f%%)"
 msgstr "%s 충전 대기 중 (%.1f%%)"
 
-#. TRANSLATORS: when the device has no charge left
-#: ../src/gpm-upower.c:306
+#: src/gpm-upower.c:306
 #, c-format
 msgid "%s empty"
 msgstr "%s 비어있음"
 
-#. TRANSLATORS: the type of data, e.g. Laptop battery
-#: ../src/gpm-upower.c:366
+#: src/gpm-upower.c:366
 msgid "Product:"
 msgstr "제품:"
 
-#. TRANSLATORS: device is missing
-#. TRANSLATORS: device is charged
-#. TRANSLATORS: device is charging
-#. TRANSLATORS: device is discharging
-#: ../src/gpm-upower.c:370 ../src/gpm-upower.c:373 ../src/gpm-upower.c:376
-#: ../src/gpm-upower.c:379
+#: src/gpm-upower.c:370 src/gpm-upower.c:373 src/gpm-upower.c:376
+#: src/gpm-upower.c:379
 msgid "Status:"
 msgstr "상태:"
 
-#: ../src/gpm-upower.c:370
+#: src/gpm-upower.c:370
 msgid "Missing"
 msgstr "없음"
 
-#. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:373 ../src/gpm-upower.c:650
+#: src/gpm-upower.c:373 src/gpm-upower.c:650
 msgid "Charged"
 msgstr "충전됨"
 
-#. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:376 ../src/gpm-upower.c:638
+#: src/gpm-upower.c:376 src/gpm-upower.c:638
 msgid "Charging"
 msgstr "충전 중"
 
-#. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:379 ../src/gpm-upower.c:642
+#: src/gpm-upower.c:379 src/gpm-upower.c:642
 msgid "Discharging"
 msgstr "방전 중"
 
-#. TRANSLATORS: percentage
-#: ../src/gpm-upower.c:384
+#: src/gpm-upower.c:384
 msgid "Percentage charge:"
 msgstr "충전 퍼센트:"
 
-#. TRANSLATORS: manufacturer
-#: ../src/gpm-upower.c:388
+#: src/gpm-upower.c:388
 msgid "Vendor:"
 msgstr "제조사:"
 
-#. TRANSLATORS: how the battery is made, e.g. Lithium Ion
-#: ../src/gpm-upower.c:393
+#: src/gpm-upower.c:393
 msgid "Technology:"
 msgstr "기술:"
 
-#. TRANSLATORS: serial number of the battery
-#: ../src/gpm-upower.c:397
+#: src/gpm-upower.c:397
 msgid "Serial number:"
 msgstr "일련 번호:"
 
-#. TRANSLATORS: model number of the battery
-#: ../src/gpm-upower.c:401
+#: src/gpm-upower.c:401
 msgid "Model:"
 msgstr "모델:"
 
-#. TRANSLATORS: time to fully charged
-#: ../src/gpm-upower.c:406
+#: src/gpm-upower.c:406
 msgid "Charge time:"
 msgstr "충전 시간:"
 
-#. TRANSLATORS: time to empty
-#: ../src/gpm-upower.c:412
+#: src/gpm-upower.c:412
 msgid "Discharge time:"
 msgstr "방전 시간:"
 
-#. TRANSLATORS: Excellent, Good, Fair and Poor are all related to battery
-#. Capacity
-#: ../src/gpm-upower.c:419
+#: src/gpm-upower.c:419
 msgid "Excellent"
 msgstr "매우 좋음"
 
-#: ../src/gpm-upower.c:421
+#: src/gpm-upower.c:421
 msgid "Good"
 msgstr "좋음"
 
-#: ../src/gpm-upower.c:423
+#: src/gpm-upower.c:423
 msgid "Fair"
 msgstr "괜찮음"
 
-#: ../src/gpm-upower.c:425
+#: src/gpm-upower.c:425
 msgid "Poor"
 msgstr "나쁨"
 
-#: ../src/gpm-upower.c:429
+#: src/gpm-upower.c:429
 msgid "Capacity:"
 msgstr "용량:"
 
-#: ../src/gpm-upower.c:435 ../src/gpm-upower.c:460
+#: src/gpm-upower.c:435 src/gpm-upower.c:460
 msgid "Current charge:"
 msgstr "현재 충전:"
 
-#: ../src/gpm-upower.c:441
+#: src/gpm-upower.c:441
 msgid "Last full charge:"
 msgstr "최근 완전 충전:"
 
-#: ../src/gpm-upower.c:447 ../src/gpm-upower.c:465
+#: src/gpm-upower.c:447 src/gpm-upower.c:465
 msgid "Design charge:"
 msgstr "설계 충전:"
 
-#: ../src/gpm-upower.c:452
+#: src/gpm-upower.c:452
 msgid "Charge rate:"
 msgstr "충전 속도:"
 
-#. TRANSLATORS: system power cord
-#: ../src/gpm-upower.c:487
+#: src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
 msgstr[0] "AC 어댑터"
 
-#. TRANSLATORS: laptop primary battery
-#: ../src/gpm-upower.c:491
+#: src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
 msgstr[0] "노트북 배터리"
 
-#. TRANSLATORS: battery-backed AC power source
-#: ../src/gpm-upower.c:495
+#: src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
 msgstr[0] "UPS"
 
-#. TRANSLATORS: a monitor is a device to measure voltage and current
-#: ../src/gpm-upower.c:499
+#: src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
 msgstr[0] "모니터"
 
-#. TRANSLATORS: wireless mice with internal batteries
-#: ../src/gpm-upower.c:503
+#: src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
 msgstr[0] "마우스"
 
-#. TRANSLATORS: wireless keyboard with internal battery
-#: ../src/gpm-upower.c:507
+#: src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
 msgstr[0] "키보드"
 
-#. TRANSLATORS: portable device
-#: ../src/gpm-upower.c:511
+#: src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
 msgstr[0] "PDA"
 
-#. TRANSLATORS: cell phone (mobile...)
-#: ../src/gpm-upower.c:515
+#: src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
 msgstr[0] "휴대전화"
 
-#. TRANSLATORS: media player, mp3 etc
-#: ../src/gpm-upower.c:519
+#: src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
 msgstr[0] "미디어 플레이어"
 
-#. TRANSLATORS: tablet device
-#: ../src/gpm-upower.c:523
+#: src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
 msgstr[0] "태블릿"
 
-#. TRANSLATORS: tablet device
-#: ../src/gpm-upower.c:527
+#: src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
 msgstr[0] "컴퓨터"
 
-#. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:594
+#: src/gpm-upower.c:594
 msgid "Lithium Ion"
 msgstr "리튬이온"
 
-#. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:598
+#: src/gpm-upower.c:598
 msgid "Lithium Polymer"
 msgstr "리튬폴리머"
 
-#. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:602
+#: src/gpm-upower.c:602
 msgid "Lithium Iron Phosphate"
 msgstr "인산리튬이온"
 
-#. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:606
+#: src/gpm-upower.c:606
 msgid "Lead acid"
 msgstr "납축전지"
 
-#. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:610
+#: src/gpm-upower.c:610
 msgid "Nickel Cadmium"
 msgstr "니켈카드뮴"
 
-#. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:614
+#: src/gpm-upower.c:614
 msgid "Nickel metal hydride"
 msgstr "니켈수소"
 
-#. TRANSLATORS: battery technology
-#: ../src/gpm-upower.c:618
+#: src/gpm-upower.c:618
 msgid "Unknown technology"
 msgstr "방식을 알 수 없음"
 
-#. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:646
+#: src/gpm-upower.c:646
 msgid "Empty"
 msgstr "비어있음"
 
-#. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:654
+#: src/gpm-upower.c:654
 msgid "Waiting to charge"
 msgstr "충전 대기 중"
 
-#. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:658
+#: src/gpm-upower.c:658
 msgid "Waiting to discharge"
 msgstr "방전 대기 중"
 
-#. TRANSLATORS: battery state
-#: ../src/gpm-upower.c:662
+#: src/gpm-upower.c:662
 msgid "Unknown state"
 msgstr "알 수 없음"

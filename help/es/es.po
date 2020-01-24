@@ -3,14 +3,13 @@
 # Andres Sanchez <blackatze93@gmail.com>, 2018
 # elio <micta2003@hotmail.com>, 2018
 # Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Isabel Ortuño <isabel.ortuno1@gmail.com>, 2018
 # Joel Barrios <darkshram@gmail.com>, 2018
 # Toni Estévez <toni.estevez@gmail.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"POT-Creation-Date: 2019-06-18 16:29+0200\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-01-12 18:32+0100\n"
 "PO-Revision-Date: 2018-10-04 15:52+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
@@ -44,7 +43,7 @@ msgstr ""
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
-msgid "<year>2015-2019</year> <holder>MATE Documentation Team</holder>"
+msgid "<year>2015-2020</year> <holder>MATE Documentation Team</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
@@ -190,6 +189,8 @@ msgid ""
 "external ref='figures/gpm-unplugged.png' "
 "md5='e9e38fa48737547a19b20af6a15d9e95'"
 msgstr ""
+"external ref='figures/gpm-unplugged.png' "
+"md5='e9e38fa48737547a19b20af6a15d9e95'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:180
@@ -220,6 +221,8 @@ msgid ""
 "external ref='figures/gpm-charged.png' "
 "md5='cc83716555d07b13a3659683f96c531c'"
 msgstr ""
+"external ref='figures/gpm-charged.png' "
+"md5='cc83716555d07b13a3659683f96c531c'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:200
@@ -264,6 +267,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gpm-low.png' md5='6cd86acf26f251d78060dd2ecb6b6506'"
 msgstr ""
+"external ref='figures/gpm-low.png' md5='6cd86acf26f251d78060dd2ecb6b6506'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:232
@@ -302,6 +306,8 @@ msgid ""
 "external ref='figures/gpm-critical.png' "
 "md5='77b0848ed3bd0510b65f89e0d07a2fed'"
 msgstr ""
+"external ref='figures/gpm-critical.png' "
+"md5='77b0848ed3bd0510b65f89e0d07a2fed'"
 
 #. (itstool) path: section/title
 #: C/index.docbook:259
@@ -332,6 +338,8 @@ msgid ""
 "external ref='figures/gpm-suspend-problem.png' "
 "md5='4e4c1fafda61c5ace02f957717ea7ce6'"
 msgstr ""
+"external ref='figures/gpm-suspend-problem.png' "
+"md5='4e4c1fafda61c5ace02f957717ea7ce6'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:276
@@ -377,6 +385,8 @@ msgid ""
 "external ref='figures/gpm-stats-graph.png' "
 "md5='c7cfa37ad6e96041a1c312d85236e7f6'"
 msgstr ""
+"external ref='figures/gpm-stats-graph.png' "
+"md5='c7cfa37ad6e96041a1c312d85236e7f6'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:308
@@ -500,6 +510,8 @@ msgid ""
 "external ref='figures/gpm-prefs-ac.png' "
 "md5='dc4409a63218146e52d3e670b26785bd'"
 msgstr ""
+"external ref='figures/gpm-prefs-ac.png' "
+"md5='dc4409a63218146e52d3e670b26785bd'"
 
 #. (itstool) path: section/title
 #: C/index.docbook:416
@@ -522,6 +534,8 @@ msgid ""
 "external ref='figures/gpm-prefs-battery.png' "
 "md5='89fe431e4f38073f7d58f38425ad1ee7'"
 msgstr ""
+"external ref='figures/gpm-prefs-battery.png' "
+"md5='89fe431e4f38073f7d58f38425ad1ee7'"
 
 #. (itstool) path: section/para
 #: C/index.docbook:427
@@ -551,6 +565,8 @@ msgid ""
 "external ref='figures/gpm-prefs-general.png' "
 "md5='52b7d145bd085d8af6f3194ac632c547'"
 msgstr ""
+"external ref='figures/gpm-prefs-general.png' "
+"md5='52b7d145bd085d8af6f3194ac632c547'"
 
 #. (itstool) path: section/title
 #: C/index.docbook:448
@@ -586,6 +602,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gs-prefs.png' md5='e9ce36b6ef557681ca4e8e90b71a7f46'"
 msgstr ""
+"external ref='figures/gs-prefs.png' md5='e9ce36b6ef557681ca4e8e90b71a7f46'"
 
 #. (itstool) path: section/para
 #: C/index.docbook:472
@@ -596,6 +613,12 @@ msgid ""
 "idle, then the idle action is performed, which is usually to turn off the "
 "screen, or to suspend or hibernate."
 msgstr ""
+"Tan pronto como la sesión está marcada como inactiva, el <application>Gestor"
+" de energía de MATE</application> inicia su propio temporizador del sistema."
+" Cuando se alcanza el tiempo de espera configurado en <command>mate-power-"
+"preferences</command> y la carga de la CPU está inactiva, se ejecuta la "
+"acción de reposo, que normalmente consiste en apagar la pantalla o en "
+"suspender o hibernar el sistema."
 
 #. (itstool) path: section/para
 #: C/index.docbook:479
@@ -716,6 +739,8 @@ msgid ""
 "external ref='figures/applet-brightness.png' "
 "md5='8ce34f6733215fb86009471f19850dcc'"
 msgstr ""
+"external ref='figures/applet-brightness.png' "
+"md5='8ce34f6733215fb86009471f19850dcc'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:580
@@ -752,6 +777,8 @@ msgid ""
 "external ref='figures/applet-inhibit.png' "
 "md5='7381a44dae4f17bfd47abaa54c0ca2a4'"
 msgstr ""
+"external ref='figures/applet-inhibit.png' "
+"md5='7381a44dae4f17bfd47abaa54c0ca2a4'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:608
@@ -801,6 +828,8 @@ msgid ""
 "external ref='figures/gpm-cell-capacity.png' "
 "md5='7635c3b846f39faf7b16a921a6ebb55c'"
 msgstr ""
+"external ref='figures/gpm-cell-capacity.png' "
+"md5='7635c3b846f39faf7b16a921a6ebb55c'"
 
 #. (itstool) path: section/title
 #: C/index.docbook:644
@@ -949,10 +978,10 @@ msgid ""
 " of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
 "with this manual."
 msgstr ""
-"Se otorga permiso para copiar, distribuir y/o modificar este documento bajo "
-"los términos de la Licencia de Documentación Libre (GFDL) de GNU, la Versión"
-" 1.1 o cualquier versión posterior publicada por la Free Software Foundation"
-" sin variaciones en Secciones, sin Textos de Portada y sin textos de "
+"Se concede permiso para copiar, distribuir y/o modificar este documento "
+"según los términos de la Licencia de Documentación Libre (GFDL) de GNU, en "
+"la versión 1.1 o en cualquier verisón posterior publicada por la Free "
+"Software Foundation, sin secciones invariables ni textos de portada ni de "
 "contraportada. Puede encontrar una copia de la GFDL en<_:ulink-1/> o en el "
 "archivo COPYING-DOCS distribuido con este manual."
 
@@ -964,10 +993,10 @@ msgid ""
 "you can do so by adding a copy of the license to the manual, as described in"
 " section 6 of the license."
 msgstr ""
-"Este manual es parte de una colección de manuales MATE distribuidos bajo la "
-"GFDL. Si quiere distribuir este manual por separado de la colección, puede "
-"hacerlo añadiendo una copia de la licencia al manual, como se describe en la"
-" sección 6 de la licencia."
+"Este manual es parte de una colección de manuales de MATE distribuidos "
+"conforme a la GFDL. Si quiere distribuir este manual por separado de la "
+"colección, puede hacerlo añadiendo una copia de la licencia al manual, tal "
+"como se describe en la sección 6 de la licencia."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:19
@@ -1002,16 +1031,16 @@ msgstr ""
 "EL DOCUMENTO SE PROPORCIONA «TAL CUAL», SIN GARANTÍA DE NINGÚN TIPO, NI "
 "EXPLÍCITA NI IMPLÍCITA, INCLUYENDO, ENTRE OTRAS, LAS GARANTÍAS DE QUE EL "
 "DOCUMENTO O UNA VERSIÓN MODIFICADA DEL DOCUMENTO CAREZCA DE DEFECTOS "
-"COMERCIALES, SEA ADECUADO A UN FIN CONCRETO O INCUMPLA ALGUNA NORMATIVA. "
-"TODO EL RIESGO RELATIVO A LA CALIDAD, PRECISIÓN Y UTILIDAD DEL DOCUMENTO O "
-"UNA VERSIÓN MODIFICADA DEL DOCUMENTO RECAE EN USTED. SI EL DOCUMENTO O "
-"CUALQUIER VERSIÓN MODIFICADA DEL DOCUMENTO RESULTARA DEFECTUOSO EN CUALQUIER"
-" ASPECTO, USTED (Y NO EL REDACTOR INICIAL, EL AUTOR O CUALQUIER "
-"CONTRIBUYENTE) ASUMIRÁ TODOS LOS COSTES DE MANTENIMIENTO, REPARACIÓN O "
-"CORRECCIÓN NECESARIOS. ESTA RENUNCIA DE GARANTÍA ES UNA PARTE ESENCIAL DE "
-"ESTA LICENCIA. NO SE AUTORIZA EL USO DEL DOCUMENTO NI DE CUALQUIER VERSIÓN "
-"MODIFICADA DEL DOCUMENTO SALVO EN VIRTUD DE LA PRESENTE CLÁUSULA DE EXENCIÓN"
-" DE RESPONSABILIDAD; Y"
+"COMERCIALES, SEA ADECUADO A UN PROPÓSITO PARTICULAR O INCUMPLA ALGUNA "
+"NORMATIVA. TODO RIESGO EN RELACIÓN CON LA CALIDAD, LA PRECISIÓN Y LA "
+"UTILIDAD DEL DOCUMENTO O UNA VERSIÓN MODIFICADA DEL DOCUMENTO RECAE EN "
+"USTED. SI EL DOCUMENTO O CUALQUIER VERSIÓN MODIFICADA DEL DOCUMENTO "
+"RESULTARA DEFECTUOSO EN CUALQUIER ASPECTO, USTED (Y NO EL REDACTOR INICIAL, "
+"EL AUTOR O CUALQUIER CONTRIBUYENTE) ASUMIRÁ TODOS LOS COSTES DE "
+"MANTENIMIENTO, REPARACIÓN O CORRECCIÓN NECESARIOS. ESTA RENUNCIA DE GARANTÍA"
+" ES UNA PARTE ESENCIAL DE ESTA LICENCIA. NO SE AUTORIZA EL USO DEL DOCUMENTO"
+" NI DE CUALQUIER VERSIÓN MODIFICADA DEL DOCUMENTO SALVO EN VIRTUD DE LA "
+"PRESENTE CLÁUSULA DE EXENCIÓN DE RESPONSABILIDAD; Y"
 
 #. (itstool) path: listitem/para
 #: C/legal.xml:55
@@ -1027,17 +1056,18 @@ msgid ""
 "VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
 " POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
-"BAJO NINGUNA CIRCUNSTANCIA NI BAJO NINGUNA TEORÍA LEGAL, SEA POR ERROR "
-"(INCLUYENDO NEGLIGENCIA), CONTRATO O DE ALGÚN OTRO MODO, EL AUTOR, EL "
-"ESCRITOR INICIAL, CUALQUIER CONTRIBUIDOR, O CUALQUIER DISTRIBUIDOR DEL "
-"DOCUMENTO O VERSIÓN MODIFICADA DEL DOCUMENTO, O CUALQUIER PROVEEDOR DE "
-"CUALQUIERA DE ESAS PARTES, SERÁ RESPONSABLE ANTE NINGUNA PERSONA POR NINGÚN "
-"DAÑO DIRECTO, INDIRECTO, ESPECIAL, INCIDENTAL O DERIVADO DE NINGÚN TIPO, "
-"INCLUYENDO, SIN LIMITACIÓN DAÑOS POR PÉRDIDA DE MERCANCÍAS, PARO TÉCNICO, "
-"FALLO INFORMÁTICO O MAL FUNCIONAMIENTO O CUALQUIER OTRO POSIBLE DAÑO O "
-"PÉRDIDAS DERIVADAS O RELACIONADAS CON EL USO DEL DOCUMENTO O SUS VERSIONES "
-"MODIFICADAS, AUNQUE DICHA PARTE HAYA SIDO INFORMADA DE LA POSIBILIDAD DE QUE"
-" SE PRODUJESEN DICHOS DAÑOS."
+"BAJO NINGUNA CIRCUNSTANCIA NI BAJO NINGÚN CONCEPTO LEGAL, YA SEA POR "
+"RESPONSABILIDAD CIVIL (INCLUIDA LA NEGLIGENCIA), CONTRACTUAL O DE OTRO TIPO,"
+" EL AUTOR, EL REDACTOR INICIAL, CUALQUIER CONTRIBUYENTE O CUALQUIER "
+"DISTRIBUIDOR DEL DOCUMENTO O DE UNA VERSIÓN MODIFICADA DEL DOCUMENTO, O "
+"CUALQUIER PROVEEDOR DE CUALQUIERA DE DICHAS PARTES, NO SERÁN RESPONSABLES "
+"ANTE NINGUNA PERSONA POR NINGÚN DAÑO DIRECTO, INDIRECTO, ESPECIAL, "
+"ACCIDENTAL O DERIVADO DE CUALQUIER TIPO, INCLUIDOS, ENTRE OTROS, LOS DAÑOS "
+"POR PÉRDIDA DE REPUTACIÓN, INTERRUPCIÓN DEL TRABAJO, FALLO O MAL "
+"FUNCIONAMIENTO DEL EQUIPO O CUALQUIER OTRO DAÑO O PÉRDIDA DERIVADO O "
+"RELACIONADO CON EL USO DEL DOCUMENTO Y LAS VERSIONES MODIFICADAS DEL "
+"DOCUMENTO, INCLUSO SI DICHAS PARTES HAN SIDO INFORMADAS DE LA POSIBILIDAD DE"
+" QUE SE PRODUZCAN DICHOS DAÑOS."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:28
@@ -1046,9 +1076,9 @@ msgid ""
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<_:orderedlist-1/>"
 msgstr ""
-"EL DOCUMENTO Y LAS VERSIONES MODIFICADAS DEL DOCUMENTO SE PROPORCIONAN BAJO "
-"LOS TÉRMINOS DE LA LICENCIA GRATUITA DE DOCUMENTACIÓN DE GNU CON EL ACUERDO "
-"ADICIONAL DE:<_:orderedlist-1/>"
+"EL DOCUMENTO Y LAS VERSIONES MODIFICADAS DEL DOCUMENTO SE PROPORCIONAN SEGÚN"
+" LOS TÉRMINOS DE LA LICENCIA DE DOCUMENTACIÓN LIBRE DE GNU CON EL ACUERDO "
+"ADICIONAL DE QUE:<_:orderedlist-1/>"
 
 #. (itstool) path: formalpara/title
 #: C/legal.xml:77
