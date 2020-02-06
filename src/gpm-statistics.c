@@ -876,7 +876,6 @@ gpm_stats_add_device (UpDevice *device, GPtrArray *devices)
 {
 	const gchar *id;
 	GtkTreeIter iter;
-	const gchar *text;
 	const gchar *icon;
 	UpDeviceKind kind;
 	gchar *label, *vendor, *model;

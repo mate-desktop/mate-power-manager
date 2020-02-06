@@ -796,8 +796,6 @@ phone_device_refresh_cb (GpmPhone *phone, guint idx, GpmEngine *engine)
 static void
 gpm_engine_init (GpmEngine *engine)
 {
-	GPtrArray *array = NULL;
-	guint i;
 	guint idle_id;
 	engine->priv = gpm_engine_get_instance_private (engine);
 

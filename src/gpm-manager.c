@@ -949,7 +949,6 @@ static void
 gpm_manager_client_changed_cb (UpClient *client, GParamSpec *pspec, GpmManager *manager)
 {
 	gboolean event_when_closed;
-	gint timeout;
 	gboolean on_battery;
 	gboolean lid_is_closed;
 
