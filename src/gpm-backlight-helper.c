@@ -40,7 +40,7 @@
  * gcm_backlight_helper_get_best_backlight:
  **/
 static gchar *
-gcm_backlight_helper_get_best_backlight ()
+gcm_backlight_helper_get_best_backlight (void)
 {
 	gchar *filename;
 	guint i;
