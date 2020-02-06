@@ -67,7 +67,6 @@ main (int argc, char **argv)
 	gboolean verbose = FALSE;
 	GOptionContext *context;
 	GpmPrefs *prefs = NULL;
-	gboolean ret;
 	GtkApplication *app;
 	GtkWidget *window;
 	gint status;

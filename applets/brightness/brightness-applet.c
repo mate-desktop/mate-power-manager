@@ -976,8 +976,6 @@ gpm_brightness_applet_name_vanished_cb (GDBusConnection *connection,
 static void
 gpm_brightness_applet_init (GpmBrightnessApplet *applet)
 {
-	DBusGConnection *connection;
-
 	/* initialize fields */
 	applet->size = 0;
 	applet->call_worked = TRUE;

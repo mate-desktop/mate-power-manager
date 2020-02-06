@@ -458,8 +458,6 @@ gpm_inhibit_applet_name_vanished_cb (GDBusConnection *connection,
 static void
 gpm_inhibit_applet_init (GpmInhibitApplet *applet)
 {
-	DBusGConnection *connection;
-
 	/* initialize fields */
 	applet->image = NULL;
 	applet->cookie = 0;
