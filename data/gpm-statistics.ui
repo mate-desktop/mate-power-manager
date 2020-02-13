@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
 <interface>
-  <requires lib="gtk+" version="2.16"/>
+  <requires lib="gtk+" version="3.0"/>
   <object class="GtkDialog" id="dialog_stats">
     <property name="can_focus">False</property>
     <property name="border_width">6</property>
     <property name="title" translatable="yes">Power Statistics</property>
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
+    <child>
+      <placeholder/>
+    </child>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox1">
         <property name="visible">True</property>
@@ -21,11 +25,11 @@
             <child>
               <object class="GtkButton" id="button_help">
                 <property name="label">gtk-help</property>
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
                 <property name="receives_default">False</property>
-                <property name="use_action_appearance">False</property>
                 <property name="use_stock">True</property>
               </object>
               <packing>
@@ -38,11 +42,11 @@
             <child>
               <object class="GtkButton" id="button_close">
                 <property name="label">gtk-close</property>
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
                 <property name="receives_default">False</property>
-                <property name="use_action_appearance">False</property>
                 <property name="use_stock">True</property>
               </object>
               <packing>
@@ -52,6 +56,11 @@
               </packing>
             </child>
           </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
         </child>
         <child>
           <object class="GtkHBox" id="hbox1">
@@ -64,7 +73,6 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="hscrollbar_policy">never</property>
-                <property name="vscrollbar_policy">automatic</property>
                 <property name="shadow_type">in</property>
                 <child>
                   <object class="GtkTreeView" id="treeview_devices">
@@ -92,8 +100,6 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="border_width">9</property>
-                    <property name="hscrollbar_policy">automatic</property>
-                    <property name="vscrollbar_policy">automatic</property>
                     <property name="shadow_type">in</property>
                     <child>
                       <object class="GtkTreeView" id="treeview_info">
@@ -140,6 +146,7 @@
                               </object>
                               <packing>
                                 <property name="expand">False</property>
+                                <property name="fill">True</property>
                                 <property name="position">0</property>
                               </packing>
                             </child>
@@ -147,7 +154,6 @@
                               <object class="GtkComboBoxText" id="combobox_history_type">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="entry_text_column">0</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -183,7 +189,6 @@
                               <object class="GtkComboBoxText" id="combobox_history_time">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="entry_text_column">0</property>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -274,10 +279,10 @@
                         <child>
                           <object class="GtkCheckButton" id="checkbutton_smooth_history">
                             <property name="label" translatable="yes">Use smoothed line</property>
+                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="draw_indicator">True</property>
                           </object>
                           <packing>
@@ -289,10 +294,10 @@
                         <child>
                           <object class="GtkCheckButton" id="checkbutton_points_history">
                             <property name="label" translatable="yes">Show data points</property>
+                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="draw_indicator">True</property>
                           </object>
                           <packing>
@@ -351,7 +356,6 @@
                           <object class="GtkComboBoxText" id="combobox_stats_type">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="entry_text_column">0</property>
                           </object>
                           <packing>
                             <property name="expand">True</property>
@@ -436,10 +440,10 @@
                         <child>
                           <object class="GtkCheckButton" id="checkbutton_smooth_stats">
                             <property name="label" translatable="yes">Use smoothed line</property>
+                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="draw_indicator">True</property>
                           </object>
                           <packing>
@@ -451,10 +455,10 @@
                         <child>
                           <object class="GtkCheckButton" id="checkbutton_points_stats">
                             <property name="label" translatable="yes">Show data points</property>
+                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="draw_indicator">True</property>
                           </object>
                           <packing>
@@ -483,87 +487,6 @@
                   </object>
                   <packing>
                     <property name="position">2</property>
-                    <property name="tab_fill">False</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkVBox" id="vbox1">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="border_width">9</property>
-                    <property name="spacing">9</property>
-                    <child>
-                      <object class="GtkHBox" id="hbox3">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="spacing">3</property>
-                        <child>
-                          <object class="GtkLabel" id="label8">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">Processor wakeups per second:</property>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">0</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkLabel" id="label_total_wakeups">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">0</property>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">1</property>
-                          </packing>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">0</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkScrolledWindow" id="scrolledwindow3">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="hscrollbar_policy">automatic</property>
-                        <property name="vscrollbar_policy">automatic</property>
-                        <property name="shadow_type">in</property>
-                        <child>
-                          <object class="GtkTreeView" id="treeview_wakeups">
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <child internal-child="selection">
-                              <object class="GtkTreeSelection" id="treeview-selection3"/>
-                            </child>
-                          </object>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="expand">True</property>
-                        <property name="fill">True</property>
-                        <property name="position">1</property>
-                      </packing>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="position">3</property>
-                  </packing>
-                </child>
-                <child type="tab">
-                  <object class="GtkLabel" id="label7">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Wakeups</property>
-                  </object>
-                  <packing>
-                    <property name="position">3</property>
                     <property name="tab_fill">False</property>
                   </packing>
                 </child>
