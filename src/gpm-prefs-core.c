@@ -41,6 +41,10 @@
 #include "gpm-icon-names.h"
 #include "gpm-brightness.h"
 
+#define GET_WIDGET(x) (GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, (x))))
+#define GET_NOTEBOOK(x) (GTK_NOTEBOOK (gtk_builder_get_object (prefs->priv->builder, (x))))
+#define GET_WINDOW(x) (GTK_WINDOW (gtk_builder_get_object (prefs->priv->builder, (x))))
+
 static void gpm_prefs_finalize (GObject *object);
 
 struct GpmPrefsPrivate
@@ -109,7 +113,7 @@ void
 gpm_prefs_activate_window (GtkApplication *app, GpmPrefs *prefs)
 {
 	GtkWindow *window;
-	window = GTK_WINDOW (gtk_builder_get_object (prefs->priv->builder, "dialog_preferences"));
+	window = GET_WINDOW ("dialog_preferences");
 	gtk_application_add_window (GTK_APPLICATION (app), window);
 	gtk_window_present (window);
 }
@@ -218,7 +222,7 @@ gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 	GPtrArray *array;
 	GpmActionPolicy *actions_added;
 
-	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, widget_name));
+	widget = GET_WIDGET (widget_name);
 
 	value = g_settings_get_enum (prefs->priv->settings, gpm_pref_key);
 	is_writable = g_settings_is_writable (prefs->priv->settings, gpm_pref_key);
@@ -296,7 +300,7 @@ gpm_prefs_setup_time_combo (GpmPrefs *prefs, const gchar *widget_name,
 	gboolean is_writable;
 	GtkWidget *widget;
 
-	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, widget_name));
+	widget = GET_WIDGET (widget_name);
 
 	value = g_settings_get_int (prefs->priv->settings, gpm_pref_key);
 	is_writable = g_settings_is_writable (prefs->priv->settings, gpm_pref_key);
@@ -352,74 +356,6 @@ gpm_prefs_delete_event_cb (GtkWidget *widget, GdkEvent *event, GpmPrefs *prefs)
 	return FALSE;
 }
 
-/** setup the notification page */
-static void
-prefs_setup_notification (GpmPrefs *prefs)
-{
-	gint icon_policy;
-	GtkWidget *radiobutton_icon_always;
-	GtkWidget *radiobutton_icon_present;
-	GtkWidget *radiobutton_icon_charge;
-	GtkWidget *radiobutton_icon_low;
-	GtkWidget *radiobutton_icon_never;
-	gboolean is_writable;
-
-	icon_policy = g_settings_get_enum (prefs->priv->settings, GPM_SETTINGS_ICON_POLICY);
-
-	radiobutton_icon_always = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder,
-						  "radiobutton_notification_always"));
-	radiobutton_icon_present = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder,
-						   "radiobutton_notification_present"));
-	radiobutton_icon_charge = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder,
-						  "radiobutton_notification_charge"));
-	radiobutton_icon_low = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder,
-					   "radiobutton_notification_low"));
-	radiobutton_icon_never = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder,
-						 "radiobutton_notification_never"));
-
-	is_writable = g_settings_is_writable (prefs->priv->settings, GPM_SETTINGS_ICON_POLICY);
-	gtk_widget_set_sensitive (radiobutton_icon_always, is_writable);
-	gtk_widget_set_sensitive (radiobutton_icon_present, is_writable);
-	gtk_widget_set_sensitive (radiobutton_icon_charge, is_writable);
-	gtk_widget_set_sensitive (radiobutton_icon_low, is_writable);
-	gtk_widget_set_sensitive (radiobutton_icon_never, is_writable);
-
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_icon_always),
-					  icon_policy == GPM_ICON_POLICY_ALWAYS);
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_icon_present),
-					  icon_policy == GPM_ICON_POLICY_PRESENT);
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_icon_charge),
-					  icon_policy == GPM_ICON_POLICY_CHARGE);
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_icon_low),
-					  icon_policy == GPM_ICON_POLICY_LOW);
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_icon_never),
-					  icon_policy == GPM_ICON_POLICY_NEVER);
-
-	g_object_set_data (G_OBJECT (radiobutton_icon_always), "policy",
-			   GINT_TO_POINTER (GPM_ICON_POLICY_ALWAYS));
-	g_object_set_data (G_OBJECT (radiobutton_icon_present), "policy",
-			   GINT_TO_POINTER (GPM_ICON_POLICY_PRESENT));
-	g_object_set_data (G_OBJECT (radiobutton_icon_charge), "policy",
-			   GINT_TO_POINTER (GPM_ICON_POLICY_CHARGE));
-	g_object_set_data (G_OBJECT (radiobutton_icon_low), "policy",
-			   GINT_TO_POINTER (GPM_ICON_POLICY_LOW));
-	g_object_set_data (G_OBJECT (radiobutton_icon_never), "policy",
-			   GINT_TO_POINTER (GPM_ICON_POLICY_NEVER));
-
-	/* only connect the callbacks after we set the value, else the settings
-	 * keys gets written to (for a split second), and the icon flickers. */
-	g_signal_connect (radiobutton_icon_always, "clicked",
-			  G_CALLBACK (gpm_prefs_icon_radio_cb), prefs);
-	g_signal_connect (radiobutton_icon_present, "clicked",
-			  G_CALLBACK (gpm_prefs_icon_radio_cb), prefs);
-	g_signal_connect (radiobutton_icon_charge, "clicked",
-			  G_CALLBACK (gpm_prefs_icon_radio_cb), prefs);
-	g_signal_connect (radiobutton_icon_low, "clicked",
-			  G_CALLBACK (gpm_prefs_icon_radio_cb), prefs);
-	g_signal_connect (radiobutton_icon_never, "clicked",
-			  G_CALLBACK (gpm_prefs_icon_radio_cb), prefs);
-}
-
 static void
 prefs_setup_ac (GpmPrefs *prefs)
 {
@@ -460,7 +396,7 @@ prefs_setup_ac (GpmPrefs *prefs)
 					  button_lid_actions);
 
 	/* setup brightness slider */
-	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hscale_ac_brightness"));
+	widget = GET_WIDGET ("hscale_ac_brightness");
 	g_settings_bind (prefs->priv->settings, GPM_SETTINGS_BRIGHTNESS_AC,
 			 gtk_range_get_adjustment (GTK_RANGE (widget)), "value",
 			 G_SETTINGS_BIND_DEFAULT);
@@ -468,30 +404,22 @@ prefs_setup_ac (GpmPrefs *prefs)
 			  G_CALLBACK (gpm_prefs_format_percentage_cb), NULL);
 
 	/* set up the checkboxes */
-	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_ac_display_dim"));
 	g_settings_bind (prefs->priv->settings, GPM_SETTINGS_IDLE_DIM_AC,
-			 widget, "active",
+			 GET_WIDGET ("checkbutton_ac_display_dim"), "active",
 			 G_SETTINGS_BIND_DEFAULT);
 
 	if (prefs->priv->has_button_lid == FALSE) {
-		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_ac_lid"));
-		gtk_widget_hide(widget);
+		gtk_widget_hide (GET_WIDGET ("box_ac_lid"));
 	}
 	if (prefs->priv->has_lcd == FALSE) {
-		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_ac_brightness"));
-
-		gtk_widget_hide(widget);
-
-		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_ac_display_dim"));
-
-		gtk_widget_hide(widget);
+		gtk_widget_hide (GET_WIDGET ("box_ac_brightness"));
+		gtk_widget_hide (GET_WIDGET ("checkbutton_ac_display_dim"));
 	}
 }
 
 static void
 prefs_setup_battery (GpmPrefs *prefs)
 {
-	GtkWidget *widget;
 	GtkNotebook *notebook;
 	gint page;
 
@@ -533,9 +461,8 @@ prefs_setup_battery (GpmPrefs *prefs)
 					display_times);
 
 	if (prefs->priv->has_batteries == FALSE) {
-		notebook = GTK_NOTEBOOK (gtk_builder_get_object (prefs->priv->builder, "notebook_preferences"));
-		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "vbox_battery"));
-		page = gtk_notebook_page_num (notebook, GTK_WIDGET (widget));
+		notebook = GET_NOTEBOOK ("notebook_preferences");
+		page = gtk_notebook_page_num (notebook, GET_WIDGET ("box_battery"));
 		gtk_notebook_remove_page (notebook, page);
 		return;
 	}
@@ -548,30 +475,23 @@ prefs_setup_battery (GpmPrefs *prefs)
 					  battery_critical_actions);
 
 	/* set up the checkboxes */
-	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_battery_display_reduce"));
 	g_settings_bind (prefs->priv->settings, GPM_SETTINGS_BACKLIGHT_BATTERY_REDUCE,
-			 widget, "active",
+			 GET_WIDGET ("checkbutton_battery_display_reduce"), "active",
 			 G_SETTINGS_BIND_DEFAULT);
-	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_battery_display_dim"));
 	g_settings_bind (prefs->priv->settings, GPM_SETTINGS_IDLE_DIM_BATT,
-			 widget, "active",
+			 GET_WIDGET ("checkbutton_battery_display_dim"), "active",
 			 G_SETTINGS_BIND_DEFAULT);
 
-	if (prefs->priv->has_button_lid == FALSE) {
-		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_battery_lid"));
+	if (prefs->priv->has_button_lid == FALSE)
+		gtk_widget_hide (GET_WIDGET ("box_battery_lid"));
 
-		gtk_widget_hide(widget);
-	}
-	if (prefs->priv->has_lcd == FALSE) {
-		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "checkbutton_battery_display_dim"));
-		gtk_widget_hide(widget);
-	}
+	if (prefs->priv->has_lcd == FALSE)
+		gtk_widget_hide (GET_WIDGET ("checkbutton_battery_display_dim"));
 }
 
 static void
 prefs_setup_ups (GpmPrefs *prefs)
 {
-	GtkWidget *widget;
 	GtkWidget *notebook;
 	GtkWidget *window;
 	gint page;
@@ -606,15 +526,14 @@ prefs_setup_ups (GpmPrefs *prefs)
 					display_times);
 
 	window = gpm_window (prefs);
-	notebook = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "notebook_preferences"));
+	notebook = GET_WIDGET ("notebook_preferences");
 	gtk_widget_add_events (notebook, GDK_SCROLL_MASK);
 	g_signal_connect (GTK_NOTEBOOK (notebook), "scroll-event",
 			  G_CALLBACK (gpm_dialog_page_scroll_event_cb),
 			  window);
 
 	if (prefs->priv->has_ups == FALSE) {
-		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "vbox_ups"));
-		page = gtk_notebook_page_num (GTK_NOTEBOOK (notebook), GTK_WIDGET (widget));
+		page = gtk_notebook_page_num (GTK_NOTEBOOK (notebook), GET_WIDGET ("box_ups"));
 		gtk_notebook_remove_page (GTK_NOTEBOOK (notebook), page);
 		return;
 	}
@@ -630,7 +549,6 @@ prefs_setup_ups (GpmPrefs *prefs)
 static void
 prefs_setup_general (GpmPrefs *prefs)
 {
-	GtkWidget *widget;
 	const GpmActionPolicy power_button_actions[] =
 				{GPM_ACTION_POLICY_INTERACTIVE,
 				 GPM_ACTION_POLICY_SUSPEND,
@@ -651,11 +569,8 @@ prefs_setup_general (GpmPrefs *prefs)
 					  GPM_SETTINGS_BUTTON_SUSPEND,
 					  suspend_button_actions);
 
-	if (prefs->priv->has_button_suspend == FALSE) {
-		widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "hbox_general_suspend"));
-
-		gtk_widget_hide(widget);
-	}
+	if (prefs->priv->has_button_suspend == FALSE)
+		gtk_widget_hide (GET_WIDGET ("box_general_suspend"));
 }
 
 /**
@@ -665,9 +580,6 @@ prefs_setup_general (GpmPrefs *prefs)
 static void
 gpm_prefs_init (GpmPrefs *prefs)
 {
-	GtkWidget *main_window;
-	GtkWidget *widget;
-	guint retval;
 	GError *error = NULL;
 	GPtrArray *devices = NULL;
 	UpDevice *device;
@@ -822,38 +734,76 @@ gpm_prefs_init (GpmPrefs *prefs)
 
 	error = NULL;
 	prefs->priv->builder = gtk_builder_new ();
-	retval = gtk_builder_add_from_resource (prefs->priv->builder, "/org/mate/powermanager/preferences/gpm-prefs.ui", &error);
+	(void) gtk_builder_add_from_resource (prefs->priv->builder, "/org/mate/powermanager/preferences/gpm-prefs.ui", &error);
 
 	if (error) {
 		egg_error ("failed to load ui: %s", error->message);
 	}
 
-	main_window = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "dialog_preferences"));
-
 	/* Hide window first so that the dialogue resizes itself without redrawing */
-	gtk_widget_hide (main_window);
-	gtk_window_set_default_icon_name (GPM_ICON_APP_ICON);
+	gtk_widget_hide (GET_WIDGET ("dialog_preferences"));
 
-	/* Get the main window quit */
-	g_signal_connect (main_window, "delete_event",
-			  G_CALLBACK (gpm_prefs_delete_event_cb), prefs);
+	gtk_widget_hide (GET_WIDGET ("button_defaults"));
 
-	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "button_close"));
-	g_signal_connect (widget, "clicked",
-			  G_CALLBACK (gpm_prefs_close_cb), prefs);
+	/** setup the notification page */
+	gint icon_policy;
+	GtkWidget *radiobutton_icon_always;
+	GtkWidget *radiobutton_icon_present;
+	GtkWidget *radiobutton_icon_charge;
+	GtkWidget *radiobutton_icon_low;
+	GtkWidget *radiobutton_icon_never;
 
-	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "button_help"));
-	g_signal_connect (widget, "clicked",
-			  G_CALLBACK (gpm_prefs_help_cb), prefs);
+	icon_policy = g_settings_get_enum (prefs->priv->settings, GPM_SETTINGS_ICON_POLICY);
 
-	widget = GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "button_defaults"));
-	gtk_widget_hide (widget);
+	radiobutton_icon_always = GET_WIDGET ("radiobutton_notification_always");
+	radiobutton_icon_present = GET_WIDGET ("radiobutton_notification_present");
+	radiobutton_icon_charge = GET_WIDGET ("radiobutton_notification_charge");
+	radiobutton_icon_low = GET_WIDGET ("radiobutton_notification_low");
+	radiobutton_icon_never = GET_WIDGET ("radiobutton_notification_never");
+
+	gtk_widget_set_sensitive (GET_WIDGET ("box_general_notification"),
+	                          g_settings_is_writable (prefs->priv->settings, GPM_SETTINGS_ICON_POLICY));
+
+	switch (icon_policy) {
+		case GPM_ICON_POLICY_ALWAYS:
+			gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_icon_always), TRUE);
+			break;
+		case GPM_ICON_POLICY_PRESENT:
+			gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_icon_present), TRUE);
+			break;
+		case GPM_ICON_POLICY_CHARGE:
+			gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_icon_charge), TRUE);
+			break;
+		case GPM_ICON_POLICY_LOW:
+			gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_icon_low), TRUE);
+			break;
+		case GPM_ICON_POLICY_NEVER:
+			gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_icon_never), TRUE);
+			break;
+	}
+
+	g_object_set_data (G_OBJECT (radiobutton_icon_always), "policy", GINT_TO_POINTER (GPM_ICON_POLICY_ALWAYS));
+	g_object_set_data (G_OBJECT (radiobutton_icon_present), "policy", GINT_TO_POINTER (GPM_ICON_POLICY_PRESENT));
+	g_object_set_data (G_OBJECT (radiobutton_icon_charge), "policy", GINT_TO_POINTER (GPM_ICON_POLICY_CHARGE));
+	g_object_set_data (G_OBJECT (radiobutton_icon_low), "policy", GINT_TO_POINTER (GPM_ICON_POLICY_LOW));
+	g_object_set_data (G_OBJECT (radiobutton_icon_never), "policy", GINT_TO_POINTER (GPM_ICON_POLICY_NEVER));
+
+	gtk_builder_add_callback_symbols (prefs->priv->builder,
+	                                  "on_dialog_preferences_delete_event", G_CALLBACK (gpm_prefs_delete_event_cb),
+	                                  "on_button_help_clicked", G_CALLBACK (gpm_prefs_help_cb),
+	                                  "on_button_close_clicked", G_CALLBACK (gpm_prefs_close_cb),
+	                                  "on_radiobutton_notification_never_clicked", G_CALLBACK (gpm_prefs_icon_radio_cb),
+	                                  "on_radiobutton_notification_low_clicked", G_CALLBACK (gpm_prefs_icon_radio_cb),
+	                                  "on_radiobutton_notification_charge_clicked", G_CALLBACK (gpm_prefs_icon_radio_cb),
+	                                  "on_radiobutton_notification_present_clicked", G_CALLBACK (gpm_prefs_icon_radio_cb),
+	                                  "on_radiobutton_notification_always_clicked", G_CALLBACK (gpm_prefs_icon_radio_cb),
+	                                  NULL);
+	gtk_builder_connect_signals (prefs->priv->builder, prefs);
 
 	prefs_setup_ac (prefs);
 	prefs_setup_battery (prefs);
 	prefs_setup_ups (prefs);
 	prefs_setup_general (prefs);
-	prefs_setup_notification (prefs);
 }
 
 /**
@@ -897,5 +847,5 @@ gpm_prefs_new (void)
 GtkWidget *
 gpm_window (GpmPrefs *prefs)
 {
-	return GTK_WIDGET (gtk_builder_get_object (prefs->priv->builder, "dialog_preferences"));
+	return GET_WIDGET ("dialog_preferences");
 }
