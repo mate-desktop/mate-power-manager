@@ -31,7 +31,6 @@
 #include <gtk/gtk.h>
 
 #include "gpm-common.h"
-#include "egg-debug.h"
 #include "gpm-prefs-core.h"
 
 /**
@@ -64,7 +63,6 @@ gpm_prefs_activated_cb (GtkApplication *app, GpmPrefs *prefs)
 int
 main (int argc, char **argv)
 {
-	gboolean verbose = FALSE;
 	GOptionContext *context;
 	GpmPrefs *prefs = NULL;
 	GtkApplication *app;
@@ -72,8 +70,6 @@ main (int argc, char **argv)
 	gint status;
 
 	const GOptionEntry options[] = {
-		{ "verbose", '\0', 0, G_OPTION_ARG_NONE, &verbose,
-		  N_("Show extra debugging information"), NULL },
 		{ NULL}
 	};
 
@@ -87,8 +83,6 @@ main (int argc, char **argv)
 	g_option_context_add_main_entries (context, options, GETTEXT_PACKAGE);
 	g_option_context_add_group (context, gtk_get_option_group (FALSE));
 	g_option_context_parse (context, &argc, &argv, NULL);
-
-	egg_debug_init (verbose);
 
 	gdk_init (&argc, &argv);
 	app = gtk_application_new("org.mate.PowerManager.Preferences", 0);

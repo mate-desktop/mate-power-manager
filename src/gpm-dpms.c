@@ -40,7 +40,6 @@
 #include <X11/Xproto.h>
 #include <X11/extensions/dpms.h>
 
-#include "egg-debug.h"
 #include "gpm-dpms.h"
 
 static void   gpm_dpms_finalize  (GObject   *object);
@@ -136,21 +135,21 @@ gpm_dpms_x11_set_mode (GpmDpms *dpms, GpmDpmsMode mode, GError **error)
 	BOOL current_enabled;
 
 	if (!dpms->priv->dpms_capable) {
-		egg_debug ("not DPMS capable");
+		g_debug ("not DPMS capable");
 		g_set_error (error, GPM_DPMS_ERROR, GPM_DPMS_ERROR_GENERAL,
 			     "Display is not DPMS capable");
 		return FALSE;
 	}
 
 	if (!DPMSInfo (dpms->priv->display, &current_state, &current_enabled)) {
-		egg_debug ("couldn't get DPMS info");
+		g_debug ("couldn't get DPMS info");
 		g_set_error (error, GPM_DPMS_ERROR, GPM_DPMS_ERROR_GENERAL,
 			     "Unable to get DPMS state");
 		return FALSE;
 	}
 
 	if (!current_enabled) {
-		egg_debug ("DPMS not enabled");
+		g_debug ("DPMS not enabled");
 		g_set_error (error, GPM_DPMS_ERROR, GPM_DPMS_ERROR_GENERAL,
 			     "DPMS is not enabled");
 		return FALSE;
@@ -198,7 +197,7 @@ gpm_dpms_set_mode (GpmDpms *dpms, GpmDpmsMode mode, GError **error)
 	g_return_val_if_fail (GPM_IS_DPMS (dpms), FALSE);
 
 	if (mode == GPM_DPMS_MODE_UNKNOWN) {
-		egg_debug ("mode unknown");
+		g_debug ("mode unknown");
 		g_set_error (error, GPM_DPMS_ERROR, GPM_DPMS_ERROR_GENERAL,
 			     "Unknown DPMS mode");
 		return FALSE;
@@ -256,11 +255,11 @@ gpm_dpms_clear_timeouts (GpmDpms *dpms)
 
 	/* never going to work */
 	if (!dpms->priv->dpms_capable) {
-		egg_debug ("not DPMS capable");
+		g_debug ("not DPMS capable");
 		goto out;
 	}
 
-	egg_debug ("set timeouts to zero");
+	g_debug ("set timeouts to zero");
 	ret = DPMSSetTimeouts (dpms->priv->display, 0, 0, 0);
 
 out:

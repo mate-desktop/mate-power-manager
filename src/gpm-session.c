@@ -28,7 +28,6 @@
 
 #include "gpm-session.h"
 #include "gpm-common.h"
-#include "egg-debug.h"
 #include "gpm-marshal.h"
 
 static void     gpm_session_finalize   (GObject		*object);
@@ -92,7 +91,7 @@ gpm_session_logout (GpmSession *session)
 
 	/* no mate-session */
 	if (session->priv->proxy == NULL) {
-		egg_warning ("no mate-session");
+		g_warning ("no mate-session");
 		return FALSE;
 	}
 
@@ -140,7 +139,7 @@ gpm_session_presence_status_changed_cb (DBusGProxy *proxy, guint status, GpmSess
 	gboolean is_idle;
 	is_idle = (status == GPM_SESSION_STATUS_ENUM_IDLE);
 	if (is_idle != session->priv->is_idle_old) {
-		egg_debug ("emitting idle-changed : (%i)", is_idle);
+		g_debug ("emitting idle-changed : (%i)", is_idle);
 		session->priv->is_idle_old = is_idle;
 		g_signal_emit (session, signals [IDLE_CHANGED], 0, is_idle);
 	}
@@ -159,7 +158,7 @@ gpm_session_is_idle (GpmSession *session)
 
 	/* no mate-session */
 	if (session->priv->proxy_prop == NULL) {
-		egg_warning ("no mate-session");
+		g_warning ("no mate-session");
 		goto out;
 	}
 
@@ -172,7 +171,7 @@ gpm_session_is_idle (GpmSession *session)
 				 G_TYPE_VALUE, value,
 				 G_TYPE_INVALID);
 	if (!ret) {
-		egg_warning ("failed to get idle status: %s", error->message);
+		g_warning ("failed to get idle status: %s", error->message);
 		g_error_free (error);
 		is_idle = FALSE;
 		goto out;
@@ -195,7 +194,7 @@ gpm_session_is_idle_inhibited (GpmSession *session)
 
 	/* no mate-session */
 	if (session->priv->proxy == NULL) {
-		egg_warning ("no mate-session");
+		g_warning ("no mate-session");
 		goto out;
 	}
 
@@ -206,7 +205,7 @@ gpm_session_is_idle_inhibited (GpmSession *session)
 				 G_TYPE_BOOLEAN, &is_inhibited,
 				 G_TYPE_INVALID);
 	if (!ret) {
-		egg_warning ("failed to get inhibit status: %s", error->message);
+		g_warning ("failed to get inhibit status: %s", error->message);
 		g_error_free (error);
 		is_inhibited = FALSE;
 	}
@@ -226,7 +225,7 @@ gpm_session_is_suspend_inhibited (GpmSession *session)
 
 	/* no mate-session */
 	if (session->priv->proxy == NULL) {
-		egg_warning ("no mate-session");
+		g_warning ("no mate-session");
 		goto out;
 	}
 
@@ -237,7 +236,7 @@ gpm_session_is_suspend_inhibited (GpmSession *session)
 				 G_TYPE_BOOLEAN, &is_inhibited,
 				 G_TYPE_INVALID);
 	if (!ret) {
-		egg_warning ("failed to get inhibit status: %s", error->message);
+		g_warning ("failed to get inhibit status: %s", error->message);
 		g_error_free (error);
 		is_inhibited = FALSE;
 	}
@@ -251,7 +250,7 @@ out:
 static void
 gpm_session_stop_cb (DBusGProxy *proxy, GpmSession *session)
 {
-	egg_debug ("emitting ::stop()");
+	g_debug ("emitting ::stop()");
 	g_signal_emit (session, signals [STOP], 0);
 }
 
@@ -261,7 +260,7 @@ gpm_session_stop_cb (DBusGProxy *proxy, GpmSession *session)
 static void
 gpm_session_query_end_session_cb (DBusGProxy *proxy, guint flags, GpmSession *session)
 {
-	egg_debug ("emitting ::query-end-session(%i)", flags);
+	g_debug ("emitting ::query-end-session(%i)", flags);
 	g_signal_emit (session, signals [QUERY_END_SESSION], 0, flags);
 }
 
@@ -271,7 +270,7 @@ gpm_session_query_end_session_cb (DBusGProxy *proxy, guint flags, GpmSession *se
 static void
 gpm_session_end_session_cb (DBusGProxy *proxy, guint flags, GpmSession *session)
 {
-	egg_debug ("emitting ::end-session(%i)", flags);
+	g_debug ("emitting ::end-session(%i)", flags);
 	g_signal_emit (session, signals [END_SESSION], 0, flags);
 }
 
@@ -289,7 +288,7 @@ gpm_session_end_session_response (GpmSession *session, gboolean is_okay, const g
 
 	/* no mate-session */
 	if (session->priv->proxy_client_private == NULL) {
-		egg_warning ("no mate-session proxy");
+		g_warning ("no mate-session proxy");
 		goto out;
 	}
 
@@ -300,7 +299,7 @@ gpm_session_end_session_response (GpmSession *session, gboolean is_okay, const g
 				 G_TYPE_INVALID,
 				 G_TYPE_INVALID);
 	if (!ret) {
-		egg_warning ("failed to send session response: %s", error->message);
+		g_warning ("failed to send session response: %s", error->message);
 		g_error_free (error);
 		goto out;
 	}
@@ -323,7 +322,7 @@ gpm_session_register_client (GpmSession *session, const gchar *app_id, const gch
 
 	/* no mate-session */
 	if (session->priv->proxy == NULL) {
-		egg_warning ("no mate-session");
+		g_warning ("no mate-session");
 		goto out;
 	}
 
@@ -335,7 +334,7 @@ gpm_session_register_client (GpmSession *session, const gchar *app_id, const gch
 				 DBUS_TYPE_G_OBJECT_PATH, &client_id,
 				 G_TYPE_INVALID);
 	if (!ret) {
-		egg_warning ("failed to register client '%s': %s", client_startup_id, error->message);
+		g_warning ("failed to register client '%s': %s", client_startup_id, error->message);
 		g_error_free (error);
 		goto out;
 	}
@@ -345,7 +344,7 @@ gpm_session_register_client (GpmSession *session, const gchar *app_id, const gch
 	session->priv->proxy_client_private = dbus_g_proxy_new_for_name_owner (connection, GPM_SESSION_MANAGER_SERVICE,
 									       client_id, GPM_SESSION_MANAGER_CLIENT_PRIVATE_INTERFACE, &error);
 	if (session->priv->proxy_client_private == NULL) {
-		egg_warning ("DBUS error: %s", error->message);
+		g_warning ("DBUS error: %s", error->message);
 		g_error_free (error);
 		goto out;
 	}
@@ -362,7 +361,7 @@ gpm_session_register_client (GpmSession *session, const gchar *app_id, const gch
 	dbus_g_proxy_add_signal (session->priv->proxy_client_private, "EndSession", G_TYPE_UINT, G_TYPE_INVALID);
 	dbus_g_proxy_connect_signal (session->priv->proxy_client_private, "EndSession", G_CALLBACK (gpm_session_end_session_cb), session, NULL);
 
-	egg_debug ("registered startup '%s' to client id '%s'", client_startup_id, client_id);
+	g_debug ("registered startup '%s' to client id '%s'", client_startup_id, client_id);
 out:
 	g_free (client_id);
 	return ret;
@@ -380,7 +379,7 @@ gpm_session_inhibit_changed_cb (DBusGProxy *proxy, const gchar *id, GpmSession *
 	is_idle_inhibited = gpm_session_is_idle_inhibited (session);
 	is_suspend_inhibited = gpm_session_is_suspend_inhibited (session);
 	if (is_idle_inhibited != session->priv->is_idle_inhibited_old || is_suspend_inhibited != session->priv->is_suspend_inhibited_old) {
-		egg_debug ("emitting inhibited-changed : idle=(%i), suspend=(%i)", is_idle_inhibited, is_suspend_inhibited);
+		g_debug ("emitting inhibited-changed : idle=(%i), suspend=(%i)", is_idle_inhibited, is_suspend_inhibited);
 		session->priv->is_idle_inhibited_old = is_idle_inhibited;
 		session->priv->is_suspend_inhibited_old = is_suspend_inhibited;
 		g_signal_emit (session, signals [INHIBITED_CHANGED], 0, is_idle_inhibited, is_suspend_inhibited);
@@ -464,7 +463,7 @@ gpm_session_init (GpmSession *session)
 								GPM_SESSION_MANAGER_PATH,
 								GPM_SESSION_MANAGER_INTERFACE, &error);
 	if (session->priv->proxy == NULL) {
-		egg_warning ("DBUS error: %s", error->message);
+		g_warning ("DBUS error: %s", error->message);
 		g_error_free (error);
 		return;
 	}
@@ -474,7 +473,7 @@ gpm_session_init (GpmSession *session)
 									 GPM_SESSION_MANAGER_PRESENCE_PATH,
 									 GPM_SESSION_MANAGER_PRESENCE_INTERFACE, &error);
 	if (session->priv->proxy_presence == NULL) {
-		egg_warning ("DBUS error: %s", error->message);
+		g_warning ("DBUS error: %s", error->message);
 		g_error_free (error);
 		return;
 	}
@@ -484,7 +483,7 @@ gpm_session_init (GpmSession *session)
 								     GPM_SESSION_MANAGER_PRESENCE_PATH,
 								     GPM_DBUS_PROPERTIES_INTERFACE, &error);
 	if (session->priv->proxy_prop == NULL) {
-		egg_warning ("DBUS error: %s", error->message);
+		g_warning ("DBUS error: %s", error->message);
 		g_error_free (error);
 		return;
 	}
@@ -505,7 +504,7 @@ gpm_session_init (GpmSession *session)
 	session->priv->is_idle_inhibited_old = gpm_session_is_idle_inhibited (session);
 	session->priv->is_suspend_inhibited_old = gpm_session_is_suspend_inhibited (session);
 	session->priv->is_idle_old = gpm_session_is_idle (session);
-	egg_debug ("idle: %i, idle_inhibited: %i, suspend_inhibited: %i", session->priv->is_idle_old, session->priv->is_idle_inhibited_old, session->priv->is_suspend_inhibited_old);
+	g_debug ("idle: %i, idle_inhibited: %i, suspend_inhibited: %i", session->priv->is_idle_old, session->priv->is_idle_inhibited_old, session->priv->is_suspend_inhibited_old);
 }
 
 /**

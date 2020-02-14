@@ -24,7 +24,6 @@
 #include <stdlib.h>
 #include <glib.h>
 
-#include "egg-debug.h"
 #include "egg-precision.h"
 
 /**
@@ -45,7 +44,7 @@ egg_precision_round_up (gfloat value, gint smallest)
 	if (fabs (value) < 0.01)
 		return 0;
 	if (smallest == 0) {
-		egg_warning ("divisor zero");
+		g_warning ("divisor zero");
 		return 0;
 	}
 	division = (gfloat) value / (gfloat) smallest;
@@ -72,7 +71,7 @@ egg_precision_round_down (gfloat value, gint smallest)
 	if (fabs (value) < 0.01)
 		return 0;
 	if (smallest == 0) {
-		egg_warning ("divisor zero");
+		g_warning ("divisor zero");
 		return 0;
 	}
 	division = (gfloat) value / (gfloat) smallest;

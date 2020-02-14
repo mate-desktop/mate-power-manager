@@ -25,7 +25,6 @@
 #include <glib-object.h>
 #include <gtk/gtk.h>
 #include "egg-test.h"
-#include "egg-debug.h"
 
 #include "gpm-screensaver.h"
 
@@ -52,7 +51,6 @@ main (int argc, char **argv)
 	EggTest *test;
 
 	test = egg_test_init ();
-	egg_debug_init (TRUE);
 
 	/* needed for DPMS checks */
 	gtk_init (&argc, &argv);

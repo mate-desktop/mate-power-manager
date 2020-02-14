@@ -34,7 +34,6 @@
 #include <glib/gi18n.h>
 #include <dbus/dbus-glib.h>
 
-#include "egg-debug.h"
 #include "gpm-common.h"
 
 #define GPM_TYPE_INHIBIT_APPLET		(gpm_inhibit_applet_get_type ())
@@ -103,7 +102,7 @@ gpm_applet_inhibit (GpmInhibitApplet *applet,
 	g_return_val_if_fail (cookie != NULL, FALSE);
 
 	if (applet->proxy == NULL) {
-		egg_warning ("not connected\n");
+		g_warning ("not connected\n");
 		return FALSE;
 	}
 
@@ -136,7 +135,7 @@ gpm_applet_uninhibit (GpmInhibitApplet *applet,
 	gboolean ret;
 
 	if (applet->proxy == NULL) {
-		egg_warning ("not connected");
+		g_warning ("not connected");
 		return FALSE;
 	}
 
@@ -367,18 +366,18 @@ gpm_inhibit_applet_dbus_connect (GpmInhibitApplet *applet)
 	GError *error = NULL;
 
 	if (applet->connection == NULL) {
-		egg_debug ("get connection\n");
+		g_debug ("get connection\n");
 		g_clear_error (&error);
 		applet->connection = dbus_g_bus_get (DBUS_BUS_SESSION, &error);
 		if (error != NULL) {
-			egg_warning ("Could not connect to DBUS daemon: %s", error->message);
+			g_warning ("Could not connect to DBUS daemon: %s", error->message);
 			g_error_free (error);
 			applet->connection = NULL;
 			return FALSE;
 		}
 	}
 	if (applet->proxy == NULL) {
-		egg_debug ("get proxy\n");
+		g_debug ("get proxy\n");
 		g_clear_error (&error);
 		applet->proxy = dbus_g_proxy_new_for_name_owner (applet->connection,
 							 GS_DBUS_SERVICE,
@@ -386,7 +385,7 @@ gpm_inhibit_applet_dbus_connect (GpmInhibitApplet *applet)
 							 GS_DBUS_INTERFACE,
 							 &error);
 		if (error != NULL) {
-			egg_warning ("Cannot connect, maybe the daemon is not running: %s\n", error->message);
+			g_warning ("Cannot connect, maybe the daemon is not running: %s\n", error->message);
 			g_error_free (error);
 			applet->proxy = NULL;
 			return FALSE;
@@ -402,7 +401,7 @@ gboolean
 gpm_inhibit_applet_dbus_disconnect (GpmInhibitApplet *applet)
 {
 	if (applet->proxy != NULL) {
-		egg_debug ("removing proxy\n");
+		g_debug ("removing proxy\n");
 		g_object_unref (applet->proxy);
 		applet->proxy = NULL;
 		/* we have no inhibit, these are not persistent across reboots */

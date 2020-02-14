@@ -40,8 +40,6 @@
 #include <gtk/gtk.h>
 #include <libupower-glib/upower.h>
 
-#include "egg-debug.h"
-
 #include "gpm-upower.h"
 #include "gpm-engine.h"
 #include "gpm-common.h"
@@ -120,7 +118,7 @@ gpm_tray_icon_set_icon (GpmTrayIcon *icon, const gchar *icon_name)
 	g_return_val_if_fail (GPM_IS_TRAY_ICON (icon), FALSE);
 
 	if (icon_name != NULL) {
-		egg_debug ("Setting icon to %s", icon_name);
+		g_debug ("Setting icon to %s", icon_name);
 		gtk_status_icon_set_from_icon_name (icon->priv->status_icon,
 		                                    icon_name);
 
@@ -128,7 +126,7 @@ gpm_tray_icon_set_icon (GpmTrayIcon *icon, const gchar *icon_name)
 		gpm_tray_icon_show (icon, TRUE);
 	} else {
 		/* remove icon */
-		egg_debug ("no icon will be displayed");
+		g_debug ("no icon will be displayed");
 
 		/* make sure that we are hidden */
 		gpm_tray_icon_show (icon, FALSE);
@@ -148,7 +146,7 @@ gpm_tray_icon_show_info_cb (GtkMenuItem *item, gpointer data)
 	object_path = g_object_get_data (G_OBJECT (item), "object-path");
 	path = g_strdup_printf ("%s/mate-power-statistics --device %s", BINDIR, object_path);
 	if (!g_spawn_command_line_async (path, NULL))
-		egg_warning ("Couldn't execute command: %s", path);
+		g_warning ("Couldn't execute command: %s", path);
 	g_free (path);
 }
 
@@ -162,7 +160,7 @@ gpm_tray_icon_show_preferences_cb (GtkMenuItem *item, gpointer data)
 	const gchar *command = "mate-power-preferences";
 
 	if (g_spawn_command_line_async (command, NULL) == FALSE)
-		egg_warning ("Couldn't execute command: %s", command);
+		g_warning ("Couldn't execute command: %s", command);
 }
 
 #define ABOUT_GROUP "About"
@@ -263,7 +261,7 @@ gpm_tray_icon_add_device (GpmTrayIcon *icon, GtkMenu *menu, const GPtrArray *arr
 			continue;
 
 		object_path = up_device_get_object_path (device);
-		egg_debug ("adding device %s", object_path);
+		g_debug ("adding device %s", object_path);
 		added++;
 
 		/* generate the label */
@@ -409,7 +407,7 @@ static void
 gpm_tray_icon_popup_cleared_cd (GtkWidget *widget, GpmTrayIcon *icon)
 {
 	g_return_if_fail (GPM_IS_TRAY_ICON (icon));
-	egg_debug ("clear tray");
+	g_debug ("clear tray");
 	g_object_ref_sink (widget);
 	g_object_unref (widget);
 }
@@ -444,7 +442,7 @@ gpm_tray_icon_popup_menu (GpmTrayIcon *icon, guint32 timestamp)
 static void
 gpm_tray_icon_popup_menu_cb (GtkStatusIcon *status_icon, guint button, guint32 timestamp, GpmTrayIcon *icon)
 {
-	egg_debug ("icon right clicked");
+	g_debug ("icon right clicked");
 	gpm_tray_icon_popup_menu (icon, timestamp);
 }
 
@@ -458,7 +456,7 @@ gpm_tray_icon_popup_menu_cb (GtkStatusIcon *status_icon, guint button, guint32 t
 static void
 gpm_tray_icon_activate_cb (GtkStatusIcon *status_icon, GpmTrayIcon *icon)
 {
-	egg_debug ("icon left clicked");
+	g_debug ("icon left clicked");
 	gpm_tray_icon_popup_menu (icon, gtk_get_current_event_time());
 }
 

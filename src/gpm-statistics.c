@@ -30,7 +30,6 @@
 #include <dbus/dbus-glib.h>
 #include <libupower-glib/upower.h>
 
-#include "egg-debug.h"
 #include "egg-color.h"
 #include "egg-array-float.h"
 
@@ -828,7 +827,7 @@ gpm_stats_devices_treeview_clicked_cb (GtkTreeSelection *selection, gboolean dat
 		g_settings_set_string (settings, GPM_SETTINGS_INFO_LAST_DEVICE, current_device);
 
 		/* show transaction_id */
-		egg_debug ("selected row is: %s", current_device);
+		g_debug ("selected row is: %s", current_device);
 
 		/* is special device */
 		device = up_device_new ();
@@ -837,7 +836,7 @@ gpm_stats_devices_treeview_clicked_cb (GtkTreeSelection *selection, gboolean dat
 		g_object_unref (device);
 
 	} else {
-		egg_debug ("no row selected");
+		g_debug ("no row selected");
 	}
 }
 
@@ -863,7 +862,7 @@ gpm_stats_device_changed_cb (UpDevice *device, GParamSpec *pspec, gpointer user_
 	object_path = up_device_get_object_path (device);
 	if (object_path == NULL || current_device == NULL)
 		return;
-	egg_debug ("changed:   %s", object_path);
+	g_debug ("changed:   %s", object_path);
 	if (g_strcmp0 (current_device, object_path) == 0)
 		gpm_stats_update_info_data (device);
 }
@@ -920,7 +919,7 @@ gpm_stats_device_added_cb (UpClient *client, UpDevice *device, GPtrArray *device
 {
 	const gchar *object_path;
 	object_path = up_device_get_object_path (device);
-	egg_debug ("added:     %s", object_path);
+	g_debug ("added:     %s", object_path);
 
 	gpm_stats_add_device (device, devices);
 }
@@ -945,7 +944,7 @@ gpm_stats_device_removed_cb (UpClient *client, const gchar *object_path, GPtrArr
 			break;
 		}
 	}
-	egg_debug ("removed:   %s", object_path);
+	g_debug ("removed:   %s", object_path);
 	if (g_strcmp0 (current_device, object_path) == 0) {
 		gtk_list_store_clear (list_store_info);
 	}
@@ -1191,7 +1190,6 @@ gpm_stats_highlight_device (const gchar *object_path)
 int
 main (int argc, char *argv[])
 {
-	gboolean verbose = FALSE;
 	GOptionContext *context;
 	GtkBox *box;
 	GtkWidget *widget, *window;
@@ -1210,9 +1208,6 @@ main (int argc, char *argv[])
 	GError *error = NULL;
 
 	const GOptionEntry options[] = {
-		{ "verbose", 'v', 0, G_OPTION_ARG_NONE, &verbose,
-		  /* TRANSLATORS: show verbose debugging */
-		  N_("Show extra debugging information"), NULL },
 		{ "device", '\0', 0, G_OPTION_ARG_STRING, &last_device,
 		  /* TRANSLATORS: show a device by default */
 		  N_("Select this device at startup"), NULL },
@@ -1234,7 +1229,6 @@ main (int argc, char *argv[])
 	g_option_context_parse (context, &argc, &argv, NULL);
 	g_option_context_free (context);
 
-	egg_debug_init (verbose);
 	gtk_init (&argc, &argv);
 
 	app = gtk_application_new ("org.mate.PowerManager.Statistics", 0);
@@ -1254,7 +1248,7 @@ main (int argc, char *argv[])
 	retval = gtk_builder_add_from_resource (builder, "/org/mate/powermanager/statistics/gpm-statistics.ui", &error);
 
 	if (error) {
-		egg_error ("failed to load ui: %s", error->message);
+		g_error ("failed to load ui: %s", error->message);
 	}
 
 	/* add history graph */

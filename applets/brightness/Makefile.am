@@ -28,8 +28,6 @@ libexec_PROGRAMS=mate-brightness-applet
 
 mate_brightness_applet_SOURCES =				\
 	brightness-applet.c					\
-	egg-debug.c						\
-	egg-debug.h						\
 	gpm-common.c						\
 	gpm-common.h
 

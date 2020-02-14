@@ -32,7 +32,6 @@
 #define UPOWER_ENABLE_DEPRECATED
 #include <libupower-glib/upower.h>
 
-#include "egg-debug.h"
 #include "egg-console-kit.h"
 
 #include "gpm-tray-icon.h"
@@ -126,7 +125,7 @@ gpm_prefs_activate_window (GtkApplication *app, GpmPrefs *prefs)
 static void
 gpm_prefs_help_cb (GtkWidget *widget, GpmPrefs *prefs)
 {
-	egg_debug ("emitting action-help");
+	g_debug ("emitting action-help");
 	g_signal_emit (prefs, signals [ACTION_HELP], 0);
 }
 
@@ -190,7 +189,7 @@ gpm_prefs_action_time_changed_cb (GtkWidget *widget, GpmPrefs *prefs)
 	active = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
 	value = values[active];
 
-	egg_debug ("Changing %s to %i", gpm_pref_key, value);
+	g_debug ("Changing %s to %i", gpm_pref_key, value);
 	g_settings_set_int (prefs->priv->settings, gpm_pref_key, value);
 }
 
@@ -237,14 +236,14 @@ gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 	for (i=0; actions[i] != -1; i++) {
 		policy = actions[i];
 		if (policy == GPM_ACTION_POLICY_SHUTDOWN && !prefs->priv->can_shutdown) {
-			egg_debug ("Cannot add option, as cannot shutdown.");
+			g_debug ("Cannot add option, as cannot shutdown.");
 		} else if (policy == GPM_ACTION_POLICY_SHUTDOWN && prefs->priv->can_shutdown) {
 			gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Shutdown"));
 			g_ptr_array_add(array, GINT_TO_POINTER (policy));
 		} else if (policy == GPM_ACTION_POLICY_SUSPEND && !prefs->priv->can_suspend) {
-			egg_debug ("Cannot add option, as cannot suspend.");
+			g_debug ("Cannot add option, as cannot suspend.");
 		} else if (policy == GPM_ACTION_POLICY_HIBERNATE && !prefs->priv->can_hibernate) {
-			egg_debug ("Cannot add option, as cannot hibernate.");
+			g_debug ("Cannot add option, as cannot hibernate.");
 		} else if (policy == GPM_ACTION_POLICY_SUSPEND && prefs->priv->can_suspend) {
 			gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Suspend"));
 			g_ptr_array_add (array, GINT_TO_POINTER (policy));
@@ -261,7 +260,7 @@ gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 			gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Do nothing"));
 			g_ptr_array_add(array, GINT_TO_POINTER (policy));
 		} else {
-			egg_warning ("Unknown action read from settings: %i", policy);
+			g_warning ("Unknown action read from settings: %i", policy);
 		}
 	}
 
@@ -339,7 +338,7 @@ gpm_prefs_setup_time_combo (GpmPrefs *prefs, const gchar *widget_name,
 static void
 gpm_prefs_close_cb (GtkWidget *widget, GpmPrefs *prefs)
 {
-	egg_debug ("emitting action-close");
+	g_debug ("emitting action-close");
 	g_signal_emit (prefs, signals [ACTION_CLOSE], 0);
 }
 
@@ -613,7 +612,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 						       NULL,
 						       &error );
 		if (proxy == NULL) {
-			egg_error("Error connecting to dbus - %s", error->message);
+			g_error ("Error connecting to dbus - %s", error->message);
 			g_error_free (error);
 			return;
 		}
@@ -630,7 +629,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 			prefs->priv->can_shutdown = g_strcmp0(r,"yes")==0?TRUE:FALSE;
 			g_variant_unref (res);
 		} else if (error != NULL ) {
-			egg_error ("Error in dbus - %s", error->message);
+			g_error ("Error in dbus - %s", error->message);
 			g_error_free (error);
 		}
 
@@ -646,7 +645,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 			prefs->priv->can_suspend = g_strcmp0(r,"yes")==0?TRUE:FALSE;
 			g_variant_unref (res);
 		} else if (error != NULL ) {
-			egg_error ("Error in dbus - %s", error->message);
+			g_error ("Error in dbus - %s", error->message);
 			g_error_free (error);
 		}
 
@@ -662,7 +661,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 			prefs->priv->can_hibernate = g_strcmp0(r,"yes")==0?TRUE:FALSE;
 			g_variant_unref (res);
 		} else if (error != NULL ) {
-			egg_error ("Error in dbus - %s", error->message);
+			g_error ("Error in dbus - %s", error->message);
 			g_error_free (error);
 		}
 		g_object_unref(proxy);
@@ -684,7 +683,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 						       NULL,
 						       &error );
 		if (proxy == NULL) {
-			egg_error("Error connecting to dbus - %s", error->message);
+			g_error ("Error connecting to dbus - %s", error->message);
 			g_error_free (error);
 			return;
 		}
@@ -704,7 +703,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 			g_variant_unref (inner);
 			g_variant_unref (res);
 		} else if (error != NULL ) {
-			egg_error ("Error in dbus - %s", error->message);
+			g_error ("Error in dbus - %s", error->message);
 			g_error_free (error);
 		}
 		g_object_unref(proxy);
@@ -737,7 +736,7 @@ gpm_prefs_init (GpmPrefs *prefs)
 	(void) gtk_builder_add_from_resource (prefs->priv->builder, "/org/mate/powermanager/preferences/gpm-prefs.ui", &error);
 
 	if (error) {
-		egg_error ("failed to load ui: %s", error->message);
+		g_error ("failed to load ui: %s", error->message);
 	}
 
 	/* Hide window first so that the dialogue resizes itself without redrawing */

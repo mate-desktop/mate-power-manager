@@ -43,8 +43,6 @@
 
 #include "org.mate.PowerManager.h"
 
-#include "egg-debug.h"
-
 /**
  * gpm_object_register:
  * @connection: What we want to register to
@@ -76,12 +74,12 @@ gpm_object_register (DBusGConnection *connection,
 				 G_TYPE_UINT, &request_name_result,
 				 G_TYPE_INVALID);
 	if (error) {
-		egg_debug ("ERROR: %s", error->message);
+		g_debug ("ERROR: %s", error->message);
 		g_error_free (error);
 	}
 	if (!ret) {
 		/* abort as the DBUS method failed */
-		egg_warning ("RequestName failed!");
+		g_warning ("RequestName failed!");
 		return FALSE;
 	}
 
@@ -156,7 +154,6 @@ main (int argc, char *argv[])
 	GMainLoop *loop;
 	DBusGConnection *system_connection;
 	DBusGConnection *session_connection;
-	gboolean verbose = FALSE;
 	gboolean version = FALSE;
 	gboolean timed_exit = FALSE;
 	gboolean immediate_exit = FALSE;
@@ -168,8 +165,6 @@ main (int argc, char *argv[])
 	guint timer_id;
 
 	const GOptionEntry options[] = {
-		{ "verbose", '\0', 0, G_OPTION_ARG_NONE, &verbose,
-		  N_("Show extra debugging information"), NULL },
 		{ "version", '\0', 0, G_OPTION_ARG_NONE, &version,
 		  N_("Show version of installed program and exit"), NULL },
 		{ "timed-exit", '\0', 0, G_OPTION_ARG_NONE, &timed_exit,
@@ -201,29 +196,28 @@ main (int argc, char *argv[])
 	dbus_g_thread_init ();
 
 	gtk_init (&argc, &argv);
-	egg_debug_init (verbose);
 
-	egg_debug ("MATE %s %s", GPM_NAME, VERSION);
+	g_debug ("MATE %s %s", GPM_NAME, VERSION);
 
 	/* check dbus connections, exit if not valid */
 	system_connection = dbus_g_bus_get (DBUS_BUS_SYSTEM, &error);
 	if (error) {
-		egg_warning ("%s", error->message);
+		g_warning ("%s", error->message);
 		g_error_free (error);
-		egg_error ("This program cannot start until you start "
-			   "the dbus system service.\n"
-			   "It is <b>strongly recommended</b> you reboot "
-			   "your computer after starting this service.");
+		g_error ("This program cannot start until you start "
+		         "the dbus system service.\n"
+		         "It is <b>strongly recommended</b> you reboot "
+		         "your computer after starting this service.");
 	}
 
 	session_connection = dbus_g_bus_get (DBUS_BUS_SESSION, &error);
 	if (error) {
-		egg_warning ("%s", error->message);
+		g_warning ("%s", error->message);
 		g_error_free (error);
-		egg_error ("This program cannot start until you start the "
-			   "dbus session service.\n\n"
-			   "This is usually started automatically in X "
-			   "or mate startup when you start a new session.");
+		g_error ("This program cannot start until you start the "
+		         "dbus session service.\n\n"
+		         "This is usually started automatically in X "
+		         "or mate startup when you start a new session.");
 	}
 
 	/* add application specific icons to search path */
@@ -243,7 +237,7 @@ main (int argc, char *argv[])
 	manager = gpm_manager_new ();
 
 	if (!gpm_object_register (session_connection, G_OBJECT (manager))) {
-		egg_error ("%s is already running in this session.", GPM_NAME);
+		g_error ("%s is already running in this session.", GPM_NAME);
 		goto unref_program;
 	}
 
@@ -253,10 +247,10 @@ main (int argc, char *argv[])
 				    DBUS_NAME_FLAG_REPLACE_EXISTING, NULL);
 	switch (ret) {
 	case DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER:
-		egg_debug ("Successfully acquired interface org.freedesktop.Policy.Power.");
+		g_debug ("Successfully acquired interface org.freedesktop.Policy.Power.");
 		break;
 	case DBUS_REQUEST_NAME_REPLY_IN_QUEUE:
-		egg_debug ("Queued for interface org.freedesktop.Policy.Power.");
+		g_debug ("Queued for interface org.freedesktop.Policy.Power.");
 		break;
 	default:
 		break;

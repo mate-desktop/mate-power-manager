@@ -24,7 +24,6 @@
 #include <stdlib.h>
 #include <glib.h>
 
-#include "egg-debug.h"
 #include "egg-discrete.h"
 
 /**
@@ -44,7 +43,7 @@ egg_discrete_from_percent (guint percentage, guint levels)
 	if (percentage > 100)
 		return levels;
 	if (levels == 0) {
-		egg_warning ("levels is 0!");
+		g_warning ("levels is 0!");
 		return 0;
 	}
 	return (guint) ((((gfloat) percentage * (gfloat) (levels - 1)) / 100.0f) + 0.5f);
@@ -66,7 +65,7 @@ egg_discrete_to_percent (guint discrete, guint levels)
 	if (discrete > levels)
 		return 100;
 	if (levels == 0) {
-		egg_warning ("levels is 0!");
+		g_warning ("levels is 0!");
 		return 0;
 	}
 	return (guint) (((gfloat) discrete * (100.0f / (gfloat) (levels - 1))) + 0.5f);
@@ -88,7 +87,7 @@ egg_discrete_to_fraction (guint discrete, guint levels)
 	if (discrete > levels)
 		return 1.0;
 	if (levels == 0) {
-		egg_warning ("levels is 0!");
+		g_warning ("levels is 0!");
 		return 0.0;
 	}
 	return (guint) ((gfloat) discrete / ((gfloat) (levels - 1)));

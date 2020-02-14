@@ -34,8 +34,6 @@
 #include "gpm-common.h"
 #include "gpm-button.h"
 
-#include "egg-debug.h"
-
 static void     gpm_button_finalize   (GObject	      *object);
 
 struct GpmButtonPrivate
@@ -72,11 +70,11 @@ gpm_button_emit_type (GpmButton *button, const gchar *type)
 	/* did we just have this button before the timeout? */
 	if (g_strcmp0 (type, button->priv->last_button) == 0 &&
 	    g_timer_elapsed (button->priv->timer, NULL) < GPM_BUTTON_DUPLICATE_TIMEOUT) {
-		egg_debug ("ignoring duplicate button %s", type);
+		g_debug ("ignoring duplicate button %s", type);
 		return FALSE;
 	}
 
-	egg_debug ("emitting button-pressed : %s", type);
+	g_debug ("emitting button-pressed : %s", type);
 	g_signal_emit (button, signals [BUTTON_PRESSED], 0, type);
 
 	/* save type and last size */
@@ -111,12 +109,12 @@ gpm_button_filter_x_events (GdkXEvent *xevent, GdkEvent *event, gpointer data)
 
 	/* found anything? */
 	if (key == NULL) {
-		egg_debug ("Key %i not found in hash", keycode);
+		g_debug ("Key %i not found in hash", keycode);
 		/* pass normal keypresses on, which might help with accessibility access */
 		return GDK_FILTER_CONTINUE;
 	}
 
-	egg_debug ("Key %i mapped to key %s", keycode, key);
+	g_debug ("Key %i mapped to key %s", keycode, key);
 	gpm_button_emit_type (button, key);
 
 	return GDK_FILTER_REMOVE;
@@ -154,7 +152,7 @@ gpm_button_grab_keystring (GpmButton *button, guint64 keycode)
 			GDK_WINDOW_XID (button->priv->window), True,
 			GrabModeAsync, GrabModeAsync);
 	if (ret == BadAccess) {
-		egg_warning ("Failed to grab modmask=%u, keycode=%li",
+		g_warning ("Failed to grab modmask=%u, keycode=%li",
 			     modmask, (long int) keycode);
 		return FALSE;
 	}
@@ -164,7 +162,7 @@ gpm_button_grab_keystring (GpmButton *button, guint64 keycode)
 			GDK_WINDOW_XID (button->priv->window), True,
 			GrabModeAsync, GrabModeAsync);
 	if (ret == BadAccess) {
-		egg_warning ("Failed to grab modmask=%u, keycode=%li",
+		g_warning ("Failed to grab modmask=%u, keycode=%li",
 			     LockMask | modmask, (long int) keycode);
 		return FALSE;
 	}
@@ -173,7 +171,7 @@ gpm_button_grab_keystring (GpmButton *button, guint64 keycode)
 	gdk_display_flush (gdkdisplay);
 	gdk_x11_display_error_trap_pop_ignored (gdkdisplay);
 
-	egg_debug ("Grabbed modmask=%x, keycode=%li", modmask, (long int) keycode);
+	g_debug ("Grabbed modmask=%x, keycode=%li", modmask, (long int) keycode);
 	return TRUE;
 }
 
@@ -200,7 +198,7 @@ gpm_button_xevent_key (GpmButton *button, guint keysym, const gchar *key_name)
 	/* convert from keysym to keycode */
 	keycode = XKeysymToKeycode (GDK_DISPLAY_XDISPLAY (gdk_display_get_default()), keysym);
 	if (keycode == 0) {
-		egg_warning ("could not map keysym %x to keycode", keysym);
+		g_warning ("could not map keysym %x to keycode", keysym);
 		return FALSE;
 	}
 
@@ -208,7 +206,7 @@ gpm_button_xevent_key (GpmButton *button, guint keysym, const gchar *key_name)
 	keycode_str = g_strdup_printf ("0x%x", keycode);
 	key = g_hash_table_lookup (button->priv->keysym_to_name_hash, (gpointer) keycode_str);
 	if (key != NULL) {
-		egg_warning ("found in hash %i", keycode);
+		g_warning ("found in hash %i", keycode);
 		g_free (keycode_str);
 		return FALSE;
 	}
@@ -216,7 +214,7 @@ gpm_button_xevent_key (GpmButton *button, guint keysym, const gchar *key_name)
 	/* try to register X event */
 	ret = gpm_button_grab_keystring (button, keycode);
 	if (!ret) {
-		egg_warning ("Failed to grab %i", keycode);
+		g_warning ("Failed to grab %i", keycode);
 		g_free (keycode_str);
 		return FALSE;
 	}
@@ -271,13 +269,13 @@ gpm_button_is_lid_closed (GpmButton *button)
 						       NULL,
 						       &error );
 		if (proxy == NULL) {
-			egg_error("Error connecting to dbus - %s", error->message);
+			g_error("Error connecting to dbus - %s", error->message);
 			g_error_free (error);
 			return -1;
 		}
 
-		res = g_dbus_proxy_call_sync (proxy, "Get", 
-					      g_variant_new( "(ss)", 
+		res = g_dbus_proxy_call_sync (proxy, "Get",
+					      g_variant_new( "(ss)",
 							     "org.freedesktop.UPower",
 							     "LidIsClosed"),
 					      G_DBUS_CALL_FLAGS_NONE,
@@ -292,7 +290,7 @@ gpm_button_is_lid_closed (GpmButton *button)
 			g_variant_unref (res);
 			return lid;
 		} else if (error != NULL ) {
-			egg_error ("Error in dbus - %s", error->message);
+			g_error ("Error in dbus - %s", error->message);
 			g_error_free (error);
 		}
 		g_object_unref(proxy);

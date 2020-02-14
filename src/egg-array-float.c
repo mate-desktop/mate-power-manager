@@ -29,7 +29,6 @@
 
 #include <glib.h>
 
-#include "egg-debug.h"
 #include "egg-array-float.h"
 
 /**
@@ -150,7 +149,7 @@ egg_array_float_compute_gaussian (guint length, gfloat sigma)
 	half_length = (length / 2) + 1;
 	for (i=0; i<half_length; i++) {
 		division = half_length - (i + 1);
-	egg_debug ("half_length=%i, div=%f, sigma=%f", half_length, division, sigma);
+	g_debug ("half_length=%i, div=%f, sigma=%f", half_length, division, sigma);
 		g_array_index (array, gfloat, i) = egg_array_float_guassian_value (division, sigma);
 	}
 
@@ -163,7 +162,7 @@ egg_array_float_compute_gaussian (guint length, gfloat sigma)
 	/* make sure we get an accurate gaussian */
 	value = egg_array_float_sum (array);
 	if (fabs (value - 1.0f) > 0.01f) {
-		egg_warning ("got wrong sum (%f), perhaps sigma too high for size?", value);
+		g_warning ("got wrong sum (%f), perhaps sigma too high for size?", value);
 		egg_array_float_free (array);
 		array = NULL;
 	}
@@ -207,7 +206,7 @@ egg_array_float_print (EggArrayFloat *array)
 	length = array->len;
 	/* debug out */
 	for (i=0; i<length; i++)
-		egg_debug ("[%i]\tval=%f", i, g_array_index (array, gfloat, i));
+		g_debug ("[%i]\tval=%f", i, g_array_index (array, gfloat, i));
 	return TRUE;
 }
 
