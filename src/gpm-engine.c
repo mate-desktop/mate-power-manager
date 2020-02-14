@@ -26,8 +26,6 @@
 #include <glib/gi18n.h>
 #include <libupower-glib/upower.h>
 
-#include "egg-debug.h"
-
 #include "gpm-common.h"
 #include "gpm-upower.h"
 #include "gpm-marshal.h"
@@ -150,7 +148,7 @@ gpm_engine_get_summary (GpmEngine *engine)
 	/* remove the last \n */
 	g_string_truncate (tooltip, tooltip->len-1);
 
-	egg_debug ("tooltip: %s", tooltip->str);
+	g_debug ("tooltip: %s", tooltip->str);
 
 	return g_string_free (tooltip, FALSE);
 }
@@ -219,7 +217,7 @@ gpm_engine_get_icon (GpmEngine *engine)
 
 	/* policy */
 	if (engine->priv->icon_policy == GPM_ICON_POLICY_NEVER) {
-		egg_debug ("no icon allowed, so no icon will be displayed.");
+		g_debug ("no icon allowed, so no icon will be displayed.");
 		return NULL;
 	}
 
@@ -239,7 +237,7 @@ gpm_engine_get_icon (GpmEngine *engine)
 
 	/* policy */
 	if (engine->priv->icon_policy == GPM_ICON_POLICY_CRITICAL) {
-		egg_debug ("no devices critical, so no icon will be displayed.");
+		g_debug ("no devices critical, so no icon will be displayed.");
 		return NULL;
 	}
 
@@ -259,7 +257,7 @@ gpm_engine_get_icon (GpmEngine *engine)
 
 	/* policy */
 	if (engine->priv->icon_policy == GPM_ICON_POLICY_LOW) {
-		egg_debug ("no devices low, so no icon will be displayed.");
+		g_debug ("no devices low, so no icon will be displayed.");
 		return NULL;
 	}
 
@@ -273,7 +271,7 @@ gpm_engine_get_icon (GpmEngine *engine)
 
 	/* policy */
 	if (engine->priv->icon_policy == GPM_ICON_POLICY_CHARGE) {
-		egg_debug ("no devices (dis)charging, so no icon will be displayed.");
+		g_debug ("no devices (dis)charging, so no icon will be displayed.");
 		return NULL;
 	}
 
@@ -287,12 +285,12 @@ gpm_engine_get_icon (GpmEngine *engine)
 
 	/* policy */
 	if (engine->priv->icon_policy == GPM_ICON_POLICY_PRESENT) {
-		egg_debug ("no devices present, so no icon will be displayed.");
+		g_debug ("no devices present, so no icon will be displayed.");
 		return NULL;
 	}
 
 	/* we fallback to the ac_adapter icon */
-	egg_debug ("Using fallback");
+	g_debug ("Using fallback");
 	return g_strdup (GPM_ICON_AC_ADAPTER);
 }
 
@@ -314,7 +312,7 @@ gpm_engine_recalculate_state_icon (GpmEngine *engine)
 		if (engine->priv->previous_icon == NULL)
 			return FALSE;
 		/* icon before, now none */
-		egg_debug ("** EMIT: icon-changed: none");
+		g_debug ("** EMIT: icon-changed: none");
 		g_signal_emit (engine, signals [ICON_CHANGED], 0, NULL);
 
 		g_free (engine->priv->previous_icon);
@@ -324,7 +322,7 @@ gpm_engine_recalculate_state_icon (GpmEngine *engine)
 
 	/* no icon before, now icon */
 	if (engine->priv->previous_icon == NULL) {
-		egg_debug ("** EMIT: icon-changed: %s", icon);
+		g_debug ("** EMIT: icon-changed: %s", icon);
 		g_signal_emit (engine, signals [ICON_CHANGED], 0, icon);
 		engine->priv->previous_icon = icon;
 		return TRUE;
@@ -334,12 +332,12 @@ gpm_engine_recalculate_state_icon (GpmEngine *engine)
 	if (strcmp (engine->priv->previous_icon, icon) != 0) {
 		g_free (engine->priv->previous_icon);
 		engine->priv->previous_icon = icon;
-		egg_debug ("** EMIT: icon-changed: %s", icon);
+		g_debug ("** EMIT: icon-changed: %s", icon);
 		g_signal_emit (engine, signals [ICON_CHANGED], 0, icon);
 		return TRUE;
 	}
 
-	egg_debug ("no change");
+	g_debug ("no change");
 	/* nothing to do */
 	g_free (icon);
 	return FALSE;
@@ -356,19 +354,19 @@ gpm_engine_recalculate_state_summary (GpmEngine *engine)
 	summary = gpm_engine_get_summary (engine);
 	if (engine->priv->previous_summary == NULL) {
 		engine->priv->previous_summary = summary;
-		egg_debug ("** EMIT: summary-changed(1): %s", summary);
+		g_debug ("** EMIT: summary-changed(1): %s", summary);
 		g_signal_emit (engine, signals [SUMMARY_CHANGED], 0, summary);
 		return TRUE;
-	}	
+	}
 
 	if (strcmp (engine->priv->previous_summary, summary) != 0) {
 		g_free (engine->priv->previous_summary);
 		engine->priv->previous_summary = summary;
-		egg_debug ("** EMIT: summary-changed(2): %s", summary);
+		g_debug ("** EMIT: summary-changed(2): %s", summary);
 		g_signal_emit (engine, signals [SUMMARY_CHANGED], 0, summary);
 		return TRUE;
 	}
-	egg_debug ("no change");
+	g_debug ("no change");
 	/* nothing to do */
 	g_free (summary);
 	return FALSE;
@@ -441,7 +439,7 @@ gpm_engine_device_check_capacity (GpmEngine *engine, UpDevice *device)
 	/* only emit this if specified in the settings */
 	ret = g_settings_get_boolean (engine->priv->settings, GPM_SETTINGS_NOTIFY_LOW_CAPACITY);
 	if (ret) {
-		egg_debug ("** EMIT: low-capacity");
+		g_debug ("** EMIT: low-capacity");
 		g_signal_emit (engine, signals [LOW_CAPACITY], 0, device);
 	}
 	return TRUE;
@@ -465,7 +463,7 @@ gpm_engine_update_composite_device (GpmEngine *engine, UpDevice *original_device
 	gchar *text;
 
 	text = up_device_to_text (engine->priv->battery_composite);
-	egg_debug ("composite:\n%s", text);
+	g_debug ("composite:\n%s", text);
 	g_free (text);
 
 	/* force update of icon */
@@ -499,11 +497,11 @@ gpm_engine_device_add (GpmEngine *engine, UpDevice *device)
 		      NULL);
 
 	/* add old state for transitions */
-	egg_debug ("adding %s with state %s", up_device_get_object_path (device), up_device_state_to_string (state));
+	g_debug ("adding %s with state %s", up_device_get_object_path (device), up_device_state_to_string (state));
 	g_object_set_data (G_OBJECT(device), "engine-state-old", GUINT_TO_POINTER(state));
 
 	if (kind == UP_DEVICE_KIND_BATTERY) {
-		egg_debug ("updating because we added a device");
+		g_debug ("updating because we added a device");
 		composite = gpm_engine_update_composite_device (engine, device);
 
 		/* get the same values for the composite device */
@@ -594,7 +592,7 @@ gpm_engine_device_changed_cb (UpDevice *device, GParamSpec *pspec, GpmEngine *en
 
 	/* if battery then use composite device to cope with multiple batteries */
 	if (kind == UP_DEVICE_KIND_BATTERY) {
-		egg_debug ("updating because %s changed", up_device_get_object_path (device));
+		g_debug ("updating because %s changed", up_device_get_object_path (device));
 		device = gpm_engine_update_composite_device (engine, device);
 	}
 
@@ -603,16 +601,16 @@ gpm_engine_device_changed_cb (UpDevice *device, GParamSpec *pspec, GpmEngine *en
 		      "state", &state,
 		      NULL);
 
-	egg_debug ("%s state is now %s", up_device_get_object_path (device), up_device_state_to_string (state));
+	g_debug ("%s state is now %s", up_device_get_object_path (device), up_device_state_to_string (state));
 
 	/* see if any interesting state changes have happened */
 	state_old = GPOINTER_TO_INT(g_object_get_data (G_OBJECT(device), "engine-state-old"));
 	if (state_old != state) {
 		if (state == UP_DEVICE_STATE_DISCHARGING) {
-			egg_debug ("** EMIT: discharging");
+			g_debug ("** EMIT: discharging");
 			g_signal_emit (engine, signals [DISCHARGING], 0, device);
 		} else if (state == UP_DEVICE_STATE_FULLY_CHARGED) {
-			egg_debug ("** EMIT: fully charged");
+			g_debug ("** EMIT: fully charged");
 			g_signal_emit (engine, signals [FULLY_CHARGED], 0, device);
 		}
 
@@ -625,13 +623,13 @@ gpm_engine_device_changed_cb (UpDevice *device, GParamSpec *pspec, GpmEngine *en
 	warning = gpm_engine_get_warning (engine, device);
 	if (warning != warning_old) {
 		if (warning == GPM_ENGINE_WARNING_LOW) {
-			egg_debug ("** EMIT: charge-low");
+			g_debug ("** EMIT: charge-low");
 			g_signal_emit (engine, signals [CHARGE_LOW], 0, device);
 		} else if (warning == GPM_ENGINE_WARNING_CRITICAL) {
-			egg_debug ("** EMIT: charge-critical");
+			g_debug ("** EMIT: charge-critical");
 			g_signal_emit (engine, signals [CHARGE_CRITICAL], 0, device);
 		} else if (warning == GPM_ENGINE_WARNING_ACTION) {
-			egg_debug ("** EMIT: charge-action");
+			g_debug ("** EMIT: charge-action");
 			g_signal_emit (engine, signals [CHARGE_ACTION], 0, device);
 		}
 		/* save new state */
@@ -705,7 +703,7 @@ phone_device_added_cb (GpmPhone *phone, guint idx, GpmEngine *engine)
 	UpDevice *device;
 	device = up_device_new ();
 
-	egg_debug ("phone added %i", idx);
+	g_debug ("phone added %i", idx);
 
 	/* get device properties */
 	g_object_set (device,
@@ -731,7 +729,7 @@ phone_device_removed_cb (GpmPhone *phone, guint idx, GpmEngine *engine)
 	UpDevice *device;
 	UpDeviceKind kind;
 
-	egg_debug ("phone removed %i", idx);
+	g_debug ("phone removed %i", idx);
 
 	for (i=0; i<engine->priv->array->len; i++) {
 		device = g_ptr_array_index (engine->priv->array, i);
@@ -764,7 +762,7 @@ phone_device_refresh_cb (GpmPhone *phone, guint idx, GpmEngine *engine)
 	gboolean is_present;
 	gdouble percentage;
 
-	egg_debug ("phone refresh %i", idx);
+	g_debug ("phone refresh %i", idx);
 
 	for (i=0; i<engine->priv->array->len; i++) {
 		device = g_ptr_array_index (engine->priv->array, i);
@@ -842,9 +840,9 @@ gpm_engine_init (GpmEngine *engine)
 	/* we can disable this if the time remaining is inaccurate or just plain wrong */
 	engine->priv->use_time_primary = g_settings_get_boolean (engine->priv->settings, GPM_SETTINGS_USE_TIME_POLICY);
 	if (engine->priv->use_time_primary)
-		egg_debug ("Using per-time notification policy");
+		g_debug ("Using per-time notification policy");
 	else
-		egg_debug ("Using percentage notification policy");
+		g_debug ("Using percentage notification policy");
 
 	idle_id = g_idle_add ((GSourceFunc) gpm_engine_coldplug_idle_cb, engine);
 	g_source_set_name_by_id (idle_id, "[GpmEngine] coldplug");

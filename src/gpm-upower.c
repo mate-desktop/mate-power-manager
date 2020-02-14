@@ -24,7 +24,6 @@
 #include <glib/gi18n.h>
 #include <libupower-glib/upower.h>
 
-#include "egg-debug.h"
 #include "egg-precision.h"
 
 #include "gpm-upower.h"
@@ -166,11 +165,11 @@ gpm_upower_get_device_icon (UpDevice *device)
 
 	/* nothing matched */
 	if (filename == NULL) {
-		egg_warning ("nothing matched, falling back to default icon");
+		g_warning ("nothing matched, falling back to default icon");
 		filename = g_strdup ("dialog-warning");
 	}
 
-	egg_debug ("got filename: %s", filename);
+	g_debug ("got filename: %s", filename);
 	return filename;
 }
 
@@ -306,7 +305,7 @@ gpm_upower_get_device_summary (UpDevice *device)
 		description = g_strdup_printf (_("%s empty"), kind_desc);
 
 	} else {
-		egg_warning ("in an undefined state we are not charging or "
+		g_warning ("in an undefined state we are not charging or "
 			     "discharging and the batteries are also not charged");
 		description = g_strdup_printf ("%s (%.1f%%)", kind_desc, percentage);
 	}
@@ -527,7 +526,7 @@ gpm_device_kind_to_localised_string (UpDeviceKind kind, guint number)
 		text = ngettext ("Computer", "Computers", number);
 		break;
 	default:
-		egg_warning ("enum unrecognised: %i", kind);
+		g_warning ("enum unrecognised: %i", kind);
 		text = up_device_kind_to_string (kind);
 	}
 	return text;
@@ -575,7 +574,7 @@ gpm_device_kind_to_icon (UpDeviceKind kind)
 		icon = "computer-apple-ipad";
 		break;
 	default:
-		egg_warning ("enum unrecognised: %i", kind);
+		g_warning ("enum unrecognised: %i", kind);
 		icon = "gtk-help";
 	}
 	return icon;

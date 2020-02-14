@@ -43,7 +43,6 @@
 #include <gnome-keyring.h>
 #endif /* WITH_KEYRING */
 
-#include "egg-debug.h"
 #include "egg-console-kit.h"
 
 #include "gpm-screensaver.h"
@@ -93,7 +92,7 @@ gpm_control_systemd_shutdown (void) {
 	GDBusProxy *proxy;
 	GVariant *res = NULL;
 
-	egg_debug ("Requesting systemd to shutdown");
+	g_debug ("Requesting systemd to shutdown");
 	proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
 					       G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
 					       NULL,
@@ -104,7 +103,7 @@ gpm_control_systemd_shutdown (void) {
 					       &error );
 	//append all our arguments
 	if (proxy == NULL) {
-		egg_error("Error connecting to dbus - %s", error->message);
+		g_error("Error connecting to dbus - %s", error->message);
 		g_error_free (error);
 		return FALSE;
 	}
@@ -117,7 +116,7 @@ gpm_control_systemd_shutdown (void) {
 				      &error
 				      );
 	if (error != NULL) {
-		egg_error ("Error in dbus - %s", error->message);
+		g_error ("Error in dbus - %s", error->message);
 		g_error_free (error);
 		return FALSE;
 	}
@@ -189,11 +188,11 @@ gpm_control_get_lock_policy (GpmControl *control, const gchar *policy)
 		GSettings *settings_ss;
 		settings_ss = g_settings_new (GS_SETTINGS_SCHEMA);
 		do_lock = g_settings_get_boolean (settings_ss, GS_SETTINGS_PREF_LOCK_ENABLED);
-		egg_debug ("Using ScreenSaver settings (%i)", do_lock);
+		g_debug ("Using ScreenSaver settings (%i)", do_lock);
 		g_object_unref (settings_ss);
 	} else {
 		do_lock = g_settings_get_boolean (control->priv->settings, policy);
-		egg_debug ("Using custom locking settings (%i)", do_lock);
+		g_debug ("Using custom locking settings (%i)", do_lock);
 	}
 	return do_lock;
 }
@@ -228,7 +227,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
 		g_object_unref (console);
 
 		if (!allowed) {
-			egg_debug ("cannot suspend as not allowed from policy");
+			g_debug ("cannot suspend as not allowed from policy");
 			g_set_error_literal (error, GPM_CONTROL_ERROR, GPM_CONTROL_ERROR_GENERAL, "Cannot suspend");
 			goto out;
 		}
@@ -240,7 +239,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
 	if (lock_gnome_keyring) {
 		keyres = gnome_keyring_lock_all_sync ();
 		if (keyres != GNOME_KEYRING_RESULT_OK)
-			egg_warning ("could not lock keyring");
+			g_warning ("could not lock keyring");
 	}
 #endif /* WITH_KEYRING */
 
@@ -255,7 +254,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
 		gpm_networkmanager_sleep ();
 
 	/* Do the suspend */
-	egg_debug ("emitting sleep");
+	g_debug ("emitting sleep");
 	g_signal_emit (control, signals [SLEEP], 0, GPM_CONTROL_ACTION_SUSPEND);
 
 	if (LOGIND_RUNNING()) {
@@ -269,7 +268,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
 						       NULL,
 						       &dbus_error );
 		if (proxy == NULL) {
-			egg_error("Error connecting to dbus - %s", dbus_error->message);
+			g_error ("Error connecting to dbus - %s", dbus_error->message);
 			g_error_free (dbus_error);
 			ret = FALSE;
 			goto out;
@@ -282,7 +281,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
 					      &dbus_error
 					      );
 		if (dbus_error != NULL ) {
-			egg_debug ("Error in dbus - %s", dbus_error->message);
+			g_debug ("Error in dbus - %s", dbus_error->message);
 			g_error_free (dbus_error);
 			ret = TRUE;
 		}
@@ -298,7 +297,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
 		g_object_unref (console);
 	}
 
-	egg_debug ("emitting resume");
+	g_debug ("emitting resume");
 	g_signal_emit (control, signals [RESUME], 0, GPM_CONTROL_ACTION_SUSPEND);
 
 	if (do_lock) {
@@ -346,7 +345,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 		g_object_unref (console);
 
 		if (!allowed) {
-			egg_debug ("cannot hibernate as not allowed from policy");
+			g_debug ("cannot hibernate as not allowed from policy");
 			g_set_error_literal (error, GPM_CONTROL_ERROR, GPM_CONTROL_ERROR_GENERAL, "Cannot hibernate");
 			goto out;
 		}
@@ -358,7 +357,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 	if (lock_gnome_keyring) {
 		keyres = gnome_keyring_lock_all_sync ();
 		if (keyres != GNOME_KEYRING_RESULT_OK) {
-			egg_warning ("could not lock keyring");
+			g_warning ("could not lock keyring");
 		}
 	}
 #endif /* WITH_KEYRING */
@@ -373,7 +372,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 	if (nm_sleep)
 		gpm_networkmanager_sleep ();
 
-	egg_debug ("emitting sleep");
+	g_debug ("emitting sleep");
 	g_signal_emit (control, signals [SLEEP], 0, GPM_CONTROL_ACTION_HIBERNATE);
 
 	if (LOGIND_RUNNING()) {
@@ -387,7 +386,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 						       NULL,
 						       &dbus_error );
 		if (proxy == NULL) {
-			egg_error("Error connecting to dbus - %s", dbus_error->message);
+			g_error ("Error connecting to dbus - %s", dbus_error->message);
 			g_error_free (dbus_error);
 			ret = FALSE;
 			goto out;
@@ -400,7 +399,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 					      &dbus_error
 					      );
 		if (dbus_error != NULL ) {
-			egg_debug ("Error in dbus - %s", dbus_error->message);
+			g_debug ("Error in dbus - %s", dbus_error->message);
 			g_error_free (dbus_error);
 			ret = TRUE;
 		}
@@ -415,7 +414,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 		g_object_unref (console);
 	}
 
-	egg_debug ("emitting resume");
+	g_debug ("emitting resume");
 	g_signal_emit (control, signals [RESUME], 0, GPM_CONTROL_ACTION_HIBERNATE);
 
 	if (do_lock) {

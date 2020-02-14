@@ -27,7 +27,6 @@
 #include <gdk/gdk.h>
 #include <gtk/gtk.h>
 
-#include "egg-debug.h"
 #include "gpm-common.h"
 
 /**

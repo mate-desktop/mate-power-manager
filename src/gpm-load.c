@@ -41,7 +41,6 @@
 
 #include "gpm-common.h"
 #include "gpm-marshal.h"
-#include "egg-debug.h"
 
 #include "gpm-load.h"
 
@@ -78,7 +77,7 @@ gpm_load_class_init (GpmLoadClass *klass)
  **/
 static gboolean
 gpm_load_get_cpu_values (long unsigned *cpu_idle, long unsigned *cpu_total)
-{	
+{
 	long unsigned cpu_user = 0;
 	long unsigned cpu_kernel = 0;
 	long unsigned cpu_wait = 0;
@@ -88,47 +87,47 @@ gpm_load_get_cpu_values (long unsigned *cpu_idle, long unsigned *cpu_total)
 	cpu_stat_t  data;
 	int ncpus;
 	int count;
-	   	
+
 	kc = kstat_open();
 	if (!kc) {
-		egg_warning ("Cannot open kstat!\n");
+		g_warning ("Cannot open kstat!\n");
 		return FALSE;
 	}
 
 	ks = kstat_lookup(kc, "unix", 0, "system_misc");
   	if (kstat_read(kc, ks, NULL) == -1) {
-		egg_warning ("Cannot read kstat on module unix!\n");
+		g_warning ("Cannot read kstat on module unix!\n");
 		goto out;
 	}
 	kn = kstat_data_lookup (ks, "ncpus");
 	if (!kn) {
-		egg_warning ("Cannot get number of cpus in current system!\n");
+		g_warning ("Cannot get number of cpus in current system!\n");
 		goto out;
 	}
 	ncpus = kn->value.ui32;
 
-	/* 
+	/*
  	 * To aggresive ticks used of all cpus,
 	 * traverse kstat chain to access very cpu_stat instane.
 	 */
 	for(count = 0, *cpu_idle =0, *cpu_total = 0; count < ncpus; count++){
-		
+
 		ks = kstat_lookup(kc, "cpu_stat", count, NULL);
 		if (ks == NULL) {
-			egg_warning ("Null output for kstat on cpu%d\n", count);
-			goto out;
-		}
-     
-		if (kstat_read(kc, ks, &data) == -1) {
-			egg_warning ("Cannot read kstat entry on cpu%d\n", count);
+			g_warning ("Null output for kstat on cpu%d\n", count);
 			goto out;
 		}
 
-		egg_debug ("cpu%d:\t%lu\t%lu\t%lu\t%lu\n", count,
-					data.cpu_sysinfo.cpu[CPU_IDLE],
-					data.cpu_sysinfo.cpu[CPU_USER],
-					data.cpu_sysinfo.cpu[CPU_KERNEL],
-					data.cpu_sysinfo.cpu[CPU_WAIT]);
+		if (kstat_read(kc, ks, &data) == -1) {
+			g_warning ("Cannot read kstat entry on cpu%d\n", count);
+			goto out;
+		}
+
+		g_debug ("cpu%d:\t%lu\t%lu\t%lu\t%lu\n", count,
+		         data.cpu_sysinfo.cpu[CPU_IDLE],
+		         data.cpu_sysinfo.cpu[CPU_USER],
+		         data.cpu_sysinfo.cpu[CPU_KERNEL],
+		         data.cpu_sysinfo.cpu[CPU_WAIT]);
 
 		*cpu_idle += data.cpu_sysinfo.cpu[CPU_IDLE];
 		cpu_user += data.cpu_sysinfo.cpu[CPU_USER];

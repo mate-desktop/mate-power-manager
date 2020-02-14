@@ -30,7 +30,6 @@
 #include "gpm-point-obj.h"
 #include "gpm-graph-widget.h"
 
-#include "egg-debug.h"
 #include "egg-color.h"
 #include "egg-precision.h"
 
@@ -121,7 +120,7 @@ gpm_graph_widget_key_data_add (GpmGraphWidget *graph, guint32 color, const gchar
 
 	g_return_val_if_fail (GPM_IS_GRAPH_WIDGET (graph), FALSE);
 
-	egg_debug ("add to list %s", desc);
+	g_debug ("add to list %s", desc);
 	keyitem = g_new0 (GpmGraphWidgetKeyData, 1);
 
 	keyitem->color = color;
@@ -649,7 +648,7 @@ gpm_graph_widget_autorange_x (GpmGraphWidget *graph)
 
 	/* no data in any array */
 	if (len == 0) {
-		egg_debug ("no data");
+		g_debug ("no data");
 		graph->priv->start_x = 0;
 		graph->priv->stop_x = 10;
 		return;
@@ -666,7 +665,7 @@ gpm_graph_widget_autorange_x (GpmGraphWidget *graph)
 				smallest_x = point->x;
 		}
 	}
-	egg_debug ("Data range is %f<x<%f", smallest_x, biggest_x);
+	g_debug ("Data range is %f<x<%f", smallest_x, biggest_x);
 	/* don't allow no difference */
 	if (biggest_x - smallest_x < 0.0001) {
 		biggest_x++;
@@ -693,7 +692,7 @@ gpm_graph_widget_autorange_x (GpmGraphWidget *graph)
 	graph->priv->start_x = egg_precision_round_down (smallest_x, rounding_x);
 	graph->priv->stop_x = egg_precision_round_up (biggest_x, rounding_x);
 
-	egg_debug ("Processed(1) range is %i<x<%i",
+	g_debug ("Processed(1) range is %i<x<%i",
 		   graph->priv->start_x, graph->priv->stop_x);
 
 	/* if percentage, and close to the end points, then extend */
@@ -707,7 +706,7 @@ gpm_graph_widget_autorange_x (GpmGraphWidget *graph)
 			graph->priv->start_x = 0;
 	}
 
-	egg_debug ("Processed range is %i<x<%i",
+	g_debug ("Processed range is %i<x<%i",
 		   graph->priv->start_x, graph->priv->stop_x);
 }
 
@@ -743,7 +742,7 @@ gpm_graph_widget_autorange_y (GpmGraphWidget *graph)
 
 	/* no data in any array */
 	if (len == 0) {
-		egg_debug ("no data");
+		g_debug ("no data");
 		graph->priv->start_y = 0;
 		graph->priv->stop_y = 10;
 		return;
@@ -760,7 +759,7 @@ gpm_graph_widget_autorange_y (GpmGraphWidget *graph)
 				smallest_y = point->y;
 		}
 	}
-	egg_debug ("Data range is %f<y<%f", smallest_y, biggest_y);
+	g_debug ("Data range is %f<y<%f", smallest_y, biggest_y);
 	/* don't allow no difference */
 	if (biggest_y - smallest_y < 0.0001) {
 		biggest_y++;
@@ -795,7 +794,7 @@ gpm_graph_widget_autorange_y (GpmGraphWidget *graph)
 			graph->priv->stop_y = -graph->priv->start_y;
 	}
 
-	egg_debug ("Processed(1) range is %i<y<%i",
+	g_debug ("Processed(1) range is %i<y<%i",
 		   graph->priv->start_y, graph->priv->stop_y);
 
 	if (graph->priv->type_y == GPM_GRAPH_WIDGET_TYPE_PERCENTAGE) {
@@ -808,7 +807,7 @@ gpm_graph_widget_autorange_y (GpmGraphWidget *graph)
 			graph->priv->start_y = 0;
 	}
 
-	egg_debug ("Processed range is %i<y<%i",
+	g_debug ("Processed range is %i<y<%i",
 		   graph->priv->start_y, graph->priv->stop_y);
 }
 
@@ -903,7 +902,7 @@ gpm_graph_widget_draw_line (GpmGraphWidget *graph, cairo_t *cr)
 	guint i, j;
 
 	if (graph->priv->data_list->len == 0) {
-		egg_debug ("no data");
+		g_debug ("no data");
 		return;
 	}
 	cairo_save (cr);
@@ -1005,7 +1004,7 @@ gpm_graph_widget_draw_legend (GpmGraphWidget *graph, gint x, gint y, gint width,
 		keydataitem = (GpmGraphWidgetKeyData *) g_slist_nth_data (graph->priv->key_data, i);
 		if (keydataitem == NULL) {
 			/* this shouldn't ever happen */
-			egg_warning ("keydataitem NULL!");
+			g_warning ("keydataitem NULL!");
 			break;
 		}
 		gpm_graph_widget_draw_legend_line (cr, x + 8, y_count, keydataitem->color);

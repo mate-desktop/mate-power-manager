@@ -20,7 +20,6 @@
 
 #include <glib.h>
 
-#include "egg-debug.h"
 #include "gpm-point-obj.h"
 
 /**

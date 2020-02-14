@@ -32,10 +32,7 @@ AM_CPPFLAGS =						\
 	-DGPM_ICONS_DATA=\"$(pkgdatadir)/icons\"	\
 	-DGTKBUILDERDIR=\"$(pkgdatadir)\"		\
 	-DUP_DISABLE_DEPRECATED				\
-	-DEGG_LOG_FILE=\""/tmp/gpm.log"\"		\
-	-DEGG_VERBOSE="\"GPM_VERBOSE\""			\
-	-DEGG_LOGGING="\"GPM_LOGGING\""			\
-	-DEGG_CONSOLE="\"GPM_CONSOLE\""			\
+	-DG_LOG_DOMAIN=\"PowerManager\"			\
 	-I$(top_srcdir)					\
 	$(DISABLE_DEPRECATED)
 
@@ -60,8 +57,6 @@ noinst_LIBRARIES = libgpmshared.a
 libgpmshared_a_SOURCES =				\
 	egg-color.c					\
 	egg-color.h					\
-	egg-debug.h					\
-	egg-debug.c					\
 	egg-precision.h					\
 	egg-precision.c					\
 	egg-array-float.c				\
@@ -222,8 +217,6 @@ mate_power_self_test_SOURCES =				\
 	egg-color.c					\
 	egg-test.h					\
 	egg-test.c					\
-	egg-debug.h					\
-	egg-debug.c					\
 	egg-precision.h					\
 	egg-precision.c					\
 	egg-idletime.h					\

@@ -28,7 +28,6 @@
 
 #include "gpm-screensaver.h"
 #include "gpm-common.h"
-#include "egg-debug.h"
 
 static void     gpm_screensaver_finalize   (GObject		*object);
 
@@ -59,11 +58,11 @@ gpm_screensaver_lock (GpmScreensaver *screensaver)
 	g_return_val_if_fail (GPM_IS_SCREENSAVER (screensaver), FALSE);
 
 	if (screensaver->priv->proxy == NULL) {
-		egg_warning ("not connected");
+		g_warning ("not connected");
 		return FALSE;
 	}
 
-	egg_debug ("doing mate-screensaver lock");
+	g_debug ("doing mate-screensaver lock");
 	dbus_g_proxy_call_no_reply (screensaver->priv->proxy,
 				    "Lock", G_TYPE_INVALID);
 
@@ -79,7 +78,7 @@ gpm_screensaver_lock (GpmScreensaver *screensaver)
 		/* Sleep for 1/10s */
 		g_usleep (1000 * 100);
 		if (sleepcount++ > 50) {
-			egg_debug ("timeout waiting for mate-screensaver");
+			g_debug ("timeout waiting for mate-screensaver");
 			break;
 		}
 	}
@@ -105,7 +104,7 @@ gpm_screensaver_add_throttle (GpmScreensaver *screensaver,
 	g_return_val_if_fail (reason != NULL, 0);
 
 	if (screensaver->priv->proxy == NULL) {
-		egg_warning ("not connected");
+		g_warning ("not connected");
 		return 0;
 	}
 
@@ -117,16 +116,16 @@ gpm_screensaver_add_throttle (GpmScreensaver *screensaver,
 				 G_TYPE_UINT, &cookie,
 				 G_TYPE_INVALID);
 	if (error) {
-		egg_debug ("ERROR: %s", error->message);
+		g_debug ("ERROR: %s", error->message);
 		g_error_free (error);
 	}
 	if (!ret) {
 		/* abort as the DBUS method failed */
-		egg_warning ("Throttle failed!");
+		g_warning ("Throttle failed!");
 		return 0;
 	}
 
-	egg_debug ("adding throttle reason: '%s': id %u", reason, cookie);
+	g_debug ("adding throttle reason: '%s': id %u", reason, cookie);
 	return cookie;
 }
 
@@ -142,23 +141,23 @@ gpm_screensaver_remove_throttle (GpmScreensaver *screensaver, guint cookie)
 	g_return_val_if_fail (GPM_IS_SCREENSAVER (screensaver), FALSE);
 
 	if (screensaver->priv->proxy == NULL) {
-		egg_warning ("not connected");
+		g_warning ("not connected");
 		return FALSE;
 	}
 
-	egg_debug ("removing throttle: id %u", cookie);
+	g_debug ("removing throttle: id %u", cookie);
 	ret = dbus_g_proxy_call (screensaver->priv->proxy,
 				 "UnThrottle", &error,
 				 G_TYPE_UINT, cookie,
 				 G_TYPE_INVALID,
 				 G_TYPE_INVALID);
 	if (error) {
-		egg_debug ("ERROR: %s", error->message);
+		g_debug ("ERROR: %s", error->message);
 		g_error_free (error);
 	}
 	if (!ret) {
 		/* abort as the DBUS method failed */
-		egg_warning ("UnThrottle failed!");
+		g_warning ("UnThrottle failed!");
 		return FALSE;
 	}
 
@@ -180,7 +179,7 @@ gpm_screensaver_check_running (GpmScreensaver *screensaver)
 	g_return_val_if_fail (GPM_IS_SCREENSAVER (screensaver), FALSE);
 
 	if (screensaver->priv->proxy == NULL) {
-		egg_warning ("not connected");
+		g_warning ("not connected");
 		return FALSE;
 	}
 
@@ -190,7 +189,7 @@ gpm_screensaver_check_running (GpmScreensaver *screensaver)
 				 G_TYPE_BOOLEAN, &temp,
 				 G_TYPE_INVALID);
 	if (error) {
-		egg_debug ("ERROR: %s", error->message);
+		g_debug ("ERROR: %s", error->message);
 		g_error_free (error);
 	}
 
@@ -211,11 +210,11 @@ gpm_screensaver_poke (GpmScreensaver *screensaver)
 	g_return_val_if_fail (GPM_IS_SCREENSAVER (screensaver), FALSE);
 
 	if (screensaver->priv->proxy == NULL) {
-		egg_warning ("not connected");
+		g_warning ("not connected");
 		return FALSE;
 	}
 
-	egg_debug ("poke");
+	g_debug ("poke");
 	dbus_g_proxy_call_no_reply (screensaver->priv->proxy,
 				    "SimulateUserActivity",
 				    G_TYPE_INVALID);

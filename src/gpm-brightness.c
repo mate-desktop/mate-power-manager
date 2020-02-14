@@ -41,7 +41,6 @@
 #endif /* HAVE_UNISTD_H */
 
 #include "egg-discrete.h"
-#include "egg-debug.h"
 
 #include "gpm-brightness.h"
 #include "gpm-common.h"
@@ -131,11 +130,11 @@ gpm_brightness_helper_get_value (const gchar *argument)
 	ret = g_spawn_command_line_sync (command,
 					 &stdout_data, NULL, &exit_status, &error);
 	if (!ret) {
-		egg_error ("failed to get value: %s", error->message);
+		g_error ("failed to get value: %s", error->message);
 		g_error_free (error);
 		goto out;
 	}
-	egg_debug ("executing %s retval: %i", command, exit_status);
+	g_debug ("executing %s retval: %i", command, exit_status);
 
 	/* parse for a number */
 	ret = gpm_brightness_helper_strtoint (stdout_data, &value);
@@ -162,11 +161,11 @@ gpm_brightness_helper_set_value (const gchar *argument, gint value)
 	command = g_strdup_printf ("pkexec " SBINDIR "/mate-power-backlight-helper --%s %i", argument, value);
 	ret = g_spawn_command_line_sync (command, NULL, NULL, &exit_status, &error);
 	if (!ret) {
-		egg_error ("failed to get value: %s", error->message);
+		g_error ("failed to get value: %s", error->message);
 		g_error_free (error);
 		goto out;
 	}
-	egg_debug ("executing %s retval: %i", command, exit_status);
+	g_debug ("executing %s retval: %i", command, exit_status);
 out:
 	g_free (command);
 	return ret;
@@ -208,7 +207,7 @@ gpm_brightness_output_get_internal (GpmBrightness *brightness, RROutput output, 
 				  0, 4, False, False, None,
 				  &actual_type, &actual_format,
 				  &nitems, &bytes_after, ((unsigned char **)&prop)) != Success) {
-		egg_debug ("failed to get property");
+		g_debug ("failed to get property");
 		return FALSE;
 	}
 	if (actual_type == XA_INTEGER && nitems == 1 && actual_format == 32) {
@@ -239,7 +238,7 @@ gpm_brightness_output_set_internal (GpmBrightness *brightness, RROutput output, 
 	XFlush (brightness->priv->dpy);
 	gdk_display_flush (display);
 	if (gdk_x11_display_error_trap_pop (display)) {
-		egg_warning ("failed to XRRChangeOutputProperty for brightness %i", value);
+		g_warning ("failed to XRRChangeOutputProperty for brightness %i", value);
 		ret = FALSE;
 	}
 	/* we changed the hardware */
@@ -261,16 +260,16 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 	/* get the display */
 	brightness->priv->dpy = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
 	if (!brightness->priv->dpy) {
-		egg_error ("Cannot open display");
+		g_error ("Cannot open display");
 		return FALSE;
 	}
 	/* is XRandR new enough? */
 	if (!XRRQueryVersion (brightness->priv->dpy, &major, &minor)) {
-		egg_debug ("RandR extension missing");
+		g_debug ("RandR extension missing");
 		return FALSE;
 	}
 	if (major < 1 || (major == 1 && minor < 3)) {
-		egg_debug ("RandR version %d.%d too old", major, minor);
+		g_debug ("RandR version %d.%d too old", major, minor);
 		return FALSE;
 	}
 	/* Can we support "Backlight" */
@@ -279,7 +278,7 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 		/* Do we support "BACKLIGHT" (legacy) */
 		brightness->priv->backlight = XInternAtom (brightness->priv->dpy, "BACKLIGHT", True);
 		if (brightness->priv->backlight == None) {
-			egg_debug ("No outputs have backlight property");
+			g_debug ("No outputs have backlight property");
 			return FALSE;
 		}
 	}
@@ -300,11 +299,11 @@ gpm_brightness_output_get_limits (GpmBrightness *brightness, RROutput output,
 
 	info = XRRQueryOutputProperty (brightness->priv->dpy, output, brightness->priv->backlight);
 	if (info == NULL) {
-		egg_debug ("could not get output property");
+		g_debug ("could not get output property");
 		return FALSE;
 	}
 	if (!info->range || info->num_values != 2) {
-		egg_debug ("was not range");
+		g_debug ("was not range");
 		ret = FALSE;
 		goto out;
 	}
@@ -334,9 +333,9 @@ gpm_brightness_output_get_percentage (GpmBrightness *brightness, RROutput output
 	ret = gpm_brightness_output_get_limits (brightness, output, &min, &max);
 	if (!ret || min == max)
 		return FALSE;
-	egg_debug ("hard value=%i, min=%i, max=%i", cur, min, max);
+	g_debug ("hard value=%i, min=%i, max=%i", cur, min, max);
 	percentage = egg_discrete_to_percent (cur, (max-min)+1);
-	egg_debug ("percentage %i", percentage);
+	g_debug ("percentage %i", percentage);
 	brightness->priv->shared_value = percentage;
 	return TRUE;
 }
@@ -360,14 +359,14 @@ gpm_brightness_output_down (GpmBrightness *brightness, RROutput output)
 	ret = gpm_brightness_output_get_limits (brightness, output, &min, &max);
 	if (!ret || min == max)
 		return FALSE;
-	egg_debug ("hard value=%i, min=%i, max=%i", cur, min, max);
+	g_debug ("hard value=%i, min=%i, max=%i", cur, min, max);
 	if (cur == min) {
-		egg_debug ("already min");
+		g_debug ("already min");
 		return TRUE;
 	}
 	step = gpm_brightness_get_step ((max-min)+1);
 	if (cur < step) {
-		egg_debug ("truncating to %i", min);
+		g_debug ("truncating to %i", min);
 		cur = min;
 	} else {
 		cur -= step;
@@ -394,14 +393,14 @@ gpm_brightness_output_up (GpmBrightness *brightness, RROutput output)
 	ret = gpm_brightness_output_get_limits (brightness, output, &min, &max);
 	if (!ret || min == max)
 		return FALSE;
-	egg_debug ("hard value=%i, min=%i, max=%i", cur, min, max);
+	g_debug ("hard value=%i, min=%i, max=%i", cur, min, max);
 	if (cur == max) {
-		egg_debug ("already max");
+		g_debug ("already max");
 		return TRUE;
 	}
 	cur += gpm_brightness_get_step ((max-min)+1);
 	if (cur > max) {
-		egg_debug ("truncating to %i", max);
+		g_debug ("truncating to %i", max);
 		cur = max;
 	}
 	ret = gpm_brightness_output_set_internal (brightness, output, cur);
@@ -431,15 +430,15 @@ gpm_brightness_output_set (GpmBrightness *brightness, RROutput output)
 		return FALSE;
 
 	shared_value_abs = egg_discrete_from_percent (brightness->priv->shared_value, (max-min)+1);
-	egg_debug ("percent=%i, absolute=%i", brightness->priv->shared_value, shared_value_abs);
+	g_debug ("percent=%i, absolute=%i", brightness->priv->shared_value, shared_value_abs);
 
-	egg_debug ("hard value=%i, min=%i, max=%i", cur, min, max);
+	g_debug ("hard value=%i, min=%i, max=%i", cur, min, max);
 	if (shared_value_abs > (gint) max)
 		shared_value_abs = max;
 	if (shared_value_abs < (gint) min)
 		shared_value_abs = min;
 	if ((gint) cur == shared_value_abs) {
-		egg_debug ("already set %i", cur);
+		g_debug ("already set %i", cur);
 		return TRUE;
 	}
 
@@ -448,7 +447,7 @@ gpm_brightness_output_set (GpmBrightness *brightness, RROutput output)
 
 		/* some adaptors have a large number of steps */
 		step = gpm_brightness_get_step (shared_value_abs - cur);
-		egg_debug ("using step of %i", step);
+		g_debug ("using step of %i", step);
 
 		/* going up */
 		for (i=cur; i<=shared_value_abs; i+=step) {
@@ -462,7 +461,7 @@ gpm_brightness_output_set (GpmBrightness *brightness, RROutput output)
 
 		/* some adaptors have a large number of steps */
 		step = gpm_brightness_get_step (cur - shared_value_abs);
-		egg_debug ("using step of %i", step);
+		g_debug ("using step of %i", step);
 
 		/* going down */
 		for (i=cur; i>=shared_value_abs; i-=step) {
@@ -492,7 +491,7 @@ gpm_brightness_foreach_resource (GpmBrightness *brightness, GpmXRandROp op, XRRS
 	/* do for each output */
 	for (i=0; i<resources->noutput; i++) {
 		output = resources->outputs[i];
-		egg_debug ("resource %i of %i", i+1, resources->noutput);
+		g_debug ("resource %i of %i", i+1, resources->noutput);
 		if (op==ACTION_BACKLIGHT_GET) {
 			ret = gpm_brightness_output_get_percentage (brightness, output);
 		} else if (op==ACTION_BACKLIGHT_INC) {
@@ -503,7 +502,7 @@ gpm_brightness_foreach_resource (GpmBrightness *brightness, GpmXRandROp op, XRRS
 			ret = gpm_brightness_output_set (brightness, output);
 		} else {
 			ret = FALSE;
-			egg_warning ("op not known");
+			g_warning ("op not known");
 		}
 		if (ret) {
 			success_any = TRUE;
@@ -534,7 +533,7 @@ gpm_brightness_foreach_screen (GpmBrightness *brightness, GpmXRandROp op)
 	length = brightness->priv->resources->len;
 	for (i=0; i<length; i++) {
 		resource = (XRRScreenResources *) g_ptr_array_index (brightness->priv->resources, i);
-		egg_debug ("using resource %p", resource);
+		g_debug ("using resource %p", resource);
 		ret = gpm_brightness_foreach_resource (brightness, op, resource);
 		if (ret)
 			success_any = TRUE;
@@ -554,7 +553,7 @@ gpm_brightness_trust_cache (GpmBrightness *brightness)
 	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
 	/* only return the cached value if the cache is trusted and we have change events */
 	if (brightness->priv->cache_trusted && brightness->priv->has_changed_events) {
-		egg_debug ("using cache for value %u (okay)", brightness->priv->cache_percentage);
+		g_debug ("using cache for value %u (okay)", brightness->priv->cache_percentage);
 		return TRUE;
 	}
 
@@ -562,7 +561,7 @@ gpm_brightness_trust_cache (GpmBrightness *brightness)
 	 * if we have multiple things setting policy on the workstation, e.g. fast user switching
 	 * or kpowersave, then this will be invalid -- this logic may be insane */
 	if (GPM_SOLE_SETTER_USE_CACHE && brightness->priv->cache_trusted) {
-		egg_warning ("using cache for value %u (probably okay)", brightness->priv->cache_percentage);
+		g_warning ("using cache for value %u (probably okay)", brightness->priv->cache_percentage);
 		return TRUE;
 	}
 	return FALSE;
@@ -586,7 +585,7 @@ gpm_brightness_set (GpmBrightness *brightness, guint percentage, gboolean *hw_ch
 	/* can we check the new value with the cache? */
 	trust_cache = gpm_brightness_trust_cache (brightness);
 	if (trust_cache && percentage == brightness->priv->cache_percentage) {
-		egg_debug ("not setting the same value %i", percentage);
+		g_debug ("not setting the same value %i", percentage);
 		return TRUE;
 	}
 
@@ -656,7 +655,7 @@ gpm_brightness_get (GpmBrightness *brightness, guint *percentage)
 
 	/* valid? */
 	if (percentage_local > 100) {
-		egg_warning ("percentage value of %i will be truncated", percentage_local);
+		g_warning ("percentage value of %i will be truncated", percentage_local);
 		percentage_local = 100;
 	}
 
@@ -784,10 +783,10 @@ gpm_brightness_may_have_changed (GpmBrightness *brightness)
 	guint percentage;
 	ret = gpm_brightness_get (brightness, &percentage);
 	if (!ret) {
-		egg_warning ("failed to get output");
+		g_warning ("failed to get output");
 		return;
 	}
-	egg_debug ("emitting brightness-changed (%i)", percentage);
+	g_debug ("emitting brightness-changed (%i)", percentage);
 	g_signal_emit (brightness, signals [BRIGHTNESS_CHANGED], 0, percentage);
 }
 
@@ -841,7 +840,7 @@ gpm_brightness_update_cache (GpmBrightness *brightness)
 
 	/* if we have not setup the changed on the monitor, set it here */
 	if (g_object_get_data (G_OBJECT (gscreen), "gpk-set-monitors-changed") == NULL) {
-		egg_debug ("watching ::monitors_changed on %p", gscreen);
+		g_debug ("watching ::monitors_changed on %p", gscreen);
 		g_object_set_data (G_OBJECT (gscreen), "gpk-set-monitors-changed", (gpointer) "true");
 		g_signal_connect (G_OBJECT (gscreen), "monitors_changed",
 				  G_CALLBACK (gpm_brightness_monitors_changed), brightness);
@@ -852,11 +851,11 @@ gpm_brightness_update_cache (GpmBrightness *brightness)
 	gdk_x11_display_error_trap_push (display);
 	resource = XRRGetScreenResourcesCurrent (brightness->priv->dpy, root);
 	if (gdk_x11_display_error_trap_pop (display) || resource == NULL) {
-		egg_warning ("failed to XRRGetScreenResourcesCurrent");
+		g_warning ("failed to XRRGetScreenResourcesCurrent");
 	}
 
 	if (resource != NULL) {
-		egg_debug ("adding resource %p", resource);
+		g_debug ("adding resource %p", resource);
 		g_ptr_array_add (brightness->priv->resources, resource);
 	}
 }
@@ -938,7 +937,7 @@ gpm_brightness_init (GpmBrightness *brightness)
 	/* can we do this */
 	brightness->priv->has_extension = gpm_brightness_setup_display (brightness);
 	if (brightness->priv->has_extension == FALSE)
-		egg_debug ("no XRANDR extension");
+		g_debug ("no XRANDR extension");
 
 	screen = gdk_screen_get_default ();
 	brightness->priv->root_window = gdk_screen_get_root_window (screen);
@@ -946,7 +945,7 @@ gpm_brightness_init (GpmBrightness *brightness)
 
 	/* as we a filtering by a window, we have to add an event type */
 	if (!XRRQueryExtension (GDK_DISPLAY_XDISPLAY (gdk_display_get_default()), &event_base, &ignore)) {
-		egg_warning ("can't get event_base for XRR");
+		g_warning ("can't get event_base for XRR");
 	}
 	gdk_x11_register_standard_event_type (display, event_base, RRNotify + 1);
 	gdk_window_add_filter (brightness->priv->root_window,
@@ -960,7 +959,7 @@ gpm_brightness_init (GpmBrightness *brightness)
 			RROutputPropertyNotifyMask); /* <--- the only one we need, but see rh:345551 */
 	gdk_display_flush (display);
 	if (gdk_x11_display_error_trap_pop (display))
-		egg_warning ("failed to select XRRSelectInput");
+		g_warning ("failed to select XRRSelectInput");
 
 	/* create cache of XRRScreenResources as XRRGetScreenResources() is slow */
 	gpm_brightness_update_cache (brightness);

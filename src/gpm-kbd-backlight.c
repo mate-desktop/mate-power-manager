@@ -24,7 +24,6 @@
 #include <libupower-glib/upower.h>
 #include <gtk/gtk.h>
 
-#include "egg-debug.h"
 #include "gpm-button.h"
 #include "gpm-common.h"
 #include "gpm-control.h"
@@ -139,16 +138,16 @@ gpm_kbd_backlight_set (GpmKbdBacklight *backlight,
                    NULL,
                    NULL);
    }
-    egg_debug("Set brightness to %i", backlight->priv->brightness);
+   g_debug("Set brightness to %i", backlight->priv->brightness);
    return TRUE;
 }
 
-/** 
+/**
  * gpm_kbd_backlight_dialog_init
  **/
 static void
-gpm_kbd_backlight_dialog_init (GpmKbdBacklight *backlight) 
-{  
+gpm_kbd_backlight_dialog_init (GpmKbdBacklight *backlight)
+{
     if (backlight->priv->popup != NULL
 	    && !msd_osd_window_is_valid (MSD_OSD_WINDOW (backlight->priv->popup))) {
 		gtk_widget_destroy (backlight->priv->popup);
@@ -517,9 +516,9 @@ gpm_kbd_backlight_button_pressed_cb (GpmButton *button,
 
    if (g_strcmp0 (type, GPM_BUTTON_KBD_BRIGHT_UP) == 0) {
        ret = gpm_kbd_backlight_brightness_up (backlight);
-        
+
         if (ret) {
-            egg_debug("Going to display OSD");
+            g_debug("Going to display OSD");
             gpm_kbd_backlight_dialog_init (backlight);
 			msd_media_keys_window_set_volume_level (MSD_MEDIA_KEYS_WINDOW (backlight->priv->popup), backlight->priv->brightness_percent);
             gpm_kbd_backlight_dialog_show (backlight);
@@ -529,12 +528,12 @@ gpm_kbd_backlight_button_pressed_cb (GpmButton *button,
        ret = gpm_kbd_backlight_brightness_down (backlight);
 
         if (ret) {
-            egg_debug("Going to display OSD");
+            g_debug("Going to display OSD");
             gpm_kbd_backlight_dialog_init (backlight);
 			msd_media_keys_window_set_volume_level (MSD_MEDIA_KEYS_WINDOW (backlight->priv->popup), backlight->priv->brightness_percent);
             gpm_kbd_backlight_dialog_show (backlight);
         }
-        
+
    } else if (g_strcmp0 (type, GPM_BUTTON_KBD_BRIGHT_TOGGLE) == 0) {
        if (backlight->priv->master_percentage == 0) {
            /* backlight is off turn it back on */
@@ -570,7 +569,7 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
    gboolean on_battery;
    gboolean enable_action;
 
-    egg_debug("Idle changed");
+   g_debug("Idle changed");
 
    lid_closed = gpm_button_is_lid_closed (backlight->priv->button);
 
@@ -590,16 +589,16 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
        return;
 
    if (mode == GPM_IDLE_MODE_NORMAL) {
-        egg_debug("GPM_IDLE_MODE_NORMAL");
+       g_debug ("GPM_IDLE_MODE_NORMAL");
        backlight->priv->master_percentage = 100;
        gpm_kbd_backlight_evaluate_power_source_and_set (backlight);
    } else if (mode == GPM_IDLE_MODE_DIM) {
-       egg_debug("GPM_IDLE_MODE_DIM");
+       g_debug ("GPM_IDLE_MODE_DIM");
        brightness = backlight->priv->master_percentage;
        value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_IDLE);
 
        if (value > 100) {
-           egg_warning ("Cannot scale brightness down by more than 100%%. Scaling by 50%%");
+           g_warning ("Cannot scale brightness down by more than 100%%. Scaling by 50%%");
            value = 50;
        }
 
