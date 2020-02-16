@@ -287,7 +287,7 @@ gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 	};
 
 	char copyright[] = \
-		"Copyright \xc2\xa9 2012-2018 MATE developers\n"
+		"Copyright \xc2\xa9 2012-2020 MATE developers\n"
 		"Copyright \xc2\xa9 2006-2007 Richard Hughes";
 
 	const char *documenters [] = {
