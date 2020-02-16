@@ -41,10 +41,12 @@ EXTRA_DIST =							\
 	$(gsettings_schemas_in_files)				\
 	$(pkgdata_DATA)						\
 	$(man_MANS)						\
+	org.mate.power-manager.manager.gresource.xml		\
 	org.mate.power-manager.preferences.gresource.xml	\
 	org.mate.power-manager.statistics.gresource.xml		\
 	gpm-prefs.ui						\
-	gpm-statistics.ui
+	gpm-statistics.ui					\
+	mate-power-manager.about
 
 clean-local :
 	rm -f *~
