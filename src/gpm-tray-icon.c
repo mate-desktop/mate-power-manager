@@ -165,6 +165,9 @@ gpm_tray_icon_show_preferences_cb (GtkMenuItem *item, gpointer data)
 		egg_warning ("Couldn't execute command: %s", command);
 }
 
+#define ABOUT_GROUP "About"
+#define EMAILIFY(string) (g_strdelimit ((string), "%", '@'))
+
 /**
  * gpm_tray_icon_show_about_cb:
  * @action: A valid GtkAction
@@ -172,13 +175,30 @@ gpm_tray_icon_show_preferences_cb (GtkMenuItem *item, gpointer data)
 static void
 gpm_tray_icon_show_about_cb (GtkMenuItem *item, gpointer data)
 {
-	const gchar *authors[] =
-	{
-		"Perberos",
-		"Steve Zesch",
-		"Stefano Karapetsas",
-		NULL
-	};
+	GKeyFile *key_file;
+	GBytes *bytes;
+	const guint8 *data_resource;
+	gsize data_resource_len;
+	GError *error = NULL;
+	char **authors;
+	gsize n_authors = 0, i;
+
+	bytes = g_resources_lookup_data ("/org/mate/powermanager/manager/mate-power-manager.about",
+	                                 G_RESOURCE_LOOKUP_FLAGS_NONE, &error);
+	g_assert_no_error (error);
+
+	data_resource = g_bytes_get_data (bytes, &data_resource_len);
+	key_file = g_key_file_new ();
+	g_key_file_load_from_data (key_file, (const char *) data_resource, data_resource_len, 0, &error);
+	g_assert_no_error (error);
+
+	authors = g_key_file_get_string_list (key_file, ABOUT_GROUP, "Authors", &n_authors, NULL);
+
+	g_key_file_free (key_file);
+	g_bytes_unref (bytes);
+
+	for (i = 0; i < n_authors; ++i)
+		authors[i] = EMAILIFY (authors[i]);
 
 	gtk_show_about_dialog (NULL,
 				"program-name", _("Power Manager"),
@@ -195,6 +215,8 @@ gpm_tray_icon_show_about_cb (GtkMenuItem *item, gpointer data)
 				"logo-icon-name", "mate-power-manager",
 				"website", "https://mate-desktop.org",
 				NULL);
+
+	g_strfreev (authors);
 }
 
 /**
