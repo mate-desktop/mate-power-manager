@@ -151,6 +151,14 @@ mate_power_preferences_CFLAGS =				\
 	$(WARN_CFLAGS)					\
 	$(NULL)
 
+mate-power-manager-resources.h mate-power-manager-resources.c: $(srcdir)/../data/org.mate.power-manager.manager.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir)/../data $(srcdir)/../data/org.mate.power-manager.manager.gresource.xml)
+	$(AM_V_GEN) XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --sourcedir $(srcdir)/../data --generate --c-name preferences $<
+
+nodist_mate_power_manager_SOURCES =			\
+	mate-power-manager-resources.h			\
+	mate-power-manager-resources.c			\
+	$(NULL)
+
 mate_power_manager_SOURCES =				\
 	gpm-dpms.h					\
 	gpm-dpms.c					\
@@ -316,6 +324,8 @@ clean-local:
 
 CLEANFILES = \
 	$(BUILT_SOURCES)				\
+	mate-power-manager-resources.h			\
+	mate-power-manager-resources.c			\
 	mate-power-preferences-resources.h		\
 	mate-power-preferences-resources.c		\
 	mate-power-statistics-resources.h		\
