@@ -1,0 +1,120 @@
+##########################################################
+# THE FOLLOWING LINES IS USED BY docker-build
+##########################################################
+requires:
+  archlinux:
+    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/mate-power-manager
+    - dbus-glib
+    - file
+    - gcc
+    - git
+    - intltool
+    - itstool
+    - libcanberra
+    - libgnome-keyring
+    - libnotify
+    - make
+    - mate-common
+    - mate-panel
+    - python
+    - upower
+    - which
+    - yelp-tools
+
+  debian:
+    # Useful URL: https://github.com/mate-desktop/debian-packages
+    # Useful URL: https://salsa.debian.org/debian-mate-team/mate-power-manager
+    - git
+    - intltool
+    - libcanberra-gtk3-dev
+    - libdbus-glib-1-dev
+    - libgcrypt20-dev
+    - libglib2.0-dev
+    - libgtk-3-dev
+    - libmate-panel-applet-dev
+    - libnotify-dev
+    - libtool-bin
+    - libupower-glib-dev
+    - libx11-dev
+    - libxext-dev
+    - libxml-parser-perl
+    - libxrandr-dev
+    - make
+    - mate-common
+    - pkg-config
+    - xmlto
+    - yelp-tools
+
+  fedora:
+    # Useful URL: https://src.fedoraproject.org/cgit/rpms/mate-power-manager.git
+    - cairo-devel
+    - dbus-glib-devel
+    - desktop-file-utils
+    - gcc
+    - git
+    - glib2-devel
+    - gtk3-devel
+    - libcanberra-devel
+    - libgnome-keyring-devel
+    - libnotify-devel
+    - make
+    - mate-common
+    - mate-panel-devel
+    - mesa-libGL-devel
+    - pangox-compat-devel
+    - popt-devel
+    - redhat-rpm-config
+    - upower-devel
+
+  ubuntu:
+    - git
+    - intltool
+    - libcanberra-gtk3-dev
+    - libdbus-glib-1-dev
+    - libgcrypt20-dev
+    - libglib2.0-dev
+    - libgtk-3-dev
+    - libmate-panel-applet-dev
+    - libnotify-dev
+    - libtool-bin
+    - libupower-glib-dev
+    - libx11-dev
+    - libxext-dev
+    - libxml-parser-perl
+    - libxrandr-dev
+    - make
+    - mate-common
+    - pkg-config
+    - xmlto
+    - yelp-tools
+
+variables:
+  - CFLAGS="-Wall -Werror=format-security"
+
+build_scripts:
+  - if [ ${DISTRO_NAME} == "debian" -o ${DISTRO_NAME} == "ubuntu" ];then
+  -     ./autogen.sh --without-keyring
+  - else
+  -     ./autogen.sh
+  - fi
+
+after_scripts:
+  - if [ ${DISTRO_NAME} == "debian" ];then
+  -     curl -Ls -o debian.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/debian.sh
+  -     bash ./debian.sh
+  - fi
+  - make distcheck
+
+releases:
+  draft: false
+  prerelease: false
+  checksum: true
+  file_glob: true
+  files: mate-power-manager-*.tar.xz
+  github_release:
+    tags: true
+    overwrite: true
+    base_version: 1.20.0
+    notify_servers:
+      - https://release.mate-desktop.org/release
+
