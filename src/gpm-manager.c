@@ -1756,7 +1756,7 @@ gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
         g_error_free (error);
         return -1;
     }
-    res = g_dbus_proxy_call_with_unix_fd_list_sync (proxy, "Inhibit", 
+    res = g_dbus_proxy_call_with_unix_fd_list_sync (proxy, "Inhibit",
                             g_variant_new( "(ssss)",
                                 arg_what,
                                 arg_who,
@@ -1770,22 +1770,26 @@ gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
                             NULL,
                             &error
                             );
-    if (error == NULL && res != NULL) {
-        g_variant_get(res, "(h)", &r);
-	    egg_debug ("Inhibiting systemd sleep res = %i", r);
-        fd = g_unix_fd_list_get (fd_list, r, &error); 
-        if (fd == -1) {
-            egg_debug("Failed to get systemd inhibitor");
-            return r;
-        }
-        egg_debug ("System inhibitor fd is %d", fd);
-        g_object_unref (fd_list);
-        g_variant_unref (res);
-    } else if (error != NULL || res == NULL) {
+    if (error != NULL) {
         egg_error ("Error in dbus - %s", error->message);
         g_error_free (error);
         return -EIO;
     }
+    if (res == NULL)
+       return -EIO;
+
+    g_variant_get(res, "(h)", &r);
+    egg_debug ("Inhibiting systemd sleep res = %i", r);
+
+    fd = g_unix_fd_list_get (fd_list, r, &error);
+    if (fd == -1) {
+        egg_debug("Failed to get systemd inhibitor");
+        return r;
+    }
+
+    egg_debug ("System inhibitor fd is %d", fd);
+    g_object_unref (fd_list);
+    g_variant_unref (res);
     egg_debug ("Inhibiting systemd sleep - success");
     return r;
 }
