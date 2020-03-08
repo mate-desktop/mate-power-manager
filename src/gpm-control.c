@@ -103,7 +103,7 @@ gpm_control_systemd_shutdown (void) {
 					       &error );
 	//append all our arguments
 	if (proxy == NULL) {
-		g_error("Error connecting to dbus - %s", error->message);
+		g_warning ("Error connecting to dbus - %s", error->message);
 		g_error_free (error);
 		return FALSE;
 	}
@@ -116,7 +116,7 @@ gpm_control_systemd_shutdown (void) {
 				      &error
 				      );
 	if (error != NULL) {
-		g_error ("Error in dbus - %s", error->message);
+		g_warning ("Error in dbus - %s", error->message);
 		g_error_free (error);
 		return FALSE;
 	}
@@ -268,7 +268,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
 						       NULL,
 						       &dbus_error );
 		if (proxy == NULL) {
-			g_error ("Error connecting to dbus - %s", dbus_error->message);
+			g_warning ("Error connecting to dbus - %s", dbus_error->message);
 			g_error_free (dbus_error);
 			ret = FALSE;
 			goto out;
@@ -281,7 +281,7 @@ gpm_control_suspend (GpmControl *control, GError **error)
 					      &dbus_error
 					      );
 		if (dbus_error != NULL ) {
-			g_debug ("Error in dbus - %s", dbus_error->message);
+			g_warning ("Error in dbus - %s", dbus_error->message);
 			g_error_free (dbus_error);
 			ret = TRUE;
 		}
@@ -386,7 +386,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 						       NULL,
 						       &dbus_error );
 		if (proxy == NULL) {
-			g_error ("Error connecting to dbus - %s", dbus_error->message);
+			g_warning ("Error connecting to dbus - %s", dbus_error->message);
 			g_error_free (dbus_error);
 			ret = FALSE;
 			goto out;
@@ -399,7 +399,7 @@ gpm_control_hibernate (GpmControl *control, GError **error)
 					      &dbus_error
 					      );
 		if (dbus_error != NULL ) {
-			g_debug ("Error in dbus - %s", dbus_error->message);
+			g_warning ("Error in dbus - %s", dbus_error->message);
 			g_error_free (dbus_error);
 			ret = TRUE;
 		}
