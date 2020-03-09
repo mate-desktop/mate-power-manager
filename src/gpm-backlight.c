@@ -284,7 +284,7 @@ gpm_backlight_brightness_evaluate_and_set (GpmBacklight *backlight, gboolean int
 	guint old_value;
 
 	if (backlight->priv->can_dim == FALSE) {
-		g_warning ("no dimming hardware");
+		g_debug ("no dimming hardware");
 		return FALSE;
 	}
 
