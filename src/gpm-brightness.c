@@ -561,7 +561,7 @@ gpm_brightness_trust_cache (GpmBrightness *brightness)
 	 * if we have multiple things setting policy on the workstation, e.g. fast user switching
 	 * or kpowersave, then this will be invalid -- this logic may be insane */
 	if (GPM_SOLE_SETTER_USE_CACHE && brightness->priv->cache_trusted) {
-		g_warning ("using cache for value %u (probably okay)", brightness->priv->cache_percentage);
+		g_debug ("using cache for value %u (probably okay)", brightness->priv->cache_percentage);
 		return TRUE;
 	}
 	return FALSE;
