@@ -4,20 +4,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Rezső Páder <rezso@rezso.net>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# István Szőllősi <szollosi.istv4n@gmail.com>, 2018
-# Falu <info@falu.me>, 2018
-# KAMI KAMI <kami911@gmail.com>, 2018
-# Balázs Meskó <meskobalazs@gmail.com>, 2019
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Wolfgang Ulbrich <mate@raveit.de>, 2020
+# Rezső Páder <rezso@rezso.net>, 2020
+# István Szőllősi <szollosi.istv4n@gmail.com>, 2020
+# Balázs Meskó <meskobalazs@gmail.com>, 2020
+# KAMI KAMI <kami911@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Falu <info@falu.me>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-power-manager 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2019-11-12 15:22+0100\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Balázs Meskó <meskobalazs@gmail.com>, 2019\n"
+"PO-Revision-Date: 2020-02-15 16:27+0000\n"
+"Last-Translator: Falu <info@falu.me>, 2020\n"
 "Language-Team: Hungarian (https://www.transifex.com/mate/teams/13566/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1120,15 +1122,15 @@ msgstr "Ismeretlen idő"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] "%i perc"
-msgstr[1] "%i perc"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] "%i óra"
-msgstr[1] "%i óra"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-common.c:75
 #, c-format
@@ -1138,14 +1140,14 @@ msgstr "%i %s, %i %s"
 #: src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] "óra"
-msgstr[1] "óra"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] "perc"
-msgstr[1] "perc"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Translators: This is %i days
 #: src/gpm-graph-widget.c:433
@@ -1323,8 +1325,8 @@ msgstr ""
 #: src/gpm-manager.c:1159
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] "Az akkumulátorok feltöltve"
-msgstr[1] "Az akkumulátorok feltöltve"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-manager.c:1205
 msgid "Battery Discharging"
@@ -1714,29 +1716,29 @@ msgstr "Ismeretlen"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] "%.0f másodperc"
-msgstr[1] "%.0f másodperc"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-statistics.c:295
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] "%.1f perc"
-msgstr[1] "%.1f perc"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-statistics.c:300
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] "%.1f óra"
-msgstr[1] "%.1f óra"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-statistics.c:304
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] "%.1f nap"
-msgstr[1] "%.1f nap"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-statistics.c:313
 msgid "Yes"
@@ -1770,8 +1772,8 @@ msgstr "Ellátás"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d másodperc"
-msgstr[1] "%d másodperc"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-statistics.c:423
 msgid "Refreshed"
@@ -1787,7 +1789,7 @@ msgstr "Újratölthető"
 
 #: src/gpm-statistics.c:446
 msgid "State"
-msgstr "Állam"
+msgstr "Állapot"
 
 #: src/gpm-statistics.c:450
 msgid "Energy"
@@ -1974,12 +1976,12 @@ msgid "translator-credits"
 msgstr ""
 "Dvornik László<dvornik at mate dot hu>\n"
 "Kelemen Gábor<kelemeng at mate dot hu>\n"
-"Tímár András<timar at mate dot hu>\n"
-"Rezső Páder<rezso at rezso dot net>\n"
 "Kalman „KAMI” Szalai<kami911 at gmail dot com>\n"
 "Falu<info at falu dot me>\n"
+"Rezső Páder<rezso at rezso dot net>\n"
 "Zoltán Rápolthy<real_zolee at hotmail dot com>\n"
-"Meskó Balázs <mesko dot balazs at fsf dot hu>"
+"Meskó Balázs <mesko dot balazs at fsf dot hu>\n"
+"Tímár András<timar at mate dot hu>"
 
 #: src/gpm-tray-icon.c:295
 #, c-format
@@ -2145,68 +2147,68 @@ msgstr "Töltés sebessége:"
 #: src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] "Hálózati csatlakozók"
-msgstr[1] "Hálózati csatlakozók"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "Noteszgép-akkumulátor"
-msgstr[1] "Noteszgép-akkumulátorok"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] "Szünetmentes táp"
-msgstr[1] "Szünetmentes tápok"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] "Monitor"
-msgstr[1] "Monitorok"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] "Egér"
-msgstr[1] "Egerek"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] "Billentyűzet"
-msgstr[1] "Billentyűzetek"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] "PDA"
-msgstr[1] "PDA-k"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] "Mobiltelefon"
-msgstr[1] "Mobiltelefonok"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] "Médialejátszó"
-msgstr[1] "Médialejátszók"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "Táblagép"
-msgstr[1] "Táblagépek"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] "Számítógép"
-msgstr[1] "Számítógépek"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:594
 msgid "Lithium Ion"

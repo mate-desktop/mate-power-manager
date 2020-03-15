@@ -4,20 +4,21 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2018
-# Alexander Jansen <bornxlo@gmail.com>, 2018
-# Kim Malmo <berencamlost@msn.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Allan Nordhøy <epost@anotheragency.no>, 2018
-# Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2019
+# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2020
+# 87d96f43665dd9fb55eba4603e184cae, 2020
+# Alexander Jansen <bornxlo@gmail.com>, 2020
+# Kim Malmo <berencamlost@msn.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Allan Nordhøy <epost@anotheragency.no>, 2020
+# Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-power-manager 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2019-11-12 15:22+0100\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2019\n"
+"PO-Revision-Date: 2020-02-15 16:27+0000\n"
+"Last-Translator: Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2020\n"
 "Language-Team: Norwegian Bokmål (https://www.transifex.com/mate/teams/13566/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -92,7 +93,7 @@ msgstr ""
 #: applets/brightness/brightness-applet.c:1063
 #: applets/inhibit/inhibit-applet.c:519
 msgid "_About"
-msgstr "Om"
+msgstr "_Om"
 
 #: applets/brightness/brightness-applet.c:1066
 #: applets/inhibit/inhibit-applet.c:522
@@ -167,7 +168,7 @@ msgstr "mate-power-manager"
 msgid "Whether to hibernate, suspend or do nothing when inactive"
 msgstr ""
 "Om maskinen skal settes i dvale-, hvilemodus eller ingen endring ved "
-"inaktivitet.'"
+"inaktivitet."
 
 #: data/org.mate.power-manager.gschema.xml.in:27
 #: data/org.mate.power-manager.gschema.xml.in:42
@@ -596,7 +597,7 @@ msgstr "Varsle ved lav strømstyrke"
 msgid ""
 "If a notification message should be displayed when the battery is getting "
 "low."
-msgstr "Om en varslingsmelding skal vises når batterinivåte er lavt."
+msgstr "Om en varslingsmelding skal vises når batterinivået er lavt."
 
 #: data/org.mate.power-manager.gschema.xml.in:226
 msgid "Notify on low capacity of mouse battery"
@@ -833,7 +834,7 @@ msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
 msgstr ""
-"HVorvidt lyd skal brukes når strømstyrken er kritisk lav eller om "
+"Hvorvidt lyd skal brukes når strømstyrken er kritisk lav eller om "
 "forespørsler om hindring har stoppet en handling fra regelsettet."
 
 #: data/org.mate.power-manager.gschema.xml.in:341
@@ -2126,8 +2127,8 @@ msgstr[1] "UPS-er"
 #: src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] "Multimeter"
-msgstr[1] "Multimetere"
+msgstr[0] "Skjerm"
+msgstr[1] "Skjermer"
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
