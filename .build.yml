@@ -82,6 +82,7 @@ requires:
     - autopoint
     - clang
     - clang-tools
+    - gcc
     - git
     - libcanberra-gtk3-dev
     - libdbus-glib-1-dev
@@ -175,4 +176,3 @@ releases:
     base_version: 1.20.0
     notify_servers:
       - https://release.mate-desktop.org/release
-
