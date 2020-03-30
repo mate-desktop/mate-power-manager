@@ -1,0 +1,2 @@
+subdir('brightness')
+subdir('inhibit')
