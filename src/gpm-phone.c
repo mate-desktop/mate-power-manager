@@ -68,7 +68,7 @@ gpm_phone_coldplug (GpmPhone *phone)
 	g_return_val_if_fail (GPM_IS_PHONE (phone), FALSE);
 
 	if (phone->priv->proxy == NULL) {
-		g_warning ("not connected");
+		g_debug ("Phone is not connected");
 		return FALSE;
 	}
 
