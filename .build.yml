@@ -135,11 +135,11 @@ before_scripts:
 
 build_scripts:
   - if [ ${DISTRO_NAME} == "debian" -o ${DISTRO_NAME} == "ubuntu" ];then
-  -     ./autogen.sh --without-keyring --enable-compile-warnings=maximum
-  -     scan-build $CHECKERS ./configure --without-keyring --enable-compile-warnings=maximum
+  -     ./autogen.sh --without-keyring
+  -     scan-build $CHECKERS ./configure --without-keyring
   - else
-  -     ./autogen.sh --enable-compile-warnings=maximum
-  -     scan-build $CHECKERS ./configure --enable-compile-warnings=maximum
+  -     ./autogen.sh
+  -     scan-build $CHECKERS ./configure
   - fi
   - if [ $CPU_COUNT -gt 1 ]; then
   -     scan-build $CHECKERS --keep-cc -o html-report make -j $CPU_COUNT
