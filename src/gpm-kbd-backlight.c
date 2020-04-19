@@ -444,18 +444,24 @@ gpm_kbd_backlight_evaluate_power_source_and_set (GpmKbdBacklight *backlight)
 
    battery_reduce = g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_KBD_BACKLIGHT_BATT_REDUCE);
 
-   if (on_battery && battery_reduce) {
-       value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_BATT);
+   if (on_battery) {
+      if (battery_reduce) {
+         value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_BATT);
 
-       if (value > 100) {
-           g_warning ("Cannot scale brightness down by more than 100%%. Scaling by 50%%");
-           value = 50;
-       }
+         if (value > 100) {
+            g_warning ("Cannot scale brightness down by more than 100%%. Scaling by 50%%");
+            value = 50;
+         }
 
-       scale = (100 - value) / 100.0f;
-       brightness *= scale;
+         scale = (100 - value) / 100.0f;
+         brightness *= scale;
 
-       value = (guint) brightness;
+         value = (guint) brightness;
+
+      } else {
+         // do not change keyboard backlight
+         return TRUE;
+      }
 
    } else {
        value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_ON_AC);
@@ -584,6 +590,7 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
 
    enable_action = on_battery
        ? g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_BATT)
+         && g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_KBD_BACKLIGHT_BATT_REDUCE)
        : g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_AC);
 
    if (!enable_action)
