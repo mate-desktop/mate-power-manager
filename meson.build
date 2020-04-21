@@ -4,7 +4,13 @@ gnome = import('gnome')
 dbus_binding_tool = find_program('dbus-binding-tool')
 
 i18n = import('i18n')
-add_project_arguments('-DGETTEXT_PACKAGE="' + meson.project_name() + '"', language: 'c')
+add_project_arguments(
+  [
+    '-DGETTEXT_PACKAGE="' + meson.project_name() + '"',
+    '-DHAVE_CONFIG_H'
+  ],
+  language: 'c'
+)
 
 cc = meson.get_compiler('c')
 m_dep = cc.find_library('m', required: false)
