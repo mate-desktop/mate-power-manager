@@ -29,6 +29,7 @@ DISTCHECK_CONFIGURE_FLAGS =   \
 	--disable-applets         \
 	--disable-tests \
 	--without-keyring \
+	--enable-compile-warnings=no \
 	CFLAGS='-Wno-deprecated-declarations'
 
 # Build ChangeLog from GIT  history
