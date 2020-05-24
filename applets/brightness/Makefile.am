@@ -65,3 +65,5 @@ EXTRA_DIST = $(applet_in_files).in $(ui_DATA) $(service_in_files)
 
 DISTCLEANFILES =						\
 	$(applet_DATA) $(applet_DATA).in $(service_DATA)
+
+-include $(top_srcdir)/git.mk
