@@ -14,3 +14,4 @@ DISTCLEANFILES = $(polkit_policy_DATA) $(polkit_policy_in_files)
 clean-local :
 	rm -f *~
 
+-include $(top_srcdir)/git.mk
