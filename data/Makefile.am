@@ -57,3 +57,5 @@ DISTCLEANFILES =						\
 	mate-power-statistics.desktop				\
 	org.mate.PowerManager.service				\
 	$(gsettings_SCHEMAS)
+
+-include $(top_srcdir)/git.mk
