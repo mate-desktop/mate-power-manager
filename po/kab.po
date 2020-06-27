@@ -4,12 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# בר בוכובזה <bokovzabox@gmail.com>, 2018
-# haxoc c11 <haxoc112@disroot.org>, 2018
-# Edward Sawyer <saoded@gmail.com>, 2018
-# Yaron Shahrabani <sh.yaron@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# shy tzedaka <shaytzedaka123@gmail.com>, 2020
+# Slimane Selyan AMIRI <selyan.kab@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -17,40 +12,40 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2019-11-12 15:22+0100\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: shy tzedaka <shaytzedaka123@gmail.com>, 2020\n"
-"Language-Team: Hebrew (https://www.transifex.com/mate/teams/13566/he/)\n"
+"Last-Translator: Slimane Selyan AMIRI <selyan.kab@gmail.com>, 2020\n"
+"Language-Team: Kabyle (https://www.transifex.com/mate/teams/13566/kab/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: he\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
+"Language: kab\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: applets/brightness/brightness-applet.c:107
 msgid "Power Manager Brightness Applet"
-msgstr "יישומון לניהול בהירות והספק חשמלי"
+msgstr ""
 
 #: applets/brightness/brightness-applet.c:108
 msgid "Adjusts laptop panel brightness."
-msgstr "מכוונן את בהירות צג המחשב הנייד."
+msgstr ""
 
 #: applets/brightness/brightness-applet.c:364
 #: applets/inhibit/inhibit-applet.c:225
 msgid "Cannot connect to mate-power-manager"
-msgstr "לא ניתן להתחבר אל mate-power-manager"
+msgstr ""
 
 #: applets/brightness/brightness-applet.c:366
 msgid "Cannot get laptop panel brightness"
-msgstr "לא ניתן לקבל את ערך בהירות צג המחשב הנייד"
+msgstr ""
 
 #: applets/brightness/brightness-applet.c:368
 #, c-format
 msgid "LCD brightness : %d%%"
-msgstr "בהירות מסך ה־LCD:‏ %d%%"
+msgstr ""
 
 #: applets/brightness/brightness-applet.c:800
 #: applets/inhibit/inhibit-applet.c:297
 msgid "Licensed under the GNU General Public License Version 2"
-msgstr "Licensed under the GNU General Public License Version 2"
+msgstr ""
 
 #: applets/brightness/brightness-applet.c:801
 #: applets/inhibit/inhibit-applet.c:298
@@ -60,10 +55,6 @@ msgid ""
 "as published by the Free Software Foundation; either version 2\n"
 "of the License, or (at your option) any later version."
 msgstr ""
-"Power Manager is free software; you can redistribute it and/or\n"
-"modify it under the terms of the GNU General Public License\n"
-"as published by the Free Software Foundation; either version 2\n"
-"of the License, or (at your option) any later version."
 
 #: applets/brightness/brightness-applet.c:805
 #: applets/inhibit/inhibit-applet.c:302
@@ -73,10 +64,6 @@ msgid ""
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
 "GNU General Public License for more details."
 msgstr ""
-"Power Manager is distributed in the hope that it will be useful,\n"
-"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-"GNU General Public License for more details."
 
 #: applets/brightness/brightness-applet.c:809
 #: applets/inhibit/inhibit-applet.c:306
@@ -86,28 +73,24 @@ msgid ""
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
 msgstr ""
-"You should have received a copy of the GNU General Public License\n"
-"along with this program; if not, write to the Free Software\n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
-"02110-1301, USA."
 
 #: applets/brightness/brightness-applet.c:1063
 #: applets/inhibit/inhibit-applet.c:519
 msgid "_About"
-msgstr "על _אודות"
+msgstr "_Ɣef"
 
 #: applets/brightness/brightness-applet.c:1066
 #: applets/inhibit/inhibit-applet.c:522
 msgid "_Help"
-msgstr "ע_זרה"
+msgstr "Ta_llalt"
 
 #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:5
 msgid "Brightness Applet Factory"
-msgstr "Brightness Applet Factory"
+msgstr ""
 
 #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:9
 msgid "Brightness Applet"
-msgstr "יישומון בהירות"
+msgstr ""
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -117,31 +100,31 @@ msgstr ""
 
 #: applets/inhibit/inhibit-applet.c:87
 msgid "Power Manager Inhibit Applet"
-msgstr "יישומון ניהול מניעת חיסכון בחשמל"
+msgstr ""
 
 #: applets/inhibit/inhibit-applet.c:88
 msgid "Allows user to inhibit automatic power saving."
-msgstr "מאפשר למשתמש למנוע חיסכון אוטומטי בחשמל."
+msgstr ""
 
 #: applets/inhibit/inhibit-applet.c:228
 msgid "Automatic sleep inhibited"
-msgstr "מצב שינה אוטומטי נמנע"
+msgstr ""
 
 #: applets/inhibit/inhibit-applet.c:230
 msgid "Automatic sleep enabled"
-msgstr "שינה אוטומטית מופעלת"
+msgstr ""
 
 #: applets/inhibit/inhibit-applet.c:258
 msgid "Manual inhibit"
-msgstr "מניעה ידנית"
+msgstr ""
 
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
-msgstr "Inhibit Applet Factory"
+msgstr ""
 
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:9
 msgid "Inhibit Applet"
-msgstr "יישומון מניעה"
+msgstr ""
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -151,11 +134,11 @@ msgstr ""
 
 #: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:184
 msgid "Power Manager"
-msgstr "מנהל צריכת החשמל"
+msgstr ""
 
 #: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:186
 msgid "Power management daemon"
-msgstr "מנוע ניהול צריכת החשמל"
+msgstr ""
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -167,30 +150,27 @@ msgstr ""
 #: data/org.mate.power-manager.gschema.xml.in:26
 #: data/org.mate.power-manager.gschema.xml.in:41
 msgid "Whether to hibernate, suspend or do nothing when inactive"
-msgstr "Whether to hibernate, suspend or do nothing when inactive"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:27
 #: data/org.mate.power-manager.gschema.xml.in:42
 msgid ""
 "The type of sleeping that should be performed when the computer is inactive."
 msgstr ""
-"The type of sleeping that should be performed when the computer is inactive."
 
 #: data/org.mate.power-manager.gschema.xml.in:31
 msgid "Battery critical low action"
-msgstr "Battery critical low action"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:32
 msgid "The action to take when the battery is critically low."
-msgstr "The action to take when the battery is critically low."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:36
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
 msgstr ""
-"If the battery event should occur when the lid is shut and the power "
-"disconnected"
 
 #: data/org.mate.power-manager.gschema.xml.in:37
 msgid ""
@@ -198,49 +178,42 @@ msgid ""
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
 msgstr ""
-"If the battery lid close event should occur (for example 'Suspend when lid "
-"closed on battery') when the lid is previously shut and the AC power "
-"disconnected at a later time."
 
 #: data/org.mate.power-manager.gschema.xml.in:46
 msgid "UPS critical low action"
-msgstr "UPS critical low action"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:47
 msgid "The action to take when the UPS is critically low."
-msgstr "The action to take when the UPS is critically low."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:51
 msgid "UPS low power action"
-msgstr "UPS low power action"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:52
 msgid "The action to take when the UPS is low."
-msgstr "The action to take when the UPS is low."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:56
 msgid "Allow backlight brightness adjustment"
-msgstr "Allow backlight brightness adjustment"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:57
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
 msgstr ""
-"If the screen brightness should be changed when switching between AC and "
-"battery power."
 
 #: data/org.mate.power-manager.gschema.xml.in:61
 msgid "Reduce the backlight brightness when on battery power"
-msgstr "Reduce the backlight brightness when on battery power"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:62
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
 msgstr ""
-"If the screen should be reduced in brightness when the computer is on "
-"battery power."
 
 #: data/org.mate.power-manager.gschema.xml.in:66
 msgid "Reduce the keyboard backlight when on battery power"
@@ -286,215 +259,189 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:86
 msgid "The brightness of the screen when idle"
-msgstr "The brightness of the screen when idle"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:87
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
 msgstr ""
-"This is the laptop panel screen brightness used when the session is idle. "
-"Only valid when use-time-for-policy is true."
 
 #: data/org.mate.power-manager.gschema.xml.in:91
 msgid "Dim the screen after a period of inactivity when on battery power"
-msgstr "Dim the screen after a period of inactivity when on battery power"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:92
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
 msgstr ""
-"If the screen should be dimmed to save power when the computer is idle when "
-"on battery power."
 
 #: data/org.mate.power-manager.gschema.xml.in:96
 msgid "The default amount of time to dim the screen after idle"
-msgstr "The default amount of time to dim the screen after idle"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:97
 msgid "The default amount of time to dim the screen after idle."
-msgstr "The default amount of time to dim the screen after idle."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:101
 msgid "LCD dimming amount when on battery"
-msgstr "LCD dimming amount when on battery"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:102
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
 msgstr ""
-"The amount to dim the brightness of the display when on battery power. "
-"Possible values are between 0 and 100."
 
 #: data/org.mate.power-manager.gschema.xml.in:106
 msgid "Dim the screen after a period of inactivity when on AC power"
-msgstr "Dim the screen after a period of inactivity when on AC power"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:107
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on AC power."
 msgstr ""
-"If the screen should be dimmed to save power when the computer is idle when "
-"on AC power."
 
 #: data/org.mate.power-manager.gschema.xml.in:111
 msgid "Method used to blank screen on AC"
-msgstr "Method used to blank screen on AC"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:112
 msgid "The DPMS method used to blank the screen when on AC power."
-msgstr "The DPMS method used to blank the screen when on AC power."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:116
 msgid "Method used to blank screen on battery"
-msgstr "Method used to blank screen on battery"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:117
 msgid "The DPMS method used to blank the screen when on battery power."
-msgstr "The DPMS method used to blank the screen when on battery power."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:121
 msgid "LCD brightness when on AC"
-msgstr "LCD brightness when on AC"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:122
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
 msgstr ""
-"The brightness of the display when on AC power. Possible values are between "
-"0.0 and 100.0."
 
 #: data/org.mate.power-manager.gschema.xml.in:126
 msgid "Suspend button action"
-msgstr "Suspend button action"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:127
 msgid "The action to take when the system suspend button is pressed."
-msgstr "The action to take when the system suspend button is pressed."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:131
 msgid "Hibernate button action"
-msgstr "Hibernate button action"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:132
 msgid "The action to take when the system hibernate button is pressed."
-msgstr "The action to take when the system hibernate button is pressed."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:136
 msgid "Power button action"
-msgstr "Power button action"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:137
 msgid "The action to take when the system power button is pressed."
-msgstr "The action to take when the system power button is pressed."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:141
 msgid "Laptop lid close action on battery"
-msgstr "Laptop lid close action on battery"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:142
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
 msgstr ""
-"The action to take when the laptop lid is closed and the laptop is on "
-"battery power."
 
 #: data/org.mate.power-manager.gschema.xml.in:146
 msgid "Laptop lid close action when on AC"
-msgstr "Laptop lid close action when on AC"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:147
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
 msgstr ""
-"The action to take when the laptop lid is closed and the laptop is on AC "
-"power."
 
 #: data/org.mate.power-manager.gschema.xml.in:151
 msgid "Whether to use time-based notifications"
-msgstr "Whether to use time-based notifications"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:152
 msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
 msgstr ""
-"If time based notifications should be used. If set to false, then the "
-"percentage change is used instead, which may fix a broken ACPI BIOS."
 
 #: data/org.mate.power-manager.gschema.xml.in:156
 msgid "Check CPU load before sleeping"
-msgstr "Check CPU load before sleeping"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:157
 msgid "If the CPU load should be checked before doing the idle action."
-msgstr "If the CPU load should be checked before doing the idle action."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:161
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
-msgstr "Whether NetworkManager should be connected and disconnected on sleep."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:162
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
 msgstr ""
-"Whether NetworkManager should disconnect before suspending or hibernating "
-"and connect on resume."
 
 #: data/org.mate.power-manager.gschema.xml.in:166
 msgid "Use mate-screensaver lock setting"
-msgstr "Use mate-screensaver lock setting"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:167
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
 msgstr ""
-"Whether to use the screen lock setting of mate-screensaver to decide if the "
-"screen is locked after a hibernate, suspend or blank screen."
 
 #: data/org.mate.power-manager.gschema.xml.in:171
 msgid "Lock screen when blanked"
-msgstr "Lock screen when blanked"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:172
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
 msgstr ""
-"Whether the screen is locked when the screen is turned off. Only used if "
-"lock-use-screensaver is false."
 
 #: data/org.mate.power-manager.gschema.xml.in:176
 msgid "Lock screen on suspend"
-msgstr "Lock screen on suspend"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:177
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
 msgstr ""
-"Whether the screen is locked when the computer wakes up from a suspend. Only"
-" used if lock-use-screensaver is false."
 
 #: data/org.mate.power-manager.gschema.xml.in:181
 msgid "Lock screen on hibernate"
-msgstr "Lock screen on hibernate"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:182
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
 msgstr ""
-"Whether the screen is locked when the computer wakes up from a hibernate. "
-"Only used if lock-use-screensaver is false."
 
 #: data/org.mate.power-manager.gschema.xml.in:186
 #: data/org.mate.power-manager.gschema.xml.in:191
@@ -515,59 +462,53 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:196
 msgid "If we should show the low capacity warning for a broken battery"
-msgstr "If we should show the low capacity warning for a broken battery"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:197
 msgid "If we should show the low capacity warning for a broken battery."
-msgstr "If we should show the low capacity warning for a broken battery."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:201
 msgid "Notify when AC adapter is disconnected"
-msgstr "Notify when AC adapter is disconnected"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:202
 msgid "If the user should be notified when the AC adapter is disconnected."
-msgstr "If the user should be notified when the AC adapter is disconnected."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:206
 msgid "Notify when fully charged"
-msgstr "Notify when fully charged"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:207
 msgid ""
 "If a notification message should be displayed when the battery is fully "
 "charged."
 msgstr ""
-"If a notification message should be displayed when the battery is fully "
-"charged."
 
 #: data/org.mate.power-manager.gschema.xml.in:211
 msgid "Notify on a sleep failure"
-msgstr "Notify on a sleep failure"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:212
 msgid ""
 "If a notification message should be displayed after suspend or hibernate "
 "failed."
 msgstr ""
-"If a notification message should be displayed after suspend or hibernate "
-"failed."
 
 #: data/org.mate.power-manager.gschema.xml.in:216
 msgid "The URI to show to the user on sleep failure"
-msgstr "The URI to show to the user on sleep failure"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:217
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
 msgstr ""
-"When sleep fails we can show the user a button to help fix the situation. "
-"Leave this blank if the button should not be shown."
 
 #: data/org.mate.power-manager.gschema.xml.in:221
 msgid "Notify on a low power"
-msgstr "Notify on a low power"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:222
 #: data/org.mate.power-manager.gschema.xml.in:227
@@ -575,8 +516,6 @@ msgid ""
 "If a notification message should be displayed when the battery is getting "
 "low."
 msgstr ""
-"If a notification message should be displayed when the battery is getting "
-"low."
 
 #: data/org.mate.power-manager.gschema.xml.in:226
 msgid "Notify on low capacity of mouse battery"
@@ -584,266 +523,232 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:231
 msgid "Whether we should show the history data points"
-msgstr "Whether we should show the history data points"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:232
 msgid ""
 "Whether we should show the history data points in the statistics window."
 msgstr ""
-"Whether we should show the history data points in the statistics window."
 
 #: data/org.mate.power-manager.gschema.xml.in:236
 msgid "Whether we should smooth the history data"
-msgstr "Whether we should smooth the history data"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:237
 msgid "Whether we should smooth the history data in the graph."
-msgstr "Whether we should smooth the history data in the graph."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:241
 msgid "The default graph type to show for history"
-msgstr "The default graph type to show for history"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:242
 msgid "The default graph type to show in the history window."
-msgstr "The default graph type to show in the history window."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:246
 msgid "The maximum time displayed for history"
-msgstr "The maximum time displayed for history"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:247
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
 msgstr ""
-"The maximum duration of time displayed on the x-axis of the history graph."
 
 #: data/org.mate.power-manager.gschema.xml.in:251
 msgid "Whether we should show the stats data points"
-msgstr "Whether we should show the stats data points"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:252
 msgid "Whether we should show the stats data points in the statistics window."
 msgstr ""
-"Whether we should show the stats data points in the statistics window."
 
 #: data/org.mate.power-manager.gschema.xml.in:256
 msgid "Whether we should smooth the stats data"
-msgstr "Whether we should smooth the stats data"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:257
 msgid "Whether we should smooth the stats data in the graph."
-msgstr "Whether we should smooth the stats data in the graph."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:261
 msgid "The default graph type to show for stats"
-msgstr "The default graph type to show for stats"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:262
 msgid "The default graph type to show in the stats window."
-msgstr "The default graph type to show in the stats window."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:266
 msgid "The index of the page number to show by default"
-msgstr "The index of the page number to show by default"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:267
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
 msgstr ""
-"The index of the page number to show by default which is used to return "
-"focus to the correct page."
 
 #: data/org.mate.power-manager.gschema.xml.in:271
 msgid "The ID of the last device selected"
-msgstr "The ID of the last device selected"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:272
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
 msgstr ""
-"The identifier of the last device which is used to return focus to the "
-"correct device."
 
 #: data/org.mate.power-manager.gschema.xml.in:276
 msgid "Percentage considered low"
-msgstr "Percentage considered low"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:277
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
 msgstr ""
-"The percentage of the battery when it is considered low. Only valid when "
-"use-time-for-policy is false."
 
 #: data/org.mate.power-manager.gschema.xml.in:281
 msgid "Percentage considered critical"
-msgstr "Percentage considered critical"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:282
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
 msgstr ""
-"The percentage of the battery when it is considered critical. Only valid "
-"when use-time-for-policy is false."
 
 #: data/org.mate.power-manager.gschema.xml.in:286
 msgid "Percentage action is taken"
-msgstr "Percentage action is taken"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:287
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
 msgstr ""
-"The percentage of the battery when the critical action is performed. Only "
-"valid when use-time-for-policy is false."
 
 #: data/org.mate.power-manager.gschema.xml.in:291
 msgid "The time remaining when low"
-msgstr "The time remaining when low"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:292
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
 msgstr ""
-"The time remaining in seconds of the battery when it is considered low. Only"
-" valid when use-time-for-policy is true."
 
 #: data/org.mate.power-manager.gschema.xml.in:296
 msgid "The time remaining when critical"
-msgstr "The time remaining when critical"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:297
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
 msgstr ""
-"The time remaining in seconds of the battery when it is considered critical."
-" Only valid when use-time-for-policy is true."
 
 #: data/org.mate.power-manager.gschema.xml.in:301
 msgid "The time remaining when action is taken"
-msgstr "The time remaining when action is taken"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:302
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
 msgstr ""
-"The time remaining in seconds of the battery when critical action is taken. "
-"Only valid when use-time-for-policy is true."
 
 #: data/org.mate.power-manager.gschema.xml.in:306
 msgid "Sleep timeout computer when on battery"
-msgstr "Sleep timeout computer when on battery"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:307
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before it goes to sleep."
 msgstr ""
-"The amount of time in seconds the computer on battery power needs to be "
-"inactive before it goes to sleep."
 
 #: data/org.mate.power-manager.gschema.xml.in:311
 msgid "Sleep timeout computer when on AC"
-msgstr "Sleep timeout computer when on AC"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:312
 msgid ""
 "The amount of time in seconds the computer on AC power needs to be inactive "
 "before it goes to sleep."
 msgstr ""
-"The amount of time in seconds the computer on AC power needs to be inactive "
-"before it goes to sleep."
 
 #: data/org.mate.power-manager.gschema.xml.in:316
 msgid "Sleep timeout computer when on UPS"
-msgstr "Sleep timeout computer when on UPS"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:317
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before it goes to sleep."
 msgstr ""
-"The amount of time in seconds the computer on UPS power needs to be inactive"
-" before it goes to sleep."
 
 #: data/org.mate.power-manager.gschema.xml.in:321
 msgid "Sleep timeout display when on AC"
-msgstr "Sleep timeout display when on AC"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:322
 msgid ""
 "The amount of time in seconds before the display goes to sleep when the "
 "computer is on AC power."
 msgstr ""
-"The amount of time in seconds before the display goes to sleep when the "
-"computer is on AC power."
 
 #: data/org.mate.power-manager.gschema.xml.in:326
 msgid "Sleep timeout display when on battery"
-msgstr "Sleep timeout display when on battery"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:327
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
 msgstr ""
-"The amount of time in seconds the computer on battery power needs to be "
-"inactive before the display goes to sleep."
 
 #: data/org.mate.power-manager.gschema.xml.in:331
 msgid "Sleep timeout display when on UPS"
-msgstr "Sleep timeout display when on UPS"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:332
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before the display goes to sleep."
 msgstr ""
-"The amount of time in seconds the computer on UPS power needs to be inactive"
-" before the display goes to sleep."
 
 #: data/org.mate.power-manager.gschema.xml.in:336
 msgid "If sounds should be used"
-msgstr "If sounds should be used"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:337
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
 msgstr ""
-"If sounds should be used when the power is critically low, or inhibit "
-"requests have stopped the policy action."
 
 #: data/org.mate.power-manager.gschema.xml.in:341
 msgid ""
 "If preferences and statistics items should be shown in the context menu"
 msgstr ""
-"If preferences and statistics items should be shown in the context menu"
 
 #: data/org.mate.power-manager.gschema.xml.in:345
 msgid "When to show the notification icon"
-msgstr "When to show the notification icon"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:346
 msgid "Display options for the notification icon."
-msgstr "Display options for the notification icon."
+msgstr ""
 
 #: data/mate-power-preferences.desktop.in.in:3
 msgid "Power Management"
-msgstr "ניהול צריכת החשמל"
+msgstr ""
 
 #: data/mate-power-preferences.desktop.in.in:4
 msgid "Configure power management"
-msgstr "הגדרת צריכת החשמל"
+msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -854,11 +759,11 @@ msgstr ""
 #: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:7
 #: src/gpm-statistics.c:1090 src/gpm-statistics.c:1577
 msgid "Power Statistics"
-msgstr "סטטיסטיקת חשמל"
+msgstr ""
 
 #: data/mate-power-statistics.desktop.in.in:4
 msgid "Observe power management"
-msgstr "צפה בניהול צריכת החשמל"
+msgstr ""
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -868,208 +773,208 @@ msgstr ""
 
 #: data/gpm-statistics.ui:113 src/gpm-statistics.c:208
 msgid "Details"
-msgstr "פרטים"
+msgstr ""
 
 #: data/gpm-statistics.ui:139 data/gpm-statistics.ui:342
 msgid "Graph type:"
-msgstr "סוג הגרף:"
+msgstr ""
 
 #: data/gpm-statistics.ui:174
 msgid "Data length:"
-msgstr "אורך הנתונים:"
+msgstr ""
 
 #: data/gpm-statistics.ui:234 data/gpm-statistics.ui:395
 msgid "There is no data to display."
-msgstr "אין נתונים להצגה."
+msgstr ""
 
 #: data/gpm-statistics.ui:276 data/gpm-statistics.ui:438
 msgid "Use smoothed line"
-msgstr "השתמש בקו מוחלק"
+msgstr ""
 
 #: data/gpm-statistics.ui:291 data/gpm-statistics.ui:453
 msgid "Show data points"
-msgstr "הצגת נקודות נתונים"
+msgstr ""
 
 #: data/gpm-statistics.ui:320
 msgid "History"
-msgstr "היסטוריה"
+msgstr "Amazray"
 
 #: data/gpm-statistics.ui:482
 msgid "Statistics"
-msgstr "סטטיסטיקה"
+msgstr ""
 
 #: data/gpm-statistics.ui:504
 msgid "Processor wakeups per second:"
-msgstr "התעוררות המעבד בכל שניה:"
+msgstr ""
 
 #: data/gpm-statistics.ui:516
 msgid "0"
-msgstr "0"
+msgstr ""
 
 #: data/gpm-statistics.ui:563 src/gpm-statistics.c:194
 msgid "Wakeups"
-msgstr "התעוררויות"
+msgstr ""
 
 #: data/gpm-prefs.ui:55
 msgid "Power Management Preferences"
-msgstr "העדפות צריכת חשמל"
+msgstr ""
 
 #: data/gpm-prefs.ui:84 data/gpm-prefs.ui:327 data/gpm-prefs.ui:585
 #: data/gpm-prefs.ui:813
 msgid "<b>Actions</b>"
-msgstr "<b>פעולות</b>"
+msgstr ""
 
 #: data/gpm-prefs.ui:111 data/gpm-prefs.ui:354 data/gpm-prefs.ui:612
 msgid "Put computer to _sleep when inactive for:"
-msgstr "העבר את המחשב למצב _שינה כאשר הוא אינו פעיל במשך:"
+msgstr ""
 
 #: data/gpm-prefs.ui:144 data/gpm-prefs.ui:387
 msgid "When laptop lid is cl_osed:"
-msgstr "כשמכסה _המחשב הנייד סגור:"
+msgstr ""
 
 #: data/gpm-prefs.ui:189 data/gpm-prefs.ui:463 data/gpm-prefs.ui:721
 msgid "<b>Display</b>"
-msgstr "<b>תצוגה</b>"
+msgstr ""
 
 #: data/gpm-prefs.ui:216 data/gpm-prefs.ui:490 data/gpm-prefs.ui:748
 msgid "Put _display to sleep when inactive for:"
-msgstr "העבר את ה_תצוגה למצב שינה כשהמחשב אינו פעיל במשך:"
+msgstr ""
 
 #: data/gpm-prefs.ui:247
 msgid "Set display _brightness to:"
-msgstr "קבע את בהירות המסך ל־:"
+msgstr ""
 
 #: data/gpm-prefs.ui:275 data/gpm-prefs.ui:529
 msgid "Di_m display when idle"
-msgstr "עמעם את ה_תצוגה בזמן המתנה"
+msgstr ""
 
 #: data/gpm-prefs.ui:306
 msgid "On AC Power"
-msgstr "מחובר לשקע חשמל"
+msgstr ""
 
 #: data/gpm-prefs.ui:418
 msgid "When battery po_wer is critically low:"
-msgstr "כשהסוללה _כמעט מרוקנת:"
+msgstr ""
 
 #: data/gpm-prefs.ui:514
 msgid "_Reduce backlight brightness"
-msgstr "_הנמך את בהירות האור האחורי"
+msgstr ""
 
 #: data/gpm-prefs.ui:563
 msgid "On Battery Power"
-msgstr "פועל על סוללה"
+msgstr ""
 
 #: data/gpm-prefs.ui:645
 msgid "When UPS power is l_ow:"
-msgstr "כשעוצמת סוללת האל-פסק נמוכה:"
+msgstr ""
 
 #: data/gpm-prefs.ui:676
 msgid "When UPS power is _critically low:"
-msgstr "כשסוללת האל־פסק _כמעט מרוקנת:"
+msgstr ""
 
 #: data/gpm-prefs.ui:791
 msgid "On UPS Power"
-msgstr "מופעל באמצעות אל־פסק"
+msgstr ""
 
 #: data/gpm-prefs.ui:840
 msgid "When the power _button is pressed:"
-msgstr "כשכפתור ה_כיבוי נלחץ:"
+msgstr ""
 
 #: data/gpm-prefs.ui:873
 msgid "When the _suspend button is pressed:"
-msgstr "כשכפתור ה_השהייה נלחץ:"
+msgstr ""
 
 #: data/gpm-prefs.ui:918
 msgid "<b>Notification Area</b>"
-msgstr "<b>אזור ההתראות</b>"
+msgstr ""
 
 #: data/gpm-prefs.ui:938
 msgid "_Never display an icon"
-msgstr "_לעולם אל תציג סמל"
+msgstr ""
 
 #: data/gpm-prefs.ui:953
 msgid "_Only display an icon when battery power is low"
-msgstr "הצג איקון  _רק כאשר הסוללה כמעט ריקה"
+msgstr ""
 
 #: data/gpm-prefs.ui:969
 msgid "Only display an icon when charging or _discharging"
-msgstr "הצג צלמית רק בטעינת או _פריקת סוללה"
+msgstr ""
 
 #: data/gpm-prefs.ui:985
 msgid "Only display an icon when a battery is p_resent"
-msgstr "הצג צלמית רק כאשר הסוללה מ_ופעלת"
+msgstr ""
 
 #: data/gpm-prefs.ui:1001
 msgid "_Always display an icon"
-msgstr "_הצג סמל תמיד"
+msgstr ""
 
 #: data/gpm-prefs.ui:1036
 msgid "General"
-msgstr "כללי"
+msgstr ""
 
 #: data/gpm-prefs.ui:1060
 msgid "Provides help about this program"
-msgstr "מספק עזרה אודות תוכנית זאת"
+msgstr ""
 
 #: data/gpm-prefs.ui:1072
 msgid "Make Default"
-msgstr "הפיכה לבררת המחדל"
+msgstr ""
 
 #: data/gpm-prefs.ui:1076
 msgid "Sets this policy to be used by all users"
-msgstr "הגדרת מדיניות זאת כך שתשמש את כל המשתמשים"
+msgstr ""
 
 #: data/gpm-prefs.ui:1092
 msgid "Closes the program"
-msgstr "סוגר את התוכנית הזאת"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:166
 msgid "Set the current brightness"
-msgstr "הגדרת הבהירות הנוכחית"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:169
 msgid "Get the current brightness"
-msgstr "קבלת הבהירות הנוכחית"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:172
 msgid "Get the number of brightness levels supported"
-msgstr "הגדרת מספר רמות הבהירות הנתמכות"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:184
 msgid "MATE Power Manager Backlight Helper"
-msgstr "מסייע צריכת החשמל של תאורת הרקע של MATE"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:192
 msgid "No valid option was specified"
-msgstr "לא צוינה אפשרות תקפה"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:201
 msgid "No backlights were found on your system"
-msgstr "לא נמצאו תאורות אחוריות במערכת שלך"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:212
 msgid "Could not get the value of the backlight"
-msgstr "לא ניתן לקבל את ערך התאורה האחורית"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:230
 msgid "Could not get the maximum value of the backlight"
-msgstr "לא ניתן לקבל את הערך המירבי של התאורה האחורית"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:247
 msgid "This program can only be used by the root user"
-msgstr "This program can only be used by the root user"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:256
 msgid "This program must only be run through pkexec"
-msgstr "על תכנית זו לרוץ דרך pkexec"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:267
 msgid "Could not set the value of the backlight"
-msgstr "לא ניתן להגדיר את ערך התאורה האחורית"
+msgstr ""
 
 #: src/gpm-common.c:53
 msgid "Unknown time"
-msgstr "זמן לא ידוע"
+msgstr ""
 
 #: src/gpm-common.c:58
 #, c-format
@@ -1077,8 +982,6 @@ msgid "%i minute"
 msgid_plural "%i minutes"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-common.c:69
 #, c-format
@@ -1086,193 +989,187 @@ msgid "%i hour"
 msgid_plural "%i hours"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-common.c:75
 #, c-format
 msgid "%i %s %i %s"
-msgstr "%i %s %i %s"
+msgstr ""
 
 #: src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #. Translators: This is %i days
 #: src/gpm-graph-widget.c:433
 #, c-format
 msgid "%id"
-msgstr "‏%i ימים"
+msgstr ""
 
 #. Translators: This is %i days %02i hours
 #: src/gpm-graph-widget.c:436
 #, c-format
 msgid "%id%02ih"
-msgstr "‏%i ימים %02i שעות"
+msgstr ""
 
 #. Translators: This is %i hours
 #: src/gpm-graph-widget.c:441
 #, c-format
 msgid "%ih"
-msgstr "%i שעות"
+msgstr ""
 
 #. Translators: This is %i hours %02i minutes
 #: src/gpm-graph-widget.c:444
 #, c-format
 msgid "%ih%02im"
-msgstr "‏%i שעות %02i דקות"
+msgstr ""
 
 #. Translators: This is %2i minutes
 #: src/gpm-graph-widget.c:449
 #, c-format
 msgid "%2im"
-msgstr "%2i דקות"
+msgstr ""
 
 #. Translators: This is %2i minutes %02i seconds
 #: src/gpm-graph-widget.c:452
 #, c-format
 msgid "%2im%02i"
-msgstr "‏%2i דקות %02i שניות"
+msgstr ""
 
 #. Translators: This is %2i seconds
 #: src/gpm-graph-widget.c:456
 #, c-format
 msgid "%2is"
-msgstr "%2i שניות"
+msgstr ""
 
 #. Translators: This is %i Percentage
 #: src/gpm-graph-widget.c:460
 #, c-format
 msgid "%i%%"
-msgstr "%i%%"
+msgstr ""
 
 #. Translators: This is %.1f Watts
 #: src/gpm-graph-widget.c:463
 #, c-format
 msgid "%.1fW"
-msgstr "%.1fW"
+msgstr ""
 
 #. Translators: This is %.1f Volts
 #: src/gpm-graph-widget.c:468
 #, c-format
 msgid "%.1fV"
-msgstr "%.1fV"
+msgstr ""
 
 #: src/gpm-main.c:172 src/gpm-prefs.c:77 src/gpm-statistics.c:1560
 msgid "Show extra debugging information"
-msgstr "Show extra debugging information"
+msgstr ""
 
 #: src/gpm-main.c:174
 msgid "Show version of installed program and exit"
-msgstr "Show version of installed program and exit"
+msgstr ""
 
 #: src/gpm-main.c:176
 msgid "Exit after a small delay (for debugging)"
-msgstr "Exit after a small delay (for debugging)"
+msgstr ""
 
 #: src/gpm-main.c:178
 msgid "Exit after the manager has loaded (for debugging)"
-msgstr "Exit after the manager has loaded (for debugging)"
+msgstr ""
 
 #: src/gpm-main.c:189 src/gpm-main.c:193
 msgid "MATE Power Manager"
-msgstr "MATE Power Manager"
+msgstr ""
 
 #: src/gpm-manager.c:222 src/gpm-manager.c:294
 msgid "Battery is very low"
-msgstr "הסוללה ברמה מאוד נמוכה"
+msgstr ""
 
 #: src/gpm-manager.c:274
 msgid "Power plugged in"
-msgstr "החשמל מחובר"
+msgstr ""
 
 #: src/gpm-manager.c:278
 msgid "Power unplugged"
-msgstr "חשמל מנותק"
+msgstr ""
 
 #: src/gpm-manager.c:282
 msgid "Lid has opened"
-msgstr "המכסה נפתח"
+msgstr ""
 
 #: src/gpm-manager.c:286
 msgid "Lid has closed"
-msgstr "המכסה נסגר"
+msgstr ""
 
 #: src/gpm-manager.c:290
 msgid "Battery is low"
-msgstr "הסוללה חלשה"
+msgstr ""
 
 #: src/gpm-manager.c:298
 msgid "Battery is full"
-msgstr "הסוללה מלאה"
+msgstr ""
 
 #: src/gpm-manager.c:302
 msgid "Suspend started"
-msgstr "ההשהייה התחילה"
+msgstr ""
 
 #: src/gpm-manager.c:306
 msgid "Resumed"
-msgstr "הומשך"
+msgstr ""
 
 #: src/gpm-manager.c:310
 msgid "Suspend failed"
-msgstr "ההשהייה נכשלה"
+msgstr ""
 
 #: src/gpm-manager.c:578
 msgid "Computer failed to suspend."
-msgstr "המחשב נכשל במעבר למצב השהייה."
+msgstr ""
 
 #: src/gpm-manager.c:580
 msgid "Failed to suspend"
-msgstr "כשל בהשהיה"
+msgstr ""
 
 #: src/gpm-manager.c:584
 msgid "Computer failed to hibernate."
-msgstr "המחשב כשל במהלך המעבר למצב שינה."
+msgstr ""
 
 #: src/gpm-manager.c:586
 msgid "Failed to hibernate"
-msgstr "כשל בכניסה למצב שינה"
+msgstr ""
 
 #: src/gpm-manager.c:591
 msgid "Failure was reported as:"
-msgstr "הכשל דווח בתור:"
+msgstr ""
 
 #: src/gpm-manager.c:604
 msgid "Visit help page"
-msgstr "בקר בעמוד העזרה"
+msgstr ""
 
 #: src/gpm-manager.c:850
 msgid "Display DPMS activated"
-msgstr "תצוגת DPMS הופעלה"
+msgstr ""
 
 #: src/gpm-manager.c:869
 msgid "On battery power"
-msgstr "פועל על סוללה"
+msgstr ""
 
 #: src/gpm-manager.c:887
 msgid "Laptop lid is closed"
-msgstr "מכסה המחשב הנייד סגור"
+msgstr ""
 
 #: src/gpm-manager.c:925
 msgid "Power Information"
-msgstr "מידע צריכת החשמל"
+msgstr ""
 
 #: src/gpm-manager.c:1107
 msgid "Battery may be broken"
-msgstr "ייתכן והסוללה פגומה"
+msgstr ""
 
 #: src/gpm-manager.c:1110
 #, c-format
@@ -1280,152 +1177,148 @@ msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
 " broken."
 msgstr ""
-"הסוללה שלך בעלת קיבולת קטנה ביותר (%1.1f%%), מה שמעיד על כך שהיא עלולה להיות"
-" ישנה או פגומה."
 
 #: src/gpm-manager.c:1159
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-manager.c:1205
 msgid "Battery Discharging"
-msgstr "סוללה מתרוקנת"
+msgstr ""
 
 #: src/gpm-manager.c:1209
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
-msgstr "‏%s נותר מאנרגיית הסוללה (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1212 src/gpm-manager.c:1224
 #, c-format
 msgid "%s discharging (%.0f%%)"
-msgstr "‏%s נפרקת (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1217
 msgid "UPS Discharging"
-msgstr "האל־פסק מתרוקן"
+msgstr ""
 
 #: src/gpm-manager.c:1221
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
-msgstr "‏%s נותר מאנרגיית הגיבוי של האל פסק (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1305
 msgid "Battery low"
-msgstr "סוללה חלשה"
+msgstr ""
 
 #: src/gpm-manager.c:1308
 msgid "Laptop battery low"
-msgstr "סוללת המחשב הנייד חלשה"
+msgstr ""
 
 #: src/gpm-manager.c:1314
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
-msgstr "חיי הסוללה הנותרים המשוערים הם <b>%s</b> ‏(%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1318
 msgid "UPS low"
-msgstr "סוללת האל־פסק חלשה"
+msgstr ""
 
 #: src/gpm-manager.c:1322
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
-msgstr "נותרו לך בערך <b>%s</b> מהאנרגיה באל פסק (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1331 src/gpm-manager.c:1470
 msgid "Mouse battery low"
-msgstr "סוללת העכבר חלשה"
+msgstr ""
 
 #: src/gpm-manager.c:1334
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
-msgstr "העכבר האלחוטי המחובר למחשב זה בעל סוללה חלשה (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1338 src/gpm-manager.c:1478
 msgid "Keyboard battery low"
-msgstr "סוללת המקלדת חלשה"
+msgstr ""
 
 #: src/gpm-manager.c:1341
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
-msgstr "המקלדת האלחוטית המחוברת למחשב זה בעלת עצמת סוללה נמוכה (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1345 src/gpm-manager.c:1487
 msgid "PDA battery low"
-msgstr "סוללת מחשב כף היד חלשה"
+msgstr ""
 
 #: src/gpm-manager.c:1348
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
-msgstr "מחשב כף היד המחובר למחשב זה בעל סוללה חלשה (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1352 src/gpm-manager.c:1497 src/gpm-manager.c:1507
 msgid "Cell phone battery low"
-msgstr "סוללת הטלפון הסלולרי חלשה"
+msgstr ""
 
 #: src/gpm-manager.c:1355
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
-msgstr "הטלפון הסלולרי המחובר למחשב זה בעל סוללה חלשה (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1359
 msgid "Media player battery low"
-msgstr "סוללת נגן המדיה חלשה"
+msgstr ""
 
 #: src/gpm-manager.c:1362
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
-msgstr "נגן המדיה המחובר למחשב זה בעל סוללה חלשה (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1366 src/gpm-manager.c:1516
 msgid "Tablet battery low"
-msgstr "סוללת מחשב הלוח חלשה"
+msgstr ""
 
 #: src/gpm-manager.c:1369
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
-msgstr "מחשב הלוח המחובר למחשב זה בעל סוללה חלשה (%.1f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1373 src/gpm-manager.c:1525
 msgid "Attached computer battery low"
-msgstr "הסוללה המחוברת למחשב חלשה"
+msgstr ""
 
 #: src/gpm-manager.c:1376
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
-msgstr "המחשב המחובר הוא בעל סוללה חלשה (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1424
 msgid "Battery critically low"
-msgstr "הסוללה כמעט ריקה"
+msgstr ""
 
 #: src/gpm-manager.c:1427 src/gpm-manager.c:1585
 msgid "Laptop battery critically low"
-msgstr "סוללת המחשב הנייד כמעט ריקה"
+msgstr ""
 
 #: src/gpm-manager.c:1436
 msgid "Plug in your AC adapter to avoid losing data."
-msgstr "חבר את מתאם החשמל כדי למנוע איבוד נתונים."
+msgstr ""
 
 #: src/gpm-manager.c:1440
 msgid "Computer will suspend very soon unless it is plugged in."
-msgstr "המחשב יושהה בקרוב אלא אם כן יחובר למקור חשמל."
+msgstr ""
 
 #: src/gpm-manager.c:1444
 msgid "Computer will hibernate very soon unless it is plugged in."
-msgstr "המחשב יעבור למצב שינה בקרוב אלא אם כן יחובר למקור חשמל."
+msgstr ""
 
 #: src/gpm-manager.c:1448
 msgid "Computer will shutdown very soon unless it is plugged in."
-msgstr "המחשב יכובה בקרוב אלא אם כן יחובר למקור חשמל."
+msgstr ""
 
 #: src/gpm-manager.c:1455 src/gpm-manager.c:1621
 msgid "UPS critically low"
-msgstr "האל־פסק כמעט מרוקן"
+msgstr ""
 
 #: src/gpm-manager.c:1459
 #, c-format
@@ -1433,8 +1326,6 @@ msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
 msgstr ""
-"יש לך בערך <b>%s</b> מהאנרגיה באל פסק (%.0f%%). יש לשחזר את המתח החלופי "
-"למחשב שלך כדי למנוע איבוד נתונים."
 
 #: src/gpm-manager.c:1473
 #, c-format
@@ -1442,8 +1333,6 @@ msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
-"סוללת העכבר האלחוטי המחובר למחשב זה חלשה (%.0f%%). התקן זה יפסיק לפעול אם לא"
-" יוטען."
 
 #: src/gpm-manager.c:1481
 #, c-format
@@ -1451,8 +1340,6 @@ msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
-"סוללת המקלדת האלחוטית המחוברת למחשב זה חלשה (%.0f%%). התקן זה יפסיק לפעול אם"
-" לא יוטען."
 
 #: src/gpm-manager.c:1490
 #, c-format
@@ -1460,8 +1347,6 @@ msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
 " not charged."
 msgstr ""
-"סוללת מחשב כף היד המחובר למחשב זה חלשה (%.1f%%). התקן זה יפסיק לפעול אם לא "
-"יוטען."
 
 #: src/gpm-manager.c:1500
 #, c-format
@@ -1469,8 +1354,6 @@ msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
-"סוללת הטלפון הסלולרי המחובר למחשב זה חלשה (%.0f%%). התקן זה יפסיק לפעול אם "
-"לא יוטען."
 
 #: src/gpm-manager.c:1510
 #, c-format
@@ -1478,15 +1361,13 @@ msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
-"סוללת נגן המדיה המחובר למחשב זה חלשה (%.0f%%). התקן זה יפסיק לפעול אם לא "
-"יוטען."
 
 #: src/gpm-manager.c:1519
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
-msgstr "סוללת מחשב הלוח חלשה (%.0f%%). התקן זה יפסיק לפעול אם לא יוטען."
+msgstr ""
 
 #: src/gpm-manager.c:1528
 #, c-format
@@ -1494,13 +1375,12 @@ msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
 msgstr ""
-"סוללת המחשב המחובר למחשב זה חלשה (%.0f%%). התקן זה יפסיק לפעול אם לא יוטען."
 
 #: src/gpm-manager.c:1593
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
-msgstr "הסוללה כמעט מרוקנת והמחשב <b>יכובה</b> כשהיא תתרוקן לחלוטין."
+msgstr ""
 
 #: src/gpm-manager.c:1599
 msgid ""
@@ -1508,152 +1388,150 @@ msgid ""
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
 msgstr ""
-"הסוללה כמעט מרוקנת, לכן המחשב עומד להכנס להשהייה. <br><b>שימו לב:</b> יש "
-"צורך בכמות קטנה של חשמל כדי להחזיק את המחשב בהשהייה."
 
 #: src/gpm-manager.c:1606
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
-msgstr "הסוללה כמעט מרוקנת, לכן המחשב עומד להכנס למצב שינה."
+msgstr ""
 
 #: src/gpm-manager.c:1611
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
-msgstr "הסוללה כמעט מרוקנת והמחשב עומד להכבות."
+msgstr ""
 
 #: src/gpm-manager.c:1629
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
-msgstr "האל־פסק כמעט ריק, המחשב <b>יכבה</b> כאשר האל־פסק יתרוקן לחלוטין."
+msgstr ""
 
 #: src/gpm-manager.c:1635
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
-msgstr "האל־פסק כמעט ריק ולכן המחשב עומד להיכנס למצב שינה."
+msgstr ""
 
 #: src/gpm-manager.c:1640
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
-msgstr "האל־פסק כמעט ריק ולכן המחשב עומד לכבות."
+msgstr ""
 
 #: src/gpm-prefs.c:81
 msgid "MATE Power Preferences"
-msgstr "העדפות צריכת חשמל של MATE"
+msgstr ""
 
 #: src/gpm-prefs-core.c:238
 msgid "Shutdown"
-msgstr "כיבוי"
+msgstr ""
 
 #: src/gpm-prefs-core.c:245
 msgid "Suspend"
-msgstr "השהייה"
+msgstr ""
 
 #: src/gpm-prefs-core.c:248
 msgid "Hibernate"
-msgstr "מצב שינה"
+msgstr ""
 
 #: src/gpm-prefs-core.c:251
 msgid "Blank screen"
-msgstr "מסך ריק"
+msgstr ""
 
 #: src/gpm-prefs-core.c:254
 msgid "Ask me"
-msgstr "שאל אותי"
+msgstr ""
 
 #: src/gpm-prefs-core.c:257
 msgid "Do nothing"
-msgstr "אל תעשה כלום"
+msgstr ""
 
 #: src/gpm-prefs-core.c:317
 msgid "Never"
-msgstr "לעולם לא"
+msgstr "Jamais"
 
 #: src/gpm-statistics.c:78 src/gpm-statistics.c:466
 msgid "Rate"
-msgstr "דירוג"
+msgstr ""
 
 #: src/gpm-statistics.c:79
 msgid "Charge"
-msgstr "טעינה"
+msgstr ""
 
 #: src/gpm-statistics.c:80 src/gpm-statistics.c:480
 msgid "Time to full"
-msgstr "זמן למילוי"
+msgstr ""
 
 #: src/gpm-statistics.c:81 src/gpm-statistics.c:485
 msgid "Time to empty"
-msgstr "זמן לריקון"
+msgstr ""
 
 #: src/gpm-statistics.c:88
 msgid "10 minutes"
-msgstr "10 דקות"
+msgstr ""
 
 #: src/gpm-statistics.c:89
 msgid "2 hours"
-msgstr "שעתיים"
+msgstr ""
 
 #: src/gpm-statistics.c:90
 msgid "6 hours"
-msgstr "6 שעות"
+msgstr ""
 
 #: src/gpm-statistics.c:91
 msgid "1 day"
-msgstr "יום אחד"
+msgstr ""
 
 #: src/gpm-statistics.c:92
 msgid "1 week"
-msgstr "שבוע אחד"
+msgstr ""
 
 #: src/gpm-statistics.c:101
 msgid "Charge profile"
-msgstr "פרופיל טעינה"
+msgstr ""
 
 #: src/gpm-statistics.c:102
 msgid "Discharge profile"
-msgstr "פרופיל התרוקנות"
+msgstr ""
 
 #: src/gpm-statistics.c:104
 msgid "Charge accuracy"
-msgstr "דיוק טעינה"
+msgstr ""
 
 #: src/gpm-statistics.c:105
 msgid "Discharge accuracy"
-msgstr "דיוק התרוקנות"
+msgstr ""
 
 #: src/gpm-statistics.c:132
 msgid "Attribute"
-msgstr "תכונה"
+msgstr ""
 
 #: src/gpm-statistics.c:139
 msgid "Value"
-msgstr "ערך"
+msgstr ""
 
 #: src/gpm-statistics.c:156
 msgid "Image"
-msgstr "תמונה"
+msgstr "Tugna"
 
 #: src/gpm-statistics.c:162
 msgid "Description"
-msgstr "תיאור"
+msgstr "Asnummel"
 
 #: src/gpm-statistics.c:181 src/gpm-statistics.c:405
 msgid "Type"
-msgstr "סוג"
+msgstr "Anaw"
 
 #: src/gpm-statistics.c:187
 msgid "ID"
-msgstr "מספר סידורי"
+msgstr "ID"
 
 #: src/gpm-statistics.c:201
 msgid "Command"
-msgstr "Command"
+msgstr "Taladna"
 
 #: src/gpm-statistics.c:286
 msgid "Unknown"
-msgstr "לא ידוע"
+msgstr "Arussin"
 
 #: src/gpm-statistics.c:290
 #, c-format
@@ -1661,8 +1539,6 @@ msgid "%.0f second"
 msgid_plural "%.0f seconds"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-statistics.c:295
 #, c-format
@@ -1670,8 +1546,6 @@ msgid "%.1f minute"
 msgid_plural "%.1f minutes"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-statistics.c:300
 #, c-format
@@ -1679,8 +1553,6 @@ msgid "%.1f hour"
 msgid_plural "%.1f hours"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-statistics.c:304
 #, c-format
@@ -1688,36 +1560,34 @@ msgid "%.1f day"
 msgid_plural "%.1f days"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-statistics.c:313
 msgid "Yes"
-msgstr "כן"
+msgstr ""
 
 #: src/gpm-statistics.c:313
 msgid "No"
-msgstr "לא"
+msgstr ""
 
 #: src/gpm-statistics.c:402
 msgid "Device"
-msgstr "התקן"
+msgstr ""
 
 #: src/gpm-statistics.c:407
 msgid "Vendor"
-msgstr "יצרן"
+msgstr ""
 
 #: src/gpm-statistics.c:409
 msgid "Model"
-msgstr "דגם"
+msgstr ""
 
 #: src/gpm-statistics.c:411
 msgid "Serial number"
-msgstr "מספר סידורי"
+msgstr ""
 
 #: src/gpm-statistics.c:416
 msgid "Supply"
-msgstr "ספק"
+msgstr ""
 
 #: src/gpm-statistics.c:419
 #, c-format
@@ -1725,200 +1595,198 @@ msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-statistics.c:423
 msgid "Refreshed"
-msgstr "רוענן"
+msgstr ""
 
 #: src/gpm-statistics.c:433
 msgid "Present"
-msgstr "נוכח"
+msgstr ""
 
 #: src/gpm-statistics.c:440
 msgid "Rechargeable"
-msgstr "ניתן לטעינה מחדש "
+msgstr ""
 
 #: src/gpm-statistics.c:446
 msgid "State"
-msgstr "מדינה"
+msgstr ""
 
 #: src/gpm-statistics.c:450
 msgid "Energy"
-msgstr "אנרגיה"
+msgstr ""
 
 #: src/gpm-statistics.c:453
 msgid "Energy when empty"
-msgstr "אנרגיה בעת התרוקנות"
+msgstr ""
 
 #: src/gpm-statistics.c:456
 msgid "Energy when full"
-msgstr "אנרגיה כשמלא"
+msgstr ""
 
 #: src/gpm-statistics.c:459
 msgid "Energy (design)"
-msgstr "אנרגיה (תכנון)"
+msgstr ""
 
 #: src/gpm-statistics.c:473
 msgid "Voltage"
-msgstr "מתח"
+msgstr ""
 
 #: src/gpm-statistics.c:495
 msgid "Percentage"
-msgstr "אחוזים"
+msgstr ""
 
 #: src/gpm-statistics.c:502
 msgid "Capacity"
-msgstr "קיבולת"
+msgstr ""
 
 #: src/gpm-statistics.c:507
 msgid "Technology"
-msgstr "טכנולוגיה"
+msgstr ""
 
 #: src/gpm-statistics.c:512
 msgid "Online"
-msgstr "מקוון"
+msgstr ""
 
 #: src/gpm-statistics.c:824
 msgid "No data"
-msgstr "אין נתונים"
+msgstr ""
 
 #: src/gpm-statistics.c:831 src/gpm-statistics.c:836
 msgid "Kernel module"
-msgstr "מודול הקרנל"
+msgstr ""
 
 #: src/gpm-statistics.c:841
 msgid "Kernel core"
-msgstr "ליבת הקרנל"
+msgstr ""
 
 #: src/gpm-statistics.c:846
 msgid "Interprocessor interrupt"
-msgstr "פסק בין מעבדים"
+msgstr ""
 
 #: src/gpm-statistics.c:851
 msgid "Interrupt"
-msgstr "פסק"
+msgstr ""
 
 #: src/gpm-statistics.c:898
 msgid "PS/2 keyboard/mouse/touchpad"
-msgstr "מקלדת/עכבר/משטח־מגע  בחיבור PS/2"
+msgstr ""
 
 #: src/gpm-statistics.c:901
 msgid "ACPI"
-msgstr "ACPI"
+msgstr ""
 
 #: src/gpm-statistics.c:904
 msgid "Serial ATA"
-msgstr "‏ATA טורי"
+msgstr ""
 
 #: src/gpm-statistics.c:907
 msgid "ATA host controller"
-msgstr "בקר מארח ATA"
+msgstr ""
 
 #: src/gpm-statistics.c:910
 msgid "Intel wireless adaptor"
-msgstr "התקן אלחוטי של Intel"
+msgstr ""
 
 #: src/gpm-statistics.c:917 src/gpm-statistics.c:922 src/gpm-statistics.c:927
 #: src/gpm-statistics.c:932 src/gpm-statistics.c:937
 #, c-format
 msgid "Timer %s"
-msgstr "מתזמן %s"
+msgstr ""
 
 #: src/gpm-statistics.c:941
 #, c-format
 msgid "Sleep %s"
-msgstr "שינה ‏%s"
+msgstr ""
 
 #: src/gpm-statistics.c:944
 #, c-format
 msgid "New task %s"
-msgstr "משימה חדשה %s"
+msgstr ""
 
 #: src/gpm-statistics.c:948
 #, c-format
 msgid "Wait %s"
-msgstr "המתנה %s"
+msgstr ""
 
 #: src/gpm-statistics.c:952 src/gpm-statistics.c:956
 #, c-format
 msgid "Work queue %s"
-msgstr "תור עבודה %s"
+msgstr ""
 
 #: src/gpm-statistics.c:959
 #, c-format
 msgid "Network route flush %s"
-msgstr "איפוס נתיב רשת %s"
+msgstr ""
 
 #: src/gpm-statistics.c:962
 #, c-format
 msgid "USB activity %s"
-msgstr "פעילות USB ‏%s"
+msgstr ""
 
 #: src/gpm-statistics.c:965
 #, c-format
 msgid "Wakeup %s"
-msgstr "התעוררות %s"
+msgstr ""
 
 #: src/gpm-statistics.c:968
 msgid "Local interrupts"
-msgstr "פסקים מקומיים"
+msgstr ""
 
 #: src/gpm-statistics.c:971
 msgid "Rescheduling interrupts"
-msgstr "פסקים מתחדשים"
+msgstr ""
 
 #: src/gpm-statistics.c:1080
 msgid "Device Information"
-msgstr "נתוני ההתקן"
+msgstr ""
 
 #: src/gpm-statistics.c:1082
 msgid "Device History"
-msgstr "היסטורית ההתקן"
+msgstr ""
 
 #: src/gpm-statistics.c:1084
 msgid "Device Profile"
-msgstr "פרופיל ההתקן"
+msgstr ""
 
 #: src/gpm-statistics.c:1086
 msgid "Processor Wakeups"
-msgstr "התעוררויות מעבד"
+msgstr ""
 
 #: src/gpm-statistics.c:1325 src/gpm-statistics.c:1331
 #: src/gpm-statistics.c:1337 src/gpm-statistics.c:1343
 msgid "Time elapsed"
-msgstr "זמן שחלף"
+msgstr ""
 
 #: src/gpm-statistics.c:1327
 msgid "Power"
-msgstr "חשמל"
+msgstr ""
 
 #: src/gpm-statistics.c:1333 src/gpm-statistics.c:1377
 #: src/gpm-statistics.c:1383 src/gpm-statistics.c:1389
 #: src/gpm-statistics.c:1395
 msgid "Cell charge"
-msgstr "טעינת תא"
+msgstr ""
 
 #: src/gpm-statistics.c:1339 src/gpm-statistics.c:1345
 msgid "Predicted time"
-msgstr "זמן מוערך"
+msgstr ""
 
 #: src/gpm-statistics.c:1379 src/gpm-statistics.c:1391
 msgid "Correction factor"
-msgstr "מתאם תיקון"
+msgstr ""
 
 #: src/gpm-statistics.c:1385 src/gpm-statistics.c:1397
 msgid "Prediction accuracy"
-msgstr "דיוק חיזוי"
+msgstr ""
 
 #: src/gpm-statistics.c:1563
 msgid "Select this device at startup"
-msgstr "בחר התקן זה עם ההפעלה"
+msgstr ""
 
 #: src/gpm-statistics.c:1802
 msgid "Processor"
-msgstr "מעבד"
+msgstr ""
 
 #: src/gpm-tray-icon.c:187
 msgid "Copyright © 2011-2018 MATE developers"
@@ -1926,7 +1794,10 @@ msgstr ""
 
 #: src/gpm-tray-icon.c:193
 msgid "translator-credits"
-msgstr "Yaron Shahrabani <sh.yaron@gmail.com>"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Belkacem Mohammed https://launchpad.net/~belkacem77\n"
+"  Slimane Amiri https://launchpad.net/~slimaneamiri"
 
 #: src/gpm-tray-icon.c:295
 #, c-format
@@ -1935,7 +1806,7 @@ msgstr ""
 
 #: src/gpm-tray-icon.c:349
 msgid "_Preferences"
-msgstr "ה_עדפות"
+msgstr ""
 
 #: src/gpm-upower.c:211
 #, c-format
@@ -1945,7 +1816,7 @@ msgstr ""
 #: src/gpm-upower.c:224 src/gpm-upower.c:288
 #, c-format
 msgid "%s charging (%.1f%%)"
-msgstr "‏%s נטענת (%.1f%%)"
+msgstr ""
 
 #: src/gpm-upower.c:239
 #, c-format
@@ -1953,23 +1824,21 @@ msgid ""
 "Battery is fully charged.\n"
 "Provides %s laptop runtime"
 msgstr ""
-"הסוללה טעונה במלואה.\n"
-"תתאפשר עבודה למשך %s עם הסוללה"
 
 #: src/gpm-upower.c:244
 #, c-format
 msgid "%s is fully charged"
-msgstr "%s טעונה במלואה"
+msgstr ""
 
 #: src/gpm-upower.c:252
 #, c-format
 msgid "%s %s remaining (%.1f%%)"
-msgstr "%s %s נותרו (%.1f%%)"
+msgstr ""
 
 #: src/gpm-upower.c:257
 #, c-format
 msgid "%s discharging (%.1f%%)"
-msgstr "%s מתרוקנת (%.1f%%)"
+msgstr ""
 
 #: src/gpm-upower.c:271
 #, c-format
@@ -1977,23 +1846,21 @@ msgid ""
 "%s %s until charged (%.1f%%)\n"
 "Provides %s battery runtime"
 msgstr ""
-"%s %s עד לטעינה מלאה (%.1f%%)\n"
-"תתאפשר עבודה למשך %s עם הסוללה"
 
 #: src/gpm-upower.c:282
 #, c-format
 msgid "%s %s until charged (%.1f%%)"
-msgstr "%s %s עד לטעינה מלאה (%.1f%%)"
+msgstr ""
 
 #: src/gpm-upower.c:295
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
-msgstr "%s ממתין להתרוקנות (%.1f%%)"
+msgstr ""
 
 #: src/gpm-upower.c:301
 #, c-format
 msgid "%s waiting to charge (%.1f%%)"
-msgstr "%s ממתין לטעינה (%.1f%%)"
+msgstr ""
 
 #: src/gpm-upower.c:306
 #, c-format
@@ -2002,220 +1869,198 @@ msgstr ""
 
 #: src/gpm-upower.c:366
 msgid "Product:"
-msgstr "מוצר:"
+msgstr ""
 
 #: src/gpm-upower.c:370 src/gpm-upower.c:373 src/gpm-upower.c:376
 #: src/gpm-upower.c:379
 msgid "Status:"
-msgstr "מצב:"
+msgstr ""
 
 #: src/gpm-upower.c:370
 msgid "Missing"
-msgstr "חסר"
+msgstr ""
 
 #: src/gpm-upower.c:373 src/gpm-upower.c:650
 msgid "Charged"
-msgstr "טעונה"
+msgstr ""
 
 #: src/gpm-upower.c:376 src/gpm-upower.c:638
 msgid "Charging"
-msgstr "נטענת"
+msgstr ""
 
 #: src/gpm-upower.c:379 src/gpm-upower.c:642
 msgid "Discharging"
-msgstr "מתרוקנת"
+msgstr ""
 
 #: src/gpm-upower.c:384
 msgid "Percentage charge:"
-msgstr "אחוז טעינה:"
+msgstr ""
 
 #: src/gpm-upower.c:388
 msgid "Vendor:"
-msgstr "יצרן:"
+msgstr ""
 
 #: src/gpm-upower.c:393
 msgid "Technology:"
-msgstr "טכנולוגיה:"
+msgstr ""
 
 #: src/gpm-upower.c:397
 msgid "Serial number:"
-msgstr "מספר סידורי:"
+msgstr ""
 
 #: src/gpm-upower.c:401
 msgid "Model:"
-msgstr "דגם:"
+msgstr ""
 
 #: src/gpm-upower.c:406
 msgid "Charge time:"
-msgstr "זמן לטעינה:"
+msgstr ""
 
 #: src/gpm-upower.c:412
 msgid "Discharge time:"
-msgstr "זמן לפריקה:"
+msgstr ""
 
 #: src/gpm-upower.c:419
 msgid "Excellent"
-msgstr "מצויין"
+msgstr ""
 
 #: src/gpm-upower.c:421
 msgid "Good"
-msgstr "טוב"
+msgstr ""
 
 #: src/gpm-upower.c:423
 msgid "Fair"
-msgstr "סביר"
+msgstr ""
 
 #: src/gpm-upower.c:425
 msgid "Poor"
-msgstr "עני"
+msgstr ""
 
 #: src/gpm-upower.c:429
 msgid "Capacity:"
-msgstr "קיבולת:"
+msgstr ""
 
 #: src/gpm-upower.c:435 src/gpm-upower.c:460
 msgid "Current charge:"
-msgstr "טעינה נוכחית:"
+msgstr ""
 
 #: src/gpm-upower.c:441
 msgid "Last full charge:"
-msgstr "טעינה מלאה אחרונה:"
+msgstr ""
 
 #: src/gpm-upower.c:447 src/gpm-upower.c:465
 msgid "Design charge:"
-msgstr "טעינה מתוכננת:"
+msgstr ""
 
 #: src/gpm-upower.c:452
 msgid "Charge rate:"
-msgstr "קצב טעינה:"
+msgstr ""
 
 #: src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:594
 msgid "Lithium Ion"
-msgstr "ליתיום יון"
+msgstr ""
 
 #: src/gpm-upower.c:598
 msgid "Lithium Polymer"
-msgstr "ליתיום פולימר"
+msgstr ""
 
 #: src/gpm-upower.c:602
 msgid "Lithium Iron Phosphate"
-msgstr "זרחת ליתיום ברזל"
+msgstr ""
 
 #: src/gpm-upower.c:606
 msgid "Lead acid"
-msgstr "חומצה עופרת"
+msgstr ""
 
 #: src/gpm-upower.c:610
 msgid "Nickel Cadmium"
-msgstr "ניקל קדמיום"
+msgstr ""
 
 #: src/gpm-upower.c:614
 msgid "Nickel metal hydride"
-msgstr "ניקל מטאל הידריד (NiMH)"
+msgstr ""
 
 #: src/gpm-upower.c:618
 msgid "Unknown technology"
-msgstr "טכנולוגיה לא ידועה"
+msgstr ""
 
 #: src/gpm-upower.c:646
 msgid "Empty"
-msgstr "ריק"
+msgstr ""
 
 #: src/gpm-upower.c:654
 msgid "Waiting to charge"
-msgstr "ממתין לטעינה"
+msgstr ""
 
 #: src/gpm-upower.c:658
 msgid "Waiting to discharge"
-msgstr "ממתין לפריקה"
+msgstr ""
 
 #: src/gpm-upower.c:662
 msgid "Unknown state"

@@ -5,9 +5,10 @@
 # 
 # Translators:
 # Tot en òc <totenoc@gmail.com>, 2018
-# Cfpo Miègjorn-Pirenèus <inactive+cfpomp@transifex.com>, 2018
+# 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Cédric Valmary <cvalmary@yahoo.fr>, 2018
+# Quentin PAGÈS, 2020
 # 
 msgid ""
 msgstr ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2019-11-12 15:22+0100\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Cédric Valmary <cvalmary@yahoo.fr>, 2018\n"
+"Last-Translator: Quentin PAGÈS, 2020\n"
 "Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,7 +30,7 @@ msgstr "Applet de luminositat del gestionari d'energia"
 
 #: applets/brightness/brightness-applet.c:108
 msgid "Adjusts laptop panel brightness."
-msgstr ""
+msgstr "Ajusta la luminositat del panèl."
 
 #: applets/brightness/brightness-applet.c:364
 #: applets/inhibit/inhibit-applet.c:225
@@ -49,6 +50,7 @@ msgstr "Luminositat LCD : %d %%"
 #: applets/inhibit/inhibit-applet.c:297
 msgid "Licensed under the GNU General Public License Version 2"
 msgstr ""
+"Licenciat jos tèrmes de la licéncia GNU General Public License Version 2"
 
 #: applets/brightness/brightness-applet.c:801
 #: applets/inhibit/inhibit-applet.c:298
@@ -58,6 +60,10 @@ msgid ""
 "as published by the Free Software Foundation; either version 2\n"
 "of the License, or (at your option) any later version."
 msgstr ""
+"Power Manager es un logicial liure ; lo podètz tornar distribuir e/o\n"
+"lo modificar segon los tèrmes de la licéncia publica generala GNU,\n"
+"coma es publicada per la Free Software Foundation ; version 2\n"
+"de la licéncia, o (se volètz) tota version seguenta."
 
 #: applets/brightness/brightness-applet.c:805
 #: applets/inhibit/inhibit-applet.c:302
@@ -67,6 +73,10 @@ msgid ""
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
 "GNU General Public License for more details."
 msgstr ""
+"Power Manager es distribuit dins l'esper que serà utile,\n"
+"mas SENS CAP DE GARANTIA ; sens la quita garantia implicita de\n"
+"COMERCIABILITAT o DE CONFORMITAT A UNA UTILIZACION PARTICULARA.\n"
+"Vejatz la Licéncia Publica Generala GNU per mai de detalhs."
 
 #: applets/brightness/brightness-applet.c:809
 #: applets/inhibit/inhibit-applet.c:306
@@ -76,6 +86,9 @@ msgid ""
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
 "02110-1301, USA."
 msgstr ""
+"Vos cal aver recebut una còpia de la Licéncia Publica Generala GNU\n"
+"al meteis temps qu’Power Manager ; s'es pas lo cas, escrivètz a la Free Software\n"
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
 
 #: applets/brightness/brightness-applet.c:1063
 #: applets/inhibit/inhibit-applet.c:519
@@ -163,11 +176,11 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:31
 msgid "Battery critical low action"
-msgstr ""
+msgstr "Accion en cas de batariá febla"
 
 #: data/org.mate.power-manager.gschema.xml.in:32
 msgid "The action to take when the battery is critically low."
-msgstr ""
+msgstr "Accion de realizar quand la batariá es vertadièrament febla."
 
 #: data/org.mate.power-manager.gschema.xml.in:36
 msgid ""
@@ -804,7 +817,7 @@ msgstr "Istoric"
 
 #: data/gpm-statistics.ui:482
 msgid "Statistics"
-msgstr ""
+msgstr "Estatisticas"
 
 #: data/gpm-statistics.ui:504
 msgid "Processor wakeups per second:"
@@ -929,7 +942,7 @@ msgstr ""
 
 #: data/gpm-prefs.ui:1092
 msgid "Closes the program"
-msgstr ""
+msgstr "Tampar lo programa"
 
 #: src/gpm-backlight-helper.c:166
 msgid "Set the current brightness"
@@ -965,7 +978,7 @@ msgstr ""
 
 #: src/gpm-backlight-helper.c:247
 msgid "This program can only be used by the root user"
-msgstr ""
+msgstr "Sonque l’utilizaire root pòt utilizar aqueste programa"
 
 #: src/gpm-backlight-helper.c:256
 msgid "This program must only be run through pkexec"
@@ -977,21 +990,21 @@ msgstr ""
 
 #: src/gpm-common.c:53
 msgid "Unknown time"
-msgstr ""
+msgstr "Durada desconeguda"
 
 #: src/gpm-common.c:58
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i minuta"
+msgstr[1] "%i minutas"
 
 #: src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i ora"
+msgstr[1] "%i oras"
 
 #: src/gpm-common.c:75
 #, c-format
@@ -1001,26 +1014,26 @@ msgstr "%i %s %i %s"
 #: src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ora"
+msgstr[1] "oras"
 
 #: src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "minuta"
+msgstr[1] "minutas"
 
 #. Translators: This is %i days
 #: src/gpm-graph-widget.c:433
 #, c-format
 msgid "%id"
-msgstr ""
+msgstr "%id"
 
 #. Translators: This is %i days %02i hours
 #: src/gpm-graph-widget.c:436
 #, c-format
 msgid "%id%02ih"
-msgstr ""
+msgstr "%id%02ih"
 
 #. Translators: This is %i hours
 #: src/gpm-graph-widget.c:441
@@ -1032,7 +1045,7 @@ msgstr "%i o"
 #: src/gpm-graph-widget.c:444
 #, c-format
 msgid "%ih%02im"
-msgstr ""
+msgstr "%ih%02im"
 
 #. Translators: This is %2i minutes
 #: src/gpm-graph-widget.c:449
@@ -1056,7 +1069,7 @@ msgstr "%2is"
 #: src/gpm-graph-widget.c:460
 #, c-format
 msgid "%i%%"
-msgstr ""
+msgstr "%i%%"
 
 #. Translators: This is %.1f Watts
 #: src/gpm-graph-widget.c:463
@@ -1088,7 +1101,7 @@ msgstr ""
 
 #: src/gpm-main.c:189 src/gpm-main.c:193
 msgid "MATE Power Manager"
-msgstr ""
+msgstr "Gestionari d’alimentacion MATE"
 
 #: src/gpm-manager.c:222 src/gpm-manager.c:294
 msgid "Battery is very low"
@@ -1212,7 +1225,7 @@ msgstr ""
 
 #: src/gpm-manager.c:1305
 msgid "Battery low"
-msgstr ""
+msgstr "Batariá febla"
 
 #: src/gpm-manager.c:1308
 msgid "Laptop battery low"
@@ -1422,7 +1435,7 @@ msgstr ""
 
 #: src/gpm-prefs.c:81
 msgid "MATE Power Preferences"
-msgstr ""
+msgstr "Preferéncias de MATE Power"
 
 #: src/gpm-prefs-core.c:238
 msgid "Shutdown"
@@ -1470,27 +1483,27 @@ msgstr ""
 
 #: src/gpm-statistics.c:88
 msgid "10 minutes"
-msgstr ""
+msgstr "10 minutas"
 
 #: src/gpm-statistics.c:89
 msgid "2 hours"
-msgstr ""
+msgstr "2 oras"
 
 #: src/gpm-statistics.c:90
 msgid "6 hours"
-msgstr ""
+msgstr "6 oras"
 
 #: src/gpm-statistics.c:91
 msgid "1 day"
-msgstr ""
+msgstr "1 jorn"
 
 #: src/gpm-statistics.c:92
 msgid "1 week"
-msgstr ""
+msgstr "1 setmana"
 
 #: src/gpm-statistics.c:101
 msgid "Charge profile"
-msgstr ""
+msgstr "Perfil de cargament"
 
 #: src/gpm-statistics.c:102
 msgid "Discharge profile"
@@ -1506,7 +1519,7 @@ msgstr ""
 
 #: src/gpm-statistics.c:132
 msgid "Attribute"
-msgstr ""
+msgstr "Atribut"
 
 #: src/gpm-statistics.c:139
 msgid "Value"
@@ -1540,29 +1553,29 @@ msgstr "Desconegut"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%.0f segonda"
+msgstr[1] "%.0f segondas"
 
 #: src/gpm-statistics.c:295
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%.1f minuta"
+msgstr[1] "%.1f minutas"
 
 #: src/gpm-statistics.c:300
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%.1f ora"
+msgstr[1] "%.1f oras"
 
 #: src/gpm-statistics.c:304
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%.1f jorn"
+msgstr[1] "%.1f jorns"
 
 #: src/gpm-statistics.c:313
 msgid "Yes"
@@ -1596,8 +1609,8 @@ msgstr "Alimentacion"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d segonda"
+msgstr[1] "%d segondas"
 
 #: src/gpm-statistics.c:423
 msgid "Refreshed"
@@ -1605,7 +1618,7 @@ msgstr "Actualizat"
 
 #: src/gpm-statistics.c:433
 msgid "Present"
-msgstr ""
+msgstr "Presenta"
 
 #: src/gpm-statistics.c:440
 msgid "Rechargeable"
@@ -1645,7 +1658,7 @@ msgstr "Capacitat"
 
 #: src/gpm-statistics.c:507
 msgid "Technology"
-msgstr ""
+msgstr "Tecnologia"
 
 #: src/gpm-statistics.c:512
 msgid "Online"
@@ -1777,7 +1790,7 @@ msgstr ""
 
 #: src/gpm-statistics.c:1379 src/gpm-statistics.c:1391
 msgid "Correction factor"
-msgstr ""
+msgstr "Factor de correction"
 
 #: src/gpm-statistics.c:1385 src/gpm-statistics.c:1397
 msgid "Prediction accuracy"
@@ -1785,7 +1798,7 @@ msgstr ""
 
 #: src/gpm-statistics.c:1563
 msgid "Select this device at startup"
-msgstr ""
+msgstr "Causir aqueste periferic a l’aviada"
 
 #: src/gpm-statistics.c:1802
 msgid "Processor"
@@ -1793,7 +1806,7 @@ msgstr "Processor"
 
 #: src/gpm-tray-icon.c:187
 msgid "Copyright © 2011-2018 MATE developers"
-msgstr ""
+msgstr "Copyright © 2011-2018 Los desvolopaires de MATE"
 
 #: src/gpm-tray-icon.c:193
 msgid "translator-credits"
@@ -1804,7 +1817,7 @@ msgstr ""
 #: src/gpm-tray-icon.c:295
 #, c-format
 msgid "%s remaining"
-msgstr ""
+msgstr "%s demorant"
 
 #: src/gpm-tray-icon.c:349
 msgid "_Preferences"
@@ -1813,12 +1826,12 @@ msgstr "_Preferéncias"
 #: src/gpm-upower.c:211
 #, c-format
 msgid "%s not present"
-msgstr ""
+msgstr "%s es pas presenta"
 
 #: src/gpm-upower.c:224 src/gpm-upower.c:288
 #, c-format
 msgid "%s charging (%.1f%%)"
-msgstr ""
+msgstr "%s en carga (%.1f%%)"
 
 #: src/gpm-upower.c:239
 #, c-format
@@ -1826,21 +1839,23 @@ msgid ""
 "Battery is fully charged.\n"
 "Provides %s laptop runtime"
 msgstr ""
+"La batariá es complètament cargada.\n"
+"Provesís %s de carga pel portable"
 
 #: src/gpm-upower.c:244
 #, c-format
 msgid "%s is fully charged"
-msgstr ""
+msgstr "%s es complètament cargada"
 
 #: src/gpm-upower.c:252
 #, c-format
 msgid "%s %s remaining (%.1f%%)"
-msgstr ""
+msgstr "%s %s demorant (%.1f%%)"
 
 #: src/gpm-upower.c:257
 #, c-format
 msgid "%s discharging (%.1f%%)"
-msgstr ""
+msgstr "%s se descaragar (%.1f%%)"
 
 #: src/gpm-upower.c:271
 #, c-format
@@ -1852,7 +1867,7 @@ msgstr ""
 #: src/gpm-upower.c:282
 #, c-format
 msgid "%s %s until charged (%.1f%%)"
-msgstr ""
+msgstr "%s %s abans carga (%.1f%%)"
 
 #: src/gpm-upower.c:295
 #, c-format
@@ -1867,11 +1882,11 @@ msgstr ""
 #: src/gpm-upower.c:306
 #, c-format
 msgid "%s empty"
-msgstr ""
+msgstr "%s void"
 
 #: src/gpm-upower.c:366
 msgid "Product:"
-msgstr ""
+msgstr "Produduit :"
 
 #: src/gpm-upower.c:370 src/gpm-upower.c:373 src/gpm-upower.c:376
 #: src/gpm-upower.c:379
@@ -1880,23 +1895,23 @@ msgstr "Estat :"
 
 #: src/gpm-upower.c:370
 msgid "Missing"
-msgstr "desconegut"
+msgstr "Absenta"
 
 #: src/gpm-upower.c:373 src/gpm-upower.c:650
 msgid "Charged"
-msgstr "cargat"
+msgstr "Cargat"
 
 #: src/gpm-upower.c:376 src/gpm-upower.c:638
 msgid "Charging"
-msgstr "en carga"
+msgstr "En carga"
 
 #: src/gpm-upower.c:379 src/gpm-upower.c:642
 msgid "Discharging"
-msgstr "en descarga"
+msgstr "En descarga"
 
 #: src/gpm-upower.c:384
 msgid "Percentage charge:"
-msgstr ""
+msgstr "Percentatge cargat :"
 
 #: src/gpm-upower.c:388
 msgid "Vendor:"
@@ -1924,11 +1939,11 @@ msgstr ""
 
 #: src/gpm-upower.c:419
 msgid "Excellent"
-msgstr "excellenta"
+msgstr "Excellenta"
 
 #: src/gpm-upower.c:421
 msgid "Good"
-msgstr "bona"
+msgstr "Bona"
 
 #: src/gpm-upower.c:423
 msgid "Fair"
@@ -1967,8 +1982,8 @@ msgstr[1] ""
 #: src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ordenador portable"
+msgstr[1] "Ordenadors portables"
 
 #: src/gpm-upower.c:495
 msgid "UPS"
@@ -1979,26 +1994,26 @@ msgstr[1] ""
 #: src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ecran"
+msgstr[1] "Ecran"
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Mirga"
+msgstr[1] "Mirgas"
 
 #: src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Clavièr"
+msgstr[1] "Clavièrs"
 
 #: src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "PDA"
+msgstr[1] "PDA"
 
 #: src/gpm-upower.c:515
 msgid "Cell phone"
@@ -2021,8 +2036,8 @@ msgstr[1] ""
 #: src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ordenador"
+msgstr[1] "Ordenadors"
 
 #: src/gpm-upower.c:594
 msgid "Lithium Ion"
@@ -2050,7 +2065,7 @@ msgstr ""
 
 #: src/gpm-upower.c:618
 msgid "Unknown technology"
-msgstr ""
+msgstr "Tecnologia desconeguda"
 
 #: src/gpm-upower.c:646
 msgid "Empty"
@@ -2058,11 +2073,11 @@ msgstr "Void"
 
 #: src/gpm-upower.c:654
 msgid "Waiting to charge"
-msgstr ""
+msgstr "En espèra de cargament"
 
 #: src/gpm-upower.c:658
 msgid "Waiting to discharge"
-msgstr ""
+msgstr "En espèra de descargament"
 
 #: src/gpm-upower.c:662
 msgid "Unknown state"

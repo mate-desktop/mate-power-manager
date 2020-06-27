@@ -1,8 +1,8 @@
+# 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Wolfgang Ulbrich <mate@raveit.de>, 2018
 # Marco Z. <minaz666@gmail.com>, 2018
-# talorno <giovanni.talorno@gmail.com>, 2018
 # Giuseppe Pignataro <rogepix@gmail.com>, 2019
 # Enrico B. <enricobe@hotmail.com>, 2019
 # Alessandro Volturno <alelvb@inwind.it>, 2020
@@ -29,7 +29,7 @@ msgstr "Bella Enrico, 2019"
 #: C/index.docbook:23
 msgid "<application>MATE Power Manager</application> Manual"
 msgstr ""
-"Manuale del <application>Gestore di alimentazione di MATE</application>"
+"Manuale del <application>Gestore dell'alimentazione di MATE</application>"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:25
@@ -38,8 +38,8 @@ msgid ""
 "MATE Desktop that manages the power settings for your laptop or desktop "
 "computer."
 msgstr ""
-"<application>Il Gestore di Alimentazione di MATE </application> è un demone "
-"per il Desktop MATE che gestisce le impostazioni energetiche del tuo "
+"<application>Il Gestore dell'alimentazione di MATE </application> è un "
+"demone per il Desktop MATE che gestisce le impostazioni energetiche del tuo "
 "computer, desktop o portatile."
 
 #. (itstool) path: articleinfo/copyright
@@ -57,7 +57,7 @@ msgstr ""
 #. (itstool) path: publisher/publishername
 #: C/index.docbook:52
 msgid "MATE Documentation Team"
-msgstr "Squadra Documentazione MATE"
+msgstr "Team Documentazione di MATE"
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
@@ -108,16 +108,17 @@ msgid ""
 "type=\"http\"><application>MATE Power Manager</application> Contact "
 "Page</ulink>."
 msgstr ""
-"Per segnalare un malfunzionamento o un suggerimento per Dizionario di MATE o"
-" questo manuale, segui le indicazioni nella<ulink url=\"https://github.com"
-"/mate-desktop/mate-power-manager/\" type=\"http\">Pagina dei contatti di "
-"<application>Gestore di alimentazione di MATE</application></ulink>."
+"Per segnalare un malfunzionamento o un suggerimento sul Gestore "
+"dell'alimentazione di MATE o su questo manuale, segui le indicazioni "
+"nella<ulink url=\"https://github.com/mate-desktop/mate-power-manager/\" "
+"type=\"http\">Pagina dei contatti di <application>Gestore dell'alimentazione"
+" di MATE</application></ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:115
 msgid "<primary><application>MATE Power Manager</application></primary>"
 msgstr ""
-"<primary><application>Gestore di alimentazione di "
+"<primary><application>Gestore dell'alimentazione di "
 "MATE</application></primary>"
 
 #. (itstool) path: article/indexterm
@@ -136,7 +137,7 @@ msgid ""
 "<primary><application>MATE Power Manager</application></primary> "
 "<secondary>Manual</secondary> <tertiary>mate-power-manager</tertiary>"
 msgstr ""
-"<primary><application>Gestore di alimentazione di "
+"<primary><application>Gestore dell'alimentazione di "
 "MATE</application></primary> <secondary>Manuale</secondary> <tertiary>mate-"
 "power-manager</tertiary>"
 
@@ -146,8 +147,8 @@ msgid ""
 "The MATE Power Manager session daemon is a power management daemon for the "
 "<systemitem>MATE desktop</systemitem>"
 msgstr ""
-"Il Gestore di alimentazione di MATE è il demone per la gestione energetica "
-"del <systemitem> desktop MATE</systemitem>"
+"Il Gestore dell'alimentazione di MATE è il demone per la gestione energetica"
+" del <systemitem> desktop MATE</systemitem>"
 
 #. (itstool) path: section/title
 #: C/index.docbook:143
@@ -161,9 +162,10 @@ msgid ""
 "startup, but you can manually start <application>MATE Power "
 "Manager</application> by doing:"
 msgstr ""
-"Il <application>Gestore di alimentazione di MATE</application> viene di "
-"solito avviato all'accensione, ma puoi avviare manualmente il "
-"<application>Gestore di alimentazione di MATE</application> tramite:"
+"Il <application>Gestore dell'alimentazione di MATE</application> viene "
+"solitamente avviato all'accensione, ma si può avviare il "
+"<application>Gestore dell'alimentazione di MATE</application> manualmente "
+"seguendo i seguenti passaggi:"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:150
@@ -176,8 +178,8 @@ msgid ""
 "Type <command>mate-power-manager --verbose --no-daemon</command>, then press"
 " <keycap>Return</keycap>:"
 msgstr ""
-"Digita <command>mate-power-manager --verbose --no-daemon</command> e premi "
-"<keycap>Invio</keycap>:"
+"Digitare <command>mate-power-manager --verbose --no-daemon</command> e "
+"premere<keycap>Invio</keycap>:"
 
 #. (itstool) path: section/title
 #: C/index.docbook:162
@@ -190,7 +192,7 @@ msgid ""
 "When <application>MATE Power Manager</application> has started, the "
 "following notifications may be displayed."
 msgstr ""
-"Quando il <application>Gestore di alimentazione di MATE </application> è "
+"Quando il <application>Gestore dell'alimentazione di MATE </application> è "
 "avviato, potrebbero apparire le seguenti notifiche."
 
 #. (itstool) path: section/title
@@ -202,7 +204,7 @@ msgstr "Batteria in fase di scarica"
 #: C/index.docbook:170
 msgid "MATE Power Manager Notification when AC adapter is removed"
 msgstr ""
-"Il Gestore di alimentazione di MATE notifica quando l'alimentatore viene "
+"Il Gestore dell'alimentazione di MATE notifica quando l'alimentatore viene "
 "disconnesso"
 
 #. (itstool) path: imageobject/imagedata
@@ -238,7 +240,7 @@ msgstr "Carica completa"
 msgid ""
 "MATE Power Manager Notification when laptop primary battery is fully charged"
 msgstr ""
-"Il Gestore di alimentazione di MATE notifica quando la batteria del "
+"Il Gestore dell'alimentazione di MATE notifica quando la batteria del "
 "portatile è completamente carica"
 
 #. (itstool) path: imageobject/imagedata
@@ -272,9 +274,9 @@ msgid ""
 " from showing unwanted repeat notifications if the battery is incorrectly "
 "reporting the charged status."
 msgstr ""
-"La notifica verrà mostrata solo quando la carica della batteria scende sotto"
-" il 95% e viene poi ricaricata completamente. Questo per evitare che vengano"
-" mostrate notifiche ripetute su alcune macchine che non comunicano "
+"Si otterrà una ripetizione della notifica se la carica della batteria scende"
+" sotto il 95% e viene poi ricaricata completamente. Questo per evitare che "
+"vengano mostrate notifiche ripetute su alcune macchine che non comunicano "
 "correttamente lo stato di carica al sistema."
 
 #. (itstool) path: section/title
@@ -294,8 +296,7 @@ msgstr ""
 #. (itstool) path: figure/title
 #: C/index.docbook:222
 msgid "MATE Power Manager Notification when battery power is low"
-msgstr ""
-"La notifica del Gestore di alimentazione di MATE quando la carica è bassa"
+msgstr "Il gestore dell'alimentazione di MATE quando la carica è bassa"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -331,16 +332,16 @@ msgid ""
 "using the preferences tool."
 msgstr ""
 "Quando il computer è scarico viene visualizzata questa notifica che spiega "
-"le azioni necessarie. È possibile modificare l'azione di critica bassa nelle"
-" preferenze."
+"quali azioni sono necessarie. È possibile modificare l'azione intrapresa per"
+" la batteria a livello critico usando lo strumento preferenze."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:247
 msgid ""
 "MATE Power Manager Notification when the system power is critically low"
 msgstr ""
-"Il Gestore di alimentazione di MATE notifica quando il livello di carica è "
-"critico"
+"Il Gestore dell'alimentazione di MATE notifica quando il livello di carica è"
+" critico"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -376,7 +377,7 @@ msgstr ""
 #: C/index.docbook:266
 msgid "MATE Power Manager Notification when suspend failure occurs"
 msgstr ""
-"Il Gestore di alimentazione di MATE notifica quando il tentativo di "
+"Il Gestore dell'alimentazione di MATE notifica quando il tentativo di "
 "sospensione fallisce"
 
 #. (itstool) path: imageobject/imagedata
@@ -413,8 +414,8 @@ msgid ""
 "The statistics program allows you to visualize the power consumption of your"
 " laptop hardware."
 msgstr ""
-"Il software di statistica consente di visualizzare il consumo energetico "
-"dell'hardware del computer portatile."
+"Il programma delle statistiche consente di visualizzare il consumo "
+"energetico dell'hardware del computer portatile."
 
 #. (itstool) path: note/para
 #: C/index.docbook:291
@@ -425,14 +426,16 @@ msgid ""
 "if required."
 msgstr ""
 "E' stato rimosso dalla finestra informativa delle versioni precedenti del "
-"Gestore di alimentazione di MATE poiché l'interfaccia dati ora utilizza DBUS"
-" al posto del IPC interno. Questo permette ad altre applicazioni di leggere "
-"e visualizzare i dati se necessario.."
+"Gestore dell'alimentazione di MATE poiché l'interfaccia dati ora utilizza "
+"DBUS al posto dell'IPC interno. Questo permette ad altre applicazioni di "
+"leggere e visualizzare i dati se richeisto.."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:298
 msgid "Power History going from battery power to AC"
-msgstr "Cronologia di carica della batteria"
+msgstr ""
+"Cronologia di carica della batteria passando all'alimentazione da corrente "
+"elettrica"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -457,13 +460,13 @@ msgid ""
 msgstr ""
 "Non è possibile visualizzare alcune opzioni o grafici se il computer non "
 "dispone dell'hardware necessario. Possono essere visualizzati anche altri "
-"hardware non mostrati qui (ad esempio i dispositivi UPS) e vengono "
-"considerati allo stesso modo di altri dispositivi."
+"hardware non mostrati qui (ad esempio i dispositivi UPS) ma questi vengono "
+"considerati allo stesso modo degli altri dispositivi."
 
 #. (itstool) path: section/title
 #: C/index.docbook:317
 msgid "Charge History"
-msgstr "Cronologia di carica"
+msgstr "Cronologia del processo di carica"
 
 #. (itstool) path: section/para
 #: C/index.docbook:318
@@ -474,14 +477,14 @@ msgid ""
 "with this graph."
 msgstr ""
 "Il grafico mostra la percentuale di carica disponibile per la batteria "
-"principale, quindi se disponi di una batteria principale e una ausiliaria "
-"verrà mostrato solo il valore medio. In questo grafico non viene mostrata "
-"una legenda."
+"principale, quindi se si dispone di una batteria principale e di una "
+"ausiliaria, verrà mostrato solo il valore medio. Con questo grafico non "
+"viene mostrata la legenda."
 
 #. (itstool) path: section/title
 #: C/index.docbook:327
 msgid "Power History"
-msgstr "Cronologia di alimentazione"
+msgstr "Cronologia di alimentazione da corrente elettrica"
 
 #. (itstool) path: section/para
 #: C/index.docbook:328
@@ -495,12 +498,12 @@ msgid ""
 "received."
 msgstr ""
 "Il grafico mostra la cronologia dell'alimentazione utilizzata dalla batteria"
-" primaria. Questa linea rappresenta la quantità di energia che viene "
+" principale. Questa linea rappresenta la quantità di energia che viene "
 "utilizzata per caricare le batterie o che viene prelevata dalle batterie. La"
 " linea dovrebbe andare verso l'alto quando vengono eseguite attività "
-"intensive del processore e verso il basso quando il sistema è inattivo o "
-"quando lo schermo è oscurato. Questo grafico mostra una legenda quando "
-"vengono ricevuti degli eventi sui dati."
+"intensive per il processore e verso il basso quando il sistema è inattivo o "
+"quando lo schermo è oscurato. Questo grafico mostra una legenda quando sono "
+"stati ricevuti dei dati sugli eventi."
 
 #. (itstool) path: note/para
 #: C/index.docbook:341
@@ -510,10 +513,11 @@ msgid ""
 "limitations where the rate is only sent from the battery management chip, "
 "rather than the power management chip on the motherboard."
 msgstr ""
-"Se il computer non è in carica o in scarica o se il computer è sospeso, non "
-"riceverai i dati relativi all'alimentazione. Ciò è dovuto a limitazioni "
-"hardware per cui le informazioni vengono inviate dal chip di gestione della "
-"batteria invece che dal chip sulla scheda madre."
+"Non si riceveranno i dati relativi alla batteria se il computer non si trova"
+" in fase di carica o di scarica, o se il computer è in sospensione. Ciò è "
+"dovuto a limitazioni hardware dove le informazioni vengono inviate dal chip "
+"di gestione della batteria invece che dal chip di gestione "
+"dell'alimentazione presente sulla scheda madre."
 
 #. (itstool) path: section/title
 #: C/index.docbook:352
@@ -532,8 +536,9 @@ msgstr ""
 "Questo grafico mostra la cronologia della durata stimata per la batteria "
 "principale. La linea rappresenta il tempo residuo alla carica completa o "
 "alla scarica completa. Dovrebbe andare proporzionalmente verso l'alto quando"
-" la durata diminuisce e verso il basso quando la durata aumenta. Viene "
-"mostrata una legenda quando si ricevono le informazioni sui dati."
+" la durata diminuisce e verso il basso quando la durata aumenta. Con questo "
+"grafico viene mostrata una legenda quando sono stati ricevuti dei dati sugli"
+" eventi."
 
 #. (itstool) path: section/title
 #: C/index.docbook:366
@@ -548,14 +553,16 @@ msgstr "La finestra delle preferenze permette di controllare:"
 #. (itstool) path: listitem/para
 #: C/index.docbook:372
 msgid "The LCD brightness when on AC and battery power"
-msgstr "La luminosità del display quando collegato oppure a batteria."
+msgstr ""
+"La luminosità del display quando collegato alla rete elettrica oppure alla "
+"batteria."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:377
 msgid "The idle time for the screen power-down and suspend action"
 msgstr ""
-"Il tempo di inattività per lo spegnimento dello schermo e la sospensione "
-"automatica."
+"Il tempo di inattività perché avvenga lo spegnimento dello schermo e "
+"l'azione di sospensione."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:382
@@ -565,7 +572,7 @@ msgstr "L'azione da svolgere alla chiusura dello schermo del portatile"
 #. (itstool) path: listitem/para
 #: C/index.docbook:387
 msgid "The notification area icon policy"
-msgstr "Le politiche di notifica"
+msgstr "La politica dell'icona dell'area di notifica "
 
 #. (itstool) path: note/para
 #: C/index.docbook:394
@@ -574,19 +581,21 @@ msgid ""
 "not writable. This allows administrators to lock-down the actions that a "
 "user can select."
 msgstr ""
-"Alcune opzioni potrebbero essere disabilitate se non è possibile scrivere le"
-" chiavi di dconf. Questo permette all'amministratore di sistema di limitare "
-"le azioni che l'utente può modificare."
+"Alcuni regoli o opzioni potrebbero essere disabilitate se non è possibile "
+"scrivere le chiavi in dconf. Questo permette all'amministratore di sistema "
+"di limitare le azioni che l'utente può selezionare."
 
 #. (itstool) path: section/title
 #: C/index.docbook:402
 msgid "AC Preferences"
-msgstr "Preferenze AC"
+msgstr "Preferenze di alimentazione dalla rete elettrica"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:404
 msgid "MATE Power Manager AC tab"
-msgstr "Scheda Alimentazione da rete elettrica del Gestore di alimentazione"
+msgstr ""
+"Scheda Alimentazione da rete elettrica del Gestore dell'alimentazione di "
+"MATE"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -605,7 +614,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:416
 msgid "Battery Preferences"
-msgstr "Preferenze a batteria"
+msgstr "Preferenze con alimentazione a batteria"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:418
@@ -633,7 +642,7 @@ msgid ""
 " the full capabilities are not required."
 msgstr ""
 "Permette ad un computer di ridurre il consumo energetico quando è inattivo o"
-" quando non sono richieste tutte le funzionalità."
+" quando non sono richieste tutte le potenzialità."
 
 #. (itstool) path: section/title
 #: C/index.docbook:434
@@ -643,7 +652,7 @@ msgstr "Preferenze generali"
 #. (itstool) path: figure/title
 #: C/index.docbook:436
 msgid "MATE Power Manager general tab"
-msgstr "Scheda Generale del Gestore di alimentazione"
+msgstr "Scheda Generale del Gestore dell'alimentazione di MATE"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -676,13 +685,14 @@ msgid ""
 " low-power mode and lowering the laptop panel brightness."
 msgstr ""
 "<command>mate-screensaver</command> è un demone di sessione che controlla "
-"l'input dell'utente e se il mouse non è stato spostato o la tastiera è stata"
-" premuta, avvia un conteggio. Quando il valore di questo contatore raggiunge"
-" il valore impostato in <command>mate-screensaver-preferences</command>, "
-"allora il login è contrassegnato come 'session idle'. A questo punto il "
-"<application>Gestore di alimentazione di MATE</application> esegue tutte le "
-"operazioni di inattività della sessione, come l'attivazione della modalità a"
-" basso consumo e la riduzione della luminosità dello schermo."
+"l'input dell'utente, e se il mouse non è stato spostato o la tastiera è "
+"stata premuta, avvia un conteggio. Quando il valore di questo contatore "
+"raggiunge il valore impostato in <command>mate-screensaver-"
+"preferences</command>, allora il login è contrassegnato come 'sessione "
+"inattiva'. A questo punto il <application>Gestore dell'alimentazione di "
+"MATE</application> esegue tutte le operazioni di inattività della sessione, "
+"come l'attivazione della modalità a basso consumo e la riduzione della "
+"luminosità dello schermo."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:461
@@ -714,8 +724,8 @@ msgid ""
 "idle, then the idle action is performed, which is usually to turn off the "
 "screen, or to suspend or hibernate."
 msgstr ""
-"Non appena la sessione viene considerata inatttiva, il <application>Gestore "
-"di alimentazione di MATE</application> avvia il proprio timer di sistema. "
+"Non appena la sessione viene considerata inattiva, il <application>Gestore "
+"dell'alimentazione di MATE</application> avvia il proprio timer di sistema. "
 "Quando viene raggiunto il timeout impostato in <command>mate-power-"
 "preferences</command> e il carico della CPU è basso, allora viene eseguita "
 "l'azione di inattività che di solito consiste nello spegnere lo schermo, "
@@ -732,10 +742,10 @@ msgid ""
 "<command>mate-power-preferences</command> will change accordingly."
 msgstr ""
 "Per chiarezza è bene specificare che i cursori in <command>mate-power-"
-"preferences</command> sono impostati per avviarsi un minuto dopo "
-"l'inattività della sessione, in quanto non possiamo logicamente avviarli "
-"prima che la sessione sia contrassegnata come inattiva. Se regoli il valore "
-"del timeout 'inattività di sistema' in <command>mate-screensaver-"
+"preferences</command> sono impostati per avviarsi 1 minuto dopo il tempo di "
+"inattività della sessione, in quanto non possiamo logicamente avviarli prima"
+" che questa sia contrassegnata come inattiva. Se si regola il valore del "
+"timeout di 'sessione inattiva' in <command>mate-screensaver-"
 "preferences</command>, l'avvio delle opzioni in <command>mate-power-"
 "preferences</command> cambierà di conseguenza."
 
@@ -755,8 +765,8 @@ msgid ""
 "You can change the idle laptop panel brightness by changing the dconf key "
 "<command>org.mate.power-manager idle-brightness</command>."
 msgstr ""
-"Puoi modificare la luminosità dello schermo inattivo modificando la chiave "
-"dconf <command>org.mate.power-manager idle-brightness</command>."
+"Si può modificare la luminosità dello schermo inattivo modificando la chiave"
+" dconf <command>org.mate.power-manager idle-brightness</command>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:504
@@ -771,11 +781,11 @@ msgid ""
 "screen\" in mate-screensaver when the lid is closed, or the system performs "
 "a suspend or hibernate action."
 msgstr ""
-"Per impostazione predefinita, il <application>Gestore di alimentazione di "
-"MATE</application> supporta uno schema di chiusura semplice. Ciò significa "
-"che lo schermo si blocca alla chiusura del coperchio se viene impostato su "
-"\"Blocca schermo\" in mate-screensaver, oppure quando il sistema esegue "
-"un'azione di sospensione o ibernazione."
+"Per impostazione predefinita, il <application>Gestore dell'alimentazione di "
+"MATE</application> supporta uno schema di blocco semplice. Ciò significa che"
+" lo schermo si blocca se viene impostato \"Blocca schermo\" in mate-"
+"screensaver, quando viene chiuso il coperchio oppure quando il sistema "
+"esegue un'azione di sospensione o ibernazione."
 
 #. (itstool) path: section/para
 #: C/index.docbook:511
@@ -784,10 +794,10 @@ msgid ""
 "locking policy to change for the lid, suspend and hibernate actions. To "
 "enable this complex mode, you will have to disable the dconf key:"
 msgstr ""
-"Esiste un complesso schema di chiusura, disponibile per gli utenti esperti, "
-"che consente di modificare la politica di chiusura del coperchio, sospendere"
-" e ibernare le azioni. Per abilitare questa modalità avanzata è necessario "
-"disabilitare la chiave dconf:"
+"Esiste uno schema di blocco complesso, disponibile per gli utenti esperti, "
+"che consente di modificare la politica di chiusura del coperchio, e le le "
+"azioni per sospendere e ibernare il computer. Per abilitare questa modalità "
+"avanzata è necessario disabilitare la chiave dconf:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:519
@@ -801,8 +811,8 @@ msgid ""
 "when the action is performed:"
 msgstr ""
 "Fatto ciò, le seguenti chiavi di sistema possono essere impostate per "
-"forzare il blocco e lo sblocco di mate-screensaver quando un'azione viene "
-"eseguita:"
+"forzare il blocco e lo sblocco di mate-screensaver quando viene eseguita "
+"un'azione:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:531
@@ -846,10 +856,10 @@ msgid ""
 "laptop without brightness buttons, as you can now change the brightness "
 "easily."
 msgstr ""
-"L'applet luminosità ti consente di cambiare temporaneamente la luminosità "
-"senza modificare il l'impostazione predefinita. Può essere utile se disponi "
-"di un computer portatile senza pulsanti dedicati a regolare la luminosità "
-"poichè è possibile modificare la luminosità facilmente."
+"L'applet luminosità consente di cambiare temporaneamente la luminosità senza"
+" modificare il l'impostazione predefinita. Può essere utile se si dispone di"
+" un computer portatile senza pulsanti dedicati a regolare la luminosità "
+"poiché è possibile modificare facilmente la luminosità dello schermo."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:568
@@ -889,11 +899,11 @@ msgid ""
 "proprietary programs such as VMWare or Matlab. Just click the icon for the "
 "auto-suspend to be inhibited, and click it again for normal operation."
 msgstr ""
-"L'applet di inibizione permette di impedire l'autospegnimento del computer "
-"quando risulta inattivo. Può essere necessario se utilizzi programmi vecchi "
-"o proprietari come VMWare o Matlab. È sufficiente fare clic sull'icona per "
-"bloccare l'auto-sospensione e fare nuovamente clic su di esso per tornare al"
-" funzionamento normale."
+"L'applet di inibizione permette di impedire l'auto-sospensione del computer "
+"quando questo risulta inattivo. Può essere necessario se si utilizzano "
+"programmi vecchi o proprietari come VMWare o Matlab. È sufficiente fare clic"
+" sull'icona per bloccare l'auto-sospensione e fare nuovamente clic su di "
+"esso per tornare al funzionamento normale."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:596
@@ -921,10 +931,10 @@ msgid ""
 "make the application use the <function>Inhibit()</function> and "
 "<function>UnInhibit()</function> methods as this should 'just work'."
 msgstr ""
-"Non usare questa applet se usi solo software MATE, segnala invece un bug per"
-" fare in modo che l'applicazione utilizzi l'opzione "
-"<function>Inhibit()</function> e <function>UnInhibit()</function>, "
-"progettate per funzionare bene."
+"Non usare questa applet se si utilizza solo software MATE, segnalare invece "
+"un bug per fare in modo che l'applicazione utilizzi i metodi "
+"<function>Inhibit()</function> e <function>UnInhibit()</function>, perché "
+"questi dovrebbero funzionare."
 
 #. (itstool) path: section/title
 #: C/index.docbook:618
@@ -1023,9 +1033,9 @@ msgstr ""
 " l'alimentazione, in modo che il computer risulti spento. Non verrà riacceso"
 " finché non viene comandato da un evento esterno, come la pressione di un "
 "tasto. Questo è lo stato di risparmio energetico più efficiente disponibile."
-" Se rimuovi l'alimentazione su un desktop o esaurisci la batteria di un "
-"portatile il lavoro non andrà perso. Può volerci anche più di un minuto per "
-"ibernare e risvegliare il computer."
+" Se si rimuove l'alimentazione su un desktop o siesaurisce la batteria di un"
+" portatile il lavoro non andrà perso. Può volerci anche più di un minuto per"
+" ibernare e risvegliare il computer."
 
 #. (itstool) path: section/title
 #: C/index.docbook:675
@@ -1046,11 +1056,11 @@ msgid ""
 " modes that work, e.g. standby, suspend or off."
 msgstr ""
 "È necessario cambiare la modalità di sospensione del DPMS usato dal "
-"<application>Gestore di alimentazione di MATE</application>. Apri <command"
-">dconf-editor</command>, quindi cambia le chiavi <literal>org.mate.mate"
-".power-manager dpms-method-ac</literal> e <literal>org.mate.power-manager "
-"dpms-method-battery</literal> in una delle modalità che risultano "
-"funzionanti, ad esempio standby, suspend o off."
+"<application>Gestore dell'alimentazione di MATE</application>. Aprire "
+"<command>dconf-editor</command>, quindi cambiare le chiavi "
+"<literal>org.mate.mate.power-manager dpms-method-ac</literal> e "
+"<literal>org.mate.power-manager dpms-method-battery</literal> in una delle "
+"modalità che risultano funzionanti, ad esempio standby, suspend o off."
 
 #. (itstool) path: section/title
 #: C/index.docbook:689
@@ -1073,8 +1083,9 @@ msgstr ""
 "Potresti essere in grado di utilizzare la carica percentuale per g-p-m da "
 "utilizzare come dati della carica. Apri <command>dconf-editor</command>, "
 "quindi modifica la chiave <command>org.mate.power-manager org.mate.power-"
-"manager</command> a false. Puoi farlo facilmente: <command>gsettings ottiene"
-" org.mate.power-manager use-time-for-policy false</command>"
+"manager</command> a \"false\". Si può fare facilmente con il seguente "
+"comando: <command>gsettings get org.mate.power-manager use-time-for-policy "
+"false</command>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:703
@@ -1101,8 +1112,8 @@ msgid ""
 "save power by hibernating or suspending."
 msgstr ""
 "Se l'applicazione sta eseguendo un'operazione lunga, potresti voler "
-"disabilitare la sospensione per un po' di tempo. Dovresti usare la mate-"
-"session se davvero non desideri che l'utente sia in grado di sospendere il "
+"disabilitare la sospensione per un po' di tempo. Dovresti usare mate-session"
+" se davvero si desidera che l'utente non sia in grado di sospendere il "
 "computer o che lo stesso risparmi energia con l'ibernazione o la "
 "sospensione."
 
@@ -1112,13 +1123,13 @@ msgid ""
 "I'm running ACPI. Why do events (such as removing the AC adapter) take so "
 "long to register?"
 msgstr ""
-"Utilizzo ACPI. Perché la registrazione di eventi (come la rimozione "
+"Utilizzo ACPI. Perché la registrazione degli eventi (come la rimozione "
 "dell'alimentatore) richiede così tanto tempo?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:727
 msgid "One of two things might be the problem."
-msgstr "Il problema potrebbe derivare da una delle due cose:"
+msgstr "Il problema potrebbe derivare da una delle due situazioni:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:732
@@ -1134,7 +1145,7 @@ msgid ""
 "report."
 msgstr ""
 "Il BIOS potrebbe essere difettoso e potrebbe esserci bisogno di un metodo "
-"alternativo. Per favore, crea una segnalazione di bug."
+"alternativo. Per favore, creare una segnalazione di bug."
 
 #. (itstool) path: section/para
 #: C/index.docbook:743
@@ -1142,8 +1153,8 @@ msgid ""
 "For the first case, try to find the HAL processes that are running: "
 "<command>ps -eaf | grep hal</command>"
 msgstr ""
-"Nel primo caso prova ad esaminare i processi HAL in esecuzione: <command>ps "
-"-eaf | grep hal</command>"
+"Nel primo caso provare ad esaminare i processi HAL in esecuzione: "
+"<command>ps -eaf | grep hal</command>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:747
@@ -1154,10 +1165,10 @@ msgid ""
 "initscript. An alternative to this is to use acpid, rather than the kernel "
 "proc file."
 msgstr ""
-"Cerca il processo <command>hald-addon-acpi</command>. Se non è in "
-"esecuzione, verifica che HAL venga eseguito con l'opzione <command>--retain-"
-"privileges</command> nello script di init <command>haldaemon</command>. "
-"Un'alternativa può essere l'uso di acpid al posto del file proc del kernel."
+"Cercare il processo <command>hald-addon-acpi</command>. Se questo non è in "
+"esecuzione, verificare che HAL venga eseguito con l'opzione <command"
+">--retain-privileges</command> nell'initscript <command>haldaemon</command>."
+" Un'alternativa può essere l'uso di acpid al posto del file proc del kernel."
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
@@ -1288,7 +1299,7 @@ msgid ""
 "Free Software Foundation; either version 2 of the License, or (at your "
 "option) any later version."
 msgstr ""
-"Gestore di alimentazione di MATE è software libero; è possibile "
+"Gestore dell'alimentazione di MATE è software libero; è possibile "
 "ridistribuirlo o modificarlo secondo i termini della licenza GNU General "
 "Public License, come pubblicata dalla Free Software Foundation; versione 2 "
 "della licenza, o (a scelta) una versione più recente."
@@ -1301,7 +1312,7 @@ msgid ""
 "or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
 "more details."
 msgstr ""
-"Gestore di alimentazione di MATE è distribuito nella speranza che possa "
+"Gestore dell'alimentazione di MATE è distribuito nella speranza che possa "
 "risultare utile, ma SENZA ALCUNA GARANZIA, nemmeno la garanzia implicita di "
 "COMMERCIABILITÀ o APPLICABILITÀ PER UNO SCOPO PARTICOLARE. Per maggiori "
 "dettagli consultare la GNU General Public License."
@@ -1314,6 +1325,6 @@ msgid ""
 " Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 "Una copia della GNU General Public License dovrebbe essere stata fornita con"
-" Gestore di alimentazione di MATE. In caso contrario scrivi a Free Software "
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, "
-"USA."
+" Gestore dell'alimentazione di MATE. In caso contrario scrivi a Free "
+"Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA "
+"02110-1301, USA."

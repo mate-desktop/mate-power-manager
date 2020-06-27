@@ -6,6 +6,7 @@
 # Translators:
 # tomoe_musashi <hkg.musashi@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Chan Shur Yan Daniel <shuryanc@hotmail.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2019-11-12 15:22+0100\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Last-Translator: Chan Shur Yan Daniel <shuryanc@hotmail.com>, 2020\n"
 "Language-Team: Chinese (Hong Kong) (https://www.transifex.com/mate/teams/13566/zh_HK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -167,7 +168,7 @@ msgstr "不使用時應否休眠、暫停或不做任何事"
 #: data/org.mate.power-manager.gschema.xml.in:42
 msgid ""
 "The type of sleeping that should be performed when the computer is inactive."
-msgstr ""
+msgstr "電腦在不使用時應執行的睡眠方式。"
 
 #: data/org.mate.power-manager.gschema.xml.in:31
 msgid "Battery critical low action"
@@ -175,7 +176,7 @@ msgstr "電量極低時的動作"
 
 #: data/org.mate.power-manager.gschema.xml.in:32
 msgid "The action to take when the battery is critically low."
-msgstr ""
+msgstr "電量極低時所採用的動作。"
 
 #: data/org.mate.power-manager.gschema.xml.in:36
 msgid ""
@@ -196,7 +197,7 @@ msgstr "不斷電系統電量極低時的動作"
 
 #: data/org.mate.power-manager.gschema.xml.in:47
 msgid "The action to take when the UPS is critically low."
-msgstr ""
+msgstr "UPS 在極低電量時所採用的動作。"
 
 #: data/org.mate.power-manager.gschema.xml.in:51
 msgid "UPS low power action"
@@ -204,7 +205,7 @@ msgstr "UPS 低電量動作"
 
 #: data/org.mate.power-manager.gschema.xml.in:52
 msgid "The action to take when the UPS is low."
-msgstr ""
+msgstr "UPS 在低電量時所採用的動作。"
 
 #: data/org.mate.power-manager.gschema.xml.in:56
 msgid "Allow backlight brightness adjustment"
@@ -1188,7 +1189,7 @@ msgstr "電池容量極低 (%1.1f%%)，這表示該電池可能太過老舊或�
 #: src/gpm-manager.c:1159
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] ""
+msgstr[0] "電池已充電"
 
 #: src/gpm-manager.c:1205
 msgid "Battery Discharging"
@@ -1979,17 +1980,17 @@ msgstr[0] ""
 #: src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] ""
+msgstr[0] "屏幕"
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] ""
+msgstr[0] "滑鼠"
 
 #: src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] ""
+msgstr[0] "鍵盤"
 
 #: src/gpm-upower.c:511
 msgid "PDA"
@@ -1999,22 +2000,22 @@ msgstr[0] ""
 #: src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] ""
+msgstr[0] "手提電話"
 
 #: src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] ""
+msgstr[0] "媒體撥放器"
 
 #: src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] ""
+msgstr[0] "平板電腦"
 
 #: src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] ""
+msgstr[0] "電腦"
 
 #: src/gpm-upower.c:594
 msgid "Lithium Ion"
@@ -2058,4 +2059,4 @@ msgstr "正等待放電"
 
 #: src/gpm-upower.c:662
 msgid "Unknown state"
-msgstr ""
+msgstr "不明的狀態"
