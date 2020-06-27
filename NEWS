@@ -1,3 +1,32 @@
+### mate-power-manager 1.25.0
+
+  * Translations update
+  * Add git.mk to generate .gitignore
+  * gpm-kbd-backlight: do not change keyboard back-light, when disabled
+  * build: silent build warnings for distcheck
+  * build: do not override the default value for MATE_COMPILE_WARNINGS
+  * gpm-phone: silent "not connected" message unless debug
+  * Remove unused entry from autostart
+  * gpm-brightness: silent "using cache for value" message unless debug
+  * Remove warning: ‘GTimeVal’ is deprecated
+  * gpm-backlight: silent "no dimming hardware" message unless debug
+  * gpm-control: warning when a property cannot be set using dbus
+  * glib-genmarshal: replace deprecated tokens NONE and BOOL
+  * Remove warning function declaration isn’t a prototype
+  * Port from EggDebug to the built-in GLib logging framework
+  * gpm-manager: Remove dereference of a null pointer warning
+  * Remove warning use of memory after it is freed
+  * Rewrite gpm-prefs.ui from scratch
+  * Remove warnings: unused variable
+  * Read authors (updated) from mate-power-manager.about
+  * Use gtk_show_about_dialog to show about dialog
+  * Remove the CPU wakeups feature
+  * Update copyright year on about dialog
+  * generate missing gpm-* PNGs from new SVGs
+  * add missing gpm-phone SVGs
+  * add missing gpm-keboard SVGs
+  * add missing gpm-mouse SVGs
+
 ### mate-power-manager 1.24.0
 
   * Translations update
