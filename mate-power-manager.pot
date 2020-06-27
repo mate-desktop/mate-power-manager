@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-power-manager 1.23.1\n"
+"Project-Id-Version: mate-power-manager 1.24.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2019-11-12 15:22+0100\n"
+"POT-Creation-Date: 2020-06-27 11:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,67 +17,76 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: applets/brightness/brightness-applet.c:107
+#: applets/brightness/brightness-applet.c:106
 msgid "Power Manager Brightness Applet"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:108
+#: applets/brightness/brightness-applet.c:107
 msgid "Adjusts laptop panel brightness."
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:364
-#: applets/inhibit/inhibit-applet.c:225
+#: applets/brightness/brightness-applet.c:363
+#: applets/inhibit/inhibit-applet.c:224
 msgid "Cannot connect to mate-power-manager"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:366
+#: applets/brightness/brightness-applet.c:365
 msgid "Cannot get laptop panel brightness"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:368
+#: applets/brightness/brightness-applet.c:367
 #, c-format
 msgid "LCD brightness : %d%%"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:800
-#: applets/inhibit/inhibit-applet.c:297
-msgid "Licensed under the GNU General Public License Version 2"
-msgstr ""
-
-#: applets/brightness/brightness-applet.c:801
-#: applets/inhibit/inhibit-applet.c:298
+#: applets/brightness/brightness-applet.c:789
+#: applets/inhibit/inhibit-applet.c:286
 msgid ""
-"Power Manager is free software; you can redistribute it and/or\n"
-"modify it under the terms of the GNU General Public License\n"
-"as published by the Free Software Foundation; either version 2\n"
-"of the License, or (at your option) any later version."
+"Power Manager is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:805
-#: applets/inhibit/inhibit-applet.c:302
+#: applets/brightness/brightness-applet.c:794
+#: applets/inhibit/inhibit-applet.c:291
 msgid ""
-"Power Manager is distributed in the hope that it will be useful,\n"
-"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-"GNU General Public License for more details."
+"Power Manager is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:809
-#: applets/inhibit/inhibit-applet.c:306
+#: applets/brightness/brightness-applet.c:799
+#: applets/inhibit/inhibit-applet.c:296
 msgid ""
-"You should have received a copy of the GNU General Public License\n"
-"along with this program; if not, write to the Free Software\n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
-"02110-1301, USA."
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:1063
-#: applets/inhibit/inhibit-applet.c:519
+#: applets/brightness/brightness-applet.c:812
+msgid "About Power Manager Brightness Applet"
+msgstr ""
+
+#: applets/brightness/brightness-applet.c:814
+msgid ""
+"Copyright © 2006 Benjamin Canou\n"
+"Copyright © 2011-2020 MATE developers"
+msgstr ""
+
+#: applets/brightness/brightness-applet.c:821
+#: applets/inhibit/inhibit-applet.c:318 src/gpm-tray-icon.c:211
+msgid "translator-credits"
+msgstr ""
+
+#: applets/brightness/brightness-applet.c:1047
+#: applets/inhibit/inhibit-applet.c:503
 msgid "_About"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:1066
-#: applets/inhibit/inhibit-applet.c:522
+#: applets/brightness/brightness-applet.c:1050
+#: applets/inhibit/inhibit-applet.c:506 data/gpm-prefs.ui:41
 msgid "_Help"
 msgstr ""
 
@@ -89,29 +98,34 @@ msgstr ""
 msgid "Brightness Applet"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-brightness-applet"
-msgstr ""
-
-#: applets/inhibit/inhibit-applet.c:87
+#: applets/inhibit/inhibit-applet.c:86
 msgid "Power Manager Inhibit Applet"
 msgstr ""
 
-#: applets/inhibit/inhibit-applet.c:88
+#: applets/inhibit/inhibit-applet.c:87
 msgid "Allows user to inhibit automatic power saving."
 msgstr ""
 
-#: applets/inhibit/inhibit-applet.c:228
+#: applets/inhibit/inhibit-applet.c:227
 msgid "Automatic sleep inhibited"
 msgstr ""
 
-#: applets/inhibit/inhibit-applet.c:230
+#: applets/inhibit/inhibit-applet.c:229
 msgid "Automatic sleep enabled"
 msgstr ""
 
-#: applets/inhibit/inhibit-applet.c:258
+#: applets/inhibit/inhibit-applet.c:257
 msgid "Manual inhibit"
+msgstr ""
+
+#: applets/inhibit/inhibit-applet.c:309
+msgid "About Power Manager Inhibit Applet"
+msgstr ""
+
+#: applets/inhibit/inhibit-applet.c:311
+msgid ""
+"Copyright © 2006-2007 Richard Hughes\n"
+"Copyright © 2011-2020 MATE developers"
 msgstr ""
 
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
@@ -122,23 +136,12 @@ msgstr ""
 msgid "Inhibit Applet"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-inhibit-applet"
-msgstr ""
-
-#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:184
+#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:202
 msgid "Power Manager"
 msgstr ""
 
-#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:186
+#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:204
 msgid "Power management daemon"
-msgstr ""
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/mate-power-manager.desktop.in.in:6
-#: data/mate-power-preferences.desktop.in.in:6
-msgid "mate-power-manager"
 msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:26
@@ -748,8 +751,8 @@ msgstr ""
 msgid "MATE;power;management;preferences;settings;"
 msgstr ""
 
-#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:7
-#: src/gpm-statistics.c:1090 src/gpm-statistics.c:1577
+#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
+#: src/gpm-statistics.c:761 src/gpm-statistics.c:1225
 msgid "Power Statistics"
 msgstr ""
 
@@ -757,166 +760,141 @@ msgstr ""
 msgid "Observe power management"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/mate-power-statistics.desktop.in.in:6
-msgid "mate-power-statistics"
-msgstr ""
-
-#: data/gpm-statistics.ui:113 src/gpm-statistics.c:208
+#: data/gpm-statistics.ui:119
 msgid "Details"
 msgstr ""
 
-#: data/gpm-statistics.ui:139 data/gpm-statistics.ui:342
+#: data/gpm-statistics.ui:145 data/gpm-statistics.ui:347
 msgid "Graph type:"
 msgstr ""
 
-#: data/gpm-statistics.ui:174
+#: data/gpm-statistics.ui:180
 msgid "Data length:"
 msgstr ""
 
-#: data/gpm-statistics.ui:234 data/gpm-statistics.ui:395
+#: data/gpm-statistics.ui:239 data/gpm-statistics.ui:399
 msgid "There is no data to display."
 msgstr ""
 
-#: data/gpm-statistics.ui:276 data/gpm-statistics.ui:438
+#: data/gpm-statistics.ui:281 data/gpm-statistics.ui:442
 msgid "Use smoothed line"
 msgstr ""
 
-#: data/gpm-statistics.ui:291 data/gpm-statistics.ui:453
+#: data/gpm-statistics.ui:296 data/gpm-statistics.ui:457
 msgid "Show data points"
 msgstr ""
 
-#: data/gpm-statistics.ui:320
+#: data/gpm-statistics.ui:325
 msgid "History"
 msgstr ""
 
-#: data/gpm-statistics.ui:482
+#: data/gpm-statistics.ui:486
 msgid "Statistics"
 msgstr ""
 
-#: data/gpm-statistics.ui:504
-msgid "Processor wakeups per second:"
-msgstr ""
-
-#: data/gpm-statistics.ui:516
-msgid "0"
-msgstr ""
-
-#: data/gpm-statistics.ui:563 src/gpm-statistics.c:194
-msgid "Wakeups"
-msgstr ""
-
-#: data/gpm-prefs.ui:55
+#: data/gpm-prefs.ui:23
 msgid "Power Management Preferences"
 msgstr ""
 
-#: data/gpm-prefs.ui:84 data/gpm-prefs.ui:327 data/gpm-prefs.ui:585
-#: data/gpm-prefs.ui:813
-msgid "<b>Actions</b>"
-msgstr ""
-
-#: data/gpm-prefs.ui:111 data/gpm-prefs.ui:354 data/gpm-prefs.ui:612
-msgid "Put computer to _sleep when inactive for:"
-msgstr ""
-
-#: data/gpm-prefs.ui:144 data/gpm-prefs.ui:387
-msgid "When laptop lid is cl_osed:"
-msgstr ""
-
-#: data/gpm-prefs.ui:189 data/gpm-prefs.ui:463 data/gpm-prefs.ui:721
-msgid "<b>Display</b>"
-msgstr ""
-
-#: data/gpm-prefs.ui:216 data/gpm-prefs.ui:490 data/gpm-prefs.ui:748
-msgid "Put _display to sleep when inactive for:"
-msgstr ""
-
-#: data/gpm-prefs.ui:247
-msgid "Set display _brightness to:"
-msgstr ""
-
-#: data/gpm-prefs.ui:275 data/gpm-prefs.ui:529
-msgid "Di_m display when idle"
-msgstr ""
-
-#: data/gpm-prefs.ui:306
-msgid "On AC Power"
-msgstr ""
-
-#: data/gpm-prefs.ui:418
-msgid "When battery po_wer is critically low:"
-msgstr ""
-
-#: data/gpm-prefs.ui:514
-msgid "_Reduce backlight brightness"
-msgstr ""
-
-#: data/gpm-prefs.ui:563
-msgid "On Battery Power"
-msgstr ""
-
-#: data/gpm-prefs.ui:645
-msgid "When UPS power is l_ow:"
-msgstr ""
-
-#: data/gpm-prefs.ui:676
-msgid "When UPS power is _critically low:"
-msgstr ""
-
-#: data/gpm-prefs.ui:791
-msgid "On UPS Power"
-msgstr ""
-
-#: data/gpm-prefs.ui:840
-msgid "When the power _button is pressed:"
-msgstr ""
-
-#: data/gpm-prefs.ui:873
-msgid "When the _suspend button is pressed:"
-msgstr ""
-
-#: data/gpm-prefs.ui:918
-msgid "<b>Notification Area</b>"
-msgstr ""
-
-#: data/gpm-prefs.ui:938
-msgid "_Never display an icon"
-msgstr ""
-
-#: data/gpm-prefs.ui:953
-msgid "_Only display an icon when battery power is low"
-msgstr ""
-
-#: data/gpm-prefs.ui:969
-msgid "Only display an icon when charging or _discharging"
-msgstr ""
-
-#: data/gpm-prefs.ui:985
-msgid "Only display an icon when a battery is p_resent"
-msgstr ""
-
-#: data/gpm-prefs.ui:1001
-msgid "_Always display an icon"
-msgstr ""
-
-#: data/gpm-prefs.ui:1036
-msgid "General"
-msgstr ""
-
-#: data/gpm-prefs.ui:1060
-msgid "Provides help about this program"
-msgstr ""
-
-#: data/gpm-prefs.ui:1072
+#: data/gpm-prefs.ui:58
 msgid "Make Default"
 msgstr ""
 
-#: data/gpm-prefs.ui:1076
-msgid "Sets this policy to be used by all users"
+#: data/gpm-prefs.ui:71
+msgid "_Close"
 msgstr ""
 
-#: data/gpm-prefs.ui:1092
-msgid "Closes the program"
+#: data/gpm-prefs.ui:138 data/gpm-prefs.ui:406 data/gpm-prefs.ui:690
+msgid "Put computer to _sleep when inactive for:"
+msgstr ""
+
+#: data/gpm-prefs.ui:176 data/gpm-prefs.ui:444
+msgid "When laptop lid is cl_osed:"
+msgstr ""
+
+#: data/gpm-prefs.ui:213 data/gpm-prefs.ui:519 data/gpm-prefs.ui:769
+#: data/gpm-prefs.ui:975
+msgid "Actions"
+msgstr ""
+
+#: data/gpm-prefs.ui:252 data/gpm-prefs.ui:560 data/gpm-prefs.ui:805
+msgid "Put _display to sleep when inactive for:"
+msgstr ""
+
+#: data/gpm-prefs.ui:289
+msgid "Set display _brightness to:"
+msgstr ""
+
+#: data/gpm-prefs.ui:322 data/gpm-prefs.ui:607
+msgid "Di_m display when idle"
+msgstr ""
+
+#: data/gpm-prefs.ui:344 data/gpm-prefs.ui:629 data/gpm-prefs.ui:834
+msgid "Display"
+msgstr ""
+
+#: data/gpm-prefs.ui:363
+msgid "On AC Power"
+msgstr ""
+
+#: data/gpm-prefs.ui:482
+msgid "When battery po_wer is critically low:"
+msgstr ""
+
+#: data/gpm-prefs.ui:591
+msgid "_Reduce backlight brightness"
+msgstr ""
+
+#: data/gpm-prefs.ui:651
+msgid "On Battery Power"
+msgstr ""
+
+#: data/gpm-prefs.ui:704
+msgid "When UPS power is l_ow:"
+msgstr ""
+
+#: data/gpm-prefs.ui:718
+msgid "When UPS power is _critically low:"
+msgstr ""
+
+#: data/gpm-prefs.ui:856
+msgid "On UPS Power"
+msgstr ""
+
+#: data/gpm-prefs.ui:900
+msgid "When the power _button is pressed:"
+msgstr ""
+
+#: data/gpm-prefs.ui:938
+msgid "When the _suspend button is pressed:"
+msgstr ""
+
+#: data/gpm-prefs.ui:1009
+msgid "_Never display an icon"
+msgstr ""
+
+#: data/gpm-prefs.ui:1027
+msgid "_Only display an icon when battery power is low"
+msgstr ""
+
+#: data/gpm-prefs.ui:1045
+msgid "Only display an icon when charging or _discharging"
+msgstr ""
+
+#: data/gpm-prefs.ui:1063
+msgid "Only display an icon when a battery is p_resent"
+msgstr ""
+
+#: data/gpm-prefs.ui:1081
+msgid "_Always display an icon"
+msgstr ""
+
+#: data/gpm-prefs.ui:1105
+msgid "Notification Area"
+msgstr ""
+
+#: data/gpm-prefs.ui:1127
+msgid "General"
 msgstr ""
 
 #: src/gpm-backlight-helper.c:166
@@ -963,1093 +941,979 @@ msgstr ""
 msgid "Could not set the value of the backlight"
 msgstr ""
 
-#: src/gpm-common.c:53
+#: src/gpm-common.c:52
 msgid "Unknown time"
 msgstr ""
 
-#: src/gpm-common.c:58
+#: src/gpm-common.c:57
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-common.c:69
+#: src/gpm-common.c:68
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-common.c:75
+#: src/gpm-common.c:74
 #, c-format
 msgid "%i %s %i %s"
 msgstr ""
 
-#: src/gpm-common.c:76
+#: src/gpm-common.c:75
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-common.c:77
+#: src/gpm-common.c:76
 msgid "minute"
 msgid_plural "minutes"
 msgstr[0] ""
 msgstr[1] ""
 
 #. Translators: This is %i days
-#: src/gpm-graph-widget.c:433
+#: src/gpm-graph-widget.c:432
 #, c-format
 msgid "%id"
 msgstr ""
 
 #. Translators: This is %i days %02i hours
-#: src/gpm-graph-widget.c:436
+#: src/gpm-graph-widget.c:435
 #, c-format
 msgid "%id%02ih"
 msgstr ""
 
 #. Translators: This is %i hours
-#: src/gpm-graph-widget.c:441
+#: src/gpm-graph-widget.c:440
 #, c-format
 msgid "%ih"
 msgstr ""
 
 #. Translators: This is %i hours %02i minutes
-#: src/gpm-graph-widget.c:444
+#: src/gpm-graph-widget.c:443
 #, c-format
 msgid "%ih%02im"
 msgstr ""
 
 #. Translators: This is %2i minutes
-#: src/gpm-graph-widget.c:449
+#: src/gpm-graph-widget.c:448
 #, c-format
 msgid "%2im"
 msgstr ""
 
 #. Translators: This is %2i minutes %02i seconds
-#: src/gpm-graph-widget.c:452
+#: src/gpm-graph-widget.c:451
 #, c-format
 msgid "%2im%02i"
 msgstr ""
 
 #. Translators: This is %2i seconds
-#: src/gpm-graph-widget.c:456
+#: src/gpm-graph-widget.c:455
 #, c-format
 msgid "%2is"
 msgstr ""
 
 #. Translators: This is %i Percentage
-#: src/gpm-graph-widget.c:460
+#: src/gpm-graph-widget.c:459
 #, c-format
 msgid "%i%%"
 msgstr ""
 
 #. Translators: This is %.1f Watts
-#: src/gpm-graph-widget.c:463
+#: src/gpm-graph-widget.c:462
 #, c-format
 msgid "%.1fW"
 msgstr ""
 
 #. Translators: This is %.1f Volts
-#: src/gpm-graph-widget.c:468
+#: src/gpm-graph-widget.c:467
 #, c-format
 msgid "%.1fV"
 msgstr ""
 
-#: src/gpm-main.c:172 src/gpm-prefs.c:77 src/gpm-statistics.c:1560
-msgid "Show extra debugging information"
-msgstr ""
-
-#: src/gpm-main.c:174
+#: src/gpm-main.c:169
 msgid "Show version of installed program and exit"
 msgstr ""
 
-#: src/gpm-main.c:176
+#: src/gpm-main.c:171
 msgid "Exit after a small delay (for debugging)"
 msgstr ""
 
-#: src/gpm-main.c:178
+#: src/gpm-main.c:173
 msgid "Exit after the manager has loaded (for debugging)"
 msgstr ""
 
-#: src/gpm-main.c:189 src/gpm-main.c:193
+#: src/gpm-main.c:184 src/gpm-main.c:188
 msgid "MATE Power Manager"
 msgstr ""
 
-#: src/gpm-manager.c:222 src/gpm-manager.c:294
+#: src/gpm-manager.c:221 src/gpm-manager.c:293
 msgid "Battery is very low"
 msgstr ""
 
-#: src/gpm-manager.c:274
+#: src/gpm-manager.c:273
 msgid "Power plugged in"
 msgstr ""
 
-#: src/gpm-manager.c:278
+#: src/gpm-manager.c:277
 msgid "Power unplugged"
 msgstr ""
 
-#: src/gpm-manager.c:282
+#: src/gpm-manager.c:281
 msgid "Lid has opened"
 msgstr ""
 
-#: src/gpm-manager.c:286
+#: src/gpm-manager.c:285
 msgid "Lid has closed"
 msgstr ""
 
-#: src/gpm-manager.c:290
+#: src/gpm-manager.c:289
 msgid "Battery is low"
 msgstr ""
 
-#: src/gpm-manager.c:298
+#: src/gpm-manager.c:297
 msgid "Battery is full"
 msgstr ""
 
-#: src/gpm-manager.c:302
+#: src/gpm-manager.c:301
 msgid "Suspend started"
 msgstr ""
 
-#: src/gpm-manager.c:306
+#: src/gpm-manager.c:305
 msgid "Resumed"
 msgstr ""
 
-#: src/gpm-manager.c:310
+#: src/gpm-manager.c:309
 msgid "Suspend failed"
 msgstr ""
 
-#: src/gpm-manager.c:578
+#: src/gpm-manager.c:577
 msgid "Computer failed to suspend."
 msgstr ""
 
-#: src/gpm-manager.c:580
+#: src/gpm-manager.c:579
 msgid "Failed to suspend"
 msgstr ""
 
-#: src/gpm-manager.c:584
+#: src/gpm-manager.c:583
 msgid "Computer failed to hibernate."
 msgstr ""
 
-#: src/gpm-manager.c:586
+#: src/gpm-manager.c:585
 msgid "Failed to hibernate"
 msgstr ""
 
-#: src/gpm-manager.c:591
+#: src/gpm-manager.c:590
 msgid "Failure was reported as:"
 msgstr ""
 
-#: src/gpm-manager.c:604
+#: src/gpm-manager.c:603
 msgid "Visit help page"
 msgstr ""
 
-#: src/gpm-manager.c:850
+#: src/gpm-manager.c:849
 msgid "Display DPMS activated"
 msgstr ""
 
-#: src/gpm-manager.c:869
+#: src/gpm-manager.c:868
 msgid "On battery power"
 msgstr ""
 
-#: src/gpm-manager.c:887
+#: src/gpm-manager.c:886
 msgid "Laptop lid is closed"
 msgstr ""
 
-#: src/gpm-manager.c:925
+#: src/gpm-manager.c:924
 msgid "Power Information"
 msgstr ""
 
-#: src/gpm-manager.c:1107
+#: src/gpm-manager.c:1105
 msgid "Battery may be broken"
 msgstr ""
 
-#: src/gpm-manager.c:1110
+#: src/gpm-manager.c:1108
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or "
 "broken."
 msgstr ""
 
-#: src/gpm-manager.c:1159
+#: src/gpm-manager.c:1157
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-manager.c:1205
+#: src/gpm-manager.c:1203
 msgid "Battery Discharging"
 msgstr ""
 
-#: src/gpm-manager.c:1209
+#: src/gpm-manager.c:1207
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1212 src/gpm-manager.c:1224
+#: src/gpm-manager.c:1210 src/gpm-manager.c:1222
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1217
+#: src/gpm-manager.c:1215
 msgid "UPS Discharging"
 msgstr ""
 
-#: src/gpm-manager.c:1221
+#: src/gpm-manager.c:1219
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1305
+#: src/gpm-manager.c:1303
 msgid "Battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1308
+#: src/gpm-manager.c:1306
 msgid "Laptop battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1314
+#: src/gpm-manager.c:1312
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1318
+#: src/gpm-manager.c:1316
 msgid "UPS low"
 msgstr ""
 
-#: src/gpm-manager.c:1322
+#: src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1331 src/gpm-manager.c:1470
+#: src/gpm-manager.c:1329 src/gpm-manager.c:1468
 msgid "Mouse battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1334
+#: src/gpm-manager.c:1332
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1338 src/gpm-manager.c:1478
+#: src/gpm-manager.c:1336 src/gpm-manager.c:1476
 msgid "Keyboard battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1341
+#: src/gpm-manager.c:1339
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1345 src/gpm-manager.c:1487
+#: src/gpm-manager.c:1343 src/gpm-manager.c:1485
 msgid "PDA battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1348
+#: src/gpm-manager.c:1346
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1352 src/gpm-manager.c:1497 src/gpm-manager.c:1507
+#: src/gpm-manager.c:1350 src/gpm-manager.c:1495 src/gpm-manager.c:1505
 msgid "Cell phone battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1355
+#: src/gpm-manager.c:1353
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1359
+#: src/gpm-manager.c:1357
 msgid "Media player battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1362
+#: src/gpm-manager.c:1360
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1366 src/gpm-manager.c:1516
+#: src/gpm-manager.c:1364 src/gpm-manager.c:1514
 msgid "Tablet battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1369
+#: src/gpm-manager.c:1367
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1373 src/gpm-manager.c:1525
+#: src/gpm-manager.c:1371 src/gpm-manager.c:1523
 msgid "Attached computer battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1376
+#: src/gpm-manager.c:1374
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1424
+#: src/gpm-manager.c:1422
 msgid "Battery critically low"
 msgstr ""
 
-#: src/gpm-manager.c:1427 src/gpm-manager.c:1585
+#: src/gpm-manager.c:1425 src/gpm-manager.c:1583
 msgid "Laptop battery critically low"
 msgstr ""
 
-#: src/gpm-manager.c:1436
+#: src/gpm-manager.c:1434
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr ""
 
-#: src/gpm-manager.c:1440
+#: src/gpm-manager.c:1438
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr ""
 
-#: src/gpm-manager.c:1444
+#: src/gpm-manager.c:1442
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr ""
 
-#: src/gpm-manager.c:1448
+#: src/gpm-manager.c:1446
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr ""
 
-#: src/gpm-manager.c:1455 src/gpm-manager.c:1621
+#: src/gpm-manager.c:1453 src/gpm-manager.c:1619
 msgid "UPS critically low"
 msgstr ""
 
-#: src/gpm-manager.c:1459
+#: src/gpm-manager.c:1457
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to "
 "your computer to avoid losing data."
 msgstr ""
 
-#: src/gpm-manager.c:1473
+#: src/gpm-manager.c:1471
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1481
+#: src/gpm-manager.c:1479
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1490
+#: src/gpm-manager.c:1488
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if "
 "not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1500
+#: src/gpm-manager.c:1498
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1510
+#: src/gpm-manager.c:1508
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1519
+#: src/gpm-manager.c:1517
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning "
 "if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1528
+#: src/gpm-manager.c:1526
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1593
+#: src/gpm-manager.c:1591
 msgid ""
 "The battery is below the critical level and this computer will <b>power-off</"
 "b> when the battery becomes completely empty."
 msgstr ""
 
-#: src/gpm-manager.c:1599
+#: src/gpm-manager.c:1597
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
 msgstr ""
 
-#: src/gpm-manager.c:1606
+#: src/gpm-manager.c:1604
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr ""
 
-#: src/gpm-manager.c:1611
+#: src/gpm-manager.c:1609
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr ""
 
-#: src/gpm-manager.c:1629
+#: src/gpm-manager.c:1627
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
 msgstr ""
 
-#: src/gpm-manager.c:1635
+#: src/gpm-manager.c:1633
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr ""
 
-#: src/gpm-manager.c:1640
+#: src/gpm-manager.c:1638
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr ""
 
-#: src/gpm-prefs.c:81
+#: src/gpm-prefs.c:76
 msgid "MATE Power Preferences"
 msgstr ""
 
-#: src/gpm-prefs-core.c:238
+#: src/gpm-prefs-core.c:241
 msgid "Shutdown"
 msgstr ""
 
-#: src/gpm-prefs-core.c:245
+#: src/gpm-prefs-core.c:248
 msgid "Suspend"
 msgstr ""
 
-#: src/gpm-prefs-core.c:248
+#: src/gpm-prefs-core.c:251
 msgid "Hibernate"
 msgstr ""
 
-#: src/gpm-prefs-core.c:251
+#: src/gpm-prefs-core.c:254
 msgid "Blank screen"
 msgstr ""
 
-#: src/gpm-prefs-core.c:254
+#: src/gpm-prefs-core.c:257
 msgid "Ask me"
 msgstr ""
 
-#: src/gpm-prefs-core.c:257
+#: src/gpm-prefs-core.c:260
 msgid "Do nothing"
 msgstr ""
 
-#: src/gpm-prefs-core.c:317
+#: src/gpm-prefs-core.c:320
 msgid "Never"
 msgstr ""
 
-#: src/gpm-statistics.c:78 src/gpm-statistics.c:466
+#: src/gpm-statistics.c:66 src/gpm-statistics.c:409
 msgid "Rate"
 msgstr ""
 
-#: src/gpm-statistics.c:79
+#: src/gpm-statistics.c:67
 msgid "Charge"
 msgstr ""
 
-#: src/gpm-statistics.c:80 src/gpm-statistics.c:480
+#: src/gpm-statistics.c:68 src/gpm-statistics.c:423
 msgid "Time to full"
 msgstr ""
 
-#: src/gpm-statistics.c:81 src/gpm-statistics.c:485
+#: src/gpm-statistics.c:69 src/gpm-statistics.c:428
 msgid "Time to empty"
 msgstr ""
 
-#: src/gpm-statistics.c:88
+#: src/gpm-statistics.c:76
 msgid "10 minutes"
 msgstr ""
 
-#: src/gpm-statistics.c:89
+#: src/gpm-statistics.c:77
 msgid "2 hours"
 msgstr ""
 
-#: src/gpm-statistics.c:90
+#: src/gpm-statistics.c:78
 msgid "6 hours"
 msgstr ""
 
-#: src/gpm-statistics.c:91
+#: src/gpm-statistics.c:79
 msgid "1 day"
 msgstr ""
 
-#: src/gpm-statistics.c:92
+#: src/gpm-statistics.c:80
 msgid "1 week"
 msgstr ""
 
-#: src/gpm-statistics.c:101
+#: src/gpm-statistics.c:89
 msgid "Charge profile"
 msgstr ""
 
-#: src/gpm-statistics.c:102
+#: src/gpm-statistics.c:90
 msgid "Discharge profile"
 msgstr ""
 
-#: src/gpm-statistics.c:104
+#: src/gpm-statistics.c:92
 msgid "Charge accuracy"
 msgstr ""
 
-#: src/gpm-statistics.c:105
+#: src/gpm-statistics.c:93
 msgid "Discharge accuracy"
 msgstr ""
 
-#: src/gpm-statistics.c:132
+#: src/gpm-statistics.c:120
 msgid "Attribute"
 msgstr ""
 
-#: src/gpm-statistics.c:139
+#: src/gpm-statistics.c:127
 msgid "Value"
 msgstr ""
 
-#: src/gpm-statistics.c:156
+#: src/gpm-statistics.c:144
 msgid "Image"
 msgstr ""
 
-#: src/gpm-statistics.c:162
+#: src/gpm-statistics.c:150
 msgid "Description"
 msgstr ""
 
-#: src/gpm-statistics.c:181 src/gpm-statistics.c:405
-msgid "Type"
-msgstr ""
-
-#: src/gpm-statistics.c:187
-msgid "ID"
-msgstr ""
-
-#: src/gpm-statistics.c:201
-msgid "Command"
-msgstr ""
-
-#: src/gpm-statistics.c:286
+#: src/gpm-statistics.c:229
 msgid "Unknown"
 msgstr ""
 
-#: src/gpm-statistics.c:290
+#: src/gpm-statistics.c:233
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-statistics.c:295
+#: src/gpm-statistics.c:238
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-statistics.c:300
+#: src/gpm-statistics.c:243
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-statistics.c:304
+#: src/gpm-statistics.c:247
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-statistics.c:313
+#: src/gpm-statistics.c:256
 msgid "Yes"
 msgstr ""
 
-#: src/gpm-statistics.c:313
+#: src/gpm-statistics.c:256
 msgid "No"
 msgstr ""
 
-#: src/gpm-statistics.c:402
+#: src/gpm-statistics.c:345
 msgid "Device"
 msgstr ""
 
-#: src/gpm-statistics.c:407
+#: src/gpm-statistics.c:348
+msgid "Type"
+msgstr ""
+
+#: src/gpm-statistics.c:350
 msgid "Vendor"
 msgstr ""
 
-#: src/gpm-statistics.c:409
+#: src/gpm-statistics.c:352
 msgid "Model"
 msgstr ""
 
-#: src/gpm-statistics.c:411
+#: src/gpm-statistics.c:354
 msgid "Serial number"
 msgstr ""
 
-#: src/gpm-statistics.c:416
+#: src/gpm-statistics.c:359
 msgid "Supply"
 msgstr ""
 
-#: src/gpm-statistics.c:419
+#: src/gpm-statistics.c:362
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-statistics.c:423
+#: src/gpm-statistics.c:366
 msgid "Refreshed"
 msgstr ""
 
-#: src/gpm-statistics.c:433
+#: src/gpm-statistics.c:376
 msgid "Present"
 msgstr ""
 
-#: src/gpm-statistics.c:440
+#: src/gpm-statistics.c:383
 msgid "Rechargeable"
 msgstr ""
 
-#: src/gpm-statistics.c:446
+#: src/gpm-statistics.c:389
 msgid "State"
 msgstr ""
 
-#: src/gpm-statistics.c:450
+#: src/gpm-statistics.c:393
 msgid "Energy"
 msgstr ""
 
-#: src/gpm-statistics.c:453
+#: src/gpm-statistics.c:396
 msgid "Energy when empty"
 msgstr ""
 
-#: src/gpm-statistics.c:456
+#: src/gpm-statistics.c:399
 msgid "Energy when full"
 msgstr ""
 
-#: src/gpm-statistics.c:459
+#: src/gpm-statistics.c:402
 msgid "Energy (design)"
 msgstr ""
 
-#: src/gpm-statistics.c:473
+#: src/gpm-statistics.c:416
 msgid "Voltage"
 msgstr ""
 
-#: src/gpm-statistics.c:495
+#: src/gpm-statistics.c:438
 msgid "Percentage"
 msgstr ""
 
-#: src/gpm-statistics.c:502
+#: src/gpm-statistics.c:445
 msgid "Capacity"
 msgstr ""
 
-#: src/gpm-statistics.c:507
+#: src/gpm-statistics.c:450
 msgid "Technology"
 msgstr ""
 
-#: src/gpm-statistics.c:512
+#: src/gpm-statistics.c:455
 msgid "Online"
 msgstr ""
 
-#: src/gpm-statistics.c:824
-msgid "No data"
-msgstr ""
-
-#: src/gpm-statistics.c:831 src/gpm-statistics.c:836
-msgid "Kernel module"
-msgstr ""
-
-#: src/gpm-statistics.c:841
-msgid "Kernel core"
-msgstr ""
-
-#: src/gpm-statistics.c:846
-msgid "Interprocessor interrupt"
-msgstr ""
-
-#: src/gpm-statistics.c:851
-msgid "Interrupt"
-msgstr ""
-
-#: src/gpm-statistics.c:898
-msgid "PS/2 keyboard/mouse/touchpad"
-msgstr ""
-
-#: src/gpm-statistics.c:901
-msgid "ACPI"
-msgstr ""
-
-#: src/gpm-statistics.c:904
-msgid "Serial ATA"
-msgstr ""
-
-#: src/gpm-statistics.c:907
-msgid "ATA host controller"
-msgstr ""
-
-#: src/gpm-statistics.c:910
-msgid "Intel wireless adaptor"
-msgstr ""
-
-#: src/gpm-statistics.c:917 src/gpm-statistics.c:922 src/gpm-statistics.c:927
-#: src/gpm-statistics.c:932 src/gpm-statistics.c:937
-#, c-format
-msgid "Timer %s"
-msgstr ""
-
-#: src/gpm-statistics.c:941
-#, c-format
-msgid "Sleep %s"
-msgstr ""
-
-#: src/gpm-statistics.c:944
-#, c-format
-msgid "New task %s"
-msgstr ""
-
-#: src/gpm-statistics.c:948
-#, c-format
-msgid "Wait %s"
-msgstr ""
-
-#: src/gpm-statistics.c:952 src/gpm-statistics.c:956
-#, c-format
-msgid "Work queue %s"
-msgstr ""
-
-#: src/gpm-statistics.c:959
-#, c-format
-msgid "Network route flush %s"
-msgstr ""
-
-#: src/gpm-statistics.c:962
-#, c-format
-msgid "USB activity %s"
-msgstr ""
-
-#: src/gpm-statistics.c:965
-#, c-format
-msgid "Wakeup %s"
-msgstr ""
-
-#: src/gpm-statistics.c:968
-msgid "Local interrupts"
-msgstr ""
-
-#: src/gpm-statistics.c:971
-msgid "Rescheduling interrupts"
-msgstr ""
-
-#: src/gpm-statistics.c:1080
+#: src/gpm-statistics.c:753
 msgid "Device Information"
 msgstr ""
 
-#: src/gpm-statistics.c:1082
+#: src/gpm-statistics.c:755
 msgid "Device History"
 msgstr ""
 
-#: src/gpm-statistics.c:1084
+#: src/gpm-statistics.c:757
 msgid "Device Profile"
 msgstr ""
 
-#: src/gpm-statistics.c:1086
-msgid "Processor Wakeups"
-msgstr ""
-
-#: src/gpm-statistics.c:1325 src/gpm-statistics.c:1331
-#: src/gpm-statistics.c:1337 src/gpm-statistics.c:1343
+#: src/gpm-statistics.c:978 src/gpm-statistics.c:984 src/gpm-statistics.c:990
+#: src/gpm-statistics.c:996
 msgid "Time elapsed"
 msgstr ""
 
-#: src/gpm-statistics.c:1327
+#: src/gpm-statistics.c:980
 msgid "Power"
 msgstr ""
 
-#: src/gpm-statistics.c:1333 src/gpm-statistics.c:1377
-#: src/gpm-statistics.c:1383 src/gpm-statistics.c:1389
-#: src/gpm-statistics.c:1395
+#: src/gpm-statistics.c:986 src/gpm-statistics.c:1030 src/gpm-statistics.c:1036
+#: src/gpm-statistics.c:1042 src/gpm-statistics.c:1048
 msgid "Cell charge"
 msgstr ""
 
-#: src/gpm-statistics.c:1339 src/gpm-statistics.c:1345
+#: src/gpm-statistics.c:992 src/gpm-statistics.c:998
 msgid "Predicted time"
 msgstr ""
 
-#: src/gpm-statistics.c:1379 src/gpm-statistics.c:1391
+#: src/gpm-statistics.c:1032 src/gpm-statistics.c:1044
 msgid "Correction factor"
 msgstr ""
 
-#: src/gpm-statistics.c:1385 src/gpm-statistics.c:1397
+#: src/gpm-statistics.c:1038 src/gpm-statistics.c:1050
 msgid "Prediction accuracy"
 msgstr ""
 
-#: src/gpm-statistics.c:1563
+#: src/gpm-statistics.c:1211
 msgid "Select this device at startup"
 msgstr ""
 
-#: src/gpm-statistics.c:1802
-msgid "Processor"
+#: src/gpm-tray-icon.c:205
+msgid "Copyright © 2011-2020 MATE developers"
 msgstr ""
 
-#: src/gpm-tray-icon.c:187
-msgid "Copyright © 2011-2018 MATE developers"
-msgstr ""
-
-#: src/gpm-tray-icon.c:193
-msgid "translator-credits"
-msgstr ""
-
-#: src/gpm-tray-icon.c:295
+#: src/gpm-tray-icon.c:315
 #, c-format
 msgid "%s remaining"
 msgstr ""
 
-#: src/gpm-tray-icon.c:349
+#: src/gpm-tray-icon.c:369
 msgid "_Preferences"
 msgstr ""
 
-#: src/gpm-upower.c:211
+#: src/gpm-upower.c:210
 #, c-format
 msgid "%s not present"
 msgstr ""
 
-#: src/gpm-upower.c:224 src/gpm-upower.c:288
+#: src/gpm-upower.c:223 src/gpm-upower.c:287
 #, c-format
 msgid "%s charging (%.1f%%)"
 msgstr ""
 
-#: src/gpm-upower.c:239
+#: src/gpm-upower.c:238
 #, c-format
 msgid ""
 "Battery is fully charged.\n"
 "Provides %s laptop runtime"
 msgstr ""
 
-#: src/gpm-upower.c:244
+#: src/gpm-upower.c:243
 #, c-format
 msgid "%s is fully charged"
 msgstr ""
 
-#: src/gpm-upower.c:252
+#: src/gpm-upower.c:251
 #, c-format
 msgid "%s %s remaining (%.1f%%)"
 msgstr ""
 
-#: src/gpm-upower.c:257
+#: src/gpm-upower.c:256
 #, c-format
 msgid "%s discharging (%.1f%%)"
 msgstr ""
 
-#: src/gpm-upower.c:271
+#: src/gpm-upower.c:270
 #, c-format
 msgid ""
 "%s %s until charged (%.1f%%)\n"
 "Provides %s battery runtime"
 msgstr ""
 
-#: src/gpm-upower.c:282
+#: src/gpm-upower.c:281
 #, c-format
 msgid "%s %s until charged (%.1f%%)"
 msgstr ""
 
-#: src/gpm-upower.c:295
+#: src/gpm-upower.c:294
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
 msgstr ""
 
-#: src/gpm-upower.c:301
+#: src/gpm-upower.c:300
 #, c-format
 msgid "%s waiting to charge (%.1f%%)"
 msgstr ""
 
-#: src/gpm-upower.c:306
+#: src/gpm-upower.c:305
 #, c-format
 msgid "%s empty"
 msgstr ""
 
-#: src/gpm-upower.c:366
+#: src/gpm-upower.c:365
 msgid "Product:"
 msgstr ""
 
-#: src/gpm-upower.c:370 src/gpm-upower.c:373 src/gpm-upower.c:376
-#: src/gpm-upower.c:379
+#: src/gpm-upower.c:369 src/gpm-upower.c:372 src/gpm-upower.c:375
+#: src/gpm-upower.c:378
 msgid "Status:"
 msgstr ""
 
-#: src/gpm-upower.c:370
+#: src/gpm-upower.c:369
 msgid "Missing"
 msgstr ""
 
-#: src/gpm-upower.c:373 src/gpm-upower.c:650
+#: src/gpm-upower.c:372 src/gpm-upower.c:649
 msgid "Charged"
 msgstr ""
 
-#: src/gpm-upower.c:376 src/gpm-upower.c:638
+#: src/gpm-upower.c:375 src/gpm-upower.c:637
 msgid "Charging"
 msgstr ""
 
-#: src/gpm-upower.c:379 src/gpm-upower.c:642
+#: src/gpm-upower.c:378 src/gpm-upower.c:641
 msgid "Discharging"
 msgstr ""
 
-#: src/gpm-upower.c:384
+#: src/gpm-upower.c:383
 msgid "Percentage charge:"
 msgstr ""
 
-#: src/gpm-upower.c:388
+#: src/gpm-upower.c:387
 msgid "Vendor:"
 msgstr ""
 
-#: src/gpm-upower.c:393
+#: src/gpm-upower.c:392
 msgid "Technology:"
 msgstr ""
 
-#: src/gpm-upower.c:397
+#: src/gpm-upower.c:396
 msgid "Serial number:"
 msgstr ""
 
-#: src/gpm-upower.c:401
+#: src/gpm-upower.c:400
 msgid "Model:"
 msgstr ""
 
-#: src/gpm-upower.c:406
+#: src/gpm-upower.c:405
 msgid "Charge time:"
 msgstr ""
 
-#: src/gpm-upower.c:412
+#: src/gpm-upower.c:411
 msgid "Discharge time:"
 msgstr ""
 
-#: src/gpm-upower.c:419
+#: src/gpm-upower.c:418
 msgid "Excellent"
 msgstr ""
 
-#: src/gpm-upower.c:421
+#: src/gpm-upower.c:420
 msgid "Good"
 msgstr ""
 
-#: src/gpm-upower.c:423
+#: src/gpm-upower.c:422
 msgid "Fair"
 msgstr ""
 
-#: src/gpm-upower.c:425
+#: src/gpm-upower.c:424
 msgid "Poor"
 msgstr ""
 
-#: src/gpm-upower.c:429
+#: src/gpm-upower.c:428
 msgid "Capacity:"
 msgstr ""
 
-#: src/gpm-upower.c:435 src/gpm-upower.c:460
+#: src/gpm-upower.c:434 src/gpm-upower.c:459
 msgid "Current charge:"
 msgstr ""
 
-#: src/gpm-upower.c:441
+#: src/gpm-upower.c:440
 msgid "Last full charge:"
 msgstr ""
 
-#: src/gpm-upower.c:447 src/gpm-upower.c:465
+#: src/gpm-upower.c:446 src/gpm-upower.c:464
 msgid "Design charge:"
 msgstr ""
 
-#: src/gpm-upower.c:452
+#: src/gpm-upower.c:451
 msgid "Charge rate:"
 msgstr ""
 
-#: src/gpm-upower.c:487
+#: src/gpm-upower.c:486
 msgid "AC adapter"
 msgid_plural "AC adapters"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-upower.c:491
+#: src/gpm-upower.c:490
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-upower.c:495
+#: src/gpm-upower.c:494
 msgid "UPS"
 msgid_plural "UPSs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-upower.c:499
+#: src/gpm-upower.c:498
 msgid "Monitor"
 msgid_plural "Monitors"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-upower.c:503
+#: src/gpm-upower.c:502
 msgid "Mouse"
 msgid_plural "Mice"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-upower.c:507
+#: src/gpm-upower.c:506
 msgid "Keyboard"
 msgid_plural "Keyboards"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-upower.c:511
+#: src/gpm-upower.c:510
 msgid "PDA"
 msgid_plural "PDAs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-upower.c:515
+#: src/gpm-upower.c:514
 msgid "Cell phone"
 msgid_plural "Cell phones"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-upower.c:519
+#: src/gpm-upower.c:518
 msgid "Media player"
 msgid_plural "Media players"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-upower.c:523
+#: src/gpm-upower.c:522
 msgid "Tablet"
 msgid_plural "Tablets"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-upower.c:527
+#: src/gpm-upower.c:526
 msgid "Computer"
 msgid_plural "Computers"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-upower.c:594
+#: src/gpm-upower.c:593
 msgid "Lithium Ion"
 msgstr ""
 
-#: src/gpm-upower.c:598
+#: src/gpm-upower.c:597
 msgid "Lithium Polymer"
 msgstr ""
 
-#: src/gpm-upower.c:602
+#: src/gpm-upower.c:601
 msgid "Lithium Iron Phosphate"
 msgstr ""
 
-#: src/gpm-upower.c:606
+#: src/gpm-upower.c:605
 msgid "Lead acid"
 msgstr ""
 
-#: src/gpm-upower.c:610
+#: src/gpm-upower.c:609
 msgid "Nickel Cadmium"
 msgstr ""
 
-#: src/gpm-upower.c:614
+#: src/gpm-upower.c:613
 msgid "Nickel metal hydride"
 msgstr ""
 
-#: src/gpm-upower.c:618
+#: src/gpm-upower.c:617
 msgid "Unknown technology"
 msgstr ""
 
-#: src/gpm-upower.c:646
+#: src/gpm-upower.c:645
 msgid "Empty"
 msgstr ""
 
-#: src/gpm-upower.c:654
+#: src/gpm-upower.c:653
 msgid "Waiting to charge"
 msgstr ""
 
-#: src/gpm-upower.c:658
+#: src/gpm-upower.c:657
 msgid "Waiting to discharge"
 msgstr ""
 
-#: src/gpm-upower.c:662
+#: src/gpm-upower.c:661
 msgid "Unknown state"
 msgstr ""
