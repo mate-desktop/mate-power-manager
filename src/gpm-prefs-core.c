@@ -492,7 +492,6 @@ static void
 prefs_setup_ups (GpmPrefs *prefs)
 {
 	GtkWidget *notebook;
-	GtkWidget *window;
 	gint page;
 
 	const GpmActionPolicy ups_low_actions[] =
@@ -524,12 +523,12 @@ prefs_setup_ups (GpmPrefs *prefs)
 					GPM_SETTINGS_SLEEP_DISPLAY_UPS,
 					display_times);
 
-	window = gpm_window (prefs);
 	notebook = GET_WIDGET ("notebook_preferences");
 	gtk_widget_add_events (notebook, GDK_SCROLL_MASK);
-	g_signal_connect (GTK_NOTEBOOK (notebook), "scroll-event",
-			  G_CALLBACK (gpm_dialog_page_scroll_event_cb),
-			  window);
+	g_signal_connect (GTK_NOTEBOOK (notebook),
+	                  "scroll-event",
+			  G_CALLBACK (gpm_notebook_scroll_event_cb),
+			  NULL);
 
 	if (prefs->priv->has_ups == FALSE) {
 		page = gtk_notebook_page_num (GTK_NOTEBOOK (notebook), GET_WIDGET ("box_ups"));
