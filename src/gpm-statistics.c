@@ -1304,9 +1304,10 @@ main (int argc, char *argv[])
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "notebook1"));
 
 	gtk_widget_add_events (widget, GDK_SCROLL_MASK);
-	g_signal_connect (widget, "scroll-event",
-	                  G_CALLBACK (gpm_dialog_page_scroll_event_cb),
-	                  window);
+	g_signal_connect (widget,
+	                  "scroll-event",
+	                  G_CALLBACK (gpm_notebook_scroll_event_cb),
+	                  NULL);
 
 	page = g_settings_get_int (settings, GPM_SETTINGS_INFO_PAGE_NUMBER);
 	gtk_notebook_set_current_page (GTK_NOTEBOOK (widget), page);
