@@ -139,10 +139,10 @@ dnl ---------------------------------------------------------------------------
 dnl - Build libsecret support
 dnl ---------------------------------------------------------------------------
 AC_ARG_WITH(libsecret,
-        [AS_HELP_STRING([--with-libsecret],
-                        [Enable the use of libsecret])],
+        [AS_HELP_STRING([--without-libsecret],
+                        [Disable the use of libsecret])],
         [],
-        [with_libsecret=no])
+        [with_libsecret=yes])
 
 AM_CONDITIONAL([WITH_LIBSECRET],[test "$with_libsecret" = "yes"])
 
@@ -155,10 +155,10 @@ dnl ---------------------------------------------------------------------------
 dnl - Build gnome-keyring support
 dnl ---------------------------------------------------------------------------
 AC_ARG_WITH(keyring,
-        [AS_HELP_STRING([--without-keyring],
-                        [Disable the use of gnome-keyring])],
+        [AS_HELP_STRING([--with-keyring],
+                        [Enable the use of gnome-keyring])],
         [],
-        [with_keyring=yes])
+        [with_keyring=no])
 
 AM_CONDITIONAL([WITH_KEYRING],[test "$with_keyring" = "yes"])
 
