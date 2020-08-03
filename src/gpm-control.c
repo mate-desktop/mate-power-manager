@@ -39,6 +39,9 @@
 #include <gio/gio.h>
 #include <glib/gi18n.h>
 
+#ifdef WITH_LIBSECRET
+#include <libsecret/secret.h>
+#endif /* WITH_LIBSECRET */
 #ifdef WITH_KEYRING
 #include <gnome-keyring.h>
 #endif /* WITH_KEYRING */
@@ -210,6 +213,13 @@ gpm_control_suspend (GpmControl *control, GError **error)
 	EggConsoleKit *console;
 	GpmScreensaver *screensaver;
 	guint32 throttle_cookie = 0;
+#ifdef WITH_LIBSECRET
+	gboolean lock_libsecret;
+	GCancellable *libsecret_cancellable = NULL;
+	SecretService *secretservice_proxy = NULL;
+	gint num_secrets_locked;
+	GList *libsecret_collections = NULL;
+#endif /* WITH_LIBSECRET */
 #ifdef WITH_KEYRING
 	gboolean lock_gnome_keyring;
 	GnomeKeyringResult keyres;
@@ -233,6 +243,36 @@ gpm_control_suspend (GpmControl *control, GError **error)
 		}
 	}
 
+#ifdef WITH_LIBSECRET
+	/* we should perhaps lock keyrings when sleeping #375681 */
+	lock_libsecret = g_settings_get_boolean (control->priv->settings,
+						 GPM_SETTINGS_LOCK_KEYRING_SUSPEND);
+	if (lock_libsecret) {
+		libsecret_cancellable = g_cancellable_new ();
+		secretservice_proxy = secret_service_get_sync (SECRET_SERVICE_LOAD_COLLECTIONS,
+							       libsecret_cancellable,
+							       error);
+		if (secretservice_proxy == NULL) {
+			g_warning ("failed to connect to secret service");
+		} else {
+			libsecret_collections = secret_service_get_collections (secretservice_proxy);
+			if ( libsecret_collections == NULL) {
+				g_warning ("failed to get secret collections");
+			} else {
+				num_secrets_locked = secret_service_lock_sync (secretservice_proxy,
+									       libsecret_collections,
+									       libsecret_cancellable,
+									       NULL,
+									       error);
+				if (num_secrets_locked <= 0)
+					g_warning ("could not lock keyring");
+				g_list_free (libsecret_collections);
+			}
+			g_object_unref (secretservice_proxy);
+		}
+		g_object_unref (libsecret_cancellable);
+	}
+#endif /* WITH_LIBSECRET */
 #ifdef WITH_KEYRING
 	/* we should perhaps lock keyrings when sleeping #375681 */
 	lock_gnome_keyring = g_settings_get_boolean (control->priv->settings, GPM_SETTINGS_LOCK_KEYRING_SUSPEND);
