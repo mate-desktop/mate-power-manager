@@ -68,6 +68,7 @@ GLIB_REQUIRED=2.50.0
 GIO_REQUIRED=2.50.0
 GDK_REQUIRED=3.22.0
 GTK_REQUIRED=3.22.0
+LIBSECRET_REQUIRED=0.11
 GNOME_KEYRING_REQUIRED=3.0.0
 DBUS_REQUIRED=1.0
 DBUS_GLIB_REQUIRED=0.70
@@ -135,6 +136,22 @@ fi
 AM_CONDITIONAL([HAVE_TESTS], [test $have_tests = yes])
 
 dnl ---------------------------------------------------------------------------
+dnl - Build libsecret support
+dnl ---------------------------------------------------------------------------
+AC_ARG_WITH(libsecret,
+        [AS_HELP_STRING([--with-libsecret],
+                        [Enable the use of libsecret])],
+        [],
+        [with_libsecret=no])
+
+AM_CONDITIONAL([WITH_LIBSECRET],[test "$with_libsecret" = "yes"])
+
+if test "$with_libsecret" = "yes"; then
+        PKG_CHECK_MODULES(LIBSECRET, libsecret-1 >= $LIBSECRET_REQUIRED)
+        AC_DEFINE([WITH_LIBSECRET],[1],[Define if LIBSECRET support is enabled])
+fi
+
+dnl ---------------------------------------------------------------------------
 dnl - Build gnome-keyring support
 dnl ---------------------------------------------------------------------------
 AC_ARG_WITH(keyring,
@@ -148,6 +165,10 @@ AM_CONDITIONAL([WITH_KEYRING],[test "$with_keyring" = "yes"])
 if test "$with_keyring" = "yes"; then
         PKG_CHECK_MODULES(KEYRING, gnome-keyring-1 >= $GNOME_KEYRING_REQUIRED)
         AC_DEFINE([WITH_KEYRING],[1],[Define if KEYRING support is enabled])
+fi
+
+if test "$with_libsecret" = "yes" -a "$with_keyring" = "yes"; then
+	AC_MSG_ERROR([Please select only 1, keyring or libsecret])
 fi
 
 dnl ---------------------------------------------------------------------------
@@ -222,6 +243,7 @@ echo "
         compiler:                  ${CC}
         cflags:                    ${CFLAGS}
         cwarnings:                 ${WARN_CFLAGS}
+        libsecret support:         ${with_libsecret}
         gnome-keyring support:     ${with_keyring}
         Building extra applets:    ${enable_applets}
         Self test support:         ${have_tests}
