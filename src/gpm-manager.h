@@ -35,7 +35,7 @@ G_BEGIN_DECLS
 #define GPM_IS_MANAGER_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), GPM_TYPE_MANAGER))
 #define GPM_MANAGER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), GPM_TYPE_MANAGER, GpmManagerClass))
 #define GPM_MANAGER_ERROR	 (gpm_manager_error_quark ())
-#define GPM_MANAGER_TYPE_ERROR	 (gpm_manager_error_get_type ()) 
+#define GPM_MANAGER_TYPE_ERROR	 (gpm_manager_error_get_type ())
 
 typedef struct GpmManagerPrivate GpmManagerPrivate;
 

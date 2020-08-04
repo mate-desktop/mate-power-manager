@@ -372,7 +372,7 @@ gpm_tray_icon_create_menu (GpmTrayIcon *icon)
 	g_signal_connect (G_OBJECT (item), "activate",
 			  G_CALLBACK (gpm_tray_icon_show_preferences_cb), icon);
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
-	
+
 	/*Set up custom panel menu theme support-gtk3 only */
 	GtkWidget *toplevel = gtk_widget_get_toplevel (GTK_WIDGET (menu));
 	/* Fix any failures of compiz/other wm's to communicate with gtk for transparency in menu theme */
