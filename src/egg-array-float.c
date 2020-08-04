@@ -431,7 +431,7 @@ egg_array_float_test (gpointer data)
 	egg_array_float_set (array, 8, 31.0);
 	egg_array_float_set (array, 9, 30.0);
 	kernel = egg_array_float_remove_outliers (array, 3, 10.0);
-	if (kernel != NULL && kernel->len == 10) 
+	if (kernel != NULL && kernel->len == 10)
 		egg_test_success (test, "got correct length outlier array");
 	else
 		egg_test_failed (test, "got gaussian array length (%i)", array->len);
@@ -460,7 +460,7 @@ egg_array_float_test (gpointer data)
 	egg_array_float_set (array, 8, 20.0);
 	egg_array_float_set (array, 9, 50.0);
 	kernel = egg_array_float_remove_outliers (array, 3, 20.0);
-	if (kernel != NULL && kernel->len == 10) 
+	if (kernel != NULL && kernel->len == 10)
 		egg_test_success (test, "got correct length outlier array");
 	else
 		egg_test_failed (test, "got gaussian array length (%i)", array->len);
@@ -513,7 +513,7 @@ egg_array_float_test (gpointer data)
 	sigma = 1.1;
 	egg_test_title (test, "get inprecise gaussian array (%i), sigma %f", size, sigma);
 	kernel = egg_array_float_compute_gaussian (size, sigma);
-	if (kernel == NULL) 
+	if (kernel == NULL)
 		egg_test_success (test, NULL);
 	else {
 		egg_test_failed (test, "got gaussian array length (%i)", array->len);
@@ -525,7 +525,7 @@ egg_array_float_test (gpointer data)
 	sigma = 1.1;
 	egg_test_title (test, "get gaussian-9 array (%i), sigma %f", size, sigma);
 	kernel = egg_array_float_compute_gaussian (size, sigma);
-	if (kernel != NULL && kernel->len == size) 
+	if (kernel != NULL && kernel->len == size)
 		egg_test_success (test, "got correct length gaussian array");
 	else
 		egg_test_failed (test, "got gaussian array length (%i)", array->len);

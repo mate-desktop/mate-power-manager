@@ -2,7 +2,7 @@
  *
  * On-screen-display (OSD) window for mate-settings-daemon's plugins
  *
- * Copyright (C) 2006-2007 William Jon McCann <mccann@jhu.edu> 
+ * Copyright (C) 2006-2007 William Jon McCann <mccann@jhu.edu>
  * Copyright (C) 2009 Novell, Inc
  *
  * Authors:

@@ -291,7 +291,7 @@ gpm_applet_draw_cb (GpmBrightnessApplet *applet)
 		cairo_rectangle (cr, 0, 0, w, h);
 		cairo_fill (cr);
 	}
-	
+
 	/* draw color background */
 	if (bg_type == PANEL_COLOR_BACKGROUND && !applet->popped) {
 		gdk_cairo_set_source_rgba (cr, &color);
@@ -460,7 +460,7 @@ static gboolean
 gpm_applet_key_press_cb (GtkWidget *popup, GdkEventKey *event, GpmBrightnessApplet *applet)
 {
 	int i;
-	
+
 	switch (event->keyval) {
 	case GDK_KEY_KP_Enter:
 	case GDK_KEY_ISO_Enter:
@@ -528,7 +528,7 @@ gpm_applet_scroll_cb (GpmBrightnessApplet *applet, GdkEventScroll *event)
 			for (i = 0;i < 5;i++) {
 				gpm_applet_plus_cb (NULL, applet);
 			}
-			
+
 		} else {
 			for (i = 0;i < 5;i++) {
 				gpm_applet_minus_cb (NULL, applet);
