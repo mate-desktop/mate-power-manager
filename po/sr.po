@@ -4,8 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2019-11-12 15:22+0100\n"
 "PO-Revision-Date: 2020-02-15 16:27+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020\n"
 "Language-Team: Serbian (https://www.transifex.com/mate/teams/13566/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -110,7 +110,7 @@ msgstr "Програмче за осветљеност"
 #. file name)!
 #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:12
 msgid "mate-brightness-applet"
-msgstr ""
+msgstr "mate-brightness-applet"
 
 #: applets/inhibit/inhibit-applet.c:87
 msgid "Power Manager Inhibit Applet"
@@ -144,7 +144,7 @@ msgstr "Програмче за онемогућавање уштеде"
 #. file name)!
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:12
 msgid "mate-inhibit-applet"
-msgstr ""
+msgstr "mate-inhibit-applet"
 
 #: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:184
 msgid "Power Manager"
@@ -159,7 +159,7 @@ msgstr "Услужник управљања напајањем"
 #: data/mate-power-manager.desktop.in.in:6
 #: data/mate-power-preferences.desktop.in.in:6
 msgid "mate-power-manager"
-msgstr ""
+msgstr "mate-power-manager"
 
 #: data/org.mate.power-manager.gschema.xml.in:26
 #: data/org.mate.power-manager.gschema.xml.in:41
@@ -605,7 +605,7 @@ msgstr "Да ли треба да обавести корисника када �
 
 #: data/org.mate.power-manager.gschema.xml.in:226
 msgid "Notify on low capacity of mouse battery"
-msgstr ""
+msgstr "Обавештава о ниском капацитету батерије миша"
 
 #: data/org.mate.power-manager.gschema.xml.in:231
 msgid "Whether we should show the history data points"
@@ -876,7 +876,7 @@ msgstr "Подесите управљање напајањем"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/mate-power-preferences.desktop.in.in:13
 msgid "MATE;power;management;preferences;settings;"
-msgstr ""
+msgstr "Мејт;напајање;управљање;поставке;подешавање;"
 
 #: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:7
 #: src/gpm-statistics.c:1090 src/gpm-statistics.c:1577
@@ -891,7 +891,7 @@ msgstr "Посматрајте потрошњу електричне енерг�
 #. file name)!
 #: data/mate-power-statistics.desktop.in.in:6
 msgid "mate-power-statistics"
-msgstr ""
+msgstr "mate-power-statistics"
 
 #: data/gpm-statistics.ui:113 src/gpm-statistics.c:208
 msgid "Details"
@@ -1102,17 +1102,17 @@ msgstr "Непознато време"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%i минут"
+msgstr[1] "%i минута"
+msgstr[2] "%i минута"
 
 #: src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%i сат"
+msgstr[1] "%i сата"
+msgstr[2] "%i сати"
 
 #: src/gpm-common.c:75
 #, c-format
@@ -1122,16 +1122,16 @@ msgstr "%i %s, %i %s"
 #: src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "сат"
+msgstr[1] "сата"
+msgstr[2] "сати"
 
 #: src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "минут"
+msgstr[1] "минута"
+msgstr[2] "минута"
 
 #. Translators: This is %i days
 #: src/gpm-graph-widget.c:433
@@ -1309,9 +1309,9 @@ msgstr ""
 #: src/gpm-manager.c:1159
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Напуњеност батерије"
+msgstr[1] "Напуњеност батерија"
+msgstr[2] "Напуњеност батерија"
 
 #: src/gpm-manager.c:1205
 msgid "Battery Discharging"
@@ -1697,33 +1697,33 @@ msgstr "Непознато"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%.0f секунда"
+msgstr[1] "%.0f секунде"
+msgstr[2] "%.0f секунди"
 
 #: src/gpm-statistics.c:295
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%.1f минут"
+msgstr[1] "%.1f минута"
+msgstr[2] "%.1f минута"
 
 #: src/gpm-statistics.c:300
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%.1f сат"
+msgstr[1] "%.1f сата"
+msgstr[2] "%.1f сати"
 
 #: src/gpm-statistics.c:304
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%.1f дан"
+msgstr[1] "%.1f дана"
+msgstr[2] "%.1f дана"
 
 #: src/gpm-statistics.c:313
 msgid "Yes"
@@ -1757,9 +1757,9 @@ msgstr "Залихе"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%d секунда"
+msgstr[1] "%d секунде"
+msgstr[2] "%d секунди"
 
 #: src/gpm-statistics.c:423
 msgid "Refreshed"
@@ -2125,79 +2125,79 @@ msgstr "Стопа напуњености:"
 #: src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Напајање из електричне мреже"
+msgstr[1] "Напајања из електричне мреже"
+msgstr[2] "Напајања из електричне мреже"
 
 #: src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Батерија рачунара"
+msgstr[1] "Батерије рачунара"
+msgstr[2] "Батерије рачунара"
 
 #: src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Резервно напајање"
+msgstr[1] "Резервна напајања"
+msgstr[2] "Резервна напајања"
 
 #: src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Монитор"
+msgstr[1] "Монитори"
+msgstr[2] "Монитори"
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Миш"
+msgstr[1] "Мишеви"
+msgstr[2] "Мишеви"
 
 #: src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Тастатура"
+msgstr[1] "Тастатуре"
+msgstr[2] "Тастатуре"
 
 #: src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "ЛДП"
+msgstr[1] "ЛДП"
+msgstr[2] "ЛДП"
 
 #: src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Мобилни телефон"
+msgstr[1] "Мобилни телефони"
+msgstr[2] "Мобилни телефони"
 
 #: src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Музички уређај"
+msgstr[1] "Музички уређаји"
+msgstr[2] "Музички уређаји"
 
 #: src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Таблица"
+msgstr[1] "Таблице"
+msgstr[2] "Таблице"
 
 #: src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Рачунар"
+msgstr[1] "Рачунари"
+msgstr[2] "Рачунари"
 
 #: src/gpm-upower.c:594
 msgid "Lithium Ion"

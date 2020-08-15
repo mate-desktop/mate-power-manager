@@ -695,15 +695,15 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:266
 msgid "The index of the page number to show by default"
-msgstr "O índice do número de páxina para amosar de forma predeterminada."
+msgstr "O índice do número de páxina para amosar por omisión"
 
 #: data/org.mate.power-manager.gschema.xml.in:267
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
 msgstr ""
-"O índice do número de páxina para amosar de forma predeterminada cando se "
-"devolve o foco á páxina correcta."
+"O índice do número de páxina para amosar por omisión, cando se devolve o "
+"foco á páxina correcta."
 
 #: data/org.mate.power-manager.gschema.xml.in:271
 msgid "The ID of the last device selected"
@@ -1398,7 +1398,7 @@ msgstr "Batería do rato baixa"
 #: src/gpm-manager.c:1334
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
-msgstr "O rato sen fíos está quedando sen enerxía (%.0f%%)"
+msgstr "O rato sen fíos está quedando sen carga (%.0f%%)"
 
 #: src/gpm-manager.c:1338 src/gpm-manager.c:1478
 msgid "Keyboard battery low"
@@ -1407,7 +1407,7 @@ msgstr "Batería do teclado baixa"
 #: src/gpm-manager.c:1341
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
-msgstr "O teclado sen fíos está quedando sen enerxía (%.1f%%)"
+msgstr "O teclado sen fíos está quedando sen carga (%.1f%%)"
 
 #: src/gpm-manager.c:1345 src/gpm-manager.c:1487
 msgid "PDA battery low"
@@ -1416,7 +1416,7 @@ msgstr "Batería da PDA baixa"
 #: src/gpm-manager.c:1348
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
-msgstr "O PDA conectado está quedando sen enerxía (%.0f%%)"
+msgstr "O PDA conectado está quedando sen carga (%.0f%%)"
 
 #: src/gpm-manager.c:1352 src/gpm-manager.c:1497 src/gpm-manager.c:1507
 msgid "Cell phone battery low"
@@ -1425,7 +1425,7 @@ msgstr "A batería do teléfono baixa"
 #: src/gpm-manager.c:1355
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
-msgstr "O teléfono móbil conectado está quedando sen enerxía (%.0f%%)"
+msgstr "O teléfono móbil conectado está quedando sen carga (%.0f%%)"
 
 #: src/gpm-manager.c:1359
 msgid "Media player battery low"
@@ -1434,7 +1434,7 @@ msgstr "A batería do reprodutor multimedia está baixa"
 #: src/gpm-manager.c:1362
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
-msgstr "O reprodutor conectado está quedando sen enerxía (%.0f%%)"
+msgstr "O reprodutor conectado está quedando sen carga (%.0f%%)"
 
 #: src/gpm-manager.c:1366 src/gpm-manager.c:1516
 msgid "Tablet battery low"
@@ -1443,7 +1443,7 @@ msgstr "Batería do tablet está baixa"
 #: src/gpm-manager.c:1369
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
-msgstr "O tablet conectado está quedando sen enerxía (%.0f%%)"
+msgstr "O tablet conectado está quedando sen carga (%.0f%%)"
 
 #: src/gpm-manager.c:1373 src/gpm-manager.c:1525
 msgid "Attached computer battery low"
@@ -1452,7 +1452,7 @@ msgstr "A batería do computador está baixa"
 #: src/gpm-manager.c:1376
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
-msgstr "O computador conectado está quedando sen enerxía (%.0f%%)"
+msgstr "O computador conectado está quedando sen carga (%.0f%%)"
 
 #: src/gpm-manager.c:1424
 msgid "Battery critically low"
@@ -1498,8 +1498,8 @@ msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
-"O rato sen fíos está quedando sen enerxía (%.1f%%). Este dispositivo deixará"
-" de funcionar se non se carga."
+"O rato sen fíos está quedando sen carga (%.1f%%). Este dispositivo deixará "
+"de funcionar se non se carga."
 
 #: src/gpm-manager.c:1481
 #, c-format
@@ -1507,7 +1507,7 @@ msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
-"O teclado sen fíos está quedando sen enerxía (%.0f%%). Este dispositivo "
+"O teclado sen fíos está quedando sen carga (%.0f%%). Este dispositivo "
 "deixará de funcionar se non se carga."
 
 #: src/gpm-manager.c:1490
@@ -1516,7 +1516,7 @@ msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
 " not charged."
 msgstr ""
-"O PDA está quedando sen enerxía (%.0f%%). Este dispositivo deixará de "
+"O PDA está quedando sen carga (%.0f%%). Este dispositivo deixará de "
 "funcionar se non se carga."
 
 #: src/gpm-manager.c:1500
@@ -1525,8 +1525,8 @@ msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
-"O teléfono móbil está quedando sen enerxía (%.0f%%). Este dispositivo "
-"deixará de funcionar se non se carga."
+"O teléfono móbil está quedando sen carga (%.0f%%). Este dispositivo deixará "
+"de funcionar se non se carga."
 
 #: src/gpm-manager.c:1510
 #, c-format
@@ -1534,8 +1534,8 @@ msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
-"O reprodutor multimedia está quedando sen enerxía (%.0f%%). Este dispositivo"
-" deixará de funcionar se non se carga."
+"O reprodutor multimedia está quedando sen carga (%.0f%%). Este dispositivo "
+"deixará de funcionar se non se carga."
 
 #: src/gpm-manager.c:1519
 #, c-format
@@ -1543,7 +1543,7 @@ msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
 msgstr ""
-"O tablet está quedando sen enerxía (%.0f%%). Este dispositivo deixará de "
+"O tablet está quedando sen carga (%.0f%%). Este dispositivo deixará de "
 "funcionar se non se carga."
 
 #: src/gpm-manager.c:1528
@@ -1552,7 +1552,7 @@ msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
 msgstr ""
-"O computador conectado está quedando sen enerxía (%.0f%%). Este dispositivo "
+"O computador conectado está quedando sen carga (%.0f%%). Este dispositivo "
 "deixará de funcionar se non se carga."
 
 #: src/gpm-manager.c:1593
@@ -1817,7 +1817,7 @@ msgstr "Enerxía cando está chea"
 
 #: src/gpm-statistics.c:459
 msgid "Energy (design)"
-msgstr "Enerxía (destinada)"
+msgstr "Enerxía (deseñada)"
 
 #: src/gpm-statistics.c:473
 msgid "Voltage"
