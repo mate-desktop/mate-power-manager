@@ -146,11 +146,7 @@ build_scripts:
 
   - NOCONFIGURE=1 ./autogen.sh
 
-  - if [ ${DISTRO_NAME} == "debian" -o ${DISTRO_NAME} == "ubuntu" ];then
-  -     scan-build $CHECKERS ./configure --without-keyring --enable-compile-warnings=maximum
-  - else
-  -     scan-build $CHECKERS ./configure --enable-compile-warnings=maximum
-  - fi
+  - scan-build $CHECKERS ./configure --enable-compile-warnings=maximum
 
   - if [ $CPU_COUNT -gt 1 ]; then
   -     if [ ${DISTRO_NAME} == "debian" ];then
