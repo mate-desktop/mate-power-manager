@@ -1,22 +1,28 @@
-common_desktop_data = configuration_data()
-common_desktop_data.set('VERSION', meson.project_version())
+preferences_desktop_data = configuration_data()
+preferences_desktop_data.set('VERSION', meson.project_version())
 
 preferences_desktop = configure_file(
   input: 'mate-power-preferences.desktop.in.in',
   output: 'mate-power-preferences.desktop.in',
-  configuration: common_desktop_data
+  configuration: preferences_desktop_data
 )
+
+statistics_desktop_data = configuration_data()
+statistics_desktop_data.set('VERSION', meson.project_version())
 
 statistics_desktop = configure_file(
   input: 'mate-power-statistics.desktop.in.in',
   output: 'mate-power-statistics.desktop.in',
-  configuration: common_desktop_data
+  configuration: statistics_desktop_data
 )
+
+mpm_autostart_data = configuration_data()
+mpm_autostart_data.set('VERSION', meson.project_version())
 
 mpm_autostart = configure_file(
   input: 'mate-power-manager.desktop.in.in',
   output: 'mate-power-manager.desktop.in',
-  configuration: common_desktop_data
+  configuration: mpm_autostart_data
 )
 
 mpm_service_data = configuration_data()
@@ -75,7 +81,8 @@ install_man(
     'mate-power-backlight-helper.1',
     'mate-power-statistics.1',
     'mate-power-preferences.1'
-  ]
+  ],
+  install_dir: mandir_path
 )
 
 install_data(
