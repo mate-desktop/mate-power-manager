@@ -1,4 +1,0 @@
-option('enable-deprecated', type: 'boolean', value: false, description: 'Warn about deprecated usages')
-option('keyring', type: 'feature', value: 'auto', description: 'Enable the use of gnome-keyring')
-option('applets', type: 'feature', value: 'enabled', description: 'Build the extra power applets')
-option('with-dbus-services', type: 'string', description: 'where D-BUS services directory is')

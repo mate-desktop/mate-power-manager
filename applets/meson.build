@@ -1,2 +1,0 @@
-subdir('brightness')
-subdir('inhibit')
