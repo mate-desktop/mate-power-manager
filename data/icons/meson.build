@@ -1,6 +1,6 @@
-actioniconsdir_path = join_paths(datadir_path, 'icons', 'hicolor')
+actioniconsdir_path = join_paths(pkgdatadir_path, 'icons', 'hicolor')
 appiconsdir_path = join_paths(datadir_path, 'icons', 'hicolor')
-statusiconsdir_path = join_paths(datadir_path, 'icons', 'hicolor')
+statusiconsdir_path = join_paths(pkgdatadir_path, 'icons', 'hicolor')
 
 action_images = [
   'gpm-hibernate.png',
