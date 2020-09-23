@@ -61,6 +61,8 @@ typedef struct{
 	guint level;
 	/* a cache for panel size */
 	gint size;
+	/* the slider action delaying */
+	guint slider_delay_id;
 } GpmBrightnessApplet;
 
 typedef struct{
@@ -107,6 +109,11 @@ static void      gpm_applet_destroy_cb            (GtkWidget *widget);
 #define GPM_BRIGHTNESS_APPLET_DESC		_("Adjusts laptop panel brightness.")
 #define MATE_PANEL_APPLET_VERTICAL(p)					\
 	 (((p) == MATE_PANEL_APPLET_ORIENT_LEFT) || ((p) == MATE_PANEL_APPLET_ORIENT_RIGHT))
+
+/* The frequency (in milliseconds) at which update the brightness when the UI
+ * slider is moved.  A too short value might lead to freezing the UI, and a
+ * too long one will seem unresponsive. */
+#define GPM_BRIGHTNESS_APPLET_SLIDER_FREQUENCY	100
 
 /**
  * gpm_applet_get_brightness:
@@ -433,6 +440,24 @@ gpm_applet_minus_cb (GtkWidget *w, GpmBrightnessApplet *applet)
 }
 
 /**
+ * gpm_applet_slide_delayed_cb:
+ * @data: Brightness applet instance
+ *
+ * callback for the delayed slider changes, actually performing the DBus call
+ **/
+static gboolean
+gpm_applet_slide_delayed_cb (gpointer data)
+{
+	GpmBrightnessApplet *applet = data;
+
+	applet->call_worked = gpm_applet_set_brightness (applet);
+	gpm_applet_update_popup_level (applet);
+	applet->slider_delay_id = 0;
+
+	return FALSE;
+}
+
+/**
  * gpm_applet_slide_cb:
  * @widget: The sending widget (slider)
  * @applet: Brightness applet instance
@@ -443,8 +468,11 @@ static gboolean
 gpm_applet_slide_cb (GtkWidget *w, GpmBrightnessApplet *applet)
 {
 	applet->level = gtk_range_get_value (GTK_RANGE(applet->slider));
-	applet->call_worked = gpm_applet_set_brightness (applet);
-	gpm_applet_update_popup_level (applet);
+	/* we delay applying the new value to improve reactivity, because the
+	 * DBus call might be slow (and we don't want to spam the bus either) */
+	if (! applet->slider_delay_id)
+		applet->slider_delay_id = g_timeout_add (GPM_BRIGHTNESS_APPLET_SLIDER_FREQUENCY,
+							 gpm_applet_slide_delayed_cb, applet);
 	return TRUE;
 }
 
@@ -846,6 +874,11 @@ gpm_applet_destroy_cb (GtkWidget *widget)
 {
 	GpmBrightnessApplet *applet = GPM_BRIGHTNESS_APPLET(widget);
 
+	if (applet->slider_delay_id) {
+		g_source_remove (applet->slider_delay_id);
+		applet->slider_delay_id = 0;
+	}
+
 	g_bus_unwatch_name (applet->bus_watch_id);
 	if (applet->icon != NULL)
 		g_object_unref (applet->icon);
@@ -970,6 +1003,7 @@ gpm_brightness_applet_init (GpmBrightnessApplet *applet)
 	applet->icon = NULL;
 	applet->connection = NULL;
 	applet->proxy = NULL;
+	applet->slider_delay_id = 0;
 
 	/* Add application specific icons to search path */
 	gtk_icon_theme_append_search_path (gtk_icon_theme_get_default (),
