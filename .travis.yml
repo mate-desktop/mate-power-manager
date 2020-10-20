@@ -25,6 +25,7 @@ install:
 
 script:
   - ./docker-build --name ${DISTRO} --verbose --config .build.yml --build scripts
+  - ./docker-build --name ${DISTRO} --verbose --config .build.yml --build scripts --build meson
 
 notifications:
   irc:
