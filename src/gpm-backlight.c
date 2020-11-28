@@ -258,7 +258,7 @@ gpm_backlight_dialog_show (GpmBacklight *backlight)
  *
  * Finds the average between value1 and value2 set on a scale factor
  **/
-inline static gfloat
+static inline gfloat
 gpm_common_sum_scale (gfloat value1, gfloat value2, gfloat factor)
 {
 	gfloat diff;
