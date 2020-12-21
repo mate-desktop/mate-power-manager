@@ -1202,8 +1202,6 @@ main (int argc, char *argv[])
 	gint page;
 	gboolean checked;
 	gchar *last_device = NULL;
-	guint retval;
-	GError *error = NULL;
 
 	const GOptionEntry options[] = {
 		{ "device", '\0', 0, G_OPTION_ARG_STRING, &last_device,
@@ -1242,12 +1240,7 @@ main (int argc, char *argv[])
 	settings = g_settings_new (GPM_SETTINGS_SCHEMA);
 
 	/* get UI */
-	builder = gtk_builder_new ();
-	retval = gtk_builder_add_from_resource (builder, "/org/mate/powermanager/statistics/gpm-statistics.ui", &error);
-
-	if (error) {
-		g_error ("failed to load ui: %s", error->message);
-	}
+	builder = gtk_builder_new_from_resource ("/org/mate/powermanager/statistics/gpm-statistics.ui");
 
 	/* add history graph */
 	box = GTK_BOX (gtk_builder_get_object (builder, "hbox_history"));

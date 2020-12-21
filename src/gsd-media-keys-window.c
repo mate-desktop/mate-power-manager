@@ -648,12 +648,7 @@ msd_media_keys_window_class_init (MsdMediaKeysWindowClass *klass)
 static void
 msd_media_keys_window_init (MsdMediaKeysWindow *window)
 {
-        GdkScreen *screen;
-
         window->priv = msd_media_keys_window_get_instance_private (window);
-
-        screen = gtk_widget_get_screen (GTK_WIDGET (window));
-
         if (!msd_osd_window_is_composited (MSD_OSD_WINDOW (window))) {
                 GtkBuilder *builder;
                 const gchar *objects[] = {"acme_box", NULL};
