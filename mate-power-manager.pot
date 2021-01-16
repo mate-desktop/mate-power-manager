@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-power-manager 1.24.0\n"
+"Project-Id-Version: mate-power-manager 1.25.0\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2020-06-27 11:03+0200\n"
+"POT-Creation-Date: 2021-01-16 14:35+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,29 +17,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: applets/brightness/brightness-applet.c:106
+#: applets/brightness/brightness-applet.c:108
 msgid "Power Manager Brightness Applet"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:107
+#: applets/brightness/brightness-applet.c:109
 msgid "Adjusts laptop panel brightness."
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:363
+#: applets/brightness/brightness-applet.c:370
 #: applets/inhibit/inhibit-applet.c:224
 msgid "Cannot connect to mate-power-manager"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:365
+#: applets/brightness/brightness-applet.c:372
 msgid "Cannot get laptop panel brightness"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:367
+#: applets/brightness/brightness-applet.c:374
 #, c-format
 msgid "LCD brightness : %d%%"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:789
+#: applets/brightness/brightness-applet.c:817
 #: applets/inhibit/inhibit-applet.c:286
 msgid ""
 "Power Manager is free software; you can redistribute it and/or modify it "
@@ -48,7 +48,7 @@ msgid ""
 "any later version."
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:794
+#: applets/brightness/brightness-applet.c:822
 #: applets/inhibit/inhibit-applet.c:291
 msgid ""
 "Power Manager is distributed in the hope that it will be useful, but WITHOUT "
@@ -57,7 +57,7 @@ msgid ""
 "more details."
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:799
+#: applets/brightness/brightness-applet.c:827
 #: applets/inhibit/inhibit-applet.c:296
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
@@ -65,27 +65,27 @@ msgid ""
 "Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:812
+#: applets/brightness/brightness-applet.c:840
 msgid "About Power Manager Brightness Applet"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:814
+#: applets/brightness/brightness-applet.c:842
 msgid ""
 "Copyright © 2006 Benjamin Canou\n"
-"Copyright © 2011-2020 MATE developers"
+"Copyright © 2011-2021 MATE developers"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:821
+#: applets/brightness/brightness-applet.c:849
 #: applets/inhibit/inhibit-applet.c:318 src/gpm-tray-icon.c:211
 msgid "translator-credits"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:1047
+#: applets/brightness/brightness-applet.c:1081
 #: applets/inhibit/inhibit-applet.c:503
 msgid "_About"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:1050
+#: applets/brightness/brightness-applet.c:1084
 #: applets/inhibit/inhibit-applet.c:506 data/gpm-prefs.ui:41
 msgid "_Help"
 msgstr ""
@@ -125,7 +125,7 @@ msgstr ""
 #: applets/inhibit/inhibit-applet.c:311
 msgid ""
 "Copyright © 2006-2007 Richard Hughes\n"
-"Copyright © 2011-2020 MATE developers"
+"Copyright © 2011-2021 MATE developers"
 msgstr ""
 
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
@@ -752,7 +752,7 @@ msgid "MATE;power;management;preferences;settings;"
 msgstr ""
 
 #: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
-#: src/gpm-statistics.c:761 src/gpm-statistics.c:1225
+#: src/gpm-statistics.c:761 src/gpm-statistics.c:1223
 msgid "Power Statistics"
 msgstr ""
 
@@ -804,7 +804,7 @@ msgstr ""
 msgid "_Close"
 msgstr ""
 
-#: data/gpm-prefs.ui:138 data/gpm-prefs.ui:406 data/gpm-prefs.ui:690
+#: data/gpm-prefs.ui:138 data/gpm-prefs.ui:406 data/gpm-prefs.ui:746
 msgid "Put computer to _sleep when inactive for:"
 msgstr ""
 
@@ -812,12 +812,12 @@ msgstr ""
 msgid "When laptop lid is cl_osed:"
 msgstr ""
 
-#: data/gpm-prefs.ui:213 data/gpm-prefs.ui:519 data/gpm-prefs.ui:769
-#: data/gpm-prefs.ui:975
+#: data/gpm-prefs.ui:213 data/gpm-prefs.ui:519 data/gpm-prefs.ui:825
+#: data/gpm-prefs.ui:1031
 msgid "Actions"
 msgstr ""
 
-#: data/gpm-prefs.ui:252 data/gpm-prefs.ui:560 data/gpm-prefs.ui:805
+#: data/gpm-prefs.ui:252 data/gpm-prefs.ui:560 data/gpm-prefs.ui:861
 msgid "Put _display to sleep when inactive for:"
 msgstr ""
 
@@ -829,7 +829,7 @@ msgstr ""
 msgid "Di_m display when idle"
 msgstr ""
 
-#: data/gpm-prefs.ui:344 data/gpm-prefs.ui:629 data/gpm-prefs.ui:834
+#: data/gpm-prefs.ui:344 data/gpm-prefs.ui:629 data/gpm-prefs.ui:890
 msgid "Display"
 msgstr ""
 
@@ -845,55 +845,65 @@ msgstr ""
 msgid "_Reduce backlight brightness"
 msgstr ""
 
-#: data/gpm-prefs.ui:651
+#: data/gpm-prefs.ui:663
+msgid "_Reduce keyboard backlight"
+msgstr ""
+
+#: data/gpm-prefs.ui:685 src/gpm-upower.c:506
+msgid "Keyboard"
+msgid_plural "Keyboards"
+msgstr[0] ""
+msgstr[1] ""
+
+#: data/gpm-prefs.ui:707
 msgid "On Battery Power"
 msgstr ""
 
-#: data/gpm-prefs.ui:704
+#: data/gpm-prefs.ui:760
 msgid "When UPS power is l_ow:"
 msgstr ""
 
-#: data/gpm-prefs.ui:718
+#: data/gpm-prefs.ui:774
 msgid "When UPS power is _critically low:"
 msgstr ""
 
-#: data/gpm-prefs.ui:856
+#: data/gpm-prefs.ui:912
 msgid "On UPS Power"
 msgstr ""
 
-#: data/gpm-prefs.ui:900
+#: data/gpm-prefs.ui:956
 msgid "When the power _button is pressed:"
 msgstr ""
 
-#: data/gpm-prefs.ui:938
+#: data/gpm-prefs.ui:994
 msgid "When the _suspend button is pressed:"
 msgstr ""
 
-#: data/gpm-prefs.ui:1009
+#: data/gpm-prefs.ui:1065
 msgid "_Never display an icon"
 msgstr ""
 
-#: data/gpm-prefs.ui:1027
+#: data/gpm-prefs.ui:1083
 msgid "_Only display an icon when battery power is low"
 msgstr ""
 
-#: data/gpm-prefs.ui:1045
+#: data/gpm-prefs.ui:1101
 msgid "Only display an icon when charging or _discharging"
 msgstr ""
 
-#: data/gpm-prefs.ui:1063
+#: data/gpm-prefs.ui:1119
 msgid "Only display an icon when a battery is p_resent"
 msgstr ""
 
-#: data/gpm-prefs.ui:1081
+#: data/gpm-prefs.ui:1137
 msgid "_Always display an icon"
 msgstr ""
 
-#: data/gpm-prefs.ui:1105
+#: data/gpm-prefs.ui:1161
 msgid "Notification Area"
 msgstr ""
 
-#: data/gpm-prefs.ui:1127
+#: data/gpm-prefs.ui:1183
 msgid "General"
 msgstr ""
 
@@ -1643,12 +1653,12 @@ msgstr ""
 msgid "Prediction accuracy"
 msgstr ""
 
-#: src/gpm-statistics.c:1211
+#: src/gpm-statistics.c:1209
 msgid "Select this device at startup"
 msgstr ""
 
 #: src/gpm-tray-icon.c:205
-msgid "Copyright © 2011-2020 MATE developers"
+msgid "Copyright © 2011-2021 MATE developers"
 msgstr ""
 
 #: src/gpm-tray-icon.c:315
@@ -1835,12 +1845,6 @@ msgstr[1] ""
 #: src/gpm-upower.c:502
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] ""
-msgstr[1] ""
-
-#: src/gpm-upower.c:506
-msgid "Keyboard"
-msgid_plural "Keyboards"
 msgstr[0] ""
 msgstr[1] ""
 
