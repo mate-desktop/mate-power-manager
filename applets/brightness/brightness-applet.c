@@ -840,7 +840,7 @@ gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 	                       "title", _("About Power Manager Brightness Applet"),
 	                       "comments", GPM_BRIGHTNESS_APPLET_DESC,
 	                       "copyright", _("Copyright \xC2\xA9 2006 Benjamin Canou\n"
-	                                      "Copyright \xC2\xA9 2011-2020 MATE developers"),
+	                                      "Copyright \xC2\xA9 2011-2021 MATE developers"),
 	                       "icon-name", GPM_BRIGHTNESS_APPLET_ICON,
 	                       "logo-icon-name", GPM_BRIGHTNESS_APPLET_ICON,
 	                       "license", license_trans,

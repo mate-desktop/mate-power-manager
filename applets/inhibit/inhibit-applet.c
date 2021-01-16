@@ -309,7 +309,7 @@ gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 	                       "title", _("About Power Manager Inhibit Applet"),
 	                       "comments", GPM_INHIBIT_APPLET_DESC,
 	                       "copyright", _("Copyright \xC2\xA9 2006-2007 Richard Hughes\n"
-	                                      "Copyright \xC2\xA9 2011-2020 MATE developers"),
+	                                      "Copyright \xC2\xA9 2011-2021 MATE developers"),
 	                       "icon-name", GPM_INHIBIT_APPLET_ICON_INHIBIT,
 	                       "logo-icon-name", GPM_INHIBIT_APPLET_ICON_INHIBIT,
 	                       "license", license_trans,
