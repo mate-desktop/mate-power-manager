@@ -317,7 +317,7 @@ gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 	                       "documenters", documenters,
 	                       "translator-credits", _("translator-credits"),
 	                       "wrap-license", TRUE,
-	                       "website", "https://mate-desktop.org",
+	                       "website", PACKAGE_URL,
 	                       NULL);
 
 	g_free (license_trans);

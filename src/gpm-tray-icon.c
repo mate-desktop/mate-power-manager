@@ -21,7 +21,7 @@
  */
 
 #ifdef HAVE_CONFIG_H
-#  include <config.h>
+#include <config.h>
 #endif
 
 #include <stdlib.h>
@@ -211,7 +211,7 @@ gpm_tray_icon_show_about_cb (GtkMenuItem *item, gpointer data)
 				"translator-credits", _("translator-credits"),
 				"icon-name", "mate-power-manager",
 				"logo-icon-name", "mate-power-manager",
-				"website", "https://mate-desktop.org",
+				"website", PACKAGE_URL,
 				NULL);
 
 	g_strfreev (authors);
