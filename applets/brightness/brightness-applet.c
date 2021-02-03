@@ -1075,7 +1075,6 @@ gpm_applet_cb (MatePanelApplet *_applet, const gchar *iid, gpointer data)
 {
 	GpmBrightnessApplet *applet = GPM_BRIGHTNESS_APPLET(_applet);
 	GtkActionGroup *action_group;
-	gchar *ui_path;
 
 	static const GtkActionEntry menu_actions [] = {
 		{ "About", "help-about", N_("_About"),
@@ -1096,9 +1095,9 @@ gpm_applet_cb (MatePanelApplet *_applet, const gchar *iid, gpointer data)
 				      menu_actions,
 				      G_N_ELEMENTS (menu_actions),
 				      applet);
-	ui_path = g_build_filename (BRIGHTNESS_MENU_UI_DIR, "brightness-applet-menu.xml", NULL);
-	mate_panel_applet_setup_menu_from_file (MATE_PANEL_APPLET (applet), ui_path, action_group);
-	g_free (ui_path);
+	mate_panel_applet_setup_menu_from_file (MATE_PANEL_APPLET (applet),
+	                                        BRIGHTNESS_MENU_UI_DIR "/brightness-applet-menu.xml",
+	                                        action_group);
 	g_object_unref (action_group);
 
 	gpm_applet_draw_cb (applet);
