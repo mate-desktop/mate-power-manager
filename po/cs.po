@@ -10,16 +10,16 @@
 # 6e833d5535e2fe0dd9dfa7fe5bf473f2_d78f422 <64c38a0ff10419c64e8e03d54c72b3bd_352524>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # LiberteCzech <liberte.czech@gmail.com>, 2020
-# Lucas Lommer <drom@kdyne.net>, 2020
 # ToMáš Marný, 2020
+# Lucas Lommer <drom@kdyne.net>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-power-manager 1.23.1\n"
+"Project-Id-Version: mate-power-manager 1.24.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2019-11-12 15:22+0100\n"
+"POT-Creation-Date: 2020-08-15 10:48+0200\n"
 "PO-Revision-Date: 2020-02-15 16:27+0000\n"
-"Last-Translator: ToMáš Marný, 2020\n"
+"Last-Translator: Lucas Lommer <drom@kdyne.net>, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,56 +49,79 @@ msgstr "Nelze zjistit jas displeje notebooku"
 msgid "LCD brightness : %d%%"
 msgstr "Jas LCD: %d%%"
 
-#: applets/brightness/brightness-applet.c:800
-#: applets/inhibit/inhibit-applet.c:297
-msgid "Licensed under the GNU General Public License Version 2"
-msgstr "Licencováno pod licencí GNU General Public Licence Verze 2"
-
-#: applets/brightness/brightness-applet.c:801
-#: applets/inhibit/inhibit-applet.c:298
+#: applets/brightness/brightness-applet.c:790
+#: applets/inhibit/inhibit-applet.c:287
 msgid ""
-"Power Manager is free software; you can redistribute it and/or\n"
-"modify it under the terms of the GNU General Public License\n"
-"as published by the Free Software Foundation; either version 2\n"
-"of the License, or (at your option) any later version."
+"Power Manager is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
 msgstr ""
 "Správce napájení je svobodný software; můžete jej dále šířit a/nebo "
 "upravovat za podmínek licence GNU General Public License v podobě, v jaké ji"
-" vydala Free Software Foundation, a to buď ve verzi 2 této licence nebo (dle"
+" vydala Free Software Foundation; a to buď ve verzi 2 této licence nebo (dle"
 " vaší volby) v libovolné novější verzi."
 
-#: applets/brightness/brightness-applet.c:805
-#: applets/inhibit/inhibit-applet.c:302
+#: applets/brightness/brightness-applet.c:795
+#: applets/inhibit/inhibit-applet.c:292
 msgid ""
-"Power Manager is distributed in the hope that it will be useful,\n"
-"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-"GNU General Public License for more details."
+"Power Manager is distributed in the hope that it will be useful, but WITHOUT"
+" ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
 msgstr ""
 "Správce napájení je šířen ve víře, že bude užitečný, ale BEZ JAKÝCHKOLIV "
 "ZÁRUK, a to i bez předpokládané záruky na PRODEJNOST nebo VHODNOST PRO "
-"KONKRÉTNÍ ÚČEL. Více podrobností najdete přímo v licenci GNU General Public "
-"License."
+"KONKRÉTNÍ ÚČEL.  Více podrobností najdete přímo v licenci GNU General Public"
+" License ."
 
-#: applets/brightness/brightness-applet.c:809
-#: applets/inhibit/inhibit-applet.c:306
+#: applets/brightness/brightness-applet.c:800
+#: applets/inhibit/inhibit-applet.c:297
 msgid ""
-"You should have received a copy of the GNU General Public License\n"
-"along with this program; if not, write to the Free Software\n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
-"02110-1301, USA."
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
-"Spolu s tímto programem byste měli obdržet kopii licence GNU General Public License. Pokud se tak nestalo, napište o ni Free Software\n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,\n"
-"MA 02110-1301, USA."
+"Kopii GNU General Public License jste měl(a) obdržet spolu s tímto "
+"programem; pokud se tak nestalo, napište o ni Free Software Foundation, 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 
-#: applets/brightness/brightness-applet.c:1063
-#: applets/inhibit/inhibit-applet.c:519
+#: applets/brightness/brightness-applet.c:813
+msgid "About Power Manager Brightness Applet"
+msgstr "O appletu Správce napájení pro nastavení jasu"
+
+#: applets/brightness/brightness-applet.c:815
+msgid ""
+"Copyright © 2006 Benjamin Canou\n"
+"Copyright © 2011-2020 MATE developers"
+msgstr ""
+"Copyright © 2006 Benjamin Canou\n"
+"Copyright © 2011-2020 Vývojáři MATE "
+
+#: applets/brightness/brightness-applet.c:822
+#: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:213
+msgid "translator-credits"
+msgstr ""
+"Stanislav Brabec <utx@penguin.cz>\n"
+"Michal Bukovjan <bukm@centrum.cz>\n"
+"Miloslav Trmač <mitr@volny.cz>\n"
+"Petr Tomeš <ptomes@gmail.com>\n"
+"Jakub Friedl <jfriedl@suse.cz>\n"
+"Petr Tomeš <ptomes@gmail.com>\n"
+"Lukáš Novotný <lukasnov@cvs.gnome.org>\n"
+"Kamil Páral <ripper42@gmail.com>\n"
+"Petr Kovář <pknbe@volny.cz>\n"
+"Lucas Lommer <drom@kdyne.net>\n"
+"Tomas Bzatek <tbzatek@redhat.com>\n"
+"Roman Horník <roman.hornik@debian-linux.cz>"
+
+#: applets/brightness/brightness-applet.c:1050
+#: applets/inhibit/inhibit-applet.c:506
 msgid "_About"
 msgstr "O _aplikaci"
 
-#: applets/brightness/brightness-applet.c:1066
-#: applets/inhibit/inhibit-applet.c:522
+#: applets/brightness/brightness-applet.c:1053
+#: applets/inhibit/inhibit-applet.c:509
 msgid "_Help"
 msgstr "_Nápověda"
 
@@ -109,12 +132,6 @@ msgstr "Generátor appletu nastavení jasu"
 #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:9
 msgid "Brightness Applet"
 msgstr "Nastavení jasu"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-brightness-applet"
-msgstr "mate-brightness-applet"
 
 #: applets/inhibit/inhibit-applet.c:87
 msgid "Power Manager Inhibit Applet"
@@ -136,6 +153,18 @@ msgstr "Povoleno automatické uspávání"
 msgid "Manual inhibit"
 msgstr "Manuální zákaz"
 
+#: applets/inhibit/inhibit-applet.c:310
+msgid "About Power Manager Inhibit Applet"
+msgstr "O appletu Správce šetření energií"
+
+#: applets/inhibit/inhibit-applet.c:312
+msgid ""
+"Copyright © 2006-2007 Richard Hughes\n"
+"Copyright © 2011-2020 MATE developers"
+msgstr ""
+"Copyright © 2006-2007 Richard Hughes\n"
+"Copyright © 2011-2020 Vývojáři MATE"
+
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
 msgstr "Generátor appletu zákazu šetření energií"
@@ -144,26 +173,13 @@ msgstr "Generátor appletu zákazu šetření energií"
 msgid "Inhibit Applet"
 msgstr "Zákaz šetření energií"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-inhibit-applet"
-msgstr "mate-inhibit-applet"
-
-#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:184
+#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:204
 msgid "Power Manager"
 msgstr "Správce napájení"
 
-#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:186
+#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:206
 msgid "Power management daemon"
 msgstr "Démon správy napájení"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/mate-power-manager.desktop.in.in:6
-#: data/mate-power-preferences.desktop.in.in:6
-msgid "mate-power-manager"
-msgstr "mate-power-manager"
 
 #: data/org.mate.power-manager.gschema.xml.in:26
 #: data/org.mate.power-manager.gschema.xml.in:41
@@ -863,8 +879,8 @@ msgstr "Nastavit správu napájení"
 msgid "MATE;power;management;preferences;settings;"
 msgstr "MATE;napájení;správa;předvolby;nastavení;"
 
-#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:7
-#: src/gpm-statistics.c:1090 src/gpm-statistics.c:1577
+#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
+#: src/gpm-statistics.c:764 src/gpm-statistics.c:1233
 msgid "Power Statistics"
 msgstr "Statistika napájení"
 
@@ -872,55 +888,37 @@ msgstr "Statistika napájení"
 msgid "Observe power management"
 msgstr "Sledovat správu napájení"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/mate-power-statistics.desktop.in.in:6
-msgid "mate-power-statistics"
-msgstr "mate-power-statistics"
-
-#: data/gpm-statistics.ui:113 src/gpm-statistics.c:208
+#: data/gpm-statistics.ui:119
 msgid "Details"
 msgstr "Podrobnosti"
 
-#: data/gpm-statistics.ui:139 data/gpm-statistics.ui:342
+#: data/gpm-statistics.ui:145 data/gpm-statistics.ui:347
 msgid "Graph type:"
 msgstr "Typ grafu:"
 
-#: data/gpm-statistics.ui:174
+#: data/gpm-statistics.ui:180
 msgid "Data length:"
 msgstr "Délka dat:"
 
-#: data/gpm-statistics.ui:234 data/gpm-statistics.ui:395
+#: data/gpm-statistics.ui:239 data/gpm-statistics.ui:399
 msgid "There is no data to display."
 msgstr "Nelze zobrazit žádná data."
 
-#: data/gpm-statistics.ui:276 data/gpm-statistics.ui:438
+#: data/gpm-statistics.ui:281 data/gpm-statistics.ui:442
 msgid "Use smoothed line"
 msgstr "Použít vyhlazenou křivku"
 
-#: data/gpm-statistics.ui:291 data/gpm-statistics.ui:453
+#: data/gpm-statistics.ui:296 data/gpm-statistics.ui:457
 msgid "Show data points"
 msgstr "Zobrazovat v datech bod"
 
-#: data/gpm-statistics.ui:320
+#: data/gpm-statistics.ui:325
 msgid "History"
 msgstr "Historie"
 
-#: data/gpm-statistics.ui:482
+#: data/gpm-statistics.ui:486
 msgid "Statistics"
 msgstr "Statistiky"
-
-#: data/gpm-statistics.ui:504
-msgid "Processor wakeups per second:"
-msgstr "Počet probuzení procesoru za sekundu:"
-
-#: data/gpm-statistics.ui:516
-msgid "0"
-msgstr "0"
-
-#: data/gpm-statistics.ui:563 src/gpm-statistics.c:194
-msgid "Wakeups"
-msgstr "Probuzení"
 
 #: data/gpm-prefs.ui:55
 msgid "Power Management Preferences"
@@ -1182,7 +1180,7 @@ msgstr "%.1f W"
 msgid "%.1fV"
 msgstr "%.1f V"
 
-#: src/gpm-main.c:172 src/gpm-prefs.c:77 src/gpm-statistics.c:1560
+#: src/gpm-main.c:172 src/gpm-prefs.c:77 src/gpm-statistics.c:1216
 msgid "Show extra debugging information"
 msgstr "Zobrazit dodatečné ladicí informace"
 
@@ -1596,91 +1594,79 @@ msgstr "Nedělat nic"
 msgid "Never"
 msgstr "Nikdy"
 
-#: src/gpm-statistics.c:78 src/gpm-statistics.c:466
+#: src/gpm-statistics.c:67 src/gpm-statistics.c:410
 msgid "Rate"
 msgstr "Rate"
 
-#: src/gpm-statistics.c:79
+#: src/gpm-statistics.c:68
 msgid "Charge"
 msgstr "Nabíjení"
 
-#: src/gpm-statistics.c:80 src/gpm-statistics.c:480
+#: src/gpm-statistics.c:69 src/gpm-statistics.c:424
 msgid "Time to full"
 msgstr "Čas do nabití"
 
-#: src/gpm-statistics.c:81 src/gpm-statistics.c:485
+#: src/gpm-statistics.c:70 src/gpm-statistics.c:429
 msgid "Time to empty"
 msgstr "Čas do vybití"
 
-#: src/gpm-statistics.c:88
+#: src/gpm-statistics.c:77
 msgid "10 minutes"
 msgstr "10 minut"
 
-#: src/gpm-statistics.c:89
+#: src/gpm-statistics.c:78
 msgid "2 hours"
 msgstr "2 hodiny"
 
-#: src/gpm-statistics.c:90
+#: src/gpm-statistics.c:79
 msgid "6 hours"
 msgstr "6 hodin"
 
-#: src/gpm-statistics.c:91
+#: src/gpm-statistics.c:80
 msgid "1 day"
 msgstr "1 den"
 
-#: src/gpm-statistics.c:92
+#: src/gpm-statistics.c:81
 msgid "1 week"
 msgstr "1 týden"
 
-#: src/gpm-statistics.c:101
+#: src/gpm-statistics.c:90
 msgid "Charge profile"
 msgstr "Profil nabíjení"
 
-#: src/gpm-statistics.c:102
+#: src/gpm-statistics.c:91
 msgid "Discharge profile"
 msgstr "Profil vybíjení"
 
-#: src/gpm-statistics.c:104
+#: src/gpm-statistics.c:93
 msgid "Charge accuracy"
 msgstr "Přesnost nabíjení"
 
-#: src/gpm-statistics.c:105
+#: src/gpm-statistics.c:94
 msgid "Discharge accuracy"
 msgstr "Přesnost vybíjení"
 
-#: src/gpm-statistics.c:132
+#: src/gpm-statistics.c:121
 msgid "Attribute"
 msgstr "Atribut"
 
-#: src/gpm-statistics.c:139
+#: src/gpm-statistics.c:128
 msgid "Value"
 msgstr "Hodnota"
 
-#: src/gpm-statistics.c:156
+#: src/gpm-statistics.c:145
 msgid "Image"
 msgstr "Obrázek"
 
-#: src/gpm-statistics.c:162
+#: src/gpm-statistics.c:151
 msgid "Description"
 msgstr "Popis"
 
-#: src/gpm-statistics.c:181 src/gpm-statistics.c:405
-msgid "Type"
-msgstr "Typ"
-
-#: src/gpm-statistics.c:187
-msgid "ID"
-msgstr "ID"
-
-#: src/gpm-statistics.c:201
-msgid "Command"
-msgstr "Příkaz"
-
-#: src/gpm-statistics.c:286
+#: src/gpm-statistics.c:230
 msgid "Unknown"
 msgstr "Neznámo"
 
-#: src/gpm-statistics.c:290
+#: src/gpm-statistics.c:234
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
@@ -1689,7 +1675,7 @@ msgstr[1] "%.0f sekundy"
 msgstr[2] "%.0f sekund"
 msgstr[3] "%.0f sekund"
 
-#: src/gpm-statistics.c:295
+#: src/gpm-statistics.c:239
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
@@ -1698,7 +1684,7 @@ msgstr[1] "%.1f minuty"
 msgstr[2] "%.1f minut"
 msgstr[3] "%.1f minut"
 
-#: src/gpm-statistics.c:300
+#: src/gpm-statistics.c:244
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
@@ -1707,7 +1693,7 @@ msgstr[1] "%.1f hodiny"
 msgstr[2] "%.1f hodin"
 msgstr[3] "%.1f hodin"
 
-#: src/gpm-statistics.c:304
+#: src/gpm-statistics.c:248
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
@@ -1716,35 +1702,39 @@ msgstr[1] "%.1f dny"
 msgstr[2] "%.1f dnů"
 msgstr[3] "%.1f dnů"
 
-#: src/gpm-statistics.c:313
+#: src/gpm-statistics.c:257
 msgid "Yes"
 msgstr "Ano"
 
-#: src/gpm-statistics.c:313
+#: src/gpm-statistics.c:257
 msgid "No"
 msgstr "Ne"
 
-#: src/gpm-statistics.c:402
+#: src/gpm-statistics.c:346
 msgid "Device"
 msgstr "Zařízení"
 
-#: src/gpm-statistics.c:407
+#: src/gpm-statistics.c:349
+msgid "Type"
+msgstr "Typ"
+
+#: src/gpm-statistics.c:351
 msgid "Vendor"
 msgstr "Dodavatel"
 
-#: src/gpm-statistics.c:409
+#: src/gpm-statistics.c:353
 msgid "Model"
 msgstr "Model"
 
-#: src/gpm-statistics.c:411
+#: src/gpm-statistics.c:355
 msgid "Serial number"
 msgstr "Sériové číslo"
 
-#: src/gpm-statistics.c:416
+#: src/gpm-statistics.c:360
 msgid "Supply"
 msgstr "Napájení"
 
-#: src/gpm-statistics.c:419
+#: src/gpm-statistics.c:363
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -1753,224 +1743,111 @@ msgstr[1] "%d sekundy"
 msgstr[2] "%d sekund"
 msgstr[3] "%d sekund"
 
-#: src/gpm-statistics.c:423
+#: src/gpm-statistics.c:367
 msgid "Refreshed"
 msgstr "Obnoveno"
 
-#: src/gpm-statistics.c:433
+#: src/gpm-statistics.c:377
 msgid "Present"
 msgstr "Současný"
 
-#: src/gpm-statistics.c:440
+#: src/gpm-statistics.c:384
 msgid "Rechargeable"
 msgstr "Dobíjitelný"
 
-#: src/gpm-statistics.c:446
+#: src/gpm-statistics.c:390
 msgid "State"
 msgstr "Stát"
 
-#: src/gpm-statistics.c:450
+#: src/gpm-statistics.c:394
 msgid "Energy"
 msgstr "Energie"
 
-#: src/gpm-statistics.c:453
+#: src/gpm-statistics.c:397
 msgid "Energy when empty"
 msgstr "Energie při úplném vybití"
 
-#: src/gpm-statistics.c:456
+#: src/gpm-statistics.c:400
 msgid "Energy when full"
 msgstr "Energie při plném nabití"
 
-#: src/gpm-statistics.c:459
+#: src/gpm-statistics.c:403
 msgid "Energy (design)"
 msgstr "Energie (výrobní)"
 
-#: src/gpm-statistics.c:473
+#: src/gpm-statistics.c:417
 msgid "Voltage"
 msgstr "Napětí"
 
-#: src/gpm-statistics.c:495
+#: src/gpm-statistics.c:439
 msgid "Percentage"
 msgstr "Procento"
 
-#: src/gpm-statistics.c:502
+#: src/gpm-statistics.c:446
 msgid "Capacity"
 msgstr "Kapacita"
 
-#: src/gpm-statistics.c:507
+#: src/gpm-statistics.c:451
 msgid "Technology"
 msgstr "Technologie"
 
-#: src/gpm-statistics.c:512
+#: src/gpm-statistics.c:456
 msgid "Online"
 msgstr "Připojeno"
 
-#: src/gpm-statistics.c:824
-msgid "No data"
-msgstr "Žádná data"
-
-#: src/gpm-statistics.c:831 src/gpm-statistics.c:836
-msgid "Kernel module"
-msgstr "Modul jádra"
-
-#: src/gpm-statistics.c:841
-msgid "Kernel core"
-msgstr "Jádro"
-
-#: src/gpm-statistics.c:846
-msgid "Interprocessor interrupt"
-msgstr "Přerušení mezi procesy"
-
-#: src/gpm-statistics.c:851
-msgid "Interrupt"
-msgstr "Přerušení"
-
-#: src/gpm-statistics.c:898
-msgid "PS/2 keyboard/mouse/touchpad"
-msgstr "Klávesnice/myš/touchpad na PS/2"
-
-#: src/gpm-statistics.c:901
-msgid "ACPI"
-msgstr "ACPI"
-
-#: src/gpm-statistics.c:904
-msgid "Serial ATA"
-msgstr "Serial ATA"
-
-#: src/gpm-statistics.c:907
-msgid "ATA host controller"
-msgstr "hostitelský řadič ATA"
-
-#: src/gpm-statistics.c:910
-msgid "Intel wireless adaptor"
-msgstr "Bezdrátový adaptér Intel"
-
-#: src/gpm-statistics.c:917 src/gpm-statistics.c:922 src/gpm-statistics.c:927
-#: src/gpm-statistics.c:932 src/gpm-statistics.c:937
-#, c-format
-msgid "Timer %s"
-msgstr "Časovač %s"
-
-#: src/gpm-statistics.c:941
-#, c-format
-msgid "Sleep %s"
-msgstr "Uspat %s"
-
-#: src/gpm-statistics.c:944
-#, c-format
-msgid "New task %s"
-msgstr "Nová úloha %s"
-
-#: src/gpm-statistics.c:948
-#, c-format
-msgid "Wait %s"
-msgstr "Čekat %s"
-
-#: src/gpm-statistics.c:952 src/gpm-statistics.c:956
-#, c-format
-msgid "Work queue %s"
-msgstr "Seznam prací %s"
-
-#: src/gpm-statistics.c:959
-#, c-format
-msgid "Network route flush %s"
-msgstr "Vyprázdnění směrovacích tabulek %s"
-
-#: src/gpm-statistics.c:962
-#, c-format
-msgid "USB activity %s"
-msgstr "Aktivita USB %s"
-
-#: src/gpm-statistics.c:965
-#, c-format
-msgid "Wakeup %s"
-msgstr "Probudit %s"
-
-#: src/gpm-statistics.c:968
-msgid "Local interrupts"
-msgstr "Místní přerušení"
-
-#: src/gpm-statistics.c:971
-msgid "Rescheduling interrupts"
-msgstr "Naplánovaná přerušení"
-
-#: src/gpm-statistics.c:1080
+#: src/gpm-statistics.c:756
 msgid "Device Information"
 msgstr "Informace o zařízení"
 
-#: src/gpm-statistics.c:1082
+#: src/gpm-statistics.c:758
 msgid "Device History"
 msgstr "Historie zařízení"
 
-#: src/gpm-statistics.c:1084
+#: src/gpm-statistics.c:760
 msgid "Device Profile"
 msgstr "Profil zařízení"
 
-#: src/gpm-statistics.c:1086
-msgid "Processor Wakeups"
-msgstr "Probuzení procesoru"
-
-#: src/gpm-statistics.c:1325 src/gpm-statistics.c:1331
-#: src/gpm-statistics.c:1337 src/gpm-statistics.c:1343
+#: src/gpm-statistics.c:982 src/gpm-statistics.c:988 src/gpm-statistics.c:994
+#: src/gpm-statistics.c:1000
 msgid "Time elapsed"
 msgstr "Uplynulý čas"
 
-#: src/gpm-statistics.c:1327
+#: src/gpm-statistics.c:984
 msgid "Power"
 msgstr "Mocnina"
 
-#: src/gpm-statistics.c:1333 src/gpm-statistics.c:1377
-#: src/gpm-statistics.c:1383 src/gpm-statistics.c:1389
-#: src/gpm-statistics.c:1395
+#: src/gpm-statistics.c:990 src/gpm-statistics.c:1034
+#: src/gpm-statistics.c:1040 src/gpm-statistics.c:1046
+#: src/gpm-statistics.c:1052
 msgid "Cell charge"
 msgstr "Nabití baterie"
 
-#: src/gpm-statistics.c:1339 src/gpm-statistics.c:1345
+#: src/gpm-statistics.c:996 src/gpm-statistics.c:1002
 msgid "Predicted time"
 msgstr "Odhadovaný čas"
 
-#: src/gpm-statistics.c:1379 src/gpm-statistics.c:1391
+#: src/gpm-statistics.c:1036 src/gpm-statistics.c:1048
 msgid "Correction factor"
 msgstr "Korekční faktor"
 
-#: src/gpm-statistics.c:1385 src/gpm-statistics.c:1397
+#: src/gpm-statistics.c:1042 src/gpm-statistics.c:1054
 msgid "Prediction accuracy"
 msgstr "Odhadovaná přesnost"
 
-#: src/gpm-statistics.c:1563
+#: src/gpm-statistics.c:1219
 msgid "Select this device at startup"
 msgstr "Vybrat toto zařízení při spuštění"
 
-#: src/gpm-statistics.c:1802
-msgid "Processor"
-msgstr "Procesor"
+#: src/gpm-tray-icon.c:207
+msgid "Copyright © 2011-2020 MATE developers"
+msgstr "Copyright © 2011-2020 Vývojáři MATE"
 
-#: src/gpm-tray-icon.c:187
-msgid "Copyright © 2011-2018 MATE developers"
-msgstr "Copyright © 2011-2018 Vývojáři MATE"
-
-#: src/gpm-tray-icon.c:193
-msgid "translator-credits"
-msgstr ""
-"Stanislav Brabec <utx@penguin.cz>\n"
-"Michal Bukovjan <bukm@centrum.cz>\n"
-"Miloslav Trmač <mitr@volny.cz>\n"
-"Petr Tomeš <ptomes@gmail.com>\n"
-"Jakub Friedl <jfriedl@suse.cz>\n"
-"Petr Tomeš <ptomes@gmail.com>\n"
-"Lukáš Novotný <lukasnov@cvs.gnome.org>\n"
-"Kamil Páral <ripper42@gmail.com>\n"
-"Petr Kovář <pknbe@volny.cz>\n"
-"Lucas Lommer <drom@kdyne.net>\n"
-"Tomas Bzatek <tbzatek@redhat.com>\n"
-"Roman Horník <roman.hornik@debian-linux.cz>"
-
-#: src/gpm-tray-icon.c:295
+#: src/gpm-tray-icon.c:317
 #, c-format
 msgid "%s remaining"
 msgstr "%s zbývající"
 
-#: src/gpm-tray-icon.c:349
+#: src/gpm-tray-icon.c:371
 msgid "_Preferences"
 msgstr "_Předvolby"
 

@@ -9,15 +9,15 @@
 # Wolfgang Ulbrich <mate@raveit.de>, 2020
 # Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Микола Ткач <chistomov@gmail.com>, 2020
+# Микола Ткач <chistomov@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-power-manager 1.23.1\n"
+"Project-Id-Version: mate-power-manager 1.24.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2019-11-12 15:22+0100\n"
+"POT-Creation-Date: 2020-08-15 10:48+0200\n"
 "PO-Revision-Date: 2020-02-15 16:27+0000\n"
-"Last-Translator: Микола Ткач <chistomov@gmail.com>, 2020\n"
+"Last-Translator: Микола Ткач <chistomov@gmail.com>, 2021\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,57 +47,71 @@ msgstr "Не вдається отримати значення яскравос
 msgid "LCD brightness : %d%%"
 msgstr "Яскравість LCD : %d%%"
 
+#: applets/brightness/brightness-applet.c:790
+#: applets/inhibit/inhibit-applet.c:287
+msgid ""
+"Power Manager is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+"Power Manager — це безкоштовне програмне забезпечення; ви можете "
+"розповсюджувати його та/чи змінювати за умовами Загальної публічної ліцензії"
+" GNU, опублікованої Фондом вільного програмного забезпечення; чи версії 2 "
+"Ліцензії, чи (на ваш вибір) будь-якої пізнішої версії."
+
+#: applets/brightness/brightness-applet.c:795
+#: applets/inhibit/inhibit-applet.c:292
+msgid ""
+"Power Manager is distributed in the hope that it will be useful, but WITHOUT"
+" ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
+msgstr ""
+"Power Manager поширюється зі сподіванням, що він буде корисний, але БЕЗ "
+"БУДЬ-ЯКИХ ЗАПОРУК; Навіть не маючи на увазі запоруку ПРОДУКЦІЙНОСТИ, чи "
+"ПРИДАТНОСТИ ДЛЯ ПЕВНОЇ МЕТИ. Детальніше див. У Загальній публічній ліцензії "
+"GNU."
+
 #: applets/brightness/brightness-applet.c:800
 #: applets/inhibit/inhibit-applet.c:297
-msgid "Licensed under the GNU General Public License Version 2"
-msgstr ""
-"Ця програма розповсюджується за умовами GNU General Public License Version 2"
-
-#: applets/brightness/brightness-applet.c:801
-#: applets/inhibit/inhibit-applet.c:298
 msgid ""
-"Power Manager is free software; you can redistribute it and/or\n"
-"modify it under the terms of the GNU General Public License\n"
-"as published by the Free Software Foundation; either version 2\n"
-"of the License, or (at your option) any later version."
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
-"Керівник живлення є вільною програмою; дозволяється розповсюджувати та/або "
-"змінювати її за умовами ліцензії GNU General Public \"\"License, що "
-"оголошена Free Software Foundation; версії 2 цієї ліцензії, \"\"або (за "
-"вашим бажанням) будь-якої старшої версії.\""
+"Ви повинні були отримати копію Загальної публічної ліцензії GNU разом із "
+"цією програмою; Якщо ні, напишіть у Фонд вільного програмного забезпечення, "
+"Inc., Франклін-стріт, 51, п’ятий поверх, Бостон, Массачусетс 02110-1301, "
+"США."
 
-#: applets/brightness/brightness-applet.c:805
-#: applets/inhibit/inhibit-applet.c:302
+#: applets/brightness/brightness-applet.c:813
+msgid "About Power Manager Brightness Applet"
+msgstr "Про аплет яскравости Power Manager"
+
+#: applets/brightness/brightness-applet.c:815
 msgid ""
-"Power Manager is distributed in the hope that it will be useful,\n"
-"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-"GNU General Public License for more details."
+"Copyright © 2006 Benjamin Canou\n"
+"Copyright © 2011-2020 MATE developers"
 msgstr ""
-"Керівник живлення поширюється зі сподіванням, що він буде корисним,але БЕЗ "
-"БУДЬ-ЯКИХ ЗАПОРУК; навіть без запоруки КОРИСНОСТИ чи ПРИДАТНОСТИ ДЛЯ ПЕВНОЇ "
-"КОНКРЕТНОЇ МЕТИ. Дивіться GNU General Public License для отримання "
-"докладнішої інформації."
+"Авторське право © 2006 Бенджамін Кану\n"
+"Авторське право © 2011-2020 Розробники MATE"
 
-#: applets/brightness/brightness-applet.c:809
-#: applets/inhibit/inhibit-applet.c:306
-msgid ""
-"You should have received a copy of the GNU General Public License\n"
-"along with this program; if not, write to the Free Software\n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
-"02110-1301, USA."
+#: applets/brightness/brightness-applet.c:822
+#: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:213
+msgid "translator-credits"
 msgstr ""
-"Ви мали отримати копію GNU General Public License разом з цією програмою; "
-"якщо це не так, напишіть у Free Software Foundation, Inc., 51 Franklin "
-"Street, Fifth Floor, Boston, MA 02110-1301, USA."
+"Yarema aka Knedlyk <yupadmin@gmail.com>,\n"
+"Микола Ткач <Stuartlittle1970@gmail.com>,\n"
+"Oleh Tsyupka <myr4yk@gmail.com>"
 
-#: applets/brightness/brightness-applet.c:1063
-#: applets/inhibit/inhibit-applet.c:519
+#: applets/brightness/brightness-applet.c:1050
+#: applets/inhibit/inhibit-applet.c:506
 msgid "_About"
 msgstr "_Про програму"
 
-#: applets/brightness/brightness-applet.c:1066
-#: applets/inhibit/inhibit-applet.c:522
+#: applets/brightness/brightness-applet.c:1053
+#: applets/inhibit/inhibit-applet.c:509
 msgid "_Help"
 msgstr "_Допомога"
 
@@ -108,12 +122,6 @@ msgstr "Фабрика аплету зміни яскравости"
 #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:9
 msgid "Brightness Applet"
 msgstr "Аплет зміни яскравости"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-brightness-applet"
-msgstr "mate-brightness-applet"
 
 #: applets/inhibit/inhibit-applet.c:87
 msgid "Power Manager Inhibit Applet"
@@ -136,6 +144,18 @@ msgstr "Самочинне засипання увімкнено"
 msgid "Manual inhibit"
 msgstr "Ручне стримання"
 
+#: applets/inhibit/inhibit-applet.c:310
+msgid "About Power Manager Inhibit Applet"
+msgstr ""
+
+#: applets/inhibit/inhibit-applet.c:312
+msgid ""
+"Copyright © 2006-2007 Richard Hughes\n"
+"Copyright © 2011-2020 MATE developers"
+msgstr ""
+"Авторське право © 2006-2007 Річард Г'юз\n"
+"Авторське право © 2011-2020 Розробники MATE"
+
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
 msgstr "Фабрика аплету стримування"
@@ -144,26 +164,13 @@ msgstr "Фабрика аплету стримування"
 msgid "Inhibit Applet"
 msgstr "Аплет Автостримування"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-inhibit-applet"
-msgstr "mate-inhibit-applet"
-
-#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:184
+#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:204
 msgid "Power Manager"
 msgstr "Керування живленням"
 
-#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:186
+#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:206
 msgid "Power management daemon"
 msgstr "Служба керування живленням"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/mate-power-manager.desktop.in.in:6
-#: data/mate-power-preferences.desktop.in.in:6
-msgid "mate-power-manager"
-msgstr "mate-power-manager"
 
 #: data/org.mate.power-manager.gschema.xml.in:26
 #: data/org.mate.power-manager.gschema.xml.in:41
@@ -877,8 +884,8 @@ msgstr "Налаштовування керування живленням"
 msgid "MATE;power;management;preferences;settings;"
 msgstr ""
 
-#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:7
-#: src/gpm-statistics.c:1090 src/gpm-statistics.c:1577
+#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
+#: src/gpm-statistics.c:764 src/gpm-statistics.c:1233
 msgid "Power Statistics"
 msgstr "Статистика живлення"
 
@@ -886,55 +893,37 @@ msgstr "Статистика живлення"
 msgid "Observe power management"
 msgstr "Стеження за керуванням живленням"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/mate-power-statistics.desktop.in.in:6
-msgid "mate-power-statistics"
-msgstr "mate-power-statistics"
-
-#: data/gpm-statistics.ui:113 src/gpm-statistics.c:208
+#: data/gpm-statistics.ui:119
 msgid "Details"
 msgstr "Докладно"
 
-#: data/gpm-statistics.ui:139 data/gpm-statistics.ui:342
+#: data/gpm-statistics.ui:145 data/gpm-statistics.ui:347
 msgid "Graph type:"
 msgstr "Тип графіку:"
 
-#: data/gpm-statistics.ui:174
+#: data/gpm-statistics.ui:180
 msgid "Data length:"
 msgstr "Тривалість:"
 
-#: data/gpm-statistics.ui:234 data/gpm-statistics.ui:395
+#: data/gpm-statistics.ui:239 data/gpm-statistics.ui:399
 msgid "There is no data to display."
 msgstr "Відсутні дані."
 
-#: data/gpm-statistics.ui:276 data/gpm-statistics.ui:438
+#: data/gpm-statistics.ui:281 data/gpm-statistics.ui:442
 msgid "Use smoothed line"
 msgstr "Використовувати згладжування"
 
-#: data/gpm-statistics.ui:291 data/gpm-statistics.ui:453
+#: data/gpm-statistics.ui:296 data/gpm-statistics.ui:457
 msgid "Show data points"
 msgstr "Показувати відлік"
 
-#: data/gpm-statistics.ui:320
+#: data/gpm-statistics.ui:325
 msgid "History"
 msgstr "Дієпис"
 
-#: data/gpm-statistics.ui:482
+#: data/gpm-statistics.ui:486
 msgid "Statistics"
 msgstr "Статистика"
-
-#: data/gpm-statistics.ui:504
-msgid "Processor wakeups per second:"
-msgstr "Пробуджень процесора за секунду:"
-
-#: data/gpm-statistics.ui:516
-msgid "0"
-msgstr "0"
-
-#: data/gpm-statistics.ui:563 src/gpm-statistics.c:194
-msgid "Wakeups"
-msgstr "Пробудження"
 
 #: data/gpm-prefs.ui:55
 msgid "Power Management Preferences"
@@ -1101,19 +1090,19 @@ msgstr "Час невідомий"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%i хвилина"
+msgstr[1] "%i хвилини"
+msgstr[2] "%i хвилин"
+msgstr[3] "%i хвилин"
 
 #: src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%i година"
+msgstr[1] "%i години"
+msgstr[2] "%i годин"
+msgstr[3] "%i годин"
 
 #: src/gpm-common.c:75
 #, c-format
@@ -1123,18 +1112,18 @@ msgstr "%i %s %i %s"
 #: src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "година"
+msgstr[1] "години"
+msgstr[2] "годин"
+msgstr[3] "годин"
 
 #: src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "хвилина"
+msgstr[1] "хвилини"
+msgstr[2] "хвилин"
+msgstr[3] "хвилин"
 
 #. Translators: This is %i days
 #: src/gpm-graph-widget.c:433
@@ -1196,7 +1185,7 @@ msgstr "%.1fВт"
 msgid "%.1fV"
 msgstr "%.1fВ"
 
-#: src/gpm-main.c:172 src/gpm-prefs.c:77 src/gpm-statistics.c:1560
+#: src/gpm-main.c:172 src/gpm-prefs.c:77 src/gpm-statistics.c:1216
 msgid "Show extra debugging information"
 msgstr "Показати додаткову зневаджувальну інформацію"
 
@@ -1312,10 +1301,10 @@ msgstr ""
 #: src/gpm-manager.c:1159
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Заряджена батарея"
+msgstr[1] "Заряджені батареї"
+msgstr[2] "Заряджених батарей"
+msgstr[3] "Заряджених батарей"
 
 #: src/gpm-manager.c:1205
 msgid "Battery Discharging"
@@ -1614,372 +1603,260 @@ msgstr "Нічого не робити"
 msgid "Never"
 msgstr "Ніколи"
 
-#: src/gpm-statistics.c:78 src/gpm-statistics.c:466
+#: src/gpm-statistics.c:67 src/gpm-statistics.c:410
 msgid "Rate"
 msgstr "Ставк"
 
-#: src/gpm-statistics.c:79
+#: src/gpm-statistics.c:68
 msgid "Charge"
 msgstr "Заряджання"
 
-#: src/gpm-statistics.c:80 src/gpm-statistics.c:480
+#: src/gpm-statistics.c:69 src/gpm-statistics.c:424
 msgid "Time to full"
 msgstr "Час до повного заряду"
 
-#: src/gpm-statistics.c:81 src/gpm-statistics.c:485
+#: src/gpm-statistics.c:70 src/gpm-statistics.c:429
 msgid "Time to empty"
 msgstr "Час до повного розряду"
 
-#: src/gpm-statistics.c:88
+#: src/gpm-statistics.c:77
 msgid "10 minutes"
 msgstr "10 хвилин"
 
-#: src/gpm-statistics.c:89
+#: src/gpm-statistics.c:78
 msgid "2 hours"
 msgstr "2 години"
 
-#: src/gpm-statistics.c:90
+#: src/gpm-statistics.c:79
 msgid "6 hours"
 msgstr "6 годин"
 
-#: src/gpm-statistics.c:91
+#: src/gpm-statistics.c:80
 msgid "1 day"
 msgstr "1 день"
 
-#: src/gpm-statistics.c:92
+#: src/gpm-statistics.c:81
 msgid "1 week"
 msgstr "1 тиждень "
 
-#: src/gpm-statistics.c:101
+#: src/gpm-statistics.c:90
 msgid "Charge profile"
 msgstr "Профіль часу заряду"
 
-#: src/gpm-statistics.c:102
+#: src/gpm-statistics.c:91
 msgid "Discharge profile"
 msgstr "Профіль часу розряду"
 
-#: src/gpm-statistics.c:104
+#: src/gpm-statistics.c:93
 msgid "Charge accuracy"
 msgstr "Профіль точности визначення часу заряду"
 
-#: src/gpm-statistics.c:105
+#: src/gpm-statistics.c:94
 msgid "Discharge accuracy"
 msgstr "Профіль точности визначення часу розряду"
 
-#: src/gpm-statistics.c:132
+#: src/gpm-statistics.c:121
 msgid "Attribute"
 msgstr "Атрибут"
 
-#: src/gpm-statistics.c:139
+#: src/gpm-statistics.c:128
 msgid "Value"
 msgstr "Значення"
 
-#: src/gpm-statistics.c:156
+#: src/gpm-statistics.c:145
 msgid "Image"
 msgstr "Зображення"
 
-#: src/gpm-statistics.c:162
+#: src/gpm-statistics.c:151
 msgid "Description"
 msgstr "Опис"
 
-#: src/gpm-statistics.c:181 src/gpm-statistics.c:405
-msgid "Type"
-msgstr "Тип"
-
-#: src/gpm-statistics.c:187
-msgid "ID"
-msgstr "ID"
-
-#: src/gpm-statistics.c:201
-msgid "Command"
-msgstr "Команда"
-
-#: src/gpm-statistics.c:286
+#: src/gpm-statistics.c:230
 msgid "Unknown"
 msgstr "Невідомий"
 
-#: src/gpm-statistics.c:290
+#: src/gpm-statistics.c:234
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%.0f секунда"
+msgstr[1] "%.0f секунди"
+msgstr[2] "%.0f секунд"
+msgstr[3] "%.0f секунд"
 
-#: src/gpm-statistics.c:295
+#: src/gpm-statistics.c:239
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%.1f хвилина"
+msgstr[1] "%.1f хвилини"
+msgstr[2] "%.1f хвилин"
+msgstr[3] "%.1f хвилин"
 
-#: src/gpm-statistics.c:300
+#: src/gpm-statistics.c:244
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%.1f година"
+msgstr[1] "%.1f години"
+msgstr[2] "%.1f годин"
+msgstr[3] "%.1f годин"
 
-#: src/gpm-statistics.c:304
+#: src/gpm-statistics.c:248
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%.1f день"
+msgstr[1] "%.1f дні"
+msgstr[2] "%.1f днів"
+msgstr[3] "%.1f днів"
 
-#: src/gpm-statistics.c:313
+#: src/gpm-statistics.c:257
 msgid "Yes"
 msgstr "Так"
 
-#: src/gpm-statistics.c:313
+#: src/gpm-statistics.c:257
 msgid "No"
 msgstr "Ні"
 
-#: src/gpm-statistics.c:402
+#: src/gpm-statistics.c:346
 msgid "Device"
 msgstr "Пристрій"
 
-#: src/gpm-statistics.c:407
+#: src/gpm-statistics.c:349
+msgid "Type"
+msgstr "Тип"
+
+#: src/gpm-statistics.c:351
 msgid "Vendor"
 msgstr "Виробник"
 
-#: src/gpm-statistics.c:409
+#: src/gpm-statistics.c:353
 msgid "Model"
 msgstr "Модель"
 
-#: src/gpm-statistics.c:411
+#: src/gpm-statistics.c:355
 msgid "Serial number"
 msgstr "Серійний номер"
 
-#: src/gpm-statistics.c:416
+#: src/gpm-statistics.c:360
 msgid "Supply"
 msgstr "Постачальник енергії"
 
-#: src/gpm-statistics.c:419
+#: src/gpm-statistics.c:363
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%d секунда"
+msgstr[1] "%d секунди"
+msgstr[2] "%d секунд"
+msgstr[3] "%d секунд"
 
-#: src/gpm-statistics.c:423
+#: src/gpm-statistics.c:367
 msgid "Refreshed"
 msgstr "Оновлено"
 
-#: src/gpm-statistics.c:433
+#: src/gpm-statistics.c:377
 msgid "Present"
 msgstr "Присутній"
 
-#: src/gpm-statistics.c:440
+#: src/gpm-statistics.c:384
 msgid "Rechargeable"
 msgstr "Перезаряджуваний"
 
-#: src/gpm-statistics.c:446
+#: src/gpm-statistics.c:390
 msgid "State"
 msgstr "Стан"
 
-#: src/gpm-statistics.c:450
+#: src/gpm-statistics.c:394
 msgid "Energy"
 msgstr "Енергія"
 
-#: src/gpm-statistics.c:453
+#: src/gpm-statistics.c:397
 msgid "Energy when empty"
 msgstr "Енергія при спустошенні"
 
-#: src/gpm-statistics.c:456
+#: src/gpm-statistics.c:400
 msgid "Energy when full"
 msgstr "Енергія при заповненні"
 
-#: src/gpm-statistics.c:459
+#: src/gpm-statistics.c:403
 msgid "Energy (design)"
 msgstr "Енергія (початкова)"
 
-#: src/gpm-statistics.c:473
+#: src/gpm-statistics.c:417
 msgid "Voltage"
 msgstr "Вольтаж"
 
-#: src/gpm-statistics.c:495
+#: src/gpm-statistics.c:439
 msgid "Percentage"
 msgstr "Відсоток"
 
-#: src/gpm-statistics.c:502
+#: src/gpm-statistics.c:446
 msgid "Capacity"
 msgstr "Місткість:"
 
-#: src/gpm-statistics.c:507
+#: src/gpm-statistics.c:451
 msgid "Technology"
 msgstr "Технологія"
 
-#: src/gpm-statistics.c:512
+#: src/gpm-statistics.c:456
 msgid "Online"
 msgstr "Під’єднано"
 
-#: src/gpm-statistics.c:824
-msgid "No data"
-msgstr "Дані відсутні"
-
-#: src/gpm-statistics.c:831 src/gpm-statistics.c:836
-msgid "Kernel module"
-msgstr "Модуль ядра"
-
-#: src/gpm-statistics.c:841
-msgid "Kernel core"
-msgstr "Ядро"
-
-#: src/gpm-statistics.c:846
-msgid "Interprocessor interrupt"
-msgstr "Міжпроцесорне переривання"
-
-#: src/gpm-statistics.c:851
-msgid "Interrupt"
-msgstr "Переривання"
-
-#: src/gpm-statistics.c:898
-msgid "PS/2 keyboard/mouse/touchpad"
-msgstr "PS/2 набірниця/миша/чутлива панель"
-
-#: src/gpm-statistics.c:901
-msgid "ACPI"
-msgstr "ACPI"
-
-#: src/gpm-statistics.c:904
-msgid "Serial ATA"
-msgstr "Serial ATA"
-
-#: src/gpm-statistics.c:907
-msgid "ATA host controller"
-msgstr "Контролер ATA"
-
-#: src/gpm-statistics.c:910
-msgid "Intel wireless adaptor"
-msgstr "Бездротовий адаптер Intel"
-
-#: src/gpm-statistics.c:917 src/gpm-statistics.c:922 src/gpm-statistics.c:927
-#: src/gpm-statistics.c:932 src/gpm-statistics.c:937
-#, c-format
-msgid "Timer %s"
-msgstr "Періодична активність %s"
-
-#: src/gpm-statistics.c:941
-#, c-format
-msgid "Sleep %s"
-msgstr "Пробудження %s"
-
-#: src/gpm-statistics.c:944
-#, c-format
-msgid "New task %s"
-msgstr "Нове завдання %s"
-
-#: src/gpm-statistics.c:948
-#, c-format
-msgid "Wait %s"
-msgstr "Очікування %s"
-
-#: src/gpm-statistics.c:952 src/gpm-statistics.c:956
-#, c-format
-msgid "Work queue %s"
-msgstr "Черга завдань %s"
-
-#: src/gpm-statistics.c:959
-#, c-format
-msgid "Network route flush %s"
-msgstr "Очищення мережних маршрутів %s"
-
-#: src/gpm-statistics.c:962
-#, c-format
-msgid "USB activity %s"
-msgstr "Активність USB %s"
-
-#: src/gpm-statistics.c:965
-#, c-format
-msgid "Wakeup %s"
-msgstr "Пробудження періодичного завдання %s"
-
-#: src/gpm-statistics.c:968
-msgid "Local interrupts"
-msgstr "Переривання"
-
-#: src/gpm-statistics.c:971
-msgid "Rescheduling interrupts"
-msgstr "Перепланування завдань"
-
-#: src/gpm-statistics.c:1080
+#: src/gpm-statistics.c:756
 msgid "Device Information"
 msgstr "Відомості про пристрій"
 
-#: src/gpm-statistics.c:1082
+#: src/gpm-statistics.c:758
 msgid "Device History"
 msgstr "Дієпис пристрою"
 
-#: src/gpm-statistics.c:1084
+#: src/gpm-statistics.c:760
 msgid "Device Profile"
 msgstr "Профіль пристрою"
 
-#: src/gpm-statistics.c:1086
-msgid "Processor Wakeups"
-msgstr "Пробудження процесора"
-
-#: src/gpm-statistics.c:1325 src/gpm-statistics.c:1331
-#: src/gpm-statistics.c:1337 src/gpm-statistics.c:1343
+#: src/gpm-statistics.c:982 src/gpm-statistics.c:988 src/gpm-statistics.c:994
+#: src/gpm-statistics.c:1000
 msgid "Time elapsed"
 msgstr "Середній час до закінчення"
 
-#: src/gpm-statistics.c:1327
+#: src/gpm-statistics.c:984
 msgid "Power"
 msgstr "Зведення у ступінь"
 
-#: src/gpm-statistics.c:1333 src/gpm-statistics.c:1377
-#: src/gpm-statistics.c:1383 src/gpm-statistics.c:1389
-#: src/gpm-statistics.c:1395
+#: src/gpm-statistics.c:990 src/gpm-statistics.c:1034
+#: src/gpm-statistics.c:1040 src/gpm-statistics.c:1046
+#: src/gpm-statistics.c:1052
 msgid "Cell charge"
 msgstr "Заряд комірки"
 
-#: src/gpm-statistics.c:1339 src/gpm-statistics.c:1345
+#: src/gpm-statistics.c:996 src/gpm-statistics.c:1002
 msgid "Predicted time"
 msgstr "Оцінковий час"
 
-#: src/gpm-statistics.c:1379 src/gpm-statistics.c:1391
+#: src/gpm-statistics.c:1036 src/gpm-statistics.c:1048
 msgid "Correction factor"
 msgstr "Корекція"
 
-#: src/gpm-statistics.c:1385 src/gpm-statistics.c:1397
+#: src/gpm-statistics.c:1042 src/gpm-statistics.c:1054
 msgid "Prediction accuracy"
 msgstr "Точність передрікання"
 
-#: src/gpm-statistics.c:1563
+#: src/gpm-statistics.c:1219
 msgid "Select this device at startup"
 msgstr "Виділяти цей пристрій після запуску"
 
-#: src/gpm-statistics.c:1802
-msgid "Processor"
-msgstr "Процесор"
+#: src/gpm-tray-icon.c:207
+msgid "Copyright © 2011-2020 MATE developers"
+msgstr "Авторське право © 2011-2020 Розробники MATE"
 
-#: src/gpm-tray-icon.c:187
-msgid "Copyright © 2011-2018 MATE developers"
-msgstr "Авторське право © 2011-2018 Розробники MATE"
-
-#: src/gpm-tray-icon.c:193
-msgid "translator-credits"
-msgstr ""
-"Yarema aka Knedlyk <yupadmin@gmail.com>,\n"
-"Микола Ткач <Stuartlittle1970@gmail.com>,\n"
-"Oleh Tsyupka <myr4yk@gmail.com>"
-
-#: src/gpm-tray-icon.c:295
+#: src/gpm-tray-icon.c:317
 #, c-format
 msgid "%s remaining"
 msgstr "%s залишилося"
 
-#: src/gpm-tray-icon.c:349
+#: src/gpm-tray-icon.c:371
 msgid "_Preferences"
 msgstr "_Налаштування"
 
@@ -2138,18 +2015,18 @@ msgstr "Відсоток заряду:"
 #: src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "AC адаптер"
+msgstr[1] "AC адаптери"
+msgstr[2] "AC адаптерів"
+msgstr[3] "AC адаптерів"
 
 #: src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Батарея ноутбука"
+msgstr[1] "Батареї ноутбуків"
+msgstr[2] "Батарей ноутбуків"
+msgstr[3] "Батарей ноутбуків"
 
 #: src/gpm-upower.c:495
 msgid "UPS"
@@ -2162,26 +2039,26 @@ msgstr[3] ""
 #: src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Монітор"
+msgstr[1] "Монітори"
+msgstr[2] "Моніторів"
+msgstr[3] "Моніторів"
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Миша"
+msgstr[1] "Мишки"
+msgstr[2] "Мишок"
+msgstr[3] "Мишок"
 
 #: src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Набірниця"
+msgstr[1] "Набірниці"
+msgstr[2] "Набірниць"
+msgstr[3] "Набірниць"
 
 #: src/gpm-upower.c:511
 msgid "PDA"
@@ -2194,34 +2071,34 @@ msgstr[3] ""
 #: src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Мобільний телефон"
+msgstr[1] "Мобільні телефони"
+msgstr[2] "Мобільних телефонів"
+msgstr[3] "Мобільних телефонів"
 
 #: src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Програвач медія"
+msgstr[1] "Програвачі медія"
+msgstr[2] "Програвачів медія"
+msgstr[3] "Програвачів медія"
 
 #: src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Планшет"
+msgstr[1] "Планшети"
+msgstr[2] "Планшетів"
+msgstr[3] "Планшетів"
 
 #: src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Комп'ютер"
+msgstr[1] "Комп'ютери"
+msgstr[2] "Комп'ютерів"
+msgstr[3] "Комп'ютерів"
 
 #: src/gpm-upower.c:594
 msgid "Lithium Ion"

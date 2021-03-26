@@ -8,9 +8,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-power-manager 1.23.1\n"
+"Project-Id-Version: mate-power-manager 1.24.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2019-11-12 15:22+0100\n"
+"POT-Creation-Date: 2020-08-15 10:48+0200\n"
 "PO-Revision-Date: 2020-02-15 16:27+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
 "Language-Team: Assamese (https://www.transifex.com/mate/teams/13566/as/)\n"
@@ -42,57 +42,54 @@ msgstr "Cannot get laptop panel brightness"
 msgid "LCD brightness : %d%%"
 msgstr "LCD brightness : %d%%"
 
+#: applets/brightness/brightness-applet.c:790
+#: applets/inhibit/inhibit-applet.c:287
+msgid ""
+"Power Manager is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+
+#: applets/brightness/brightness-applet.c:795
+#: applets/inhibit/inhibit-applet.c:292
+msgid ""
+"Power Manager is distributed in the hope that it will be useful, but WITHOUT"
+" ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
+msgstr ""
+
 #: applets/brightness/brightness-applet.c:800
 #: applets/inhibit/inhibit-applet.c:297
-msgid "Licensed under the GNU General Public License Version 2"
-msgstr "GNU সাধাৰণ পাবলিক প্ৰমাণপত্ৰ সংস্কৰণ ২'ৰ অধীন প্ৰমাণপত্ৰ কৰা হৈছে"
-
-#: applets/brightness/brightness-applet.c:801
-#: applets/inhibit/inhibit-applet.c:298
 msgid ""
-"Power Manager is free software; you can redistribute it and/or\n"
-"modify it under the terms of the GNU General Public License\n"
-"as published by the Free Software Foundation; either version 2\n"
-"of the License, or (at your option) any later version."
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
-"Power Manager is free software; you can redistribute it and/or\n"
-"modify it under the terms of the GNU General Public License\n"
-"as published by the Free Software Foundation; either version 2\n"
-"of the License, or (at your option) any later version."
 
-#: applets/brightness/brightness-applet.c:805
-#: applets/inhibit/inhibit-applet.c:302
+#: applets/brightness/brightness-applet.c:813
+msgid "About Power Manager Brightness Applet"
+msgstr ""
+
+#: applets/brightness/brightness-applet.c:815
 msgid ""
-"Power Manager is distributed in the hope that it will be useful,\n"
-"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-"GNU General Public License for more details."
+"Copyright © 2006 Benjamin Canou\n"
+"Copyright © 2011-2020 MATE developers"
 msgstr ""
-"Power Manager is distributed in the hope that it will be useful,\n"
-"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-"GNU General Public License for more details."
 
-#: applets/brightness/brightness-applet.c:809
-#: applets/inhibit/inhibit-applet.c:306
-msgid ""
-"You should have received a copy of the GNU General Public License\n"
-"along with this program; if not, write to the Free Software\n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
-"02110-1301, USA."
-msgstr ""
-"You should have received a copy of the GNU General Public License\n"
-"along with this program; if not, write to the Free Software\n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
-"02110-1301, USA."
+#: applets/brightness/brightness-applet.c:822
+#: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:213
+msgid "translator-credits"
+msgstr "অমিতাক্ষ ফুকন (aphukan@fedoraproject.org)"
 
-#: applets/brightness/brightness-applet.c:1063
-#: applets/inhibit/inhibit-applet.c:519
+#: applets/brightness/brightness-applet.c:1050
+#: applets/inhibit/inhibit-applet.c:506
 msgid "_About"
 msgstr "বিষয়ে (_A)"
 
-#: applets/brightness/brightness-applet.c:1066
-#: applets/inhibit/inhibit-applet.c:522
+#: applets/brightness/brightness-applet.c:1053
+#: applets/inhibit/inhibit-applet.c:509
 msgid "_Help"
 msgstr "সাহায্য (_H)"
 
@@ -103,12 +100,6 @@ msgstr "উজ্জ্বলতা এপ্লেটৰ কলঘৰ"
 #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:9
 msgid "Brightness Applet"
 msgstr "উজ্জ্বলতা"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-brightness-applet"
-msgstr ""
 
 #: applets/inhibit/inhibit-applet.c:87
 msgid "Power Manager Inhibit Applet"
@@ -130,6 +121,16 @@ msgstr "Automatic sleep enabled"
 msgid "Manual inhibit"
 msgstr "Manual inhibit"
 
+#: applets/inhibit/inhibit-applet.c:310
+msgid "About Power Manager Inhibit Applet"
+msgstr ""
+
+#: applets/inhibit/inhibit-applet.c:312
+msgid ""
+"Copyright © 2006-2007 Richard Hughes\n"
+"Copyright © 2011-2020 MATE developers"
+msgstr ""
+
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
 msgstr "Inhibit কলঘৰ"
@@ -138,26 +139,13 @@ msgstr "Inhibit কলঘৰ"
 msgid "Inhibit Applet"
 msgstr "Inhibit"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-inhibit-applet"
-msgstr ""
-
-#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:184
+#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:204
 msgid "Power Manager"
 msgstr "Power Manager"
 
-#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:186
+#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:206
 msgid "Power management daemon"
 msgstr "বিদ্যুত্‌ পৰিচালনা সম্বন্ধীয় ডেমন"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/mate-power-manager.desktop.in.in:6
-#: data/mate-power-preferences.desktop.in.in:6
-msgid "mate-power-manager"
-msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:26
 #: data/org.mate.power-manager.gschema.xml.in:41
@@ -807,8 +795,8 @@ msgstr "বিদ্যুত্‌ পৰিচালনব্যৱস্থ�
 msgid "MATE;power;management;preferences;settings;"
 msgstr ""
 
-#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:7
-#: src/gpm-statistics.c:1090 src/gpm-statistics.c:1577
+#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
+#: src/gpm-statistics.c:764 src/gpm-statistics.c:1233
 msgid "Power Statistics"
 msgstr "পৰিসংখ্যান"
 
@@ -816,55 +804,37 @@ msgstr "পৰিসংখ্যান"
 msgid "Observe power management"
 msgstr "Observe power management"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/mate-power-statistics.desktop.in.in:6
-msgid "mate-power-statistics"
-msgstr ""
-
-#: data/gpm-statistics.ui:113 src/gpm-statistics.c:208
+#: data/gpm-statistics.ui:119
 msgid "Details"
 msgstr "বিবৰণ"
 
-#: data/gpm-statistics.ui:139 data/gpm-statistics.ui:342
+#: data/gpm-statistics.ui:145 data/gpm-statistics.ui:347
 msgid "Graph type:"
 msgstr "ধৰন:"
 
-#: data/gpm-statistics.ui:174
+#: data/gpm-statistics.ui:180
 msgid "Data length:"
 msgstr "ডাটাৰ দৈৰ্ঘ্য:"
 
-#: data/gpm-statistics.ui:234 data/gpm-statistics.ui:395
+#: data/gpm-statistics.ui:239 data/gpm-statistics.ui:399
 msgid "There is no data to display."
 msgstr "প্ৰদৰ্শনযোগ্য কোনো তথ্য নাই ।"
 
-#: data/gpm-statistics.ui:276 data/gpm-statistics.ui:438
+#: data/gpm-statistics.ui:281 data/gpm-statistics.ui:442
 msgid "Use smoothed line"
 msgstr "মশ্ৰিণ ৰেখা ব্যৱহাৰ কৰা হ'ব"
 
-#: data/gpm-statistics.ui:291 data/gpm-statistics.ui:453
+#: data/gpm-statistics.ui:296 data/gpm-statistics.ui:457
 msgid "Show data points"
 msgstr "আৰম্ভ"
 
-#: data/gpm-statistics.ui:320
+#: data/gpm-statistics.ui:325
 msgid "History"
 msgstr "পূৰ্ববৰ্তী তথ্য"
 
-#: data/gpm-statistics.ui:482
+#: data/gpm-statistics.ui:486
 msgid "Statistics"
 msgstr "পৰিসংখ্যান"
-
-#: data/gpm-statistics.ui:504
-msgid "Processor wakeups per second:"
-msgstr "প্ৰতি ছেকেণ্ডত প্ৰছেচৰ সজাগ হোৱাৰ সংখ্যা:"
-
-#: data/gpm-statistics.ui:516
-msgid "0"
-msgstr "0"
-
-#: data/gpm-statistics.ui:563 src/gpm-statistics.c:194
-msgid "Wakeups"
-msgstr "Wakeups"
 
 #: data/gpm-prefs.ui:55
 msgid "Power Management Preferences"
@@ -1118,7 +1088,7 @@ msgstr "%.1fW"
 msgid "%.1fV"
 msgstr "%.1fV"
 
-#: src/gpm-main.c:172 src/gpm-prefs.c:77 src/gpm-statistics.c:1560
+#: src/gpm-main.c:172 src/gpm-prefs.c:77 src/gpm-statistics.c:1216
 msgid "Show extra debugging information"
 msgstr "অতিৰিক্ত ডিবাগ তথ্য প্ৰদৰ্শন কৰা হ'ব"
 
@@ -1502,359 +1472,250 @@ msgstr "কিছু কৰা হ'ব না"
 msgid "Never"
 msgstr "কেতিয়াও নহয়"
 
-#: src/gpm-statistics.c:78 src/gpm-statistics.c:466
+#: src/gpm-statistics.c:67 src/gpm-statistics.c:410
 msgid "Rate"
 msgstr "হাৰ"
 
-#: src/gpm-statistics.c:79
+#: src/gpm-statistics.c:68
 msgid "Charge"
 msgstr "Charge time:"
 
-#: src/gpm-statistics.c:80 src/gpm-statistics.c:480
+#: src/gpm-statistics.c:69 src/gpm-statistics.c:424
 msgid "Time to full"
 msgstr "সময়"
 
-#: src/gpm-statistics.c:81 src/gpm-statistics.c:485
+#: src/gpm-statistics.c:70 src/gpm-statistics.c:429
 msgid "Time to empty"
 msgstr "ৰিক্ত কৰিবলৈ ব্যয় হোৱা সময়"
 
-#: src/gpm-statistics.c:88
+#: src/gpm-statistics.c:77
 msgid "10 minutes"
 msgstr "মিনিট"
 
-#: src/gpm-statistics.c:89
+#: src/gpm-statistics.c:78
 msgid "2 hours"
 msgstr "ঘন্টা"
 
-#: src/gpm-statistics.c:90
+#: src/gpm-statistics.c:79
 msgid "6 hours"
 msgstr ""
 
-#: src/gpm-statistics.c:91
+#: src/gpm-statistics.c:80
 msgid "1 day"
 msgstr "দিন"
 
-#: src/gpm-statistics.c:92
+#: src/gpm-statistics.c:81
 msgid "1 week"
 msgstr "<b>সপ্তাহ</b>"
 
-#: src/gpm-statistics.c:101
+#: src/gpm-statistics.c:90
 msgid "Charge profile"
 msgstr "Charge time profile"
 
-#: src/gpm-statistics.c:102
+#: src/gpm-statistics.c:91
 msgid "Discharge profile"
 msgstr "Discharge time profile"
 
-#: src/gpm-statistics.c:104
+#: src/gpm-statistics.c:93
 msgid "Charge accuracy"
 msgstr "Charge time accuracy profile"
 
-#: src/gpm-statistics.c:105
+#: src/gpm-statistics.c:94
 msgid "Discharge accuracy"
 msgstr "Discharge time accuracy profile"
 
-#: src/gpm-statistics.c:132
+#: src/gpm-statistics.c:121
 msgid "Attribute"
 msgstr "এট্ৰিবিয়ুট"
 
-#: src/gpm-statistics.c:139
+#: src/gpm-statistics.c:128
 msgid "Value"
 msgstr "মান"
 
-#: src/gpm-statistics.c:156
+#: src/gpm-statistics.c:145
 msgid "Image"
 msgstr "ছবি"
 
-#: src/gpm-statistics.c:162
+#: src/gpm-statistics.c:151
 msgid "Description"
 msgstr "বিৱৰণ"
 
-#: src/gpm-statistics.c:181 src/gpm-statistics.c:405
-msgid "Type"
-msgstr "ধৰন"
-
-#: src/gpm-statistics.c:187
-msgid "ID"
-msgstr "ID"
-
-#: src/gpm-statistics.c:201
-msgid "Command"
-msgstr "কমান্ড"
-
-#: src/gpm-statistics.c:286
+#: src/gpm-statistics.c:230
 msgid "Unknown"
 msgstr "অজ্ঞাত"
 
-#: src/gpm-statistics.c:290
+#: src/gpm-statistics.c:234
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-statistics.c:295
+#: src/gpm-statistics.c:239
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-statistics.c:300
+#: src/gpm-statistics.c:244
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-statistics.c:304
+#: src/gpm-statistics.c:248
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-statistics.c:313
+#: src/gpm-statistics.c:257
 msgid "Yes"
 msgstr "হয়"
 
-#: src/gpm-statistics.c:313
+#: src/gpm-statistics.c:257
 msgid "No"
 msgstr "নহয়"
 
-#: src/gpm-statistics.c:402
+#: src/gpm-statistics.c:346
 msgid "Device"
 msgstr "ডিভাইস"
 
-#: src/gpm-statistics.c:407
+#: src/gpm-statistics.c:349
+msgid "Type"
+msgstr "ধৰন"
+
+#: src/gpm-statistics.c:351
 msgid "Vendor"
 msgstr "বিক্ৰতা"
 
-#: src/gpm-statistics.c:409
+#: src/gpm-statistics.c:353
 msgid "Model"
 msgstr "মডেল"
 
-#: src/gpm-statistics.c:411
+#: src/gpm-statistics.c:355
 msgid "Serial number"
 msgstr "ক্ৰমিক নং:"
 
-#: src/gpm-statistics.c:416
+#: src/gpm-statistics.c:360
 msgid "Supply"
 msgstr "যোগান ধৰা"
 
-#: src/gpm-statistics.c:419
+#: src/gpm-statistics.c:363
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-statistics.c:423
+#: src/gpm-statistics.c:367
 msgid "Refreshed"
 msgstr "সতেজ কৰা"
 
-#: src/gpm-statistics.c:433
+#: src/gpm-statistics.c:377
 msgid "Present"
 msgstr "বৰ্তমান মূল্যটো"
 
-#: src/gpm-statistics.c:440
+#: src/gpm-statistics.c:384
 msgid "Rechargeable"
 msgstr "Rechargeable"
 
-#: src/gpm-statistics.c:446
+#: src/gpm-statistics.c:390
 msgid "State"
 msgstr "অৱস্থা"
 
-#: src/gpm-statistics.c:450
+#: src/gpm-statistics.c:394
 msgid "Energy"
 msgstr "শক্তি"
 
-#: src/gpm-statistics.c:453
+#: src/gpm-statistics.c:397
 msgid "Energy when empty"
 msgstr "ৰিক্ত অৱস্থাত ক্ষমতা"
 
-#: src/gpm-statistics.c:456
+#: src/gpm-statistics.c:400
 msgid "Energy when full"
 msgstr "পূৰ্ণ অৱস্থাত ক্ষমতা"
 
-#: src/gpm-statistics.c:459
+#: src/gpm-statistics.c:403
 msgid "Energy (design)"
 msgstr "ক্ষমতা (ডিজাইন অনুযায়ী)"
 
-#: src/gpm-statistics.c:473
+#: src/gpm-statistics.c:417
 msgid "Voltage"
 msgstr "Voltage"
 
-#: src/gpm-statistics.c:495
+#: src/gpm-statistics.c:439
 msgid "Percentage"
 msgstr "শতাংশ"
 
-#: src/gpm-statistics.c:502
+#: src/gpm-statistics.c:446
 msgid "Capacity"
 msgstr "Capacity:"
 
-#: src/gpm-statistics.c:507
+#: src/gpm-statistics.c:451
 msgid "Technology"
 msgstr "Technology:"
 
-#: src/gpm-statistics.c:512
+#: src/gpm-statistics.c:456
 msgid "Online"
 msgstr "অন-লাইন"
 
-#: src/gpm-statistics.c:824
-msgid "No data"
-msgstr "না"
-
-#: src/gpm-statistics.c:831 src/gpm-statistics.c:836
-msgid "Kernel module"
-msgstr "কাৰ্ণেল অংশ"
-
-#: src/gpm-statistics.c:841
-msgid "Kernel core"
-msgstr "কাৰ্ণেল ক'ৰ"
-
-#: src/gpm-statistics.c:846
-msgid "Interprocessor interrupt"
-msgstr "ইন্টাৰপ্ৰছেচৰ ইন্টাৰাপ্ট"
-
-#: src/gpm-statistics.c:851
-msgid "Interrupt"
-msgstr "ইন্টাৰাপ্ট উৎপন্ন কৰা হ'ব"
-
-#: src/gpm-statistics.c:898
-msgid "PS/2 keyboard/mouse/touchpad"
-msgstr "PS/2 keyboard/mouse/touchpad"
-
-#: src/gpm-statistics.c:901
-msgid "ACPI"
-msgstr "ACPI"
-
-#: src/gpm-statistics.c:904
-msgid "Serial ATA"
-msgstr "Serial ATA"
-
-#: src/gpm-statistics.c:907
-msgid "ATA host controller"
-msgstr "ATA host controller"
-
-#: src/gpm-statistics.c:910
-msgid "Intel wireless adaptor"
-msgstr "Intel wireless adaptor"
-
-#: src/gpm-statistics.c:917 src/gpm-statistics.c:922 src/gpm-statistics.c:927
-#: src/gpm-statistics.c:932 src/gpm-statistics.c:937
-#, c-format
-msgid "Timer %s"
-msgstr "সময় %s"
-
-#: src/gpm-statistics.c:941
-#, c-format
-msgid "Sleep %s"
-msgstr "Sleep %s"
-
-#: src/gpm-statistics.c:944
-#, c-format
-msgid "New task %s"
-msgstr "New task %s"
-
-#: src/gpm-statistics.c:948
-#, c-format
-msgid "Wait %s"
-msgstr "Wait %s"
-
-#: src/gpm-statistics.c:952 src/gpm-statistics.c:956
-#, c-format
-msgid "Work queue %s"
-msgstr "কামৰ কিউ %s"
-
-#: src/gpm-statistics.c:959
-#, c-format
-msgid "Network route flush %s"
-msgstr "নেটৱৰ্ক ৰুটৰ ফ্লাশ্ব %s"
-
-#: src/gpm-statistics.c:962
-#, c-format
-msgid "USB activity %s"
-msgstr "USB কাৰ্য্য %s"
-
-#: src/gpm-statistics.c:965
-#, c-format
-msgid "Wakeup %s"
-msgstr "Wakeup %s"
-
-#: src/gpm-statistics.c:968
-msgid "Local interrupts"
-msgstr "স্থানীয় ইন্টাৰাপ্ত"
-
-#: src/gpm-statistics.c:971
-msgid "Rescheduling interrupts"
-msgstr "পুনৰায় নিৰ্ধাৰণৰ ইন্টাৰাপ্ট"
-
-#: src/gpm-statistics.c:1080
+#: src/gpm-statistics.c:756
 msgid "Device Information"
 msgstr "যন্ত্ৰ সংক্ৰান্ত তথ্য"
 
-#: src/gpm-statistics.c:1082
+#: src/gpm-statistics.c:758
 msgid "Device History"
 msgstr "বিদ্যুত্‌ ব্যৱহাৰ সংক্ৰান্ত পূৰ্ববৰ্তী তথ্য"
 
-#: src/gpm-statistics.c:1084
+#: src/gpm-statistics.c:760
 msgid "Device Profile"
 msgstr "Discharge time profile"
 
-#: src/gpm-statistics.c:1086
-msgid "Processor Wakeups"
-msgstr "প্ৰছেচৰৰ সজাগতা"
-
-#: src/gpm-statistics.c:1325 src/gpm-statistics.c:1331
-#: src/gpm-statistics.c:1337 src/gpm-statistics.c:1343
+#: src/gpm-statistics.c:982 src/gpm-statistics.c:988 src/gpm-statistics.c:994
+#: src/gpm-statistics.c:1000
 msgid "Time elapsed"
 msgstr "Average time elapsed"
 
-#: src/gpm-statistics.c:1327
+#: src/gpm-statistics.c:984
 msgid "Power"
 msgstr "Power"
 
-#: src/gpm-statistics.c:1333 src/gpm-statistics.c:1377
-#: src/gpm-statistics.c:1383 src/gpm-statistics.c:1389
-#: src/gpm-statistics.c:1395
+#: src/gpm-statistics.c:990 src/gpm-statistics.c:1034
+#: src/gpm-statistics.c:1040 src/gpm-statistics.c:1046
+#: src/gpm-statistics.c:1052
 msgid "Cell charge"
 msgstr "Cell Voltage"
 
-#: src/gpm-statistics.c:1339 src/gpm-statistics.c:1345
+#: src/gpm-statistics.c:996 src/gpm-statistics.c:1002
 msgid "Predicted time"
 msgstr "Estimated time"
 
-#: src/gpm-statistics.c:1379 src/gpm-statistics.c:1391
+#: src/gpm-statistics.c:1036 src/gpm-statistics.c:1048
 msgid "Correction factor"
 msgstr "যথাৰ্থতাৰ গুণনীয়ক"
 
-#: src/gpm-statistics.c:1385 src/gpm-statistics.c:1397
+#: src/gpm-statistics.c:1042 src/gpm-statistics.c:1054
 msgid "Prediction accuracy"
 msgstr "অনুমানৰ যথাৰ্থতা"
 
-#: src/gpm-statistics.c:1563
+#: src/gpm-statistics.c:1219
 msgid "Select this device at startup"
 msgstr ""
 
-#: src/gpm-statistics.c:1802
-msgid "Processor"
-msgstr "প্ৰসেসৰ"
-
-#: src/gpm-tray-icon.c:187
-msgid "Copyright © 2011-2018 MATE developers"
+#: src/gpm-tray-icon.c:207
+msgid "Copyright © 2011-2020 MATE developers"
 msgstr ""
 
-#: src/gpm-tray-icon.c:193
-msgid "translator-credits"
-msgstr "অমিতাক্ষ ফুকন (aphukan@fedoraproject.org)"
-
-#: src/gpm-tray-icon.c:295
+#: src/gpm-tray-icon.c:317
 #, c-format
 msgid "%s remaining"
 msgstr ""
 
-#: src/gpm-tray-icon.c:349
+#: src/gpm-tray-icon.c:371
 msgid "_Preferences"
 msgstr "পছন্দ (_P)"
 

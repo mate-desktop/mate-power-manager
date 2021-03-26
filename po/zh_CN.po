@@ -5,21 +5,20 @@
 # 
 # Translators:
 # Wolfgang Ulbrich <mate@raveit.de>, 2020
-# Mingye Wang <arthur200126@gmail.com>, 2020
 # zhineng404 <zhinengge@gmail.com>, 2020
 # Mingtian Yang <i@skylee.xyz>, 2020
 # e0c668032ced196bd60f2b6a070d982d_8f72ae0, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Mingcong Bai <jeffbai@aosc.xyz>, 2020
-# liushuyu011 <liushuyu011@gmail.com>, 2020
+# shuyu liu <liushuyu011@gmail.com>, 2020
 # 玉堂白鹤 <yjwork@qq.com>, 2020
 # liulitchi <xingzuo88@qq.com>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-power-manager 1.23.1\n"
+"Project-Id-Version: mate-power-manager 1.24.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2019-11-12 15:22+0100\n"
+"POT-Creation-Date: 2020-08-15 10:48+0200\n"
 "PO-Revision-Date: 2020-02-15 16:27+0000\n"
 "Last-Translator: liulitchi <xingzuo88@qq.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
@@ -51,55 +50,65 @@ msgstr "无法获得笔记本屏幕亮度"
 msgid "LCD brightness : %d%%"
 msgstr "LCD 亮度：%d%%"
 
+#: applets/brightness/brightness-applet.c:790
+#: applets/inhibit/inhibit-applet.c:287
+msgid ""
+"Power Manager is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+
+#: applets/brightness/brightness-applet.c:795
+#: applets/inhibit/inhibit-applet.c:292
+msgid ""
+"Power Manager is distributed in the hope that it will be useful, but WITHOUT"
+" ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
+msgstr ""
+
 #: applets/brightness/brightness-applet.c:800
 #: applets/inhibit/inhibit-applet.c:297
-msgid "Licensed under the GNU General Public License Version 2"
-msgstr "在 GNU 通用公共许可证 版本 2下授权"
-
-#: applets/brightness/brightness-applet.c:801
-#: applets/inhibit/inhibit-applet.c:298
 msgid ""
-"Power Manager is free software; you can redistribute it and/or\n"
-"modify it under the terms of the GNU General Public License\n"
-"as published by the Free Software Foundation; either version 2\n"
-"of the License, or (at your option) any later version."
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
-"电源管理器是自由软件；\n"
-"您可以在自由软件基金会发布的 GNU 通用公共许可证的条款下重新分发和(或)修改它；\n"
-"您可以选择使用 GPL 第二版，或(按照您的意愿)任何更新的版本。"
 
-#: applets/brightness/brightness-applet.c:805
-#: applets/inhibit/inhibit-applet.c:302
+#: applets/brightness/brightness-applet.c:813
+msgid "About Power Manager Brightness Applet"
+msgstr ""
+
+#: applets/brightness/brightness-applet.c:815
 msgid ""
-"Power Manager is distributed in the hope that it will be useful,\n"
-"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-"GNU General Public License for more details."
+"Copyright © 2006 Benjamin Canou\n"
+"Copyright © 2011-2020 MATE developers"
 msgstr ""
-"电源管理器分发的目的是希望它物有所用，\n"
-"但是没有任何担保；对于其适销性或某一特定目的下的适用性，\n"
-"没有任何即便是暗示的担保。\n"
-"请查阅 GNU 通用公共许可证以获得更多信息。"
 
-#: applets/brightness/brightness-applet.c:809
-#: applets/inhibit/inhibit-applet.c:306
-msgid ""
-"You should have received a copy of the GNU General Public License\n"
-"along with this program; if not, write to the Free Software\n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
-"02110-1301, USA."
+#: applets/brightness/brightness-applet.c:822
+#: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:213
+msgid "translator-credits"
 msgstr ""
-"你应当已经跟本程序一起收到一份 GNU 通用公众许可证的副本；\n"
-"如果没有，请写信至：Free Software Foundation, Inc.，\n"
-"51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA"
+"Christopher Meng <i@cicku.me>, 2012-2013\n"
+"ravix <dr.neemous@gmail.com>, 2013\n"
+"Dianjin Wang <1132321739qq@gmail.com>, 2012\n"
+"Cravix <dr.neemous@gmail.com>, 2013\n"
+"nyanyh <rebuilty@gmail.com>, 2013\n"
+"liulitchi <xingzuo88@qq.com>, 2013\n"
+"玉堂白鹤 <yjwork@qq.com>, 2015\n"
+"Mingye Wang <arthur200126@gmail.com>, 2015-2016\n"
+"白铭骢 <jeffbai@aosc.xyz>, 2015-2016\n"
+"刘子兴 <liushuyu@aosc.xyz>, 2015-2016\n"
+"Mingtian Yang <i@skylee.xyz>, 2020"
 
-#: applets/brightness/brightness-applet.c:1063
-#: applets/inhibit/inhibit-applet.c:519
+#: applets/brightness/brightness-applet.c:1050
+#: applets/inhibit/inhibit-applet.c:506
 msgid "_About"
 msgstr "关于(_A)"
 
-#: applets/brightness/brightness-applet.c:1066
-#: applets/inhibit/inhibit-applet.c:522
+#: applets/brightness/brightness-applet.c:1053
+#: applets/inhibit/inhibit-applet.c:509
 msgid "_Help"
 msgstr "帮助(_H)"
 
@@ -110,12 +119,6 @@ msgstr "亮度小程序工厂"
 #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:9
 msgid "Brightness Applet"
 msgstr "亮度小程序"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-brightness-applet"
-msgstr "mate-brightness-applet"
 
 #: applets/inhibit/inhibit-applet.c:87
 msgid "Power Manager Inhibit Applet"
@@ -137,6 +140,16 @@ msgstr "自动休眠被启用"
 msgid "Manual inhibit"
 msgstr "人工阻止"
 
+#: applets/inhibit/inhibit-applet.c:310
+msgid "About Power Manager Inhibit Applet"
+msgstr ""
+
+#: applets/inhibit/inhibit-applet.c:312
+msgid ""
+"Copyright © 2006-2007 Richard Hughes\n"
+"Copyright © 2011-2020 MATE developers"
+msgstr ""
+
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
 msgstr "阻止管理小程序工厂"
@@ -145,26 +158,13 @@ msgstr "阻止管理小程序工厂"
 msgid "Inhibit Applet"
 msgstr "阻止管理小程序"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-inhibit-applet"
-msgstr "mate-inhibit-applet"
-
-#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:184
+#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:204
 msgid "Power Manager"
 msgstr "电源管理器"
 
-#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:186
+#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:206
 msgid "Power management daemon"
 msgstr "电源管理守护程序"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/mate-power-manager.desktop.in.in:6
-#: data/mate-power-preferences.desktop.in.in:6
-msgid "mate-power-manager"
-msgstr "mate-power-manager"
 
 #: data/org.mate.power-manager.gschema.xml.in:26
 #: data/org.mate.power-manager.gschema.xml.in:41
@@ -775,8 +775,8 @@ msgstr "配置电源管理"
 msgid "MATE;power;management;preferences;settings;"
 msgstr "MATE;power;management;preferences;settings;"
 
-#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:7
-#: src/gpm-statistics.c:1090 src/gpm-statistics.c:1577
+#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
+#: src/gpm-statistics.c:764 src/gpm-statistics.c:1233
 msgid "Power Statistics"
 msgstr "电源统计"
 
@@ -784,55 +784,37 @@ msgstr "电源统计"
 msgid "Observe power management"
 msgstr "监控电源管理"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/mate-power-statistics.desktop.in.in:6
-msgid "mate-power-statistics"
-msgstr "mate-power-statistics"
-
-#: data/gpm-statistics.ui:113 src/gpm-statistics.c:208
+#: data/gpm-statistics.ui:119
 msgid "Details"
 msgstr "细节"
 
-#: data/gpm-statistics.ui:139 data/gpm-statistics.ui:342
+#: data/gpm-statistics.ui:145 data/gpm-statistics.ui:347
 msgid "Graph type:"
 msgstr "图表类型："
 
-#: data/gpm-statistics.ui:174
+#: data/gpm-statistics.ui:180
 msgid "Data length:"
 msgstr "时间跨度："
 
-#: data/gpm-statistics.ui:234 data/gpm-statistics.ui:395
+#: data/gpm-statistics.ui:239 data/gpm-statistics.ui:399
 msgid "There is no data to display."
 msgstr "没有要显示的数据。"
 
-#: data/gpm-statistics.ui:276 data/gpm-statistics.ui:438
+#: data/gpm-statistics.ui:281 data/gpm-statistics.ui:442
 msgid "Use smoothed line"
 msgstr "使用平滑曲线"
 
-#: data/gpm-statistics.ui:291 data/gpm-statistics.ui:453
+#: data/gpm-statistics.ui:296 data/gpm-statistics.ui:457
 msgid "Show data points"
 msgstr "显示数据点"
 
-#: data/gpm-statistics.ui:320
+#: data/gpm-statistics.ui:325
 msgid "History"
 msgstr "历史"
 
-#: data/gpm-statistics.ui:482
+#: data/gpm-statistics.ui:486
 msgid "Statistics"
 msgstr "统计"
-
-#: data/gpm-statistics.ui:504
-msgid "Processor wakeups per second:"
-msgstr "每秒处理器唤醒次数："
-
-#: data/gpm-statistics.ui:516
-msgid "0"
-msgstr "0"
-
-#: data/gpm-statistics.ui:563 src/gpm-statistics.c:194
-msgid "Wakeups"
-msgstr "唤醒"
 
 #: data/gpm-prefs.ui:55
 msgid "Power Management Preferences"
@@ -1082,7 +1064,7 @@ msgstr "%.1fW"
 msgid "%.1fV"
 msgstr "%.1fV"
 
-#: src/gpm-main.c:172 src/gpm-prefs.c:77 src/gpm-statistics.c:1560
+#: src/gpm-main.c:172 src/gpm-prefs.c:77 src/gpm-statistics.c:1216
 msgid "Show extra debugging information"
 msgstr "显示额外的调试信息"
 
@@ -1463,365 +1445,245 @@ msgstr "不执行动作"
 msgid "Never"
 msgstr "从不"
 
-#: src/gpm-statistics.c:78 src/gpm-statistics.c:466
+#: src/gpm-statistics.c:67 src/gpm-statistics.c:410
 msgid "Rate"
 msgstr "利率"
 
-#: src/gpm-statistics.c:79
+#: src/gpm-statistics.c:68
 msgid "Charge"
 msgstr "电量"
 
-#: src/gpm-statistics.c:80 src/gpm-statistics.c:480
+#: src/gpm-statistics.c:69 src/gpm-statistics.c:424
 msgid "Time to full"
 msgstr "充满时间"
 
-#: src/gpm-statistics.c:81 src/gpm-statistics.c:485
+#: src/gpm-statistics.c:70 src/gpm-statistics.c:429
 msgid "Time to empty"
 msgstr "放完时间"
 
-#: src/gpm-statistics.c:88
+#: src/gpm-statistics.c:77
 msgid "10 minutes"
 msgstr "10 分钟"
 
-#: src/gpm-statistics.c:89
+#: src/gpm-statistics.c:78
 msgid "2 hours"
 msgstr "2 小时"
 
-#: src/gpm-statistics.c:90
+#: src/gpm-statistics.c:79
 msgid "6 hours"
 msgstr "6 小时"
 
-#: src/gpm-statistics.c:91
+#: src/gpm-statistics.c:80
 msgid "1 day"
 msgstr "1 天"
 
-#: src/gpm-statistics.c:92
+#: src/gpm-statistics.c:81
 msgid "1 week"
 msgstr "1 周"
 
-#: src/gpm-statistics.c:101
+#: src/gpm-statistics.c:90
 msgid "Charge profile"
 msgstr "充电图"
 
-#: src/gpm-statistics.c:102
+#: src/gpm-statistics.c:91
 msgid "Discharge profile"
 msgstr "放电图"
 
-#: src/gpm-statistics.c:104
+#: src/gpm-statistics.c:93
 msgid "Charge accuracy"
 msgstr "充电准确度"
 
-#: src/gpm-statistics.c:105
+#: src/gpm-statistics.c:94
 msgid "Discharge accuracy"
 msgstr "放电时间准确度"
 
-#: src/gpm-statistics.c:132
+#: src/gpm-statistics.c:121
 msgid "Attribute"
 msgstr "属性"
 
-#: src/gpm-statistics.c:139
+#: src/gpm-statistics.c:128
 msgid "Value"
 msgstr "值"
 
-#: src/gpm-statistics.c:156
+#: src/gpm-statistics.c:145
 msgid "Image"
 msgstr "图像"
 
-#: src/gpm-statistics.c:162
+#: src/gpm-statistics.c:151
 msgid "Description"
 msgstr "描述"
 
-#: src/gpm-statistics.c:181 src/gpm-statistics.c:405
-msgid "Type"
-msgstr "类型"
-
-#: src/gpm-statistics.c:187
-msgid "ID"
-msgstr "ID"
-
-#: src/gpm-statistics.c:201
-msgid "Command"
-msgstr "命令"
-
-#: src/gpm-statistics.c:286
+#: src/gpm-statistics.c:230
 msgid "Unknown"
 msgstr "未知"
 
-#: src/gpm-statistics.c:290
+#: src/gpm-statistics.c:234
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
 msgstr[0] "%.0f 秒"
 
-#: src/gpm-statistics.c:295
+#: src/gpm-statistics.c:239
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
 msgstr[0] "%.1f 分"
 
-#: src/gpm-statistics.c:300
+#: src/gpm-statistics.c:244
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
 msgstr[0] "%.1f 小时"
 
-#: src/gpm-statistics.c:304
+#: src/gpm-statistics.c:248
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
 msgstr[0] "%.1f 天"
 
-#: src/gpm-statistics.c:313
+#: src/gpm-statistics.c:257
 msgid "Yes"
 msgstr "是"
 
-#: src/gpm-statistics.c:313
+#: src/gpm-statistics.c:257
 msgid "No"
 msgstr "否"
 
-#: src/gpm-statistics.c:402
+#: src/gpm-statistics.c:346
 msgid "Device"
 msgstr "设备"
 
-#: src/gpm-statistics.c:407
+#: src/gpm-statistics.c:349
+msgid "Type"
+msgstr "类型"
+
+#: src/gpm-statistics.c:351
 msgid "Vendor"
 msgstr "发行商"
 
-#: src/gpm-statistics.c:409
+#: src/gpm-statistics.c:353
 msgid "Model"
 msgstr "型号"
 
-#: src/gpm-statistics.c:411
+#: src/gpm-statistics.c:355
 msgid "Serial number"
 msgstr "序列号"
 
-#: src/gpm-statistics.c:416
+#: src/gpm-statistics.c:360
 msgid "Supply"
 msgstr "供应"
 
-#: src/gpm-statistics.c:419
+#: src/gpm-statistics.c:363
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d 秒"
 
-#: src/gpm-statistics.c:423
+#: src/gpm-statistics.c:367
 msgid "Refreshed"
 msgstr "已刷新"
 
-#: src/gpm-statistics.c:433
+#: src/gpm-statistics.c:377
 msgid "Present"
 msgstr "当前电池"
 
-#: src/gpm-statistics.c:440
+#: src/gpm-statistics.c:384
 msgid "Rechargeable"
 msgstr "可充电"
 
-#: src/gpm-statistics.c:446
+#: src/gpm-statistics.c:390
 msgid "State"
 msgstr "状态"
 
-#: src/gpm-statistics.c:450
+#: src/gpm-statistics.c:394
 msgid "Energy"
 msgstr "能量"
 
-#: src/gpm-statistics.c:453
+#: src/gpm-statistics.c:397
 msgid "Energy when empty"
 msgstr "空时能量"
 
-#: src/gpm-statistics.c:456
+#: src/gpm-statistics.c:400
 msgid "Energy when full"
 msgstr "满时能量"
 
-#: src/gpm-statistics.c:459
+#: src/gpm-statistics.c:403
 msgid "Energy (design)"
 msgstr "能量 (设计)"
 
-#: src/gpm-statistics.c:473
+#: src/gpm-statistics.c:417
 msgid "Voltage"
 msgstr "电压"
 
-#: src/gpm-statistics.c:495
+#: src/gpm-statistics.c:439
 msgid "Percentage"
 msgstr "百分比"
 
-#: src/gpm-statistics.c:502
+#: src/gpm-statistics.c:446
 msgid "Capacity"
 msgstr "容量"
 
-#: src/gpm-statistics.c:507
+#: src/gpm-statistics.c:451
 msgid "Technology"
 msgstr "技术"
 
-#: src/gpm-statistics.c:512
+#: src/gpm-statistics.c:456
 msgid "Online"
 msgstr "在线"
 
-#: src/gpm-statistics.c:824
-msgid "No data"
-msgstr "无数据"
-
-#: src/gpm-statistics.c:831 src/gpm-statistics.c:836
-msgid "Kernel module"
-msgstr "内核模块"
-
-#: src/gpm-statistics.c:841
-msgid "Kernel core"
-msgstr "内核核心"
-
-#: src/gpm-statistics.c:846
-msgid "Interprocessor interrupt"
-msgstr "处理器间中断"
-
-#: src/gpm-statistics.c:851
-msgid "Interrupt"
-msgstr "中断"
-
-#: src/gpm-statistics.c:898
-msgid "PS/2 keyboard/mouse/touchpad"
-msgstr "PS/2 键盘/鼠标/触摸板"
-
-#: src/gpm-statistics.c:901
-msgid "ACPI"
-msgstr "ACPI(高级配置及电源接口)"
-
-#: src/gpm-statistics.c:904
-msgid "Serial ATA"
-msgstr "串行 ATA(SATA)"
-
-#: src/gpm-statistics.c:907
-msgid "ATA host controller"
-msgstr "ATA 主控制器"
-
-#: src/gpm-statistics.c:910
-msgid "Intel wireless adaptor"
-msgstr "Intel 无线适配器(无线网卡)"
-
-#: src/gpm-statistics.c:917 src/gpm-statistics.c:922 src/gpm-statistics.c:927
-#: src/gpm-statistics.c:932 src/gpm-statistics.c:937
-#, c-format
-msgid "Timer %s"
-msgstr "定时器 %s"
-
-#: src/gpm-statistics.c:941
-#, c-format
-msgid "Sleep %s"
-msgstr "睡眠 %s"
-
-#: src/gpm-statistics.c:944
-#, c-format
-msgid "New task %s"
-msgstr "新任务 %s"
-
-#: src/gpm-statistics.c:948
-#, c-format
-msgid "Wait %s"
-msgstr "等待 %s"
-
-#: src/gpm-statistics.c:952 src/gpm-statistics.c:956
-#, c-format
-msgid "Work queue %s"
-msgstr "工作队列 %s"
-
-#: src/gpm-statistics.c:959
-#, c-format
-msgid "Network route flush %s"
-msgstr "网络路由清出 %s"
-
-#: src/gpm-statistics.c:962
-#, c-format
-msgid "USB activity %s"
-msgstr "USB 活动 %s"
-
-#: src/gpm-statistics.c:965
-#, c-format
-msgid "Wakeup %s"
-msgstr "唤醒 %s"
-
-#: src/gpm-statistics.c:968
-msgid "Local interrupts"
-msgstr "本地中断"
-
-#: src/gpm-statistics.c:971
-msgid "Rescheduling interrupts"
-msgstr "重调度中断"
-
-#: src/gpm-statistics.c:1080
+#: src/gpm-statistics.c:756
 msgid "Device Information"
 msgstr "设备信息"
 
-#: src/gpm-statistics.c:1082
+#: src/gpm-statistics.c:758
 msgid "Device History"
 msgstr "设备历史"
 
-#: src/gpm-statistics.c:1084
+#: src/gpm-statistics.c:760
 msgid "Device Profile"
 msgstr "设备配置"
 
-#: src/gpm-statistics.c:1086
-msgid "Processor Wakeups"
-msgstr "处理器唤醒"
-
-#: src/gpm-statistics.c:1325 src/gpm-statistics.c:1331
-#: src/gpm-statistics.c:1337 src/gpm-statistics.c:1343
+#: src/gpm-statistics.c:982 src/gpm-statistics.c:988 src/gpm-statistics.c:994
+#: src/gpm-statistics.c:1000
 msgid "Time elapsed"
 msgstr "已过去时间"
 
-#: src/gpm-statistics.c:1327
+#: src/gpm-statistics.c:984
 msgid "Power"
 msgstr "乘方"
 
-#: src/gpm-statistics.c:1333 src/gpm-statistics.c:1377
-#: src/gpm-statistics.c:1383 src/gpm-statistics.c:1389
-#: src/gpm-statistics.c:1395
+#: src/gpm-statistics.c:990 src/gpm-statistics.c:1034
+#: src/gpm-statistics.c:1040 src/gpm-statistics.c:1046
+#: src/gpm-statistics.c:1052
 msgid "Cell charge"
 msgstr "电池电量"
 
-#: src/gpm-statistics.c:1339 src/gpm-statistics.c:1345
+#: src/gpm-statistics.c:996 src/gpm-statistics.c:1002
 msgid "Predicted time"
 msgstr "预计时间"
 
-#: src/gpm-statistics.c:1379 src/gpm-statistics.c:1391
+#: src/gpm-statistics.c:1036 src/gpm-statistics.c:1048
 msgid "Correction factor"
 msgstr "修正因数"
 
-#: src/gpm-statistics.c:1385 src/gpm-statistics.c:1397
+#: src/gpm-statistics.c:1042 src/gpm-statistics.c:1054
 msgid "Prediction accuracy"
 msgstr "预测准确度"
 
-#: src/gpm-statistics.c:1563
+#: src/gpm-statistics.c:1219
 msgid "Select this device at startup"
 msgstr "在启动时选择这个设备"
 
-#: src/gpm-statistics.c:1802
-msgid "Processor"
-msgstr "处理器"
-
-#: src/gpm-tray-icon.c:187
-msgid "Copyright © 2011-2018 MATE developers"
-msgstr "版权所有 © 2011-2018 MATE 开发者"
-
-#: src/gpm-tray-icon.c:193
-msgid "translator-credits"
+#: src/gpm-tray-icon.c:207
+msgid "Copyright © 2011-2020 MATE developers"
 msgstr ""
-"Christopher Meng <i@cicku.me>, 2012-2013\n"
-"ravix <dr.neemous@gmail.com>, 2013\n"
-"Dianjin Wang <1132321739qq@gmail.com>, 2012\n"
-"Cravix <dr.neemous@gmail.com>, 2013\n"
-"nyanyh <rebuilty@gmail.com>, 2013\n"
-"liulitchi <xingzuo88@qq.com>, 2013\n"
-"玉堂白鹤 <yjwork@qq.com>, 2015\n"
-"Mingye Wang <arthur200126@gmail.com>, 2015-2016\n"
-"白铭骢 <jeffbai@aosc.xyz>, 2015-2016\n"
-"刘子兴 <liushuyu@aosc.xyz>, 2015-2016\n"
-"Mingtian Yang <i@skylee.xyz>, 2020"
 
-#: src/gpm-tray-icon.c:295
+#: src/gpm-tray-icon.c:317
 #, c-format
 msgid "%s remaining"
 msgstr "剩余 %s"
 
-#: src/gpm-tray-icon.c:349
+#: src/gpm-tray-icon.c:371
 msgid "_Preferences"
 msgstr "属性(_P)"
 
