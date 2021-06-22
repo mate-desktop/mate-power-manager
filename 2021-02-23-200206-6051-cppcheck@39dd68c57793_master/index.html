@@ -1,0 +1,201 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cppcheck - HTML report - mate-power-manager</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+    <script>
+      function getStyle(el, styleProp) {
+        var y;
+
+        if (el.currentStyle) {
+          y = el.currentStyle[styleProp];
+        } else if (window.getComputedStyle) {
+          y = document.defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
+        }
+
+        return y;
+      }
+
+      function toggle() {
+        var el = this.expandable_content;
+        var mark = this.expandable_marker;
+
+        if (el.style.display === "block") {
+          el.style.display = "none";
+          mark.textContent = "[+]";
+        } else {
+          el.style.display = "block";
+          mark.textContent = "[-]";
+        }
+      }
+
+      function initExpandables() {
+        var elements = document.querySelectorAll(".expandable");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var el = elements[i];
+          var clickable = el.querySelector("span");
+          var marker = clickable.querySelector(".marker");
+          var content = el.querySelector(".content");
+          var width = clickable.clientWidth - parseInt(getStyle(content, "padding-left")) - parseInt(getStyle(content, "padding-right"));
+          content.style.width = width + "px";
+          clickable.expandable_content = content;
+          clickable.expandable_marker = marker;
+          clickable.addEventListener("click", toggle);
+        }
+      }
+
+      function toggleDisplay(id) {
+        var elements = document.querySelectorAll("." + id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("d-none");
+        }
+      }
+
+      function toggleAll() {
+        var elements = document.querySelectorAll("input");
+
+        // starting from 1 since 0 is the "toggle all" input
+        for (var i = 1, len = elements.length; i < len; i++) {
+          var el = elements[i];
+
+          if (el.checked) {
+            el.checked = false;
+          } else {
+            el.checked = true;
+          }
+
+          toggleDisplay(el.id);
+        }
+      }
+      window.addEventListener("load", initExpandables);
+    </script>
+  </head>
+  <body>
+    <div id="header" class="header">
+      <h1>Cppcheck report - mate-power-manager: </h1>
+    </div>
+    <div class="wrapper">
+      <div id="menu_index">
+       <p id="filename"><a href="index.html">Defect summary;</a> </p>
+
+       <label><input type="checkbox" onclick="toggleAll()" checked> Toggle all</label>
+       <table>
+           <tr><th>Show</th><th>#</th><th>Defect ID</th></tr>
+            <tr><td><input type="checkbox" onclick="toggleDisplay(this.id)" id="variableScope" name="variableScope" checked></td><td>28</td><td>variableScope</td></tr>
+            <tr><td><input type="checkbox" onclick="toggleDisplay(this.id)" id="unusedStructMember" name="unusedStructMember" checked></td><td>13</td><td>unusedStructMember</td></tr>
+            <tr><td><input type="checkbox" onclick="toggleDisplay(this.id)" id="unknownMacro" name="unknownMacro" checked></td><td>9</td><td>unknownMacro</td></tr>
+            <tr><td><input type="checkbox" onclick="toggleDisplay(this.id)" id="duplicateCondition" name="duplicateCondition" checked></td><td>2</td><td>duplicateCondition</td></tr>
+            <tr><td><input type="checkbox" onclick="toggleDisplay(this.id)" id="unreadVariable" name="unreadVariable" checked></td><td>2</td><td>unreadVariable</td></tr>
+            <tr><td><input type="checkbox" onclick="toggleDisplay(this.id)" id="duplicateExpression" name="duplicateExpression" checked></td><td>1</td><td>duplicateExpression</td></tr>
+            <tr><td><input type="checkbox" onclick="toggleDisplay(this.id)" id="invalidscanf" name="invalidscanf" checked></td><td>1</td><td>invalidscanf</td></tr>
+            <tr><td><input type="checkbox" onclick="toggleDisplay(this.id)" id="missingInclude" name="missingInclude" checked></td><td>1</td><td>missingInclude</td></tr>
+            <tr><td><input type="checkbox" onclick="toggleDisplay(this.id)" id="nullPointerRedundantCheck" name="nullPointerRedundantCheck" checked></td><td>1</td><td>nullPointerRedundantCheck</td></tr>
+           <tr><td></td><td>58</td><td>total</td></tr>
+       </table>
+       <p><a href="stats.html">Statistics</a></p>
+    </div>
+    <div id="content_index">
+
+       <table>
+       <tr><th>Line</th><th>Id</th><th>CWE</th><th>Severity</th><th>Message</th></tr>
+       <tr><td colspan="5"><a href="22.html"></a></td></tr>
+         <tr class="missingInclude"><td></td><td>missingInclude</td><td></td><td>information</td><td>Cppcheck cannot find all the include files (use --check-config for details)</td></tr>
+       <tr><td colspan="5"><a href="0.html">applets/brightness/brightness-applet.c</a></td></tr>
+       <tr class="variableScope"><td><a href="0.html#line-268">268</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;context&apos; can be reduced.</td></tr>
+       <tr class="variableScope"><td><a href="0.html#line-552">552</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;i&apos; can be reduced.</td></tr>
+       <tr><td colspan="5"><a href="1.html">src/egg-console-kit.c</a></td></tr>
+       <tr class="unknownMacro"><td><a href="1.html#line-60">60</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+       <tr><td colspan="5"><a href="2.html">src/egg-idletime.c</a></td></tr>
+       <tr class="variableScope"><td><a href="2.html#line-174">174</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;alarm&apos; can be reduced.</td></tr>
+       <tr class="variableScope"><td><a href="2.html#line-225">225</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;alarm&apos; can be reduced.</td></tr>
+       <tr class="variableScope"><td><a href="2.html#line-437">437</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;alarm&apos; can be reduced.</td></tr>
+       <tr><td colspan="5"><a href="3.html">src/gpm-backlight.c</a></td></tr>
+       <tr class="unknownMacro"><td><a href="3.html#line-81">81</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+       <tr><td colspan="5"><a href="4.html">src/gpm-brightness.c</a></td></tr>
+       <tr class="variableScope"><td><a href="4.html#line-522">522</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;resource&apos; can be reduced.</td></tr>
+       <tr><td colspan="5"><a href="5.html">src/gpm-button.c</a></td></tr>
+       <tr class="variableScope"><td><a href="5.html#line-255">255</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;proxy&apos; can be reduced.</td></tr>
+       <tr class="variableScope"><td><a href="5.html#line-256">256</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;res&apos; can be reduced.</td></tr>
+       <tr><td colspan="5"><a href="6.html">src/gpm-control.c</a></td></tr>
+       <tr class="unknownMacro"><td><a href="6.html#line-70">70</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+       <tr><td colspan="5"><a href="7.html">src/gpm-dpms.c</a></td></tr>
+       <tr class="unknownMacro"><td><a href="7.html#line-66">66</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+       <tr><td colspan="5"><a href="8.html">src/gpm-engine.c</a></td></tr>
+       <tr class="variableScope"><td><a href="8.html#line-119">119</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;device&apos; can be reduced.</td></tr>
+       <tr class="variableScope"><td><a href="8.html#line-166">166</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;device&apos; can be reduced.</td></tr>
+       <tr class="variableScope"><td><a href="8.html#line-484">484</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;composite&apos; can be reduced.</td></tr>
+       <tr class="variableScope"><td><a href="8.html#line-527">527</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;device&apos; can be reduced.</td></tr>
+       <tr class="nullPointerRedundantCheck"><td><a href="8.html#line-538">538</a></td><td>nullPointerRedundantCheck</td><td><a href="https://cwe.mitre.org/data/definitions/476.html">476</a></td><td>warning</td><td >Either the condition &apos;array!=NULL&apos; is redundant or there is possible null pointer dereference: array.</td></tr>
+       <tr class="variableScope"><td><a href="8.html#line-663">663</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;device_tmp&apos; can be reduced.</td></tr>
+       <tr class="variableScope"><td><a href="8.html#line-729">729</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;device&apos; can be reduced.</td></tr>
+       <tr class="variableScope"><td><a href="8.html#line-759">759</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;device&apos; can be reduced.</td></tr>
+       <tr><td colspan="5"><a href="9.html">src/gpm-graph-widget.c</a></td></tr>
+       <tr class="unusedStructMember"><td><a href="9.html#line-61">61</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td >struct member &apos;GpmGraphWidgetPrivate::title&apos; is never used.</td></tr>
+       <tr class="variableScope"><td><a href="9.html#line-96">96</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;keyitem&apos; can be reduced.</td></tr>
+       <tr class="variableScope"><td><a href="9.html#line-382">382</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;obj&apos; can be reduced.</td></tr>
+       <tr class="unreadVariable"><td><a href="9.html#line-534">534</a></td><td>unreadVariable</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td >Variable &apos;offsetx&apos; is assigned a value that is never used.</td></tr>
+       <tr class="unreadVariable"><td><a href="9.html#line-535">535</a></td><td>unreadVariable</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td >Variable &apos;offsety&apos; is assigned a value that is never used.</td></tr>
+       <tr class="variableScope"><td><a href="9.html#line-600">600</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;text&apos; can be reduced.</td></tr>
+       <tr class="duplicateExpression"><td><a href="9.html#line-842">842</a></td><td>duplicateExpression</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >Same expression on both sides of &apos;/&apos;.</td></tr>
+       <tr class="variableScope"><td><a href="9.html#line-898">898</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;data&apos; can be reduced.</td></tr>
+       <tr class="variableScope"><td><a href="9.html#line-997">997</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;keydataitem&apos; can be reduced.</td></tr>
+       <tr class="variableScope"><td><a href="9.html#line-1035">1035</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;keydataitem&apos; can be reduced.</td></tr>
+       <tr><td colspan="5"><a href="10.html">src/gpm-kbd-backlight.c</a></td></tr>
+       <tr class="unknownMacro"><td><a href="10.html#line-62">62</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+       <tr><td colspan="5"><a href="11.html">src/gpm-load.c</a></td></tr>
+       <tr class="invalidscanf"><td><a href="11.html#line-182">182</a></td><td>invalidscanf</td><td><a href="https://cwe.mitre.org/data/definitions/119.html">119</a></td><td>warning</td><td >sscanf() without field width limits can crash with huge input data.</td></tr>
+       <tr><td colspan="5"><a href="12.html">src/gpm-manager.c</a></td></tr>
+       <tr class="unknownMacro"><td><a href="12.html#line-118">118</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+       <tr><td colspan="5"><a href="13.html">src/gpm-phone.c</a></td></tr>
+       <tr class="unknownMacro"><td><a href="13.html#line-55">55</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+       <tr><td colspan="5"><a href="14.html">src/gpm-prefs-core.c</a></td></tr>
+       <tr class="variableScope"><td><a href="14.html#line-422">422</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;notebook&apos; can be reduced.</td></tr>
+       <tr class="variableScope"><td><a href="14.html#line-586">586</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;device&apos; can be reduced.</td></tr>
+       <tr><td colspan="5"><a href="15.html">src/gpm-screensaver.c</a></td></tr>
+       <tr class="unknownMacro"><td><a href="15.html#line-46">46</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+       <tr><td colspan="5"><a href="16.html">src/gpm-session.c</a></td></tr>
+       <tr class="unknownMacro"><td><a href="16.html#line-82">82</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+       <tr><td colspan="5"><a href="17.html">src/gpm-statistics.c</a></td></tr>
+       <tr class="variableScope"><td><a href="17.html#line-178">178</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;point_new&apos; can be reduced.</td></tr>
+       <tr class="duplicateCondition"><td><a href="17.html#line-386">386</a></td><td>duplicateCondition</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The if condition is the same as the previous if condition</td></tr>
+       <tr class="duplicateCondition"><td><a href="17.html#line-448">448</a></td><td>duplicateCondition</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The if condition is the same as the previous if condition</td></tr>
+       <tr class="variableScope"><td><a href="17.html#line-469">469</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;smoothed&apos; can be reduced.</td></tr>
+       <tr class="variableScope"><td><a href="17.html#line-817">817</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;device&apos; can be reduced.</td></tr>
+       <tr class="variableScope"><td><a href="17.html#line-935">935</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;device_tmp&apos; can be reduced.</td></tr>
+       <tr><td colspan="5"><a href="18.html">src/gpm-tray-icon.c</a></td></tr>
+       <tr class="variableScope"><td><a href="18.html#line-244">244</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td >The scope of the variable &apos;device&apos; can be reduced.</td></tr>
+       <tr><td colspan="5"><a href="19.html">src/mate-power-manager-resources.c</a></td></tr>
+       <tr class="unusedStructMember"><td><a href="19.html#line-10">10</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td >union member &apos;Anonymous0::alignment&apos; is never used.</td></tr>
+       <tr class="unusedStructMember"><td><a href="19.html#line-10">10</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td >union member &apos;Anonymous0::ptr&apos; is never used.</td></tr>
+       <tr class="unusedStructMember"><td><a href="19.html#line-91">91</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td >union member &apos;Anonymous0::alignment&apos; is never used.</td></tr>
+       <tr class="unusedStructMember"><td><a href="19.html#line-91">91</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td >union member &apos;Anonymous0::ptr&apos; is never used.</td></tr>
+       <tr><td colspan="5"><a href="20.html">src/mate-power-preferences-resources.c</a></td></tr>
+       <tr class="unusedStructMember"><td><a href="20.html#line-10">10</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td >union member &apos;Anonymous0::alignment&apos; is never used.</td></tr>
+       <tr class="unusedStructMember"><td><a href="20.html#line-10">10</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td >union member &apos;Anonymous0::ptr&apos; is never used.</td></tr>
+       <tr class="unusedStructMember"><td><a href="20.html#line-211">211</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td >union member &apos;Anonymous0::alignment&apos; is never used.</td></tr>
+       <tr class="unusedStructMember"><td><a href="20.html#line-211">211</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td >union member &apos;Anonymous0::ptr&apos; is never used.</td></tr>
+       <tr><td colspan="5"><a href="21.html">src/mate-power-statistics-resources.c</a></td></tr>
+       <tr class="unusedStructMember"><td><a href="21.html#line-10">10</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td >union member &apos;Anonymous0::alignment&apos; is never used.</td></tr>
+       <tr class="unusedStructMember"><td><a href="21.html#line-10">10</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td >union member &apos;Anonymous0::ptr&apos; is never used.</td></tr>
+       <tr class="unusedStructMember"><td><a href="21.html#line-134">134</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td >union member &apos;Anonymous0::alignment&apos; is never used.</td></tr>
+       <tr class="unusedStructMember"><td><a href="21.html#line-134">134</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td >union member &apos;Anonymous0::ptr&apos; is never used.</td></tr>
+       </table>
+      </div> <!-- /.wrapper -->
+    </div>
+    <div id="footer" class="footer">
+      <p>
+        Cppcheck 2.3 - a tool for static C/C++ code analysis<br>
+        <br>
+        Internet: <a href="http://cppcheck.net">http://cppcheck.net</a><br>
+        IRC: <a href="irc://irc.freenode.net/cppcheck">irc://irc.freenode.net/cppcheck</a><br>
+      </p>
+    </div>
+  </body>
+</html>
