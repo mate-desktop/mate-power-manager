@@ -4,6 +4,7 @@
  *
  * Copyright (C) 2006-2007 William Jon McCann <mccann@jhu.edu>
  * Copyright (C) 2009 Novell, Inc
+ * Copyright (C) 2012-2021 MATE Developers
  *
  * Authors:
  *   William Jon McCann <mccann@jhu.edu>

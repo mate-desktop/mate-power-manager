@@ -3,6 +3,7 @@
  * Copyright (C) 2002 Jorn Baayen
  * Copyright (C) 2003,2004 Colin Walters <walters@verbum.org>
  * Copyright (C) 2005-2007 Richard Hughes <richard@hughsie.com>
+ * Copyright (C) 2012-2021 MATE Developers
  *
  * Licensed under the GNU General Public License Version 2
  *

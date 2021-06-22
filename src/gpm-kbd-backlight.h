@@ -1,6 +1,7 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*-
  *
  * Copyright (C) 2010 Alex Launi <alex launi canonical com>
+ * Copyright (C) 2012-2021 MATE Developers
  *
  * Licensed under the GNU General Public License Version 2
  *

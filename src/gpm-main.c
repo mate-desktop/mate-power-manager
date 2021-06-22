@@ -1,6 +1,7 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*-
  *
  * Copyright (C) 2005-2007 Richard Hughes <richard@hughsie.com>
+ * Copyright (C) 2012-2021 MATE Developers
  *
  * Taken in part from:
  *  - lshal   (C) 2003 David Zeuthen, <david@fubar.dk>

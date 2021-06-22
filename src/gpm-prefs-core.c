@@ -3,6 +3,7 @@
  * Copyright (C) 2005 Jaap Haitsma <jaap@haitsma.org>
  * Copyright (C) 2005 William Jon McCann <mccann@jhu.edu>
  * Copyright (C) 2005-2009 Richard Hughes <richard@hughsie.com>
+ * Copyright (C) 2012-2021 MATE Developers
  *
  * Licensed under the GNU General Public License Version 2
  *
