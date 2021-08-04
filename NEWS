@@ -1,3 +1,25 @@
+### mate-power-manager 1.26.0
+
+  * Translations update
+  * update copyright to 2021
+  * applets: Do not build the path to the menu files
+  * build: Use PACKAGE_URL variable
+  * update resource for transifex
+  * Update copyright to 2021
+  * Remove warning -Wunused-but-set-variable
+  * update issue template
+  * gpm-backlight: Fix the position of the inline keyword
+  * mate-power-preferences: add option to enable keyboard dimming
+  * Switch default from libgnome-keyring to libsecret
+  * gpm-control.c: Add libsecret implementation to gpm_control_hibernate()
+  * gpm-control.c: Add libsecret implementation to gpm_control_suspend()
+  * Add autotools support for libsecret
+  * brightness applet: Prevent sliding from bogging down the UI
+  * Install action and status icons to right location
+  * Remove trailing spaces/tabs
+  * gpm-kbd-backlight: Remove unused functions
+  * Remove unused variable from gpm_notebook_scroll_event_cb
+
 ### mate-power-manager 1.25.0
 
   * Translations update
