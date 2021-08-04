@@ -4,17 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Polihron Alexandru (APoliTech) <ppolihron@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Daniel <danny3@tutanota.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Daniel <danny3@tutanota.com>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-power-manager 1.23.1\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2019-11-12 15:22+0100\n"
+"Project-Id-Version: mate-power-manager 1.25.0\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
+"POT-Creation-Date: 2021-06-22 17:30+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Daniel <danny3@tutanota.com>, 2018\n"
+"Last-Translator: Daniel <danny3@tutanota.com>, 2020\n"
 "Language-Team: Romanian (https://www.transifex.com/mate/teams/13566/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,79 +21,76 @@ msgstr ""
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
-#: applets/brightness/brightness-applet.c:107
+#: applets/brightness/brightness-applet.c:109
 msgid "Power Manager Brightness Applet"
 msgstr "Miniaplicație administrare luminozitate ecran"
 
-#: applets/brightness/brightness-applet.c:108
+#: applets/brightness/brightness-applet.c:110
 msgid "Adjusts laptop panel brightness."
 msgstr "Ajustează luminozitatea ecranului laptopului."
 
-#: applets/brightness/brightness-applet.c:364
+#: applets/brightness/brightness-applet.c:371
 #: applets/inhibit/inhibit-applet.c:225
 msgid "Cannot connect to mate-power-manager"
 msgstr "Nu este posibilă conectarea la mate-power-manager"
 
-#: applets/brightness/brightness-applet.c:366
+#: applets/brightness/brightness-applet.c:373
 msgid "Cannot get laptop panel brightness"
 msgstr "Nu se poate determina luminozitatea ecranului laptopului"
 
-#: applets/brightness/brightness-applet.c:368
+#: applets/brightness/brightness-applet.c:375
 #, c-format
 msgid "LCD brightness : %d%%"
 msgstr "Luminozitate LCD: %d%%"
 
-#: applets/brightness/brightness-applet.c:800
+#: applets/brightness/brightness-applet.c:818
+#: applets/inhibit/inhibit-applet.c:287
+msgid ""
+"Power Manager is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+
+#: applets/brightness/brightness-applet.c:823
+#: applets/inhibit/inhibit-applet.c:292
+msgid ""
+"Power Manager is distributed in the hope that it will be useful, but WITHOUT"
+" ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
+msgstr ""
+
+#: applets/brightness/brightness-applet.c:828
 #: applets/inhibit/inhibit-applet.c:297
-msgid "Licensed under the GNU General Public License Version 2"
-msgstr "Licențiat sub GNU General Public License Versiunea a 2-a"
-
-#: applets/brightness/brightness-applet.c:801
-#: applets/inhibit/inhibit-applet.c:298
 msgid ""
-"Power Manager is free software; you can redistribute it and/or\n"
-"modify it under the terms of the GNU General Public License\n"
-"as published by the Free Software Foundation; either version 2\n"
-"of the License, or (at your option) any later version."
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
-"Gestionarul de consum este software liber; puteți să îl redistribuiți și/sau\n"
-"să îl modificați sub termenii GNU General Public License\n"
-"așa cum este publicată de către Free Software Foundation; sau versiunea a 2-a\n"
-"a Licenței, sau (la alegerea dumneavoastră) orice versiune ulterioară."
 
-#: applets/brightness/brightness-applet.c:805
-#: applets/inhibit/inhibit-applet.c:302
+#: applets/brightness/brightness-applet.c:841
+msgid "About Power Manager Brightness Applet"
+msgstr ""
+
+#: applets/brightness/brightness-applet.c:843
 msgid ""
-"Power Manager is distributed in the hope that it will be useful,\n"
-"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-"GNU General Public License for more details."
+"Copyright © 2006 Benjamin Canou\n"
+"Copyright © 2011-2021 MATE developers"
 msgstr ""
-"Getionarul de consum este distribuit în speranța că va fi folositor,\n"
-"dar FARĂ NICIO GARANȚIE; chiar fără garanția implicită a\n"
-"COMERCIALIZĂRII sau FOLOSIRII ÎN SCOPURI PARTICULARE. Verficați \n"
-"GNU General Public License pentru mai multe detalii."
 
-#: applets/brightness/brightness-applet.c:809
-#: applets/inhibit/inhibit-applet.c:306
-msgid ""
-"You should have received a copy of the GNU General Public License\n"
-"along with this program; if not, write to the Free Software\n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
-"02110-1301, USA."
-msgstr ""
-"Ar fi trebuit să primiți o copie a GNU General Public License\n"
-"alături de acest program; dacă nu, scrieți la Free Software\n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
-"02110-1301, USA."
+#: applets/brightness/brightness-applet.c:850
+#: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:212
+msgid "translator-credits"
+msgstr "Daniel Alămiță <danny3@tutanota.com>"
 
-#: applets/brightness/brightness-applet.c:1063
-#: applets/inhibit/inhibit-applet.c:519
+#: applets/brightness/brightness-applet.c:1081
+#: applets/inhibit/inhibit-applet.c:503
 msgid "_About"
 msgstr "_Despre"
 
-#: applets/brightness/brightness-applet.c:1066
-#: applets/inhibit/inhibit-applet.c:522
+#: applets/brightness/brightness-applet.c:1084
+#: applets/inhibit/inhibit-applet.c:506 data/gpm-prefs.ui:41
 msgid "_Help"
 msgstr "_Ajutor"
 
@@ -105,12 +101,6 @@ msgstr "Șablon miniaplicație de luminozitate"
 #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:9
 msgid "Brightness Applet"
 msgstr "Miniaplicație luminozitate"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-brightness-applet"
-msgstr ""
 
 #: applets/inhibit/inhibit-applet.c:87
 msgid "Power Manager Inhibit Applet"
@@ -134,6 +124,16 @@ msgstr "Suspendarea automată a sistemului este activată"
 msgid "Manual inhibit"
 msgstr "Împiedicare manuală"
 
+#: applets/inhibit/inhibit-applet.c:310
+msgid "About Power Manager Inhibit Applet"
+msgstr ""
+
+#: applets/inhibit/inhibit-applet.c:312
+msgid ""
+"Copyright © 2006-2007 Richard Hughes\n"
+"Copyright © 2011-2021 MATE developers"
+msgstr ""
+
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
 msgstr "Șablon miniaplicație de împiedicare"
@@ -142,26 +142,13 @@ msgstr "Șablon miniaplicație de împiedicare"
 msgid "Inhibit Applet"
 msgstr "Miniaplicație de împiedicare"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-inhibit-applet"
-msgstr ""
-
-#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:184
+#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:203
 msgid "Power Manager"
 msgstr "Administrare consum"
 
-#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:186
+#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:205
 msgid "Power management daemon"
 msgstr "Serviciu de administrare consum"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/mate-power-manager.desktop.in.in:6
-#: data/mate-power-preferences.desktop.in.in:6
-msgid "mate-power-manager"
-msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:26
 #: data/org.mate.power-manager.gschema.xml.in:41
@@ -924,8 +911,8 @@ msgstr "Configurare administrare consum"
 msgid "MATE;power;management;preferences;settings;"
 msgstr ""
 
-#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:7
-#: src/gpm-statistics.c:1090 src/gpm-statistics.c:1577
+#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
+#: src/gpm-statistics.c:762 src/gpm-statistics.c:1224
 msgid "Power Statistics"
 msgstr "Statistici consum"
 
@@ -933,210 +920,195 @@ msgstr "Statistici consum"
 msgid "Observe power management"
 msgstr "Examinează administrarea consumului"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/mate-power-statistics.desktop.in.in:6
-msgid "mate-power-statistics"
-msgstr ""
-
-#: data/gpm-statistics.ui:113 src/gpm-statistics.c:208
+#: data/gpm-statistics.ui:119
 msgid "Details"
 msgstr "Detalii"
 
-#: data/gpm-statistics.ui:139 data/gpm-statistics.ui:342
+#: data/gpm-statistics.ui:145 data/gpm-statistics.ui:347
 msgid "Graph type:"
 msgstr "Tip grafic:"
 
-#: data/gpm-statistics.ui:174
+#: data/gpm-statistics.ui:180
 msgid "Data length:"
 msgstr "Lungime date:"
 
-#: data/gpm-statistics.ui:234 data/gpm-statistics.ui:395
+#: data/gpm-statistics.ui:239 data/gpm-statistics.ui:399
 msgid "There is no data to display."
 msgstr "Nu există date de afișat."
 
-#: data/gpm-statistics.ui:276 data/gpm-statistics.ui:438
+#: data/gpm-statistics.ui:281 data/gpm-statistics.ui:442
 msgid "Use smoothed line"
 msgstr "Folosește o linie netezită"
 
-#: data/gpm-statistics.ui:291 data/gpm-statistics.ui:453
+#: data/gpm-statistics.ui:296 data/gpm-statistics.ui:457
 msgid "Show data points"
 msgstr "Afișează puncte pentru date"
 
-#: data/gpm-statistics.ui:320
+#: data/gpm-statistics.ui:325
 msgid "History"
 msgstr "Istoric"
 
-#: data/gpm-statistics.ui:482
+#: data/gpm-statistics.ui:486
 msgid "Statistics"
 msgstr "Statistici"
 
-#: data/gpm-statistics.ui:504
-msgid "Processor wakeups per second:"
-msgstr "Treziri procesor pe secundă:"
-
-#: data/gpm-statistics.ui:516
-msgid "0"
-msgstr "0"
-
-#: data/gpm-statistics.ui:563 src/gpm-statistics.c:194
-msgid "Wakeups"
-msgstr "Treziri"
-
-#: data/gpm-prefs.ui:55
+#: data/gpm-prefs.ui:23
 msgid "Power Management Preferences"
 msgstr "Preferințe pentru administrare consum"
 
-#: data/gpm-prefs.ui:84 data/gpm-prefs.ui:327 data/gpm-prefs.ui:585
-#: data/gpm-prefs.ui:813
-msgid "<b>Actions</b>"
-msgstr "<b>Acțiuni</b>"
-
-#: data/gpm-prefs.ui:111 data/gpm-prefs.ui:354 data/gpm-prefs.ui:612
-msgid "Put computer to _sleep when inactive for:"
-msgstr "Pune calculatorul în suspendare dacă e_ste inactiv pentru:"
-
-#: data/gpm-prefs.ui:144 data/gpm-prefs.ui:387
-msgid "When laptop lid is cl_osed:"
-msgstr "Când ecranul lapt_opului este închis:"
-
-#: data/gpm-prefs.ui:189 data/gpm-prefs.ui:463 data/gpm-prefs.ui:721
-msgid "<b>Display</b>"
-msgstr "<b>Ecran</b>"
-
-#: data/gpm-prefs.ui:216 data/gpm-prefs.ui:490 data/gpm-prefs.ui:748
-msgid "Put _display to sleep when inactive for:"
-msgstr "Oprește ecranul _dacă este inactiv pentru:"
-
-#: data/gpm-prefs.ui:247
-msgid "Set display _brightness to:"
-msgstr "_Definește luminozitatea ecranului la:"
-
-#: data/gpm-prefs.ui:275 data/gpm-prefs.ui:529
-msgid "Di_m display when idle"
-msgstr "Redu lu_minozitatea ecranului când este inactiv"
-
-#: data/gpm-prefs.ui:306
-msgid "On AC Power"
-msgstr "Alimentat din rețea"
-
-#: data/gpm-prefs.ui:418
-msgid "When battery po_wer is critically low:"
-msgstr "Când acumulatorul a atins un ni_vel critic:"
-
-#: data/gpm-prefs.ui:514
-msgid "_Reduce backlight brightness"
-msgstr "_Redu luminozitatea ecranului"
-
-#: data/gpm-prefs.ui:563
-msgid "On Battery Power"
-msgstr "Alimentat din acumulator"
-
-#: data/gpm-prefs.ui:645
-msgid "When UPS power is l_ow:"
-msgstr "Când nivelul UPS-ul este _scăzut:"
-
-#: data/gpm-prefs.ui:676
-msgid "When UPS power is _critically low:"
-msgstr "Când nivelul UPS-ul a atins un nivel _critic:"
-
-#: data/gpm-prefs.ui:791
-msgid "On UPS Power"
-msgstr "Alimentat din UPS"
-
-#: data/gpm-prefs.ui:840
-msgid "When the power _button is pressed:"
-msgstr "Când se apasă _butonul de pornire:"
-
-#: data/gpm-prefs.ui:873
-msgid "When the _suspend button is pressed:"
-msgstr "Când butonul de _suspendare este apăsat:"
-
-#: data/gpm-prefs.ui:918
-msgid "<b>Notification Area</b>"
-msgstr "<b>Zonă notificare</b>"
-
-#: data/gpm-prefs.ui:938
-msgid "_Never display an icon"
-msgstr "_Nu afișa niciodată o pictogramă"
-
-#: data/gpm-prefs.ui:953
-msgid "_Only display an icon when battery power is low"
-msgstr "Afișează pict_ograma doar când acumulatorul este la un nivel scăzut"
-
-#: data/gpm-prefs.ui:969
-msgid "Only display an icon when charging or _discharging"
-msgstr "Afișează o pictogramă doar la încărcare sau _descărcare"
-
-#: data/gpm-prefs.ui:985
-msgid "Only display an icon when a battery is p_resent"
-msgstr "Afișează pictograma numai dacă este p_rezent un acumulator"
-
-#: data/gpm-prefs.ui:1001
-msgid "_Always display an icon"
-msgstr "_Afișează întotdeauna o pictogramă"
-
-#: data/gpm-prefs.ui:1036
-msgid "General"
-msgstr "General"
-
-#: data/gpm-prefs.ui:1060
-msgid "Provides help about this program"
-msgstr "Furnizează ajutor pentru acest program"
-
-#: data/gpm-prefs.ui:1072
+#: data/gpm-prefs.ui:58
 msgid "Make Default"
 msgstr "Definește ca implicit"
 
-#: data/gpm-prefs.ui:1076
-msgid "Sets this policy to be used by all users"
-msgstr "Definește această politică să fie utilizată de toți utilizatorii"
+#: data/gpm-prefs.ui:71
+msgid "_Close"
+msgstr "În_chide"
 
-#: data/gpm-prefs.ui:1092
-msgid "Closes the program"
-msgstr "Închide programul"
+#: data/gpm-prefs.ui:138 data/gpm-prefs.ui:406 data/gpm-prefs.ui:746
+msgid "Put computer to _sleep when inactive for:"
+msgstr "Pune calculatorul în suspendare dacă e_ste inactiv pentru:"
 
-#: src/gpm-backlight-helper.c:166
+#: data/gpm-prefs.ui:176 data/gpm-prefs.ui:444
+msgid "When laptop lid is cl_osed:"
+msgstr "Când ecranul lapt_opului este închis:"
+
+#: data/gpm-prefs.ui:213 data/gpm-prefs.ui:519 data/gpm-prefs.ui:825
+#: data/gpm-prefs.ui:1031
+msgid "Actions"
+msgstr "Acțiuni"
+
+#: data/gpm-prefs.ui:252 data/gpm-prefs.ui:560 data/gpm-prefs.ui:861
+msgid "Put _display to sleep when inactive for:"
+msgstr "Oprește ecranul _dacă este inactiv pentru:"
+
+#: data/gpm-prefs.ui:289
+msgid "Set display _brightness to:"
+msgstr "_Definește luminozitatea ecranului la:"
+
+#: data/gpm-prefs.ui:322 data/gpm-prefs.ui:607
+msgid "Di_m display when idle"
+msgstr "Redu lu_minozitatea ecranului când este inactiv"
+
+#: data/gpm-prefs.ui:344 data/gpm-prefs.ui:629 data/gpm-prefs.ui:890
+msgid "Display"
+msgstr "Ecran"
+
+#: data/gpm-prefs.ui:363
+msgid "On AC Power"
+msgstr "Alimentat din rețea"
+
+#: data/gpm-prefs.ui:482
+msgid "When battery po_wer is critically low:"
+msgstr "Când acumulatorul a atins un ni_vel critic:"
+
+#: data/gpm-prefs.ui:591
+msgid "_Reduce backlight brightness"
+msgstr "_Redu luminozitatea ecranului"
+
+#: data/gpm-prefs.ui:663
+msgid "_Reduce keyboard backlight"
+msgstr ""
+
+#: data/gpm-prefs.ui:685 src/gpm-upower.c:507
+msgid "Keyboard"
+msgid_plural "Keyboards"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: data/gpm-prefs.ui:707
+msgid "On Battery Power"
+msgstr "Alimentat din acumulator"
+
+#: data/gpm-prefs.ui:760
+msgid "When UPS power is l_ow:"
+msgstr "Când nivelul UPS-ul este _scăzut:"
+
+#: data/gpm-prefs.ui:774
+msgid "When UPS power is _critically low:"
+msgstr "Când nivelul UPS-ul a atins un nivel _critic:"
+
+#: data/gpm-prefs.ui:912
+msgid "On UPS Power"
+msgstr "Alimentat din UPS"
+
+#: data/gpm-prefs.ui:956
+msgid "When the power _button is pressed:"
+msgstr "Când se apasă _butonul de pornire:"
+
+#: data/gpm-prefs.ui:994
+msgid "When the _suspend button is pressed:"
+msgstr "Când butonul de _suspendare este apăsat:"
+
+#: data/gpm-prefs.ui:1065
+msgid "_Never display an icon"
+msgstr "_Nu afișa niciodată o pictogramă"
+
+#: data/gpm-prefs.ui:1083
+msgid "_Only display an icon when battery power is low"
+msgstr "Afișează pict_ograma doar când acumulatorul este la un nivel scăzut"
+
+#: data/gpm-prefs.ui:1101
+msgid "Only display an icon when charging or _discharging"
+msgstr "Afișează o pictogramă doar la încărcare sau _descărcare"
+
+#: data/gpm-prefs.ui:1119
+msgid "Only display an icon when a battery is p_resent"
+msgstr "Afișează pictograma numai dacă este p_rezent un acumulator"
+
+#: data/gpm-prefs.ui:1137
+msgid "_Always display an icon"
+msgstr "_Afișează întotdeauna o pictogramă"
+
+#: data/gpm-prefs.ui:1161
+msgid "Notification Area"
+msgstr "Zona de notificare"
+
+#: data/gpm-prefs.ui:1183
+msgid "General"
+msgstr "General"
+
+#: src/gpm-backlight-helper.c:167
 msgid "Set the current brightness"
 msgstr "Definiți nivelul actual al luminozității"
 
-#: src/gpm-backlight-helper.c:169
+#: src/gpm-backlight-helper.c:170
 msgid "Get the current brightness"
 msgstr "Obține nivelul actual al luminozității"
 
-#: src/gpm-backlight-helper.c:172
+#: src/gpm-backlight-helper.c:173
 msgid "Get the number of brightness levels supported"
 msgstr "Obține numărul de nivele de luminozitate suportate"
 
-#: src/gpm-backlight-helper.c:184
+#: src/gpm-backlight-helper.c:185
 msgid "MATE Power Manager Backlight Helper"
 msgstr "Ajutor lumină de fundal pentru Administratorul consum MATE"
 
-#: src/gpm-backlight-helper.c:192
+#: src/gpm-backlight-helper.c:193
 msgid "No valid option was specified"
 msgstr "Nu a fost specificată nicio opțiune validă"
 
-#: src/gpm-backlight-helper.c:201
+#: src/gpm-backlight-helper.c:202
 msgid "No backlights were found on your system"
 msgstr "Nu au fost găsite lumini de fundal pe sistemul duneavoastră"
 
-#: src/gpm-backlight-helper.c:212
+#: src/gpm-backlight-helper.c:213
 msgid "Could not get the value of the backlight"
 msgstr "Nu se poate obține valoarea luminii de fundal"
 
-#: src/gpm-backlight-helper.c:230
+#: src/gpm-backlight-helper.c:231
 msgid "Could not get the maximum value of the backlight"
 msgstr "Nu se poate obține valoarea maximă a luminii de fundal"
 
-#: src/gpm-backlight-helper.c:247
+#: src/gpm-backlight-helper.c:248
 msgid "This program can only be used by the root user"
 msgstr "Acest program poate fi utilizat doar de utilizatorul root"
 
-#: src/gpm-backlight-helper.c:256
+#: src/gpm-backlight-helper.c:257
 msgid "This program must only be run through pkexec"
 msgstr "Acest program trebuie rulat doar prin pkexec"
 
-#: src/gpm-backlight-helper.c:267
+#: src/gpm-backlight-helper.c:268
 msgid "Could not set the value of the backlight"
 msgstr "Nu se poate defini valoarea luminii de fundal"
 
@@ -1239,23 +1211,19 @@ msgstr "%.1fW"
 msgid "%.1fV"
 msgstr "%.1fV"
 
-#: src/gpm-main.c:172 src/gpm-prefs.c:77 src/gpm-statistics.c:1560
-msgid "Show extra debugging information"
-msgstr "Afișează informații suplimentare de depanare"
-
-#: src/gpm-main.c:174
+#: src/gpm-main.c:170
 msgid "Show version of installed program and exit"
 msgstr "Afișează versiunea programului instalat și ieși"
 
-#: src/gpm-main.c:176
+#: src/gpm-main.c:172
 msgid "Exit after a small delay (for debugging)"
 msgstr "Iese după o mică pauză (pentru depanare)"
 
-#: src/gpm-main.c:178
+#: src/gpm-main.c:174
 msgid "Exit after the manager has loaded (for debugging)"
 msgstr "Iese după ce administratorul a fost încărcat (pentru depanare)"
 
-#: src/gpm-main.c:189 src/gpm-main.c:193
+#: src/gpm-main.c:185 src/gpm-main.c:189
 msgid "MATE Power Manager"
 msgstr "Administrator consum MATE"
 
@@ -1339,11 +1307,11 @@ msgstr "Capacul laptopului este închis"
 msgid "Power Information"
 msgstr "Informații consum"
 
-#: src/gpm-manager.c:1107
+#: src/gpm-manager.c:1106
 msgid "Battery may be broken"
 msgstr "Acumulatorul poate fi defect"
 
-#: src/gpm-manager.c:1110
+#: src/gpm-manager.c:1109
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
@@ -1352,157 +1320,157 @@ msgstr ""
 "Acumulatorul are o capacitate foarte mică (%1.1f%%), ceea ce înseamnă că "
 "este vechi sau defect."
 
-#: src/gpm-manager.c:1159
+#: src/gpm-manager.c:1158
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/gpm-manager.c:1205
+#: src/gpm-manager.c:1204
 msgid "Battery Discharging"
 msgstr "Acumulatorul se descarcă"
 
-#: src/gpm-manager.c:1209
+#: src/gpm-manager.c:1208
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr "%s din energia acumulatorului rămasă (%.0f%%)"
 
-#: src/gpm-manager.c:1212 src/gpm-manager.c:1224
+#: src/gpm-manager.c:1211 src/gpm-manager.c:1223
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr "%s se descarcă (%.0f%%)"
 
-#: src/gpm-manager.c:1217
+#: src/gpm-manager.c:1216
 msgid "UPS Discharging"
 msgstr "Sursa de energie neîntreruptibilă se descarcă"
 
-#: src/gpm-manager.c:1221
+#: src/gpm-manager.c:1220
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr ""
 "%s din energia de rezervă a sursei de alimentare neîntreruptibilă rămasă "
 "(%.0f%%)"
 
-#: src/gpm-manager.c:1305
+#: src/gpm-manager.c:1304
 msgid "Battery low"
 msgstr "Acumulatorul este la un nivel scăzut"
 
-#: src/gpm-manager.c:1308
+#: src/gpm-manager.c:1307
 msgid "Laptop battery low"
 msgstr "Acumulatorul laptopului este la un nivel scăzut"
 
-#: src/gpm-manager.c:1314
+#: src/gpm-manager.c:1313
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "Aproximativ <b>%s</b> rămasă (%.0f%%)"
 
-#: src/gpm-manager.c:1318
+#: src/gpm-manager.c:1317
 msgid "UPS low"
 msgstr "UPS scăzut"
 
-#: src/gpm-manager.c:1322
+#: src/gpm-manager.c:1321
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr ""
 "Aproximativ <b>%s</b> din energia de rezervă a sursei de alimentare "
 "neîntreruptibilă rămasă (%.0f%%)"
 
-#: src/gpm-manager.c:1331 src/gpm-manager.c:1470
+#: src/gpm-manager.c:1330 src/gpm-manager.c:1469
 msgid "Mouse battery low"
 msgstr "Acumulatorul mausului este la un nivel scăzut"
 
-#: src/gpm-manager.c:1334
+#: src/gpm-manager.c:1333
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr "Acumulatorul mausului fără fir este la un nivel scăzut (%.0f%%)"
 
-#: src/gpm-manager.c:1338 src/gpm-manager.c:1478
+#: src/gpm-manager.c:1337 src/gpm-manager.c:1477
 msgid "Keyboard battery low"
 msgstr "Acumulatorul tastaturii este la un nivel scăzut"
 
-#: src/gpm-manager.c:1341
+#: src/gpm-manager.c:1340
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr "Acumulatorul tastaturii fără fir este la un nivel scăzut (%.0f%%)"
 
-#: src/gpm-manager.c:1345 src/gpm-manager.c:1487
+#: src/gpm-manager.c:1344 src/gpm-manager.c:1486
 msgid "PDA battery low"
 msgstr "Acumulatorul asistentului digital personal este la un nivel scăzut"
 
-#: src/gpm-manager.c:1348
+#: src/gpm-manager.c:1347
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr ""
 "Acumulatorul asistentului digital personal este la un nivel scăzut (%.0f%%)"
 
-#: src/gpm-manager.c:1352 src/gpm-manager.c:1497 src/gpm-manager.c:1507
+#: src/gpm-manager.c:1351 src/gpm-manager.c:1496 src/gpm-manager.c:1506
 msgid "Cell phone battery low"
 msgstr "Acumulatorul telefonului celular este la un nivel scăzut"
 
-#: src/gpm-manager.c:1355
+#: src/gpm-manager.c:1354
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "Acumulatorul telefonului celular este la un nivel scăzut (%.0f%%)"
 
-#: src/gpm-manager.c:1359
+#: src/gpm-manager.c:1358
 msgid "Media player battery low"
 msgstr "Acumulatorul lectorului media este la un nivel scăzut"
 
-#: src/gpm-manager.c:1362
+#: src/gpm-manager.c:1361
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr "Acumulatorul lectorului media este la un nivel scăzut (%.0f%%)"
 
-#: src/gpm-manager.c:1366 src/gpm-manager.c:1516
+#: src/gpm-manager.c:1365 src/gpm-manager.c:1515
 msgid "Tablet battery low"
 msgstr "Acumulatorul tabletei este la un nivel scăzut"
 
-#: src/gpm-manager.c:1369
+#: src/gpm-manager.c:1368
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "Acumulatorul tabletei este la un nivel scăzut (%.0f%%)"
 
-#: src/gpm-manager.c:1373 src/gpm-manager.c:1525
+#: src/gpm-manager.c:1372 src/gpm-manager.c:1524
 msgid "Attached computer battery low"
 msgstr "Acumulatorul calculatorului atașat este la un nivel scăzut"
 
-#: src/gpm-manager.c:1376
+#: src/gpm-manager.c:1375
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "Acumulatorul calculatorului atașat este la un nivel scăzut (%.0f%%)"
 
-#: src/gpm-manager.c:1424
+#: src/gpm-manager.c:1423
 msgid "Battery critically low"
 msgstr "Acumulatorul este la un nivel critic de scăzut"
 
-#: src/gpm-manager.c:1427 src/gpm-manager.c:1585
+#: src/gpm-manager.c:1426 src/gpm-manager.c:1584
 msgid "Laptop battery critically low"
 msgstr "Acumulatorul laptopului este la un nivel critic de scăzut"
 
-#: src/gpm-manager.c:1436
+#: src/gpm-manager.c:1435
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr ""
 "Pentru a evita pierderea datelor conectați adaptorul la rețeaua electrică."
 
-#: src/gpm-manager.c:1440
+#: src/gpm-manager.c:1439
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr ""
 "Calculatorul se va fi suspendat foarte curând dacă nu va fi alimentat."
 
-#: src/gpm-manager.c:1444
+#: src/gpm-manager.c:1443
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr "Calculatorul se va hiberna foarte curând dacă nu va fi alimentat."
 
-#: src/gpm-manager.c:1448
+#: src/gpm-manager.c:1447
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr "Calculatorul se va opri foarte curând dacă nu va fi alimentat."
 
-#: src/gpm-manager.c:1455 src/gpm-manager.c:1621
+#: src/gpm-manager.c:1454 src/gpm-manager.c:1620
 msgid "UPS critically low"
 msgstr "Nivel UPS critic"
 
-#: src/gpm-manager.c:1459
+#: src/gpm-manager.c:1458
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
@@ -1512,7 +1480,7 @@ msgstr ""
 "neîntreruptibilă rămasă (%.0f%%). Restaurați energia din rețea la calculator"
 " pentru a evita pierderea de date."
 
-#: src/gpm-manager.c:1473
+#: src/gpm-manager.c:1472
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
@@ -1521,7 +1489,7 @@ msgstr ""
 "Acumulatorul mausului fără fir este la un nivel foarte scăzut (%.0f%%). "
 "Acest dispozitiv va înceta să funcționeze în curând dacă nu este încărcat."
 
-#: src/gpm-manager.c:1481
+#: src/gpm-manager.c:1480
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
@@ -1530,7 +1498,7 @@ msgstr ""
 "Acumulatorul tastaturii fără fir este la un nivel foarte scăzut (%.0f%%). "
 "Acest dispozitiv va înceta să funcționeze în curând dacă nu este încărcat."
 
-#: src/gpm-manager.c:1490
+#: src/gpm-manager.c:1489
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
@@ -1540,7 +1508,7 @@ msgstr ""
 "(%.0f%%). Acest dispozitiv va înceta să funcționeze în curând dacă nu este "
 "încărcat."
 
-#: src/gpm-manager.c:1500
+#: src/gpm-manager.c:1499
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
@@ -1549,7 +1517,7 @@ msgstr ""
 "Acumulatorul telefonului celular este la un nivel foarte scăzut (%.0f%%). "
 "Acest dispozitiv va înceta să funcționeze în curând dacă nu este încărcat."
 
-#: src/gpm-manager.c:1510
+#: src/gpm-manager.c:1509
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
@@ -1558,7 +1526,7 @@ msgstr ""
 "Acumulatorul lectorului media este la un nivel scăzut (%.0f%%). Acest "
 "dispozitiv va înceta să funcționeze în curând dacă nu este încărcat."
 
-#: src/gpm-manager.c:1519
+#: src/gpm-manager.c:1518
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
@@ -1567,7 +1535,7 @@ msgstr ""
 "Acumulatorul tabletei este la un nivel foarte scăzut (%.0f%%). Acest "
 "dispozitiv va înceta să funcționeze în curând dacă nu este încărcat."
 
-#: src/gpm-manager.c:1528
+#: src/gpm-manager.c:1527
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
@@ -1576,7 +1544,7 @@ msgstr ""
 "Acumulatorul calculatorului atașat este la un nivel foarte scăzut (%.0f%%). "
 "Dispozitivul va înceta să funcționeze în curând dacă nu este încărcat."
 
-#: src/gpm-manager.c:1593
+#: src/gpm-manager.c:1592
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
@@ -1584,7 +1552,7 @@ msgstr ""
 "Nivelul acumulatorului este sub cel critic și calculatorul va <b>opri</b> "
 "când energia acumulatorul se va termina complet."
 
-#: src/gpm-manager.c:1599
+#: src/gpm-manager.c:1598
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
@@ -1594,7 +1562,7 @@ msgstr ""
 "suspende.<br><b>ATENȚIE:</b> este nevoie de o mică cantitate de energie "
 "pentru a menține calculatorul în starea de suspendare."
 
-#: src/gpm-manager.c:1606
+#: src/gpm-manager.c:1605
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
@@ -1602,7 +1570,7 @@ msgstr ""
 "Nivelul acumulatorului este sub cel critic și calculatorul este gata să "
 "intre în hibernare."
 
-#: src/gpm-manager.c:1611
+#: src/gpm-manager.c:1610
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
@@ -1610,7 +1578,7 @@ msgstr ""
 "Nivelul bateriei este sub cel critic și calculatorul este gata să se "
 "oprească."
 
-#: src/gpm-manager.c:1629
+#: src/gpm-manager.c:1628
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
@@ -1618,134 +1586,122 @@ msgstr ""
 "UPS-ul este sub nivelul critic și acest computer se va <b>opri</b> atunci "
 "când UPS devine complet descărcat."
 
-#: src/gpm-manager.c:1635
+#: src/gpm-manager.c:1634
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr ""
 "UPS-ul este sub nivelul critic și acest calculator va intra în hibernare."
 
-#: src/gpm-manager.c:1640
+#: src/gpm-manager.c:1639
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr "UPS-ul este sub nivelul critic și acest calculator se va închide."
 
-#: src/gpm-prefs.c:81
+#: src/gpm-prefs.c:77
 msgid "MATE Power Preferences"
 msgstr "Preferințe consum MATE"
 
-#: src/gpm-prefs-core.c:238
+#: src/gpm-prefs-core.c:242
 msgid "Shutdown"
 msgstr "Oprește"
 
-#: src/gpm-prefs-core.c:245
+#: src/gpm-prefs-core.c:249
 msgid "Suspend"
 msgstr "Suspendă"
 
-#: src/gpm-prefs-core.c:248
+#: src/gpm-prefs-core.c:252
 msgid "Hibernate"
 msgstr "Hibernează"
 
-#: src/gpm-prefs-core.c:251
+#: src/gpm-prefs-core.c:255
 msgid "Blank screen"
 msgstr "Golește ecranul"
 
-#: src/gpm-prefs-core.c:254
+#: src/gpm-prefs-core.c:258
 msgid "Ask me"
 msgstr "Întreabă-mă"
 
-#: src/gpm-prefs-core.c:257
+#: src/gpm-prefs-core.c:261
 msgid "Do nothing"
 msgstr "Nu fă nimic"
 
-#: src/gpm-prefs-core.c:317
+#: src/gpm-prefs-core.c:321
 msgid "Never"
 msgstr "Niciodată"
 
-#: src/gpm-statistics.c:78 src/gpm-statistics.c:466
+#: src/gpm-statistics.c:67 src/gpm-statistics.c:410
 msgid "Rate"
 msgstr "Rată"
 
-#: src/gpm-statistics.c:79
+#: src/gpm-statistics.c:68
 msgid "Charge"
 msgstr "Încărcare"
 
-#: src/gpm-statistics.c:80 src/gpm-statistics.c:480
+#: src/gpm-statistics.c:69 src/gpm-statistics.c:424
 msgid "Time to full"
 msgstr "Timp până la încărcare"
 
-#: src/gpm-statistics.c:81 src/gpm-statistics.c:485
+#: src/gpm-statistics.c:70 src/gpm-statistics.c:429
 msgid "Time to empty"
 msgstr "Timp până la golire"
 
-#: src/gpm-statistics.c:88
+#: src/gpm-statistics.c:77
 msgid "10 minutes"
 msgstr "zece minute"
 
-#: src/gpm-statistics.c:89
+#: src/gpm-statistics.c:78
 msgid "2 hours"
 msgstr "două ore"
 
-#: src/gpm-statistics.c:90
+#: src/gpm-statistics.c:79
 msgid "6 hours"
 msgstr "6ore"
 
-#: src/gpm-statistics.c:91
+#: src/gpm-statistics.c:80
 msgid "1 day"
 msgstr "o zi"
 
-#: src/gpm-statistics.c:92
+#: src/gpm-statistics.c:81
 msgid "1 week"
 msgstr "o săptămână"
 
-#: src/gpm-statistics.c:101
+#: src/gpm-statistics.c:90
 msgid "Charge profile"
 msgstr "Profil încărcare"
 
-#: src/gpm-statistics.c:102
+#: src/gpm-statistics.c:91
 msgid "Discharge profile"
 msgstr "Profil descărcare"
 
-#: src/gpm-statistics.c:104
+#: src/gpm-statistics.c:93
 msgid "Charge accuracy"
 msgstr "Acuratețe încărcare"
 
-#: src/gpm-statistics.c:105
+#: src/gpm-statistics.c:94
 msgid "Discharge accuracy"
 msgstr "Acuratețe descărcare"
 
-#: src/gpm-statistics.c:132
+#: src/gpm-statistics.c:121
 msgid "Attribute"
 msgstr "Atribut"
 
-#: src/gpm-statistics.c:139
+#: src/gpm-statistics.c:128
 msgid "Value"
 msgstr "Valoare"
 
-#: src/gpm-statistics.c:156
+#: src/gpm-statistics.c:145
 msgid "Image"
 msgstr "Imagine"
 
-#: src/gpm-statistics.c:162
+#: src/gpm-statistics.c:151
 msgid "Description"
 msgstr "Descriere"
 
-#: src/gpm-statistics.c:181 src/gpm-statistics.c:405
-msgid "Type"
-msgstr "Tip"
-
-#: src/gpm-statistics.c:187
-msgid "ID"
-msgstr "ID"
-
-#: src/gpm-statistics.c:201
-msgid "Command"
-msgstr "Comandă"
-
-#: src/gpm-statistics.c:286
+#: src/gpm-statistics.c:230
 msgid "Unknown"
 msgstr "Necunoscut"
 
-#: src/gpm-statistics.c:290
+#: src/gpm-statistics.c:234
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
@@ -1753,7 +1709,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/gpm-statistics.c:295
+#: src/gpm-statistics.c:239
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
@@ -1761,7 +1717,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/gpm-statistics.c:300
+#: src/gpm-statistics.c:244
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
@@ -1769,7 +1725,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/gpm-statistics.c:304
+#: src/gpm-statistics.c:248
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
@@ -1777,35 +1733,39 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/gpm-statistics.c:313
+#: src/gpm-statistics.c:257
 msgid "Yes"
 msgstr "Da"
 
-#: src/gpm-statistics.c:313
+#: src/gpm-statistics.c:257
 msgid "No"
 msgstr "Nu"
 
-#: src/gpm-statistics.c:402
+#: src/gpm-statistics.c:346
 msgid "Device"
 msgstr "Dispozitiv"
 
-#: src/gpm-statistics.c:407
+#: src/gpm-statistics.c:349
+msgid "Type"
+msgstr "Tip"
+
+#: src/gpm-statistics.c:351
 msgid "Vendor"
 msgstr "Comerciant"
 
-#: src/gpm-statistics.c:409
+#: src/gpm-statistics.c:353
 msgid "Model"
 msgstr "Model"
 
-#: src/gpm-statistics.c:411
+#: src/gpm-statistics.c:355
 msgid "Serial number"
 msgstr "Număr serie"
 
-#: src/gpm-statistics.c:416
+#: src/gpm-statistics.c:360
 msgid "Supply"
 msgstr "Alimentare"
 
-#: src/gpm-statistics.c:419
+#: src/gpm-statistics.c:363
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -1813,212 +1773,111 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/gpm-statistics.c:423
+#: src/gpm-statistics.c:367
 msgid "Refreshed"
 msgstr "Reactualizat"
 
-#: src/gpm-statistics.c:433
+#: src/gpm-statistics.c:377
 msgid "Present"
 msgstr "Prezent"
 
-#: src/gpm-statistics.c:440
+#: src/gpm-statistics.c:384
 msgid "Rechargeable"
 msgstr "Reîncărcabil"
 
-#: src/gpm-statistics.c:446
+#: src/gpm-statistics.c:390
 msgid "State"
 msgstr "Stat"
 
-#: src/gpm-statistics.c:450
+#: src/gpm-statistics.c:394
 msgid "Energy"
 msgstr "Energie"
 
-#: src/gpm-statistics.c:453
+#: src/gpm-statistics.c:397
 msgid "Energy when empty"
 msgstr "Energie la golire"
 
-#: src/gpm-statistics.c:456
+#: src/gpm-statistics.c:400
 msgid "Energy when full"
 msgstr "Energie la încărcare completă"
 
-#: src/gpm-statistics.c:459
+#: src/gpm-statistics.c:403
 msgid "Energy (design)"
 msgstr "Energie (proiectat)"
 
-#: src/gpm-statistics.c:473
+#: src/gpm-statistics.c:417
 msgid "Voltage"
 msgstr "Voltaj"
 
-#: src/gpm-statistics.c:495
+#: src/gpm-statistics.c:439
 msgid "Percentage"
 msgstr "Procentaj"
 
-#: src/gpm-statistics.c:502
+#: src/gpm-statistics.c:446
 msgid "Capacity"
 msgstr "Capacitate"
 
-#: src/gpm-statistics.c:507
+#: src/gpm-statistics.c:451
 msgid "Technology"
 msgstr "Tehnologie"
 
-#: src/gpm-statistics.c:512
+#: src/gpm-statistics.c:456
 msgid "Online"
 msgstr "Conectat"
 
-#: src/gpm-statistics.c:824
-msgid "No data"
-msgstr "Lipsă date"
-
-#: src/gpm-statistics.c:831 src/gpm-statistics.c:836
-msgid "Kernel module"
-msgstr "Modul kernel"
-
-#: src/gpm-statistics.c:841
-msgid "Kernel core"
-msgstr "Kernel core"
-
-#: src/gpm-statistics.c:846
-msgid "Interprocessor interrupt"
-msgstr "Intrerupere interprocesor"
-
-#: src/gpm-statistics.c:851
-msgid "Interrupt"
-msgstr "Intrerupere"
-
-#: src/gpm-statistics.c:898
-msgid "PS/2 keyboard/mouse/touchpad"
-msgstr "Tastatură/maus/zonă tactilă PS2"
-
-#: src/gpm-statistics.c:901
-msgid "ACPI"
-msgstr "ACPI"
-
-#: src/gpm-statistics.c:904
-msgid "Serial ATA"
-msgstr "Serial ATA"
-
-#: src/gpm-statistics.c:907
-msgid "ATA host controller"
-msgstr "Controler gazdă ATA"
-
-#: src/gpm-statistics.c:910
-msgid "Intel wireless adaptor"
-msgstr "Adaptor fără fir Intel"
-
-#: src/gpm-statistics.c:917 src/gpm-statistics.c:922 src/gpm-statistics.c:927
-#: src/gpm-statistics.c:932 src/gpm-statistics.c:937
-#, c-format
-msgid "Timer %s"
-msgstr "Declanșator %s"
-
-#: src/gpm-statistics.c:941
-#, c-format
-msgid "Sleep %s"
-msgstr "Adomit %s"
-
-#: src/gpm-statistics.c:944
-#, c-format
-msgid "New task %s"
-msgstr "Sarcină nouă %s"
-
-#: src/gpm-statistics.c:948
-#, c-format
-msgid "Wait %s"
-msgstr "Așteptare %s"
-
-#: src/gpm-statistics.c:952 src/gpm-statistics.c:956
-#, c-format
-msgid "Work queue %s"
-msgstr "Coadă sarcini %s"
-
-#: src/gpm-statistics.c:959
-#, c-format
-msgid "Network route flush %s"
-msgstr "Golire rută rețea %s"
-
-#: src/gpm-statistics.c:962
-#, c-format
-msgid "USB activity %s"
-msgstr "Activitate USB %s"
-
-#: src/gpm-statistics.c:965
-#, c-format
-msgid "Wakeup %s"
-msgstr "Trezit %s"
-
-#: src/gpm-statistics.c:968
-msgid "Local interrupts"
-msgstr "Întreruperi locale"
-
-#: src/gpm-statistics.c:971
-msgid "Rescheduling interrupts"
-msgstr "Se replanifică întreruperile"
-
-#: src/gpm-statistics.c:1080
+#: src/gpm-statistics.c:754
 msgid "Device Information"
 msgstr "Informații dispozitiv"
 
-#: src/gpm-statistics.c:1082
+#: src/gpm-statistics.c:756
 msgid "Device History"
 msgstr "Istoric dispozitiv"
 
-#: src/gpm-statistics.c:1084
+#: src/gpm-statistics.c:758
 msgid "Device Profile"
 msgstr "Profil dispozitiv"
 
-#: src/gpm-statistics.c:1086
-msgid "Processor Wakeups"
-msgstr "Treziri procesor"
-
-#: src/gpm-statistics.c:1325 src/gpm-statistics.c:1331
-#: src/gpm-statistics.c:1337 src/gpm-statistics.c:1343
+#: src/gpm-statistics.c:979 src/gpm-statistics.c:985 src/gpm-statistics.c:991
+#: src/gpm-statistics.c:997
 msgid "Time elapsed"
 msgstr "Timp trecut"
 
-#: src/gpm-statistics.c:1327
+#: src/gpm-statistics.c:981
 msgid "Power"
 msgstr "Putere"
 
-#: src/gpm-statistics.c:1333 src/gpm-statistics.c:1377
-#: src/gpm-statistics.c:1383 src/gpm-statistics.c:1389
-#: src/gpm-statistics.c:1395
+#: src/gpm-statistics.c:987 src/gpm-statistics.c:1031
+#: src/gpm-statistics.c:1037 src/gpm-statistics.c:1043
+#: src/gpm-statistics.c:1049
 msgid "Cell charge"
 msgstr "Încărcare celulă"
 
-#: src/gpm-statistics.c:1339 src/gpm-statistics.c:1345
+#: src/gpm-statistics.c:993 src/gpm-statistics.c:999
 msgid "Predicted time"
 msgstr "Timp estimat"
 
-#: src/gpm-statistics.c:1379 src/gpm-statistics.c:1391
+#: src/gpm-statistics.c:1033 src/gpm-statistics.c:1045
 msgid "Correction factor"
 msgstr "Factor corecție"
 
-#: src/gpm-statistics.c:1385 src/gpm-statistics.c:1397
+#: src/gpm-statistics.c:1039 src/gpm-statistics.c:1051
 msgid "Prediction accuracy"
 msgstr "Precizie predicție"
 
-#: src/gpm-statistics.c:1563
+#: src/gpm-statistics.c:1210
 msgid "Select this device at startup"
 msgstr "Alege acest dispozitiv la pornire"
 
-#: src/gpm-statistics.c:1802
-msgid "Processor"
-msgstr "Procesor"
-
-#: src/gpm-tray-icon.c:187
-msgid "Copyright © 2011-2018 MATE developers"
+#: src/gpm-tray-icon.c:206
+msgid "Copyright © 2011-2021 MATE developers"
 msgstr ""
 
-#: src/gpm-tray-icon.c:193
-msgid "translator-credits"
-msgstr "Daniel Alămiță <danny3@tutanota.com>"
-
-#: src/gpm-tray-icon.c:295
+#: src/gpm-tray-icon.c:316
 #, c-format
 msgid "%s remaining"
 msgstr "%s rămase"
 
-#: src/gpm-tray-icon.c:349
+#: src/gpm-tray-icon.c:370
 msgid "_Preferences"
 msgstr "_Preferințe"
 
@@ -2205,13 +2064,6 @@ msgstr[2] ""
 #: src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-
-#: src/gpm-upower.c:507
-msgid "Keyboard"
-msgid_plural "Keyboards"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""

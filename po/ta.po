@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Mooglie <mooglietech@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Kamala Kannan, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-power-manager 1.23.1\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2019-11-12 15:22+0100\n"
+"Project-Id-Version: mate-power-manager 1.25.0\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
+"POT-Creation-Date: 2021-06-22 17:30+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Last-Translator: Kamala Kannan, 2020\n"
 "Language-Team: Tamil (https://www.transifex.com/mate/teams/13566/ta/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,79 +22,79 @@ msgstr ""
 "Language: ta\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: applets/brightness/brightness-applet.c:107
+#: applets/brightness/brightness-applet.c:109
 msgid "Power Manager Brightness Applet"
 msgstr "மின் மேலாளர் பிரகாச குறுநிரல்"
 
-#: applets/brightness/brightness-applet.c:108
+#: applets/brightness/brightness-applet.c:110
 msgid "Adjusts laptop panel brightness."
 msgstr "மடி கணினியின் வெளிச்சத்தை சரி செய்கிறது."
 
-#: applets/brightness/brightness-applet.c:364
+#: applets/brightness/brightness-applet.c:371
 #: applets/inhibit/inhibit-applet.c:225
 msgid "Cannot connect to mate-power-manager"
 msgstr "க்னோம் மின் மேலாளர் ஐ தொடர்பு கொள்ள முடியவில்லை"
 
-#: applets/brightness/brightness-applet.c:366
+#: applets/brightness/brightness-applet.c:373
 msgid "Cannot get laptop panel brightness"
 msgstr "மடி கணினியின் பலக பிரகாசத்தை வாங்க முடியவில்லை"
 
-#: applets/brightness/brightness-applet.c:368
+#: applets/brightness/brightness-applet.c:375
 #, c-format
 msgid "LCD brightness : %d%%"
 msgstr "எல்சிடி(LCD) வெளிச்சம்:: %d%%"
 
-#: applets/brightness/brightness-applet.c:800
+#: applets/brightness/brightness-applet.c:818
+#: applets/inhibit/inhibit-applet.c:287
+msgid ""
+"Power Manager is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+
+#: applets/brightness/brightness-applet.c:823
+#: applets/inhibit/inhibit-applet.c:292
+msgid ""
+"Power Manager is distributed in the hope that it will be useful, but WITHOUT"
+" ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
+msgstr ""
+
+#: applets/brightness/brightness-applet.c:828
 #: applets/inhibit/inhibit-applet.c:297
-msgid "Licensed under the GNU General Public License Version 2"
-msgstr "ஜிஎன்யு பொது அனுமதி விதிகளின் 2ம் பதிப்பு படி அனுமதிக்கப் பட்டது "
-
-#: applets/brightness/brightness-applet.c:801
-#: applets/inhibit/inhibit-applet.c:298
 msgid ""
-"Power Manager is free software; you can redistribute it and/or\n"
-"modify it under the terms of the GNU General Public License\n"
-"as published by the Free Software Foundation; either version 2\n"
-"of the License, or (at your option) any later version."
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
-"சக்தி மேலாளர் இலவச மென் பொருளாகும்.நீங்கள்  இலவச மென் பொருள் அமைப்பினால் \n"
-"வெளியிடப்பட்ட ஜிஎன்யு பொது அனுமதிக்கான விதிகளின் படி இந்த 2ம் பதிப்பையோ \n"
-"அல்லது அடுத்த பதிப்புகளையோ நீங்கள் (விருப்பப்படி) மாற்றலாம்.\n"
-" அல்லது மீண்டும் பறிமாறலாம்."
 
-#: applets/brightness/brightness-applet.c:805
-#: applets/inhibit/inhibit-applet.c:302
+#: applets/brightness/brightness-applet.c:841
+msgid "About Power Manager Brightness Applet"
+msgstr ""
+
+#: applets/brightness/brightness-applet.c:843
 msgid ""
-"Power Manager is distributed in the hope that it will be useful,\n"
-"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-"GNU General Public License for more details."
+"Copyright © 2006 Benjamin Canou\n"
+"Copyright © 2011-2021 MATE developers"
 msgstr ""
-"உபயோகப்படும் என்ற எதிர்பார்ப்புடன் சக்தி மேலாளர் வெளியிடப்படுகிறது.\n"
-" ஆனால் விற்க தகுதி, குறிப்பிட்ட செயலுக்கான தகுதி உள்பட எந்த உத்திரவாதமும் \n"
-"அளிக்கப்படவில்லை. மேற் கொண்டு விவரங்களுக்கு ஜிஎன்யு பொது அனுமதிக்கான \n"
-"விதிகளை பார்க்கவும்"
 
-#: applets/brightness/brightness-applet.c:809
-#: applets/inhibit/inhibit-applet.c:306
-msgid ""
-"You should have received a copy of the GNU General Public License\n"
-"along with this program; if not, write to the Free Software\n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
-"02110-1301, USA."
+#: applets/brightness/brightness-applet.c:850
+#: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:212
+msgid "translator-credits"
 msgstr ""
-"சக்தி மேலாளர் உடன் ஜிஎன்யு பொது அனுமதிக்கான விதிகளின் பிரதி \n"
-"உங்களுக்கு கிடைத்திருக்க வேண்டும். இல்லையானால் கீழ் கண்ட \n"
-"முகவரிக்கு கடிதம் எழுதவும். Free Software Foundation, Inc., 51 Franklin Street, \n"
-"Fifth Floor, Boston, MA 02110-1301, USA."
+"Launchpad Contributions:\n"
+"  Valmantas Palikša https://launchpad.net/~walmis\n"
+"  bhuvi https://launchpad.net/~bhuvanesh"
 
-#: applets/brightness/brightness-applet.c:1063
-#: applets/inhibit/inhibit-applet.c:519
+#: applets/brightness/brightness-applet.c:1081
+#: applets/inhibit/inhibit-applet.c:503
 msgid "_About"
 msgstr "பற்றி "
 
-#: applets/brightness/brightness-applet.c:1066
-#: applets/inhibit/inhibit-applet.c:522
+#: applets/brightness/brightness-applet.c:1084
+#: applets/inhibit/inhibit-applet.c:506 data/gpm-prefs.ui:41
 msgid "_Help"
 msgstr "_உதவி"
 
@@ -104,12 +105,6 @@ msgstr "வெளிச்ச குறு நிரல் தொழிற்ச
 #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:9
 msgid "Brightness Applet"
 msgstr "வெளிச்ச குறு நிரல்"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-brightness-applet"
-msgstr ""
 
 #: applets/inhibit/inhibit-applet.c:87
 msgid "Power Manager Inhibit Applet"
@@ -131,6 +126,16 @@ msgstr "தானியங்கி தூக்கம் செயல் பட
 msgid "Manual inhibit"
 msgstr "கைமுறை பாதிப்பு"
 
+#: applets/inhibit/inhibit-applet.c:310
+msgid "About Power Manager Inhibit Applet"
+msgstr ""
+
+#: applets/inhibit/inhibit-applet.c:312
+msgid ""
+"Copyright © 2006-2007 Richard Hughes\n"
+"Copyright © 2011-2021 MATE developers"
+msgstr ""
+
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
 msgstr "பாதிப்பு குறு நிரல் தொழிற்சாலை"
@@ -139,26 +144,13 @@ msgstr "பாதிப்பு குறு நிரல் தொழிற்
 msgid "Inhibit Applet"
 msgstr "பாதிப்பு குறுநிரல்"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-inhibit-applet"
-msgstr ""
-
-#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:184
+#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:203
 msgid "Power Manager"
 msgstr "மின் மேலாளர்"
 
-#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:186
+#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:205
 msgid "Power management daemon"
 msgstr "மின் மேலாளர் டீமான்"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/mate-power-manager.desktop.in.in:6
-#: data/mate-power-preferences.desktop.in.in:6
-msgid "mate-power-manager"
-msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:26
 #: data/org.mate.power-manager.gschema.xml.in:41
@@ -812,8 +804,8 @@ msgstr "மின் மேலாண்மையை கட்டமை"
 msgid "MATE;power;management;preferences;settings;"
 msgstr ""
 
-#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:7
-#: src/gpm-statistics.c:1090 src/gpm-statistics.c:1577
+#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
+#: src/gpm-statistics.c:762 src/gpm-statistics.c:1224
 msgid "Power Statistics"
 msgstr "மின் புள்ளிவிவரங்கள்"
 
@@ -821,210 +813,194 @@ msgstr "மின் புள்ளிவிவரங்கள்"
 msgid "Observe power management"
 msgstr "மின் மேலாண்மையை அனுசரி"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/mate-power-statistics.desktop.in.in:6
-msgid "mate-power-statistics"
-msgstr ""
-
-#: data/gpm-statistics.ui:113 src/gpm-statistics.c:208
+#: data/gpm-statistics.ui:119
 msgid "Details"
 msgstr "விவரங்கள்"
 
-#: data/gpm-statistics.ui:139 data/gpm-statistics.ui:342
+#: data/gpm-statistics.ui:145 data/gpm-statistics.ui:347
 msgid "Graph type:"
 msgstr "வரைபட வகை:"
 
-#: data/gpm-statistics.ui:174
+#: data/gpm-statistics.ui:180
 msgid "Data length:"
 msgstr "தரவு நீளம்:"
 
-#: data/gpm-statistics.ui:234 data/gpm-statistics.ui:395
+#: data/gpm-statistics.ui:239 data/gpm-statistics.ui:399
 msgid "There is no data to display."
 msgstr "காட்ட தரவு ஏதும் இல்லை"
 
-#: data/gpm-statistics.ui:276 data/gpm-statistics.ui:438
+#: data/gpm-statistics.ui:281 data/gpm-statistics.ui:442
 msgid "Use smoothed line"
 msgstr "இதப்படுத்திய தடத்தை பயன்படுத்துக"
 
-#: data/gpm-statistics.ui:291 data/gpm-statistics.ui:453
+#: data/gpm-statistics.ui:296 data/gpm-statistics.ui:457
 msgid "Show data points"
 msgstr "தரவு புள்ளிகளை காட்டு "
 
-#: data/gpm-statistics.ui:320
+#: data/gpm-statistics.ui:325
 msgid "History"
 msgstr "வரலாறு"
 
-#: data/gpm-statistics.ui:482
+#: data/gpm-statistics.ui:486
 msgid "Statistics"
 msgstr "புள்ளிவிவரம்"
 
-#: data/gpm-statistics.ui:504
-msgid "Processor wakeups per second:"
-msgstr "ஒரு வினாடிக்கு செயலக எழுப்புதல்கள்"
-
-#: data/gpm-statistics.ui:516
-msgid "0"
-msgstr "0"
-
-#: data/gpm-statistics.ui:563 src/gpm-statistics.c:194
-msgid "Wakeups"
-msgstr "எழுப்புதல்கள்"
-
-#: data/gpm-prefs.ui:55
+#: data/gpm-prefs.ui:23
 msgid "Power Management Preferences"
 msgstr "மின் மேலாண்மை முன்னுரிமைகள்"
 
-#: data/gpm-prefs.ui:84 data/gpm-prefs.ui:327 data/gpm-prefs.ui:585
-#: data/gpm-prefs.ui:813
-msgid "<b>Actions</b>"
-msgstr "<b>செயல்கள்</b>"
-
-#: data/gpm-prefs.ui:111 data/gpm-prefs.ui:354 data/gpm-prefs.ui:612
-msgid "Put computer to _sleep when inactive for:"
-msgstr "இவ்வளவு நேரம் செயலற்ற போது கணினியை தூங்க வை"
-
-#: data/gpm-prefs.ui:144 data/gpm-prefs.ui:387
-msgid "When laptop lid is cl_osed:"
-msgstr "_o மடிக்கணினி மூடி மூடியிருக்கும் போது:"
-
-#: data/gpm-prefs.ui:189 data/gpm-prefs.ui:463 data/gpm-prefs.ui:721
-msgid "<b>Display</b>"
-msgstr "<b>காட்டு</b>"
-
-#: data/gpm-prefs.ui:216 data/gpm-prefs.ui:490 data/gpm-prefs.ui:748
-msgid "Put _display to sleep when inactive for:"
-msgstr "இவ்வளவு நேரம் செயலற்ற போது காட்சியை தூங்க வை"
-
-#: data/gpm-prefs.ui:247
-msgid "Set display _brightness to:"
-msgstr "காட்சியை இந்த வெளிச்சத்திற்கு அமைக்கவும்: (_b)"
-
-#: data/gpm-prefs.ui:275 data/gpm-prefs.ui:529
-msgid "Di_m display when idle"
-msgstr "(_m) வேலை இல்லாத போது திரை வெளிச்சத்தை குறைக்கவும்."
-
-#: data/gpm-prefs.ui:306
-msgid "On AC Power"
-msgstr "ஏசி சக்தியில்"
-
-#: data/gpm-prefs.ui:418
-msgid "When battery po_wer is critically low:"
-msgstr "_w மின்கலத்தின் மின்சாரம் மிகக்குறைவான போது:"
-
-#: data/gpm-prefs.ui:514
-msgid "_Reduce backlight brightness"
-msgstr "(_R) பின்வெளிச்ச பிரகாசத்தை குறை"
-
-#: data/gpm-prefs.ui:563
-msgid "On Battery Power"
-msgstr "மின்கல திறனில்"
-
-#: data/gpm-prefs.ui:645
-msgid "When UPS power is l_ow:"
-msgstr "_o யூபிஎஸ்(UPS) மின்சாரம் குறைவான போது:"
-
-#: data/gpm-prefs.ui:676
-msgid "When UPS power is _critically low:"
-msgstr "_c யூபிஎஸ்(UPS) மின்சாரம் மிகக்குறைவான போது:"
-
-#: data/gpm-prefs.ui:791
-msgid "On UPS Power"
-msgstr "யூபிஎஸ்(UPS) மின்சாரத்தில்"
-
-#: data/gpm-prefs.ui:840
-msgid "When the power _button is pressed:"
-msgstr "_b மின் பொத்தானை அழுத்தும் போது:"
-
-#: data/gpm-prefs.ui:873
-msgid "When the _suspend button is pressed:"
-msgstr "_s இடைநிறுத்த பொத்தானை அழுத்தும் போது:"
-
-#: data/gpm-prefs.ui:918
-msgid "<b>Notification Area</b>"
-msgstr "<b>அறிவிப்பு பகுதி</b>"
-
-#: data/gpm-prefs.ui:938
-msgid "_Never display an icon"
-msgstr "சின்னத்தை _N ஒருபோதும் காட்டாதே"
-
-#: data/gpm-prefs.ui:953
-msgid "_Only display an icon when battery power is low"
-msgstr "_O மின்கல சக்தி இருக்கும் போது மட்டும் சின்னத்தை காட்டு"
-
-#: data/gpm-prefs.ui:969
-msgid "Only display an icon when charging or _discharging"
-msgstr "மின் _d ஏற்றும் போது அல்லது இறக்கும் போது சின்னம் மட்டும் காட்டு"
-
-#: data/gpm-prefs.ui:985
-msgid "Only display an icon when a battery is p_resent"
-msgstr "மின்கலம் _r இருக்கும் போது சின்னம் மட்டும் காட்டு"
-
-#: data/gpm-prefs.ui:1001
-msgid "_Always display an icon"
-msgstr "_A எப்போதும் சின்னத்தை காட்டு"
-
-#: data/gpm-prefs.ui:1036
-msgid "General"
-msgstr "பொது"
-
-#: data/gpm-prefs.ui:1060
-msgid "Provides help about this program"
-msgstr "இந்த நிரல் பற்றி உதவி தருகிறது"
-
-#: data/gpm-prefs.ui:1072
+#: data/gpm-prefs.ui:58
 msgid "Make Default"
 msgstr "முன்னிருப்பு ஆக்கு"
 
-#: data/gpm-prefs.ui:1076
-msgid "Sets this policy to be used by all users"
-msgstr "இந்த கொள்கையை அனைத்து பயனர்களுக்கும் பயன்படுத்த அமைக்கிறது"
+#: data/gpm-prefs.ui:71
+msgid "_Close"
+msgstr "மூடு (_C)"
 
-#: data/gpm-prefs.ui:1092
-msgid "Closes the program"
-msgstr "நிரலை இயக்கம் நிறுத்துகிறது"
+#: data/gpm-prefs.ui:138 data/gpm-prefs.ui:406 data/gpm-prefs.ui:746
+msgid "Put computer to _sleep when inactive for:"
+msgstr "இவ்வளவு நேரம் செயலற்ற போது கணினியை தூங்க வை"
 
-#: src/gpm-backlight-helper.c:166
+#: data/gpm-prefs.ui:176 data/gpm-prefs.ui:444
+msgid "When laptop lid is cl_osed:"
+msgstr "_o மடிக்கணினி மூடி மூடியிருக்கும் போது:"
+
+#: data/gpm-prefs.ui:213 data/gpm-prefs.ui:519 data/gpm-prefs.ui:825
+#: data/gpm-prefs.ui:1031
+msgid "Actions"
+msgstr "செயல்கள்"
+
+#: data/gpm-prefs.ui:252 data/gpm-prefs.ui:560 data/gpm-prefs.ui:861
+msgid "Put _display to sleep when inactive for:"
+msgstr "இவ்வளவு நேரம் செயலற்ற போது காட்சியை தூங்க வை"
+
+#: data/gpm-prefs.ui:289
+msgid "Set display _brightness to:"
+msgstr "காட்சியை இந்த வெளிச்சத்திற்கு அமைக்கவும்: (_b)"
+
+#: data/gpm-prefs.ui:322 data/gpm-prefs.ui:607
+msgid "Di_m display when idle"
+msgstr "(_m) வேலை இல்லாத போது திரை வெளிச்சத்தை குறைக்கவும்."
+
+#: data/gpm-prefs.ui:344 data/gpm-prefs.ui:629 data/gpm-prefs.ui:890
+msgid "Display"
+msgstr "காண்பி"
+
+#: data/gpm-prefs.ui:363
+msgid "On AC Power"
+msgstr "ஏசி சக்தியில்"
+
+#: data/gpm-prefs.ui:482
+msgid "When battery po_wer is critically low:"
+msgstr "_w மின்கலத்தின் மின்சாரம் மிகக்குறைவான போது:"
+
+#: data/gpm-prefs.ui:591
+msgid "_Reduce backlight brightness"
+msgstr "(_R) பின்வெளிச்ச பிரகாசத்தை குறை"
+
+#: data/gpm-prefs.ui:663
+msgid "_Reduce keyboard backlight"
+msgstr ""
+
+#: data/gpm-prefs.ui:685 src/gpm-upower.c:507
+msgid "Keyboard"
+msgid_plural "Keyboards"
+msgstr[0] ""
+msgstr[1] ""
+
+#: data/gpm-prefs.ui:707
+msgid "On Battery Power"
+msgstr "மின்கல திறனில்"
+
+#: data/gpm-prefs.ui:760
+msgid "When UPS power is l_ow:"
+msgstr "_o யூபிஎஸ்(UPS) மின்சாரம் குறைவான போது:"
+
+#: data/gpm-prefs.ui:774
+msgid "When UPS power is _critically low:"
+msgstr "_c யூபிஎஸ்(UPS) மின்சாரம் மிகக்குறைவான போது:"
+
+#: data/gpm-prefs.ui:912
+msgid "On UPS Power"
+msgstr "யூபிஎஸ்(UPS) மின்சாரத்தில்"
+
+#: data/gpm-prefs.ui:956
+msgid "When the power _button is pressed:"
+msgstr "_b மின் பொத்தானை அழுத்தும் போது:"
+
+#: data/gpm-prefs.ui:994
+msgid "When the _suspend button is pressed:"
+msgstr "_s இடைநிறுத்த பொத்தானை அழுத்தும் போது:"
+
+#: data/gpm-prefs.ui:1065
+msgid "_Never display an icon"
+msgstr "சின்னத்தை _N ஒருபோதும் காட்டாதே"
+
+#: data/gpm-prefs.ui:1083
+msgid "_Only display an icon when battery power is low"
+msgstr "_O மின்கல சக்தி இருக்கும் போது மட்டும் சின்னத்தை காட்டு"
+
+#: data/gpm-prefs.ui:1101
+msgid "Only display an icon when charging or _discharging"
+msgstr "மின் _d ஏற்றும் போது அல்லது இறக்கும் போது சின்னம் மட்டும் காட்டு"
+
+#: data/gpm-prefs.ui:1119
+msgid "Only display an icon when a battery is p_resent"
+msgstr "மின்கலம் _r இருக்கும் போது சின்னம் மட்டும் காட்டு"
+
+#: data/gpm-prefs.ui:1137
+msgid "_Always display an icon"
+msgstr "_A எப்போதும் சின்னத்தை காட்டு"
+
+#: data/gpm-prefs.ui:1161
+msgid "Notification Area"
+msgstr "அறிவிப்பு இடம்"
+
+#: data/gpm-prefs.ui:1183
+msgid "General"
+msgstr "பொது"
+
+#: src/gpm-backlight-helper.c:167
 msgid "Set the current brightness"
 msgstr ""
 
-#: src/gpm-backlight-helper.c:169
+#: src/gpm-backlight-helper.c:170
 msgid "Get the current brightness"
 msgstr ""
 
-#: src/gpm-backlight-helper.c:172
+#: src/gpm-backlight-helper.c:173
 msgid "Get the number of brightness levels supported"
 msgstr ""
 
-#: src/gpm-backlight-helper.c:184
+#: src/gpm-backlight-helper.c:185
 msgid "MATE Power Manager Backlight Helper"
 msgstr ""
 
-#: src/gpm-backlight-helper.c:192
+#: src/gpm-backlight-helper.c:193
 msgid "No valid option was specified"
 msgstr ""
 
-#: src/gpm-backlight-helper.c:201
+#: src/gpm-backlight-helper.c:202
 msgid "No backlights were found on your system"
 msgstr ""
 
-#: src/gpm-backlight-helper.c:212
+#: src/gpm-backlight-helper.c:213
 msgid "Could not get the value of the backlight"
 msgstr ""
 
-#: src/gpm-backlight-helper.c:230
+#: src/gpm-backlight-helper.c:231
 msgid "Could not get the maximum value of the backlight"
 msgstr ""
 
-#: src/gpm-backlight-helper.c:247
+#: src/gpm-backlight-helper.c:248
 msgid "This program can only be used by the root user"
 msgstr ""
 
-#: src/gpm-backlight-helper.c:256
+#: src/gpm-backlight-helper.c:257
 msgid "This program must only be run through pkexec"
 msgstr ""
 
-#: src/gpm-backlight-helper.c:267
+#: src/gpm-backlight-helper.c:268
 msgid "Could not set the value of the backlight"
 msgstr ""
 
@@ -1123,23 +1099,19 @@ msgstr "%.1fW"
 msgid "%.1fV"
 msgstr "%.1fV"
 
-#: src/gpm-main.c:172 src/gpm-prefs.c:77 src/gpm-statistics.c:1560
-msgid "Show extra debugging information"
-msgstr "கூடுதல் பிழைத்திருத்த தகவல்களை காட்டு"
-
-#: src/gpm-main.c:174
+#: src/gpm-main.c:170
 msgid "Show version of installed program and exit"
 msgstr "நிறுவிய நிரலின் பதிப்பை காட்டி வெளியேறு"
 
-#: src/gpm-main.c:176
+#: src/gpm-main.c:172
 msgid "Exit after a small delay (for debugging)"
 msgstr "சிறிய தாமதத்தின் (பிழை திருத்த) பின் வெளியேறு"
 
-#: src/gpm-main.c:178
+#: src/gpm-main.c:174
 msgid "Exit after the manager has loaded (for debugging)"
 msgstr "மேலாளர் ஏற்றப்பட்ட பின் (பிழை திருத்த) வெளியேறு"
 
-#: src/gpm-main.c:189 src/gpm-main.c:193
+#: src/gpm-main.c:185 src/gpm-main.c:189
 msgid "MATE Power Manager"
 msgstr "க்னோம் மின் மேலாளர்"
 
@@ -1223,218 +1195,218 @@ msgstr "மடிக்கணினி மூடி மூடப்பட்ட�
 msgid "Power Information"
 msgstr "மின் தகவல்"
 
-#: src/gpm-manager.c:1107
+#: src/gpm-manager.c:1106
 msgid "Battery may be broken"
 msgstr "மின்கலம் சிதைந்து இருக்கலாம்."
 
-#: src/gpm-manager.c:1110
+#: src/gpm-manager.c:1109
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
 " broken."
 msgstr ""
 
-#: src/gpm-manager.c:1159
+#: src/gpm-manager.c:1158
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-manager.c:1205
+#: src/gpm-manager.c:1204
 msgid "Battery Discharging"
 msgstr "மின்கல சக்தி இறங்குகிறது"
 
-#: src/gpm-manager.c:1209
+#: src/gpm-manager.c:1208
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1212 src/gpm-manager.c:1224
+#: src/gpm-manager.c:1211 src/gpm-manager.c:1223
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1217
+#: src/gpm-manager.c:1216
 msgid "UPS Discharging"
 msgstr "யூபிஎஸ் மின் சக்தி இறங்குகிறது"
 
-#: src/gpm-manager.c:1221
+#: src/gpm-manager.c:1220
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1305
+#: src/gpm-manager.c:1304
 msgid "Battery low"
 msgstr "பாட்டரி குறைவாக உள்ளது"
 
-#: src/gpm-manager.c:1308
+#: src/gpm-manager.c:1307
 msgid "Laptop battery low"
 msgstr "மடிக்கணினி மின்கல சக்தி குறைவாக உள்ளது"
 
-#: src/gpm-manager.c:1314
+#: src/gpm-manager.c:1313
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1318
+#: src/gpm-manager.c:1317
 msgid "UPS low"
 msgstr "யூபிஎஸ்(UPS) மின்சாரம் குறைவாக உள்ளது"
 
-#: src/gpm-manager.c:1322
+#: src/gpm-manager.c:1321
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1331 src/gpm-manager.c:1470
+#: src/gpm-manager.c:1330 src/gpm-manager.c:1469
 msgid "Mouse battery low"
 msgstr "சொடுக்கி மின்கல மின்சாரம் குறைவாக உள்ளது"
 
-#: src/gpm-manager.c:1334
+#: src/gpm-manager.c:1333
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1338 src/gpm-manager.c:1478
+#: src/gpm-manager.c:1337 src/gpm-manager.c:1477
 msgid "Keyboard battery low"
 msgstr "விசைப்பலகை மின்கல மின்சாரம் குறைவாக உள்ளது"
 
-#: src/gpm-manager.c:1341
+#: src/gpm-manager.c:1340
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1345 src/gpm-manager.c:1487
+#: src/gpm-manager.c:1344 src/gpm-manager.c:1486
 msgid "PDA battery low"
 msgstr "பிடிஏ மின்கல மின்சாரம் குறைவாக உள்ளது"
 
-#: src/gpm-manager.c:1348
+#: src/gpm-manager.c:1347
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1352 src/gpm-manager.c:1497 src/gpm-manager.c:1507
+#: src/gpm-manager.c:1351 src/gpm-manager.c:1496 src/gpm-manager.c:1506
 msgid "Cell phone battery low"
 msgstr "அலைபேசி மின்கல மின்சாரம் குறைவாக உள்ளது"
 
-#: src/gpm-manager.c:1355
+#: src/gpm-manager.c:1354
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1359
+#: src/gpm-manager.c:1358
 msgid "Media player battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1362
+#: src/gpm-manager.c:1361
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1366 src/gpm-manager.c:1516
+#: src/gpm-manager.c:1365 src/gpm-manager.c:1515
 msgid "Tablet battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1369
+#: src/gpm-manager.c:1368
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1373 src/gpm-manager.c:1525
+#: src/gpm-manager.c:1372 src/gpm-manager.c:1524
 msgid "Attached computer battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1376
+#: src/gpm-manager.c:1375
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1424
+#: src/gpm-manager.c:1423
 msgid "Battery critically low"
 msgstr "பாட்டரி அபாயகரமாக குறைவாக உள்ளது"
 
-#: src/gpm-manager.c:1427 src/gpm-manager.c:1585
+#: src/gpm-manager.c:1426 src/gpm-manager.c:1584
 msgid "Laptop battery critically low"
 msgstr "மடிகணினி மின்கலம் மின் அடக்கம் மிகக் குறைவு"
 
-#: src/gpm-manager.c:1436
+#: src/gpm-manager.c:1435
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr "தரவை இழக்காதிருக்க ஏசி தகவியை சொருகவும்."
 
-#: src/gpm-manager.c:1440
+#: src/gpm-manager.c:1439
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr ""
 "மின்சக்தி தொடர்பு தரவில்லையானால்  கணினி சீக்கிரம்  இடை நிறுத்தப்படும்."
 
-#: src/gpm-manager.c:1444
+#: src/gpm-manager.c:1443
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr "மின்சக்தி தொடர்பு தரவில்லையானால் கணினி  சீக்கிரம் உறங்கும்."
 
-#: src/gpm-manager.c:1448
+#: src/gpm-manager.c:1447
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr ""
 "மின்சக்தி தொடர்பு தரவில்லையானால் கணினி சீக்கிரம் பணிநிறுத்தம் செய்யப்படும்."
 
-#: src/gpm-manager.c:1455 src/gpm-manager.c:1621
+#: src/gpm-manager.c:1454 src/gpm-manager.c:1620
 msgid "UPS critically low"
 msgstr "யூபிஎஸ்(UPS) மின் அடக்கம் மிகவும்  குறைகிறது"
 
-#: src/gpm-manager.c:1459
+#: src/gpm-manager.c:1458
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
 msgstr ""
 
-#: src/gpm-manager.c:1473
+#: src/gpm-manager.c:1472
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1481
+#: src/gpm-manager.c:1480
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1490
+#: src/gpm-manager.c:1489
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
 " not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1500
+#: src/gpm-manager.c:1499
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1510
+#: src/gpm-manager.c:1509
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1519
+#: src/gpm-manager.c:1518
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1528
+#: src/gpm-manager.c:1527
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1593
+#: src/gpm-manager.c:1592
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
@@ -1442,7 +1414,7 @@ msgstr ""
 "மின்கல மின் அடக்கம் அபாயகரமாக குறைவு. முழுக்க மின் கலம் காலி ஆகும் போது இந்த"
 " கணினி <b> மின் நிறுத்தம்</b> செய்யும்."
 
-#: src/gpm-manager.c:1599
+#: src/gpm-manager.c:1598
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
@@ -1452,7 +1424,7 @@ msgstr ""
 " உள்ளது. <br><b>NOTE:</b> கணினியை இடை நிறுத்தத்தில் வைக்க சிறிது மின் சக்தி "
 "தேவை."
 
-#: src/gpm-manager.c:1606
+#: src/gpm-manager.c:1605
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
@@ -1460,7 +1432,7 @@ msgstr ""
 "மின்கல மின் அடக்கம் அபாயகரமாக குறைவு. இந்த கணினி இப்போது உறக்கம் செய்ய "
 "உள்ளது"
 
-#: src/gpm-manager.c:1611
+#: src/gpm-manager.c:1610
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
@@ -1468,7 +1440,7 @@ msgstr ""
 "மின்கல மின் அடக்கம் அபாயகரமாக குறைவு ஆகையால் இந்த கணினி இப்போது முழு செயல் "
 "நிறுத்தம் செய்ய உள்ளது."
 
-#: src/gpm-manager.c:1629
+#: src/gpm-manager.c:1628
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
@@ -1476,408 +1448,296 @@ msgstr ""
 "யுபிஎஸ் மின் அடக்கம் அபாயகரமாக குறைவு. முழுக்க மின் கலம் காலி ஆகும் போது "
 "இந்த கணினி <b> மின் நிறுத்தம்</b> செய்யும்."
 
-#: src/gpm-manager.c:1635
+#: src/gpm-manager.c:1634
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr ""
 "யுபிஎஸ் மின் அடக்கம் அபாயகரமாக குறைவு இந்த கணினி இப்போது உறக்கம் செய்ய "
 "உள்ளது."
 
-#: src/gpm-manager.c:1640
+#: src/gpm-manager.c:1639
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr ""
 "யுபிஎஸ் மின் அடக்கம் அபாயகரமாக குறைவு இந்த கணினி இப்போது முழு செயல் "
 "நிறுத்தம் செய்ய உள்ளது."
 
-#: src/gpm-prefs.c:81
+#: src/gpm-prefs.c:77
 msgid "MATE Power Preferences"
 msgstr "க்னோம் மின் முன்னுரிமைகள்"
 
-#: src/gpm-prefs-core.c:238
+#: src/gpm-prefs-core.c:242
 msgid "Shutdown"
 msgstr "பணி நிறுத்தம்"
 
-#: src/gpm-prefs-core.c:245
+#: src/gpm-prefs-core.c:249
 msgid "Suspend"
 msgstr "இடை நீக்கம்"
 
-#: src/gpm-prefs-core.c:248
+#: src/gpm-prefs-core.c:252
 msgid "Hibernate"
 msgstr "செயலற்ற"
 
-#: src/gpm-prefs-core.c:251
+#: src/gpm-prefs-core.c:255
 msgid "Blank screen"
 msgstr "வெற்று திரை"
 
-#: src/gpm-prefs-core.c:254
+#: src/gpm-prefs-core.c:258
 msgid "Ask me"
 msgstr "என்னைக் கேள்"
 
-#: src/gpm-prefs-core.c:257
+#: src/gpm-prefs-core.c:261
 msgid "Do nothing"
 msgstr "ஒன்றும் செய்யாதே"
 
-#: src/gpm-prefs-core.c:317
+#: src/gpm-prefs-core.c:321
 msgid "Never"
 msgstr "ஒரு போதும் இல்லை"
 
-#: src/gpm-statistics.c:78 src/gpm-statistics.c:466
+#: src/gpm-statistics.c:67 src/gpm-statistics.c:410
 msgid "Rate"
 msgstr "விகிதம்"
 
-#: src/gpm-statistics.c:79
+#: src/gpm-statistics.c:68
 msgid "Charge"
 msgstr "சக்தி"
 
-#: src/gpm-statistics.c:80 src/gpm-statistics.c:480
+#: src/gpm-statistics.c:69 src/gpm-statistics.c:424
 msgid "Time to full"
 msgstr "நிறைவதற்கு நேரம் "
 
-#: src/gpm-statistics.c:81 src/gpm-statistics.c:485
+#: src/gpm-statistics.c:70 src/gpm-statistics.c:429
 msgid "Time to empty"
 msgstr "வெற்றாக நேரம் "
 
-#: src/gpm-statistics.c:88
+#: src/gpm-statistics.c:77
 msgid "10 minutes"
 msgstr "10 நிமிடங்கள்"
 
-#: src/gpm-statistics.c:89
+#: src/gpm-statistics.c:78
 msgid "2 hours"
 msgstr "2 மணிகள்"
 
-#: src/gpm-statistics.c:90
+#: src/gpm-statistics.c:79
 msgid "6 hours"
 msgstr ""
 
-#: src/gpm-statistics.c:91
+#: src/gpm-statistics.c:80
 msgid "1 day"
 msgstr "1 நாள்"
 
-#: src/gpm-statistics.c:92
+#: src/gpm-statistics.c:81
 msgid "1 week"
 msgstr "1 வாரம்"
 
-#: src/gpm-statistics.c:101
+#: src/gpm-statistics.c:90
 msgid "Charge profile"
 msgstr "சக்தியூட்டும் நேர வரியுரு"
 
-#: src/gpm-statistics.c:102
+#: src/gpm-statistics.c:91
 msgid "Discharge profile"
 msgstr "சக்தியிறக்கும் நேர வரியுரு"
 
-#: src/gpm-statistics.c:104
+#: src/gpm-statistics.c:93
 msgid "Charge accuracy"
 msgstr "சக்தியூட்டும் நேர வழுவாமை "
 
-#: src/gpm-statistics.c:105
+#: src/gpm-statistics.c:94
 msgid "Discharge accuracy"
 msgstr "சக்தியிறக்கும் நேர வழுவாமை "
 
-#: src/gpm-statistics.c:132
+#: src/gpm-statistics.c:121
 msgid "Attribute"
 msgstr "பண்புக்கூறு"
 
-#: src/gpm-statistics.c:139
+#: src/gpm-statistics.c:128
 msgid "Value"
 msgstr "மதிப்பு"
 
-#: src/gpm-statistics.c:156
+#: src/gpm-statistics.c:145
 msgid "Image"
 msgstr "படம்"
 
-#: src/gpm-statistics.c:162
+#: src/gpm-statistics.c:151
 msgid "Description"
 msgstr "விவரம்"
 
-#: src/gpm-statistics.c:181 src/gpm-statistics.c:405
-msgid "Type"
-msgstr "þனம்"
-
-#: src/gpm-statistics.c:187
-msgid "ID"
-msgstr "எண்"
-
-#: src/gpm-statistics.c:201
-msgid "Command"
-msgstr "கட்டளை"
-
-#: src/gpm-statistics.c:286
+#: src/gpm-statistics.c:230
 msgid "Unknown"
 msgstr "தெரியாத"
 
-#: src/gpm-statistics.c:290
+#: src/gpm-statistics.c:234
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-statistics.c:295
+#: src/gpm-statistics.c:239
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-statistics.c:300
+#: src/gpm-statistics.c:244
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-statistics.c:304
+#: src/gpm-statistics.c:248
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-statistics.c:313
+#: src/gpm-statistics.c:257
 msgid "Yes"
 msgstr "ஆம்"
 
-#: src/gpm-statistics.c:313
+#: src/gpm-statistics.c:257
 msgid "No"
 msgstr "இல்லை"
 
-#: src/gpm-statistics.c:402
+#: src/gpm-statistics.c:346
 msgid "Device"
 msgstr "சாதனம்"
 
-#: src/gpm-statistics.c:407
+#: src/gpm-statistics.c:349
+msgid "Type"
+msgstr "þனம்"
+
+#: src/gpm-statistics.c:351
 msgid "Vendor"
 msgstr "விற்பனையாளர்"
 
-#: src/gpm-statistics.c:409
+#: src/gpm-statistics.c:353
 msgid "Model"
 msgstr "மாதிரி"
 
-#: src/gpm-statistics.c:411
+#: src/gpm-statistics.c:355
 msgid "Serial number"
 msgstr "வரிசை எண் "
 
-#: src/gpm-statistics.c:416
+#: src/gpm-statistics.c:360
 msgid "Supply"
 msgstr "வழங்கு"
 
-#: src/gpm-statistics.c:419
+#: src/gpm-statistics.c:363
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/gpm-statistics.c:423
+#: src/gpm-statistics.c:367
 msgid "Refreshed"
 msgstr "புதுப்பிக்கப்பட்டது"
 
-#: src/gpm-statistics.c:433
+#: src/gpm-statistics.c:377
 msgid "Present"
 msgstr "நிகழ்"
 
-#: src/gpm-statistics.c:440
+#: src/gpm-statistics.c:384
 msgid "Rechargeable"
 msgstr "மீள் சக்தியேற்ற இயலும்"
 
-#: src/gpm-statistics.c:446
+#: src/gpm-statistics.c:390
 msgid "State"
 msgstr "மாவட்டம்"
 
-#: src/gpm-statistics.c:450
+#: src/gpm-statistics.c:394
 msgid "Energy"
 msgstr "சக்தி"
 
-#: src/gpm-statistics.c:453
+#: src/gpm-statistics.c:397
 msgid "Energy when empty"
 msgstr "வெற்றான போது சக்தி"
 
-#: src/gpm-statistics.c:456
+#: src/gpm-statistics.c:400
 msgid "Energy when full"
 msgstr "முழுமையான போது சக்தி"
 
-#: src/gpm-statistics.c:459
+#: src/gpm-statistics.c:403
 msgid "Energy (design)"
 msgstr "சக்தி (வடிவு)"
 
-#: src/gpm-statistics.c:473
+#: src/gpm-statistics.c:417
 msgid "Voltage"
 msgstr "வோல்டேஜ்"
 
-#: src/gpm-statistics.c:495
+#: src/gpm-statistics.c:439
 msgid "Percentage"
 msgstr "சதவிகிதம்"
 
-#: src/gpm-statistics.c:502
+#: src/gpm-statistics.c:446
 msgid "Capacity"
 msgstr "கொள்ளளவு:"
 
-#: src/gpm-statistics.c:507
+#: src/gpm-statistics.c:451
 msgid "Technology"
 msgstr "தொழில் நுட்பம்:"
 
-#: src/gpm-statistics.c:512
+#: src/gpm-statistics.c:456
 msgid "Online"
 msgstr "இணைப்பில்"
 
-#: src/gpm-statistics.c:824
-msgid "No data"
-msgstr "தரவு இல்லை"
-
-#: src/gpm-statistics.c:831 src/gpm-statistics.c:836
-msgid "Kernel module"
-msgstr "கரு தொகுப்பு"
-
-#: src/gpm-statistics.c:841
-msgid "Kernel core"
-msgstr "கரு உட்கூறு "
-
-#: src/gpm-statistics.c:846
-msgid "Interprocessor interrupt"
-msgstr "இடைசெயலி மறிப்பு"
-
-#: src/gpm-statistics.c:851
-msgid "Interrupt"
-msgstr "தடை"
-
-#: src/gpm-statistics.c:898
-msgid "PS/2 keyboard/mouse/touchpad"
-msgstr "பிஎஸ்/2 விசைப்பலகை/ சொடுக்கி/ தொடுதிட்டு"
-
-#: src/gpm-statistics.c:901
-msgid "ACPI"
-msgstr "ஏசிபிஐ"
-
-#: src/gpm-statistics.c:904
-msgid "Serial ATA"
-msgstr "சீரியல் ஏடிஏ"
-
-#: src/gpm-statistics.c:907
-msgid "ATA host controller"
-msgstr "ஏடிஏ புரவலன் கட்டுபடுத்தி"
-
-#: src/gpm-statistics.c:910
-msgid "Intel wireless adaptor"
-msgstr "இன்டல் கம்பியில்லா தகவி"
-
-#: src/gpm-statistics.c:917 src/gpm-statistics.c:922 src/gpm-statistics.c:927
-#: src/gpm-statistics.c:932 src/gpm-statistics.c:937
-#, c-format
-msgid "Timer %s"
-msgstr "நேர கணனி %s"
-
-#: src/gpm-statistics.c:941
-#, c-format
-msgid "Sleep %s"
-msgstr "உறங்கு %s"
-
-#: src/gpm-statistics.c:944
-#, c-format
-msgid "New task %s"
-msgstr "புதிய வேலை %s"
-
-#: src/gpm-statistics.c:948
-#, c-format
-msgid "Wait %s"
-msgstr "காத்திரு %s"
-
-#: src/gpm-statistics.c:952 src/gpm-statistics.c:956
-#, c-format
-msgid "Work queue %s"
-msgstr "வேலை வரிசை %s"
-
-#: src/gpm-statistics.c:959
-#, c-format
-msgid "Network route flush %s"
-msgstr "வலையமைப்பு தட சுத்தம் %s"
-
-#: src/gpm-statistics.c:962
-#, c-format
-msgid "USB activity %s"
-msgstr "யூஎஸ்பி செயல் %s"
-
-#: src/gpm-statistics.c:965
-#, c-format
-msgid "Wakeup %s"
-msgstr "எழுப்புதல் %s"
-
-#: src/gpm-statistics.c:968
-msgid "Local interrupts"
-msgstr "உள்ளமை தடைகள்"
-
-#: src/gpm-statistics.c:971
-msgid "Rescheduling interrupts"
-msgstr "தடைகளை மீள் அமைத்தல்"
-
-#: src/gpm-statistics.c:1080
+#: src/gpm-statistics.c:754
 msgid "Device Information"
 msgstr "சாதனம் தகவல்"
 
-#: src/gpm-statistics.c:1082
+#: src/gpm-statistics.c:756
 msgid "Device History"
 msgstr "சாதனம் வரலாறு"
 
-#: src/gpm-statistics.c:1084
+#: src/gpm-statistics.c:758
 msgid "Device Profile"
 msgstr "சாதனம் விவரகுறிப்பு"
 
-#: src/gpm-statistics.c:1086
-msgid "Processor Wakeups"
-msgstr "செயலக எழுப்புதல்"
-
-#: src/gpm-statistics.c:1325 src/gpm-statistics.c:1331
-#: src/gpm-statistics.c:1337 src/gpm-statistics.c:1343
+#: src/gpm-statistics.c:979 src/gpm-statistics.c:985 src/gpm-statistics.c:991
+#: src/gpm-statistics.c:997
 msgid "Time elapsed"
 msgstr "கடந்த நேரம்"
 
-#: src/gpm-statistics.c:1327
+#: src/gpm-statistics.c:981
 msgid "Power"
 msgstr "சக்தி"
 
-#: src/gpm-statistics.c:1333 src/gpm-statistics.c:1377
-#: src/gpm-statistics.c:1383 src/gpm-statistics.c:1389
-#: src/gpm-statistics.c:1395
+#: src/gpm-statistics.c:987 src/gpm-statistics.c:1031
+#: src/gpm-statistics.c:1037 src/gpm-statistics.c:1043
+#: src/gpm-statistics.c:1049
 msgid "Cell charge"
 msgstr "அறை சக்தி"
 
-#: src/gpm-statistics.c:1339 src/gpm-statistics.c:1345
+#: src/gpm-statistics.c:993 src/gpm-statistics.c:999
 msgid "Predicted time"
 msgstr "கணிக்கப்பட்ட நேரம்"
 
-#: src/gpm-statistics.c:1379 src/gpm-statistics.c:1391
+#: src/gpm-statistics.c:1033 src/gpm-statistics.c:1045
 msgid "Correction factor"
 msgstr "திருத்த காரணி "
 
-#: src/gpm-statistics.c:1385 src/gpm-statistics.c:1397
+#: src/gpm-statistics.c:1039 src/gpm-statistics.c:1051
 msgid "Prediction accuracy"
 msgstr "கணிப்பு வழுவாமை "
 
-#: src/gpm-statistics.c:1563
+#: src/gpm-statistics.c:1210
 msgid "Select this device at startup"
 msgstr "துவக்கத்தில் இந்த சாதனத்தை தேர்ந்தெடுக்கவும்"
 
-#: src/gpm-statistics.c:1802
-msgid "Processor"
-msgstr "செயலகம்"
-
-#: src/gpm-tray-icon.c:187
-msgid "Copyright © 2011-2018 MATE developers"
+#: src/gpm-tray-icon.c:206
+msgid "Copyright © 2011-2021 MATE developers"
 msgstr ""
 
-#: src/gpm-tray-icon.c:193
-msgid "translator-credits"
-msgstr ""
-"Launchpad Contributions:\n"
-"  Valmantas Palikša https://launchpad.net/~walmis\n"
-"  bhuvi https://launchpad.net/~bhuvanesh"
-
-#: src/gpm-tray-icon.c:295
+#: src/gpm-tray-icon.c:316
 #, c-format
 msgid "%s remaining"
 msgstr ""
 
-#: src/gpm-tray-icon.c:349
+#: src/gpm-tray-icon.c:370
 msgid "_Preferences"
 msgstr "விருப்ப தேர்வுகள் "
 
@@ -2060,12 +1920,6 @@ msgstr[1] ""
 #: src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] ""
-msgstr[1] ""
-
-#: src/gpm-upower.c:507
-msgid "Keyboard"
-msgid_plural "Keyboards"
 msgstr[0] ""
 msgstr[1] ""
 

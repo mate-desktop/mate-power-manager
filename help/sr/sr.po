@@ -1,14 +1,14 @@
 # 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2019
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-12 18:32+0100\n"
+"POT-Creation-Date: 2021-01-16 14:35+0100\n"
 "PO-Revision-Date: 2018-10-04 15:52+0000\n"
-"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>, 2019\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>, 2021\n"
 "Language-Team: Serbian (https://www.transifex.com/mate/teams/13566/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +24,7 @@ msgstr "Мирослав Николић <miroslavnikolic@rocketmail.com>"
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:23
 msgid "<application>MATE Power Manager</application> Manual"
-msgstr ""
+msgstr "Упутство за <application>Мејтовог управника напајањем</application>"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:25
@@ -33,17 +33,21 @@ msgid ""
 "MATE Desktop that manages the power settings for your laptop or desktop "
 "computer."
 msgstr ""
+"<application>Мејтов управник напајањем</application> је позадинац сесије за "
+"Мејтову радну површ који управља поставкама напајања вашег преносног или "
+"стоног рачунара."
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
-msgid "<year>2015-2020</year> <holder>MATE Documentation Team</holder>"
-msgstr ""
+msgid "<year>2015-2021</year> <holder>MATE Documentation Team</holder>"
+msgstr "<year>2015-2021</year> <holder>Тим Мејтове документације</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:34
 msgid ""
 "<year>2006-2009</year> <holder>Richard Hughes (richard@hughsie.com)</holder>"
 msgstr ""
+"<year>2006-2009</year> <holder>Ричард Хјуџиз (richard@hughsie.com)</holder>"
 
 #. (itstool) path: publisher/publishername
 #: C/index.docbook:52
@@ -54,13 +58,14 @@ msgstr "Тим документације Гнома"
 #. (itstool) path: revdescription/para
 #: C/index.docbook:55 C/index.docbook:98
 msgid "Richard Hughes"
-msgstr ""
+msgstr "Ричардс Хјуџиз"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:61
 msgid ""
 "<surname>MATE Documentation Team</surname> <affiliation> </affiliation>"
 msgstr ""
+"<surname>Тим Мејтове документације</surname> <affiliation> </affiliation>"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:71
@@ -68,22 +73,25 @@ msgid ""
 "<firstname>Richard</firstname> <surname>Hughes</surname> "
 "<email>richard@hughsie.com</email>"
 msgstr ""
+"<firstname>Ричард</firstname> <surname>Хјуџиз</surname> "
+"<email>richard@hughsie.com</email>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:95
 msgid "Richard Hughes <email>richard@hughsie.com</email>"
-msgstr ""
+msgstr "Ричард Хјуџиз <email>richard@hughsie.com</email>"
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:91
 msgid ""
 "<revnumber>2.0</revnumber> <date>2006-08-30</date> <_:revdescription-1/>"
 msgstr ""
+"<revnumber>2.0</revnumber> <date>30.08.2006.</date> <_:revdescription-1/>"
 
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:104
 msgid "Feedback"
-msgstr ""
+msgstr "Примедбе"
 
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:105
@@ -94,16 +102,20 @@ msgid ""
 "type=\"http\"><application>MATE Power Manager</application> Contact "
 "Page</ulink>."
 msgstr ""
+"Да пријавите грешку или да дате предлог у вези Мејтовог управника напајањем "
+"или овог упутства, пратите смернице на <ulink url=\"https://github.com/mate-"
+"desktop/mate-power-manager/\" type=\"http\">контакт страници "
+"<application>Мејтовог управника напајањем</application></ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:115
 msgid "<primary><application>MATE Power Manager</application></primary>"
-msgstr ""
+msgstr "<application>Мејтов управник напајањем</application>"
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:118
 msgid "<primary>mate-power-manager</primary>"
-msgstr ""
+msgstr "<primary>mate-power-manager</primary>"
 
 #. (itstool) path: section/title
 #: C/index.docbook:125
@@ -116,6 +128,8 @@ msgid ""
 "<primary><application>MATE Power Manager</application></primary> "
 "<secondary>Manual</secondary> <tertiary>mate-power-manager</tertiary>"
 msgstr ""
+"<primary><application>Мејтов управник напајањем</application></primary> "
+"<secondary>Упутство</secondary> <tertiary>mate-power-manager</tertiary>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:135
@@ -123,6 +137,8 @@ msgid ""
 "The MATE Power Manager session daemon is a power management daemon for the "
 "<systemitem>MATE desktop</systemitem>"
 msgstr ""
+"Мејтов управник напајањем позадинац сесије јесте позадинац управљања "
+"напајањем за <systemitem>Мејтову радну површ</systemitem>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:143
@@ -136,6 +152,9 @@ msgid ""
 "startup, but you can manually start <application>MATE Power "
 "Manager</application> by doing:"
 msgstr ""
+"<application>Мејтов управник напајањем</application> се обично покреће у "
+"Мејтовом почетном покретању, али можете и ручно да покренете "
+"<application>Мејтовог управника напајањем</application> на следећи начин:"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:150
@@ -145,14 +164,16 @@ msgstr "Наредба"
 #. (itstool) path: listitem/para
 #: C/index.docbook:152
 msgid ""
-"Type <command>mate-power-manager --verbose --no-daemon</command>, then press"
-" <keycap>Return</keycap>:"
+"Type <command>G_MESSAGES_DEBUG=PowerManager mate-power-manager --no-"
+"daemon</command>, then press <keycap>Return</keycap>:"
 msgstr ""
+"Упишите „<command>G_MESSAGES_DEBUG=PowerManager mate-power-manager --no-"
+"daemon</command>“, затим притисните <keycap>Унеси</keycap>:"
 
 #. (itstool) path: section/title
 #: C/index.docbook:162
 msgid "Notification Messages"
-msgstr ""
+msgstr "Поруке обавештења"
 
 #. (itstool) path: section/para
 #: C/index.docbook:163
@@ -160,16 +181,19 @@ msgid ""
 "When <application>MATE Power Manager</application> has started, the "
 "following notifications may be displayed."
 msgstr ""
+"Када се покрене <application>Мејтов управник напајањем</application>, могу "
+"бити приказана следећа обавештења."
 
 #. (itstool) path: section/title
 #: C/index.docbook:168
 msgid "AC Adapter Unplugged"
-msgstr ""
+msgstr "Струјни исправљач није прикључен"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:170
 msgid "MATE Power Manager Notification when AC adapter is removed"
 msgstr ""
+"Обавештење Мејтовог управника напајањем када је струјни исправљач уклоњен"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -182,6 +206,8 @@ msgid ""
 "external ref='figures/gpm-unplugged.png' "
 "md5='e9e38fa48737547a19b20af6a15d9e95'"
 msgstr ""
+"external ref='figures/gpm-unplugged.png' "
+"md5='e9e38fa48737547a19b20af6a15d9e95'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:180
@@ -189,17 +215,21 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-discharging</command>."
 msgstr ""
+"Можете да онемогућите ово обавештење променивши кључ д-подешавања "
+"„<command>org.mate.power-manager notify-discharging</command>“."
 
 #. (itstool) path: section/title
 #: C/index.docbook:188
 msgid "Fully Charged"
-msgstr ""
+msgstr "Потпуно пуна"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:190
 msgid ""
 "MATE Power Manager Notification when laptop primary battery is fully charged"
 msgstr ""
+"Обавештење Мејтовог управника напајањем када је главна батерија преносног "
+"рачунара потпуно напуњена"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -212,6 +242,8 @@ msgid ""
 "external ref='figures/gpm-charged.png' "
 "md5='cc83716555d07b13a3659683f96c531c'"
 msgstr ""
+"external ref='figures/gpm-charged.png' "
+"md5='cc83716555d07b13a3659683f96c531c'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:200
@@ -219,6 +251,8 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-fully-charged</command>."
 msgstr ""
+"Можете да онемогућите ово обавештење променивши кључ д-подешавања "
+"„<command>org.mate.power-manager notify-fully-charged</command>“."
 
 #. (itstool) path: note/para
 #: C/index.docbook:206
@@ -228,11 +262,15 @@ msgid ""
 " from showing unwanted repeat notifications if the battery is incorrectly "
 "reporting the charged status."
 msgstr ""
+"Поново ћете добити обавештење само ако проценат напуњености батерије падне "
+"испод 95% и тада се поново пуни до краја. Ово спречава да неки рачунари "
+"приказују нежељена поновна обавештења ако батерија нетачно извештава о стању"
+" напуњености."
 
 #. (itstool) path: section/title
 #: C/index.docbook:216
 msgid "Power Low"
-msgstr ""
+msgstr "Слабо напајање"
 
 #. (itstool) path: section/para
 #: C/index.docbook:217
@@ -240,11 +278,14 @@ msgid ""
 "When the battery is low, you will receive the following notification. You "
 "should consider switching to AC power really soon."
 msgstr ""
+"Када је батерија скоро празна, примићете следеће обавештење. Требало би што "
+"пре да размислите о прикључивању мрежног напајања."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:222
 msgid "MATE Power Manager Notification when battery power is low"
 msgstr ""
+"Обавештење Мејтовог управника напајањем када је напајање батерије слабо"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -256,6 +297,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gpm-low.png' md5='6cd86acf26f251d78060dd2ecb6b6506'"
 msgstr ""
+"external ref='figures/gpm-low.png' md5='6cd86acf26f251d78060dd2ecb6b6506'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:232
@@ -263,11 +305,13 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-low-power</command>."
 msgstr ""
+"Можете да онемогућите ово обавештење променивши кључ д-подешавања "
+"„<command>org.mate.power-manager notify-low-power</command>“."
 
 #. (itstool) path: section/title
 #: C/index.docbook:240
 msgid "Power Critical"
-msgstr ""
+msgstr "Ризично напајање"
 
 #. (itstool) path: section/para
 #: C/index.docbook:241
@@ -276,12 +320,17 @@ msgid ""
 "explaining what action is required. You can change the critical low action "
 "using the preferences tool."
 msgstr ""
+"Када рачунару понестане напајање, приказаће ово обавештење објашњавајући "
+"која ће радња бити предузета. Можете да измените радњу ризичног слабог "
+"напајања користећи алат поставки."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:247
 msgid ""
 "MATE Power Manager Notification when the system power is critically low"
 msgstr ""
+"Обавештење Мејтовог управника напајањем када је системско напајање ризично "
+"слабо"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -294,11 +343,13 @@ msgid ""
 "external ref='figures/gpm-critical.png' "
 "md5='77b0848ed3bd0510b65f89e0d07a2fed'"
 msgstr ""
+"external ref='figures/gpm-critical.png' "
+"md5='77b0848ed3bd0510b65f89e0d07a2fed'"
 
 #. (itstool) path: section/title
 #: C/index.docbook:259
 msgid "Suspend Failure"
-msgstr ""
+msgstr "Неуспех обустављања"
 
 #. (itstool) path: section/para
 #: C/index.docbook:260
@@ -307,11 +358,15 @@ msgid ""
 "common reason for this notification is that the current user does not have "
 "permission to suspend or hibernate the computer."
 msgstr ""
+"Када дође до неуспеха обустављања можете добити следеће обавештење. Најчешћи"
+" разлог за ово обавештење је тај да тренутни корисник нема овлашћења да "
+"обустави или замрзне рачунар."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:266
 msgid "MATE Power Manager Notification when suspend failure occurs"
 msgstr ""
+"Обавештење Мејтовог управника напајањем када дође до неуспеха обустављања"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -324,6 +379,8 @@ msgid ""
 "external ref='figures/gpm-suspend-problem.png' "
 "md5='4e4c1fafda61c5ace02f957717ea7ce6'"
 msgstr ""
+"external ref='figures/gpm-suspend-problem.png' "
+"md5='4e4c1fafda61c5ace02f957717ea7ce6'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:276
@@ -331,6 +388,8 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-sleep-failed</command>."
 msgstr ""
+"Можете да онемогућите ово обавештење променивши кључ д-подешавања "
+"„<command>org.mate.power-manager notify-sleep-failed</command>“."
 
 #. (itstool) path: section/title
 #: C/index.docbook:285
@@ -343,6 +402,8 @@ msgid ""
 "The statistics program allows you to visualize the power consumption of your"
 " laptop hardware."
 msgstr ""
+"Програм статистике вам омогућава да прикажете потрошњу хардвера вашег "
+"преносног рачунара."
 
 #. (itstool) path: note/para
 #: C/index.docbook:291
@@ -352,11 +413,15 @@ msgid ""
 "internal IPC. This allows other applications to query and display the data "
 "if required."
 msgstr ""
+"Ово је уклоњено из прозора обавештења претходних издања Мејтовог управника "
+"напајањем јер сучеље података сада користи Д-САБИРНИЦУ уместо унутрашњег "
+"ИПЦ-а. Ово омогућава другим програмима да пропитују и приказују податке ако "
+"је захтевано."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:298
 msgid "Power History going from battery power to AC"
-msgstr ""
+msgstr "Историјат напајања од напајања из батерије до мрежног напајања"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -369,6 +434,8 @@ msgid ""
 "external ref='figures/gpm-stats-graph.png' "
 "md5='c7cfa37ad6e96041a1c312d85236e7f6'"
 msgstr ""
+"external ref='figures/gpm-stats-graph.png' "
+"md5='c7cfa37ad6e96041a1c312d85236e7f6'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:308
@@ -377,11 +444,15 @@ msgid ""
 "required hardware. You may also see other hardware not shown here (for "
 "example UPS devices) but these are treated the same way as other devices."
 msgstr ""
+"Можда нећете видети неке опције или графике ако ваш рачунар нема захтевани "
+"хардвер. Можда ћете такође видети други хардвер који овде није приказан (на "
+"пример уређаје резервног напајања) али се они третирају на исти начин као "
+"други уређаји."
 
 #. (itstool) path: section/title
 #: C/index.docbook:317
 msgid "Charge History"
-msgstr ""
+msgstr "Историјат пуњења"
 
 #. (itstool) path: section/para
 #: C/index.docbook:318
@@ -391,11 +462,15 @@ msgid ""
 "battery then only the averaged value will be shown. A legend is not shown "
 "with this graph."
 msgstr ""
+"Овај график приказује доступан проценат пуњења за композитну главну "
+"батерију, тако да ако имате главну батерију преносног рачунара и помоћну "
+"тада ће бити приказана само просечна вредност. Легенда се не приказује уз "
+"овај график."
 
 #. (itstool) path: section/title
 #: C/index.docbook:327
 msgid "Power History"
-msgstr ""
+msgstr "Историјат напајања"
 
 #. (itstool) path: section/para
 #: C/index.docbook:328
@@ -408,6 +483,13 @@ msgid ""
 " is dimmed. A legend is shown with this graph when data events have been "
 "received."
 msgstr ""
+"Овај график приказује историјат напајања пуњења коришћеног композитном "
+"главном батеријом. Ова линија представља количину напајања које се користи "
+"за пуњење батерије на систему, или напајање које се користи системом из "
+"батерија. Требало би да видите линију која иде на горе приликом обављања "
+"задатака који захтевају веће коришћење процесора, и на доле када систем "
+"мирује, или када је екран замагљен. Легенда се приказује уз овај график "
+"приликом пријема догађаја података."
 
 #. (itstool) path: note/para
 #: C/index.docbook:341
@@ -417,11 +499,15 @@ msgid ""
 "limitations where the rate is only sent from the battery management chip, "
 "rather than the power management chip on the motherboard."
 msgstr ""
+"Нећете примити податке протока са вашег рачунара ако се не пуни или не "
+"празни, или ако је рад рачунара обустављен. Ово је због хардверских "
+"ограничења где се проток шаље само са чипа који управља батеријом, уместо са"
+" чипа за управљање напајањем на матичној плочи."
 
 #. (itstool) path: section/title
 #: C/index.docbook:352
 msgid "Estimated Time History"
-msgstr ""
+msgstr "Историјат процењеног времена"
 
 #. (itstool) path: section/para
 #: C/index.docbook:353
@@ -432,6 +518,11 @@ msgid ""
 "when the rate decreases and down when the rate increases. A legend is shown "
 "with this graph when data events have been received."
 msgstr ""
+"Овај график приказује историјат процењеног пуњења за композитну главну "
+"батерију. Ова линија представља количину времена потребног за пуњење, или "
+"количину времена зо пражњење. Ова линија треба да иде сразмерно на горе када"
+" проток опада и на доле када проток расте. Легенда се приказује уз овај "
+"график када се приме догађаји података."
 
 #. (itstool) path: section/title
 #: C/index.docbook:366
@@ -441,27 +532,29 @@ msgstr "Поставке"
 #. (itstool) path: section/para
 #: C/index.docbook:368
 msgid "The preferences window allows you to control:"
-msgstr ""
+msgstr "Прозор поставки вам омогућава да управљате:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:372
 msgid "The LCD brightness when on AC and battery power"
 msgstr ""
+"Осветљењем екрана са течним кристалима када је на мрежном или напајању из "
+"батерије"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:377
 msgid "The idle time for the screen power-down and suspend action"
-msgstr ""
+msgstr "Временом мировања за радње екрана гашења и обустављања"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:382
 msgid "The actions to perform when the laptop lid is closed"
-msgstr ""
+msgstr "Радњама за обављање приликом спуштања поклопца преносног рачунара"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:387
 msgid "The notification area icon policy"
-msgstr ""
+msgstr "Политиком иконице области обавештења "
 
 #. (itstool) path: note/para
 #: C/index.docbook:394
@@ -470,16 +563,19 @@ msgid ""
 "not writable. This allows administrators to lock-down the actions that a "
 "user can select."
 msgstr ""
+"Неки клизачи или поља опција могу бити приказани ако кључеви политике "
+"д-подешавања нису уписиви. Ово омогућава администраторима да закључају радње"
+" које корисник може да изабере."
 
 #. (itstool) path: section/title
 #: C/index.docbook:402
 msgid "AC Preferences"
-msgstr ""
+msgstr "Поставке напајања из ел. мреже"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:404
 msgid "MATE Power Manager AC tab"
-msgstr ""
+msgstr "Језичак напајања из ел. мреже у Мејтовом управнику напајањем"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -492,16 +588,18 @@ msgid ""
 "external ref='figures/gpm-prefs-ac.png' "
 "md5='dc4409a63218146e52d3e670b26785bd'"
 msgstr ""
+"external ref='figures/gpm-prefs-ac.png' "
+"md5='dc4409a63218146e52d3e670b26785bd'"
 
 #. (itstool) path: section/title
 #: C/index.docbook:416
 msgid "Battery Preferences"
-msgstr ""
+msgstr "Поставке батерије"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:418
 msgid "MATE Power Manager battery tab"
-msgstr ""
+msgstr "Језичак напајања из батерије у Мејтовом управнику напајањем"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -514,6 +612,8 @@ msgid ""
 "external ref='figures/gpm-prefs-battery.png' "
 "md5='89fe431e4f38073f7d58f38425ad1ee7'"
 msgstr ""
+"external ref='figures/gpm-prefs-battery.png' "
+"md5='89fe431e4f38073f7d58f38425ad1ee7'"
 
 #. (itstool) path: section/para
 #: C/index.docbook:427
@@ -521,16 +621,18 @@ msgid ""
 "This allows a powerful computer to reduce the power usage when idle, or when"
 " the full capabilities are not required."
 msgstr ""
+"Ово омогућава снажним рачунарима да смањи потрошњу напајања када мирује, или"
+" када се све могућности не захтевају."
 
 #. (itstool) path: section/title
 #: C/index.docbook:434
 msgid "General Preferences"
-msgstr ""
+msgstr "Опште поставке"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:436
 msgid "MATE Power Manager general tab"
-msgstr ""
+msgstr "Језичак општих поставки у Мејтовом управнику напајањем"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -543,11 +645,13 @@ msgid ""
 "external ref='figures/gpm-prefs-general.png' "
 "md5='52b7d145bd085d8af6f3194ac632c547'"
 msgstr ""
+"external ref='figures/gpm-prefs-general.png' "
+"md5='52b7d145bd085d8af6f3194ac632c547'"
 
 #. (itstool) path: section/title
 #: C/index.docbook:448
 msgid "Session and system idle times"
-msgstr ""
+msgstr "Времена мировања сесије и система"
 
 #. (itstool) path: section/para
 #: C/index.docbook:449
@@ -560,6 +664,14 @@ msgid ""
 "Manager</application> performs all the session idle actions such as enabling"
 " low-power mode and lowering the laptop panel brightness."
 msgstr ""
+"„<command>mate-screensaver</command>“ јесте позадинац сесије који надгледа "
+"улаз корисника, и ако се миш не помери, или када се не користи тастатура "
+"тада започиње са одбројавањем. Када вредност тог одбројавања достигне "
+"вредност постављену у „<command>mate-screensaver-preferences</command>“, "
+"тада је пријава означена са „сесија мирује“. Тада <application>Мејтов "
+"управник напајањем</application> обавља све радње мировања сесије као што је"
+" укључивање режима ниског напајања и смањивање осветљености екрана преносног"
+" рачунара."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:461
@@ -567,6 +679,8 @@ msgid ""
 "Changing the session idle timeout in <command>mate-screensaver-"
 "preferences</command>"
 msgstr ""
+"Промена истека времена мировања сесије у „<command>поставкама-мејтовог-"
+"чувара-екрана</command>“"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -578,6 +692,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gs-prefs.png' md5='e9ce36b6ef557681ca4e8e90b71a7f46'"
 msgstr ""
+"external ref='figures/gs-prefs.png' md5='e9ce36b6ef557681ca4e8e90b71a7f46'"
 
 #. (itstool) path: section/para
 #: C/index.docbook:472
@@ -588,6 +703,12 @@ msgid ""
 "idle, then the idle action is performed, which is usually to turn off the "
 "screen, or to suspend or hibernate."
 msgstr ""
+"Одмах након што се сесија означи да мирује, <application>Мејтов управник "
+"напајањем</application> покреће свој сопствени „системски“ одбројавач. Када "
+"се достигне истек времена постављен у „<command>mate-power-"
+"preferences</command>“, а оптерећење процесора мирује, тада се обавља радња "
+"мировања, која је обично гашење екрана, или обустављање или замрзавање рада "
+"рачунара."
 
 #. (itstool) path: section/para
 #: C/index.docbook:479
@@ -599,16 +720,22 @@ msgid ""
 ">mate-screensaver-preferences</command> then the start of the sliders in "
 "<command>mate-power-preferences</command> will change accordingly."
 msgstr ""
+"Да појаснимо, клизачи у „<command>mate-power-preferences</command>“ су "
+"постављени да започну на вредности „истек времена сесије + 1“ минут, јер не "
+"можемо логички да окинемо пре него се сесија означи да мирује. Ако дотерате "
+"вредност временски истек „мировања сесије“ у „<command>mate-screensaver-"
+"preferences</command>“ тада ће почетак клизача у „<command>mate-power-"
+"preferences</command>“ да се промени у складу са тим."
 
 #. (itstool) path: section/title
 #: C/index.docbook:491
 msgid "Advanced Preferences"
-msgstr ""
+msgstr "Напредне поставке"
 
 #. (itstool) path: section/title
 #: C/index.docbook:494
 msgid "Screen Dim Brightness"
-msgstr ""
+msgstr "Осветљење затамњења екрана"
 
 #. (itstool) path: note/para
 #: C/index.docbook:496
@@ -616,11 +743,14 @@ msgid ""
 "You can change the idle laptop panel brightness by changing the dconf key "
 "<command>org.mate.power-manager idle-brightness</command>."
 msgstr ""
+"Можете да измените осветљење екрана мировања преносног рачунара променивши "
+"кључ д-подешавања „<command>org.mate.power-manager idle-"
+"brightness</command>“."
 
 #. (itstool) path: section/title
 #: C/index.docbook:504
 msgid "Screen Locking"
-msgstr ""
+msgstr "Закључавање екрана"
 
 #. (itstool) path: section/para
 #: C/index.docbook:505
@@ -630,6 +760,10 @@ msgid ""
 "screen\" in mate-screensaver when the lid is closed, or the system performs "
 "a suspend or hibernate action."
 msgstr ""
+"По основи, <application>Мејтов управник напајањем</application> подржава "
+"једноставну шему закључавања. То значи да ће екран да се закључа ако је "
+"постављен на „Закључај екран“ у Мејтовом чувару екрана када приликом "
+"спуштања поклопца, или ако систем обави радњу обустављања или замрзавања."
 
 #. (itstool) path: section/para
 #: C/index.docbook:511
@@ -638,11 +772,15 @@ msgid ""
 "locking policy to change for the lid, suspend and hibernate actions. To "
 "enable this complex mode, you will have to disable the dconf key:"
 msgstr ""
+"Постоји и сложена шема закључавања доступна за моћне кориснике која "
+"омогућава промену радњи политике закључавања за поклопац, обустављање и "
+"замрзавање. Да омогућите овај сложени режим, морате искључити кључ "
+"д-подешавања:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:519
 msgid "<command>org.mate.power-manager lock-use-screensaver</command>"
-msgstr ""
+msgstr "<command>org.mate.power-manager lock-use-screensaver</command>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:524
@@ -650,21 +788,23 @@ msgid ""
 "Then the policy keys can be set to force a mate-screensaver lock and unlock "
 "when the action is performed:"
 msgstr ""
+"Тада се кључеви политике могу поставити да присиле закључавање или "
+"откључавање Мејтовог чувара екрана када се обави радња:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:531
 msgid "<command>org.mate.power-manager lock-blank-screen</command>"
-msgstr ""
+msgstr "<command>org.mate.power-manager lock-blank-screen</command>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:536
 msgid "<command>org.mate.power-manager lock-suspend</command>"
-msgstr ""
+msgstr "<command>org.mate.power-manager lock-suspend</command>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:541
 msgid "<command>org.mate.power-manager lock-hibernate</command>"
-msgstr ""
+msgstr "<command>org.mate.power-manager lock-hibernate</command>"
 
 #. (itstool) path: note/para
 #: C/index.docbook:548
@@ -672,11 +812,13 @@ msgid ""
 "The lock policy for mate-screensaver is ignored until the simple mode is re-"
 "enabled."
 msgstr ""
+"Политика закључавања за Мејтов чувар екрана се занемарује све док се поново "
+"не укључи једноставан режим."
 
 #. (itstool) path: section/title
 #: C/index.docbook:557
 msgid "MATE Power Applets"
-msgstr ""
+msgstr "Програмчићи Мејтовог напајања"
 
 #. (itstool) path: section/title
 #: C/index.docbook:560
@@ -691,11 +833,15 @@ msgid ""
 "laptop without brightness buttons, as you can now change the brightness "
 "easily."
 msgstr ""
+"Програмче осветљености омогућава кориснику да привремено измени осветљење "
+"без промене основне политике. Ово може бити корисно ако ваш преносни рачунар"
+" нема дугмад за осветљеност, јер сада можете врло лако да измените "
+"осветљеност."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:568
 msgid "Brightness applet drop-down."
-msgstr ""
+msgstr "Падајући клизач програмчета осветљености"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -708,11 +854,13 @@ msgid ""
 "external ref='figures/applet-brightness.png' "
 "md5='8ce34f6733215fb86009471f19850dcc'"
 msgstr ""
+"external ref='figures/applet-brightness.png' "
+"md5='8ce34f6733215fb86009471f19850dcc'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:580
 msgid "You will not get the slider if your hardware is not supported."
-msgstr ""
+msgstr "Нећете имати клизач ако ваш хардвер није подржан."
 
 #. (itstool) path: section/title
 #: C/index.docbook:587
@@ -727,11 +875,16 @@ msgid ""
 "proprietary programs such as VMWare or Matlab. Just click the icon for the "
 "auto-suspend to be inhibited, and click it again for normal operation."
 msgstr ""
+"„<application>Програмче онемогућавања уштеде</application>“ омогућава "
+"кориснику да спречи рачунар да се сам успава када не ради ништа. Ово могу "
+"захтевати стари или власнички програми као „VMWare“ или „Matlab“. Само "
+"кликните на иконицу само-обустављања да се промени у онемогућено, и поново "
+"кликните на њу за уобичајене радње."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:596
 msgid "Inhibit applet in inhibited state."
-msgstr ""
+msgstr "Програмче онемогућавања уштеде у стању онемогућености."
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -744,6 +897,8 @@ msgid ""
 "external ref='figures/applet-inhibit.png' "
 "md5='7381a44dae4f17bfd47abaa54c0ca2a4'"
 msgstr ""
+"external ref='figures/applet-inhibit.png' "
+"md5='7381a44dae4f17bfd47abaa54c0ca2a4'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:608
@@ -752,21 +907,25 @@ msgid ""
 "make the application use the <function>Inhibit()</function> and "
 "<function>UnInhibit()</function> methods as this should 'just work'."
 msgstr ""
+"Немојте користити ово програмче ако користите Мејтов софтвер, уместо тога "
+"попуните грешку да учините да програм користи "
+"„<function>Inhibit()</function>“ и „<function>UnInhibit()</function>“ методе"
+" јер то треба „једностабно да ради“."
 
 #. (itstool) path: section/title
 #: C/index.docbook:618
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "Често постављана питања"
 
 #. (itstool) path: section/para
 #: C/index.docbook:619
 msgid "These are questions the mailing list gets asked frequently."
-msgstr ""
+msgstr "Ово су питања која се често постављају на дописној листи."
 
 #. (itstool) path: section/title
 #: C/index.docbook:623
 msgid "What is battery capacity?"
-msgstr ""
+msgstr "Шта је капацитет батерије?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:624
@@ -774,6 +933,8 @@ msgid ""
 "Capacity is how much charge your battery can store compared to its "
 "manufacturer's guidelines."
 msgstr ""
+"Капацитет показује колику напуњеност може батерија да садржи у поређењу са "
+"њеним смерницама произвођача."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:629
@@ -781,6 +942,8 @@ msgid ""
 "This graph shows the capacity of a typical lithium ion battery over a few "
 "hundred charge-discharge cycles."
 msgstr ""
+"Овај график показује капацитет уобичајене литијум јонске батерије након "
+"хиљаду циклуса пуњења-пражњења."
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -793,11 +956,13 @@ msgid ""
 "external ref='figures/gpm-cell-capacity.png' "
 "md5='7635c3b846f39faf7b16a921a6ebb55c'"
 msgstr ""
+"external ref='figures/gpm-cell-capacity.png' "
+"md5='7635c3b846f39faf7b16a921a6ebb55c'"
 
 #. (itstool) path: section/title
 #: C/index.docbook:644
 msgid "What's the difference between suspend and hibernate?"
-msgstr ""
+msgstr "Која је разлика између обустављања и замрзавања?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:645
@@ -809,6 +974,12 @@ msgid ""
 "external event such as a keyboard button press. It generally takes a few "
 "seconds to suspend and then resume your computer."
 msgstr ""
+"Стање обустављања је функција уштеде напајања која је најнижи ниво потрошње "
+"напајања која очувава податке програма у меморији рачунара. Када је ваш "
+"рачунар у стању обустављања, прорачуни се неће обављати све до враћања на "
+"нормалну активност. До тога неће доћи све док се не добије сигнал спољног "
+"догађаја као што је притисак на дугме тастатуре. Уопштено је потребно "
+"неколико секунди за обустављање и за враћање рачунара."
 
 #. (itstool) path: caution/para
 #: C/index.docbook:655
@@ -817,6 +988,10 @@ msgid ""
 "recommended for the low power action. If you remove AC power on a desktop, "
 "or run out of battery power on a laptop then you will lose your work."
 msgstr ""
+"Још увек се користи мала количина напајања из батерије приликом обуставе, "
+"тако да се не прпоручује за радњу слабог напајања. Ако искључите мрежно "
+"напајање на стоном рачунару, или се истроши батерија на преносном рачунару "
+"изгубићете ваш рад."
 
 #. (itstool) path: section/para
 #: C/index.docbook:662
@@ -829,6 +1004,13 @@ msgid ""
 "lost. It can take up to a minute or more to hibernate and wake your "
 "computer."
 msgstr ""
+"Стање замрзавања чува читаво стање рачунара на чврсти диск и гаси рачунар, "
+"тако да рачунар изгледа да је угашен. Неће се повратити све док се не "
+"сигнализира спољним догађајем као што је притисак дугмета тастатуре. Ово је "
+"стање успаваности најмањег напајања. Ако уклоните мрежно напајање на стоном "
+"рачунару, или се истроши батерија на преносном рачунару тада ваш рад неће "
+"бити изгубљен. Биће потребно око једног минута или више за замрзавање и "
+"буђење вашег рачунара."
 
 #. (itstool) path: section/title
 #: C/index.docbook:675
@@ -836,6 +1018,8 @@ msgid ""
 "My monitor is broken and treats DPMS standby and off states as 'no-signal' "
 "which leaves the monitor powered on."
 msgstr ""
+"Мој монитор је оштећен и сматра „DPMS“ стања чекања и угашености као „нема "
+"сигнала“ што оставља монитор упаљеним."
 
 #. (itstool) path: section/para
 #: C/index.docbook:679
@@ -846,6 +1030,12 @@ msgid ""
 " <literal>org.mate.power-manager dpms-method-battery</literal> to one of the"
 " modes that work, e.g. standby, suspend or off."
 msgstr ""
+"Треба да измените „DPMS“ режим обустављања који користи <application>Мејтов "
+"управник потрошње</application>. Отворите „<command>dconf-editor</command>“,"
+" и затим измените кључеве „<literal>org.mate.power-manager dpms-method-"
+"ac</literal>“ и „<literal>org.mate.power-manager dpms-method-"
+"battery</literal>“ на један од режима који ради, нпр. на чекању, обустављено"
+" или искључено."
 
 #. (itstool) path: section/title
 #: C/index.docbook:689
@@ -853,6 +1043,7 @@ msgid ""
 "My time to discharge is always incorrect due to a faulty battery, what can I"
 " do?"
 msgstr ""
+"Моје време пражњења је увек нетачно због лоше батерије, шта могу да урадим?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:693
@@ -863,6 +1054,12 @@ msgid ""
 "can do this easily by doing: <command> gsettings get org.mate.power-manager "
 "use-time-for-policy false </command>"
 msgstr ""
+"Мжда ћете моћи да користите процентуално пуњење за „g-p-m“ да користите као "
+"податке политике. Отворите „<command>dconf-editor</command>“, и затим "
+"измените кључ „<command>org.mate.power-manager use-time-for-"
+"policy</command>“ на поништено. Ово можете да урадите на следећи начин: "
+"„<command> gsettings get org.mate.power-manager use-time-for-policy false "
+"</command>“"
 
 #. (itstool) path: section/para
 #: C/index.docbook:703
@@ -870,11 +1067,13 @@ msgid ""
 "This should get the policy actions working for you, but of course the time "
 "remaining will still be incorrect."
 msgstr ""
+"Овиме би радње политике требало да раде, али наравно преостало врем ће још "
+"увек бити нетачно."
 
 #. (itstool) path: section/title
 #: C/index.docbook:710
 msgid "How do I make my application stop the computer auto-suspending?"
-msgstr ""
+msgstr "Како да учиним да мој програм заустави само-обустављање рачунара?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:713
@@ -884,6 +1083,10 @@ msgid ""
 "really don't want the user to be able to suspend, or for the computer to "
 "save power by hibernating or suspending."
 msgstr ""
+"Ако ваш програм ради на дугој операцији, желећете да искључите могућност "
+"обустављања на неко време. Треба да користите мејтову сесију ако стварно не "
+"желите да корисник може да обустави, или да рачунар сачува напајање "
+"замрзавањем или обустављањем."
 
 #. (itstool) path: section/title
 #: C/index.docbook:723
@@ -891,16 +1094,18 @@ msgid ""
 "I'm running ACPI. Why do events (such as removing the AC adapter) take so "
 "long to register?"
 msgstr ""
+"Покрећем ACPI. Зашто догађајима (као што је уклањање исправљача мрежног "
+"напајања) треба толико дуго да се региструју?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:727
 msgid "One of two things might be the problem."
-msgstr ""
+msgstr "Проблем може бити у једној од две ствари."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:732
 msgid "HAL might not be running the add-on that captures the ACPI event."
-msgstr ""
+msgstr "HAL можда није покренуо додатак који хвата ACPI догађај."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:737
@@ -908,6 +1113,8 @@ msgid ""
 "You BIOS could be faulty, and might need a work-around. Please send a bug "
 "report."
 msgstr ""
+"Ваш БИОС може бити лош, и можда му је потребно подешавање. Пошаљите извештај"
+" о грешци."
 
 #. (itstool) path: section/para
 #: C/index.docbook:743
@@ -915,6 +1122,8 @@ msgid ""
 "For the first case, try to find the HAL processes that are running: "
 "<command>ps -eaf | grep hal</command>"
 msgstr ""
+"У првом случају, покушајте да нађете HAL-ове процесе који раде: <command>ps "
+"-eaf | grep hal</command>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:747
@@ -925,6 +1134,10 @@ msgid ""
 "initscript. An alternative to this is to use acpid, rather than the kernel "
 "proc file."
 msgstr ""
+"И проверите процес „<command>hald-addon-acpi</command>“. Ако није покренут, "
+"тада се уверите да HAL ради са опцијом „<command>--retain-"
+"privileges</command>“ у „<command>haldaemon</command>“ покретачкој скрипти. "
+"Замена овоме је да користите „acpid“, уместо „proc“ датотеке језгра."
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
@@ -941,6 +1154,12 @@ msgid ""
 " of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
 "with this manual."
 msgstr ""
+"Дозвољено је умножавање, расподела, вршење измена овог документа под "
+"условима Гну-ове Лиценце Слободне Документације (ГЛСД), верзије 1.1 или било"
+" које касније верзије без непромењивих одељака, текста на насловној и "
+"последњој страни, а коју је објавила Задужбина Слободног Софтвера. Примерак "
+"ГЛСД можете пронаћи на овој <_:ulink-1/> или у датотеци „COPYING-DOCS“ која "
+"је приложена уз ово упутство."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:12
@@ -950,6 +1169,10 @@ msgid ""
 "you can do so by adding a copy of the license to the manual, as described in"
 " section 6 of the license."
 msgstr ""
+"Ово упутство је део скупа Мејтових докумената објављених под GFDL. Уколико "
+"желите да расподељујете ово упутство одвојено од скупа, то можете урадити "
+"додавањем примерка лиценце документу, како је описано у одељку 6 саме "
+"лиценце."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:19
@@ -960,6 +1183,11 @@ msgid ""
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
+"Многи називи које компаније користе у циљу препознатљивости својих производа"
+" и услуга представљају робне марке. Када (уколико) се такви називи "
+"појављују(спомињу) у било којем Мејтовом документу, а чланови Мејтовог "
+"документационог пројекта имају сазнања о томе, тада су називи исписани "
+"великим словима или са великим почетним словима."
 
 #. (itstool) path: listitem/para
 #: C/legal.xml:35
@@ -976,6 +1204,18 @@ msgid ""
 "ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
 "OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
+"ДОКУМЕНТ ЈЕ ДОСТУПАН СА СВИМ СВОЈИМ ДОБРИМ И ЛОШИМ СТРАНАМА БЕЗ БИЛО КАКВОГ "
+"ЈАМСТВА, БИЛО ОНО ИЗРЕЧЕНО ИЛИ НЕ, УКЉУЧУЈУЋИ БЕЗ ОГРАНИЧЕЊА, ЈАМСТВО ДА ЈЕ "
+"ОВАЈ ДОКУМЕНТ ИЛИ ЊЕГОВА ИЗМЕЊЕНА ВЕРЗИЈА БЕЗ НЕДОСТАТАКА, СПРЕМАН ЗА "
+"ТРЖИШТЕ, СВРСИСХОДАН И НЕ НАРУШАВА ЗАКОНСКЕ НОРМЕ. ЦЕЛОКУПАН РИЗИК КОЈИ СЕ "
+"ОДНОСИ НА КВАЛИТЕТ, ТАЧНОСТ И ДОМЕТ (УЧИНАК) ДОКУМЕНТА ИЛИ ЊЕГОВЕ ИЗМЕЊЕНЕ "
+"ВЕРЗИЈЕ СНОСИ КОРИСНИК. УКОЛИКО СЕ У БИЛО КОЈЕМ ДОКУМЕНТУ ИЛИ ЊЕГОВОЈ "
+"ИЗМЕЊЕНОЈ ВЕРЗИЈИ ПОЈАВИ НЕДОСТАТАК (ГРЕШКА) БИЛО КОЈЕ ВРСТЕ, КОРИСНИК (А НЕ"
+" АУТОР ИЗВОРНЕ ВЕРЗИЈЕ, БИЛО КОЈИ ДРУГИ АУТОР ИЛИ САРАДНИК) СНОСИ СВЕ "
+"ТРОШКОВЕ НЕОПХОДНОГ СЕРВИСИРАЊА, ПОПРАВКЕ ИЛИ ИСПРАВКЕ. ОВО ОГРАНИЧЕЊЕ "
+"ЈАМСТВА ПРЕДСТАВЉА САСТАВНИ ДЕО ОВЕ ДОЗВОЛЕ. УПОТРЕБА БИЛО КОЈЕГ ДОКУМЕНТА "
+"ИЛИ ЊЕГОВЕ ИЗМЕЊЕНЕ ВЕРЗИЈЕ НИЈЕ ДОЗВОЉЕНА ОСИМ ПОД УСЛОВИМА ОВОГ ОГРАНИЧЕЊА"
+" ЈАМСТВА."
 
 #. (itstool) path: listitem/para
 #: C/legal.xml:55
@@ -991,6 +1231,15 @@ msgid ""
 "VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
 " POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
+"НИ ПОД КАКВИМ ОКОЛНОСТИМА ИЛИ ЗАКОНУ, БИЛО ЗБОГ КРШЕЊА (ИЛИ НЕМАРА) УГОВОРА,"
+" ИЛИ НА БИЛО КОЈИ ДРУГИ НАЧИН, АУТОР (ПРВОБИТНЕ ВЕРЗИЈЕ), САРАДНИК ИЛИ "
+"ИСПОРУЧИВАЛАЦ ДОКУМЕНТА ИЛИ ЊЕГОВЕ ИЗМЕЊЕНЕ ВЕРЗИЈЕ, НИТИ ДОБАВЉАЧ БИЛО КОЈЕ"
+" ОД НАВЕДЕНИХ СТРАНА НЕЋЕ СНОСИТИ МАТЕРИЈАЛНУ ОДГОВОРНОСТ ЗА НАСТАЛА "
+"ДИРЕКТНА, ИНДИРЕКТНА, ПОСЕБНА, СЛУЧАЈНА ИЛИ ТИМЕ НАСТАЛА ОШТЕЋЕЊА БИЛО КОЈЕ "
+"ВРСТЕ УКЉУЧУЈУЋИ, БЕЗ ОГРАНИЧЕЊА, ШТЕТУ НАНЕСЕНУ УГЛЕДУ ФИРМЕ, ПРЕСТАНКУ "
+"ПРОИЗВОДЊЕ, ОТКАЗИВАЊЕ РАДА РАЧУНАРА ИЛИ КВАРА КАО И ЗА СВЕ ОСТАЛЕ ШТЕТЕ ИЛИ"
+" ГУБИТКЕ НАСТАЛЕ УСЛЕД КОРИШЋЕЊА ДОКУМЕНТА И ЊЕГОВИХ ИЗМЕЊЕНИХ ВЕРЗИЈА ЧАК И"
+" АКО ЈЕ ОШТЕЋЕНА СТРАНА БИЛА ОБАВЕШТЕНА О МОГУЋНОСТИ НАСТАНКА ТЕ ШТЕТЕ."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:28
@@ -999,11 +1248,13 @@ msgid ""
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<_:orderedlist-1/>"
 msgstr ""
+"OVAJ DOKUMENT I NJEGOVE IZMENJENE VERZIJE SU DOSTUPNE POD USLOVIMA GNU-OVE "
+"SLOBODNE DOKUMENTACIONE DOZVOLE UZ DODATNU SAGLASNOST DA: <_:orderedlist-1/>"
 
 #. (itstool) path: formalpara/title
 #: C/legal.xml:77
 msgid "Software Licence"
-msgstr ""
+msgstr "Софтверска лиценца"
 
 #. (itstool) path: formalpara/para
 #: C/legal.xml:78
@@ -1013,6 +1264,10 @@ msgid ""
 "Free Software Foundation; either version 2 of the License, or (at your "
 "option) any later version."
 msgstr ""
+"Мејтов управник напајања је слободан програм; можете га прослеђивати и/или "
+"мењати под условима Гнуове опште јавне лиценце коју је објавила Задужбина "
+"слободног софтвера; било издања 2 лиценце или (по вашем избору) било којег "
+"новијег издања."
 
 #. (itstool) path: formalpara/para
 #: C/legal.xml:83
@@ -1022,6 +1277,10 @@ msgid ""
 "or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
 "more details."
 msgstr ""
+"Мејтов управник напајања се расподељује у нади да ће бити користан, али БЕЗ "
+"ИКАКВЕ ГАРАНЦИЈЕ; чак и без примењене гаранције ТРЖИШНЕ ВРЕДНОСТИ или "
+"ПРИЛАГОЂЕНОСТИ ОДРЕЂЕНОЈ НАМЕНИ. Погледајте Гнуову општу јавну лиценцу за "
+"више детаља."
 
 #. (itstool) path: formalpara/para
 #: C/legal.xml:88
@@ -1030,3 +1289,7 @@ msgid ""
 " MATE Power Manager; if not, write to the Free Software Foundation, Inc., 51"
 " Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
+"Требало је да примите примерак Гнуове опште јавне лиценце уз овај програм; "
+"ако нисте, пишите Задужбини слободног софтвера на адресу: „Free Software "
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, "
+"USA“"

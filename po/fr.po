@@ -6,23 +6,25 @@
 # Translators:
 # Benjamin Teissier <enatheme@enatheme.org>, 2018
 # jeremy shields <jeremy.shields@orange.fr>, 2018
-# Tubuntu <tubuntu@testimonium.be>, 2018
-# Xorg, 2018
+# df3de0cb43d289cd23a753345b3743cd_a20684f, 2018
 # mauron, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Charles Monzat <c.monzat@laposte.net>, 2018
 # yoplait <yoplait@tememe.org>, 2018
 # Étienne Deparis <etienne@depar.is>, 2018
-# Rox fr <roxfr@outlook.fr>, 2020
+# roxfr <roxfr@outlook.fr>, 2020
 # Laurent Napias, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# David D, 2021
+# Tubuntu, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-power-manager 1.23.1\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2019-11-12 15:22+0100\n"
+"Project-Id-Version: mate-power-manager 1.25.0\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
+"POT-Creation-Date: 2021-06-22 17:30+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Laurent Napias, 2020\n"
+"Last-Translator: Tubuntu, 2021\n"
 "Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,80 +32,103 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: applets/brightness/brightness-applet.c:107
+#: applets/brightness/brightness-applet.c:109
 msgid "Power Manager Brightness Applet"
 msgstr "Applet de luminosité du gestionnaire d'énergie"
 
-#: applets/brightness/brightness-applet.c:108
+#: applets/brightness/brightness-applet.c:110
 msgid "Adjusts laptop panel brightness."
 msgstr "Ajuste la luminosité de l'écran du portable."
 
-#: applets/brightness/brightness-applet.c:364
+#: applets/brightness/brightness-applet.c:371
 #: applets/inhibit/inhibit-applet.c:225
 msgid "Cannot connect to mate-power-manager"
 msgstr "Impossible de se connecter à mate-power-manager."
 
-#: applets/brightness/brightness-applet.c:366
+#: applets/brightness/brightness-applet.c:373
 msgid "Cannot get laptop panel brightness"
 msgstr "Impossible d'obtenir la luminosité de l'écran"
 
-#: applets/brightness/brightness-applet.c:368
+#: applets/brightness/brightness-applet.c:375
 #, c-format
 msgid "LCD brightness : %d%%"
 msgstr "Luminosité LCD : %d %%"
 
-#: applets/brightness/brightness-applet.c:800
+#: applets/brightness/brightness-applet.c:818
+#: applets/inhibit/inhibit-applet.c:287
+msgid ""
+"Power Manager is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+"Le gestionnaire d'énergie MATE est un logiciel libre ; vous pouvez le "
+"distribuer et/ou le modifier sous les termes de la Licence Publique Générale"
+" GNU tel que publiée par la Free Software Foundation ; soit la version 2 de "
+"la licence, ou (à votre discrétion) toutes versions ultérieures."
+
+#: applets/brightness/brightness-applet.c:823
+#: applets/inhibit/inhibit-applet.c:292
+msgid ""
+"Power Manager is distributed in the hope that it will be useful, but WITHOUT"
+" ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
+msgstr ""
+"Le gestionnaire d'énergie MATE est distribué dans l'espoir d'être utile, "
+"mais SANS AUCUNE GARANTIE; sans même une garantie implicite de VALEUR "
+"MARCHANDE ou d'ADÉQUATION À UN BESOIN PARTICULIER. Voir la Licence Publique "
+"Générale GNU pour plus d'informations."
+
+#: applets/brightness/brightness-applet.c:828
 #: applets/inhibit/inhibit-applet.c:297
-msgid "Licensed under the GNU General Public License Version 2"
-msgstr ""
-"Distribué sous les termes de la Licence Publique Générale GNU Version 2"
-
-#: applets/brightness/brightness-applet.c:801
-#: applets/inhibit/inhibit-applet.c:298
 msgid ""
-"Power Manager is free software; you can redistribute it and/or\n"
-"modify it under the terms of the GNU General Public License\n"
-"as published by the Free Software Foundation; either version 2\n"
-"of the License, or (at your option) any later version."
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
-"Le gestionnaire d'énergie MATE est un logiciel libre ; vous pouvez le\n"
-"distribuer et/ou le modifier sous les termes de la Licence Publique\n"
-"Générale GNU tel que publiée par la Free Software Foundation ; soit la\n"
-"version 2 de la licence, ou (à votre discrétion), toutes versions ultérieures."
+"Vous devriez avoir reçu une copie de la Licence Publique Générale GNU avec "
+"ce programme; sinon, écrivez à la Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 
-#: applets/brightness/brightness-applet.c:805
-#: applets/inhibit/inhibit-applet.c:302
+#: applets/brightness/brightness-applet.c:841
+msgid "About Power Manager Brightness Applet"
+msgstr "À propos de l'applet de luminosité du Gestionnaire d'énergie"
+
+#: applets/brightness/brightness-applet.c:843
 msgid ""
-"Power Manager is distributed in the hope that it will be useful,\n"
-"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-"GNU General Public License for more details."
+"Copyright © 2006 Benjamin Canou\n"
+"Copyright © 2011-2021 MATE developers"
 msgstr ""
-"Le gestionnaire d'énergie MATE est distribué dans l'espoir qu'il puisse\n"
-"être utile mais SANS AUCUNE GARANTIE ; sans même une garantie implicite de\n"
-"VALEUR MARCHANDE ou d'ADÉQUATION À UN BESOIN PARTICULIER. Voir la Licence\n"
-"Publique Générale GNU pour plus d'informations."
+"Copyright © 2006 Benjamin Canou\n"
+"Copyright © 2011-2021 Développeurs MATE"
 
-#: applets/brightness/brightness-applet.c:809
-#: applets/inhibit/inhibit-applet.c:306
-msgid ""
-"You should have received a copy of the GNU General Public License\n"
-"along with this program; if not, write to the Free Software\n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA\n"
-"02110-1301, USA."
+#: applets/brightness/brightness-applet.c:850
+#: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:212
+msgid "translator-credits"
 msgstr ""
-"Vous devriez avoir reçu une copie de la Licence Publique Générale GNU\n"
-"avec ce programme ; si ce n'est pas le cas, écrivez à la\n"
-"Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,\n"
-"Boston, MA 02110-1301 USA."
+"Contributeurs au projet MATE :\n"
+"Voir https://www.transifex.com/mate/teams/13566/fr/\n"
+"\n"
+"Contributeurs au projet GNOME :\n"
+"Vincent Renardias <vincent@ldsol.com>, 1998-2000.\n"
+"Joaquim Fellmann <joaquim@hrnet.fr>, 2000.\n"
+"Christophe Merlet <redfox@redfoxcenter.org>, 2000-2006.\n"
+"Christophe Fergeau <teuf@users.sourceforge.net>, 2002-2003.\n"
+"Sun G11n <gnome_int_l10n@ireland.sun.com>, 2002.\n"
+"Robert-André Mauchin <zebob.m@pengzone.org>, 2006-2008.\n"
+"Stéphane Raimbault <stephane.raimbault@gmail.com>, 2007.\n"
+"Yannick Tailliez <ytdispatch-libre@yahoo.com>, 2008.\n"
+"Claude Paroz <claude@2xlibre.net>, 2008-2010.\n"
+"Gérard Baylard <gerard dot b at bbox dot fr>, 2010"
 
-#: applets/brightness/brightness-applet.c:1063
-#: applets/inhibit/inhibit-applet.c:519
+#: applets/brightness/brightness-applet.c:1081
+#: applets/inhibit/inhibit-applet.c:503
 msgid "_About"
 msgstr "_À propos"
 
-#: applets/brightness/brightness-applet.c:1066
-#: applets/inhibit/inhibit-applet.c:522
+#: applets/brightness/brightness-applet.c:1084
+#: applets/inhibit/inhibit-applet.c:506 data/gpm-prefs.ui:41
 msgid "_Help"
 msgstr "Aid_e"
 
@@ -114,12 +139,6 @@ msgstr "Fabrique de l'applet de luminosité"
 #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:9
 msgid "Brightness Applet"
 msgstr "Applet de luminosité"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-brightness-applet"
-msgstr "mate-brightness-applet"
 
 #: applets/inhibit/inhibit-applet.c:87
 msgid "Power Manager Inhibit Applet"
@@ -141,6 +160,18 @@ msgstr "Mise en veille automatique activée"
 msgid "Manual inhibit"
 msgstr "Inhibition manuelle"
 
+#: applets/inhibit/inhibit-applet.c:310
+msgid "About Power Manager Inhibit Applet"
+msgstr "À propos de l'applet d'inhibition du Gestionnaire d'énergie"
+
+#: applets/inhibit/inhibit-applet.c:312
+msgid ""
+"Copyright © 2006-2007 Richard Hughes\n"
+"Copyright © 2011-2021 MATE developers"
+msgstr ""
+"Copyright © 2006-2007 Richard Hughes\n"
+"Copyright © 2011-2021 Développeurs MATE"
+
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
 msgstr "Fabrique de l'applet d'inhibition"
@@ -149,26 +180,13 @@ msgstr "Fabrique de l'applet d'inhibition"
 msgid "Inhibit Applet"
 msgstr "Applet d'inhibition"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:12
-msgid "mate-inhibit-applet"
-msgstr "mate-inhibit-applet"
-
-#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:184
+#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:203
 msgid "Power Manager"
 msgstr "Gestionnaire d'énergie"
 
-#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:186
+#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:205
 msgid "Power management daemon"
 msgstr "Moniteur du gestionnaire d'énergie"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/mate-power-manager.desktop.in.in:6
-#: data/mate-power-preferences.desktop.in.in:6
-msgid "mate-power-manager"
-msgstr "mate-power-manager"
 
 #: data/org.mate.power-manager.gschema.xml.in:26
 #: data/org.mate.power-manager.gschema.xml.in:41
@@ -929,10 +947,10 @@ msgstr "Configure la gestion d'énergie"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/mate-power-preferences.desktop.in.in:13
 msgid "MATE;power;management;preferences;settings;"
-msgstr ""
+msgstr "MATE;power;management;preferences;settings;"
 
-#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:7
-#: src/gpm-statistics.c:1090 src/gpm-statistics.c:1577
+#: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
+#: src/gpm-statistics.c:762 src/gpm-statistics.c:1224
 msgid "Power Statistics"
 msgstr "Statistiques de l'alimentation"
 
@@ -940,210 +958,194 @@ msgstr "Statistiques de l'alimentation"
 msgid "Observe power management"
 msgstr "Surveille la gestion d'énergie"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/mate-power-statistics.desktop.in.in:6
-msgid "mate-power-statistics"
-msgstr "mate-power-statistics"
-
-#: data/gpm-statistics.ui:113 src/gpm-statistics.c:208
+#: data/gpm-statistics.ui:119
 msgid "Details"
 msgstr "Détails"
 
-#: data/gpm-statistics.ui:139 data/gpm-statistics.ui:342
+#: data/gpm-statistics.ui:145 data/gpm-statistics.ui:347
 msgid "Graph type:"
 msgstr "Type de graphique :"
 
-#: data/gpm-statistics.ui:174
+#: data/gpm-statistics.ui:180
 msgid "Data length:"
 msgstr "Longueur des données :"
 
-#: data/gpm-statistics.ui:234 data/gpm-statistics.ui:395
+#: data/gpm-statistics.ui:239 data/gpm-statistics.ui:399
 msgid "There is no data to display."
 msgstr "Il n'y a pas de données à afficher."
 
-#: data/gpm-statistics.ui:276 data/gpm-statistics.ui:438
+#: data/gpm-statistics.ui:281 data/gpm-statistics.ui:442
 msgid "Use smoothed line"
 msgstr "Lisser la courbe"
 
-#: data/gpm-statistics.ui:291 data/gpm-statistics.ui:453
+#: data/gpm-statistics.ui:296 data/gpm-statistics.ui:457
 msgid "Show data points"
 msgstr "Afficher les points de données"
 
-#: data/gpm-statistics.ui:320
+#: data/gpm-statistics.ui:325
 msgid "History"
 msgstr "Historique"
 
-#: data/gpm-statistics.ui:482
+#: data/gpm-statistics.ui:486
 msgid "Statistics"
 msgstr "Statistiques"
 
-#: data/gpm-statistics.ui:504
-msgid "Processor wakeups per second:"
-msgstr "Nombre de réveils du processeur par seconde :"
-
-#: data/gpm-statistics.ui:516
-msgid "0"
-msgstr "0"
-
-#: data/gpm-statistics.ui:563 src/gpm-statistics.c:194
-msgid "Wakeups"
-msgstr "Réveils"
-
-#: data/gpm-prefs.ui:55
+#: data/gpm-prefs.ui:23
 msgid "Power Management Preferences"
 msgstr "Préférences de gestion d'énergie"
 
-#: data/gpm-prefs.ui:84 data/gpm-prefs.ui:327 data/gpm-prefs.ui:585
-#: data/gpm-prefs.ui:813
-msgid "<b>Actions</b>"
-msgstr "<b>Actions</b>"
-
-#: data/gpm-prefs.ui:111 data/gpm-prefs.ui:354 data/gpm-prefs.ui:612
-msgid "Put computer to _sleep when inactive for:"
-msgstr "Mettre l'_ordinateur en veille si inactif depuis :"
-
-#: data/gpm-prefs.ui:144 data/gpm-prefs.ui:387
-msgid "When laptop lid is cl_osed:"
-msgstr "Lorsque l'écran du portable est _rabattu :"
-
-#: data/gpm-prefs.ui:189 data/gpm-prefs.ui:463 data/gpm-prefs.ui:721
-msgid "<b>Display</b>"
-msgstr "<b>Affichage</b>"
-
-#: data/gpm-prefs.ui:216 data/gpm-prefs.ui:490 data/gpm-prefs.ui:748
-msgid "Put _display to sleep when inactive for:"
-msgstr "Mettre l'é_cran en veille si inactif depuis :"
-
-#: data/gpm-prefs.ui:247
-msgid "Set display _brightness to:"
-msgstr "Définir la _luminosité de l'écran à :"
-
-#: data/gpm-prefs.ui:275 data/gpm-prefs.ui:529
-msgid "Di_m display when idle"
-msgstr "A_tténuer l'écran en cas d'inactivité"
-
-#: data/gpm-prefs.ui:306
-msgid "On AC Power"
-msgstr "Sur secteur"
-
-#: data/gpm-prefs.ui:418
-msgid "When battery po_wer is critically low:"
-msgstr "Lorsque le _niveau de la batterie est critique :"
-
-#: data/gpm-prefs.ui:514
-msgid "_Reduce backlight brightness"
-msgstr "_Réduire la luminosité du rétro-éclairage"
-
-#: data/gpm-prefs.ui:563
-msgid "On Battery Power"
-msgstr "Sur batterie"
-
-#: data/gpm-prefs.ui:645
-msgid "When UPS power is l_ow:"
-msgstr "Lorsque le _niveau de l'onduleur est faible :"
-
-#: data/gpm-prefs.ui:676
-msgid "When UPS power is _critically low:"
-msgstr "Lorsque le _niveau de l'onduleur est critique :"
-
-#: data/gpm-prefs.ui:791
-msgid "On UPS Power"
-msgstr "Sur onduleur"
-
-#: data/gpm-prefs.ui:840
-msgid "When the power _button is pressed:"
-msgstr "Lorsque le bouton de _mise sous tension est appuyé :"
-
-#: data/gpm-prefs.ui:873
-msgid "When the _suspend button is pressed:"
-msgstr "Lorsque le bouton de mise en _veille est appuyé :"
-
-#: data/gpm-prefs.ui:918
-msgid "<b>Notification Area</b>"
-msgstr "<b>Zone de notification</b>"
-
-#: data/gpm-prefs.ui:938
-msgid "_Never display an icon"
-msgstr "_Ne jamais afficher d'icône"
-
-#: data/gpm-prefs.ui:953
-msgid "_Only display an icon when battery power is low"
-msgstr "_Afficher une icône uniquement si le niveau de la batterie est faible"
-
-#: data/gpm-prefs.ui:969
-msgid "Only display an icon when charging or _discharging"
-msgstr "Afficher une icône uniquement si en _charge ou en décharge"
-
-#: data/gpm-prefs.ui:985
-msgid "Only display an icon when a battery is p_resent"
-msgstr "Afficher une icône uniquement si la batterie est _présente"
-
-#: data/gpm-prefs.ui:1001
-msgid "_Always display an icon"
-msgstr "_Toujours afficher une icône"
-
-#: data/gpm-prefs.ui:1036
-msgid "General"
-msgstr "Général"
-
-#: data/gpm-prefs.ui:1060
-msgid "Provides help about this program"
-msgstr "Fournit de l'aide sur ce programme"
-
-#: data/gpm-prefs.ui:1072
+#: data/gpm-prefs.ui:58
 msgid "Make Default"
 msgstr "Définir comme valeur par défaut"
 
-#: data/gpm-prefs.ui:1076
-msgid "Sets this policy to be used by all users"
-msgstr "Définit cette stratégie pour tous les utilisateurs"
+#: data/gpm-prefs.ui:71
+msgid "_Close"
+msgstr "_Fermer"
 
-#: data/gpm-prefs.ui:1092
-msgid "Closes the program"
-msgstr "Ferme le programme"
+#: data/gpm-prefs.ui:138 data/gpm-prefs.ui:406 data/gpm-prefs.ui:746
+msgid "Put computer to _sleep when inactive for:"
+msgstr "Mettre l'_ordinateur en veille si inactif depuis :"
 
-#: src/gpm-backlight-helper.c:166
+#: data/gpm-prefs.ui:176 data/gpm-prefs.ui:444
+msgid "When laptop lid is cl_osed:"
+msgstr "Lorsque l'écran du portable est _rabattu :"
+
+#: data/gpm-prefs.ui:213 data/gpm-prefs.ui:519 data/gpm-prefs.ui:825
+#: data/gpm-prefs.ui:1031
+msgid "Actions"
+msgstr "Actions"
+
+#: data/gpm-prefs.ui:252 data/gpm-prefs.ui:560 data/gpm-prefs.ui:861
+msgid "Put _display to sleep when inactive for:"
+msgstr "Mettre l'é_cran en veille si inactif depuis :"
+
+#: data/gpm-prefs.ui:289
+msgid "Set display _brightness to:"
+msgstr "Définir la _luminosité de l'écran à :"
+
+#: data/gpm-prefs.ui:322 data/gpm-prefs.ui:607
+msgid "Di_m display when idle"
+msgstr "A_tténuer l'écran en cas d'inactivité"
+
+#: data/gpm-prefs.ui:344 data/gpm-prefs.ui:629 data/gpm-prefs.ui:890
+msgid "Display"
+msgstr "Affichage"
+
+#: data/gpm-prefs.ui:363
+msgid "On AC Power"
+msgstr "Sur secteur"
+
+#: data/gpm-prefs.ui:482
+msgid "When battery po_wer is critically low:"
+msgstr "Lorsque le _niveau de la batterie est critique :"
+
+#: data/gpm-prefs.ui:591
+msgid "_Reduce backlight brightness"
+msgstr "_Réduire la luminosité du rétro-éclairage"
+
+#: data/gpm-prefs.ui:663
+msgid "_Reduce keyboard backlight"
+msgstr "_Réduire luminosité du rétro-éclairage"
+
+#: data/gpm-prefs.ui:685 src/gpm-upower.c:507
+msgid "Keyboard"
+msgid_plural "Keyboards"
+msgstr[0] "Clavier"
+msgstr[1] "Claviers"
+
+#: data/gpm-prefs.ui:707
+msgid "On Battery Power"
+msgstr "Sur batterie"
+
+#: data/gpm-prefs.ui:760
+msgid "When UPS power is l_ow:"
+msgstr "Lorsque le _niveau de l'onduleur est faible :"
+
+#: data/gpm-prefs.ui:774
+msgid "When UPS power is _critically low:"
+msgstr "Lorsque le _niveau de l'onduleur est critique :"
+
+#: data/gpm-prefs.ui:912
+msgid "On UPS Power"
+msgstr "Sur onduleur"
+
+#: data/gpm-prefs.ui:956
+msgid "When the power _button is pressed:"
+msgstr "Lorsque le bouton de _mise sous tension est appuyé :"
+
+#: data/gpm-prefs.ui:994
+msgid "When the _suspend button is pressed:"
+msgstr "Lorsque le bouton de mise en _veille est appuyé :"
+
+#: data/gpm-prefs.ui:1065
+msgid "_Never display an icon"
+msgstr "_Ne jamais afficher d'icône"
+
+#: data/gpm-prefs.ui:1083
+msgid "_Only display an icon when battery power is low"
+msgstr "_Afficher une icône uniquement si le niveau de la batterie est faible"
+
+#: data/gpm-prefs.ui:1101
+msgid "Only display an icon when charging or _discharging"
+msgstr "Afficher une icône uniquement si en _charge ou en décharge"
+
+#: data/gpm-prefs.ui:1119
+msgid "Only display an icon when a battery is p_resent"
+msgstr "Afficher une icône uniquement si la batterie est _présente"
+
+#: data/gpm-prefs.ui:1137
+msgid "_Always display an icon"
+msgstr "_Toujours afficher une icône"
+
+#: data/gpm-prefs.ui:1161
+msgid "Notification Area"
+msgstr "Zone de notification"
+
+#: data/gpm-prefs.ui:1183
+msgid "General"
+msgstr "Général"
+
+#: src/gpm-backlight-helper.c:167
 msgid "Set the current brightness"
 msgstr "Définir la luminosité actuelle"
 
-#: src/gpm-backlight-helper.c:169
+#: src/gpm-backlight-helper.c:170
 msgid "Get the current brightness"
 msgstr "Obtenir la luminosité actuelle"
 
-#: src/gpm-backlight-helper.c:172
+#: src/gpm-backlight-helper.c:173
 msgid "Get the number of brightness levels supported"
 msgstr "Obtenir le nombre de niveaux de luminosité pris en charge"
 
-#: src/gpm-backlight-helper.c:184
+#: src/gpm-backlight-helper.c:185
 msgid "MATE Power Manager Backlight Helper"
 msgstr "Assistant de rétroéclairage du gestionnaire d'énergie de MATE "
 
-#: src/gpm-backlight-helper.c:192
+#: src/gpm-backlight-helper.c:193
 msgid "No valid option was specified"
 msgstr "Aucune option valide spécifiée"
 
-#: src/gpm-backlight-helper.c:201
+#: src/gpm-backlight-helper.c:202
 msgid "No backlights were found on your system"
 msgstr "Aucun rétroéclairage trouvé sur votre système"
 
-#: src/gpm-backlight-helper.c:212
+#: src/gpm-backlight-helper.c:213
 msgid "Could not get the value of the backlight"
 msgstr "Impossible d'obtenir la valeur du rétroéclairage"
 
-#: src/gpm-backlight-helper.c:230
+#: src/gpm-backlight-helper.c:231
 msgid "Could not get the maximum value of the backlight"
 msgstr "Impossible d'obtenir la valeur maximale du rétroéclairage"
 
-#: src/gpm-backlight-helper.c:247
+#: src/gpm-backlight-helper.c:248
 msgid "This program can only be used by the root user"
 msgstr "Ce programme ne peut être utilisé que par l'utilisateur root"
 
-#: src/gpm-backlight-helper.c:256
+#: src/gpm-backlight-helper.c:257
 msgid "This program must only be run through pkexec"
 msgstr "Ce programme ne peut être lancé que via pkexec"
 
-#: src/gpm-backlight-helper.c:267
+#: src/gpm-backlight-helper.c:268
 msgid "Could not set the value of the backlight"
 msgstr "Impossible de définir la valeur du rétroéclairage"
 
@@ -1242,23 +1244,19 @@ msgstr "%.1f W"
 msgid "%.1fV"
 msgstr "%.1f V"
 
-#: src/gpm-main.c:172 src/gpm-prefs.c:77 src/gpm-statistics.c:1560
-msgid "Show extra debugging information"
-msgstr "Affiche les informations de débogage"
-
-#: src/gpm-main.c:174
+#: src/gpm-main.c:170
 msgid "Show version of installed program and exit"
 msgstr "Affiche la version du programme installé et quitte"
 
-#: src/gpm-main.c:176
+#: src/gpm-main.c:172
 msgid "Exit after a small delay (for debugging)"
 msgstr "Quitte après un court délai (pour débogage)"
 
-#: src/gpm-main.c:178
+#: src/gpm-main.c:174
 msgid "Exit after the manager has loaded (for debugging)"
 msgstr "Quitte après le chargement du gestionnaire (pour débogage)"
 
-#: src/gpm-main.c:189 src/gpm-main.c:193
+#: src/gpm-main.c:185 src/gpm-main.c:189
 msgid "MATE Power Manager"
 msgstr "Gestionnaire d'énergie de MATE"
 
@@ -1342,11 +1340,11 @@ msgstr "L'écran du portable est rabattu"
 msgid "Power Information"
 msgstr "Informations sur l'alimentation"
 
-#: src/gpm-manager.c:1107
+#: src/gpm-manager.c:1106
 msgid "Battery may be broken"
 msgstr "La batterie est peut être défectueuse"
 
-#: src/gpm-manager.c:1110
+#: src/gpm-manager.c:1109
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
@@ -1355,154 +1353,154 @@ msgstr ""
 "La batterie dispose d'une très faible capacité (%1.1f %%), celle-ci est "
 "probablement ancienne ou défectueuse."
 
-#: src/gpm-manager.c:1159
+#: src/gpm-manager.c:1158
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] "Batterie chargée"
 msgstr[1] "Batteries chargées"
 
-#: src/gpm-manager.c:1205
+#: src/gpm-manager.c:1204
 msgid "Battery Discharging"
 msgstr "La batterie se décharge"
 
-#: src/gpm-manager.c:1209
+#: src/gpm-manager.c:1208
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr "La batterie contient encore %s d'énergie (%.0f %%)"
 
-#: src/gpm-manager.c:1212 src/gpm-manager.c:1224
+#: src/gpm-manager.c:1211 src/gpm-manager.c:1223
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr "%s : en décharge (%.0f %%)"
 
-#: src/gpm-manager.c:1217
+#: src/gpm-manager.c:1216
 msgid "UPS Discharging"
 msgstr "L'onduleur se décharge"
 
-#: src/gpm-manager.c:1221
+#: src/gpm-manager.c:1220
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr "L'onduleur contient encore %s d'énergie (%.0f %%)"
 
-#: src/gpm-manager.c:1305
+#: src/gpm-manager.c:1304
 msgid "Battery low"
 msgstr "Batterie faible"
 
-#: src/gpm-manager.c:1308
+#: src/gpm-manager.c:1307
 msgid "Laptop battery low"
 msgstr "La batterie du portable est faible"
 
-#: src/gpm-manager.c:1314
+#: src/gpm-manager.c:1313
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "Il reste environ <b>%s</b> d'énergie (%.0f %%)"
 
-#: src/gpm-manager.c:1318
+#: src/gpm-manager.c:1317
 msgid "UPS low"
 msgstr "L'onduleur est faible"
 
-#: src/gpm-manager.c:1322
+#: src/gpm-manager.c:1321
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr ""
 "Il reste environ <b>%s</b> d'énergie de réserve sur l'onduleur (%.0f %%)."
 
-#: src/gpm-manager.c:1331 src/gpm-manager.c:1470
+#: src/gpm-manager.c:1330 src/gpm-manager.c:1469
 msgid "Mouse battery low"
 msgstr "La batterie de la souris est faible"
 
-#: src/gpm-manager.c:1334
+#: src/gpm-manager.c:1333
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr "La puissance de la souris sans fil est faible (%.0f %%)"
 
-#: src/gpm-manager.c:1338 src/gpm-manager.c:1478
+#: src/gpm-manager.c:1337 src/gpm-manager.c:1477
 msgid "Keyboard battery low"
 msgstr "La batterie du clavier est faible"
 
-#: src/gpm-manager.c:1341
+#: src/gpm-manager.c:1340
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr "La puissance du clavier sans fil est faible (%.0f %%)"
 
-#: src/gpm-manager.c:1345 src/gpm-manager.c:1487
+#: src/gpm-manager.c:1344 src/gpm-manager.c:1486
 msgid "PDA battery low"
 msgstr "La batterie de l'assistant personnel est faible"
 
-#: src/gpm-manager.c:1348
+#: src/gpm-manager.c:1347
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr "La puissance de l'assistant personnel est faible (%.0f %%)"
 
-#: src/gpm-manager.c:1352 src/gpm-manager.c:1497 src/gpm-manager.c:1507
+#: src/gpm-manager.c:1351 src/gpm-manager.c:1496 src/gpm-manager.c:1506
 msgid "Cell phone battery low"
 msgstr "La batterie du téléphone portable est faible"
 
-#: src/gpm-manager.c:1355
+#: src/gpm-manager.c:1354
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "La puissance du téléphone portable est faible (%.0f %%)"
 
-#: src/gpm-manager.c:1359
+#: src/gpm-manager.c:1358
 msgid "Media player battery low"
 msgstr "La batterie du lecteur multimédia est faible"
 
-#: src/gpm-manager.c:1362
+#: src/gpm-manager.c:1361
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr "La puissance de lecteur multimédia est faible (%.0f %%)"
 
-#: src/gpm-manager.c:1366 src/gpm-manager.c:1516
+#: src/gpm-manager.c:1365 src/gpm-manager.c:1515
 msgid "Tablet battery low"
 msgstr "La batterie de la tablette est faible"
 
-#: src/gpm-manager.c:1369
+#: src/gpm-manager.c:1368
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "La puissance de la tablette est faible (%.0f %%)"
 
-#: src/gpm-manager.c:1373 src/gpm-manager.c:1525
+#: src/gpm-manager.c:1372 src/gpm-manager.c:1524
 msgid "Attached computer battery low"
 msgstr "La batterie de l'ordinateur est faible"
 
-#: src/gpm-manager.c:1376
+#: src/gpm-manager.c:1375
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "La puissance de l'ordinateur est faible (%.0f %%)"
 
-#: src/gpm-manager.c:1424
+#: src/gpm-manager.c:1423
 msgid "Battery critically low"
 msgstr "Niveau de batterie très bas"
 
-#: src/gpm-manager.c:1427 src/gpm-manager.c:1585
+#: src/gpm-manager.c:1426 src/gpm-manager.c:1584
 msgid "Laptop battery critically low"
 msgstr "Le niveau de la batterie du portable est très faible"
 
-#: src/gpm-manager.c:1436
+#: src/gpm-manager.c:1435
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr "Branchez votre adaptateur secteur pour éviter de perdre des données."
 
-#: src/gpm-manager.c:1440
+#: src/gpm-manager.c:1439
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr ""
 "L'ordinateur va se mettre en veille dans peu de temps s'il n'est pas "
 "branché."
 
-#: src/gpm-manager.c:1444
+#: src/gpm-manager.c:1443
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr ""
 "L'ordinateur va se mettre en hibernation dans peu de temps s'il n'est pas "
 "branché."
 
-#: src/gpm-manager.c:1448
+#: src/gpm-manager.c:1447
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr "L'ordinateur va s'éteindre dans peu de temps s'il n'est pas branché."
 
-#: src/gpm-manager.c:1455 src/gpm-manager.c:1621
+#: src/gpm-manager.c:1454 src/gpm-manager.c:1620
 msgid "UPS critically low"
 msgstr "Le niveau de l'onduleur est critique"
 
-#: src/gpm-manager.c:1459
+#: src/gpm-manager.c:1458
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
@@ -1511,7 +1509,7 @@ msgstr ""
 "Il reste environ <b>%s</b> d'énergie sur l'onduleur (%.0f %%). Rétablissez "
 "votre alimentation secteur pour éviter de perdre des données."
 
-#: src/gpm-manager.c:1473
+#: src/gpm-manager.c:1472
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
@@ -1520,7 +1518,7 @@ msgstr ""
 "La puissance de votre souris sans fil est très faible (%.0f %%). Ce "
 "périphérique s'arrêtera de fonctionner s'il n'est pas mis en charge."
 
-#: src/gpm-manager.c:1481
+#: src/gpm-manager.c:1480
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
@@ -1529,7 +1527,7 @@ msgstr ""
 "La puissance du clavier sans fil est très faible (%.0f %%). Ce périphérique "
 "s'arrêtera de fonctionner s'il n'est pas mis en charge."
 
-#: src/gpm-manager.c:1490
+#: src/gpm-manager.c:1489
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
@@ -1538,7 +1536,7 @@ msgstr ""
 "La puissance de l'assistant personnel est très faible (%.0f %%). Ce "
 "périphérique s'arrêtera de fonctionner s'il n'est pas mis en charge."
 
-#: src/gpm-manager.c:1500
+#: src/gpm-manager.c:1499
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
@@ -1547,7 +1545,7 @@ msgstr ""
 "La puissance du téléphone portable est très faible (%.0f %%). Ce "
 "périphérique s'arrêtera de fonctionner s'il n'est pas mis en charge."
 
-#: src/gpm-manager.c:1510
+#: src/gpm-manager.c:1509
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
@@ -1556,7 +1554,7 @@ msgstr ""
 "La puissance du lecteur multimédia est très faible (%.0f %%). Ce "
 "périphérique s'arrêtera de fonctionner s'il n'est pas mis en charge."
 
-#: src/gpm-manager.c:1519
+#: src/gpm-manager.c:1518
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
@@ -1565,7 +1563,7 @@ msgstr ""
 "La puissance de la tablette est très faible (%.0f %%). Ce périphérique "
 "s'arrêtera de fonctionner s'il n'est pas mis en charge."
 
-#: src/gpm-manager.c:1528
+#: src/gpm-manager.c:1527
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
@@ -1574,7 +1572,7 @@ msgstr ""
 "La puissance de l'ordinateur est très faible (%.1f %%). Ce périphérique "
 "s'arrêtera de fonctionner s'il n'est pas mis en charge."
 
-#: src/gpm-manager.c:1593
+#: src/gpm-manager.c:1592
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
@@ -1582,7 +1580,7 @@ msgstr ""
 "La batterie est en dessous de son niveau critique ; l'ordinateur va "
 "<b>s'éteindre</b> quand la batterie sera complètement déchargée."
 
-#: src/gpm-manager.c:1599
+#: src/gpm-manager.c:1598
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
@@ -1592,7 +1590,7 @@ msgstr ""
 "mis en veille</b>.<br><b>Note :</b> une petite quantité d'énergie est "
 "requise pour maintenir l'ordinateur en état de veille."
 
-#: src/gpm-manager.c:1606
+#: src/gpm-manager.c:1605
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
@@ -1600,7 +1598,7 @@ msgstr ""
 "La batterie est en dessous de son niveau critique ; l'ordinateur va "
 "<b>hiberner</b>."
 
-#: src/gpm-manager.c:1611
+#: src/gpm-manager.c:1610
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
@@ -1608,7 +1606,7 @@ msgstr ""
 "La batterie est en dessous de son niveau critique ; l'ordinateur va "
 "<b>s'éteindre</b>."
 
-#: src/gpm-manager.c:1629
+#: src/gpm-manager.c:1628
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
@@ -1616,419 +1614,296 @@ msgstr ""
 "L'onduleur est en dessous de son niveau critique ; l'ordinateur va "
 "<b>s'éteindre</b> quand l'onduleur sera complètement déchargé."
 
-#: src/gpm-manager.c:1635
+#: src/gpm-manager.c:1634
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr ""
 "L'onduleur est en dessous de son niveau critique ; l'ordinateur va "
 "<b>hiberner</b>."
 
-#: src/gpm-manager.c:1640
+#: src/gpm-manager.c:1639
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr ""
 "L'onduleur est en dessous de son niveau critique ; l'ordinateur va "
 "<b>s'éteindre</b>."
 
-#: src/gpm-prefs.c:81
+#: src/gpm-prefs.c:77
 msgid "MATE Power Preferences"
 msgstr "Préférences de gestion d'énergie MATE"
 
-#: src/gpm-prefs-core.c:238
+#: src/gpm-prefs-core.c:242
 msgid "Shutdown"
 msgstr "Éteindre"
 
-#: src/gpm-prefs-core.c:245
+#: src/gpm-prefs-core.c:249
 msgid "Suspend"
 msgstr "Mettre en veille"
 
-#: src/gpm-prefs-core.c:248
+#: src/gpm-prefs-core.c:252
 msgid "Hibernate"
 msgstr "Hiberner"
 
-#: src/gpm-prefs-core.c:251
+#: src/gpm-prefs-core.c:255
 msgid "Blank screen"
 msgstr "Écran vide"
 
-#: src/gpm-prefs-core.c:254
+#: src/gpm-prefs-core.c:258
 msgid "Ask me"
 msgstr "Me poser la question"
 
-#: src/gpm-prefs-core.c:257
+#: src/gpm-prefs-core.c:261
 msgid "Do nothing"
 msgstr "Ne rien faire"
 
-#: src/gpm-prefs-core.c:317
+#: src/gpm-prefs-core.c:321
 msgid "Never"
 msgstr "Jamais"
 
-#: src/gpm-statistics.c:78 src/gpm-statistics.c:466
+#: src/gpm-statistics.c:67 src/gpm-statistics.c:410
 msgid "Rate"
 msgstr "Taux"
 
-#: src/gpm-statistics.c:79
+#: src/gpm-statistics.c:68
 msgid "Charge"
 msgstr "Charge"
 
-#: src/gpm-statistics.c:80 src/gpm-statistics.c:480
+#: src/gpm-statistics.c:69 src/gpm-statistics.c:424
 msgid "Time to full"
 msgstr "Durée de la charge"
 
-#: src/gpm-statistics.c:81 src/gpm-statistics.c:485
+#: src/gpm-statistics.c:70 src/gpm-statistics.c:429
 msgid "Time to empty"
 msgstr "Durée de la décharge"
 
-#: src/gpm-statistics.c:88
+#: src/gpm-statistics.c:77
 msgid "10 minutes"
 msgstr "10 minutes"
 
-#: src/gpm-statistics.c:89
+#: src/gpm-statistics.c:78
 msgid "2 hours"
 msgstr "2 heures"
 
-#: src/gpm-statistics.c:90
+#: src/gpm-statistics.c:79
 msgid "6 hours"
 msgstr "6 heures"
 
-#: src/gpm-statistics.c:91
+#: src/gpm-statistics.c:80
 msgid "1 day"
 msgstr "1 jour"
 
-#: src/gpm-statistics.c:92
+#: src/gpm-statistics.c:81
 msgid "1 week"
 msgstr "1 semaine"
 
-#: src/gpm-statistics.c:101
+#: src/gpm-statistics.c:90
 msgid "Charge profile"
 msgstr "Profil de charge"
 
-#: src/gpm-statistics.c:102
+#: src/gpm-statistics.c:91
 msgid "Discharge profile"
 msgstr "Profil de décharge"
 
-#: src/gpm-statistics.c:104
+#: src/gpm-statistics.c:93
 msgid "Charge accuracy"
 msgstr "Précision de la charge"
 
-#: src/gpm-statistics.c:105
+#: src/gpm-statistics.c:94
 msgid "Discharge accuracy"
 msgstr "Précision de la décharge"
 
-#: src/gpm-statistics.c:132
+#: src/gpm-statistics.c:121
 msgid "Attribute"
 msgstr "Attribut"
 
-#: src/gpm-statistics.c:139
+#: src/gpm-statistics.c:128
 msgid "Value"
 msgstr "Valeur"
 
-#: src/gpm-statistics.c:156
+#: src/gpm-statistics.c:145
 msgid "Image"
 msgstr "Image"
 
-#: src/gpm-statistics.c:162
+#: src/gpm-statistics.c:151
 msgid "Description"
 msgstr "Description"
 
-#: src/gpm-statistics.c:181 src/gpm-statistics.c:405
-msgid "Type"
-msgstr "Type"
-
-#: src/gpm-statistics.c:187
-msgid "ID"
-msgstr "ID"
-
-#: src/gpm-statistics.c:201
-msgid "Command"
-msgstr "Commande"
-
-#: src/gpm-statistics.c:286
+#: src/gpm-statistics.c:230
 msgid "Unknown"
 msgstr "Inconnu"
 
-#: src/gpm-statistics.c:290
+#: src/gpm-statistics.c:234
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
 msgstr[0] "%.0f seconde"
 msgstr[1] "%.0f secondes"
 
-#: src/gpm-statistics.c:295
+#: src/gpm-statistics.c:239
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
 msgstr[0] "%.1f minute"
 msgstr[1] "%.1f minutes"
 
-#: src/gpm-statistics.c:300
+#: src/gpm-statistics.c:244
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
 msgstr[0] "%.1f heure"
 msgstr[1] "%.1f heures"
 
-#: src/gpm-statistics.c:304
+#: src/gpm-statistics.c:248
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
 msgstr[0] "%.1f jour"
 msgstr[1] "%.1f jours"
 
-#: src/gpm-statistics.c:313
+#: src/gpm-statistics.c:257
 msgid "Yes"
 msgstr "Oui"
 
-#: src/gpm-statistics.c:313
+#: src/gpm-statistics.c:257
 msgid "No"
 msgstr "Non"
 
-#: src/gpm-statistics.c:402
+#: src/gpm-statistics.c:346
 msgid "Device"
 msgstr "Périphérique"
 
-#: src/gpm-statistics.c:407
+#: src/gpm-statistics.c:349
+msgid "Type"
+msgstr "Type"
+
+#: src/gpm-statistics.c:351
 msgid "Vendor"
 msgstr "Marque"
 
-#: src/gpm-statistics.c:409
+#: src/gpm-statistics.c:353
 msgid "Model"
 msgstr "Modèle"
 
-#: src/gpm-statistics.c:411
+#: src/gpm-statistics.c:355
 msgid "Serial number"
 msgstr "Numéro de série"
 
-#: src/gpm-statistics.c:416
+#: src/gpm-statistics.c:360
 msgid "Supply"
 msgstr "Alimentation"
 
-#: src/gpm-statistics.c:419
+#: src/gpm-statistics.c:363
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d seconde"
 msgstr[1] "%d secondes"
 
-#: src/gpm-statistics.c:423
+#: src/gpm-statistics.c:367
 msgid "Refreshed"
 msgstr "Actualisé"
 
-#: src/gpm-statistics.c:433
+#: src/gpm-statistics.c:377
 msgid "Present"
 msgstr "Présent(e)"
 
-#: src/gpm-statistics.c:440
+#: src/gpm-statistics.c:384
 msgid "Rechargeable"
 msgstr "Rechargeable"
 
-#: src/gpm-statistics.c:446
+#: src/gpm-statistics.c:390
 msgid "State"
 msgstr "État"
 
-#: src/gpm-statistics.c:450
+#: src/gpm-statistics.c:394
 msgid "Energy"
 msgstr "Énergie"
 
-#: src/gpm-statistics.c:453
+#: src/gpm-statistics.c:397
 msgid "Energy when empty"
 msgstr "Énergie à vide"
 
-#: src/gpm-statistics.c:456
+#: src/gpm-statistics.c:400
 msgid "Energy when full"
 msgstr "Énergie à pleine charge"
 
-#: src/gpm-statistics.c:459
+#: src/gpm-statistics.c:403
 msgid "Energy (design)"
 msgstr "Énergie (théorique)"
 
-#: src/gpm-statistics.c:473
+#: src/gpm-statistics.c:417
 msgid "Voltage"
 msgstr "tension"
 
-#: src/gpm-statistics.c:495
+#: src/gpm-statistics.c:439
 msgid "Percentage"
 msgstr "Pourcentage"
 
-#: src/gpm-statistics.c:502
+#: src/gpm-statistics.c:446
 msgid "Capacity"
 msgstr "Capacité"
 
-#: src/gpm-statistics.c:507
+#: src/gpm-statistics.c:451
 msgid "Technology"
 msgstr "Technologie"
 
-#: src/gpm-statistics.c:512
+#: src/gpm-statistics.c:456
 msgid "Online"
 msgstr "Branché"
 
-#: src/gpm-statistics.c:824
-msgid "No data"
-msgstr "Aucune donnée"
-
-#: src/gpm-statistics.c:831 src/gpm-statistics.c:836
-msgid "Kernel module"
-msgstr "Module du noyau"
-
-#: src/gpm-statistics.c:841
-msgid "Kernel core"
-msgstr "Noyau central"
-
-#: src/gpm-statistics.c:846
-msgid "Interprocessor interrupt"
-msgstr "Interruption entre processeurs"
-
-#: src/gpm-statistics.c:851
-msgid "Interrupt"
-msgstr "Interruption"
-
-#: src/gpm-statistics.c:898
-msgid "PS/2 keyboard/mouse/touchpad"
-msgstr "Clavier/souris/pavé tactile PS/2"
-
-#: src/gpm-statistics.c:901
-msgid "ACPI"
-msgstr "ACPI"
-
-#: src/gpm-statistics.c:904
-msgid "Serial ATA"
-msgstr "ATA série"
-
-#: src/gpm-statistics.c:907
-msgid "ATA host controller"
-msgstr "Contrôleur d'hôte ATA"
-
-#: src/gpm-statistics.c:910
-msgid "Intel wireless adaptor"
-msgstr "Adaptateur sans fil Intel"
-
-#: src/gpm-statistics.c:917 src/gpm-statistics.c:922 src/gpm-statistics.c:927
-#: src/gpm-statistics.c:932 src/gpm-statistics.c:937
-#, c-format
-msgid "Timer %s"
-msgstr "Tâche périodique %s"
-
-#: src/gpm-statistics.c:941
-#, c-format
-msgid "Sleep %s"
-msgstr "Tâche endormie %s"
-
-#: src/gpm-statistics.c:944
-#, c-format
-msgid "New task %s"
-msgstr "Nouvelle tâche %s"
-
-#: src/gpm-statistics.c:948
-#, c-format
-msgid "Wait %s"
-msgstr "Tâche en attente %s"
-
-#: src/gpm-statistics.c:952 src/gpm-statistics.c:956
-#, c-format
-msgid "Work queue %s"
-msgstr "File d'attente %s"
-
-#: src/gpm-statistics.c:959
-#, c-format
-msgid "Network route flush %s"
-msgstr "Vidage des routes réseau %s"
-
-#: src/gpm-statistics.c:962
-#, c-format
-msgid "USB activity %s"
-msgstr "Activité USB %s"
-
-#: src/gpm-statistics.c:965
-#, c-format
-msgid "Wakeup %s"
-msgstr "Éveil de %s"
-
-#: src/gpm-statistics.c:968
-msgid "Local interrupts"
-msgstr "Interruptions locales"
-
-#: src/gpm-statistics.c:971
-msgid "Rescheduling interrupts"
-msgstr "Interruptions de réordonnancement"
-
-#: src/gpm-statistics.c:1080
+#: src/gpm-statistics.c:754
 msgid "Device Information"
 msgstr "Informations sur le périphérique"
 
-#: src/gpm-statistics.c:1082
+#: src/gpm-statistics.c:756
 msgid "Device History"
 msgstr "Historique du périphérique"
 
-#: src/gpm-statistics.c:1084
+#: src/gpm-statistics.c:758
 msgid "Device Profile"
 msgstr "Profil du périphérique"
 
-#: src/gpm-statistics.c:1086
-msgid "Processor Wakeups"
-msgstr "Réveils du processeur"
-
-#: src/gpm-statistics.c:1325 src/gpm-statistics.c:1331
-#: src/gpm-statistics.c:1337 src/gpm-statistics.c:1343
+#: src/gpm-statistics.c:979 src/gpm-statistics.c:985 src/gpm-statistics.c:991
+#: src/gpm-statistics.c:997
 msgid "Time elapsed"
 msgstr "Temps"
 
-#: src/gpm-statistics.c:1327
+#: src/gpm-statistics.c:981
 msgid "Power"
 msgstr "Puissance"
 
-#: src/gpm-statistics.c:1333 src/gpm-statistics.c:1377
-#: src/gpm-statistics.c:1383 src/gpm-statistics.c:1389
-#: src/gpm-statistics.c:1395
+#: src/gpm-statistics.c:987 src/gpm-statistics.c:1031
+#: src/gpm-statistics.c:1037 src/gpm-statistics.c:1043
+#: src/gpm-statistics.c:1049
 msgid "Cell charge"
 msgstr "Charge de la batterie"
 
-#: src/gpm-statistics.c:1339 src/gpm-statistics.c:1345
+#: src/gpm-statistics.c:993 src/gpm-statistics.c:999
 msgid "Predicted time"
 msgstr "Durée prévue"
 
-#: src/gpm-statistics.c:1379 src/gpm-statistics.c:1391
+#: src/gpm-statistics.c:1033 src/gpm-statistics.c:1045
 msgid "Correction factor"
 msgstr "Facteur de correction"
 
-#: src/gpm-statistics.c:1385 src/gpm-statistics.c:1397
+#: src/gpm-statistics.c:1039 src/gpm-statistics.c:1051
 msgid "Prediction accuracy"
 msgstr "Précision de la prédiction"
 
-#: src/gpm-statistics.c:1563
+#: src/gpm-statistics.c:1210
 msgid "Select this device at startup"
 msgstr "Sélectionner ce périphérique au démarrage"
 
-#: src/gpm-statistics.c:1802
-msgid "Processor"
-msgstr "Processeur"
+#: src/gpm-tray-icon.c:206
+msgid "Copyright © 2011-2021 MATE developers"
+msgstr "Copyright © 2011-2021 Développeurs MATE"
 
-#: src/gpm-tray-icon.c:187
-msgid "Copyright © 2011-2018 MATE developers"
-msgstr "Copyright © 2011-2018 Développeurs MATE"
-
-#: src/gpm-tray-icon.c:193
-msgid "translator-credits"
-msgstr ""
-"Contributeurs au projet MATE :\n"
-"Voir https://www.transifex.com/mate/teams/13566/fr/\n"
-"\n"
-"Contributeurs au projet GNOME :\n"
-"Vincent Renardias <vincent@ldsol.com>, 1998-2000.\n"
-"Joaquim Fellmann <joaquim@hrnet.fr>, 2000.\n"
-"Christophe Merlet <redfox@redfoxcenter.org>, 2000-2006.\n"
-"Christophe Fergeau <teuf@users.sourceforge.net>, 2002-2003.\n"
-"Sun G11n <gnome_int_l10n@ireland.sun.com>, 2002.\n"
-"Robert-André Mauchin <zebob.m@pengzone.org>, 2006-2008.\n"
-"Stéphane Raimbault <stephane.raimbault@gmail.com>, 2007.\n"
-"Yannick Tailliez <ytdispatch-libre@yahoo.com>, 2008.\n"
-"Claude Paroz <claude@2xlibre.net>, 2008-2010.\n"
-"Gérard Baylard <gerard dot b at bbox dot fr>, 2010"
-
-#: src/gpm-tray-icon.c:295
+#: src/gpm-tray-icon.c:316
 #, c-format
 msgid "%s remaining"
 msgstr "%s restants"
 
-#: src/gpm-tray-icon.c:349
+#: src/gpm-tray-icon.c:370
 msgid "_Preferences"
 msgstr "_Préférences"
 
@@ -2213,12 +2088,6 @@ msgid "Mouse"
 msgid_plural "Mice"
 msgstr[0] "Souris"
 msgstr[1] "Souris"
-
-#: src/gpm-upower.c:507
-msgid "Keyboard"
-msgid_plural "Keyboards"
-msgstr[0] "Clavier"
-msgstr[1] "Claviers"
 
 #: src/gpm-upower.c:511
 msgid "PDA"

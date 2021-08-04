@@ -1,18 +1,19 @@
 # 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Aleksey Kabanov <ak099@mail.ru>, 2018
 # AlexL <loginov.alex.valer@gmail.com>, 2018
 # Wolfgang Ulbrich <mate@raveit.de>, 2018
 # Михаил Ильинский <mail@milinsky.com>, 2018
 # Alex Putz, 2018
-# Aleksey Kabanov <ak099@mail.ru>, 2018
+# Иван Л. <lukyanenkoiv@bk.ru>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-12 18:32+0100\n"
+"POT-Creation-Date: 2021-01-16 14:35+0100\n"
 "PO-Revision-Date: 2018-10-04 15:52+0000\n"
-"Last-Translator: Aleksey Kabanov <ak099@mail.ru>, 2018\n"
+"Last-Translator: Иван Л. <lukyanenkoiv@bk.ru>, 2021\n"
 "Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,7 +61,7 @@ msgstr ""
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:23
 msgid "<application>MATE Power Manager</application> Manual"
-msgstr ""
+msgstr "<application>Менеджер питания MATE</application>Руководство"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:25
@@ -69,10 +70,13 @@ msgid ""
 "MATE Desktop that manages the power settings for your laptop or desktop "
 "computer."
 msgstr ""
+"<application>Менеджер питания MATE</application>- это демон сеанса для "
+"рабочего стола MATE, который управляет параметрами питания вашего "
+"портативного или настольного компьютера. "
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
-msgid "<year>2015-2020</year> <holder>MATE Documentation Team</holder>"
+msgid "<year>2015-2021</year> <holder>MATE Documentation Team</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
@@ -80,6 +84,7 @@ msgstr ""
 msgid ""
 "<year>2006-2009</year> <holder>Richard Hughes (richard@hughsie.com)</holder>"
 msgstr ""
+"<year>2006-2009</year><holder>Ричард Хьюз (richard@hughsie.com)</holder>"
 
 #. (itstool) path: publisher/publishername
 #: C/index.docbook:52
@@ -90,13 +95,13 @@ msgstr "Команда документирования MATE"
 #. (itstool) path: revdescription/para
 #: C/index.docbook:55 C/index.docbook:98
 msgid "Richard Hughes"
-msgstr ""
+msgstr "Ричард Хьюз"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:61
 msgid ""
 "<surname>MATE Documentation Team</surname> <affiliation> </affiliation>"
-msgstr ""
+msgstr "Команда документации MATE "
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:71
@@ -104,17 +109,20 @@ msgid ""
 "<firstname>Richard</firstname> <surname>Hughes</surname> "
 "<email>richard@hughsie.com</email>"
 msgstr ""
+"<firstname>Ричард</firstname><surname> "
+"Хьюз</surname><email>richard@hughsie.com</email>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:95
 msgid "Richard Hughes <email>richard@hughsie.com</email>"
-msgstr ""
+msgstr "Ричард Хьюз<email>richard@hughsie.com</email>"
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:91
 msgid ""
 "<revnumber>2.0</revnumber> <date>2006-08-30</date> <_:revdescription-1/>"
 msgstr ""
+"<revnumber>2.0</revnumber><date>30-08-2006</date><_:revdescription-1/>"
 
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:104
@@ -134,12 +142,12 @@ msgstr ""
 #. (itstool) path: article/indexterm
 #: C/index.docbook:115
 msgid "<primary><application>MATE Power Manager</application></primary>"
-msgstr ""
+msgstr "<primary><application>Менеджер питания MATE</application></primary>"
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:118
 msgid "<primary>mate-power-manager</primary>"
-msgstr ""
+msgstr "<primary>менеджер-питания-mate</primary>"
 
 #. (itstool) path: section/title
 #: C/index.docbook:125
@@ -152,6 +160,9 @@ msgid ""
 "<primary><application>MATE Power Manager</application></primary> "
 "<secondary>Manual</secondary> <tertiary>mate-power-manager</tertiary>"
 msgstr ""
+"<primary><application>Менеджер Питания "
+"MATE</application></primary><secondary>Инструкция</secondary><tertiary"
+">менеджер-питания-mate</tertiary>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:135
@@ -181,11 +192,9 @@ msgstr "Командная строка"
 #. (itstool) path: listitem/para
 #: C/index.docbook:152
 msgid ""
-"Type <command>mate-power-manager --verbose --no-daemon</command>, then press"
-" <keycap>Return</keycap>:"
+"Type <command>G_MESSAGES_DEBUG=PowerManager mate-power-manager --no-"
+"daemon</command>, then press <keycap>Return</keycap>:"
 msgstr ""
-"Наберите <command>mate-power-manager --verbose --no-daemon</command> и "
-"нажмите <keycap>Enter</keycap>:"
 
 #. (itstool) path: section/title
 #: C/index.docbook:162

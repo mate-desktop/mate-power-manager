@@ -1,18 +1,19 @@
 # 
 # Translators:
-# Kristoffer Grundström <lovaren@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Henrik Mattsson-Mårn <h@reglage.net>, 2018
 # Wolfgang Ulbrich <mate@raveit.de>, 2018
 # Daniel Gullbransen, 2018
 # eckeman <eckeman@zoho.com>, 2020
+# Luna Jernberg <bittin@cafe8bitar.se>, 2020
+# Kristoffer Grundström <lovaren@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-12 18:32+0100\n"
+"POT-Creation-Date: 2021-01-16 14:35+0100\n"
 "PO-Revision-Date: 2018-10-04 15:52+0000\n"
-"Last-Translator: eckeman <eckeman@zoho.com>, 2020\n"
+"Last-Translator: Kristoffer Grundström <lovaren@gmail.com>, 2021\n"
 "Language-Team: Swedish (https://www.transifex.com/mate/teams/13566/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,7 +41,7 @@ msgstr ""
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
-msgid "<year>2015-2020</year> <holder>MATE Documentation Team</holder>"
+msgid "<year>2015-2021</year> <holder>MATE Documentation Team</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
@@ -48,6 +49,7 @@ msgstr ""
 msgid ""
 "<year>2006-2009</year> <holder>Richard Hughes (richard@hughsie.com)</holder>"
 msgstr ""
+"<year>2006-2009</year> <holder>Richard Hughes (richard@hughsie.com)</holder>"
 
 #. (itstool) path: publisher/publishername
 #: C/index.docbook:52
@@ -58,7 +60,7 @@ msgstr "MATE Documentation Team"
 #. (itstool) path: revdescription/para
 #: C/index.docbook:55 C/index.docbook:98
 msgid "Richard Hughes"
-msgstr ""
+msgstr "Richard Hughes"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:61
@@ -83,6 +85,7 @@ msgstr ""
 msgid ""
 "<revnumber>2.0</revnumber> <date>2006-08-30</date> <_:revdescription-1/>"
 msgstr ""
+"<revnumber>2.0</revnumber> <date>2006-08-30</date> <_:revdescription-1/>"
 
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:104
@@ -149,8 +152,8 @@ msgstr "Kommandorad"
 #. (itstool) path: listitem/para
 #: C/index.docbook:152
 msgid ""
-"Type <command>mate-power-manager --verbose --no-daemon</command>, then press"
-" <keycap>Return</keycap>:"
+"Type <command>G_MESSAGES_DEBUG=PowerManager mate-power-manager --no-"
+"daemon</command>, then press <keycap>Return</keycap>:"
 msgstr ""
 
 #. (itstool) path: section/title
@@ -186,6 +189,8 @@ msgid ""
 "external ref='figures/gpm-unplugged.png' "
 "md5='e9e38fa48737547a19b20af6a15d9e95'"
 msgstr ""
+"external ref='figures/gpm-unplugged.png' "
+"md5='e9e38fa48737547a19b20af6a15d9e95'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:180
@@ -216,6 +221,8 @@ msgid ""
 "external ref='figures/gpm-charged.png' "
 "md5='cc83716555d07b13a3659683f96c531c'"
 msgstr ""
+"external ref='figures/gpm-charged.png' "
+"md5='cc83716555d07b13a3659683f96c531c'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:200
@@ -260,6 +267,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gpm-low.png' md5='6cd86acf26f251d78060dd2ecb6b6506'"
 msgstr ""
+"external ref='figures/gpm-low.png' md5='6cd86acf26f251d78060dd2ecb6b6506'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:232
@@ -298,6 +306,8 @@ msgid ""
 "external ref='figures/gpm-critical.png' "
 "md5='77b0848ed3bd0510b65f89e0d07a2fed'"
 msgstr ""
+"external ref='figures/gpm-critical.png' "
+"md5='77b0848ed3bd0510b65f89e0d07a2fed'"
 
 #. (itstool) path: section/title
 #: C/index.docbook:259
@@ -328,6 +338,8 @@ msgid ""
 "external ref='figures/gpm-suspend-problem.png' "
 "md5='4e4c1fafda61c5ace02f957717ea7ce6'"
 msgstr ""
+"external ref='figures/gpm-suspend-problem.png' "
+"md5='4e4c1fafda61c5ace02f957717ea7ce6'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:276
@@ -373,6 +385,8 @@ msgid ""
 "external ref='figures/gpm-stats-graph.png' "
 "md5='c7cfa37ad6e96041a1c312d85236e7f6'"
 msgstr ""
+"external ref='figures/gpm-stats-graph.png' "
+"md5='c7cfa37ad6e96041a1c312d85236e7f6'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:308
@@ -496,6 +510,8 @@ msgid ""
 "external ref='figures/gpm-prefs-ac.png' "
 "md5='dc4409a63218146e52d3e670b26785bd'"
 msgstr ""
+"external ref='figures/gpm-prefs-ac.png' "
+"md5='dc4409a63218146e52d3e670b26785bd'"
 
 #. (itstool) path: section/title
 #: C/index.docbook:416
@@ -518,6 +534,8 @@ msgid ""
 "external ref='figures/gpm-prefs-battery.png' "
 "md5='89fe431e4f38073f7d58f38425ad1ee7'"
 msgstr ""
+"external ref='figures/gpm-prefs-battery.png' "
+"md5='89fe431e4f38073f7d58f38425ad1ee7'"
 
 #. (itstool) path: section/para
 #: C/index.docbook:427
@@ -529,7 +547,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:434
 msgid "General Preferences"
-msgstr ""
+msgstr "Generella egenskaper"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:436
@@ -547,6 +565,8 @@ msgid ""
 "external ref='figures/gpm-prefs-general.png' "
 "md5='52b7d145bd085d8af6f3194ac632c547'"
 msgstr ""
+"external ref='figures/gpm-prefs-general.png' "
+"md5='52b7d145bd085d8af6f3194ac632c547'"
 
 #. (itstool) path: section/title
 #: C/index.docbook:448
@@ -582,6 +602,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gs-prefs.png' md5='e9ce36b6ef557681ca4e8e90b71a7f46'"
 msgstr ""
+"external ref='figures/gs-prefs.png' md5='e9ce36b6ef557681ca4e8e90b71a7f46'"
 
 #. (itstool) path: section/para
 #: C/index.docbook:472
@@ -712,6 +733,8 @@ msgid ""
 "external ref='figures/applet-brightness.png' "
 "md5='8ce34f6733215fb86009471f19850dcc'"
 msgstr ""
+"external ref='figures/applet-brightness.png' "
+"md5='8ce34f6733215fb86009471f19850dcc'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:580
@@ -748,6 +771,8 @@ msgid ""
 "external ref='figures/applet-inhibit.png' "
 "md5='7381a44dae4f17bfd47abaa54c0ca2a4'"
 msgstr ""
+"external ref='figures/applet-inhibit.png' "
+"md5='7381a44dae4f17bfd47abaa54c0ca2a4'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:608
@@ -797,6 +822,8 @@ msgid ""
 "external ref='figures/gpm-cell-capacity.png' "
 "md5='7635c3b846f39faf7b16a921a6ebb55c'"
 msgstr ""
+"external ref='figures/gpm-cell-capacity.png' "
+"md5='7635c3b846f39faf7b16a921a6ebb55c'"
 
 #. (itstool) path: section/title
 #: C/index.docbook:644
