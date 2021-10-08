@@ -96,7 +96,9 @@ static gboolean  gpm_applet_key_press_cb          (GtkWidget *popup, GdkEventKey
 static gboolean  gpm_applet_scroll_cb             (GpmBrightnessApplet *applet, GdkEventScroll *event);
 static gboolean  gpm_applet_slide_cb              (GtkWidget *w, GpmBrightnessApplet *applet);
 static void      gpm_applet_create_popup          (GpmBrightnessApplet *applet);
-static gboolean  gpm_applet_popup_cb              (GpmBrightnessApplet *applet, GdkEventButton *event);
+static gboolean  gpm_applet_popup_click_cb        (GpmBrightnessApplet *applet, GdkEventButton *event);
+static gboolean  gpm_applet_popup_key_cb          (GpmBrightnessApplet *applet, GdkEventKey *event);
+static gboolean  gpm_applet_popup_cb              (GpmBrightnessApplet *applet);
 static void      gpm_applet_dialog_about_cb       (GtkAction *action, gpointer data);
 static gboolean  gpm_applet_cb                    (MatePanelApplet *_applet, const gchar *iid, gpointer data);
 static void      gpm_applet_destroy_cb            (GtkWidget *widget);
@@ -375,6 +377,10 @@ gpm_applet_update_tooltip (GpmBrightnessApplet *applet)
 			buf = g_strdup_printf (_("LCD brightness : %d%%"), applet->level);
 		}
 		gtk_widget_set_tooltip_text (GTK_WIDGET(applet), buf);
+
+		AtkObject *atk_obj = gtk_widget_get_accessible (GTK_WIDGET (applet));
+		if (GTK_IS_ACCESSIBLE (atk_obj))
+			atk_object_set_description (atk_obj, buf);
 	} else {
 		gtk_widget_set_tooltip_text (GTK_WIDGET(applet), NULL);
 	}
@@ -673,6 +679,48 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
  	GdkScreen *screen = gtk_widget_get_screen(GTK_WIDGET(toplevel));
 	GdkVisual *visual = gdk_screen_get_rgba_visual(screen);
 	gtk_widget_set_visual(GTK_WIDGET(toplevel), visual);
+	gtk_widget_grab_focus (applet->popup);
+}
+
+/**
+ * gpm_applet_popup_click_cb:
+ * @applet: Brightness applet instance
+ *
+ * pops and unpops (through mouse button)
+ **/
+gboolean
+gpm_applet_popup_click_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
+{
+	/* react only to left mouse button */
+	if (event->button != 1) {
+		return FALSE;
+	}
+	return gpm_applet_popup_cb (applet);
+}
+
+/**
+ * gpm_applet_popup_cb:
+ * @applet: Brightness applet instance
+ *
+ * shows the popup (through key press event)
+ **/
+gboolean
+gpm_applet_popup_key_cb (GpmBrightnessApplet *applet, GdkEventKey *event)
+{
+	/* More or less the same keys accepted in the popup itself,
+	 * except that we don’t want Escape to open the popup. */
+	switch (event->keyval) {
+	case GDK_KEY_KP_Enter:
+	case GDK_KEY_ISO_Enter:
+	case GDK_KEY_3270_Enter:
+	case GDK_KEY_Return:
+	case GDK_KEY_space:
+	case GDK_KEY_KP_Space:
+		return gpm_applet_popup_cb (applet);
+	default:
+		break;
+	}
+	return FALSE;
 }
 
 /**
@@ -682,18 +730,13 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
  * pops and unpops
  **/
 static gboolean
-gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
+gpm_applet_popup_cb (GpmBrightnessApplet *applet)
 {
 	GtkAllocation allocation, popup_allocation;
 	gint orientation, x, y;
 	GdkWindow *window;
 	GdkDisplay *display;
 	GdkSeat *seat;
-
-	/* react only to left mouse button */
-	if (event->button != 1) {
-		return FALSE;
-	}
 
 	/* if yet popped, release focus and hide */
 	if (applet->popped) {
@@ -775,7 +818,7 @@ gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 /**
  * gpm_applet_theme_change_cb:
  *
- * Updtes icon when theme changes
+ * Updates icon when theme changes
  **/
 static void
 gpm_applet_theme_change_cb (GtkIconTheme *icon_theme, gpointer data)
@@ -1035,10 +1078,13 @@ gpm_brightness_applet_init (GpmBrightnessApplet *applet)
 
 	/* connect */
 	g_signal_connect (G_OBJECT(applet), "button-press-event",
-			  G_CALLBACK(gpm_applet_popup_cb), NULL);
+			  G_CALLBACK(gpm_applet_popup_click_cb), NULL);
 
 	g_signal_connect (G_OBJECT(applet), "scroll-event",
 			  G_CALLBACK(gpm_applet_scroll_cb), NULL);
+
+	g_signal_connect (G_OBJECT(applet), "key-press-event",
+			  G_CALLBACK(gpm_applet_popup_key_cb), NULL);
 
 	/* We use g_signal_connect_after because letting the panel draw
 	 * the background is the only way to have the correct
@@ -1076,6 +1122,7 @@ gpm_applet_cb (MatePanelApplet *_applet, const gchar *iid, gpointer data)
 {
 	GpmBrightnessApplet *applet = GPM_BRIGHTNESS_APPLET(_applet);
 	GtkActionGroup *action_group;
+	AtkObject *atk_obj;
 
 	static const GtkActionEntry menu_actions [] = {
 		{ "About", "help-about", N_("_About"),
@@ -1100,6 +1147,9 @@ gpm_applet_cb (MatePanelApplet *_applet, const gchar *iid, gpointer data)
 	                                        BRIGHTNESS_MENU_UI_DIR "/brightness-applet-menu.xml",
 	                                        action_group);
 	g_object_unref (action_group);
+	atk_obj = gtk_widget_get_accessible (GTK_WIDGET (applet));
+	if (GTK_IS_ACCESSIBLE (atk_obj))
+		atk_object_set_name (atk_obj, _("Brightness Applet"));
 
 	gpm_applet_draw_cb (applet);
 	return TRUE;
