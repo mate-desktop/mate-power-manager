@@ -84,6 +84,7 @@ main (int argc, char **argv)
 	g_option_context_add_main_entries (context, options, GETTEXT_PACKAGE);
 	g_option_context_add_group (context, gtk_get_option_group (FALSE));
 	g_option_context_parse (context, &argc, &argv, NULL);
+	g_option_context_free (context);
 
 	gdk_init (&argc, &argv);
 	app = gtk_application_new("org.mate.PowerManager.Preferences", 0);
@@ -102,9 +103,6 @@ main (int argc, char **argv)
 	g_object_unref (prefs);
 
 	g_object_unref (app);
-
-/* seems to not work...
-	g_option_context_free (context); */
 
 	return status;
 }
