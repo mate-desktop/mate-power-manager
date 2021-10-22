@@ -43,8 +43,6 @@ static GtkBuilder *builder = NULL;
 static GtkListStore *list_store_info = NULL;
 static GtkListStore *list_store_devices = NULL;
 gchar *current_device = NULL;
-static const gchar *history_type;
-static const gchar *stats_type;
 static guint history_time;
 static GSettings *settings;
 static gfloat sigma_smoothing = 0.0f;
@@ -64,11 +62,24 @@ enum {
 	GPM_DEVICES_COLUMN_LAST
 };
 
+#define GPM_STATS_CHARGE_DATA_VALUE             "charge-data"
+#define GPM_STATS_CHARGE_ACCURACY_VALUE         "charge-accuracy"
+#define GPM_STATS_DISCHARGE_DATA_VALUE          "discharge-data"
+#define GPM_STATS_DISCHARGE_ACCURACY_VALUE      "discharge-accuracy"
+
+/* TRANSLATORS: what we've observed about the device */
+#define GPM_STATS_CHARGE_DATA_TEXT              _("Charge profile")
+#define GPM_STATS_DISCHARGE_DATA_TEXT           _("Discharge profile")
+/* TRANSLATORS: how accurately we can predict the time remaining of the battery */
+#define GPM_STATS_CHARGE_ACCURACY_TEXT          _("Charge accuracy")
+#define GPM_STATS_DISCHARGE_ACCURACY_TEXT       _("Discharge accuracy")
+
 #define GPM_HISTORY_RATE_TEXT			_("Rate")
 #define GPM_HISTORY_CHARGE_TEXT			_("Charge")
 #define GPM_HISTORY_TIME_FULL_TEXT		_("Time to full")
 #define GPM_HISTORY_TIME_EMPTY_TEXT		_("Time to empty")
 
+#define GPM_HISTORY_POWER_VALUE                 "power"
 #define GPM_HISTORY_RATE_VALUE			"rate"
 #define GPM_HISTORY_CHARGE_VALUE		"charge"
 #define GPM_HISTORY_TIME_FULL_VALUE		"time-full"
@@ -86,17 +97,31 @@ enum {
 #define GPM_HISTORY_DAY_VALUE			24*60*60
 #define GPM_HISTORY_WEEK_VALUE			7*24*60*60
 
-/* TRANSLATORS: what we've observed about the device */
-#define GPM_STATS_CHARGE_DATA_TEXT		_("Charge profile")
-#define GPM_STATS_DISCHARGE_DATA_TEXT		_("Discharge profile")
-/* TRANSLATORS: how accurately we can predict the time remaining of the battery */
-#define GPM_STATS_CHARGE_ACCURACY_TEXT		_("Charge accuracy")
-#define GPM_STATS_DISCHARGE_ACCURACY_TEXT	_("Discharge accuracy")
+enum stats_type_enum {
+	GPM_STATS_CHARGE_TYPE = 0,
+	GPM_STATS_DISCHARGE_TYPE,
+	GPM_STATS_CHARGE_ACCURACY_TYPE,
+	GPM_STATS_DISCHARGE_ACCURACY_TYPE,
+	GPM_STATS_LAST_TYPE
+};
+static enum stats_type_enum stats_type;
 
-#define GPM_STATS_CHARGE_DATA_VALUE		"charge-data"
-#define GPM_STATS_CHARGE_ACCURACY_VALUE		"charge-accuracy"
-#define GPM_STATS_DISCHARGE_DATA_VALUE		"discharge-data"
-#define GPM_STATS_DISCHARGE_ACCURACY_VALUE	"discharge-accuracy"
+enum history_type_enum {
+	GPM_HISTORY_RATE_TYPE = 0,
+	GPM_HISTORY_CHARGE_TYPE,
+	GPM_HISTORY_TIME_FULL_TYPE,
+	GPM_HISTORY_TIME_EMPTY_TYPE,
+	GPM_HISTORY_POWER_TYPE,
+	GPM_HISTORY_LAST_TYPE
+};
+static enum history_type_enum history_type;
+static const char *history_types [GPM_HISTORY_LAST_TYPE] = {
+	[GPM_HISTORY_RATE_TYPE] = GPM_HISTORY_RATE_VALUE,
+	[GPM_HISTORY_CHARGE_TYPE] = GPM_HISTORY_CHARGE_VALUE,
+	[GPM_HISTORY_TIME_FULL_TYPE] = GPM_HISTORY_TIME_FULL_VALUE,
+	[GPM_HISTORY_TIME_EMPTY_TYPE] = GPM_HISTORY_TIME_EMPTY_VALUE,
+	[GPM_HISTORY_POWER_TYPE] = GPM_HISTORY_POWER_VALUE
+};
 
 /**
  * gpm_stats_button_help_cb:
@@ -506,7 +531,7 @@ gpm_stats_update_info_page_history (UpDevice *device)
 	gint32 offset;
 
 	new = g_ptr_array_new_with_free_func ((GDestroyNotify) gpm_point_obj_free);
-	if (g_strcmp0 (history_type, GPM_HISTORY_CHARGE_VALUE) == 0) {
+	if (history_type == GPM_HISTORY_CHARGE_TYPE) {
 		g_object_set (graph_history,
 			      "type-x", GPM_GRAPH_WIDGET_TYPE_TIME,
 			      "type-y", GPM_GRAPH_WIDGET_TYPE_PERCENTAGE,
@@ -517,7 +542,7 @@ gpm_stats_update_info_page_history (UpDevice *device)
 			      "start-y", 0,
 			      "stop-y", 100,
 			      NULL);
-	} else if (g_strcmp0 (history_type, GPM_HISTORY_RATE_VALUE) == 0) {
+	} else if (history_type == GPM_HISTORY_RATE_TYPE) {
 		g_object_set (graph_history,
 			      "type-x", GPM_GRAPH_WIDGET_TYPE_TIME,
 			      "type-y", GPM_GRAPH_WIDGET_TYPE_POWER,
@@ -538,7 +563,8 @@ gpm_stats_update_info_page_history (UpDevice *device)
 	}
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "label_history_nodata"));
-	array = up_device_get_history_sync (device, history_type, history_time, 150, NULL, NULL);
+	/* The type of history, history_types [history_type], known values are "rate" and "charge". */
+	array = up_device_get_history_sync (device, history_types [history_type], history_time, 150, NULL, NULL);
 	if (array == NULL) {
 		/* show no data label and hide graph */
 		gtk_widget_hide (graph_history);
@@ -571,7 +597,7 @@ gpm_stats_update_info_page_history (UpDevice *device)
 		else if (up_history_item_get_state (item) == UP_DEVICE_STATE_PENDING_DISCHARGE)
 			point->color = egg_color_from_rgb (0, 0, 200);
 		else {
-			if (g_strcmp0 (history_type, GPM_HISTORY_RATE_VALUE) == 0)
+			if (history_type == GPM_HISTORY_RATE_TYPE)
 				point->color = egg_color_from_rgb (255, 255, 255);
 			else
 				point->color = egg_color_from_rgb (0, 255, 0);
@@ -613,16 +639,16 @@ gpm_stats_update_info_page_stats (UpDevice *device)
 	const gchar *type = NULL;
 
 	new = g_ptr_array_new_with_free_func ((GDestroyNotify) gpm_point_obj_free);
-	if (g_strcmp0 (stats_type, GPM_STATS_CHARGE_DATA_VALUE) == 0) {
+	if (stats_type == GPM_STATS_CHARGE_TYPE) {
 		type = "charging";
 		use_data = TRUE;
-	} else if (g_strcmp0 (stats_type, GPM_STATS_DISCHARGE_DATA_VALUE) == 0) {
+	} else if (stats_type == GPM_STATS_DISCHARGE_TYPE) {
 		type = "discharging";
 		use_data = TRUE;
-	} else if (g_strcmp0 (stats_type, GPM_STATS_CHARGE_ACCURACY_VALUE) == 0) {
+	} else if (stats_type == GPM_STATS_CHARGE_ACCURACY_TYPE) {
 		type = "charging";
 		use_data = FALSE;
-	} else if (g_strcmp0 (stats_type, GPM_STATS_DISCHARGE_ACCURACY_VALUE) == 0) {
+	} else if (stats_type == GPM_STATS_DISCHARGE_ACCURACY_TYPE) {
 		type = "discharging";
 		use_data = FALSE;
 	} else {
@@ -873,7 +899,7 @@ gpm_stats_add_device (UpDevice *device, GPtrArray *devices)
 {
 	const gchar *id;
 	GtkTreeIter iter;
-	const gchar *icon;
+	char *icon;
 	UpDeviceKind kind;
 	gchar *label, *vendor, *model;
 
@@ -904,6 +930,7 @@ gpm_stats_add_device (UpDevice *device, GPtrArray *devices)
 			    GPM_DEVICES_COLUMN_ID, id,
 			    GPM_DEVICES_COLUMN_TEXT, label,
 			    GPM_DEVICES_COLUMN_ICON, icon, -1);
+	g_free (icon);
 	g_free (label);
 	g_free (vendor);
 	g_free (model);
@@ -973,25 +1000,25 @@ gpm_stats_history_type_combo_changed_cb (GtkWidget *widget, gpointer data)
 	active = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
 
 	if (active == 0) {
-		history_type = GPM_HISTORY_RATE_VALUE;
+		history_type = GPM_HISTORY_RATE_TYPE;
 		/* TRANSLATORS: this is the X axis on the graph */
 		axis_x = _("Time elapsed");
 		/* TRANSLATORS: this is the Y axis on the graph */
 		axis_y = _("Power");
 	} else if (active == 1) {
-		history_type = GPM_HISTORY_CHARGE_VALUE;
+		history_type = GPM_HISTORY_CHARGE_TYPE;
 		/* TRANSLATORS: this is the X axis on the graph */
 		axis_x = _("Time elapsed");
 		/* TRANSLATORS: this is the Y axis on the graph for the whole battery device */
 		axis_y = _("Cell charge");
 	} else if (active == 2) {
-		history_type = GPM_HISTORY_TIME_FULL_VALUE;
+		history_type = GPM_HISTORY_TIME_FULL_TYPE;
 		/* TRANSLATORS: this is the X axis on the graph */
 		axis_x = _("Time elapsed");
 		/* TRANSLATORS: this is the Y axis on the graph */
 		axis_y = _("Predicted time");
 	} else if (active == 3) {
-		history_type = GPM_HISTORY_TIME_EMPTY_VALUE;
+		history_type = GPM_HISTORY_TIME_EMPTY_TYPE;
 		/* TRANSLATORS: this is the X axis on the graph */
 		axis_x = _("Time elapsed");
 		/* TRANSLATORS: this is the Y axis on the graph */
@@ -1009,7 +1036,7 @@ gpm_stats_history_type_combo_changed_cb (GtkWidget *widget, gpointer data)
 	gpm_stats_button_update_ui ();
 
 	/* save to gsettings */
-	g_settings_set_string (settings, GPM_SETTINGS_INFO_HISTORY_TYPE, history_type);
+	g_settings_set_string (settings, GPM_SETTINGS_INFO_HISTORY_TYPE, history_types [history_type]);
 }
 
 /**
@@ -1021,29 +1048,35 @@ gpm_stats_type_combo_changed_cb (GtkWidget *widget, gpointer data)
 	guint active;
 	const gchar *axis_x = NULL;
 	const gchar *axis_y = NULL;
+	const char *stats_types [GPM_STATS_LAST_TYPE] = {
+		[GPM_STATS_CHARGE_TYPE] = GPM_STATS_CHARGE_DATA_VALUE,
+		[GPM_STATS_DISCHARGE_TYPE] = GPM_STATS_CHARGE_ACCURACY_VALUE,
+		[GPM_STATS_CHARGE_ACCURACY_TYPE] = GPM_STATS_DISCHARGE_DATA_VALUE,
+		[GPM_STATS_DISCHARGE_ACCURACY_TYPE] = GPM_STATS_DISCHARGE_ACCURACY_VALUE
+	};
 
 	active = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
 
 	if (active == 0) {
-		stats_type = GPM_STATS_CHARGE_DATA_VALUE;
+		stats_type = GPM_STATS_CHARGE_TYPE;
 		/* TRANSLATORS: this is the X axis on the graph for the whole battery device */
 		axis_x = _("Cell charge");
 		/* TRANSLATORS: this is the Y axis on the graph */
 		axis_y = _("Correction factor");
 	} else if (active == 1) {
-		stats_type = GPM_STATS_CHARGE_ACCURACY_VALUE;
+		stats_type = GPM_STATS_CHARGE_ACCURACY_TYPE;
 		/* TRANSLATORS: this is the X axis on the graph for the whole battery device */
 		axis_x = _("Cell charge");
 		/* TRANSLATORS: this is the Y axis on the graph */
 		axis_y = _("Prediction accuracy");
 	} else if (active == 2) {
-		stats_type = GPM_STATS_DISCHARGE_DATA_VALUE;
+		stats_type = GPM_STATS_DISCHARGE_TYPE;
 		/* TRANSLATORS: this is the X axis on the graph for the whole battery device */
 		axis_x = _("Cell charge");
 		/* TRANSLATORS: this is the Y axis on the graph */
 		axis_y = _("Correction factor");
 	} else if (active == 3) {
-		stats_type = GPM_STATS_DISCHARGE_ACCURACY_VALUE;
+		stats_type = GPM_STATS_DISCHARGE_ACCURACY_TYPE;
 		/* TRANSLATORS: this is the X axis on the graph for the whole battery device */
 		axis_x = _("Cell charge");
 		/* TRANSLATORS: this is the Y axis on the graph */
@@ -1061,7 +1094,7 @@ gpm_stats_type_combo_changed_cb (GtkWidget *widget, gpointer data)
 	gpm_stats_button_update_ui ();
 
 	/* save to gsettings */
-	g_settings_set_string (settings, GPM_SETTINGS_INFO_STATS_TYPE, stats_type);
+	g_settings_set_string (settings, GPM_SETTINGS_INFO_STATS_TYPE, stats_types[stats_type]);
 }
 
 /**
@@ -1333,41 +1366,72 @@ main (int argc, char *argv[])
 	gpm_stats_add_devices_columns (GTK_TREE_VIEW (widget));
 	gtk_tree_view_columns_autosize (GTK_TREE_VIEW (widget)); /* show */
 
-	history_type = g_settings_get_string (settings, GPM_SETTINGS_INFO_HISTORY_TYPE);
+	char *history_type_str = g_settings_get_string (settings, GPM_SETTINGS_INFO_HISTORY_TYPE);
+	if ((history_type_str == NULL) || (strcmp (history_type_str, GPM_HISTORY_CHARGE_VALUE) == 0)) {
+		history_type = GPM_HISTORY_CHARGE_TYPE;
+	} else if (strcmp (history_type_str, GPM_HISTORY_RATE_VALUE) == 0) {
+		history_type = GPM_HISTORY_RATE_TYPE;
+	} else if (strcmp (history_type_str, GPM_HISTORY_TIME_FULL_VALUE) == 0) {
+		history_type = GPM_HISTORY_TIME_FULL_TYPE;
+	} else if (strcmp (history_type_str, GPM_HISTORY_TIME_EMPTY_VALUE) == 0) {
+		history_type = GPM_HISTORY_TIME_EMPTY_TYPE;
+	} else if (strcmp (history_type_str, GPM_HISTORY_POWER_VALUE) == 0) {
+		history_type = GPM_HISTORY_POWER_TYPE;
+	} else {
+		history_type = GPM_HISTORY_CHARGE_TYPE;
+	}
+	g_free (history_type_str);
+
 	history_time = g_settings_get_int (settings, GPM_SETTINGS_INFO_HISTORY_TIME);
-	if (history_type == NULL)
-		history_type = GPM_HISTORY_CHARGE_VALUE;
 	if (history_time == 0)
 		history_time = GPM_HISTORY_HOUR_VALUE;
 
-	stats_type = g_settings_get_string (settings, GPM_SETTINGS_INFO_STATS_TYPE);
-	if (stats_type == NULL)
-		stats_type = GPM_STATS_CHARGE_DATA_VALUE;
+	char *stats_type_str = g_settings_get_string (settings, GPM_SETTINGS_INFO_STATS_TYPE);
+	if ((stats_type_str == NULL) || (strcmp (stats_type_str, GPM_STATS_CHARGE_DATA_VALUE) == 0)) {
+		stats_type = GPM_STATS_CHARGE_TYPE;
+	} else if (strcmp (stats_type_str, GPM_STATS_DISCHARGE_DATA_VALUE) == 0) {
+		stats_type = GPM_STATS_DISCHARGE_TYPE;
+	} else if (strcmp (stats_type_str, GPM_STATS_CHARGE_ACCURACY_VALUE) == 0) {
+		stats_type = GPM_STATS_CHARGE_ACCURACY_TYPE;
+	} else if (strcmp (stats_type_str, GPM_STATS_DISCHARGE_ACCURACY_VALUE) == 0) {
+		stats_type = GPM_STATS_DISCHARGE_ACCURACY_TYPE;
+	} else {
+		stats_type = GPM_STATS_CHARGE_TYPE;
+	}
+	g_free (stats_type_str);
 
+	const char *history_text [GPM_HISTORY_LAST_TYPE - 1] = {
+		[GPM_HISTORY_RATE_TYPE] = GPM_HISTORY_RATE_TEXT,
+		[GPM_HISTORY_CHARGE_TYPE] = GPM_HISTORY_CHARGE_TEXT,
+		[GPM_HISTORY_TIME_FULL_TYPE] = GPM_HISTORY_TIME_FULL_TEXT,
+		[GPM_HISTORY_TIME_EMPTY_TYPE] = GPM_HISTORY_TIME_EMPTY_TEXT
+	};
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "combobox_history_type"));
-	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_RATE_TEXT);
-	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_CHARGE_TEXT);
-	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_TIME_FULL_TEXT);
-	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_HISTORY_TIME_EMPTY_TEXT);
-	if (g_strcmp0 (history_type, GPM_HISTORY_RATE_VALUE) == 0)
+	for (i = 0; i < GPM_HISTORY_LAST_TYPE - 1; i++)
+		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), history_text[i]);
+	if (history_type == GPM_HISTORY_RATE_TYPE)
 		gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 0);
 	else
 		gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 1);
 	g_signal_connect (G_OBJECT (widget), "changed",
 			  G_CALLBACK (gpm_stats_history_type_combo_changed_cb), NULL);
 
+	const char *stats_text [GPM_STATS_LAST_TYPE] = {
+		[GPM_STATS_CHARGE_TYPE] = GPM_STATS_CHARGE_DATA_TEXT,
+		[GPM_STATS_DISCHARGE_TYPE] = GPM_STATS_DISCHARGE_DATA_TEXT,
+		[GPM_STATS_CHARGE_ACCURACY_TYPE] = GPM_STATS_CHARGE_ACCURACY_TEXT,
+		[GPM_STATS_DISCHARGE_ACCURACY_TYPE] = GPM_STATS_DISCHARGE_ACCURACY_TEXT
+	};
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "combobox_stats_type"));
-	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_STATS_CHARGE_DATA_TEXT);
-	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_STATS_CHARGE_ACCURACY_TEXT);
-	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_STATS_DISCHARGE_DATA_TEXT);
-	gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), GPM_STATS_DISCHARGE_ACCURACY_TEXT);
-	if (g_strcmp0 (stats_type, GPM_STATS_CHARGE_DATA_VALUE) == 0)
+	for (i = 0; i < GPM_STATS_LAST_TYPE; i++)
+		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), stats_text[i]);
+	if (stats_type == GPM_STATS_CHARGE_TYPE)
 		gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 0);
-	else if (g_strcmp0 (stats_type, GPM_STATS_CHARGE_DATA_VALUE) == 0)
+	else if (stats_type == GPM_STATS_CHARGE_TYPE)
 		gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 1);
-	else if (g_strcmp0 (stats_type, GPM_STATS_CHARGE_DATA_VALUE) == 0)
+	else if (stats_type == GPM_STATS_CHARGE_TYPE)
 		gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 2);
-	else if (g_strcmp0 (stats_type, GPM_STATS_CHARGE_DATA_VALUE) == 0)
+	else if (stats_type == GPM_STATS_CHARGE_TYPE)
 		gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 0);
 	else
 		gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 3);
