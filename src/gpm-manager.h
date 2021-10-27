@@ -58,7 +58,6 @@ typedef enum
 	GPM_MANAGER_ERROR_LAST
 } GpmManagerError;
 
-
 GQuark		 gpm_manager_error_quark		(void);
 GType		 gpm_manager_error_get_type		(void);
 GType		 gpm_manager_get_type		  	(void);

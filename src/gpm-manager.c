@@ -520,7 +520,6 @@ out:
 	return ret;
 }
 
-
 /**
  * gpm_manager_sleep_failure_response_cb:
  **/

@@ -129,7 +129,6 @@ gpm_discrete_to_percent (guint discrete, guint levels)
     return (guint) (((gfloat) discrete * (100.0f / (gfloat) (levels - factor))) + 0.5f);
 }
 
-
 /**
  * gpm_help_display:
  * @link_id: Subsection of mate-power-manager help section

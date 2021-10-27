@@ -41,7 +41,6 @@ struct GpmScreensaverPrivate
 	DBusGProxy		*proxy;
 };
 
-
 static gpointer gpm_screensaver_object = NULL;
 
 G_DEFINE_TYPE_WITH_PRIVATE (GpmScreensaver, gpm_screensaver, G_TYPE_OBJECT)

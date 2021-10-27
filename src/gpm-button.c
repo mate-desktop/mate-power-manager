@@ -303,7 +303,6 @@ gpm_button_is_lid_closed (GpmButton *button)
 	}
 }
 
-
 /**
  * gpm_button_reset_time:
  *

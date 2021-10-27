@@ -718,7 +718,6 @@ gpm_stats_update_info_data (UpDevice *device)
 		      "has-statistics", &has_statistics,
 		      NULL);
 
-
 	notebook = GTK_NOTEBOOK (gtk_builder_get_object (builder, "notebook1"));
 
 	/* show info page */
