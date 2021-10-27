@@ -244,11 +244,9 @@ gpm_applet_update_tooltip (GpmInhibitApplet *applet)
 static gboolean
 gpm_applet_click_cb (GpmInhibitApplet *applet, GdkEventButton *event)
 {
-	/* react only to left mouse button */
-	if (event->button != 1) {
-		return FALSE;
-	}
-	return gpm_applet_switch_cb (applet);
+	if (gdk_event_triggers_context_menu ((GdkEvent *) event))
+		return gpm_applet_switch_cb (applet);
+	return FALSE;
 }
 
 /**

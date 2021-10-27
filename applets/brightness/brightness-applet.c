@@ -691,11 +691,9 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
 gboolean
 gpm_applet_popup_click_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 {
-	/* react only to left mouse button */
-	if (event->button != 1) {
-		return FALSE;
-	}
-	return gpm_applet_popup_cb (applet);
+	if (gdk_event_triggers_context_menu ((GdkEvent *) event))
+		return gpm_applet_popup_cb (applet);
+	return FALSE;
 }
 
 /**
