@@ -236,19 +236,22 @@ AC_OUTPUT
 
 dnl ==========================================================================
 echo "
-                    MATE Power Manager $VERSION
-                  =============================
+Configure summary:
 
-        prefix:                    ${prefix}
-        datadir:                   ${datadir}
-        compiler:                  ${CC}
-        cflags:                    ${CFLAGS}
-        cwarnings:                 ${WARN_CFLAGS}
-        libsecret support:         ${with_libsecret}
-        gnome-keyring support:     ${with_keyring}
-        Building extra applets:    ${enable_applets}
-        Self test support:         ${have_tests}
-        dbus-1 services dir:       $DBUS_SERVICES_DIR
+    ${PACKAGE_STRING}
+    `echo $PACKAGE_STRING | sed "s/./=/g"`
+
+    prefix ......................: ${prefix}
+    datadir .....................: ${datadir}
+    compiler ....................: ${CC}
+    cflags ......................: ${CFLAGS}
+    cwarnings ...................: ${WARN_CFLAGS}
+
+    libsecret support ...........: ${with_libsecret}
+    gnome-keyring support .......: ${with_keyring}
+    Building extra applets ......: ${enable_applets}
+    Self test support ...........: ${have_tests}
+    dbus-1 services dir .........: $DBUS_SERVICES_DIR
 "
 if [[ "${prefix}" != "/usr" ]] ; then
 	echo '
