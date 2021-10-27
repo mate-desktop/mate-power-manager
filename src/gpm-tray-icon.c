@@ -447,7 +447,6 @@ gpm_tray_icon_popup_menu_cb (GtkStatusIcon *status_icon, guint button, guint32 t
 	gpm_tray_icon_popup_menu (icon, timestamp);
 }
 
-
 /**
  * gpm_tray_icon_activate_cb:
  * @button: Which buttons are pressed

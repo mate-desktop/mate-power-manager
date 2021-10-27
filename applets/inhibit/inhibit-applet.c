@@ -89,7 +89,6 @@ static void	gpm_applet_destroy_cb		(GtkWidget *widget);
 #define MATE_PANEL_APPLET_VERTICAL(p)					\
 	 (((p) == MATE_PANEL_APPLET_ORIENT_LEFT) || ((p) == MATE_PANEL_APPLET_ORIENT_RIGHT))
 
-
 /** cookie is returned as an unsigned integer */
 static gboolean
 gpm_applet_inhibit (GpmInhibitApplet *applet,
@@ -209,7 +208,6 @@ gpm_applet_size_allocate_cb (GtkWidget    *widget,
 	/* GtkImage already contains a check to do nothing if it's the same */
 	gtk_image_set_pixel_size (GTK_IMAGE(applet->image), size);
 }
-
 
 /**
  * gpm_applet_update_tooltip:
@@ -356,7 +354,6 @@ gpm_inhibit_applet_class_init (GpmInhibitAppletClass *class)
 {
 	/* nothing to do here */
 }
-
 
 /**
  * gpm_inhibit_applet_dbus_connect:

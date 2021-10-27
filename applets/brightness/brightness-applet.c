@@ -72,7 +72,6 @@ typedef struct{
 
 GType                gpm_brightness_applet_get_type  (void);
 
-
 #define	GPM_DBUS_SERVICE		"org.mate.PowerManager"
 #define	GPM_DBUS_PATH_BACKLIGHT		"/org/mate/PowerManager/Backlight"
 #define	GPM_DBUS_INTERFACE_BACKLIGHT	"org.mate.PowerManager.Backlight"

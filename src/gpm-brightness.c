@@ -773,7 +773,6 @@ out:
 	return ret;
 }
 
-
 /**
  * gpm_brightness_may_have_changed:
  **/
@@ -803,7 +802,6 @@ gpm_brightness_filter_xevents (GdkXEvent *xevent, GdkEvent *event, gpointer data
 	gpm_brightness_may_have_changed (brightness);
 	return GDK_FILTER_CONTINUE;
 }
-
 
 static void gpm_brightness_update_cache (GpmBrightness *brightness);
 
