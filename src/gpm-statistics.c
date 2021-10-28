@@ -1207,7 +1207,7 @@ main (int argc, char *argv[])
 		{ "device", '\0', 0, G_OPTION_ARG_STRING, &last_device,
 		  /* TRANSLATORS: show a device by default */
 		  N_("Select this device at startup"), NULL },
-		{ NULL}
+		{ NULL, 0, 0, G_OPTION_ARG_NONE, NULL, NULL, NULL }
 	};
 
 	setlocale (LC_ALL, "");

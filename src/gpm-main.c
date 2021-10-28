@@ -172,7 +172,7 @@ main (int argc, char *argv[])
 		  N_("Exit after a small delay (for debugging)"), NULL },
 		{ "immediate-exit", '\0', 0, G_OPTION_ARG_NONE, &immediate_exit,
 		  N_("Exit after the manager has loaded (for debugging)"), NULL },
-		{ NULL}
+		{ NULL, 0, 0, G_OPTION_ARG_NONE, NULL, NULL, NULL }
 	};
 
 	setlocale (LC_ALL, "");

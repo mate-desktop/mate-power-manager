@@ -171,7 +171,7 @@ main (gint argc, gchar *argv[])
 		{ "get-max-brightness", '\0', 0, G_OPTION_ARG_NONE, &get_max_brightness,
 		   /* command line argument */
 		  _("Get the number of brightness levels supported"), NULL },
-		{ NULL}
+		{ NULL, 0, 0, G_OPTION_ARG_NONE, NULL, NULL, NULL }
 	};
 
 	/* setup translations */
