@@ -71,7 +71,7 @@ main (int argc, char **argv)
 	gint status;
 
 	const GOptionEntry options[] = {
-		{ NULL}
+		{ NULL, 0, 0, G_OPTION_ARG_NONE, NULL, NULL, NULL }
 	};
 
 	context = g_option_context_new (N_("MATE Power Preferences"));
