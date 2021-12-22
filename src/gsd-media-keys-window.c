@@ -175,7 +175,7 @@ msd_media_keys_window_set_volume_muted (MsdMediaKeysWindow *window,
         g_return_if_fail (MSD_IS_MEDIA_KEYS_WINDOW (window));
 
         if (window->priv->volume_muted != muted) {
-                window->priv->volume_muted = muted;
+                window->priv->volume_muted = (muted != FALSE);
                 volume_muted_changed (window);
         }
 }
