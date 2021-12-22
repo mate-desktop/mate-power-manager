@@ -441,7 +441,7 @@ msd_osd_window_init (MsdOsdWindow *window)
 
         screen = gtk_widget_get_screen (GTK_WIDGET (window));
 
-        window->priv->is_composited = gdk_screen_is_composited (screen);
+        window->priv->is_composited = (gdk_screen_is_composited (screen) != FALSE);
         window->priv->scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
 
         if (window->priv->is_composited) {
