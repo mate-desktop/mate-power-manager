@@ -354,6 +354,7 @@ gpm_tray_icon_create_menu (GpmTrayIcon *icon)
 	dev_cnt += gpm_tray_icon_add_device (icon, menu, array, UP_DEVICE_KIND_MEDIA_PLAYER);
 	dev_cnt += gpm_tray_icon_add_device (icon, menu, array, UP_DEVICE_KIND_TABLET);
 	dev_cnt += gpm_tray_icon_add_device (icon, menu, array, UP_DEVICE_KIND_COMPUTER);
+	dev_cnt += gpm_tray_icon_add_device (icon, menu, array, UP_DEVICE_KIND_GAMING_INPUT);
 	g_ptr_array_unref (array);
 
 	/* skip for things like live-cd's and GDM */

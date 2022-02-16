@@ -162,6 +162,9 @@ gpm_upower_get_device_icon (UpDevice *device)
 			index_str = gpm_upower_get_device_icon_index (device);
 			filename = g_strdup_printf ("gpm-%s-%s", prefix, index_str);
 		}
+	} else if (kind == UP_DEVICE_KIND_GAMING_INPUT) {
+		index_str = gpm_upower_get_device_icon_index (device);
+		filename = g_strdup_printf ("gpm-%s-%s", prefix, index_str);
 	}
 
 	/* nothing matched */
@@ -525,6 +528,10 @@ gpm_device_kind_to_localised_string (UpDeviceKind kind, guint number)
 	case UP_DEVICE_KIND_COMPUTER:
 		/* TRANSLATORS: tablet device */
 		text = ngettext ("Computer", "Computers", number);
+		break;
+	case UP_DEVICE_KIND_GAMING_INPUT:
+		/* TRANSLATORS: wireless gamepad, joystick etc */
+		text = ngettext ("Gaming input", "Gaming inputs", number);
 		break;
 	default:
 		g_warning ("enum unrecognised: %i", kind);
