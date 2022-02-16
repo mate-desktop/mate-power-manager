@@ -269,6 +269,9 @@ gpm_tray_icon_add_device (GpmTrayIcon *icon, GtkMenu *menu, const GPtrArray *arr
 		if ((vendor != NULL && strlen(vendor) != 0) && (model != NULL && strlen(model) != 0)) {
 			label = g_strdup_printf ("%s %s (%.1f%%)", vendor, model, percentage);
 		}
+		else if((vendor == NULL || strlen(vendor) == 0) && (model != NULL && strlen(model) != 0)) {
+			label = g_strdup_printf ("%s (%.1f%%)", model, percentage);
+		}
 		else {
 			label = g_strdup_printf ("%s (%.1f%%)", gpm_device_kind_to_localised_string (kind, 1), percentage);
 		}

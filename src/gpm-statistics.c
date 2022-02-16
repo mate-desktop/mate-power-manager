@@ -920,6 +920,9 @@ gpm_stats_add_device (UpDevice *device, GPtrArray *devices)
 	if ((vendor != NULL && strlen(vendor) != 0) && (model != NULL && strlen(model) != 0)) {
 		label = g_strdup_printf ("%s %s", vendor, model);
 	}
+	else if((vendor == NULL || strlen(vendor) == 0) && (model != NULL && strlen(model) != 0)) {
+		label = g_strdup_printf ("%s", model);
+	}
 	else {
 		label = g_strdup_printf ("%s", gpm_device_kind_to_localised_string (kind, 1));
 	}
