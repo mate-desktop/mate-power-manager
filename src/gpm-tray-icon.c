@@ -92,6 +92,7 @@ gpm_tray_icon_set_tooltip (GpmTrayIcon *icon, const gchar *tooltip)
 	g_return_val_if_fail (tooltip != NULL, FALSE);
 
 	gtk_status_icon_set_tooltip_text (icon->priv->status_icon, tooltip);
+gtk_status_icon_set_title (icon->priv->status_icon, tooltip);
 
 	return TRUE;
 }
