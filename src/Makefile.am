@@ -16,6 +16,7 @@ AM_CPPFLAGS =						\
 	$(CAIRO_CFLAGS)					\
 	$(LIBSECRET_CFLAGS)				\
 	$(KEYRING_CFLAGS)				\
+	$(UDEV_CFLAGS)					\
 	$(X11_CFLAGS)					\
 	$(LIBNOTIFY_CFLAGS)				\
 	$(CANBERRA_CFLAGS)				\
@@ -84,6 +85,7 @@ mate_power_backlight_helper_SOURCES =			\
 mate_power_backlight_helper_LDADD =			\
 	libgpmshared.a					\
 	$(GLIB_LIBS)					\
+	$(UDEV_LIBS)					\
 	-lm
 
 mate_power_backlight_helper_CFLAGS =			\
@@ -109,6 +111,7 @@ mate_power_statistics_SOURCES =				\
 mate_power_statistics_LDADD =				\
 	libgpmshared.a					\
 	$(GLIB_LIBS)					\
+	$(UDEV_LIBS)					\
 	$(X11_LIBS)					\
 	$(UPOWER_LIBS)					\
 	$(CAIRO_LIBS)					\
@@ -136,6 +139,7 @@ mate_power_preferences_SOURCES =			\
 mate_power_preferences_LDADD =				\
 	libgpmshared.a					\
 	$(GLIB_LIBS)					\
+	$(UDEV_LIBS)					\
 	$(X11_LIBS)					\
 	$(CAIRO_LIBS)					\
 	$(DBUS_LIBS)					\
@@ -200,6 +204,7 @@ mate_power_manager_LDADD =				\
 	$(CAIRO_LIBS)					\
 	$(LIBSECRET_LIBS)					\
 	$(KEYRING_LIBS)					\
+	$(UDEV_LIBS)					\
 	$(DBUS_LIBS)					\
 	$(X11_LIBS)					\
 	$(CANBERRA_LIBS)				\

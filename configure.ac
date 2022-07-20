@@ -80,6 +80,7 @@ XRANDR_REQUIRED=1.3.0
 XPROTO_REQUIRED=7.0.15
 CANBERRA_REQUIRED=0.10
 UPOWER_REQUIRED=0.99.8
+LIBGUDEV_REQUIRED=234
 
 dnl ---------------------------------------------------------------------------
 dnl - Check library dependencies
@@ -173,6 +174,23 @@ if test "$with_libsecret" = "yes" -a "$with_keyring" = "yes"; then
 fi
 
 dnl ---------------------------------------------------------------------------
+dnl - Build udev support
+dnl ---------------------------------------------------------------------------
+AC_ARG_WITH(udev,
+        [AS_HELP_STRING([--with-udev],
+                        [Directly query devices for enhanced hardware support])],
+        [],
+        [with_udev=no])
+
+AM_CONDITIONAL([WITH_UDEV],[test "$with_udev" = "yes"])
+
+if test "$with_udev" = "yes"; then
+        PKG_CHECK_MODULES(UDEV, gudev-1.0 >= $LIBGUDEV_REQUIRED)
+        AC_DEFINE([WITH_UDEV],[1],[Define if UDEV support is enabled])
+fi
+
+
+dnl ---------------------------------------------------------------------------
 dnl - Build applets
 dnl ---------------------------------------------------------------------------
 AC_ARG_ENABLE(applets,
@@ -249,6 +267,7 @@ Configure summary:
 
     libsecret support ...........: ${with_libsecret}
     gnome-keyring support .......: ${with_keyring}
+    udev support ................: ${with_udev}
     Building extra applets ......: ${enable_applets}
     Self test support ...........: ${have_tests}
     dbus-1 services dir .........: $DBUS_SERVICES_DIR

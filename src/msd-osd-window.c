@@ -375,10 +375,24 @@ msd_osd_window_constructor (GType                  type,
         return object;
 }
 
+/**
+ * msd_osd_window_finalize:
+ * @object: The OSD window instance
+ **/
+static void
+msd_osd_window_finalize (GObject *object)
+{
+        MsdOsdWindow *window = MSD_OSD_WINDOW (object);
+        remove_hide_timeout (window);
+        G_OBJECT_CLASS (msd_osd_window_parent_class)->finalize (object);
+}
+
 static void
 msd_osd_window_class_init (MsdOsdWindowClass *klass)
 {
         GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
+        gobject_class->finalize = msd_osd_window_finalize;
+
         GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
 
         gobject_class->constructor = msd_osd_window_constructor;
