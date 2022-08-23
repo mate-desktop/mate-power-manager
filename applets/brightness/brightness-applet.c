@@ -906,7 +906,7 @@ brightness_changed_cb (DBusGProxy          *proxy,
 /**
  * gpm_brightness_applet_dbus_connect:
  **/
-gboolean
+static gboolean
 gpm_brightness_applet_dbus_connect (GpmBrightnessApplet *applet)
 {
 	GError *error = NULL;
@@ -950,7 +950,7 @@ gpm_brightness_applet_dbus_connect (GpmBrightnessApplet *applet)
 /**
  * gpm_brightness_applet_dbus_disconnect:
  **/
-gboolean
+static gboolean
 gpm_brightness_applet_dbus_disconnect (GpmBrightnessApplet *applet)
 {
 	if (applet->proxy != NULL) {
@@ -978,7 +978,7 @@ gpm_brightness_applet_name_appeared_cb (GDBusConnection *connection,
 /**
  * gpm_brightness_applet_name_vanished_cb:
  **/
-void
+static void
 gpm_brightness_applet_name_vanished_cb (GDBusConnection *connection,
 					 const gchar *name,
 					 GpmBrightnessApplet *applet)

@@ -358,7 +358,7 @@ gpm_inhibit_applet_class_init (GpmInhibitAppletClass *class)
 /**
  * gpm_inhibit_applet_dbus_connect:
  **/
-gboolean
+static gboolean
 gpm_inhibit_applet_dbus_connect (GpmInhibitApplet *applet)
 {
 	GError *error = NULL;
@@ -395,7 +395,7 @@ gpm_inhibit_applet_dbus_connect (GpmInhibitApplet *applet)
 /**
  * gpm_inhibit_applet_dbus_disconnect:
  **/
-gboolean
+static gboolean
 gpm_inhibit_applet_dbus_disconnect (GpmInhibitApplet *applet)
 {
 	if (applet->proxy != NULL) {
@@ -425,7 +425,7 @@ gpm_inhibit_applet_name_appeared_cb (GDBusConnection *connection,
 /**
  * gpm_inhibit_applet_name_vanished_cb:
  **/
-void
+static void
 gpm_inhibit_applet_name_vanished_cb (GDBusConnection *connection,
 				     const gchar *name,
 				     GpmInhibitApplet *applet)
