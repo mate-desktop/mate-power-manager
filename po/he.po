@@ -13,9 +13,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-power-manager 1.25.0\n"
+"Project-Id-Version: mate-power-manager 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
-"POT-Creation-Date: 2021-06-22 17:30+0200\n"
+"POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
 "Last-Translator: shy tzedaka <shaytzedaka123@gmail.com>, 2020\n"
 "Language-Team: Hebrew (https://www.transifex.com/mate/teams/13566/he/)\n"
@@ -25,30 +25,30 @@ msgstr ""
 "Language: he\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
 
-#: applets/brightness/brightness-applet.c:109
+#: applets/brightness/brightness-applet.c:108
 msgid "Power Manager Brightness Applet"
 msgstr "יישומון לניהול בהירות והספק חשמלי"
 
-#: applets/brightness/brightness-applet.c:110
+#: applets/brightness/brightness-applet.c:109
 msgid "Adjusts laptop panel brightness."
 msgstr "מכוונן את בהירות צג המחשב הנייד."
 
-#: applets/brightness/brightness-applet.c:371
-#: applets/inhibit/inhibit-applet.c:225
+#: applets/brightness/brightness-applet.c:370
+#: applets/inhibit/inhibit-applet.c:223
 msgid "Cannot connect to mate-power-manager"
 msgstr "לא ניתן להתחבר אל mate-power-manager"
 
-#: applets/brightness/brightness-applet.c:373
+#: applets/brightness/brightness-applet.c:372
 msgid "Cannot get laptop panel brightness"
 msgstr "לא ניתן לקבל את ערך בהירות צג המחשב הנייד"
 
-#: applets/brightness/brightness-applet.c:375
+#: applets/brightness/brightness-applet.c:374
 #, c-format
 msgid "LCD brightness : %d%%"
 msgstr "בהירות מסך ה־LCD:‏ %d%%"
 
-#: applets/brightness/brightness-applet.c:818
-#: applets/inhibit/inhibit-applet.c:287
+#: applets/brightness/brightness-applet.c:817
+#: applets/inhibit/inhibit-applet.c:285
 msgid ""
 "Power Manager is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -56,8 +56,8 @@ msgid ""
 "any later version."
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:823
-#: applets/inhibit/inhibit-applet.c:292
+#: applets/brightness/brightness-applet.c:822
+#: applets/inhibit/inhibit-applet.c:290
 msgid ""
 "Power Manager is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -65,36 +65,36 @@ msgid ""
 "more details."
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:828
-#: applets/inhibit/inhibit-applet.c:297
+#: applets/brightness/brightness-applet.c:827
+#: applets/inhibit/inhibit-applet.c:295
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:841
+#: applets/brightness/brightness-applet.c:840
 msgid "About Power Manager Brightness Applet"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:843
+#: applets/brightness/brightness-applet.c:842
 msgid ""
 "Copyright © 2006 Benjamin Canou\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:850
-#: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:212
+#: applets/brightness/brightness-applet.c:849
+#: applets/inhibit/inhibit-applet.c:317 src/gpm-tray-icon.c:212
 msgid "translator-credits"
 msgstr "Yaron Shahrabani <sh.yaron@gmail.com>"
 
-#: applets/brightness/brightness-applet.c:1081
-#: applets/inhibit/inhibit-applet.c:503
+#: applets/brightness/brightness-applet.c:1080
+#: applets/inhibit/inhibit-applet.c:500
 msgid "_About"
 msgstr "על _אודות"
 
-#: applets/brightness/brightness-applet.c:1084
-#: applets/inhibit/inhibit-applet.c:506 data/gpm-prefs.ui:41
+#: applets/brightness/brightness-applet.c:1083
+#: applets/inhibit/inhibit-applet.c:503 data/gpm-prefs.ui:41
 msgid "_Help"
 msgstr "ע_זרה"
 
@@ -114,23 +114,23 @@ msgstr "יישומון ניהול מניעת חיסכון בחשמל"
 msgid "Allows user to inhibit automatic power saving."
 msgstr "מאפשר למשתמש למנוע חיסכון אוטומטי בחשמל."
 
-#: applets/inhibit/inhibit-applet.c:228
+#: applets/inhibit/inhibit-applet.c:226
 msgid "Automatic sleep inhibited"
 msgstr "מצב שינה אוטומטי נמנע"
 
-#: applets/inhibit/inhibit-applet.c:230
+#: applets/inhibit/inhibit-applet.c:228
 msgid "Automatic sleep enabled"
 msgstr "שינה אוטומטית מופעלת"
 
-#: applets/inhibit/inhibit-applet.c:258
+#: applets/inhibit/inhibit-applet.c:256
 msgid "Manual inhibit"
 msgstr "מניעה ידנית"
 
-#: applets/inhibit/inhibit-applet.c:310
+#: applets/inhibit/inhibit-applet.c:308
 msgid "About Power Manager Inhibit Applet"
 msgstr ""
 
-#: applets/inhibit/inhibit-applet.c:312
+#: applets/inhibit/inhibit-applet.c:310
 msgid ""
 "Copyright © 2006-2007 Richard Hughes\n"
 "Copyright © 2011-2021 MATE developers"
@@ -840,7 +840,7 @@ msgid "MATE;power;management;preferences;settings;"
 msgstr ""
 
 #: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
-#: src/gpm-statistics.c:762 src/gpm-statistics.c:1224
+#: src/gpm-statistics.c:787 src/gpm-statistics.c:1259
 msgid "Power Statistics"
 msgstr "סטטיסטיקת חשמל"
 
@@ -937,7 +937,7 @@ msgstr "_הנמך את בהירות האור האחורי"
 msgid "_Reduce keyboard backlight"
 msgstr ""
 
-#: data/gpm-prefs.ui:685 src/gpm-upower.c:507
+#: data/gpm-prefs.ui:685 src/gpm-upower.c:510
 msgid "Keyboard"
 msgid_plural "Keyboards"
 msgstr[0] ""
@@ -1200,51 +1200,51 @@ msgstr "הומשך"
 msgid "Suspend failed"
 msgstr "ההשהייה נכשלה"
 
-#: src/gpm-manager.c:578
+#: src/gpm-manager.c:577
 msgid "Computer failed to suspend."
 msgstr "המחשב נכשל במעבר למצב השהייה."
 
-#: src/gpm-manager.c:580
+#: src/gpm-manager.c:579
 msgid "Failed to suspend"
 msgstr "כשל בהשהיה"
 
-#: src/gpm-manager.c:584
+#: src/gpm-manager.c:583
 msgid "Computer failed to hibernate."
 msgstr "המחשב כשל במהלך המעבר למצב שינה."
 
-#: src/gpm-manager.c:586
+#: src/gpm-manager.c:585
 msgid "Failed to hibernate"
 msgstr "כשל בכניסה למצב שינה"
 
-#: src/gpm-manager.c:591
+#: src/gpm-manager.c:590
 msgid "Failure was reported as:"
 msgstr "הכשל דווח בתור:"
 
-#: src/gpm-manager.c:604
+#: src/gpm-manager.c:603
 msgid "Visit help page"
 msgstr "בקר בעמוד העזרה"
 
-#: src/gpm-manager.c:850
+#: src/gpm-manager.c:849
 msgid "Display DPMS activated"
 msgstr "תצוגת DPMS הופעלה"
 
-#: src/gpm-manager.c:869
+#: src/gpm-manager.c:868
 msgid "On battery power"
 msgstr "פועל על סוללה"
 
-#: src/gpm-manager.c:887
+#: src/gpm-manager.c:886
 msgid "Laptop lid is closed"
 msgstr "מכסה המחשב הנייד סגור"
 
-#: src/gpm-manager.c:925
+#: src/gpm-manager.c:924
 msgid "Power Information"
 msgstr "מידע צריכת החשמל"
 
-#: src/gpm-manager.c:1106
+#: src/gpm-manager.c:1105
 msgid "Battery may be broken"
 msgstr "ייתכן והסוללה פגומה"
 
-#: src/gpm-manager.c:1109
+#: src/gpm-manager.c:1108
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
@@ -1253,7 +1253,7 @@ msgstr ""
 "הסוללה שלך בעלת קיבולת קטנה ביותר (%1.1f%%), מה שמעיד על כך שהיא עלולה להיות"
 " ישנה או פגומה."
 
-#: src/gpm-manager.c:1158
+#: src/gpm-manager.c:1157
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] ""
@@ -1261,143 +1261,143 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/gpm-manager.c:1204
+#: src/gpm-manager.c:1203
 msgid "Battery Discharging"
 msgstr "סוללה מתרוקנת"
 
-#: src/gpm-manager.c:1208
+#: src/gpm-manager.c:1207
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr "‏%s נותר מאנרגיית הסוללה (%.0f%%)"
 
-#: src/gpm-manager.c:1211 src/gpm-manager.c:1223
+#: src/gpm-manager.c:1210 src/gpm-manager.c:1222
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr "‏%s נפרקת (%.0f%%)"
 
-#: src/gpm-manager.c:1216
+#: src/gpm-manager.c:1215
 msgid "UPS Discharging"
 msgstr "האל־פסק מתרוקן"
 
-#: src/gpm-manager.c:1220
+#: src/gpm-manager.c:1219
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr "‏%s נותר מאנרגיית הגיבוי של האל פסק (%.0f%%)"
 
-#: src/gpm-manager.c:1304
+#: src/gpm-manager.c:1303
 msgid "Battery low"
 msgstr "סוללה חלשה"
 
-#: src/gpm-manager.c:1307
+#: src/gpm-manager.c:1306
 msgid "Laptop battery low"
 msgstr "סוללת המחשב הנייד חלשה"
 
-#: src/gpm-manager.c:1313
+#: src/gpm-manager.c:1312
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "חיי הסוללה הנותרים המשוערים הם <b>%s</b> ‏(%.0f%%)"
 
-#: src/gpm-manager.c:1317
+#: src/gpm-manager.c:1316
 msgid "UPS low"
 msgstr "סוללת האל־פסק חלשה"
 
-#: src/gpm-manager.c:1321
+#: src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr "נותרו לך בערך <b>%s</b> מהאנרגיה באל פסק (%.0f%%)"
 
-#: src/gpm-manager.c:1330 src/gpm-manager.c:1469
+#: src/gpm-manager.c:1329 src/gpm-manager.c:1468
 msgid "Mouse battery low"
 msgstr "סוללת העכבר חלשה"
 
-#: src/gpm-manager.c:1333
+#: src/gpm-manager.c:1332
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr "העכבר האלחוטי המחובר למחשב זה בעל סוללה חלשה (%.0f%%)"
 
-#: src/gpm-manager.c:1337 src/gpm-manager.c:1477
+#: src/gpm-manager.c:1336 src/gpm-manager.c:1476
 msgid "Keyboard battery low"
 msgstr "סוללת המקלדת חלשה"
 
-#: src/gpm-manager.c:1340
+#: src/gpm-manager.c:1339
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr "המקלדת האלחוטית המחוברת למחשב זה בעלת עצמת סוללה נמוכה (%.0f%%)"
 
-#: src/gpm-manager.c:1344 src/gpm-manager.c:1486
+#: src/gpm-manager.c:1343 src/gpm-manager.c:1485
 msgid "PDA battery low"
 msgstr "סוללת מחשב כף היד חלשה"
 
-#: src/gpm-manager.c:1347
+#: src/gpm-manager.c:1346
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr "מחשב כף היד המחובר למחשב זה בעל סוללה חלשה (%.0f%%)"
 
-#: src/gpm-manager.c:1351 src/gpm-manager.c:1496 src/gpm-manager.c:1506
+#: src/gpm-manager.c:1350 src/gpm-manager.c:1495 src/gpm-manager.c:1505
 msgid "Cell phone battery low"
 msgstr "סוללת הטלפון הסלולרי חלשה"
 
-#: src/gpm-manager.c:1354
+#: src/gpm-manager.c:1353
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "הטלפון הסלולרי המחובר למחשב זה בעל סוללה חלשה (%.0f%%)"
 
-#: src/gpm-manager.c:1358
+#: src/gpm-manager.c:1357
 msgid "Media player battery low"
 msgstr "סוללת נגן המדיה חלשה"
 
-#: src/gpm-manager.c:1361
+#: src/gpm-manager.c:1360
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr "נגן המדיה המחובר למחשב זה בעל סוללה חלשה (%.0f%%)"
 
-#: src/gpm-manager.c:1365 src/gpm-manager.c:1515
+#: src/gpm-manager.c:1364 src/gpm-manager.c:1514
 msgid "Tablet battery low"
 msgstr "סוללת מחשב הלוח חלשה"
 
-#: src/gpm-manager.c:1368
+#: src/gpm-manager.c:1367
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "מחשב הלוח המחובר למחשב זה בעל סוללה חלשה (%.1f%%)"
 
-#: src/gpm-manager.c:1372 src/gpm-manager.c:1524
+#: src/gpm-manager.c:1371 src/gpm-manager.c:1523
 msgid "Attached computer battery low"
 msgstr "הסוללה המחוברת למחשב חלשה"
 
-#: src/gpm-manager.c:1375
+#: src/gpm-manager.c:1374
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "המחשב המחובר הוא בעל סוללה חלשה (%.0f%%)"
 
-#: src/gpm-manager.c:1423
+#: src/gpm-manager.c:1422
 msgid "Battery critically low"
 msgstr "הסוללה כמעט ריקה"
 
-#: src/gpm-manager.c:1426 src/gpm-manager.c:1584
+#: src/gpm-manager.c:1425 src/gpm-manager.c:1583
 msgid "Laptop battery critically low"
 msgstr "סוללת המחשב הנייד כמעט ריקה"
 
-#: src/gpm-manager.c:1435
+#: src/gpm-manager.c:1434
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr "חבר את מתאם החשמל כדי למנוע איבוד נתונים."
 
-#: src/gpm-manager.c:1439
+#: src/gpm-manager.c:1438
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr "המחשב יושהה בקרוב אלא אם כן יחובר למקור חשמל."
 
-#: src/gpm-manager.c:1443
+#: src/gpm-manager.c:1442
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr "המחשב יעבור למצב שינה בקרוב אלא אם כן יחובר למקור חשמל."
 
-#: src/gpm-manager.c:1447
+#: src/gpm-manager.c:1446
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr "המחשב יכובה בקרוב אלא אם כן יחובר למקור חשמל."
 
-#: src/gpm-manager.c:1454 src/gpm-manager.c:1620
+#: src/gpm-manager.c:1453 src/gpm-manager.c:1619
 msgid "UPS critically low"
 msgstr "האל־פסק כמעט מרוקן"
 
-#: src/gpm-manager.c:1458
+#: src/gpm-manager.c:1457
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
@@ -1406,7 +1406,7 @@ msgstr ""
 "יש לך בערך <b>%s</b> מהאנרגיה באל פסק (%.0f%%). יש לשחזר את המתח החלופי "
 "למחשב שלך כדי למנוע איבוד נתונים."
 
-#: src/gpm-manager.c:1472
+#: src/gpm-manager.c:1471
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
@@ -1415,7 +1415,7 @@ msgstr ""
 "סוללת העכבר האלחוטי המחובר למחשב זה חלשה (%.0f%%). התקן זה יפסיק לפעול אם לא"
 " יוטען."
 
-#: src/gpm-manager.c:1480
+#: src/gpm-manager.c:1479
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
@@ -1424,7 +1424,7 @@ msgstr ""
 "סוללת המקלדת האלחוטית המחוברת למחשב זה חלשה (%.0f%%). התקן זה יפסיק לפעול אם"
 " לא יוטען."
 
-#: src/gpm-manager.c:1489
+#: src/gpm-manager.c:1488
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
@@ -1433,7 +1433,7 @@ msgstr ""
 "סוללת מחשב כף היד המחובר למחשב זה חלשה (%.1f%%). התקן זה יפסיק לפעול אם לא "
 "יוטען."
 
-#: src/gpm-manager.c:1499
+#: src/gpm-manager.c:1498
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
@@ -1442,7 +1442,7 @@ msgstr ""
 "סוללת הטלפון הסלולרי המחובר למחשב זה חלשה (%.0f%%). התקן זה יפסיק לפעול אם "
 "לא יוטען."
 
-#: src/gpm-manager.c:1509
+#: src/gpm-manager.c:1508
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
@@ -1451,14 +1451,14 @@ msgstr ""
 "סוללת נגן המדיה המחובר למחשב זה חלשה (%.0f%%). התקן זה יפסיק לפעול אם לא "
 "יוטען."
 
-#: src/gpm-manager.c:1518
+#: src/gpm-manager.c:1517
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
 msgstr "סוללת מחשב הלוח חלשה (%.0f%%). התקן זה יפסיק לפעול אם לא יוטען."
 
-#: src/gpm-manager.c:1527
+#: src/gpm-manager.c:1526
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
@@ -1466,13 +1466,13 @@ msgid ""
 msgstr ""
 "סוללת המחשב המחובר למחשב זה חלשה (%.0f%%). התקן זה יפסיק לפעול אם לא יוטען."
 
-#: src/gpm-manager.c:1592
+#: src/gpm-manager.c:1591
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
 msgstr "הסוללה כמעט מרוקנת והמחשב <b>יכובה</b> כשהיא תתרוקן לחלוטין."
 
-#: src/gpm-manager.c:1598
+#: src/gpm-manager.c:1597
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
@@ -1481,30 +1481,30 @@ msgstr ""
 "הסוללה כמעט מרוקנת, לכן המחשב עומד להכנס להשהייה. <br><b>שימו לב:</b> יש "
 "צורך בכמות קטנה של חשמל כדי להחזיק את המחשב בהשהייה."
 
-#: src/gpm-manager.c:1605
+#: src/gpm-manager.c:1604
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr "הסוללה כמעט מרוקנת, לכן המחשב עומד להכנס למצב שינה."
 
-#: src/gpm-manager.c:1610
+#: src/gpm-manager.c:1609
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr "הסוללה כמעט מרוקנת והמחשב עומד להכבות."
 
-#: src/gpm-manager.c:1628
+#: src/gpm-manager.c:1627
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
 msgstr "האל־פסק כמעט ריק, המחשב <b>יכבה</b> כאשר האל־פסק יתרוקן לחלוטין."
 
-#: src/gpm-manager.c:1634
+#: src/gpm-manager.c:1633
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr "האל־פסק כמעט ריק ולכן המחשב עומד להיכנס למצב שינה."
 
-#: src/gpm-manager.c:1639
+#: src/gpm-manager.c:1638
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr "האל־פסק כמעט ריק ולכן המחשב עומד לכבות."
@@ -1541,79 +1541,79 @@ msgstr "אל תעשה כלום"
 msgid "Never"
 msgstr "לעולם לא"
 
-#: src/gpm-statistics.c:67 src/gpm-statistics.c:410
-msgid "Rate"
-msgstr "דירוג"
-
-#: src/gpm-statistics.c:68
-msgid "Charge"
-msgstr "טעינה"
-
-#: src/gpm-statistics.c:69 src/gpm-statistics.c:424
-msgid "Time to full"
-msgstr "זמן למילוי"
-
-#: src/gpm-statistics.c:70 src/gpm-statistics.c:429
-msgid "Time to empty"
-msgstr "זמן לריקון"
-
-#: src/gpm-statistics.c:77
-msgid "10 minutes"
-msgstr "10 דקות"
-
-#: src/gpm-statistics.c:78
-msgid "2 hours"
-msgstr "שעתיים"
-
-#: src/gpm-statistics.c:79
-msgid "6 hours"
-msgstr "6 שעות"
-
-#: src/gpm-statistics.c:80
-msgid "1 day"
-msgstr "יום אחד"
-
-#: src/gpm-statistics.c:81
-msgid "1 week"
-msgstr "שבוע אחד"
-
-#: src/gpm-statistics.c:90
+#: src/gpm-statistics.c:71
 msgid "Charge profile"
 msgstr "פרופיל טעינה"
 
-#: src/gpm-statistics.c:91
+#: src/gpm-statistics.c:72
 msgid "Discharge profile"
 msgstr "פרופיל התרוקנות"
 
-#: src/gpm-statistics.c:93
+#: src/gpm-statistics.c:74
 msgid "Charge accuracy"
 msgstr "דיוק טעינה"
 
-#: src/gpm-statistics.c:94
+#: src/gpm-statistics.c:75
 msgid "Discharge accuracy"
 msgstr "דיוק התרוקנות"
 
-#: src/gpm-statistics.c:121
+#: src/gpm-statistics.c:77 src/gpm-statistics.c:435
+msgid "Rate"
+msgstr "דירוג"
+
+#: src/gpm-statistics.c:78
+msgid "Charge"
+msgstr "טעינה"
+
+#: src/gpm-statistics.c:79 src/gpm-statistics.c:449
+msgid "Time to full"
+msgstr "זמן למילוי"
+
+#: src/gpm-statistics.c:80 src/gpm-statistics.c:454
+msgid "Time to empty"
+msgstr "זמן לריקון"
+
+#: src/gpm-statistics.c:88
+msgid "10 minutes"
+msgstr "10 דקות"
+
+#: src/gpm-statistics.c:89
+msgid "2 hours"
+msgstr "שעתיים"
+
+#: src/gpm-statistics.c:90
+msgid "6 hours"
+msgstr "6 שעות"
+
+#: src/gpm-statistics.c:91
+msgid "1 day"
+msgstr "יום אחד"
+
+#: src/gpm-statistics.c:92
+msgid "1 week"
+msgstr "שבוע אחד"
+
+#: src/gpm-statistics.c:146
 msgid "Attribute"
 msgstr "תכונה"
 
-#: src/gpm-statistics.c:128
+#: src/gpm-statistics.c:153
 msgid "Value"
 msgstr "ערך"
 
-#: src/gpm-statistics.c:145
+#: src/gpm-statistics.c:170
 msgid "Image"
 msgstr "תמונה"
 
-#: src/gpm-statistics.c:151
+#: src/gpm-statistics.c:176
 msgid "Description"
 msgstr "תיאור"
 
-#: src/gpm-statistics.c:230
+#: src/gpm-statistics.c:255
 msgid "Unknown"
 msgstr "לא ידוע"
 
-#: src/gpm-statistics.c:234
+#: src/gpm-statistics.c:259
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
@@ -1622,7 +1622,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/gpm-statistics.c:239
+#: src/gpm-statistics.c:264
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
@@ -1631,7 +1631,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/gpm-statistics.c:244
+#: src/gpm-statistics.c:269
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
@@ -1640,7 +1640,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/gpm-statistics.c:248
+#: src/gpm-statistics.c:273
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
@@ -1649,39 +1649,39 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/gpm-statistics.c:257
+#: src/gpm-statistics.c:282
 msgid "Yes"
 msgstr "כן"
 
-#: src/gpm-statistics.c:257
+#: src/gpm-statistics.c:282
 msgid "No"
 msgstr "לא"
 
-#: src/gpm-statistics.c:346
+#: src/gpm-statistics.c:371
 msgid "Device"
 msgstr "התקן"
 
-#: src/gpm-statistics.c:349
+#: src/gpm-statistics.c:374
 msgid "Type"
 msgstr "סוג"
 
-#: src/gpm-statistics.c:351
+#: src/gpm-statistics.c:376
 msgid "Vendor"
 msgstr "יצרן"
 
-#: src/gpm-statistics.c:353
+#: src/gpm-statistics.c:378
 msgid "Model"
 msgstr "דגם"
 
-#: src/gpm-statistics.c:355
+#: src/gpm-statistics.c:380
 msgid "Serial number"
 msgstr "מספר סידורי"
 
-#: src/gpm-statistics.c:360
+#: src/gpm-statistics.c:385
 msgid "Supply"
 msgstr "ספק"
 
-#: src/gpm-statistics.c:363
+#: src/gpm-statistics.c:388
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -1690,98 +1690,98 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/gpm-statistics.c:367
+#: src/gpm-statistics.c:392
 msgid "Refreshed"
 msgstr "רוענן"
 
-#: src/gpm-statistics.c:377
+#: src/gpm-statistics.c:402
 msgid "Present"
 msgstr "נוכח"
 
-#: src/gpm-statistics.c:384
+#: src/gpm-statistics.c:409
 msgid "Rechargeable"
 msgstr "ניתן לטעינה מחדש "
 
-#: src/gpm-statistics.c:390
+#: src/gpm-statistics.c:415
 msgid "State"
 msgstr "מדינה"
 
-#: src/gpm-statistics.c:394
+#: src/gpm-statistics.c:419
 msgid "Energy"
 msgstr "אנרגיה"
 
-#: src/gpm-statistics.c:397
+#: src/gpm-statistics.c:422
 msgid "Energy when empty"
 msgstr "אנרגיה בעת התרוקנות"
 
-#: src/gpm-statistics.c:400
+#: src/gpm-statistics.c:425
 msgid "Energy when full"
 msgstr "אנרגיה כשמלא"
 
-#: src/gpm-statistics.c:403
+#: src/gpm-statistics.c:428
 msgid "Energy (design)"
 msgstr "אנרגיה (תכנון)"
 
-#: src/gpm-statistics.c:417
+#: src/gpm-statistics.c:442
 msgid "Voltage"
 msgstr "מתח"
 
-#: src/gpm-statistics.c:439
+#: src/gpm-statistics.c:464
 msgid "Percentage"
 msgstr "אחוזים"
 
-#: src/gpm-statistics.c:446
+#: src/gpm-statistics.c:471
 msgid "Capacity"
 msgstr "קיבולת"
 
-#: src/gpm-statistics.c:451
+#: src/gpm-statistics.c:476
 msgid "Technology"
 msgstr "טכנולוגיה"
 
-#: src/gpm-statistics.c:456
+#: src/gpm-statistics.c:481
 msgid "Online"
 msgstr "מקוון"
 
-#: src/gpm-statistics.c:754
+#: src/gpm-statistics.c:779
 msgid "Device Information"
 msgstr "נתוני ההתקן"
 
-#: src/gpm-statistics.c:756
+#: src/gpm-statistics.c:781
 msgid "Device History"
 msgstr "היסטורית ההתקן"
 
-#: src/gpm-statistics.c:758
+#: src/gpm-statistics.c:783
 msgid "Device Profile"
 msgstr "פרופיל ההתקן"
 
-#: src/gpm-statistics.c:979 src/gpm-statistics.c:985 src/gpm-statistics.c:991
-#: src/gpm-statistics.c:997
+#: src/gpm-statistics.c:1008 src/gpm-statistics.c:1014
+#: src/gpm-statistics.c:1020 src/gpm-statistics.c:1026
 msgid "Time elapsed"
 msgstr "זמן שחלף"
 
-#: src/gpm-statistics.c:981
+#: src/gpm-statistics.c:1010
 msgid "Power"
 msgstr "חשמל"
 
-#: src/gpm-statistics.c:987 src/gpm-statistics.c:1031
-#: src/gpm-statistics.c:1037 src/gpm-statistics.c:1043
-#: src/gpm-statistics.c:1049
+#: src/gpm-statistics.c:1016 src/gpm-statistics.c:1066
+#: src/gpm-statistics.c:1072 src/gpm-statistics.c:1078
+#: src/gpm-statistics.c:1084
 msgid "Cell charge"
 msgstr "טעינת תא"
 
-#: src/gpm-statistics.c:993 src/gpm-statistics.c:999
+#: src/gpm-statistics.c:1022 src/gpm-statistics.c:1028
 msgid "Predicted time"
 msgstr "זמן מוערך"
 
-#: src/gpm-statistics.c:1033 src/gpm-statistics.c:1045
+#: src/gpm-statistics.c:1068 src/gpm-statistics.c:1080
 msgid "Correction factor"
 msgstr "מתאם תיקון"
 
-#: src/gpm-statistics.c:1039 src/gpm-statistics.c:1051
+#: src/gpm-statistics.c:1074 src/gpm-statistics.c:1086
 msgid "Prediction accuracy"
 msgstr "דיוק חיזוי"
 
-#: src/gpm-statistics.c:1210
+#: src/gpm-statistics.c:1245
 msgid "Select this device at startup"
 msgstr "בחר התקן זה עם ההפעלה"
 
@@ -1789,26 +1789,26 @@ msgstr "בחר התקן זה עם ההפעלה"
 msgid "Copyright © 2011-2021 MATE developers"
 msgstr ""
 
-#: src/gpm-tray-icon.c:316
+#: src/gpm-tray-icon.c:319
 #, c-format
 msgid "%s remaining"
 msgstr ""
 
-#: src/gpm-tray-icon.c:370
+#: src/gpm-tray-icon.c:374
 msgid "_Preferences"
 msgstr "ה_עדפות"
 
-#: src/gpm-upower.c:211
+#: src/gpm-upower.c:214
 #, c-format
 msgid "%s not present"
 msgstr ""
 
-#: src/gpm-upower.c:224 src/gpm-upower.c:288
+#: src/gpm-upower.c:227 src/gpm-upower.c:291
 #, c-format
 msgid "%s charging (%.1f%%)"
 msgstr "‏%s נטענת (%.1f%%)"
 
-#: src/gpm-upower.c:239
+#: src/gpm-upower.c:242
 #, c-format
 msgid ""
 "Battery is fully charged.\n"
@@ -1817,22 +1817,22 @@ msgstr ""
 "הסוללה טעונה במלואה.\n"
 "תתאפשר עבודה למשך %s עם הסוללה"
 
-#: src/gpm-upower.c:244
+#: src/gpm-upower.c:247
 #, c-format
 msgid "%s is fully charged"
 msgstr "%s טעונה במלואה"
 
-#: src/gpm-upower.c:252
+#: src/gpm-upower.c:255
 #, c-format
 msgid "%s %s remaining (%.1f%%)"
 msgstr "%s %s נותרו (%.1f%%)"
 
-#: src/gpm-upower.c:257
+#: src/gpm-upower.c:260
 #, c-format
 msgid "%s discharging (%.1f%%)"
 msgstr "%s מתרוקנת (%.1f%%)"
 
-#: src/gpm-upower.c:271
+#: src/gpm-upower.c:274
 #, c-format
 msgid ""
 "%s %s until charged (%.1f%%)\n"
@@ -1841,116 +1841,116 @@ msgstr ""
 "%s %s עד לטעינה מלאה (%.1f%%)\n"
 "תתאפשר עבודה למשך %s עם הסוללה"
 
-#: src/gpm-upower.c:282
+#: src/gpm-upower.c:285
 #, c-format
 msgid "%s %s until charged (%.1f%%)"
 msgstr "%s %s עד לטעינה מלאה (%.1f%%)"
 
-#: src/gpm-upower.c:295
+#: src/gpm-upower.c:298
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
 msgstr "%s ממתין להתרוקנות (%.1f%%)"
 
-#: src/gpm-upower.c:301
+#: src/gpm-upower.c:304
 #, c-format
 msgid "%s waiting to charge (%.1f%%)"
 msgstr "%s ממתין לטעינה (%.1f%%)"
 
-#: src/gpm-upower.c:306
+#: src/gpm-upower.c:309
 #, c-format
 msgid "%s empty"
 msgstr ""
 
-#: src/gpm-upower.c:366
+#: src/gpm-upower.c:369
 msgid "Product:"
 msgstr "מוצר:"
 
-#: src/gpm-upower.c:370 src/gpm-upower.c:373 src/gpm-upower.c:376
-#: src/gpm-upower.c:379
+#: src/gpm-upower.c:373 src/gpm-upower.c:376 src/gpm-upower.c:379
+#: src/gpm-upower.c:382
 msgid "Status:"
 msgstr "מצב:"
 
-#: src/gpm-upower.c:370
+#: src/gpm-upower.c:373
 msgid "Missing"
 msgstr "חסר"
 
-#: src/gpm-upower.c:373 src/gpm-upower.c:650
+#: src/gpm-upower.c:376 src/gpm-upower.c:657
 msgid "Charged"
 msgstr "טעונה"
 
-#: src/gpm-upower.c:376 src/gpm-upower.c:638
+#: src/gpm-upower.c:379 src/gpm-upower.c:645
 msgid "Charging"
 msgstr "נטענת"
 
-#: src/gpm-upower.c:379 src/gpm-upower.c:642
+#: src/gpm-upower.c:382 src/gpm-upower.c:649
 msgid "Discharging"
 msgstr "מתרוקנת"
 
-#: src/gpm-upower.c:384
+#: src/gpm-upower.c:387
 msgid "Percentage charge:"
 msgstr "אחוז טעינה:"
 
-#: src/gpm-upower.c:388
+#: src/gpm-upower.c:391
 msgid "Vendor:"
 msgstr "יצרן:"
 
-#: src/gpm-upower.c:393
+#: src/gpm-upower.c:396
 msgid "Technology:"
 msgstr "טכנולוגיה:"
 
-#: src/gpm-upower.c:397
+#: src/gpm-upower.c:400
 msgid "Serial number:"
 msgstr "מספר סידורי:"
 
-#: src/gpm-upower.c:401
+#: src/gpm-upower.c:404
 msgid "Model:"
 msgstr "דגם:"
 
-#: src/gpm-upower.c:406
+#: src/gpm-upower.c:409
 msgid "Charge time:"
 msgstr "זמן לטעינה:"
 
-#: src/gpm-upower.c:412
+#: src/gpm-upower.c:415
 msgid "Discharge time:"
 msgstr "זמן לפריקה:"
 
-#: src/gpm-upower.c:419
+#: src/gpm-upower.c:422
 msgid "Excellent"
 msgstr "מצויין"
 
-#: src/gpm-upower.c:421
+#: src/gpm-upower.c:424
 msgid "Good"
 msgstr "טוב"
 
-#: src/gpm-upower.c:423
+#: src/gpm-upower.c:426
 msgid "Fair"
 msgstr "סביר"
 
-#: src/gpm-upower.c:425
+#: src/gpm-upower.c:428
 msgid "Poor"
 msgstr "עני"
 
-#: src/gpm-upower.c:429
+#: src/gpm-upower.c:432
 msgid "Capacity:"
 msgstr "קיבולת:"
 
-#: src/gpm-upower.c:435 src/gpm-upower.c:460
+#: src/gpm-upower.c:438 src/gpm-upower.c:463
 msgid "Current charge:"
 msgstr "טעינה נוכחית:"
 
-#: src/gpm-upower.c:441
+#: src/gpm-upower.c:444
 msgid "Last full charge:"
 msgstr "טעינה מלאה אחרונה:"
 
-#: src/gpm-upower.c:447 src/gpm-upower.c:465
+#: src/gpm-upower.c:450 src/gpm-upower.c:468
 msgid "Design charge:"
 msgstr "טעינה מתוכננת:"
 
-#: src/gpm-upower.c:452
+#: src/gpm-upower.c:455
 msgid "Charge rate:"
 msgstr "קצב טעינה:"
 
-#: src/gpm-upower.c:487
+#: src/gpm-upower.c:490
 msgid "AC adapter"
 msgid_plural "AC adapters"
 msgstr[0] ""
@@ -1958,7 +1958,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/gpm-upower.c:491
+#: src/gpm-upower.c:494
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
 msgstr[0] ""
@@ -1966,7 +1966,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/gpm-upower.c:495
+#: src/gpm-upower.c:498
 msgid "UPS"
 msgid_plural "UPSs"
 msgstr[0] ""
@@ -1974,7 +1974,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/gpm-upower.c:499
+#: src/gpm-upower.c:502
 msgid "Monitor"
 msgid_plural "Monitors"
 msgstr[0] ""
@@ -1982,7 +1982,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/gpm-upower.c:503
+#: src/gpm-upower.c:506
 msgid "Mouse"
 msgid_plural "Mice"
 msgstr[0] ""
@@ -1990,7 +1990,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/gpm-upower.c:511
+#: src/gpm-upower.c:514
 msgid "PDA"
 msgid_plural "PDAs"
 msgstr[0] ""
@@ -1998,7 +1998,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/gpm-upower.c:515
+#: src/gpm-upower.c:518
 msgid "Cell phone"
 msgid_plural "Cell phones"
 msgstr[0] ""
@@ -2006,7 +2006,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/gpm-upower.c:519
+#: src/gpm-upower.c:522
 msgid "Media player"
 msgid_plural "Media players"
 msgstr[0] ""
@@ -2014,7 +2014,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/gpm-upower.c:523
+#: src/gpm-upower.c:526
 msgid "Tablet"
 msgid_plural "Tablets"
 msgstr[0] ""
@@ -2022,7 +2022,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/gpm-upower.c:527
+#: src/gpm-upower.c:530
 msgid "Computer"
 msgid_plural "Computers"
 msgstr[0] ""
@@ -2030,46 +2030,54 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/gpm-upower.c:594
+#: src/gpm-upower.c:534
+msgid "Gaming input"
+msgid_plural "Gaming inputs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/gpm-upower.c:601
 msgid "Lithium Ion"
 msgstr "ליתיום יון"
 
-#: src/gpm-upower.c:598
+#: src/gpm-upower.c:605
 msgid "Lithium Polymer"
 msgstr "ליתיום פולימר"
 
-#: src/gpm-upower.c:602
+#: src/gpm-upower.c:609
 msgid "Lithium Iron Phosphate"
 msgstr "זרחת ליתיום ברזל"
 
-#: src/gpm-upower.c:606
+#: src/gpm-upower.c:613
 msgid "Lead acid"
 msgstr "חומצה עופרת"
 
-#: src/gpm-upower.c:610
+#: src/gpm-upower.c:617
 msgid "Nickel Cadmium"
 msgstr "ניקל קדמיום"
 
-#: src/gpm-upower.c:614
+#: src/gpm-upower.c:621
 msgid "Nickel metal hydride"
 msgstr "ניקל מטאל הידריד (NiMH)"
 
-#: src/gpm-upower.c:618
+#: src/gpm-upower.c:625
 msgid "Unknown technology"
 msgstr "טכנולוגיה לא ידועה"
 
-#: src/gpm-upower.c:646
+#: src/gpm-upower.c:653
 msgid "Empty"
 msgstr "ריק"
 
-#: src/gpm-upower.c:654
+#: src/gpm-upower.c:661
 msgid "Waiting to charge"
 msgstr "ממתין לטעינה"
 
-#: src/gpm-upower.c:658
+#: src/gpm-upower.c:665
 msgid "Waiting to discharge"
 msgstr "ממתין לפריקה"
 
-#: src/gpm-upower.c:662
+#: src/gpm-upower.c:669
 msgid "Unknown state"
 msgstr ""

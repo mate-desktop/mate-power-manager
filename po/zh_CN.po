@@ -7,20 +7,18 @@
 # e0c668032ced196bd60f2b6a070d982d_8f72ae0, 2018
 # Mingcong Bai <jeffbai@aosc.xyz>, 2018
 # shuyu liu <liushuyu011@gmail.com>, 2018
-# zhineng404 <zhinengge@gmail.com>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # 玉堂白鹤 <yjwork@qq.com>, 2020
 # Wolfgang Ulbrich <mate@raveit.de>, 2020
-# liulitchi <xingzuo88@qq.com>, 2021
-# Wenbin Lv <wenbin816@gmail.com>, 2021
+# Wenbin Lv <wenbin816@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-power-manager 1.25.0\n"
+"Project-Id-Version: mate-power-manager 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
-"POT-Creation-Date: 2021-06-22 17:30+0200\n"
+"POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Wenbin Lv <wenbin816@gmail.com>, 2021\n"
+"Last-Translator: Wenbin Lv <wenbin816@gmail.com>, 2022\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,74 +26,73 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: applets/brightness/brightness-applet.c:109
+#: applets/brightness/brightness-applet.c:108
 msgid "Power Manager Brightness Applet"
 msgstr "电源管理器亮度管理小程序"
 
-#: applets/brightness/brightness-applet.c:110
+#: applets/brightness/brightness-applet.c:109
 msgid "Adjusts laptop panel brightness."
 msgstr "调整笔记本屏幕亮度。"
 
-#: applets/brightness/brightness-applet.c:371
-#: applets/inhibit/inhibit-applet.c:225
+#: applets/brightness/brightness-applet.c:370
+#: applets/inhibit/inhibit-applet.c:223
 msgid "Cannot connect to mate-power-manager"
 msgstr "无法连接到 MATE 电源管理器"
 
-#: applets/brightness/brightness-applet.c:373
+#: applets/brightness/brightness-applet.c:372
 msgid "Cannot get laptop panel brightness"
 msgstr "无法获得笔记本屏幕亮度"
 
-#: applets/brightness/brightness-applet.c:375
+#: applets/brightness/brightness-applet.c:374
 #, c-format
 msgid "LCD brightness : %d%%"
 msgstr "LCD 亮度：%d%%"
 
-#: applets/brightness/brightness-applet.c:818
-#: applets/inhibit/inhibit-applet.c:287
+#: applets/brightness/brightness-applet.c:817
+#: applets/inhibit/inhibit-applet.c:285
 msgid ""
 "Power Manager is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
 msgstr ""
-"电源管理器是自由软件；可以在自由软件基金会发布的 GNU 通用公共许可证的条款下重新分发和(或)修改它；可以选择使用 GPL "
-"第二版，或(按照你的意愿)任何更新的版本。"
+"电源管理器是自由软件；您可以按照自由软件基金会所发布的 GNU "
+"通用公共许可证再分发和/或修改它；您可以使用此许可证的第二版或（依您所愿）任何更新的版本。"
 
-#: applets/brightness/brightness-applet.c:823
-#: applets/inhibit/inhibit-applet.c:292
+#: applets/brightness/brightness-applet.c:822
+#: applets/inhibit/inhibit-applet.c:290
 msgid ""
 "Power Manager is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
 msgstr ""
-"电源管理器分发的目的是希望它物有所用，但是没有任何担保；对于其适销性或某一特定目的下的适用性，没有任何即便是暗示的担保。请查阅 GNU "
-"通用公共许可证以获得更多信息。"
+"分发电源管理器的目的是希望它对您有用，但没有任何保证；甚至没有对适销性或特定用途适用性的默示保证。请阅读 GNU 通用公共许可证以了解更多细节。"
 
-#: applets/brightness/brightness-applet.c:828
-#: applets/inhibit/inhibit-applet.c:297
+#: applets/brightness/brightness-applet.c:827
+#: applets/inhibit/inhibit-applet.c:295
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
-"你应该已经随本程序一起收到一份 GNU 通用公共许可证副本；如果没有，可以写信给 \"\"the Free Software Foundation, "
-"Inc., 51 Franklin Street, Fifth Floor, Boston, \"\"MA 02110-1301, USA \""
+"您应该在收到电源管理器的同时也收到了 GNU 通用公共许可证的副本；如果没有收到该许可证的话，您可以写信给自由软件基金会，地址是：51 Franklin"
+" Street, Fifth Floor, Boston, MA 02110-1301, USA"
 
-#: applets/brightness/brightness-applet.c:841
+#: applets/brightness/brightness-applet.c:840
 msgid "About Power Manager Brightness Applet"
-msgstr "电源管理器亮度管理小程序"
+msgstr "关于电源管理器亮度管理小程序"
 
-#: applets/brightness/brightness-applet.c:843
+#: applets/brightness/brightness-applet.c:842
 msgid ""
 "Copyright © 2006 Benjamin Canou\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
-"版权所有 © 2006 Benjamin Canou\n"
-"版权所有 © 2011-2021 MATE 开发者"
+"Copyright © 2006 Benjamin Canou\n"
+"Copyright © 2011-2021 MATE 开发者"
 
-#: applets/brightness/brightness-applet.c:850
-#: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:212
+#: applets/brightness/brightness-applet.c:849
+#: applets/inhibit/inhibit-applet.c:317 src/gpm-tray-icon.c:212
 msgid "translator-credits"
 msgstr ""
 "Christopher Meng <i@cicku.me>, 2012-2013\n"
@@ -107,25 +104,26 @@ msgstr ""
 "玉堂白鹤 <yjwork@qq.com>, 2015\n"
 "Mingye Wang <arthur200126@gmail.com>, 2015-2016\n"
 "白铭骢 <jeffbai@aosc.xyz>, 2015-2016\n"
-"刘子兴 <liushuyu@aosc.xyz>, 2015-2016"
+"刘子兴 <liushuyu@aosc.xyz>, 2015-2016\n"
+"Wenbin Lv <wenbin816@gmail.com>, 2021-2022"
 
-#: applets/brightness/brightness-applet.c:1081
-#: applets/inhibit/inhibit-applet.c:503
+#: applets/brightness/brightness-applet.c:1080
+#: applets/inhibit/inhibit-applet.c:500
 msgid "_About"
 msgstr "关于(_A)"
 
-#: applets/brightness/brightness-applet.c:1084
-#: applets/inhibit/inhibit-applet.c:506 data/gpm-prefs.ui:41
+#: applets/brightness/brightness-applet.c:1083
+#: applets/inhibit/inhibit-applet.c:503 data/gpm-prefs.ui:41
 msgid "_Help"
-msgstr "帮助（_H）"
+msgstr "帮助(_H)"
 
 #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:5
 msgid "Brightness Applet Factory"
-msgstr "亮度小程序工厂"
+msgstr "亮度管理小程序工厂"
 
 #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:9
 msgid "Brightness Applet"
-msgstr "亮度小程序"
+msgstr "亮度管理小程序"
 
 #: applets/inhibit/inhibit-applet.c:87
 msgid "Power Manager Inhibit Applet"
@@ -135,29 +133,29 @@ msgstr "电源管理器阻止管理小程序"
 msgid "Allows user to inhibit automatic power saving."
 msgstr "允许用户阻止自动节电。"
 
-#: applets/inhibit/inhibit-applet.c:228
+#: applets/inhibit/inhibit-applet.c:226
 msgid "Automatic sleep inhibited"
 msgstr "已阻止自动休眠"
 
-#: applets/inhibit/inhibit-applet.c:230
+#: applets/inhibit/inhibit-applet.c:228
 msgid "Automatic sleep enabled"
-msgstr "自动休眠被启用"
+msgstr "已启用自动休眠"
 
-#: applets/inhibit/inhibit-applet.c:258
+#: applets/inhibit/inhibit-applet.c:256
 msgid "Manual inhibit"
 msgstr "人工阻止"
 
-#: applets/inhibit/inhibit-applet.c:310
+#: applets/inhibit/inhibit-applet.c:308
 msgid "About Power Manager Inhibit Applet"
-msgstr "电源管理器阻止管理小程序"
+msgstr "关于电源管理器阻止管理小程序"
 
-#: applets/inhibit/inhibit-applet.c:312
+#: applets/inhibit/inhibit-applet.c:310
 msgid ""
 "Copyright © 2006-2007 Richard Hughes\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
-"版权所有 © 2006-2007 Richard Hughes\n"
-"版权所有 © 2011-2021 MATE 开发者"
+"Copyright © 2006-2007 Richard Hughes\n"
+"Copyright © 2011-2021 MATE 开发者"
 
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
@@ -178,7 +176,7 @@ msgstr "电源管理守护程序"
 #: data/org.mate.power-manager.gschema.xml.in:26
 #: data/org.mate.power-manager.gschema.xml.in:41
 msgid "Whether to hibernate, suspend or do nothing when inactive"
-msgstr "在空闲时是 hibernate，suspend 还是什么也不做"
+msgstr "在空闲时是休眠、挂起还是什么也不做"
 
 #: data/org.mate.power-manager.gschema.xml.in:27
 #: data/org.mate.power-manager.gschema.xml.in:42
@@ -188,7 +186,7 @@ msgstr "计算机空闲时执行的睡眠动作类型。"
 
 #: data/org.mate.power-manager.gschema.xml.in:31
 msgid "Battery critical low action"
-msgstr "低电量动作"
+msgstr "电量将用尽动作"
 
 #: data/org.mate.power-manager.gschema.xml.in:32
 msgid "The action to take when the battery is critically low."
@@ -198,14 +196,14 @@ msgstr "电池电量将用尽时的操作。"
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
-msgstr "上盖关闭且交流电源被移除时是否发生电池事件"
+msgstr "上盖关闭后断开交流电源时是否发生电池事件"
 
 #: data/org.mate.power-manager.gschema.xml.in:37
 msgid ""
 "If the battery lid close event should occur (for example 'Suspend when lid "
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
-msgstr "在先前上盖已关闭，而后交流电源也被移除时是否发生“上盖已关闭(使用电池时)”的相应事件，如‘在使用电池时如果上盖关闭则挂起’。"
+msgstr "在先前上盖已关闭，然后再断开交流电源时是否发生“使用电池时上盖被关闭”的相应事件，如“在使用电池时如果上盖关闭则挂起”。"
 
 #: data/org.mate.power-manager.gschema.xml.in:46
 msgid "UPS critical low action"
@@ -231,7 +229,7 @@ msgstr "允许调节背光亮度"
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
-msgstr "交流电源与电池切换时是否应改变屏幕亮度。"
+msgstr "在交流电源与电池间切换时是否应改变屏幕亮度。"
 
 #: data/org.mate.power-manager.gschema.xml.in:61
 msgid "Reduce the backlight brightness when on battery power"
@@ -241,7 +239,7 @@ msgstr "使用电池时减小背光亮度"
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
-msgstr "使用电池供电时计算机空闲时是否应减小屏幕亮度。"
+msgstr "使用电池供电时是否应减小屏幕亮度。"
 
 #: data/org.mate.power-manager.gschema.xml.in:66
 msgid "Reduce the keyboard backlight when on battery power"
@@ -251,7 +249,7 @@ msgstr "使用电池时减小键盘背光亮度"
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
-msgstr "使用电池供电时计算机空闲时是否应减小键盘背光亮度。"
+msgstr "使用电池供电时是否应减小键盘背光亮度。"
 
 #: data/org.mate.power-manager.gschema.xml.in:71
 msgid "Keyboard backlight brightness when on AC power."
@@ -272,7 +270,7 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
-msgstr "在使用电池时减少键盘背光亮度的百分比。例如设定为 '60'，背光亮度将在使用电池时减少 40%。可用值为 0 至 100."
+msgstr "在使用电池时减少键盘背光亮度的百分比。例如设定为“60”，背光亮度将在使用电池时减少 40%。可用值为 0 至 100。"
 
 #: data/org.mate.power-manager.gschema.xml.in:81
 msgid "Percent to reduce keyboard backlight by when idle."
@@ -283,7 +281,7 @@ msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
-msgstr "在空闲时减少键盘背光亮度的百分比。例如设定为 '60'，背光亮度将在使用电池时减少 40%。可用值为 0 至 100."
+msgstr "在空闲时减少键盘背光亮度的百分比。例如设定为“60”，背光亮度将在空闲时减少 40%。可用值为 0 至 100。"
 
 #: data/org.mate.power-manager.gschema.xml.in:86
 msgid "The brightness of the screen when idle"
@@ -297,7 +295,7 @@ msgstr "这是在会话空闲时使用的笔记本电脑屏幕亮度值。仅在
 
 #: data/org.mate.power-manager.gschema.xml.in:91
 msgid "Dim the screen after a period of inactivity when on battery power"
-msgstr "一段时间内不活动后将屏幕变暗(使用电池时)"
+msgstr "一段时间内不活动后将屏幕变暗（使用电池时）"
 
 #: data/org.mate.power-manager.gschema.xml.in:92
 msgid ""
@@ -311,21 +309,21 @@ msgstr "使屏幕变暗的默认空闲时间"
 
 #: data/org.mate.power-manager.gschema.xml.in:97
 msgid "The default amount of time to dim the screen after idle."
-msgstr "使屏幕变暗的默认空闲时间"
+msgstr "使屏幕变暗的默认空闲时间。"
 
 #: data/org.mate.power-manager.gschema.xml.in:101
 msgid "LCD dimming amount when on battery"
-msgstr "电池供电时的 LCD 变暗"
+msgstr "电池供电时的 LCD 变暗程度"
 
 #: data/org.mate.power-manager.gschema.xml.in:102
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
-msgstr "使用电池供电时显示屏的亮度。有效值可从 0 到 100。"
+msgstr "使用电池供电时显示屏变暗的程度。有效值为 0 到 100。"
 
 #: data/org.mate.power-manager.gschema.xml.in:106
 msgid "Dim the screen after a period of inactivity when on AC power"
-msgstr "一段时间内不活动后将屏幕变暗(使用交流电源时)"
+msgstr "一段时间内不活动后将屏幕变暗（使用交流电源时）"
 
 #: data/org.mate.power-manager.gschema.xml.in:107
 msgid ""
@@ -339,7 +337,7 @@ msgstr "交流电源供电时使用的黑屏方法"
 
 #: data/org.mate.power-manager.gschema.xml.in:112
 msgid "The DPMS method used to blank the screen when on AC power."
-msgstr "在使用交流适配器供电时采用的 DMPS 黑屏模式。"
+msgstr "在使用交流适配器供电时采用的 DPMS 方法。"
 
 #: data/org.mate.power-manager.gschema.xml.in:116
 msgid "Method used to blank screen on battery"
@@ -347,7 +345,7 @@ msgstr "电池供电时使用的黑屏方法"
 
 #: data/org.mate.power-manager.gschema.xml.in:117
 msgid "The DPMS method used to blank the screen when on battery power."
-msgstr "在使用电池供电时采用的 DMPS 黑屏模式。"
+msgstr "在使用电池供电时采用的 DPMS 方法。"
 
 #: data/org.mate.power-manager.gschema.xml.in:121
 msgid "LCD brightness when on AC"
@@ -357,7 +355,7 @@ msgstr "交流电供电时的 LCD 亮度"
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
-msgstr "使用交流电源时显示屏的亮度。有效值可从 0.0 到 100.0。"
+msgstr "使用交流电源时显示屏的亮度。有效值为 0.0 到 100.0。"
 
 #: data/org.mate.power-manager.gschema.xml.in:126
 msgid "Suspend button action"
@@ -419,7 +417,7 @@ msgstr "睡眠之前检查 CPU 负载"
 
 #: data/org.mate.power-manager.gschema.xml.in:157
 msgid "If the CPU load should be checked before doing the idle action."
-msgstr "在执行空闲动作时是否检查 CPU 负载。"
+msgstr "在执行空闲动作前是否检查 CPU 负载。"
 
 #: data/org.mate.power-manager.gschema.xml.in:161
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
@@ -449,7 +447,7 @@ msgstr "黑屏时锁定屏幕"
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
-msgstr "在关闭显示器时是否锁定屏幕。仅当 lock_use_screensaver 为 false 时使用。"
+msgstr "在关闭显示器时是否锁定屏幕。仅当 lock-use-screensaver 为 false 时使用。"
 
 #: data/org.mate.power-manager.gschema.xml.in:176
 msgid "Lock screen on suspend"
@@ -459,7 +457,7 @@ msgstr "挂起时锁定屏幕"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
-msgstr "计算机从挂起中恢复时是否锁定屏幕。仅在 lock_use_screensaver 为 false 时使用。"
+msgstr "计算机从挂起中恢复时是否锁定屏幕。仅在 lock-use-screensaver 为 false 时使用。"
 
 #: data/org.mate.power-manager.gschema.xml.in:181
 msgid "Lock screen on hibernate"
@@ -469,7 +467,7 @@ msgstr "休眠时锁定屏幕"
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
-msgstr "计算机从休眠中恢复时是否锁定屏幕。仅在 lock_use_screensaver 为 false 时使用。"
+msgstr "计算机从休眠中恢复时是否锁定屏幕。仅在 lock-use-screensaver 为 false 时使用。"
 
 #: data/org.mate.power-manager.gschema.xml.in:186
 #: data/org.mate.power-manager.gschema.xml.in:191
@@ -494,7 +492,7 @@ msgstr "是否为问题电池显示低容量警告"
 
 #: data/org.mate.power-manager.gschema.xml.in:197
 msgid "If we should show the low capacity warning for a broken battery."
-msgstr "是否为问题电池显示低容量警告"
+msgstr "是否为问题电池显示低容量警告。"
 
 #: data/org.mate.power-manager.gschema.xml.in:201
 msgid "Notify when AC adapter is disconnected"
@@ -502,7 +500,7 @@ msgstr "移除交流电源适配器时通知"
 
 #: data/org.mate.power-manager.gschema.xml.in:202
 msgid "If the user should be notified when the AC adapter is disconnected."
-msgstr "移除交流电源适配器时是否应通知用户"
+msgstr "移除交流电源适配器时是否应通知用户。"
 
 #: data/org.mate.power-manager.gschema.xml.in:206
 msgid "Notify when fully charged"
@@ -532,7 +530,7 @@ msgstr "挂起失败时显示给用户的 URI 地址"
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
-msgstr "睡眠失败时，我们可以向用户展示该按钮以帮助其修复问题。"
+msgstr "睡眠失败时，我们可以向用户展示该按钮以帮助其修复问题。如不希望使用此按钮，请留空。"
 
 #: data/org.mate.power-manager.gschema.xml.in:221
 msgid "Notify on a low power"
@@ -547,7 +545,7 @@ msgstr "电池电量低时是否应显示通知消息。"
 
 #: data/org.mate.power-manager.gschema.xml.in:226
 msgid "Notify on low capacity of mouse battery"
-msgstr "通知鼠标电池电量过低"
+msgstr "鼠标电池电量低时通知"
 
 #: data/org.mate.power-manager.gschema.xml.in:231
 msgid "Whether we should show the history data points"
@@ -581,7 +579,7 @@ msgstr "历史显示的时间上限"
 #: data/org.mate.power-manager.gschema.xml.in:247
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
-msgstr "历史图表 x 轴显示的最长时间长度"
+msgstr "历史图表 x 轴显示的最长时间长度。"
 
 #: data/org.mate.power-manager.gschema.xml.in:251
 msgid "Whether we should show the stats data points"
@@ -615,17 +613,17 @@ msgstr "默认显示的页码索引"
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
-msgstr "默认显示的页码索引，用于将焦点移回当前页。"
+msgstr "默认显示的页码索引，用于将焦点移回正确的页面。"
 
 #: data/org.mate.power-manager.gschema.xml.in:271
 msgid "The ID of the last device selected"
-msgstr "上次选择设备的标识"
+msgstr "上次选择的设备的 ID"
 
 #: data/org.mate.power-manager.gschema.xml.in:272
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
-msgstr "上次使用设备的标识，用于将焦点移回正确的设备。"
+msgstr "上次选择的设备的 ID，用于将焦点移回正确的设备。"
 
 #: data/org.mate.power-manager.gschema.xml.in:276
 msgid "Percentage considered low"
@@ -649,7 +647,7 @@ msgstr "电池被视为电量将用尽时的电量百分比。仅在 use_time_fo
 
 #: data/org.mate.power-manager.gschema.xml.in:286
 msgid "Percentage action is taken"
-msgstr "剩余多少百分比执行该动作"
+msgstr "剩余多少百分比执行动作"
 
 #: data/org.mate.power-manager.gschema.xml.in:287
 msgid ""
@@ -659,7 +657,7 @@ msgstr "执行电量将用尽动作时的电池电量百分比。仅在 use_time
 
 #: data/org.mate.power-manager.gschema.xml.in:291
 msgid "The time remaining when low"
-msgstr "视为低电量时的剩余时间"
+msgstr "剩余多少时间为低电量"
 
 #: data/org.mate.power-manager.gschema.xml.in:292
 msgid ""
@@ -669,7 +667,7 @@ msgstr "电池被视为低电量时的剩余时间秒数。仅在 use_time_for_p
 
 #: data/org.mate.power-manager.gschema.xml.in:296
 msgid "The time remaining when critical"
-msgstr "视为电量时将用尽的剩余时间"
+msgstr "剩余多少时间为电量将用尽"
 
 #: data/org.mate.power-manager.gschema.xml.in:297
 msgid ""
@@ -679,7 +677,7 @@ msgstr "电池被视为电量将用尽时的剩余时间秒数。仅在 use_time
 
 #: data/org.mate.power-manager.gschema.xml.in:301
 msgid "The time remaining when action is taken"
-msgstr "执行预定动作时的剩余时间"
+msgstr "剩余多少时间执行动作"
 
 #: data/org.mate.power-manager.gschema.xml.in:302
 msgid ""
@@ -709,13 +707,13 @@ msgstr "使用交流电源时在转入睡眠状态前计算机需空闲的时间
 
 #: data/org.mate.power-manager.gschema.xml.in:316
 msgid "Sleep timeout computer when on UPS"
-msgstr "使用 UPS (不间断电源) 时计算机挂起超时"
+msgstr "使用 UPS (不间断电源) 时计算机睡眠延时"
 
 #: data/org.mate.power-manager.gschema.xml.in:317
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before it goes to sleep."
-msgstr "使用 UPS (不间断电源) 供电时计算机在挂起前需空闲的时间秒数。"
+msgstr "使用 UPS (不间断电源) 供电时计算机在睡眠前需空闲的时间秒数。"
 
 #: data/org.mate.power-manager.gschema.xml.in:321
 msgid "Sleep timeout display when on AC"
@@ -725,7 +723,7 @@ msgstr "使用交流电源时的显示器睡眠延时"
 msgid ""
 "The amount of time in seconds before the display goes to sleep when the "
 "computer is on AC power."
-msgstr "使用交流电源时显示器转入睡眠状态前等待的时间秒数"
+msgstr "使用交流电源时显示器转入睡眠状态前等待的时间秒数。"
 
 #: data/org.mate.power-manager.gschema.xml.in:326
 msgid "Sleep timeout display when on battery"
@@ -739,13 +737,13 @@ msgstr "使用电池时在显示器转入睡眠状态前计算机需空闲的时
 
 #: data/org.mate.power-manager.gschema.xml.in:331
 msgid "Sleep timeout display when on UPS"
-msgstr "使用 UPS (不间断电源) 时的显示器挂起超时"
+msgstr "使用 UPS（不间断电源）时的显示器睡眠延时"
 
 #: data/org.mate.power-manager.gschema.xml.in:332
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before the display goes to sleep."
-msgstr "使用 UPS (不间断电源) 供电时显示器在挂起前需空闲的时间秒数。"
+msgstr "使用 UPS（不间断电源）供电时显示器在睡眠前需空闲的时间秒数。"
 
 #: data/org.mate.power-manager.gschema.xml.in:336
 msgid "If sounds should be used"
@@ -760,11 +758,11 @@ msgstr "在电量将用尽或阻止请求已阻止某策略动作时是否使用
 #: data/org.mate.power-manager.gschema.xml.in:341
 msgid ""
 "If preferences and statistics items should be shown in the context menu"
-msgstr "首选项和状态条目是否应当在上下文菜单中显示"
+msgstr "首选项和统计项目是否应当在上下文菜单中显示"
 
 #: data/org.mate.power-manager.gschema.xml.in:345
 msgid "When to show the notification icon"
-msgstr "是否显示通知图标"
+msgstr "何时显示通知图标"
 
 #: data/org.mate.power-manager.gschema.xml.in:346
 msgid "Display options for the notification icon."
@@ -782,10 +780,10 @@ msgstr "配置电源管理"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/mate-power-preferences.desktop.in.in:13
 msgid "MATE;power;management;preferences;settings;"
-msgstr "MATE;电源;管理;首选项;设置;"
+msgstr "MATE;power;management;preferences;settings;电源;管理;首选项;设置;"
 
 #: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
-#: src/gpm-statistics.c:762 src/gpm-statistics.c:1224
+#: src/gpm-statistics.c:787 src/gpm-statistics.c:1259
 msgid "Power Statistics"
 msgstr "电源统计"
 
@@ -827,7 +825,7 @@ msgstr "统计"
 
 #: data/gpm-prefs.ui:23
 msgid "Power Management Preferences"
-msgstr "电源首选项"
+msgstr "电源管理首选项"
 
 #: data/gpm-prefs.ui:58
 msgid "Make Default"
@@ -856,11 +854,11 @@ msgstr "空闲此时间后将显示器转入睡眠(_D)："
 
 #: data/gpm-prefs.ui:289
 msgid "Set display _brightness to:"
-msgstr "设定显示亮度为(_B)："
+msgstr "设置显示器亮度为(_B)："
 
 #: data/gpm-prefs.ui:322 data/gpm-prefs.ui:607
 msgid "Di_m display when idle"
-msgstr "空闲时变暗显示器(_M)"
+msgstr "空闲时降低显示器亮度(_M)"
 
 #: data/gpm-prefs.ui:344 data/gpm-prefs.ui:629 data/gpm-prefs.ui:890
 msgid "Display"
@@ -880,9 +878,9 @@ msgstr "减小背光亮度(_R)"
 
 #: data/gpm-prefs.ui:663
 msgid "_Reduce keyboard backlight"
-msgstr "减小背光亮度(_R)"
+msgstr "减小键盘背光亮度(_R)"
 
-#: data/gpm-prefs.ui:685 src/gpm-upower.c:507
+#: data/gpm-prefs.ui:685 src/gpm-upower.c:510
 msgid "Keyboard"
 msgid_plural "Keyboards"
 msgstr[0] "键盘"
@@ -905,11 +903,11 @@ msgstr "UPS 供电时"
 
 #: data/gpm-prefs.ui:956
 msgid "When the power _button is pressed:"
-msgstr "按下了电源按钮时(_B)："
+msgstr "按下电源按钮时(_B)："
 
 #: data/gpm-prefs.ui:994
 msgid "When the _suspend button is pressed:"
-msgstr "按下了挂起按钮(_S)："
+msgstr "按下挂起按钮时(_S)："
 
 #: data/gpm-prefs.ui:1065
 msgid "_Never display an icon"
@@ -917,7 +915,7 @@ msgstr "从不显示图标(_N)"
 
 #: data/gpm-prefs.ui:1083
 msgid "_Only display an icon when battery power is low"
-msgstr "仅当电池电量即将用尽时显示图标(_O)"
+msgstr "仅在电池电量低时显示图标(_O)"
 
 #: data/gpm-prefs.ui:1101
 msgid "Only display an icon when charging or _discharging"
@@ -925,7 +923,7 @@ msgstr "仅在充电或放电时显示图标(_D)"
 
 #: data/gpm-prefs.ui:1119
 msgid "Only display an icon when a battery is p_resent"
-msgstr "仅当使用电池时显示图标(_R)"
+msgstr "仅在使用电池时显示图标(_R)"
 
 #: data/gpm-prefs.ui:1137
 msgid "_Always display an icon"
@@ -965,11 +963,11 @@ msgstr "没有找到您系统上的背光"
 
 #: src/gpm-backlight-helper.c:213
 msgid "Could not get the value of the backlight"
-msgstr "无法获知背光的值"
+msgstr "无法获取背光的值"
 
 #: src/gpm-backlight-helper.c:231
 msgid "Could not get the maximum value of the backlight"
-msgstr "无法获知背光的最大值"
+msgstr "无法获取背光的最大值"
 
 #: src/gpm-backlight-helper.c:248
 msgid "This program can only be used by the root user"
@@ -1018,43 +1016,43 @@ msgstr[0] "分钟"
 #: src/gpm-graph-widget.c:433
 #, c-format
 msgid "%id"
-msgstr "%id"
+msgstr "%i 天"
 
 #. Translators: This is %i days %02i hours
 #: src/gpm-graph-widget.c:436
 #, c-format
 msgid "%id%02ih"
-msgstr "%id%02ih"
+msgstr "%i 天 %02i 时"
 
 #. Translators: This is %i hours
 #: src/gpm-graph-widget.c:441
 #, c-format
 msgid "%ih"
-msgstr "%ih"
+msgstr "%i 时"
 
 #. Translators: This is %i hours %02i minutes
 #: src/gpm-graph-widget.c:444
 #, c-format
 msgid "%ih%02im"
-msgstr "%ih%02im"
+msgstr "%i 时 %02i 分"
 
 #. Translators: This is %2i minutes
 #: src/gpm-graph-widget.c:449
 #, c-format
 msgid "%2im"
-msgstr "%2im"
+msgstr "%2i 分"
 
 #. Translators: This is %2i minutes %02i seconds
 #: src/gpm-graph-widget.c:452
 #, c-format
 msgid "%2im%02i"
-msgstr "%2im%02i"
+msgstr "%2i 分 %02i 秒"
 
 #. Translators: This is %2i seconds
 #: src/gpm-graph-widget.c:456
 #, c-format
 msgid "%2is"
-msgstr "%2is"
+msgstr "%2i 秒"
 
 #. Translators: This is %i Percentage
 #: src/gpm-graph-widget.c:460
@@ -1076,15 +1074,15 @@ msgstr "%.1fV"
 
 #: src/gpm-main.c:170
 msgid "Show version of installed program and exit"
-msgstr "显示安装的程序的版本并退出"
+msgstr "显示已安装的程序的版本并退出"
 
 #: src/gpm-main.c:172
 msgid "Exit after a small delay (for debugging)"
-msgstr "在短暂暂停后退出(用于调试)"
+msgstr "在短暂暂停后退出（用于调试）"
 
 #: src/gpm-main.c:174
 msgid "Exit after the manager has loaded (for debugging)"
-msgstr "在管理器加载后退出(用于调试)"
+msgstr "在管理器加载后退出（用于调试）"
 
 #: src/gpm-main.c:185 src/gpm-main.c:189
 msgid "MATE Power Manager"
@@ -1092,7 +1090,7 @@ msgstr "MATE 电源管理器"
 
 #: src/gpm-manager.c:222 src/gpm-manager.c:294
 msgid "Battery is very low"
-msgstr "电池电量非常低。"
+msgstr "电池电量非常低"
 
 #: src/gpm-manager.c:274
 msgid "Power plugged in"
@@ -1100,7 +1098,7 @@ msgstr "电源已插入"
 
 #: src/gpm-manager.c:278
 msgid "Power unplugged"
-msgstr "未插电源"
+msgstr "电源已断开"
 
 #: src/gpm-manager.c:282
 msgid "Lid has opened"
@@ -1112,7 +1110,7 @@ msgstr "上盖已合上"
 
 #: src/gpm-manager.c:290
 msgid "Battery is low"
-msgstr "电池电量低。"
+msgstr "电池电量低"
 
 #: src/gpm-manager.c:298
 msgid "Battery is full"
@@ -1120,304 +1118,304 @@ msgstr "电池电量满"
 
 #: src/gpm-manager.c:302
 msgid "Suspend started"
-msgstr "挂起已开启"
+msgstr "挂起已开始"
 
 #: src/gpm-manager.c:306
 msgid "Resumed"
-msgstr "已恢复"
+msgstr "挂起已恢复"
 
 #: src/gpm-manager.c:310
 msgid "Suspend failed"
 msgstr "挂起失败"
 
-#: src/gpm-manager.c:578
+#: src/gpm-manager.c:577
 msgid "Computer failed to suspend."
 msgstr "您的计算机挂起失败。"
 
-#: src/gpm-manager.c:580
+#: src/gpm-manager.c:579
 msgid "Failed to suspend"
 msgstr "挂起失败"
 
-#: src/gpm-manager.c:584
+#: src/gpm-manager.c:583
 msgid "Computer failed to hibernate."
 msgstr "您的计算机休眠失败。"
 
-#: src/gpm-manager.c:586
+#: src/gpm-manager.c:585
 msgid "Failed to hibernate"
 msgstr "休眠失败"
 
-#: src/gpm-manager.c:591
+#: src/gpm-manager.c:590
 msgid "Failure was reported as:"
-msgstr "失败被报告为："
+msgstr "报告的错误是："
 
-#: src/gpm-manager.c:604
+#: src/gpm-manager.c:603
 msgid "Visit help page"
 msgstr "访问帮助页面"
 
-#: src/gpm-manager.c:850
+#: src/gpm-manager.c:849
 msgid "Display DPMS activated"
 msgstr "已激活显示器 DPMS"
 
-#: src/gpm-manager.c:869
+#: src/gpm-manager.c:868
 msgid "On battery power"
-msgstr "电池供电时"
+msgstr "正使用电池供电"
 
-#: src/gpm-manager.c:887
+#: src/gpm-manager.c:886
 msgid "Laptop lid is closed"
 msgstr "笔记本电脑上盖已合上"
 
-#: src/gpm-manager.c:925
+#: src/gpm-manager.c:924
 msgid "Power Information"
 msgstr "电源信息"
 
-#: src/gpm-manager.c:1106
+#: src/gpm-manager.c:1105
 msgid "Battery may be broken"
 msgstr "电池可能已损坏"
 
-#: src/gpm-manager.c:1109
+#: src/gpm-manager.c:1108
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
 " broken."
-msgstr "电池容量过低 (%1.1f%%)，这表示电池可能太旧或已损坏"
+msgstr "电池容量过低（%1.1f%%），这表示电池可能太旧或已损坏。"
 
-#: src/gpm-manager.c:1158
+#: src/gpm-manager.c:1157
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] "电池已充满"
 
-#: src/gpm-manager.c:1204
+#: src/gpm-manager.c:1203
 msgid "Battery Discharging"
 msgstr "电池正在放电"
 
-#: src/gpm-manager.c:1208
+#: src/gpm-manager.c:1207
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
-msgstr "电池电量剩余 %s(%.1f%%)"
+msgstr "电池电量剩余 %s（%.0f%%）"
 
-#: src/gpm-manager.c:1211 src/gpm-manager.c:1223
+#: src/gpm-manager.c:1210 src/gpm-manager.c:1222
 #, c-format
 msgid "%s discharging (%.0f%%)"
-msgstr "%s 放电中 (%.1f%%)"
+msgstr "%s正在放电（%.0f%%）"
 
-#: src/gpm-manager.c:1216
+#: src/gpm-manager.c:1215
 msgid "UPS Discharging"
 msgstr "UPS 正在放电"
 
-#: src/gpm-manager.c:1220
+#: src/gpm-manager.c:1219
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
-msgstr "UPS 备用电池电量剩余 %s(%.1f%%)"
+msgstr "UPS 备用电源电量剩余 %s（%.0f%%）"
 
-#: src/gpm-manager.c:1304
+#: src/gpm-manager.c:1303
 msgid "Battery low"
-msgstr "电池电量低。"
+msgstr "电池电量低"
 
-#: src/gpm-manager.c:1307
+#: src/gpm-manager.c:1306
 msgid "Laptop battery low"
-msgstr "笔记本电池电量低"
+msgstr "笔记本电脑电池电量低"
 
-#: src/gpm-manager.c:1313
+#: src/gpm-manager.c:1312
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
-msgstr "大约剩余 <b>%s</b>(%.1f%%)"
+msgstr "大约剩余 <b>%s</b>（%.0f%%）"
 
-#: src/gpm-manager.c:1317
+#: src/gpm-manager.c:1316
 msgid "UPS low"
 msgstr "UPS 电量低"
 
-#: src/gpm-manager.c:1321
+#: src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
-msgstr "UPS 备用电源的剩余电量大约可维持 <b>%s</b>，为总电量的 %.1f%%"
+msgstr "UPS 备用电源电量大约剩余 <b>%s</b>（%.0f%%）"
 
-#: src/gpm-manager.c:1330 src/gpm-manager.c:1469
+#: src/gpm-manager.c:1329 src/gpm-manager.c:1468
 msgid "Mouse battery low"
 msgstr "鼠标电量低"
 
-#: src/gpm-manager.c:1333
+#: src/gpm-manager.c:1332
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
-msgstr "无线鼠标电量不足(仅剩 %.1f%%)"
+msgstr "无线鼠标电量不足（%.0f%%）"
 
-#: src/gpm-manager.c:1337 src/gpm-manager.c:1477
+#: src/gpm-manager.c:1336 src/gpm-manager.c:1476
 msgid "Keyboard battery low"
 msgstr "键盘电量低"
 
-#: src/gpm-manager.c:1340
+#: src/gpm-manager.c:1339
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
-msgstr "无线键盘电量不足(仅剩 %.1f%%)"
+msgstr "无线键盘电量不足（%.0f%%）"
 
-#: src/gpm-manager.c:1344 src/gpm-manager.c:1486
+#: src/gpm-manager.c:1343 src/gpm-manager.c:1485
 msgid "PDA battery low"
 msgstr "PDA 电量低"
 
-#: src/gpm-manager.c:1347
+#: src/gpm-manager.c:1346
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
-msgstr "PDA 电量不足(仅剩 %.1f%%)"
+msgstr "PDA 电量不足（%.0f%%）"
 
-#: src/gpm-manager.c:1351 src/gpm-manager.c:1496 src/gpm-manager.c:1506
+#: src/gpm-manager.c:1350 src/gpm-manager.c:1495 src/gpm-manager.c:1505
 msgid "Cell phone battery low"
 msgstr "手机电池电量低"
 
-#: src/gpm-manager.c:1354
+#: src/gpm-manager.c:1353
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
-msgstr "手机电量不足(仅剩 %.1f%%)"
+msgstr "手机电量不足（%.0f%%）"
 
-#: src/gpm-manager.c:1358
+#: src/gpm-manager.c:1357
 msgid "Media player battery low"
 msgstr "手机电池电量低"
 
-#: src/gpm-manager.c:1361
+#: src/gpm-manager.c:1360
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
-msgstr "媒体播放器电量不足(仅剩 %.1f%%)"
+msgstr "媒体播放器电量不足（ %.0f%%）"
 
-#: src/gpm-manager.c:1365 src/gpm-manager.c:1515
+#: src/gpm-manager.c:1364 src/gpm-manager.c:1514
 msgid "Tablet battery low"
 msgstr "触摸板电池电量低"
 
-#: src/gpm-manager.c:1368
+#: src/gpm-manager.c:1367
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
-msgstr "触摸板电量不足(仅剩 %.1f%%)"
+msgstr "触摸板电量不足（%.0f%%）"
 
-#: src/gpm-manager.c:1372 src/gpm-manager.c:1524
+#: src/gpm-manager.c:1371 src/gpm-manager.c:1523
 msgid "Attached computer battery low"
 msgstr "连接的计算机电池电量低"
 
-#: src/gpm-manager.c:1375
+#: src/gpm-manager.c:1374
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
-msgstr "连接的计算机电量不足(仅剩 %.1f%%)"
+msgstr "连接的计算机电量不足（%.0f%%）"
 
-#: src/gpm-manager.c:1423
+#: src/gpm-manager.c:1422
 msgid "Battery critically low"
-msgstr "电池电量将用尽。"
+msgstr "电池电量将用尽"
 
-#: src/gpm-manager.c:1426 src/gpm-manager.c:1584
+#: src/gpm-manager.c:1425 src/gpm-manager.c:1583
 msgid "Laptop battery critically low"
 msgstr "笔记本电池电量将用尽"
 
-#: src/gpm-manager.c:1435
+#: src/gpm-manager.c:1434
 msgid "Plug in your AC adapter to avoid losing data."
-msgstr "接入您的交流电源以避免丢失数据。"
+msgstr "插入您的交流适配器以避免丢失数据。"
 
-#: src/gpm-manager.c:1439
+#: src/gpm-manager.c:1438
 msgid "Computer will suspend very soon unless it is plugged in."
-msgstr "除非连接电源，计算机很快就要挂起。"
+msgstr "除非连接电源，计算机将很快挂起。"
 
-#: src/gpm-manager.c:1443
+#: src/gpm-manager.c:1442
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr "除非连接电源，计算机将很快休眠。"
 
-#: src/gpm-manager.c:1447
+#: src/gpm-manager.c:1446
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr "除非连接电源，计算机将很快关机。"
 
-#: src/gpm-manager.c:1454 src/gpm-manager.c:1620
+#: src/gpm-manager.c:1453 src/gpm-manager.c:1619
 msgid "UPS critically low"
 msgstr "UPS 电量将用尽"
 
-#: src/gpm-manager.c:1458
+#: src/gpm-manager.c:1457
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
-msgstr "您的 UPS 剩余电量大约可维持 <b>%s</b>，为总电量的 %.1f%%。请恢复交流电源以防丢失数据。"
+msgstr "UPS 电量大约剩余 <b>%s</b>（%.0f%%）。请恢复您计算机的交流电源以避免丢失数据。"
 
-#: src/gpm-manager.c:1472
+#: src/gpm-manager.c:1471
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "无线鼠标电池电量严重不足(仅剩 %.1f%%)。如果不充电的话，此设备将会很快停止工作。"
+msgstr "无线鼠标电池电量严重不足（%.0f%%）。如果不充电的话，此设备将会很快停止工作。"
 
-#: src/gpm-manager.c:1480
+#: src/gpm-manager.c:1479
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "无线键盘电量严重不足(仅剩 %.1f%%)。如果不充电的话，此设备将会很快停止工作。"
+msgstr "无线键盘电量严重不足（%.0f%%）。如果不充电的话，此设备将会很快停止工作。"
 
-#: src/gpm-manager.c:1489
+#: src/gpm-manager.c:1488
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
 " not charged."
-msgstr "PDA 电量严重不足(仅剩 %.1f%%)。如果不充电的话，此设备将会很快停止工作。"
+msgstr "PDA 电量严重不足（%.0f%%）。如果不充电的话，此设备将会很快停止工作。"
 
-#: src/gpm-manager.c:1499
+#: src/gpm-manager.c:1498
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "您的手机电量严重不足(仅剩 %.1f%%)。如果不充电的话，此设备将会很快停止工作。"
+msgstr "手机电量严重不足（%.0f%%）。如果不充电的话，此设备将会很快停止工作。"
 
-#: src/gpm-manager.c:1509
+#: src/gpm-manager.c:1508
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
-msgstr "媒体播放器电量严重不足(仅剩 %.1f%%)。如果不充电的话，此设备将会很快停止工作。"
+msgstr "媒体播放器电量严重不足（%.0f%%）。如果不充电的话，此设备将会很快停止工作。"
 
-#: src/gpm-manager.c:1518
+#: src/gpm-manager.c:1517
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
-msgstr "触摸板电量严重不足(仅剩 %.1f%%)。如果不充电的话，此设备将会很快停止工作。"
+msgstr "触摸板电量严重不足（%.0f%%）。如果不充电的话，此设备将会很快停止工作。"
 
-#: src/gpm-manager.c:1527
+#: src/gpm-manager.c:1526
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
-msgstr "连接的此计算机电量严重不足(仅剩 %.1f%%)。如果不充电的话，此设备将会很快停止工作。"
+msgstr "连接的计算机电量严重不足（%.0f%%）。如果不充电的话，此设备将会很快停止工作。"
 
-#: src/gpm-manager.c:1592
+#: src/gpm-manager.c:1591
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
-msgstr "电池的电量将用尽，电池的电量完全用尽时计算机将会<b>关机</b>。"
+msgstr "电池电量将用尽。电池的电量完全用尽时计算机将会<b>关机</b>。"
 
-#: src/gpm-manager.c:1598
+#: src/gpm-manager.c:1597
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
-msgstr "电池的电量将用尽，计算机将开始挂起。<br><b>注意：</b>将您的计算机保持在挂起状态也需要一点电量。"
+msgstr "电池电量将用尽。计算机即将挂起。<br><b>注意：</b>将您的计算机保持在挂起状态也需要一点电量。"
 
-#: src/gpm-manager.c:1605
+#: src/gpm-manager.c:1604
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
-msgstr "电池的电量将用尽，计算机将开始休眠。"
+msgstr "电池电量将用尽。计算机即将休眠。"
 
-#: src/gpm-manager.c:1610
+#: src/gpm-manager.c:1609
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
-msgstr "电池的电量将用尽，计算机将开始关机。"
+msgstr "电池电量将用尽。计算机即将关机。"
 
-#: src/gpm-manager.c:1628
+#: src/gpm-manager.c:1627
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
-msgstr "UPS 电量将用尽。UPS 电量完全用尽时计算将会<b>关机</b>。"
+msgstr "UPS 电量将用尽。UPS 电量完全用尽时计算机将会<b>关机</b>。"
 
-#: src/gpm-manager.c:1634
+#: src/gpm-manager.c:1633
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
-msgstr "UPS 电量将用尽，计算机将开始休眠到硬盘。"
+msgstr "UPS 电量将用尽。计算机即将休眠。"
 
-#: src/gpm-manager.c:1639
+#: src/gpm-manager.c:1638
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
-msgstr "UPS 电量将用尽，计算机将开始关机。"
+msgstr "UPS 电量将用尽。计算机即将关机。"
 
 #: src/gpm-prefs.c:77
 msgid "MATE Power Preferences"
@@ -1441,500 +1439,505 @@ msgstr "黑屏幕"
 
 #: src/gpm-prefs-core.c:258
 msgid "Ask me"
-msgstr "询问"
+msgstr "询问我"
 
 #: src/gpm-prefs-core.c:261
 msgid "Do nothing"
-msgstr "不执行动作"
+msgstr "什么都不做"
 
 #: src/gpm-prefs-core.c:321
 msgid "Never"
 msgstr "从不"
 
-#: src/gpm-statistics.c:67 src/gpm-statistics.c:410
-msgid "Rate"
-msgstr "利率"
-
-#: src/gpm-statistics.c:68
-msgid "Charge"
-msgstr "电量"
-
-#: src/gpm-statistics.c:69 src/gpm-statistics.c:424
-msgid "Time to full"
-msgstr "充满时间"
-
-#: src/gpm-statistics.c:70 src/gpm-statistics.c:429
-msgid "Time to empty"
-msgstr "放完时间"
-
-#: src/gpm-statistics.c:77
-msgid "10 minutes"
-msgstr "10 分钟"
-
-#: src/gpm-statistics.c:78
-msgid "2 hours"
-msgstr "2 小时"
-
-#: src/gpm-statistics.c:79
-msgid "6 hours"
-msgstr "6 小时"
-
-#: src/gpm-statistics.c:80
-msgid "1 day"
-msgstr "1 天"
-
-#: src/gpm-statistics.c:81
-msgid "1 week"
-msgstr "1 周"
-
-#: src/gpm-statistics.c:90
+#: src/gpm-statistics.c:71
 msgid "Charge profile"
 msgstr "充电图"
 
-#: src/gpm-statistics.c:91
+#: src/gpm-statistics.c:72
 msgid "Discharge profile"
 msgstr "放电图"
 
-#: src/gpm-statistics.c:93
+#: src/gpm-statistics.c:74
 msgid "Charge accuracy"
 msgstr "充电准确度"
 
-#: src/gpm-statistics.c:94
+#: src/gpm-statistics.c:75
 msgid "Discharge accuracy"
-msgstr "放电时间准确度"
+msgstr "放电准确度"
 
-#: src/gpm-statistics.c:121
+#: src/gpm-statistics.c:77 src/gpm-statistics.c:435
+msgid "Rate"
+msgstr "速率"
+
+#: src/gpm-statistics.c:78
+msgid "Charge"
+msgstr "电量"
+
+#: src/gpm-statistics.c:79 src/gpm-statistics.c:449
+msgid "Time to full"
+msgstr "充满时间"
+
+#: src/gpm-statistics.c:80 src/gpm-statistics.c:454
+msgid "Time to empty"
+msgstr "放空时间"
+
+#: src/gpm-statistics.c:88
+msgid "10 minutes"
+msgstr "10 分钟"
+
+#: src/gpm-statistics.c:89
+msgid "2 hours"
+msgstr "2 小时"
+
+#: src/gpm-statistics.c:90
+msgid "6 hours"
+msgstr "6 小时"
+
+#: src/gpm-statistics.c:91
+msgid "1 day"
+msgstr "1 天"
+
+#: src/gpm-statistics.c:92
+msgid "1 week"
+msgstr "1 周"
+
+#: src/gpm-statistics.c:146
 msgid "Attribute"
 msgstr "属性"
 
-#: src/gpm-statistics.c:128
+#: src/gpm-statistics.c:153
 msgid "Value"
 msgstr "值"
 
-#: src/gpm-statistics.c:145
+#: src/gpm-statistics.c:170
 msgid "Image"
 msgstr "图像"
 
-#: src/gpm-statistics.c:151
+#: src/gpm-statistics.c:176
 msgid "Description"
 msgstr "描述"
 
-#: src/gpm-statistics.c:230
+#: src/gpm-statistics.c:255
 msgid "Unknown"
 msgstr "未知"
 
-#: src/gpm-statistics.c:234
+#: src/gpm-statistics.c:259
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
 msgstr[0] "%.0f 秒"
 
-#: src/gpm-statistics.c:239
+#: src/gpm-statistics.c:264
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
 msgstr[0] "%.1f 分"
 
-#: src/gpm-statistics.c:244
+#: src/gpm-statistics.c:269
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
 msgstr[0] "%.1f 小时"
 
-#: src/gpm-statistics.c:248
+#: src/gpm-statistics.c:273
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
 msgstr[0] "%.1f 天"
 
-#: src/gpm-statistics.c:257
+#: src/gpm-statistics.c:282
 msgid "Yes"
 msgstr "是"
 
-#: src/gpm-statistics.c:257
+#: src/gpm-statistics.c:282
 msgid "No"
 msgstr "否"
 
-#: src/gpm-statistics.c:346
+#: src/gpm-statistics.c:371
 msgid "Device"
 msgstr "设备"
 
-#: src/gpm-statistics.c:349
+#: src/gpm-statistics.c:374
 msgid "Type"
 msgstr "类型"
 
-#: src/gpm-statistics.c:351
+#: src/gpm-statistics.c:376
 msgid "Vendor"
-msgstr "发行商"
+msgstr "厂商"
 
-#: src/gpm-statistics.c:353
+#: src/gpm-statistics.c:378
 msgid "Model"
 msgstr "型号"
 
-#: src/gpm-statistics.c:355
+#: src/gpm-statistics.c:380
 msgid "Serial number"
 msgstr "序列号"
 
-#: src/gpm-statistics.c:360
+#: src/gpm-statistics.c:385
 msgid "Supply"
-msgstr "供应"
+msgstr "供电"
 
-#: src/gpm-statistics.c:363
+#: src/gpm-statistics.c:388
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d 秒"
 
-#: src/gpm-statistics.c:367
+#: src/gpm-statistics.c:392
 msgid "Refreshed"
-msgstr "已刷新"
+msgstr "上次刷新"
 
-#: src/gpm-statistics.c:377
+#: src/gpm-statistics.c:402
 msgid "Present"
-msgstr "当前电池"
+msgstr "存在"
 
-#: src/gpm-statistics.c:384
+#: src/gpm-statistics.c:409
 msgid "Rechargeable"
 msgstr "可充电"
 
-#: src/gpm-statistics.c:390
+#: src/gpm-statistics.c:415
 msgid "State"
-msgstr "州/省"
+msgstr "状态"
 
-#: src/gpm-statistics.c:394
+#: src/gpm-statistics.c:419
 msgid "Energy"
 msgstr "能量"
 
-#: src/gpm-statistics.c:397
+#: src/gpm-statistics.c:422
 msgid "Energy when empty"
 msgstr "空时能量"
 
-#: src/gpm-statistics.c:400
+#: src/gpm-statistics.c:425
 msgid "Energy when full"
 msgstr "满时能量"
 
-#: src/gpm-statistics.c:403
+#: src/gpm-statistics.c:428
 msgid "Energy (design)"
-msgstr "能量 (设计)"
+msgstr "能量（设计）"
 
-#: src/gpm-statistics.c:417
+#: src/gpm-statistics.c:442
 msgid "Voltage"
 msgstr "电压"
 
-#: src/gpm-statistics.c:439
+#: src/gpm-statistics.c:464
 msgid "Percentage"
 msgstr "百分比"
 
-#: src/gpm-statistics.c:446
+#: src/gpm-statistics.c:471
 msgid "Capacity"
 msgstr "容量"
 
-#: src/gpm-statistics.c:451
+#: src/gpm-statistics.c:476
 msgid "Technology"
 msgstr "技术"
 
-#: src/gpm-statistics.c:456
+#: src/gpm-statistics.c:481
 msgid "Online"
-msgstr "在线"
+msgstr "连接时间"
 
-#: src/gpm-statistics.c:754
+#: src/gpm-statistics.c:779
 msgid "Device Information"
 msgstr "设备信息"
 
-#: src/gpm-statistics.c:756
+#: src/gpm-statistics.c:781
 msgid "Device History"
 msgstr "设备历史"
 
-#: src/gpm-statistics.c:758
+#: src/gpm-statistics.c:783
 msgid "Device Profile"
-msgstr "设备配置"
+msgstr "设备图表"
 
-#: src/gpm-statistics.c:979 src/gpm-statistics.c:985 src/gpm-statistics.c:991
-#: src/gpm-statistics.c:997
+#: src/gpm-statistics.c:1008 src/gpm-statistics.c:1014
+#: src/gpm-statistics.c:1020 src/gpm-statistics.c:1026
 msgid "Time elapsed"
 msgstr "已过去时间"
 
-#: src/gpm-statistics.c:981
+#: src/gpm-statistics.c:1010
 msgid "Power"
-msgstr "乘方"
+msgstr "功率"
 
-#: src/gpm-statistics.c:987 src/gpm-statistics.c:1031
-#: src/gpm-statistics.c:1037 src/gpm-statistics.c:1043
-#: src/gpm-statistics.c:1049
+#: src/gpm-statistics.c:1016 src/gpm-statistics.c:1066
+#: src/gpm-statistics.c:1072 src/gpm-statistics.c:1078
+#: src/gpm-statistics.c:1084
 msgid "Cell charge"
 msgstr "电池电量"
 
-#: src/gpm-statistics.c:993 src/gpm-statistics.c:999
+#: src/gpm-statistics.c:1022 src/gpm-statistics.c:1028
 msgid "Predicted time"
 msgstr "预计时间"
 
-#: src/gpm-statistics.c:1033 src/gpm-statistics.c:1045
+#: src/gpm-statistics.c:1068 src/gpm-statistics.c:1080
 msgid "Correction factor"
 msgstr "修正因数"
 
-#: src/gpm-statistics.c:1039 src/gpm-statistics.c:1051
+#: src/gpm-statistics.c:1074 src/gpm-statistics.c:1086
 msgid "Prediction accuracy"
 msgstr "预测准确度"
 
-#: src/gpm-statistics.c:1210
+#: src/gpm-statistics.c:1245
 msgid "Select this device at startup"
 msgstr "在启动时选择这个设备"
 
 #: src/gpm-tray-icon.c:206
 msgid "Copyright © 2011-2021 MATE developers"
-msgstr "版权所有 © 2011-2021 MATE 开发者"
+msgstr "Copyright © 2011-2021 MATE 开发者"
 
-#: src/gpm-tray-icon.c:316
+#: src/gpm-tray-icon.c:319
 #, c-format
 msgid "%s remaining"
 msgstr "剩余 %s"
 
-#: src/gpm-tray-icon.c:370
+#: src/gpm-tray-icon.c:374
 msgid "_Preferences"
 msgstr "属性(_P)"
 
-#: src/gpm-upower.c:211
+#: src/gpm-upower.c:214
 #, c-format
 msgid "%s not present"
-msgstr "%s 不存在"
+msgstr "%s不存在"
 
-#: src/gpm-upower.c:224 src/gpm-upower.c:288
+#: src/gpm-upower.c:227 src/gpm-upower.c:291
 #, c-format
 msgid "%s charging (%.1f%%)"
-msgstr "%s 充电中 (%.1f%%)"
+msgstr "%s正在充电（%.1f%%）"
 
-#: src/gpm-upower.c:239
+#: src/gpm-upower.c:242
 #, c-format
 msgid ""
 "Battery is fully charged.\n"
 "Provides %s laptop runtime"
 msgstr ""
-"电池已充满.\n"
-"可提供 %s 笔记本运行时间"
+"电池已充满。\n"
+"可提供 %s的笔记本运行时间"
 
-#: src/gpm-upower.c:244
+#: src/gpm-upower.c:247
 #, c-format
 msgid "%s is fully charged"
-msgstr "%s 已充满"
+msgstr "%s已充满"
 
-#: src/gpm-upower.c:252
+#: src/gpm-upower.c:255
 #, c-format
 msgid "%s %s remaining (%.1f%%)"
-msgstr "剩余%s %s (%.1f%%)"
+msgstr "%s剩余 %s（%.1f%%）"
 
-#: src/gpm-upower.c:257
+#: src/gpm-upower.c:260
 #, c-format
 msgid "%s discharging (%.1f%%)"
-msgstr "%s 放电中 (%.1f%%)"
+msgstr "%s正在放电（%.1f%%）"
 
-#: src/gpm-upower.c:271
+#: src/gpm-upower.c:274
 #, c-format
 msgid ""
 "%s %s until charged (%.1f%%)\n"
 "Provides %s battery runtime"
 msgstr ""
-"还需%s %s才能充满 (%.1f%%)\n"
-"可提供 %s 电池运行时间"
+"%s离充满还有 %s（%.1f%%）\n"
+"可提供 %s电池运行时间"
 
-#: src/gpm-upower.c:282
+#: src/gpm-upower.c:285
 #, c-format
 msgid "%s %s until charged (%.1f%%)"
-msgstr "离充满还有 %s %s (%.1f%%)"
+msgstr "%s离充满还有 %s（%.1f%%）"
 
-#: src/gpm-upower.c:295
+#: src/gpm-upower.c:298
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
-msgstr "%s 正在等待放电 (%.1f%%)"
+msgstr "%s正在等待放电（%.1f%%）"
 
-#: src/gpm-upower.c:301
+#: src/gpm-upower.c:304
 #, c-format
 msgid "%s waiting to charge (%.1f%%)"
-msgstr "%s 正在等待充电(%.1f%%)"
+msgstr "%s正在等待充电（%.1f%%）"
 
-#: src/gpm-upower.c:306
+#: src/gpm-upower.c:309
 #, c-format
 msgid "%s empty"
-msgstr "%s 为空"
+msgstr "%s为空"
 
-#: src/gpm-upower.c:366
+#: src/gpm-upower.c:369
 msgid "Product:"
 msgstr "产品："
 
-#: src/gpm-upower.c:370 src/gpm-upower.c:373 src/gpm-upower.c:376
-#: src/gpm-upower.c:379
+#: src/gpm-upower.c:373 src/gpm-upower.c:376 src/gpm-upower.c:379
+#: src/gpm-upower.c:382
 msgid "Status:"
 msgstr "状态："
 
-#: src/gpm-upower.c:370
+#: src/gpm-upower.c:373
 msgid "Missing"
-msgstr "缺少"
+msgstr "缺失"
 
-#: src/gpm-upower.c:373 src/gpm-upower.c:650
+#: src/gpm-upower.c:376 src/gpm-upower.c:657
 msgid "Charged"
 msgstr "已充满"
 
-#: src/gpm-upower.c:376 src/gpm-upower.c:638
+#: src/gpm-upower.c:379 src/gpm-upower.c:645
 msgid "Charging"
-msgstr "正充电"
+msgstr "正在充电"
 
-#: src/gpm-upower.c:379 src/gpm-upower.c:642
+#: src/gpm-upower.c:382 src/gpm-upower.c:649
 msgid "Discharging"
-msgstr "正放电"
+msgstr "正在放电"
 
-#: src/gpm-upower.c:384
+#: src/gpm-upower.c:387
 msgid "Percentage charge:"
-msgstr "充电百分比："
+msgstr "电量百分比："
 
-#: src/gpm-upower.c:388
+#: src/gpm-upower.c:391
 msgid "Vendor:"
-msgstr "厂家："
+msgstr "厂商："
 
-#: src/gpm-upower.c:393
+#: src/gpm-upower.c:396
 msgid "Technology:"
 msgstr "技术："
 
-#: src/gpm-upower.c:397
+#: src/gpm-upower.c:400
 msgid "Serial number:"
 msgstr "序列号："
 
-#: src/gpm-upower.c:401
+#: src/gpm-upower.c:404
 msgid "Model:"
 msgstr "型号："
 
-#: src/gpm-upower.c:406
+#: src/gpm-upower.c:409
 msgid "Charge time:"
 msgstr "充电时间："
 
-#: src/gpm-upower.c:412
+#: src/gpm-upower.c:415
 msgid "Discharge time:"
 msgstr "放电时间："
 
-#: src/gpm-upower.c:419
+#: src/gpm-upower.c:422
 msgid "Excellent"
 msgstr "非常好"
 
-#: src/gpm-upower.c:421
+#: src/gpm-upower.c:424
 msgid "Good"
-msgstr "较好"
+msgstr "好"
 
-#: src/gpm-upower.c:423
+#: src/gpm-upower.c:426
 msgid "Fair"
 msgstr "尚可"
 
-#: src/gpm-upower.c:425
+#: src/gpm-upower.c:428
 msgid "Poor"
 msgstr "差"
 
-#: src/gpm-upower.c:429
+#: src/gpm-upower.c:432
 msgid "Capacity:"
 msgstr "容量："
 
-#: src/gpm-upower.c:435 src/gpm-upower.c:460
+#: src/gpm-upower.c:438 src/gpm-upower.c:463
 msgid "Current charge:"
-msgstr "当前充电："
+msgstr "当前电量："
 
-#: src/gpm-upower.c:441
+#: src/gpm-upower.c:444
 msgid "Last full charge:"
-msgstr "上次充电："
+msgstr "上次充满时电量："
 
-#: src/gpm-upower.c:447 src/gpm-upower.c:465
+#: src/gpm-upower.c:450 src/gpm-upower.c:468
 msgid "Design charge:"
-msgstr "设计充电："
+msgstr "设计电量："
 
-#: src/gpm-upower.c:452
+#: src/gpm-upower.c:455
 msgid "Charge rate:"
-msgstr "充电率："
+msgstr "充放电速率："
 
-#: src/gpm-upower.c:487
+#: src/gpm-upower.c:490
 msgid "AC adapter"
 msgid_plural "AC adapters"
 msgstr[0] "交流电源适配器"
 
-#: src/gpm-upower.c:491
+#: src/gpm-upower.c:494
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
 msgstr[0] "笔记本电池"
 
-#: src/gpm-upower.c:495
+#: src/gpm-upower.c:498
 msgid "UPS"
 msgid_plural "UPSs"
 msgstr[0] "UPS"
 
-#: src/gpm-upower.c:499
+#: src/gpm-upower.c:502
 msgid "Monitor"
 msgid_plural "Monitors"
 msgstr[0] "显示器"
 
-#: src/gpm-upower.c:503
+#: src/gpm-upower.c:506
 msgid "Mouse"
 msgid_plural "Mice"
 msgstr[0] "鼠标"
 
-#: src/gpm-upower.c:511
+#: src/gpm-upower.c:514
 msgid "PDA"
 msgid_plural "PDAs"
 msgstr[0] "PDA"
 
-#: src/gpm-upower.c:515
+#: src/gpm-upower.c:518
 msgid "Cell phone"
 msgid_plural "Cell phones"
 msgstr[0] "手机"
 
-#: src/gpm-upower.c:519
+#: src/gpm-upower.c:522
 msgid "Media player"
 msgid_plural "Media players"
 msgstr[0] "媒体播放器"
 
-#: src/gpm-upower.c:523
+#: src/gpm-upower.c:526
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "触摸板"
+msgstr[0] "平板电脑"
 
-#: src/gpm-upower.c:527
+#: src/gpm-upower.c:530
 msgid "Computer"
 msgid_plural "Computers"
 msgstr[0] "计算机"
 
-#: src/gpm-upower.c:594
+#: src/gpm-upower.c:534
+msgid "Gaming input"
+msgid_plural "Gaming inputs"
+msgstr[0] ""
+
+#: src/gpm-upower.c:601
 msgid "Lithium Ion"
 msgstr "锂离子"
 
-#: src/gpm-upower.c:598
+#: src/gpm-upower.c:605
 msgid "Lithium Polymer"
 msgstr "锂聚合物"
 
-#: src/gpm-upower.c:602
+#: src/gpm-upower.c:609
 msgid "Lithium Iron Phosphate"
 msgstr "磷酸铁锂"
 
-#: src/gpm-upower.c:606
+#: src/gpm-upower.c:613
 msgid "Lead acid"
 msgstr "铅酸"
 
-#: src/gpm-upower.c:610
+#: src/gpm-upower.c:617
 msgid "Nickel Cadmium"
 msgstr "镍镉"
 
-#: src/gpm-upower.c:614
+#: src/gpm-upower.c:621
 msgid "Nickel metal hydride"
 msgstr "镍氢"
 
-#: src/gpm-upower.c:618
+#: src/gpm-upower.c:625
 msgid "Unknown technology"
 msgstr "未知技术"
 
-#: src/gpm-upower.c:646
+#: src/gpm-upower.c:653
 msgid "Empty"
 msgstr "空"
 
-#: src/gpm-upower.c:654
+#: src/gpm-upower.c:661
 msgid "Waiting to charge"
 msgstr "待充电"
 
-#: src/gpm-upower.c:658
+#: src/gpm-upower.c:665
 msgid "Waiting to discharge"
 msgstr "待放电"
 
-#: src/gpm-upower.c:662
+#: src/gpm-upower.c:669
 msgid "Unknown state"
 msgstr "未知状态"

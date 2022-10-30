@@ -9,14 +9,15 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Damir Jerovšek <jierro@windowslive.com>, 2020
 # Helena S <ele@tutamail.com>, 2020
+# Martin Srebotnjak <miles@filmsi.net>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-power-manager 1.25.0\n"
+"Project-Id-Version: mate-power-manager 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
-"POT-Creation-Date: 2021-06-22 17:30+0200\n"
+"POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Helena S <ele@tutamail.com>, 2020\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>, 2021\n"
 "Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,76 +25,91 @@ msgstr ""
 "Language: sl\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
-#: applets/brightness/brightness-applet.c:109
+#: applets/brightness/brightness-applet.c:108
 msgid "Power Manager Brightness Applet"
 msgstr "Aplet svetlosti upravljalnika porabe energije"
 
-#: applets/brightness/brightness-applet.c:110
+#: applets/brightness/brightness-applet.c:109
 msgid "Adjusts laptop panel brightness."
 msgstr "Prilagodi svetlost zaslona prenosnika."
 
-#: applets/brightness/brightness-applet.c:371
-#: applets/inhibit/inhibit-applet.c:225
+#: applets/brightness/brightness-applet.c:370
+#: applets/inhibit/inhibit-applet.c:223
 msgid "Cannot connect to mate-power-manager"
 msgstr "Ni se mogoče povezati z upravljalnikom porabe energije"
 
-#: applets/brightness/brightness-applet.c:373
+#: applets/brightness/brightness-applet.c:372
 msgid "Cannot get laptop panel brightness"
 msgstr "Ni mogoče določiti svetlosti zaslona prenosnika"
 
-#: applets/brightness/brightness-applet.c:375
+#: applets/brightness/brightness-applet.c:374
 #, c-format
 msgid "LCD brightness : %d%%"
 msgstr "Svetlost zaslona LCD: %d%%"
 
-#: applets/brightness/brightness-applet.c:818
-#: applets/inhibit/inhibit-applet.c:287
+#: applets/brightness/brightness-applet.c:817
+#: applets/inhibit/inhibit-applet.c:285
 msgid ""
 "Power Manager is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
 msgstr ""
+"Upravljalnik porabe energije spada med prosto programsko opremo; lahko jo "
+"razširjate in/ali spreminjate pod pogoji Splošnega dovoljenja GNU (GNU "
+"General Public License), kot ga je objavila ustanova Free Software "
+"Foundation; bodisi različice 2 ali (po vaši izbiri) poljubne novejše "
+"različice."
 
-#: applets/brightness/brightness-applet.c:823
-#: applets/inhibit/inhibit-applet.c:292
+#: applets/brightness/brightness-applet.c:822
+#: applets/inhibit/inhibit-applet.c:290
 msgid ""
 "Power Manager is distributed in the hope that it will be useful, but WITHOUT"
 " ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
 msgstr ""
+"Upravljalnik porabe energije se razširja v upanju, da bo uporaben, vendar "
+"BREZ VSAKRŠNEGA JAMSTVA; tudi brez posredne zagotovitve CENOVNE VREDNOSTI "
+"ali PRIMERNOSTI ZA DOLOČEN NAMEN.  Za podrobnosti glejte besedilo GNU "
+"General Public License."
 
-#: applets/brightness/brightness-applet.c:828
-#: applets/inhibit/inhibit-applet.c:297
+#: applets/brightness/brightness-applet.c:827
+#: applets/inhibit/inhibit-applet.c:295
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
+"Skupaj s tem programom bi morali prejeti izvod Splošnega dovoljenja GNU (GNU"
+" General Public License); v primeru, da ga niste, pišite na Free Software "
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, "
+"USA."
 
-#: applets/brightness/brightness-applet.c:841
+#: applets/brightness/brightness-applet.c:840
 msgid "About Power Manager Brightness Applet"
-msgstr ""
+msgstr "O apletu svetlosti upravljalnika porabe energije"
 
-#: applets/brightness/brightness-applet.c:843
+#: applets/brightness/brightness-applet.c:842
 msgid ""
 "Copyright © 2006 Benjamin Canou\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
+"Avtorske pravice © 2006 Benjamin Canou\n"
+"Avtorske pravice © 2011-2021 razvijalci MATE"
 
-#: applets/brightness/brightness-applet.c:850
-#: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:212
+#: applets/brightness/brightness-applet.c:849
+#: applets/inhibit/inhibit-applet.c:317 src/gpm-tray-icon.c:212
 msgid "translator-credits"
 msgstr "zasluge-prevajalcev"
 
-#: applets/brightness/brightness-applet.c:1081
-#: applets/inhibit/inhibit-applet.c:503
+#: applets/brightness/brightness-applet.c:1080
+#: applets/inhibit/inhibit-applet.c:500
 msgid "_About"
 msgstr "_O programu"
 
-#: applets/brightness/brightness-applet.c:1084
-#: applets/inhibit/inhibit-applet.c:506 data/gpm-prefs.ui:41
+#: applets/brightness/brightness-applet.c:1083
+#: applets/inhibit/inhibit-applet.c:503 data/gpm-prefs.ui:41
 msgid "_Help"
 msgstr "_Pomoč"
 
@@ -113,27 +129,29 @@ msgstr "Aplet preprečevanja upravljalnika porabe energije"
 msgid "Allows user to inhibit automatic power saving."
 msgstr "Omogoča uporabniku preprečevanje samodejnega varčevanja z energijo."
 
-#: applets/inhibit/inhibit-applet.c:228
+#: applets/inhibit/inhibit-applet.c:226
 msgid "Automatic sleep inhibited"
 msgstr "Preprečevanje samodejnega prehoda v pripravljenost"
 
-#: applets/inhibit/inhibit-applet.c:230
+#: applets/inhibit/inhibit-applet.c:228
 msgid "Automatic sleep enabled"
 msgstr "Samodejni prehod v pripravljenost je omogočen"
 
-#: applets/inhibit/inhibit-applet.c:258
+#: applets/inhibit/inhibit-applet.c:256
 msgid "Manual inhibit"
 msgstr "Ročno preprečevanje"
 
-#: applets/inhibit/inhibit-applet.c:310
+#: applets/inhibit/inhibit-applet.c:308
 msgid "About Power Manager Inhibit Applet"
-msgstr ""
+msgstr "O apletu preprečevanja upravljalnika porabe energije"
 
-#: applets/inhibit/inhibit-applet.c:312
+#: applets/inhibit/inhibit-applet.c:310
 msgid ""
 "Copyright © 2006-2007 Richard Hughes\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
+"Avtorske pravice © 2006-2007 Richard Hughes\n"
+"Avtorske pravice © 2011-2021 razvijalci MATE"
 
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
@@ -862,10 +880,10 @@ msgstr "Nastavi upravljanje porabe energije"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/mate-power-preferences.desktop.in.in:13
 msgid "MATE;power;management;preferences;settings;"
-msgstr ""
+msgstr "MATE;napajanje;poraba;upravljanje;nastavitve;možnosti;energija;"
 
 #: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
-#: src/gpm-statistics.c:762 src/gpm-statistics.c:1224
+#: src/gpm-statistics.c:787 src/gpm-statistics.c:1259
 msgid "Power Statistics"
 msgstr "Statistika porabe energije"
 
@@ -960,9 +978,9 @@ msgstr "_Zmanjšaj svetlost ozadja"
 
 #: data/gpm-prefs.ui:663
 msgid "_Reduce keyboard backlight"
-msgstr ""
+msgstr "_Zmanjšaj hrbtno osvetlitev tipk"
 
-#: data/gpm-prefs.ui:685 src/gpm-upower.c:507
+#: data/gpm-prefs.ui:685 src/gpm-upower.c:510
 msgid "Keyboard"
 msgid_plural "Keyboards"
 msgstr[0] "Tipkovnica"
@@ -1225,51 +1243,51 @@ msgstr "Obnovljeno"
 msgid "Suspend failed"
 msgstr "Način pripravljenosti je spodletel"
 
-#: src/gpm-manager.c:578
+#: src/gpm-manager.c:577
 msgid "Computer failed to suspend."
 msgstr "Prehod računalnika v pripravljenost je spodletel."
 
-#: src/gpm-manager.c:580
+#: src/gpm-manager.c:579
 msgid "Failed to suspend"
 msgstr "Prehod v pripravljenost je spodletel"
 
-#: src/gpm-manager.c:584
+#: src/gpm-manager.c:583
 msgid "Computer failed to hibernate."
 msgstr "Prehod računalnika v mirovanje je spodletel."
 
-#: src/gpm-manager.c:586
+#: src/gpm-manager.c:585
 msgid "Failed to hibernate"
 msgstr "Prehod v mirovanje je spodletel"
 
-#: src/gpm-manager.c:591
+#: src/gpm-manager.c:590
 msgid "Failure was reported as:"
 msgstr "Napaka je poročana kot:"
 
-#: src/gpm-manager.c:604
+#: src/gpm-manager.c:603
 msgid "Visit help page"
 msgstr "Obiščite stran pomoči"
 
-#: src/gpm-manager.c:850
+#: src/gpm-manager.c:849
 msgid "Display DPMS activated"
 msgstr "Prikaz DPMS je omogočen"
 
-#: src/gpm-manager.c:869
+#: src/gpm-manager.c:868
 msgid "On battery power"
 msgstr "Napajanje iz baterije"
 
-#: src/gpm-manager.c:887
+#: src/gpm-manager.c:886
 msgid "Laptop lid is closed"
 msgstr "Pokrov prenosnika je zaprt"
 
-#: src/gpm-manager.c:925
+#: src/gpm-manager.c:924
 msgid "Power Information"
 msgstr "Podatki o porabi energije"
 
-#: src/gpm-manager.c:1106
+#: src/gpm-manager.c:1105
 msgid "Battery may be broken"
 msgstr "Baterija je morda pokvarjena"
 
-#: src/gpm-manager.c:1109
+#: src/gpm-manager.c:1108
 #, c-format
 msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
@@ -1278,7 +1296,7 @@ msgstr ""
 "Zmogljivost baterij je zelo majhna (%1.1f %%), kar pomeni, da je bodisi "
 "stara ali pa pokvarjena."
 
-#: src/gpm-manager.c:1158
+#: src/gpm-manager.c:1157
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] "Napolnjenost baterije"
@@ -1286,149 +1304,149 @@ msgstr[1] "Napolnjenost baterij"
 msgstr[2] "Napolnjenost baterij"
 msgstr[3] "Napolnjenost baterij"
 
-#: src/gpm-manager.c:1204
+#: src/gpm-manager.c:1203
 msgid "Battery Discharging"
 msgstr "Praznjenje baterije"
 
-#: src/gpm-manager.c:1208
+#: src/gpm-manager.c:1207
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
 msgstr "%s preostale napetosti baterije (%.0f %%)"
 
-#: src/gpm-manager.c:1211 src/gpm-manager.c:1223
+#: src/gpm-manager.c:1210 src/gpm-manager.c:1222
 #, c-format
 msgid "%s discharging (%.0f%%)"
 msgstr "%s se prazni (%.0f%%)"
 
-#: src/gpm-manager.c:1216
+#: src/gpm-manager.c:1215
 msgid "UPS Discharging"
 msgstr "Brezprekinitveni vir UPS se prazni"
 
-#: src/gpm-manager.c:1220
+#: src/gpm-manager.c:1219
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr "%s preostale napetosti vira UPS (%.0f%%)"
 
-#: src/gpm-manager.c:1304
+#: src/gpm-manager.c:1303
 msgid "Battery low"
 msgstr "Napetost baterije je nizka"
 
-#: src/gpm-manager.c:1307
+#: src/gpm-manager.c:1306
 msgid "Laptop battery low"
 msgstr "Napetost baterije prenosnika je nizka"
 
-#: src/gpm-manager.c:1313
+#: src/gpm-manager.c:1312
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr "Na voljo je še približno <b>%s</b> delovanja baterije (%.0f%%)"
 
-#: src/gpm-manager.c:1317
+#: src/gpm-manager.c:1316
 msgid "UPS low"
 msgstr "Napetost vira UPS je nizka"
 
-#: src/gpm-manager.c:1321
+#: src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr "Na voljo je še približno <b>%s</b> delovanja vira UPS (%.0f%%)"
 
-#: src/gpm-manager.c:1330 src/gpm-manager.c:1469
+#: src/gpm-manager.c:1329 src/gpm-manager.c:1468
 msgid "Mouse battery low"
 msgstr "Napetost baterije miške je nizka"
 
-#: src/gpm-manager.c:1333
+#: src/gpm-manager.c:1332
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr "Brezžična miška ima nizko napetost baterije (%.0f%%)"
 
-#: src/gpm-manager.c:1337 src/gpm-manager.c:1477
+#: src/gpm-manager.c:1336 src/gpm-manager.c:1476
 msgid "Keyboard battery low"
 msgstr "Napetost baterije tipkovnice je nizka"
 
-#: src/gpm-manager.c:1340
+#: src/gpm-manager.c:1339
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr "Brezžična tipkovnica ima nizko napetost baterije (%.0f%%)"
 
-#: src/gpm-manager.c:1344 src/gpm-manager.c:1486
+#: src/gpm-manager.c:1343 src/gpm-manager.c:1485
 msgid "PDA battery low"
 msgstr "Napetost baterije dlančnika je nizka"
 
-#: src/gpm-manager.c:1347
+#: src/gpm-manager.c:1346
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr "Dlančnik ima nizko napetost baterije (%.0f%%)"
 
-#: src/gpm-manager.c:1351 src/gpm-manager.c:1496 src/gpm-manager.c:1506
+#: src/gpm-manager.c:1350 src/gpm-manager.c:1495 src/gpm-manager.c:1505
 msgid "Cell phone battery low"
 msgstr "Napetost baterije mobilnega telefona je nizka"
 
-#: src/gpm-manager.c:1354
+#: src/gpm-manager.c:1353
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr "Priključeni mobilni telefon ima nizko napetost baterije (%.0f%%)."
 
-#: src/gpm-manager.c:1358
+#: src/gpm-manager.c:1357
 msgid "Media player battery low"
 msgstr "Predstavnostna naprava ima nizko napetost baterije"
 
-#: src/gpm-manager.c:1361
+#: src/gpm-manager.c:1360
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr "Predstavnostna naprava ima nizko napetost baterije (%.0f%%)"
 
-#: src/gpm-manager.c:1365 src/gpm-manager.c:1515
+#: src/gpm-manager.c:1364 src/gpm-manager.c:1514
 msgid "Tablet battery low"
 msgstr "Tablični računalnik ima nizko napetost baterije"
 
-#: src/gpm-manager.c:1368
+#: src/gpm-manager.c:1367
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr "Tablični računalnik ima nizko napetost baterije (%.0f%%)"
 
-#: src/gpm-manager.c:1372 src/gpm-manager.c:1524
+#: src/gpm-manager.c:1371 src/gpm-manager.c:1523
 msgid "Attached computer battery low"
 msgstr "Priključen računalnik ima nizko napetost baterije"
 
-#: src/gpm-manager.c:1375
+#: src/gpm-manager.c:1374
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr "Priključen računalnik ima nizko napetost baterije (%.0f%%)"
 
-#: src/gpm-manager.c:1423
+#: src/gpm-manager.c:1422
 msgid "Battery critically low"
 msgstr "Baterija ima kritično nizko napetost"
 
-#: src/gpm-manager.c:1426 src/gpm-manager.c:1584
+#: src/gpm-manager.c:1425 src/gpm-manager.c:1583
 msgid "Laptop battery critically low"
 msgstr "Napetost baterije prenosnika je kritično nizka"
 
-#: src/gpm-manager.c:1435
+#: src/gpm-manager.c:1434
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr ""
 "V izogib izgubi podatkov priklopite napajalni kabel v električno omrežje."
 
-#: src/gpm-manager.c:1439
+#: src/gpm-manager.c:1438
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr ""
 "V kolikor računalnika ne priklopite v el. omrežje, se bo kmalu postavil v "
 "pripravljenost."
 
-#: src/gpm-manager.c:1443
+#: src/gpm-manager.c:1442
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr ""
 "V kolikor računalnika ne priklopite v el. omrežje, se bo postavil v "
 "mirovanje."
 
-#: src/gpm-manager.c:1447
+#: src/gpm-manager.c:1446
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr ""
 "V kolikor računalnika ne priklopite v el. omrežje, se bo kmalu izklopil."
 
-#: src/gpm-manager.c:1454 src/gpm-manager.c:1620
+#: src/gpm-manager.c:1453 src/gpm-manager.c:1619
 msgid "UPS critically low"
 msgstr "Napetost vira UPS je kritično nizka"
 
-#: src/gpm-manager.c:1458
+#: src/gpm-manager.c:1457
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
@@ -1437,7 +1455,7 @@ msgstr ""
 "Na voljo je še približno <b>%s</b> zmogljivosti vira UPS (%.0f %%). V izogib"
 " izgubi podatkov priklopite napajalni kabel v električno omrežje."
 
-#: src/gpm-manager.c:1472
+#: src/gpm-manager.c:1471
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
@@ -1446,7 +1464,7 @@ msgstr ""
 "Brezžična miška ima zelo nizko napetost baterije (%.0f %%). Naprava bo, v "
 "kolikor je ne napolnite, prenehala delovati."
 
-#: src/gpm-manager.c:1480
+#: src/gpm-manager.c:1479
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
@@ -1455,7 +1473,7 @@ msgstr ""
 "Brezžična tipkovnica ima zelo nizko napetost baterije (%.0f %%). Naprava bo,"
 " v kolikor je ne napolnite, prenehala delovati."
 
-#: src/gpm-manager.c:1489
+#: src/gpm-manager.c:1488
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
@@ -1464,7 +1482,7 @@ msgstr ""
 "Dlančnik ima zelo nizko napetost baterije (%.0f %%). Naprava bo, v kolikor "
 "je ne napolnite, prenehala delovati."
 
-#: src/gpm-manager.c:1499
+#: src/gpm-manager.c:1498
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
@@ -1473,7 +1491,7 @@ msgstr ""
 "Prenosni telefon ima zelo nizko napetost baterije (%.0f %%). Naprava bo, v "
 "kolikor je ne napolnite, prenehala delovati."
 
-#: src/gpm-manager.c:1509
+#: src/gpm-manager.c:1508
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
@@ -1482,7 +1500,7 @@ msgstr ""
 "Predstavnostna naprava ima zelo nizko napetost baterije (%.0f %%). Naprava "
 "bo, v kolikor je ne napolnite, prenehala delovati."
 
-#: src/gpm-manager.c:1518
+#: src/gpm-manager.c:1517
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
@@ -1491,7 +1509,7 @@ msgstr ""
 "Tablični računalnik ima zelo nizko napetost baterije (%.0f %%). Naprava bo, "
 "v kolikor je ne napolnite, prenehala delovati."
 
-#: src/gpm-manager.c:1527
+#: src/gpm-manager.c:1526
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
@@ -1500,7 +1518,7 @@ msgstr ""
 "Priključen računalnik ima zelo nizko napetost baterije (%.0f %%). Naprava se"
 " bo, v kolikor je ne napolnite, samodejno izklopila."
 
-#: src/gpm-manager.c:1592
+#: src/gpm-manager.c:1591
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
@@ -1508,7 +1526,7 @@ msgstr ""
 "Napetost baterije je kritično nizka. Računalnik se bo <b>izklopil</b>, ko se"
 " baterija do konca izprazni."
 
-#: src/gpm-manager.c:1598
+#: src/gpm-manager.c:1597
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
@@ -1518,20 +1536,20 @@ msgstr ""
 "stanje pripravljenosti. <br><b>OPOMBA:</b> Ohranjanje računalnika v načinu "
 "pripravljenosti zahteva majhno količino el. energije."
 
-#: src/gpm-manager.c:1605
+#: src/gpm-manager.c:1604
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr ""
 "Napetost baterije je kritično nizka. Računalnik se bo postavil v mirovanje."
 
-#: src/gpm-manager.c:1610
+#: src/gpm-manager.c:1609
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr "Napetost baterije je kritično nizka. Računalnik se bo izklopil."
 
-#: src/gpm-manager.c:1628
+#: src/gpm-manager.c:1627
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
@@ -1539,13 +1557,13 @@ msgstr ""
 "Vir UPS je pod kritično ravnjo. Računalnik se bo <b>izklopil</b>, ko se vir "
 "UPS do konca izprazni."
 
-#: src/gpm-manager.c:1634
+#: src/gpm-manager.c:1633
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr ""
 "Vir UPS je pod kritično ravnjo. Računalnik se bo postavil v mirovanje."
 
-#: src/gpm-manager.c:1639
+#: src/gpm-manager.c:1638
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr "Vir UPS je pod kritično ravnjo. Računalnik se bo izklopil."
@@ -1582,79 +1600,79 @@ msgstr "Ne naredi ničesar"
 msgid "Never"
 msgstr "Nikoli"
 
-#: src/gpm-statistics.c:67 src/gpm-statistics.c:410
-msgid "Rate"
-msgstr "Obrestna mera"
-
-#: src/gpm-statistics.c:68
-msgid "Charge"
-msgstr "Polnjenje"
-
-#: src/gpm-statistics.c:69 src/gpm-statistics.c:424
-msgid "Time to full"
-msgstr "Čas do napolnitve"
-
-#: src/gpm-statistics.c:70 src/gpm-statistics.c:429
-msgid "Time to empty"
-msgstr "Čas do izpraznitve"
-
-#: src/gpm-statistics.c:77
-msgid "10 minutes"
-msgstr "10 minut"
-
-#: src/gpm-statistics.c:78
-msgid "2 hours"
-msgstr "2 uri"
-
-#: src/gpm-statistics.c:79
-msgid "6 hours"
-msgstr "6 ur"
-
-#: src/gpm-statistics.c:80
-msgid "1 day"
-msgstr "1 dan"
-
-#: src/gpm-statistics.c:81
-msgid "1 week"
-msgstr "1 teden"
-
-#: src/gpm-statistics.c:90
+#: src/gpm-statistics.c:71
 msgid "Charge profile"
 msgstr "Profil polnjenja"
 
-#: src/gpm-statistics.c:91
+#: src/gpm-statistics.c:72
 msgid "Discharge profile"
 msgstr "Profil praznjenja"
 
-#: src/gpm-statistics.c:93
+#: src/gpm-statistics.c:74
 msgid "Charge accuracy"
 msgstr "Natančnost polnjenja"
 
-#: src/gpm-statistics.c:94
+#: src/gpm-statistics.c:75
 msgid "Discharge accuracy"
 msgstr "Natančnost praznjenja"
 
-#: src/gpm-statistics.c:121
+#: src/gpm-statistics.c:77 src/gpm-statistics.c:435
+msgid "Rate"
+msgstr "Obrestna mera"
+
+#: src/gpm-statistics.c:78
+msgid "Charge"
+msgstr "Polnjenje"
+
+#: src/gpm-statistics.c:79 src/gpm-statistics.c:449
+msgid "Time to full"
+msgstr "Čas do napolnitve"
+
+#: src/gpm-statistics.c:80 src/gpm-statistics.c:454
+msgid "Time to empty"
+msgstr "Čas do izpraznitve"
+
+#: src/gpm-statistics.c:88
+msgid "10 minutes"
+msgstr "10 minut"
+
+#: src/gpm-statistics.c:89
+msgid "2 hours"
+msgstr "2 uri"
+
+#: src/gpm-statistics.c:90
+msgid "6 hours"
+msgstr "6 ur"
+
+#: src/gpm-statistics.c:91
+msgid "1 day"
+msgstr "1 dan"
+
+#: src/gpm-statistics.c:92
+msgid "1 week"
+msgstr "1 teden"
+
+#: src/gpm-statistics.c:146
 msgid "Attribute"
 msgstr "Atribut"
 
-#: src/gpm-statistics.c:128
+#: src/gpm-statistics.c:153
 msgid "Value"
 msgstr "Vrednost"
 
-#: src/gpm-statistics.c:145
+#: src/gpm-statistics.c:170
 msgid "Image"
 msgstr "Slika"
 
-#: src/gpm-statistics.c:151
+#: src/gpm-statistics.c:176
 msgid "Description"
 msgstr "Opis"
 
-#: src/gpm-statistics.c:230
+#: src/gpm-statistics.c:255
 msgid "Unknown"
 msgstr "Neznano"
 
-#: src/gpm-statistics.c:234
+#: src/gpm-statistics.c:259
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
@@ -1663,7 +1681,7 @@ msgstr[1] "%.0f sekund"
 msgstr[2] "%.0f sekund"
 msgstr[3] "%.0f sekund"
 
-#: src/gpm-statistics.c:239
+#: src/gpm-statistics.c:264
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
@@ -1672,7 +1690,7 @@ msgstr[1] "%.1f minuti"
 msgstr[2] "%.1f minute"
 msgstr[3] "%.1f minut"
 
-#: src/gpm-statistics.c:244
+#: src/gpm-statistics.c:269
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
@@ -1681,7 +1699,7 @@ msgstr[1] "%.1f uri"
 msgstr[2] "%.1f ure"
 msgstr[3] "%.1f ur"
 
-#: src/gpm-statistics.c:248
+#: src/gpm-statistics.c:273
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
@@ -1690,39 +1708,39 @@ msgstr[1] "%.1f dneva"
 msgstr[2] "%.1f dnevi"
 msgstr[3] "%.1f dnevi"
 
-#: src/gpm-statistics.c:257
+#: src/gpm-statistics.c:282
 msgid "Yes"
 msgstr "Da"
 
-#: src/gpm-statistics.c:257
+#: src/gpm-statistics.c:282
 msgid "No"
 msgstr "Ne"
 
-#: src/gpm-statistics.c:346
+#: src/gpm-statistics.c:371
 msgid "Device"
 msgstr "Naprava"
 
-#: src/gpm-statistics.c:349
+#: src/gpm-statistics.c:374
 msgid "Type"
 msgstr "Vrsta"
 
-#: src/gpm-statistics.c:351
+#: src/gpm-statistics.c:376
 msgid "Vendor"
 msgstr "Prodajalec"
 
-#: src/gpm-statistics.c:353
+#: src/gpm-statistics.c:378
 msgid "Model"
 msgstr "Model"
 
-#: src/gpm-statistics.c:355
+#: src/gpm-statistics.c:380
 msgid "Serial number"
 msgstr "Zaporedna številka"
 
-#: src/gpm-statistics.c:360
+#: src/gpm-statistics.c:385
 msgid "Supply"
 msgstr "Napajanje"
 
-#: src/gpm-statistics.c:363
+#: src/gpm-statistics.c:388
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -1731,125 +1749,125 @@ msgstr[1] "%d sekundi"
 msgstr[2] "%d sekunde"
 msgstr[3] "%d sekund"
 
-#: src/gpm-statistics.c:367
+#: src/gpm-statistics.c:392
 msgid "Refreshed"
 msgstr "Osveženo"
 
-#: src/gpm-statistics.c:377
+#: src/gpm-statistics.c:402
 msgid "Present"
 msgstr "Prisotnost"
 
-#: src/gpm-statistics.c:384
+#: src/gpm-statistics.c:409
 msgid "Rechargeable"
 msgstr "Ponovno polnjenje"
 
-#: src/gpm-statistics.c:390
+#: src/gpm-statistics.c:415
 msgid "State"
 msgstr "Okraj"
 
-#: src/gpm-statistics.c:394
+#: src/gpm-statistics.c:419
 msgid "Energy"
 msgstr "Energija"
 
-#: src/gpm-statistics.c:397
+#: src/gpm-statistics.c:422
 msgid "Energy when empty"
 msgstr "Energija ob izpraznitvi"
 
-#: src/gpm-statistics.c:400
+#: src/gpm-statistics.c:425
 msgid "Energy when full"
 msgstr "Energija ob napolnitvi"
 
-#: src/gpm-statistics.c:403
+#: src/gpm-statistics.c:428
 msgid "Energy (design)"
 msgstr "Energija (zasnova)"
 
-#: src/gpm-statistics.c:417
+#: src/gpm-statistics.c:442
 msgid "Voltage"
 msgstr "Voltaža"
 
-#: src/gpm-statistics.c:439
+#: src/gpm-statistics.c:464
 msgid "Percentage"
 msgstr "Odstotek"
 
-#: src/gpm-statistics.c:446
+#: src/gpm-statistics.c:471
 msgid "Capacity"
 msgstr "Zmogljivost"
 
-#: src/gpm-statistics.c:451
+#: src/gpm-statistics.c:476
 msgid "Technology"
 msgstr "Tehnologija"
 
-#: src/gpm-statistics.c:456
+#: src/gpm-statistics.c:481
 msgid "Online"
 msgstr "Povezano"
 
-#: src/gpm-statistics.c:754
+#: src/gpm-statistics.c:779
 msgid "Device Information"
 msgstr "Podatki o napravi"
 
-#: src/gpm-statistics.c:756
+#: src/gpm-statistics.c:781
 msgid "Device History"
 msgstr "Zgodovina naprave"
 
-#: src/gpm-statistics.c:758
+#: src/gpm-statistics.c:783
 msgid "Device Profile"
 msgstr "Profil naprave"
 
-#: src/gpm-statistics.c:979 src/gpm-statistics.c:985 src/gpm-statistics.c:991
-#: src/gpm-statistics.c:997
+#: src/gpm-statistics.c:1008 src/gpm-statistics.c:1014
+#: src/gpm-statistics.c:1020 src/gpm-statistics.c:1026
 msgid "Time elapsed"
 msgstr "Pretečen čas"
 
-#: src/gpm-statistics.c:981
+#: src/gpm-statistics.c:1010
 msgid "Power"
 msgstr "Vklop"
 
-#: src/gpm-statistics.c:987 src/gpm-statistics.c:1031
-#: src/gpm-statistics.c:1037 src/gpm-statistics.c:1043
-#: src/gpm-statistics.c:1049
+#: src/gpm-statistics.c:1016 src/gpm-statistics.c:1066
+#: src/gpm-statistics.c:1072 src/gpm-statistics.c:1078
+#: src/gpm-statistics.c:1084
 msgid "Cell charge"
 msgstr "Napetost celice"
 
-#: src/gpm-statistics.c:993 src/gpm-statistics.c:999
+#: src/gpm-statistics.c:1022 src/gpm-statistics.c:1028
 msgid "Predicted time"
 msgstr "Predvideni čas"
 
-#: src/gpm-statistics.c:1033 src/gpm-statistics.c:1045
+#: src/gpm-statistics.c:1068 src/gpm-statistics.c:1080
 msgid "Correction factor"
 msgstr "Korekcijski faktor"
 
-#: src/gpm-statistics.c:1039 src/gpm-statistics.c:1051
+#: src/gpm-statistics.c:1074 src/gpm-statistics.c:1086
 msgid "Prediction accuracy"
 msgstr "Natančnost predvidevanja"
 
-#: src/gpm-statistics.c:1210
+#: src/gpm-statistics.c:1245
 msgid "Select this device at startup"
 msgstr "Izberi to napravo ob zagonu"
 
 #: src/gpm-tray-icon.c:206
 msgid "Copyright © 2011-2021 MATE developers"
-msgstr ""
+msgstr "Avtorske pravice © 2011-2021 razvijalci MATE"
 
-#: src/gpm-tray-icon.c:316
+#: src/gpm-tray-icon.c:319
 #, c-format
 msgid "%s remaining"
 msgstr "%s preostalo"
 
-#: src/gpm-tray-icon.c:370
+#: src/gpm-tray-icon.c:374
 msgid "_Preferences"
 msgstr "_Možnosti"
 
-#: src/gpm-upower.c:211
+#: src/gpm-upower.c:214
 #, c-format
 msgid "%s not present"
 msgstr "%s ni prisotno"
 
-#: src/gpm-upower.c:224 src/gpm-upower.c:288
+#: src/gpm-upower.c:227 src/gpm-upower.c:291
 #, c-format
 msgid "%s charging (%.1f%%)"
 msgstr "%s se polni (%.1f%%)"
 
-#: src/gpm-upower.c:239
+#: src/gpm-upower.c:242
 #, c-format
 msgid ""
 "Battery is fully charged.\n"
@@ -1858,22 +1876,22 @@ msgstr ""
 "Baterija je napolnjena\n"
 "Na voljo je %s delovanja"
 
-#: src/gpm-upower.c:244
+#: src/gpm-upower.c:247
 #, c-format
 msgid "%s is fully charged"
 msgstr "Naprava %s je napolnjena"
 
-#: src/gpm-upower.c:252
+#: src/gpm-upower.c:255
 #, c-format
 msgid "%s %s remaining (%.1f%%)"
 msgstr "%s %s preostalo (%.1f%%)"
 
-#: src/gpm-upower.c:257
+#: src/gpm-upower.c:260
 #, c-format
 msgid "%s discharging (%.1f%%)"
 msgstr "%s se prazni (%.1f%%)"
 
-#: src/gpm-upower.c:271
+#: src/gpm-upower.c:274
 #, c-format
 msgid ""
 "%s %s until charged (%.1f%%)\n"
@@ -1882,116 +1900,116 @@ msgstr ""
 "%s %s do napolnjenosti (%.1f%%)\n"
 "Na voljo je %s delovanja baterije"
 
-#: src/gpm-upower.c:282
+#: src/gpm-upower.c:285
 #, c-format
 msgid "%s %s until charged (%.1f%%)"
 msgstr "%s %s do napolnjenosti (%.1f%%)"
 
-#: src/gpm-upower.c:295
+#: src/gpm-upower.c:298
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
 msgstr "%s čakanje na praznjenje (%.1f%%)"
 
-#: src/gpm-upower.c:301
+#: src/gpm-upower.c:304
 #, c-format
 msgid "%s waiting to charge (%.1f%%)"
 msgstr "%s na čakanju za polnjenje (%.1f%%)"
 
-#: src/gpm-upower.c:306
+#: src/gpm-upower.c:309
 #, c-format
 msgid "%s empty"
 msgstr "%s prazno"
 
-#: src/gpm-upower.c:366
+#: src/gpm-upower.c:369
 msgid "Product:"
 msgstr "Izdelek:"
 
-#: src/gpm-upower.c:370 src/gpm-upower.c:373 src/gpm-upower.c:376
-#: src/gpm-upower.c:379
+#: src/gpm-upower.c:373 src/gpm-upower.c:376 src/gpm-upower.c:379
+#: src/gpm-upower.c:382
 msgid "Status:"
 msgstr "Stanje:"
 
-#: src/gpm-upower.c:370
+#: src/gpm-upower.c:373
 msgid "Missing"
 msgstr "Manjkajoče"
 
-#: src/gpm-upower.c:373 src/gpm-upower.c:650
+#: src/gpm-upower.c:376 src/gpm-upower.c:657
 msgid "Charged"
 msgstr "Napolnjeno"
 
-#: src/gpm-upower.c:376 src/gpm-upower.c:638
+#: src/gpm-upower.c:379 src/gpm-upower.c:645
 msgid "Charging"
 msgstr "Polnjenje"
 
-#: src/gpm-upower.c:379 src/gpm-upower.c:642
+#: src/gpm-upower.c:382 src/gpm-upower.c:649
 msgid "Discharging"
 msgstr "Praznjenje"
 
-#: src/gpm-upower.c:384
+#: src/gpm-upower.c:387
 msgid "Percentage charge:"
 msgstr "Odstotek polnjenja:"
 
-#: src/gpm-upower.c:388
+#: src/gpm-upower.c:391
 msgid "Vendor:"
 msgstr "Prodajalec:"
 
-#: src/gpm-upower.c:393
+#: src/gpm-upower.c:396
 msgid "Technology:"
 msgstr "Tehnologija:"
 
-#: src/gpm-upower.c:397
+#: src/gpm-upower.c:400
 msgid "Serial number:"
 msgstr "Serijska številka:"
 
-#: src/gpm-upower.c:401
+#: src/gpm-upower.c:404
 msgid "Model:"
 msgstr "Model:"
 
-#: src/gpm-upower.c:406
+#: src/gpm-upower.c:409
 msgid "Charge time:"
 msgstr "Čas polnjenja:"
 
-#: src/gpm-upower.c:412
+#: src/gpm-upower.c:415
 msgid "Discharge time:"
 msgstr "Čas praznjenja:"
 
-#: src/gpm-upower.c:419
+#: src/gpm-upower.c:422
 msgid "Excellent"
 msgstr "Odlično"
 
-#: src/gpm-upower.c:421
+#: src/gpm-upower.c:424
 msgid "Good"
 msgstr "Dobro"
 
-#: src/gpm-upower.c:423
+#: src/gpm-upower.c:426
 msgid "Fair"
 msgstr "Solidno"
 
-#: src/gpm-upower.c:425
+#: src/gpm-upower.c:428
 msgid "Poor"
 msgstr "Slabo"
 
-#: src/gpm-upower.c:429
+#: src/gpm-upower.c:432
 msgid "Capacity:"
 msgstr "Zmogljivost:"
 
-#: src/gpm-upower.c:435 src/gpm-upower.c:460
+#: src/gpm-upower.c:438 src/gpm-upower.c:463
 msgid "Current charge:"
 msgstr "Trenutno polnjenje:"
 
-#: src/gpm-upower.c:441
+#: src/gpm-upower.c:444
 msgid "Last full charge:"
 msgstr "Zadnje celotno polnjenje:"
 
-#: src/gpm-upower.c:447 src/gpm-upower.c:465
+#: src/gpm-upower.c:450 src/gpm-upower.c:468
 msgid "Design charge:"
 msgstr "Prvo polnjenje:"
 
-#: src/gpm-upower.c:452
+#: src/gpm-upower.c:455
 msgid "Charge rate:"
 msgstr "Hitrost polnjenja:"
 
-#: src/gpm-upower.c:487
+#: src/gpm-upower.c:490
 msgid "AC adapter"
 msgid_plural "AC adapters"
 msgstr[0] "Adapter za električno omrežje"
@@ -1999,7 +2017,7 @@ msgstr[1] "Adapterja za električno omrežje"
 msgstr[2] "Adapterji za električno omrežje"
 msgstr[3] "Adapterji za električno omrežje"
 
-#: src/gpm-upower.c:491
+#: src/gpm-upower.c:494
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
 msgstr[0] "Baterija prenosnika"
@@ -2007,7 +2025,7 @@ msgstr[1] "Bateriji prenosnika"
 msgstr[2] "Baterije prenosnika"
 msgstr[3] "Baterije prenosnika"
 
-#: src/gpm-upower.c:495
+#: src/gpm-upower.c:498
 msgid "UPS"
 msgid_plural "UPSs"
 msgstr[0] "Neprekinjeno napajanje"
@@ -2015,7 +2033,7 @@ msgstr[1] "Neprekinjeni napajanji"
 msgstr[2] "Neprekinjena napajanja"
 msgstr[3] "Neprekinjena napajanja"
 
-#: src/gpm-upower.c:499
+#: src/gpm-upower.c:502
 msgid "Monitor"
 msgid_plural "Monitors"
 msgstr[0] "Zaslon"
@@ -2023,7 +2041,7 @@ msgstr[1] "Zaslona"
 msgstr[2] "Zasloni"
 msgstr[3] "Zasloni"
 
-#: src/gpm-upower.c:503
+#: src/gpm-upower.c:506
 msgid "Mouse"
 msgid_plural "Mice"
 msgstr[0] "Miška"
@@ -2031,7 +2049,7 @@ msgstr[1] "Miški"
 msgstr[2] "Miške"
 msgstr[3] "Miške"
 
-#: src/gpm-upower.c:511
+#: src/gpm-upower.c:514
 msgid "PDA"
 msgid_plural "PDAs"
 msgstr[0] "PDA"
@@ -2039,7 +2057,7 @@ msgstr[1] "PDA"
 msgstr[2] "PDA"
 msgstr[3] "PDA"
 
-#: src/gpm-upower.c:515
+#: src/gpm-upower.c:518
 msgid "Cell phone"
 msgid_plural "Cell phones"
 msgstr[0] "Mobilni telefon"
@@ -2047,7 +2065,7 @@ msgstr[1] "Mobilna telefona"
 msgstr[2] "Mobilni telefoni"
 msgstr[3] "Mobilni telefoni"
 
-#: src/gpm-upower.c:519
+#: src/gpm-upower.c:522
 msgid "Media player"
 msgid_plural "Media players"
 msgstr[0] "Medijski predvajalnik"
@@ -2055,7 +2073,7 @@ msgstr[1] "Medijska predvajalnika"
 msgstr[2] "Medijski predvajalniki"
 msgstr[3] "Medijski predvajalniki"
 
-#: src/gpm-upower.c:523
+#: src/gpm-upower.c:526
 msgid "Tablet"
 msgid_plural "Tablets"
 msgstr[0] "Tablica"
@@ -2063,7 +2081,7 @@ msgstr[1] "Tablici"
 msgstr[2] "Tablice"
 msgstr[3] "Tablice"
 
-#: src/gpm-upower.c:527
+#: src/gpm-upower.c:530
 msgid "Computer"
 msgid_plural "Computers"
 msgstr[0] "Računalnik"
@@ -2071,46 +2089,54 @@ msgstr[1] "Računalnika"
 msgstr[2] "Računalniki"
 msgstr[3] "Računalniki"
 
-#: src/gpm-upower.c:594
+#: src/gpm-upower.c:534
+msgid "Gaming input"
+msgid_plural "Gaming inputs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/gpm-upower.c:601
 msgid "Lithium Ion"
 msgstr "Litij-ionska"
 
-#: src/gpm-upower.c:598
+#: src/gpm-upower.c:605
 msgid "Lithium Polymer"
 msgstr "Litijev polimer"
 
-#: src/gpm-upower.c:602
+#: src/gpm-upower.c:609
 msgid "Lithium Iron Phosphate"
 msgstr "Litij-železov fosfat"
 
-#: src/gpm-upower.c:606
+#: src/gpm-upower.c:613
 msgid "Lead acid"
 msgstr "Svinčena kislina"
 
-#: src/gpm-upower.c:610
+#: src/gpm-upower.c:617
 msgid "Nickel Cadmium"
 msgstr "Nikelj-kadmij"
 
-#: src/gpm-upower.c:614
+#: src/gpm-upower.c:621
 msgid "Nickel metal hydride"
 msgstr "Nikelj metal hidrid"
 
-#: src/gpm-upower.c:618
+#: src/gpm-upower.c:625
 msgid "Unknown technology"
 msgstr "Neznana tehnologija"
 
-#: src/gpm-upower.c:646
+#: src/gpm-upower.c:653
 msgid "Empty"
 msgstr "Prazno"
 
-#: src/gpm-upower.c:654
+#: src/gpm-upower.c:661
 msgid "Waiting to charge"
 msgstr "Čakanje na polnjenje"
 
-#: src/gpm-upower.c:658
+#: src/gpm-upower.c:665
 msgid "Waiting to discharge"
 msgstr "Čakanje na praznjenje"
 
-#: src/gpm-upower.c:662
+#: src/gpm-upower.c:669
 msgid "Unknown state"
 msgstr "Neznano stanje"
