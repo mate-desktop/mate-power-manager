@@ -89,6 +89,7 @@ static void      gpm_applet_stop_scroll_events_cb (GtkWidget *widget, GdkEvent  
 static gboolean  gpm_applet_destroy_popup_cb      (GpmBrightnessApplet *applet);
 static void      gpm_applet_update_tooltip        (GpmBrightnessApplet *applet);
 static void      gpm_applet_update_popup_level    (GpmBrightnessApplet *applet);
+static void      gpm_applet_adjust_brightness     (GpmBrightnessApplet *applet, guint step, gboolean increase);
 static gboolean  gpm_applet_plus_cb               (GtkWidget *w, GpmBrightnessApplet *applet);
 static gboolean  gpm_applet_minus_cb              (GtkWidget *w, GpmBrightnessApplet *applet);
 static gboolean  gpm_applet_key_press_cb          (GtkWidget *popup, GdkEventKey *event, GpmBrightnessApplet *applet);
@@ -114,6 +115,12 @@ static void      gpm_applet_destroy_cb            (GtkWidget *widget);
  * slider is moved.  A too short value might lead to freezing the UI, and a
  * too long one will seem unresponsive. */
 #define GPM_BRIGHTNESS_APPLET_SLIDER_FREQUENCY	100
+
+/* Brightness percentage changes for each input method */
+#define GPM_BRIGHTNESS_APPLET_PERCENT_CHANGE_BUTTON 1  /* plus/minus buttons in the popup */
+#define GPM_BRIGHTNESS_APPLET_PERCENT_CHANGE_ARROW 1  /* arrow keys when the popup is open */
+#define GPM_BRIGHTNESS_APPLET_PERCENT_CHANGE_SCROLL 5  /* scrolling over the indicator icon */
+#define GPM_BRIGHTNESS_APPLET_PERCENT_CHANGE_PAGE 10  /* page up/down keys when the popup is open */
 
 /**
  * gpm_applet_get_brightness:
@@ -404,6 +411,27 @@ gpm_applet_update_popup_level (GpmBrightnessApplet *applet)
 }
 
 /**
+ * gpm_applet_adjust_brightness:
+ * @applet: Brightness applet instance
+ * @step: The percentage to adjust by
+ * @increase: Whether to increase (TRUE) or decrease (FALSE)
+ *
+ * Change brightness by a given percentage, apply via D-Bus,
+ * and sync the popup slider if it exists.
+ **/
+static void
+gpm_applet_adjust_brightness (GpmBrightnessApplet *applet, guint step, gboolean increase)
+{
+	if (increase) {
+		applet->level = (applet->level <= 100 - step) ? applet->level + step : 100;
+	} else {
+		applet->level = (applet->level >= step) ? applet->level - step : 0;
+	}
+	applet->call_worked = gpm_applet_set_brightness (applet);
+	gpm_applet_update_popup_level (applet);
+}
+
+/**
  * gpm_applet_plus_cb:
  * @widget: The sending widget (plus button)
  * @applet: Brightness applet instance
@@ -413,11 +441,7 @@ gpm_applet_update_popup_level (GpmBrightnessApplet *applet)
 static gboolean
 gpm_applet_plus_cb (GtkWidget *w, GpmBrightnessApplet *applet)
 {
-	if (applet->level < 100) {
-		applet->level++;
-	}
-	applet->call_worked = gpm_applet_set_brightness (applet);
-	gpm_applet_update_popup_level (applet);
+	gpm_applet_adjust_brightness (applet, GPM_BRIGHTNESS_APPLET_PERCENT_CHANGE_BUTTON, TRUE);
 	return TRUE;
 }
 
@@ -431,11 +455,7 @@ gpm_applet_plus_cb (GtkWidget *w, GpmBrightnessApplet *applet)
 static gboolean
 gpm_applet_minus_cb (GtkWidget *w, GpmBrightnessApplet *applet)
 {
-	if (applet->level > 0) {
-		applet->level--;
-	}
-	applet->call_worked = gpm_applet_set_brightness (applet);
-	gpm_applet_update_popup_level (applet);
+	gpm_applet_adjust_brightness (applet, GPM_BRIGHTNESS_APPLET_PERCENT_CHANGE_BUTTON, FALSE);
 	return TRUE;
 }
 
@@ -487,8 +507,6 @@ gpm_applet_slide_cb (GtkWidget *w, GpmBrightnessApplet *applet)
 static gboolean
 gpm_applet_key_press_cb (GtkWidget *popup, GdkEventKey *event, GpmBrightnessApplet *applet)
 {
-	int i;
-
 	switch (event->keyval) {
 	case GDK_KEY_KP_Enter:
 	case GDK_KEY_ISO_Enter:
@@ -508,25 +526,21 @@ gpm_applet_key_press_cb (GtkWidget *popup, GdkEventKey *event, GpmBrightnessAppl
 		}
 		break;
 	case GDK_KEY_Page_Up:
-		for (i = 0;i < 10;i++) {
-			gpm_applet_plus_cb (NULL, applet);
-		}
+		gpm_applet_adjust_brightness (applet, GPM_BRIGHTNESS_APPLET_PERCENT_CHANGE_PAGE, TRUE);
 		return TRUE;
 		break;
 	case GDK_KEY_Left:
 	case GDK_KEY_Up:
-		gpm_applet_plus_cb (NULL, applet);
+		gpm_applet_adjust_brightness (applet, GPM_BRIGHTNESS_APPLET_PERCENT_CHANGE_ARROW, TRUE);
 		return TRUE;
 		break;
 	case GDK_KEY_Page_Down:
-		for (i = 0;i < 10;i++) {
-			gpm_applet_minus_cb (NULL, applet);
-		}
+		gpm_applet_adjust_brightness (applet, GPM_BRIGHTNESS_APPLET_PERCENT_CHANGE_PAGE, FALSE);
 		return TRUE;
 		break;
 	case GDK_KEY_Right:
 	case GDK_KEY_Down:
-		gpm_applet_minus_cb (NULL, applet);
+		gpm_applet_adjust_brightness (applet, GPM_BRIGHTNESS_APPLET_PERCENT_CHANGE_ARROW, FALSE);
 		return TRUE;
 		break;
 	default:
@@ -549,18 +563,11 @@ gpm_applet_key_press_cb (GtkWidget *popup, GdkEventKey *event, GpmBrightnessAppl
 static gboolean
 gpm_applet_scroll_cb (GpmBrightnessApplet *applet, GdkEventScroll *event)
 {
-	int i;
-
 	if (event->type == GDK_SCROLL) {
 		if (event->direction == GDK_SCROLL_UP) {
-			for (i = 0;i < 5;i++) {
-				gpm_applet_plus_cb (NULL, applet);
-			}
-
+			gpm_applet_adjust_brightness (applet, GPM_BRIGHTNESS_APPLET_PERCENT_CHANGE_SCROLL, TRUE);
 		} else {
-			for (i = 0;i < 5;i++) {
-				gpm_applet_minus_cb (NULL, applet);
-			}
+			gpm_applet_adjust_brightness (applet, GPM_BRIGHTNESS_APPLET_PERCENT_CHANGE_SCROLL, FALSE);
 		}
 		return TRUE;
 	}
