@@ -1,3 +1,21 @@
+### mate-power-manager 1.27.0
+
+  * tx: sync with transifex
+  * tx: update resource
+  * tx: migrate config file
+  * Fix -Wmissing-prototypes warnings (#381)
+  * Show device model even if vendor is not available
+  * Add gaming input logos
+  * Add support for gaming inputs
+  * gpm-prefs: fix memory leak
+  * gpm-statistics: fix memory leak
+  * Fix implicit conversion changes signedness: 'gboolean' to 'guint'
+  * gpm-backlight: unused function 'gpm_common_sum_scale'
+  * ci: drop -Wunused-parameter compiler cflag from debian build
+  * Fix build warnings about missing field initializer
+  * build: show configure summary using a pretty format
+  * Use a blank line at most
+
 ### mate-power-manager 1.26.0
 
   * Translations update
