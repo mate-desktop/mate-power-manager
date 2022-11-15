@@ -1,0 +1,19 @@
+[Applet Factory]
+Id=BrightnessAppletFactory
+Location=@LIBEXECDIR@/mate-brightness-applet
+Name=Brightness Applet Factory
+Description=Factory for Brightness Applet
+Description[ru]=Фабрика приложения для установки яркости
+
+[BrightnessApplet]
+Name=Brightness Applet
+Description=Adjusts Laptop panel brightness
+Description[ru]=Настройка яркости экрана ноутбука
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+Icon=mate-brightness-applet
+MateComponentId=OAFIID:MATE_BrightnessApplet
+X-MATE-Bugzilla-Bugzilla=MATE
+X-MATE-Bugzilla-Product=mate-power-manager
+X-MATE-Bugzilla-Component=applets
+X-MATE-Bugzilla-Version=@VERSION@
+X-MATE-Bugzilla-OtherBinaries=mate-brightness-applet
