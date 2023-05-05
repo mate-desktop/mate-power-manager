@@ -1,16 +1,17 @@
 [main]
 host = https://www.transifex.com
- 
-[MATE.1-26--mate-power-manager]
-file_filter = po/<lang>.po
-source_file = mate-power-manager.pot
-source_lang = en
-type = PO
+
+[o:mate:p:MATE:r:1-26--mate-power-manager]
+file_filter  = po/<lang>.po
+source_file  = mate-power-manager.pot
+source_lang  = en
+type         = PO
 minimum_perc = 2
 
-[MATE.1-26--mate-power-manager-user-guide]
-file_filter = help/<lang>/<lang>.po
-source_file = help/mate-power-manager.pot
-source_lang = en
-type = PO
+[o:mate:p:MATE:r:1-26--mate-power-manager-user-guide]
+file_filter  = help/<lang>/<lang>.po
+source_file  = help/mate-power-manager.pot
+source_lang  = en
+type         = PO
 minimum_perc = 2
+
