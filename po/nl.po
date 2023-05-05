@@ -4,13 +4,13 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Michael Steenbeek <m.o.steenbeek@gmail.com>, 2018
-# Stef Pletinck <stef.plet@gmail.com>, 2018
-# Volluta <volluta@tutanota.com>, 2018
-# dragnadh, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Erik Bent <hj.bent.60@gmail.com>, 2020
-# 8c3c560621f92e66455793da7b85eff0_8989672 <0e181aafae430e5c919398b6a7bba462_109266>, 2020
+# Volluta <volluta@tutanota.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Michael Steenbeek <m.o.steenbeek@gmail.com>, 2021
+# Erik Bent <hj.bent.60@gmail.com>, 2021
+# 8c3c560621f92e66455793da7b85eff0_8989672 <0e181aafae430e5c919398b6a7bba462_109266>, 2021
+# dragnadh, 2021
+# Stef Pletinck <stef.plet@gmail.com>, 2021
 # Pjotr <pjotrvertaalt@gmail.com>, 2021
 # 
 msgid ""
@@ -18,9 +18,9 @@ msgstr ""
 "Project-Id-Version: mate-power-manager 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2021-06-22 17:30+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
+"PO-Revision-Date: 2021-09-20 18:18+0000\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>, 2021\n"
-"Language-Team: Dutch (https://www.transifex.com/mate/teams/13566/nl/)\n"
+"Language-Team: Dutch (https://app.transifex.com/mate/teams/13566/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -102,23 +102,12 @@ msgstr ""
 #: applets/brightness/brightness-applet.c:850
 #: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:212
 msgid "translator-credits"
-msgstr ""
-"Launchpad-bijdragers:\n"
-"  Daniël H. https://launchpad.net/~daan-is-here\n"
-"  Mark Cilissen https://launchpad.net/~pixlism\n"
-"  Peter van der Does https://launchpad.net/~pdoes\n"
-"  Tom Louwrier https://launchpad.net/~tom-louwrier\n"
-"  Twan Coenraad https://launchpad.net/~t.coenraad\n"
-"  cumulus007 https://launchpad.net/~cumulus-007\n"
-"  kactusrvm https://launchpad.net/~kactusrvm\n"
-"  kriekske https://launchpad.net/~kriekenbuik-gmail\n"
-"Andere bijdragers:\n"
-"Pjotr"
+msgstr "Pjotr (pjotrvertaalt@gmail.com)"
 
 #: applets/brightness/brightness-applet.c:1081
 #: applets/inhibit/inhibit-applet.c:503
 msgid "_About"
-msgstr "_Info"
+msgstr "_Over"
 
 #: applets/brightness/brightness-applet.c:1084
 #: applets/inhibit/inhibit-applet.c:506 data/gpm-prefs.ui:41
@@ -1141,7 +1130,7 @@ msgstr[1] "%i minuten"
 msgid "%i hour"
 msgid_plural "%i hours"
 msgstr[0] "%i uur"
-msgstr[1] "%i uur"
+msgstr[1] "%i uren"
 
 #: src/gpm-common.c:75
 #, c-format
@@ -1723,7 +1712,7 @@ msgstr[1] "%.1f minuten"
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
 msgstr[0] "%.1f uur"
-msgstr[1] "%.1f uur"
+msgstr[1] "%.1f uren"
 
 #: src/gpm-statistics.c:248
 #, c-format
@@ -1877,7 +1866,7 @@ msgstr "%s resterend"
 
 #: src/gpm-tray-icon.c:370
 msgid "_Preferences"
-msgstr "Voorkeuren"
+msgstr "_Voorkeuren"
 
 #: src/gpm-upower.c:211
 #, c-format
@@ -2040,8 +2029,8 @@ msgstr[1] "Netstroomstekkers"
 #: src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "Laptop-accu"
-msgstr[1] "Laptop-accu's"
+msgstr[0] "Laptopaccu"
+msgstr[1] "Laptopaccu's"
 
 #: src/gpm-upower.c:495
 msgid "UPS"

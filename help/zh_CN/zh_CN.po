@@ -1,19 +1,21 @@
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Mingcong Bai <jeffbai@aosc.xyz>, 2018
-# shuyu liu <liushuyu011@gmail.com>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
-# biqiu-ssw <shenshuaiwen@gmail.com>, 2018
-# CNAmira <forucial@icloud.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Mingcong Bai <jeffbai@aosc.xyz>, 2021
+# shuyu liu <liushuyu011@gmail.com>, 2021
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
+# CNAmira <forucial@icloud.com>, 2021
+# biqiu-ssw <shenshuaiwen@gmail.com>, 2021
+# OkayPJ <1535253694@qq.com>, 2021
+# copi143 <copi143@outlook.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2021-01-16 14:35+0100\n"
-"PO-Revision-Date: 2018-10-04 15:52+0000\n"
-"Last-Translator: CNAmira <forucial@icloud.com>, 2018\n"
-"Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
+"PO-Revision-Date: 2021-09-20 18:22+0000\n"
+"Last-Translator: copi143 <copi143@outlook.com>, 2022\n"
+"Language-Team: Chinese (China) (https://app.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,17 +26,18 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Christopher Meng <i@cicku.me>, 2012-2013\n"
-"ravix <dr.neemous@gmail.com>, 2013\n"
+"Christopher Meng , 2012-2013\n"
+"ravix , 2013\n"
 "Dianjin Wang <1132321739qq@gmail.com>, 2012\n"
-"Cravix <dr.neemous@gmail.com>, 2013\n"
-"nyanyh <rebuilty@gmail.com>, 2013\n"
-"liulitchi <xingzuo88@qq.com>, 2013\n"
-"玉堂白鹤 <yjwork@qq.com>, 2015\n"
-"Mingye Wang <arthur200126@gmail.com>, 2015-2016\n"
-"白铭骢 <jeffbai@aosc.xyz>, 2015-2016\n"
-"刘子兴 <liushuyu@aosc.xyz>, 2015-2016\n"
-"比丘<shenshuaiwen@gmail.com>,2018-2019"
+"Cravix , 2013\n"
+"nyanyh , 2013\n"
+"liulitchi , 2013\n"
+"玉堂白鹤 , 2015\n"
+"Mingye Wang , 2015-2016\n"
+"白铭骢 , 2015-2016\n"
+"刘子兴 , 2015-2016\n"
+"比丘 , 2018-2019\n"
+"OkayPJ , 2020"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:23
@@ -48,11 +51,13 @@ msgid ""
 "MATE Desktop that manages the power settings for your laptop or desktop "
 "computer."
 msgstr ""
+"<application>MATE Power Manager</application>是 MATE Desktop "
+"的会话守护进程，用于管理笔记本电脑或台式机的电源设置。"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
 msgid "<year>2015-2021</year> <holder>MATE Documentation Team</holder>"
-msgstr ""
+msgstr "<year>2015-2021</year>MATE 文档团队"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:34
@@ -118,7 +123,7 @@ msgstr ""
 #. (itstool) path: article/indexterm
 #: C/index.docbook:118
 msgid "<primary>mate-power-manager</primary>"
-msgstr ""
+msgstr "<primary>MATE 电源管理器</primary>"
 
 #. (itstool) path: section/title
 #: C/index.docbook:125
@@ -131,13 +136,16 @@ msgid ""
 "<primary><application>MATE Power Manager</application></primary> "
 "<secondary>Manual</secondary> <tertiary>mate-power-manager</tertiary>"
 msgstr ""
+"<primary><application>MATE "
+"电源管理器</application></primary><secondary>手动</secondary><tertiary>mate-"
+"电源管理器</tertiary>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:135
 msgid ""
 "The MATE Power Manager session daemon is a power management daemon for the "
 "<systemitem>MATE desktop</systemitem>"
-msgstr ""
+msgstr "MATE 电源管理器 会话守护进程是一个电源管理守护进程，用于<systemitem>MATE desktop</systemitem>"
 
 #. (itstool) path: section/title
 #: C/index.docbook:143
@@ -247,14 +255,14 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:216
 msgid "Power Low"
-msgstr ""
+msgstr "低能耗"
 
 #. (itstool) path: section/para
 #: C/index.docbook:217
 msgid ""
 "When the battery is low, you will receive the following notification. You "
 "should consider switching to AC power really soon."
-msgstr ""
+msgstr "当电池电量不足时，您将收到以下通知。 您应该尽快切换到交流电源。 "
 
 #. (itstool) path: figure/title
 #: C/index.docbook:222
@@ -282,7 +290,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:240
 msgid "Power Critical"
-msgstr ""
+msgstr "电量严重不足"
 
 #. (itstool) path: section/para
 #: C/index.docbook:241
@@ -290,7 +298,7 @@ msgid ""
 "When the computer has run out of power, it will show this notification "
 "explaining what action is required. You can change the critical low action "
 "using the preferences tool."
-msgstr ""
+msgstr "当计算机电量耗尽时，将显示此通知，说明需要采取什么措施。 您可以使用首选项工具更改电量严重不足时的操作。 "
 
 #. (itstool) path: figure/title
 #: C/index.docbook:247
@@ -313,7 +321,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:259
 msgid "Suspend Failure"
-msgstr ""
+msgstr "挂起失败"
 
 #. (itstool) path: section/para
 #: C/index.docbook:260
@@ -610,9 +618,10 @@ msgid ""
 "To make this clearer, the sliders in <command>mate-power-"
 "preferences</command> are set to start at the value of the session-timeout +"
 " 1 minute, as we cannot logically trigger before the session is marked as "
-"idle. If you adjust the value of the 'session idle' timeout in <command"
-">mate-screensaver-preferences</command> then the start of the sliders in "
-"<command>mate-power-preferences</command> will change accordingly."
+"idle. If you adjust the value of the 'session idle' timeout in "
+"<command>mate-screensaver-preferences</command> then the start of the "
+"sliders in <command>mate-power-preferences</command> will change "
+"accordingly."
 msgstr ""
 
 #. (itstool) path: section/title
@@ -935,10 +944,10 @@ msgstr ""
 #: C/index.docbook:747
 msgid ""
 "And check for the process <command>hald-addon-acpi</command>. If it is not "
-"being run, then please make sure that HAL is being run with the <command"
-">--retain-privileges</command> option in the <command>haldaemon</command> "
-"initscript. An alternative to this is to use acpid, rather than the kernel "
-"proc file."
+"being run, then please make sure that HAL is being run with the "
+"<command>--retain-privileges</command> option in the "
+"<command>haldaemon</command> initscript. An alternative to this is to use "
+"acpid, rather than the kernel proc file."
 msgstr ""
 
 #. (itstool) path: para/ulink

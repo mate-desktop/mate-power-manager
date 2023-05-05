@@ -4,16 +4,13 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Arcenio Cid <gusty.miliki@gmail.com>, 2018
-# Adolfo Jayme Barrientos, 2018
-# Benjamin Perez Carrillo <benperezc@gmail.com>, 2018
-# ZenWalker <scow@riseup.net>, 2018
-# seacat <seacat.linux@gmail.com>, 2018
-# Lluís Tusquellas <lutusq@gmail.com>, 2018
-# Miguel de Dios Matias <tres.14159@gmail.com>, 2018
-# Joel Barrios <darkshram@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Emiliano Fascetti, 2020
+# Benjamin Perez Carrillo <benperezc@gmail.com>, 2021
+# Emiliano Fascetti, 2021
+# seacat <seacat.linux@gmail.com>, 2021
+# Adolfo Jayme-Barrientos, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Lluís Tusquellas <lutusq@gmail.com>, 2021
+# ZenWalker <scow@riseup.net>, 2021
 # Toni Estévez <toni.estevez@gmail.com>, 2021
 # 
 msgid ""
@@ -21,14 +18,14 @@ msgstr ""
 "Project-Id-Version: mate-power-manager 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2021-06-22 17:30+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
+"PO-Revision-Date: 2021-09-20 18:18+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
+"Language-Team: Spanish (https://app.transifex.com/mate/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: applets/brightness/brightness-applet.c:109
 msgid "Power Manager Brightness Applet"
@@ -105,7 +102,8 @@ msgstr ""
 #: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:212
 msgid "translator-credits"
 msgstr ""
-"Toni Estevez <toni.estevez@gmail.com>, 2019\n"
+"Toni Estevez <toni.estevez@gmail.com>, 2020-2021\n"
+"Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2018\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2010\n"
 "Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2003-2006\n"
 "Pablo Gonzalo del Campo <pablodc@bigfoot.com>, 2002-2003"
@@ -470,13 +468,13 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:156
 msgid "Check CPU load before sleeping"
-msgstr "Comprobar la carga de la CPU antes de pasar a reposo"
+msgstr "Comprobar la carga del procesador antes de pasar a reposo"
 
 #: data/org.mate.power-manager.gschema.xml.in:157
 msgid "If the CPU load should be checked before doing the idle action."
 msgstr ""
-"Indica si se debe comprobar la carga de la CPU antes de hacer la acción de "
-"inactividad."
+"Indica si se debe comprobar la carga del procesador antes ejecutar la acción"
+" prevista en caso de incactividad."
 
 #: data/org.mate.power-manager.gschema.xml.in:161
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
@@ -1014,6 +1012,7 @@ msgid "Keyboard"
 msgid_plural "Keyboards"
 msgstr[0] "Teclado"
 msgstr[1] "Teclados"
+msgstr[2] "Teclados"
 
 #: data/gpm-prefs.ui:707
 msgid "On Battery Power"
@@ -1121,6 +1120,7 @@ msgid "%i minute"
 msgid_plural "%i minutes"
 msgstr[0] "%i minuto"
 msgstr[1] "%i minutos"
+msgstr[2] "%i minutos"
 
 #: src/gpm-common.c:69
 #, c-format
@@ -1128,6 +1128,7 @@ msgid "%i hour"
 msgid_plural "%i hours"
 msgstr[0] "%i hora"
 msgstr[1] "%i horas"
+msgstr[2] "%i horas"
 
 #: src/gpm-common.c:75
 #, c-format
@@ -1139,12 +1140,14 @@ msgid "hour"
 msgid_plural "hours"
 msgstr[0] "hora"
 msgstr[1] "horas"
+msgstr[2] "horas"
 
 #: src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
 msgstr[0] "minuto"
 msgstr[1] "minutos"
+msgstr[2] "minutos"
 
 #. Translators: This is %i days
 #: src/gpm-graph-widget.c:433
@@ -1320,6 +1323,7 @@ msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] "Batería cargada"
 msgstr[1] "Baterías cargadas"
+msgstr[2] "Baterías cargadas"
 
 #: src/gpm-manager.c:1204
 msgid "Battery Discharging"
@@ -1684,7 +1688,7 @@ msgstr "Descripción"
 
 #: src/gpm-statistics.c:230
 msgid "Unknown"
-msgstr "Desconocido"
+msgstr "Se desconoce"
 
 #: src/gpm-statistics.c:234
 #, c-format
@@ -1692,6 +1696,7 @@ msgid "%.0f second"
 msgid_plural "%.0f seconds"
 msgstr[0] "%.0f segundo"
 msgstr[1] "%.0f segundos"
+msgstr[2] "%.0f segundos"
 
 #: src/gpm-statistics.c:239
 #, c-format
@@ -1699,6 +1704,7 @@ msgid "%.1f minute"
 msgid_plural "%.1f minutes"
 msgstr[0] "%.1f minuto"
 msgstr[1] "%.1f minutos"
+msgstr[2] "%.1f minutos"
 
 #: src/gpm-statistics.c:244
 #, c-format
@@ -1706,6 +1712,7 @@ msgid "%.1f hour"
 msgid_plural "%.1f hours"
 msgstr[0] "%.1f hora"
 msgstr[1] "%.1f horas"
+msgstr[2] "%.1f horas"
 
 #: src/gpm-statistics.c:248
 #, c-format
@@ -1713,6 +1720,7 @@ msgid "%.1f day"
 msgid_plural "%.1f days"
 msgstr[0] "%.1f día"
 msgstr[1] "%.1f días"
+msgstr[2] "%.1f días"
 
 #: src/gpm-statistics.c:257
 msgid "Yes"
@@ -1752,6 +1760,7 @@ msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d segundo"
 msgstr[1] "%d segundos"
+msgstr[2] "%d segundos"
 
 #: src/gpm-statistics.c:367
 msgid "Refreshed"
@@ -1859,7 +1868,7 @@ msgstr "quedan %s"
 
 #: src/gpm-tray-icon.c:370
 msgid "_Preferences"
-msgstr "Preferencias"
+msgstr "_Preferencias"
 
 #: src/gpm-upower.c:211
 #, c-format
@@ -2018,60 +2027,70 @@ msgid "AC adapter"
 msgid_plural "AC adapters"
 msgstr[0] "Adaptador de corriente"
 msgstr[1] "Adaptadores de corriente"
+msgstr[2] "Adaptadores de corriente"
 
 #: src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "Batería de portátil"
-msgstr[1] "Baterías de portátiles"
+msgstr[0] "Batería del portátil"
+msgstr[1] "Baterías del portátil"
+msgstr[2] "Baterías del portátil"
 
 #: src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] "UPS"
+msgstr[0] "SAI"
 msgstr[1] "SAI"
+msgstr[2] "SAI"
 
 #: src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
 msgstr[0] "Monitor"
 msgstr[1] "Monitores"
+msgstr[2] "Monitores"
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
 msgstr[0] "Ratón"
 msgstr[1] "Ratones"
+msgstr[2] "Ratones"
 
 #: src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
 msgstr[0] "PDA"
-msgstr[1] "PDAs"
+msgstr[1] "PDA"
+msgstr[2] "PDA"
 
 #: src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] "Teléfono celular"
-msgstr[1] "Teléfonos celulares"
+msgstr[0] "Teléfono móvil"
+msgstr[1] "Teléfonos móviles"
+msgstr[2] "Teléfonos móviles"
 
 #: src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] "Reproductor de soportes"
-msgstr[1] "Reproductores de soportes"
+msgstr[0] "Reproductor multimedia"
+msgstr[1] "Reproductores multimedia"
+msgstr[2] "Reproductores multimedia"
 
 #: src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
 msgstr[0] "Tableta"
 msgstr[1] "Tabletas"
+msgstr[2] "Tabletas"
 
 #: src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] "Computadora"
-msgstr[1] "Computadoras"
+msgstr[0] "Equipo"
+msgstr[1] "Equipos"
+msgstr[2] "Equipos"
 
 #: src/gpm-upower.c:594
 msgid "Lithium Ion"

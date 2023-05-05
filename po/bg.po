@@ -4,19 +4,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Kiril Kirilov <cybercop_montana@abv.bg>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Любомир Василев, 2020
-# Замфир Йончев <zamfir.yonchev@gmail.com>, 2020
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Kiril Kirilov <cybercop_montana@abv.bg>, 2021
+# Любомир Василев, 2021
+# Замфир Йончев <zamfir.yonchev@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-power-manager 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2021-06-22 17:30+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Замфир Йончев <zamfir.yonchev@gmail.com>, 2020\n"
-"Language-Team: Bulgarian (https://www.transifex.com/mate/teams/13566/bg/)\n"
+"PO-Revision-Date: 2021-09-20 18:18+0000\n"
+"Last-Translator: Замфир Йончев <zamfir.yonchev@gmail.com>, 2021\n"
+"Language-Team: Bulgarian (https://app.transifex.com/mate/teams/13566/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1103,15 +1104,15 @@ msgstr "Неизвестно време"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] "%i минута"
-msgstr[1] "%i минути"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] "%i час"
-msgstr[1] "%i часа"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-common.c:75
 #, c-format
@@ -1121,14 +1122,14 @@ msgstr "%i %s и %i %s"
 #: src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] "час"
-msgstr[1] "часа"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] "минута"
-msgstr[1] "минути"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Translators: This is %i days
 #: src/gpm-graph-widget.c:433
@@ -1355,8 +1356,8 @@ msgstr "Ниско ниво на непрекъсваемото токозахр
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr ""
-"Остава приблизително <b>%s</b> живот на непрекъсваемото токозахранване (%.0f"
-" %%)"
+"Остава приблизително <b>%s</b> живот на непрекъсваемото токозахранване "
+"(%.0f %%)"
 
 #: src/gpm-manager.c:1330 src/gpm-manager.c:1469
 msgid "Mouse battery low"
@@ -1461,9 +1462,9 @@ msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
 msgstr ""
-"Остава приблизително <b>%s</b> живот на непрекъсваемото токозахранване (%.0f"
-" %%). Включете компютъра към електрическата мрежа, за да избегнете загуба на"
-" данни."
+"Остава приблизително <b>%s</b> живот на непрекъсваемото токозахранване "
+"(%.0f %%). Включете компютъра към електрическата мрежа, за да избегнете "
+"загуба на данни."
 
 #: src/gpm-manager.c:1472
 #, c-format
@@ -1767,7 +1768,7 @@ msgstr "Презареждаща"
 
 #: src/gpm-statistics.c:390
 msgid "State"
-msgstr "Щат"
+msgstr "Състояние"
 
 #: src/gpm-statistics.c:394
 msgid "Energy"

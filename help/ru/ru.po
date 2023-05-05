@@ -1,20 +1,26 @@
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Aleksey Kabanov <ak099@mail.ru>, 2018
-# AlexL <loginov.alex.valer@gmail.com>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Михаил Ильинский <mail@milinsky.com>, 2018
-# Alex Putz, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Aleksey Kabanov <ak099@mail.ru>, 2021
+# AlexL <loginov.alex.valer@gmail.com>, 2021
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
+# Михаил Ильинский <mail@milinsky.com>, 2021
+# Alex Puts, 2021
+# Olesya Gerasimenko <gammaray@basealt.ru>, 2021
+# Дмитрий Астанков <mornie@basealt.ru>, 2021
+# Alexey Rodionov <melenki@yandex.ru>, 2021
 # Иван Л. <lukyanenkoiv@bk.ru>, 2021
+# Павел Коваленко, 2021
+# Andrei Stepanov, 2022
+# Sergej A. <Ser82-png@yandex.ru>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2021-01-16 14:35+0100\n"
-"PO-Revision-Date: 2018-10-04 15:52+0000\n"
-"Last-Translator: Иван Л. <lukyanenkoiv@bk.ru>, 2021\n"
-"Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
+"PO-Revision-Date: 2021-09-20 18:22+0000\n"
+"Last-Translator: Sergej A. <Ser82-png@yandex.ru>, 2022\n"
+"Language-Team: Russian (https://app.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,7 +35,7 @@ msgstr ""
 "Александр Сигачёв <ajvol2@gmail.com>\n"
 "Александр Соколов\n"
 "Александр Хромин\n"
-"Алексей Кабанов <ak099@mail.ru>, 2018\n"
+"Алексей Родионов <alexey.rodionov@red-soft.ru>\n"
 "Алексей Рочев <equeim@gmail.com>\n"
 "Алексей Сорокин <sor.alexei@meowr.ru>\n"
 "Андрей Иванков\n"
@@ -61,7 +67,7 @@ msgstr ""
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:23
 msgid "<application>MATE Power Manager</application> Manual"
-msgstr "<application>Менеджер питания MATE</application>Руководство"
+msgstr "<application>Диспетчер питания MATE</application>Руководство"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:25
@@ -70,14 +76,14 @@ msgid ""
 "MATE Desktop that manages the power settings for your laptop or desktop "
 "computer."
 msgstr ""
-"<application>Менеджер питания MATE</application>- это демон сеанса для "
+"<application>Диспетчер питания MATE</application> - это демон сеанса для "
 "рабочего стола MATE, который управляет параметрами питания вашего "
-"портативного или настольного компьютера. "
+"портативного или настольного компьютера."
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
 msgid "<year>2015-2021</year> <holder>MATE Documentation Team</holder>"
-msgstr ""
+msgstr "<year>2015-2021</year> <holder>Команда документирования MATE</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:34
@@ -95,13 +101,15 @@ msgstr "Команда документирования MATE"
 #. (itstool) path: revdescription/para
 #: C/index.docbook:55 C/index.docbook:98
 msgid "Richard Hughes"
-msgstr "Ричард Хьюз"
+msgstr "Ричард Хьюз (Richard Hughes)"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:61
 msgid ""
 "<surname>MATE Documentation Team</surname> <affiliation> </affiliation>"
-msgstr "Команда документации MATE "
+msgstr ""
+"<surname>Команда документирования MATE</surname> <affiliation> "
+"</affiliation>"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:71
@@ -138,16 +146,21 @@ msgid ""
 "type=\"http\"><application>MATE Power Manager</application> Contact "
 "Page</ulink>."
 msgstr ""
+"Чтобы сообщить об ошибке или внести предложение относительно приложения "
+"«Диспетчер питания MATE» или этого руководства, следуйте инструкциям на "
+"странице <ulink url=\"https://github.com/mate-desktop/mate-power-manager/\" "
+"type=\"http\"><application>Диспетчер питания MATE</application> Contact "
+"Page</ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:115
 msgid "<primary><application>MATE Power Manager</application></primary>"
-msgstr "<primary><application>Менеджер питания MATE</application></primary>"
+msgstr "<primary><application>Диспетчер питания MATE</application></primary>"
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:118
 msgid "<primary>mate-power-manager</primary>"
-msgstr "<primary>менеджер-питания-mate</primary>"
+msgstr "<primary>mate-power-manager</primary>"
 
 #. (itstool) path: section/title
 #: C/index.docbook:125
@@ -160,9 +173,9 @@ msgid ""
 "<primary><application>MATE Power Manager</application></primary> "
 "<secondary>Manual</secondary> <tertiary>mate-power-manager</tertiary>"
 msgstr ""
-"<primary><application>Менеджер Питания "
-"MATE</application></primary><secondary>Инструкция</secondary><tertiary"
-">менеджер-питания-mate</tertiary>"
+"<primary><application>Диспетчер питания "
+"MATE</application></primary><secondary>Инструкция</secondary><tertiary>mate-"
+"power-manager</tertiary>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:135
@@ -170,6 +183,8 @@ msgid ""
 "The MATE Power Manager session daemon is a power management daemon for the "
 "<systemitem>MATE desktop</systemitem>"
 msgstr ""
+"«Диспетчер питания MATE» — это демон управления питанием для "
+"<systemitem>Рабочего стола MATE</systemitem>"
 
 #. (itstool) path: section/title
 #: C/index.docbook:143
@@ -183,6 +198,10 @@ msgid ""
 "startup, but you can manually start <application>MATE Power "
 "Manager</application> by doing:"
 msgstr ""
+"<application>Диспетчер питания MATE</application> обычно запускается при "
+"старте среды рабочего стола MATE, но вы можете запустить "
+"<application>Диспетчер питания MATE</application> вручную, выполнив "
+"следующие действия:"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:150
@@ -195,11 +214,13 @@ msgid ""
 "Type <command>G_MESSAGES_DEBUG=PowerManager mate-power-manager --no-"
 "daemon</command>, then press <keycap>Return</keycap>:"
 msgstr ""
+"Наберите <command>G_MESSAGES_DEBUG=PowerManager mate-power-manager --no-"
+"daemon</command> и нажмите <keycap>Enter</keycap>:"
 
 #. (itstool) path: section/title
 #: C/index.docbook:162
 msgid "Notification Messages"
-msgstr ""
+msgstr "Уведомления"
 
 #. (itstool) path: section/para
 #: C/index.docbook:163
@@ -207,16 +228,20 @@ msgid ""
 "When <application>MATE Power Manager</application> has started, the "
 "following notifications may be displayed."
 msgstr ""
+"При запуске <application>Диспетчера питания MATE</application> могут "
+"отображаться следующие уведомления."
 
 #. (itstool) path: section/title
 #: C/index.docbook:168
 msgid "AC Adapter Unplugged"
-msgstr ""
+msgstr "Адаптер переменного тока отключён"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:170
 msgid "MATE Power Manager Notification when AC adapter is removed"
 msgstr ""
+"Уведомление «Диспетчера питания MATE» при отключении адаптера переменного "
+"тока"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -229,6 +254,8 @@ msgid ""
 "external ref='figures/gpm-unplugged.png' "
 "md5='e9e38fa48737547a19b20af6a15d9e95'"
 msgstr ""
+"external ref='figures/gpm-unplugged.png' "
+"md5='e9e38fa48737547a19b20af6a15d9e95'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:180
@@ -236,17 +263,21 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-discharging</command>."
 msgstr ""
+"Вы можете отключить это уведомление, изменив значение ключа dconf "
+"<command>org.mate.power-manager notify-discharging</command>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:188
 msgid "Fully Charged"
-msgstr ""
+msgstr "Полностью заряжено"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:190
 msgid ""
 "MATE Power Manager Notification when laptop primary battery is fully charged"
 msgstr ""
+"Уведомление «Диспетчера питания MATE» при полном заряде основной батареи "
+"ноутбука"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -259,6 +290,8 @@ msgid ""
 "external ref='figures/gpm-charged.png' "
 "md5='cc83716555d07b13a3659683f96c531c'"
 msgstr ""
+"external ref='figures/gpm-charged.png' "
+"md5='cc83716555d07b13a3659683f96c531c'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:200
@@ -266,6 +299,8 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-fully-charged</command>."
 msgstr ""
+"Вы можете отключить это уведомление, изменив значение ключа dconf "
+"<command>org.mate.power-manager notify-fully-charged</command>."
 
 #. (itstool) path: note/para
 #: C/index.docbook:206
@@ -275,11 +310,15 @@ msgid ""
 " from showing unwanted repeat notifications if the battery is incorrectly "
 "reporting the charged status."
 msgstr ""
+"Повторное уведомление вы получите только в том случае, если процент заряда "
+"батареи упадет ниже 95%, а затем снова будет полностью заряжен. Это "
+"предотвращает показ нежелательных повторных уведомлений на некоторых "
+"машинах, если батарея неправильно сообщает о состоянии своего заряда."
 
 #. (itstool) path: section/title
 #: C/index.docbook:216
 msgid "Power Low"
-msgstr ""
+msgstr "Низкий заряд"
 
 #. (itstool) path: section/para
 #: C/index.docbook:217
@@ -287,11 +326,14 @@ msgid ""
 "When the battery is low, you will receive the following notification. You "
 "should consider switching to AC power really soon."
 msgstr ""
+"Следующее уведомление вы получите, когда батарея будет разряжена. В этом "
+"случае вы должны будете подумать о переходе на питание от источника "
+"переменного тока."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:222
 msgid "MATE Power Manager Notification when battery power is low"
-msgstr ""
+msgstr "Уведомление «Диспетчера питания MATE» при низком заряде батареи"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -303,6 +345,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gpm-low.png' md5='6cd86acf26f251d78060dd2ecb6b6506'"
 msgstr ""
+"external ref='figures/gpm-low.png' md5='6cd86acf26f251d78060dd2ecb6b6506'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:232
@@ -310,11 +353,13 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-low-power</command>."
 msgstr ""
+"Вы можете отключить это уведомление, изменив значение ключа dconf "
+"<command>org.mate.power-manager notify-low-power</command>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:240
 msgid "Power Critical"
-msgstr ""
+msgstr "Критический заряд"
 
 #. (itstool) path: section/para
 #: C/index.docbook:241
@@ -323,12 +368,16 @@ msgid ""
 "explaining what action is required. You can change the critical low action "
 "using the preferences tool."
 msgstr ""
+"Когда компьютер разрядится, будет показано это уведомление с объяснением "
+"требуемого действия. С помощью инструмента «Параметры» вы можете изменить "
+"действие при достижении критически низкого уровня заряда."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:247
 msgid ""
 "MATE Power Manager Notification when the system power is critically low"
 msgstr ""
+"Уведомление «Диспетчера питания MATE» при критически низком заряде батареи"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -341,11 +390,13 @@ msgid ""
 "external ref='figures/gpm-critical.png' "
 "md5='77b0848ed3bd0510b65f89e0d07a2fed'"
 msgstr ""
+"external ref='figures/gpm-critical.png' "
+"md5='77b0848ed3bd0510b65f89e0d07a2fed'"
 
 #. (itstool) path: section/title
 #: C/index.docbook:259
 msgid "Suspend Failure"
-msgstr ""
+msgstr "Ждущий режим"
 
 #. (itstool) path: section/para
 #: C/index.docbook:260
@@ -354,11 +405,14 @@ msgid ""
 "common reason for this notification is that the current user does not have "
 "permission to suspend or hibernate the computer."
 msgstr ""
+"Следующее предупреждение вы можете получить при сбое перехода в ждущий "
+"режим. Наиболее распространенной причиной этого является то, что у текущего "
+"пользователя нет разрешения на переход в ждущий режим или режим гибернации."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:266
 msgid "MATE Power Manager Notification when suspend failure occurs"
-msgstr ""
+msgstr "Уведомление «Диспетчера питания MATE» при переходе в ждущий режим"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -371,6 +425,8 @@ msgid ""
 "external ref='figures/gpm-suspend-problem.png' "
 "md5='4e4c1fafda61c5ace02f957717ea7ce6'"
 msgstr ""
+"external ref='figures/gpm-suspend-problem.png' "
+"md5='4e4c1fafda61c5ace02f957717ea7ce6'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:276
@@ -378,6 +434,8 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-sleep-failed</command>."
 msgstr ""
+"Вы можете отключить это уведомление, изменив значение ключа dconf "
+"<command>org.mate.power-manager notify-sleep-failed</command>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:285
@@ -390,6 +448,8 @@ msgid ""
 "The statistics program allows you to visualize the power consumption of your"
 " laptop hardware."
 msgstr ""
+"Программа статистики позволяет визуализировать энергопотребление вашего "
+"ноутбука."
 
 #. (itstool) path: note/para
 #: C/index.docbook:291
@@ -399,11 +459,15 @@ msgid ""
 "internal IPC. This allows other applications to query and display the data "
 "if required."
 msgstr ""
+"Это было удалено из информационного окна предыдущих версий «Диспетчера "
+"питания MATE», поскольку интерфейс данных теперь использует DBUS, а не "
+"внутренний IPC. Это позволяет другим приложениям запрашивать и отображать "
+"данные, если это необходимо."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:298
 msgid "Power History going from battery power to AC"
-msgstr ""
+msgstr "История питания от батареи до питания от сети переменного тока"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -416,6 +480,8 @@ msgid ""
 "external ref='figures/gpm-stats-graph.png' "
 "md5='c7cfa37ad6e96041a1c312d85236e7f6'"
 msgstr ""
+"external ref='figures/gpm-stats-graph.png' "
+"md5='c7cfa37ad6e96041a1c312d85236e7f6'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:308
@@ -424,11 +490,15 @@ msgid ""
 "required hardware. You may also see other hardware not shown here (for "
 "example UPS devices) but these are treated the same way as other devices."
 msgstr ""
+"Если на компьютере нет необходимого оборудования, то вы можете не увидеть "
+"некоторые варианты или графики. Но вы можете увидеть другое, не показанное "
+"здесь, оборудование (например, источники бесперебойного питания), которое "
+"обрабатывается точно так же, как и любое другое устройство."
 
 #. (itstool) path: section/title
 #: C/index.docbook:317
 msgid "Charge History"
-msgstr ""
+msgstr "История зарядки"
 
 #. (itstool) path: section/para
 #: C/index.docbook:318
@@ -438,11 +508,14 @@ msgid ""
 "battery then only the averaged value will be shown. A legend is not shown "
 "with this graph."
 msgstr ""
+"На графике показан процент заряда, доступный для основной батареи поэтому, "
+"если у вас есть основная и дополнительная батареи, то будет показано только "
+"среднее значение. На этом графике легенда не показывается."
 
 #. (itstool) path: section/title
 #: C/index.docbook:327
 msgid "Power History"
-msgstr ""
+msgstr "История электропитания"
 
 #. (itstool) path: section/para
 #: C/index.docbook:328
@@ -455,6 +528,13 @@ msgid ""
 " is dimmed. A legend is shown with this graph when data events have been "
 "received."
 msgstr ""
+"На этом графике показана динамика текущего заряда основной батареи. Эта "
+"линия представляет собой количество энергии, используемое для зарядки "
+"аккумуляторов или используемое системой от батареи. Вы должны увидеть, как "
+"линия поднимается вверх, когда выполняются задачи с интенсивным "
+"использованием процессора, и опускается вниз, когда система простаивает или "
+"когда экран затемнён. При получении данных рядом с графиком появляется "
+"легенда."
 
 #. (itstool) path: note/para
 #: C/index.docbook:341
@@ -464,11 +544,16 @@ msgid ""
 "limitations where the rate is only sent from the battery management chip, "
 "rather than the power management chip on the motherboard."
 msgstr ""
+"Если батарея компьютера не заряжается или не разряжается, или если компьютер"
+" перешёл в ждущий режим, то данных скорости зарядки/разрядки вы получать не "
+"будите. Это связано с ограничениями оборудования, когда скорость "
+"зарядки/разрядки передается только с чипа управления батареей, а не с чипа "
+"управления питанием на материнской плате."
 
 #. (itstool) path: section/title
 #: C/index.docbook:352
 msgid "Estimated Time History"
-msgstr ""
+msgstr "История - Расчётное время"
 
 #. (itstool) path: section/para
 #: C/index.docbook:353
@@ -479,6 +564,12 @@ msgid ""
 "when the rate decreases and down when the rate increases. A legend is shown "
 "with this graph when data events have been received."
 msgstr ""
+"На этом графике показана расчётная история заряда основной батареи. Эта "
+"линия представляет собой количество времени, необходимого для полной зарядки"
+" батареи, или количество времени до полного её разряда. Линия должна идти "
+"пропорционально вверх при снижении скорости зарядки/разряда и вниз при "
+"увеличении скорости зарядки/разряда. При получении данных рядом с графиком "
+"появляется легенда."
 
 #. (itstool) path: section/title
 #: C/index.docbook:366
@@ -488,27 +579,27 @@ msgstr "Параметры"
 #. (itstool) path: section/para
 #: C/index.docbook:368
 msgid "The preferences window allows you to control:"
-msgstr ""
+msgstr "Окно параметров позволяет вам настраивать:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:372
 msgid "The LCD brightness when on AC and battery power"
-msgstr ""
+msgstr "Яркость LCD при питании от сети и батареи"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:377
 msgid "The idle time for the screen power-down and suspend action"
-msgstr ""
+msgstr "Время простоя перед выключением экрана и переходе в ждущий режим"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:382
 msgid "The actions to perform when the laptop lid is closed"
-msgstr ""
+msgstr "Действия, выполняемые при закрытии крышки ноутбука"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:387
 msgid "The notification area icon policy"
-msgstr ""
+msgstr "Политика отображения значков в области уведомления"
 
 #. (itstool) path: note/para
 #: C/index.docbook:394
@@ -517,16 +608,19 @@ msgid ""
 "not writable. This allows administrators to lock-down the actions that a "
 "user can select."
 msgstr ""
+"Некоторые слайдеры или параметры могут быть отключены, если изменение ключей"
+" dconf недоступно для записи. Это позволяет администраторам блокировать "
+"несанкционированные действия пользователей."
 
 #. (itstool) path: section/title
 #: C/index.docbook:402
 msgid "AC Preferences"
-msgstr ""
+msgstr "Параметры питания от сети"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:404
 msgid "MATE Power Manager AC tab"
-msgstr ""
+msgstr "Вкладка диспетчера питания MATE - питание от сети"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -539,16 +633,18 @@ msgid ""
 "external ref='figures/gpm-prefs-ac.png' "
 "md5='dc4409a63218146e52d3e670b26785bd'"
 msgstr ""
+"external ref='figures/gpm-prefs-ac.png' "
+"md5='dc4409a63218146e52d3e670b26785bd'"
 
 #. (itstool) path: section/title
 #: C/index.docbook:416
 msgid "Battery Preferences"
-msgstr ""
+msgstr "Параметры питания от батареи"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:418
 msgid "MATE Power Manager battery tab"
-msgstr ""
+msgstr "Вкладка диспетчера питания MATE - питание от батареи"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -561,6 +657,8 @@ msgid ""
 "external ref='figures/gpm-prefs-battery.png' "
 "md5='89fe431e4f38073f7d58f38425ad1ee7'"
 msgstr ""
+"external ref='figures/gpm-prefs-battery.png' "
+"md5='89fe431e4f38073f7d58f38425ad1ee7'"
 
 #. (itstool) path: section/para
 #: C/index.docbook:427
@@ -568,16 +666,18 @@ msgid ""
 "This allows a powerful computer to reduce the power usage when idle, or when"
 " the full capabilities are not required."
 msgstr ""
+"Это позволит мощному компьютеру снизить энергопотребление в режиме ожидания "
+"или когда не требуются все возможности."
 
 #. (itstool) path: section/title
 #: C/index.docbook:434
 msgid "General Preferences"
-msgstr ""
+msgstr "Общие параметры"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:436
 msgid "MATE Power Manager general tab"
-msgstr ""
+msgstr "Вкладка диспетчера питания MATE - Общее"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -590,11 +690,13 @@ msgid ""
 "external ref='figures/gpm-prefs-general.png' "
 "md5='52b7d145bd085d8af6f3194ac632c547'"
 msgstr ""
+"external ref='figures/gpm-prefs-general.png' "
+"md5='52b7d145bd085d8af6f3194ac632c547'"
 
 #. (itstool) path: section/title
 #: C/index.docbook:448
 msgid "Session and system idle times"
-msgstr ""
+msgstr "Сеанс и система во время простоя"
 
 #. (itstool) path: section/para
 #: C/index.docbook:449
@@ -607,6 +709,13 @@ msgid ""
 "Manager</application> performs all the session idle actions such as enabling"
 " low-power mode and lowering the laptop panel brightness."
 msgstr ""
+"<command>mate-screensaver</command> — демон сеанса, который отслеживает ввод"
+" данных пользователем, и если действия с мышью или клавиатурой отсутствуют, "
+"начинается тайм-аут. Когда тайм-аут достигает значения, установленного в "
+"<command>mate-screensaver-preferences</command>, тогда вход в систему "
+"помечается как «простаивающий сеанс». На этом этапе <application>Диспетчер "
+"питания MATE</application> выполняет такие действия, как включение режима "
+"пониженного энергопотребления и снижение яркости экрана ноутбука."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:461
@@ -614,6 +723,8 @@ msgid ""
 "Changing the session idle timeout in <command>mate-screensaver-"
 "preferences</command>"
 msgstr ""
+"Изменение тайм-аута сеанса при бездействии в <command>mate-screensaver-"
+"preferences</command>"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -625,6 +736,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gs-prefs.png' md5='e9ce36b6ef557681ca4e8e90b71a7f46'"
 msgstr ""
+"external ref='figures/gs-prefs.png' md5='e9ce36b6ef557681ca4e8e90b71a7f46'"
 
 #. (itstool) path: section/para
 #: C/index.docbook:472
@@ -635,6 +747,12 @@ msgid ""
 "idle, then the idle action is performed, which is usually to turn off the "
 "screen, or to suspend or hibernate."
 msgstr ""
+"Как только сеанс помечается как простаивающий, <application>Диспетчер "
+"питания MATE</application> запускает собственный «системный» таймер. Когда "
+"время ожидания, установленное в <command>mate-power-preferences</command> "
+"будет достигнуто, а загрузка процессора отсутствует, то выполняются "
+"мероприятия, характерные для режима бездействия, которые обычно включают в "
+"себя: выключение экрана, переход в ждущий режим или режим гибернации."
 
 #. (itstool) path: section/para
 #: C/index.docbook:479
@@ -642,20 +760,28 @@ msgid ""
 "To make this clearer, the sliders in <command>mate-power-"
 "preferences</command> are set to start at the value of the session-timeout +"
 " 1 minute, as we cannot logically trigger before the session is marked as "
-"idle. If you adjust the value of the 'session idle' timeout in <command"
-">mate-screensaver-preferences</command> then the start of the sliders in "
-"<command>mate-power-preferences</command> will change accordingly."
+"idle. If you adjust the value of the 'session idle' timeout in "
+"<command>mate-screensaver-preferences</command> then the start of the "
+"sliders in <command>mate-power-preferences</command> will change "
+"accordingly."
 msgstr ""
+"Чтобы было понятнее, слайдеры в <command>mate-power-preferences</command> "
+"настроены на запуск со значением session-timeout +1 минута, поскольку мы "
+"логически не можем сработать до того, как сеанс будет помечен как "
+"простаивающий. Если вы отрегулируете значение тайм-аута «простаивающего "
+"сеанса» в <command>mate-screensaver-preferences</command>, тогда "
+"соответственно изменится начало расположения слайдеров в <command>mate-"
+"power-preferences</command>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:491
 msgid "Advanced Preferences"
-msgstr ""
+msgstr "Расширенные параметры"
 
 #. (itstool) path: section/title
 #: C/index.docbook:494
 msgid "Screen Dim Brightness"
-msgstr ""
+msgstr "Уменьшить яркость экрана"
 
 #. (itstool) path: note/para
 #: C/index.docbook:496
@@ -663,11 +789,14 @@ msgid ""
 "You can change the idle laptop panel brightness by changing the dconf key "
 "<command>org.mate.power-manager idle-brightness</command>."
 msgstr ""
+"Вы можете изменить яркость экрана ноутбука в режиме ожидания, изменив "
+"значение ключа dconf <command>org.mate.power-manager idle-"
+"brightness</command>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:504
 msgid "Screen Locking"
-msgstr ""
+msgstr "Блокировка экрана"
 
 #. (itstool) path: section/para
 #: C/index.docbook:505
@@ -677,6 +806,10 @@ msgid ""
 "screen\" in mate-screensaver when the lid is closed, or the system performs "
 "a suspend or hibernate action."
 msgstr ""
+"По умолчанию <application>Диспетчер питания MATE</application> поддерживает "
+"простую схему блокировки. Это означает, что экран будет заблокирован, если в"
+" mate-screensaver установлено значение «Блокировать экран», когда крышка "
+"закрыта или система переходит в ждущий режим или режим гибернации."
 
 #. (itstool) path: section/para
 #: C/index.docbook:511
@@ -685,11 +818,15 @@ msgid ""
 "locking policy to change for the lid, suspend and hibernate actions. To "
 "enable this complex mode, you will have to disable the dconf key:"
 msgstr ""
+"Для опытных пользователей доступна сложная схема блокировки, которая "
+"позволяет изменять политику блокировки для действий крышки, переходе в "
+"ждущий режим и режим гибернации. Чтобы включить этот сложный режим, вам "
+"необходимо отключить соответствующий ключ dconf:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:519
 msgid "<command>org.mate.power-manager lock-use-screensaver</command>"
-msgstr ""
+msgstr "<command>org.mate.power-manager lock-use-screensaver</command>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:524
@@ -697,21 +834,23 @@ msgid ""
 "Then the policy keys can be set to force a mate-screensaver lock and unlock "
 "when the action is performed:"
 msgstr ""
+"Затем можно настроить следующие ключи mate-screensaver для принудительной "
+"блокировки и разблокировки после выполнения действий:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:531
 msgid "<command>org.mate.power-manager lock-blank-screen</command>"
-msgstr ""
+msgstr "<command>org.mate.power-manager lock-blank-screen</command>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:536
 msgid "<command>org.mate.power-manager lock-suspend</command>"
-msgstr ""
+msgstr "<command>org.mate.power-manager lock-suspend</command>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:541
 msgid "<command>org.mate.power-manager lock-hibernate</command>"
-msgstr ""
+msgstr "<command>org.mate.power-manager lock-hibernate</command>"
 
 #. (itstool) path: note/para
 #: C/index.docbook:548
@@ -719,16 +858,18 @@ msgid ""
 "The lock policy for mate-screensaver is ignored until the simple mode is re-"
 "enabled."
 msgstr ""
+"Политика блокировки для mate-screensaver игнорируется до тех пор, пока не "
+"будет повторно активирован простой режим."
 
 #. (itstool) path: section/title
 #: C/index.docbook:557
 msgid "MATE Power Applets"
-msgstr ""
+msgstr "Апплеты питания MATE"
 
 #. (itstool) path: section/title
 #: C/index.docbook:560
 msgid "Brightness Applet"
-msgstr "Апплет установки яркости"
+msgstr "Приложение для установки яркости"
 
 #. (itstool) path: section/para
 #: C/index.docbook:561
@@ -738,11 +879,15 @@ msgid ""
 "laptop without brightness buttons, as you can now change the brightness "
 "easily."
 msgstr ""
+"Приложение для установки яркости позволяет пользователю временно изменять "
+"значение яркости экрана без изменения предустановленных параметров. Это "
+"может быть полезно, если у вас ноутбук без кнопок изменения яркости, с этим "
+"приложением вы можете легко изменять яркость экрана."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:568
 msgid "Brightness applet drop-down."
-msgstr ""
+msgstr "Выпадающий список приложения для установки яркости."
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -755,16 +900,19 @@ msgid ""
 "external ref='figures/applet-brightness.png' "
 "md5='8ce34f6733215fb86009471f19850dcc'"
 msgstr ""
+"external ref='figures/applet-brightness.png' "
+"md5='8ce34f6733215fb86009471f19850dcc'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:580
 msgid "You will not get the slider if your hardware is not supported."
 msgstr ""
+"Вы не увидите слайдер, если оборудование не поддерживает данную функцию."
 
 #. (itstool) path: section/title
 #: C/index.docbook:587
 msgid "Inhibit Applet"
-msgstr "Апплет блокировки"
+msgstr "Приложение для блокировки"
 
 #. (itstool) path: section/para
 #: C/index.docbook:588
@@ -774,11 +922,17 @@ msgid ""
 "proprietary programs such as VMWare or Matlab. Just click the icon for the "
 "auto-suspend to be inhibited, and click it again for normal operation."
 msgstr ""
+"<application>Приложение для блокировки</application> позволяет пользователю "
+"предотвратить автоматический переход компьютера в спящий режим, когда он "
+"неактивен. Это функция может потребоваться для старых или проприетарных "
+"программ, таких как VMWare или Matlab. Просто щёлкните значок, чтобы "
+"запретить автоматическую остановку, и щёлкните его ещё раз для нормальной "
+"работы."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:596
 msgid "Inhibit applet in inhibited state."
-msgstr ""
+msgstr "Приложение для блокировки в режиме блокировки"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -791,6 +945,8 @@ msgid ""
 "external ref='figures/applet-inhibit.png' "
 "md5='7381a44dae4f17bfd47abaa54c0ca2a4'"
 msgstr ""
+"external ref='figures/applet-inhibit.png' "
+"md5='7381a44dae4f17bfd47abaa54c0ca2a4'"
 
 #. (itstool) path: note/para
 #: C/index.docbook:608
@@ -799,21 +955,25 @@ msgid ""
 "make the application use the <function>Inhibit()</function> and "
 "<function>UnInhibit()</function> methods as this should 'just work'."
 msgstr ""
+"Не используйте это приложение, если вы используете программное обеспечение "
+"MATE, вместо этого отправьте отчёт об ошибке, чтобы приложение использовало "
+"методы <function>Inhibit()</function> и <function>UnInhibit()</function>, "
+"потому что это должно «просто работать»."
 
 #. (itstool) path: section/title
 #: C/index.docbook:618
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "Часто задаваемые вопросы"
 
 #. (itstool) path: section/para
 #: C/index.docbook:619
 msgid "These are questions the mailing list gets asked frequently."
-msgstr ""
+msgstr "Эти вопросы часто задают в списке рассылки."
 
 #. (itstool) path: section/title
 #: C/index.docbook:623
 msgid "What is battery capacity?"
-msgstr ""
+msgstr "Что такое ёмкость батареи?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:624
@@ -821,6 +981,8 @@ msgid ""
 "Capacity is how much charge your battery can store compared to its "
 "manufacturer's guidelines."
 msgstr ""
+"Ёмкость — это то, сколько заряда может хранить ваша батарея в сравнении с "
+"рекомендациями производителя."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:629
@@ -828,6 +990,8 @@ msgid ""
 "This graph shows the capacity of a typical lithium ion battery over a few "
 "hundred charge-discharge cycles."
 msgstr ""
+"На этом графике показана ёмкость типичной литий-ионной батареи после "
+"нескольких сотен циклов зарядки-разрядки."
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -840,11 +1004,13 @@ msgid ""
 "external ref='figures/gpm-cell-capacity.png' "
 "md5='7635c3b846f39faf7b16a921a6ebb55c'"
 msgstr ""
+"external ref='figures/gpm-cell-capacity.png' "
+"md5='7635c3b846f39faf7b16a921a6ebb55c'"
 
 #. (itstool) path: section/title
 #: C/index.docbook:644
 msgid "What's the difference between suspend and hibernate?"
-msgstr ""
+msgstr "В чём разница между ждущим режимом и гибернацией?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:645
@@ -856,6 +1022,13 @@ msgid ""
 "external event such as a keyboard button press. It generally takes a few "
 "seconds to suspend and then resume your computer."
 msgstr ""
+"Ждущий режим — это функция энергосбережения, представляющая собой самый "
+"низкий уровень энергосбережения, при котором данные программы сохраняются в "
+"оперативной памяти компьютера. Когда ваш компьютер находится в ждущем "
+"режиме, вычисления не выполняются. Нормальная деятельность не возобновится "
+"до тех пор, пока не будет об этом сообщено внешним событием, таким как "
+"нажатие клавиши на клавиатуре. Обычно для перехода в ждущий режим и "
+"последующего возобновления работы компьютера требуется несколько секунд."
 
 #. (itstool) path: caution/para
 #: C/index.docbook:655
@@ -864,6 +1037,10 @@ msgid ""
 "recommended for the low power action. If you remove AC power on a desktop, "
 "or run out of battery power on a laptop then you will lose your work."
 msgstr ""
+"В ждущем режиме вы по-прежнему используете небольшое количество заряда "
+"батареи, поэтому он не рекомендуется для работы при низком заряде батареи. "
+"Если вы отключите питание переменного тока на настольном компьютере или "
+"разрядится батарея на ноутбуке, то вы потеряете свою работу."
 
 #. (itstool) path: section/para
 #: C/index.docbook:662
@@ -876,6 +1053,13 @@ msgid ""
 "lost. It can take up to a minute or more to hibernate and wake your "
 "computer."
 msgstr ""
+"Состояние гибернации сохраняет полное состояние компьютера на жёстком диске "
+"и отключает питание, так что компьютер кажется выключенным. Он не возобновит"
+" свою работу, пока об этом не будет сообщено внешним событием, таким как "
+"нажатие клавиши на клавиатуре. Это режим с наименьшим энергопотреблением. "
+"Если вы отключите питание переменного тока на настольном компьютере или "
+"разрядится батарея на ноутбуке, работа не будет потеряна. Перевод компьютера"
+" в режим гибернации и пробуждение может занимать до одной и более минут."
 
 #. (itstool) path: section/title
 #: C/index.docbook:675
@@ -883,6 +1067,8 @@ msgid ""
 "My monitor is broken and treats DPMS standby and off states as 'no-signal' "
 "which leaves the monitor powered on."
 msgstr ""
+"Мой монитор неисправен и рассматривает состояния ожидания и выключения DPMS "
+"как «отсутствие сигнала», в результате чего монитор остается включённым."
 
 #. (itstool) path: section/para
 #: C/index.docbook:679
@@ -893,6 +1079,12 @@ msgid ""
 " <literal>org.mate.power-manager dpms-method-battery</literal> to one of the"
 " modes that work, e.g. standby, suspend or off."
 msgstr ""
+"Вы должны изменить ждущий режим DPMS, используемый <application>Диспетчером "
+"питания MATE</application>. Для этого откройте <command>dconf-"
+"editor</command> и измените значение ключа <literal>org.mate.power-manager "
+"dpms-method-ac</literal> и <literal>org.mate.power-manager dpms-method-"
+"battery</literal> в один из работающих режимов. Например, «standby», "
+"«suspend» или «off»."
 
 #. (itstool) path: section/title
 #: C/index.docbook:689
@@ -900,6 +1092,8 @@ msgid ""
 "My time to discharge is always incorrect due to a faulty battery, what can I"
 " do?"
 msgstr ""
+"Информация о времени разряда всегда неверное из-за неисправной батареи, что "
+"я могу сделать?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:693
@@ -910,6 +1104,12 @@ msgid ""
 "can do this easily by doing: <command> gsettings get org.mate.power-manager "
 "use-time-for-policy false </command>"
 msgstr ""
+"Возможно, вы сможете использовать процентное изменение для g-p-m в качестве "
+"данных расчёта. Необходимо открыть <command>dconf-editor</command> и "
+"изменить значение ключа <command>org.mate.power-manager use-time-for-"
+"policy</command> на «false». Вы легко можете осуществить это действие "
+"выполнив команду: <command> gsettings get org.mate.power-manager use-time-"
+"for-policy false </command>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:703
@@ -917,11 +1117,15 @@ msgid ""
 "This should get the policy actions working for you, but of course the time "
 "remaining will still be incorrect."
 msgstr ""
+"Это должно заставить действия политики работать на вас, но, конечно, "
+"оставшееся время всё равно будет неверным."
 
 #. (itstool) path: section/title
 #: C/index.docbook:710
 msgid "How do I make my application stop the computer auto-suspending?"
 msgstr ""
+"Как заставить моё приложение прекратить автоматический переход в ждущий "
+"режим?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:713
@@ -931,6 +1135,11 @@ msgid ""
 "really don't want the user to be able to suspend, or for the computer to "
 "save power by hibernating or suspending."
 msgstr ""
+"Если ваше приложение выполняет длительную операцию, то вы можете на "
+"некоторое время отключить возможность перехода в ждущий режим. Вы должны "
+"использовать mate-session, если действительно хотите, чтобы пользователь не "
+"мог переходить в ждущий режим, или чтобы компьютер не экономил энергию, "
+"переходя в режим гибернации."
 
 #. (itstool) path: section/title
 #: C/index.docbook:723
@@ -938,16 +1147,18 @@ msgid ""
 "I'm running ACPI. Why do events (such as removing the AC adapter) take so "
 "long to register?"
 msgstr ""
+"Я использую ACPI. Почему регистрация событий (например, отключение адаптера "
+"переменного тока) происходит так долго?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:727
 msgid "One of two things might be the problem."
-msgstr ""
+msgstr "Возможны две причины возникновения этой проблемы."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:732
 msgid "HAL might not be running the add-on that captures the ACPI event."
-msgstr ""
+msgstr "HAL может не запускать расширение, записывающее событие ACPI."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:737
@@ -955,6 +1166,8 @@ msgid ""
 "You BIOS could be faulty, and might need a work-around. Please send a bug "
 "report."
 msgstr ""
+"Ваш BIOS может быть неисправен, и возможно потребуется использовать обходной"
+" путь. Пожалуйста, отправьте отчёт об ошибке."
 
 #. (itstool) path: section/para
 #: C/index.docbook:743
@@ -962,16 +1175,22 @@ msgid ""
 "For the first case, try to find the HAL processes that are running: "
 "<command>ps -eaf | grep hal</command>"
 msgstr ""
+"В первом случае попробуйте найти запущенные процессы HAL: <command>ps -eaf |"
+" grep hal</command>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:747
 msgid ""
 "And check for the process <command>hald-addon-acpi</command>. If it is not "
-"being run, then please make sure that HAL is being run with the <command"
-">--retain-privileges</command> option in the <command>haldaemon</command> "
-"initscript. An alternative to this is to use acpid, rather than the kernel "
-"proc file."
+"being run, then please make sure that HAL is being run with the "
+"<command>--retain-privileges</command> option in the "
+"<command>haldaemon</command> initscript. An alternative to this is to use "
+"acpid, rather than the kernel proc file."
 msgstr ""
+"И проверьте наличие процесса <command>hald-addon-acpi</command>. Если он не "
+"был запущен, убедитесь, что HAL запускается с параметром <command>--retain-"
+"privileges</command> в сценарии загрузки <command>haldaemon</command>. "
+"Альтернативой этому является использование acpid, а не файл kernel proc."
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
@@ -1046,8 +1265,8 @@ msgstr ""
 "ИЗМЕНЁННЫХ ВЕРСИЙ ДОКУМЕНТА, ЛЕЖИТ НА ВАС. ЕСЛИ ДОКУМЕНТ ИЛИ ИЗМЕНЁННАЯ "
 "ВЕРСИЯ ДОКУМЕНТА ИМЕЕТ НЕДОСТАТКИ, ВЫ (А НЕ АВТОР ДОКУМЕНТА ИЛИ ЕГО "
 "ПОМОЩНИК) БЕРЁТЕ НА СЕБЯ СТОИМОСТЬ ЛЮБОЙ НЕОБХОДИМОЙ ДОРАБОТКИ, КОРРЕКЦИИ "
-"ИЛИ ВОССТАНОВЛЕНИЯ. ЭТОТ ОТКАЗ ОТ ГАРАНТИЙ СОСТАВЛЯЕТ ВАЖНУЮ ЧАСТЬ ЛИЦЕНЗИИ."
-" НИКАКОЕ ИСПОЛЬЗОВАНИЕ ДОКУМЕНТА ИЛИ ИЗМЕНЁННОЙ ВЕРСИИ ДОКУМЕНТА НЕ "
+"ИЛИ ВОССТАНОВЛЕНИЯ. ЭТОТ ОТКАЗ ОТ ГАРАНТИЙ СОСТАВЛЯЕТ ВАЖНУЮ ЧАСТЬ "
+"ЛИЦЕНЗИИ.НИКАКОЕ ИСПОЛЬЗОВАНИЕ ДОКУМЕНТА ИЛИ ИЗМЕНЁННОЙ ВЕРСИИ ДОКУМЕНТА НЕ "
 "ДОПУСКАЕТСЯ БЕЗ ДАННОГО ПРЕДУПРЕЖДЕНИЯ И"
 
 #. (itstool) path: listitem/para
@@ -1068,7 +1287,7 @@ msgstr ""
 "СОГЛАШЕНИЮ ИЛИ ДРУГОЙ ПРИЧИНЕ, АВТОР, СОЗДАТЕЛЬ, ПОМОЩНИКИ ИЛИ "
 "РАСПРОСТРАНИТЕЛИ ДОКУМЕНТА НЕ НЕСУТ ОТВЕТСТВЕННОСТЬ ЗА ПРЯМОЙ, КОСВЕННЫЙ, "
 "СПЕЦИАЛЬНЫЙ, СЛУЧАЙНЫЙ ИЛИ ПРЕДНАМЕРЕННЫЙ УЩЕРБ ЛЮБОГО СВОЙСТВА, ВКЛЮЧАЯ, "
-"БЕЗ ОГРАНИЧЕНИЯ, ПОТЕРЮ ЖЕЛАНИЯ, РАБОТОСПОСОБНОСТИ, КОМПЬЮТЕРНЫЕ СБОИ ИЛИ "
+"БЕЗ ОГРАНИЧЕНИЯ, ПОТЕРЮ РЕПУТАЦИИ, РАБОТОСПОСОБНОСТИ, КОМПЬЮТЕРНЫЕ СБОИ ИЛИ "
 "ПОЛОМКИ, ИЛИ ЛЮБОЙ ДРУГОЙ УЩЕРБ ИЛИ ПОТЕРИ, ВОЗНИКАЮЩИЕ ВСЛЕДСТВИЕ ИЛИ "
 "СВЯЗАННЫЕ С ИСПОЛЬЗОВАНИЕМ ДОКУМЕНТА ИЛИ ИЗМЕНЁННЫХ ВЕРСИЙ ДОКУМЕНТА, ДАЖЕ "
 "ЕСЛИ СТОРОНА БЫЛА УВЕДОМЛЕНА О ВОЗМОЖНОСТИ ТАКОГО УЩЕРБА."
@@ -1080,14 +1299,13 @@ msgid ""
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<_:orderedlist-1/>"
 msgstr ""
-"ДОКУМЕНТ И ИЗМЕНЁННЫЕ ВЕРСИИ ДОКУМЕНТА ПРЕДОСТАВЛЯЮТСЯ ПРЕДОСТАВЛЯЮТСЯ ПО "
-"УСЛОВИЯМ ЛИЦЕНЗИИ БЕСПЛАТНОЙ ДОКУМЕНТАЦИИ GNU С ПОНИМАНИЕМ ЧТО: "
-"<_:orderedlist-1/>"
+"ДОКУМЕНТ И ИЗМЕНЁННЫЕ ВЕРСИИ ДОКУМЕНТА ПРЕДОСТАВЛЯЮТСЯ ПО УСЛОВИЯМ ЛИЦЕНЗИИ "
+"БЕСПЛАТНОЙ ДОКУМЕНТАЦИИ GNU С ПОНИМАНИЕМ, ЧТО: <_:orderedlist-1/>"
 
 #. (itstool) path: formalpara/title
 #: C/legal.xml:77
 msgid "Software Licence"
-msgstr ""
+msgstr "Лицензия на программное обеспечение"
 
 #. (itstool) path: formalpara/para
 #: C/legal.xml:78
@@ -1097,6 +1315,11 @@ msgid ""
 "Free Software Foundation; either version 2 of the License, or (at your "
 "option) any later version."
 msgstr ""
+"Приложение «Диспетчер питания MATE» относится к категории свободного "
+"программного обеспечения. Его изменение и/или распространение допускается в "
+"соответствии с условиями лицензии GNU General Public License 2 или любой "
+"более поздней версии, опубликованной Фондом свободного программного "
+"обеспечения."
 
 #. (itstool) path: formalpara/para
 #: C/legal.xml:83
@@ -1106,6 +1329,11 @@ msgid ""
 "or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
 "more details."
 msgstr ""
+"Приложение «Диспетчер питания MATE» распространяется в надежде, что оно "
+"может быть полезно, но БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ВЫРАЖЕННЫХ ЯВНО ИЛИ "
+"ПОДРАЗУМЕВАЕМЫХ, В ТОМ ЧИСЛЕ БЕЗ ГАРАНТИЙ КОММЕРЧЕСКОЙ ЦЕННОСТИ И "
+"ПРИГОДНОСТИ ДЛЯ КОНКРЕТНОЙ ЦЕЛИ. Подробную информацию можно найти в тексте "
+"лицензии GNU General Public License."
 
 #. (itstool) path: formalpara/para
 #: C/legal.xml:88
@@ -1114,3 +1342,6 @@ msgid ""
 " MATE Power Manager; if not, write to the Free Software Foundation, Inc., 51"
 " Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
+"Вы должны были получить копию Стандартной общественной лицензии GNU вместе с"
+" MATE Power Manager; если нет, напишите в Free Software Foundation, Inc., 51"
+" Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."

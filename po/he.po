@@ -4,21 +4,21 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# haxoc c11 <haxoc112@disroot.org>, 2018
-# Edward Sawyer <saoded@gmail.com>, 2018
-# Yaron Shahrabani <sh.yaron@gmail.com>, 2020
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Omer I.S. <omeritzicschwartz@gmail.com>, 2020
-# shy tzedaka <shaytzedaka123@gmail.com>, 2020
+# Edward Sawyer <saoded@gmail.com>, 2021
+# haxoc c11 <haxoc112@disroot.org>, 2021
+# Yaron Shahrabani <sh.yaron@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# shy tzedaka <shaytzedaka123@gmail.com>, 2021
+# 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-power-manager 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2021-06-22 17:30+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: shy tzedaka <shaytzedaka123@gmail.com>, 2020\n"
-"Language-Team: Hebrew (https://www.transifex.com/mate/teams/13566/he/)\n"
+"PO-Revision-Date: 2021-09-20 18:18+0000\n"
+"Last-Translator: 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2021\n"
+"Language-Team: Hebrew (https://app.transifex.com/mate/teams/13566/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -86,7 +86,9 @@ msgstr ""
 #: applets/brightness/brightness-applet.c:850
 #: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:212
 msgid "translator-credits"
-msgstr "Yaron Shahrabani <sh.yaron@gmail.com>"
+msgstr ""
+"Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Omer I.S. <omeritzicschwartz@gmail.com>"
 
 #: applets/brightness/brightness-applet.c:1081
 #: applets/inhibit/inhibit-applet.c:503
@@ -568,7 +570,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:226
 msgid "Notify on low capacity of mouse battery"
-msgstr "להודיע כאשר סוללת העכבר בקיבולת נמוכה."
+msgstr "להודיע כאשר סוללת העכבר חלשה."
 
 #: data/org.mate.power-manager.gschema.xml.in:231
 msgid "Whether we should show the history data points"
@@ -975,7 +977,7 @@ msgstr "_לעולם אל תציג סמל"
 
 #: data/gpm-prefs.ui:1083
 msgid "_Only display an icon when battery power is low"
-msgstr "הצג איקון  _רק כאשר הסוללה כמעט ריקה"
+msgstr "_הצגת סמל רק כאשר הסוללה נמוכה"
 
 #: data/gpm-prefs.ui:1101
 msgid "Only display an icon when charging or _discharging"
@@ -1182,7 +1184,7 @@ msgstr "המכסה נסגר"
 
 #: src/gpm-manager.c:290
 msgid "Battery is low"
-msgstr "הסוללה חלשה"
+msgstr "סוללה חלשה"
 
 #: src/gpm-manager.c:298
 msgid "Battery is full"
@@ -1783,7 +1785,7 @@ msgstr "דיוק חיזוי"
 
 #: src/gpm-statistics.c:1210
 msgid "Select this device at startup"
-msgstr "בחר התקן זה עם ההפעלה"
+msgstr "לבחור התקן זה עם ההפעלה"
 
 #: src/gpm-tray-icon.c:206
 msgid "Copyright © 2011-2021 MATE developers"

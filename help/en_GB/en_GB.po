@@ -1,16 +1,15 @@
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Martin Wimpress <code@flexion.org>, 2018
-# Andi Chandler <andi@gowling.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Andi Chandler <andi@gowling.com>, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2021-01-16 14:35+0100\n"
-"PO-Revision-Date: 2018-10-04 15:52+0000\n"
-"Last-Translator: Andi Chandler <andi@gowling.com>, 2020\n"
-"Language-Team: English (United Kingdom) (https://www.transifex.com/mate/teams/13566/en_GB/)\n"
+"PO-Revision-Date: 2021-09-20 18:22+0000\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>, 2023\n"
+"Language-Team: English (United Kingdom) (https://app.transifex.com/mate/teams/13566/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,12 +19,14 @@ msgstr ""
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Martin Wimpress"
+msgstr ""
+"Martin Wimpress\n"
+"Andi Chandler"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:23
 msgid "<application>MATE Power Manager</application> Manual"
-msgstr ""
+msgstr "<application>MATE Power Manager</application> Manual"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:25
@@ -34,11 +35,14 @@ msgid ""
 "MATE Desktop that manages the power settings for your laptop or desktop "
 "computer."
 msgstr ""
+"<application>MATE Power Manager</application> is a session daemon for the "
+"MATE Desktop that manages the power settings for your laptop or desktop "
+"computer."
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
 msgid "<year>2015-2021</year> <holder>MATE Documentation Team</holder>"
-msgstr ""
+msgstr "<year>2015-2021</year> <holder>MATE Documentation Team</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:34
@@ -526,7 +530,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:434
 msgid "General Preferences"
-msgstr ""
+msgstr "General Preferences"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:436
@@ -596,9 +600,10 @@ msgid ""
 "To make this clearer, the sliders in <command>mate-power-"
 "preferences</command> are set to start at the value of the session-timeout +"
 " 1 minute, as we cannot logically trigger before the session is marked as "
-"idle. If you adjust the value of the 'session idle' timeout in <command"
-">mate-screensaver-preferences</command> then the start of the sliders in "
-"<command>mate-power-preferences</command> will change accordingly."
+"idle. If you adjust the value of the 'session idle' timeout in "
+"<command>mate-screensaver-preferences</command> then the start of the "
+"sliders in <command>mate-power-preferences</command> will change "
+"accordingly."
 msgstr ""
 
 #. (itstool) path: section/title
@@ -921,10 +926,10 @@ msgstr ""
 #: C/index.docbook:747
 msgid ""
 "And check for the process <command>hald-addon-acpi</command>. If it is not "
-"being run, then please make sure that HAL is being run with the <command"
-">--retain-privileges</command> option in the <command>haldaemon</command> "
-"initscript. An alternative to this is to use acpid, rather than the kernel "
-"proc file."
+"being run, then please make sure that HAL is being run with the "
+"<command>--retain-privileges</command> option in the "
+"<command>haldaemon</command> initscript. An alternative to this is to use "
+"acpid, rather than the kernel proc file."
 msgstr ""
 
 #. (itstool) path: para/ulink

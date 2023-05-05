@@ -1,17 +1,17 @@
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# ABE Tsunehiko, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Green, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# ABE Tsunehiko, 2021
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
+# Green <usergreen@users.osdn.me>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2021-01-16 14:35+0100\n"
-"PO-Revision-Date: 2018-10-04 15:52+0000\n"
-"Last-Translator: Green, 2021\n"
-"Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
+"PO-Revision-Date: 2021-09-20 18:22+0000\n"
+"Last-Translator: Green <usergreen@users.osdn.me>, 2021\n"
+"Language-Team: Japanese (https://app.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,8 +32,8 @@ msgstr ""
 "やまね ひでき \n"
 "草野 貴之 \n"
 "松澤 二郎 \n"
-"Green, alias usergreen\n"
-"日本GNOMEユーザー会 http://www.gnome.gr.jp/\n"
+"Green, alias usergreen \n"
+"日本GNOMEユーザー会 http://www.gnome.gr.jp/ \n"
 "MATE 文書化チーム https://www.transifex.com/mate/ "
 
 #. (itstool) path: articleinfo/title
@@ -169,7 +169,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:150
 msgid "Command line"
-msgstr "コマンドライン"
+msgstr "コマンドラインから"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:152
@@ -498,7 +498,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:366
 msgid "Preferences"
-msgstr "設定"
+msgstr "各種設定"
 
 #. (itstool) path: section/para
 #: C/index.docbook:368
@@ -677,9 +677,10 @@ msgid ""
 "To make this clearer, the sliders in <command>mate-power-"
 "preferences</command> are set to start at the value of the session-timeout +"
 " 1 minute, as we cannot logically trigger before the session is marked as "
-"idle. If you adjust the value of the 'session idle' timeout in <command"
-">mate-screensaver-preferences</command> then the start of the sliders in "
-"<command>mate-power-preferences</command> will change accordingly."
+"idle. If you adjust the value of the 'session idle' timeout in "
+"<command>mate-screensaver-preferences</command> then the start of the "
+"sliders in <command>mate-power-preferences</command> will change "
+"accordingly."
 msgstr ""
 "これをより明確にすると、論理的にセッションがアイドルとしてマークされる前にトリガすることはできないので、<command>mate-power-"
 "preferences</command> はセッション・タイムアウト +1 分の値で開始するように設定されています。<command>mate-"
@@ -960,10 +961,11 @@ msgid ""
 " <literal>org.mate.power-manager dpms-method-battery</literal> to one of the"
 " modes that work, e.g. standby, suspend or off."
 msgstr ""
-"<application>MATE 電源管理</application>が使用する DPMS サスペンドモードを変更する必要があります。<command"
-">dconf-editor</command> を開き、<literal>org.mate.power-manager dpms-method-"
-"ac</literal> キー と <literal>org.mate.power-manager dpms-method-"
-"battery</literal> キーをスタンバイ、サスペンド、オフなどのうちで動作可能なモードに変更してください。"
+"<application>MATE 電源管理</application>が使用する DPMS "
+"サスペンドモードを変更する必要があります。<command>dconf-editor</command> "
+"を開き、<literal>org.mate.power-manager dpms-method-ac</literal> キー と "
+"<literal>org.mate.power-manager dpms-method-battery</literal> "
+"キーをスタンバイ、サスペンド、オフなどのうちで動作可能なモードに変更してください。"
 
 #. (itstool) path: section/title
 #: C/index.docbook:689
@@ -1044,10 +1046,10 @@ msgstr "最初のケースでは、実行中のHALプロセスを検索します
 #: C/index.docbook:747
 msgid ""
 "And check for the process <command>hald-addon-acpi</command>. If it is not "
-"being run, then please make sure that HAL is being run with the <command"
-">--retain-privileges</command> option in the <command>haldaemon</command> "
-"initscript. An alternative to this is to use acpid, rather than the kernel "
-"proc file."
+"being run, then please make sure that HAL is being run with the "
+"<command>--retain-privileges</command> option in the "
+"<command>haldaemon</command> initscript. An alternative to this is to use "
+"acpid, rather than the kernel proc file."
 msgstr ""
 "プロセス <command>hald-addon-acpi</command> "
 "をチェックしてください。もし実行されていない場合は、<command>haldaemon</command> の initscript で "
@@ -1069,8 +1071,8 @@ msgid ""
 " of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
 "with this manual."
 msgstr ""
-"この文書をフリーソフトウェア財団発行の GNU 自由文書ライセンス (第 1.1 版かそれ以降から１つを選択) "
-"が定める条件の下で複製、頒布、あるいは改変することを許可します。変更不可部分、表カバーテキスト、裏カバーテキストは存在しません。この利用許諾契約の複製物は<_:ulink-1/>、またはこの文書と共に配布されている"
+"この文書をフリーソフトウェア財団発行の GNU 自由文書ライセンス（第 1.1 "
+"版かそれ以降から１つを選択）が定める条件の下で複製、頒布、あるいは改変することを許可します。変更不可部分、表カバーテキスト、裏カバーテキストは存在しません。このライセンスの複製物は<_:ulink-1/>、またはこの文書と共に配布されている"
 " COPYING-DOCS というファイルに中に記載されています。"
 
 #. (itstool) path: legalnotice/para
@@ -1095,7 +1097,7 @@ msgid ""
 msgstr ""
 "企業が自らの製品とサービスを区別する目的で使用する名称の多くは、登録商標であると主張しています。こうした名称が MATE "
 "の文書の中に記載されていて、この登録商標が MATE "
-"文書化プロジェクトのメンバーによって了解されている箇所については、名称を大文字または頭文字を大文字で表示しています。"
+"文書化プロジェクトのメンバーによって了解されている箇所については、名称が大文字または頭文字を大文字で表示しています。"
 
 #. (itstool) path: listitem/para
 #: C/legal.xml:35
@@ -1156,7 +1158,7 @@ msgid ""
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<_:orderedlist-1/>"
 msgstr ""
-"この文書およびその修正版は、以下の点を理解したという前提で、GNU 自由文書ライセンス "
+"この文書およびその修正版は、以下の点を了解しているという前提で、GNU 自由文書ライセンス "
 "の条件の下で配布されています：<_:orderedlist-1/>"
 
 #. (itstool) path: formalpara/title

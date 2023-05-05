@@ -1,19 +1,19 @@
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2018
-# Chotibul Studio <chotibulstudio@gmail.com>, 2020
-# Andika Triwidada <andika@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2021
+# Aril Apria Susanto <awriel@gmail.com>, 2021
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
+# Chotibul Studio <chotibulstudio@gmail.com>, 2021
+# Andika Triwidada <andika@gmail.com>, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2021-01-16 14:35+0100\n"
-"PO-Revision-Date: 2018-10-04 15:52+0000\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>, 2021\n"
-"Language-Team: Indonesian (https://www.transifex.com/mate/teams/13566/id/)\n"
+"PO-Revision-Date: 2021-09-20 18:22+0000\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>, 2023\n"
+"Language-Team: Indonesian (https://app.transifex.com/mate/teams/13566/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,12 +28,14 @@ msgstr ""
 "Ahmad Riza H Nst  <ari@160c.afraid.org>\n"
 "Dirgita <dirgita@gmail.com>\n"
 "Tim MATE Indonesia <http://id.mate.org>\n"
-"Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017."
+"Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017.\n"
+"Andika Triwidada <andika@gmail.com>, 2020, 2021, 2023.\n"
+"Triyan W. Nugroho <triyan.wn@gmail.com>, 2021."
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:23
 msgid "<application>MATE Power Manager</application> Manual"
-msgstr ""
+msgstr "Manual <application>Manajer Daya MATE</application>"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:25
@@ -42,6 +44,9 @@ msgid ""
 "MATE Desktop that manages the power settings for your laptop or desktop "
 "computer."
 msgstr ""
+"<application>Manajer Daya MATE</application> adalah sebuah daemon sesi untuk"
+" Desktop MATE yang mengelola pengaturan daya bagi komputer laptop atau "
+"desktop Anda."
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
@@ -53,6 +58,7 @@ msgstr "<year>2015-2021</year> <holder>Tim Dokumentasi MATE</holder>"
 msgid ""
 "<year>2006-2009</year> <holder>Richard Hughes (richard@hughsie.com)</holder>"
 msgstr ""
+"<year>2006-2009</year> <holder>Richard Hughes (richard@hughsie.com)</holder>"
 
 #. (itstool) path: publisher/publishername
 #: C/index.docbook:52
@@ -63,13 +69,13 @@ msgstr "Tim Dokumentasi MATE"
 #. (itstool) path: revdescription/para
 #: C/index.docbook:55 C/index.docbook:98
 msgid "Richard Hughes"
-msgstr ""
+msgstr "Richard Hughes"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:61
 msgid ""
 "<surname>MATE Documentation Team</surname> <affiliation> </affiliation>"
-msgstr ""
+msgstr "<surname>Tim Dokumentasi MATE</surname> <affiliation> </affiliation>"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:71
@@ -77,17 +83,20 @@ msgid ""
 "<firstname>Richard</firstname> <surname>Hughes</surname> "
 "<email>richard@hughsie.com</email>"
 msgstr ""
+"<firstname>Richard</firstname> <surname>Hughes</surname> "
+"<email>richard@hughsie.com</email>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:95
 msgid "Richard Hughes <email>richard@hughsie.com</email>"
-msgstr ""
+msgstr "Richard Hughes <email>richard@hughsie.com</email>"
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:91
 msgid ""
 "<revnumber>2.0</revnumber> <date>2006-08-30</date> <_:revdescription-1/>"
 msgstr ""
+"<revnumber>2.0</revnumber> <date>2006-08-30</date> <_:revdescription-1/>"
 
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:104
@@ -103,16 +112,20 @@ msgid ""
 "type=\"http\"><application>MATE Power Manager</application> Contact "
 "Page</ulink>."
 msgstr ""
+"Untuk melaporkan bug atau membuat saran mengenai aplikasi Manajer Daya MATE "
+"atau manual ini, ikuti petunjuk di <ulink url=\"https://github.com/mate-"
+"desktop/mate-power-manager/\" type=\"http\">Halaman Kontak "
+"<application>Manajer Daya MATE</application></ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:115
 msgid "<primary><application>MATE Power Manager</application></primary>"
-msgstr ""
+msgstr "<primary><application>Manajer Daya MATE</application></primary>"
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:118
 msgid "<primary>mate-power-manager</primary>"
-msgstr ""
+msgstr "<primary>mate-power-manager</primary>"
 
 #. (itstool) path: section/title
 #: C/index.docbook:125
@@ -125,6 +138,8 @@ msgid ""
 "<primary><application>MATE Power Manager</application></primary> "
 "<secondary>Manual</secondary> <tertiary>mate-power-manager</tertiary>"
 msgstr ""
+"<primary><application>Manajer Daya MATE</application></primary> "
+"<secondary>Manual</secondary> <tertiary>mate-power-manager</tertiary>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:135
@@ -132,6 +147,8 @@ msgid ""
 "The MATE Power Manager session daemon is a power management daemon for the "
 "<systemitem>MATE desktop</systemitem>"
 msgstr ""
+"Daemon sesi Manajer Daya MATE adalah sebuah daemon manajemen daya bagi "
+"<systemitem>Desktop MATE</systemitem>"
 
 #. (itstool) path: section/title
 #: C/index.docbook:143
@@ -145,6 +162,9 @@ msgid ""
 "startup, but you can manually start <application>MATE Power "
 "Manager</application> by doing:"
 msgstr ""
+"<application>Manajer Daya MATE</application> biasanya dimulai dalam awal "
+"mula MATE, tapi Anda dapat memulai <application>Manajer Daya "
+"MATE</application> secara manual dengan melakukan:"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:150
@@ -157,11 +177,13 @@ msgid ""
 "Type <command>G_MESSAGES_DEBUG=PowerManager mate-power-manager --no-"
 "daemon</command>, then press <keycap>Return</keycap>:"
 msgstr ""
+"Ketik <command>G_MESSAGES_DEBUG=PowerManager mate-power-manager --no-"
+"daemon</command>, lalu tekan <keycap>Return</keycap>:"
 
 #. (itstool) path: section/title
 #: C/index.docbook:162
 msgid "Notification Messages"
-msgstr ""
+msgstr "Pesan Notifikasi"
 
 #. (itstool) path: section/para
 #: C/index.docbook:163
@@ -169,16 +191,18 @@ msgid ""
 "When <application>MATE Power Manager</application> has started, the "
 "following notifications may be displayed."
 msgstr ""
+"Ketika <application>Manajer Daya MATE</application> sudah dimulai, "
+"notifikasi berikut mungkin ditampilkan."
 
 #. (itstool) path: section/title
 #: C/index.docbook:168
 msgid "AC Adapter Unplugged"
-msgstr ""
+msgstr "Adaptor AC Dilepas"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:170
 msgid "MATE Power Manager Notification when AC adapter is removed"
-msgstr ""
+msgstr "Pemberitahuan Manajer Daya MATE ketika adaptor AC dicabut"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -190,7 +214,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gpm-unplugged.png' "
 "md5='e9e38fa48737547a19b20af6a15d9e95'"
-msgstr ""
+msgstr "."
 
 #. (itstool) path: note/para
 #: C/index.docbook:180
@@ -198,17 +222,20 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-discharging</command>."
 msgstr ""
+"Anda dapat menonaktifkan notifikasi ini dengan mengubah kunci dconf "
+"<command>org.mate.power-manager notify-discharging</command>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:188
 msgid "Fully Charged"
-msgstr ""
+msgstr "Terisi Penuh"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:190
 msgid ""
 "MATE Power Manager Notification when laptop primary battery is fully charged"
 msgstr ""
+"Notifikasi Manajer Daya MATE ketika baterai primer laptop terisi penuh"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -220,7 +247,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gpm-charged.png' "
 "md5='cc83716555d07b13a3659683f96c531c'"
-msgstr ""
+msgstr "."
 
 #. (itstool) path: note/para
 #: C/index.docbook:200
@@ -228,6 +255,8 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-fully-charged</command>."
 msgstr ""
+"Anda dapat menonaktifkan notifikasi ini dengan mengubah kunci dconf "
+"<command>org.mate.power-manager notify-fully-charged</command>."
 
 #. (itstool) path: note/para
 #: C/index.docbook:206
@@ -237,11 +266,15 @@ msgid ""
 " from showing unwanted repeat notifications if the battery is incorrectly "
 "reporting the charged status."
 msgstr ""
+"Anda hanya akan mendapat pemberitahuan berulang bila persentase muatan "
+"baterai Anda turun di bawah 95% kemudian terisi penuh lagi. Ini mencegah "
+"beberapa mesin menampilkan pemberitahuan berulang yang tidak diinginkan bila"
+" baterai secara salah melaporkan status muatan."
 
 #. (itstool) path: section/title
 #: C/index.docbook:216
 msgid "Power Low"
-msgstr ""
+msgstr "Daya Rendah"
 
 #. (itstool) path: section/para
 #: C/index.docbook:217
@@ -249,11 +282,13 @@ msgid ""
 "When the battery is low, you will receive the following notification. You "
 "should consider switching to AC power really soon."
 msgstr ""
+"Ketika baterai lemah, Anda akan menerima pemberitahuan berikut. Anda mesti "
+"mempertimbangkan beralih ke daya AC sesegera mungkin."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:222
 msgid "MATE Power Manager Notification when battery power is low"
-msgstr ""
+msgstr "Pemberitahuan Manajer Daya MATE ketika tenaga baterai lemah"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -264,7 +299,7 @@ msgstr ""
 msgctxt "_"
 msgid ""
 "external ref='figures/gpm-low.png' md5='6cd86acf26f251d78060dd2ecb6b6506'"
-msgstr ""
+msgstr "."
 
 #. (itstool) path: note/para
 #: C/index.docbook:232
@@ -272,11 +307,13 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-low-power</command>."
 msgstr ""
+"Anda dapat menonaktifkan notifikasi ini dengan mengubah kunci dconf "
+"<command>org.mate.power-manager notify-low-power</command>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:240
 msgid "Power Critical"
-msgstr ""
+msgstr "Daya Kritis"
 
 #. (itstool) path: section/para
 #: C/index.docbook:241
@@ -285,12 +322,15 @@ msgid ""
 "explaining what action is required. You can change the critical low action "
 "using the preferences tool."
 msgstr ""
+"Ketika komputer kehabisan daya, itu akan menampilkan pemberitahuan ini, "
+"menjelaskan tindakan apa yang diperlukan. Anda dapat mengubah tindakan "
+"rendah kritis memakai alat preferensi."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:247
 msgid ""
 "MATE Power Manager Notification when the system power is critically low"
-msgstr ""
+msgstr "Pemberitahuan Manajer Daya MATE ketika tenaga sistem sangat lemah"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -302,12 +342,12 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gpm-critical.png' "
 "md5='77b0848ed3bd0510b65f89e0d07a2fed'"
-msgstr ""
+msgstr "."
 
 #. (itstool) path: section/title
 #: C/index.docbook:259
 msgid "Suspend Failure"
-msgstr ""
+msgstr "Kegagalan Suspensi"
 
 #. (itstool) path: section/para
 #: C/index.docbook:260
@@ -316,11 +356,14 @@ msgid ""
 "common reason for this notification is that the current user does not have "
 "permission to suspend or hibernate the computer."
 msgstr ""
+"Ketika Kegagalan Suspensi terjadi Anda mungkin memperoleh peringatan ini. "
+"Alasan paling umum untuk pemberitahuan ini adalah pengguna saat ini tidak "
+"punya izin untuk mensuspensi atau menghibernasi komputer."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:266
 msgid "MATE Power Manager Notification when suspend failure occurs"
-msgstr ""
+msgstr "Pemberitahuan Manajer Daya MATE ketika terjadi kegagalan suspensi"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -332,7 +375,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gpm-suspend-problem.png' "
 "md5='4e4c1fafda61c5ace02f957717ea7ce6'"
-msgstr ""
+msgstr "."
 
 #. (itstool) path: note/para
 #: C/index.docbook:276
@@ -340,6 +383,8 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-sleep-failed</command>."
 msgstr ""
+"Anda dapat menonaktifkan notifikasi ini dengan mengubah kunci dconf "
+"<command>org.mate.power-manager notify-sleep-failed</command>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:285
@@ -377,7 +422,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gpm-stats-graph.png' "
 "md5='c7cfa37ad6e96041a1c312d85236e7f6'"
-msgstr ""
+msgstr "."
 
 #. (itstool) path: note/para
 #: C/index.docbook:308
@@ -390,7 +435,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:317
 msgid "Charge History"
-msgstr ""
+msgstr "Riwayat Muatan"
 
 #. (itstool) path: section/para
 #: C/index.docbook:318
@@ -404,7 +449,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:327
 msgid "Power History"
-msgstr ""
+msgstr "Riwayat Daya"
 
 #. (itstool) path: section/para
 #: C/index.docbook:328
@@ -430,7 +475,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:352
 msgid "Estimated Time History"
-msgstr ""
+msgstr "Riwayat Estimasi Waktu"
 
 #. (itstool) path: section/para
 #: C/index.docbook:353
@@ -483,12 +528,12 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:402
 msgid "AC Preferences"
-msgstr ""
+msgstr "Preferensi AC"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:404
 msgid "MATE Power Manager AC tab"
-msgstr ""
+msgstr "Tab AC Manajer Daya MATE"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -500,17 +545,17 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gpm-prefs-ac.png' "
 "md5='dc4409a63218146e52d3e670b26785bd'"
-msgstr ""
+msgstr "."
 
 #. (itstool) path: section/title
 #: C/index.docbook:416
 msgid "Battery Preferences"
-msgstr ""
+msgstr "Preferensi Baterai"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:418
 msgid "MATE Power Manager battery tab"
-msgstr ""
+msgstr "Tab baterai Manajer Daya MATE"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -522,7 +567,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gpm-prefs-battery.png' "
 "md5='89fe431e4f38073f7d58f38425ad1ee7'"
-msgstr ""
+msgstr "."
 
 #. (itstool) path: section/para
 #: C/index.docbook:427
@@ -530,6 +575,8 @@ msgid ""
 "This allows a powerful computer to reduce the power usage when idle, or when"
 " the full capabilities are not required."
 msgstr ""
+"Ini mengizinkan komputer yang bertenaga mengurangi penggunaan daya ketika "
+"menganggur, atau ketika kapabilitas penuh tidak diperlukan."
 
 #. (itstool) path: section/title
 #: C/index.docbook:434
@@ -539,7 +586,7 @@ msgstr "Preferensi Umum"
 #. (itstool) path: figure/title
 #: C/index.docbook:436
 msgid "MATE Power Manager general tab"
-msgstr ""
+msgstr "Tab umum Manajer Daya MATE"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -551,12 +598,12 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gpm-prefs-general.png' "
 "md5='52b7d145bd085d8af6f3194ac632c547'"
-msgstr ""
+msgstr "."
 
 #. (itstool) path: section/title
 #: C/index.docbook:448
 msgid "Session and system idle times"
-msgstr ""
+msgstr "Waktu menganggur sistem dan sesi"
 
 #. (itstool) path: section/para
 #: C/index.docbook:449
@@ -586,7 +633,7 @@ msgstr ""
 msgctxt "_"
 msgid ""
 "external ref='figures/gs-prefs.png' md5='e9ce36b6ef557681ca4e8e90b71a7f46'"
-msgstr ""
+msgstr "."
 
 #. (itstool) path: section/para
 #: C/index.docbook:472
@@ -604,15 +651,16 @@ msgid ""
 "To make this clearer, the sliders in <command>mate-power-"
 "preferences</command> are set to start at the value of the session-timeout +"
 " 1 minute, as we cannot logically trigger before the session is marked as "
-"idle. If you adjust the value of the 'session idle' timeout in <command"
-">mate-screensaver-preferences</command> then the start of the sliders in "
-"<command>mate-power-preferences</command> will change accordingly."
+"idle. If you adjust the value of the 'session idle' timeout in "
+"<command>mate-screensaver-preferences</command> then the start of the "
+"sliders in <command>mate-power-preferences</command> will change "
+"accordingly."
 msgstr ""
 
 #. (itstool) path: section/title
 #: C/index.docbook:491
 msgid "Advanced Preferences"
-msgstr ""
+msgstr "Preferensi Tingkat Lanjut"
 
 #. (itstool) path: section/title
 #: C/index.docbook:494
@@ -629,7 +677,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:504
 msgid "Screen Locking"
-msgstr ""
+msgstr "Penguncian Layar"
 
 #. (itstool) path: section/para
 #: C/index.docbook:505
@@ -651,7 +699,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:519
 msgid "<command>org.mate.power-manager lock-use-screensaver</command>"
-msgstr ""
+msgstr "<command>org.mate.power-manager lock-use-screensaver</command>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:524
@@ -663,17 +711,17 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:531
 msgid "<command>org.mate.power-manager lock-blank-screen</command>"
-msgstr ""
+msgstr "<command>org.mate.power-manager lock-blank-screen</command>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:536
 msgid "<command>org.mate.power-manager lock-suspend</command>"
-msgstr ""
+msgstr "<command>org.mate.power-manager lock-suspend</command>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:541
 msgid "<command>org.mate.power-manager lock-hibernate</command>"
-msgstr ""
+msgstr "<command>org.mate.power-manager lock-hibernate</command>"
 
 #. (itstool) path: note/para
 #: C/index.docbook:548
@@ -685,7 +733,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:557
 msgid "MATE Power Applets"
-msgstr ""
+msgstr "Aplet Daya MATE"
 
 #. (itstool) path: section/title
 #: C/index.docbook:560
@@ -716,7 +764,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/applet-brightness.png' "
 "md5='8ce34f6733215fb86009471f19850dcc'"
-msgstr ""
+msgstr "."
 
 #. (itstool) path: note/para
 #: C/index.docbook:580
@@ -752,7 +800,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/applet-inhibit.png' "
 "md5='7381a44dae4f17bfd47abaa54c0ca2a4'"
-msgstr ""
+msgstr "."
 
 #. (itstool) path: note/para
 #: C/index.docbook:608
@@ -765,7 +813,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:618
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "Pertanyaan Sering Muncul"
 
 #. (itstool) path: section/para
 #: C/index.docbook:619
@@ -775,7 +823,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:623
 msgid "What is battery capacity?"
-msgstr ""
+msgstr "Apa itu kapasitas baterai?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:624
@@ -801,7 +849,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gpm-cell-capacity.png' "
 "md5='7635c3b846f39faf7b16a921a6ebb55c'"
-msgstr ""
+msgstr "."
 
 #. (itstool) path: section/title
 #: C/index.docbook:644
@@ -929,16 +977,16 @@ msgstr ""
 #: C/index.docbook:747
 msgid ""
 "And check for the process <command>hald-addon-acpi</command>. If it is not "
-"being run, then please make sure that HAL is being run with the <command"
-">--retain-privileges</command> option in the <command>haldaemon</command> "
-"initscript. An alternative to this is to use acpid, rather than the kernel "
-"proc file."
+"being run, then please make sure that HAL is being run with the "
+"<command>--retain-privileges</command> option in the "
+"<command>haldaemon</command> initscript. An alternative to this is to use "
+"acpid, rather than the kernel proc file."
 msgstr ""
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
 msgid "link"
-msgstr "taut"
+msgstr "tautan"
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:2
@@ -1001,17 +1049,17 @@ msgid ""
 "ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
 "OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
-"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
-"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
-"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
-"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
-"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
-"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
-"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
-"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
-"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
-"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
-"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+"DOKUMEN DISEDIAKAN \"SEBAGAIMANA ADANYA\", TANPA JAMINAN APA PUN, BAIK "
+"TERSURAT MAUPUN TERSIRAT, TERMASUK, TANPA BATASAN, JAMINAN BAHWA DOKUMEN "
+"ATAU VERSI MODIFIKASI DOKUMEN BEBAS DARI CACAT DAPAT DIPERDAGANGKAN ATAU "
+"TIDAK UNTUK TUJUAN TERTENTU -INFRINGING. SELURUH RISIKO TERKAIT KUALITAS, "
+"AKURASI, DAN KINERJA DOKUMEN ATAU VERSI MODIFIKASI DOKUMEN ADALAH PADA ANDA."
+" SEHARUSNYA DOKUMEN ATAU VERSI YANG DIMODIFIKASI TERBUKTI CACAT DALAM HAL "
+"APA PUN, ANDA (BUKAN PENULIS AWAL, PENGARANG ATAU KONTRIBUTOR APA PUN) "
+"BERTANGGUNG JAWAB BIAYA PELAYANAN, PERBAIKAN, ATAU KOREKSI YANG DIPERLUKAN. "
+"PENAFIAN JAMINAN INI MENJADI BAGIAN PENTING LISENSI INI. TIDAK ADA "
+"PENGGUNAAN DOKUMEN ATAU VERSI MODIFIKASI DOKUMEN YANG DIIZINKAN DI SINI "
+"KECUALI BERDASARKAN PENAFIAN INI; DAN"
 
 #. (itstool) path: listitem/para
 #: C/legal.xml:55
@@ -1027,16 +1075,17 @@ msgid ""
 "VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
 " POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
-" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
-"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
-"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
-"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
-"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
-" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
-" POSSIBILITY OF SUCH DAMAGES."
+"DALAM KEADAAN APA PUN DAN DALAM TEORI HUKUM, BAIK DALAM TOR (TERMASUK "
+"KELALAIAN), KONTRAK, ATAU LAINNYA, PENULIS, PENULIS AWAL, KONTRIBUTOR APA "
+"PUN, ATAU DISTRIBUTOR DOKUMEN ATAU VERSI YANG DIMODIFIKASI DARI DOKUMEN APA "
+"PUN, ATAU VERSI YANG DIMODIFIKASI DARI DOKUMEN APA PUN, ATAU DARI PIHAK "
+"TERSEBUT, BERTANGGUNG JAWAB KEPADA SIAPAPUN ATAS KERUSAKAN LANGSUNG, TIDAK "
+"LANGSUNG, KHUSUS, INSIDENTAL, ATAU KONSEKUENSIAL DARI SETIAP KARAKTER "
+"TERMASUK, TANPA BATASAN, KERUSAKAN ATAS KEHILANGAN NAMA BAIK, PENGHENTIAN "
+"KERJA, KEGAGALAN KOMPUTER ATAU KESALAHAN LAINNYA, ATAU KERUSAKAN APA PUN DAN"
+" SEMUA KERUSAKAN ATAU KERUGIAN YANG TIMBUL KARENA ATAU TERKAIT DENGAN "
+"PENGGUNAAN DOKUMEN DAN VERSI YANG DIUBAH DARI DOKUMEN, MESKIPUN PIHAK "
+"TERSEBUT TELAH DIBERITAHU TENTANG KEMUNGKINAN KERUSAKAN TERSEBUT."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:28
@@ -1045,14 +1094,14 @@ msgid ""
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<_:orderedlist-1/>"
 msgstr ""
-"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
-"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"DOKUMEN DAN VERSI MODIFIKASI DOKUMEN DIBERIKAN BERDASARKAN PERSYARATAN "
+"LISENSI DOKUMENTASI GRATIS GNU DENGAN PEMAHAMAN LEBIH LANJUT BAHWA: "
 "<_:orderedlist-1/>"
 
 #. (itstool) path: formalpara/title
 #: C/legal.xml:77
 msgid "Software Licence"
-msgstr ""
+msgstr "Lisensi Perangkat Lunak"
 
 #. (itstool) path: formalpara/para
 #: C/legal.xml:78

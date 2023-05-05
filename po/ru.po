@@ -4,24 +4,28 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Alexei Sorokin, 2018
-# Дмитрий Михирев, 2018
-# theirix <theirix@gmail.com>, 2018
-# AlexL <loginov.alex.valer@gmail.com>, 2018
-# Alex Putz, 2018
-# Anna Vyalkova <cybertailor@gmail.com>, 2020
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Wolfgang Ulbrich <mate@raveit.de>, 2020
-# Дмитрий Астанков <mornie@basealt.ru>, 2020
+# Дмитрий Михирев, 2021
+# theirix <theirix@gmail.com>, 2021
+# Transifex Bot <>, 2021
+# Alexey Rodionov <melenki@yandex.ru>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# XRevan86, 2021
+# AlexL <loginov.alex.valer@gmail.com>, 2021
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
+# Cyber Tailor <cyber@sysrq.in>, 2021
+# Olesya Gerasimenko <gammaray@basealt.ru>, 2021
+# Дмитрий Астанков <mornie@basealt.ru>, 2021
+# Павел Коваленко, 2021
+# Sergej A. <Ser82-png@yandex.ru>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-power-manager 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2021-06-22 17:30+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Дмитрий Астанков <mornie@basealt.ru>, 2020\n"
-"Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
+"PO-Revision-Date: 2021-09-20 18:18+0000\n"
+"Last-Translator: Sergej A. <Ser82-png@yandex.ru>, 2022\n"
+"Language-Team: Russian (https://app.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -96,6 +100,8 @@ msgid ""
 "Copyright © 2006 Benjamin Canou\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
+"Copyright © 2006 Benjamin Canou\n"
+"Copyright © 2011-2021 Разработчики MATE"
 
 #: applets/brightness/brightness-applet.c:850
 #: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:212
@@ -105,6 +111,7 @@ msgstr ""
 "Александр Сигачёв <ajvol2@gmail.com>\n"
 "Александр Соколов\n"
 "Александр Хромин\n"
+"Алексей Родионов <alexey.rodionov@red-soft.ru>\n"
 "Алексей Рочев <equeim@gmail.com>\n"
 "Алексей Сорокин <sor.alexei@meowr.ru>\n"
 "Андрей Иванков\n"
@@ -118,7 +125,6 @@ msgstr ""
 "Влад Орлов <monsta@inbox.ru>\n"
 "Глеб Мехренин <mehrenin@gmail.com>\n"
 "Денис Арефьев <arefevdns@mail.ru>\n"
-"Дмитрий Астанков <mornie@basealt.ru>\n"
 "Дмитрий Мандрык <dmandryk@gmail.com>\n"
 "Дмитрий Мастрюков <dmitry@taurussoft.org>\n"
 "Дмитрий Михирев <mikhirev@gmail.com>\n"
@@ -183,6 +189,8 @@ msgid ""
 "Copyright © 2006-2007 Richard Hughes\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
+"Copyright © 2006-2007 Richard Hughes\n"
+"Copyright © 2011-2021 Разработчики MATE"
 
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
@@ -495,8 +503,9 @@ msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
 msgstr ""
-"Должен ли NetworkManager разрывать соединение перед переходом в ждущий или "
-"спящий режим и восстанавливать его при возврате в обычный режим работы."
+"Должен ли NetworkManager разрывать соединение перед переходом в ждущий режим"
+" или режим гибернации и восстанавливать его при возврате в обычный режим "
+"работы."
 
 #: data/org.mate.power-manager.gschema.xml.in:166
 msgid "Use mate-screensaver lock setting"
@@ -508,7 +517,7 @@ msgid ""
 "screen is locked after a hibernate, suspend or blank screen."
 msgstr ""
 "Использовать ли параметр блокировки экрана программы mate-screensaver, чтобы"
-" определить, нужно ли блокировать экран после гибернации, спящего режима или"
+" определить, нужно ли блокировать экран после гибернации, ждущего режима или"
 " отключения экрана."
 
 #: data/org.mate.power-manager.gschema.xml.in:171
@@ -537,15 +546,16 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:181
 msgid "Lock screen on hibernate"
-msgstr "Блокировать экран при переходе в спящий режим"
+msgstr "Блокировать экран при переходе в режим гибернации"
 
 #: data/org.mate.power-manager.gschema.xml.in:182
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
 msgstr ""
-"Блокировать ли экран после выходе компьютера из спящего режима. Используется"
-" только в случае, если не установлен параметр lock-use-screensaver."
+"Блокировать ли экран после выхода компьютера из режима гибернации. "
+"Используется только в случае, если не установлен параметр lock-use-"
+"screensaver."
 
 #: data/org.mate.power-manager.gschema.xml.in:186
 #: data/org.mate.power-manager.gschema.xml.in:191
@@ -1002,7 +1012,7 @@ msgstr "_Уменьшать яркость подсветки экрана"
 
 #: data/gpm-prefs.ui:663
 msgid "_Reduce keyboard backlight"
-msgstr ""
+msgstr "_Уменьшить подсветку клавиатуры"
 
 #: data/gpm-prefs.ui:685 src/gpm-upower.c:507
 msgid "Keyboard"
@@ -1010,7 +1020,7 @@ msgid_plural "Keyboards"
 msgstr[0] "Клавиатура"
 msgstr[1] "Клавиатуры"
 msgstr[2] "Клавиатуры"
-msgstr[3] "Клавиатура"
+msgstr[3] "Клавиатуры"
 
 #: data/gpm-prefs.ui:707
 msgid "On Battery Power"
@@ -1058,7 +1068,7 @@ msgstr "_Всегда отображать значок"
 
 #: data/gpm-prefs.ui:1161
 msgid "Notification Area"
-msgstr "Область уведомления"
+msgstr "Область уведомлений"
 
 #: data/gpm-prefs.ui:1183
 msgid "General"
@@ -1119,7 +1129,7 @@ msgid_plural "%i minutes"
 msgstr[0] "%i минута"
 msgstr[1] "%i минуты"
 msgstr[2] "%i минут"
-msgstr[3] "%i минута"
+msgstr[3] "%i минут"
 
 #: src/gpm-common.c:69
 #, c-format
@@ -1128,7 +1138,7 @@ msgid_plural "%i hours"
 msgstr[0] "%i час"
 msgstr[1] "%i часа"
 msgstr[2] "%i часов"
-msgstr[3] "%i час"
+msgstr[3] "%i часов"
 
 #: src/gpm-common.c:75
 #, c-format
@@ -1141,7 +1151,7 @@ msgid_plural "hours"
 msgstr[0] "час"
 msgstr[1] "часа"
 msgstr[2] "часов"
-msgstr[3] "час"
+msgstr[3] "часов"
 
 #: src/gpm-common.c:77
 msgid "minute"
@@ -1149,7 +1159,7 @@ msgid_plural "minutes"
 msgstr[0] "минута"
 msgstr[1] "минуты"
 msgstr[2] "минут"
-msgstr[3] "минута"
+msgstr[3] "минут"
 
 #. Translators: This is %i days
 #: src/gpm-graph-widget.c:433
@@ -1694,7 +1704,7 @@ msgstr "Описание"
 
 #: src/gpm-statistics.c:230
 msgid "Unknown"
-msgstr "Неизвестный"
+msgstr "Неизвестная"
 
 #: src/gpm-statistics.c:234
 #, c-format
@@ -1703,7 +1713,7 @@ msgid_plural "%.0f seconds"
 msgstr[0] "%.0f секунда"
 msgstr[1] "%.0f секунды"
 msgstr[2] "%.0f секунд"
-msgstr[3] "%.0f секунда"
+msgstr[3] "%.0f секунд"
 
 #: src/gpm-statistics.c:239
 #, c-format
@@ -1712,7 +1722,7 @@ msgid_plural "%.1f minutes"
 msgstr[0] "%.1f минута"
 msgstr[1] "%.1f минуты"
 msgstr[2] "%.1f минут"
-msgstr[3] "%.1f минута"
+msgstr[3] "%.1f минут"
 
 #: src/gpm-statistics.c:244
 #, c-format
@@ -1721,7 +1731,7 @@ msgid_plural "%.1f hours"
 msgstr[0] "%.1f час"
 msgstr[1] "%.1f часа"
 msgstr[2] "%.1f часов"
-msgstr[3] "%.1f час"
+msgstr[3] "%.1f часов"
 
 #: src/gpm-statistics.c:248
 #, c-format
@@ -1730,7 +1740,7 @@ msgid_plural "%.1f days"
 msgstr[0] "%.1f день"
 msgstr[1] "%.1f дня"
 msgstr[2] "%.1f дней"
-msgstr[3] "%.1f день"
+msgstr[3] "%.1f дней"
 
 #: src/gpm-statistics.c:257
 msgid "Yes"
@@ -1771,7 +1781,7 @@ msgid_plural "%d seconds"
 msgstr[0] "%d секунда"
 msgstr[1] "%d секунды"
 msgstr[2] "%d секунд"
-msgstr[3] "%d секунда"
+msgstr[3] "%d секунд"
 
 #: src/gpm-statistics.c:367
 msgid "Refreshed"
@@ -1870,7 +1880,7 @@ msgstr "Выбрать это устройство при запуске"
 
 #: src/gpm-tray-icon.c:206
 msgid "Copyright © 2011-2021 MATE developers"
-msgstr ""
+msgstr "Copyright © 2011-2021 Разработчики MATE"
 
 #: src/gpm-tray-icon.c:316
 #, c-format
@@ -2039,7 +2049,7 @@ msgid_plural "AC adapters"
 msgstr[0] "Сетевой адаптер"
 msgstr[1] "Сетевые адаптеры"
 msgstr[2] "Сетевые адаптеры"
-msgstr[3] "Сетевой адаптер"
+msgstr[3] "Сетевые адаптеры"
 
 #: src/gpm-upower.c:491
 msgid "Laptop battery"
@@ -2047,7 +2057,7 @@ msgid_plural "Laptop batteries"
 msgstr[0] "Батарея ноутбука"
 msgstr[1] "Батареи ноутбука"
 msgstr[2] "Батареи ноутбука"
-msgstr[3] "Батарея ноутбука"
+msgstr[3] "Батареи ноутбука"
 
 #: src/gpm-upower.c:495
 msgid "UPS"
@@ -2055,7 +2065,7 @@ msgid_plural "UPSs"
 msgstr[0] "Блок бесперебойного питания"
 msgstr[1] "Блоки бесперебойного питания"
 msgstr[2] "Блоки бесперебойного питания"
-msgstr[3] "Блок бесперебойного питания"
+msgstr[3] "Блоки бесперебойного питания"
 
 #: src/gpm-upower.c:499
 msgid "Monitor"
@@ -2063,7 +2073,7 @@ msgid_plural "Monitors"
 msgstr[0] "Монитор"
 msgstr[1] "Мониторы"
 msgstr[2] "Мониторы"
-msgstr[3] "Монитор"
+msgstr[3] "Мониторы"
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
@@ -2071,7 +2081,7 @@ msgid_plural "Mice"
 msgstr[0] "Мышь"
 msgstr[1] "Мыши"
 msgstr[2] "Мыши"
-msgstr[3] "Мышь"
+msgstr[3] "Мыши"
 
 #: src/gpm-upower.c:511
 msgid "PDA"
@@ -2087,7 +2097,7 @@ msgid_plural "Cell phones"
 msgstr[0] "Мобильный телефон"
 msgstr[1] "Мобильные телефоны"
 msgstr[2] "Мобильные телефоны"
-msgstr[3] "Мобильный телефон"
+msgstr[3] "Мобильные телефоны"
 
 #: src/gpm-upower.c:519
 msgid "Media player"
@@ -2095,7 +2105,7 @@ msgid_plural "Media players"
 msgstr[0] "Медиапроигрыватель"
 msgstr[1] "Медиапроигрыватели"
 msgstr[2] "Медиапроигрыватели"
-msgstr[3] "Медиапроигрыватель"
+msgstr[3] "Медиапроигрыватели"
 
 #: src/gpm-upower.c:523
 msgid "Tablet"
@@ -2103,7 +2113,7 @@ msgid_plural "Tablets"
 msgstr[0] "Планшет"
 msgstr[1] "Планшеты"
 msgstr[2] "Планшеты"
-msgstr[3] "Планшет"
+msgstr[3] "Планшеты"
 
 #: src/gpm-upower.c:527
 msgid "Computer"
@@ -2111,7 +2121,7 @@ msgid_plural "Computers"
 msgstr[0] "Компьютер"
 msgstr[1] "Компьютеры"
 msgstr[2] "Компьютеры"
-msgstr[3] "Компьютер"
+msgstr[3] "Компьютеры"
 
 #: src/gpm-upower.c:594
 msgid "Lithium Ion"

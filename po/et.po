@@ -4,19 +4,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tõnis Rand, 2018
-# Mattias Põldaru <mahfiaz@gmail.com>, 2019
-# Ivar Smolin <okul@linux.ee>, 2020
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# vaba <vaba@riseup.net>, 2021
+# Mattias Põldaru <mahfiaz@gmail.com>, 2021
+# Ivar Smolin <okul@linux.ee>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Tõnis Rand, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-power-manager 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2021-06-22 17:30+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
-"Language-Team: Estonian (https://www.transifex.com/mate/teams/13566/et/)\n"
+"PO-Revision-Date: 2021-09-20 18:18+0000\n"
+"Last-Translator: Tõnis Rand, 2021\n"
+"Language-Team: Estonian (https://app.transifex.com/mate/teams/13566/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -89,7 +90,8 @@ msgstr ""
 "Ilmar Kerm <ikerm hot ee>, 2001, 2002.\n"
 "Tõivo Leedjärv <toivo linux ee>, 2002, 2003.\n"
 "Priit Laes <plaes plaes org>, 2004–2006, 2008, 2009\n"
-"Ivar Smolin <okul linux ee>, 2005–2010, 2014–2015, 2018."
+"Ivar Smolin <okul linux ee>, 2005–2010, 2014–2015, 2018.\n"
+"Marko Silluste, 2021."
 
 #: applets/brightness/brightness-applet.c:1081
 #: applets/inhibit/inhibit-applet.c:503
@@ -918,8 +920,8 @@ msgstr ""
 #: data/gpm-prefs.ui:685 src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] "Klaviatuur"
-msgstr[1] "Klaviatuurid"
+msgstr[0] ""
+msgstr[1] ""
 
 #: data/gpm-prefs.ui:707
 msgid "On Battery Power"
@@ -1025,15 +1027,15 @@ msgstr "teadmata aeg"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] "%i minut"
-msgstr[1] "%i minutit"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] "%i tund"
-msgstr[1] "%i tundi"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-common.c:75
 #, c-format
@@ -1043,14 +1045,14 @@ msgstr "%i %s ja %i %s"
 #: src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] "tund"
-msgstr[1] "tundi"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] "minut"
-msgstr[1] "minutit"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Translators: This is %i days
 #: src/gpm-graph-widget.c:433
@@ -1224,8 +1226,8 @@ msgstr ""
 #: src/gpm-manager.c:1158
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] "Aku laetud"
-msgstr[1] "Akud laetud"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-manager.c:1204
 msgid "Battery Discharging"
@@ -1595,29 +1597,29 @@ msgstr "Tundmatu"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] "%.0f sekund"
-msgstr[1] "%.0f sekundit"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-statistics.c:239
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] "%.1f minut"
-msgstr[1] "%.1f minutit"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-statistics.c:244
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] "%.1f tund"
-msgstr[1] "%.1f tundi"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-statistics.c:248
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] "%.1f päev"
-msgstr[1] "%.1f päeva"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-statistics.c:257
 msgid "Yes"
@@ -1655,8 +1657,8 @@ msgstr "Toide"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d sekund"
-msgstr[1] "%d sekundit"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-statistics.c:367
 msgid "Refreshed"
@@ -1760,7 +1762,7 @@ msgstr ""
 #: src/gpm-tray-icon.c:316
 #, c-format
 msgid "%s remaining"
-msgstr "jäänud 1%s"
+msgstr "jäänud %s"
 
 #: src/gpm-tray-icon.c:370
 msgid "_Preferences"
@@ -1827,7 +1829,7 @@ msgstr "%s on laadimise ootel (%.1f%%)"
 #: src/gpm-upower.c:306
 #, c-format
 msgid "%s empty"
-msgstr "%s tühi"
+msgstr "%s on tühi"
 
 #: src/gpm-upower.c:366
 msgid "Product:"
@@ -1921,62 +1923,62 @@ msgstr "Laadimise kiirus:"
 #: src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] "Vooluadapter"
-msgstr[1] "Vooluadapterid"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "Sülearvuti aku"
-msgstr[1] "Sülearvuti akud"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] "UPS"
-msgstr[1] "UPS-id"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] "Monitor"
-msgstr[1] "Monitorid"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] "Hiir"
-msgstr[1] "Hiired"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] "PDA"
-msgstr[1] "PDAd"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] "Mobiiltelefon"
-msgstr[1] "Mobiiltelefonid"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] "Meediaesitaja"
-msgstr[1] "Meediaesitajad"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "Tahvelarvuti"
-msgstr[1] "Tahvelarvutid"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] "Arvuti"
-msgstr[1] "Arvutid"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:594
 msgid "Lithium Ion"

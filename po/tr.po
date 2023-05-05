@@ -4,23 +4,24 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Emre FIRAT <emrefirat93@gmail.com>, 2018
-# Mehmet, 2018
-# Umut Barış GÖKMEN <umtbrsgkmn@gmail.com>, 2018
-# Yasin Uysal <yasinuysal22@outlook.com>, 2018
-# mauron, 2018
-# Butterfly <gokhanlnx@gmail.com>, 2019
-# tarakbumba <tarakbumba@gmail.com>, 2020
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# tarakbumba <tarakbumba@gmail.com>, 2021
+# hilalis <hilalis@outlook.com.tr>, 2021
+# mauron, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Butterfly <gokhanlnx@gmail.com>, 2021
+# Umut Barış GÖKMEN <umtbrsgkmn@gmail.com>, 2021
+# Yasin Uysal <yasinuysal22@outlook.com>, 2021
+# Mehmet, 2022
+# Sabri Ünal <libreajans@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-power-manager 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2021-06-22 17:30+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
-"Language-Team: Turkish (https://www.transifex.com/mate/teams/13566/tr/)\n"
+"PO-Revision-Date: 2021-09-20 18:18+0000\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>, 2022\n"
+"Language-Team: Turkish (https://app.transifex.com/mate/teams/13566/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -57,6 +58,10 @@ msgid ""
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
 msgstr ""
+"Güç Yöneticisi özgür bir yazılımdır; uygulamayı, Free Software Foundation "
+"tarafından yayınlanan GNU Genel Kamu Lisansı'nın 2. sürümüyle veya (isteğe "
+"bağlı olarak) daha yeni bir sürümüyle belirlenmiş koşullar altında "
+"dağıtabilir ve/veya değiştirebilirsiniz."
 
 #: applets/brightness/brightness-applet.c:823
 #: applets/inhibit/inhibit-applet.c:292
@@ -66,6 +71,9 @@ msgid ""
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
 msgstr ""
+"Güç yöneticisi faydalı olacağı düşüncesiyle fakat HİÇBİR GARANTİ OLMADAN; "
+"hatta ima edilen bir ORTALAMA KALİTE veya BELLİ BİR AMACA UYGUNLUK garantisi"
+" olmadan dağıtılmaktadır. Ayrıntılar için GNU Genel Kamu Lisansı'na bakınız."
 
 #: applets/brightness/brightness-applet.c:828
 #: applets/inhibit/inhibit-applet.c:297
@@ -74,16 +82,21 @@ msgid ""
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
+"Bu programla beraber GNU Genel Kamu Lisansını da almış olmalısınız; eğer "
+"almadıysanız, Free Software Foundation, Inc., 59 Temple Place - Suite 330, "
+"Boston, MA 02110-1302, USA adresine yazınız."
 
 #: applets/brightness/brightness-applet.c:841
 msgid "About Power Manager Brightness Applet"
-msgstr ""
+msgstr "Güç Yöneticisi Parlaklık Uygulamacığı Hakkında"
 
 #: applets/brightness/brightness-applet.c:843
 msgid ""
 "Copyright © 2006 Benjamin Canou\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
+"Telif Hakkı © 2006 Benjamin Canou\n"
+"Telif Hakkı © 2011-2021 MATE geliştiricileri"
 
 #: applets/brightness/brightness-applet.c:850
 #: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:212
@@ -96,9 +109,10 @@ msgstr ""
 "Muhammet Kara <muhammet.k@gmail.com>, 2011.\n"
 "MATE projesine katkıda bulunanlar:\n"
 "hsngrms <dead-bodies-everywhere@hotmail.com>, 2012\n"
-"mauron, 2012-2014\n"
+"mauron, 2012, 2013, 2014, 2015, 2016, 2017, 2018\n"
 "Atilla Öntaş <tarakbumba@gmail.com>, 2014\n"
-"Emre FIRAT <emrefirat93@gmail.com>, 2013, 2014, 2015"
+"Emre FIRAT <emrefirat93@gmail.com>, 2013, 2014, 2015\n"
+"Hilalis BIRDS <hilalis@outlook.com.tr>, 2021"
 
 #: applets/brightness/brightness-applet.c:1081
 #: applets/inhibit/inhibit-applet.c:503
@@ -140,13 +154,15 @@ msgstr "El ile önleme"
 
 #: applets/inhibit/inhibit-applet.c:310
 msgid "About Power Manager Inhibit Applet"
-msgstr ""
+msgstr "Güç Yöneticisi Önleme Uygulamacığı Hakkında"
 
 #: applets/inhibit/inhibit-applet.c:312
 msgid ""
 "Copyright © 2006-2007 Richard Hughes\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
+"Telif Hakkı © 2006-2007 Richard Hughes\n"
+"Telif Hakkı © 2011-2021 MATE geliştircileri"
 
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
@@ -589,7 +605,7 @@ msgstr "Pil gücü azalırken bir uyarı iletisi gösterilsin."
 
 #: data/org.mate.power-manager.gschema.xml.in:226
 msgid "Notify on low capacity of mouse battery"
-msgstr "Fare pilinin kapasitesi azaldığında bildirimde bulun"
+msgstr "Fare pilinin kapasitesi azaldığında bildir"
 
 #: data/org.mate.power-manager.gschema.xml.in:231
 msgid "Whether we should show the history data points"
@@ -862,7 +878,7 @@ msgstr "Güç yönetimini yapılandır"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/mate-power-preferences.desktop.in.in:13
 msgid "MATE;power;management;preferences;settings;"
-msgstr ""
+msgstr "MATE;güç;yönetim;tercihler;ayarlar;güç yönetimi;"
 
 #: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
 #: src/gpm-statistics.c:762 src/gpm-statistics.c:1224
@@ -936,7 +952,7 @@ msgstr "_Ekranın uyuması için etkisiz geçmesi gereken süre:"
 
 #: data/gpm-prefs.ui:289
 msgid "Set display _brightness to:"
-msgstr "Görüntü parlaklığının _değeri:"
+msgstr "Ekran parlaklığının _değeri:"
 
 #: data/gpm-prefs.ui:322 data/gpm-prefs.ui:607
 msgid "Di_m display when idle"
@@ -960,13 +976,13 @@ msgstr "_Arka ışık parlaklığını azalt"
 
 #: data/gpm-prefs.ui:663
 msgid "_Reduce keyboard backlight"
-msgstr ""
+msgstr "_Klavye arka ışığını azalt"
 
 #: data/gpm-prefs.ui:685 src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] "Klavye"
-msgstr[1] "Klavye"
+msgstr[0] ""
+msgstr[1] ""
 
 #: data/gpm-prefs.ui:707
 msgid "On Battery Power"
@@ -1072,15 +1088,15 @@ msgstr "Bilinmeyen zaman"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] "%i dakika"
-msgstr[1] "%i dakika"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] "%i saat"
-msgstr[1] "%i saat"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-common.c:75
 #, c-format
@@ -1090,14 +1106,14 @@ msgstr "%i %s, %i %s"
 #: src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] "saat"
-msgstr[1] "saat"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] "dakika"
-msgstr[1] "dakika"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Translators: This is %i days
 #: src/gpm-graph-widget.c:433
@@ -1271,8 +1287,8 @@ msgstr ""
 #: src/gpm-manager.c:1158
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] "Pil Doldu"
-msgstr[1] "Piller Doldu"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-manager.c:1204
 msgid "Battery Discharging"
@@ -1645,29 +1661,29 @@ msgstr "Bilinmeyen"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] "%.0f saniye"
-msgstr[1] "%.0f saniye"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-statistics.c:239
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] "%.1f dakika"
-msgstr[1] "%.1f dakika"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-statistics.c:244
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] "%.1f saat"
-msgstr[1] "%.1f saat"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-statistics.c:248
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] "%.1f gün"
-msgstr[1] "%.1f gün"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-statistics.c:257
 msgid "Yes"
@@ -1705,8 +1721,8 @@ msgstr "Kaynak"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d saniye"
-msgstr[1] "%d saniye"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-statistics.c:367
 msgid "Refreshed"
@@ -1722,7 +1738,7 @@ msgstr "Şarj edilebilir"
 
 #: src/gpm-statistics.c:390
 msgid "State"
-msgstr "Eyalet"
+msgstr "Durum"
 
 #: src/gpm-statistics.c:394
 msgid "Energy"
@@ -1805,7 +1821,7 @@ msgstr "Başlangıçta bu cihazı seç"
 
 #: src/gpm-tray-icon.c:206
 msgid "Copyright © 2011-2021 MATE developers"
-msgstr ""
+msgstr "Telif Hakkı © 2011-2021 MATE geliştiricileri"
 
 #: src/gpm-tray-icon.c:316
 #, c-format
@@ -1971,62 +1987,62 @@ msgstr "Dolum hızı:"
 #: src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] "AC adaptörü"
-msgstr[1] "AC adaptörü"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "Dizüstü pili"
-msgstr[1] "Dizüstü pili"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] "UPS"
-msgstr[1] "UPS"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] "Ekran"
-msgstr[1] "Ekran"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] "Fare"
-msgstr[1] "Fare"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] "PDA"
-msgstr[1] "PDA"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] "Cep telefonu"
-msgstr[1] "Cep telefonu"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] "Ortam oynatıcı"
-msgstr[1] "Ortam oynatıcı"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "Tablet"
-msgstr[1] "Tablet"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] "Bilgisayar"
-msgstr[1] "Bilgisayar"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/gpm-upower.c:594
 msgid "Lithium Ion"

@@ -4,19 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Cédric Valmary <cvalmary@yahoo.fr>, 2020
-# Quentin PAGÈS, 2021
+# 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Cédric Valmary <cvalmary@yahoo.fr>, 2021
+# Quentin PAGÈS, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-power-manager 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2021-06-22 17:30+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Quentin PAGÈS, 2021\n"
-"Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
+"PO-Revision-Date: 2021-09-20 18:18+0000\n"
+"Last-Translator: Quentin PAGÈS, 2023\n"
+"Language-Team: Occitan (post 1500) (https://app.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -98,8 +98,8 @@ msgstr ""
 #: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:212
 msgid "translator-credits"
 msgstr ""
-"Yannig Marchegay (Kokoyaya) <yannig@marchegay.org> & Cédric Valmary "
-"(totenoc.eu) <cvalmary@yahoo.fr>"
+"Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, Cédric Valmary "
+"(totenoc.eu) <cvalmary@yahoo.fr>, Quentin Pagès"
 
 #: applets/brightness/brightness-applet.c:1081
 #: applets/inhibit/inhibit-applet.c:503
@@ -176,7 +176,7 @@ msgstr ""
 #: data/org.mate.power-manager.gschema.xml.in:42
 msgid ""
 "The type of sleeping that should be performed when the computer is inactive."
-msgstr ""
+msgstr "Tipe de mesa en velha que l’ordenador deu aplicar quand es inactiu."
 
 #: data/org.mate.power-manager.gschema.xml.in:31
 msgid "Battery critical low action"
@@ -201,53 +201,58 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:46
 msgid "UPS critical low action"
-msgstr ""
+msgstr "Accion en cas d’ondulador fòrça feble"
 
 #: data/org.mate.power-manager.gschema.xml.in:47
 msgid "The action to take when the UPS is critically low."
-msgstr ""
+msgstr "L’accion de menar quand l’ondulador es fòrça feble."
 
 #: data/org.mate.power-manager.gschema.xml.in:51
 msgid "UPS low power action"
-msgstr ""
+msgstr "Accion en cas d’ondulador feble"
 
 #: data/org.mate.power-manager.gschema.xml.in:52
 msgid "The action to take when the UPS is low."
-msgstr ""
+msgstr "L’accion de menar quand l’ondulador es feble."
 
 #: data/org.mate.power-manager.gschema.xml.in:56
 msgid "Allow backlight brightness adjustment"
-msgstr ""
+msgstr "Permetre d’ajustar la luminositat del retroesclairatge"
 
 #: data/org.mate.power-manager.gschema.xml.in:57
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
 msgstr ""
+"Se lo retroesclairatge de l’ecran deu èsser cambiat en basculant entre "
+"alimentacion batariá e sector."
 
 #: data/org.mate.power-manager.gschema.xml.in:61
 msgid "Reduce the backlight brightness when on battery power"
-msgstr ""
+msgstr "Reduire la luminositat del retroesclairatge sus batariá"
 
 #: data/org.mate.power-manager.gschema.xml.in:62
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
 msgstr ""
+"Se la luminositat de l’ecran deu èsser reducha quand l’ordenador es sus "
+"batariá."
 
 #: data/org.mate.power-manager.gschema.xml.in:66
 msgid "Reduce the keyboard backlight when on battery power"
-msgstr ""
+msgstr "Reduire lo retroesclairatge del clavièr sus batariá"
 
 #: data/org.mate.power-manager.gschema.xml.in:67
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
 msgstr ""
+"Se lo retroesclairatge deu èsser reducha quand l’ordenador es sus batariá"
 
 #: data/org.mate.power-manager.gschema.xml.in:71
 msgid "Keyboard backlight brightness when on AC power."
-msgstr ""
+msgstr "Luminositat del retroesclairatge del clavier sus sector."
 
 #: data/org.mate.power-manager.gschema.xml.in:72
 msgid ""
@@ -257,7 +262,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:76
 msgid "Percent to reduce keyboard backlight by when on battery power."
-msgstr ""
+msgstr "Percentatge de reduccion del retroesclairatge del clavièr sus batariá"
 
 #: data/org.mate.power-manager.gschema.xml.in:77
 msgid ""
@@ -269,6 +274,7 @@ msgstr ""
 #: data/org.mate.power-manager.gschema.xml.in:81
 msgid "Percent to reduce keyboard backlight by when idle."
 msgstr ""
+"Percentatge de reduccion del retroesclairatge del clavièr en inactivitat."
 
 #: data/org.mate.power-manager.gschema.xml.in:82
 msgid ""
@@ -353,61 +359,66 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:126
 msgid "Suspend button action"
-msgstr ""
+msgstr "Accion del boton de mesa en velha"
 
 #: data/org.mate.power-manager.gschema.xml.in:127
 msgid "The action to take when the system suspend button is pressed."
-msgstr ""
+msgstr "Accion quand lo boton de velha del sistèma es quichat."
 
 #: data/org.mate.power-manager.gschema.xml.in:131
 msgid "Hibernate button action"
-msgstr ""
+msgstr "Accion sus quichada del boton d'ivernacion"
 
 #: data/org.mate.power-manager.gschema.xml.in:132
 msgid "The action to take when the system hibernate button is pressed."
-msgstr ""
+msgstr "Accion de realizar quand lo boton d’ivernacion sistèma es quichat."
 
 #: data/org.mate.power-manager.gschema.xml.in:136
 msgid "Power button action"
-msgstr ""
+msgstr "Accion del boton d’alimentacion"
 
 #: data/org.mate.power-manager.gschema.xml.in:137
 msgid "The action to take when the system power button is pressed."
-msgstr ""
+msgstr "Accion quand lo boton d’alimentacion del sistèma es quichat."
 
 #: data/org.mate.power-manager.gschema.xml.in:141
 msgid "Laptop lid close action on battery"
-msgstr ""
+msgstr "Accion quand l'ecran del portable sus batariá es replegat"
 
 #: data/org.mate.power-manager.gschema.xml.in:142
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
 msgstr ""
+"Accion quand l'ecran del portable es replegat e que l'ordenador es brancat a"
+" la batariá."
 
 #: data/org.mate.power-manager.gschema.xml.in:146
 msgid "Laptop lid close action when on AC"
-msgstr ""
+msgstr "Accion quand l'ecran del portable sus sector es replegat"
 
 #: data/org.mate.power-manager.gschema.xml.in:147
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
-msgstr ""
+msgstr "Accion quand l'ecran del portable sus sector es replegat."
 
 #: data/org.mate.power-manager.gschema.xml.in:151
 msgid "Whether to use time-based notifications"
-msgstr ""
+msgstr "Indica se las notificacions basadas sul temps devon èsser utilizadas"
 
 #: data/org.mate.power-manager.gschema.xml.in:152
 msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
 msgstr ""
+"Indica se cal utilizar de notificacions basadas sul temps. A defaut, la "
+"variacion en percentatge serà utilizada. Aquò pòt permetre de corregir lo "
+"foncionament d'unas BIOS ACPI defectuoses."
 
 #: data/org.mate.power-manager.gschema.xml.in:156
 msgid "Check CPU load before sleeping"
-msgstr ""
+msgstr "Verificar la carga processor abans la velha"
 
 #: data/org.mate.power-manager.gschema.xml.in:157
 msgid "If the CPU load should be checked before doing the idle action."
@@ -445,7 +456,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:176
 msgid "Lock screen on suspend"
-msgstr ""
+msgstr "Verrolhar l'ecran al moment de la mesa en velha"
 
 #: data/org.mate.power-manager.gschema.xml.in:177
 msgid ""
@@ -455,13 +466,15 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:181
 msgid "Lock screen on hibernate"
-msgstr ""
+msgstr "Verrolhar l’ecran en ivernacion"
 
 #: data/org.mate.power-manager.gschema.xml.in:182
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
 msgstr ""
+"Indica se l’ecran es verrolhat quand l’ordenador es sortir d’ivernacion. "
+"Utilizat sonque se lock-use-screensaver es definit a false."
 
 #: data/org.mate.power-manager.gschema.xml.in:186
 #: data/org.mate.power-manager.gschema.xml.in:191
@@ -490,11 +503,11 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:201
 msgid "Notify when AC adapter is disconnected"
-msgstr ""
+msgstr "Notificar quand l’adaptador sector es desbrancat"
 
 #: data/org.mate.power-manager.gschema.xml.in:202
 msgid "If the user should be notified when the AC adapter is disconnected."
-msgstr ""
+msgstr "Se cal notificar l’utilizaire que l’adaptador sector es desbrancat."
 
 #: data/org.mate.power-manager.gschema.xml.in:206
 msgid "Notify when fully charged"
@@ -510,7 +523,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:211
 msgid "Notify on a sleep failure"
-msgstr ""
+msgstr "Notificar del fracàs de mesa en velha"
 
 #: data/org.mate.power-manager.gschema.xml.in:212
 msgid ""
@@ -530,7 +543,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:221
 msgid "Notify on a low power"
-msgstr ""
+msgstr "Notificar d’energia febla"
 
 #: data/org.mate.power-manager.gschema.xml.in:222
 #: data/org.mate.power-manager.gschema.xml.in:227
@@ -579,81 +592,95 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:251
 msgid "Whether we should show the stats data points"
-msgstr ""
+msgstr "Indica se los punts de las estatisticas an d'èsser afichats"
 
 #: data/org.mate.power-manager.gschema.xml.in:252
 msgid "Whether we should show the stats data points in the statistics window."
 msgstr ""
+"Indica se los punts de las estatisticas an d'èsser afichats dins la fenèstra"
+" de las estatisticas."
 
 #: data/org.mate.power-manager.gschema.xml.in:256
 msgid "Whether we should smooth the stats data"
-msgstr ""
+msgstr "Indica se las donadas de las estatisticas an d'èsser lissadas"
 
 #: data/org.mate.power-manager.gschema.xml.in:257
 msgid "Whether we should smooth the stats data in the graph."
 msgstr ""
+"Indica se las donadas de las estatisticas an d'èsser lissadas sul grafic."
 
 #: data/org.mate.power-manager.gschema.xml.in:261
 msgid "The default graph type to show for stats"
-msgstr ""
+msgstr "Lo tipe de grafic per defaut d'afichar per las estatisticas"
 
 #: data/org.mate.power-manager.gschema.xml.in:262
 msgid "The default graph type to show in the stats window."
 msgstr ""
+"Lo tipe de grafic per defaut d'afichar dins la fenèstra de las estatisticas."
 
 #: data/org.mate.power-manager.gschema.xml.in:266
 msgid "The index of the page number to show by default"
-msgstr ""
+msgstr "L'indici del numèro de pagina d'afichar per defaut"
 
 #: data/org.mate.power-manager.gschema.xml.in:267
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
 msgstr ""
+"L'indici del numèro de pagina d'afichar per defaut qu'es utilizat per "
+"redonar lo focus a la bona pagina."
 
 #: data/org.mate.power-manager.gschema.xml.in:271
 msgid "The ID of the last device selected"
-msgstr ""
+msgstr "L'ID del darrièr periferic seleccionat"
 
 #: data/org.mate.power-manager.gschema.xml.in:272
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
 msgstr ""
+"L'identificant del darrièr periferic qu'es utilizat per redonar lo focus cap"
+" al bon periferic."
 
 #: data/org.mate.power-manager.gschema.xml.in:276
 msgid "Percentage considered low"
-msgstr ""
+msgstr "Percentatge considerat coma feble"
 
 #: data/org.mate.power-manager.gschema.xml.in:277
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
 msgstr ""
+"Lo percentatge de la batariá quand es considerat coma feble. Valable "
+"unicament quand use-time-for-policy es fals."
 
 #: data/org.mate.power-manager.gschema.xml.in:281
 msgid "Percentage considered critical"
-msgstr ""
+msgstr "Percentatge considerat coma critic"
 
 #: data/org.mate.power-manager.gschema.xml.in:282
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
 msgstr ""
+"Lo percentatge de la batariá quand es considerat coma critic. Valable "
+"unicament quand use-time-for-policy es definit a false."
 
 #: data/org.mate.power-manager.gschema.xml.in:286
 msgid "Percentage action is taken"
-msgstr ""
+msgstr "Percentatge ont l'accion es efectuada"
 
 #: data/org.mate.power-manager.gschema.xml.in:287
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
 msgstr ""
+"Lo percentatge de la batariá quand l'accion critica es efectuada. Valable "
+"unicament quand use-time-for-policy es fals."
 
 #: data/org.mate.power-manager.gschema.xml.in:291
 msgid "The time remaining when low"
-msgstr ""
+msgstr "Lo temps que demòra quand feble"
 
 #: data/org.mate.power-manager.gschema.xml.in:292
 msgid ""
@@ -663,7 +690,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:296
 msgid "The time remaining when critical"
-msgstr ""
+msgstr "Lo temps que demòra quand critic"
 
 #: data/org.mate.power-manager.gschema.xml.in:297
 msgid ""
@@ -673,7 +700,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:301
 msgid "The time remaining when action is taken"
-msgstr ""
+msgstr "Lo temps que demòra quand l'accion es efectuada"
 
 #: data/org.mate.power-manager.gschema.xml.in:302
 msgid ""
@@ -683,7 +710,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:306
 msgid "Sleep timeout computer when on battery"
-msgstr ""
+msgstr "Temps abans la mesa en velha de l'ordenador sus batariá"
 
 #: data/org.mate.power-manager.gschema.xml.in:307
 msgid ""
@@ -693,7 +720,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:311
 msgid "Sleep timeout computer when on AC"
-msgstr ""
+msgstr "Relambi abans velha de l'ordenador sus batariá"
 
 #: data/org.mate.power-manager.gschema.xml.in:312
 msgid ""
@@ -743,7 +770,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:336
 msgid "If sounds should be used"
-msgstr ""
+msgstr "Indica se cal utilizar los sons"
 
 #: data/org.mate.power-manager.gschema.xml.in:337
 msgid ""
@@ -758,11 +785,11 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:345
 msgid "When to show the notification icon"
-msgstr ""
+msgstr "Quand afichar l’icòna de notificacion"
 
 #: data/org.mate.power-manager.gschema.xml.in:346
 msgid "Display options for the notification icon."
-msgstr ""
+msgstr "Aficha las opcions de l'icòna de notificacion."
 
 #: data/mate-power-preferences.desktop.in.in:3
 msgid "Power Management"
@@ -786,7 +813,7 @@ msgstr "Estatisticas de l'alimentacion"
 
 #: data/mate-power-statistics.desktop.in.in:4
 msgid "Observe power management"
-msgstr "Susvellha la gestion d'energia"
+msgstr "Susvelhar la gestion d'energia"
 
 #: data/gpm-statistics.ui:119
 msgid "Details"
@@ -794,23 +821,23 @@ msgstr "Detalhs"
 
 #: data/gpm-statistics.ui:145 data/gpm-statistics.ui:347
 msgid "Graph type:"
-msgstr ""
+msgstr "Tipe de grafic :"
 
 #: data/gpm-statistics.ui:180
 msgid "Data length:"
-msgstr ""
+msgstr "Longor de las donadas :"
 
 #: data/gpm-statistics.ui:239 data/gpm-statistics.ui:399
 msgid "There is no data to display."
-msgstr ""
+msgstr "I a pas de donadas d'afichar."
 
 #: data/gpm-statistics.ui:281 data/gpm-statistics.ui:442
 msgid "Use smoothed line"
-msgstr ""
+msgstr "Lissar la corba"
 
 #: data/gpm-statistics.ui:296 data/gpm-statistics.ui:457
 msgid "Show data points"
-msgstr ""
+msgstr "Afichar los punts de donadas"
 
 #: data/gpm-statistics.ui:325
 msgid "History"
@@ -822,11 +849,11 @@ msgstr "Estatisticas"
 
 #: data/gpm-prefs.ui:23
 msgid "Power Management Preferences"
-msgstr ""
+msgstr "Preferéncias de gestion energetica"
 
 #: data/gpm-prefs.ui:58
 msgid "Make Default"
-msgstr ""
+msgstr "Utilizar per defaut"
 
 #: data/gpm-prefs.ui:71
 msgid "_Close"
@@ -834,11 +861,11 @@ msgstr "_Tampar"
 
 #: data/gpm-prefs.ui:138 data/gpm-prefs.ui:406 data/gpm-prefs.ui:746
 msgid "Put computer to _sleep when inactive for:"
-msgstr ""
+msgstr "Metre l’ordenador en _velha quand inactiu pendent :"
 
 #: data/gpm-prefs.ui:176 data/gpm-prefs.ui:444
 msgid "When laptop lid is cl_osed:"
-msgstr ""
+msgstr "Quand l’ecran del portable es rabatut :"
 
 #: data/gpm-prefs.ui:213 data/gpm-prefs.ui:519 data/gpm-prefs.ui:825
 #: data/gpm-prefs.ui:1031
@@ -847,11 +874,11 @@ msgstr "Accions"
 
 #: data/gpm-prefs.ui:252 data/gpm-prefs.ui:560 data/gpm-prefs.ui:861
 msgid "Put _display to sleep when inactive for:"
-msgstr ""
+msgstr "Metre en velha l’afichatge quand inactiu pendent :"
 
 #: data/gpm-prefs.ui:289
 msgid "Set display _brightness to:"
-msgstr ""
+msgstr "Definir la _luminositat d’ecran a :"
 
 #: data/gpm-prefs.ui:322 data/gpm-prefs.ui:607
 msgid "Di_m display when idle"
@@ -859,23 +886,23 @@ msgstr ""
 
 #: data/gpm-prefs.ui:344 data/gpm-prefs.ui:629 data/gpm-prefs.ui:890
 msgid "Display"
-msgstr "Afichar"
+msgstr "Afichatge"
 
 #: data/gpm-prefs.ui:363
 msgid "On AC Power"
-msgstr ""
+msgstr "Sus sector"
 
 #: data/gpm-prefs.ui:482
 msgid "When battery po_wer is critically low:"
-msgstr ""
+msgstr "Quand la _batariá es plan febla"
 
 #: data/gpm-prefs.ui:591
 msgid "_Reduce backlight brightness"
-msgstr ""
+msgstr "_Reduire la luminositat"
 
 #: data/gpm-prefs.ui:663
 msgid "_Reduce keyboard backlight"
-msgstr ""
+msgstr "_Reduire l’esclairatge del clavièr"
 
 #: data/gpm-prefs.ui:685 src/gpm-upower.c:507
 msgid "Keyboard"
@@ -897,15 +924,15 @@ msgstr ""
 
 #: data/gpm-prefs.ui:912
 msgid "On UPS Power"
-msgstr ""
+msgstr "Sus ondulador"
 
 #: data/gpm-prefs.ui:956
 msgid "When the power _button is pressed:"
-msgstr ""
+msgstr "Quand lo _boton d’alimentacion es quichat :"
 
 #: data/gpm-prefs.ui:994
 msgid "When the _suspend button is pressed:"
-msgstr ""
+msgstr "Accion quand lo boton de velha del sistèma es quichat :"
 
 #: data/gpm-prefs.ui:1065
 msgid "_Never display an icon"
@@ -913,19 +940,19 @@ msgstr "VIsualizar pas _jamai d'icòna"
 
 #: data/gpm-prefs.ui:1083
 msgid "_Only display an icon when battery power is low"
-msgstr ""
+msgstr "Sonque afichar una icòna quand la batariá es febla"
 
 #: data/gpm-prefs.ui:1101
 msgid "Only display an icon when charging or _discharging"
-msgstr ""
+msgstr "Sonque afichar una icòna en carga o en _descarga"
 
 #: data/gpm-prefs.ui:1119
 msgid "Only display an icon when a battery is p_resent"
-msgstr ""
+msgstr "Sonque afichar una icòna quand una batariá es p_resenta"
 
 #: data/gpm-prefs.ui:1137
 msgid "_Always display an icon"
-msgstr ""
+msgstr "_Totjorn afichar coma una icòna"
 
 #: data/gpm-prefs.ui:1161
 msgid "Notification Area"
@@ -937,11 +964,11 @@ msgstr "General"
 
 #: src/gpm-backlight-helper.c:167
 msgid "Set the current brightness"
-msgstr ""
+msgstr "Definir la luminositat actuala"
 
 #: src/gpm-backlight-helper.c:170
 msgid "Get the current brightness"
-msgstr ""
+msgstr "Obténer la luminositat actuala"
 
 #: src/gpm-backlight-helper.c:173
 msgid "Get the number of brightness levels supported"
@@ -987,15 +1014,15 @@ msgstr "Durada desconeguda"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] "%i minuta"
-msgstr[1] "%i minutas"
+msgstr[0] "%i minuta"
+msgstr[1] "%i minutas"
 
 #: src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] "%i ora"
-msgstr[1] "%i oras"
+msgstr[0] "%i ora"
+msgstr[1] "%i oras"
 
 #: src/gpm-common.c:75
 #, c-format
@@ -1112,23 +1139,23 @@ msgstr ""
 
 #: src/gpm-manager.c:290
 msgid "Battery is low"
-msgstr ""
+msgstr "La batariá es febla"
 
 #: src/gpm-manager.c:298
 msgid "Battery is full"
-msgstr ""
+msgstr "La batariá es plena"
 
 #: src/gpm-manager.c:302
 msgid "Suspend started"
-msgstr ""
+msgstr "Mesa en velha lançada"
 
 #: src/gpm-manager.c:306
 msgid "Resumed"
-msgstr ""
+msgstr "Représ"
 
 #: src/gpm-manager.c:310
 msgid "Suspend failed"
-msgstr ""
+msgstr "Fracàs de la mesa en velha"
 
 #: src/gpm-manager.c:578
 msgid "Computer failed to suspend."
@@ -1156,23 +1183,23 @@ msgstr "Consultar la pagina d’ajuda"
 
 #: src/gpm-manager.c:850
 msgid "Display DPMS activated"
-msgstr ""
+msgstr "Afichatge DPMS activat"
 
 #: src/gpm-manager.c:869
 msgid "On battery power"
-msgstr ""
+msgstr "Sus batariá"
 
 #: src/gpm-manager.c:887
 msgid "Laptop lid is closed"
-msgstr ""
+msgstr "Ecran del portable rabatut"
 
 #: src/gpm-manager.c:925
 msgid "Power Information"
-msgstr ""
+msgstr "Informacion d’alimentacion"
 
 #: src/gpm-manager.c:1106
 msgid "Battery may be broken"
-msgstr ""
+msgstr "La batariá es benlèu copada"
 
 #: src/gpm-manager.c:1109
 #, c-format
@@ -1180,6 +1207,8 @@ msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
 " broken."
 msgstr ""
+"La batariá a una capacitat plan febla (%1.1f%%) çò qu’indica qu’es vielha o "
+"copada."
 
 #: src/gpm-manager.c:1158
 msgid "Battery Charged"
@@ -1189,26 +1218,26 @@ msgstr[1] "Batariás cargadas"
 
 #: src/gpm-manager.c:1204
 msgid "Battery Discharging"
-msgstr ""
+msgstr "Batariá en descarga"
 
 #: src/gpm-manager.c:1208
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
-msgstr ""
+msgstr "%s de batariá restant (%.0f%%)"
 
 #: src/gpm-manager.c:1211 src/gpm-manager.c:1223
 #, c-format
 msgid "%s discharging (%.0f%%)"
-msgstr ""
+msgstr "%s es a se descargar (%.0f%%)"
 
 #: src/gpm-manager.c:1216
 msgid "UPS Discharging"
-msgstr ""
+msgstr "Ondulador en descarga"
 
 #: src/gpm-manager.c:1220
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
-msgstr ""
+msgstr "%s de resèrva d’ondulador restant (%.0f%%)"
 
 #: src/gpm-manager.c:1304
 msgid "Battery low"
@@ -1216,30 +1245,30 @@ msgstr "Batariá febla"
 
 #: src/gpm-manager.c:1307
 msgid "Laptop battery low"
-msgstr ""
+msgstr "Batariá del portatil febla"
 
 #: src/gpm-manager.c:1313
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
-msgstr ""
+msgstr "Environ <b>%s</b> restant (%.0f%%)"
 
 #: src/gpm-manager.c:1317
 msgid "UPS low"
-msgstr ""
+msgstr "Ondulador feble"
 
 #: src/gpm-manager.c:1321
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
-msgstr ""
+msgstr "Demòra environ <b>%s</b> d'autonomia a l'ondulador (%.0f %%)"
 
 #: src/gpm-manager.c:1330 src/gpm-manager.c:1469
 msgid "Mouse battery low"
-msgstr ""
+msgstr "La batariá de la mirga es febla"
 
 #: src/gpm-manager.c:1333
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
-msgstr ""
+msgstr "La poténcia de la mirga sens fial es febla (%.0f %%)"
 
 #: src/gpm-manager.c:1337 src/gpm-manager.c:1477
 msgid "Keyboard battery low"
@@ -1252,76 +1281,77 @@ msgstr "Clavièr sens fial feble en energia (%.0f%%)"
 
 #: src/gpm-manager.c:1344 src/gpm-manager.c:1486
 msgid "PDA battery low"
-msgstr ""
+msgstr "La batariá de l'assistent personal es febla"
 
 #: src/gpm-manager.c:1347
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
-msgstr ""
+msgstr "La poténcia de l'assistent personal es febla (%.0f%%)"
 
 #: src/gpm-manager.c:1351 src/gpm-manager.c:1496 src/gpm-manager.c:1506
 msgid "Cell phone battery low"
-msgstr ""
+msgstr "La batariá del telefonet es febla"
 
 #: src/gpm-manager.c:1354
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
-msgstr ""
+msgstr "La poténcia del telefonet es febla (%.0f %%)"
 
 #: src/gpm-manager.c:1358
 msgid "Media player battery low"
-msgstr ""
+msgstr "La batariá del lector multimèdia es febla"
 
 #: src/gpm-manager.c:1361
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
-msgstr ""
+msgstr "La poténcia del lector multimèdia es febla (%.0f %%)"
 
 #: src/gpm-manager.c:1365 src/gpm-manager.c:1515
 msgid "Tablet battery low"
-msgstr ""
+msgstr "Batariá de la tauleta febla"
 
 #: src/gpm-manager.c:1368
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
-msgstr ""
+msgstr "La poténcia de la tauleta es febla (%.0f %%)"
 
 #: src/gpm-manager.c:1372 src/gpm-manager.c:1524
 msgid "Attached computer battery low"
-msgstr ""
+msgstr "Batariá de l'ordenador connectat febla"
 
 #: src/gpm-manager.c:1375
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
-msgstr ""
+msgstr "La poténcia de l'ordenador es febla (%.0f %%)"
 
 #: src/gpm-manager.c:1423
 msgid "Battery critically low"
-msgstr ""
+msgstr "Batariá fòrça febla"
 
 #: src/gpm-manager.c:1426 src/gpm-manager.c:1584
 msgid "Laptop battery critically low"
-msgstr ""
+msgstr "Batariá del portatil fòrça febla"
 
 #: src/gpm-manager.c:1435
 msgid "Plug in your AC adapter to avoid losing data."
-msgstr ""
+msgstr "Brancatz l’adaptador sector per evitar una pèrda de donadas."
 
 #: src/gpm-manager.c:1439
 msgid "Computer will suspend very soon unless it is plugged in."
-msgstr ""
+msgstr "L'ordenador se va metre en velha dins pauc de temps s'es pas brancat."
 
 #: src/gpm-manager.c:1443
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr ""
+"L'ordenador se va metre en ivernacion dins pauc de temps s'es pas brancat."
 
 #: src/gpm-manager.c:1447
 msgid "Computer will shutdown very soon unless it is plugged in."
-msgstr ""
+msgstr "L'ordenador se va atudar dins pauc de temps s'es pas brancat."
 
 #: src/gpm-manager.c:1454 src/gpm-manager.c:1620
 msgid "UPS critically low"
-msgstr ""
+msgstr "Nivèl de l'ondulador critic"
 
 #: src/gpm-manager.c:1458
 #, c-format
@@ -1329,6 +1359,8 @@ msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
 msgstr ""
+"Demòra environ <b>%s</b> d'autonomia a l'ondulador (%.0f %%). Brancatz "
+"vòstre ordenador al sector per evitar de pèrdre de donadas."
 
 #: src/gpm-manager.c:1472
 #, c-format
@@ -1372,6 +1404,8 @@ msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
+"Demòra fòrça pauc d'autonomia al lector multimèdia (%.0f %%). S'arrestarà "
+"lèu de foncionar se es pas recargat."
 
 #: src/gpm-manager.c:1518
 #, c-format
@@ -1388,12 +1422,16 @@ msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
 msgstr ""
+"Demòra pas gaire d'autonomia a l'ordenador connectat (%.0f %%). S'arrestarà "
+"lèu de foncionar s'es pas recargat."
 
 #: src/gpm-manager.c:1592
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
 msgstr ""
+"La batariá es en dejós de son nivèl critic ; l'ordenador se va <b>atudar</b>"
+" quand la batariá serà complètament descargada."
 
 #: src/gpm-manager.c:1598
 msgid ""
@@ -1401,34 +1439,46 @@ msgid ""
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
 msgstr ""
+"La batariá es en dejós de son nivèl critic ; l'ordenador se va metre en "
+"velha.<br><b>Nòta :</b> una pichona quantitat d'energia es necessària per "
+"conservar l'ordenador en estat de velha."
 
 #: src/gpm-manager.c:1605
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr ""
+"La batariá es en dejós de son nivèl critic ; l'ordenador va <b>ivernar</b>."
 
 #: src/gpm-manager.c:1610
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr ""
+"La batariá es en dejós de son nivèl critic ; l'ordenador se va "
+"<b>atudar</b>."
 
 #: src/gpm-manager.c:1628
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
 msgstr ""
+"L'ondulador es en dejós de son nivèl critic e aqueste ordenador se va "
+"<b>atudar</b> tre que l'ondulator serà complètament void."
 
 #: src/gpm-manager.c:1634
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr ""
+"L'ondulador es en dejós de son nivèl critic e aqueste ordenador se va metre "
+"en ivernacion."
 
 #: src/gpm-manager.c:1639
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr ""
+"L'ondulador es en dejós de son nivèl critic e aqueste ordenador se va "
+"atudar."
 
 #: src/gpm-prefs.c:77
 msgid "MATE Power Preferences"
@@ -1444,7 +1494,7 @@ msgstr "Suspendre"
 
 #: src/gpm-prefs-core.c:252
 msgid "Hibernate"
-msgstr "Ibernar"
+msgstr "Ivernar"
 
 #: src/gpm-prefs-core.c:255
 msgid "Blank screen"
@@ -1468,15 +1518,15 @@ msgstr "Taus"
 
 #: src/gpm-statistics.c:68
 msgid "Charge"
-msgstr ""
+msgstr "Carga"
 
 #: src/gpm-statistics.c:69 src/gpm-statistics.c:424
 msgid "Time to full"
-msgstr ""
+msgstr "Durada de la carga"
 
 #: src/gpm-statistics.c:70 src/gpm-statistics.c:429
 msgid "Time to empty"
-msgstr ""
+msgstr "Durada de la descarga"
 
 #: src/gpm-statistics.c:77
 msgid "10 minutes"
@@ -1504,15 +1554,15 @@ msgstr "Perfil de cargament"
 
 #: src/gpm-statistics.c:91
 msgid "Discharge profile"
-msgstr ""
+msgstr "Perfil de descargament"
 
 #: src/gpm-statistics.c:93
 msgid "Charge accuracy"
-msgstr ""
+msgstr "Exactitud de la carga"
 
 #: src/gpm-statistics.c:94
 msgid "Discharge accuracy"
-msgstr ""
+msgstr "Exactitud de la descarga"
 
 #: src/gpm-statistics.c:121
 msgid "Attribute"
@@ -1538,29 +1588,29 @@ msgstr "Desconegut"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] "%.0f segonda"
-msgstr[1] "%.0f segondas"
+msgstr[0] "%.0f segonda"
+msgstr[1] "%.0f segondas"
 
 #: src/gpm-statistics.c:239
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] "%.1f minuta"
-msgstr[1] "%.1f minutas"
+msgstr[0] "%.1f minuta"
+msgstr[1] "%.1f minutas"
 
 #: src/gpm-statistics.c:244
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] "%.1f ora"
-msgstr[1] "%.1f oras"
+msgstr[0] "%.1f ora"
+msgstr[1] "%.1f oras"
 
 #: src/gpm-statistics.c:248
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] "%.1f jorn"
-msgstr[1] "%.1f jorns"
+msgstr[0] "%.1f jorn"
+msgstr[1] "%.1f jorns"
 
 #: src/gpm-statistics.c:257
 msgid "Yes"
@@ -1598,8 +1648,8 @@ msgstr "Alimentacion"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d segonda"
-msgstr[1] "%d segondas"
+msgstr[0] "%d segonda"
+msgstr[1] "%d segondas"
 
 #: src/gpm-statistics.c:367
 msgid "Refreshed"
@@ -1611,7 +1661,7 @@ msgstr "Presenta"
 
 #: src/gpm-statistics.c:384
 msgid "Rechargeable"
-msgstr ""
+msgstr "Recargabla"
 
 #: src/gpm-statistics.c:390
 msgid "State"
@@ -1623,15 +1673,15 @@ msgstr "Energia"
 
 #: src/gpm-statistics.c:397
 msgid "Energy when empty"
-msgstr ""
+msgstr "Energia a void"
 
 #: src/gpm-statistics.c:400
 msgid "Energy when full"
-msgstr ""
+msgstr "Energia a plena carga"
 
 #: src/gpm-statistics.c:403
 msgid "Energy (design)"
-msgstr ""
+msgstr "Energia (teorica)"
 
 #: src/gpm-statistics.c:417
 msgid "Voltage"
@@ -1659,7 +1709,7 @@ msgstr "Informacions del periferic"
 
 #: src/gpm-statistics.c:756
 msgid "Device History"
-msgstr ""
+msgstr "Istoric del periferic"
 
 #: src/gpm-statistics.c:758
 msgid "Device Profile"
@@ -1678,7 +1728,7 @@ msgstr "Poténcia"
 #: src/gpm-statistics.c:1037 src/gpm-statistics.c:1043
 #: src/gpm-statistics.c:1049
 msgid "Cell charge"
-msgstr ""
+msgstr "Carga de la batariá"
 
 #: src/gpm-statistics.c:993 src/gpm-statistics.c:999
 msgid "Predicted time"
@@ -1690,7 +1740,7 @@ msgstr "Factor de correction"
 
 #: src/gpm-statistics.c:1039 src/gpm-statistics.c:1051
 msgid "Prediction accuracy"
-msgstr ""
+msgstr "Precision de la prediccion"
 
 #: src/gpm-statistics.c:1210
 msgid "Select this device at startup"
@@ -1731,7 +1781,7 @@ msgstr ""
 #: src/gpm-upower.c:244
 #, c-format
 msgid "%s is fully charged"
-msgstr "%s es complètament cargada"
+msgstr "%s a una carga complèta"
 
 #: src/gpm-upower.c:252
 #, c-format
@@ -1741,7 +1791,7 @@ msgstr "%s %s demorant (%.1f%%)"
 #: src/gpm-upower.c:257
 #, c-format
 msgid "%s discharging (%.1f%%)"
-msgstr "%s se descaragar (%.1f%%)"
+msgstr "%s es a se descargar (%.1f%%)"
 
 #: src/gpm-upower.c:271
 #, c-format
@@ -1760,12 +1810,12 @@ msgstr "%s %s abans carga (%.1f%%)"
 #: src/gpm-upower.c:295
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
-msgstr ""
+msgstr "%s en espèra de descargament (%.1f%%)"
 
 #: src/gpm-upower.c:301
 #, c-format
 msgid "%s waiting to charge (%.1f%%)"
-msgstr ""
+msgstr "%s en espèra de cargament (%.1f%%)"
 
 #: src/gpm-upower.c:306
 #, c-format
@@ -1819,11 +1869,11 @@ msgstr "Modèl :"
 
 #: src/gpm-upower.c:406
 msgid "Charge time:"
-msgstr ""
+msgstr "Temps de carga :"
 
 #: src/gpm-upower.c:412
 msgid "Discharge time:"
-msgstr ""
+msgstr "Temps de descarga :"
 
 #: src/gpm-upower.c:419
 msgid "Excellent"
@@ -1835,7 +1885,7 @@ msgstr "Bona"
 
 #: src/gpm-upower.c:423
 msgid "Fair"
-msgstr ""
+msgstr "Acceptable"
 
 #: src/gpm-upower.c:425
 msgid "Poor"
@@ -1847,19 +1897,19 @@ msgstr "Capacitat :"
 
 #: src/gpm-upower.c:435 src/gpm-upower.c:460
 msgid "Current charge:"
-msgstr ""
+msgstr "Carga actuala :"
 
 #: src/gpm-upower.c:441
 msgid "Last full charge:"
-msgstr ""
+msgstr "Darrièra carga complèta :"
 
 #: src/gpm-upower.c:447 src/gpm-upower.c:465
 msgid "Design charge:"
-msgstr ""
+msgstr "Carga teorica :"
 
 #: src/gpm-upower.c:452
 msgid "Charge rate:"
-msgstr ""
+msgstr "Taus de carga :"
 
 #: src/gpm-upower.c:487
 msgid "AC adapter"
@@ -1870,20 +1920,20 @@ msgstr[1] "Adaptadors sector"
 #: src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "Ordenador portable"
-msgstr[1] "Ordenadors portables"
+msgstr[0] "Batariá de portatil"
+msgstr[1] "Batariás de portatil"
 
 #: src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ondulador"
+msgstr[1] "Onduladors"
 
 #: src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] "Ecran"
-msgstr[1] "Ecrans"
+msgstr[0] "Monitor"
+msgstr[1] "Monitors"
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
@@ -1894,14 +1944,14 @@ msgstr[1] "Mirgas"
 #: src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] "PDA"
-msgstr[1] "PDA"
+msgstr[0] "Assistent personal"
+msgstr[1] "Assistents personals"
 
 #: src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Mobil"
+msgstr[1] "Mobils"
 
 #: src/gpm-upower.c:519
 msgid "Media player"
@@ -1912,8 +1962,8 @@ msgstr[1] "Lectors multimèdias"
 #: src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Tauleta"
+msgstr[1] "Tauletas"
 
 #: src/gpm-upower.c:527
 msgid "Computer"
@@ -1927,15 +1977,15 @@ msgstr "Liti-ion"
 
 #: src/gpm-upower.c:598
 msgid "Lithium Polymer"
-msgstr ""
+msgstr "Liti polimèr"
 
 #: src/gpm-upower.c:602
 msgid "Lithium Iron Phosphate"
-msgstr ""
+msgstr "Liti fosfat de fèrre"
 
 #: src/gpm-upower.c:606
 msgid "Lead acid"
-msgstr ""
+msgstr "Plomb-acid"
 
 #: src/gpm-upower.c:610
 msgid "Nickel Cadmium"
@@ -1943,7 +1993,7 @@ msgstr "Niquèl cadmi"
 
 #: src/gpm-upower.c:614
 msgid "Nickel metal hydride"
-msgstr ""
+msgstr "Niquèl metal idrur"
 
 #: src/gpm-upower.c:618
 msgid "Unknown technology"

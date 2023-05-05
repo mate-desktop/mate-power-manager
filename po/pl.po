@@ -4,26 +4,26 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Piotr Strębski <strebski@gmail.com>, 2018
-# Marcin Kralka <marcink96@gmail.com>, 2018
-# Krzysztof Kokot <kokot300@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Michal Herman <szalejot@gmail.com>, 2018
-# Kajetan Rosiak <roskaj@gmail.com>, 2018
-# Beniamin Pawlus <kupwzywcu@o2.pl>, 2018
-# pietrasagh <kowalik.piotr@pm.me>, 2019
-# Piotr Drąg <piotrdrag@gmail.com>, 2020
-# clefebvre <clement.lefebvre@linuxmint.com>, 2020
-# No Ne, 2021
+# Marcin Kralka <marcink96@gmail.com>, 2021
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# Krzysztof Kokot <kokot300@gmail.com>, 2021
+# Piotr Drąg <piotrdrag@gmail.com>, 2021
+# Piotr Strębski <strebski@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Michal Herman <szalejot@gmail.com>, 2021
+# Kajetan Rosiak <roskaj@gmail.com>, 2021
+# Beniamin Pawlus <kupwzywcu@o2.pl>, 2021
+# Daniel Tokarzewski <bezimo@gmail.com>, 2021
+# Marek Adamski, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-power-manager 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2021-06-22 17:30+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: No Ne, 2021\n"
-"Language-Team: Polish (https://www.transifex.com/mate/teams/13566/pl/)\n"
+"PO-Revision-Date: 2021-09-20 18:18+0000\n"
+"Last-Translator: Marek Adamski, 2021\n"
+"Language-Team: Polish (https://app.transifex.com/mate/teams/13566/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -107,7 +107,7 @@ msgstr ""
 #: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:212
 msgid "translator-credits"
 msgstr ""
-"Tłumacze środowiska MATE, 2014-2018\n"
+"Tłumacze środowiska MATE, 2014-2020\n"
 "\n"
 "Zbigniew Chyla, 2002-2003\n"
 "Artur Flinta, 2003-2005\n"
@@ -115,7 +115,8 @@ msgstr ""
 "Tomasz Dominikowski, 2008-2009\n"
 "Joanna Mazgaj, 2009\n"
 "Piotr Drąg, 2010\n"
-"Aviary.pl, 2007-2010"
+"Aviary.pl, 2007-2010\n"
+"Daniel Tokarzewski, 2020"
 
 #: applets/brightness/brightness-applet.c:1081
 #: applets/inhibit/inhibit-applet.c:503
@@ -125,7 +126,7 @@ msgstr "_O programie"
 #: applets/brightness/brightness-applet.c:1084
 #: applets/inhibit/inhibit-applet.c:506 data/gpm-prefs.ui:41
 msgid "_Help"
-msgstr "P_omoc"
+msgstr "_Pomoc"
 
 #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:5
 msgid "Brightness Applet Factory"
@@ -203,7 +204,8 @@ msgstr "Czynność przy krytycznie niskim poziomie naładowania akumulatora"
 
 #: data/org.mate.power-manager.gschema.xml.in:32
 msgid "The action to take when the battery is critically low."
-msgstr "Akcja, która zastanie podjęta, gry stan baterii jet krytyczne niski."
+msgstr ""
+"Akcja, która zastanie podjęta, gdy stan akumulatora jest krytyczne niski."
 
 #: data/org.mate.power-manager.gschema.xml.in:36
 msgid ""
@@ -380,8 +382,8 @@ msgstr "Metoda wygaszenia ekranu przy zasilaniu sieciowym"
 #: data/org.mate.power-manager.gschema.xml.in:112
 msgid "The DPMS method used to blank the screen when on AC power."
 msgstr ""
-"Metoda DPMS używana do wygaszania ekranu gdy komputer jest podpięty do "
-"sieci."
+"Metoda DPMS używana do wygaszania ekranu, gdy komputer jest podpięty do "
+"sieci elektrycznej."
 
 #: data/org.mate.power-manager.gschema.xml.in:116
 msgid "Method used to blank screen on battery"
@@ -389,7 +391,8 @@ msgstr "Metoda wygaszenia ekranu przy zasilaniu z akumulatora"
 
 #: data/org.mate.power-manager.gschema.xml.in:117
 msgid "The DPMS method used to blank the screen when on battery power."
-msgstr "Metoda DPMS używana do wygaszania ekranu gdy komputer używa baterii."
+msgstr ""
+"Metoda DPMS używana do wygaszania ekranu, gdy komputer używa akumulatora."
 
 #: data/org.mate.power-manager.gschema.xml.in:121
 msgid "LCD brightness when on AC"
@@ -410,7 +413,7 @@ msgstr "Działanie przycisku uśpienia"
 #: data/org.mate.power-manager.gschema.xml.in:127
 msgid "The action to take when the system suspend button is pressed."
 msgstr ""
-"Akcja, która zostanie podjęta gdy zostania naciśnięty przycisk wstrzymania."
+"Akcja, która zostanie podjęta, gdy zostania naciśnięty przycisk wstrzymania."
 
 #: data/org.mate.power-manager.gschema.xml.in:131
 msgid "Hibernate button action"
@@ -419,7 +422,7 @@ msgstr "Działanie przycisku Zahibernuj"
 #: data/org.mate.power-manager.gschema.xml.in:132
 msgid "The action to take when the system hibernate button is pressed."
 msgstr ""
-"Akcja, która zostanie podjęta gdy zostanie naciśnięty przycisk hibernacji."
+"Akcja, która zostanie podjęta, gdy zostanie naciśnięty przycisk hibernacji."
 
 #: data/org.mate.power-manager.gschema.xml.in:136
 msgid "Power button action"
@@ -428,7 +431,7 @@ msgstr "Działanie wyłącznika"
 #: data/org.mate.power-manager.gschema.xml.in:137
 msgid "The action to take when the system power button is pressed."
 msgstr ""
-"Akcja, która zostanie podjęta gdy zostania naciśnięty przycisk zasilania."
+"Akcja, która zostanie podjęta, gdy zostania naciśnięty przycisk zasilania."
 
 #: data/org.mate.power-manager.gschema.xml.in:141
 msgid "Laptop lid close action on battery"
@@ -627,7 +630,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:226
 msgid "Notify on low capacity of mouse battery"
-msgstr "Powiadom przy niskim poziomie baterii myszy"
+msgstr "Powiadom przy niskim poziomie akumulatora myszy"
 
 #: data/org.mate.power-manager.gschema.xml.in:231
 msgid "Whether we should show the history data points"
@@ -1001,8 +1004,8 @@ msgid "Keyboard"
 msgid_plural "Keyboards"
 msgstr[0] "Klawiatura"
 msgstr[1] "Klawiatury"
-msgstr[2] "Klawiatury"
-msgstr[3] "Klawiatury"
+msgstr[2] "Klawiatur"
+msgstr[3] "Klawiatur"
 
 #: data/gpm-prefs.ui:707
 msgid "On Battery Power"
@@ -1318,8 +1321,8 @@ msgid "Battery Charged"
 msgid_plural "Batteries Charged"
 msgstr[0] "Akumulator naładowany"
 msgstr[1] "Akumulatory naładowane"
-msgstr[2] "Akumulatory naładowane"
-msgstr[3] "Akumulatory naładowane"
+msgstr[2] "Akumulatorów naładowanych"
+msgstr[3] "Akumulatorów naładowanych"
 
 #: src/gpm-manager.c:1204
 msgid "Battery Discharging"
@@ -1884,7 +1887,7 @@ msgstr "Pozostało %s"
 
 #: src/gpm-tray-icon.c:370
 msgid "_Preferences"
-msgstr "P_referencje"
+msgstr "_Preferencje"
 
 #: src/gpm-upower.c:211
 #, c-format
@@ -2051,8 +2054,8 @@ msgid "Laptop battery"
 msgid_plural "Laptop batteries"
 msgstr[0] "Akumulator laptopa"
 msgstr[1] "Akumulatory laptopa"
-msgstr[2] "Akumulatory laptopa"
-msgstr[3] "Akumulatory laptopa"
+msgstr[2] "Akumulatorów laptopa"
+msgstr[3] "Akumulatorów laptopa"
 
 #: src/gpm-upower.c:495
 msgid "UPS"
@@ -2067,8 +2070,8 @@ msgid "Monitor"
 msgid_plural "Monitors"
 msgstr[0] "Monitor"
 msgstr[1] "Monitory"
-msgstr[2] "Monitory"
-msgstr[3] "Monitory"
+msgstr[2] "Monitorów"
+msgstr[3] "Monitorów"
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
@@ -2083,40 +2086,40 @@ msgid "PDA"
 msgid_plural "PDAs"
 msgstr[0] "Urządzenie PDA"
 msgstr[1] "Urządzenia PDA"
-msgstr[2] "Urządzenia PDA"
-msgstr[3] "Urządzenia PDA"
+msgstr[2] "Urządzeń PDA"
+msgstr[3] "Urządzeń PDA"
 
 #: src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
 msgstr[0] "Telefon komórkowy"
 msgstr[1] "Telefony komórkowe"
-msgstr[2] "Telefony komórkowe"
-msgstr[3] "Telefony komórkowe"
+msgstr[2] "Telefonów komórkowych"
+msgstr[3] "Telefonów komórkowych"
 
 #: src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] "Odtwarzacz multimedialny"
-msgstr[1] "Odtwarzacze multimedialne"
-msgstr[2] "Odtwarzacze multimedialne"
-msgstr[3] "Odtwarzacze multimedialne"
+msgstr[0] "Odtwarzacz multimediów"
+msgstr[1] "Odtwarzacze multimediów"
+msgstr[2] "Odtwarzaczy multimediów"
+msgstr[3] "Odtwarzaczy multimediów"
 
 #: src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
 msgstr[0] "Tablet"
 msgstr[1] "Tablety"
-msgstr[2] "Tablety"
-msgstr[3] "Tablety"
+msgstr[2] "Tabletów"
+msgstr[3] "Tabletów"
 
 #: src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
 msgstr[0] "Komputer"
 msgstr[1] "Komputery"
-msgstr[2] "Komputery"
-msgstr[3] "Komputery"
+msgstr[2] "Komputerów"
+msgstr[3] "Komputerów"
 
 #: src/gpm-upower.c:594
 msgid "Lithium Ion"

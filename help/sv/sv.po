@@ -1,20 +1,20 @@
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Henrik Mattsson-Mårn <h@reglage.net>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Daniel Gullbransen, 2018
-# eckeman <eckeman@zoho.com>, 2020
-# Luna Jernberg <bittin@cafe8bitar.se>, 2020
 # Kristoffer Grundström <lovaren@gmail.com>, 2021
+# Luna Jernberg <bittin@cafe8bitar.se>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Henrik Mattsson-Mårn <h@reglage.net>, 2021
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
+# eckeman <eckeman@zoho.com>, 2021
+# Daniel Gullbransen, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2021-01-16 14:35+0100\n"
-"PO-Revision-Date: 2018-10-04 15:52+0000\n"
-"Last-Translator: Kristoffer Grundström <lovaren@gmail.com>, 2021\n"
-"Language-Team: Swedish (https://www.transifex.com/mate/teams/13566/sv/)\n"
+"PO-Revision-Date: 2021-09-20 18:22+0000\n"
+"Last-Translator: Daniel Gullbransen, 2021\n"
+"Language-Team: Swedish (https://app.transifex.com/mate/teams/13566/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,7 +24,7 @@ msgstr ""
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>"
+msgstr "Kristoffer Grundström <lovaren@gmail.com>"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:23
@@ -620,9 +620,10 @@ msgid ""
 "To make this clearer, the sliders in <command>mate-power-"
 "preferences</command> are set to start at the value of the session-timeout +"
 " 1 minute, as we cannot logically trigger before the session is marked as "
-"idle. If you adjust the value of the 'session idle' timeout in <command"
-">mate-screensaver-preferences</command> then the start of the sliders in "
-"<command>mate-power-preferences</command> will change accordingly."
+"idle. If you adjust the value of the 'session idle' timeout in "
+"<command>mate-screensaver-preferences</command> then the start of the "
+"sliders in <command>mate-power-preferences</command> will change "
+"accordingly."
 msgstr ""
 
 #. (itstool) path: section/title
@@ -951,10 +952,10 @@ msgstr ""
 #: C/index.docbook:747
 msgid ""
 "And check for the process <command>hald-addon-acpi</command>. If it is not "
-"being run, then please make sure that HAL is being run with the <command"
-">--retain-privileges</command> option in the <command>haldaemon</command> "
-"initscript. An alternative to this is to use acpid, rather than the kernel "
-"proc file."
+"being run, then please make sure that HAL is being run with the "
+"<command>--retain-privileges</command> option in the "
+"<command>haldaemon</command> initscript. An alternative to this is to use "
+"acpid, rather than the kernel proc file."
 msgstr ""
 
 #. (itstool) path: para/ulink

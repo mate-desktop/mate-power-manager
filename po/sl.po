@@ -4,20 +4,21 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Marko Šterman <marko.chamillionaire@gmail.com>, 2018
-# Arnold Marko <arnold.marko@gmail.com>, 2019
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Damir Jerovšek <jierro@windowslive.com>, 2020
-# Helena S <ele@tutamail.com>, 2020
+# Marko Šterman <marko.chamillionaire@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Damir Jerovšek <jierro@windowslive.com>, 2021
+# Helena S <ele@tutamail.com>, 2021
+# Arnold Marko <arnold.marko@gmail.com>, 2021
+# Martin Srebotnjak <miles@filmsi.net>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-power-manager 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2021-06-22 17:30+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Helena S <ele@tutamail.com>, 2020\n"
-"Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
+"PO-Revision-Date: 2021-09-20 18:18+0000\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>, 2022\n"
+"Language-Team: Slovenian (https://app.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -54,6 +55,11 @@ msgid ""
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
 msgstr ""
+"Upravljalnik porabe energije spada med prosto programsko opremo; lahko jo "
+"razširjate in/ali spreminjate pod pogoji Splošnega dovoljenja GNU (GNU "
+"General Public License), kot ga je objavila ustanova Free Software "
+"Foundation; bodisi različice 2 ali (po vaši izbiri) poljubne novejše "
+"različice."
 
 #: applets/brightness/brightness-applet.c:823
 #: applets/inhibit/inhibit-applet.c:292
@@ -63,6 +69,10 @@ msgid ""
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
 msgstr ""
+"Upravljalnik porabe energije se razširja v upanju, da bo uporaben, vendar "
+"BREZ VSAKRŠNEGA JAMSTVA; tudi brez posredne zagotovitve CENOVNE VREDNOSTI "
+"ali PRIMERNOSTI ZA DOLOČEN NAMEN.  Za podrobnosti glejte besedilo GNU "
+"General Public License."
 
 #: applets/brightness/brightness-applet.c:828
 #: applets/inhibit/inhibit-applet.c:297
@@ -71,16 +81,22 @@ msgid ""
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
+"Skupaj s tem programom bi morali prejeti izvod Splošnega dovoljenja GNU (GNU"
+" General Public License); v primeru, da ga niste, pišite na Free Software "
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, "
+"USA."
 
 #: applets/brightness/brightness-applet.c:841
 msgid "About Power Manager Brightness Applet"
-msgstr ""
+msgstr "O apletu svetlosti upravljalnika porabe energije"
 
 #: applets/brightness/brightness-applet.c:843
 msgid ""
 "Copyright © 2006 Benjamin Canou\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
+"Avtorske pravice © 2006 Benjamin Canou\n"
+"Avtorske pravice © 2011-2021 razvijalci MATE"
 
 #: applets/brightness/brightness-applet.c:850
 #: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:212
@@ -127,13 +143,15 @@ msgstr "Ročno preprečevanje"
 
 #: applets/inhibit/inhibit-applet.c:310
 msgid "About Power Manager Inhibit Applet"
-msgstr ""
+msgstr "O apletu preprečevanja upravljalnika porabe energije"
 
 #: applets/inhibit/inhibit-applet.c:312
 msgid ""
 "Copyright © 2006-2007 Richard Hughes\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
+"Avtorske pravice © 2006-2007 Richard Hughes\n"
+"Avtorske pravice © 2011-2021 razvijalci MATE"
 
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
@@ -862,7 +880,7 @@ msgstr "Nastavi upravljanje porabe energije"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/mate-power-preferences.desktop.in.in:13
 msgid "MATE;power;management;preferences;settings;"
-msgstr ""
+msgstr "MATE;napajanje;poraba;upravljanje;nastavitve;možnosti;energija"
 
 #: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
 #: src/gpm-statistics.c:762 src/gpm-statistics.c:1224
@@ -960,7 +978,7 @@ msgstr "_Zmanjšaj svetlost ozadja"
 
 #: data/gpm-prefs.ui:663
 msgid "_Reduce keyboard backlight"
-msgstr ""
+msgstr "_Zmanjšaj hrbtno osvetlitev tipk"
 
 #: data/gpm-prefs.ui:685 src/gpm-upower.c:507
 msgid "Keyboard"
@@ -1281,10 +1299,10 @@ msgstr ""
 #: src/gpm-manager.c:1158
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] "Napolnjenost baterije"
-msgstr[1] "Napolnjenost baterij"
-msgstr[2] "Napolnjenost baterij"
-msgstr[3] "Napolnjenost baterij"
+msgstr[0] "Baterija je napolnjena"
+msgstr[1] "Bateriji sta napolnjeni"
+msgstr[2] "Baterije so napolnjene"
+msgstr[3] "Baterije so napolnjene"
 
 #: src/gpm-manager.c:1204
 msgid "Battery Discharging"
@@ -1658,37 +1676,37 @@ msgstr "Neznano"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] "%.0f sekunde"
-msgstr[1] "%.0f sekund"
-msgstr[2] "%.0f sekund"
-msgstr[3] "%.0f sekund"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/gpm-statistics.c:239
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] "%.1f minuta"
-msgstr[1] "%.1f minuti"
-msgstr[2] "%.1f minute"
-msgstr[3] "%.1f minut"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/gpm-statistics.c:244
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] "%.1f ura"
-msgstr[1] "%.1f uri"
-msgstr[2] "%.1f ure"
-msgstr[3] "%.1f ur"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/gpm-statistics.c:248
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] "%.1f dan"
-msgstr[1] "%.1f dneva"
-msgstr[2] "%.1f dnevi"
-msgstr[3] "%.1f dnevi"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/gpm-statistics.c:257
 msgid "Yes"
@@ -1726,10 +1744,10 @@ msgstr "Napajanje"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d sekunda"
-msgstr[1] "%d sekundi"
-msgstr[2] "%d sekunde"
-msgstr[3] "%d sekund"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/gpm-statistics.c:367
 msgid "Refreshed"
@@ -1828,7 +1846,7 @@ msgstr "Izberi to napravo ob zagonu"
 
 #: src/gpm-tray-icon.c:206
 msgid "Copyright © 2011-2021 MATE developers"
-msgstr ""
+msgstr "Avtorske pravice © 2011-2021 razvijalci MATE"
 
 #: src/gpm-tray-icon.c:316
 #, c-format
@@ -1994,10 +2012,10 @@ msgstr "Hitrost polnjenja:"
 #: src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] "Adapter za električno omrežje"
-msgstr[1] "Adapterja za električno omrežje"
-msgstr[2] "Adapterji za električno omrežje"
-msgstr[3] "Adapterji za električno omrežje"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/gpm-upower.c:491
 msgid "Laptop battery"
@@ -2010,66 +2028,66 @@ msgstr[3] "Baterije prenosnika"
 #: src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] "Neprekinjeno napajanje"
-msgstr[1] "Neprekinjeni napajanji"
-msgstr[2] "Neprekinjena napajanja"
-msgstr[3] "Neprekinjena napajanja"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] "Zaslon"
-msgstr[1] "Zaslona"
-msgstr[2] "Zasloni"
-msgstr[3] "Zasloni"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] "Miška"
-msgstr[1] "Miški"
-msgstr[2] "Miške"
-msgstr[3] "Miške"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] "PDA"
-msgstr[1] "PDA"
-msgstr[2] "PDA"
-msgstr[3] "PDA"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] "Mobilni telefon"
-msgstr[1] "Mobilna telefona"
-msgstr[2] "Mobilni telefoni"
-msgstr[3] "Mobilni telefoni"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] "Medijski predvajalnik"
-msgstr[1] "Medijska predvajalnika"
-msgstr[2] "Medijski predvajalniki"
-msgstr[3] "Medijski predvajalniki"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "Tablica"
-msgstr[1] "Tablici"
-msgstr[2] "Tablice"
-msgstr[3] "Tablice"
+msgstr[0] "tablica"
+msgstr[1] "tablici"
+msgstr[2] "tablice"
+msgstr[3] "tablic"
 
 #: src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] "Računalnik"
-msgstr[1] "Računalnika"
-msgstr[2] "Računalniki"
-msgstr[3] "Računalniki"
+msgstr[0] "računalnik"
+msgstr[1] "računalnika"
+msgstr[2] "računalniki"
+msgstr[3] "računalnikov"
 
 #: src/gpm-upower.c:594
 msgid "Lithium Ion"

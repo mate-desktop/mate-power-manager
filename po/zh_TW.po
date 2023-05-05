@@ -4,9 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Walter Cheuk <wwycheuk@gmail.com>, 2018
-# 趙惟倫 <bluebat@member.fsf.org>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# 趙惟倫 <bluebat@member.fsf.org>, 2021
 # 黃柏諺 <s8321414@gmail.com>, 2021
 # 
 msgid ""
@@ -14,9 +13,9 @@ msgstr ""
 "Project-Id-Version: mate-power-manager 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2021-06-22 17:30+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
+"PO-Revision-Date: 2021-09-20 18:18+0000\n"
 "Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2021\n"
-"Language-Team: Chinese (Taiwan) (https://www.transifex.com/mate/teams/13566/zh_TW/)\n"
+"Language-Team: Chinese (Taiwan) (https://app.transifex.com/mate/teams/13566/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -92,7 +91,7 @@ msgstr ""
 #: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:212
 msgid "translator-credits"
 msgstr ""
-"黃柏諺 <s8321414@yahoo.com.tw>,2013-14\n"
+"Jeff Huang <s8321414@yahoo.com.tw>,2013-2021\n"
 "Launchpad 貢獻者：\n"
 "  Jose Sun https://launchpad.net/~josesun\n"
 "  Toomore https://launchpad.net/~toomore\n"
@@ -876,7 +875,7 @@ msgstr "降低鍵盤背光亮度(_R)"
 #: data/gpm-prefs.ui:685 src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] "鍵盤"
+msgstr[0] ""
 
 #: data/gpm-prefs.ui:707
 msgid "On Battery Power"
@@ -982,13 +981,13 @@ msgstr "未知的時間"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] "%i 分鐘"
+msgstr[0] ""
 
 #: src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] "%i 小時"
+msgstr[0] ""
 
 #: src/gpm-common.c:75
 #, c-format
@@ -998,12 +997,12 @@ msgstr "%i %s, %i %s"
 #: src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] "小時"
+msgstr[0] ""
 
 #: src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] "分"
+msgstr[0] ""
 
 #. Translators: This is %i days
 #: src/gpm-graph-widget.c:433
@@ -1175,7 +1174,7 @@ msgstr "電池容量極低 (%1.1f%%)，這表示該電池可能太過老舊或�
 #: src/gpm-manager.c:1158
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] "電池已充電"
+msgstr[0] ""
 
 #: src/gpm-manager.c:1204
 msgid "Battery Discharging"
@@ -1518,25 +1517,25 @@ msgstr "未知的"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] "%.0f 秒"
+msgstr[0] ""
 
 #: src/gpm-statistics.c:239
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] "%.1f 分鐘"
+msgstr[0] ""
 
 #: src/gpm-statistics.c:244
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] "%.1f 小時"
+msgstr[0] ""
 
 #: src/gpm-statistics.c:248
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] "%.1f 天"
+msgstr[0] ""
 
 #: src/gpm-statistics.c:257
 msgid "Yes"
@@ -1574,7 +1573,7 @@ msgstr "供給"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d 秒"
+msgstr[0] ""
 
 #: src/gpm-statistics.c:367
 msgid "Refreshed"
@@ -1839,52 +1838,52 @@ msgstr "充電率："
 #: src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] "交流電源"
+msgstr[0] ""
 
 #: src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "筆電電池"
+msgstr[0] ""
 
 #: src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] "不斷電系統"
+msgstr[0] ""
 
 #: src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] "螢幕"
+msgstr[0] ""
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] "滑鼠"
+msgstr[0] ""
 
 #: src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] "PDA"
+msgstr[0] ""
 
 #: src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] "行動電話"
+msgstr[0] ""
 
 #: src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] "媒體播放器"
+msgstr[0] ""
 
 #: src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "手寫板"
+msgstr[0] ""
 
 #: src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] "電腦"
+msgstr[0] ""
 
 #: src/gpm-upower.c:594
 msgid "Lithium Ion"

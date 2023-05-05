@@ -4,24 +4,26 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# e0c668032ced196bd60f2b6a070d982d_8f72ae0, 2018
-# Mingcong Bai <jeffbai@aosc.xyz>, 2018
-# shuyu liu <liushuyu011@gmail.com>, 2018
-# zhineng404 <zhinengge@gmail.com>, 2019
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# 玉堂白鹤 <yjwork@qq.com>, 2020
-# Wolfgang Ulbrich <mate@raveit.de>, 2020
-# liulitchi <xingzuo88@qq.com>, 2021
-# Wenbin Lv <wenbin816@gmail.com>, 2021
+# a73a47e368cc011d8f94528bd9d5d3f1_91fccdf <1b07f49e2a323989c85dd26d526f7bb9_871526>, 2021
+# OkayPJ <1535253694@qq.com>, 2021
+# e0c668032ced196bd60f2b6a070d982d_8f72ae0, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# liu lizhi <xingzuo88@qq.com>, 2021
+# 玉堂白鹤 <yjwork@qq.com>, 2021
+# Mingcong Bai <jeffbai@aosc.xyz>, 2021
+# shuyu liu <liushuyu011@gmail.com>, 2021
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
+# zhineng404 <zhinengge@gmail.com>, 2021
+# Wenbin Lv <wenbin816@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-power-manager 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2021-06-22 17:30+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Wenbin Lv <wenbin816@gmail.com>, 2021\n"
-"Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
+"PO-Revision-Date: 2021-09-20 18:18+0000\n"
+"Last-Translator: Wenbin Lv <wenbin816@gmail.com>, 2022\n"
+"Language-Team: Chinese (China) (https://app.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -98,16 +100,18 @@ msgstr ""
 #: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:212
 msgid "translator-credits"
 msgstr ""
-"Christopher Meng <i@cicku.me>, 2012-2013\n"
-"ravix <dr.neemous@gmail.com>, 2013\n"
+"Christopher Meng , 2012-2013\n"
+"ravix , 2013\n"
 "Dianjin Wang <1132321739qq@gmail.com>, 2012\n"
-"Cravix <dr.neemous@gmail.com>, 2013\n"
-"nyanyh <rebuilty@gmail.com>, 2013\n"
-"liulitchi <xingzuo88@qq.com>, 2013\n"
-"玉堂白鹤 <yjwork@qq.com>, 2015\n"
-"Mingye Wang <arthur200126@gmail.com>, 2015-2016\n"
-"白铭骢 <jeffbai@aosc.xyz>, 2015-2016\n"
-"刘子兴 <liushuyu@aosc.xyz>, 2015-2016"
+"Cravix , 2013\n"
+"nyanyh , 2013\n"
+"liulitchi , 2013\n"
+"玉堂白鹤 , 2015\n"
+"Mingye Wang , 2015-2016\n"
+"白铭骢 , 2015-2016\n"
+"刘子兴 , 2015-2016\n"
+"比丘 , 2018-2019\n"
+"OkayPJ , 2020"
 
 #: applets/brightness/brightness-applet.c:1081
 #: applets/inhibit/inhibit-applet.c:503
@@ -117,7 +121,7 @@ msgstr "关于(_A)"
 #: applets/brightness/brightness-applet.c:1084
 #: applets/inhibit/inhibit-applet.c:506 data/gpm-prefs.ui:41
 msgid "_Help"
-msgstr "帮助（_H）"
+msgstr "帮助(_H)"
 
 #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:5
 msgid "Brightness Applet Factory"
@@ -880,7 +884,7 @@ msgstr "减小背光亮度(_R)"
 
 #: data/gpm-prefs.ui:663
 msgid "_Reduce keyboard backlight"
-msgstr "减小背光亮度(_R)"
+msgstr "降低背光亮度(_R)"
 
 #: data/gpm-prefs.ui:685 src/gpm-upower.c:507
 msgid "Keyboard"
@@ -1184,7 +1188,7 @@ msgstr "电池容量过低 (%1.1f%%)，这表示电池可能太旧或已损坏"
 #: src/gpm-manager.c:1158
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] "电池已充满"
+msgstr[0] "已充满电"
 
 #: src/gpm-manager.c:1204
 msgid "Battery Discharging"
@@ -1533,7 +1537,7 @@ msgstr[0] "%.0f 秒"
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] "%.1f 分"
+msgstr[0] "%.1f 分钟"
 
 #: src/gpm-statistics.c:244
 #, c-format
@@ -1599,7 +1603,7 @@ msgstr "可充电"
 
 #: src/gpm-statistics.c:390
 msgid "State"
-msgstr "州/省"
+msgstr "状态"
 
 #: src/gpm-statistics.c:394
 msgid "Energy"
@@ -1858,7 +1862,7 @@ msgstr[0] "笔记本电池"
 #: src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] "UPS"
+msgstr[0] "不间断电源"
 
 #: src/gpm-upower.c:499
 msgid "Monitor"
@@ -1873,7 +1877,7 @@ msgstr[0] "鼠标"
 #: src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] "PDA"
+msgstr[0] "PDA（个人数码助理）"
 
 #: src/gpm-upower.c:515
 msgid "Cell phone"
@@ -1888,7 +1892,7 @@ msgstr[0] "媒体播放器"
 #: src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "触摸板"
+msgstr[0] "平板电脑"
 
 #: src/gpm-upower.c:527
 msgid "Computer"

@@ -4,20 +4,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Youngbin Han <sukso96100@gmail.com>, 2018
-# Seong-ho Cho <darkcircle.0426@gmail.com>, 2020
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2020
-# JungHee Lee <daemul72@gmail.com>, 2021
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# 1763f4a4329a2376c933c5e919a36cbc_341ca53 <1f851310383599d03339229d772e1290_119292>, 2021
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# Youngbin Han <sukso96100@gmail.com>, 2021
+# Junghee Lee <daemul72@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-power-manager 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2021-06-22 17:30+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: JungHee Lee <daemul72@gmail.com>, 2021\n"
-"Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
+"PO-Revision-Date: 2021-09-20 18:18+0000\n"
+"Last-Translator: Junghee Lee <daemul72@gmail.com>, 2021\n"
+"Language-Team: Korean (https://app.transifex.com/mate/teams/13566/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -903,7 +905,7 @@ msgstr ""
 #: data/gpm-prefs.ui:685 src/gpm-upower.c:507
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] "키보드"
+msgstr[0] ""
 
 #: data/gpm-prefs.ui:707
 msgid "On Battery Power"
@@ -1009,13 +1011,13 @@ msgstr "알 수 없는 시간"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] "%i분"
+msgstr[0] ""
 
 #: src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] "%i시간"
+msgstr[0] ""
 
 #: src/gpm-common.c:75
 #, c-format
@@ -1025,12 +1027,12 @@ msgstr "%i%s %i%s"
 #: src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] "시간"
+msgstr[0] ""
 
 #: src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] "분"
+msgstr[0] ""
 
 #. Translators: This is %i days
 #: src/gpm-graph-widget.c:433
@@ -1202,7 +1204,7 @@ msgstr "배터리 용량이 매우 부족합니다(%1.1f%%). 배터리가 오래
 #: src/gpm-manager.c:1158
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] "배터리 충전 완료"
+msgstr[0] ""
 
 #: src/gpm-manager.c:1204
 msgid "Battery Discharging"
@@ -1549,25 +1551,25 @@ msgstr "알 수 없음"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] "%.0f초"
+msgstr[0] ""
 
 #: src/gpm-statistics.c:239
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] "%.1f분"
+msgstr[0] ""
 
 #: src/gpm-statistics.c:244
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] "%.1f시간"
+msgstr[0] ""
 
 #: src/gpm-statistics.c:248
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] "%.1f일"
+msgstr[0] ""
 
 #: src/gpm-statistics.c:257
 msgid "Yes"
@@ -1605,7 +1607,7 @@ msgstr "공급"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d초"
+msgstr[0] ""
 
 #: src/gpm-statistics.c:367
 msgid "Refreshed"
@@ -1621,7 +1623,7 @@ msgstr "충전 가능"
 
 #: src/gpm-statistics.c:390
 msgid "State"
-msgstr "주"
+msgstr "상태"
 
 #: src/gpm-statistics.c:394
 msgid "Energy"
@@ -1870,52 +1872,52 @@ msgstr "충전 속도:"
 #: src/gpm-upower.c:487
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] "AC 어댑터"
+msgstr[0] ""
 
 #: src/gpm-upower.c:491
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "노트북 배터리"
+msgstr[0] ""
 
 #: src/gpm-upower.c:495
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] "UPS"
+msgstr[0] ""
 
 #: src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] "모니터"
+msgstr[0] ""
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] "마우스"
+msgstr[0] ""
 
 #: src/gpm-upower.c:511
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] "PDA"
+msgstr[0] ""
 
 #: src/gpm-upower.c:515
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] "휴대전화"
+msgstr[0] ""
 
 #: src/gpm-upower.c:519
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] "미디어 플레이어"
+msgstr[0] ""
 
 #: src/gpm-upower.c:523
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "태블릿"
+msgstr[0] ""
 
 #: src/gpm-upower.c:527
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] "컴퓨터"
+msgstr[0] ""
 
 #: src/gpm-upower.c:594
 msgid "Lithium Ion"

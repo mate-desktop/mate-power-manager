@@ -4,10 +4,11 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2018
-# Alexander Jansen <bornxlo@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Allan Nordhøy <epost@anotheragency.no>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Alexander Jansen <bornxlo@gmail.com>, 2021
+# Allan Nordhøy <epost@anotheragency.no>, 2021
+# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2021
+# 87d96f43665dd9fb55eba4603e184cae, 2021
 # heskjestad <cato@heskjestad.xyz>, 2021
 # 
 msgid ""
@@ -15,9 +16,9 @@ msgstr ""
 "Project-Id-Version: mate-power-manager 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2021-06-22 17:30+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
+"PO-Revision-Date: 2021-09-20 18:18+0000\n"
 "Last-Translator: heskjestad <cato@heskjestad.xyz>, 2021\n"
-"Language-Team: Norwegian Bokmål (https://www.transifex.com/mate/teams/13566/nb/)\n"
+"Language-Team: Norwegian Bokmål (https://app.transifex.com/mate/teams/13566/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -112,7 +113,7 @@ msgstr ""
 #: applets/brightness/brightness-applet.c:1081
 #: applets/inhibit/inhibit-applet.c:503
 msgid "_About"
-msgstr "Om"
+msgstr "_Om"
 
 #: applets/brightness/brightness-applet.c:1084
 #: applets/inhibit/inhibit-applet.c:506 data/gpm-prefs.ui:41
@@ -180,7 +181,7 @@ msgstr "Tjeneste for strømstyring"
 msgid "Whether to hibernate, suspend or do nothing when inactive"
 msgstr ""
 "Om maskinen skal settes i dvale-, hvilemodus eller ingen endring ved "
-"inaktivitet.'"
+"inaktivitet."
 
 #: data/org.mate.power-manager.gschema.xml.in:27
 #: data/org.mate.power-manager.gschema.xml.in:42
@@ -472,7 +473,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:161
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
-msgstr "Hvorvidt NetworkManager skal til- og fra-kobles ved sovetilstand."
+msgstr "Hvorvidt NetworkManager skal til- og frakobles ved sovetilstand."
 
 #: data/org.mate.power-manager.gschema.xml.in:162
 msgid ""
@@ -609,7 +610,7 @@ msgstr "Varsle ved lav strømstyrke"
 msgid ""
 "If a notification message should be displayed when the battery is getting "
 "low."
-msgstr "Om en varslingsmelding skal vises når batterinivåte er lavt."
+msgstr "Om en varslingsmelding skal vises når batterinivået er lavt."
 
 #: data/org.mate.power-manager.gschema.xml.in:226
 msgid "Notify on low capacity of mouse battery"
@@ -626,7 +627,7 @@ msgstr "Hvorvidt historikkdatapunkter skal vises i statistikk-vinduet."
 
 #: data/org.mate.power-manager.gschema.xml.in:236
 msgid "Whether we should smooth the history data"
-msgstr "Hvorvidt historikkdataene skal utgjevnes"
+msgstr "Hvorvidt historikkdataene skal utjevnes"
 
 #: data/org.mate.power-manager.gschema.xml.in:237
 msgid "Whether we should smooth the history data in the graph."
@@ -659,11 +660,11 @@ msgstr "Hvorvidt statistikkdatapunktene skal vises i statistikk-vinduet."
 
 #: data/org.mate.power-manager.gschema.xml.in:256
 msgid "Whether we should smooth the stats data"
-msgstr "Hvorvidt statistikkdataene skal utgjevnes"
+msgstr "Hvorvidt statistikkdataene skal utjevnes"
 
 #: data/org.mate.power-manager.gschema.xml.in:257
 msgid "Whether we should smooth the stats data in the graph."
-msgstr "Hvorvidt statistikkgrafens data skal utgjevnes."
+msgstr "Hvorvidt statistikkgrafens data skal utjevnes."
 
 #: data/org.mate.power-manager.gschema.xml.in:261
 msgid "The default graph type to show for stats"
@@ -846,7 +847,7 @@ msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
 msgstr ""
-"HVorvidt lyd skal brukes når strømstyrken er kritisk lav eller om "
+"Hvorvidt lyd skal brukes når strømstyrken er kritisk lav eller om "
 "forespørsler om hindring har stoppet en handling fra regelsettet."
 
 #: data/org.mate.power-manager.gschema.xml.in:341
@@ -979,7 +980,7 @@ msgstr "_Reduser tastaturets baklys"
 msgid "Keyboard"
 msgid_plural "Keyboards"
 msgstr[0] "Tastatur"
-msgstr[1] "Tastatur"
+msgstr[1] "Tastaturer"
 
 #: data/gpm-prefs.ui:707
 msgid "On Battery Power"
@@ -1825,7 +1826,7 @@ msgstr "%s gjenstår"
 
 #: src/gpm-tray-icon.c:370
 msgid "_Preferences"
-msgstr "Innstillinger"
+msgstr "Innstillin_ger"
 
 #: src/gpm-upower.c:211
 #, c-format
@@ -2000,8 +2001,8 @@ msgstr[1] "UPS-er"
 #: src/gpm-upower.c:499
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] "Multimeter"
-msgstr[1] "Multimetere"
+msgstr[0] "Skjerm"
+msgstr[1] "Skjermer"
 
 #: src/gpm-upower.c:503
 msgid "Mouse"
