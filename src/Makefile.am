@@ -15,6 +15,7 @@ AM_CPPFLAGS =						\
 	$(DBUS_CFLAGS)					\
 	$(CAIRO_CFLAGS)					\
 	$(LIBSECRET_CFLAGS)				\
+	$(MATE_DESKTOP_CFLAGS)			\
 	$(KEYRING_CFLAGS)				\
 	$(X11_CFLAGS)					\
 	$(LIBNOTIFY_CFLAGS)				\
@@ -198,6 +199,7 @@ mate_power_manager_LDADD =				\
 	$(X11_LIBS)					\
 	$(GSTREAMER_LIBS)				\
 	$(CAIRO_LIBS)					\
+	$(MATE_DESKTOP_LIBS)			\
 	$(LIBSECRET_LIBS)					\
 	$(KEYRING_LIBS)					\
 	$(DBUS_LIBS)					\
@@ -261,6 +263,7 @@ mate_power_self_test_LDADD =				\
 	$(GLIB_LIBS)					\
 	$(X11_LIBS)					\
 	$(CAIRO_LIBS)					\
+	$(MATE_DESKTOP_LIBS)			\
 	$(LIBSECRET_LIBS)					\
 	$(KEYRING_LIBS)					\
 	$(GSTREAMER_LIBS)				\

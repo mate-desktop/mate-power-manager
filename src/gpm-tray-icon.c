@@ -41,6 +41,8 @@
 #include <gtk/gtk.h>
 #include <libupower-glib/upower.h>
 
+#include <libmate-desktop/mate-image-menu-item.h>
+
 #include "gpm-upower.h"
 #include "gpm-engine.h"
 #include "gpm-common.h"
@@ -275,13 +277,12 @@ gpm_tray_icon_add_device (GpmTrayIcon *icon, GtkMenu *menu, const GPtrArray *arr
 		else {
 			label = g_strdup_printf ("%s (%.1f%%)", gpm_device_kind_to_localised_string (kind, 1), percentage);
 		}
-		item = gtk_image_menu_item_new_with_label (label);
+		item = mate_image_menu_item_new_with_label (label);
 
 		/* generate the image */
 		icon_name = gpm_upower_get_device_icon (device);
 		image = gtk_image_new_from_icon_name (icon_name, GTK_ICON_SIZE_MENU);
-		gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (item), image);
-		gtk_image_menu_item_set_always_show_image (GTK_IMAGE_MENU_ITEM (item), TRUE);
+		mate_image_menu_item_set_image (MATE_IMAGE_MENU_ITEM (item), image);
 
 		/* set callback and add the menu */
 		g_signal_connect (G_OBJECT (item), "activate", G_CALLBACK (gpm_tray_icon_show_info_cb), icon);
@@ -317,7 +318,7 @@ gpm_tray_icon_add_primary_device (GpmTrayIcon *icon, GtkMenu *menu, UpDevice *de
 
 	/* TRANSLATORS: % is a timestring, e.g. "6 hours 10 minutes" */
 	string = g_strdup_printf (_("%s remaining"), time_str);
-	item = gtk_image_menu_item_new_with_label (string);
+	item = mate_image_menu_item_new_with_label (string);
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
 	g_free (time_str);
 	g_free (string);
@@ -371,9 +372,9 @@ gpm_tray_icon_create_menu (GpmTrayIcon *icon)
 	}
 
 	/* preferences */
-	item = gtk_image_menu_item_new_with_mnemonic (_("_Preferences"));
+	item = mate_image_menu_item_new_with_mnemonic (_("_Preferences"));
 	image = gtk_image_new_from_icon_name ("preferences-system", GTK_ICON_SIZE_MENU);
-	gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (item), image);
+	mate_image_menu_item_set_image (MATE_IMAGE_MENU_ITEM (item), image);
 	g_signal_connect (G_OBJECT (item), "activate",
 			  G_CALLBACK (gpm_tray_icon_show_preferences_cb), icon);
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
