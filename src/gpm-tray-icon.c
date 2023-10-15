@@ -392,7 +392,9 @@ gpm_tray_icon_create_menu (GpmTrayIcon *icon)
 	gtk_style_context_add_class(context,"mate-panel-menu-bar");
 
 	/* about */
-	item = gtk_image_menu_item_new_from_stock ("gtk-about", NULL);
+	item = mate_image_menu_item_new_with_mnemonic (_("_About"));
+	image = gtk_image_new_from_icon_name ("help-about", GTK_ICON_SIZE_MENU);
+	mate_image_menu_item_set_image (MATE_IMAGE_MENU_ITEM (item), image);
 	g_signal_connect (G_OBJECT (item), "activate",
 			  G_CALLBACK (gpm_tray_icon_show_about_cb), icon);
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
