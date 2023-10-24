@@ -45,7 +45,7 @@ struct EggTest {
  * egg_test_init:
  **/
 EggTest *
-egg_test_init ()
+egg_test_init (void)
 {
 	EggTest *test;
 	test = g_new (EggTest, 1);

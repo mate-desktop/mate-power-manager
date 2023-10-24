@@ -202,6 +202,8 @@ gpm_applet_size_allocate_cb (GtkWidget    *widget,
 		case MATE_PANEL_APPLET_ORIENT_DOWN:
 			size = allocation->height;
 			break;
+		default:
+			break;
 	}
 
 	/* Scale to the actual size of the applet, don't quantize to original icon size */

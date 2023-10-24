@@ -110,12 +110,12 @@ gpm_button_filter_x_events (GdkXEvent *xevent, GdkEvent *event, gpointer data)
 
 	/* found anything? */
 	if (key == NULL) {
-		g_debug ("Key %i not found in hash", keycode);
+		g_debug ("Key %u not found in hash", keycode);
 		/* pass normal keypresses on, which might help with accessibility access */
 		return GDK_FILTER_CONTINUE;
 	}
 
-	g_debug ("Key %i mapped to key %s", keycode, key);
+	g_debug ("Key %u mapped to key %s", keycode, key);
 	gpm_button_emit_type (button, key);
 
 	return GDK_FILTER_REMOVE;
@@ -207,7 +207,7 @@ gpm_button_xevent_key (GpmButton *button, guint keysym, const gchar *key_name)
 	keycode_str = g_strdup_printf ("0x%x", keycode);
 	key = g_hash_table_lookup (button->priv->keysym_to_name_hash, (gpointer) keycode_str);
 	if (key != NULL) {
-		g_warning ("found in hash %i", keycode);
+		g_warning ("found in hash %u", keycode);
 		g_free (keycode_str);
 		return FALSE;
 	}
@@ -215,7 +215,7 @@ gpm_button_xevent_key (GpmButton *button, guint keysym, const gchar *key_name)
 	/* try to register X event */
 	ret = gpm_button_grab_keystring (button, keycode);
 	if (!ret) {
-		g_warning ("Failed to grab %i", keycode);
+		g_warning ("Failed to grab %u", keycode);
 		g_free (keycode_str);
 		return FALSE;
 	}

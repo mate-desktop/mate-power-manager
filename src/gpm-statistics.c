@@ -385,7 +385,7 @@ gpm_stats_update_info_page_details (UpDevice *device)
 	gpm_stats_add_info_data (_("Supply"), gpm_stats_bool_to_string (power_supply));
 
 	refreshed = (int) (time (NULL) - update_time);
-	text = g_strdup_printf (ngettext ("%d second", "%d seconds", refreshed), refreshed);
+	text = g_strdup_printf (ngettext ("%u second", "%u seconds", refreshed), refreshed);
 
 	/* TRANSLATORS: when the device was last updated with new data. It's
 	* usually a few seconds when a device is discharging or charging. */
@@ -1206,7 +1206,7 @@ gpm_stats_highlight_device (const gchar *object_path)
 				    GPM_DEVICES_COLUMN_ID, &id,
 				    -1);
 		if (g_strcmp0 (id, object_path) == 0) {
-			path_str = g_strdup_printf ("%i", i);
+			path_str = g_strdup_printf ("%u", i);
 			path = gtk_tree_path_new_from_string (path_str);
 			widget = GTK_WIDGET (gtk_builder_get_object (builder, "treeview_devices"));
 			gtk_tree_view_set_cursor_on_cell (GTK_TREE_VIEW (widget), path, NULL, NULL, FALSE);
@@ -1238,7 +1238,21 @@ main (int argc, char *argv[])
 	gint page;
 	gboolean checked;
 	gchar *last_device = NULL;
+	char  *history_type_str;
+	char  *stats_type_str;
 
+	const char *history_text [GPM_HISTORY_LAST_TYPE - 1] = {
+		[GPM_HISTORY_RATE_TYPE] = GPM_HISTORY_RATE_TEXT,
+		[GPM_HISTORY_CHARGE_TYPE] = GPM_HISTORY_CHARGE_TEXT,
+		[GPM_HISTORY_TIME_FULL_TYPE] = GPM_HISTORY_TIME_FULL_TEXT,
+		[GPM_HISTORY_TIME_EMPTY_TYPE] = GPM_HISTORY_TIME_EMPTY_TEXT
+	};
+	const char *stats_text [GPM_STATS_LAST_TYPE] = {
+		[GPM_STATS_CHARGE_TYPE] = GPM_STATS_CHARGE_DATA_TEXT,
+		[GPM_STATS_DISCHARGE_TYPE] = GPM_STATS_DISCHARGE_DATA_TEXT,
+		[GPM_STATS_CHARGE_ACCURACY_TYPE] = GPM_STATS_CHARGE_ACCURACY_TEXT,
+		[GPM_STATS_DISCHARGE_ACCURACY_TYPE] = GPM_STATS_DISCHARGE_ACCURACY_TEXT
+	};
 	const GOptionEntry options[] = {
 		{ "device", '\0', 0, G_OPTION_ARG_STRING, &last_device,
 		  /* TRANSLATORS: show a device by default */
@@ -1369,7 +1383,7 @@ main (int argc, char *argv[])
 	gpm_stats_add_devices_columns (GTK_TREE_VIEW (widget));
 	gtk_tree_view_columns_autosize (GTK_TREE_VIEW (widget)); /* show */
 
-	char *history_type_str = g_settings_get_string (settings, GPM_SETTINGS_INFO_HISTORY_TYPE);
+	history_type_str = g_settings_get_string (settings, GPM_SETTINGS_INFO_HISTORY_TYPE);
 	if ((history_type_str == NULL) || (strcmp (history_type_str, GPM_HISTORY_CHARGE_VALUE) == 0)) {
 		history_type = GPM_HISTORY_CHARGE_TYPE;
 	} else if (strcmp (history_type_str, GPM_HISTORY_RATE_VALUE) == 0) {
@@ -1389,7 +1403,7 @@ main (int argc, char *argv[])
 	if (history_time == 0)
 		history_time = GPM_HISTORY_HOUR_VALUE;
 
-	char *stats_type_str = g_settings_get_string (settings, GPM_SETTINGS_INFO_STATS_TYPE);
+	stats_type_str = g_settings_get_string (settings, GPM_SETTINGS_INFO_STATS_TYPE);
 	if ((stats_type_str == NULL) || (strcmp (stats_type_str, GPM_STATS_CHARGE_DATA_VALUE) == 0)) {
 		stats_type = GPM_STATS_CHARGE_TYPE;
 	} else if (strcmp (stats_type_str, GPM_STATS_DISCHARGE_DATA_VALUE) == 0) {
@@ -1403,12 +1417,6 @@ main (int argc, char *argv[])
 	}
 	g_free (stats_type_str);
 
-	const char *history_text [GPM_HISTORY_LAST_TYPE - 1] = {
-		[GPM_HISTORY_RATE_TYPE] = GPM_HISTORY_RATE_TEXT,
-		[GPM_HISTORY_CHARGE_TYPE] = GPM_HISTORY_CHARGE_TEXT,
-		[GPM_HISTORY_TIME_FULL_TYPE] = GPM_HISTORY_TIME_FULL_TEXT,
-		[GPM_HISTORY_TIME_EMPTY_TYPE] = GPM_HISTORY_TIME_EMPTY_TEXT
-	};
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "combobox_history_type"));
 	for (i = 0; i < GPM_HISTORY_LAST_TYPE - 1; i++)
 		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), history_text[i]);
@@ -1419,12 +1427,6 @@ main (int argc, char *argv[])
 	g_signal_connect (G_OBJECT (widget), "changed",
 			  G_CALLBACK (gpm_stats_history_type_combo_changed_cb), NULL);
 
-	const char *stats_text [GPM_STATS_LAST_TYPE] = {
-		[GPM_STATS_CHARGE_TYPE] = GPM_STATS_CHARGE_DATA_TEXT,
-		[GPM_STATS_DISCHARGE_TYPE] = GPM_STATS_DISCHARGE_DATA_TEXT,
-		[GPM_STATS_CHARGE_ACCURACY_TYPE] = GPM_STATS_CHARGE_ACCURACY_TEXT,
-		[GPM_STATS_DISCHARGE_ACCURACY_TYPE] = GPM_STATS_DISCHARGE_ACCURACY_TEXT
-	};
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "combobox_stats_type"));
 	for (i = 0; i < GPM_STATS_LAST_TYPE; i++)
 		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), stats_text[i]);

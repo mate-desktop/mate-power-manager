@@ -404,7 +404,7 @@ egg_console_kit_init (EggConsoleKit *console)
 				 DBUS_TYPE_G_OBJECT_PATH, &console->priv->session_id,
 				 G_TYPE_INVALID);
 	if (!ret) {
-		g_warning ("Failed to get session for pid %i: %s", pid, error->message);
+		g_warning ("Failed to get session for pid %u: %s", pid, error->message);
 		g_error_free (error);
 		goto out;
 	}

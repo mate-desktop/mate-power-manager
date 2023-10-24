@@ -139,7 +139,7 @@ gpm_kbd_backlight_set (GpmKbdBacklight *backlight,
                    NULL,
                    NULL);
    }
-   g_debug("Set brightness to %i", backlight->priv->brightness);
+   g_debug("Set brightness to %u", backlight->priv->brightness);
    return TRUE;
 }
 

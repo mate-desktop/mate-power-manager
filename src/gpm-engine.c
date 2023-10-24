@@ -704,13 +704,13 @@ phone_device_added_cb (GpmPhone *phone, guint idx, GpmEngine *engine)
 	UpDevice *device;
 	device = up_device_new ();
 
-	g_debug ("phone added %i", idx);
+	g_debug ("phone added %u", idx);
 
 	/* get device properties */
 	g_object_set (device,
 		      "kind", UP_DEVICE_KIND_PHONE,
 		      "is-rechargeable", TRUE,
-		      "native-path", g_strdup_printf ("dummy:phone_%i", idx),
+		      "native-path", g_strdup_printf ("dummy:phone_%u", idx),
 		      "is-present", TRUE,
 		      NULL);
 
@@ -730,7 +730,7 @@ phone_device_removed_cb (GpmPhone *phone, guint idx, GpmEngine *engine)
 	UpDevice *device;
 	UpDeviceKind kind;
 
-	g_debug ("phone removed %i", idx);
+	g_debug ("phone removed %u", idx);
 
 	for (i=0; i<engine->priv->array->len; i++) {
 		device = g_ptr_array_index (engine->priv->array, i);
@@ -763,7 +763,7 @@ phone_device_refresh_cb (GpmPhone *phone, guint idx, GpmEngine *engine)
 	gboolean is_present;
 	gdouble percentage;
 
-	g_debug ("phone refresh %i", idx);
+	g_debug ("phone refresh %u", idx);
 
 	for (i=0; i<engine->priv->array->len; i++) {
 		device = g_ptr_array_index (engine->priv->array, i);

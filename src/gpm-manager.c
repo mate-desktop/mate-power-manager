@@ -224,7 +224,7 @@ gpm_manager_play_loop_start (GpmManager *manager, GpmManagerSound action, gboole
 
 	/* no match */
 	if (id == NULL) {
-		g_warning ("no sound match for %i", action);
+		g_warning ("no sound match for %u", action);
 		return FALSE;
 	}
 
@@ -675,7 +675,7 @@ gpm_manager_perform_policy (GpmManager  *manager, const gchar *policy_key, const
 		return FALSE;
 
 	policy = g_settings_get_enum (manager->priv->settings, policy_key);
-	g_debug ("action: %s set to %i (%s)", policy_key, policy, reason);
+	g_debug ("action: %s set to %u (%s)", policy_key, policy, reason);
 
 	if (policy == GPM_ACTION_POLICY_NOTHING) {
 		g_debug ("doing nothing, reason: %s", reason);
@@ -699,7 +699,7 @@ gpm_manager_perform_policy (GpmManager  *manager, const gchar *policy_key, const
 		gpm_session_logout (session);
 		g_object_unref (session);
 	} else {
-		g_warning ("unknown action %i", policy);
+		g_warning ("unknown action %u", policy);
 	}
 
 	return TRUE;
@@ -1672,7 +1672,7 @@ out:
 static void
 gpm_manager_dpms_mode_changed_cb (GpmDpms *dpms, GpmDpmsMode mode, GpmManager *manager)
 {
-	g_debug ("DPMS mode changed: %d", mode);
+	g_debug ("DPMS mode changed: %u", mode);
 
 	if (mode == GPM_DPMS_MODE_ON)
 		g_debug ("dpms on");
@@ -1816,12 +1816,10 @@ gpm_manager_init (GpmManager *manager)
 {
 	gboolean check_type_cpu;
 	DBusGConnection *connection;
-	GDBusConnection *g_connection;
 	GError *error = NULL;
 
 	manager->priv = gpm_manager_get_instance_private (manager);
 	connection = dbus_g_bus_get (DBUS_BUS_SESSION, &error);
-	g_connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, &error);
 
 	/* We want to inhibit the systemd suspend options, and take care of them ourselves */
 	if (LOGIND_RUNNING()) {

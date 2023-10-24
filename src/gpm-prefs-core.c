@@ -190,7 +190,7 @@ gpm_prefs_action_time_changed_cb (GtkWidget *widget, GpmPrefs *prefs)
 	active = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
 	value = values[active];
 
-	g_debug ("Changing %s to %i", gpm_pref_key, value);
+	g_debug ("Changing %s to %u", gpm_pref_key, value);
 	g_settings_set_int (prefs->priv->settings, gpm_pref_key, value);
 }
 
@@ -214,7 +214,7 @@ static void
 gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 				  const gchar *gpm_pref_key, const GpmActionPolicy *actions)
 {
-	gint i;
+	guint i;
 	gboolean is_writable;
 	GtkWidget *widget;
 	GpmActionPolicy policy;
@@ -234,7 +234,7 @@ gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 	g_signal_connect (G_OBJECT (widget), "changed",
 			  G_CALLBACK (gpm_prefs_action_combo_changed_cb), prefs);
 
-	for (i=0; actions[i] != -1; i++) {
+	for (i=0; (gint)actions[i] != -1; i++) {
 		policy = actions[i];
 		if (policy == GPM_ACTION_POLICY_SHUTDOWN && !prefs->priv->can_shutdown) {
 			g_debug ("Cannot add option, as cannot shutdown.");
@@ -261,7 +261,7 @@ gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 			gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT (widget), _("Do nothing"));
 			g_ptr_array_add(array, GINT_TO_POINTER (policy));
 		} else {
-			g_warning ("Unknown action read from settings: %i", policy);
+			g_warning ("Unknown action read from settings: %u", policy);
 		}
 	}
 
@@ -274,7 +274,7 @@ gpm_prefs_setup_action_combo (GpmPrefs *prefs, const gchar *widget_name,
 	g_object_set_data_full (G_OBJECT (widget), "actions", (gpointer) actions_added, (GDestroyNotify) gpm_prefs_actions_destroy_cb);
 
 	/* set what we have in the settings */
-	for (i=0; actions_added[i] != -1; i++) {
+	for (i=0; (gint)actions_added[i] != -1; i++) {
 		policy = actions_added[i];
 		if (value == policy)
 			 gtk_combo_box_set_active (GTK_COMBO_BOX (widget), i);
@@ -322,7 +322,7 @@ gpm_prefs_setup_time_combo (GpmPrefs *prefs, const gchar *widget_name,
 		}
 
 		/* matches, so set default */
-		if (value == values[i])
+		if ((gint)value == values[i])
 			 gtk_combo_box_set_active (GTK_COMBO_BOX (widget), i);
 	}
 
@@ -587,6 +587,14 @@ gpm_prefs_init (GpmPrefs *prefs)
 	UpDevice *device;
 	UpDeviceKind kind;
 	GpmBrightness *brightness;
+	gint icon_policy;
+	/** setup the notification page */
+	GtkWidget *radiobutton_icon_always;
+	GtkWidget *radiobutton_icon_present;
+	GtkWidget *radiobutton_icon_charge;
+	GtkWidget *radiobutton_icon_low;
+	GtkWidget *radiobutton_icon_never;
+
 	guint i;
 
 	GDBusProxy *proxy;
@@ -747,14 +755,6 @@ gpm_prefs_init (GpmPrefs *prefs)
 
 	gtk_widget_hide (GET_WIDGET ("button_defaults"));
 
-	/** setup the notification page */
-	gint icon_policy;
-	GtkWidget *radiobutton_icon_always;
-	GtkWidget *radiobutton_icon_present;
-	GtkWidget *radiobutton_icon_charge;
-	GtkWidget *radiobutton_icon_low;
-	GtkWidget *radiobutton_icon_never;
-
 	icon_policy = g_settings_get_enum (prefs->priv->settings, GPM_SETTINGS_ICON_POLICY);
 
 	radiobutton_icon_always = GET_WIDGET ("radiobutton_notification_always");
@@ -781,6 +781,8 @@ gpm_prefs_init (GpmPrefs *prefs)
 			break;
 		case GPM_ICON_POLICY_NEVER:
 			gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_icon_never), TRUE);
+			break;
+		default:
 			break;
 	}
 
