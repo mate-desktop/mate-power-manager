@@ -261,7 +261,7 @@ gpm_session_stop_cb (DBusGProxy *proxy, GpmSession *session)
 static void
 gpm_session_query_end_session_cb (DBusGProxy *proxy, guint flags, GpmSession *session)
 {
-	g_debug ("emitting ::query-end-session(%i)", flags);
+	g_debug ("emitting ::query-end-session(%u)", flags);
 	g_signal_emit (session, signals [QUERY_END_SESSION], 0, flags);
 }
 
@@ -271,7 +271,7 @@ gpm_session_query_end_session_cb (DBusGProxy *proxy, guint flags, GpmSession *se
 static void
 gpm_session_end_session_cb (DBusGProxy *proxy, guint flags, GpmSession *session)
 {
-	g_debug ("emitting ::end-session(%i)", flags);
+	g_debug ("emitting ::end-session(%u)", flags);
 	g_signal_emit (session, signals [END_SESSION], 0, flags);
 }
 

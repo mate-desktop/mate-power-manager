@@ -239,7 +239,7 @@ gpm_brightness_output_set_internal (GpmBrightness *brightness, RROutput output, 
 	XFlush (brightness->priv->dpy);
 	gdk_display_flush (display);
 	if (gdk_x11_display_error_trap_pop (display)) {
-		g_warning ("failed to XRRChangeOutputProperty for brightness %i", value);
+		g_warning ("failed to XRRChangeOutputProperty for brightness %u", value);
 		ret = FALSE;
 	}
 	/* we changed the hardware */
@@ -334,9 +334,9 @@ gpm_brightness_output_get_percentage (GpmBrightness *brightness, RROutput output
 	ret = gpm_brightness_output_get_limits (brightness, output, &min, &max);
 	if (!ret || min == max)
 		return FALSE;
-	g_debug ("hard value=%i, min=%i, max=%i", cur, min, max);
+	g_debug ("hard value=%u, min=%u, max=%u", cur, min, max);
 	percentage = egg_discrete_to_percent (cur, (max-min)+1);
-	g_debug ("percentage %i", percentage);
+	g_debug ("percentage %u", percentage);
 	brightness->priv->shared_value = percentage;
 	return TRUE;
 }
@@ -360,14 +360,14 @@ gpm_brightness_output_down (GpmBrightness *brightness, RROutput output)
 	ret = gpm_brightness_output_get_limits (brightness, output, &min, &max);
 	if (!ret || min == max)
 		return FALSE;
-	g_debug ("hard value=%i, min=%i, max=%i", cur, min, max);
+	g_debug ("hard value=%u, min=%u, max=%u", cur, min, max);
 	if (cur == min) {
 		g_debug ("already min");
 		return TRUE;
 	}
 	step = gpm_brightness_get_step ((max-min)+1);
 	if (cur < step) {
-		g_debug ("truncating to %i", min);
+		g_debug ("truncating to %u", min);
 		cur = min;
 	} else {
 		cur -= step;
@@ -394,14 +394,14 @@ gpm_brightness_output_up (GpmBrightness *brightness, RROutput output)
 	ret = gpm_brightness_output_get_limits (brightness, output, &min, &max);
 	if (!ret || min == max)
 		return FALSE;
-	g_debug ("hard value=%i, min=%i, max=%i", cur, min, max);
+	g_debug ("hard value=%u, min=%u, max=%u", cur, min, max);
 	if (cur == max) {
 		g_debug ("already max");
 		return TRUE;
 	}
 	cur += gpm_brightness_get_step ((max-min)+1);
 	if (cur > max) {
-		g_debug ("truncating to %i", max);
+		g_debug ("truncating to %u", max);
 		cur = max;
 	}
 	ret = gpm_brightness_output_set_internal (brightness, output, cur);
@@ -431,15 +431,15 @@ gpm_brightness_output_set (GpmBrightness *brightness, RROutput output)
 		return FALSE;
 
 	shared_value_abs = egg_discrete_from_percent (brightness->priv->shared_value, (max-min)+1);
-	g_debug ("percent=%i, absolute=%i", brightness->priv->shared_value, shared_value_abs);
+	g_debug ("percent=%u, absolute=%i", brightness->priv->shared_value, shared_value_abs);
 
-	g_debug ("hard value=%i, min=%i, max=%i", cur, min, max);
+	g_debug ("hard value=%u, min=%u, max=%u", cur, min, max);
 	if (shared_value_abs > (gint) max)
 		shared_value_abs = max;
 	if (shared_value_abs < (gint) min)
 		shared_value_abs = min;
 	if ((gint) cur == shared_value_abs) {
-		g_debug ("already set %i", cur);
+		g_debug ("already set %u", cur);
 		return TRUE;
 	}
 
@@ -448,7 +448,7 @@ gpm_brightness_output_set (GpmBrightness *brightness, RROutput output)
 
 		/* some adaptors have a large number of steps */
 		step = gpm_brightness_get_step (shared_value_abs - cur);
-		g_debug ("using step of %i", step);
+		g_debug ("using step of %u", step);
 
 		/* going up */
 		for (i=cur; i<=shared_value_abs; i+=step) {
@@ -462,7 +462,7 @@ gpm_brightness_output_set (GpmBrightness *brightness, RROutput output)
 
 		/* some adaptors have a large number of steps */
 		step = gpm_brightness_get_step (cur - shared_value_abs);
-		g_debug ("using step of %i", step);
+		g_debug ("using step of %u", step);
 
 		/* going down */
 		for (i=cur; i>=shared_value_abs; i-=step) {
@@ -586,7 +586,7 @@ gpm_brightness_set (GpmBrightness *brightness, guint percentage, gboolean *hw_ch
 	/* can we check the new value with the cache? */
 	trust_cache = gpm_brightness_trust_cache (brightness);
 	if (trust_cache && percentage == brightness->priv->cache_percentage) {
-		g_debug ("not setting the same value %i", percentage);
+		g_debug ("not setting the same value %u", percentage);
 		return TRUE;
 	}
 
@@ -656,7 +656,7 @@ gpm_brightness_get (GpmBrightness *brightness, guint *percentage)
 
 	/* valid? */
 	if (percentage_local > 100) {
-		g_warning ("percentage value of %i will be truncated", percentage_local);
+		g_warning ("percentage value of %u will be truncated", percentage_local);
 		percentage_local = 100;
 	}
 
@@ -786,7 +786,7 @@ gpm_brightness_may_have_changed (GpmBrightness *brightness)
 		g_warning ("failed to get output");
 		return;
 	}
-	g_debug ("emitting brightness-changed (%i)", percentage);
+	g_debug ("emitting brightness-changed (%u)", percentage);
 	g_signal_emit (brightness, signals [BRIGHTNESS_CHANGED], 0, percentage);
 }
 

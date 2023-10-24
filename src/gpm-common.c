@@ -208,8 +208,12 @@ gpm_notebook_scroll_event_cb (GtkWidget       *widget,
                                         else if (event->delta_x < 0)
                                                 gtk_notebook_prev_page (notebook);
                                         break;
+				default:
+					break;
                         }
                         break;
+		default:
+			break;
         }
 
         return TRUE;

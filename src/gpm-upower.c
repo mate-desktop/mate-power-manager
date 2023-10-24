@@ -534,7 +534,7 @@ gpm_device_kind_to_localised_string (UpDeviceKind kind, guint number)
 		text = ngettext ("Gaming input", "Gaming inputs", number);
 		break;
 	default:
-		g_warning ("enum unrecognised: %i", kind);
+		g_warning ("enum unrecognised: %u", kind);
 		text = up_device_kind_to_string (kind);
 	}
 	return text;
@@ -582,7 +582,7 @@ gpm_device_kind_to_icon (UpDeviceKind kind)
 		icon = "computer-apple-ipad";
 		break;
 	default:
-		g_warning ("enum unrecognised: %i", kind);
+		g_warning ("enum unrecognised: %u", kind);
 		icon = "gtk-help";
 	}
 	return icon;

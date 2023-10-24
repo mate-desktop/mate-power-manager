@@ -141,11 +141,11 @@ gpm_phone_battery_state_changed (DBusGProxy *proxy, guint idx, guint percentage,
 {
 	g_return_if_fail (GPM_IS_PHONE (phone));
 
-	g_debug ("got BatteryStateChanged %i = %i (%i)", idx, percentage, on_ac);
+	g_debug ("got BatteryStateChanged %u = %u (%i)", idx, percentage, on_ac);
 	phone->priv->percentage = percentage;
 	phone->priv->onac = on_ac;
 	phone->priv->present = TRUE;
-	g_debug ("emitting device-refresh : (%i)", idx);
+	g_debug ("emitting device-refresh : (%u)", idx);
 	g_signal_emit (phone, signals [DEVICE_REFRESH], 0, idx);
 }
 
@@ -156,7 +156,7 @@ gpm_phone_num_batteries_changed (DBusGProxy *proxy, guint number, GpmPhone *phon
 {
 	g_return_if_fail (GPM_IS_PHONE (phone));
 
-	g_debug ("got NumberBatteriesChanged %i", number);
+	g_debug ("got NumberBatteriesChanged %u", number);
 	if (number > 1) {
 		g_warning ("number not 0 or 1, not valid!");
 		return;
@@ -371,19 +371,27 @@ gpm_phone_new (void)
 
 static gboolean test_got_refresh = FALSE;
 
+static gboolean
+timeout_main_loop_quit (gpointer data)
+{
+	g_main_loop_quit (data);
+
+	return FALSE;
+}
+
 static void
 egg_test_mainloop_wait (guint ms)
 {
 	GMainLoop *loop;
 	loop = g_main_loop_new (NULL, FALSE);
-	g_timeout_add (ms, (GSourceFunc) g_main_loop_quit, loop);
+	g_timeout_add (ms, (GSourceFunc) timeout_main_loop_quit, loop);
 	g_main_loop_run (loop);
 }
 
 static void
 phone_device_refresh_cb (GpmPhone *phone, guint idx, gpointer *data)
 {
-	g_debug ("idx refresh = %i", idx);
+	g_debug ("idx refresh = %u", idx);
 	if (idx == 0 && GPOINTER_TO_UINT (data) == 44)
 		test_got_refresh = TRUE;
 }

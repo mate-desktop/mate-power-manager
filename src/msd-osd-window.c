@@ -356,7 +356,9 @@ msd_osd_window_constructor (GType                  type,
                             guint                  n_construct_properties,
                             GObjectConstructParam *construct_params)
 {
-        GObject *object;
+        GObject         *object;
+        GtkWidget       *widget;
+        GtkStyleContext *style_context;
 
         object = G_OBJECT_CLASS (msd_osd_window_parent_class)->constructor (type, n_construct_properties, construct_params);
 
@@ -368,8 +370,8 @@ msd_osd_window_constructor (GType                  type,
                       "focus-on-map", FALSE,
                       NULL);
 
-        GtkWidget *widget = GTK_WIDGET (object);
-        GtkStyleContext *style_context = gtk_widget_get_style_context (widget);
+        widget = GTK_WIDGET (object);
+        style_context = gtk_widget_get_style_context (widget);
         gtk_style_context_add_class (style_context, "osd");
 
         return object;
@@ -435,7 +437,8 @@ msd_osd_window_is_valid (MsdOsdWindow *window)
 static void
 msd_osd_window_init (MsdOsdWindow *window)
 {
-        GdkScreen *screen;
+        GdkScreen       *screen;
+        GtkStyleContext *style;
 
         window->priv = msd_osd_window_get_instance_private (window);
 
@@ -451,7 +454,7 @@ msd_osd_window_init (MsdOsdWindow *window)
                 gtk_window_set_decorated (GTK_WINDOW (window), FALSE);
                 gtk_widget_set_app_paintable (GTK_WIDGET (window), TRUE);
 
-                GtkStyleContext *style = gtk_widget_get_style_context (GTK_WIDGET (window));
+                style = gtk_widget_get_style_context (GTK_WIDGET (window));
                 gtk_style_context_add_class (style, "window-frame");
 
                 /* assume 110x110 on a 640x480 display and scale from there */

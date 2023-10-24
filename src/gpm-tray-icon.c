@@ -338,6 +338,10 @@ gpm_tray_icon_create_menu (GpmTrayIcon *icon)
 	guint dev_cnt = 0;
 	GPtrArray *array;
 	UpDevice *device = NULL;
+	GtkStyleContext *context;
+	GtkWidget       *toplevel;
+	GdkScreen       *screen;
+	GdkVisual       *visual;
 
 	/* show the primary device time remaining */
 	device = gpm_engine_get_primary_device (icon->priv->engine);
@@ -380,13 +384,12 @@ gpm_tray_icon_create_menu (GpmTrayIcon *icon)
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
 
 	/*Set up custom panel menu theme support-gtk3 only */
-	GtkWidget *toplevel = gtk_widget_get_toplevel (GTK_WIDGET (menu));
+	toplevel = gtk_widget_get_toplevel (GTK_WIDGET (menu));
 	/* Fix any failures of compiz/other wm's to communicate with gtk for transparency in menu theme */
-	GdkScreen *screen = gtk_widget_get_screen(GTK_WIDGET(toplevel));
-	GdkVisual *visual = gdk_screen_get_rgba_visual(screen);
+	screen = gtk_widget_get_screen(GTK_WIDGET(toplevel));
+	visual = gdk_screen_get_rgba_visual(screen);
 	gtk_widget_set_visual(GTK_WIDGET(toplevel), visual);
 	/* Set menu and its toplevel window to follow panel theme */
-	GtkStyleContext *context;
 	context = gtk_widget_get_style_context (GTK_WIDGET(toplevel));
 	gtk_style_context_add_class(context,"gnome-panel-menu-bar");
 	gtk_style_context_add_class(context,"mate-panel-menu-bar");

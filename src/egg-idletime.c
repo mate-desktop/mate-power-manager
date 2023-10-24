@@ -388,7 +388,7 @@ egg_idletime_init (EggIdletime *idletime)
 	int ncounters;
 	XSyncSystemCounter *counters;
 	EggIdletimeAlarm *alarm;
-	guint i;
+	gint i;
 
 	idletime->priv = egg_idletime_get_instance_private (idletime);
 

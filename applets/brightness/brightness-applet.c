@@ -371,7 +371,7 @@ gpm_applet_update_tooltip (GpmBrightnessApplet *applet)
 		} else if (applet->call_worked == FALSE) {
 			buf = g_strdup (_("Cannot get laptop panel brightness"));
 		} else {
-			buf = g_strdup_printf (_("LCD brightness : %d%%"), applet->level);
+			buf = g_strdup_printf (_("LCD brightness : %u%%"), applet->level);
 		}
 		gtk_widget_set_tooltip_text (GTK_WIDGET(applet), buf);
 	} else {
@@ -607,6 +607,10 @@ static void
 gpm_applet_create_popup (GpmBrightnessApplet *applet)
 {
 	static GtkWidget *box, *frame;
+	GtkWidget       *toplevel;
+	GtkStyleContext *context;
+	GdkScreen       *screen;
+	GdkVisual       *visual;
 	gint orientation = mate_panel_applet_get_orient (MATE_PANEL_APPLET (MATE_PANEL_APPLET (applet)));
 
 	gpm_applet_destroy_popup_cb (applet);
@@ -664,13 +668,12 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
 	                  G_CALLBACK(gpm_applet_key_press_cb), applet);
 
 	/* Set volume control frame, slider and toplevel window to follow panel volume control theme */
-	GtkWidget *toplevel = gtk_widget_get_toplevel (frame);
-	GtkStyleContext *context;
+	toplevel = gtk_widget_get_toplevel (frame);
 	context = gtk_widget_get_style_context (GTK_WIDGET(toplevel));
 	gtk_style_context_add_class(context,"mate-panel-applet-slider");
 	/*Make transparency possible in gtk3 theme3 */
- 	GdkScreen *screen = gtk_widget_get_screen(GTK_WIDGET(toplevel));
-	GdkVisual *visual = gdk_screen_get_rgba_visual(screen);
+	screen = gtk_widget_get_screen(GTK_WIDGET(toplevel));
+	visual = gdk_screen_get_rgba_visual(screen);
 	gtk_widget_set_visual(GTK_WIDGET(toplevel), visual);
 }
 
@@ -700,11 +703,6 @@ gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 		applet->popped = FALSE;
 		gpm_applet_update_tooltip (applet);
 		return TRUE;
-	}
-
-	/* don't show the popup if brightness is unavailable */
-	if (applet->level == -1) {
-		return FALSE;
 	}
 
 	/* otherwise pop */
@@ -899,7 +897,7 @@ brightness_changed_cb (DBusGProxy          *proxy,
 		       guint	            brightness,
 		       GpmBrightnessApplet *applet)
 {
-	g_debug ("BrightnessChanged detected: %i\n", brightness);
+	g_debug ("BrightnessChanged detected: %u\n", brightness);
 	applet->level = brightness;
 }
 

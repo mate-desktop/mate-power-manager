@@ -158,7 +158,7 @@ gpm_backlight_set_brightness (GpmBacklight *backlight, guint percentage, GError 
 	}
 	/* we emit a signal for the brightness applet */
 	if (ret && hw_changed) {
-		g_debug ("emitting brightness-changed : %i", percentage);
+		g_debug ("emitting brightness-changed : %u", percentage);
 		g_signal_emit (backlight, signals [BRIGHTNESS_CHANGED], 0, percentage);
 	}
 	return ret;
@@ -298,7 +298,7 @@ gpm_backlight_brightness_evaluate_and_set (GpmBacklight *backlight, gboolean int
 		if (on_battery && battery_reduce) {
 			value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_BRIGHTNESS_DIM_BATT);
 			if (value > 100) {
-				g_warning ("cannot use battery brightness value %i, correcting to 50", value);
+				g_warning ("cannot use battery brightness value %u, correcting to 50", value);
 				value = 50;
 			}
 			scale = (100 - value) / 100.0f;
@@ -317,7 +317,7 @@ gpm_backlight_brightness_evaluate_and_set (GpmBacklight *backlight, gboolean int
 	if (enable_action && backlight->priv->system_is_idle) {
 		value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_IDLE_BRIGHTNESS);
 		if (value > 100) {
-			g_warning ("cannot use idle brightness value %i, correcting to 50", value);
+			g_warning ("cannot use idle brightness value %u, correcting to 50", value);
 			value = 50;
 		}
 		scale = value / 100.0f;
@@ -348,7 +348,7 @@ gpm_backlight_brightness_evaluate_and_set (GpmBacklight *backlight, gboolean int
 	ret = gpm_brightness_set (backlight->priv->brightness, value, &hw_changed);
 	/* we emit a signal for the brightness applet */
 	if (ret && hw_changed) {
-		g_debug ("emitting brightness-changed : %i", value);
+		g_debug ("emitting brightness-changed : %u", value);
 		g_signal_emit (backlight, signals [BRIGHTNESS_CHANGED], 0, value);
 	}
 	return TRUE;
@@ -437,14 +437,14 @@ gpm_backlight_button_pressed_cb (GpmButton *button, const gchar *type, GpmBackli
 			/* if using AC power supply, save the new brightness settings */
 			g_object_get (backlight->priv->client, "on-battery", &on_battery, NULL);
 			if (!on_battery) {
-				g_debug ("saving brightness for ac supply: %i", percentage);
+				g_debug ("saving brightness for ac supply: %u", percentage);
 				g_settings_set_double (backlight->priv->settings, GPM_SETTINGS_BRIGHTNESS_AC,
 						       percentage*1.0);
 			}
 		}
 		/* we emit a signal for the brightness applet */
 		if (ret && hw_changed) {
-			g_debug ("emitting brightness-changed : %i", percentage);
+			g_debug ("emitting brightness-changed : %u", percentage);
 			g_signal_emit (backlight, signals [BRIGHTNESS_CHANGED], 0, percentage);
 		}
 	} else if (g_strcmp0 (type, GPM_BUTTON_BRIGHT_DOWN) == 0) {
@@ -463,14 +463,14 @@ gpm_backlight_button_pressed_cb (GpmButton *button, const gchar *type, GpmBackli
 			/* if using AC power supply, save the new brightness settings */
 			g_object_get (backlight->priv->client, "on-battery", &on_battery, NULL);
 			if (!on_battery) {
-				g_debug ("saving brightness for ac supply: %i", percentage);
+				g_debug ("saving brightness for ac supply: %u", percentage);
 				g_settings_set_double (backlight->priv->settings, GPM_SETTINGS_BRIGHTNESS_AC,
 						       percentage*1.0);
 			}
 		}
 		/* we emit a signal for the brightness applet */
 		if (ret && hw_changed) {
-			g_debug ("emitting brightness-changed : %i", percentage);
+			g_debug ("emitting brightness-changed : %u", percentage);
 			g_signal_emit (backlight, signals [BRIGHTNESS_CHANGED], 0, percentage);
 		}
 	} else if (g_strcmp0 (type, GPM_BUTTON_LID_OPEN) == 0) {
@@ -512,7 +512,7 @@ gpm_backlight_notify_system_idle_changed (GpmBacklight *backlight, gboolean is_i
 		if (elapsed < 10) {
 			/* double the event time */
 			backlight->priv->idle_dim_timeout *= 2.0;
-			g_debug ("increasing idle dim time to %is", backlight->priv->idle_dim_timeout);
+			g_debug ("increasing idle dim time to %us", backlight->priv->idle_dim_timeout);
 			gpm_idle_set_timeout_dim (backlight->priv->idle, backlight->priv->idle_dim_timeout);
 		}
 
@@ -523,7 +523,7 @@ gpm_backlight_notify_system_idle_changed (GpmBacklight *backlight, gboolean is_i
 			backlight->priv->idle_dim_timeout =
 				g_settings_get_int (backlight->priv->settings,
 					   GPM_SETTINGS_IDLE_DIM_TIME);
-			g_debug ("resetting idle dim time to %is", backlight->priv->idle_dim_timeout);
+			g_debug ("resetting idle dim time to %us", backlight->priv->idle_dim_timeout);
 			gpm_idle_set_timeout_dim (backlight->priv->idle, backlight->priv->idle_dim_timeout);
 		}
 	} else {
@@ -606,7 +606,7 @@ idle_changed_cb (GpmIdle *idle, GpmIdleMode mode, GpmBacklight *backlight)
 
 		/* check if method is valid */
 		if (dpms_mode == GPM_DPMS_MODE_UNKNOWN || dpms_mode == GPM_DPMS_MODE_ON) {
-			g_warning ("BACKLIGHT method %i unknown. Using OFF.", dpms_mode);
+			g_warning ("BACKLIGHT method %u unknown. Using OFF.", dpms_mode);
 			dpms_mode = GPM_DPMS_MODE_OFF;
 		}
 
@@ -635,7 +635,7 @@ brightness_changed_cb (GpmBrightness *brightness, guint percentage, GpmBacklight
 	backlight->priv->master_percentage = percentage;
 
 	/* we emit a signal for the brightness applet */
-	g_debug ("emitting brightness-changed : %i", percentage);
+	g_debug ("emitting brightness-changed : %u", percentage);
 	g_signal_emit (backlight, signals [BRIGHTNESS_CHANGED], 0, percentage);
 }
 
