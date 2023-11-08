@@ -33,7 +33,11 @@
 #include <X11/Xlib.h>
 #include <X11/extensions/Xrandr.h>
 #include <gdk/gdkx.h>
+#include <gio/gio.h>
 #include <gtk/gtk.h>
+#ifdef WITH_UDEV
+#include <gudev/gudev.h>
+#endif /* WITH_UDEV */
 #include <string.h>
 #include <sys/time.h>
 #include <sys/types.h>
@@ -65,6 +69,11 @@ struct GpmBrightnessPrivate
 	GPtrArray		*resources;
 	gint			 extension_levels;
 	gint			 extension_current;
+#ifdef WITH_UDEV
+	GDBusProxy		*logind_proxy;
+	GUdevClient		*udev;
+	GUdevDevice		*udev_device;
+#endif /* WITH_UDEV */
 };
 
 enum {
@@ -83,6 +92,371 @@ G_DEFINE_TYPE_WITH_PRIVATE (GpmBrightness, gpm_brightness, G_TYPE_OBJECT)
 
 static guint signals [LAST_SIGNAL] = { 0 };
 static gpointer gpm_brightness_object = NULL;
+
+/**
+ * gpm_brightness_get_step:
+ * @levels: The number of levels supported
+ * Return value: the amount of hardware steps to do on each increment or decrement
+ **/
+static guint
+gpm_brightness_get_step (guint levels)
+{
+	/* macbook pro has a bazzillion brightness levels, do in 5% steps */
+	if (levels > 20)
+		return levels / 20;
+	return 1;
+}
+
+#ifdef WITH_UDEV
+/**
+ * gpm_brightness_udev_get_abs:
+ * @brightness: The brightness class instance
+ * @max: Output parameter set to the maximum brightness value
+ * @cur: Output parameter set to the current brightness value
+ * Return value: %TRUE if the values are valid, %FALSE otherwise
+ **/
+static gboolean
+gpm_brightness_udev_get_abs (GpmBrightness *brightness, gint *max, gint *cur)
+{
+	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
+
+	if (brightness->priv->udev_device == NULL)
+		return FALSE;
+
+	*max = g_udev_device_get_sysfs_attr_as_int (brightness->priv->udev_device,
+						    "max_brightness");
+	*cur = g_udev_device_get_sysfs_attr_as_int_uncached (brightness->priv->udev_device,
+							     "brightness");
+
+	if (*max <= 0 || *cur < 0 || *cur > *max)
+		return FALSE;
+
+	return TRUE;
+}
+
+/**
+ * gpm_brightness_udev_get_percentage:
+ * @brightness: The brightness class instance
+ *
+ * Reads the absolute brightness values from the underlying device, converts
+ * them to a percentage, and stores the value for the caller to retrieve.
+ **/
+static gboolean
+gpm_brightness_udev_get_percentage (GpmBrightness *brightness)
+{
+	gint max, cur;
+
+	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
+
+	if (gpm_brightness_udev_get_abs (brightness, &max, &cur) == FALSE)
+		return FALSE;
+
+	g_debug ("hard value=%i, max=%i", cur, max);
+	brightness->priv->shared_value = egg_discrete_to_percent (cur, max+1);
+	g_debug ("percentage %i", brightness->priv->shared_value);
+
+	return TRUE;
+}
+
+/**
+ * gpm_brightness_udev_dbus_call:
+ * @brightness: The brightness class instance
+ * @value: The absolute value to set the brightness to
+ * Return value: %TRUE if the value was set successfully, %FALSE otherwise
+ **/
+static gboolean
+gpm_brightness_udev_dbus_call (GpmBrightness *brightness, guint value)
+{
+	GVariant *dbus_parameters, *dbus_ret;
+	GError *error = NULL;
+
+	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
+
+	if (brightness->priv->logind_proxy == NULL)
+		return FALSE;
+
+	/* need device to send name */
+	if (brightness->priv->udev_device == NULL)
+		return FALSE;
+
+	dbus_parameters = g_variant_new ("(ssu)", "backlight",
+					 g_udev_device_get_name (brightness->priv->udev_device),
+					 value);
+
+	dbus_ret = g_dbus_proxy_call_sync (brightness->priv->logind_proxy, "SetBrightness",
+					   dbus_parameters, G_DBUS_CALL_FLAGS_NONE, -1, NULL,
+					   &error);
+	if (error != NULL) {
+		if (!g_error_matches (error, G_DBUS_ERROR, G_DBUS_ERROR_UNKNOWN_METHOD))
+			g_warning ("Unable to set brightness using D-Bus call - %s", error->message);
+
+		g_error_free(error);
+		return FALSE;
+	}
+
+	g_variant_unref (dbus_ret);
+
+	brightness->priv->hw_changed = TRUE;
+	return TRUE;
+}
+
+/**
+ * gpm_brightness_udev_down:
+ * @brightness: The brightness class instance
+ * Return value: %TRUE if the brightness was adjusted, %FALSE otherwise
+ **/
+static gboolean
+gpm_brightness_udev_down (GpmBrightness *brightness)
+{
+	gint max, cur;
+	guint step;
+
+	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
+
+	if (gpm_brightness_udev_get_abs (brightness, &max, &cur) == FALSE)
+		return FALSE;
+
+	g_debug ("hard value=%i, max=%i", cur, max);
+
+	if (cur == 0) {
+		g_debug ("already min");
+		return TRUE;
+	}
+
+	step = gpm_brightness_get_step (max+1);
+	if (cur < step) {
+		cur = 0;
+	} else {
+		cur -= step;
+	}
+
+	return gpm_brightness_udev_dbus_call (brightness, cur);
+}
+
+/**
+ * gpm_brightness_udev_up:
+ * @brightness: The brightness class instance
+ * Return value: %TRUE if the brightness was adjusted, %FALSE otherwise
+ **/
+static gboolean
+gpm_brightness_udev_up (GpmBrightness *brightness)
+{
+	gint max, cur;
+
+	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
+
+	if (gpm_brightness_udev_get_abs (brightness, &max, &cur) == FALSE)
+		return FALSE;
+
+	g_debug ("hard value=%i, max=%i", cur, max);
+
+	if (cur == max) {
+		g_debug ("already max");
+		return TRUE;
+	}
+
+	cur += gpm_brightness_get_step (max+1);
+	if (cur > max) {
+		g_debug ("truncating to %i", max);
+		cur = max;
+	}
+
+	return gpm_brightness_udev_dbus_call (brightness, cur);
+}
+
+/**
+ * gpm_brightness_udev_set:
+ * @brightness: The brightness class instance
+ * Return value: %TRUE if the brightness was adjusted, %FALSE otherwise
+ **/
+static gboolean
+gpm_brightness_udev_set (GpmBrightness *brightness)
+{
+	gboolean ret = FALSE;
+	gint max, cur;
+	gint shared_value_abs;
+	guint step;
+	gint i;
+
+	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
+
+	if (gpm_brightness_udev_get_abs (brightness, &max, &cur) == FALSE)
+		return FALSE;
+
+	shared_value_abs = egg_discrete_from_percent (brightness->priv->shared_value, max+1);
+	if (shared_value_abs > max)
+		shared_value_abs = max;
+	else if (shared_value_abs < 0)
+		shared_value_abs = 0;
+
+	if (cur == shared_value_abs) {
+		g_debug ("already set %i", cur);
+		return TRUE;
+	}
+
+	if (cur < shared_value_abs) {
+		step = gpm_brightness_get_step (shared_value_abs - cur);
+		g_debug ("using step of %i", step);
+
+		/* going up */
+		for (i=cur; i<=shared_value_abs; i+=step) {
+			if (gpm_brightness_udev_dbus_call (brightness, i) == FALSE)
+				break;
+			ret = TRUE;
+			g_usleep (1000 * GPM_BRIGHTNESS_DIM_INTERVAL);
+		}
+	} else {
+		step = gpm_brightness_get_step (cur - shared_value_abs);
+		g_debug ("using step of %i", step);
+
+		/* going down */
+		for (i=cur; i>=shared_value_abs; i-=step) {
+			if (gpm_brightness_udev_dbus_call (brightness, i) == FALSE)
+				break;
+			ret = TRUE;
+			g_usleep (1000 * GPM_BRIGHTNESS_DIM_INTERVAL);
+		}
+	}
+	return ret;
+}
+
+/**
+ * gpm_brightness_udev_probe:
+ * @brightness: The brightness class instance
+ * Return value: %TRUE if a usable backlight device was found, %FALSE otherwise
+ **/
+static gboolean
+gpm_brightness_udev_probe (GpmBrightness *brightness)
+{
+	gboolean ret = FALSE;
+	GList *devices = NULL;
+	GList *i;
+	const gchar *i_type;
+	gpointer best_device = NULL;
+
+	/* remove existing device reference if we have one */
+	g_clear_object (&brightness->priv->udev_device);
+
+	devices = g_udev_client_query_by_subsystem (brightness->priv->udev, "backlight");
+	if (devices == NULL)
+		return FALSE;
+
+	for (i=devices; i != NULL; i=i->next) {
+		i_type = g_udev_device_get_sysfs_attr (i->data, "type");
+		if (g_strcmp0 (i_type, "firmware")) {
+			/* always prefer firmware devices - when we find one, use it */
+			best_device = i->data;
+			break;
+		} else if (g_strcmp0 (i_type, "platform")) {
+			/* first choice fallback, so just replace the candidate */
+			best_device = i->data;
+		} else if (g_strcmp0 (i_type, "raw")) {
+			/* second choice fallback - only replace if we don't have anything */
+			if (best_device == NULL)
+				best_device = i->data;
+		}
+	}
+
+	if (best_device != NULL) {
+		brightness->priv->udev_device = G_UDEV_DEVICE (g_object_ref (best_device));
+		ret = TRUE;
+	}
+
+	g_list_free_full (g_steal_pointer (&devices), g_object_unref);
+
+	return ret;
+}
+
+/**
+ * gpm_brightness_udev_on_uevent:
+ * @udev: The udev client
+ * @action: The action being reported (add, remove, etc.)
+ * @udev_device: The affected udev device
+ * @user_data: The backlight class instance
+ *
+ * Handles a udev event for the backlight subsystem and reprobes or invalidates
+ * the cache as needed.
+ **/
+static void
+gpm_brightness_udev_on_uevent (GUdevClient *udev, const gchar *action, GUdevDevice *udev_device, gpointer user_data)
+{
+	GpmBrightness *brightness = GPM_BRIGHTNESS (user_data);
+
+	g_debug ("udev event received for backlight device %s",
+		 g_udev_device_get_name (udev_device));
+
+	if (g_strcmp0 (action, "add") == 0) {
+		/* may have a better device now */
+		g_debug ("backlight device added - running probe");
+		gpm_brightness_udev_probe (brightness);
+		return;
+	}
+
+	if (g_strcmp0 (g_udev_device_get_sysfs_path (brightness->priv->udev_device),
+		       g_udev_device_get_sysfs_path (udev_device)) != 0) {
+		/* not relevant to us */
+		return;
+	}
+
+	if (g_strcmp0 (action, "remove") == 0) {
+		/* device removed from under us, so search for a new one */
+		g_debug ("backlight device removed - running probe");
+		gpm_brightness_udev_probe (brightness);
+	} else if (g_strcmp0 (action, "change") == 0) {
+		/* updated value of existing device, so untrust cache */
+		g_debug ("backlight device changed - expiring cache");
+		brightness->priv->cache_trusted = FALSE;
+	}
+}
+
+/**
+ * gpm_brightness_udev_finalize:
+ * @brightness: The backlight class instance
+ **/
+static void
+gpm_brightness_udev_finalize (GpmBrightness *brightness)
+{
+	g_clear_object (&brightness->priv->udev_device);
+	g_clear_object (&brightness->priv->udev);
+	g_clear_object (&brightness->priv->logind_proxy);
+}
+
+/**
+ * gpm_brightness_udev_init:
+ * @brightness: The backlight class instance
+ * Return value: %TRUE if we created a logind D-Bus proxy and set up udev, %FALSE otherwise
+ **/
+static gboolean
+gpm_brightness_udev_init (GpmBrightness *brightness)
+{
+	GError *error = NULL;
+	const gchar *const udev_subsystems[] = {"backlight", NULL};
+
+	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
+
+	brightness->priv->logind_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+									G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
+									NULL,
+									"org.freedesktop.login1",
+									"/org/freedesktop/login1/session/auto",
+									"org.freedesktop.login1.Session",
+									NULL,
+									&error);
+	if (error != NULL) {
+		g_warning ("Error connecting to D-Bus - %s", error->message);
+		g_error_free (error);
+		return FALSE;
+	}
+
+	brightness->priv->udev = g_udev_client_new (udev_subsystems);
+	g_signal_connect_object (brightness->priv->udev, "uevent",
+				 G_CALLBACK (gpm_brightness_udev_on_uevent),
+				 brightness, 0);
+
+	gpm_brightness_udev_probe (brightness);
+	return TRUE;
+}
+#endif /* WITH_UDEV */
 
 /**
  * gpm_brightness_helper_strtoint:
@@ -170,20 +544,6 @@ gpm_brightness_helper_set_value (const gchar *argument, gint value)
 out:
 	g_free (command);
 	return ret;
-}
-
-/**
- * gpm_brightness_get_step:
- * @levels: The number of levels supported
- * Return value: the amount of hardware steps to do on each increment or decrement
- **/
-static guint
-gpm_brightness_get_step (guint levels)
-{
-	/* macbook pro has a bazzillion brightness levels, do in 5% steps */
-	if (levels > 20)
-		return levels / 20;
-	return 1;
 }
 
 /**
@@ -596,6 +956,10 @@ gpm_brightness_set (GpmBrightness *brightness, guint percentage, gboolean *hw_ch
 	/* reset to not-changed */
 	brightness->priv->hw_changed = FALSE;
 	ret = gpm_brightness_foreach_screen (brightness, ACTION_BACKLIGHT_SET);
+#ifdef WITH_UDEV
+	if (!ret)
+		ret = gpm_brightness_udev_set (brightness);
+#endif /* WITH_UDEV */
 
 	/* legacy fallback */
 	if (!ret) {
@@ -643,6 +1007,10 @@ gpm_brightness_get (GpmBrightness *brightness, guint *percentage)
 
 	/* get the brightness from hardware -- slow */
 	ret = gpm_brightness_foreach_screen (brightness, ACTION_BACKLIGHT_GET);
+#ifdef WITH_UDEV
+	if (!ret)
+		ret = gpm_brightness_udev_get_percentage (brightness);
+#endif /* WITH_UDEV */
 	percentage_local = brightness->priv->shared_value;
 
 	/* legacy fallback */
@@ -690,6 +1058,10 @@ gpm_brightness_up (GpmBrightness *brightness, gboolean *hw_changed)
 	/* reset to not-changed */
 	brightness->priv->hw_changed = FALSE;
 	ret = gpm_brightness_foreach_screen (brightness, ACTION_BACKLIGHT_INC);
+#ifdef WITH_UDEV
+	if (!ret)
+		ret = gpm_brightness_udev_up (brightness);
+#endif /* WITH_UDEV */
 
 	/* did the hardware have to be modified? */
 	if (ret && hw_changed != NULL)
@@ -741,6 +1113,10 @@ gpm_brightness_down (GpmBrightness *brightness, gboolean *hw_changed)
 	/* reset to not-changed */
 	brightness->priv->hw_changed = FALSE;
 	ret = gpm_brightness_foreach_screen (brightness, ACTION_BACKLIGHT_DEC);
+#ifdef WITH_UDEV
+	if (!ret)
+		ret = gpm_brightness_udev_down (brightness);
+#endif /* WITH_UDEV */
 
 	/* did the hardware have to be modified? */
 	if (ret && hw_changed != NULL)
@@ -871,6 +1247,12 @@ gpm_brightness_has_hw (GpmBrightness *brightness)
 	if (brightness->priv->has_extension)
 		return TRUE;
 
+#ifdef WITH_UDEV
+	/* check for udev device */
+	if (brightness->priv->udev_device != NULL)
+		return TRUE;
+#endif /* WITH_UDEV */
+
 	/* fallback to legacy access */
 	if (brightness->priv->extension_levels < 0)
 		brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
@@ -889,6 +1271,9 @@ gpm_brightness_finalize (GObject *object)
 	g_return_if_fail (object != NULL);
 	g_return_if_fail (GPM_IS_BRIGHTNESS (object));
 	brightness = GPM_BRIGHTNESS (object);
+#ifdef WITH_UDEV
+	gpm_brightness_udev_finalize (brightness);
+#endif /* WITH_UDEV */
 	g_ptr_array_unref (brightness->priv->resources);
 	gdk_window_remove_filter (brightness->priv->root_window,
 				  gpm_brightness_filter_xevents, brightness);
@@ -937,6 +1322,11 @@ gpm_brightness_init (GpmBrightness *brightness)
 	brightness->priv->has_extension = gpm_brightness_setup_display (brightness);
 	if (brightness->priv->has_extension == FALSE)
 		g_debug ("no XRANDR extension");
+
+#ifdef WITH_UDEV
+	if (gpm_brightness_udev_init (brightness) == FALSE)
+		g_debug ("can't configure udev support");
+#endif /* WITH_UDEV */
 
 	screen = gdk_screen_get_default ();
 	brightness->priv->root_window = gdk_screen_get_root_window (screen);
