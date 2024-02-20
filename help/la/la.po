@@ -1,14 +1,16 @@
+# 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Vendelín Slezák <klaykap@yandex.com>, 2018
+# Roger Herikstad, 2023
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"POT-Creation-Date: 2019-03-20 16:48+0100\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-10-04 15:52+0000\n"
-"Last-Translator: Vendelín Slezák <klaykap@yandex.com>, 2018\n"
-"Language-Team: Latin (https://www.transifex.com/mate/teams/13566/la/)\n"
+"Last-Translator: Roger Herikstad, 2023\n"
+"Language-Team: Latin (https://app.transifex.com/mate/teams/13566/la/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +37,7 @@ msgstr ""
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
-msgid "<year>2015</year> <holder>MATE Documentation Team</holder>"
+msgid "<year>2015-2021</year> <holder>MATE Documentation Team</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
@@ -126,7 +128,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:143
 msgid "Usage"
-msgstr ""
+msgstr "Usus"
 
 #. (itstool) path: section/para
 #: C/index.docbook:144
@@ -144,8 +146,8 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:152
 msgid ""
-"Type <command>mate-power-manager --verbose --no-daemon</command>, then press"
-" <keycap>Return</keycap>:"
+"Type <command>G_MESSAGES_DEBUG=PowerManager mate-power-manager --no-"
+"daemon</command>, then press <keycap>Return</keycap>:"
 msgstr ""
 
 #. (itstool) path: section/title
@@ -594,9 +596,10 @@ msgid ""
 "To make this clearer, the sliders in <command>mate-power-"
 "preferences</command> are set to start at the value of the session-timeout +"
 " 1 minute, as we cannot logically trigger before the session is marked as "
-"idle. If you adjust the value of the 'session idle' timeout in <command"
-">mate-screensaver-preferences</command> then the start of the sliders in "
-"<command>mate-power-preferences</command> will change accordingly."
+"idle. If you adjust the value of the 'session idle' timeout in "
+"<command>mate-screensaver-preferences</command> then the start of the "
+"sliders in <command>mate-power-preferences</command> will change "
+"accordingly."
 msgstr ""
 
 #. (itstool) path: section/title
@@ -919,50 +922,16 @@ msgstr ""
 #: C/index.docbook:747
 msgid ""
 "And check for the process <command>hald-addon-acpi</command>. If it is not "
-"being run, then please make sure that HAL is being run with the <command"
-">--retain-privileges</command> option in the <command>haldaemon</command> "
-"initscript. An alternative to this is to use acpid, rather than the kernel "
-"proc file."
-msgstr ""
-
-#. (itstool) path: section/title
-#: C/index.docbook:759
-msgid "About"
-msgstr "De Hac Re"
-
-#. (itstool) path: section/para
-#: C/index.docbook:760
-msgid ""
-"MATE Power Manager was written by Mate Development. To find more information"
-" about MATE Power Manager, please visit the <ulink url=\"https://github.com"
-"/mate-desktop/mate-power-manager\" type=\"http\"> <application>MATE Power "
-"Manager</application> web page</ulink>. Origin power-manager was written by "
-"Richard Hughes <email>richard@hughsie.com</email>."
-msgstr ""
-
-#. (itstool) path: section/para
-#: C/index.docbook:767
-msgid ""
-"To report a bug or make a suggestion regarding this application or this "
-"manual, follow the directions at the <ulink url=\"https://github.com/mate-"
-"desktop/mate-power-manager\" type=\"http\"> <application>MATE Power "
-"Manager</application> Bug Page</ulink>."
-msgstr ""
-
-#. (itstool) path: section/para
-#: C/index.docbook:773
-msgid ""
-"This program is distributed under the terms of the GNU General Public "
-"license as published by the Free Software Foundation; either version 2 of "
-"the License, or (at your option) any later version. A copy of this license "
-"can be found at this <ulink type=\"help\" url=\"help:gpl\">link</ulink>, or "
-"in the file COPYING included with the source code of this program."
+"being run, then please make sure that HAL is being run with the "
+"<command>--retain-privileges</command> option in the "
+"<command>haldaemon</command> initscript. An alternative to this is to use "
+"acpid, rather than the kernel proc file."
 msgstr ""
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
 msgid "link"
-msgstr ""
+msgstr "vinculum"
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:2
@@ -1031,4 +1000,35 @@ msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<_:orderedlist-1/>"
+msgstr ""
+
+#. (itstool) path: formalpara/title
+#: C/legal.xml:77
+msgid "Software Licence"
+msgstr ""
+
+#. (itstool) path: formalpara/para
+#: C/legal.xml:78
+msgid ""
+"MATE Power Manager is free software; you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by the "
+"Free Software Foundation; either version 2 of the License, or (at your "
+"option) any later version."
+msgstr ""
+
+#. (itstool) path: formalpara/para
+#: C/legal.xml:83
+msgid ""
+"MATE Power Manager is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
+"or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
+"more details."
+msgstr ""
+
+#. (itstool) path: formalpara/para
+#: C/legal.xml:88
+msgid ""
+"You should have received a copy of the GNU General Public License along with"
+" MATE Power Manager; if not, write to the Free Software Foundation, Inc., 51"
+" Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""

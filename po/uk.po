@@ -4,12 +4,11 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# zubr139, 2018
 # Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Микола Ткач <chistomov@gmail.com>, 2021
-# Taras Panchenko <top39@ukr.net>, 2021
 # Sergiy <sergiy@gorichenko.com>, 2022
+# Anton Gladky <gladk@debian.org>, 2022
 # 
 msgid ""
 msgstr ""
@@ -17,8 +16,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Sergiy <sergiy@gorichenko.com>, 2022\n"
-"Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
+"Last-Translator: Anton Gladky <gladk@debian.org>, 2022\n"
+"Language-Team: Ukrainian (https://app.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -87,7 +86,7 @@ msgstr ""
 
 #: applets/brightness/brightness-applet.c:840
 msgid "About Power Manager Brightness Applet"
-msgstr "Про аплет яскравости Power Manager"
+msgstr "Про аплет керівника живлення для керування яскравістю"
 
 #: applets/brightness/brightness-applet.c:842
 msgid ""
@@ -103,7 +102,8 @@ msgid "translator-credits"
 msgstr ""
 "Yarema aka Knedlyk <yupadmin@gmail.com>,\n"
 "Микола Ткач <Stuartlittle1970@gmail.com>,\n"
-"Oleh Tsyupka <myr4yk@gmail.com>"
+"Oleh Tsyupka <myr4yk@gmail.com>\n"
+"Anton Gladky <gladk@debian.org>"
 
 #: applets/brightness/brightness-applet.c:1080
 #: applets/inhibit/inhibit-applet.c:500
@@ -146,7 +146,7 @@ msgstr "Ручне стримання"
 
 #: applets/inhibit/inhibit-applet.c:308
 msgid "About Power Manager Inhibit Applet"
-msgstr "Про аплет Power Manager Inhibit"
+msgstr "Аплет стримування зберігання живлення"
 
 #: applets/inhibit/inhibit-applet.c:310
 msgid ""
@@ -213,7 +213,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:46
 msgid "UPS critical low action"
-msgstr "дія при критично низькому заряді UPS"
+msgstr "Дія при критичній розрядці акумулятора"
 
 #: data/org.mate.power-manager.gschema.xml.in:47
 msgid "The action to take when the UPS is critically low."
@@ -453,7 +453,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:156
 msgid "Check CPU load before sleeping"
-msgstr "Перед сном перевіряти завантаження ЦП"
+msgstr "Перед засипанням перевіряти завантаження CPU"
 
 #: data/org.mate.power-manager.gschema.xml.in:157
 msgid "If the CPU load should be checked before doing the idle action."
@@ -565,7 +565,7 @@ msgstr "Чи сповіщати користувача при від'єднан�
 
 #: data/org.mate.power-manager.gschema.xml.in:206
 msgid "Notify when fully charged"
-msgstr "Сповіщати про повне перезарядження акумулятора"
+msgstr "Сповіщати про повний заряд акумулятора"
 
 #: data/org.mate.power-manager.gschema.xml.in:207
 msgid ""
@@ -615,20 +615,20 @@ msgstr "Повідомляти про низьку місткість батар
 
 #: data/org.mate.power-manager.gschema.xml.in:231
 msgid "Whether we should show the history data points"
-msgstr "Чи показувати пункти історії даних"
+msgstr "Чи показувати історичні дані"
 
 #: data/org.mate.power-manager.gschema.xml.in:232
 msgid ""
 "Whether we should show the history data points in the statistics window."
-msgstr "Чи показувати пункти історії даних у вікні статистики."
+msgstr "Чи показувати пункти історичні дані у вікні статистики."
 
 #: data/org.mate.power-manager.gschema.xml.in:236
 msgid "Whether we should smooth the history data"
-msgstr "Чи згладжувати історію даних"
+msgstr "Чи згладжувати історичні дані"
 
 #: data/org.mate.power-manager.gschema.xml.in:237
 msgid "Whether we should smooth the history data in the graph."
-msgstr "Чи згладжувати історію даних на графіку."
+msgstr "Чи згладжувати історичні дані на графіку."
 
 #: data/org.mate.power-manager.gschema.xml.in:241
 msgid "The default graph type to show for history"
@@ -640,12 +640,12 @@ msgstr "Типовий тип графіку у вікні історії"
 
 #: data/org.mate.power-manager.gschema.xml.in:246
 msgid "The maximum time displayed for history"
-msgstr "Щонайбільший час що показується для історії"
+msgstr "Максимальний час що показується для історії"
 
 #: data/org.mate.power-manager.gschema.xml.in:247
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
-msgstr "Щонайбільша тривалість часу по осі X графіку історії."
+msgstr "Максимальна тривалість часу по осі X графіку історії."
 
 #: data/org.mate.power-manager.gschema.xml.in:251
 msgid "Whether we should show the stats data points"
@@ -845,15 +845,15 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:336
 msgid "If sounds should be used"
-msgstr "Чи використовувати динамік PC"
+msgstr "Чи використовувати звуки"
 
 #: data/org.mate.power-manager.gschema.xml.in:337
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
 msgstr ""
-"Чи використовувати динамік PC для сигналізації низького рівню живлення, або "
-"коли запити стримування зупиняють заплановану дію."
+"Чи використовувати звуки для сигналізації низького рівню живлення, або коли "
+"запити стримування зупиняють заплановану дію."
 
 #: data/org.mate.power-manager.gschema.xml.in:341
 msgid ""
@@ -918,7 +918,7 @@ msgstr "Показувати відлік"
 
 #: data/gpm-statistics.ui:325
 msgid "History"
-msgstr "Дієпис"
+msgstr "Історія"
 
 #: data/gpm-statistics.ui:486
 msgid "Statistics"
@@ -930,7 +930,7 @@ msgstr "Параметри керування живленням"
 
 #: data/gpm-prefs.ui:58
 msgid "Make Default"
-msgstr "Усталено"
+msgstr "Зробити типовим"
 
 #: data/gpm-prefs.ui:71
 msgid "_Close"
@@ -963,7 +963,7 @@ msgstr "Дисплей з_гасає під час простою"
 
 #: data/gpm-prefs.ui:344 data/gpm-prefs.ui:629 data/gpm-prefs.ui:890
 msgid "Display"
-msgstr "Зовнішній вигляд"
+msgstr "Дісплей"
 
 #: data/gpm-prefs.ui:363
 msgid "On AC Power"
@@ -975,7 +975,7 @@ msgstr "При низькому заряді _акумулятора:"
 
 #: data/gpm-prefs.ui:591
 msgid "_Reduce backlight brightness"
-msgstr "З_меншувати яскравість заднього підсвічення"
+msgstr "З_меншувати яскравість фонового підсвічення"
 
 #: data/gpm-prefs.ui:663
 msgid "_Reduce keyboard backlight"
@@ -987,7 +987,7 @@ msgid_plural "Keyboards"
 msgstr[0] "Набірниця"
 msgstr[1] "Набірниці"
 msgstr[2] "Набірниць"
-msgstr[3] "Набірниць"
+msgstr[3] "Клавіатури"
 
 #: data/gpm-prefs.ui:707
 msgid "On Battery Power"
@@ -1019,7 +1019,7 @@ msgstr "_Ніколи не виводити піктограму"
 
 #: data/gpm-prefs.ui:1083
 msgid "_Only display an icon when battery power is low"
-msgstr "Показувати _лише при критично низькому заряді"
+msgstr "Показувати _лише при низькому заряді"
 
 #: data/gpm-prefs.ui:1101
 msgid "Only display an icon when charging or _discharging"
@@ -1051,7 +1051,7 @@ msgstr "Отримати значення поточної яскравости"
 
 #: src/gpm-backlight-helper.c:173
 msgid "Get the number of brightness levels supported"
-msgstr "Отримати підтримувану кількість рівнів яскравости"
+msgstr "Отримати підтримувану кількість рівнів яскравості"
 
 #: src/gpm-backlight-helper.c:185
 msgid "MATE Power Manager Backlight Helper"
@@ -1071,7 +1071,7 @@ msgstr "Не вдалося отримати значення підсвічув
 
 #: src/gpm-backlight-helper.c:231
 msgid "Could not get the maximum value of the backlight"
-msgstr "Не вдалося встановити щонайбільше значення підсвічування"
+msgstr "Не вдалося встановити максимальне значення підсвічування"
 
 #: src/gpm-backlight-helper.c:248
 msgid "This program can only be used by the root user"
@@ -1194,11 +1194,11 @@ msgstr "Вивести версію встановленої програми т
 
 #: src/gpm-main.c:172
 msgid "Exit after a small delay (for debugging)"
-msgstr "Вийти після невеликої призупинки (для зневадження)"
+msgstr "Вийти після невеликої призупинки (для налагодження)"
 
 #: src/gpm-main.c:174
 msgid "Exit after the manager has loaded (for debugging)"
-msgstr "Завершити роботу після завантаження керівника (для зневадження)"
+msgstr "Завершити роботу після завантаження керівника (для налагодження)"
 
 #: src/gpm-main.c:185 src/gpm-main.c:189
 msgid "MATE Power Manager"
@@ -1206,7 +1206,7 @@ msgstr "Керування живленням MATE"
 
 #: src/gpm-manager.c:222 src/gpm-manager.c:294
 msgid "Battery is very low"
-msgstr "Заряд акумулятора критично низький"
+msgstr "Заряд акумулятора дуже низький"
 
 #: src/gpm-manager.c:274
 msgid "Power plugged in"
@@ -1303,7 +1303,7 @@ msgid_plural "Batteries Charged"
 msgstr[0] "Батарея заряджена"
 msgstr[1] "Батареї заряджені"
 msgstr[2] "Батареї заряджені"
-msgstr[3] "Батареї заряджені"
+msgstr[3] "Акумулятори заряджені"
 
 #: src/gpm-manager.c:1203
 msgid "Battery Discharging"
@@ -1361,12 +1361,12 @@ msgstr "Бездротова миша незабаром розрядиться 
 
 #: src/gpm-manager.c:1336 src/gpm-manager.c:1476
 msgid "Keyboard battery low"
-msgstr "Низький заряд акумулятора набірниці"
+msgstr "Низький заряд акумулятора клавіатури"
 
 #: src/gpm-manager.c:1339
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
-msgstr "Бездротова набірниця незабаром розрядиться (%.0f%%)"
+msgstr "Бездротова клавіатура незабаром розрядиться (%.0f%%)"
 
 #: src/gpm-manager.c:1343 src/gpm-manager.c:1485
 msgid "PDA battery low"
@@ -1388,12 +1388,12 @@ msgstr "Мобільний телефон незабаром розрядить�
 
 #: src/gpm-manager.c:1357
 msgid "Media player battery low"
-msgstr "Низький заряд акумулятора медіяпрогравача"
+msgstr "Низький заряд акумулятора медіапрогравача"
 
 #: src/gpm-manager.c:1360
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
-msgstr "Медіяпрогравач незабаром розрядиться (%.0f%%)"
+msgstr "Медіапрогравач незабаром розрядиться (%.0f%%)"
 
 #: src/gpm-manager.c:1364 src/gpm-manager.c:1514
 msgid "Tablet battery low"
@@ -1402,7 +1402,7 @@ msgstr "Низький заряд акумулятора планшета"
 #: src/gpm-manager.c:1367
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
-msgstr "Пляншет незабаром розрядиться (%.0f%%)"
+msgstr "Планшет незабаром розрядиться (%.0f%%)"
 
 #: src/gpm-manager.c:1371 src/gpm-manager.c:1523
 msgid "Attached computer battery low"
@@ -1419,7 +1419,7 @@ msgstr "Заряд акумулятора критично низький"
 
 #: src/gpm-manager.c:1425 src/gpm-manager.c:1583
 msgid "Laptop battery critically low"
-msgstr "Заряд акумулятора критично низький"
+msgstr "Заряд акумулятора ноутбука критично низький"
 
 #: src/gpm-manager.c:1434
 msgid "Plug in your AC adapter to avoid losing data."
@@ -1470,8 +1470,8 @@ msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
-"Бездротова набірниця незабаром розрядиться (%.0f%%). Цей пристрій незабаром "
-"припинить роботу, якщо не зарядити."
+"Бездротова клавіатура незабаром розрядиться (%.0f%%). Цей пристрій незабаром"
+" припинить роботу, якщо не зарядити."
 
 #: src/gpm-manager.c:1488
 #, c-format
@@ -1497,8 +1497,8 @@ msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
-"Медіяпрогравач незабаром розрядиться (%.0f%%). Цей пристрій незабаром "
-"припинить роботу, якщо не зарядити."
+"Медіапрогравач незабаром розрядиться (%.0f%%). Цей пристрій незабаром "
+"припинить роботу, якщо його не зарядити."
 
 #: src/gpm-manager.c:1517
 #, c-format
@@ -1507,7 +1507,7 @@ msgid ""
 " if not charged."
 msgstr ""
 "Планшет незабаром розрядиться (%.0f%%). Цей пристрій незабаром припинить "
-"роботу, якщо не зарядити."
+"роботу, якщо не його зарядити."
 
 #: src/gpm-manager.c:1526
 #, c-format
@@ -1516,14 +1516,14 @@ msgid ""
 "shutdown if not charged."
 msgstr ""
 "Під’єднаний комп’ютер незабаром розрядиться (%.0f%%). Пристрій незабаром "
-"вимкнеться, якщо не зарядити."
+"вимкнеться, якщо його не зарядити."
 
 #: src/gpm-manager.c:1591
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
 msgstr ""
-"Рівень заряду акумулятора нижчий критичного і комп'ютер буде <b>вимкнено</b>"
+"Рівень заряду акумулятора нижче критичного і комп'ютер буде <b>вимкнено,</b>"
 " коли акумулятор повністю розрядиться."
 
 #: src/gpm-manager.c:1597
@@ -1532,7 +1532,7 @@ msgid ""
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
 msgstr ""
-"Рівень заряду акумулятора нижчий критичного і комп'ютер буде призупинено. "
+"Рівень заряду акумулятора нижче критичного і комп'ютер буде призупинено. "
 "<br><b>НОТАТКА:</b> Для підтримання комп'ютера у стані призупинення потрібна"
 " невелика потужність."
 
@@ -1541,34 +1541,33 @@ msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr ""
-"Рівень заряду акумулятора нижчий критичного і комп'ютер буде переведено у "
+"Рівень заряду акумулятора нижче критичного і комп'ютер буде переведено у "
 "стан сну."
 
 #: src/gpm-manager.c:1609
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
-msgstr ""
-"Рівень заряду акумулятора нижчий критичного і комп'ютер буде вимкнено."
+msgstr "Рівень заряду акумулятора нижче критичного і комп'ютер буде вимкнено."
 
 #: src/gpm-manager.c:1627
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
 msgstr ""
-"Заряд UPS нижчий критичного рівню і комп'ютер буде <b>вимкнено</b>, коли UPS"
-" повністю розрядиться."
+"Заряд UPS нижче критичного рівню і комп'ютер буде <b>вимкнено</b>, коли UPS "
+"повністю розрядиться."
 
 #: src/gpm-manager.c:1633
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr ""
-"Заряд UPS нижчий критичного рівню і комп'ютер буде переведено у стан сну."
+"Заряд UPS нижче критичного рівня і комп'ютер буде переведено у стан сну."
 
 #: src/gpm-manager.c:1638
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
-msgstr "Заряд UPS нижчий критичного рівню і комп'ютер буде вимкнено."
+msgstr "Заряд UPS нижче критичного рівня і комп'ютер буде вимкнено."
 
 #: src/gpm-prefs.c:77
 msgid "MATE Power Preferences"
@@ -1592,7 +1591,7 @@ msgstr "Порожній екран"
 
 #: src/gpm-prefs-core.c:258
 msgid "Ask me"
-msgstr "Запитувати"
+msgstr "Запитати"
 
 #: src/gpm-prefs-core.c:261
 msgid "Do nothing"
@@ -1604,27 +1603,27 @@ msgstr "Ніколи"
 
 #: src/gpm-statistics.c:71
 msgid "Charge profile"
-msgstr "Профіль часу заряду"
+msgstr "Профіль заряду"
 
 #: src/gpm-statistics.c:72
 msgid "Discharge profile"
-msgstr "Профіль часу розряду"
+msgstr "Профіль розряду"
 
 #: src/gpm-statistics.c:74
 msgid "Charge accuracy"
-msgstr "Профіль точности визначення часу заряду"
+msgstr "Точність заряду"
 
 #: src/gpm-statistics.c:75
 msgid "Discharge accuracy"
-msgstr "Профіль точности визначення часу розряду"
+msgstr "Точність розряду"
 
 #: src/gpm-statistics.c:77 src/gpm-statistics.c:435
 msgid "Rate"
-msgstr "Ставк"
+msgstr "Оцінка"
 
 #: src/gpm-statistics.c:78
 msgid "Charge"
-msgstr "Заряджання"
+msgstr "Зарядка"
 
 #: src/gpm-statistics.c:79 src/gpm-statistics.c:449
 msgid "Time to full"
@@ -1740,7 +1739,7 @@ msgstr "Серійний номер"
 
 #: src/gpm-statistics.c:385
 msgid "Supply"
-msgstr "Постачальник енергії"
+msgstr "Постачання"
 
 #: src/gpm-statistics.c:388
 #, c-format
@@ -1765,7 +1764,7 @@ msgstr "Перезаряджуваний"
 
 #: src/gpm-statistics.c:415
 msgid "State"
-msgstr "Область"
+msgstr "Стан"
 
 #: src/gpm-statistics.c:419
 msgid "Energy"
@@ -1773,19 +1772,19 @@ msgstr "Енергія"
 
 #: src/gpm-statistics.c:422
 msgid "Energy when empty"
-msgstr "Енергія при спустошенні"
+msgstr "Енергія, коли порожня"
 
 #: src/gpm-statistics.c:425
 msgid "Energy when full"
-msgstr "Енергія при заповненні"
+msgstr "Енергія, коли повна"
 
 #: src/gpm-statistics.c:428
 msgid "Energy (design)"
-msgstr "Енергія (початкова)"
+msgstr "Енергія (номінальна)"
 
 #: src/gpm-statistics.c:442
 msgid "Voltage"
-msgstr "Вольтаж"
+msgstr "Напруга"
 
 #: src/gpm-statistics.c:464
 msgid "Percentage"
@@ -1793,7 +1792,7 @@ msgstr "Відсоток"
 
 #: src/gpm-statistics.c:471
 msgid "Capacity"
-msgstr "Місткість:"
+msgstr "Місткість"
 
 #: src/gpm-statistics.c:476
 msgid "Technology"
@@ -1801,7 +1800,7 @@ msgstr "Технологія"
 
 #: src/gpm-statistics.c:481
 msgid "Online"
-msgstr "Під’єднано"
+msgstr "Онлайн"
 
 #: src/gpm-statistics.c:779
 msgid "Device Information"
@@ -1809,7 +1808,7 @@ msgstr "Відомості про пристрій"
 
 #: src/gpm-statistics.c:781
 msgid "Device History"
-msgstr "Дієпис пристрою"
+msgstr "Історія пристрою"
 
 #: src/gpm-statistics.c:783
 msgid "Device Profile"
@@ -1818,17 +1817,17 @@ msgstr "Профіль пристрою"
 #: src/gpm-statistics.c:1008 src/gpm-statistics.c:1014
 #: src/gpm-statistics.c:1020 src/gpm-statistics.c:1026
 msgid "Time elapsed"
-msgstr "Середній час до закінчення"
+msgstr "Потрачену часу"
 
 #: src/gpm-statistics.c:1010
 msgid "Power"
-msgstr "Зведення у ступінь"
+msgstr "Міцність"
 
 #: src/gpm-statistics.c:1016 src/gpm-statistics.c:1066
 #: src/gpm-statistics.c:1072 src/gpm-statistics.c:1078
 #: src/gpm-statistics.c:1084
 msgid "Cell charge"
-msgstr "Заряд комірки"
+msgstr "Заряд секції"
 
 #: src/gpm-statistics.c:1022 src/gpm-statistics.c:1028
 msgid "Predicted time"
@@ -1836,15 +1835,15 @@ msgstr "Оцінковий час"
 
 #: src/gpm-statistics.c:1068 src/gpm-statistics.c:1080
 msgid "Correction factor"
-msgstr "Корекція"
+msgstr "Фактор корекції"
 
 #: src/gpm-statistics.c:1074 src/gpm-statistics.c:1086
 msgid "Prediction accuracy"
-msgstr "Точність передрікання"
+msgstr "Точність прогнозу"
 
 #: src/gpm-statistics.c:1245
 msgid "Select this device at startup"
-msgstr "Виділяти цей пристрій після запуску"
+msgstr "Обрати цей пристрій після запуску"
 
 #: src/gpm-tray-icon.c:206
 msgid "Copyright © 2011-2021 MATE developers"
@@ -1910,12 +1909,12 @@ msgstr "%s %s до повного заряду (%.1f%%)"
 #: src/gpm-upower.c:298
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
-msgstr "%s до повного розряду (%.1f%%)"
+msgstr "%s очікується до повного розряду (%.1f%%)"
 
 #: src/gpm-upower.c:304
 #, c-format
 msgid "%s waiting to charge (%.1f%%)"
-msgstr "%s до повного заряду (%.1f%%)"
+msgstr "%s очікується до повного заряду (%.1f%%)"
 
 #: src/gpm-upower.c:309
 #, c-format
@@ -2005,11 +2004,11 @@ msgstr "Останній повний заряд:"
 
 #: src/gpm-upower.c:450 src/gpm-upower.c:468
 msgid "Design charge:"
-msgstr "Плановий заряд:"
+msgstr "Номінальний заряд:"
 
 #: src/gpm-upower.c:455
 msgid "Charge rate:"
-msgstr "Відсоток заряду:"
+msgstr "Ступінь заряду:"
 
 #: src/gpm-upower.c:490
 msgid "AC adapter"
@@ -2049,7 +2048,7 @@ msgid_plural "Mice"
 msgstr[0] "Мишка"
 msgstr[1] "Мишки"
 msgstr[2] "Мишок"
-msgstr[3] "Мишок"
+msgstr[3] "Миш"
 
 #: src/gpm-upower.c:514
 msgid "PDA"
@@ -2073,7 +2072,7 @@ msgid_plural "Media players"
 msgstr[0] "Медіяпрогравач"
 msgstr[1] "Медіяпрогравачі"
 msgstr[2] "Медіяпрогравачів"
-msgstr[3] "Медіяпрогравачів"
+msgstr[3] "Медіапрогравачів"
 
 #: src/gpm-upower.c:526
 msgid "Tablet"
@@ -2109,7 +2108,7 @@ msgstr "Літій-полімеровий"
 
 #: src/gpm-upower.c:609
 msgid "Lithium Iron Phosphate"
-msgstr "Літій-фосфатовий"
+msgstr "Літій-залізофосфатовий"
 
 #: src/gpm-upower.c:613
 msgid "Lead acid"
