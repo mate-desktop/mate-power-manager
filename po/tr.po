@@ -12,7 +12,7 @@
 # tarakbumba <tarakbumba@gmail.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Mehmet, 2022
-# Sabri Ünal <libreajans@gmail.com>, 2022
+# Sabri Ünal <libreajans@gmail.com>, 2023
 # 
 msgid ""
 msgstr ""
@@ -20,8 +20,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>, 2022\n"
-"Language-Team: Turkish (https://www.transifex.com/mate/teams/13566/tr/)\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>, 2023\n"
+"Language-Team: Turkish (https://app.transifex.com/mate/teams/13566/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -316,8 +316,8 @@ msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
 msgstr ""
-"Oturum boşta iken kullanılacak dizüstü paneli parlaklığı. Sadece "
-"use_time_for_policy anahtarı doğru olarak işaretliyse geçerlidir."
+"Oturum boşta iken kullanılacak dizüstü paneli parlaklığı. Sadece use-time-"
+"for-policy anahtarı true (doğru) olarak işaretliyse geçerlidir."
 
 #: data/org.mate.power-manager.gschema.xml.in:91
 msgid "Dim the screen after a period of inactivity when on battery power"
@@ -448,8 +448,9 @@ msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
 msgstr ""
-"Zaman temelli bildirimler yapılsın. Yanlış olarak işaretlenirse, yerine "
-"yüzde değişimi kullanılır, sorunlu bir ACPI BIOS'u için yararlı olabilir."
+"Zaman temelli bildirimler yapılsın. Eğer false (yanlış) olarak "
+"işaretlenirse, yerine yüzde değişimi kullanılır, sorunlu bir ACPI BIOS'u "
+"için yararlı olabilir."
 
 #: data/org.mate.power-manager.gschema.xml.in:156
 msgid "Check CPU load before sleeping"
@@ -493,8 +494,8 @@ msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
 msgstr ""
-"Ekran kapatıldığında ekran kilitlensin. Sadece lock_use_screensaver_settings"
-" anahtarı yanlış olarak işaretliyse kullanılır."
+"Ekran kapatıldığında ekran kilitlensin. Sadece lock-use-screensaver-settings"
+" anahtarı false (yanlış) olarak işaretliyse kullanılır."
 
 #: data/org.mate.power-manager.gschema.xml.in:176
 msgid "Lock screen on suspend"
@@ -505,8 +506,8 @@ msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
 msgstr ""
-"Bilgisayar askıya almadan sonra uyandığında ekran kilitlensin. Sadece "
-"lock_use_screensaver_settings anahtarı yanlış olarak ayarlanmışsa "
+"Bilgisayar askıya almadan sonra uyandığında ekran kilitlensin. Sadece lock-"
+"use-screensaver-settings anahtarı false (yanlış) olarak ayarlanmışsa "
 "kullanılır."
 
 #: data/org.mate.power-manager.gschema.xml.in:181
@@ -518,8 +519,8 @@ msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
 msgstr ""
-"Bilgisayar uyku kipinden geri döndüğünde ekran kilitlensin. Sadece "
-"lock_use_screensaver_settings anahtarı yanlış olarak işaretliyse kullanılır."
+"Bilgisayar uyku kipinden geri döndüğünde ekran kilitlensin. Sadece lock-use-"
+"screensaver-settings anahtarı false (yanlış) olarak işaretliyse kullanılır."
 
 #: data/org.mate.power-manager.gschema.xml.in:186
 #: data/org.mate.power-manager.gschema.xml.in:191
@@ -701,8 +702,8 @@ msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
 msgstr ""
-"Pilin düşük sayılacağı yüzde. Sadece use_time_for_policy anahtarı yanlış "
-"olarak işaretliyse geçerlidir."
+"Pilin düşük sayılacağı yüzde. Sadece use-time-for-policy anahtarı false "
+"(yanlış) olarak işaretliyse geçerlidir."
 
 #: data/org.mate.power-manager.gschema.xml.in:281
 msgid "Percentage considered critical"
@@ -713,8 +714,8 @@ msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
 msgstr ""
-"Pilin tehlikeli biçimde düşük sayılacağı yüzde. Sadece use_time_for_policy "
-"anahtarı yanlış olarak işaretliyse geçerlidir."
+"Pilin tehlikeli biçimde düşük sayılacağı yüzde. Sadece use-time-for-policy "
+"anahtarı false (yanlış) olarak işaretliyse geçerlidir."
 
 #: data/org.mate.power-manager.gschema.xml.in:286
 msgid "Percentage action is taken"
@@ -725,8 +726,8 @@ msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
 msgstr ""
-"Pil bitme tehlikesi eyleminin uygulanacağı yüzde. Sadece use_time_for_policy"
-" anahtarı yanlış olarak işaretliyse geçerlidir."
+"Pil bitme tehlikesi eyleminin uygulanacağı yüzde. Sadece use-time-for-policy"
+" anahtarı false (yanlış) olarak işaretliyse geçerlidir."
 
 #: data/org.mate.power-manager.gschema.xml.in:291
 msgid "The time remaining when low"
@@ -737,8 +738,8 @@ msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
 msgstr ""
-"Pilin düşük sayılacağı kalan pil zamanı (saniye cinsinden). Sadece "
-"use_time_for_policy anahtarı doğru olarak işaretliyse geçerlidir."
+"Pilin düşük sayılacağı kalan pil zamanı (saniye cinsinden). Sadece use-time-"
+"for-policy anahtarı true (doğru) olarak işaretliyse geçerlidir."
 
 #: data/org.mate.power-manager.gschema.xml.in:296
 msgid "The time remaining when critical"
@@ -750,8 +751,8 @@ msgid ""
 " Only valid when use-time-for-policy is true."
 msgstr ""
 "Pilin tehlikeli biçimde düşük sayılacağı kalan pil zamanı (saniye "
-"cinsinden). Sadece use_time_for_policy anahtarı doğru olarak işaretliyse "
-"geçerlidir."
+"cinsinden). Sadece use-time-for-policy anahtarı true (doğru) olarak "
+"işaretliyse geçerlidir."
 
 #: data/org.mate.power-manager.gschema.xml.in:301
 msgid "The time remaining when action is taken"
@@ -763,8 +764,8 @@ msgid ""
 "Only valid when use-time-for-policy is true."
 msgstr ""
 "Pil bitme tehlikesi eyleminin uygulanacağı kalan pil zamanı (saniye "
-"cinsinden). Sadece use_time_for_policy anahtarı doğru olarak işaretliyse "
-"geçerlidir."
+"cinsinden). Sadece use-time-for-policy anahtarı true (doğru) olarak "
+"işaretliyse geçerlidir."
 
 #: data/org.mate.power-manager.gschema.xml.in:306
 msgid "Sleep timeout computer when on battery"
@@ -2046,8 +2047,8 @@ msgstr[1] "Bilgisayar"
 #: src/gpm-upower.c:534
 msgid "Gaming input"
 msgid_plural "Gaming inputs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Oyun girdisi"
+msgstr[1] "Oyun girdileri"
 
 #: src/gpm-upower.c:601
 msgid "Lithium Ion"
