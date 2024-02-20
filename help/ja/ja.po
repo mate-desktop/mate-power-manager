@@ -3,15 +3,15 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # ABE Tsunehiko, 2018
 # Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Green <usergreen@users.osdn.me>, 2024
+# Green, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-10-04 15:52+0000\n"
-"Last-Translator: Green <usergreen@users.osdn.me>, 2024\n"
-"Language-Team: Japanese (https://app.transifex.com/mate/teams/13566/ja/)\n"
+"Last-Translator: Green, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -354,7 +354,7 @@ msgid ""
 "common reason for this notification is that the current user does not have "
 "permission to suspend or hibernate the computer."
 msgstr ""
-"サスペンドの障害が発生すると、次のような警告が表示されることがあります。この警告が表示される最も一般的な理由は、現在のユーザがコンピュータをサスペンドまたはハイバネートする権限を持っていないからです。"
+"サスペンドの障害が発生すると、次のような警告が表示されることがあります。この警告が表示される最も一般的な理由は、現在のユーザーがコンピュータをサスペンドまたはハイバネーションする権限を持っていないからです。"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:266
@@ -533,7 +533,7 @@ msgid ""
 "user can select."
 msgstr ""
 "dconf "
-"ポリシーキーが書き込み可能でない場合、一部のスライダまたはオプションボックスが無効になることがあります。これによって、管理者はユーザが選択できるアクションを制限できます。"
+"ポリシーキーが書き込み可能でない場合、一部のスライダまたはオプションボックスが無効になることがあります。これによって、管理者はユーザーが選択できるアクションを制限できます。"
 
 #. (itstool) path: section/title
 #: C/index.docbook:402
@@ -631,7 +631,7 @@ msgid ""
 " low-power mode and lowering the laptop panel brightness."
 msgstr ""
 "<command>mate-screensaver</command> "
-"は、ユーザの入力を監視するセッションデーモンです。マウスが動かされなかったり、キーボードが押されなかったりすると、タイムアウトを開始します。このタイムアウトの値が"
+"は、ユーザーの入力を監視するセッションデーモンです。マウスが動かされなかったり、キーボードが押されなかったりすると、タイムアウトを開始します。このタイムアウトの値が"
 " <command>mate-screensaver-preferences</command> "
 "で設定された値に達すると、そのログインは「アイドル中のセッション」としてマークされます。この時、<application>MATE "
 "電源管理</application> "
@@ -667,9 +667,9 @@ msgid ""
 "screen, or to suspend or hibernate."
 msgstr ""
 "セッションがアイドル状態とマークされると、すぐに <application>MATE "
-"電源管理</application>は独自の「システム」タイマーを開始します。<command>MATE 電源管理</command> "
-"で設定されたタイムアウトに達して CPU "
-"負荷がアイドル状態になると、アイドルアクションが実行されます。通常は、画面をオフにするか、サスペンドまたはハイバネートにします。"
+"電源管理</application>は独自の「システム」タイマーを開始します。<command>MATE-Power-"
+"Preferences</command> で設定されたタイムアウトに達して CPU "
+"負荷がアイドル状態になると、アイドルアクションが実行されます。通常は、画面をオフにするか、サスペンドまたはハイバネーションにします。"
 
 #. (itstool) path: section/para
 #: C/index.docbook:479
@@ -720,9 +720,9 @@ msgid ""
 "screen\" in mate-screensaver when the lid is closed, or the system performs "
 "a suspend or hibernate action."
 msgstr ""
-"既定では、<application>MATE "
-"電源管理</application>は単純なロック方式をサポートしています。これは、ふたが閉じているとき、またはシステムがサスペンドまたはハイバネートの動作を実行しているときに、MATE"
-" スクリーンセーバで「画面をロック」に設定されていると、画面がロックされることを意味します。"
+"デフォルトでは、<application>MATE "
+"電源管理</application>は単純なロック方式をサポートしています。これは、ふたが閉じているとき、またはシステムがサスペンドまたはハイバネーションの動作を実行しているときに、MATE"
+" スクリーンセーバーで「画面をロック」に設定されていると、画面がロックされることを意味します。"
 
 #. (itstool) path: section/para
 #: C/index.docbook:511
@@ -731,7 +731,7 @@ msgid ""
 "locking policy to change for the lid, suspend and hibernate actions. To "
 "enable this complex mode, you will have to disable the dconf key:"
 msgstr ""
-"上級ユーザ向けに、リッド、サスペンド、ハイバネートの各アクションでロックポリシーを変更できる複雑なロック方式が用意されています。この複雑なモードを有効にするには、dconf"
+"上級ユーザー向けに、リッド、サスペンド、ハイバネーションの各アクションでロックポリシーを変更できる複雑なロック方式が用意されています。この複雑なモードを有効にするには、dconf"
 " キーを無効にする必要があります。"
 
 #. (itstool) path: listitem/para
@@ -744,7 +744,7 @@ msgstr "<command>org.mate.power-manager lock-use-screensaver</command>"
 msgid ""
 "Then the policy keys can be set to force a mate-screensaver lock and unlock "
 "when the action is performed:"
-msgstr "これで、ポリシーキーを設定して、アクションの実行時に MATE スクリーンセーバのロックとロック解除を強制的に行うことができます。"
+msgstr "これで、ポリシーキーを設定して、アクションの実行時に MATE スクリーンセーバーのロックとロック解除を強制的に行うことができます。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:531
@@ -905,7 +905,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:644
 msgid "What's the difference between suspend and hibernate?"
-msgstr "サスペンドとハイバネートの違いは何ですか？"
+msgstr "サスペンドとハイバネーションの違いは何ですか？"
 
 #. (itstool) path: section/para
 #: C/index.docbook:645
@@ -940,9 +940,9 @@ msgid ""
 "lost. It can take up to a minute or more to hibernate and wake your "
 "computer."
 msgstr ""
-"ハイバネートとは、コンピュータの完全な状態をハードディスクに保存し、電源をオフにします。これは、コンピュータがオフになっているように見えるようにするためです。キーボードのボタンを押すなど、外部イベントによって通知されるまで、システムは再開されません。これは、使用可能な最低電力のスリープ状態です。デスクトップの"
+"ハイバネーションとは、コンピュータの完全な状態をハードディスクに保存し、電源をオフにします。これは、コンピュータがオフになっているように見えるようにするためです。キーボードのボタンを押すなど、外部イベントによって通知されるまで、システムは再開されません。これは、使用可能な最低電力のスリープ状態です。デスクトップの"
 " AC "
-"電源をオフにするか、ラップトップのバッテリ電源が切れた場合でも、作業内容は失われません。コンピュータをハイバネートにしたりスリープ解除したりするには、最大"
+"電源をオフにするか、ラップトップのバッテリ電源が切れた場合でも、作業内容は失われません。コンピュータをハイバネーションにしたりスリープ解除したりするには、最大"
 " 1 分以上かかることがあります。"
 
 #. (itstool) path: section/title
@@ -1008,8 +1008,8 @@ msgid ""
 "really don't want the user to be able to suspend, or for the computer to "
 "save power by hibernating or suspending."
 msgstr ""
-"アプリケーションが長時間に渡って作動している場合は、しばらくの間サスペンド機能を無効にしたいと希望するかもしれません。ユーザがサスペンドできないようにする場合や、コンピュータがハイバネートやサスペンドで電力を節約する全く望まない場合は、mate-"
-"session を使用してください。"
+"アプリケーションが長時間に渡って作動している場合は、しばらくの間サスペンド機能を無効にしたいと希望するかもしれません。ユーザーがサスペンドできないようにする場合や、コンピュータがハイバネーションやサスペンドで電力を節約する全く望まない場合は、"
+" mate-session を使用してください。"
 
 #. (itstool) path: section/title
 #: C/index.docbook:723

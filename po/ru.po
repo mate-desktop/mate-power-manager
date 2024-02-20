@@ -15,7 +15,6 @@
 # Дмитрий Астанков <mornie@basealt.ru>, 2020
 # Павел Коваленко, 2021
 # Olesya Gerasimenko <gammaray@basealt.ru>, 2021
-# Темак, 2022
 # 
 msgid ""
 msgstr ""
@@ -23,8 +22,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Темак, 2022\n"
-"Language-Team: Russian (https://app.transifex.com/mate/teams/13566/ru/)\n"
+"Last-Translator: Olesya Gerasimenko <gammaray@basealt.ru>, 2021\n"
+"Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -42,7 +41,7 @@ msgstr "Настройка яркости экрана ноутбука."
 #: applets/brightness/brightness-applet.c:370
 #: applets/inhibit/inhibit-applet.c:223
 msgid "Cannot connect to mate-power-manager"
-msgstr "Не удаётся подключиться к mate-power-manager"
+msgstr "Не удаётся подключиться к сервису mate-power-manager"
 
 #: applets/brightness/brightness-applet.c:372
 msgid "Cannot get laptop panel brightness"
@@ -51,7 +50,7 @@ msgstr "Не удалось установить яркость экрана н�
 #: applets/brightness/brightness-applet.c:374
 #, c-format
 msgid "LCD brightness : %d%%"
-msgstr "Яркость экрана: %d%%"
+msgstr "Яркость LCD: %d%%"
 
 #: applets/brightness/brightness-applet.c:817
 #: applets/inhibit/inhibit-applet.c:285
@@ -61,10 +60,10 @@ msgid ""
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
 msgstr ""
-"Приложение «Диспетчер питания» относится к свободному программному "
-"обеспечению. Его изменение и/или распространение допускается в соответствии "
-"с условиями Основной Общественной Лицензии GNU 2.0 или любой более поздней "
-"версии, размещённой Фондом свободного программного обеспечения."
+"Программа «Диспетчер питания» относится к категории свободного программного "
+"обеспечения. Её изменение и/или распространение допускается в соответствии с"
+" условиями лицензии GNU General Public License 2 или любой более поздней "
+"версии, опубликованной Фондом свободного программного обеспечения."
 
 #: applets/brightness/brightness-applet.c:822
 #: applets/inhibit/inhibit-applet.c:290
@@ -74,10 +73,10 @@ msgid ""
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
 msgstr ""
-"Приложение распространяется в надежде, что оно может быть полезным, но БЕЗ "
+"Программа распространяется в надежде, что она может быть полезной, но БЕЗ "
 "КАКИХ-ЛИБО ГАРАНТИЙ, ВЫРАЖЕННЫХ ЯВНО ИЛИ ПОДРАЗУМЕВАЕМЫХ, В ТОМ ЧИСЛЕ БЕЗ "
-"ГАРАНТИЙ КОММЕРЧЕСКОЙ ЦЕННОСТИ И ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЁННОЙ ЦЕЛИ. "
-"Подробности можно найти в тексте Основной Общественной Лицензии GNU."
+"ГАРАНТИЙ КОММЕРЧЕСКОЙ ЦЕННОСТИ И ПРИГОДНОСТИ ДЛЯ КОНКРЕТНОЙ ЦЕЛИ. Подробную "
+"информацию можно найти в тексте лицензии GNU General Public License."
 
 #: applets/brightness/brightness-applet.c:827
 #: applets/inhibit/inhibit-applet.c:295
@@ -86,9 +85,9 @@ msgid ""
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
-"Копия лицензии GNU General Public License предоставляется вместе с этим "
-"приложением. Адрес фонда: Free Software Foundation, Inc., 51 Franklin "
-"Street, Fifth Floor, Boston, MA 02110-1301, USA."
+"Копия лицензии GNU General Public License предоставляется вместе с этой "
+"программой. Адрес фонда: Free Software Foundation, Inc., 51 Franklin Street,"
+" Fifth Floor, Boston, MA 02110-1301, USA."
 
 #: applets/brightness/brightness-applet.c:840
 msgid "About Power Manager Brightness Applet"
@@ -99,8 +98,8 @@ msgid ""
 "Copyright © 2006 Benjamin Canou\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
-"Авторское право © 2006 Benjamin Canou\n"
-"Авторское право © 2011-2021 Разработчики MATE"
+"Copyright © 2006 Benjamin Canou\n"
+"Copyright © 2011-2021 Разработчики MATE"
 
 #: applets/brightness/brightness-applet.c:849
 #: applets/inhibit/inhibit-applet.c:317 src/gpm-tray-icon.c:212
@@ -137,9 +136,7 @@ msgstr ""
 "Сергей Панов <sipan@mit.edu>\n"
 "Сергей Яковлев\n"
 "Юрий Козлов <yuray@komyakino.ru>\n"
-"Evolve32 <evolve32@ya.ru>\n"
-"Артём Котлубай <artemkotlubai@yandex.ru>\n"
-" "
+"Evolve32 <evolve32@ya.ru>"
 
 #: applets/brightness/brightness-applet.c:1080
 #: applets/inhibit/inhibit-applet.c:500
@@ -207,20 +204,20 @@ msgstr "Диспетчер питания"
 
 #: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:205
 msgid "Power management daemon"
-msgstr "Служба управления питанием"
+msgstr "Демон управления питанием"
 
 #: data/org.mate.power-manager.gschema.xml.in:26
 #: data/org.mate.power-manager.gschema.xml.in:41
 msgid "Whether to hibernate, suspend or do nothing when inactive"
 msgstr ""
-"Перейти в режим гибернации, ждущий режим или ничего не делать после "
-"промежутка бездействия"
+"Перейти в режим гибернации, ждущий режим или ничего не делать после периода "
+"бездействия"
 
 #: data/org.mate.power-manager.gschema.xml.in:27
 #: data/org.mate.power-manager.gschema.xml.in:42
 msgid ""
 "The type of sleeping that should be performed when the computer is inactive."
-msgstr "Тип приостановки компьютера после промежутка бездействия."
+msgstr "Тип приостановки компьютера после периода бездействия."
 
 #: data/org.mate.power-manager.gschema.xml.in:31
 msgid "Battery critical low action"
@@ -420,7 +417,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:121
 msgid "LCD brightness when on AC"
-msgstr "Яркость экрана при питании от сети"
+msgstr "Яркость LCD при питании от сети"
 
 #: data/org.mate.power-manager.gschema.xml.in:122
 msgid ""
@@ -913,7 +910,7 @@ msgstr "Настройка управления электропитанием"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/mate-power-preferences.desktop.in.in:13
 msgid "MATE;power;management;preferences;settings;"
-msgstr "MATE;электропитание;управление;управление;настройка;"
+msgstr "MATE;электропитание;управление;параметры;настройка;"
 
 #: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
 #: src/gpm-statistics.c:787 src/gpm-statistics.c:1259
@@ -958,7 +955,7 @@ msgstr "Статистика"
 
 #: data/gpm-prefs.ui:23
 msgid "Power Management Preferences"
-msgstr "Настройки управления электропитанием"
+msgstr "Параметры управления электропитанием"
 
 #: data/gpm-prefs.ui:58
 msgid "Make Default"
@@ -1103,15 +1100,15 @@ msgstr "Не удалось получить значение подсветки
 
 #: src/gpm-backlight-helper.c:231
 msgid "Could not get the maximum value of the backlight"
-msgstr "Не удалось установить предельное значение подсветки"
+msgstr "Не удалось установить максимальное значение подсветки"
 
 #: src/gpm-backlight-helper.c:248
 msgid "This program can only be used by the root user"
-msgstr "Это приложение может использоваться только суперпользователем"
+msgstr "Эта программа может использоваться только суперпользователем"
 
 #: src/gpm-backlight-helper.c:257
 msgid "This program must only be run through pkexec"
-msgstr "Это приложение можно запускать только через pkexec"
+msgstr "Эту программу можно запускать только через pkexec"
 
 #: src/gpm-backlight-helper.c:268
 msgid "Could not set the value of the backlight"
@@ -1603,7 +1600,7 @@ msgstr "Уровень заряда ИБП ниже критического, к
 
 #: src/gpm-prefs.c:77
 msgid "MATE Power Preferences"
-msgstr "Настройки управления питанием MATE"
+msgstr "Параметры управления питанием MATE"
 
 #: src/gpm-prefs-core.c:242
 msgid "Shutdown"
@@ -1863,7 +1860,7 @@ msgstr "Заряд ячейки"
 
 #: src/gpm-statistics.c:1022 src/gpm-statistics.c:1028
 msgid "Predicted time"
-msgstr "Оценочное время"
+msgstr "Прогнозируемое время"
 
 #: src/gpm-statistics.c:1068 src/gpm-statistics.c:1080
 msgid "Correction factor"
@@ -1871,7 +1868,7 @@ msgstr "Поправочный коэффициент"
 
 #: src/gpm-statistics.c:1074 src/gpm-statistics.c:1086
 msgid "Prediction accuracy"
-msgstr "Точность оценки"
+msgstr "Точность прогноза"
 
 #: src/gpm-statistics.c:1245
 msgid "Select this device at startup"
@@ -1879,7 +1876,7 @@ msgstr "Выбрать это устройство при запуске"
 
 #: src/gpm-tray-icon.c:206
 msgid "Copyright © 2011-2021 MATE developers"
-msgstr "Авторское право © 2011-2021 Разработчики MATE"
+msgstr "Copyright © 2011-2021 Разработчики MATE"
 
 #: src/gpm-tray-icon.c:319
 #, c-format
@@ -1888,7 +1885,7 @@ msgstr "Осталось %s"
 
 #: src/gpm-tray-icon.c:374
 msgid "_Preferences"
-msgstr "Н_астройки"
+msgstr "П_араметры"
 
 #: src/gpm-upower.c:214
 #, c-format
@@ -2125,10 +2122,10 @@ msgstr[3] "Компьютер"
 #: src/gpm-upower.c:534
 msgid "Gaming input"
 msgid_plural "Gaming inputs"
-msgstr[0] "Игровое устройство ввода"
-msgstr[1] "Игровые устройства ввода"
-msgstr[2] "Игровые устройства ввода"
-msgstr[3] "Игровые устройства ввода"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/gpm-upower.c:601
 msgid "Lithium Ion"

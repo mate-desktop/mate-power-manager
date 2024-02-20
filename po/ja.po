@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# 🎈 BALLOON | FU-SEN, 2018
+# BALLOON | FU-SEN, 2018
 # Ikuru K <kanumaiku@gmail.com>, 2018
 # あわしろいくや <ikunya@gmail.com>, 2018
 # shinmili <rmsk.pl.ur.lpt@gmail.com>, 2018
@@ -12,7 +12,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # ABE Tsunehiko, 2020
 # Wolfgang Ulbrich <mate@raveit.de>, 2020
-# Green <usergreen@users.osdn.me>, 2024
+# Green, 2021
 # 
 msgid ""
 msgstr ""
@@ -20,8 +20,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Green <usergreen@users.osdn.me>, 2024\n"
-"Language-Team: Japanese (https://app.transifex.com/mate/teams/13566/ja/)\n"
+"Last-Translator: Green, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -252,7 +252,7 @@ msgstr "バッテリーを使用している時に画面の輝度を低くすべ
 
 #: data/org.mate.power-manager.gschema.xml.in:66
 msgid "Reduce the keyboard backlight when on battery power"
-msgstr "バッテリー利用時にキーボードのバックライトを抑える"
+msgstr "バッテリ利用時にキーボードのバックライトを抑える"
 
 #: data/org.mate.power-manager.gschema.xml.in:67
 msgid ""
@@ -324,11 +324,11 @@ msgstr "アイドル後に画面が暗くなるまでの時間"
 
 #: data/org.mate.power-manager.gschema.xml.in:97
 msgid "The default amount of time to dim the screen after idle."
-msgstr "アイドル後に画面が暗くなるまでの時間 (既定値) です。"
+msgstr "アイドル後に画面が暗くなるまでの時間 (デフォルト) です。"
 
 #: data/org.mate.power-manager.gschema.xml.in:101
 msgid "LCD dimming amount when on battery"
-msgstr "バッテリー使用時の液晶ディスプレイの暗さ"
+msgstr "バッテリ使用時の液晶ディスプレイの暗さ"
 
 #: data/org.mate.power-manager.gschema.xml.in:102
 msgid ""
@@ -448,7 +448,7 @@ msgstr "サスペンドまたはハイバーネートする前に NetworkManager
 
 #: data/org.mate.power-manager.gschema.xml.in:166
 msgid "Use mate-screensaver lock setting"
-msgstr "MATE スクリーンセーバでロックするかどうか"
+msgstr "MATE スクリーンセーバーでロックするかどうか"
 
 #: data/org.mate.power-manager.gschema.xml.in:167
 msgid ""
@@ -511,7 +511,7 @@ msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
 msgstr ""
-"コンピュータがハイバネートに入る前に、GNOMEキーリングをロックするか設定します。これは、レジューム時にキーリングのロックを解除しなければならないことを意味します。"
+"コンピュータがハイバネーションに入る前に、GNOMEキーリングをロックするか設定します。これは、レジューム時にキーリングのロックを解除しなければならないことを意味します。"
 
 #: data/org.mate.power-manager.gschema.xml.in:196
 msgid "If we should show the low capacity warning for a broken battery"
@@ -551,13 +551,13 @@ msgstr "サスペンドやハイバーネートが失敗したら通知メッセ
 
 #: data/org.mate.power-manager.gschema.xml.in:216
 msgid "The URI to show to the user on sleep failure"
-msgstr "スリープ失敗時にユーザに表示する URI"
+msgstr "スリープ失敗時にユーザーに表示するURI"
 
 #: data/org.mate.power-manager.gschema.xml.in:217
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
-msgstr "スリープ失敗時、問題解決のためのヘルプボタンをユーザに表示できます。ボタンを表示しない場合は空欄にしてください。"
+msgstr "スリープ失敗時、問題解決のためのヘルプボタンをユーザーに表示できます。ボタンを表示しない場合は空欄にしてください。"
 
 #: data/org.mate.power-manager.gschema.xml.in:221
 msgid "Notify on a low power"
@@ -597,11 +597,11 @@ msgstr "履歴データを表示するグラフの種類"
 
 #: data/org.mate.power-manager.gschema.xml.in:242
 msgid "The default graph type to show in the history window."
-msgstr "履歴ウィンドウの中に表示する既定のグラフの種類です。"
+msgstr "履歴ウィンドウの中に表示するデフォルトのグラフの種類です。"
 
 #: data/org.mate.power-manager.gschema.xml.in:246
 msgid "The maximum time displayed for history"
-msgstr "履歴に表示する最大経過時間"
+msgstr "ヒストリーに表示する最大経過時間"
 
 #: data/org.mate.power-manager.gschema.xml.in:247
 msgid ""
@@ -626,21 +626,21 @@ msgstr "グラフの統計データ点をを滑らかに表示するかどうか
 
 #: data/org.mate.power-manager.gschema.xml.in:261
 msgid "The default graph type to show for stats"
-msgstr "統計を表示する既定のグラフの種類"
+msgstr "統計を表示するデフォルトのグラフ"
 
 #: data/org.mate.power-manager.gschema.xml.in:262
 msgid "The default graph type to show in the stats window."
-msgstr "統計ウィンドウに表示する既定のグラフの種類です。"
+msgstr "統計ウィンドウに表示するデフォルトのグラフの種類"
 
 #: data/org.mate.power-manager.gschema.xml.in:266
 msgid "The index of the page number to show by default"
-msgstr "既定で表示するページ番号のインデックス"
+msgstr "デフォルトで表示するページ番号のインデックス"
 
 #: data/org.mate.power-manager.gschema.xml.in:267
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
-msgstr "正しいページにフォーカスを戻した際に既定で表示するページ番号のインデックス"
+msgstr "正しいページにフォーカスを戻した際にデフォルトで表示するページ番号のインデックス"
 
 #: data/org.mate.power-manager.gschema.xml.in:271
 msgid "The ID of the last device selected"
@@ -717,7 +717,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:306
 msgid "Sleep timeout computer when on battery"
-msgstr "バッテリーの使用中にシステムがスリープするまでの時間"
+msgstr "バッテリの使用中にシステムがスリープするまでの時間"
 
 #: data/org.mate.power-manager.gschema.xml.in:307
 msgid ""
@@ -757,7 +757,7 @@ msgstr "AC 電源を使用している時にディスプレイがスリープす
 
 #: data/org.mate.power-manager.gschema.xml.in:326
 msgid "Sleep timeout display when on battery"
-msgstr "バッテリーの使用中にディスプレイがスリープするまでの時間"
+msgstr "バッテリの使用中にディスプレイがスリープするまでの時間"
 
 #: data/org.mate.power-manager.gschema.xml.in:327
 msgid ""
@@ -859,7 +859,7 @@ msgstr "電源管理の設定"
 
 #: data/gpm-prefs.ui:58
 msgid "Make Default"
-msgstr "既定にする"
+msgstr "デフォルトにする"
 
 #: data/gpm-prefs.ui:71
 msgid "_Close"
@@ -904,7 +904,7 @@ msgstr "AC 電源使用時"
 
 #: data/gpm-prefs.ui:482
 msgid "When battery po_wer is critically low:"
-msgstr "バッテリーがほとんどない場合は(_W):"
+msgstr "バッテリがほとんどない場合は(_W):"
 
 #: data/gpm-prefs.ui:591
 msgid "_Reduce backlight brightness"
@@ -1005,7 +1005,7 @@ msgstr "バックライトの最大値を取得できませんでした"
 
 #: src/gpm-backlight-helper.c:248
 msgid "This program can only be used by the root user"
-msgstr "このプログラムは root ユーザのみが使用できます"
+msgstr "このプログラムは root ユーザーのみが使用できます"
 
 #: src/gpm-backlight-helper.c:257
 msgid "This program must only be run through pkexec"
@@ -1645,7 +1645,7 @@ msgstr "空の時のエネルギー"
 
 #: src/gpm-statistics.c:425
 msgid "Energy when full"
-msgstr "満充電時のエネルギー"
+msgstr "フルの時のエネルギー"
 
 #: src/gpm-statistics.c:428
 msgid "Energy (design)"
@@ -1885,7 +1885,7 @@ msgstr[0] "AC アダプタ"
 #: src/gpm-upower.c:494
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "ノートパソコン用バッテリー"
+msgstr[0] "ノートブック用バッテリ"
 
 #: src/gpm-upower.c:498
 msgid "UPS"
@@ -1930,7 +1930,7 @@ msgstr[0] "コンピュータ"
 #: src/gpm-upower.c:534
 msgid "Gaming input"
 msgid_plural "Gaming inputs"
-msgstr[0] "ゲームの入力"
+msgstr[0] ""
 
 #: src/gpm-upower.c:601
 msgid "Lithium Ion"

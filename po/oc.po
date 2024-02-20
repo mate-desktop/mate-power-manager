@@ -7,7 +7,7 @@
 # 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Cédric Valmary <cvalmary@yahoo.fr>, 2020
-# Quentin PAGÈS, 2023
+# Quentin PAGÈS, 2021
 # 
 msgid ""
 msgstr ""
@@ -15,8 +15,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Quentin PAGÈS, 2023\n"
-"Language-Team: Occitan (post 1500) (https://app.transifex.com/mate/teams/13566/oc/)\n"
+"Last-Translator: Quentin PAGÈS, 2021\n"
+"Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -99,7 +99,7 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 "Yannig Marchegay (Kokoyaya) <yannig@marchegay.org> & Cédric Valmary "
-"(totenoc.eu) <cvalmary@yahoo.fr>, Quentin PAGÈS"
+"(totenoc.eu) <cvalmary@yahoo.fr>"
 
 #: applets/brightness/brightness-applet.c:1080
 #: applets/inhibit/inhibit-applet.c:500
@@ -201,19 +201,19 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:46
 msgid "UPS critical low action"
-msgstr "Accion en cas d’ondulador fòrça feble"
+msgstr "Accion en cas d’ondulator fòrça feble"
 
 #: data/org.mate.power-manager.gschema.xml.in:47
 msgid "The action to take when the UPS is critically low."
-msgstr "L’accion de menar quand l’ondulador es fòrça feble."
+msgstr "L’accion de menar quand l’ondulator es fòrça feble."
 
 #: data/org.mate.power-manager.gschema.xml.in:51
 msgid "UPS low power action"
-msgstr "Accion en cas d’ondulador feble"
+msgstr "Accion en cas d’ondulator feble"
 
 #: data/org.mate.power-manager.gschema.xml.in:52
 msgid "The action to take when the UPS is low."
-msgstr "L’accion de menar quand l’ondulador es feble."
+msgstr "L’accion de menar quand l’ondulator es feble."
 
 #: data/org.mate.power-manager.gschema.xml.in:56
 msgid "Allow backlight brightness adjustment"
@@ -359,7 +359,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:126
 msgid "Suspend button action"
-msgstr "Accion del boton de mesa en velha"
+msgstr "Accion del boton de misa en velha"
 
 #: data/org.mate.power-manager.gschema.xml.in:127
 msgid "The action to take when the system suspend button is pressed."
@@ -924,7 +924,7 @@ msgstr ""
 
 #: data/gpm-prefs.ui:912
 msgid "On UPS Power"
-msgstr "Sus ondulador"
+msgstr "Sus ondulator"
 
 #: data/gpm-prefs.ui:956
 msgid "When the power _button is pressed:"
@@ -1232,12 +1232,12 @@ msgstr "%s es a se descargar (%.0f%%)"
 
 #: src/gpm-manager.c:1215
 msgid "UPS Discharging"
-msgstr "Ondulador en descarga"
+msgstr "Ondulator en descarga"
 
 #: src/gpm-manager.c:1219
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
-msgstr "%s de resèrva d’ondulador restant (%.0f%%)"
+msgstr "%s de resèrva d’ondulator restant (%.0f%%)"
 
 #: src/gpm-manager.c:1303
 msgid "Battery low"
@@ -1259,7 +1259,7 @@ msgstr "Ondulador feble"
 #: src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
-msgstr "Demòra environ <b>%s</b> d'autonomia a l'ondulador (%.0f %%)"
+msgstr "Demòra environ <b>%s</b> d'autonomia a l'ondulator (%.0f %%)"
 
 #: src/gpm-manager.c:1329 src/gpm-manager.c:1468
 msgid "Mouse battery low"
@@ -1351,7 +1351,7 @@ msgstr "L'ordenador se va atudar dins pauc de temps s'es pas brancat."
 
 #: src/gpm-manager.c:1453 src/gpm-manager.c:1619
 msgid "UPS critically low"
-msgstr "Nivèl de l'ondulador critic"
+msgstr "Nivèl de l'ondulator critic"
 
 #: src/gpm-manager.c:1457
 #, c-format
@@ -1359,7 +1359,7 @@ msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
 msgstr ""
-"Demòra environ <b>%s</b> d'autonomia a l'ondulador (%.0f %%). Brancatz "
+"Demòra environ <b>%s</b> d'autonomia a l'ondulator (%.0f %%). Brancatz "
 "vòstre ordenador al sector per evitar de pèrdre de donadas."
 
 #: src/gpm-manager.c:1471
@@ -1431,7 +1431,7 @@ msgid ""
 "off</b> when the battery becomes completely empty."
 msgstr ""
 "La batariá es en dejós de son nivèl critic ; l'ordenador se va <b>atudar</b>"
-" quand la batariá serà complètament descargada."
+" quand la batariá serà completament descargada."
 
 #: src/gpm-manager.c:1597
 msgid ""
@@ -1463,21 +1463,21 @@ msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
 msgstr ""
-"L'ondulador es en dejós de son nivèl critic e aqueste ordenador se va "
-"<b>atudar</b> tre que l'ondulador serà complètament void."
+"L'ondulator es en dejós de son nivèl critic e aqueste ordenador se va "
+"<b>atudar</b> tre que l'ondulator serà completament void."
 
 #: src/gpm-manager.c:1633
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr ""
-"L'ondulador es en dejós de son nivèl critic e aqueste ordenador se va metre "
+"L'ondulator es en dejós de son nivèl critic e aqueste ordenador se va metre "
 "en ivernacion."
 
 #: src/gpm-manager.c:1638
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr ""
-"L'ondulador es en dejós de son nivèl critic e aqueste ordenador se va "
+"L'ondulator es en dejós de son nivèl critic e aqueste ordenador se va "
 "atudar."
 
 #: src/gpm-prefs.c:77
@@ -1901,7 +1901,7 @@ msgstr "Carga actuala :"
 
 #: src/gpm-upower.c:444
 msgid "Last full charge:"
-msgstr "Darrièra carga complèta :"
+msgstr "Darrièra carga completa :"
 
 #: src/gpm-upower.c:450 src/gpm-upower.c:468
 msgid "Design charge:"
@@ -1926,8 +1926,8 @@ msgstr[1] "Ordenadors portables"
 #: src/gpm-upower.c:498
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] "Ondulador"
-msgstr[1] "Onduladors"
+msgstr[0] "Ondulator"
+msgstr[1] "Ondulators"
 
 #: src/gpm-upower.c:502
 msgid "Monitor"
