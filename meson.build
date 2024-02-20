@@ -1,5 +1,5 @@
 project('mate-power-manager', 'c',
-  version : '1.27.0',
+  version : '1.28.0',
   default_options : ['warning_level=1'],
   meson_version : '>=0.50.0'
 )
