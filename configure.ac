@@ -1,6 +1,6 @@
 AC_PREREQ(2.63)
 
-AC_INIT([mate-power-manager], [1.28.0], [https://github.com/mate-desktop/mate-power-manager/pulls],
+AC_INIT([mate-power-manager], [1.28.1], [https://github.com/mate-desktop/mate-power-manager/pulls],
         [mate-power-manager], [https://mate-desktop.org])
 AC_CONFIG_SRCDIR(src)
 AM_INIT_AUTOMAKE([1.9 no-dist-gzip dist-xz check-news tar-ustar])
