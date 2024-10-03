@@ -440,18 +440,8 @@ gpm_kbd_backlight_button_pressed_cb (GpmButton *button,
                     const gchar *type,
                     GpmKbdBacklight *backlight)
 {
-   static guint saved_brightness = ~0u;
+   static guint saved_brightness;
    gboolean ret;
-
-   if (saved_brightness == ~0u) {
-       saved_brightness = backlight->priv->brightness_percent;
-       /* If the initial value is 0, which probably means we saved on_ac=0, we
-        * try and restore some arbitrary value for the toggle not to seem
-        * broken */
-       if (saved_brightness == 0) {
-           saved_brightness = 100u;
-       }
-   }
 
    if (g_strcmp0 (type, GPM_BUTTON_KBD_BRIGHT_UP) == 0) {
        ret = gpm_kbd_backlight_brightness_up (backlight);
@@ -475,7 +465,13 @@ gpm_kbd_backlight_button_pressed_cb (GpmButton *button,
 
    } else if (g_strcmp0 (type, GPM_BUTTON_KBD_BRIGHT_TOGGLE) == 0) {
        if (backlight->priv->brightness_percent == 0) {
-           /* backlight is off turn it back on */
+           /* backlight is off turn it back on.
+            * If the initial value is 0, which probably means we saved on_ac=0, we
+            * try and restore some arbitrary value for the toggle not to seem
+            * broken. */
+           if (saved_brightness == 0) {
+               saved_brightness = 100u;
+           }
            gpm_kbd_backlight_set (backlight, saved_brightness, TRUE);
        } else {
            /* backlight is on, turn it off and save current value */
