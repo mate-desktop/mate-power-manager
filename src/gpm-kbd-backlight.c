@@ -383,13 +383,9 @@ gpm_kbd_backlight_evaluate_power_source_and_set (GpmKbdBacklight *backlight)
    guint value;
    guint dim_by = 0;
 
-   if (up_client_get_on_battery (backlight->priv->client)) {
-      if (g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_KBD_BACKLIGHT_BATT_REDUCE)) {
-         dim_by = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_BATT);
-      } else {
-         // do not change keyboard backlight
-         return TRUE;
-      }
+   if (up_client_get_on_battery (backlight->priv->client) &&
+       g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_KBD_BACKLIGHT_BATT_REDUCE)) {
+      dim_by = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_BATT);
    }
 
    value = gpm_kbd_backlight_get_ac_percentage_dimmed (backlight, dim_by);
@@ -428,7 +424,9 @@ gpm_kbd_backlight_client_changed_cb (UpClient *client,
                                      GParamSpec *pspec,
                                      GpmKbdBacklight *backlight)
 {
-   gpm_kbd_backlight_evaluate_power_source_and_set (backlight);
+   if (g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_KBD_BACKLIGHT_BATT_REDUCE)) {
+      gpm_kbd_backlight_evaluate_power_source_and_set (backlight);
+   }
 }
 
 /**
@@ -513,7 +511,6 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
 
    enable_action = up_client_get_on_battery (backlight->priv->client)
        ? g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_BATT)
-         && g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_KBD_BACKLIGHT_BATT_REDUCE)
        : g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_AC);
 
    if (!enable_action)
