@@ -354,29 +354,40 @@ gpm_kbd_backlight_on_dbus_signal (GDBusProxy *proxy,
    g_debug ("signal '%s' not handled!", signal_name);
 }
 
+static guint
+gpm_kbd_backlight_get_master_percentage_dimmed (GpmKbdBacklight *backlight,
+                                                guint dim_by)
+{
+   guint value;
+
+   value = backlight->priv->master_percentage;
+
+   if (dim_by) {
+      gfloat scale;
+
+      if (dim_by > 100) {
+         g_warning ("Cannot scale brightness down by more than 100%%. Scaling by 50%%");
+         dim_by = 50;
+      }
+
+      scale = (100 - dim_by) / 100.0f;
+
+      value = (guint) ((gfloat) value * scale);
+   }
+
+   return value;
+}
+
 static gboolean
 gpm_kbd_backlight_evaluate_power_source_and_set (GpmKbdBacklight *backlight)
 {
-   gfloat brightness;
-   gfloat scale;
    guint value;
-
-   brightness = backlight->priv->master_percentage;
+   guint dim_by;
 
    if (up_client_get_on_battery (backlight->priv->client)) {
       if (g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_KBD_BACKLIGHT_BATT_REDUCE)) {
-         value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_BATT);
-
-         if (value > 100) {
-            g_warning ("Cannot scale brightness down by more than 100%%. Scaling by 50%%");
-            value = 50;
-         }
-
-         scale = (100 - value) / 100.0f;
-         brightness *= scale;
-
-         value = (guint) brightness;
-
+         dim_by = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_BATT);
+         value = gpm_kbd_backlight_get_master_percentage_dimmed (backlight, dim_by);
       } else {
          // do not change keyboard backlight
          return TRUE;
@@ -495,8 +506,6 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
                   GpmIdleMode mode,
                   GpmKbdBacklight *backlight)
 {
-   gfloat brightness;
-   gfloat scale;
    guint value;
    gboolean enable_action;
 
@@ -519,18 +528,8 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
        gpm_kbd_backlight_evaluate_power_source_and_set (backlight);
    } else if (mode == GPM_IDLE_MODE_DIM) {
        g_debug ("GPM_IDLE_MODE_DIM");
-       brightness = backlight->priv->master_percentage;
        value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_IDLE);
-
-       if (value > 100) {
-           g_warning ("Cannot scale brightness down by more than 100%%. Scaling by 50%%");
-           value = 50;
-       }
-
-       scale = (100 - value) / 100.0f;
-       brightness *= scale;
-
-       value = (guint) brightness;
+       value = gpm_kbd_backlight_get_master_percentage_dimmed (backlight, value);
        gpm_kbd_backlight_set (backlight, value, FALSE);
    } else if (mode == GPM_IDLE_MODE_BLANK) {
        gpm_kbd_backlight_set (backlight, 0u, FALSE);
