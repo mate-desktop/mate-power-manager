@@ -105,7 +105,8 @@ gpm_kbd_backlight_get_brightness (GpmKbdBacklight *backlight,
 
 static gboolean
 gpm_kbd_backlight_set (GpmKbdBacklight *backlight,
-              guint percentage)
+                       guint percentage,
+                       gboolean save)
 {
    gint scale;
    guint goal;
@@ -139,6 +140,34 @@ gpm_kbd_backlight_set (GpmKbdBacklight *backlight,
                    NULL,
                    NULL);
    }
+
+   /* On user interaction, save the target brightness in the only setting we
+    * have, to be able to restore it next time. */
+   if (save) {
+       gint ac_value = backlight->priv->brightness_percent;
+
+       /* If on battery, try and scale the saved value up so applying it with
+        * the scaling would yield the current value.  It's however not possible
+        * to make it accurate as any value that is higher than the dim percentage
+        * cannot be saved (as the saved value is 0-100). */
+       if (g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_KBD_BACKLIGHT_BATT_REDUCE) &&
+           up_client_get_on_battery (backlight->priv->client)) {
+           gint dim_pct;
+
+           dim_pct = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_BATT);
+
+           if (dim_pct > 100) {
+              g_warning ("Cannot scale brightness down by more than 100%%. Scaling by 50%%");
+              dim_pct = 50;
+           }
+
+           ac_value = (gint) (((gdouble) ac_value) / ((100 - dim_pct) / 100.0));
+           ac_value = CLAMP (ac_value, 0, 100);
+       }
+
+       g_settings_set_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_ON_AC, ac_value);
+   }
+
    g_debug("Set brightness to %u", backlight->priv->brightness);
    return TRUE;
 }
@@ -240,7 +269,7 @@ gpm_kbd_backlight_brightness_up (GpmKbdBacklight *backlight)
    guint new;
 
    new = MIN (backlight->priv->brightness_percent + GPM_KBD_BACKLIGHT_STEP, 100u);
-   return gpm_kbd_backlight_set (backlight, new);
+   return gpm_kbd_backlight_set (backlight, new, TRUE);
 }
 
 /**
@@ -253,7 +282,7 @@ gpm_kbd_backlight_brightness_down (GpmKbdBacklight *backlight)
 
    // we can possibly go below 0 here, so by converting to a gint we avoid underflow errors.
    new = MAX ((gint) backlight->priv->brightness_percent - GPM_KBD_BACKLIGHT_STEP, 0);
-   return gpm_kbd_backlight_set (backlight, new);
+   return gpm_kbd_backlight_set (backlight, new, TRUE);
 }
 
 /**
@@ -283,7 +312,7 @@ gpm_kbd_backlight_set_brightness (GpmKbdBacklight *backlight,
 
    backlight->priv->master_percentage = percentage;
 
-   ret = gpm_kbd_backlight_set (backlight, percentage);
+   ret = gpm_kbd_backlight_set (backlight, percentage, TRUE);
    if (!ret) {
        g_set_error_literal (error, gpm_kbd_backlight_error_quark (),
                     GPM_KBD_BACKLIGHT_ERROR_GENERAL,
@@ -367,7 +396,7 @@ gpm_kbd_backlight_evaluate_power_source_and_set (GpmKbdBacklight *backlight)
        value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_ON_AC);
    }
 
-   ret = gpm_kbd_backlight_set (backlight, value);
+   ret = gpm_kbd_backlight_set (backlight, value, FALSE);
    return ret;
 }
 
@@ -419,8 +448,15 @@ gpm_kbd_backlight_button_pressed_cb (GpmButton *button,
    static guint saved_brightness = ~0u;
    gboolean ret;
 
-   if (saved_brightness == ~0u)
-       saved_brightness = backlight->priv->master_percentage;
+   if (saved_brightness == ~0u) {
+       saved_brightness = backlight->priv->brightness_percent;
+       /* If the initial value is 0, which probably means we saved on_ac=0, we
+        * try and restore some arbitrary value for the toggle not to seem
+        * broken */
+       if (saved_brightness == 0) {
+           saved_brightness = 100u;
+       }
+   }
 
    if (g_strcmp0 (type, GPM_BUTTON_KBD_BRIGHT_UP) == 0) {
        ret = gpm_kbd_backlight_brightness_up (backlight);
@@ -443,13 +479,13 @@ gpm_kbd_backlight_button_pressed_cb (GpmButton *button,
         }
 
    } else if (g_strcmp0 (type, GPM_BUTTON_KBD_BRIGHT_TOGGLE) == 0) {
-       if (backlight->priv->master_percentage == 0) {
+       if (backlight->priv->brightness_percent == 0) {
            /* backlight is off turn it back on */
-           gpm_kbd_backlight_set (backlight, saved_brightness);
+           gpm_kbd_backlight_set (backlight, saved_brightness, TRUE);
        } else {
            /* backlight is on, turn it off and save current value */
-           saved_brightness = backlight->priv->master_percentage;
-           gpm_kbd_backlight_set (backlight, 0);
+           saved_brightness = backlight->priv->brightness_percent;
+           gpm_kbd_backlight_set (backlight, 0, TRUE);
        }
    }
 }
@@ -515,9 +551,9 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
        brightness *= scale;
 
        value = (guint) brightness;
-       gpm_kbd_backlight_set (backlight, value);
+       gpm_kbd_backlight_set (backlight, value, FALSE);
    } else if (mode == GPM_IDLE_MODE_BLANK) {
-       gpm_kbd_backlight_set (backlight, 0u);
+       gpm_kbd_backlight_set (backlight, 0u, FALSE);
    }
 }
 
