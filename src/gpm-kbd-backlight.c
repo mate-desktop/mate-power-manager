@@ -359,22 +359,12 @@ gpm_kbd_backlight_evaluate_power_source_and_set (GpmKbdBacklight *backlight)
 {
    gfloat brightness;
    gfloat scale;
-   gboolean on_battery;
-   gboolean battery_reduce;
    guint value;
-   gboolean ret;
 
    brightness = backlight->priv->master_percentage;
 
-   g_object_get (backlight->priv->client,
-             "on-battery",
-             &on_battery,
-             NULL);
-
-   battery_reduce = g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_KBD_BACKLIGHT_BATT_REDUCE);
-
-   if (on_battery) {
-      if (battery_reduce) {
+   if (up_client_get_on_battery (backlight->priv->client)) {
+      if (g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_KBD_BACKLIGHT_BATT_REDUCE)) {
          value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_BATT);
 
          if (value > 100) {
@@ -396,8 +386,7 @@ gpm_kbd_backlight_evaluate_power_source_and_set (GpmKbdBacklight *backlight)
        value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_ON_AC);
    }
 
-   ret = gpm_kbd_backlight_set (backlight, value, FALSE);
-   return ret;
+   return gpm_kbd_backlight_set (backlight, value, FALSE);
 }
 
 /**
@@ -509,23 +498,14 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
    gfloat brightness;
    gfloat scale;
    guint value;
-   gboolean lid_closed;
-   gboolean on_battery;
    gboolean enable_action;
 
    g_debug("Idle changed");
 
-   lid_closed = gpm_button_is_lid_closed (backlight->priv->button);
-
-   if (lid_closed)
+   if (gpm_button_is_lid_closed (backlight->priv->button))
        return;
 
-   g_object_get (backlight->priv->client,
-                 "on-battery",
-                 &on_battery,
-                 NULL);
-
-   enable_action = on_battery
+   enable_action = up_client_get_on_battery (backlight->priv->client)
        ? g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_BATT)
          && g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_KBD_BACKLIGHT_BATT_REDUCE)
        : g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_IDLE_DIM_AC);
