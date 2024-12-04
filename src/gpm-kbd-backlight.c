@@ -43,7 +43,6 @@ struct GpmKbdBacklightPrivate
     gboolean         system_is_idle;
     GTimer          *idle_timer;
     guint            idle_dim_timeout;
-    guint            master_percentage;
     guint            brightness;
     guint            max_brightness;
     guint            brightness_percent;
@@ -310,8 +309,6 @@ gpm_kbd_backlight_set_brightness (GpmKbdBacklight *backlight,
        return FALSE;
    }
 
-   backlight->priv->master_percentage = percentage;
-
    ret = gpm_kbd_backlight_set (backlight, percentage, TRUE);
    if (!ret) {
        g_set_error_literal (error, gpm_kbd_backlight_error_quark (),
@@ -328,7 +325,6 @@ gpm_kbd_backlight_on_brightness_changed (GpmKbdBacklight *backlight,
 {
    backlight->priv->brightness = value;
    backlight->priv->brightness_percent = gpm_discrete_to_percent (value, backlight->priv->max_brightness);
-   backlight->priv->master_percentage = backlight->priv->brightness_percent;
    g_signal_emit (backlight, signals [BRIGHTNESS_CHANGED], 0, backlight->priv->brightness_percent);
 }
 
@@ -355,12 +351,15 @@ gpm_kbd_backlight_on_dbus_signal (GDBusProxy *proxy,
 }
 
 static guint
-gpm_kbd_backlight_get_master_percentage_dimmed (GpmKbdBacklight *backlight,
-                                                guint dim_by)
+gpm_kbd_backlight_get_ac_percentage_dimmed (GpmKbdBacklight *backlight,
+                                            guint dim_by)
 {
    guint value;
 
-   value = backlight->priv->master_percentage;
+   value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_ON_AC);
+   if (value > 100) {
+      value = 100;
+   }
 
    if (dim_by) {
       gfloat scale;
@@ -382,20 +381,18 @@ static gboolean
 gpm_kbd_backlight_evaluate_power_source_and_set (GpmKbdBacklight *backlight)
 {
    guint value;
-   guint dim_by;
+   guint dim_by = 0;
 
    if (up_client_get_on_battery (backlight->priv->client)) {
       if (g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_KBD_BACKLIGHT_BATT_REDUCE)) {
          dim_by = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_BATT);
-         value = gpm_kbd_backlight_get_master_percentage_dimmed (backlight, dim_by);
       } else {
          // do not change keyboard backlight
          return TRUE;
       }
-
-   } else {
-       value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_ON_AC);
    }
+
+   value = gpm_kbd_backlight_get_ac_percentage_dimmed (backlight, dim_by);
 
    return gpm_kbd_backlight_set (backlight, value, FALSE);
 }
@@ -524,12 +521,11 @@ gpm_kbd_backlight_idle_changed_cb (GpmIdle *idle,
 
    if (mode == GPM_IDLE_MODE_NORMAL) {
        g_debug ("GPM_IDLE_MODE_NORMAL");
-       backlight->priv->master_percentage = 100;
        gpm_kbd_backlight_evaluate_power_source_and_set (backlight);
    } else if (mode == GPM_IDLE_MODE_DIM) {
        g_debug ("GPM_IDLE_MODE_DIM");
        value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_IDLE);
-       value = gpm_kbd_backlight_get_master_percentage_dimmed (backlight, value);
+       value = gpm_kbd_backlight_get_ac_percentage_dimmed (backlight, value);
        gpm_kbd_backlight_set (backlight, value, FALSE);
    } else if (mode == GPM_IDLE_MODE_BLANK) {
        gpm_kbd_backlight_set (backlight, 0u, FALSE);
@@ -673,9 +669,6 @@ err:
    backlight->priv->max_brightness = 0;
 
 noerr:
-   /* Initialize the master to full power. It will get scaled if needed */
-   backlight->priv->master_percentage = 100u;
-
    backlight->priv->idle_timer = g_timer_new ();
    backlight->priv->can_dim = backlight->priv->max_brightness > 1;
 
