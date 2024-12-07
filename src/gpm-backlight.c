@@ -405,6 +405,47 @@ gpm_backlight_client_changed_cb (UpClient *client, GParamSpec *pspec, GpmBacklig
 }
 
 /**
+ * gpm_backlight_save_settings:
+ * @backlight: This class instance
+ * @percentage: Current brightess in percent
+ **/
+static void
+gpm_backlight_save_settings (GpmBacklight *backlight, guint percentage)
+{
+	gint battery_reduce;
+	gfloat brightness_ac;
+	gboolean on_battery;
+
+	backlight->priv->master_percentage = percentage;
+	g_object_get (backlight->priv->client, "on-battery", &on_battery, NULL);
+	if (on_battery) {
+		/* If using battery, saving settings needs a bit of trickery.
+		 * IMHO this shows that using two factors for setting
+		 * brightness level is a crooked idea to begin with, but
+		 * this is still less random than only saving changes when
+		 * running on AC.
+		 */
+		brightness_ac = g_settings_get_double (backlight->priv->settings, GPM_SETTINGS_BRIGHTNESS_AC);
+		battery_reduce = 100 - (gint) (percentage * 100.0f / brightness_ac);
+		if (battery_reduce < 0) {
+			/* Brightness set higher than brightness-ac - we have to adjust that value. */
+			g_settings_set_double (backlight->priv->settings, GPM_SETTINGS_BRIGHTNESS_AC,
+					percentage * 1.0);
+			battery_reduce = 0;
+			g_debug ("saving brightness for ac supply: %u", percentage);
+		}
+		g_debug ("saving brightness for battery - master percent: %u; ac supply: %f; dim battery: %u",
+				percentage, brightness_ac, battery_reduce);
+		g_settings_set_uint (backlight->priv->settings, GPM_SETTINGS_BRIGHTNESS_DIM_BATT, (guint) battery_reduce);
+	} else {
+		/* if using AC power supply, save the new brightness settings */
+		g_debug ("saving brightness for ac supply: %u", percentage);
+		g_settings_set_double (backlight->priv->settings, GPM_SETTINGS_BRIGHTNESS_AC,
+				percentage * 1.0);
+	}
+}
+
+/**
  * gpm_backlight_button_pressed_cb:
  * @power: The power class instance
  * @type: The button type, e.g. "power"
@@ -418,7 +459,6 @@ gpm_backlight_button_pressed_cb (GpmButton *button, const gchar *type, GpmBackli
 	GError *error = NULL;
 	guint percentage;
 	gboolean hw_changed;
-	gboolean on_battery;
 	g_debug ("Button press event type=%s", type);
 
 	if (g_strcmp0 (type, GPM_BUTTON_BRIGHT_UP) == 0) {
@@ -433,14 +473,7 @@ gpm_backlight_button_pressed_cb (GpmButton *button, const gchar *type, GpmBackli
 								percentage);
 			gpm_backlight_dialog_show (backlight);
 			/* save the new percentage */
-			backlight->priv->master_percentage = percentage;
-			/* if using AC power supply, save the new brightness settings */
-			g_object_get (backlight->priv->client, "on-battery", &on_battery, NULL);
-			if (!on_battery) {
-				g_debug ("saving brightness for ac supply: %u", percentage);
-				g_settings_set_double (backlight->priv->settings, GPM_SETTINGS_BRIGHTNESS_AC,
-						       percentage*1.0);
-			}
+			gpm_backlight_save_settings (backlight, percentage);
 		}
 		/* we emit a signal for the brightness applet */
 		if (ret && hw_changed) {
@@ -459,14 +492,7 @@ gpm_backlight_button_pressed_cb (GpmButton *button, const gchar *type, GpmBackli
 								percentage);
 			gpm_backlight_dialog_show (backlight);
 			/* save the new percentage */
-			backlight->priv->master_percentage = percentage;
-			/* if using AC power supply, save the new brightness settings */
-			g_object_get (backlight->priv->client, "on-battery", &on_battery, NULL);
-			if (!on_battery) {
-				g_debug ("saving brightness for ac supply: %u", percentage);
-				g_settings_set_double (backlight->priv->settings, GPM_SETTINGS_BRIGHTNESS_AC,
-						       percentage*1.0);
-			}
+			gpm_backlight_save_settings (backlight, percentage);
 		}
 		/* we emit a signal for the brightness applet */
 		if (ret && hw_changed) {

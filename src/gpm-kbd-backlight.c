@@ -332,8 +332,15 @@ gpm_kbd_backlight_evaluate_power_source_and_set (GpmKbdBacklight *backlight)
    gfloat scale;
    gboolean on_battery;
    gboolean battery_reduce;
+   gboolean do_kbd_backlight;
    guint value;
    gboolean ret;
+
+   do_kbd_backlight = g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_KBD_BACKLIGHT_ENABLE);
+   if (do_kbd_backlight == FALSE) {
+      g_warning ("policy is no dimming");
+      return FALSE;
+   }
 
    brightness = backlight->priv->master_percentage;
 
@@ -344,25 +351,18 @@ gpm_kbd_backlight_evaluate_power_source_and_set (GpmKbdBacklight *backlight)
 
    battery_reduce = g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_KBD_BACKLIGHT_BATT_REDUCE);
 
-   if (on_battery) {
-      if (battery_reduce) {
-         value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_BATT);
+   if (on_battery && battery_reduce) {
+      value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_BATT);
 
-         if (value > 100) {
-            g_warning ("Cannot scale brightness down by more than 100%%. Scaling by 50%%");
-            value = 50;
-         }
-
-         scale = (100 - value) / 100.0f;
-         brightness *= scale;
-
-         value = (guint) brightness;
-
-      } else {
-         // do not change keyboard backlight
-         return TRUE;
+      if (value > 100) {
+         g_warning ("Cannot scale brightness down by more than 100%%. Scaling by 50%%");
+         value = 50;
       }
 
+      scale = (100 - value) / 100.0f;
+      brightness *= scale;
+
+      value = (guint) brightness;
    } else {
        value = g_settings_get_int (backlight->priv->settings, GPM_SETTINGS_KBD_BRIGHTNESS_ON_AC);
    }
@@ -418,8 +418,6 @@ gpm_kbd_backlight_button_pressed_cb (GpmButton *button,
 {
    static guint saved_brightness;
    gboolean ret;
-
-   saved_brightness = backlight->priv->master_percentage;
 
    if (g_strcmp0 (type, GPM_BUTTON_KBD_BRIGHT_UP) == 0) {
        ret = gpm_kbd_backlight_brightness_up (backlight);

@@ -68,6 +68,7 @@ G_BEGIN_DECLS
 #define GPM_SETTINGS_BRIGHTNESS_DIM_BATT		"brightness-dim-battery"
 
 /* keyboard backlight */
+#define GPM_SETTINGS_KBD_BACKLIGHT_ENABLE		"kbd-backlight-enable"
 #define GPM_SETTINGS_KBD_BACKLIGHT_BATT_REDUCE     "kbd-backlight-battery-reduce"
 #define GPM_SETTINGS_KBD_BRIGHTNESS_ON_AC      "kbd-brightness-on-ac"
 #define GPM_SETTINGS_KBD_BRIGHTNESS_DIM_BY_ON_BATT      "kbd-brightness-dim-by-on-battery"
