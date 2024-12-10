@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="https://github.com/mate-desktop/mate-power-manager/raw/master/data/icons/16x16/apps/mate-power-manager.png" />
+  <title>mate-power-manager Code Analyzer results</title>
+</head>
+<body>
+<h1>
+  <a href="https://github.com/mate-desktop">mate-desktop</a>/<a href="https://github.com/mate-desktop/mate-power-manager">mate-power-manager</a> Static analyzer results
+</h1>
+  <a href="https://github.com/mate-desktop/mate-power-manager" title="Github"><i class="fa fa-github fa-2x"></i>GitHub</a>
+  <a href="https://app.travis-ci.com/mate-desktop/mate-power-manager/builds/273476478" title="Travis CI"><img src="https://travis-ci.org/mate-desktop/mate-power-manager.svg?branch=master" alt="Build Status" /></a>
+<hr/>
+Commit: <a href="https://github.com/mate-desktop/mate-power-manager/commit/cf76826417831e0ee6fcd90ad2da76d9f2c37f30">cf76826417831e0ee6fcd90ad2da76d9f2c37f30</a><br/>
+Compare: <a href="https://github.com/mate-desktop/mate-power-manager/compare/606c145bfc16...cf7682641783">606c145bfc16...cf7682641783</a><br/>
+Branch: <a href="https://github.com/mate-desktop/mate-power-manager/tree/kbd-backlight">kbd-backlight</a><br/>
+Time: 2024-12-10 08:57:07+00:00<br/>
+Messages:<br/>
+<pre>
+gpm-kbd-backlight: Rationalize handling of battery-reduce setting
+
+Handling of a disabled battery-reduce setting was too aggressive, which
+could reduce in not setting backlight value in unrelated cases,
+including initial startup and resume, as well as some cases of IDLE
+handling.
+
+Now the user choices are better followed, the whole special-casing
+could probably be removed as the internal state should always reflect
+the reality, but keep the specific check not to do anything on AC
+plug/unplug when this is disabled just in case, although the historical
+reasons why it was actually problematic should be gone now.
+</pre>
+<hr/>
+<ul>
+<li><a href="2024-12-10-085707-3194-cppcheck@cf7682641783_kbd-backlight">2024-12-10-085707-3194-cppcheck@cf7682641783_kbd-backlight</a></li>
+<li><a href="2024-12-10-085615-10907-1@cf7682641783_kbd-backlight">2024-12-10-085615-10907-1@cf7682641783_kbd-backlight</a></li>
+<li><a href=2024-12-06-085155-5491-cppcheck@937ef297a9b1_master>2024-12-06-085155-5491-cppcheck@937ef297a9b1_master</a></li>
+<li><a href=2024-12-06-085111-10910-1@937ef297a9b1_master>2024-12-06-085111-10910-1@937ef297a9b1_master</a></li>
+<li><a href=2024-12-05-085637-8256-cppcheck@63309169d441_ci-fixes>2024-12-05-085637-8256-cppcheck@63309169d441_ci-fixes</a></li>
+<li><a href=2024-12-05-085545-10998-1@63309169d441_ci-fixes>2024-12-05-085545-10998-1@63309169d441_ci-fixes</a></li>
+<li><a href=2024-12-05-084616-4698-cppcheck@606c145bfc16_kbd-backlight>2024-12-05-084616-4698-cppcheck@606c145bfc16_kbd-backlight</a></li>
+<li><a href=2024-12-05-084523-10907-1@606c145bfc16_kbd-backlight>2024-12-05-084523-10907-1@606c145bfc16_kbd-backlight</a></li>
+<li><a href=2024-10-02-101458-4403-cppcheck@e8abdd43368d_submodules-no-fatal-errors>2024-10-02-101458-4403-cppcheck@e8abdd43368d_submodules-no-fatal-errors</a></li>
+<li><a href=2024-10-02-101334-12034-1@e8abdd43368d_submodules-no-fatal-errors>2024-10-02-101334-12034-1@e8abdd43368d_submodules-no-fatal-errors</a></li>
+<li><a href=2024-02-25-212232-3050-cppcheck@6561790b0304_v1.28.1>2024-02-25-212232-3050-cppcheck@6561790b0304_v1.28.1</a></li>
+<li><a href=2024-02-25-212103-11825-1@6561790b0304_v1.28.1>2024-02-25-212103-11825-1@6561790b0304_v1.28.1</a></li>
+<li><a href=2024-02-25-205812-7291-cppcheck@c406c230d131_master>2024-02-25-205812-7291-cppcheck@c406c230d131_master</a></li>
+<li><a href=2024-02-25-205630-11823-1@c406c230d131_master>2024-02-25-205630-11823-1@c406c230d131_master</a></li>
+<li><a href=2024-02-24-211327-4700-cppcheck@9c92dc6751d6_shiti-meson>2024-02-24-211327-4700-cppcheck@9c92dc6751d6_shiti-meson</a></li>
+<li><a href=2024-02-24-211205-11824-1@9c92dc6751d6_shiti-meson>2024-02-24-211205-11824-1@9c92dc6751d6_shiti-meson</a></li>
+<li><a href=2024-02-20-035850-1944-cppcheck@c4d942135cd8_v1.28.0>2024-02-20-035850-1944-cppcheck@c4d942135cd8_v1.28.0</a></li>
+<li><a href=2024-02-20-035709-11940-1@c4d942135cd8_v1.28.0>2024-02-20-035709-11940-1@c4d942135cd8_v1.28.0</a></li>
+<li><a href=2024-02-20-033116-3408-cppcheck@75e7f43a2d7c_translation-test>2024-02-20-033116-3408-cppcheck@75e7f43a2d7c_translation-test</a></li>
+<li><a href=2024-02-20-032953-11902-1@75e7f43a2d7c_translation-test>2024-02-20-032953-11902-1@75e7f43a2d7c_translation-test</a></li>
+</ul>
+</body>
+</html>
