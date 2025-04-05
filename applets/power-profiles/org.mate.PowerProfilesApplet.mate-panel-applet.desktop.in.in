@@ -1,0 +1,18 @@
+[Applet Factory]
+Id=PowerProfilesAppletFactory
+Location=@LIBEXECDIR@/mate-power-profiles-applet
+Name=Power Profiles Applet Factory
+Description=Factory for Power Profiles Applet
+
+[PowerProfilesApplet]
+Name=Power Profiles Applet
+Description=Adjusts system power profiles
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+Icon=mate-power-profiles-applet
+MateComponentId=OAFIID:MATE_PowerProfilesApplet
+Platforms=X11;
+X-MATE-Bugzilla-Bugzilla=MATE
+X-MATE-Bugzilla-Product=mate-power-manager
+X-MATE-Bugzilla-Component=applets
+X-MATE-Bugzilla-Version=@VERSION@
+X-MATE-Bugzilla-OtherBinaries=mate-power-profiles-applet

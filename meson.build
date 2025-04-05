@@ -136,6 +136,7 @@ config_inc = include_directories('.')
 if enable_applet
   subdir('applets/brightness')
   subdir('applets/inhibit')
+  subdir('applets/power-profiles')
 endif
 subdir('help')
 subdir('src')
