@@ -23,6 +23,7 @@
     <property name="title" translatable="yes">Power Management Preferences</property>
     <property name="icon_name">mate-power-manager</property>
     <property name="type_hint">dialog</property>
+    <property name="border-width">5</property>
     <signal name="delete-event" handler="on_dialog_preferences_delete_event" swapped="no"/>
     <child>
       <placeholder/>
@@ -94,10 +95,7 @@
           <object class="GtkNotebook" id="notebook_preferences">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="margin_left">12</property>
-            <property name="margin_right">12</property>
-            <property name="margin_top">12</property>
-            <property name="margin_bottom">12</property>
+            <property name="border-width">5</property>
             <child>
               <object class="GtkBox" id="box_ac">
                 <property name="visible">True</property>
