@@ -384,8 +384,8 @@ gpm_kbd_backlight_evaluate_power_source_and_set (GpmKbdBacklight *backlight)
    guint dim_by = 0;
 
    if (g_settings_get_boolean (backlight->priv->settings, GPM_SETTINGS_KBD_BACKLIGHT_ENABLE) == FALSE) {
-      g_warning ("policy is no dimming");
-      return FALSE;
+      g_debug ("policy is no dimming");
+      return TRUE;
    }
 
    if (up_client_get_on_battery (backlight->priv->client) &&
