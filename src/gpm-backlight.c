@@ -426,9 +426,14 @@ gpm_backlight_save_settings (GpmBacklight *backlight, guint percentage)
 		 * running on AC.
 		 */
 		brightness_ac = g_settings_get_double (backlight->priv->settings, GPM_SETTINGS_BRIGHTNESS_AC);
-		battery_reduce = 100 - (gint) (percentage * 100.0f / brightness_ac);
+		if (brightness_ac) {
+			battery_reduce = 100 - (gint) (percentage * 100.0f / brightness_ac);
+		} else {
+			/* Any negative number indicates we surpassed brightness_ac. 0 indicates nothing changed. */
+			battery_reduce = - (gint) percentage;
+		}
 		if (battery_reduce < 0) {
-			/* Brightness set higher than brightness-ac - we have to adjust that value. */
+			/* Brightness set higher than brightness_ac - we have to adjust that value. */
 			g_settings_set_double (backlight->priv->settings, GPM_SETTINGS_BRIGHTNESS_AC,
 					percentage * 1.0);
 			battery_reduce = 0;
