@@ -17,17 +17,18 @@ EXTRA_DIST =						\
 
 # Distribute the Meson build system files as well
 EXTRA_DIST += \
-	meson.build			\
-	meson_options.txt		\
-	meson_post_install.sh		\
-	applets/brightness/meson.build	\
-	applets/inhibit/meson.build	\
-	data/meson.build		\
-	data/icons/meson.build		\
-	help/meson.build		\
-	help/LINGUAS			\
-	po/meson.build			\
-	policy/meson.build		\
+	meson.build				\
+	meson_options.txt			\
+	meson_post_install.sh			\
+	applets/brightness/meson.build		\
+	applets/inhibit/meson.build		\
+	applets/power-profiles/meson.build	\
+	data/meson.build			\
+	data/icons/meson.build			\
+	help/meson.build			\
+	help/LINGUAS				\
+	po/meson.build				\
+	policy/meson.build			\
 	src/meson.build
 
 clean-local :

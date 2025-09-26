@@ -225,6 +225,7 @@ src/Makefile
 applets/Makefile
 applets/brightness/Makefile
 applets/inhibit/Makefile
+applets/power-profiles/Makefile
 help/Makefile
 po/Makefile.in
 policy/Makefile
