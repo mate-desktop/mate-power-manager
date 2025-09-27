@@ -75,6 +75,8 @@ static void	gpm_applet_update_icon		(GpmInhibitApplet *applet);
 static void	gpm_applet_size_allocate_cb     (GtkWidget *widget, GdkRectangle *allocation);;
 static void	gpm_applet_update_tooltip	(GpmInhibitApplet *applet);
 static gboolean	gpm_applet_click_cb		(GpmInhibitApplet *applet, GdkEventButton *event);
+static gboolean	gpm_applet_key_cb		(GpmInhibitApplet *applet, GdkEventKey *event);
+static gboolean	gpm_applet_switch_cb		(GpmInhibitApplet *applet);
 static void	gpm_applet_dialog_about_cb	(GtkAction *action, gpointer data);
 static gboolean	gpm_applet_cb		        (MatePanelApplet *_applet, const gchar *iid, gpointer data);
 static void	gpm_applet_destroy_cb		(GtkWidget *widget);
@@ -237,16 +239,48 @@ gpm_applet_update_tooltip (GpmInhibitApplet *applet)
  * gpm_applet_click_cb:
  * @applet: Inhibit applet instance
  *
- * pops and unpops
+ * toggle switch (through mouse button)
  **/
 static gboolean
 gpm_applet_click_cb (GpmInhibitApplet *applet, GdkEventButton *event)
 {
-	/* react only to left mouse button */
-	if (event->button != 1) {
-		return FALSE;
-	}
+	if (gdk_event_triggers_context_menu ((GdkEvent *) event))
+		return gpm_applet_switch_cb (applet);
+	return FALSE;
+}
 
+/**
+ * gpm_applet_key_cb:
+ * @applet: Inhibit applet instance
+ *
+ * toggle switch (through key press event)
+ **/
+static gboolean
+gpm_applet_key_cb (GpmInhibitApplet *applet, GdkEventKey *event)
+{
+	switch (event->keyval) {
+	case GDK_KEY_KP_Enter:
+	case GDK_KEY_ISO_Enter:
+	case GDK_KEY_3270_Enter:
+	case GDK_KEY_Return:
+	case GDK_KEY_space:
+	case GDK_KEY_KP_Space:
+		return gpm_applet_switch_cb (applet);
+	default:
+		break;
+	}
+	return FALSE;
+}
+
+/**
+ * gpm_applet_switch_cb:
+ * @applet: Inhibit applet instance
+ *
+ * pops and unpops
+ **/
+static gboolean
+gpm_applet_switch_cb (GpmInhibitApplet *applet)
+{
 	if (applet->cookie > 0) {
 		g_debug ("uninhibiting %u", applet->cookie);
 		gpm_applet_uninhibit (applet, applet->cookie);
@@ -477,6 +511,9 @@ gpm_inhibit_applet_init (GpmInhibitApplet *applet)
 	/* connect */
 	g_signal_connect (G_OBJECT(applet), "button-press-event",
 			  G_CALLBACK(gpm_applet_click_cb), NULL);
+
+	g_signal_connect (G_OBJECT(applet), "key-press-event",
+			  G_CALLBACK(gpm_applet_key_cb), NULL);
 
 	g_signal_connect (G_OBJECT(applet), "size-allocate",
 			  G_CALLBACK(gpm_applet_size_allocate_cb), NULL);
