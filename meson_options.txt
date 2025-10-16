@@ -2,3 +2,4 @@ option('enable-tests', type : 'boolean', value : true, description : 'enable tes
 option('gnome-keyring', type : 'boolean', value : false, description : 'gnome-keyring support')
 option('libsecret', type : 'boolean', value : true, description : 'libsecret enabled')
 option('applets', type : 'boolean', value : true, description : 'applets enabled')
+option('applets-in-process', type : 'boolean', value : false, description : 'build applets in-process')

@@ -24,17 +24,34 @@ AM_CPPFLAGS =							\
 	$(WARN_CFLAGS)						\
 	$(NULL)
 
-libexec_PROGRAMS=mate-power-profiles-applet
+if APPLETS_INPROCESS
+APPLET_IN_PROCESS = true
+APPLET_LOCATION   = $(libdir)/$(PACKAGE)/libmate-power-profiles-applet.so
 
+pkglib_LTLIBRARIES = libmate-power-profiles-applet.la
+libmate_power_profiles_applet_la_SOURCES =			\
+	power-profiles-applet.c					\
+	gpm-common.c						\
+	gpm-common.h
+libmate_power_profiles_applet_la_LDFLAGS = -module -avoid-version
+libmate_power_profiles_applet_la_LIBADD =			\
+	$(DBUS_LIBS)						\
+	$(CAIRO_LIBS)						\
+	$(PANEL_LIBS)
+else
+APPLET_IN_PROCESS = false
+APPLET_LOCATION   = $(libexecdir)/mate-power-profiles-applet
+
+libexec_PROGRAMS = mate-power-profiles-applet
 mate_power_profiles_applet_SOURCES =				\
 	power-profiles-applet.c					\
 	gpm-common.c						\
 	gpm-common.h
-
-mate_power_profiles_applet_LDADD =					\
+mate_power_profiles_applet_LDADD =				\
 	$(DBUS_LIBS)						\
 	$(CAIRO_LIBS)						\
 	$(PANEL_LIBS)
+endif
 
 appletdir       = $(datadir)/mate-panel/applets
 applet_in_files = org.mate.PowerProfilesApplet.mate-panel-applet.desktop.in
@@ -43,12 +60,14 @@ applet_DATA     = $(applet_in_files:.mate-panel-applet.desktop.in=.mate-panel-ap
 $(applet_DATA): $(applet_in_files)
 	$(AM_V_GEN) $(MSGFMT) --desktop --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
 
-$(applet_in_files): $(applet_in_files).in
+$(applet_in_files): $(applet_in_files).in Makefile
 	$(AM_V_GEN) sed \
-            -e "s|\@LIBEXECDIR\@|$(libexecdir)|" \
+            -e "s|\@APPLET_LOCATION\@|$(APPLET_LOCATION)|" \
+            -e "s|\@APPLET_IN_PROCESS\@|$(APPLET_IN_PROCESS)|" \
             -e "s|\@VERSION\@|$(PACKAGE_VERSION)|" \
             $< > $@
 
+if !APPLETS_INPROCESS
 servicedir       = $(datadir)/dbus-1/services
 service_in_files = org.mate.panel.applet.PowerProfilesAppletFactory.service.in
 service_DATA     = $(service_in_files:.service.in=.service)
@@ -57,6 +76,7 @@ org.mate.panel.applet.PowerProfilesAppletFactory.service: $(service_in_files)
 	$(AM_V_GEN)sed \
             -e "s|\@LIBEXECDIR\@|$(libexecdir)|" \
             $< > $@
+endif
 
 uidir   = $(datadir)/mate-power-manager/ui
 ui_DATA = power-profiles-applet-menu.xml

@@ -88,6 +88,7 @@ foreach arg: test_link_args
 endforeach
 
 enable_applet = get_option('applets')
+enable_applets_inprocess = get_option('applets-in-process')
 enable_keyring = get_option('gnome-keyring')
 enable_libsecret = get_option('libsecret')
 
@@ -116,6 +117,7 @@ i18n = import('i18n')
 
 conf.set('WITH_KEYRING', keyring.found())
 conf.set('WITH_LIBSECRET', libsecret.found())
+conf.set('APPLETS_INPROCESS', enable_applets_inprocess)
 conf.set_quoted('GETTEXT_PACKAGE', meson.project_name())
 conf.set_quoted('LOCALEDIR',
                 join_paths(get_option('prefix'),

@@ -1105,12 +1105,24 @@ gpm_applet_cb (MatePanelApplet *_applet, const gchar *iid, gpointer data)
 /**
  * this generates a main with a applet factory
  **/
-MATE_PANEL_APPLET_OUT_PROCESS_FACTORY
+#ifdef APPLETS_INPROCESS
+MATE_PANEL_APPLET_IN_PROCESS_FACTORY
  (/* the factory iid */
  GPM_BRIGHTNESS_APPLET_FACTORY_ID,
- /* generates brighness applets instead of regular mate applets  */
+ /* generates brightness applets instead of regular mate applets  */
  GPM_TYPE_BRIGHTNESS_APPLET,
  /* the applet name */
  "BrightnessApplet",
  /* our callback (with no user data) */
- gpm_applet_cb, NULL);
+ gpm_applet_cb, NULL)
+#else
+MATE_PANEL_APPLET_OUT_PROCESS_FACTORY
+ (/* the factory iid */
+ GPM_BRIGHTNESS_APPLET_FACTORY_ID,
+ /* generates brightness applets instead of regular mate applets  */
+ GPM_TYPE_BRIGHTNESS_APPLET,
+ /* the applet name */
+ "BrightnessApplet",
+ /* our callback (with no user data) */
+ gpm_applet_cb, NULL)
+#endif

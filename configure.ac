@@ -195,6 +195,20 @@ fi
 AC_MSG_RESULT([$have_applets])
 AM_CONDITIONAL([HAVE_APPLETS], [test $have_applets = yes])
 
+AC_ARG_ENABLE(applets-in-process,
+              AS_HELP_STRING([--enable-applets-in-process],
+                             [Build applets in-process (default: no)]),
+              enable_applets_inprocess=$enableval,enable_applets_inprocess=no)
+
+AC_MSG_CHECKING([whether to build applets in-process])
+if test x$enable_applets_inprocess = xyes ; then
+    AC_DEFINE(APPLETS_INPROCESS, 1, [Define if we are building in-process applets])
+    AC_MSG_RESULT(yes)
+else
+    AC_MSG_RESULT(no)
+fi
+AM_CONDITIONAL([APPLETS_INPROCESS], [test x$enable_applets_inprocess = xyes])
+
 dnl ---------------------------------------------------------------------------
 dnl - Are we specifying a different dbus root ?
 dnl ---------------------------------------------------------------------------
@@ -255,6 +269,7 @@ Configure summary:
     libsecret support ...........: ${with_libsecret}
     gnome-keyring support .......: ${with_keyring}
     Building extra applets ......: ${enable_applets}
+    Applets in-process...........: ${enable_applets_inprocess}
     Self test support ...........: ${have_tests}
     dbus-1 services dir .........: $DBUS_SERVICES_DIR
 "

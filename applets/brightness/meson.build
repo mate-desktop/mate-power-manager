@@ -15,39 +15,63 @@ cflags = [
   '-DEGG_CONSOLE="GPM_CONSOLE"'
   ]
 
-executable('mate-brightness-applet',
-  sources: source_files,
-  dependencies : [
-    gtk,
-    glib,
-    cairo,
-    notify,
-    dbus,
-    dbusglib,
-    matepanel
-  ],
-  include_directories : config_inc,
-  c_args : cflags,
-  install : true,
-  install_dir: mateexecdir,
-)
+if enable_applets_inprocess
+  shared_library('mate-brightness-applet',
+    sources: source_files,
+    dependencies : [
+      gtk,
+      glib,
+      cairo,
+      notify,
+      dbus,
+      dbusglib,
+      matepanel
+    ],
+    include_directories : config_inc,
+    c_args : cflags,
+    install : true,
+    install_dir: join_paths(get_option('libdir'), meson.project_name()),
+  )
+else
+  executable('mate-brightness-applet',
+    sources: source_files,
+    dependencies : [
+      gtk,
+      glib,
+      cairo,
+      notify,
+      dbus,
+      dbusglib,
+      matepanel
+    ],
+    include_directories : config_inc,
+    c_args : cflags,
+    install : true,
+    install_dir: mateexecdir,
+  )
 
-# .service files
+  # .service files
+  service_data = configuration_data()
+  service_data.set('LIBEXECDIR', join_paths(prefix, get_option('libexecdir')))
 
-service_data = configuration_data()
-service_data.set('LIBEXECDIR', join_paths(prefix, get_option('libexecdir')))
-
-configure_file(
-  input : 'org.mate.panel.applet.BrightnessAppletFactory.service.in',
-  output : 'org.mate.panel.applet.BrightnessAppletFactory.service',
-  configuration : service_data,
-  install : true,
-  install_dir : join_paths(matedatadir, 'dbus-1/services')
-)
+  configure_file(
+    input : 'org.mate.panel.applet.BrightnessAppletFactory.service.in',
+    output : 'org.mate.panel.applet.BrightnessAppletFactory.service',
+    configuration : service_data,
+    install : true,
+    install_dir : join_paths(matedatadir, 'dbus-1/services')
+  )
+endif
 
 desktop_data = configuration_data()
 desktop_data.set('VERSION', meson.project_version())
-desktop_data.set('LIBEXECDIR', join_paths(prefix, get_option('libexecdir')))
+if enable_applets_inprocess
+  desktop_data.set('APPLET_IN_PROCESS', 'true')
+  desktop_data.set('APPLET_LOCATION', join_paths(prefix, get_option('libdir'), meson.project_name(), 'libmate-brightness-applet.so'))
+else
+  desktop_data.set('APPLET_IN_PROCESS', 'false')
+  desktop_data.set('APPLET_LOCATION', join_paths(prefix, get_option('libexecdir'), 'mate-brightness-applet'))
+endif
 desktop_in_file = configure_file(
   input : 'org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in',
   output : 'org.mate.BrightnessApplet.mate-panel-applet.desktop.in',
