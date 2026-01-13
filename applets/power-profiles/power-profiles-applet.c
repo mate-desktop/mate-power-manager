@@ -319,7 +319,7 @@ gpm_applet_popup_cleared_cb (GtkWidget *widget, GpmPowerProfilesApplet *applet)
  * Display the popup menu.
  **/
 static void
-gpm_applet_popup_menu (GpmPowerProfilesApplet *applet, guint32 timestamp)
+gpm_applet_popup_menu (GpmPowerProfilesApplet *applet)
 {
 	GtkMenu *menu;
 
@@ -327,8 +327,10 @@ gpm_applet_popup_menu (GpmPowerProfilesApplet *applet, guint32 timestamp)
 
 	/* show the menu */
 	gtk_widget_show_all (GTK_WIDGET (menu));
-	gtk_menu_popup (GTK_MENU (menu), NULL, NULL, NULL,
-			applet, 1, timestamp);
+	gtk_menu_popup_at_widget (GTK_MENU (menu), GTK_WIDGET (applet),
+				  GDK_GRAVITY_SOUTH_WEST,
+				  GDK_GRAVITY_NORTH_WEST,
+				  NULL);
 
 	g_signal_connect (GTK_WIDGET (menu), "hide",
 			  G_CALLBACK (gpm_applet_popup_cleared_cb), applet);
@@ -348,7 +350,7 @@ gpm_applet_click_cb (GpmPowerProfilesApplet *applet, GdkEventButton *event)
 		return FALSE;
 	}
 
-	gpm_applet_popup_menu (applet, gtk_get_current_event_time());
+	gpm_applet_popup_menu (applet);
 
 	gpm_applet_get_power_profile (applet);
 	gpm_applet_update_icon (applet);
