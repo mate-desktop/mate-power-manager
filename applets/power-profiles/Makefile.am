@@ -33,6 +33,7 @@ libmate_power_profiles_applet_la_SOURCES =			\
 	power-profiles-applet.c					\
 	gpm-common.c						\
 	gpm-common.h
+libmate_power_profiles_applet_la_CFLAGS = $(AM_CFLAGS)
 libmate_power_profiles_applet_la_LDFLAGS = -module -avoid-version
 libmate_power_profiles_applet_la_LIBADD =			\
 	$(DBUS_LIBS)						\
@@ -47,6 +48,7 @@ mate_power_profiles_applet_SOURCES =				\
 	power-profiles-applet.c					\
 	gpm-common.c						\
 	gpm-common.h
+mate_power_profiles_applet_CFLAGS = $(AM_CFLAGS)
 mate_power_profiles_applet_LDADD =				\
 	$(DBUS_LIBS)						\
 	$(CAIRO_LIBS)						\

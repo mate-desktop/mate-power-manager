@@ -33,6 +33,7 @@ libmate_brightness_applet_la_SOURCES =				\
 	brightness-applet.c					\
 	gpm-common.c						\
 	gpm-common.h
+libmate_brightness_applet_la_CFLAGS = $(AM_CFLAGS)
 libmate_brightness_applet_la_LDFLAGS = -module -avoid-version
 libmate_brightness_applet_la_LIBADD =				\
 	$(DBUS_LIBS)						\
@@ -47,6 +48,7 @@ mate_brightness_applet_SOURCES =				\
 	brightness-applet.c					\
 	gpm-common.c						\
 	gpm-common.h
+mate_brightness_applet_CFLAGS = $(AM_CFLAGS)
 mate_brightness_applet_LDADD =					\
 	$(DBUS_LIBS)						\
 	$(CAIRO_LIBS)						\

@@ -33,6 +33,7 @@ libmate_inhibit_applet_la_SOURCES =				\
 	inhibit-applet.c					\
 	gpm-common.c						\
 	gpm-common.h
+libmate_inhibit_applet_la_CFLAGS = $(AM_CFLAGS)
 libmate_inhibit_applet_la_LDFLAGS = -module -avoid-version
 libmate_inhibit_applet_la_LIBADD =				\
 	$(DBUS_LIBS)						\
@@ -47,6 +48,7 @@ mate_inhibit_applet_SOURCES =					\
 	inhibit-applet.c					\
 	gpm-common.c						\
 	gpm-common.h
+mate_inhibit_applet_CFLAGS = $(AM_CFLAGS)
 mate_inhibit_applet_LDADD =					\
 	$(DBUS_LIBS)						\
 	$(CAIRO_LIBS)						\
