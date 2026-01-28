@@ -11,30 +11,30 @@ infoend() {
 # Required packages on Archlinux
 requires=(
 	ccache # Use ccache to speed up build
+	clang  # Build with clang on Archlinux
 	meson  # Used for meson build
 )
 
+# https://gitlab.archlinux.org/archlinux/packaging/packages/mate-power-manager
 requires+=(
 	autoconf-archive
 	dbus-glib
-	file
 	gcc
+	gettext
 	git
+	glib2-devel
 	itstool
 	libcanberra
-	libsecret
-	libgnome-keyring
 	libnotify
+	libsecret
 	make
 	mate-common
 	mate-panel
+	polkit
 	python
 	upower
 	which
 	yelp-tools
-	iso-codes
-	gobject-introspection
-	dconf
 )
 
 infobegin "Update system"
