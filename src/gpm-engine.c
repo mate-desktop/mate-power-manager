@@ -717,6 +717,7 @@ phone_device_added_cb (GpmPhone *phone, guint idx, GpmEngine *engine)
 	/* state changed */
 	gpm_engine_device_add (engine, device);
 	g_ptr_array_add (engine->priv->array, g_object_ref (device));
+	g_object_unref (device);
 	gpm_engine_recalculate_state (engine);
 }
 
