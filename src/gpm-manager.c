@@ -1172,7 +1172,7 @@ gpm_manager_engine_discharging_cb (GpmEngine *engine, UpDevice *device, GpmManag
 	UpDeviceKind kind;
 	gboolean ret;
 	const gchar *title;
-	const gchar *message;
+	gchar *message = NULL;
 	gdouble percentage;
 	gint64 time_to_empty;
 	gchar *remaining_text = NULL;
@@ -1234,6 +1234,7 @@ gpm_manager_engine_discharging_cb (GpmEngine *engine, UpDevice *device, GpmManag
 out:
 	g_free (icon);
 	g_free (remaining_text);
+	g_free (message);
 	return;
 }
 

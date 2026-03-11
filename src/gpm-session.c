@@ -174,6 +174,7 @@ gpm_session_is_idle (GpmSession *session)
 	if (!ret) {
 		g_warning ("failed to get idle status: %s", error->message);
 		g_error_free (error);
+		g_free (value);
 		is_idle = FALSE;
 		goto out;
 	}
