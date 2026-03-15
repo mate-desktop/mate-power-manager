@@ -46,6 +46,7 @@ requires+=(
 	gobject-introspection
 	libgirepository1.0-dev
 	libdconf-dev
+    xvfb
 )
 
 infobegin "Update system"

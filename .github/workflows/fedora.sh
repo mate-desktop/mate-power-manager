@@ -40,6 +40,7 @@ requires+=(
 	iso-codes-devel
 	gobject-introspection-devel
 	dconf-devel
+    xorg-x11-server-Xvfb
 )
 
 infobegin "Update system"

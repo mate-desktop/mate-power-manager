@@ -37,7 +37,7 @@ requires+=(
 	python
 	upower
 	which
-	yelp-tools
+    xorg-server-xvfb
 )
 
 infobegin "Update system"
