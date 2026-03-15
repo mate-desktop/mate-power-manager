@@ -27,9 +27,7 @@ if [ -f meson.build ]; then
 	infoend
 
 	infobegin "Test (meson)"
-	ninja -C _build test || {
-		true
-	}
+	xvfb-run -a ninja -C _build test
 	infoend
 
 	infobegin "Dist (meson)"
@@ -37,7 +35,7 @@ if [ -f meson.build ]; then
 	# https://github.com/git/git/commit/8959555cee7ec045958f9b6dd62e541affb7e7d9
 	# https://git-scm.com/docs/git-config/2.35.2#Documentation/git-config.txt-safedirectory
 	git config --global --add safe.directory ${PWD}
-	meson dist -C _build --no-tests
+	xvfb-run -a meson dist -C _build
 	infoend
 fi
 
