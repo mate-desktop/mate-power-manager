@@ -3,7 +3,6 @@ NULL =
 AM_CPPFLAGS =							\
 	-I. -I$(srcdir) 					\
 	$(GLIB_CFLAGS)						\
-	$(DBUS_CFLAGS)						\
 	$(CAIRO_CFLAGS)						\
 	$(PANEL_CFLAGS)						\
 	$(LIBNOTIFY_CFLAGS)					\
@@ -36,7 +35,6 @@ libmate_inhibit_applet_la_SOURCES =				\
 libmate_inhibit_applet_la_CFLAGS = $(AM_CFLAGS)
 libmate_inhibit_applet_la_LDFLAGS = -module -avoid-version
 libmate_inhibit_applet_la_LIBADD =				\
-	$(DBUS_LIBS)						\
 	$(CAIRO_LIBS)						\
 	$(PANEL_LIBS)
 else
@@ -50,7 +48,6 @@ mate_inhibit_applet_SOURCES =					\
 	gpm-common.h
 mate_inhibit_applet_CFLAGS = $(AM_CFLAGS)
 mate_inhibit_applet_LDADD =					\
-	$(DBUS_LIBS)						\
 	$(CAIRO_LIBS)						\
 	$(PANEL_LIBS)
 endif

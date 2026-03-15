@@ -25,7 +25,7 @@
 #endif
 
 #include <glib.h>
-#include <dbus/dbus-glib.h>
+#include <gio/gio.h>
 
 #include "gpm-networkmanager.h"
 
@@ -43,26 +43,44 @@
 gboolean
 gpm_networkmanager_sleep (void)
 {
-	DBusGConnection *connection = NULL;
-	DBusGProxy *nm_proxy = NULL;
+	GDBusProxy *nm_proxy = NULL;
+	GVariant *result = NULL;
 	GError *error = NULL;
 
-	connection = dbus_g_bus_get (DBUS_BUS_SYSTEM, &error);
+	nm_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+						 G_DBUS_PROXY_FLAGS_NONE,
+						 NULL,
+						 NM_LISTENER_SERVICE,
+						 NM_LISTENER_PATH,
+						 NM_LISTENER_INTERFACE,
+						 NULL,
+						 &error);
 	if (error) {
 		g_warning ("%s", error->message);
 		g_error_free (error);
 		return FALSE;
 	}
-
-	nm_proxy = dbus_g_proxy_new_for_name (connection,
-			NM_LISTENER_SERVICE,
-			NM_LISTENER_PATH,
-			NM_LISTENER_INTERFACE);
 	if (!nm_proxy) {
 		g_warning ("Failed to get name owner");
 		return FALSE;
 	}
-	dbus_g_proxy_call_no_reply (nm_proxy, "sleep", G_TYPE_INVALID);
+
+	result = g_dbus_proxy_call_sync (nm_proxy,
+					 "sleep",
+					 NULL,
+					 G_DBUS_CALL_FLAGS_NONE,
+					 -1,
+					 NULL,
+					 &error);
+	if (error) {
+		g_warning ("%s", error->message);
+		g_error_free (error);
+		g_object_unref (G_OBJECT (nm_proxy));
+		return FALSE;
+	}
+	if (result != NULL)
+		g_variant_unref (result);
+
 	g_object_unref (G_OBJECT (nm_proxy));
 	return TRUE;
 }
@@ -77,26 +95,44 @@ gpm_networkmanager_sleep (void)
 gboolean
 gpm_networkmanager_wake (void)
 {
-	DBusGConnection *connection = NULL;
-	DBusGProxy *nm_proxy = NULL;
+	GDBusProxy *nm_proxy = NULL;
+	GVariant *result = NULL;
 	GError *error = NULL;
 
-	connection = dbus_g_bus_get (DBUS_BUS_SYSTEM, &error);
+	nm_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+						 G_DBUS_PROXY_FLAGS_NONE,
+						 NULL,
+						 NM_LISTENER_SERVICE,
+						 NM_LISTENER_PATH,
+						 NM_LISTENER_INTERFACE,
+						 NULL,
+						 &error);
 	if (error) {
 		g_warning ("%s", error->message);
 		g_error_free (error);
 		return FALSE;
 	}
-
-	nm_proxy = dbus_g_proxy_new_for_name (connection,
-			NM_LISTENER_SERVICE,
-			NM_LISTENER_PATH,
-			NM_LISTENER_INTERFACE);
 	if (!nm_proxy) {
 		g_warning ("Failed to get name owner");
 		return FALSE;
 	}
-	dbus_g_proxy_call_no_reply (nm_proxy, "wake", G_TYPE_INVALID);
+
+	result = g_dbus_proxy_call_sync (nm_proxy,
+					 "wake",
+					 NULL,
+					 G_DBUS_CALL_FLAGS_NONE,
+					 -1,
+					 NULL,
+					 &error);
+	if (error) {
+		g_warning ("%s", error->message);
+		g_error_free (error);
+		g_object_unref (G_OBJECT (nm_proxy));
+		return FALSE;
+	}
+	if (result != NULL)
+		g_variant_unref (result);
+
 	g_object_unref (G_OBJECT (nm_proxy));
 	return TRUE;
 }

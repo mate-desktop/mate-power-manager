@@ -24,8 +24,8 @@
 #ifndef __GPM_MANAGER_H
 #define __GPM_MANAGER_H
 
+#include <gio/gio.h>
 #include <glib-object.h>
-#include <dbus/dbus-glib.h>
 
 G_BEGIN_DECLS
 
@@ -62,6 +62,9 @@ GQuark		 gpm_manager_error_quark		(void);
 GType		 gpm_manager_error_get_type		(void);
 GType		 gpm_manager_get_type		  	(void);
 GpmManager	*gpm_manager_new			(void);
+gboolean	 gpm_manager_register_dbus		(GpmManager	*manager,
+							 GDBusConnection	*connection,
+							 GError		**error);
 
 gboolean	 gpm_manager_suspend			(GpmManager	*manager,
 							 GError		**error);

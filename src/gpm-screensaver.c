@@ -24,8 +24,8 @@
 
 #include <string.h>
 #include <glib.h>
+#include <gio/gio.h>
 #include <glib/gi18n.h>
-#include <dbus/dbus-glib.h>
 
 #include "gpm-screensaver.h"
 #include "gpm-common.h"
@@ -38,7 +38,7 @@ static void     gpm_screensaver_finalize   (GObject		*object);
 
 struct GpmScreensaverPrivate
 {
-	DBusGProxy		*proxy;
+	GDBusProxy		*proxy;
 };
 
 static gpointer gpm_screensaver_object = NULL;
@@ -53,6 +53,8 @@ G_DEFINE_TYPE_WITH_PRIVATE (GpmScreensaver, gpm_screensaver, G_TYPE_OBJECT)
 gboolean
 gpm_screensaver_lock (GpmScreensaver *screensaver)
 {
+	GError *error = NULL;
+	GVariant *result;
 	guint sleepcount = 0;
 
 	g_return_val_if_fail (GPM_IS_SCREENSAVER (screensaver), FALSE);
@@ -63,8 +65,20 @@ gpm_screensaver_lock (GpmScreensaver *screensaver)
 	}
 
 	g_debug ("doing mate-screensaver lock");
-	dbus_g_proxy_call_no_reply (screensaver->priv->proxy,
-				    "Lock", G_TYPE_INVALID);
+	result = g_dbus_proxy_call_sync (screensaver->priv->proxy,
+					 "Lock",
+					 NULL,
+					 G_DBUS_CALL_FLAGS_NONE,
+					 -1,
+					 NULL,
+					 &error);
+	if (error != NULL) {
+		g_warning ("Lock failed: %s", error->message);
+		g_error_free (error);
+		return FALSE;
+	}
+	if (result != NULL)
+		g_variant_unref (result);
 
 	/* When we send the Lock signal to g-ss it takes maybe a second
 	   or so to fade the screen and lock. If we suspend mid fade then on
@@ -97,6 +111,7 @@ gpm_screensaver_add_throttle (GpmScreensaver *screensaver,
 			      const char     *reason)
 {
 	GError  *error = NULL;
+	GVariant *result;
 	gboolean ret;
 	guint32  cookie;
 
@@ -108,13 +123,18 @@ gpm_screensaver_add_throttle (GpmScreensaver *screensaver,
 		return 0;
 	}
 
-	ret = dbus_g_proxy_call (screensaver->priv->proxy,
-				 "Throttle", &error,
-				 G_TYPE_STRING, "Power screensaver",
-				 G_TYPE_STRING, reason,
-				 G_TYPE_INVALID,
-				 G_TYPE_UINT, &cookie,
-				 G_TYPE_INVALID);
+	result = g_dbus_proxy_call_sync (screensaver->priv->proxy,
+					 "Throttle",
+					 g_variant_new ("(ss)", "Power screensaver", reason),
+					 G_DBUS_CALL_FLAGS_NONE,
+					 -1,
+					 NULL,
+					 &error);
+	ret = (result != NULL);
+	if (result != NULL) {
+		g_variant_get (result, "(u)", &cookie);
+		g_variant_unref (result);
+	}
 	if (error) {
 		g_debug ("ERROR: %s", error->message);
 		g_error_free (error);
@@ -137,6 +157,7 @@ gpm_screensaver_remove_throttle (GpmScreensaver *screensaver, guint cookie)
 {
 	gboolean ret;
 	GError *error = NULL;
+	GVariant *result;
 
 	g_return_val_if_fail (GPM_IS_SCREENSAVER (screensaver), FALSE);
 
@@ -146,11 +167,16 @@ gpm_screensaver_remove_throttle (GpmScreensaver *screensaver, guint cookie)
 	}
 
 	g_debug ("removing throttle: id %u", cookie);
-	ret = dbus_g_proxy_call (screensaver->priv->proxy,
-				 "UnThrottle", &error,
-				 G_TYPE_UINT, cookie,
-				 G_TYPE_INVALID,
-				 G_TYPE_INVALID);
+	result = g_dbus_proxy_call_sync (screensaver->priv->proxy,
+					 "UnThrottle",
+					 g_variant_new ("(u)", cookie),
+					 G_DBUS_CALL_FLAGS_NONE,
+					 -1,
+					 NULL,
+					 &error);
+	ret = (result != NULL);
+	if (result != NULL)
+		g_variant_unref (result);
 	if (error) {
 		g_debug ("ERROR: %s", error->message);
 		g_error_free (error);
@@ -172,9 +198,9 @@ gpm_screensaver_remove_throttle (GpmScreensaver *screensaver, guint cookie)
 gboolean
 gpm_screensaver_check_running (GpmScreensaver *screensaver)
 {
-	gboolean ret;
-	gboolean temp = TRUE;
+	gboolean temp = FALSE;
 	GError *error = NULL;
+	GVariant *result;
 
 	g_return_val_if_fail (GPM_IS_SCREENSAVER (screensaver), FALSE);
 
@@ -183,17 +209,23 @@ gpm_screensaver_check_running (GpmScreensaver *screensaver)
 		return FALSE;
 	}
 
-	ret = dbus_g_proxy_call (screensaver->priv->proxy,
-				 "GetActive", &error,
-				 G_TYPE_INVALID,
-				 G_TYPE_BOOLEAN, &temp,
-				 G_TYPE_INVALID);
+	result = g_dbus_proxy_call_sync (screensaver->priv->proxy,
+					 "GetActive",
+					 NULL,
+					 G_DBUS_CALL_FLAGS_NONE,
+					 -1,
+					 NULL,
+					 &error);
+	if (result != NULL) {
+		g_variant_get (result, "(b)", &temp);
+		g_variant_unref (result);
+	}
 	if (error) {
 		g_debug ("ERROR: %s", error->message);
 		g_error_free (error);
 	}
 
-	return ret;
+	return temp;
 }
 
 /**
@@ -207,6 +239,9 @@ gpm_screensaver_check_running (GpmScreensaver *screensaver)
 gboolean
 gpm_screensaver_poke (GpmScreensaver *screensaver)
 {
+	GError *error = NULL;
+	GVariant *result;
+
 	g_return_val_if_fail (GPM_IS_SCREENSAVER (screensaver), FALSE);
 
 	if (screensaver->priv->proxy == NULL) {
@@ -215,9 +250,21 @@ gpm_screensaver_poke (GpmScreensaver *screensaver)
 	}
 
 	g_debug ("poke");
-	dbus_g_proxy_call_no_reply (screensaver->priv->proxy,
-				    "SimulateUserActivity",
-				    G_TYPE_INVALID);
+	result = g_dbus_proxy_call_sync (screensaver->priv->proxy,
+					 "SimulateUserActivity",
+					 NULL,
+					 G_DBUS_CALL_FLAGS_NONE,
+					 -1,
+					 NULL,
+					 &error);
+	if (error != NULL) {
+		g_warning ("SimulateUserActivity failed: %s", error->message);
+		g_error_free (error);
+		return FALSE;
+	}
+	if (result != NULL)
+		g_variant_unref (result);
+
 	return TRUE;
 }
 
@@ -239,15 +286,23 @@ gpm_screensaver_class_init (GpmScreensaverClass *klass)
 static void
 gpm_screensaver_init (GpmScreensaver *screensaver)
 {
-	DBusGConnection *connection;
+	GError *error = NULL;
 
 	screensaver->priv = gpm_screensaver_get_instance_private (screensaver);
 
-	connection = dbus_g_bus_get (DBUS_BUS_SESSION, NULL);
-	screensaver->priv->proxy = dbus_g_proxy_new_for_name (connection,
-							      GS_LISTENER_SERVICE,
-							      GS_LISTENER_PATH,
-							      GS_LISTENER_INTERFACE);
+	screensaver->priv->proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SESSION,
+							   G_DBUS_PROXY_FLAGS_NONE,
+							   NULL,
+							   GS_LISTENER_SERVICE,
+							   GS_LISTENER_PATH,
+							   GS_LISTENER_INTERFACE,
+							   NULL,
+							   &error);
+	if (error != NULL) {
+		g_warning ("Could not create screensaver proxy: %s", error->message);
+		g_error_free (error);
+		screensaver->priv->proxy = NULL;
+	}
 }
 
 /**
@@ -264,7 +319,8 @@ gpm_screensaver_finalize (GObject *object)
 	screensaver = GPM_SCREENSAVER (object);
 	screensaver->priv = gpm_screensaver_get_instance_private (screensaver);
 
-	g_object_unref (screensaver->priv->proxy);
+	if (screensaver->priv->proxy != NULL)
+		g_object_unref (screensaver->priv->proxy);
 
 	G_OBJECT_CLASS (gpm_screensaver_parent_class)->finalize (object);
 }

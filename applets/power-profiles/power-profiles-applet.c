@@ -31,7 +31,6 @@
 #include <gtk/gtk.h>
 #include <glib-object.h>
 #include <glib/gi18n.h>
-#include <dbus/dbus-glib.h>
 
 #include "gpm-common.h"
 

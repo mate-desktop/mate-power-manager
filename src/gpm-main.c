@@ -31,18 +31,30 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <locale.h>
+#include <gio/gio.h>
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
-#include <dbus/dbus-glib.h>
-#include <dbus/dbus-glib-lowlevel.h>
 
 #include "gpm-icon-names.h"
 #include "gpm-common.h"
 #include "gpm-manager.h"
 #include "gpm-session.h"
 
-#include "org.mate.PowerManager.h"
+#define GPM_DBUS_DAEMON_SERVICE "org.freedesktop.DBus"
+#define GPM_DBUS_DAEMON_PATH "/org/freedesktop/DBus"
+
+enum {
+	GPM_DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER = 1,
+	GPM_DBUS_REQUEST_NAME_REPLY_IN_QUEUE = 2
+};
+
+static const gchar gpm_manager_introspection_xml[] =
+	"<node>"
+	"  <interface name='org.mate.PowerManager'/>"
+	"</node>";
+
+static GDBusNodeInfo *gpm_manager_node_info = NULL;
 
 /**
  * gpm_object_register:
@@ -55,46 +67,67 @@
  * Return value: success
  **/
 static gboolean
-gpm_object_register (DBusGConnection *connection,
-		     GObject	     *object)
+gpm_object_register (GDBusConnection *connection,
+		     GObject *object)
 {
-	DBusGProxy *bus_proxy = NULL;
 	GError *error = NULL;
+	GVariant *result = NULL;
 	guint request_name_result;
-	gboolean ret;
+	guint registration_id;
+        static const GDBusInterfaceVTable interface_vtable = {
+		NULL,
+		NULL,
+		NULL,
+		{ 0 }
+	};
 
-	bus_proxy = dbus_g_proxy_new_for_name (connection,
-					       DBUS_SERVICE_DBUS,
-					       DBUS_PATH_DBUS,
-					       DBUS_INTERFACE_DBUS);
-
-	ret = dbus_g_proxy_call (bus_proxy, "RequestName", &error,
-				 G_TYPE_STRING, GPM_DBUS_SERVICE,
-				 G_TYPE_UINT, 0,
-				 G_TYPE_INVALID,
-				 G_TYPE_UINT, &request_name_result,
-				 G_TYPE_INVALID);
-	if (error) {
+	result = g_dbus_connection_call_sync (connection,
+					 GPM_DBUS_DAEMON_SERVICE,
+					 GPM_DBUS_DAEMON_PATH,
+					 GPM_DBUS_DAEMON_SERVICE,
+					 "RequestName",
+					 g_variant_new ("(su)", GPM_DBUS_SERVICE, (guint) G_BUS_NAME_OWNER_FLAGS_NONE),
+					 G_VARIANT_TYPE ("(u)"),
+					 G_DBUS_CALL_FLAGS_NONE,
+					 -1,
+					 NULL,
+					 &error);
+	if (result == NULL) {
 		g_debug ("ERROR: %s", error->message);
 		g_error_free (error);
-	}
-	if (!ret) {
 		/* abort as the DBUS method failed */
 		g_warning ("RequestName failed!");
 		return FALSE;
 	}
-
-	/* free the bus_proxy */
-	g_object_unref (G_OBJECT (bus_proxy));
+	g_variant_get (result, "(u)", &request_name_result);
+	g_variant_unref (result);
 
 	/* already running */
- 	if (request_name_result != DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER) {
+	if (request_name_result != GPM_DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER) {
 		return FALSE;
 	}
 
-	dbus_g_object_type_install_info (GPM_TYPE_MANAGER, &dbus_glib_gpm_manager_object_info);
-	dbus_g_error_domain_register (GPM_MANAGER_ERROR, NULL, GPM_MANAGER_TYPE_ERROR);
-	dbus_g_connection_register_g_object (connection, GPM_DBUS_PATH, object);
+	if (gpm_manager_node_info == NULL) {
+		gpm_manager_node_info = g_dbus_node_info_new_for_xml (gpm_manager_introspection_xml, &error);
+		if (gpm_manager_node_info == NULL) {
+			g_warning ("Failed to create manager introspection data: %s", error->message);
+			g_error_free (error);
+			return FALSE;
+		}
+	}
+
+	registration_id = g_dbus_connection_register_object (connection,
+						     GPM_DBUS_PATH,
+						     gpm_manager_node_info->interfaces[0],
+						     &interface_vtable,
+						     object,
+						     NULL,
+						     &error);
+	if (registration_id == 0) {
+		g_warning ("Failed to register %s: %s", GPM_DBUS_PATH, error->message);
+		g_error_free (error);
+		return FALSE;
+	}
 
 	return TRUE;
 }
@@ -153,14 +186,15 @@ int
 main (int argc, char *argv[])
 {
 	GMainLoop *loop;
-	DBusGConnection *system_connection;
-	DBusGConnection *session_connection;
+	GDBusConnection *system_connection;
+	GDBusConnection *session_connection;
 	gboolean version = FALSE;
 	gboolean timed_exit = FALSE;
 	gboolean immediate_exit = FALSE;
 	GpmSession *session = NULL;
 	GpmManager *manager = NULL;
 	GError *error = NULL;
+	GVariant *result = NULL;
 	GOptionContext *context;
 	gint ret;
 	guint timer_id;
@@ -180,8 +214,6 @@ main (int argc, char *argv[])
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
 
-	dbus_g_thread_init ();
-
 	context = g_option_context_new (N_("MATE Power Manager"));
 	/* TRANSLATORS: program name, a simple app to view pending updates */
 	g_option_context_add_main_entries (context, options, GETTEXT_PACKAGE);
@@ -194,14 +226,12 @@ main (int argc, char *argv[])
 		goto unref_program;
 	}
 
-	dbus_g_thread_init ();
-
 	gtk_init (&argc, &argv);
 
 	g_debug ("MATE %s %s", GPM_NAME, VERSION);
 
 	/* check dbus connections, exit if not valid */
-	system_connection = dbus_g_bus_get (DBUS_BUS_SYSTEM, &error);
+	system_connection = g_bus_get_sync (G_BUS_TYPE_SYSTEM, NULL, &error);
 	if (error) {
 		g_warning ("%s", error->message);
 		g_error_free (error);
@@ -211,7 +241,8 @@ main (int argc, char *argv[])
 		         "your computer after starting this service.");
 	}
 
-	session_connection = dbus_g_bus_get (DBUS_BUS_SESSION, &error);
+	error = NULL;
+	session_connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, &error);
 	if (error) {
 		g_warning ("%s", error->message);
 		g_error_free (error);
@@ -242,15 +273,37 @@ main (int argc, char *argv[])
 		goto unref_program;
 	}
 
+	error = NULL;
+	if (!gpm_manager_register_dbus (manager, session_connection, &error)) {
+		g_error ("Failed to export D-Bus objects: %s", error->message);
+		g_error_free (error);
+		goto unref_program;
+	}
+
 	/* register to be a policy agent, just like kpackagekit does */
-	ret = dbus_bus_request_name(dbus_g_connection_get_connection(system_connection),
-				    "org.freedesktop.Policy.Power",
-				    DBUS_NAME_FLAG_REPLACE_EXISTING, NULL);
+	result = g_dbus_connection_call_sync (system_connection,
+					 GPM_DBUS_DAEMON_SERVICE,
+					 GPM_DBUS_DAEMON_PATH,
+					 GPM_DBUS_DAEMON_SERVICE,
+					 "RequestName",
+					 g_variant_new ("(su)",
+							"org.freedesktop.Policy.Power",
+							(guint) G_BUS_NAME_OWNER_FLAGS_REPLACE),
+					 G_VARIANT_TYPE ("(u)"),
+					 G_DBUS_CALL_FLAGS_NONE,
+					 -1,
+					 NULL,
+					 NULL);
+	ret = 0;
+	if (result != NULL) {
+		g_variant_get (result, "(u)", &ret);
+		g_variant_unref (result);
+	}
 	switch (ret) {
-	case DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER:
+	case GPM_DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER:
 		g_debug ("Successfully acquired interface org.freedesktop.Policy.Power.");
 		break;
-	case DBUS_REQUEST_NAME_REPLY_IN_QUEUE:
+	case GPM_DBUS_REQUEST_NAME_REPLY_IN_QUEUE:
 		g_debug ("Queued for interface org.freedesktop.Policy.Power.");
 		break;
 	default:

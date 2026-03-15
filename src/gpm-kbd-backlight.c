@@ -59,7 +59,128 @@ enum {
 
 static guint signals [LAST_SIGNAL] = { 0 };
 
+static const gchar gpm_kbd_backlight_introspection_xml[] =
+    "<node>"
+    "  <interface name='org.mate.PowerManager.KbdBacklight'>"
+    "    <method name='GetBrightness'>"
+    "      <arg type='u' name='percentage_brightness' direction='out'/>"
+    "    </method>"
+    "    <method name='SetBrightness'>"
+    "      <arg type='u' name='percentage_brightness' direction='in'/>"
+    "    </method>"
+    "    <signal name='BrightnessChanged'>"
+    "      <arg type='u' name='percentage_brightness' direction='out'/>"
+    "    </signal>"
+    "  </interface>"
+    "</node>";
+
 G_DEFINE_TYPE_WITH_PRIVATE (GpmKbdBacklight, gpm_kbd_backlight, G_TYPE_OBJECT)
+
+static void
+gpm_kbd_backlight_dbus_emit_brightness_changed (GpmKbdBacklight *backlight,
+                    guint value,
+                    gpointer user_data)
+{
+   GError *error = NULL;
+
+   if (backlight->priv->bus_connection == NULL)
+       return;
+
+   g_dbus_connection_emit_signal (backlight->priv->bus_connection,
+                      NULL,
+                      GPM_DBUS_PATH_KBD_BACKLIGHT,
+                      GPM_DBUS_INTERFACE_KBD_BACKLIGHT,
+                      "BrightnessChanged",
+                      g_variant_new ("(u)", value),
+                      &error);
+   if (error != NULL) {
+       g_warning ("Failed to emit keyboard backlight D-Bus signal: %s", error->message);
+       g_error_free (error);
+   }
+}
+
+static void
+gpm_kbd_backlight_dbus_method_call (GDBusConnection *connection,
+                    G_GNUC_UNUSED const gchar *sender,
+                    G_GNUC_UNUSED const gchar *object_path,
+                    G_GNUC_UNUSED const gchar *interface_name,
+                    const gchar *method_name,
+                    GVariant *parameters,
+                    GDBusMethodInvocation *invocation,
+                    gpointer user_data)
+{
+   GpmKbdBacklight *backlight = GPM_KBD_BACKLIGHT (user_data);
+   GError *error = NULL;
+   guint brightness;
+
+   if (g_strcmp0 (method_name, "GetBrightness") == 0) {
+       if (gpm_kbd_backlight_get_brightness (backlight, &brightness, &error)) {
+           g_dbus_method_invocation_return_value (invocation,
+                              g_variant_new ("(u)", brightness));
+       } else {
+           g_dbus_method_invocation_return_gerror (invocation, error);
+           g_error_free (error);
+       }
+       return;
+   }
+
+   if (g_strcmp0 (method_name, "SetBrightness") == 0) {
+       g_variant_get (parameters, "(u)", &brightness);
+       if (gpm_kbd_backlight_set_brightness (backlight, brightness, &error)) {
+           g_dbus_method_invocation_return_value (invocation, NULL);
+       } else {
+           g_dbus_method_invocation_return_gerror (invocation, error);
+           g_error_free (error);
+       }
+       return;
+   }
+
+   g_dbus_method_invocation_return_error (invocation,
+                      G_IO_ERROR,
+                      G_IO_ERROR_NOT_SUPPORTED,
+                      "Method %s is not supported",
+                      method_name);
+}
+
+static const GDBusInterfaceVTable gpm_kbd_backlight_interface_vtable = {
+   gpm_kbd_backlight_dbus_method_call,
+   NULL,
+   NULL,
+   { 0 }
+};
+
+void
+gpm_kbd_backlight_register_dbus (GpmKbdBacklight *backlight,
+                    GDBusConnection *connection,
+                    GError **error)
+{
+    GDBusNodeInfo *node_info;
+
+   g_return_if_fail (GPM_IS_KBD_BACKLIGHT (backlight));
+   g_return_if_fail (G_IS_DBUS_CONNECTION (connection));
+
+   if (backlight->priv->bus_connection != NULL)
+       return;
+
+    node_info = g_dbus_node_info_new_for_xml (gpm_kbd_backlight_introspection_xml, error);
+    if (node_info == NULL)
+        return;
+
+   backlight->priv->bus_object_id =
+      g_dbus_connection_register_object (connection,
+                         GPM_DBUS_PATH_KBD_BACKLIGHT,
+                     node_info->interfaces[0],
+                         &gpm_kbd_backlight_interface_vtable,
+                         backlight,
+                         NULL,
+                         error);
+    g_dbus_node_info_unref (node_info);
+
+   if (backlight->priv->bus_object_id == 0)
+       return;
+
+   backlight->priv->bus_connection = g_object_ref (connection);
+}
 
 /**
  * gpm_kbd_backlight_error_quark:
@@ -602,6 +723,11 @@ gpm_kbd_backlight_init (GpmKbdBacklight *backlight)
    GError   *error = NULL;
 
    backlight->priv = gpm_kbd_backlight_get_instance_private (backlight);
+    backlight->priv->bus_connection = NULL;
+    backlight->priv->bus_object_id = 0;
+
+    g_signal_connect (backlight, "brightness-changed",
+                 G_CALLBACK (gpm_kbd_backlight_dbus_emit_brightness_changed), NULL);
 
    backlight->priv->upower_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
                                       G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,

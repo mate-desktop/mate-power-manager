@@ -23,8 +23,6 @@ if enable_applets_inprocess
       glib,
       cairo,
       notify,
-      dbus,
-      dbusglib,
       matepanel
     ],
     include_directories : config_inc,
@@ -40,8 +38,6 @@ else
       glib,
       cairo,
       notify,
-      dbus,
-      dbusglib,
       matepanel
     ],
     include_directories : config_inc,
