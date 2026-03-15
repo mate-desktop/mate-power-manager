@@ -34,7 +34,6 @@
 #include <glib/gi18n.h>
 #include <gdk/gdkkeysyms.h>
 #include <glib-object.h>
-#include <dbus/dbus-glib.h>
 
 #include "gpm-common.h"
 
@@ -56,8 +55,8 @@ typedef struct{
 	GdkPixbuf *icon;
 	gint icon_width, icon_height;
 	/* connection to g-p-m */
-	DBusGProxy *proxy;
-	DBusGConnection *connection;
+	GDBusProxy *proxy;
+	GDBusConnection *connection;
 	guint bus_watch_id;
 	guint level;
 	/* a cache for panel size */
@@ -123,7 +122,7 @@ static gboolean
 gpm_applet_get_brightness (GpmBrightnessApplet *applet)
 {
 	GError  *error = NULL;
-	gboolean ret;
+	GVariant *result;
 	guint policy_brightness;
 
 	if (applet->proxy == NULL) {
@@ -131,22 +130,28 @@ gpm_applet_get_brightness (GpmBrightnessApplet *applet)
 		return FALSE;
 	}
 
-	ret = dbus_g_proxy_call (applet->proxy, "GetBrightness", &error,
-				 G_TYPE_INVALID,
-				 G_TYPE_UINT, &policy_brightness,
-				 G_TYPE_INVALID);
+	result = g_dbus_proxy_call_sync (applet->proxy,
+					 "GetBrightness",
+					 NULL,
+					 G_DBUS_CALL_FLAGS_NONE,
+					 -1,
+					 NULL,
+					 &error);
 	if (error) {
 		g_debug ("ERROR: %s\n", error->message);
 		g_error_free (error);
 	}
-	if (ret) {
+	if (result != NULL) {
+		g_variant_get (result, "(u)", &policy_brightness);
+		g_variant_unref (result);
 		applet->level = policy_brightness;
+		return TRUE;
 	} else {
 		/* abort as the DBUS method failed */
 		g_warning ("GetBrightness failed!\n");
 	}
 
-	return ret;
+	return FALSE;
 }
 
 /**
@@ -157,6 +162,7 @@ static gboolean
 gpm_applet_set_brightness (GpmBrightnessApplet *applet)
 {
 	GError  *error = NULL;
+	GVariant *result;
 	gboolean ret;
 
 	if (applet->proxy == NULL) {
@@ -164,10 +170,16 @@ gpm_applet_set_brightness (GpmBrightnessApplet *applet)
 		return FALSE;
 	}
 
-	ret = dbus_g_proxy_call (applet->proxy, "SetBrightness", &error,
-				 G_TYPE_UINT, applet->level,
-				 G_TYPE_INVALID,
-				 G_TYPE_INVALID);
+	result = g_dbus_proxy_call_sync (applet->proxy,
+					 "SetBrightness",
+					 g_variant_new ("(u)", applet->level),
+					 G_DBUS_CALL_FLAGS_NONE,
+					 -1,
+					 NULL,
+					 &error);
+	ret = (result != NULL);
+	if (result != NULL)
+		g_variant_unref (result);
 	if (error) {
 		g_debug ("ERROR: %s", error->message);
 		g_error_free (error);
@@ -878,6 +890,10 @@ gpm_applet_destroy_cb (GtkWidget *widget)
 	}
 
 	g_bus_unwatch_name (applet->bus_watch_id);
+	if (applet->proxy != NULL)
+		g_object_unref (applet->proxy);
+	if (applet->connection != NULL)
+		g_object_unref (applet->connection);
 	if (applet->icon != NULL)
 		g_object_unref (applet->icon);
 }
@@ -893,10 +909,18 @@ gpm_brightness_applet_class_init (GpmBrightnessAppletClass *class)
 }
 
 static void
-brightness_changed_cb (DBusGProxy          *proxy,
-		       guint	            brightness,
+brightness_changed_cb (GDBusProxy          *proxy,
+		       gchar               *sender_name,
+		       gchar               *signal_name,
+		       GVariant            *parameters,
 		       GpmBrightnessApplet *applet)
 {
+	guint brightness;
+
+	if (g_strcmp0 (signal_name, "BrightnessChanged") != 0)
+		return;
+
+	g_variant_get (parameters, "(u)", &brightness);
 	g_debug ("BrightnessChanged detected: %u\n", brightness);
 	applet->level = brightness;
 }
@@ -912,7 +936,7 @@ gpm_brightness_applet_dbus_connect (GpmBrightnessApplet *applet)
 	if (applet->connection == NULL) {
 		g_debug ("get connection\n");
 		g_clear_error (&error);
-		applet->connection = dbus_g_bus_get (DBUS_BUS_SESSION, &error);
+		applet->connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, &error);
 		if (error != NULL) {
 			g_warning ("Could not connect to DBUS daemon: %s", error->message);
 			g_error_free (error);
@@ -923,22 +947,22 @@ gpm_brightness_applet_dbus_connect (GpmBrightnessApplet *applet)
 	if (applet->proxy == NULL) {
 		g_debug ("get proxy\n");
 		g_clear_error (&error);
-		applet->proxy = dbus_g_proxy_new_for_name_owner (applet->connection,
-							 GPM_DBUS_SERVICE,
-							 GPM_DBUS_PATH_BACKLIGHT,
-							 GPM_DBUS_INTERFACE_BACKLIGHT,
-							 &error);
+		applet->proxy = g_dbus_proxy_new_sync (applet->connection,
+					       G_DBUS_PROXY_FLAGS_NONE,
+					       NULL,
+					       GPM_DBUS_SERVICE,
+					       GPM_DBUS_PATH_BACKLIGHT,
+					       GPM_DBUS_INTERFACE_BACKLIGHT,
+					       NULL,
+					       &error);
 		if (error != NULL) {
 			g_warning ("Cannot connect, maybe the daemon is not running: %s\n", error->message);
 			g_error_free (error);
 			applet->proxy = NULL;
 			return FALSE;
 		}
-		dbus_g_proxy_add_signal (applet->proxy, "BrightnessChanged",
-					 G_TYPE_UINT, G_TYPE_INVALID);
-		dbus_g_proxy_connect_signal (applet->proxy, "BrightnessChanged",
-					     G_CALLBACK (brightness_changed_cb),
-					     applet, NULL);
+		g_signal_connect (applet->proxy, "g-signal",
+				  G_CALLBACK (brightness_changed_cb), applet);
 		/* reset, we might be starting race */
 		applet->call_worked = gpm_applet_get_brightness (applet);
 	}

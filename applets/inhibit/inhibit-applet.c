@@ -33,7 +33,6 @@
 #include <gtk/gtk.h>
 #include <glib-object.h>
 #include <glib/gi18n.h>
-#include <dbus/dbus-glib.h>
 
 #include "gpm-common.h"
 
@@ -51,8 +50,8 @@ typedef struct{
 	/* the icon */
 	GtkWidget *image;
 	/* connection to g-p-m */
-	DBusGProxy *proxy;
-	DBusGConnection *connection;
+	GDBusProxy *proxy;
+	GDBusConnection *connection;
 	guint bus_watch_id;
 	guint level;
 	/* a cache for panel size */
@@ -97,6 +96,7 @@ gpm_applet_inhibit (GpmInhibitApplet *applet,
 		    guint           *cookie)
 {
 	GError  *error = NULL;
+	GVariant *result;
 	gboolean ret;
 
 	g_return_val_if_fail (cookie != NULL, FALSE);
@@ -106,14 +106,22 @@ gpm_applet_inhibit (GpmInhibitApplet *applet,
 		return FALSE;
 	}
 
-	ret = dbus_g_proxy_call (applet->proxy, "Inhibit", &error,
-				 G_TYPE_STRING, appname,
-				 G_TYPE_UINT, 0, /* xid */
-				 G_TYPE_STRING, reason,
-				 G_TYPE_UINT, 1+2+4+8, /* logoff, switch, suspend, and idle */
-				 G_TYPE_INVALID,
-				 G_TYPE_UINT, cookie,
-				 G_TYPE_INVALID);
+	result = g_dbus_proxy_call_sync (applet->proxy,
+					 "Inhibit",
+					 g_variant_new ("(susu)",
+							appname,
+							0,
+							reason,
+							1+2+4+8),
+					 G_DBUS_CALL_FLAGS_NONE,
+					 -1,
+					 NULL,
+					 &error);
+	ret = (result != NULL);
+	if (result != NULL) {
+		g_variant_get (result, "(u)", cookie);
+		g_variant_unref (result);
+	}
 	if (error) {
 		g_debug ("ERROR: %s", error->message);
 		g_error_free (error);
@@ -132,6 +140,7 @@ gpm_applet_uninhibit (GpmInhibitApplet *applet,
 		      guint            cookie)
 {
 	GError *error = NULL;
+	GVariant *result;
 	gboolean ret;
 
 	if (applet->proxy == NULL) {
@@ -139,10 +148,16 @@ gpm_applet_uninhibit (GpmInhibitApplet *applet,
 		return FALSE;
 	}
 
-	ret = dbus_g_proxy_call (applet->proxy, "Uninhibit", &error,
-				 G_TYPE_UINT, cookie,
-				 G_TYPE_INVALID,
-				 G_TYPE_INVALID);
+	result = g_dbus_proxy_call_sync (applet->proxy,
+					 "Uninhibit",
+					 g_variant_new ("(u)", cookie),
+					 G_DBUS_CALL_FLAGS_NONE,
+					 -1,
+					 NULL,
+					 &error);
+	ret = (result != NULL);
+	if (result != NULL)
+		g_variant_unref (result);
 	if (error) {
 		g_debug ("ERROR: %s", error->message);
 		g_error_free (error);
@@ -345,6 +360,10 @@ gpm_applet_destroy_cb (GtkWidget *widget)
 	GpmInhibitApplet *applet = GPM_INHIBIT_APPLET(widget);
 
 	g_bus_unwatch_name (applet->bus_watch_id);
+	if (applet->proxy != NULL)
+		g_object_unref (applet->proxy);
+	if (applet->connection != NULL)
+		g_object_unref (applet->connection);
 }
 
 /**
@@ -368,7 +387,7 @@ gpm_inhibit_applet_dbus_connect (GpmInhibitApplet *applet)
 	if (applet->connection == NULL) {
 		g_debug ("get connection\n");
 		g_clear_error (&error);
-		applet->connection = dbus_g_bus_get (DBUS_BUS_SESSION, &error);
+		applet->connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, &error);
 		if (error != NULL) {
 			g_warning ("Could not connect to DBUS daemon: %s", error->message);
 			g_error_free (error);
@@ -379,11 +398,14 @@ gpm_inhibit_applet_dbus_connect (GpmInhibitApplet *applet)
 	if (applet->proxy == NULL) {
 		g_debug ("get proxy\n");
 		g_clear_error (&error);
-		applet->proxy = dbus_g_proxy_new_for_name_owner (applet->connection,
-							 GS_DBUS_SERVICE,
-							 GS_DBUS_PATH,
-							 GS_DBUS_INTERFACE,
-							 &error);
+		applet->proxy = g_dbus_proxy_new_sync (applet->connection,
+					       G_DBUS_PROXY_FLAGS_NONE,
+					       NULL,
+					       GS_DBUS_SERVICE,
+					       GS_DBUS_PATH,
+					       GS_DBUS_INTERFACE,
+					       NULL,
+					       &error);
 		if (error != NULL) {
 			g_warning ("Cannot connect, maybe the daemon is not running: %s\n", error->message);
 			g_error_free (error);

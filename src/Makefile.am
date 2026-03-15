@@ -12,7 +12,6 @@ EXTRA_DIST =						\
 
 AM_CPPFLAGS =						\
 	$(GLIB_CFLAGS)					\
-	$(DBUS_CFLAGS)					\
 	$(CAIRO_CFLAGS)					\
 	$(LIBSECRET_CFLAGS)				\
 	$(MATE_DESKTOP_CFLAGS)			\
@@ -113,7 +112,6 @@ mate_power_statistics_LDADD =				\
 	$(X11_LIBS)					\
 	$(UPOWER_LIBS)					\
 	$(CAIRO_LIBS)					\
-	$(DBUS_LIBS)					\
 	-lm
 
 mate_power_statistics_CFLAGS =				\
@@ -139,7 +137,6 @@ mate_power_preferences_LDADD =				\
 	$(GLIB_LIBS)					\
 	$(X11_LIBS)					\
 	$(CAIRO_LIBS)					\
-	$(DBUS_LIBS)					\
 	$(GPM_EXTRA_LIBS)				\
 	$(UPOWER_LIBS)					\
 	-lm
@@ -202,7 +199,6 @@ mate_power_manager_LDADD =				\
 	$(MATE_DESKTOP_LIBS)			\
 	$(LIBSECRET_LIBS)					\
 	$(KEYRING_LIBS)					\
-	$(DBUS_LIBS)					\
 	$(X11_LIBS)					\
 	$(CANBERRA_LIBS)				\
 	$(LIBNOTIFY_LIBS)				\
@@ -268,7 +264,6 @@ mate_power_self_test_LDADD =				\
 	$(KEYRING_LIBS)					\
 	$(GSTREAMER_LIBS)				\
 	$(UPOWER_LIBS)					\
-	$(DBUS_LIBS)					\
 	$(X11_LIBS)					\
 	$(LIBNOTIFY_LIBS)				\
 	$(GPM_EXTRA_LIBS)				\
@@ -282,9 +277,6 @@ mate_power_self_test_CFLAGS = 				\
 endif
 
 BUILT_SOURCES = 					\
-	org.mate.PowerManager.h				\
-	org.mate.PowerManager.Backlight.h		\
-	org.mate.PowerManager.KbdBacklight.h		\
 	gpm-marshal.c					\
 	gpm-marshal.h					\
 	$(NULL)
@@ -295,27 +287,6 @@ gpm-marshal.c: gpm-marshal.list
 
 gpm-marshal.h: gpm-marshal.list
 	@GLIB_GENMARSHAL@ $< --prefix=gpm_marshal --header > $@
-
-org.mate.PowerManager.h: org.mate.PowerManager.xml
-	$(LIBTOOL) --mode=execute dbus-binding-tool	\
-		--prefix=gpm_manager			\
-		--mode=glib-server			\
-		--output=org.mate.PowerManager.h	\
-		$(srcdir)/org.mate.PowerManager.xml
-
-org.mate.PowerManager.Backlight.h: org.mate.PowerManager.Backlight.xml
-	$(LIBTOOL) --mode=execute dbus-binding-tool	\
-		--prefix=gpm_backlight			\
-		--mode=glib-server			\
-		--output=org.mate.PowerManager.Backlight.h	\
-		$(srcdir)/org.mate.PowerManager.Backlight.xml
-
-org.mate.PowerManager.KbdBacklight.h: org.mate.PowerManager.KbdBacklight.xml
-	$(LIBTOOL) --mode=execute dbus-binding-tool	\
-		--prefix=gpm_kbd_backlight		\
-		--mode=glib-server			\
-		--output=org.mate.PowerManager.KbdBacklight.h	\
-		$(srcdir)/org.mate.PowerManager.KbdBacklight.xml
 
 clean-local:
 	rm -f *~

@@ -24,6 +24,7 @@
 #ifndef __GPM_BACKLIGHT_H
 #define __GPM_BACKLIGHT_H
 
+#include <gio/gio.h>
 #include <glib-object.h>
 
 G_BEGIN_DECLS
@@ -60,6 +61,9 @@ typedef enum
 GType		 gpm_backlight_get_type			(void);
 GQuark		 gpm_backlight_error_quark		(void);
 GpmBacklight	*gpm_backlight_new			(void);
+gboolean	 gpm_backlight_register_dbus		(GpmBacklight	*backlight,
+							 GDBusConnection	*connection,
+							 GError		**error);
 
 gboolean	 gpm_backlight_get_brightness		(GpmBacklight	*backlight,
 							 guint		*brightness,

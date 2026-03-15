@@ -53,8 +53,12 @@ typedef struct
 
 GType		 egg_console_kit_get_type	  	(void);
 EggConsoleKit	*egg_console_kit_new			(void);
-gboolean	 egg_console_kit_is_local		(EggConsoleKit	*console);
-gboolean	 egg_console_kit_is_active		(EggConsoleKit	*console);
+gboolean	 egg_console_kit_is_local		(EggConsoleKit	*console,
+						 gboolean	*is_local,
+						 GError		**error);
+gboolean	 egg_console_kit_is_active		(EggConsoleKit	*console,
+						 gboolean	*is_active,
+						 GError		**error);
 gboolean	 egg_console_kit_stop			(EggConsoleKit	*console,
 							 GError		**error);
 gboolean	 egg_console_kit_restart		(EggConsoleKit	*console,

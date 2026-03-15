@@ -38,8 +38,6 @@
 #include <glib/gi18n.h>
 #include <gio/gunixfdlist.h>
 #include <gtk/gtk.h>
-#include <dbus/dbus-glib.h>
-#include <dbus/dbus-glib-lowlevel.h>
 #include <canberra-gtk.h>
 #include <libupower-glib/upower.h>
 #include <libnotify/notify.h>
@@ -60,9 +58,6 @@
 #include "gpm-tray-icon.h"
 #include "gpm-engine.h"
 #include "gpm-upower.h"
-
-#include "org.mate.PowerManager.Backlight.h"
-#include "org.mate.PowerManager.KbdBacklight.h"
 
 static void     gpm_manager_finalize	(GObject	 *object);
 
@@ -117,6 +112,27 @@ typedef enum {
 } GpmManagerSound;
 
 G_DEFINE_TYPE_WITH_PRIVATE (GpmManager, gpm_manager, G_TYPE_OBJECT)
+
+gboolean
+gpm_manager_register_dbus (GpmManager *manager,
+			   GDBusConnection *connection,
+			   GError **error)
+{
+	g_return_val_if_fail (GPM_IS_MANAGER (manager), FALSE);
+	g_return_val_if_fail (G_IS_DBUS_CONNECTION (connection), FALSE);
+
+	if (manager->priv->backlight != NULL &&
+	    !gpm_backlight_register_dbus (manager->priv->backlight, connection, error))
+		return FALSE;
+
+	if (manager->priv->kbd_backlight != NULL) {
+		gpm_kbd_backlight_register_dbus (manager->priv->kbd_backlight, connection, error);
+		if (error != NULL && *error != NULL)
+			return FALSE;
+	}
+
+	return TRUE;
+}
 
 /**
  * gpm_manager_error_quark:
@@ -758,6 +774,28 @@ gpm_manager_idle_do_sleep (GpmManager *manager)
 }
 
 /**
+ * gpm_manager_is_active:
+ **/
+static gboolean
+gpm_manager_is_active (GpmManager *manager)
+{
+	gboolean ret;
+	gboolean is_active = TRUE;
+	GError *error = NULL;
+
+	if (LOGIND_RUNNING ())
+		return TRUE;
+
+	/* if we fail, assume we are on active console */
+	ret = egg_console_kit_is_active (manager->priv->console, &is_active, &error);
+	if (!ret) {
+		g_warning ("failed to get active status: %s", error->message);
+		g_error_free (error);
+	}
+	return is_active;
+}
+
+/**
  * gpm_manager_idle_changed_cb:
  * @idle: The idle class instance
  * @mode: The idle mode, e.g. GPM_IDLE_MODE_BLANK
@@ -772,7 +810,7 @@ static void
 gpm_manager_idle_changed_cb (GpmIdle *idle, GpmIdleMode mode, GpmManager *manager)
 {
 	/* ConsoleKit/systemd say we are not on active console */
-	if (!LOGIND_RUNNING() && !egg_console_kit_is_active (manager->priv->console)) {
+	if (!gpm_manager_is_active (manager)) {
 		g_debug ("ignoring as not on active console");
 		return;
 	}
@@ -901,7 +939,7 @@ gpm_manager_button_pressed_cb (GpmButton *button, const gchar *type, GpmManager 
 	g_debug ("Button press event type=%s", type);
 
 	/* ConsoleKit/systemd say we are not on active console */
-	if (!LOGIND_RUNNING() && !egg_console_kit_is_active (manager->priv->console)) {
+	if (!gpm_manager_is_active (manager)) {
 		g_debug ("ignoring as not on active console");
 		return;
 	}
@@ -978,7 +1016,7 @@ gpm_manager_client_changed_cb (UpClient *client, GParamSpec *pspec, GpmManager *
 	manager->priv->on_battery = on_battery;
 
 	/* ConsoleKit/systemd say we are not on active console */
-	if (!LOGIND_RUNNING() && !egg_console_kit_is_active (manager->priv->console)) {
+	if (!gpm_manager_is_active (manager)) {
 		g_debug ("ignoring as not on active console");
 		return;
 	}
@@ -1816,11 +1854,8 @@ static void
 gpm_manager_init (GpmManager *manager)
 {
 	gboolean check_type_cpu;
-	DBusGConnection *connection;
-	GError *error = NULL;
 
 	manager->priv = gpm_manager_get_instance_private (manager);
-	connection = dbus_g_bus_get (DBUS_BUS_SESSION, &error);
 
 	/* We want to inhibit the systemd suspend options, and take care of them ourselves */
 	if (LOGIND_RUNNING()) {
@@ -1871,22 +1906,8 @@ gpm_manager_init (GpmManager *manager)
 
 	/* try an start an interactive service */
 	manager->priv->backlight = gpm_backlight_new ();
-	if (manager->priv->backlight != NULL) {
-		/* add the new brightness lcd DBUS interface */
-		dbus_g_object_type_install_info (GPM_TYPE_BACKLIGHT,
-						 &dbus_glib_gpm_backlight_object_info);
-		dbus_g_connection_register_g_object (connection, GPM_DBUS_PATH_BACKLIGHT,
-						     G_OBJECT (manager->priv->backlight));
-	}
 
     manager->priv->kbd_backlight = gpm_kbd_backlight_new ();
-    if (manager->priv->kbd_backlight != NULL) {
-    	dbus_g_object_type_install_info (GPM_TYPE_KBD_BACKLIGHT,
-						 &dbus_glib_gpm_kbd_backlight_object_info);
-		dbus_g_connection_register_g_object (connection, GPM_DBUS_PATH_KBD_BACKLIGHT,
-						     G_OBJECT (manager->priv->kbd_backlight));
-
-    }
 
 	manager->priv->idle = gpm_idle_new ();
 	g_signal_connect (manager->priv->idle, "idle-changed",

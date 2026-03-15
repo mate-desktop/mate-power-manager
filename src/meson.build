@@ -34,30 +34,9 @@ cflags = [
   '-DEGG_CONSOLE="GPM_CONSOLE"'
 ]
 marshal_files = gnome.genmarshal('gpm-marshal', prefix : 'gpm_marshal', sources : 'gpm-marshal.list')
-
-dbus_binding_tool = find_program('dbus-binding-tool')
-dbus_Backlight = custom_target('org.mate.PowerManager.Backlight',
-  input: 'org.mate.PowerManager.Backlight.xml',
-  output: 'org.mate.PowerManager.Backlight.h',
-  command: [dbus_binding_tool, '--prefix=gpm_backlight', '--mode=glib-server',
-            '--output=@OUTPUT@', '@INPUT@']
-)
-dbus_KbdBacklight = custom_target('org.mate.PowerManager.KbdBacklight',
-  input: 'org.mate.PowerManager.KbdBacklight.xml',
-  output: 'org.mate.PowerManager.KbdBacklight.h',
-  command: [dbus_binding_tool, '--prefix=gpm_kbd_backlight', '--mode=glib-server',
-            '--output=@OUTPUT@', '@INPUT@']
-)
-dbus_Manager = custom_target('org.mate.PowerManager',
-  input: 'org.mate.PowerManager.xml',
-  output: 'org.mate.PowerManager.h',
-  command: [dbus_binding_tool, '--prefix=gpm_manager', '--mode=glib-server',
-            '--output=@OUTPUT@', '@INPUT@']
-)
 deps = [
   glib,
   gtk,
-  dbusglib,
   cairo,
   upower,
   keyring,
@@ -172,9 +151,6 @@ executable(
     'gsd-media-keys-window.c',
     'msd-osd-window.c',
     'gpm-engine.c',
-    dbus_Backlight,
-    dbus_KbdBacklight,
-    dbus_Manager,
   ],
   include_directories : [
     include_directories('..'),
