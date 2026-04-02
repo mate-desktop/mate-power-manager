@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-power-manager 1.26.0\n"
+"Project-Id-Version: mate-power-manager 1.28.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/"
 "pulls\n"
-"POT-Creation-Date: 2022-10-29 15:32+0200\n"
+"POT-Creation-Date: 2026-04-02 10:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgid "Adjusts laptop panel brightness."
 msgstr ""
 
 #: applets/brightness/brightness-applet.c:370
-#: applets/inhibit/inhibit-applet.c:223
+#: applets/inhibit/inhibit-applet.c:225
 msgid "Cannot connect to mate-power-manager"
 msgstr ""
 
@@ -37,11 +37,11 @@ msgstr ""
 
 #: applets/brightness/brightness-applet.c:374
 #, c-format
-msgid "LCD brightness : %d%%"
+msgid "LCD brightness : %u%%"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:817
-#: applets/inhibit/inhibit-applet.c:285
+#: applets/brightness/brightness-applet.c:815
+#: applets/inhibit/inhibit-applet.c:287
 msgid ""
 "Power Manager is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -49,8 +49,8 @@ msgid ""
 "any later version."
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:822
-#: applets/inhibit/inhibit-applet.c:290
+#: applets/brightness/brightness-applet.c:820
+#: applets/inhibit/inhibit-applet.c:292
 msgid ""
 "Power Manager is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -58,44 +58,44 @@ msgid ""
 "more details."
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:827
-#: applets/inhibit/inhibit-applet.c:295
+#: applets/brightness/brightness-applet.c:825
+#: applets/inhibit/inhibit-applet.c:297
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
 "this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:840
+#: applets/brightness/brightness-applet.c:838
 msgid "About Power Manager Brightness Applet"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:842
+#: applets/brightness/brightness-applet.c:840
 msgid ""
 "Copyright © 2006 Benjamin Canou\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:849
-#: applets/inhibit/inhibit-applet.c:317 src/gpm-tray-icon.c:212
+#: applets/brightness/brightness-applet.c:847
+#: applets/inhibit/inhibit-applet.c:319 src/gpm-tray-icon.c:214
 msgid "translator-credits"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:1080
-#: applets/inhibit/inhibit-applet.c:500
+#: applets/brightness/brightness-applet.c:1078
+#: applets/inhibit/inhibit-applet.c:502 src/gpm-tray-icon.c:398
 msgid "_About"
 msgstr ""
 
-#: applets/brightness/brightness-applet.c:1083
-#: applets/inhibit/inhibit-applet.c:503 data/gpm-prefs.ui:41
+#: applets/brightness/brightness-applet.c:1081
+#: applets/inhibit/inhibit-applet.c:505 data/gpm-prefs.ui:42
 msgid "_Help"
 msgstr ""
 
-#: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:5
+#: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:6
 msgid "Brightness Applet Factory"
 msgstr ""
 
-#: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:9
+#: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:10
 msgid "Brightness Applet"
 msgstr ""
 
@@ -107,41 +107,41 @@ msgstr ""
 msgid "Allows user to inhibit automatic power saving."
 msgstr ""
 
-#: applets/inhibit/inhibit-applet.c:226
+#: applets/inhibit/inhibit-applet.c:228
 msgid "Automatic sleep inhibited"
 msgstr ""
 
-#: applets/inhibit/inhibit-applet.c:228
+#: applets/inhibit/inhibit-applet.c:230
 msgid "Automatic sleep enabled"
 msgstr ""
 
-#: applets/inhibit/inhibit-applet.c:256
+#: applets/inhibit/inhibit-applet.c:258
 msgid "Manual inhibit"
 msgstr ""
 
-#: applets/inhibit/inhibit-applet.c:308
+#: applets/inhibit/inhibit-applet.c:310
 msgid "About Power Manager Inhibit Applet"
 msgstr ""
 
-#: applets/inhibit/inhibit-applet.c:310
+#: applets/inhibit/inhibit-applet.c:312
 msgid ""
 "Copyright © 2006-2007 Richard Hughes\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
 
-#: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
+#: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:6
 msgid "Inhibit Applet Factory"
 msgstr ""
 
-#: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:9
+#: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:10
 msgid "Inhibit Applet"
 msgstr ""
 
-#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:203
+#: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:205
 msgid "Power Manager"
 msgstr ""
 
-#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:205
+#: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:207
 msgid "Power management daemon"
 msgstr ""
 
@@ -214,528 +214,536 @@ msgid ""
 msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:66
-msgid "Reduce the keyboard backlight when on battery power"
+msgid "Allow keyboard backlight brightness adjustment"
 msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:67
+msgid "If the keyboard backlight brightness should be switched automatically."
+msgstr ""
+
+#: data/org.mate.power-manager.gschema.xml.in:71
+msgid "Reduce the keyboard backlight when on battery power"
+msgstr ""
+
+#: data/org.mate.power-manager.gschema.xml.in:72
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:71
+#: data/org.mate.power-manager.gschema.xml.in:76
 msgid "Keyboard backlight brightness when on AC power."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:72
+#: data/org.mate.power-manager.gschema.xml.in:77
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:76
+#: data/org.mate.power-manager.gschema.xml.in:81
 msgid "Percent to reduce keyboard backlight by when on battery power."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:77
+#: data/org.mate.power-manager.gschema.xml.in:82
 msgid ""
 "The percentage to reduce the keyboard backlight by when on battery power. "
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:81
+#: data/org.mate.power-manager.gschema.xml.in:86
 msgid "Percent to reduce keyboard backlight by when idle."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:82
+#: data/org.mate.power-manager.gschema.xml.in:87
 msgid ""
 "The percentage to reduce the keyboard backlight by when idle. For example, "
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are "
 "between 0 and 100."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:86
+#: data/org.mate.power-manager.gschema.xml.in:91
 msgid "The brightness of the screen when idle"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:87
+#: data/org.mate.power-manager.gschema.xml.in:92
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:91
+#: data/org.mate.power-manager.gschema.xml.in:96
 msgid "Dim the screen after a period of inactivity when on battery power"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:92
+#: data/org.mate.power-manager.gschema.xml.in:97
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:96
+#: data/org.mate.power-manager.gschema.xml.in:101
 msgid "The default amount of time to dim the screen after idle"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:97
+#: data/org.mate.power-manager.gschema.xml.in:102
 msgid "The default amount of time to dim the screen after idle."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:101
+#: data/org.mate.power-manager.gschema.xml.in:106
 msgid "LCD dimming amount when on battery"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:102
+#: data/org.mate.power-manager.gschema.xml.in:107
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:106
+#: data/org.mate.power-manager.gschema.xml.in:111
 msgid "Dim the screen after a period of inactivity when on AC power"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:107
+#: data/org.mate.power-manager.gschema.xml.in:112
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on AC power."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:111
+#: data/org.mate.power-manager.gschema.xml.in:116
 msgid "Method used to blank screen on AC"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:112
+#: data/org.mate.power-manager.gschema.xml.in:117
 msgid "The DPMS method used to blank the screen when on AC power."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:116
+#: data/org.mate.power-manager.gschema.xml.in:121
 msgid "Method used to blank screen on battery"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:117
+#: data/org.mate.power-manager.gschema.xml.in:122
 msgid "The DPMS method used to blank the screen when on battery power."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:121
+#: data/org.mate.power-manager.gschema.xml.in:126
 msgid "LCD brightness when on AC"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:122
+#: data/org.mate.power-manager.gschema.xml.in:127
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:126
+#: data/org.mate.power-manager.gschema.xml.in:131
 msgid "Suspend button action"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:127
+#: data/org.mate.power-manager.gschema.xml.in:132
 msgid "The action to take when the system suspend button is pressed."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:131
+#: data/org.mate.power-manager.gschema.xml.in:136
 msgid "Hibernate button action"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:132
+#: data/org.mate.power-manager.gschema.xml.in:137
 msgid "The action to take when the system hibernate button is pressed."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:136
+#: data/org.mate.power-manager.gschema.xml.in:141
 msgid "Power button action"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:137
+#: data/org.mate.power-manager.gschema.xml.in:142
 msgid "The action to take when the system power button is pressed."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:141
+#: data/org.mate.power-manager.gschema.xml.in:146
 msgid "Laptop lid close action on battery"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:142
+#: data/org.mate.power-manager.gschema.xml.in:147
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:146
+#: data/org.mate.power-manager.gschema.xml.in:151
 msgid "Laptop lid close action when on AC"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:147
+#: data/org.mate.power-manager.gschema.xml.in:152
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:151
+#: data/org.mate.power-manager.gschema.xml.in:156
 msgid "Whether to use time-based notifications"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:152
+#: data/org.mate.power-manager.gschema.xml.in:157
 msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:156
+#: data/org.mate.power-manager.gschema.xml.in:161
 msgid "Check CPU load before sleeping"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:157
+#: data/org.mate.power-manager.gschema.xml.in:162
 msgid "If the CPU load should be checked before doing the idle action."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:161
+#: data/org.mate.power-manager.gschema.xml.in:166
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:162
+#: data/org.mate.power-manager.gschema.xml.in:167
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:166
+#: data/org.mate.power-manager.gschema.xml.in:171
 msgid "Use mate-screensaver lock setting"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:167
+#: data/org.mate.power-manager.gschema.xml.in:172
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:171
+#: data/org.mate.power-manager.gschema.xml.in:176
 msgid "Lock screen when blanked"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:172
+#: data/org.mate.power-manager.gschema.xml.in:177
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:176
+#: data/org.mate.power-manager.gschema.xml.in:181
 msgid "Lock screen on suspend"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:177
+#: data/org.mate.power-manager.gschema.xml.in:182
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only "
 "used if lock-use-screensaver is false."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:181
+#: data/org.mate.power-manager.gschema.xml.in:186
 msgid "Lock screen on hibernate"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:182
+#: data/org.mate.power-manager.gschema.xml.in:187
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:186
 #: data/org.mate.power-manager.gschema.xml.in:191
+#: data/org.mate.power-manager.gschema.xml.in:196
 msgid "Lock GNOME keyring on sleep"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:187
+#: data/org.mate.power-manager.gschema.xml.in:192
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This "
 "means the keyring will have to be unlocked on resume."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:192
+#: data/org.mate.power-manager.gschema.xml.in:197
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:196
+#: data/org.mate.power-manager.gschema.xml.in:201
 msgid "If we should show the low capacity warning for a broken battery"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:197
+#: data/org.mate.power-manager.gschema.xml.in:202
 msgid "If we should show the low capacity warning for a broken battery."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:201
+#: data/org.mate.power-manager.gschema.xml.in:206
 msgid "Notify when AC adapter is disconnected"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:202
+#: data/org.mate.power-manager.gschema.xml.in:207
 msgid "If the user should be notified when the AC adapter is disconnected."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:206
+#: data/org.mate.power-manager.gschema.xml.in:211
 msgid "Notify when fully charged"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:207
+#: data/org.mate.power-manager.gschema.xml.in:212
 msgid ""
 "If a notification message should be displayed when the battery is fully "
 "charged."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:211
+#: data/org.mate.power-manager.gschema.xml.in:216
 msgid "Notify on a sleep failure"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:212
+#: data/org.mate.power-manager.gschema.xml.in:217
 msgid ""
 "If a notification message should be displayed after suspend or hibernate "
 "failed."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:216
+#: data/org.mate.power-manager.gschema.xml.in:221
 msgid "The URI to show to the user on sleep failure"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:217
+#: data/org.mate.power-manager.gschema.xml.in:222
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:221
+#: data/org.mate.power-manager.gschema.xml.in:226
 msgid "Notify on a low power"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:222
 #: data/org.mate.power-manager.gschema.xml.in:227
+#: data/org.mate.power-manager.gschema.xml.in:232
 msgid ""
 "If a notification message should be displayed when the battery is getting "
 "low."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:226
+#: data/org.mate.power-manager.gschema.xml.in:231
 msgid "Notify on low capacity of mouse battery"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:231
+#: data/org.mate.power-manager.gschema.xml.in:236
 msgid "Whether we should show the history data points"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:232
+#: data/org.mate.power-manager.gschema.xml.in:237
 msgid ""
 "Whether we should show the history data points in the statistics window."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:236
+#: data/org.mate.power-manager.gschema.xml.in:241
 msgid "Whether we should smooth the history data"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:237
+#: data/org.mate.power-manager.gschema.xml.in:242
 msgid "Whether we should smooth the history data in the graph."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:241
+#: data/org.mate.power-manager.gschema.xml.in:246
 msgid "The default graph type to show for history"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:242
+#: data/org.mate.power-manager.gschema.xml.in:247
 msgid "The default graph type to show in the history window."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:246
+#: data/org.mate.power-manager.gschema.xml.in:251
 msgid "The maximum time displayed for history"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:247
+#: data/org.mate.power-manager.gschema.xml.in:252
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:251
+#: data/org.mate.power-manager.gschema.xml.in:256
 msgid "Whether we should show the stats data points"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:252
+#: data/org.mate.power-manager.gschema.xml.in:257
 msgid "Whether we should show the stats data points in the statistics window."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:256
+#: data/org.mate.power-manager.gschema.xml.in:261
 msgid "Whether we should smooth the stats data"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:257
+#: data/org.mate.power-manager.gschema.xml.in:262
 msgid "Whether we should smooth the stats data in the graph."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:261
+#: data/org.mate.power-manager.gschema.xml.in:266
 msgid "The default graph type to show for stats"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:262
+#: data/org.mate.power-manager.gschema.xml.in:267
 msgid "The default graph type to show in the stats window."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:266
+#: data/org.mate.power-manager.gschema.xml.in:271
 msgid "The index of the page number to show by default"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:267
+#: data/org.mate.power-manager.gschema.xml.in:272
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:271
+#: data/org.mate.power-manager.gschema.xml.in:276
 msgid "The ID of the last device selected"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:272
+#: data/org.mate.power-manager.gschema.xml.in:277
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:276
+#: data/org.mate.power-manager.gschema.xml.in:281
 msgid "Percentage considered low"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:277
+#: data/org.mate.power-manager.gschema.xml.in:282
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when use-"
 "time-for-policy is false."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:281
+#: data/org.mate.power-manager.gschema.xml.in:286
 msgid "Percentage considered critical"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:282
+#: data/org.mate.power-manager.gschema.xml.in:287
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:286
+#: data/org.mate.power-manager.gschema.xml.in:291
 msgid "Percentage action is taken"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:287
+#: data/org.mate.power-manager.gschema.xml.in:292
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:291
+#: data/org.mate.power-manager.gschema.xml.in:296
 msgid "The time remaining when low"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:292
+#: data/org.mate.power-manager.gschema.xml.in:297
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only "
 "valid when use-time-for-policy is true."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:296
+#: data/org.mate.power-manager.gschema.xml.in:301
 msgid "The time remaining when critical"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:297
+#: data/org.mate.power-manager.gschema.xml.in:302
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical. "
 "Only valid when use-time-for-policy is true."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:301
+#: data/org.mate.power-manager.gschema.xml.in:306
 msgid "The time remaining when action is taken"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:302
+#: data/org.mate.power-manager.gschema.xml.in:307
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:306
+#: data/org.mate.power-manager.gschema.xml.in:311
 msgid "Sleep timeout computer when on battery"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:307
+#: data/org.mate.power-manager.gschema.xml.in:312
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before it goes to sleep."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:311
+#: data/org.mate.power-manager.gschema.xml.in:316
 msgid "Sleep timeout computer when on AC"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:312
+#: data/org.mate.power-manager.gschema.xml.in:317
 msgid ""
 "The amount of time in seconds the computer on AC power needs to be inactive "
 "before it goes to sleep."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:316
+#: data/org.mate.power-manager.gschema.xml.in:321
 msgid "Sleep timeout computer when on UPS"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:317
+#: data/org.mate.power-manager.gschema.xml.in:322
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive "
 "before it goes to sleep."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:321
+#: data/org.mate.power-manager.gschema.xml.in:326
 msgid "Sleep timeout display when on AC"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:322
+#: data/org.mate.power-manager.gschema.xml.in:327
 msgid ""
 "The amount of time in seconds before the display goes to sleep when the "
 "computer is on AC power."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:326
+#: data/org.mate.power-manager.gschema.xml.in:331
 msgid "Sleep timeout display when on battery"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:327
+#: data/org.mate.power-manager.gschema.xml.in:332
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:331
+#: data/org.mate.power-manager.gschema.xml.in:336
 msgid "Sleep timeout display when on UPS"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:332
+#: data/org.mate.power-manager.gschema.xml.in:337
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive "
 "before the display goes to sleep."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:336
+#: data/org.mate.power-manager.gschema.xml.in:341
 msgid "If sounds should be used"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:337
+#: data/org.mate.power-manager.gschema.xml.in:342
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:341
+#: data/org.mate.power-manager.gschema.xml.in:346
 msgid "If preferences and statistics items should be shown in the context menu"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:345
+#: data/org.mate.power-manager.gschema.xml.in:350
 msgid "When to show the notification icon"
 msgstr ""
 
-#: data/org.mate.power-manager.gschema.xml.in:346
+#: data/org.mate.power-manager.gschema.xml.in:351
 msgid "Display options for the notification icon."
 msgstr ""
 
@@ -753,7 +761,7 @@ msgid "MATE;power;management;preferences;settings;"
 msgstr ""
 
 #: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
-#: src/gpm-statistics.c:787 src/gpm-statistics.c:1259
+#: src/gpm-statistics.c:787 src/gpm-statistics.c:1273
 msgid "Power Statistics"
 msgstr ""
 
@@ -797,114 +805,114 @@ msgstr ""
 msgid "Power Management Preferences"
 msgstr ""
 
-#: data/gpm-prefs.ui:58
+#: data/gpm-prefs.ui:59
 msgid "Make Default"
 msgstr ""
 
-#: data/gpm-prefs.ui:71
+#: data/gpm-prefs.ui:72
 msgid "_Close"
 msgstr ""
 
-#: data/gpm-prefs.ui:138 data/gpm-prefs.ui:406 data/gpm-prefs.ui:746
+#: data/gpm-prefs.ui:136 data/gpm-prefs.ui:404 data/gpm-prefs.ui:744
 msgid "Put computer to _sleep when inactive for:"
 msgstr ""
 
-#: data/gpm-prefs.ui:176 data/gpm-prefs.ui:444
+#: data/gpm-prefs.ui:174 data/gpm-prefs.ui:442
 msgid "When laptop lid is cl_osed:"
 msgstr ""
 
-#: data/gpm-prefs.ui:213 data/gpm-prefs.ui:519 data/gpm-prefs.ui:825
-#: data/gpm-prefs.ui:1031
+#: data/gpm-prefs.ui:211 data/gpm-prefs.ui:517 data/gpm-prefs.ui:823
+#: data/gpm-prefs.ui:1029
 msgid "Actions"
 msgstr ""
 
-#: data/gpm-prefs.ui:252 data/gpm-prefs.ui:560 data/gpm-prefs.ui:861
+#: data/gpm-prefs.ui:250 data/gpm-prefs.ui:558 data/gpm-prefs.ui:859
 msgid "Put _display to sleep when inactive for:"
 msgstr ""
 
-#: data/gpm-prefs.ui:289
+#: data/gpm-prefs.ui:287
 msgid "Set display _brightness to:"
 msgstr ""
 
-#: data/gpm-prefs.ui:322 data/gpm-prefs.ui:607
+#: data/gpm-prefs.ui:320 data/gpm-prefs.ui:605
 msgid "Di_m display when idle"
 msgstr ""
 
-#: data/gpm-prefs.ui:344 data/gpm-prefs.ui:629 data/gpm-prefs.ui:890
+#: data/gpm-prefs.ui:342 data/gpm-prefs.ui:627 data/gpm-prefs.ui:888
 msgid "Display"
 msgstr ""
 
-#: data/gpm-prefs.ui:363
+#: data/gpm-prefs.ui:361
 msgid "On AC Power"
 msgstr ""
 
-#: data/gpm-prefs.ui:482
+#: data/gpm-prefs.ui:480
 msgid "When battery po_wer is critically low:"
 msgstr ""
 
-#: data/gpm-prefs.ui:591
+#: data/gpm-prefs.ui:589
 msgid "_Reduce backlight brightness"
 msgstr ""
 
-#: data/gpm-prefs.ui:663
+#: data/gpm-prefs.ui:661
 msgid "_Reduce keyboard backlight"
 msgstr ""
 
-#: data/gpm-prefs.ui:685 src/gpm-upower.c:510
+#: data/gpm-prefs.ui:683 src/gpm-upower.c:510
 msgid "Keyboard"
 msgid_plural "Keyboards"
 msgstr[0] ""
 msgstr[1] ""
 
-#: data/gpm-prefs.ui:707
+#: data/gpm-prefs.ui:705
 msgid "On Battery Power"
 msgstr ""
 
-#: data/gpm-prefs.ui:760
+#: data/gpm-prefs.ui:758
 msgid "When UPS power is l_ow:"
 msgstr ""
 
-#: data/gpm-prefs.ui:774
+#: data/gpm-prefs.ui:772
 msgid "When UPS power is _critically low:"
 msgstr ""
 
-#: data/gpm-prefs.ui:912
+#: data/gpm-prefs.ui:910
 msgid "On UPS Power"
 msgstr ""
 
-#: data/gpm-prefs.ui:956
+#: data/gpm-prefs.ui:954
 msgid "When the power _button is pressed:"
 msgstr ""
 
-#: data/gpm-prefs.ui:994
+#: data/gpm-prefs.ui:992
 msgid "When the _suspend button is pressed:"
 msgstr ""
 
-#: data/gpm-prefs.ui:1065
+#: data/gpm-prefs.ui:1063
 msgid "_Never display an icon"
 msgstr ""
 
-#: data/gpm-prefs.ui:1083
+#: data/gpm-prefs.ui:1081
 msgid "_Only display an icon when battery power is low"
 msgstr ""
 
-#: data/gpm-prefs.ui:1101
+#: data/gpm-prefs.ui:1099
 msgid "Only display an icon when charging or _discharging"
 msgstr ""
 
-#: data/gpm-prefs.ui:1119
+#: data/gpm-prefs.ui:1117
 msgid "Only display an icon when a battery is p_resent"
 msgstr ""
 
-#: data/gpm-prefs.ui:1137
+#: data/gpm-prefs.ui:1135
 msgid "_Always display an icon"
 msgstr ""
 
-#: data/gpm-prefs.ui:1161
+#: data/gpm-prefs.ui:1159
 msgid "Notification Area"
 msgstr ""
 
-#: data/gpm-prefs.ui:1183
+#: data/gpm-prefs.ui:1181
 msgid "General"
 msgstr ""
 
@@ -1183,212 +1191,212 @@ msgstr ""
 msgid "%s of UPS backup power remaining (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1303
+#: src/gpm-manager.c:1304
 msgid "Battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1306
+#: src/gpm-manager.c:1307
 msgid "Laptop battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1312
+#: src/gpm-manager.c:1313
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1316
+#: src/gpm-manager.c:1317
 msgid "UPS low"
 msgstr ""
 
-#: src/gpm-manager.c:1320
+#: src/gpm-manager.c:1321
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1329 src/gpm-manager.c:1468
+#: src/gpm-manager.c:1330 src/gpm-manager.c:1469
 msgid "Mouse battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1332
+#: src/gpm-manager.c:1333
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1336 src/gpm-manager.c:1476
+#: src/gpm-manager.c:1337 src/gpm-manager.c:1477
 msgid "Keyboard battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1339
+#: src/gpm-manager.c:1340
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1343 src/gpm-manager.c:1485
+#: src/gpm-manager.c:1344 src/gpm-manager.c:1486
 msgid "PDA battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1346
+#: src/gpm-manager.c:1347
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1350 src/gpm-manager.c:1495 src/gpm-manager.c:1505
+#: src/gpm-manager.c:1351 src/gpm-manager.c:1496 src/gpm-manager.c:1506
 msgid "Cell phone battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1353
+#: src/gpm-manager.c:1354
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1357
+#: src/gpm-manager.c:1358
 msgid "Media player battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1360
+#: src/gpm-manager.c:1361
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1364 src/gpm-manager.c:1514
+#: src/gpm-manager.c:1365 src/gpm-manager.c:1515
 msgid "Tablet battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1367
+#: src/gpm-manager.c:1368
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1371 src/gpm-manager.c:1523
+#: src/gpm-manager.c:1372 src/gpm-manager.c:1524
 msgid "Attached computer battery low"
 msgstr ""
 
-#: src/gpm-manager.c:1374
+#: src/gpm-manager.c:1375
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
 msgstr ""
 
-#: src/gpm-manager.c:1422
+#: src/gpm-manager.c:1423
 msgid "Battery critically low"
 msgstr ""
 
-#: src/gpm-manager.c:1425 src/gpm-manager.c:1583
+#: src/gpm-manager.c:1426 src/gpm-manager.c:1584
 msgid "Laptop battery critically low"
 msgstr ""
 
-#: src/gpm-manager.c:1434
+#: src/gpm-manager.c:1435
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr ""
 
-#: src/gpm-manager.c:1438
+#: src/gpm-manager.c:1439
 msgid "Computer will suspend very soon unless it is plugged in."
 msgstr ""
 
-#: src/gpm-manager.c:1442
+#: src/gpm-manager.c:1443
 msgid "Computer will hibernate very soon unless it is plugged in."
 msgstr ""
 
-#: src/gpm-manager.c:1446
+#: src/gpm-manager.c:1447
 msgid "Computer will shutdown very soon unless it is plugged in."
 msgstr ""
 
-#: src/gpm-manager.c:1453 src/gpm-manager.c:1619
+#: src/gpm-manager.c:1454 src/gpm-manager.c:1620
 msgid "UPS critically low"
 msgstr ""
 
-#: src/gpm-manager.c:1457
+#: src/gpm-manager.c:1458
 #, c-format
 msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to "
 "your computer to avoid losing data."
 msgstr ""
 
-#: src/gpm-manager.c:1471
+#: src/gpm-manager.c:1472
 #, c-format
 msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1479
+#: src/gpm-manager.c:1480
 #, c-format
 msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1488
+#: src/gpm-manager.c:1489
 #, c-format
 msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if "
 "not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1498
+#: src/gpm-manager.c:1499
 #, c-format
 msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1508
+#: src/gpm-manager.c:1509
 #, c-format
 msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1517
+#: src/gpm-manager.c:1518
 #, c-format
 msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning "
 "if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1526
+#: src/gpm-manager.c:1527
 #, c-format
 msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
 msgstr ""
 
-#: src/gpm-manager.c:1591
+#: src/gpm-manager.c:1592
 msgid ""
 "The battery is below the critical level and this computer will <b>power-off</"
 "b> when the battery becomes completely empty."
 msgstr ""
 
-#: src/gpm-manager.c:1597
+#: src/gpm-manager.c:1598
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
 msgstr ""
 
-#: src/gpm-manager.c:1604
+#: src/gpm-manager.c:1605
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr ""
 
-#: src/gpm-manager.c:1609
+#: src/gpm-manager.c:1610
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr ""
 
-#: src/gpm-manager.c:1627
+#: src/gpm-manager.c:1628
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
 msgstr ""
 
-#: src/gpm-manager.c:1633
+#: src/gpm-manager.c:1634
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr ""
 
-#: src/gpm-manager.c:1638
+#: src/gpm-manager.c:1639
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr ""
@@ -1559,8 +1567,8 @@ msgstr ""
 
 #: src/gpm-statistics.c:388
 #, c-format
-msgid "%d second"
-msgid_plural "%d seconds"
+msgid "%u second"
+msgid_plural "%u seconds"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -1655,20 +1663,20 @@ msgstr ""
 msgid "Prediction accuracy"
 msgstr ""
 
-#: src/gpm-statistics.c:1245
+#: src/gpm-statistics.c:1259
 msgid "Select this device at startup"
 msgstr ""
 
-#: src/gpm-tray-icon.c:206
+#: src/gpm-tray-icon.c:208
 msgid "Copyright © 2011-2021 MATE developers"
 msgstr ""
 
-#: src/gpm-tray-icon.c:319
+#: src/gpm-tray-icon.c:320
 #, c-format
 msgid "%s remaining"
 msgstr ""
 
-#: src/gpm-tray-icon.c:374
+#: src/gpm-tray-icon.c:379
 msgid "_Preferences"
 msgstr ""
 
