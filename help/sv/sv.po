@@ -1,19 +1,19 @@
-# 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Henrik Mattsson-Mårn <h@reglage.net>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# Wolfgang Ulbrich <raveit65.sun@gmail.com>, 2018
 # Daniel Gullbransen, 2018
 # eckeman <eckeman@zoho.com>, 2020
 # Luna Jernberg <droidbittin@gmail.com>, 2020
 # Kristoffer Grundström <lovaren@gmail.com>, 2021
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-10-04 15:52+0000\n"
-"Last-Translator: Kristoffer Grundström <lovaren@gmail.com>, 2021\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/mate/teams/13566/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,12 +24,14 @@ msgstr ""
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>"
+msgstr ""
+"Daniel Nylander <po@danielnylander.se>\n"
+"Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:23
 msgid "<application>MATE Power Manager</application> Manual"
-msgstr ""
+msgstr "Manual för <application>MATE Strömhanterare</application>"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:25
@@ -38,11 +40,14 @@ msgid ""
 "MATE Desktop that manages the power settings for your laptop or desktop "
 "computer."
 msgstr ""
+"<application>MATE Strömhanterare</application> är en session daemon för MATE"
+" Desktop som hanterar ströminställningarna för din bärbara eller stationära "
+"dator."
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
 msgid "<year>2015-2021</year> <holder>MATE Documentation Team</holder>"
-msgstr ""
+msgstr "<year>2015-2021</year> <holder>MATE:s dokumentationsteam</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:34
@@ -67,6 +72,7 @@ msgstr "Richard Hughes"
 msgid ""
 "<surname>MATE Documentation Team</surname> <affiliation> </affiliation>"
 msgstr ""
+"<surname>MATE:s dokumentationsteam</surname> <affiliation> </affiliation>"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:71
@@ -74,11 +80,13 @@ msgid ""
 "<firstname>Richard</firstname> <surname>Hughes</surname> "
 "<email>richard@hughsie.com</email>"
 msgstr ""
+"<firstname>Richard Hughes</firstname> <surname>Hughes</surname> "
+"<email>richard@hughsie.com</email>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:95
 msgid "Richard Hughes <email>richard@hughsie.com</email>"
-msgstr ""
+msgstr "Richard Hughes <email>richard@hughsie.com</email>"
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:91
@@ -101,16 +109,22 @@ msgid ""
 "type=\"http\"><application>MATE Power Manager</application> Contact "
 "Page</ulink>."
 msgstr ""
+"Om du vill rapportera en bugg eller lämna ett förslag angående MATE "
+"Strömhanterare-programmet eller den här handboken följer du anvisningarna på"
+" <ulink url=\"https://github.com/mate-desktop/mate-power-manager/\" "
+"type=\"http\">kontaktsidan</ulink> för <ulink url=\"https://github.com/mate-"
+"desktop/mate-power-manager/\" type=\"http\"><application>MATE "
+"Strömhanterare</application></ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:115
 msgid "<primary><application>MATE Power Manager</application></primary>"
-msgstr ""
+msgstr "<primary><application>MATE Strömhanterare</application></primary>"
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:118
 msgid "<primary>mate-power-manager</primary>"
-msgstr ""
+msgstr "<primary>mate-power-manager</primary>"
 
 #. (itstool) path: section/title
 #: C/index.docbook:125
@@ -123,6 +137,8 @@ msgid ""
 "<primary><application>MATE Power Manager</application></primary> "
 "<secondary>Manual</secondary> <tertiary>mate-power-manager</tertiary>"
 msgstr ""
+"<primary><application>MATE Strömhanterare</application></primary> "
+"<secondary>Handbok</secondary> <tertiary>mate-power-manager</tertiary>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:135
@@ -130,6 +146,8 @@ msgid ""
 "The MATE Power Manager session daemon is a power management daemon for the "
 "<systemitem>MATE desktop</systemitem>"
 msgstr ""
+"MATE Strömhanterare session daemon är en daemon för strömhantering för "
+"<systemitem>MATE-skrivbordet</systemitem>"
 
 #. (itstool) path: section/title
 #: C/index.docbook:143
@@ -143,6 +161,9 @@ msgid ""
 "startup, but you can manually start <application>MATE Power "
 "Manager</application> by doing:"
 msgstr ""
+"MATE <application>Strömhanterare</application> startas vanligtvis i MATE-"
+"start, men du kan starta MATE <application>Strömhanterare</application> "
+"manuellt genom att göra:"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:150
@@ -155,11 +176,13 @@ msgid ""
 "Type <command>G_MESSAGES_DEBUG=PowerManager mate-power-manager --no-"
 "daemon</command>, then press <keycap>Return</keycap>:"
 msgstr ""
+"Skriv <command>G_MESSAGES_DEBUG=PowerManager mate-power-manager --no-"
+"daemon</command> och tryck sedan på <keycap>Return</keycap>:"
 
 #. (itstool) path: section/title
 #: C/index.docbook:162
 msgid "Notification Messages"
-msgstr ""
+msgstr "Notifieringsmeddelanden"
 
 #. (itstool) path: section/para
 #: C/index.docbook:163
@@ -167,16 +190,18 @@ msgid ""
 "When <application>MATE Power Manager</application> has started, the "
 "following notifications may be displayed."
 msgstr ""
+"När <application>MATE Strömhanterare</application> har startat kan följande "
+"meddelanden visas."
 
 #. (itstool) path: section/title
 #: C/index.docbook:168
 msgid "AC Adapter Unplugged"
-msgstr ""
+msgstr "AC-adaptern urkopplad"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:170
 msgid "MATE Power Manager Notification when AC adapter is removed"
-msgstr ""
+msgstr "MATE Strömhanterare Meddelande när nätadaptern tas bort"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -198,17 +223,21 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-discharging</command>."
 msgstr ""
+"Du kan inaktivera detta meddelande genom att ändra dconf-nyckeln "
+"<command>org.mate.power-manager notify-discharging</command>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:188
 msgid "Fully Charged"
-msgstr ""
+msgstr "Fullt laddad"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:190
 msgid ""
 "MATE Power Manager Notification when laptop primary battery is fully charged"
 msgstr ""
+"MATE Strömhanterare Meddelande när den bärbara datorns primära batteri är "
+"fulladdat"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -230,6 +259,8 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-fully-charged</command>."
 msgstr ""
+"Du kan inaktivera detta meddelande genom att ändra dconf-nyckeln "
+"<command>org.mate.power-manager notify-fully-charged</command>."
 
 #. (itstool) path: note/para
 #: C/index.docbook:206
@@ -239,11 +270,15 @@ msgid ""
 " from showing unwanted repeat notifications if the battery is incorrectly "
 "reporting the charged status."
 msgstr ""
+"Du kommer endast att få ett upprepat meddelande om batteriets procentuella "
+"laddning sjunker under 95% a och sedan åter är fulladdat. Detta förhindrar "
+"att vissa maskiner visar oönskade upprepade meddelanden om batteriet "
+"felaktigt rapporterar laddningsstatus."
 
 #. (itstool) path: section/title
 #: C/index.docbook:216
 msgid "Power Low"
-msgstr ""
+msgstr "Låg effekt"
 
 #. (itstool) path: section/para
 #: C/index.docbook:217
@@ -251,11 +286,13 @@ msgid ""
 "When the battery is low, you will receive the following notification. You "
 "should consider switching to AC power really soon."
 msgstr ""
+"När batterinivån är låg får du följande meddelande. Du bör överväga att byta"
+" till nätström mycket snart."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:222
 msgid "MATE Power Manager Notification when battery power is low"
-msgstr ""
+msgstr "MATE Strömhanterare Meddelande när batterinivån är låg"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -275,11 +312,13 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-low-power</command>."
 msgstr ""
+"Du kan inaktivera detta meddelande genom att ändra dconf-nyckeln "
+"<command>org.mate.power-manager notify-low-power</command>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:240
 msgid "Power Critical"
-msgstr ""
+msgstr "Kraftkritisk"
 
 #. (itstool) path: section/para
 #: C/index.docbook:241
@@ -288,12 +327,17 @@ msgid ""
 "explaining what action is required. You can change the critical low action "
 "using the preferences tool."
 msgstr ""
+"När datorn har fått slut på ström visas detta meddelande som förklarar vilka"
+" åtgärder som krävs. Du kan ändra den kritiskt låga åtgärden med hjälp av "
+"inställningsverktyget."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:247
 msgid ""
 "MATE Power Manager Notification when the system power is critically low"
 msgstr ""
+"MATE Strömhanterare Meddelanden när systemets strömförsörjning är kritiskt "
+"låg"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -312,7 +356,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:259
 msgid "Suspend Failure"
-msgstr ""
+msgstr "Avbryta fel"
 
 #. (itstool) path: section/para
 #: C/index.docbook:260
@@ -321,11 +365,14 @@ msgid ""
 "common reason for this notification is that the current user does not have "
 "permission to suspend or hibernate the computer."
 msgstr ""
+"När ett Suspend Failure inträffar kan du få följande varning. Den vanligaste"
+" orsaken till detta meddelande är att den aktuella användaren inte har "
+"behörighet att stänga av datorn eller försätta den i viloläge."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:266
 msgid "MATE Power Manager Notification when suspend failure occurs"
-msgstr ""
+msgstr "MATE Strömhanterare Meddelande när fel i suspenderingen inträffar"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -347,6 +394,8 @@ msgid ""
 "You can disable this notification by changing the dconf key "
 "<command>org.mate.power-manager notify-sleep-failed</command>."
 msgstr ""
+"Du kan inaktivera detta meddelande genom att ändra dconf-nyckeln "
+"<command>org.mate.power-manager notify-sleep-failed</command>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:285
@@ -359,6 +408,8 @@ msgid ""
 "The statistics program allows you to visualize the power consumption of your"
 " laptop hardware."
 msgstr ""
+"Med statistikprogrammet kan du visualisera strömförbrukningen för din "
+"bärbara dators hårdvara."
 
 #. (itstool) path: note/para
 #: C/index.docbook:291
@@ -368,11 +419,15 @@ msgid ""
 "internal IPC. This allows other applications to query and display the data "
 "if required."
 msgstr ""
+"Detta har tagits bort från informationsfönstret i tidigare versioner av MATE"
+" Strömhanterare eftersom datagränssnittet nu använder DBUS i stället för "
+"intern IPC. Detta gör det möjligt för andra applikationer att fråga och visa"
+" data om så krävs."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:298
 msgid "Power History going from battery power to AC"
-msgstr ""
+msgstr "Strömhistorik vid övergång från batteridrift till växelström"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -395,11 +450,15 @@ msgid ""
 "required hardware. You may also see other hardware not shown here (for "
 "example UPS devices) but these are treated the same way as other devices."
 msgstr ""
+"Det kan hända att vissa alternativ eller grafer inte visas om datorn inte "
+"har den maskinvara som krävs. Du kan också se annan maskinvara som inte "
+"visas här (t.ex. UPS-enheter), men dessa behandlas på samma sätt som andra "
+"enheter."
 
 #. (itstool) path: section/title
 #: C/index.docbook:317
 msgid "Charge History"
-msgstr ""
+msgstr "Avgiftshistorik"
 
 #. (itstool) path: section/para
 #: C/index.docbook:318
@@ -409,11 +468,15 @@ msgid ""
 "battery then only the averaged value will be shown. A legend is not shown "
 "with this graph."
 msgstr ""
+"Det här diagrammet visar tillgänglig laddningsprocent för det sammansatta "
+"primärbatteriet, så om du har ett huvudbatteri och ett extrabatteri till din"
+" bärbara dator visas endast det genomsnittliga värdet. Någon "
+"teckenförklaring visas inte med detta diagram."
 
 #. (itstool) path: section/title
 #: C/index.docbook:327
 msgid "Power History"
-msgstr ""
+msgstr "Krafthistoria"
 
 #. (itstool) path: section/para
 #: C/index.docbook:328
@@ -426,6 +489,13 @@ msgid ""
 " is dimmed. A legend is shown with this graph when data events have been "
 "received."
 msgstr ""
+"Detta diagram visar den effekthistoriska laddning som används av det "
+"sammansatta primärbatteriet. Den här linjen representerar den mängd ström "
+"som antingen används för att ladda batterierna i systemet eller den ström "
+"som systemet använder från batterierna. Du bör se att linjen går upp när "
+"processorintensiva uppgifter utförs och ner när systemet är i viloläge eller"
+" när skärmen är nedtonad. En teckenförklaring visas med denna graf när "
+"datahändelser har tagits emot."
 
 #. (itstool) path: note/para
 #: C/index.docbook:341
@@ -435,11 +505,15 @@ msgid ""
 "limitations where the rate is only sent from the battery management chip, "
 "rather than the power management chip on the motherboard."
 msgstr ""
+"Du får inga hastighetsdata från datorn om den inte laddas eller urladdas, "
+"eller om datorn är avstängd. Detta beror på maskinvarubegränsningar där "
+"hastigheten endast skickas från batterihanteringschipet, snarare än från "
+"strömhanteringschipet på moderkortet."
 
 #. (itstool) path: section/title
 #: C/index.docbook:352
 msgid "Estimated Time History"
-msgstr ""
+msgstr "Beräknad tidshistorik"
 
 #. (itstool) path: section/para
 #: C/index.docbook:353
@@ -450,6 +524,11 @@ msgid ""
 "when the rate decreases and down when the rate increases. A legend is shown "
 "with this graph when data events have been received."
 msgstr ""
+"Detta diagram visar den beräknade laddningshistoriken för det sammansatta "
+"primärbatteriet. Linjen representerar den tid som krävs för laddning, eller "
+"den tid som krävs för urladdning. Denna linje bör gå proportionellt uppåt "
+"när hastigheten minskar och nedåt när hastigheten ökar. En teckenförklaring "
+"visas med detta diagram när datahändelser har tagits emot."
 
 #. (itstool) path: section/title
 #: C/index.docbook:366
@@ -459,27 +538,28 @@ msgstr "Inställningar"
 #. (itstool) path: section/para
 #: C/index.docbook:368
 msgid "The preferences window allows you to control:"
-msgstr ""
+msgstr "I inställningsfönstret kan du styra:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:372
 msgid "The LCD brightness when on AC and battery power"
-msgstr ""
+msgstr "LCD-ljusstyrkan vid AC- och batteridrift"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:377
 msgid "The idle time for the screen power-down and suspend action"
-msgstr ""
+msgstr "Inaktivitetstid för avstängning och uppskjutning av skärmen"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:382
 msgid "The actions to perform when the laptop lid is closed"
 msgstr ""
+"De åtgärder som ska utföras när locket till den bärbara datorn är stängt"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:387
 msgid "The notification area icon policy"
-msgstr ""
+msgstr "Policy för ikonen i meddelandefältet"
 
 #. (itstool) path: note/para
 #: C/index.docbook:394
@@ -488,16 +568,19 @@ msgid ""
 "not writable. This allows administrators to lock-down the actions that a "
 "user can select."
 msgstr ""
+"Vissa skjutreglage eller alternativrutor kan inaktiveras om dconf-"
+"policynycklarna inte är skrivbara. Detta gör det möjligt för administratörer"
+" att låsa de åtgärder som en användare kan välja."
 
 #. (itstool) path: section/title
 #: C/index.docbook:402
 msgid "AC Preferences"
-msgstr ""
+msgstr "AC-inställningar"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:404
 msgid "MATE Power Manager AC tab"
-msgstr ""
+msgstr "Fliken AC i MATE Strömhanterare"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -516,12 +599,12 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:416
 msgid "Battery Preferences"
-msgstr ""
+msgstr "Inställningar för batteri"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:418
 msgid "MATE Power Manager battery tab"
-msgstr ""
+msgstr "Batterifliken i MATE Strömhanterare"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -543,6 +626,8 @@ msgid ""
 "This allows a powerful computer to reduce the power usage when idle, or when"
 " the full capabilities are not required."
 msgstr ""
+"Detta gör att en kraftfull dator kan minska strömförbrukningen när den är "
+"inaktiv eller när den inte kräver full kapacitet."
 
 #. (itstool) path: section/title
 #: C/index.docbook:434
@@ -552,7 +637,7 @@ msgstr "Generella egenskaper"
 #. (itstool) path: figure/title
 #: C/index.docbook:436
 msgid "MATE Power Manager general tab"
-msgstr ""
+msgstr "MATE Strömhanterare allmän flik"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -571,7 +656,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:448
 msgid "Session and system idle times"
-msgstr ""
+msgstr "Inaktivitetstider för session och system"
 
 #. (itstool) path: section/para
 #: C/index.docbook:449
@@ -584,6 +669,14 @@ msgid ""
 "Manager</application> performs all the session idle actions such as enabling"
 " low-power mode and lowering the laptop panel brightness."
 msgstr ""
+"<command>mate-screensaver</command> är en sessionsdemon som övervakar "
+"användarinmatning och om musen inte har flyttats eller tangentbordet inte "
+"har tryckts ned startar en timeout. När värdet för denna timeout når det "
+"värde som anges i <command>mate-screensaver-preferences</command> markeras "
+"inloggningen som \"session idle\". Det är då <application>MATE "
+"Strömhanterare</application> utför alla åtgärder för sessionen i viloläge, "
+"t.ex. aktivering av lågeffektläge och sänkning av ljusstyrkan på den bärbara"
+" datorns panel."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:461
@@ -591,6 +684,8 @@ msgid ""
 "Changing the session idle timeout in <command>mate-screensaver-"
 "preferences</command>"
 msgstr ""
+"Ändra tidsgränsen för sessionens inaktivitet i <command>mate-screensaver-"
+"preferences</command>"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -613,6 +708,11 @@ msgid ""
 "idle, then the idle action is performed, which is usually to turn off the "
 "screen, or to suspend or hibernate."
 msgstr ""
+"Så snart sessionen markeras som inaktiv startar <application>MATE "
+"Strömhanterare</application> sin egen \"system\"-timer. När den timeout som "
+"anges i <command>mate-power-preferences</command> har uppnåtts och CPU-"
+"belastningen är inaktiv utförs inaktivitetsåtgärden, vilket vanligtvis är "
+"att stänga av skärmen eller att stänga av eller gå i viloläge."
 
 #. (itstool) path: section/para
 #: C/index.docbook:479
@@ -625,16 +725,23 @@ msgid ""
 "sliders in <command>mate-power-preferences</command> will change "
 "accordingly."
 msgstr ""
+"För att göra detta tydligare är reglagen i <command>mate-power-"
+"preferences</command> inställda på att starta vid värdet för session-timeout"
+" + 1 minut, eftersom vi logiskt sett inte kan trigga innan sessionen "
+"markeras som inaktiv. Om du justerar värdet på timeouten för \"session "
+"idle\" i <command>mate-screensaver-preferences</command> kommer starten för "
+"reglagen i <command>mate-power-preferences</command> att ändras i enlighet "
+"med detta."
 
 #. (itstool) path: section/title
 #: C/index.docbook:491
 msgid "Advanced Preferences"
-msgstr ""
+msgstr "Avancerade inställningar"
 
 #. (itstool) path: section/title
 #: C/index.docbook:494
 msgid "Screen Dim Brightness"
-msgstr ""
+msgstr "Skärmdimma Ljusstyrka"
 
 #. (itstool) path: note/para
 #: C/index.docbook:496
@@ -642,11 +749,14 @@ msgid ""
 "You can change the idle laptop panel brightness by changing the dconf key "
 "<command>org.mate.power-manager idle-brightness</command>."
 msgstr ""
+"Du kan ändra ljusstyrkan på den bärbara datorns panel i viloläge genom att "
+"ändra dconf-nyckeln <command>org.mate.power-manager idle-"
+"brightness</command>."
 
 #. (itstool) path: section/title
 #: C/index.docbook:504
 msgid "Screen Locking"
-msgstr ""
+msgstr "Låsning av skärm"
 
 #. (itstool) path: section/para
 #: C/index.docbook:505
@@ -656,6 +766,10 @@ msgid ""
 "screen\" in mate-screensaver when the lid is closed, or the system performs "
 "a suspend or hibernate action."
 msgstr ""
+"Som standard stöder <application>MATE Strömhanterare</application> ett "
+"enkelt låsningsschema. Det innebär att skärmen låses om den är inställd på "
+"\"Lock screen\" i mate-screensaver när locket stängs eller systemet utför en"
+" suspenderings- eller vilolägesåtgärd."
 
 #. (itstool) path: section/para
 #: C/index.docbook:511
@@ -664,11 +778,15 @@ msgid ""
 "locking policy to change for the lid, suspend and hibernate actions. To "
 "enable this complex mode, you will have to disable the dconf key:"
 msgstr ""
+"Det finns ett komplext låsningsschema tillgängligt för avancerade användare "
+"som gör det möjligt att ändra låsningspolicyn för åtgärderna lid, suspend "
+"och hibernate. För att aktivera detta komplexa läge måste du inaktivera "
+"dconf-nyckeln:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:519
 msgid "<command>org.mate.power-manager lock-use-screensaver</command>"
-msgstr ""
+msgstr "<command>org.mate.power-manager lås-använd-skärmläsare</command>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:524
@@ -676,21 +794,23 @@ msgid ""
 "Then the policy keys can be set to force a mate-screensaver lock and unlock "
 "when the action is performed:"
 msgstr ""
+"Policyknapparna kan sedan ställas in så att de tvingar fram en låsning och "
+"upplåsning av skärmsläckaren när åtgärden utförs:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:531
 msgid "<command>org.mate.power-manager lock-blank-screen</command>"
-msgstr ""
+msgstr "<command>org.mate.power-manager lås-blankskärm</command>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:536
 msgid "<command>org.mate.power-manager lock-suspend</command>"
-msgstr ""
+msgstr "<command>org.mate.power-manager lock-suspend</command>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:541
 msgid "<command>org.mate.power-manager lock-hibernate</command>"
-msgstr ""
+msgstr "<command>org.mate.power-manager lock-hibernate</command>"
 
 #. (itstool) path: note/para
 #: C/index.docbook:548
@@ -698,11 +818,13 @@ msgid ""
 "The lock policy for mate-screensaver is ignored until the simple mode is re-"
 "enabled."
 msgstr ""
+"Låspolicyn för mate-screensaver ignoreras tills det enkla läget "
+"återaktiveras."
 
 #. (itstool) path: section/title
 #: C/index.docbook:557
 msgid "MATE Power Applets"
-msgstr ""
+msgstr "MATE Power Applets"
 
 #. (itstool) path: section/title
 #: C/index.docbook:560
@@ -717,11 +839,15 @@ msgid ""
 "laptop without brightness buttons, as you can now change the brightness "
 "easily."
 msgstr ""
+"Appleten för ljusstyrka gör det möjligt för användaren att ändra ljusstyrkan"
+" tillfälligt utan att ändra standardpolicyn. Detta kan vara användbart om du"
+" har en bärbar dator utan knappar för ljusstyrka, eftersom du nu enkelt kan "
+"ändra ljusstyrkan."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:568
 msgid "Brightness applet drop-down."
-msgstr ""
+msgstr "Ljusstyrka applet rullgardinsmeny."
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -740,7 +866,7 @@ msgstr ""
 #. (itstool) path: note/para
 #: C/index.docbook:580
 msgid "You will not get the slider if your hardware is not supported."
-msgstr ""
+msgstr "Du kommer inte att få slidern om din maskinvara inte stöds."
 
 #. (itstool) path: section/title
 #: C/index.docbook:587
@@ -755,11 +881,16 @@ msgid ""
 "proprietary programs such as VMWare or Matlab. Just click the icon for the "
 "auto-suspend to be inhibited, and click it again for normal operation."
 msgstr ""
+"Med <application>Inhibit Applet</application> kan användaren förhindra att "
+"datorn automatiskt sover när den är inaktiv. Detta kan behövas med gamla "
+"eller egenutvecklade program som VMWare eller Matlab. Klicka bara på ikonen "
+"för att förhindra automatisk insomning och klicka på den igen för normal "
+"drift."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:596
 msgid "Inhibit applet in inhibited state."
-msgstr ""
+msgstr "Inhibera applet i inhiberat tillstånd."
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -782,21 +913,25 @@ msgid ""
 "make the application use the <function>Inhibit()</function> and "
 "<function>UnInhibit()</function> methods as this should 'just work'."
 msgstr ""
+"Använd inte den här appleten om du bara använder MATE-programvaran, lämna "
+"istället in en bugg för att få programmet att använda "
+"<function>Inhibit()</function> - och <function>UnInhibit()</function> "
+"-metoderna eftersom detta \"bara borde fungera\"."
 
 #. (itstool) path: section/title
 #: C/index.docbook:618
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "Vanliga frågor"
 
 #. (itstool) path: section/para
 #: C/index.docbook:619
 msgid "These are questions the mailing list gets asked frequently."
-msgstr ""
+msgstr "Det här är frågor som ofta ställs till e-postlistan."
 
 #. (itstool) path: section/title
 #: C/index.docbook:623
 msgid "What is battery capacity?"
-msgstr ""
+msgstr "Vad är batterikapacitet?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:624
@@ -804,6 +939,8 @@ msgid ""
 "Capacity is how much charge your battery can store compared to its "
 "manufacturer's guidelines."
 msgstr ""
+"Kapaciteten är hur mycket laddning batteriet kan lagra i förhållande till "
+"tillverkarens riktlinjer."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:629
@@ -811,6 +948,8 @@ msgid ""
 "This graph shows the capacity of a typical lithium ion battery over a few "
 "hundred charge-discharge cycles."
 msgstr ""
+"Denna graf visar kapaciteten hos ett typiskt litiumjonbatteri under några "
+"hundra laddnings- och urladdningscykler."
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -829,7 +968,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.docbook:644
 msgid "What's the difference between suspend and hibernate?"
-msgstr ""
+msgstr "Vad är skillnaden mellan suspend och hibernate?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:645
@@ -841,6 +980,12 @@ msgid ""
 "external event such as a keyboard button press. It generally takes a few "
 "seconds to suspend and then resume your computer."
 msgstr ""
+"Suspend-läget är en energisparfunktion som är den lägsta nivån av "
+"strömförbrukning som bevarar programdata i datorns minne. När datorn "
+"befinner sig i Suspended-läget utförs inga beräkningar förrän normal "
+"aktivitet återupptas. Den återupptas inte förrän den signaleras av en extern"
+" händelse, t.ex. en knapptryckning på tangentbordet. Det tar i allmänhet "
+"några sekunder att avbryta och sedan återuppta datorn."
 
 #. (itstool) path: caution/para
 #: C/index.docbook:655
@@ -849,6 +994,10 @@ msgid ""
 "recommended for the low power action. If you remove AC power on a desktop, "
 "or run out of battery power on a laptop then you will lose your work."
 msgstr ""
+"Du använder fortfarande en liten mängd batteriström när du är avstängd, så "
+"det rekommenderas inte för lågeffektåtgärder. Om du kopplar bort nätströmmen"
+" på en stationär dator eller om batteriet tar slut på en bärbar dator kommer"
+" du att förlora ditt arbete."
 
 #. (itstool) path: section/para
 #: C/index.docbook:662
@@ -861,6 +1010,13 @@ msgid ""
 "lost. It can take up to a minute or more to hibernate and wake your "
 "computer."
 msgstr ""
+"I viloläget sparas hela datorns tillstånd på hårddisken och strömmen stängs "
+"av så att datorn ser ut att vara avstängd. Den återupptas inte förrän den "
+"signaleras av en extern händelse, t.ex. en knapptryckning på tangentbordet. "
+"Det här är det mest energisnåla viloläget som finns. Om du stänger av "
+"nätströmmen på en stationär dator eller tar slut på batteriet på en bärbar "
+"dator kommer arbetet inte att gå förlorat. Det kan ta upp till en minut "
+"eller mer att försätta datorn i viloläge och väcka den."
 
 #. (itstool) path: section/title
 #: C/index.docbook:675
@@ -868,6 +1024,8 @@ msgid ""
 "My monitor is broken and treats DPMS standby and off states as 'no-signal' "
 "which leaves the monitor powered on."
 msgstr ""
+"Min monitor är trasig och behandlar DPMS standby- och off-tillstånd som "
+"\"ingen signal\", vilket gör att monitorn förblir påslagen."
 
 #. (itstool) path: section/para
 #: C/index.docbook:679
@@ -878,6 +1036,12 @@ msgid ""
 " <literal>org.mate.power-manager dpms-method-battery</literal> to one of the"
 " modes that work, e.g. standby, suspend or off."
 msgstr ""
+"Du måste ändra DPMS-suspensionsläget som <application>MATE "
+"Strömhanterare</application> använder. Öppna <command>dconf-editor</command>"
+" och ändra sedan nycklarna <literal>org.mate.power-manager dpms-method-"
+"ac</literal> och <literal>org.mate.power-manager dpms-method-"
+"battery</literal> till ett av de lägen som fungerar, t.ex. standby, suspend "
+"eller off."
 
 #. (itstool) path: section/title
 #: C/index.docbook:689
@@ -885,6 +1049,8 @@ msgid ""
 "My time to discharge is always incorrect due to a faulty battery, what can I"
 " do?"
 msgstr ""
+"Min urladdningstid är alltid felaktig på grund av ett felaktigt batteri, vad"
+" kan jag göra?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:693
@@ -895,6 +1061,11 @@ msgid ""
 "can do this easily by doing: <command> gsettings get org.mate.power-manager "
 "use-time-for-policy false </command>"
 msgstr ""
+"Du kanske kan använda den procentuella avgiften för g-p-m som policydata. "
+"Öppna <command>dconf-editor</command> och ändra sedan nyckeln "
+"<command>org.mate.power-manager use-time-for-policy</command> till false. Du"
+" kan göra detta enkelt genom att göra: <command> gsettings get "
+"org.mate.power-manager use-time-for-policy false </command>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:703
@@ -902,11 +1073,14 @@ msgid ""
 "This should get the policy actions working for you, but of course the time "
 "remaining will still be incorrect."
 msgstr ""
+"Detta bör få policyåtgärderna att fungera för dig, men den återstående tiden"
+" kommer naturligtvis fortfarande att vara felaktig."
 
 #. (itstool) path: section/title
 #: C/index.docbook:710
 msgid "How do I make my application stop the computer auto-suspending?"
 msgstr ""
+"Hur gör jag för att min ansökan inte ska bli automatiskt avstängd av datorn?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:713
@@ -916,6 +1090,10 @@ msgid ""
 "really don't want the user to be able to suspend, or for the computer to "
 "save power by hibernating or suspending."
 msgstr ""
+"Om ditt program utför en lång operation kanske du vill inaktivera "
+"möjligheten att suspendera under en liten stund. Du bör använda mate-session"
+" om du verkligen inte vill att användaren ska kunna suspendera eller att "
+"datorn ska spara ström genom att gå i viloläge eller suspendera."
 
 #. (itstool) path: section/title
 #: C/index.docbook:723
@@ -923,16 +1101,18 @@ msgid ""
 "I'm running ACPI. Why do events (such as removing the AC adapter) take so "
 "long to register?"
 msgstr ""
+"Jag kör ACPI. Varför tar det så lång tid att registrera händelser (t.ex. att"
+" ta bort nätadaptern)?"
 
 #. (itstool) path: section/para
 #: C/index.docbook:727
 msgid "One of two things might be the problem."
-msgstr ""
+msgstr "En av två saker kan vara problemet."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:732
 msgid "HAL might not be running the add-on that captures the ACPI event."
-msgstr ""
+msgstr "HAL kanske inte kör det tilläggsprogram som fångar ACPI-händelsen."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:737
@@ -940,6 +1120,8 @@ msgid ""
 "You BIOS could be faulty, and might need a work-around. Please send a bug "
 "report."
 msgstr ""
+"Ditt BIOS kan vara felaktigt och kan behöva en lösning. Vänligen skicka en "
+"felrapport."
 
 #. (itstool) path: section/para
 #: C/index.docbook:743
@@ -947,6 +1129,8 @@ msgid ""
 "For the first case, try to find the HAL processes that are running: "
 "<command>ps -eaf | grep hal</command>"
 msgstr ""
+"I det första fallet kan du försöka hitta de HAL-processer som körs: "
+"<command>ps -eaf | grep hal</command>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:747
@@ -957,6 +1141,10 @@ msgid ""
 "<command>haldaemon</command> initscript. An alternative to this is to use "
 "acpid, rather than the kernel proc file."
 msgstr ""
+"Och leta efter processen <command>hald-addon-acpi</command>. Om den inte "
+"körs, se till att HAL körs med alternativet <command>--retain-"
+"privileges</command> i initscriptet för <command>haldaemon</command>. Ett "
+"alternativ till detta är att använda acpid i stället för kernel proc-filen."
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
@@ -973,6 +1161,12 @@ msgid ""
 " of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
 "with this manual."
 msgstr ""
+"Tillstånd ges att kopiera, distribuera och/eller modifiera detta dokument "
+"enligt villkoren i GNU Free Documentation License (GFDL), version 1.1 eller "
+"senare version publicerad av Free Software Foundation utan invarianta "
+"sektioner, utan texter på framsidan och utan texter på baksidan. Du kan "
+"hitta en kopia av GFDL på denna <_:ulink-1/> eller i filen COPYING-DOCS som "
+"distribueras med den här handboken."
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:12
@@ -1065,11 +1259,14 @@ msgid ""
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<_:orderedlist-1/>"
 msgstr ""
+"DOKUMENTET OCH MODIFIERADE VERSIONER AV DOKUMENTET TILLHANDAHÅLLS ENLIGT "
+"VILLKOREN I GNU:S LICENS FÖR FRI DOKUMENTATION MED DEN YTTERLIGARE "
+"ÖVERENSKOMMELSEN ATT: <_:beställningslista-1/>"
 
 #. (itstool) path: formalpara/title
 #: C/legal.xml:77
 msgid "Software Licence"
-msgstr ""
+msgstr "Programvarulicens"
 
 #. (itstool) path: formalpara/para
 #: C/legal.xml:78
@@ -1079,6 +1276,10 @@ msgid ""
 "Free Software Foundation; either version 2 of the License, or (at your "
 "option) any later version."
 msgstr ""
+"MATE Strömhanterare är fri programvara; du kan vidaredistribuera den "
+"och/eller modifiera den enligt villkoren i GNU General Public License som "
+"publiceras av Free Software Foundation; antingen version 2 av licensen eller"
+" (efter eget val) någon senare version."
 
 #. (itstool) path: formalpara/para
 #: C/legal.xml:83
@@ -1088,6 +1289,10 @@ msgid ""
 "or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
 "more details."
 msgstr ""
+"MATE Strömhanterare distribueras i hopp om att det ska vara användbart, men "
+"UTAN NÅGON GARANTI; inte ens den underförstådda garantin om SÄLJBARHET eller"
+" LÄMPLIGHET FÖR ETT VISST SYFTE. Se GNU General Public License för mer "
+"information."
 
 #. (itstool) path: formalpara/para
 #: C/legal.xml:88
@@ -1096,3 +1301,6 @@ msgid ""
 " MATE Power Manager; if not, write to the Free Software Foundation, Inc., 51"
 " Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
+"Du bör ha fått en kopia av GNU General Public License tillsammans med MATE "
+"Strömhanterare; om inte, skriv till Free Software Foundation, Inc, 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."

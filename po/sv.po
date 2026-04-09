@@ -14,7 +14,8 @@
 # Philip Andersen <renegadevi@codeofmagi.net>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # cb445fb3dfd1fe3c2b9f58ac5638f478, 2020
-# Luna Jernberg <droidbittin@gmail.com>, 2023
+# Luna Jernberg <droidbittin@gmail.com>, 2024
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 msgid ""
 msgstr ""
@@ -22,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Luna Jernberg <droidbittin@gmail.com>, 2023\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/mate/teams/13566/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,6 +61,10 @@ msgid ""
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
 msgstr ""
+"Strömhanteraren är fri programvara. Du kan distribuera det och/eller "
+"modifiera det under villkoren i GNU General Public License, publicerad av "
+"Free Software Foundation, antingen version 2 eller (om du så vill) någon "
+"senare version."
 
 #: applets/brightness/brightness-applet.c:822
 #: applets/inhibit/inhibit-applet.c:290
@@ -69,6 +74,10 @@ msgid ""
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
 msgstr ""
+"Strömhanteraren distribueras i hopp om att det ska vara användbart, men UTAN"
+" NÅGON SOM HELST GARANTI, även utan underförstådd garanti om SÄLJBARHET "
+"eller LÄMPLIGHET FÖR NÅGOT SPECIELLT ÄNDAMÅL. Se GNU General Public License "
+"för ytterligare information."
 
 #: applets/brightness/brightness-applet.c:827
 #: applets/inhibit/inhibit-applet.c:295
@@ -77,10 +86,13 @@ msgid ""
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
+"Du bör ha fått en kopia av GNU General Public License tillsammans med detta "
+"program. Om inte, skriv till Free Software Foundation, Inc., 51 Franklin "
+"Street, Fifth Floor, Boston, MA  02110-1301, USA"
 
 #: applets/brightness/brightness-applet.c:840
 msgid "About Power Manager Brightness Applet"
-msgstr ""
+msgstr "Om strömhanterare panelprogram för justering av ljusstyrka"
 
 #: applets/brightness/brightness-applet.c:842
 msgid ""
@@ -135,7 +147,7 @@ msgstr "Manuell förhindring"
 
 #: applets/inhibit/inhibit-applet.c:308
 msgid "About Power Manager Inhibit Applet"
-msgstr ""
+msgstr "Om strömhanterare panelprogram för hindring av strömsparning"
 
 #: applets/inhibit/inhibit-applet.c:310
 msgid ""
@@ -602,7 +614,7 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:226
 msgid "Notify on low capacity of mouse battery"
-msgstr ""
+msgstr "Meddela om musens batteri har låg kapacitet"
 
 #: data/org.mate.power-manager.gschema.xml.in:231
 msgid "Whether we should show the history data points"
@@ -867,7 +879,7 @@ msgstr "Konfigurera strömhantering"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/mate-power-preferences.desktop.in.in:13
 msgid "MATE;power;management;preferences;settings;"
-msgstr ""
+msgstr "MATE;ström;hantering;inställningar;settings;"
 
 #: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
 #: src/gpm-statistics.c:787 src/gpm-statistics.c:1259
@@ -2043,8 +2055,8 @@ msgstr[1] "Datorer"
 #: src/gpm-upower.c:534
 msgid "Gaming input"
 msgid_plural "Gaming inputs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Spelinmatning"
+msgstr[1] "Spelinmatningar"
 
 #: src/gpm-upower.c:601
 msgid "Lithium Ion"

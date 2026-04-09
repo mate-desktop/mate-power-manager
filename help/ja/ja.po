@@ -1,16 +1,15 @@
-# 
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # ABE Tsunehiko, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Green <usergreen@users.osdn.me>, 2024
+# Wolfgang Ulbrich <raveit65.sun@gmail.com>, 2018
+# green <usergreen@users.osdn.me>, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-10-04 15:52+0000\n"
-"Last-Translator: Green <usergreen@users.osdn.me>, 2024\n"
+"Last-Translator: green <usergreen@users.osdn.me>, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,7 +48,7 @@ msgid ""
 "computer."
 msgstr ""
 "<application>MATE 電源管理</application>は、MATE "
-"デスクトップのセッション・デーモンで、ノートパソコンやデスクトップパソコンの電源設定を管理します。"
+"デスクトップのセッション・デーモンで、ラップトップやデスクトップの電源設定を管理します。"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
@@ -234,7 +233,7 @@ msgstr "満充電"
 #: C/index.docbook:190
 msgid ""
 "MATE Power Manager Notification when laptop primary battery is fully charged"
-msgstr "ノートパソコンの一次電池が完全に充電された時の MATE 電源管理の通知"
+msgstr "ラップトップの一次電池が完全に充電された時の MATE 電源管理の通知"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -268,7 +267,7 @@ msgid ""
 "reporting the charged status."
 msgstr ""
 "バッテリの充電率が "
-"95％以下になり、その後再び満充電になった場合にのみ、繰り返し通知が表示されます。これによって、一部のパソコンでは、バッテリが誤った充電状態を報告した場合に、不要な通知が繰り返し表示されるのを防ぎます。"
+"95％以下になり、その後再び満充電になった場合にのみ、繰り返し通知が表示されます。これによって、一部のマシンでは、バッテリが誤った充電状態を報告した場合に、不要な通知が繰り返し表示されるのを防ぎます。"
 
 #. (itstool) path: section/title
 #: C/index.docbook:216
@@ -394,7 +393,7 @@ msgstr "統計"
 msgid ""
 "The statistics program allows you to visualize the power consumption of your"
 " laptop hardware."
-msgstr "統計プログラムでは、ノートパソコンのハードウェアの消費電力を視覚化することができます。"
+msgstr "統計プログラムでは、ラップトップのハードウェアの消費電力を視覚化することができます。"
 
 #. (itstool) path: note/para
 #: C/index.docbook:291
@@ -449,7 +448,7 @@ msgid ""
 "battery then only the averaged value will be shown. A legend is not shown "
 "with this graph."
 msgstr ""
-"このグラフには、複合一次電池の使用可能な充電率が表示されます。したがって、メインのノートパソコン用バッテリと補助バッテリがある場合は、平均値のみが表示されます。このグラフには凡例は表示されません。"
+"このグラフには、複合一次電池の使用可能な充電率が表示されます。したがって、メインのラップトップ用バッテリと補助バッテリがある場合は、平均値のみが表示されます。このグラフには凡例は表示されません。"
 
 #. (itstool) path: section/title
 #: C/index.docbook:327
@@ -518,7 +517,7 @@ msgstr "画面の電源切断およびサスペンド動作のアイドル時間
 #. (itstool) path: listitem/para
 #: C/index.docbook:382
 msgid "The actions to perform when the laptop lid is closed"
-msgstr "ノートパソコンのふたを閉じたときに行う動作"
+msgstr "ラップトップのふたを閉じたときに行う動作"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:387
@@ -635,7 +634,7 @@ msgstr ""
 " <command>mate-screensaver-preferences</command> "
 "で設定された値に達すると、そのログインは「アイドル中のセッション」としてマークされます。この時、<application>MATE "
 "電源管理</application> "
-"は、低電力モードを有効にしたり、ノートパソコンのパネル輝度を下げたりするなど、すべてのセッションのアイドルアクションを実行します。"
+"は、低電力モードを有効にしたり、ラップトップのパネル輝度を下げたりするなど、すべてのセッションのアイドルアクションを実行します。"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:461
@@ -704,7 +703,7 @@ msgid ""
 "You can change the idle laptop panel brightness by changing the dconf key "
 "<command>org.mate.power-manager idle-brightness</command>."
 msgstr ""
-"アイドル状態のノートパソコン・パネルの明るさを変更するには、<command>dconfキーorg.mate.power-manager idle-"
+"アイドル状態のラップトップパネルの明るさを変更するには、dconf キー<command>org.mate.power-manager idle-"
 "brightness</command> を変更します。"
 
 #. (itstool) path: section/title
@@ -786,7 +785,7 @@ msgid ""
 "laptop without brightness buttons, as you can now change the brightness "
 "easily."
 msgstr ""
-"明るさの調整アプレットを使用すると、既定のポリシーを変更せずに一時的に明るさを変更できます。これは、明るさボタンのないノートパソコンでは、明るさを簡単に変更できるので便利です。"
+"明るさの調整アプレットを使用すると、既定のポリシーを変更せずに一時的に明るさを変更できます。これは、明るさボタンのないラップトップでは、明るさを簡単に変更できるので便利です。"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:568
@@ -927,7 +926,7 @@ msgid ""
 "or run out of battery power on a laptop then you will lose your work."
 msgstr ""
 "サスペンド中も少量のバッテリ電源を使用しているため、低電力動作の用途にはお勧めしません。デスクトップで AC "
-"電源をオフにしたり、ノートパソコンでバッテリ電源が切れたりすると、作業内容が失われます。"
+"電源をオフにしたり、ラップトップでバッテリ電源が切れたりすると、作業内容が失われます。"
 
 #. (itstool) path: section/para
 #: C/index.docbook:662

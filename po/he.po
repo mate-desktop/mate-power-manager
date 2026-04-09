@@ -6,10 +6,11 @@
 # Translators:
 # haxoc c11 <haxoc112@disroot.org>, 2018
 # Edward Sawyer <saoded@gmail.com>, 2018
-# Yaron Shahrabani <sh.yaron@gmail.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# Omer I.S. <omeritzicschwartz@gmail.com>, 2020
 # shy tzedaka <shaytzedaka123@gmail.com>, 2020
+# Yaron Shahrabani <sh.yaron@gmail.com>, 2024
+# 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2024
+# Avi Markovitz <avi.markovitz@gmail.com>, 2024
 # 
 msgid ""
 msgstr ""
@@ -17,13 +18,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: shy tzedaka <shaytzedaka123@gmail.com>, 2020\n"
-"Language-Team: Hebrew (https://www.transifex.com/mate/teams/13566/he/)\n"
+"Last-Translator: Avi Markovitz <avi.markovitz@gmail.com>, 2024\n"
+"Language-Team: Hebrew (https://app.transifex.com/mate/teams/13566/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;\n"
 
 #: applets/brightness/brightness-applet.c:108
 msgid "Power Manager Brightness Applet"
@@ -293,8 +294,6 @@ msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
 msgstr ""
-"If the screen should be dimmed to save power when the computer is idle when "
-"on battery power."
 
 #: data/org.mate.power-manager.gschema.xml.in:96
 msgid "The default amount of time to dim the screen after idle"
@@ -325,8 +324,6 @@ msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on AC power."
 msgstr ""
-"If the screen should be dimmed to save power when the computer is idle when "
-"on AC power."
 
 #: data/org.mate.power-manager.gschema.xml.in:111
 msgid "Method used to blank screen on AC"
@@ -438,15 +435,13 @@ msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:166
 msgid "Use mate-screensaver lock setting"
-msgstr "Use mate-screensaver lock setting"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:167
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
 msgstr ""
-"Whether to use the screen lock setting of mate-screensaver to decide if the "
-"screen is locked after a hibernate, suspend or blank screen."
 
 #: data/org.mate.power-manager.gschema.xml.in:171
 msgid "Lock screen when blanked"
@@ -457,8 +452,6 @@ msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
 msgstr ""
-"Whether the screen is locked when the screen is turned off. Only used if "
-"lock-use-screensaver is false."
 
 #: data/org.mate.power-manager.gschema.xml.in:176
 msgid "Lock screen on suspend"
@@ -469,8 +462,6 @@ msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
 msgstr ""
-"Whether the screen is locked when the computer wakes up from a suspend. Only"
-" used if lock-use-screensaver is false."
 
 #: data/org.mate.power-manager.gschema.xml.in:181
 msgid "Lock screen on hibernate"
@@ -481,8 +472,6 @@ msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
 msgstr ""
-"Whether the screen is locked when the computer wakes up from a hibernate. "
-"Only used if lock-use-screensaver is false."
 
 #: data/org.mate.power-manager.gschema.xml.in:186
 #: data/org.mate.power-manager.gschema.xml.in:191
@@ -815,7 +804,6 @@ msgstr ""
 msgid ""
 "If preferences and statistics items should be shown in the context menu"
 msgstr ""
-"If preferences and statistics items should be shown in the context menu"
 
 #: data/org.mate.power-manager.gschema.xml.in:345
 msgid "When to show the notification icon"
@@ -890,7 +878,7 @@ msgstr "הפיכה לבררת המחדל"
 
 #: data/gpm-prefs.ui:71
 msgid "_Close"
-msgstr "_סגור"
+msgstr "_סגירה"
 
 #: data/gpm-prefs.ui:138 data/gpm-prefs.ui:406 data/gpm-prefs.ui:746
 msgid "Put computer to _sleep when inactive for:"
@@ -943,7 +931,6 @@ msgid_plural "Keyboards"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: data/gpm-prefs.ui:707
 msgid "On Battery Power"
@@ -1052,7 +1039,6 @@ msgid_plural "%i minutes"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-common.c:69
 #, c-format
@@ -1061,7 +1047,6 @@ msgid_plural "%i hours"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-common.c:75
 #, c-format
@@ -1071,18 +1056,16 @@ msgstr "%i %s %i %s"
 #: src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "שעה"
+msgstr[1] "שעות"
+msgstr[2] "שעות"
 
 #: src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "דקה"
+msgstr[1] "דקות"
+msgstr[2] "דקות"
 
 #. Translators: This is %i days
 #: src/gpm-graph-widget.c:433
@@ -1259,7 +1242,6 @@ msgid_plural "Batteries Charged"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-manager.c:1203
 msgid "Battery Discharging"
@@ -1620,7 +1602,6 @@ msgid_plural "%.0f seconds"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-statistics.c:264
 #, c-format
@@ -1629,7 +1610,6 @@ msgid_plural "%.1f minutes"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-statistics.c:269
 #, c-format
@@ -1638,7 +1618,6 @@ msgid_plural "%.1f hours"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-statistics.c:273
 #, c-format
@@ -1647,7 +1626,6 @@ msgid_plural "%.1f days"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-statistics.c:282
 msgid "Yes"
@@ -1685,10 +1663,9 @@ msgstr "ספק"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "שנייה"
+msgstr[1] "%d שניות"
+msgstr[2] "%d שניות"
 
 #: src/gpm-statistics.c:392
 msgid "Refreshed"
@@ -1956,7 +1933,6 @@ msgid_plural "AC adapters"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:494
 msgid "Laptop battery"
@@ -1964,7 +1940,6 @@ msgid_plural "Laptop batteries"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:498
 msgid "UPS"
@@ -1972,7 +1947,6 @@ msgid_plural "UPSs"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:502
 msgid "Monitor"
@@ -1980,7 +1954,6 @@ msgid_plural "Monitors"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:506
 msgid "Mouse"
@@ -1988,7 +1961,6 @@ msgid_plural "Mice"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:514
 msgid "PDA"
@@ -1996,7 +1968,6 @@ msgid_plural "PDAs"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:518
 msgid "Cell phone"
@@ -2004,7 +1975,6 @@ msgid_plural "Cell phones"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:522
 msgid "Media player"
@@ -2012,7 +1982,6 @@ msgid_plural "Media players"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:526
 msgid "Tablet"
@@ -2020,7 +1989,6 @@ msgid_plural "Tablets"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:530
 msgid "Computer"
@@ -2028,7 +1996,6 @@ msgid_plural "Computers"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:534
 msgid "Gaming input"
@@ -2036,7 +2003,6 @@ msgid_plural "Gaming inputs"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: src/gpm-upower.c:601
 msgid "Lithium Ion"
