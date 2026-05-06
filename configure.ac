@@ -5,7 +5,7 @@ AC_INIT([mate-power-manager], [1.28.1], [https://github.com/mate-desktop/mate-po
 AC_CONFIG_SRCDIR(src)
 AM_INIT_AUTOMAKE([1.9 no-dist-gzip dist-xz check-news tar-ustar])
 AC_CONFIG_HEADERS([config.h])
-AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_MACRO_DIRS([m4])
 
 # enable nice build output on automake1.11
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
