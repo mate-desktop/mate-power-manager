@@ -5,11 +5,12 @@
 # 
 # Translators:
 # Mikko Harhanen <gitti@mikkoharhanen.fi>, 2018
-# Lasse Liehu <larso@gmx.com>, 2018
+# Lasse Liehu-Inui <larso@gmx.com>, 2018
 # Ammuu5, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Eslam Ali <talvikahvi@gmail.com>, 2020
 # nomen omen, 2020
+# Tommi Nieminen <translator@legisign.org>, 2026
 # 
 msgid ""
 msgstr ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: nomen omen, 2020\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>, 2026\n"
 "Language-Team: Finnish (https://app.transifex.com/mate/teams/13566/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -75,13 +76,15 @@ msgstr ""
 
 #: applets/brightness/brightness-applet.c:840
 msgid "About Power Manager Brightness Applet"
-msgstr ""
+msgstr "Tietoa virranhallinnan kirkkaussovelmasta"
 
 #: applets/brightness/brightness-applet.c:842
 msgid ""
 "Copyright © 2006 Benjamin Canou\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
+"Tekijänoikeudet © 2006 Benjamin Canou\n"
+"Tekijänoikeudet © 2011–2021 MATEn kehittäjät"
 
 #: applets/brightness/brightness-applet.c:849
 #: applets/inhibit/inhibit-applet.c:317 src/gpm-tray-icon.c:212
@@ -133,13 +136,15 @@ msgstr "Estetty käsin"
 
 #: applets/inhibit/inhibit-applet.c:308
 msgid "About Power Manager Inhibit Applet"
-msgstr ""
+msgstr "Tietoa virranhallinnan estosovelmasta"
 
 #: applets/inhibit/inhibit-applet.c:310
 msgid ""
 "Copyright © 2006-2007 Richard Hughes\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
+"Tekijänoikeudet © 2006–2007 Richard Hughes\n"
+"Tekijänoikeudet © 2011–2021 MATEn kehittäjät"
 
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
@@ -335,7 +340,7 @@ msgstr "Näytön pimennystapa käytettäessä verkkovirtaa"
 
 #: data/org.mate.power-manager.gschema.xml.in:112
 msgid "The DPMS method used to blank the screen when on AC power."
-msgstr ""
+msgstr "Näytön tyhjennykseen verkkovirralla käytettävä DPMS-menetelmä."
 
 #: data/org.mate.power-manager.gschema.xml.in:116
 msgid "Method used to blank screen on battery"
@@ -343,7 +348,7 @@ msgstr "Näytön pimennystapa käytettäessä akkua"
 
 #: data/org.mate.power-manager.gschema.xml.in:117
 msgid "The DPMS method used to blank the screen when on battery power."
-msgstr ""
+msgstr "Näytön tyhjennykseen akkuvirralla käytettävä DPMS-menetelmä."
 
 #: data/org.mate.power-manager.gschema.xml.in:121
 msgid "LCD brightness when on AC"
@@ -354,6 +359,7 @@ msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
 msgstr ""
+"Näytön kirkkaus verkkovirralla. Mahdolliset arvot ovat väliltä 0,0–100,0."
 
 #: data/org.mate.power-manager.gschema.xml.in:126
 msgid "Suspend button action"
@@ -361,7 +367,7 @@ msgstr "Virransäästönapin toiminto"
 
 #: data/org.mate.power-manager.gschema.xml.in:127
 msgid "The action to take when the system suspend button is pressed."
-msgstr ""
+msgstr "Suoritettava toiminto järjestelmän keskeytyspainiketta painettaessa."
 
 #: data/org.mate.power-manager.gschema.xml.in:131
 msgid "Hibernate button action"
@@ -369,7 +375,7 @@ msgstr "Lepotilanapin toiminto"
 
 #: data/org.mate.power-manager.gschema.xml.in:132
 msgid "The action to take when the system hibernate button is pressed."
-msgstr ""
+msgstr "Suoritettava toiminto järjestelmän lepotilapainiketta painettaessa."
 
 #: data/org.mate.power-manager.gschema.xml.in:136
 msgid "Power button action"
@@ -377,7 +383,7 @@ msgstr "Virtanapin toiminto"
 
 #: data/org.mate.power-manager.gschema.xml.in:137
 msgid "The action to take when the system power button is pressed."
-msgstr ""
+msgstr "Suoritettava toiminto järjestelmän virtakytkintä painettaessa."
 
 #: data/org.mate.power-manager.gschema.xml.in:141
 msgid "Laptop lid close action on battery"
@@ -388,6 +394,8 @@ msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
 msgstr ""
+"Suoritettava toiminto kannettavan kantta suljettaessa, kun kannettava toimii"
+" akkuvirralla."
 
 #: data/org.mate.power-manager.gschema.xml.in:146
 msgid "Laptop lid close action when on AC"
@@ -398,6 +406,8 @@ msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
 msgstr ""
+"Suoritettava toiminto kannettavan kantta suljettaessa, kun kannettava toimii"
+" verkkovirralla."
 
 #: data/org.mate.power-manager.gschema.xml.in:151
 msgid "Whether to use time-based notifications"
@@ -793,7 +803,7 @@ msgstr "Milloin ilmoitusalueen kuvake näytetään"
 
 #: data/org.mate.power-manager.gschema.xml.in:346
 msgid "Display options for the notification icon."
-msgstr ""
+msgstr "Näytä ilmoituskuvakkeen valinnat."
 
 #: data/mate-power-preferences.desktop.in.in:3
 msgid "Power Management"
@@ -905,13 +915,13 @@ msgstr "_Himmennä taustavaloa"
 
 #: data/gpm-prefs.ui:663
 msgid "_Reduce keyboard backlight"
-msgstr ""
+msgstr "_Himmennä näppäimistön taustavaloa"
 
 #: data/gpm-prefs.ui:685 src/gpm-upower.c:510
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Näppäimistö"
+msgstr[1] "Näppäimistöt"
 
 #: data/gpm-prefs.ui:707
 msgid "On Battery Power"
@@ -987,15 +997,15 @@ msgstr ""
 
 #: src/gpm-backlight-helper.c:202
 msgid "No backlights were found on your system"
-msgstr ""
+msgstr "Järjestelmästä ei löytynyt taustavaloja"
 
 #: src/gpm-backlight-helper.c:213
 msgid "Could not get the value of the backlight"
-msgstr ""
+msgstr "Taustavalon arvoa ei saatu"
 
 #: src/gpm-backlight-helper.c:231
 msgid "Could not get the maximum value of the backlight"
-msgstr ""
+msgstr "Taustavalon enimmäisarvoa ei saatu"
 
 #: src/gpm-backlight-helper.c:248
 msgid "This program can only be used by the root user"
@@ -1007,7 +1017,7 @@ msgstr "Tämä ohjelma tulee suorittaa pkexeciä käyttäen"
 
 #: src/gpm-backlight-helper.c:268
 msgid "Could not set the value of the backlight"
-msgstr ""
+msgstr "Taustavalon arvoa ei voitu asettaa"
 
 #: src/gpm-common.c:53
 msgid "Unknown time"
@@ -1017,15 +1027,15 @@ msgstr "Tuntematon aika"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i minuutti"
+msgstr[1] "%i minuuttia"
 
 #: src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i tunti"
+msgstr[1] "%i tuntia"
 
 #: src/gpm-common.c:75
 #, c-format
@@ -1035,14 +1045,14 @@ msgstr "%i %s, %i %s"
 #: src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "tunti"
+msgstr[1] "tuntia"
 
 #: src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "minuutti"
+msgstr[1] "minuuttia"
 
 #. Translators: This is %i days
 #: src/gpm-graph-widget.c:433
@@ -1311,21 +1321,21 @@ msgstr "Mediasoittimen virta on vähissä (%.0f%%)"
 
 #: src/gpm-manager.c:1364 src/gpm-manager.c:1514
 msgid "Tablet battery low"
-msgstr ""
+msgstr "Tabletin akku vähissä"
 
 #: src/gpm-manager.c:1367
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
-msgstr ""
+msgstr "Tabletin virta on vähissä (%.0f %%)"
 
 #: src/gpm-manager.c:1371 src/gpm-manager.c:1523
 msgid "Attached computer battery low"
-msgstr ""
+msgstr "Kytketyn tietokoneen akku vähissä"
 
 #: src/gpm-manager.c:1374
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
-msgstr ""
+msgstr "Kytketyn tietokoneen virta on hyvin vähissä (%.0f %%)"
 
 #: src/gpm-manager.c:1422
 msgid "Battery critically low"
@@ -1362,6 +1372,8 @@ msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
 msgstr ""
+"Noin <b>%s</b> UPS-virtaa jäljellä (%.0f %%). Kytke tietokone verkkovirtaan,"
+" jottei tietoa menetetä."
 
 #: src/gpm-manager.c:1471
 #, c-format
@@ -1369,6 +1381,8 @@ msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
+"Langattoman hiiren akku on hyvin vähissä (%.0f %%). Lataamatta laite lakkaa "
+"pian toimimasta."
 
 #: src/gpm-manager.c:1479
 #, c-format
@@ -1376,6 +1390,8 @@ msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
+"Langattoman näppäimistön virta on hyvin vähissä (%.0f %%). Lataamatta laite "
+"lakkaa pian toimimasta."
 
 #: src/gpm-manager.c:1488
 #, c-format
@@ -1390,6 +1406,8 @@ msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
+"Matkapuhelimen virta on hyvin vähissä (%.0f %%). Lataamatta laite lakkaa "
+"pian toimimasta."
 
 #: src/gpm-manager.c:1508
 #, c-format
@@ -1397,6 +1415,8 @@ msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
+"Mediasoittimen virta on hyvin vähissä (%.0f %%). Lataamatta laite lakkaa "
+"pian toimimasta."
 
 #: src/gpm-manager.c:1517
 #, c-format
@@ -1404,6 +1424,8 @@ msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
 msgstr ""
+"Tabletin virta on hyvin vähissä (%.0f %%). Lataamatta laite lakkaa pian "
+"toimimasta."
 
 #: src/gpm-manager.c:1526
 #, c-format
@@ -1411,6 +1433,8 @@ msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
 msgstr ""
+"Kytketyn tietokoneen virta on hyvin vähissä (%.0f %%). Lataamatta laite "
+"lakkaa pian toimimasta."
 
 #: src/gpm-manager.c:1591
 msgid ""
@@ -1569,29 +1593,29 @@ msgstr "Tuntematon"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%.0f sekunti"
+msgstr[1] "%.0f sekuntia"
 
 #: src/gpm-statistics.c:264
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%.1f minuutti"
+msgstr[1] "%.1f minuuttia"
 
 #: src/gpm-statistics.c:269
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%.1f tunti"
+msgstr[1] "%.1f tuntia"
 
 #: src/gpm-statistics.c:273
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%.1f päivä"
+msgstr[1] "%.1f päivää"
 
 #: src/gpm-statistics.c:282
 msgid "Yes"
@@ -1629,8 +1653,8 @@ msgstr "Lähde"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d sekunti"
+msgstr[1] "%d sekuntia"
 
 #: src/gpm-statistics.c:392
 msgid "Refreshed"
@@ -1729,12 +1753,12 @@ msgstr "Valitse tämä laite käynnistettäessä"
 
 #: src/gpm-tray-icon.c:206
 msgid "Copyright © 2011-2021 MATE developers"
-msgstr ""
+msgstr "Tekijänoikeudet © 2011–2021 MATEn kehittäjät"
 
 #: src/gpm-tray-icon.c:319
 #, c-format
 msgid "%s remaining"
-msgstr ""
+msgstr "%s jäljellä"
 
 #: src/gpm-tray-icon.c:374
 msgid "_Preferences"
@@ -1743,7 +1767,7 @@ msgstr "_Asetukset"
 #: src/gpm-upower.c:214
 #, c-format
 msgid "%s not present"
-msgstr ""
+msgstr "%s ei läsnä"
 
 #: src/gpm-upower.c:227 src/gpm-upower.c:291
 #, c-format
@@ -1801,7 +1825,7 @@ msgstr "%s odottaa latausta (%.1f %%)"
 #: src/gpm-upower.c:309
 #, c-format
 msgid "%s empty"
-msgstr ""
+msgstr "%s tyhjänä"
 
 #: src/gpm-upower.c:369
 msgid "Product:"
@@ -1895,32 +1919,32 @@ msgstr "Latausteho:"
 #: src/gpm-upower.c:490
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Verkkovirtasovitin"
+msgstr[1] "Verkkovirtasovittimet"
 
 #: src/gpm-upower.c:494
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Kannettavan akku"
+msgstr[1] "Kannettavan akut"
 
 #: src/gpm-upower.c:498
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "UPS"
+msgstr[1] "UPS:t"
 
 #: src/gpm-upower.c:502
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Näyttö"
+msgstr[1] "Näytöt"
 
 #: src/gpm-upower.c:506
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Hiiri"
+msgstr[1] "Hiiret"
 
 #: src/gpm-upower.c:514
 msgid "PDA"
@@ -1931,26 +1955,26 @@ msgstr[1] ""
 #: src/gpm-upower.c:518
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Matkapuhelin"
+msgstr[1] "Matkapuhelimet"
 
 #: src/gpm-upower.c:522
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Mediasoitin"
+msgstr[1] "Mediasoittimet"
 
 #: src/gpm-upower.c:526
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Tabletti"
+msgstr[1] "Tabletit"
 
 #: src/gpm-upower.c:530
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Tietokone"
+msgstr[1] "Tietokoneet"
 
 #: src/gpm-upower.c:534
 msgid "Gaming input"
@@ -1992,12 +2016,12 @@ msgstr "Tyhjä"
 
 #: src/gpm-upower.c:661
 msgid "Waiting to charge"
-msgstr ""
+msgstr "Odotetaan latausta"
 
 #: src/gpm-upower.c:665
 msgid "Waiting to discharge"
-msgstr ""
+msgstr "Odotetaan latauksen purkautumista"
 
 #: src/gpm-upower.c:669
 msgid "Unknown state"
-msgstr ""
+msgstr "Tuntematon tila"

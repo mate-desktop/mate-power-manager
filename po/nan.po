@@ -4,13 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# István Szőllősi <szollosi.istv4n@gmail.com>, 2018
-# Falu <info@falu.me>, 2018
-# KAMI KAMI <kami911@gmail.com>, 2018
-# Balázs Meskó <meskobalazs@mailbox.org>, 2019
-# Rezső Páder <rezso@rezso.net>, 2020
-# Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# László Varga, 2025
+# Tan, Kian-ting, 2024
 # 
 msgid ""
 msgstr ""
@@ -18,35 +12,35 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: László Varga, 2025\n"
-"Language-Team: Hungarian (https://app.transifex.com/mate/teams/13566/hu/)\n"
+"Last-Translator: Tan, Kian-ting, 2024\n"
+"Language-Team: Chinese (Min Nan) (https://app.transifex.com/mate/teams/13566/nan/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nan\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: applets/brightness/brightness-applet.c:108
 msgid "Power Manager Brightness Applet"
-msgstr "Energiakezelő fényerő kisalkalmazás"
+msgstr ""
 
 #: applets/brightness/brightness-applet.c:109
 msgid "Adjusts laptop panel brightness."
-msgstr "A noteszgépkijelző fényerejét szabályozza."
+msgstr ""
 
 #: applets/brightness/brightness-applet.c:370
 #: applets/inhibit/inhibit-applet.c:223
 msgid "Cannot connect to mate-power-manager"
-msgstr "Nem lehet csatlakozni a MATE Energiakezelőhöz."
+msgstr ""
 
 #: applets/brightness/brightness-applet.c:372
 msgid "Cannot get laptop panel brightness"
-msgstr "Nem kérhető le a noteszgép kijelzőjének fényereje"
+msgstr ""
 
 #: applets/brightness/brightness-applet.c:374
 #, c-format
 msgid "LCD brightness : %d%%"
-msgstr "LCD fényerő: %d%%"
+msgstr ""
 
 #: applets/brightness/brightness-applet.c:817
 #: applets/inhibit/inhibit-applet.c:285
@@ -87,53 +81,45 @@ msgstr ""
 #: applets/brightness/brightness-applet.c:849
 #: applets/inhibit/inhibit-applet.c:317 src/gpm-tray-icon.c:212
 msgid "translator-credits"
-msgstr ""
-"Dvornik László<dvornik at mate dot hu>\n"
-"Kelemen Gábor<kelemeng at mate dot hu>\n"
-"Tímár András<timar at mate dot hu>\n"
-"Rezső Páder<rezso at rezso dot net>\n"
-"Kalman „KAMI” Szalai<kami911 at gmail dot com>\n"
-"Falu<info at falu dot me>\n"
-"Zoltán Rápolthy<real_zolee at hotmail dot com>\n"
-"Meskó Balázs <mesko dot balazs at fsf dot hu>"
+msgstr "Tan Kian-ting <yoxem@kianting.info>, 2023"
 
 #: applets/brightness/brightness-applet.c:1080
 #: applets/inhibit/inhibit-applet.c:500
 msgid "_About"
-msgstr "_Névjegy"
+msgstr "關係 (_A)"
 
 #: applets/brightness/brightness-applet.c:1083
 #: applets/inhibit/inhibit-applet.c:503 data/gpm-prefs.ui:41
 msgid "_Help"
-msgstr "_Súgó"
+msgstr "說明(_H)"
 
 #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:5
 msgid "Brightness Applet Factory"
-msgstr "Fényerőkezelő factory"
+msgstr ""
 
 #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:9
 msgid "Brightness Applet"
-msgstr "Fényerőszabályzó"
+msgstr ""
 
 #: applets/inhibit/inhibit-applet.c:87
 msgid "Power Manager Inhibit Applet"
-msgstr "Energiagazdálkodás korlátozása"
+msgstr ""
 
 #: applets/inhibit/inhibit-applet.c:88
 msgid "Allows user to inhibit automatic power saving."
-msgstr "Lehetővé teszi az automatikus energiatakarékosság korlátozását."
+msgstr ""
 
 #: applets/inhibit/inhibit-applet.c:226
 msgid "Automatic sleep inhibited"
-msgstr "Automatikus energiatakarékosság korlátozva"
+msgstr ""
 
 #: applets/inhibit/inhibit-applet.c:228
 msgid "Automatic sleep enabled"
-msgstr "Automatikus energiatakarékosság engedélyezve"
+msgstr ""
 
 #: applets/inhibit/inhibit-applet.c:256
 msgid "Manual inhibit"
-msgstr "Kézi korlátozás"
+msgstr ""
 
 #: applets/inhibit/inhibit-applet.c:308
 msgid "About Power Manager Inhibit Applet"
@@ -147,48 +133,44 @@ msgstr ""
 
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
-msgstr "Energiagazdálkodás-korlátozó factory"
+msgstr ""
 
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:9
 msgid "Inhibit Applet"
-msgstr "Energiagazdálkodás korlátozása"
+msgstr ""
 
 #: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:203
 msgid "Power Manager"
-msgstr "Energiakezelő"
+msgstr ""
 
 #: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:205
 msgid "Power management daemon"
-msgstr "Energiagazdálkodási démon"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:26
 #: data/org.mate.power-manager.gschema.xml.in:41
 msgid "Whether to hibernate, suspend or do nothing when inactive"
-msgstr "Legyen-e hibernálás, felfüggesztés vagy sem tétlenség esetén"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:27
 #: data/org.mate.power-manager.gschema.xml.in:42
 msgid ""
 "The type of sleeping that should be performed when the computer is inactive."
 msgstr ""
-"A számítógép tétlensége esetén használandó energiatakarékossági mód típusa. "
 
 #: data/org.mate.power-manager.gschema.xml.in:31
 msgid "Battery critical low action"
-msgstr "Az akkumulátor kritikusan gyenge művelet"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:32
 msgid "The action to take when the battery is critically low."
 msgstr ""
-"Az akkumulátor kritikusan alacsony szintje esetén végrehajtandó művelet."
 
 #: data/org.mate.power-manager.gschema.xml.in:36
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
 msgstr ""
-"Az akkumulátor esemény bekövetkezzen-e a fedél lehajtásakor és a hálózati "
-"tápellátás megszűnésekor"
 
 #: data/org.mate.power-manager.gschema.xml.in:37
 msgid ""
@@ -196,82 +178,66 @@ msgid ""
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
 msgstr ""
-"Az akkumulátor fedél lezárása eseménye (például „Felfüggesztés a fedél "
-"lezárásakor akkumulátoros tápellátás esetén”) bekövetkezzen-e ha a fedél le "
-"van zárva és a hálózati tápfeszültség később szűnik meg."
 
 #: data/org.mate.power-manager.gschema.xml.in:46
 msgid "UPS critical low action"
-msgstr "A szünetmentes táp kritikusan gyenge művelet"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:47
 msgid "The action to take when the UPS is critically low."
-msgstr "Az UPS kritikusan alacsony szintje esetén végrehajtandó művelet."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:51
 msgid "UPS low power action"
-msgstr "A szünetmentes táp gyenge művelet"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:52
 msgid "The action to take when the UPS is low."
-msgstr "Az UPS alacsony szintje esetén végrehajtandó művelet."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:56
 msgid "Allow backlight brightness adjustment"
-msgstr "Lehetővé teszi a háttérvilágítás fényerejének szabályozását"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:57
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
 msgstr ""
-"A képernyő fényereje módosítandó-e a hálózati feszültség és akkumulátoros "
-"ellátás közti váltáskor."
 
 #: data/org.mate.power-manager.gschema.xml.in:61
 msgid "Reduce the backlight brightness when on battery power"
 msgstr ""
-"A háttérvilágítás fényerejének csökkentése akkumulátoros tápellátás esetén"
 
 #: data/org.mate.power-manager.gschema.xml.in:62
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
-msgstr "Akkumulátoros tápellátás esetén csökkenjen-e a képernyő fényereje."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:66
 msgid "Reduce the keyboard backlight when on battery power"
 msgstr ""
-"A billentyűzet háttérvilágítás fényerejének csökkentése akkumulátoros "
-"tápellátás esetén"
 
 #: data/org.mate.power-manager.gschema.xml.in:67
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
 msgstr ""
-"Akkumulátoros tápellátás esetén csökkenjen-e a billentyűzet "
-"háttérvilágításának fényereje"
 
 #: data/org.mate.power-manager.gschema.xml.in:71
 msgid "Keyboard backlight brightness when on AC power."
 msgstr ""
-"A Billentyűzet háttérvilágítás fényerejének csökkentése akkumulátoros "
-"tápellátás esetén."
 
 #: data/org.mate.power-manager.gschema.xml.in:72
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
 msgstr ""
-"A billentyűzet háttérvilágításának fényereje hálózati tápellátás esetén. A "
-"lehetséges értékek 0 és 100 között vannak."
 
 #: data/org.mate.power-manager.gschema.xml.in:76
 msgid "Percent to reduce keyboard backlight by when on battery power."
 msgstr ""
-"A billentyűzet háttérvilágítás fényerejének csökkentése – százalékban "
-"megadva – akkumulátoros tápellátás esetén."
 
 #: data/org.mate.power-manager.gschema.xml.in:77
 msgid ""
@@ -279,16 +245,10 @@ msgid ""
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
 msgstr ""
-"A billentyűzet háttérvilágítás fényerejének csökkentése, amikor a számítógép"
-" akkumulátoros tápellátást használ. Például ha ezt az értéket „60”-ra "
-"állítja, akkor 40%-kal kisebb lesz a háttérvilágítás fényereje. A lehetséges"
-" értékek 0 és 100 között vannak."
 
 #: data/org.mate.power-manager.gschema.xml.in:81
 msgid "Percent to reduce keyboard backlight by when idle."
 msgstr ""
-"A billentyűzet háttérvilágítás fényerejének csökkentése – százalékban "
-"megadva – ha a számítógép tétlen."
 
 #: data/org.mate.power-manager.gschema.xml.in:82
 msgid ""
@@ -296,319 +256,259 @@ msgid ""
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
 msgstr ""
-"A billentyűzet háttérvilágítás fényerejének csökkentése, amikor a számítógép"
-" tétlen. Például ha ezt az értéket „60”-ra állítja, akkor 40%-kal kisebb "
-"lesz a háttérvilágítás fényereje. A lehetséges értékek 0 és 100 között "
-"vannak."
 
 #: data/org.mate.power-manager.gschema.xml.in:86
 msgid "The brightness of the screen when idle"
-msgstr "A képernyő fényereje üresjáratban"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:87
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
 msgstr ""
-"Ez a noteszgép-képernyőjének a munkamenet tétlensége esetén használandó "
-"fényereje. Csak a use_time_for_policy kulcs igaz értéke esetén érvényes."
 
 #: data/org.mate.power-manager.gschema.xml.in:91
 msgid "Dim the screen after a period of inactivity when on battery power"
 msgstr ""
-"A képernyő elsötétítése adott idejű tétlenség után akkumulátoros tápellátás "
-"esetén"
 
 #: data/org.mate.power-manager.gschema.xml.in:92
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
 msgstr ""
-"Akkumulátoros tápellátás esetén elsötétüljön-e a képernyő az "
-"energiatakarékosság érdekében, ha a számítógép tétlen."
 
 #: data/org.mate.power-manager.gschema.xml.in:96
 msgid "The default amount of time to dim the screen after idle"
-msgstr "Üresjárat után a képernyő elsötétítésének alapértelmezett ideje"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:97
 msgid "The default amount of time to dim the screen after idle."
-msgstr "Üresjárat után a képernyő elsötétítésének alapértelmezett ideje."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:101
 msgid "LCD dimming amount when on battery"
-msgstr "LCD sötétítése akkumulátoros tápellátás esetén"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:102
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
 msgstr ""
-"A képernyő fényerejének csökkentése ennyivel akkumulátoros tápellátás "
-"esetén. A lehetséges értékek 0 és 100 között vannak."
 
 #: data/org.mate.power-manager.gschema.xml.in:106
 msgid "Dim the screen after a period of inactivity when on AC power"
 msgstr ""
-"A képernyő elsötétítése adott idejű tétlenség után hálózati tápellátás "
-"esetén"
 
 #: data/org.mate.power-manager.gschema.xml.in:107
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on AC power."
 msgstr ""
-"Hálózati tápellátás esetén elsötétüljön-e a képernyő az energiatakarékosság "
-"érdekében, ha a számítógép tétlen."
 
 #: data/org.mate.power-manager.gschema.xml.in:111
 msgid "Method used to blank screen on AC"
-msgstr "A képernyő elsötétítésére használt módszer hálózati tápellátás esetén"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:112
 msgid "The DPMS method used to blank the screen when on AC power."
 msgstr ""
-"A képernyő elsötétítésére használandó DPMS módszer hálózati tápellátás "
-"esetén."
 
 #: data/org.mate.power-manager.gschema.xml.in:116
 msgid "Method used to blank screen on battery"
 msgstr ""
-"A képernyő elsötétítésére használt módszer akkumulátoros tápellátás esetén"
 
 #: data/org.mate.power-manager.gschema.xml.in:117
 msgid "The DPMS method used to blank the screen when on battery power."
 msgstr ""
-"A képernyő elsötétítésére használandó DPMS módszer akkumulátoros tápellátás "
-"esetén."
 
 #: data/org.mate.power-manager.gschema.xml.in:121
 msgid "LCD brightness when on AC"
-msgstr "LCD fényereje hálózati tápellátás esetén"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:122
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
 msgstr ""
-"A képernyő fényereje hálózati tápellátás esetén. A lehetséges értékek 0.0 és"
-" 100.0 között vannak."
 
 #: data/org.mate.power-manager.gschema.xml.in:126
 msgid "Suspend button action"
-msgstr "Felfüggesztés gomb művelete"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:127
 msgid "The action to take when the system suspend button is pressed."
-msgstr "Mi történjen a felfüggesztés gomb lenyomásakor."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:131
 msgid "Hibernate button action"
-msgstr "Hibernálás gomb művelete"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:132
 msgid "The action to take when the system hibernate button is pressed."
-msgstr "Mi történjen a hibernálás gomb lenyomásakor."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:136
 msgid "Power button action"
-msgstr "Bekapcsoló gomb művelete"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:137
 msgid "The action to take when the system power button is pressed."
-msgstr "Mi történjen a kikapcsolás gomb lenyomásakor."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:141
 msgid "Laptop lid close action on battery"
 msgstr ""
-"A noteszgép fedelének lezárásakor végrehajtandó művelet akkumulátoros "
-"tápellátás esetén"
 
 #: data/org.mate.power-manager.gschema.xml.in:142
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
 msgstr ""
-"A noteszgép fedelének lezárásakor végrehajtandó művelet, ha a gép "
-"akkumulátorról működik. "
 
 #: data/org.mate.power-manager.gschema.xml.in:146
 msgid "Laptop lid close action when on AC"
 msgstr ""
-"A noteszgép fedelének lezárásakor végrehajtandó művelet hálózati tápellátás "
-"esetén"
 
 #: data/org.mate.power-manager.gschema.xml.in:147
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
 msgstr ""
-"A noteszgép fedelének lezárásakor végrehajtandó művelet hálózati tápellátás "
-"esetén."
 
 #: data/org.mate.power-manager.gschema.xml.in:151
 msgid "Whether to use time-based notifications"
-msgstr "Legyenek-e idő alapú értesítések"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:152
 msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
 msgstr ""
-"Használandók-e az idő alapú értesítések. Hamis értékre állítva a százalékos "
-"változás kerül alkalmazásra, ez hibás ACPI BIOS esetén megoldhatja a "
-"problémát."
 
 #: data/org.mate.power-manager.gschema.xml.in:156
 msgid "Check CPU load before sleeping"
-msgstr "A processzorterhelés ellenőrzése energiatakarékos módra váltás előtt"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:157
 msgid "If the CPU load should be checked before doing the idle action."
 msgstr ""
-"Kerüljön-e ellenőrzésre a CPU terhelése a tétlenség esetén végrehajtandó "
-"művelet előtt."
 
 #: data/org.mate.power-manager.gschema.xml.in:161
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
 msgstr ""
-"A Hálózatkezelő kapcsolódjon-e és bontson-e az energiatakarékos mód "
-"változásakor"
 
 #: data/org.mate.power-manager.gschema.xml.in:162
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
 msgstr ""
-"A Hálózatkezelő bontsa-e a kapcsolatot felfüggesztés vagy hibernálás esetén "
-"és kapcsolódjon-e folytatáskor."
 
 #: data/org.mate.power-manager.gschema.xml.in:166
 msgid "Use mate-screensaver lock setting"
-msgstr "A mate-screensaver zárolási beállításainak használata"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:167
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
 msgstr ""
-"A mate-screensaver képernyő-zárolási értékei felhasználásra kerüljenek-e a "
-"képernyő lezárásához hibernálás, felfüggesztés vagy a képernyő elsötétítése "
-"után."
 
 #: data/org.mate.power-manager.gschema.xml.in:171
 msgid "Lock screen when blanked"
-msgstr "Képernyő zárolása elsötétítéskor"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:172
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
 msgstr ""
-"Le legyen-e zárva a képernyő a kikapcsolásakor. Ez csak akkor használható, "
-"ha a lock_use_screensaver értéke hamis."
 
 #: data/org.mate.power-manager.gschema.xml.in:176
 msgid "Lock screen on suspend"
-msgstr "Képernyő zárolása felfüggesztéskor"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:177
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
 msgstr ""
-"Le legyen-e zárva a képernyő, amikor a számítógép felébred a "
-"felfüggesztésből. Ez csak akkor használható, ha a lock_use_screensaver "
-"értéke hamis."
 
 #: data/org.mate.power-manager.gschema.xml.in:181
 msgid "Lock screen on hibernate"
-msgstr "Képernyő zárolása hibernáláskor"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:182
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
 msgstr ""
-"Le legyen-e zárva a képernyő, amikor a számítógép felébred a hibernálásból. "
-"Ez csak akkor használható, ha a lock_use_screensaver értéke hamis."
 
 #: data/org.mate.power-manager.gschema.xml.in:186
 #: data/org.mate.power-manager.gschema.xml.in:191
 msgid "Lock GNOME keyring on sleep"
-msgstr "A GNOME kulcstartó zárolása energiatakarékos módba váltáskor"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:187
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
 msgstr ""
-"A MATE kulcstartó zárolásra kerüljön-e a számítógép felfüggesztése előtt. Ez"
-" azt jelenti, hogy folytatáskor fel kell oldania a kulcstartó zárolását."
 
 #: data/org.mate.power-manager.gschema.xml.in:192
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
 msgstr ""
-"A MATE kulcstartó zárolásra kerüljön-e a számítógép hibernálása előtt. Ez "
-"azt jelenti, hogy folytatáskor fel kell oldania a kulcstartó zárolását."
 
 #: data/org.mate.power-manager.gschema.xml.in:196
 msgid "If we should show the low capacity warning for a broken battery"
 msgstr ""
-"Megjelenjen-e a gyenge kapacitás figyelmeztetés hibás akkumulátor esetén"
 
 #: data/org.mate.power-manager.gschema.xml.in:197
 msgid "If we should show the low capacity warning for a broken battery."
 msgstr ""
-"Megjelenjen-e a gyenge kapacitás figyelmeztetés hibás akkumulátor esetén."
 
 #: data/org.mate.power-manager.gschema.xml.in:201
 msgid "Notify when AC adapter is disconnected"
-msgstr "Értesítés a hálózati csatlakozó eltávolításakor"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:202
 msgid "If the user should be notified when the AC adapter is disconnected."
-msgstr "Kapjon-e értesítést a felhasználó a hálózati csatlakozó kihúzásakor."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:206
 msgid "Notify when fully charged"
-msgstr "Értesítés az akkumulátor teljes feltöltésekor"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:207
 msgid ""
 "If a notification message should be displayed when the battery is fully "
 "charged."
 msgstr ""
-"Megjelenjen-e értesítő üzenet, ha az akkumulátor teljesen feltöltődött."
 
 #: data/org.mate.power-manager.gschema.xml.in:211
 msgid "Notify on a sleep failure"
-msgstr "Értesítés az energiatakarékos mód hibája esetén"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:212
 msgid ""
 "If a notification message should be displayed after suspend or hibernate "
 "failed."
 msgstr ""
-"Megjelenjen-e értesítő üzenet, ha a felfüggesztés vagy hibernálás meghiúsul."
 
 #: data/org.mate.power-manager.gschema.xml.in:216
 msgid "The URI to show to the user on sleep failure"
-msgstr "Az energiatakarékos mód hibája után megjelenítendő URI"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:217
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
 msgstr ""
-"Ha az energiatakarékos mód hibázik, megjeleníthető egy gomb a helyzet "
-"javítása érdekében. Hagyja üresen, ha ne jelenjen meg gomb."
 
 #: data/org.mate.power-manager.gschema.xml.in:221
 msgid "Notify on a low power"
-msgstr "Értesítés alacsony energiaszint esetén"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:222
 #: data/org.mate.power-manager.gschema.xml.in:227
@@ -616,276 +516,239 @@ msgid ""
 "If a notification message should be displayed when the battery is getting "
 "low."
 msgstr ""
-"Megjelenjen-e értesítő üzenet, ha az akkumulátor teljesen lemerülőben van."
 
 #: data/org.mate.power-manager.gschema.xml.in:226
 msgid "Notify on low capacity of mouse battery"
-msgstr "Értesítés, ha az egér akkumulátorának töltöttsége alacsony"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:231
 msgid "Whether we should show the history data points"
-msgstr "Megjelenjenek-e az előzmények adatpontjai"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:232
 msgid ""
 "Whether we should show the history data points in the statistics window."
-msgstr "Megjelenjenek-e az előzmények adatpontjai a statisztikaablakban?"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:236
 msgid "Whether we should smooth the history data"
-msgstr "Az előzményadatok simításra kerüljenek-e"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:237
 msgid "Whether we should smooth the history data in the graph."
-msgstr "Az előzményadatok simításra kerüljenek-e a grafikonon?"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:241
 msgid "The default graph type to show for history"
-msgstr "Az előzményekhez megjelenítendő alapértelmezett grafikontípus"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:242
 msgid "The default graph type to show in the history window."
-msgstr "Az előzményablakban megjelenítendő alapértelmezett grafikontípus."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:246
 msgid "The maximum time displayed for history"
-msgstr "Az előzményekhez megjelenítendő maximális időtartam"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:247
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
-msgstr "Az előzménygrafikon X tengelyén megjelenítendő maximális időtartam."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:251
 msgid "Whether we should show the stats data points"
-msgstr "Megjelenjenek-e a statisztika adatpontjai"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:252
 msgid "Whether we should show the stats data points in the statistics window."
-msgstr "Megjelenjenek-e a statisztika adatpontjai a statisztikaablakban?"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:256
 msgid "Whether we should smooth the stats data"
-msgstr "A statisztikaadatok simításra kerüljenek-e"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:257
 msgid "Whether we should smooth the stats data in the graph."
-msgstr "A statisztikaadatok simításra kerüljenek-e a grafikonon?"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:261
 msgid "The default graph type to show for stats"
-msgstr "A statisztikákhoz megjelenítendő alapértelmezett grafikontípus"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:262
 msgid "The default graph type to show in the stats window."
-msgstr "A statisztikaablakban megjelenítendő alapértelmezett grafikontípus."
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:266
 msgid "The index of the page number to show by default"
-msgstr "Az alapértelmezésben megjelenítendő oldalszám indexe"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:267
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
 msgstr ""
-"Az alapértelmezésben megjelenítendő oldalszám indexe, amely a fókusz "
-"megfelelő oldalra való visszaadására használatos."
 
 #: data/org.mate.power-manager.gschema.xml.in:271
 msgid "The ID of the last device selected"
-msgstr "Az utoljára kiválasztott eszköz azonosítója"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:272
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
 msgstr ""
-"Az utolsó eszköz azonosítója, amely a fókusz megfelelő eszköznek való "
-"visszaadására használatos."
 
 #: data/org.mate.power-manager.gschema.xml.in:276
 msgid "Percentage considered low"
-msgstr "Alacsonyként kezelt százalékos arány"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:277
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
 msgstr ""
-"Az akkumulátor alacsonynak tekintett százalékos töltöttsége. Csak a use-"
-"time-for-policy kulcs hamis értéke esetén érvényes."
 
 #: data/org.mate.power-manager.gschema.xml.in:281
 msgid "Percentage considered critical"
-msgstr "Kritikusként kezelt százalékos arány"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:282
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
 msgstr ""
-"Az akkumulátor kritikusnak tekintett százalékos töltöttsége. Csak a use-"
-"time-for-policy kulcs hamis értéke esetén érvényes."
 
 #: data/org.mate.power-manager.gschema.xml.in:286
 msgid "Percentage action is taken"
-msgstr "Százalékos arány művelet végrehajtásához"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:287
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
 msgstr ""
-"Az akkumulátor százalékos töltöttsége, amikor a kritikus művelet "
-"végrehajtandó. Csak a use-time-for-policy kulcs hamis értéke esetén "
-"érvényes."
 
 #: data/org.mate.power-manager.gschema.xml.in:291
 msgid "The time remaining when low"
-msgstr "A hátralévő idő annak alacsonyként kezeléséhez"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:292
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
 msgstr ""
-"Az akkumulátor töltöttségéből hátralévő idő másodpercben annak alacsonyként "
-"kezeléséhez. Csak a use-time-for-policy kulcs igaz értéke esetén érvényes."
 
 #: data/org.mate.power-manager.gschema.xml.in:296
 msgid "The time remaining when critical"
-msgstr "A hátralévő idő annak kritikusként kezeléséhez"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:297
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
 msgstr ""
-"Az akkumulátor töltöttségéből hátralévő idő másodpercben annak kritikusként "
-"kezeléséhez. Csak a use-time-for-policy kulcs igaz értéke esetén érvényes."
 
 #: data/org.mate.power-manager.gschema.xml.in:301
 msgid "The time remaining when action is taken"
-msgstr "A hátralévő idő, amikor művelet kerül végrehajtásra"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:302
 msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
 msgstr ""
-"Az akkumulátor töltöttségéből hátralévő idő másodpercben, amikor a kritikus "
-"művelet végrehajtandó. Csak a use-time-for-policy kulcs igaz értéke esetén "
-"érvényes."
 
 #: data/org.mate.power-manager.gschema.xml.in:306
 msgid "Sleep timeout computer when on battery"
-msgstr "Energiatakarékossági időkorlát akkumulátoros tápellátás esetén"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:307
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before it goes to sleep."
 msgstr ""
-"Akkumulátoros tápellátás esetén ennyi másodpercnyi tétlenség után vált "
-"energiatakarékos módba a számítógép."
 
 #: data/org.mate.power-manager.gschema.xml.in:311
 msgid "Sleep timeout computer when on AC"
-msgstr "Energiatakarékossági időkorlát hálózati tápellátás esetén"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:312
 msgid ""
 "The amount of time in seconds the computer on AC power needs to be inactive "
 "before it goes to sleep."
 msgstr ""
-"Hálózati tápellátás esetén ennyi másodpercnyi tétlenség után vált "
-"energiatakarékos módba a számítógép."
 
 #: data/org.mate.power-manager.gschema.xml.in:316
 msgid "Sleep timeout computer when on UPS"
 msgstr ""
-"Számítógép energiatakarékossági időkorlátja szünetmentes táp használatakor"
 
 #: data/org.mate.power-manager.gschema.xml.in:317
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before it goes to sleep."
 msgstr ""
-"A szünetmentes táp használata esetén ennyi másodpercnyi tétlenség után vált "
-"energiatakarékos módba a számítógép."
 
 #: data/org.mate.power-manager.gschema.xml.in:321
 msgid "Sleep timeout display when on AC"
 msgstr ""
-"Energiatakarékossági időkorlát megjelenítése hálózati tápellátás esetén"
 
 #: data/org.mate.power-manager.gschema.xml.in:322
 msgid ""
 "The amount of time in seconds before the display goes to sleep when the "
 "computer is on AC power."
 msgstr ""
-"Hálózati tápellátás esetén ennyi másodpercnyi tétlenség után vált "
-"energiatakarékos módba a képernyő."
 
 #: data/org.mate.power-manager.gschema.xml.in:326
 msgid "Sleep timeout display when on battery"
 msgstr ""
-"Energiatakarékossági időkorlát megjelenítése akkumulátoros tápellátás esetén"
 
 #: data/org.mate.power-manager.gschema.xml.in:327
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
 msgstr ""
-"Akkumulátoros tápellátás esetén ennyi másodpercnyi tétlenség után vált "
-"energiatakarékos módba a képernyő."
 
 #: data/org.mate.power-manager.gschema.xml.in:331
 msgid "Sleep timeout display when on UPS"
 msgstr ""
-"Kijelző energiatakarékossági időkorlátja szünetmentes táp használatakor"
 
 #: data/org.mate.power-manager.gschema.xml.in:332
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before the display goes to sleep."
 msgstr ""
-"A szünetmentes táp használata esetén ennyi másodpercnyi tétlenség után vált "
-"energiatakarékos módba a képernyő."
 
 #: data/org.mate.power-manager.gschema.xml.in:336
 msgid "If sounds should be used"
-msgstr "Használandók-e hangok"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:337
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
 msgstr ""
-"Használandók-e hangok, ha az energiaszint alacsony, vagy korlátozási kérések"
-" leállították az irányelvműveletet."
 
 #: data/org.mate.power-manager.gschema.xml.in:341
 msgid ""
 "If preferences and statistics items should be shown in the context menu"
-msgstr "A beállítások és statisztikaelemek megjelenjenek-e a helyi menüben"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:345
 msgid "When to show the notification icon"
-msgstr "Mikor jelenjen meg az értesítési ikon"
+msgstr ""
 
 #: data/org.mate.power-manager.gschema.xml.in:346
 msgid "Display options for the notification icon."
-msgstr "Beállítás megjelenítése értesítési ikonnak."
+msgstr ""
 
 #: data/mate-power-preferences.desktop.in.in:3
 msgid "Power Management"
-msgstr "Energiagazdálkodás"
+msgstr ""
 
 #: data/mate-power-preferences.desktop.in.in:4
 msgid "Configure power management"
-msgstr "Energiagazdálkodás beállítása"
+msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -896,397 +759,392 @@ msgstr ""
 #: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
 #: src/gpm-statistics.c:787 src/gpm-statistics.c:1259
 msgid "Power Statistics"
-msgstr "Energiastatisztika"
+msgstr ""
 
 #: data/mate-power-statistics.desktop.in.in:4
 msgid "Observe power management"
-msgstr "Energiagazdálkodás megfigyelése"
+msgstr ""
 
 #: data/gpm-statistics.ui:119
 msgid "Details"
-msgstr "Részletek"
+msgstr ""
 
 #: data/gpm-statistics.ui:145 data/gpm-statistics.ui:347
 msgid "Graph type:"
-msgstr "Grafikontípus:"
+msgstr ""
 
 #: data/gpm-statistics.ui:180
 msgid "Data length:"
-msgstr "Adathossz:"
+msgstr ""
 
 #: data/gpm-statistics.ui:239 data/gpm-statistics.ui:399
 msgid "There is no data to display."
-msgstr "Nincsenek megjeleníthető adatok"
+msgstr ""
 
 #: data/gpm-statistics.ui:281 data/gpm-statistics.ui:442
 msgid "Use smoothed line"
-msgstr "Simított vonal használata"
+msgstr ""
 
 #: data/gpm-statistics.ui:296 data/gpm-statistics.ui:457
 msgid "Show data points"
-msgstr "Adatpontok megjelenítése"
+msgstr ""
 
 #: data/gpm-statistics.ui:325
 msgid "History"
-msgstr "Előzmények"
+msgstr "歷史"
 
 #: data/gpm-statistics.ui:486
 msgid "Statistics"
-msgstr "Statisztika"
+msgstr ""
 
 #: data/gpm-prefs.ui:23
 msgid "Power Management Preferences"
-msgstr "Energiagazdálkodás beállításai"
+msgstr ""
 
 #: data/gpm-prefs.ui:58
 msgid "Make Default"
-msgstr "Beállítás alapértelmezettként"
+msgstr ""
 
 #: data/gpm-prefs.ui:71
 msgid "_Close"
-msgstr "_Bezárás"
+msgstr "關掉(_C)"
 
 #: data/gpm-prefs.ui:138 data/gpm-prefs.ui:406 data/gpm-prefs.ui:746
 msgid "Put computer to _sleep when inactive for:"
-msgstr "Számítógép _energiatakarékos módjának bekapcsolása:"
+msgstr ""
 
 #: data/gpm-prefs.ui:176 data/gpm-prefs.ui:444
 msgid "When laptop lid is cl_osed:"
-msgstr "A _noteszgép fedelének lezárásakor:"
+msgstr ""
 
 #: data/gpm-prefs.ui:213 data/gpm-prefs.ui:519 data/gpm-prefs.ui:825
 #: data/gpm-prefs.ui:1031
 msgid "Actions"
-msgstr "Műveletek"
+msgstr ""
 
 #: data/gpm-prefs.ui:252 data/gpm-prefs.ui:560 data/gpm-prefs.ui:861
 msgid "Put _display to sleep when inactive for:"
-msgstr "Ké_pernyő energiatakarékos módjának bekapcsolása:"
+msgstr ""
 
 #: data/gpm-prefs.ui:289
 msgid "Set display _brightness to:"
-msgstr "Képernyő fényerejé_nek beállítása:"
+msgstr ""
 
 #: data/gpm-prefs.ui:322 data/gpm-prefs.ui:607
 msgid "Di_m display when idle"
-msgstr "Képernyő el_sötétítése üresjáratban"
+msgstr ""
 
 #: data/gpm-prefs.ui:344 data/gpm-prefs.ui:629 data/gpm-prefs.ui:890
 msgid "Display"
-msgstr "Kijelző"
+msgstr "顯示"
 
 #: data/gpm-prefs.ui:363
 msgid "On AC Power"
-msgstr "Hálózaton"
+msgstr ""
 
 #: data/gpm-prefs.ui:482
 msgid "When battery po_wer is critically low:"
-msgstr "Ha az akkum_ulátor energiája kritikus:"
+msgstr ""
 
 #: data/gpm-prefs.ui:591
 msgid "_Reduce backlight brightness"
-msgstr "_Háttérvilágítás fényerejének csökkentése"
+msgstr ""
 
 #: data/gpm-prefs.ui:663
 msgid "_Reduce keyboard backlight"
-msgstr "_Billentyűzet háttérvilágítás csökkentése"
+msgstr ""
 
 #: data/gpm-prefs.ui:685 src/gpm-upower.c:510
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] "Billentyűzet"
-msgstr[1] "Billentyűzetek"
+msgstr[0] ""
 
 #: data/gpm-prefs.ui:707
 msgid "On Battery Power"
-msgstr "Akkumulátoron"
+msgstr ""
 
 #: data/gpm-prefs.ui:760
 msgid "When UPS power is l_ow:"
-msgstr "Ha a _szünetmentes táp energiája alacsony:"
+msgstr ""
 
 #: data/gpm-prefs.ui:774
 msgid "When UPS power is _critically low:"
-msgstr "Ha a _szünetmentes táp energiája kritikus:"
+msgstr ""
 
 #: data/gpm-prefs.ui:912
 msgid "On UPS Power"
-msgstr "Szünetmentes tápon"
+msgstr ""
 
 #: data/gpm-prefs.ui:956
 msgid "When the power _button is pressed:"
-msgstr "A be_kapcsológomb megnyomásakor:"
+msgstr ""
 
 #: data/gpm-prefs.ui:994
 msgid "When the _suspend button is pressed:"
-msgstr "A _felfüggesztés gomb megnyomásakor:"
+msgstr ""
 
 #: data/gpm-prefs.ui:1065
 msgid "_Never display an icon"
-msgstr "So_ha ne jelenítse meg az ikont"
+msgstr ""
 
 #: data/gpm-prefs.ui:1083
 msgid "_Only display an icon when battery power is low"
-msgstr "Ikon megjelenítése csak ha az _akkumulátor energiaszintje gyenge"
+msgstr ""
 
 #: data/gpm-prefs.ui:1101
 msgid "Only display an icon when charging or _discharging"
-msgstr "Ikon megjelenítése _csak töltés vagy kisülés közben"
+msgstr ""
 
 #: data/gpm-prefs.ui:1119
 msgid "Only display an icon when a battery is p_resent"
-msgstr "Ikon megjelenítése csak ha jelen _van akkumulátor"
+msgstr ""
 
 #: data/gpm-prefs.ui:1137
 msgid "_Always display an icon"
-msgstr "_Mindig jelenítse meg az ikont"
+msgstr ""
 
 #: data/gpm-prefs.ui:1161
 msgid "Notification Area"
-msgstr "Értesítési terület"
+msgstr ""
 
 #: data/gpm-prefs.ui:1183
 msgid "General"
-msgstr "Általános"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:167
 msgid "Set the current brightness"
-msgstr "A jelenlegi fényerő beállítása"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:170
 msgid "Get the current brightness"
-msgstr "A jelenlegi fényerő lekérése"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:173
 msgid "Get the number of brightness levels supported"
-msgstr "A támogatott fényerőszintek számának lekérése"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:185
 msgid "MATE Power Manager Backlight Helper"
-msgstr "MATE Energiakezelő háttérvilágítás-segéd"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:193
 msgid "No valid option was specified"
-msgstr "Nem lett érvényes kapcsoló megadva"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:202
 msgid "No backlights were found on your system"
-msgstr "Nem található háttérvilágítás a rendszeren"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:213
 msgid "Could not get the value of the backlight"
-msgstr "Nem kérhető le a háttérvilágítás értéke"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:231
 msgid "Could not get the maximum value of the backlight"
-msgstr "Nem kérhető le a háttérvilágítás maximális értéke"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:248
 msgid "This program can only be used by the root user"
-msgstr "Ezt a programot csak a root felhasználó használhatja"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:257
 msgid "This program must only be run through pkexec"
-msgstr "Ezt a programot pkexecen keresztül szabad csak futtatni"
+msgstr ""
 
 #: src/gpm-backlight-helper.c:268
 msgid "Could not set the value of the backlight"
-msgstr "Nem állítható be a háttérvilágítás értéke"
+msgstr ""
 
 #: src/gpm-common.c:53
 msgid "Unknown time"
-msgstr "Ismeretlen idő"
+msgstr ""
 
 #: src/gpm-common.c:58
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] "%i perc"
-msgstr[1] "%i perc"
+msgstr[0] ""
 
 #: src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] "%i óra"
-msgstr[1] "%i óra"
+msgstr[0] ""
 
 #: src/gpm-common.c:75
 #, c-format
 msgid "%i %s %i %s"
-msgstr "%i %s, %i %s"
+msgstr ""
 
 #: src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] "óra"
-msgstr[1] "óra"
+msgstr[0] ""
 
 #: src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] "perc"
-msgstr[1] "perc"
+msgstr[0] ""
 
 #. Translators: This is %i days
 #: src/gpm-graph-widget.c:433
 #, c-format
 msgid "%id"
-msgstr "%in"
+msgstr ""
 
 #. Translators: This is %i days %02i hours
 #: src/gpm-graph-widget.c:436
 #, c-format
 msgid "%id%02ih"
-msgstr "%dn %02ió"
+msgstr ""
 
 #. Translators: This is %i hours
 #: src/gpm-graph-widget.c:441
 #, c-format
 msgid "%ih"
-msgstr "%ió"
+msgstr ""
 
 #. Translators: This is %i hours %02i minutes
 #: src/gpm-graph-widget.c:444
 #, c-format
 msgid "%ih%02im"
-msgstr "%ió %02im"
+msgstr ""
 
 #. Translators: This is %2i minutes
 #: src/gpm-graph-widget.c:449
 #, c-format
 msgid "%2im"
-msgstr "%2ip"
+msgstr ""
 
 #. Translators: This is %2i minutes %02i seconds
 #: src/gpm-graph-widget.c:452
 #, c-format
 msgid "%2im%02i"
-msgstr "%2ip %02i"
+msgstr ""
 
 #. Translators: This is %2i seconds
 #: src/gpm-graph-widget.c:456
 #, c-format
 msgid "%2is"
-msgstr "%2imp"
+msgstr ""
 
 #. Translators: This is %i Percentage
 #: src/gpm-graph-widget.c:460
 #, c-format
 msgid "%i%%"
-msgstr "%i%%"
+msgstr ""
 
 #. Translators: This is %.1f Watts
 #: src/gpm-graph-widget.c:463
 #, c-format
 msgid "%.1fW"
-msgstr "%.1fW"
+msgstr ""
 
 #. Translators: This is %.1f Volts
 #: src/gpm-graph-widget.c:468
 #, c-format
 msgid "%.1fV"
-msgstr "%.1fV"
+msgstr ""
 
 #: src/gpm-main.c:170
 msgid "Show version of installed program and exit"
-msgstr "A telepített program verziószámának megjelenítése és kilépés"
+msgstr ""
 
 #: src/gpm-main.c:172
 msgid "Exit after a small delay (for debugging)"
-msgstr "Kilépés rövid késleltetés után (hibakereséshez)"
+msgstr ""
 
 #: src/gpm-main.c:174
 msgid "Exit after the manager has loaded (for debugging)"
-msgstr "Kilépés a felügyelő betöltése után (hibakereséshez)"
+msgstr ""
 
 #: src/gpm-main.c:185 src/gpm-main.c:189
 msgid "MATE Power Manager"
-msgstr "MATE Energiakezelő"
+msgstr ""
 
 #: src/gpm-manager.c:222 src/gpm-manager.c:294
 msgid "Battery is very low"
-msgstr "Az akkumulátor nagyon gyenge"
+msgstr ""
 
 #: src/gpm-manager.c:274
 msgid "Power plugged in"
-msgstr "Áramellátás bekapcsolva"
+msgstr ""
 
 #: src/gpm-manager.c:278
 msgid "Power unplugged"
-msgstr "Áramellátás kikapcsolva"
+msgstr ""
 
 #: src/gpm-manager.c:282
 msgid "Lid has opened"
-msgstr "Fedél kinyitva"
+msgstr ""
 
 #: src/gpm-manager.c:286
 msgid "Lid has closed"
-msgstr "Fedél lezárva"
+msgstr ""
 
 #: src/gpm-manager.c:290
 msgid "Battery is low"
-msgstr "Az akkumulátor gyenge"
+msgstr ""
 
 #: src/gpm-manager.c:298
 msgid "Battery is full"
-msgstr "Az akkumulátor feltöltve"
+msgstr ""
 
 #: src/gpm-manager.c:302
 msgid "Suspend started"
-msgstr "Felfüggesztés megkezdve"
+msgstr ""
 
 #: src/gpm-manager.c:306
 msgid "Resumed"
-msgstr "Folytatás"
+msgstr ""
 
 #: src/gpm-manager.c:310
 msgid "Suspend failed"
-msgstr "Felfüggesztés meghiúsult"
+msgstr ""
 
 #: src/gpm-manager.c:577
 msgid "Computer failed to suspend."
-msgstr "A számítógép nem volt képes a felfüggesztés végrehajtására."
+msgstr ""
 
 #: src/gpm-manager.c:579
 msgid "Failed to suspend"
-msgstr "A felfüggesztés meghiúsult"
+msgstr ""
 
 #: src/gpm-manager.c:583
 msgid "Computer failed to hibernate."
-msgstr "A számítógép nem volt képes a hibernálás végrehajtására."
+msgstr ""
 
 #: src/gpm-manager.c:585
 msgid "Failed to hibernate"
-msgstr "A hibernálás meghiúsult"
+msgstr ""
 
 #: src/gpm-manager.c:590
 msgid "Failure was reported as:"
-msgstr "A jelentett hiba:"
+msgstr ""
 
 #: src/gpm-manager.c:603
 msgid "Visit help page"
-msgstr "Súgóoldal felkeresése"
+msgstr ""
 
 #: src/gpm-manager.c:849
 msgid "Display DPMS activated"
-msgstr "Képernyő DPMS aktiválva"
+msgstr ""
 
 #: src/gpm-manager.c:868
 msgid "On battery power"
-msgstr "Akkumulátoron"
+msgstr ""
 
 #: src/gpm-manager.c:886
 msgid "Laptop lid is closed"
-msgstr "Noteszgép fedele lezárva"
+msgstr ""
 
 #: src/gpm-manager.c:924
 msgid "Power Information"
-msgstr "Tápellátási információ"
+msgstr ""
 
 #: src/gpm-manager.c:1105
 msgid "Battery may be broken"
-msgstr "Az akkumulátor hibás lehet"
+msgstr ""
 
 #: src/gpm-manager.c:1108
 #, c-format
@@ -1294,154 +1152,147 @@ msgid ""
 "Battery has a very low capacity (%1.1f%%), which means that it may be old or"
 " broken."
 msgstr ""
-"Az akkumulátor kapacitása nagyon gyenge (%1.1f%%), ez azt jelentheti, hogy "
-"régi vagy hibás."
 
 #: src/gpm-manager.c:1157
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] "Az akkumulátorok feltöltve"
-msgstr[1] "Az akkumulátorok feltöltve"
+msgstr[0] ""
 
 #: src/gpm-manager.c:1203
 msgid "Battery Discharging"
-msgstr "Az akkumulátor kisül"
+msgstr ""
 
 #: src/gpm-manager.c:1207
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
-msgstr "%s akkumulátorkapacitás van hátra (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1210 src/gpm-manager.c:1222
 #, c-format
 msgid "%s discharging (%.0f%%)"
-msgstr "%s: kisül (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1215
 msgid "UPS Discharging"
-msgstr "A szünetmentes táp kisül"
+msgstr ""
 
 #: src/gpm-manager.c:1219
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
-msgstr "%s szünetmentes tápellátás van hátra (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1303
 msgid "Battery low"
-msgstr "Az akkumulátor gyenge"
+msgstr ""
 
 #: src/gpm-manager.c:1306
 msgid "Laptop battery low"
-msgstr "A noteszgép akkumulátora gyenge"
+msgstr ""
 
 #: src/gpm-manager.c:1312
 #, c-format
-#, fuzzy
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
-msgstr "Megközelítőleg <b>%s</b> van hátra (%.0lf%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1316
 msgid "UPS low"
-msgstr "A szünetmentes táp gyenge"
+msgstr ""
 
 #: src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
 msgstr ""
-"A szünetmentes táp áthidalási idejéből még megközelítőleg <b>%s</b> van "
-"hátra (%.0f%%)"
 
 #: src/gpm-manager.c:1329 src/gpm-manager.c:1468
 msgid "Mouse battery low"
-msgstr "Az egér akkumulátora gyenge"
+msgstr ""
 
 #: src/gpm-manager.c:1332
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
-msgstr "A vezeték nélküli egér akkumulátora gyenge (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1336 src/gpm-manager.c:1476
 msgid "Keyboard battery low"
-msgstr "A billentyűzet akkumulátora gyenge"
+msgstr ""
 
 #: src/gpm-manager.c:1339
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
-msgstr "A vezeték nélküli billentyűzet akkumulátora gyenge (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1343 src/gpm-manager.c:1485
 msgid "PDA battery low"
-msgstr "A PDA akkumulátora gyenge"
+msgstr ""
 
 #: src/gpm-manager.c:1346
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
-msgstr "A PDA akkumulátora gyenge (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1350 src/gpm-manager.c:1495 src/gpm-manager.c:1505
 msgid "Cell phone battery low"
-msgstr "A mobiltelefon akkumulátora gyenge"
+msgstr ""
 
 #: src/gpm-manager.c:1353
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
-msgstr "A mobiltelefon akkumulátora gyenge (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1357
 msgid "Media player battery low"
-msgstr "A médialejátszó akkumulátora gyenge"
+msgstr ""
 
 #: src/gpm-manager.c:1360
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
-msgstr "A médialejátszó akkumulátora gyenge (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1364 src/gpm-manager.c:1514
 msgid "Tablet battery low"
-msgstr "A táblagép akkumulátora gyenge"
+msgstr ""
 
 #: src/gpm-manager.c:1367
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
-msgstr "A táblagép akkumulátora gyenge (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1371 src/gpm-manager.c:1523
 msgid "Attached computer battery low"
-msgstr "A csatlakozó számítógép akkumulátora gyenge"
+msgstr ""
 
 #: src/gpm-manager.c:1374
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
-msgstr "A csatlakozó számítógép akkumulátora gyenge (%.0f%%)"
+msgstr ""
 
 #: src/gpm-manager.c:1422
 msgid "Battery critically low"
-msgstr "Az akkumulátor kritikusan gyenge"
+msgstr ""
 
 #: src/gpm-manager.c:1425 src/gpm-manager.c:1583
 msgid "Laptop battery critically low"
-msgstr "A noteszgép akkumulátora kritikusan gyenge"
+msgstr ""
 
 #: src/gpm-manager.c:1434
 msgid "Plug in your AC adapter to avoid losing data."
 msgstr ""
-"Az adatvesztés elkerülése érdekében csatlakoztassa a hálózati csatlakozót."
 
 #: src/gpm-manager.c:1438
 msgid "Computer will suspend very soon unless it is plugged in."
-msgstr "A számítógép hamarosan fel lesz függesztve, ha nem csatlakoztatja."
+msgstr ""
 
 #: src/gpm-manager.c:1442
 msgid "Computer will hibernate very soon unless it is plugged in."
-msgstr "A számítógép hamarosan hibernálva lesz, ha nem csatlakoztatja."
+msgstr ""
 
 #: src/gpm-manager.c:1446
 msgid "Computer will shutdown very soon unless it is plugged in."
-msgstr "A számítógép hamarosan leáll, ha nem csatlakoztatja."
+msgstr ""
 
 #: src/gpm-manager.c:1453 src/gpm-manager.c:1619
 msgid "UPS critically low"
-msgstr "A szünetmentes táp kritikusan gyenge"
+msgstr ""
 
 #: src/gpm-manager.c:1457
 #, c-format
@@ -1449,9 +1300,6 @@ msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
 msgstr ""
-"A szünetmentes táp áthidalási idejéből még megközelítőleg <b>%s</b> van "
-"hátra (%.0f%%). Az adatvesztés elkerülése érdekében állítsa vissza a "
-"hálózati tápellátást."
 
 #: src/gpm-manager.c:1471
 #, c-format
@@ -1459,8 +1307,6 @@ msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
-"A vezeték nélküli egér akkumulátora nagyon gyenge (%.0f%%). Ha nem tölti "
-"fel, az eszköz le fog állni."
 
 #: src/gpm-manager.c:1479
 #, c-format
@@ -1468,8 +1314,6 @@ msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
-"A vezeték nélküli billentyűzet akkumulátora nagyon gyenge (%.0f%%). Ha nem "
-"tölti fel, az eszköz le fog állni."
 
 #: src/gpm-manager.c:1488
 #, c-format
@@ -1477,8 +1321,6 @@ msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
 " not charged."
 msgstr ""
-"A PDA akkumulátora nagyon gyenge (%.0f%%). Ha nem tölti fel, az eszköz le "
-"fog állni."
 
 #: src/gpm-manager.c:1498
 #, c-format
@@ -1486,8 +1328,6 @@ msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
-"A mobiltelefon akkumulátora nagyon gyenge (%.0f%%). Ha nem tölti fel, az "
-"eszköz le fog állni."
 
 #: src/gpm-manager.c:1508
 #, c-format
@@ -1495,8 +1335,6 @@ msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
-"A médialejátszó akkumulátora nagyon gyenge (%.0f%%). Ha nem tölti fel, az "
-"eszköz le fog állni."
 
 #: src/gpm-manager.c:1517
 #, c-format
@@ -1504,8 +1342,6 @@ msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
 msgstr ""
-"A táblagép akkumulátora nagyon gyenge (%.0f%%). Ha nem tölti fel, az eszköz "
-"le fog állni."
 
 #: src/gpm-manager.c:1526
 #, c-format
@@ -1513,16 +1349,12 @@ msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
 msgstr ""
-"A csatlakozó számítógép akkumulátora nagyon gyenge (%.0f%%). Ha nem tölti "
-"fel, az eszköz le fog állni."
 
 #: src/gpm-manager.c:1591
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
 msgstr ""
-"Az akkumulátor a kritikus szint alatt van és ez a számítógép <b>ki fog "
-"kapcsolni</b>, amint az akkumulátor teljesen kiürül."
 
 #: src/gpm-manager.c:1597
 msgid ""
@@ -1530,313 +1362,295 @@ msgid ""
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
 msgstr ""
-"Az akkumulátor kapacitása a kritikus szint alá esett és a gép "
-"felfüggesztésre készül.<br><b>Megjegyzés:</b> Minimális mértékben a "
-"számítógép felfüggesztett állapotban is fogyaszt áramot."
 
 #: src/gpm-manager.c:1604
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
 msgstr ""
-"Az akkumulátor kapacitása a kritikus szint alá esett és a gép hibernálásra "
-"készül."
 
 #: src/gpm-manager.c:1609
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
 msgstr ""
-"Az akkumulátor kapacitása a kritikus szint alá esett és a gép leállni "
-"készül."
 
 #: src/gpm-manager.c:1627
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
 msgstr ""
-"A szünetmentes táp kapacitása a kritikus szint alá esett és teljes "
-"kiürülésekor a számítógép <b>ki fog kapcsolni</b>."
 
 #: src/gpm-manager.c:1633
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
 msgstr ""
-"A szünetmentes táp kapacitása a kritikus szint alá esett és a gép "
-"hibernálásra készül."
 
 #: src/gpm-manager.c:1638
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
 msgstr ""
-"A szünetmentes táp kapacitása a kritikus szint alá esett és a gép leállni "
-"készül."
 
 #: src/gpm-prefs.c:77
 msgid "MATE Power Preferences"
-msgstr "A MATE energiagazdálkodási beállításai"
+msgstr ""
 
 #: src/gpm-prefs-core.c:242
 msgid "Shutdown"
-msgstr "Leállítás"
+msgstr ""
 
 #: src/gpm-prefs-core.c:249
 msgid "Suspend"
-msgstr "Felfüggesztés"
+msgstr ""
 
 #: src/gpm-prefs-core.c:252
 msgid "Hibernate"
-msgstr "Hibernálás"
+msgstr ""
 
 #: src/gpm-prefs-core.c:255
 msgid "Blank screen"
-msgstr "Üres képernyő"
+msgstr ""
 
 #: src/gpm-prefs-core.c:258
 msgid "Ask me"
-msgstr "Kérdezzen"
+msgstr ""
 
 #: src/gpm-prefs-core.c:261
 msgid "Do nothing"
-msgstr "Ne tegyen semmit"
+msgstr ""
 
 #: src/gpm-prefs-core.c:321
 msgid "Never"
-msgstr "Soha"
+msgstr "Lóng mài"
 
 #: src/gpm-statistics.c:71
 msgid "Charge profile"
-msgstr "Töltés profilja"
+msgstr ""
 
 #: src/gpm-statistics.c:72
 msgid "Discharge profile"
-msgstr "Kisülés profilja"
+msgstr ""
 
 #: src/gpm-statistics.c:74
 msgid "Charge accuracy"
-msgstr "Töltés pontossága"
+msgstr ""
 
 #: src/gpm-statistics.c:75
 msgid "Discharge accuracy"
-msgstr "Kisülés pontossága"
+msgstr ""
 
 #: src/gpm-statistics.c:77 src/gpm-statistics.c:435
 msgid "Rate"
-msgstr "Rate"
+msgstr ""
 
 #: src/gpm-statistics.c:78
 msgid "Charge"
-msgstr "Töltés"
+msgstr ""
 
 #: src/gpm-statistics.c:79 src/gpm-statistics.c:449
 msgid "Time to full"
-msgstr "Idő a feltöltésig"
+msgstr ""
 
 #: src/gpm-statistics.c:80 src/gpm-statistics.c:454
 msgid "Time to empty"
-msgstr "Idő a lemerülésig"
+msgstr ""
 
 #: src/gpm-statistics.c:88
 msgid "10 minutes"
-msgstr "10 perc"
+msgstr ""
 
 #: src/gpm-statistics.c:89
 msgid "2 hours"
-msgstr "2 óra"
+msgstr ""
 
 #: src/gpm-statistics.c:90
 msgid "6 hours"
-msgstr "6 óra"
+msgstr ""
 
 #: src/gpm-statistics.c:91
 msgid "1 day"
-msgstr "1 nap"
+msgstr ""
 
 #: src/gpm-statistics.c:92
 msgid "1 week"
-msgstr "1 hét"
+msgstr ""
 
 #: src/gpm-statistics.c:146
 msgid "Attribute"
-msgstr "Attribútum"
+msgstr ""
 
 #: src/gpm-statistics.c:153
 msgid "Value"
-msgstr "Érték:"
+msgstr ""
 
 #: src/gpm-statistics.c:170
 msgid "Image"
-msgstr "Kép"
+msgstr "圖"
 
 #: src/gpm-statistics.c:176
 msgid "Description"
-msgstr "Leírás"
+msgstr "說明"
 
 #: src/gpm-statistics.c:255
 msgid "Unknown"
-msgstr "Ismeretlen"
+msgstr "毋知ê"
 
 #: src/gpm-statistics.c:259
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] "%.0f másodperc"
-msgstr[1] "%.0f másodperc"
+msgstr[0] ""
 
 #: src/gpm-statistics.c:264
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] "%.1f perc"
-msgstr[1] "%.1f perc"
+msgstr[0] ""
 
 #: src/gpm-statistics.c:269
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] "%.1f óra"
-msgstr[1] "%.1f óra"
+msgstr[0] ""
 
 #: src/gpm-statistics.c:273
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] "%.1f nap"
-msgstr[1] "%.1f nap"
+msgstr[0] ""
 
 #: src/gpm-statistics.c:282
 msgid "Yes"
-msgstr "Engedélyezve"
+msgstr ""
 
 #: src/gpm-statistics.c:282
 msgid "No"
-msgstr "Tiltva"
+msgstr ""
 
 #: src/gpm-statistics.c:371
 msgid "Device"
-msgstr "Eszköz"
+msgstr ""
 
 #: src/gpm-statistics.c:374
 msgid "Type"
-msgstr "Típus"
+msgstr "類型"
 
 #: src/gpm-statistics.c:376
 msgid "Vendor"
-msgstr "Gyártó"
+msgstr ""
 
 #: src/gpm-statistics.c:378
 msgid "Model"
-msgstr "Modell"
+msgstr ""
 
 #: src/gpm-statistics.c:380
 msgid "Serial number"
-msgstr "Sorozatszám"
+msgstr ""
 
 #: src/gpm-statistics.c:385
 msgid "Supply"
-msgstr "Ellátás"
+msgstr ""
 
 #: src/gpm-statistics.c:388
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d másodperc"
-msgstr[1] "%d másodperc"
+msgstr[0] ""
 
 #: src/gpm-statistics.c:392
 msgid "Refreshed"
-msgstr "Frissítve"
+msgstr ""
 
 #: src/gpm-statistics.c:402
 msgid "Present"
-msgstr "Jelen van"
+msgstr ""
 
 #: src/gpm-statistics.c:409
 msgid "Rechargeable"
-msgstr "Újratölthető"
+msgstr ""
 
 #: src/gpm-statistics.c:415
 msgid "State"
-msgstr "Állam"
+msgstr ""
 
 #: src/gpm-statistics.c:419
 msgid "Energy"
-msgstr "Energia"
+msgstr ""
 
 #: src/gpm-statistics.c:422
 msgid "Energy when empty"
-msgstr "Energia üresen"
+msgstr ""
 
 #: src/gpm-statistics.c:425
 msgid "Energy when full"
-msgstr "Energia feltöltve"
+msgstr ""
 
 #: src/gpm-statistics.c:428
 msgid "Energy (design)"
-msgstr "Energia (tervezett)"
+msgstr ""
 
 #: src/gpm-statistics.c:442
 msgid "Voltage"
-msgstr "Feszültség"
+msgstr ""
 
 #: src/gpm-statistics.c:464
 msgid "Percentage"
-msgstr "Százalék"
+msgstr ""
 
 #: src/gpm-statistics.c:471
 msgid "Capacity"
-msgstr "Kapacitás"
+msgstr ""
 
 #: src/gpm-statistics.c:476
 msgid "Technology"
-msgstr "Technológia"
+msgstr ""
 
 #: src/gpm-statistics.c:481
 msgid "Online"
-msgstr "Online"
+msgstr ""
 
 #: src/gpm-statistics.c:779
 msgid "Device Information"
-msgstr "Eszközinformációk"
+msgstr ""
 
 #: src/gpm-statistics.c:781
 msgid "Device History"
-msgstr "Eszköz előzményei"
+msgstr ""
 
 #: src/gpm-statistics.c:783
 msgid "Device Profile"
-msgstr "Eszköz profilja"
+msgstr ""
 
 #: src/gpm-statistics.c:1008 src/gpm-statistics.c:1014
 #: src/gpm-statistics.c:1020 src/gpm-statistics.c:1026
 msgid "Time elapsed"
-msgstr "Eltelt idő"
+msgstr ""
 
 #: src/gpm-statistics.c:1010
 msgid "Power"
-msgstr "Hatványozás"
+msgstr ""
 
 #: src/gpm-statistics.c:1016 src/gpm-statistics.c:1066
 #: src/gpm-statistics.c:1072 src/gpm-statistics.c:1078
 #: src/gpm-statistics.c:1084
 msgid "Cell charge"
-msgstr "Cellatöltés"
+msgstr ""
 
 #: src/gpm-statistics.c:1022 src/gpm-statistics.c:1028
 msgid "Predicted time"
-msgstr "Előrejelzett idő"
+msgstr ""
 
 #: src/gpm-statistics.c:1068 src/gpm-statistics.c:1080
 msgid "Correction factor"
-msgstr "Javítási tényező"
+msgstr ""
 
 #: src/gpm-statistics.c:1074 src/gpm-statistics.c:1086
 msgid "Prediction accuracy"
-msgstr "Előrejelzés pontossága"
+msgstr ""
 
 #: src/gpm-statistics.c:1245
 msgid "Select this device at startup"
-msgstr "Ezen eszköz kiválasztása indításkor"
+msgstr ""
 
 #: src/gpm-tray-icon.c:206
 msgid "Copyright © 2011-2021 MATE developers"
@@ -1845,21 +1659,21 @@ msgstr ""
 #: src/gpm-tray-icon.c:319
 #, c-format
 msgid "%s remaining"
-msgstr "%s van még"
+msgstr ""
 
 #: src/gpm-tray-icon.c:374
 msgid "_Preferences"
-msgstr "_Beállítások"
+msgstr ""
 
 #: src/gpm-upower.c:214
 #, c-format
 msgid "%s not present"
-msgstr "%s nincs jelen"
+msgstr ""
 
 #: src/gpm-upower.c:227 src/gpm-upower.c:291
 #, c-format
 msgid "%s charging (%.1f%%)"
-msgstr "%s: töltés (%.1f%%)"
+msgstr ""
 
 #: src/gpm-upower.c:242
 #, c-format
@@ -1867,23 +1681,21 @@ msgid ""
 "Battery is fully charged.\n"
 "Provides %s laptop runtime"
 msgstr ""
-"Az akkumulátor teljesen feltöltve\n"
-"Várható működési idő: %s"
 
 #: src/gpm-upower.c:247
 #, c-format
 msgid "%s is fully charged"
-msgstr "%s teljesen feltöltve"
+msgstr ""
 
 #: src/gpm-upower.c:255
 #, c-format
 msgid "%s %s remaining (%.1f%%)"
-msgstr "%s: %s van hátra (%.1f%%)"
+msgstr ""
 
 #: src/gpm-upower.c:260
 #, c-format
 msgid "%s discharging (%.1f%%)"
-msgstr "%s: kisül (%.1f%%)"
+msgstr ""
 
 #: src/gpm-upower.c:274
 #, c-format
@@ -1891,224 +1703,211 @@ msgid ""
 "%s %s until charged (%.1f%%)\n"
 "Provides %s battery runtime"
 msgstr ""
-"%s: %s a feltöltésig (%.1f%%)\n"
-"Várható működési idő akkumulátorról: %s"
 
 #: src/gpm-upower.c:285
 #, c-format
 msgid "%s %s until charged (%.1f%%)"
-msgstr "%s: %s a feltöltésig (%.1f%%)"
+msgstr ""
 
 #: src/gpm-upower.c:298
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
-msgstr "%s vár a kisülésre (%.1f%%)"
+msgstr ""
 
 #: src/gpm-upower.c:304
 #, c-format
 msgid "%s waiting to charge (%.1f%%)"
-msgstr "%s vár a feltöltésre (%.1f%%)"
+msgstr ""
 
 #: src/gpm-upower.c:309
 #, c-format
 msgid "%s empty"
-msgstr "%s üres"
+msgstr ""
 
 #: src/gpm-upower.c:369
 msgid "Product:"
-msgstr "Termék:"
+msgstr ""
 
 #: src/gpm-upower.c:373 src/gpm-upower.c:376 src/gpm-upower.c:379
 #: src/gpm-upower.c:382
 msgid "Status:"
-msgstr "Állapot:"
+msgstr ""
 
 #: src/gpm-upower.c:373
 msgid "Missing"
-msgstr "Hiányzik"
+msgstr ""
 
 #: src/gpm-upower.c:376 src/gpm-upower.c:657
 msgid "Charged"
-msgstr "Feltöltve"
+msgstr ""
 
 #: src/gpm-upower.c:379 src/gpm-upower.c:645
 msgid "Charging"
-msgstr "Töltés"
+msgstr ""
 
 #: src/gpm-upower.c:382 src/gpm-upower.c:649
 msgid "Discharging"
-msgstr "Kisülés"
+msgstr ""
 
 #: src/gpm-upower.c:387
 msgid "Percentage charge:"
-msgstr "Százalékos töltöttség:"
+msgstr ""
 
 #: src/gpm-upower.c:391
 msgid "Vendor:"
-msgstr "Szállító:"
+msgstr ""
 
 #: src/gpm-upower.c:396
 msgid "Technology:"
-msgstr "Technológia:"
+msgstr ""
 
 #: src/gpm-upower.c:400
 msgid "Serial number:"
-msgstr "Sorozatszám:"
+msgstr ""
 
 #: src/gpm-upower.c:404
 msgid "Model:"
-msgstr "Típus:"
+msgstr ""
 
 #: src/gpm-upower.c:409
 msgid "Charge time:"
-msgstr "Töltési idő:"
+msgstr ""
 
 #: src/gpm-upower.c:415
 msgid "Discharge time:"
-msgstr "Kisülési idő:"
+msgstr ""
 
 #: src/gpm-upower.c:422
 msgid "Excellent"
-msgstr "Kitűnő"
+msgstr ""
 
 #: src/gpm-upower.c:424
 msgid "Good"
-msgstr "Jó"
+msgstr ""
 
 #: src/gpm-upower.c:426
 msgid "Fair"
-msgstr "Elfogadható"
+msgstr ""
 
 #: src/gpm-upower.c:428
 msgid "Poor"
-msgstr "Gyenge"
+msgstr ""
 
 #: src/gpm-upower.c:432
 msgid "Capacity:"
-msgstr "Kapacitás:"
+msgstr ""
 
 #: src/gpm-upower.c:438 src/gpm-upower.c:463
 msgid "Current charge:"
-msgstr "Jelenlegi töltés:"
+msgstr ""
 
 #: src/gpm-upower.c:444
 msgid "Last full charge:"
-msgstr "Utolsó teljes töltés:"
+msgstr ""
 
 #: src/gpm-upower.c:450 src/gpm-upower.c:468
 msgid "Design charge:"
-msgstr "Tervezett töltés:"
+msgstr ""
 
 #: src/gpm-upower.c:455
 msgid "Charge rate:"
-msgstr "Töltés sebessége:"
+msgstr ""
 
 #: src/gpm-upower.c:490
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] "Hálózati csatlakozók"
-msgstr[1] "Hálózati csatlakozók"
+msgstr[0] ""
 
 #: src/gpm-upower.c:494
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] "Noteszgép-akkumulátor"
-msgstr[1] "Noteszgép-akkumulátorok"
+msgstr[0] ""
 
 #: src/gpm-upower.c:498
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] "Szünetmentes táp"
-msgstr[1] "Szünetmentes tápok"
+msgstr[0] ""
 
 #: src/gpm-upower.c:502
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] "Monitor"
-msgstr[1] "Monitorok"
+msgstr[0] ""
 
 #: src/gpm-upower.c:506
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] "Egér"
-msgstr[1] "Egerek"
+msgstr[0] ""
 
 #: src/gpm-upower.c:514
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] "PDA"
-msgstr[1] "PDA-k"
+msgstr[0] ""
 
 #: src/gpm-upower.c:518
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] "Mobiltelefon"
-msgstr[1] "Mobiltelefonok"
+msgstr[0] ""
 
 #: src/gpm-upower.c:522
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] "Médialejátszó"
-msgstr[1] "Médialejátszók"
+msgstr[0] ""
 
 #: src/gpm-upower.c:526
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] "Táblagép"
-msgstr[1] "Táblagépek"
+msgstr[0] ""
 
 #: src/gpm-upower.c:530
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] "Számítógép"
-msgstr[1] "Számítógépek"
+msgstr[0] ""
 
 #: src/gpm-upower.c:534
 msgid "Gaming input"
 msgid_plural "Gaming inputs"
 msgstr[0] ""
-msgstr[1] ""
 
 #: src/gpm-upower.c:601
 msgid "Lithium Ion"
-msgstr "Lítiumion"
+msgstr ""
 
 #: src/gpm-upower.c:605
 msgid "Lithium Polymer"
-msgstr "Lítiumpolimer"
+msgstr ""
 
 #: src/gpm-upower.c:609
 msgid "Lithium Iron Phosphate"
-msgstr "Lítium-vasfoszfát"
+msgstr ""
 
 #: src/gpm-upower.c:613
 msgid "Lead acid"
-msgstr "Ólmos-savas"
+msgstr ""
 
 #: src/gpm-upower.c:617
 msgid "Nickel Cadmium"
-msgstr "Nikkel-kadmium"
+msgstr ""
 
 #: src/gpm-upower.c:621
 msgid "Nickel metal hydride"
-msgstr "Nikkel-fém hidrid"
+msgstr ""
 
 #: src/gpm-upower.c:625
 msgid "Unknown technology"
-msgstr "Ismeretlen technológia"
+msgstr ""
 
 #: src/gpm-upower.c:653
 msgid "Empty"
-msgstr "Üres"
+msgstr ""
 
 #: src/gpm-upower.c:661
 msgid "Waiting to charge"
-msgstr "Várakozás töltésre"
+msgstr ""
 
 #: src/gpm-upower.c:665
 msgid "Waiting to discharge"
-msgstr "Várakozás kisülésre"
+msgstr ""
 
 #: src/gpm-upower.c:669
 msgid "Unknown state"
-msgstr "Ismeretlen állapot"
+msgstr ""

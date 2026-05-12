@@ -9,11 +9,12 @@
 # guyfawkes <a.dawtjan@gmx.de>, 2018
 # Bernard Ladenthin <bernard.ladenthin@gmail.com>, 2018
 # Moritz Bruder <muesli4@gmail.com>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# Wolfgang Ulbrich <raveit65.sun@gmail.com>, 2018
 # valsu <valsu@hylia.de>, 2018
 # Daniel <daniel@teichm-sh.de>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Tobias Bannert <tobannert@gmail.com>, 2020
+# Christian Weiske <cweiske+transifex.com@cweiske.de>, 2025
 # 
 msgid ""
 msgstr ""
@@ -21,7 +22,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
 "POT-Creation-Date: 2022-10-29 15:32+0200\n"
 "PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Tobias Bannert <tobannert@gmail.com>, 2020\n"
+"Last-Translator: Christian Weiske <cweiske+transifex.com@cweiske.de>, 2025\n"
 "Language-Team: German (https://app.transifex.com/mate/teams/13566/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,6 +60,11 @@ msgid ""
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
 msgstr ""
+"Die Energieverwaltung ist eine freie Anwendung; Sie dürfen das Programm "
+"weiter verteilen oder verändern unter Beachtung der Bestimmungen der »GNU "
+"General Public License«, so wie sie von der »Free Software Foundation« "
+"festgelegt wurde. Es gilt entweder Version 2 der Lizenz oder (wahlweise) "
+"jede spätere Version."
 
 #: applets/brightness/brightness-applet.c:822
 #: applets/inhibit/inhibit-applet.c:290
@@ -68,6 +74,10 @@ msgid ""
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
 msgstr ""
+"Die Energieverwaltung wurde in der Hoffnung veröffentlicht, dass sie sich "
+"als nützlich erweise, jedoch OHNE JEGLICHE GARANTIE AUF FUNKTIONSFÄHIGKEIT "
+"UND OHNE RECHTSANSPRUCH BEI FEHLERHAFTEM VERHALTEN DER ANWENDUNG. Für "
+"weitere Informationen bitte die »GNU General Public License« lesen."
 
 #: applets/brightness/brightness-applet.c:827
 #: applets/inhibit/inhibit-applet.c:295
@@ -76,16 +86,22 @@ msgid ""
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
+"Sie sollten ein Exemplar der »GNU General Public License« zusammen mit "
+"diesem Programm erhalten haben. Falls nicht, schreiben Sie bitte an die Free"
+" Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA "
+"02110-1301, USA."
 
 #: applets/brightness/brightness-applet.c:840
 msgid "About Power Manager Brightness Applet"
-msgstr ""
+msgstr "Über den Helligkeitsregler der Energieverwaltung"
 
 #: applets/brightness/brightness-applet.c:842
 msgid ""
 "Copyright © 2006 Benjamin Canou\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
+"Urheberrecht © 2006 Benjamin Canou\n"
+"Urheberrecht © 2011-2021 MATE-Entwickler"
 
 #: applets/brightness/brightness-applet.c:849
 #: applets/inhibit/inhibit-applet.c:317 src/gpm-tray-icon.c:212
@@ -141,13 +157,15 @@ msgstr "Manuell unterdrückt"
 
 #: applets/inhibit/inhibit-applet.c:308
 msgid "About Power Manager Inhibit Applet"
-msgstr ""
+msgstr "Über den Regler zur Unterdrückung des Energiesparmodus"
 
 #: applets/inhibit/inhibit-applet.c:310
 msgid ""
 "Copyright © 2006-2007 Richard Hughes\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
+"Urheberrecht © 2006-2007 Richard Hughes\n"
+"Urheberrecht © 2011-2021 MATE-Entwickler"
 
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
@@ -906,7 +924,7 @@ msgstr "Energieverwaltung konfigurieren"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/mate-power-preferences.desktop.in.in:13
 msgid "MATE;power;management;preferences;settings;"
-msgstr ""
+msgstr "MATE;energie;verwaltung;einstellungen;batterie;akku;"
 
 #: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
 #: src/gpm-statistics.c:787 src/gpm-statistics.c:1259
@@ -1004,7 +1022,7 @@ msgstr "Bildschirm_helligkeit reduzieren"
 
 #: data/gpm-prefs.ui:663
 msgid "_Reduce keyboard backlight"
-msgstr ""
+msgstr "Tastatu_rbeleuchtung abdunkeln"
 
 #: data/gpm-prefs.ui:685 src/gpm-upower.c:510
 msgid "Keyboard"
@@ -1860,7 +1878,7 @@ msgstr "Dieses Gerät wird beim Start gewählt"
 
 #: src/gpm-tray-icon.c:206
 msgid "Copyright © 2011-2021 MATE developers"
-msgstr ""
+msgstr "Urheberrecht © 2011-2021 MATE-Entwickler"
 
 #: src/gpm-tray-icon.c:319
 #, c-format
@@ -2086,8 +2104,8 @@ msgstr[1] "Rechner"
 #: src/gpm-upower.c:534
 msgid "Gaming input"
 msgid_plural "Gaming inputs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Spielecontrollereingaben"
+msgstr[1] "Spielecontrollereingaben"
 
 #: src/gpm-upower.c:601
 msgid "Lithium Ion"
