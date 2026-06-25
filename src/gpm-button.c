@@ -270,9 +270,9 @@ gpm_button_is_lid_closed (GpmButton *button)
 						       NULL,
 						       &error );
 		if (proxy == NULL) {
-			g_error("Error connecting to dbus - %s", error->message);
+			g_warning ("Error connecting to dbus - %s", error->message);
 			g_error_free (error);
-			return -1;
+			goto err;
 		}
 
 		res = g_dbus_proxy_call_sync (proxy, "Get",
@@ -284,6 +284,7 @@ gpm_button_is_lid_closed (GpmButton *button)
 					      NULL,
 					      &error
 					      );
+		g_object_unref(proxy);
 		if (error == NULL && res != NULL) {
 			g_variant_get(res, "(v)", &inner );
 			lid = g_variant_get_boolean(inner);
@@ -291,16 +292,16 @@ gpm_button_is_lid_closed (GpmButton *button)
 			g_variant_unref (res);
 			return lid;
 		} else if (error != NULL ) {
-			g_error ("Error in dbus - %s", error->message);
+			g_warning ("Error in dbus - %s", error->message);
 			g_error_free (error);
+			goto err;
 		}
-		g_object_unref(proxy);
 
 		return FALSE;
 	}
-	else {
-		return up_client_get_lid_is_closed (button->priv->client);
-	}
+
+err: /* fall back on our client in case of error */
+	return up_client_get_lid_is_closed (button->priv->client);
 }
 
 /**
