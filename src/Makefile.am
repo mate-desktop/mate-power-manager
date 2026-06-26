@@ -24,7 +24,7 @@ AM_CPPFLAGS =						\
 	-DI_KNOW_THE_DEVICEKIT_POWER_API_IS_SUBJECT_TO_CHANGE \
 	$(UPOWER_CFLAGS)				\
 	-DBINDIR=\"$(bindir)\"			 	\
-	-DSBINDIR=\"$(sbindir)\"			\
+	-DLIBEXECDIR=\"$(libexecdir)\"			\
 	-DMATELOCALEDIR=\""$(datadir)/locale"\"		\
 	-DDATADIR=\"$(datadir)\"			\
 	-DPREFIX=\""$(prefix)"\" 			\
@@ -46,7 +46,7 @@ bin_PROGRAMS =						\
 	mate-power-statistics				\
 	$(NULL)
 
-sbin_PROGRAMS =						\
+libexec_PROGRAMS =					\
 	mate-power-backlight-helper			\
 	$(NULL)
 
