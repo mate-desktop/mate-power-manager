@@ -1,25 +1,27 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-power-manager package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2026
-# 
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-power-manager 1.26.0\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/"
+"pulls\n"
 "POT-Creation-Date: 2022-10-29 15:32+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2026\n"
-"Language-Team: Georgian (https://app.transifex.com/mate/teams/13566/ka/)\n"
+"PO-Revision-Date: 2026-06-22 15:10+0000\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/mate-power-manager/ka/>\n"
+"Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ka\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #: applets/brightness/brightness-applet.c:108
 msgid "Power Manager Brightness Applet"
@@ -82,7 +84,7 @@ msgstr ""
 #: applets/brightness/brightness-applet.c:849
 #: applets/inhibit/inhibit-applet.c:317 src/gpm-tray-icon.c:212
 msgid "translator-credits"
-msgstr "Vladimer Sichinava ვლადიმერ სიჭინავა <vsichi@gnome.org>"
+msgstr "თემური დოღონაძე"
 
 #: applets/brightness/brightness-applet.c:1080
 #: applets/inhibit/inhibit-applet.c:500
@@ -151,9 +153,7 @@ msgstr "ენერგიის მმართველის დემონ�
 #: data/org.mate.power-manager.gschema.xml.in:26
 #: data/org.mate.power-manager.gschema.xml.in:41
 msgid "Whether to hibernate, suspend or do nothing when inactive"
-msgstr ""
-"გადავიდეს თუ არა სისტემა ძილის ან ლოდინის რეჟიმში, ან არაფერი გააკეთოს, თუ "
-"არააქტიურია."
+msgstr "პროგრამული ძილი, უბრალო ძილი, თუ არაფრის გაკეთება უქმეობისას"
 
 #: data/org.mate.power-manager.gschema.xml.in:27
 #: data/org.mate.power-manager.gschema.xml.in:42
@@ -485,7 +485,9 @@ msgstr "შემატყობინე, როცა ქსელური �
 
 #: data/org.mate.power-manager.gschema.xml.in:202
 msgid "If the user should be notified when the AC adapter is disconnected."
-msgstr "შემატყობინე, როცა ქსელური კვება გამორთულია"
+msgstr ""
+"უნდა მოხდეს, თუ არა მომხმარებლის გაფრთხილება, როცა კვების ბლოკი გამოერთებული "
+"იქნება."
 
 #: data/org.mate.power-manager.gschema.xml.in:206
 msgid "Notify when fully charged"
@@ -679,8 +681,8 @@ msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before it goes to sleep."
 msgstr ""
-"დრო (წამებში), რომლის განმავლობაშიც კომპიუტერი, რომელიც იკვებება "
-"აკუმულატორიდან, უნდა იყოს არააქტიური, რომ ის გადავიდეს \"ძილის რეჟიმში\""
+"დროის რაოდენობა წამებში, რომელიც უნდა იყოს ელემენტზე მომუშავე კომპიუტერი "
+"უქმედ, რომ მან დაიძინოს."
 
 #: data/org.mate.power-manager.gschema.xml.in:311
 msgid "Sleep timeout computer when on AC"
@@ -691,8 +693,8 @@ msgid ""
 "The amount of time in seconds the computer on AC power needs to be inactive "
 "before it goes to sleep."
 msgstr ""
-"დრო (წამებში), რომლის განმავლობაშიც კომპიუტერი, რომელიც ჩართულია ელ. ქსელში,"
-" უნდა იყოს არააქტიური, რომ ის გადავიდეს \"ძილის რეჟიმში\""
+"დროის რაოდენობა წამებში, რომელიც უნდა იყოს კვების ბლოკით მომუშავე კომპიუტერი "
+"უქმედ, რომ მან დაიძინოს."
 
 #: data/org.mate.power-manager.gschema.xml.in:316
 msgid "Sleep timeout computer when on UPS"
@@ -725,8 +727,8 @@ msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
 msgstr ""
-"დრო (წამებში), რომლის განმავლობაშიც კომპიუტერი, რომელიც ჩართულია ელ. ქსელში,"
-" უნდა იყოს არააქტიური, რომ ეკრანი გადავიდეს \"ძილის რეჟიმში\""
+"დროის რაოდენობა წამებში, რომელიც უნდა იყოს ელემენტზე მომუშავე კომპიუტერი "
+"უქმედ, რომ ეკრანმა დაიძინოს."
 
 #: data/org.mate.power-manager.gschema.xml.in:331
 msgid "Sleep timeout display when on UPS"
@@ -773,7 +775,7 @@ msgstr "ენერგიის მართვის კონფიგურ�
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/mate-power-preferences.desktop.in.in:13
 msgid "MATE;power;management;preferences;settings;"
-msgstr ""
+msgstr "MATE;power;management;preferences;settings;კვება;მართვა;მორგება;"
 
 #: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
 #: src/gpm-statistics.c:787 src/gpm-statistics.c:1259
@@ -814,7 +816,7 @@ msgstr "ისტორია"
 
 #: data/gpm-statistics.ui:486
 msgid "Statistics"
-msgstr ""
+msgstr "სტატისტიკა"
 
 #: data/gpm-prefs.ui:23
 msgid "Power Management Preferences"
@@ -839,7 +841,7 @@ msgstr ""
 #: data/gpm-prefs.ui:213 data/gpm-prefs.ui:519 data/gpm-prefs.ui:825
 #: data/gpm-prefs.ui:1031
 msgid "Actions"
-msgstr "მოქმედებები"
+msgstr "ქმედებები"
 
 #: data/gpm-prefs.ui:252 data/gpm-prefs.ui:560 data/gpm-prefs.ui:861
 msgid "Put _display to sleep when inactive for:"
@@ -855,7 +857,7 @@ msgstr ""
 
 #: data/gpm-prefs.ui:344 data/gpm-prefs.ui:629 data/gpm-prefs.ui:890
 msgid "Display"
-msgstr "დისპლეი"
+msgstr "ჩვენება"
 
 #: data/gpm-prefs.ui:363
 msgid "On AC Power"
@@ -929,7 +931,7 @@ msgstr "შეტყობინებების არე"
 
 #: data/gpm-prefs.ui:1183
 msgid "General"
-msgstr "საერთო"
+msgstr "ზოგადი"
 
 #: src/gpm-backlight-helper.c:167
 msgid "Set the current brightness"
@@ -1014,61 +1016,61 @@ msgstr[1] ""
 #: src/gpm-graph-widget.c:433
 #, c-format
 msgid "%id"
-msgstr ""
+msgstr "%iდღე"
 
 #. Translators: This is %i days %02i hours
 #: src/gpm-graph-widget.c:436
 #, c-format
 msgid "%id%02ih"
-msgstr ""
+msgstr "%iდ%02iსთ"
 
 #. Translators: This is %i hours
 #: src/gpm-graph-widget.c:441
 #, c-format
 msgid "%ih"
-msgstr ""
+msgstr "%iსთ"
 
 #. Translators: This is %i hours %02i minutes
 #: src/gpm-graph-widget.c:444
 #, c-format
 msgid "%ih%02im"
-msgstr ""
+msgstr "%iსთ%02iწთ"
 
 #. Translators: This is %2i minutes
 #: src/gpm-graph-widget.c:449
 #, c-format
 msgid "%2im"
-msgstr ""
+msgstr "%2iწთ"
 
 #. Translators: This is %2i minutes %02i seconds
 #: src/gpm-graph-widget.c:452
 #, c-format
 msgid "%2im%02i"
-msgstr ""
+msgstr "%2iწთ%02iწმ"
 
 #. Translators: This is %2i seconds
 #: src/gpm-graph-widget.c:456
 #, c-format
 msgid "%2is"
-msgstr ""
+msgstr "%2iწმ"
 
 #. Translators: This is %i Percentage
 #: src/gpm-graph-widget.c:460
 #, c-format
 msgid "%i%%"
-msgstr ""
+msgstr "%i%%"
 
 #. Translators: This is %.1f Watts
 #: src/gpm-graph-widget.c:463
 #, c-format
 msgid "%.1fW"
-msgstr ""
+msgstr "%.1fვტ"
 
 #. Translators: This is %.1f Volts
 #: src/gpm-graph-widget.c:468
 #, c-format
 msgid "%.1fV"
-msgstr ""
+msgstr "%.1fვ"
 
 #: src/gpm-main.c:170
 msgid "Show version of installed program and exit"
@@ -1120,7 +1122,7 @@ msgstr ""
 
 #: src/gpm-manager.c:306
 msgid "Resumed"
-msgstr ""
+msgstr "გაგრძელდა"
 
 #: src/gpm-manager.c:310
 msgid "Suspend failed"
@@ -1422,11 +1424,11 @@ msgstr "MATE ენერგიის პარამეტრები"
 
 #: src/gpm-prefs-core.c:242
 msgid "Shutdown"
-msgstr ""
+msgstr "გამორთვა"
 
 #: src/gpm-prefs-core.c:249
 msgid "Suspend"
-msgstr ""
+msgstr "პროგრამული ძილი"
 
 #: src/gpm-prefs-core.c:252
 msgid "Hibernate"
@@ -1466,11 +1468,11 @@ msgstr ""
 
 #: src/gpm-statistics.c:77 src/gpm-statistics.c:435
 msgid "Rate"
-msgstr "Rate"
+msgstr "სიჩქარე"
 
 #: src/gpm-statistics.c:78
 msgid "Charge"
-msgstr ""
+msgstr "მუხტი"
 
 #: src/gpm-statistics.c:79 src/gpm-statistics.c:449
 msgid "Time to full"
@@ -1502,7 +1504,7 @@ msgstr ""
 
 #: src/gpm-statistics.c:146
 msgid "Attribute"
-msgstr ""
+msgstr "ატრიბუტი"
 
 #: src/gpm-statistics.c:153
 msgid "Value"
@@ -1566,11 +1568,11 @@ msgstr "ტიპი"
 
 #: src/gpm-statistics.c:376
 msgid "Vendor"
-msgstr ""
+msgstr "მომწოდებელი"
 
 #: src/gpm-statistics.c:378
 msgid "Model"
-msgstr ""
+msgstr "მოდელი"
 
 #: src/gpm-statistics.c:380
 msgid "Serial number"
@@ -1578,7 +1580,7 @@ msgstr ""
 
 #: src/gpm-statistics.c:385
 msgid "Supply"
-msgstr ""
+msgstr "ენერგიის წყარო"
 
 #: src/gpm-statistics.c:388
 #, c-format
@@ -1589,23 +1591,23 @@ msgstr[1] ""
 
 #: src/gpm-statistics.c:392
 msgid "Refreshed"
-msgstr ""
+msgstr "განახლდა"
 
 #: src/gpm-statistics.c:402
 msgid "Present"
-msgstr ""
+msgstr "არსებობს"
 
 #: src/gpm-statistics.c:409
 msgid "Rechargeable"
-msgstr ""
+msgstr "დამუხტვადი"
 
 #: src/gpm-statistics.c:415
 msgid "State"
-msgstr ""
+msgstr "მდგომარეობა"
 
 #: src/gpm-statistics.c:419
 msgid "Energy"
-msgstr ""
+msgstr "ენერგია"
 
 #: src/gpm-statistics.c:422
 msgid "Energy when empty"
@@ -1625,19 +1627,19 @@ msgstr "ძაბვა"
 
 #: src/gpm-statistics.c:464
 msgid "Percentage"
-msgstr ""
+msgstr "პროცენტულობა"
 
 #: src/gpm-statistics.c:471
 msgid "Capacity"
-msgstr ""
+msgstr "მოცულობა"
 
 #: src/gpm-statistics.c:476
 msgid "Technology"
-msgstr ""
+msgstr "ტექნოლოგია"
 
 #: src/gpm-statistics.c:481
 msgid "Online"
-msgstr ""
+msgstr "ხაზზეა"
 
 #: src/gpm-statistics.c:779
 msgid "Device Information"
@@ -1658,7 +1660,7 @@ msgstr ""
 
 #: src/gpm-statistics.c:1010
 msgid "Power"
-msgstr ""
+msgstr "კვება"
 
 #: src/gpm-statistics.c:1016 src/gpm-statistics.c:1066
 #: src/gpm-statistics.c:1072 src/gpm-statistics.c:1078
@@ -1693,7 +1695,7 @@ msgstr ""
 
 #: src/gpm-tray-icon.c:374
 msgid "_Preferences"
-msgstr "_პარამეტრები"
+msgstr "_მორგება"
 
 #: src/gpm-upower.c:214
 #, c-format
@@ -1756,28 +1758,28 @@ msgstr ""
 
 #: src/gpm-upower.c:369
 msgid "Product:"
-msgstr ""
+msgstr "პროდუქტი:"
 
 #: src/gpm-upower.c:373 src/gpm-upower.c:376 src/gpm-upower.c:379
 #: src/gpm-upower.c:382
 msgid "Status:"
-msgstr ""
+msgstr "სტატუსი:"
 
 #: src/gpm-upower.c:373
 msgid "Missing"
-msgstr ""
+msgstr "აკლია"
 
 #: src/gpm-upower.c:376 src/gpm-upower.c:657
 msgid "Charged"
-msgstr ""
+msgstr "დამუხტულია"
 
 #: src/gpm-upower.c:379 src/gpm-upower.c:645
 msgid "Charging"
-msgstr ""
+msgstr "იმუხტება"
 
 #: src/gpm-upower.c:382 src/gpm-upower.c:649
 msgid "Discharging"
-msgstr ""
+msgstr "იცლება"
 
 #: src/gpm-upower.c:387
 msgid "Percentage charge:"
@@ -1785,11 +1787,11 @@ msgstr ""
 
 #: src/gpm-upower.c:391
 msgid "Vendor:"
-msgstr ""
+msgstr "მომწოდებელი:"
 
 #: src/gpm-upower.c:396
 msgid "Technology:"
-msgstr ""
+msgstr "ტექნოლოგია:"
 
 #: src/gpm-upower.c:400
 msgid "Serial number:"
@@ -1797,7 +1799,7 @@ msgstr ""
 
 #: src/gpm-upower.c:404
 msgid "Model:"
-msgstr ""
+msgstr "მოდელი:"
 
 #: src/gpm-upower.c:409
 msgid "Charge time:"
@@ -1809,23 +1811,23 @@ msgstr ""
 
 #: src/gpm-upower.c:422
 msgid "Excellent"
-msgstr ""
+msgstr "შესანიშნავი"
 
 #: src/gpm-upower.c:424
 msgid "Good"
-msgstr ""
+msgstr "კარგი"
 
 #: src/gpm-upower.c:426
 msgid "Fair"
-msgstr ""
+msgstr "მისაღები"
 
 #: src/gpm-upower.c:428
 msgid "Poor"
-msgstr ""
+msgstr "ცუდი"
 
 #: src/gpm-upower.c:432
 msgid "Capacity:"
-msgstr ""
+msgstr "მოცულობა:"
 
 #: src/gpm-upower.c:438 src/gpm-upower.c:463
 msgid "Current charge:"
