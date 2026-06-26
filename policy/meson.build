@@ -1,6 +1,6 @@
 po_dir = join_paths(meson.source_root(), 'po')
 dataconf = configuration_data()
-dataconf.set('sbindir', matesbindir)
+dataconf.set('libexecdir', mateexecdir)
 
 i18n.merge_file(
   input : configure_file(

@@ -24,7 +24,7 @@ cflags = [
   '-DG_LOG_DOMAIN="PowerManager"',
   '-DGPM_ICONS_DATA="@0@"'.format(mateicons),
   '-DINHIBIT_MENU_UI_DIR="@0@"'.format(mateui),
-  '-DSBINDIR="@0@"'.format(matesbindir),
+  '-DLIBEXECDIR="@0@"'.format(mateexecdir),
   '-DBINDIR="@0@"'.format(matebindir),
   '-DGTKBUILDERDIR="@0@"'.format(pkgdatadir),
   '-DEGG_VERBOSE="GPM_VERBOSE"',
@@ -85,7 +85,7 @@ executable(
   link_with :libmpm_shared,
   c_args : cflags,
   install : true,
-  install_dir : get_option('sbindir')
+  install_dir : get_option('libexecdir')
 )
 
 mate_power_statistics_resources = gnome.compile_resources(

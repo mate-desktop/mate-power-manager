@@ -6,7 +6,7 @@ $(polkit_policy_DATA): $(polkit_policy_in_files)
 	$(AM_V_GEN) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
 
 .in2.in:
-	sed "s|[@]sbindir@|${sbindir}|" $< > $@
+	sed "s|[@]libexecdir@|${libexecdir}|" $< > $@
 
 EXTRA_DIST = org.mate.power.policy.in2
 DISTCLEANFILES = $(polkit_policy_DATA) $(polkit_policy_in_files)
