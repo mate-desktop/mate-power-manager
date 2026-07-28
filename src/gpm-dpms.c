@@ -36,10 +36,16 @@
 #endif /* HAVE_UNISTD_H */
 
 #include <gdk/gdk.h>
-#include <gdk/gdkx.h>
 
+#ifdef HAVE_X11
+#include <gdk/gdkx.h>
 #include <X11/Xproto.h>
 #include <X11/extensions/dpms.h>
+#endif /* HAVE_X11 */
+
+#ifdef HAVE_WAYLAND
+#include <gdk/gdkwayland.h>
+#endif /* HAVE_WAYLAND */
 
 #include "gpm-dpms.h"
 
@@ -53,7 +59,9 @@ struct GpmDpmsPrivate
 	gboolean		 dpms_capable;
 	GpmDpmsMode		 mode;
 	guint			 timer_id;
+#ifdef HAVE_X11
 	Display			*display;
+#endif
 };
 
 enum {
@@ -77,6 +85,8 @@ gpm_dpms_error_quark (void)
 		quark = g_quark_from_static_string ("gpm_dpms_error");
 	return quark;
 }
+
+#ifdef HAVE_X11
 
 /**
  * gpm_dpms_x11_get_mode:
@@ -267,6 +277,42 @@ out:
 	return ret;
 }
 
+#else /* !HAVE_X11 */
+
+gboolean
+gpm_dpms_set_mode (GpmDpms *dpms, GpmDpmsMode mode, GError **error)
+{
+#ifdef HAVE_WAYLAND
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ())) {
+		g_set_error (error, GPM_DPMS_ERROR, GPM_DPMS_ERROR_GENERAL,
+			     "Wayland DPMS not yet implemented");
+		return FALSE;
+	}
+#endif
+	g_return_val_if_fail (GPM_IS_DPMS (dpms), FALSE);
+	g_set_error (error, GPM_DPMS_ERROR, GPM_DPMS_ERROR_GENERAL,
+		     "DPMS not supported on this display");
+	return FALSE;
+}
+
+gboolean
+gpm_dpms_get_mode (GpmDpms *dpms, GpmDpmsMode *mode, GError **error)
+{
+	g_return_val_if_fail (GPM_IS_DPMS (dpms), FALSE);
+	if (mode)
+		*mode = GPM_DPMS_MODE_ON;
+	return TRUE;
+}
+
+static gboolean
+gpm_dpms_poll_mode_cb (GpmDpms *dpms)
+{
+	return TRUE;
+}
+
+#endif /* HAVE_X11 */
+
 /**
  * gpm_dpms_class_init:
  **/
@@ -293,14 +339,32 @@ gpm_dpms_init (GpmDpms *dpms)
 {
 	dpms->priv = gpm_dpms_get_instance_private (dpms);
 
-	/* DPMSCapable() can never change for a given display */
-	dpms->priv->display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
-	dpms->priv->dpms_capable = DPMSCapable (dpms->priv->display);
-	dpms->priv->timer_id = g_timeout_add_seconds (GPM_DPMS_POLL_TIME, (GSourceFunc)gpm_dpms_poll_mode_cb, dpms);
-	g_source_set_name_by_id (dpms->priv->timer_id, "[GpmDpms] poll");
+	dpms->priv->dpms_capable = FALSE;
+	dpms->priv->mode = GPM_DPMS_MODE_UNKNOWN;
+	dpms->priv->timer_id = 0;
 
-	/* ensure we clear the default timeouts (Standby: 1200s, Suspend: 1800s, Off: 2400s) */
-	gpm_dpms_clear_timeouts (dpms);
+#ifdef HAVE_X11
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		/* DPMSCapable() can never change for a given display */
+		dpms->priv->display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
+		dpms->priv->dpms_capable = DPMSCapable (dpms->priv->display);
+		dpms->priv->timer_id = g_timeout_add_seconds (GPM_DPMS_POLL_TIME, (GSourceFunc)gpm_dpms_poll_mode_cb, dpms);
+		g_source_set_name_by_id (dpms->priv->timer_id, "[GpmDpms] poll");
+
+		/* ensure we clear the default timeouts (Standby: 1200s, Suspend: 1800s, Off: 2400s) */
+		gpm_dpms_clear_timeouts (dpms);
+		return;
+	}
+#endif
+#ifdef HAVE_WAYLAND
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ())) {
+		g_debug ("Wayland DPMS not yet implemented");
+		return;
+	}
+#endif
+	g_debug ("No DPMS backend available for current display");
 }
 
 /**
@@ -422,4 +486,3 @@ gpm_dpms_test (gpointer data)
 }
 
 #endif
-

@@ -25,10 +25,17 @@
 #endif
 
 #include <glib.h>
+#include <gdk/gdk.h>
+
+#ifdef HAVE_X11
 #include <X11/Xlib.h>
 #include <X11/extensions/sync.h>
 #include <gdk/gdkx.h>
-#include <gdk/gdk.h>
+#endif /* HAVE_X11 */
+
+#ifdef HAVE_WAYLAND
+#include <gdk/gdkwayland.h>
+#endif /* HAVE_WAYLAND */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -40,13 +47,19 @@ static void     egg_idletime_finalize   (GObject       *object);
 
 struct EggIdletimePrivate
 {
-	gint			 sync_event;
 	gboolean		 reset_set;
-	XSyncCounter		 idle_counter;
 	GPtrArray		*array;
+#ifdef HAVE_X11
+	gint			 sync_event;
+	XSyncCounter		 idle_counter;
 	Display			*dpy;
+#endif
+#ifdef HAVE_WAYLAND
+	gpointer		 idle_notifier;
+#endif
 };
 
+#ifdef HAVE_X11
 typedef struct
 {
 	guint			 id;
@@ -54,6 +67,7 @@ typedef struct
 	XSyncAlarm		 xalarm;
 	EggIdletime		*idletime;
 } EggIdletimeAlarm;
+#endif
 
 enum {
 	SIGNAL_ALARM_EXPIRED,
@@ -61,16 +75,20 @@ enum {
 	LAST_SIGNAL
 };
 
+#ifdef HAVE_X11
 typedef enum {
 	EGG_IDLETIME_ALARM_TYPE_POSITIVE,
 	EGG_IDLETIME_ALARM_TYPE_NEGATIVE,
 	EGG_IDLETIME_ALARM_TYPE_DISABLED
 } EggIdletimeAlarmType;
+#endif
 
 static guint signals [LAST_SIGNAL] = { 0 };
 static gpointer egg_idletime_object = NULL;
 
 G_DEFINE_TYPE_WITH_PRIVATE (EggIdletime, egg_idletime, G_TYPE_OBJECT)
+
+#ifdef HAVE_X11
 
 /**
  * egg_idletime_xsyncvalue_to_int64:
@@ -337,7 +355,7 @@ egg_idletime_alarm_free (EggIdletime *idletime, EggIdletimeAlarm *alarm)
 }
 
 /**
- * egg_idletime_alarm_free:
+ * egg_idletime_alarm_remove:
  */
 gboolean
 egg_idletime_alarm_remove (EggIdletime *idletime, guint id)
@@ -352,6 +370,40 @@ egg_idletime_alarm_remove (EggIdletime *idletime, guint id)
 	egg_idletime_alarm_free (idletime, alarm);
 	return TRUE;
 }
+
+#elif defined(HAVE_WAYLAND)
+
+/* Wayland idle detection using ext-idle-notify-v1 (placeholder) */
+
+gint64
+egg_idletime_get_time (EggIdletime *idletime)
+{
+	g_return_val_if_fail (EGG_IS_IDLETIME (idletime), 0);
+	return 0;
+}
+
+void
+egg_idletime_alarm_reset_all (EggIdletime *idletime)
+{
+	g_return_if_fail (EGG_IS_IDLETIME (idletime));
+}
+
+gboolean
+egg_idletime_alarm_set (EggIdletime *idletime, guint id, guint timeout)
+{
+	g_return_val_if_fail (EGG_IS_IDLETIME (idletime), FALSE);
+	g_warning ("EggIdletime: alarm_set not supported without X11");
+	return FALSE;
+}
+
+gboolean
+egg_idletime_alarm_remove (EggIdletime *idletime, guint id)
+{
+	g_return_val_if_fail (EGG_IS_IDLETIME (idletime), FALSE);
+	return FALSE;
+}
+
+#endif /* HAVE_X11 */
 
 /**
  * egg_idletime_class_init:
@@ -384,47 +436,61 @@ egg_idletime_class_init (EggIdletimeClass *klass)
 static void
 egg_idletime_init (EggIdletime *idletime)
 {
-	int sync_error;
-	int ncounters;
-	XSyncSystemCounter *counters;
-	EggIdletimeAlarm *alarm;
-	gint i;
-
 	idletime->priv = egg_idletime_get_instance_private (idletime);
 
+	idletime->priv->reset_set = FALSE;
 	idletime->priv->array = g_ptr_array_new ();
 
-	idletime->priv->reset_set = FALSE;
-	idletime->priv->idle_counter = None;
-	idletime->priv->sync_event = 0;
-	idletime->priv->dpy = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
+#ifdef HAVE_X11
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		int sync_error;
+		int ncounters;
+		XSyncSystemCounter *counters;
+		EggIdletimeAlarm *alarm;
+		gint i;
 
-	/* get the sync event */
-	if (!XSyncQueryExtension (idletime->priv->dpy, &idletime->priv->sync_event, &sync_error)) {
-		g_warning ("No Sync extension.");
+		idletime->priv->idle_counter = None;
+		idletime->priv->sync_event = 0;
+		idletime->priv->dpy = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
+
+		/* get the sync event */
+		if (!XSyncQueryExtension (idletime->priv->dpy, &idletime->priv->sync_event, &sync_error)) {
+			g_warning ("No Sync extension.");
+			return;
+		}
+
+		/* gtk_init should do XSyncInitialize for us */
+		counters = XSyncListSystemCounters (idletime->priv->dpy, &ncounters);
+		for (i=0; i < ncounters && !idletime->priv->idle_counter; i++) {
+			if (strcmp(counters[i].name, "IDLETIME") == 0)
+				idletime->priv->idle_counter = counters[i].counter;
+		}
+		XSyncFreeSystemCounterList (counters);
+
+		/* arh. we don't have IDLETIME support */
+		if (!idletime->priv->idle_counter) {
+			g_warning ("No idle counter.");
+			return;
+		}
+
+		/* catch the timer alarm */
+		gdk_window_add_filter (NULL, egg_idletime_event_filter_cb, idletime);
+
+		/* create a reset alarm */
+		alarm = egg_idletime_alarm_new (idletime, 0);
+		g_ptr_array_add (idletime->priv->array, alarm);
 		return;
 	}
-
-	/* gtk_init should do XSyncInitialize for us */
-	counters = XSyncListSystemCounters (idletime->priv->dpy, &ncounters);
-	for (i=0; i < ncounters && !idletime->priv->idle_counter; i++) {
-		if (strcmp(counters[i].name, "IDLETIME") == 0)
-			idletime->priv->idle_counter = counters[i].counter;
-	}
-	XSyncFreeSystemCounterList (counters);
-
-	/* arh. we don't have IDLETIME support */
-	if (!idletime->priv->idle_counter) {
-		g_warning ("No idle counter.");
+#endif
+#ifdef HAVE_WAYLAND
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ())) {
+		g_debug ("Wayland idle tracking not yet implemented");
 		return;
 	}
-
-	/* catch the timer alarm */
-	gdk_window_add_filter (NULL, egg_idletime_event_filter_cb, idletime);
-
-	/* create a reset alarm */
-	alarm = egg_idletime_alarm_new (idletime, 0);
-	g_ptr_array_add (idletime->priv->array, alarm);
+#endif
+	g_debug ("No idle tracking available for current display");
 }
 
 /**
@@ -435,7 +501,6 @@ egg_idletime_finalize (GObject *object)
 {
 	guint i;
 	EggIdletime *idletime;
-	EggIdletimeAlarm *alarm;
 
 	g_return_if_fail (object != NULL);
 	g_return_if_fail (EGG_IS_IDLETIME (object));
@@ -443,11 +508,21 @@ egg_idletime_finalize (GObject *object)
 	idletime = EGG_IDLETIME (object);
 	idletime->priv = egg_idletime_get_instance_private (idletime);
 
-	/* free all counters, including reset counter */
-	for (i=0; i<idletime->priv->array->len; i++) {
-		alarm = g_ptr_array_index (idletime->priv->array, i);
-		egg_idletime_alarm_free (idletime, alarm);
+#ifdef HAVE_X11
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		EggIdletimeAlarm *alarm;
+
+		/* free all counters, including reset counter */
+		for (i=0; i<idletime->priv->array->len; i++) {
+			alarm = g_ptr_array_index (idletime->priv->array, i);
+			if (alarm->xalarm)
+				XSyncDestroyAlarm (idletime->priv->dpy, alarm->xalarm);
+			g_object_unref (alarm->idletime);
+			g_free (alarm);
+		}
 	}
+#endif
 	g_ptr_array_free (idletime->priv->array, TRUE);
 
 	G_OBJECT_CLASS (egg_idletime_parent_class)->finalize (object);
@@ -685,4 +760,3 @@ egg_idletime_test (gpointer data)
 }
 
 #endif
-

@@ -26,10 +26,13 @@
 #include <glib.h>
 #include <glib/gi18n.h>
 
+#ifdef HAVE_X11
 #include <X11/X.h>
 #include <gdk/gdkx.h>
-#include <gtk/gtk.h>
 #include <X11/XF86keysym.h>
+#endif /* HAVE_X11 */
+
+#include <gtk/gtk.h>
 #include <libupower-glib/upower.h>
 
 #include "gpm-common.h"
@@ -39,9 +42,11 @@ static void     gpm_button_finalize   (GObject	      *object);
 
 struct GpmButtonPrivate
 {
+#ifdef HAVE_X11
 	GdkScreen		*screen;
 	GdkWindow		*window;
 	GHashTable		*keysym_to_name_hash;
+#endif
 	gchar			*last_button;
 	GTimer			*timer;
 	gboolean		 lid_is_closed;
@@ -85,6 +90,8 @@ gpm_button_emit_type (GpmButton *button, const gchar *type)
 
 	return TRUE;
 }
+
+#ifdef HAVE_X11
 
 /**
  * gpm_button_filter_x_events:
@@ -227,6 +234,8 @@ gpm_button_xevent_key (GpmButton *button, guint keysym, const gchar *key_name)
 	return TRUE;
 }
 
+#endif /* HAVE_X11 */
+
 /**
  * gpm_button_class_init:
  * @button: This class instance
@@ -351,10 +360,6 @@ gpm_button_init (GpmButton *button)
 {
 	button->priv = gpm_button_get_instance_private (button);
 
-	button->priv->screen = gdk_screen_get_default ();
-	button->priv->window = gdk_screen_get_root_window (button->priv->screen);
-
-	button->priv->keysym_to_name_hash = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
 	button->priv->last_button = NULL;
 	button->priv->timer = g_timer_new ();
 
@@ -362,27 +367,33 @@ gpm_button_init (GpmButton *button)
 	button->priv->lid_is_closed = up_client_get_lid_is_closed (button->priv->client);
 	g_signal_connect (button->priv->client, "notify",
 			  G_CALLBACK (gpm_button_client_changed_cb), button);
-	/* register the brightness keys */
-	gpm_button_xevent_key (button, XF86XK_PowerOff, GPM_BUTTON_POWER);
 
-	/* The kernel messes up suspend/hibernate in some places. One of
-	 * them is the key names. Unfortunately, they refuse to see the
-	 * errors of their way in the name of 'compatibility'. Meh
-	 */
-	gpm_button_xevent_key (button, XF86XK_Suspend, GPM_BUTTON_HIBERNATE);
-	gpm_button_xevent_key (button, XF86XK_Sleep, GPM_BUTTON_SUSPEND); /* should be configurable */
-	gpm_button_xevent_key (button, XF86XK_Hibernate, GPM_BUTTON_HIBERNATE);
-	gpm_button_xevent_key (button, XF86XK_MonBrightnessUp, GPM_BUTTON_BRIGHT_UP);
-	gpm_button_xevent_key (button, XF86XK_MonBrightnessDown, GPM_BUTTON_BRIGHT_DOWN);
-	gpm_button_xevent_key (button, XF86XK_ScreenSaver, GPM_BUTTON_LOCK);
-	gpm_button_xevent_key (button, XF86XK_Battery, GPM_BUTTON_BATTERY);
-	gpm_button_xevent_key (button, XF86XK_KbdBrightnessUp, GPM_BUTTON_KBD_BRIGHT_UP);
-	gpm_button_xevent_key (button, XF86XK_KbdBrightnessDown, GPM_BUTTON_KBD_BRIGHT_DOWN);
-	gpm_button_xevent_key (button, XF86XK_KbdLightOnOff, GPM_BUTTON_KBD_BRIGHT_TOGGLE);
+#ifdef HAVE_X11
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		button->priv->screen = gdk_screen_get_default ();
+		button->priv->window = gdk_screen_get_root_window (button->priv->screen);
+		button->priv->keysym_to_name_hash = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
 
-	/* use global filter */
-	gdk_window_add_filter (button->priv->window,
-			       gpm_button_filter_x_events, (gpointer) button);
+		gpm_button_xevent_key (button, XF86XK_PowerOff, GPM_BUTTON_POWER);
+
+		gpm_button_xevent_key (button, XF86XK_Suspend, GPM_BUTTON_HIBERNATE);
+		gpm_button_xevent_key (button, XF86XK_Sleep, GPM_BUTTON_SUSPEND);
+		gpm_button_xevent_key (button, XF86XK_Hibernate, GPM_BUTTON_HIBERNATE);
+		gpm_button_xevent_key (button, XF86XK_MonBrightnessUp, GPM_BUTTON_BRIGHT_UP);
+		gpm_button_xevent_key (button, XF86XK_MonBrightnessDown, GPM_BUTTON_BRIGHT_DOWN);
+		gpm_button_xevent_key (button, XF86XK_ScreenSaver, GPM_BUTTON_LOCK);
+		gpm_button_xevent_key (button, XF86XK_Battery, GPM_BUTTON_BATTERY);
+		gpm_button_xevent_key (button, XF86XK_KbdBrightnessUp, GPM_BUTTON_KBD_BRIGHT_UP);
+		gpm_button_xevent_key (button, XF86XK_KbdBrightnessDown, GPM_BUTTON_KBD_BRIGHT_DOWN);
+		gpm_button_xevent_key (button, XF86XK_KbdLightOnOff, GPM_BUTTON_KBD_BRIGHT_TOGGLE);
+
+		gdk_window_add_filter (button->priv->window,
+				       gpm_button_filter_x_events, (gpointer) button);
+		return;
+	}
+#endif
+	g_debug ("No X11 backend for button key grabbing; compositor handles keys");
 }
 
 /**
@@ -403,7 +414,10 @@ gpm_button_finalize (GObject *object)
 	g_free (button->priv->last_button);
 	g_timer_destroy (button->priv->timer);
 
-	g_hash_table_unref (button->priv->keysym_to_name_hash);
+#ifdef HAVE_X11
+	if (button->priv->keysym_to_name_hash)
+		g_hash_table_unref (button->priv->keysym_to_name_hash);
+#endif
 
 	G_OBJECT_CLASS (gpm_button_parent_class)->finalize (object);
 }

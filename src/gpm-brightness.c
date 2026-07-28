@@ -29,10 +29,17 @@
 #include <time.h>
 #include <errno.h>
 
+#ifdef HAVE_X11
 #include <X11/Xatom.h>
 #include <X11/Xlib.h>
 #include <X11/extensions/Xrandr.h>
 #include <gdk/gdkx.h>
+#endif /* HAVE_X11 */
+
+#ifdef HAVE_WAYLAND
+#include <gdk/gdkwayland.h>
+#endif /* HAVE_WAYLAND */
+
 #include <gtk/gtk.h>
 #include <string.h>
 #include <sys/time.h>
@@ -55,16 +62,18 @@ struct GpmBrightnessPrivate
 	gboolean		 cache_trusted;
 	guint			 cache_percentage;
 	guint			 last_set_hw;
+	gboolean		 has_extension;
+	gboolean		 hw_changed;
+	gint			 extension_levels;
+	gint			 extension_current;
+#ifdef HAVE_X11
 	Atom			 backlight;
 	Display			*dpy;
 	GdkWindow		*root_window;
 	guint			 shared_value;
-	gboolean		 has_extension;
-	gboolean		 hw_changed;
 	/* A cache of XRRScreenResources is used as XRRGetScreenResources is expensive */
 	GPtrArray		*resources;
-	gint			 extension_levels;
-	gint			 extension_current;
+#endif
 };
 
 enum {
@@ -72,12 +81,14 @@ enum {
 	LAST_SIGNAL
 };
 
+#ifdef HAVE_X11
 typedef enum {
 	ACTION_BACKLIGHT_GET,
 	ACTION_BACKLIGHT_SET,
 	ACTION_BACKLIGHT_INC,
 	ACTION_BACKLIGHT_DEC
 } GpmXRandROp;
+#endif
 
 G_DEFINE_TYPE_WITH_PRIVATE (GpmBrightness, gpm_brightness, G_TYPE_OBJECT)
 
@@ -185,6 +196,8 @@ gpm_brightness_get_step (guint levels)
 		return levels / 20;
 	return 1;
 }
+
+#ifdef HAVE_X11
 
 /**
  * gpm_brightness_output_get_internal:
@@ -445,7 +458,6 @@ gpm_brightness_output_set (GpmBrightness *brightness, RROutput output)
 
 	/* step the correct way */
 	if ((gint) cur < shared_value_abs) {
-
 		/* some adaptors have a large number of steps */
 		step = gpm_brightness_get_step (shared_value_abs - cur);
 		g_debug ("using step of %u", step);
@@ -459,7 +471,6 @@ gpm_brightness_output_set (GpmBrightness *brightness, RROutput output)
 				g_usleep (1000 * GPM_BRIGHTNESS_DIM_INTERVAL);
 		}
 	} else {
-
 		/* some adaptors have a large number of steps */
 		step = gpm_brightness_get_step (cur - shared_value_abs);
 		g_debug ("using step of %u", step);
@@ -543,252 +554,7 @@ gpm_brightness_foreach_screen (GpmBrightness *brightness, GpmXRandROp op)
 	return success_any;
 }
 
-/**
- * gpm_brightness_trust_cache:
- * @brightness: This brightness class instance
- * Return value: if we can trust the cache
- **/
-static gboolean
-gpm_brightness_trust_cache (GpmBrightness *brightness)
-{
-	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
-	/* only return the cached value if the cache is trusted and we have change events */
-	if (brightness->priv->cache_trusted && brightness->priv->has_changed_events) {
-		g_debug ("using cache for value %u (okay)", brightness->priv->cache_percentage);
-		return TRUE;
-	}
-
-	/* can we trust that if we set a value 5 minutes ago, will it still be valid now?
-	 * if we have multiple things setting policy on the workstation, e.g. fast user switching
-	 * or kpowersave, then this will be invalid -- this logic may be insane */
-	if (GPM_SOLE_SETTER_USE_CACHE && brightness->priv->cache_trusted) {
-		g_debug ("using cache for value %u (probably okay)", brightness->priv->cache_percentage);
-		return TRUE;
-	}
-	return FALSE;
-}
-
-/**
- * gpm_brightness_set:
- * @brightness: This brightness class instance
- * @percentage: The percentage brightness
- * @hw_changed: If the hardware was changed, i.e. the brightness changed
- * Return value: %TRUE if success, %FALSE if there was an error
- **/
-gboolean
-gpm_brightness_set (GpmBrightness *brightness, guint percentage, gboolean *hw_changed)
-{
-	gboolean ret = FALSE;
-	gboolean trust_cache;
-
-	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
-
-	/* can we check the new value with the cache? */
-	trust_cache = gpm_brightness_trust_cache (brightness);
-	if (trust_cache && percentage == brightness->priv->cache_percentage) {
-		g_debug ("not setting the same value %u", percentage);
-		return TRUE;
-	}
-
-	/* set the value we want */
-	brightness->priv->shared_value = percentage;
-
-	/* reset to not-changed */
-	brightness->priv->hw_changed = FALSE;
-	ret = gpm_brightness_foreach_screen (brightness, ACTION_BACKLIGHT_SET);
-
-	/* legacy fallback */
-	if (!ret) {
-		if (brightness->priv->extension_levels < 0)
-			brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
-		brightness->priv->extension_current = egg_discrete_from_percent (percentage, brightness->priv->extension_levels+1);
-		ret = gpm_brightness_helper_set_value ("set-brightness", brightness->priv->extension_current);
-	}
-
-	/* did the hardware have to be modified? */
-	if (ret && hw_changed != NULL)
-		*hw_changed = brightness->priv->hw_changed;
-
-	/* we did something to the hardware, so untrusted */
-	if (ret)
-		brightness->priv->cache_trusted = FALSE;
-
-	return ret;
-}
-
-/**
- * gpm_brightness_get:
- * @brightness: This brightness class instance
- * Return value: The percentage brightness, or -1 for no hardware or error
- *
- * Gets the current (or at least what this class thinks is current) percentage
- * brightness. This is quick as no HAL inquiry is done.
- **/
-gboolean
-gpm_brightness_get (GpmBrightness *brightness, guint *percentage)
-{
-	gboolean ret = FALSE;
-	gboolean trust_cache;
-	guint percentage_local;
-
-	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
-	g_return_val_if_fail (percentage != NULL, FALSE);
-
-	/* can we use the cache? */
-	trust_cache = gpm_brightness_trust_cache (brightness);
-	if (trust_cache) {
-		*percentage = brightness->priv->cache_percentage;
-		return TRUE;
-	}
-
-	/* get the brightness from hardware -- slow */
-	ret = gpm_brightness_foreach_screen (brightness, ACTION_BACKLIGHT_GET);
-	percentage_local = brightness->priv->shared_value;
-
-	/* legacy fallback */
-	if (!ret) {
-		if (brightness->priv->extension_levels < 0)
-			brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
-		brightness->priv->extension_current = gpm_brightness_helper_get_value ("get-brightness");
-		percentage_local = egg_discrete_to_percent (brightness->priv->extension_current, brightness->priv->extension_levels+1);
-		ret = TRUE;
-	}
-
-	/* valid? */
-	if (percentage_local > 100) {
-		g_warning ("percentage value of %u will be truncated", percentage_local);
-		percentage_local = 100;
-	}
-
-	/* a new value is always trusted if the method and checks succeed */
-	if (ret) {
-		brightness->priv->cache_percentage = percentage_local;
-		brightness->priv->cache_trusted = TRUE;
-		*percentage = percentage_local;
-	} else {
-		brightness->priv->cache_trusted = FALSE;
-	}
-	return ret;
-}
-
-/**
- * gpm_brightness_up:
- * @brightness: This brightness class instance
- * @hw_changed: If the hardware was changed, i.e. the brightness changed
- * Return value: %TRUE if success, %FALSE if there was an error
- *
- * If possible, put the brightness of the LCD up one unit.
- **/
-gboolean
-gpm_brightness_up (GpmBrightness *brightness, gboolean *hw_changed)
-{
-	gboolean ret = FALSE;
-	guint step;
-
-	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
-
-	/* reset to not-changed */
-	brightness->priv->hw_changed = FALSE;
-	ret = gpm_brightness_foreach_screen (brightness, ACTION_BACKLIGHT_INC);
-
-	/* did the hardware have to be modified? */
-	if (ret && hw_changed != NULL)
-		*hw_changed = brightness->priv->hw_changed;
-
-	/* we did something to the hardware, so untrusted */
-	if (ret)
-		brightness->priv->cache_trusted = FALSE;
-
-	/* legacy fallback */
-	if (!ret) {
-		if (brightness->priv->extension_levels < 0)
-			brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
-		brightness->priv->extension_current = gpm_brightness_helper_get_value ("get-brightness");
-
-		/* increase by the step, limiting to the maximum possible levels */
-		if (brightness->priv->extension_current < brightness->priv->extension_levels) {
-			step = gpm_brightness_get_step (brightness->priv->extension_levels);
-			brightness->priv->extension_current += step;
-			if (brightness->priv->extension_current > brightness->priv->extension_levels)
-				brightness->priv->extension_current = brightness->priv->extension_levels;
-			ret = gpm_brightness_helper_set_value ("set-brightness", brightness->priv->extension_current);
-		}
-		if (hw_changed != NULL)
-			*hw_changed = ret;
-		brightness->priv->cache_trusted = FALSE;
-		goto out;
-	}
-out:
-	return ret;
-}
-
-/**
- * gpm_brightness_down:
- * @brightness: This brightness class instance
- * @hw_changed: If the hardware was changed, i.e. the brightness changed
- * Return value: %TRUE if success, %FALSE if there was an error
- *
- * If possible, put the brightness of the LCD down one unit.
- **/
-gboolean
-gpm_brightness_down (GpmBrightness *brightness, gboolean *hw_changed)
-{
-	gboolean ret = FALSE;
-	guint step;
-
-	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
-
-	/* reset to not-changed */
-	brightness->priv->hw_changed = FALSE;
-	ret = gpm_brightness_foreach_screen (brightness, ACTION_BACKLIGHT_DEC);
-
-	/* did the hardware have to be modified? */
-	if (ret && hw_changed != NULL)
-		*hw_changed = brightness->priv->hw_changed;
-
-	/* we did something to the hardware, so untrusted */
-	if (ret)
-		brightness->priv->cache_trusted = FALSE;
-
-	/* legacy fallback */
-	if (!ret) {
-		if (brightness->priv->extension_levels < 0)
-			brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
-		brightness->priv->extension_current = gpm_brightness_helper_get_value ("get-brightness");
-
-		/* decrease by the step, limiting to zero */
-		if (brightness->priv->extension_current > 0) {
-			step = gpm_brightness_get_step (brightness->priv->extension_levels);
-			brightness->priv->extension_current -= step;
-			if (brightness->priv->extension_current < 0)
-				brightness->priv->extension_current = 0;
-			ret = gpm_brightness_helper_set_value ("set-brightness", brightness->priv->extension_current);
-		}
-		if (hw_changed != NULL)
-			*hw_changed = ret;
-		brightness->priv->cache_trusted = FALSE;
-		goto out;
-	}
-out:
-	return ret;
-}
-
-/**
- * gpm_brightness_may_have_changed:
- **/
-static void
-gpm_brightness_may_have_changed (GpmBrightness *brightness)
-{
-	gboolean ret;
-	guint percentage;
-	ret = gpm_brightness_get (brightness, &percentage);
-	if (!ret) {
-		g_warning ("failed to get output");
-		return;
-	}
-	g_debug ("emitting brightness-changed (%u)", percentage);
-	g_signal_emit (brightness, signals [BRIGHTNESS_CHANGED], 0, percentage);
-}
+static void gpm_brightness_may_have_changed (GpmBrightness *brightness);
 
 /**
  * gpm_brightness_filter_xevents:
@@ -859,6 +625,268 @@ gpm_brightness_update_cache (GpmBrightness *brightness)
 	}
 }
 
+#endif /* HAVE_X11 */
+
+/**
+ * gpm_brightness_trust_cache:
+ * @brightness: This brightness class instance
+ * Return value: if we can trust the cache
+ **/
+static gboolean
+gpm_brightness_trust_cache (GpmBrightness *brightness)
+{
+	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
+	/* only return the cached value if the cache is trusted and we have change events */
+	if (brightness->priv->cache_trusted && brightness->priv->has_changed_events) {
+		g_debug ("using cache for value %u (okay)", brightness->priv->cache_percentage);
+		return TRUE;
+	}
+
+	/* can we trust that if we set a value 5 minutes ago, will it still be valid now?
+	 * if we have multiple things setting policy on the workstation, e.g. fast user switching
+	 * or kpowersave, then this will be invalid -- this logic may be insane */
+	if (GPM_SOLE_SETTER_USE_CACHE && brightness->priv->cache_trusted) {
+		g_debug ("using cache for value %u (probably okay)", brightness->priv->cache_percentage);
+		return TRUE;
+	}
+	return FALSE;
+}
+
+/**
+ * gpm_brightness_set:
+ * @brightness: This brightness class instance
+ * @percentage: The percentage brightness
+ * @hw_changed: If the hardware was changed, i.e. the brightness changed
+ * Return value: %TRUE if success, %FALSE if there was an error
+ **/
+gboolean
+gpm_brightness_set (GpmBrightness *brightness, guint percentage, gboolean *hw_changed)
+{
+	gboolean ret = FALSE;
+	gboolean trust_cache;
+
+	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
+
+	/* can we check the new value with the cache? */
+	trust_cache = gpm_brightness_trust_cache (brightness);
+	if (trust_cache && percentage == brightness->priv->cache_percentage) {
+		g_debug ("not setting the same value %u", percentage);
+		return TRUE;
+	}
+
+	/* set the value we want */
+#ifdef HAVE_X11
+	brightness->priv->shared_value = percentage;
+#endif
+
+	/* reset to not-changed */
+	brightness->priv->hw_changed = FALSE;
+
+#ifdef HAVE_X11
+	ret = gpm_brightness_foreach_screen (brightness, ACTION_BACKLIGHT_SET);
+#endif
+
+	/* legacy fallback */
+	if (!ret) {
+		if (brightness->priv->extension_levels < 0)
+			brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
+		brightness->priv->extension_current = egg_discrete_from_percent (percentage, brightness->priv->extension_levels+1);
+		ret = gpm_brightness_helper_set_value ("set-brightness", brightness->priv->extension_current);
+	}
+
+	/* did the hardware have to be modified? */
+	if (ret && hw_changed != NULL)
+		*hw_changed = brightness->priv->hw_changed;
+
+	/* we did something to the hardware, so untrusted */
+	if (ret)
+		brightness->priv->cache_trusted = FALSE;
+
+	return ret;
+}
+
+/**
+ * gpm_brightness_get:
+ * @brightness: This brightness class instance
+ * Return value: The percentage brightness, or -1 for no hardware or error
+ *
+ * Gets the current (or at least what this class thinks is current) percentage
+ * brightness. This is quick as no HAL inquiry is done.
+ **/
+gboolean
+gpm_brightness_get (GpmBrightness *brightness, guint *percentage)
+{
+	gboolean ret = FALSE;
+	gboolean trust_cache;
+	guint percentage_local;
+
+	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
+	g_return_val_if_fail (percentage != NULL, FALSE);
+
+	/* can we use the cache? */
+	trust_cache = gpm_brightness_trust_cache (brightness);
+	if (trust_cache) {
+		*percentage = brightness->priv->cache_percentage;
+		return TRUE;
+	}
+
+	/* get the brightness from hardware -- slow */
+#ifdef HAVE_X11
+	ret = gpm_brightness_foreach_screen (brightness, ACTION_BACKLIGHT_GET);
+	percentage_local = brightness->priv->shared_value;
+#endif
+
+	/* legacy fallback */
+	if (!ret) {
+		if (brightness->priv->extension_levels < 0)
+			brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
+		brightness->priv->extension_current = gpm_brightness_helper_get_value ("get-brightness");
+		percentage_local = egg_discrete_to_percent (brightness->priv->extension_current, brightness->priv->extension_levels+1);
+		ret = TRUE;
+	}
+
+	/* valid? */
+	if (percentage_local > 100) {
+		g_warning ("percentage value of %u will be truncated", percentage_local);
+		percentage_local = 100;
+	}
+
+	/* a new value is always trusted if the method and checks succeed */
+	if (ret) {
+		brightness->priv->cache_percentage = percentage_local;
+		brightness->priv->cache_trusted = TRUE;
+		*percentage = percentage_local;
+	} else {
+		brightness->priv->cache_trusted = FALSE;
+	}
+	return ret;
+}
+
+/**
+ * gpm_brightness_up:
+ * @brightness: This brightness class instance
+ * @hw_changed: If the hardware was changed, i.e. the brightness changed
+ * Return value: %TRUE if success, %FALSE if there was an error
+ *
+ * If possible, put the brightness of the LCD up one unit.
+ **/
+gboolean
+gpm_brightness_up (GpmBrightness *brightness, gboolean *hw_changed)
+{
+	gboolean ret = FALSE;
+	guint step;
+
+	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
+
+	/* reset to not-changed */
+	brightness->priv->hw_changed = FALSE;
+
+#ifdef HAVE_X11
+	ret = gpm_brightness_foreach_screen (brightness, ACTION_BACKLIGHT_INC);
+#endif
+
+	/* did the hardware have to be modified? */
+	if (ret && hw_changed != NULL)
+		*hw_changed = brightness->priv->hw_changed;
+
+	/* we did something to the hardware, so untrusted */
+	if (ret)
+		brightness->priv->cache_trusted = FALSE;
+
+	/* legacy fallback */
+	if (!ret) {
+		if (brightness->priv->extension_levels < 0)
+			brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
+		brightness->priv->extension_current = gpm_brightness_helper_get_value ("get-brightness");
+
+		/* increase by the step, limiting to the maximum possible levels */
+		if (brightness->priv->extension_current < brightness->priv->extension_levels) {
+			step = gpm_brightness_get_step (brightness->priv->extension_levels);
+			brightness->priv->extension_current += step;
+			if (brightness->priv->extension_current > brightness->priv->extension_levels)
+				brightness->priv->extension_current = brightness->priv->extension_levels;
+			ret = gpm_brightness_helper_set_value ("set-brightness", brightness->priv->extension_current);
+		}
+		if (hw_changed != NULL)
+			*hw_changed = ret;
+		brightness->priv->cache_trusted = FALSE;
+		goto out;
+	}
+out:
+	return ret;
+}
+
+/**
+ * gpm_brightness_down:
+ * @brightness: This brightness class instance
+ * @hw_changed: If the hardware was changed, i.e. the brightness changed
+ * Return value: %TRUE if success, %FALSE if there was an error
+ *
+ * If possible, put the brightness of the LCD down one unit.
+ **/
+gboolean
+gpm_brightness_down (GpmBrightness *brightness, gboolean *hw_changed)
+{
+	gboolean ret = FALSE;
+	guint step;
+
+	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
+
+	/* reset to not-changed */
+	brightness->priv->hw_changed = FALSE;
+
+#ifdef HAVE_X11
+	ret = gpm_brightness_foreach_screen (brightness, ACTION_BACKLIGHT_DEC);
+#endif
+
+	/* did the hardware have to be modified? */
+	if (ret && hw_changed != NULL)
+		*hw_changed = brightness->priv->hw_changed;
+
+	/* we did something to the hardware, so untrusted */
+	if (ret)
+		brightness->priv->cache_trusted = FALSE;
+
+	/* legacy fallback */
+	if (!ret) {
+		if (brightness->priv->extension_levels < 0)
+			brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
+		brightness->priv->extension_current = gpm_brightness_helper_get_value ("get-brightness");
+
+		/* decrease by the step, limiting to zero */
+		if (brightness->priv->extension_current > 0) {
+			step = gpm_brightness_get_step (brightness->priv->extension_levels);
+			brightness->priv->extension_current -= step;
+			if (brightness->priv->extension_current < 0)
+				brightness->priv->extension_current = 0;
+			ret = gpm_brightness_helper_set_value ("set-brightness", brightness->priv->extension_current);
+		}
+		if (hw_changed != NULL)
+			*hw_changed = ret;
+		brightness->priv->cache_trusted = FALSE;
+		goto out;
+	}
+out:
+	return ret;
+}
+
+/**
+ * gpm_brightness_may_have_changed:
+ **/
+static void
+gpm_brightness_may_have_changed (GpmBrightness *brightness)
+{
+	gboolean ret;
+	guint percentage;
+	ret = gpm_brightness_get (brightness, &percentage);
+	if (!ret) {
+		g_warning ("failed to get output");
+		return;
+	}
+	g_debug ("emitting brightness-changed (%u)", percentage);
+	g_signal_emit (brightness, signals [BRIGHTNESS_CHANGED], 0, percentage);
+}
+
 /**
  * gpm_brightness_has_hw:
  **/
@@ -868,8 +896,10 @@ gpm_brightness_has_hw (GpmBrightness *brightness)
 	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
 
 	/* use XRandR first */
+#ifdef HAVE_X11
 	if (brightness->priv->has_extension)
 		return TRUE;
+#endif
 
 	/* fallback to legacy access */
 	if (brightness->priv->extension_levels < 0)
@@ -889,9 +919,11 @@ gpm_brightness_finalize (GObject *object)
 	g_return_if_fail (object != NULL);
 	g_return_if_fail (GPM_IS_BRIGHTNESS (object));
 	brightness = GPM_BRIGHTNESS (object);
+#ifdef HAVE_X11
 	g_ptr_array_unref (brightness->priv->resources);
 	gdk_window_remove_filter (brightness->priv->root_window,
 				  gpm_brightness_filter_xevents, brightness);
+#endif
 	G_OBJECT_CLASS (gpm_brightness_parent_class)->finalize (object);
 }
 
@@ -919,11 +951,6 @@ gpm_brightness_class_init (GpmBrightnessClass *klass)
 static void
 gpm_brightness_init (GpmBrightness *brightness)
 {
-	GdkScreen *screen;
-	GdkDisplay *display;
-	int event_base;
-	int ignore;
-
 	brightness->priv = gpm_brightness_get_instance_private (brightness);
 
 	brightness->priv->cache_trusted = FALSE;
@@ -931,37 +958,50 @@ gpm_brightness_init (GpmBrightness *brightness)
 	brightness->priv->cache_percentage = 0;
 	brightness->priv->hw_changed = FALSE;
 	brightness->priv->extension_levels = -1;
-	brightness->priv->resources = g_ptr_array_new_with_free_func ((GDestroyNotify) XRRFreeScreenResources);
 
-	/* can we do this */
-	brightness->priv->has_extension = gpm_brightness_setup_display (brightness);
-	if (brightness->priv->has_extension == FALSE)
-		g_debug ("no XRANDR extension");
+#ifdef HAVE_X11
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		GdkScreen *screen;
+		GdkDisplay *display;
+		int event_base;
+		int ignore;
 
-	screen = gdk_screen_get_default ();
-	brightness->priv->root_window = gdk_screen_get_root_window (screen);
-	display = gdk_display_get_default ();
+		brightness->priv->resources = g_ptr_array_new_with_free_func ((GDestroyNotify) XRRFreeScreenResources);
 
-	/* as we a filtering by a window, we have to add an event type */
-	if (!XRRQueryExtension (GDK_DISPLAY_XDISPLAY (gdk_display_get_default()), &event_base, &ignore)) {
-		g_warning ("can't get event_base for XRR");
+		/* can we do this */
+		brightness->priv->has_extension = gpm_brightness_setup_display (brightness);
+		if (brightness->priv->has_extension == FALSE)
+			g_debug ("no XRANDR extension");
+
+		screen = gdk_screen_get_default ();
+		brightness->priv->root_window = gdk_screen_get_root_window (screen);
+		display = gdk_display_get_default ();
+
+		/* as we a filtering by a window, we have to add an event type */
+		if (!XRRQueryExtension (GDK_DISPLAY_XDISPLAY (gdk_display_get_default()), &event_base, &ignore)) {
+			g_warning ("can't get event_base for XRR");
+		}
+		gdk_x11_register_standard_event_type (display, event_base, RRNotify + 1);
+		gdk_window_add_filter (brightness->priv->root_window,
+				       gpm_brightness_filter_xevents, brightness);
+
+		/* don't abort on error */
+		gdk_x11_display_error_trap_push (display);
+		XRRSelectInput (GDK_DISPLAY_XDISPLAY (gdk_display_get_default()),
+				GDK_WINDOW_XID (brightness->priv->root_window),
+				RRScreenChangeNotifyMask |
+				RROutputPropertyNotifyMask); /* <--- the only one we need, but see rh:345551 */
+		gdk_display_flush (display);
+		if (gdk_x11_display_error_trap_pop (display))
+			g_warning ("failed to select XRRSelectInput");
+
+		/* create cache of XRRScreenResources as XRRGetScreenResources() is slow */
+		gpm_brightness_update_cache (brightness);
+		return;
 	}
-	gdk_x11_register_standard_event_type (display, event_base, RRNotify + 1);
-	gdk_window_add_filter (brightness->priv->root_window,
-			       gpm_brightness_filter_xevents, brightness);
-
-	/* don't abort on error */
-	gdk_x11_display_error_trap_push (display);
-	XRRSelectInput (GDK_DISPLAY_XDISPLAY (gdk_display_get_default()),
-			GDK_WINDOW_XID (brightness->priv->root_window),
-			RRScreenChangeNotifyMask |
-			RROutputPropertyNotifyMask); /* <--- the only one we need, but see rh:345551 */
-	gdk_display_flush (display);
-	if (gdk_x11_display_error_trap_pop (display))
-		g_warning ("failed to select XRRSelectInput");
-
-	/* create cache of XRRScreenResources as XRRGetScreenResources() is slow */
-	gpm_brightness_update_cache (brightness);
+#endif
+	g_debug ("No XRandR brightness backend; using sysfs fallback only");
 }
 
 /**
@@ -980,4 +1020,3 @@ gpm_brightness_new (void)
 	}
 	return GPM_BRIGHTNESS (gpm_brightness_object);
 }
-

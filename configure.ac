@@ -108,6 +108,7 @@ PKG_CHECK_MODULES(MATE_DESKTOP, [
 PKG_CHECK_MODULES(X11, [
  xrandr >= $XRANDR_REQUIRED
  x11 xext xproto >= $XPROTO_REQUIRED])
+AC_DEFINE([HAVE_X11], 1, [Define if X11 support is available])
 
 PKG_CHECK_MODULES(LIBNOTIFY, libnotify >= $LIBNOTIFY_REQUIRED)
 
@@ -120,6 +121,43 @@ AC_SUBST(SYSCONFDIR, $sysconfdir)
 AC_SUBST(DATADIR, $datadir)
 AC_SUBST(BINDIR, $bindir)
 AC_SUBST(SBINDIR, $sbindir)
+
+dnl ---------------------------------------------------------------------------
+dnl - Build with Wayland support
+dnl ---------------------------------------------------------------------------
+AC_ARG_ENABLE(wayland,
+        AS_HELP_STRING([--enable-wayland],
+                        [Enable Wayland support (default: auto)]),
+        [enable_wayland=$enableval],
+        [enable_wayland=auto])
+
+AC_MSG_CHECKING([whether to support Wayland])
+
+have_wayland=no
+if test "x$enable_wayland" != "xno"; then
+        PKG_CHECK_MODULES(WAYLAND_CLIENT, wayland-client, [
+                have_wayland=yes
+                AC_DEFINE([HAVE_WAYLAND], 1, [Define if Wayland support is enabled])
+                PKG_CHECK_MODULES(WAYLAND_PROTOCOLS, wayland-protocols)
+                AC_PATH_PROG([WAYLAND_SCANNER], [wayland-scanner], [no])
+                if test "x$WAYLAND_SCANNER" = "xno"; then
+                        AC_MSG_ERROR([wayland-scanner not found])
+                fi
+        ], [
+                if test "x$enable_wayland" = "xyes"; then
+                        AC_MSG_ERROR([Wayland support requested but wayland-client not found])
+                fi
+        ])
+fi
+
+dnl Only build X11 backend if Wayland is not the sole target
+if test "x$have_wayland" = "xyes"; then
+        AC_MSG_RESULT([yes (with X11 fallback)])
+else
+        AC_MSG_RESULT([no])
+fi
+
+AM_CONDITIONAL([HAVE_WAYLAND], [test "x$have_wayland" = "xyes"])
 
 dnl ---------------------------------------------------------------------------
 dnl - Build self tests
@@ -270,6 +308,7 @@ Configure summary:
     gnome-keyring support .......: ${with_keyring}
     Building extra applets ......: ${enable_applets}
     Applets in-process...........: ${enable_applets_inprocess}
+    Wayland support .............: ${have_wayland}
     Self test support ...........: ${have_tests}
     dbus-1 services dir .........: $DBUS_SERVICES_DIR
 "

@@ -27,9 +27,9 @@ AM_CPPFLAGS =						\
 	-DSBINDIR=\"$(sbindir)\"			\
 	-DMATELOCALEDIR=\""$(datadir)/locale"\"		\
 	-DDATADIR=\"$(datadir)\"			\
-	-DPREFIX=\""$(prefix)"\" 			\
-	-DSYSCONFDIR=\""$(sysconfdir)"\" 		\
-	-DLIBDIR=\""$(libdir)"\" 			\
+	-DPREFIX=\""$(prefix)\"" 			\
+	-DSYSCONFDIR=\""$(sysconfdir)\"" 		\
+	-DLIBDIR=\""$(libdir)\"" 			\
 	-DVERSION="\"$(VERSION)\"" 			\
 	-DGPM_ICONS_DATA=\"$(pkgdatadir)/icons\"	\
 	-DGTKBUILDERDIR=\"$(pkgdatadir)\"		\
@@ -37,6 +37,13 @@ AM_CPPFLAGS =						\
 	-DG_LOG_DOMAIN=\"PowerManager\"			\
 	-I$(top_srcdir)					\
 	$(DISABLE_DEPRECATED)
+
+if HAVE_WAYLAND
+AM_CPPFLAGS +=					\
+	$(WAYLAND_CLIENT_CFLAGS)			\
+	-DHAVE_WAYLAND					\
+	$(NULL)
+endif
 
 AM_CPPFLAGS += $(NULL)
 
@@ -209,6 +216,12 @@ mate_power_manager_LDADD =				\
 	$(GPM_EXTRA_LIBS)				\
 	$(UPOWER_LIBS)					\
 	-lm
+
+if HAVE_WAYLAND
+mate_power_manager_LDADD +=				\
+	$(WAYLAND_CLIENT_LIBS)				\
+	$(NULL)
+endif
 
 mate_power_manager_CFLAGS =				\
 	$(WARN_CFLAGS)					\

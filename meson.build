@@ -91,15 +91,12 @@ enable_applet = get_option('applets')
 enable_applets_inprocess = get_option('applets-in-process')
 enable_keyring = get_option('gnome-keyring')
 enable_libsecret = get_option('libsecret')
+enable_wayland = get_option('wayland')
 
 gtk = dependency('gtk+-3.0', version : '>= 3.22.0')
 glib = dependency('glib-2.0', version : '>= 2.50.0')
 gdk = dependency('gdk-3.0', version : '>= 3.22.0')
 cairo = dependency('cairo', version : '>= 1.0.0')
-xrandr = dependency('xrandr', version : '>= 1.3.0')
-xproto = dependency('xproto', version : '>= 7.0.15')
-x11 = dependency('x11', version : '>= 1.3.0')
-xext = dependency('xext', version : '>= 1.3.0')
 dbus = dependency('dbus-1', version : '>= 1.0')
 dbusglib = dependency('dbus-glib-1', version : '>= 0.70')
 notify = dependency('libnotify', version : '>= 0.7.0')
@@ -108,9 +105,20 @@ matepanel = dependency('libmatepanelapplet-4.0', version : '>= 1.17.0',required:
 upower = dependency('upower-glib', version : '>= 0.99.8')
 libsecret = dependency('libsecret-1', version : '>= 0.11', required: enable_libsecret)
 keyring = dependency('gnome-keyring-1', version : '>= 3.0.0', required: enable_keyring)
-canberra = dependency('libcanberra-gtk3', version : '>= 0.10')
 md = dependency('mate-desktop-2.0', version : '>= 1.27.1')
 libm = cc.find_library('m', required: false)
+
+xrandr = dependency('xrandr', version : '>= 1.3.0', required: true)
+xproto = dependency('xproto', version : '>= 7.0.15', required: true)
+x11 = dependency('x11', version : '>= 1.3.0', required: true)
+xext = dependency('xext', version : '>= 1.3.0', required: true)
+
+if enable_wayland
+  wayland_client = dependency('wayland-client', required: true)
+  wayland_protocols = dependency('wayland-protocols', required: true)
+  wayland_scanner = find_program('wayland-scanner', required: true)
+  conf.set('HAVE_WAYLAND', 1)
+endif
 
 gnome = import('gnome')
 i18n = import('i18n')
@@ -118,6 +126,7 @@ i18n = import('i18n')
 conf.set('WITH_KEYRING', keyring.found())
 conf.set('WITH_LIBSECRET', libsecret.found())
 conf.set('APPLETS_INPROCESS', enable_applets_inprocess)
+conf.set('HAVE_X11', 1)
 conf.set_quoted('GETTEXT_PACKAGE', meson.project_name())
 conf.set_quoted('LOCALEDIR',
                 join_paths(get_option('prefix'),

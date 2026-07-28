@@ -33,6 +33,10 @@ cflags = [
   '-DI_KNOW_THE_DEVICEKIT_POWER_API_IS_SUBJECT_TO_CHANGE',
   '-DEGG_CONSOLE="GPM_CONSOLE"'
 ]
+
+if enable_wayland
+  cflags += '-DHAVE_WAYLAND'
+endif
 marshal_files = gnome.genmarshal('gpm-marshal', prefix : 'gpm_marshal', sources : 'gpm-marshal.list')
 
 dbus_binding_tool = find_program('dbus-binding-tool')
@@ -64,6 +68,10 @@ deps = [
   libsecret,
   notify,
 ]
+
+if enable_wayland
+  deps += wayland_client
+endif
 
 libmpm_shared = static_library(
   'libmpmstatic',
