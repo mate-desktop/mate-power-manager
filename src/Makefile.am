@@ -12,6 +12,7 @@ EXTRA_DIST =						\
 
 WAYLAND_PROTOCOLS_DATADIR = @WAYLAND_PROTOCOLS_DATADIR@
 EXT_IDLE_NOTIFY_XML = $(WAYLAND_PROTOCOLS_DATADIR)/staging/ext-idle-notify/ext-idle-notify-v1.xml
+WLR_OUTPUT_POWER_XML = $(top_srcdir)/subprojects/wlr-protocols/unstable/wlr-output-power-management-unstable-v1.xml
 
 AM_CPPFLAGS =						\
 	$(GLIB_CFLAGS)					\
@@ -91,6 +92,7 @@ libgpmshared_a_SOURCES =				\
 if HAVE_WAYLAND
 libgpmshared_a_SOURCES +=				\
 	ext-idle-notify-v1-protocol.c			\
+	wlr-output-power-management-unstable-v1-protocol.c	\
 	$(NULL)
 endif
 
@@ -315,6 +317,8 @@ if HAVE_WAYLAND
 BUILT_SOURCES +=					\
 	ext-idle-notify-v1-client.h			\
 	ext-idle-notify-v1-protocol.c			\
+	wlr-output-power-management-unstable-v1-client.h	\
+	wlr-output-power-management-unstable-v1-protocol.c	\
 	$(NULL)
 endif
 
@@ -322,6 +326,12 @@ ext-idle-notify-v1-client.h: $(EXT_IDLE_NOTIFY_XML)
 	$(AM_V_GEN)$(WAYLAND_SCANNER) client-header < $< > $@
 
 ext-idle-notify-v1-protocol.c: $(EXT_IDLE_NOTIFY_XML)
+	$(AM_V_GEN)$(WAYLAND_SCANNER) private-code < $< > $@
+
+wlr-output-power-management-unstable-v1-client.h: $(WLR_OUTPUT_POWER_XML)
+	$(AM_V_GEN)$(WAYLAND_SCANNER) client-header < $< > $@
+
+wlr-output-power-management-unstable-v1-protocol.c: $(WLR_OUTPUT_POWER_XML)
 	$(AM_V_GEN)$(WAYLAND_SCANNER) private-code < $< > $@
 
 gpm-marshal.c: gpm-marshal.list
@@ -356,6 +366,7 @@ clean-local:
 	rm -f *~
 	rm -f gpm-marshal.c gpm-marshal.h
 	rm -f ext-idle-notify-v1-client.h ext-idle-notify-v1-protocol.c
+	rm -f wlr-output-power-management-unstable-v1-client.h wlr-output-power-management-unstable-v1-protocol.c
 
 CLEANFILES = \
 	$(BUILT_SOURCES)				\

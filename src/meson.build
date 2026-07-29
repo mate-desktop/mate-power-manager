@@ -50,6 +50,19 @@ if enable_wayland
     command: [wayland_scanner, 'client-header', '@INPUT@', '@OUTPUT@']
   )
   sources += ext_idle_notify_code
+
+  wlr_output_power_xml = join_paths(meson.current_source_dir(), '..', 'subprojects', 'wlr-protocols', 'unstable', 'wlr-output-power-management-unstable-v1.xml')
+  wlr_output_power_code = custom_target('wlr-output-power-protocol',
+    input: wlr_output_power_xml,
+    output: 'wlr-output-power-management-unstable-v1-protocol.c',
+    command: [wayland_scanner, 'private-code', '@INPUT@', '@OUTPUT@']
+  )
+  wlr_output_power_header = custom_target('wlr-output-power-header',
+    input: wlr_output_power_xml,
+    output: 'wlr-output-power-management-unstable-v1-client.h',
+    command: [wayland_scanner, 'client-header', '@INPUT@', '@OUTPUT@']
+  )
+  sources += wlr_output_power_code
 endif
 marshal_files = gnome.genmarshal('gpm-marshal', prefix : 'gpm_marshal', sources : 'gpm-marshal.list')
 
