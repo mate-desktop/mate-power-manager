@@ -158,37 +158,6 @@ egg_idletime_xsync_alarm_set (EggIdletime *idletime, EggIdletimeAlarm *alarm, Eg
 }
 
 /**
- * egg_idletime_alarm_reset_all:
- */
-void
-egg_idletime_alarm_reset_all (EggIdletime *idletime)
-{
-	guint i;
-	EggIdletimeAlarm *alarm;
-
-	g_return_if_fail (EGG_IS_IDLETIME (idletime));
-
-	if (!idletime->priv->reset_set)
-		return;
-
-	/* reset all the alarms (except the reset alarm) to their timeouts */
-	for (i=1; i<idletime->priv->array->len; i++) {
-		alarm = g_ptr_array_index (idletime->priv->array, i);
-		egg_idletime_xsync_alarm_set (idletime, alarm, EGG_IDLETIME_ALARM_TYPE_POSITIVE);
-	}
-
-	/* set the reset alarm to be disabled */
-	alarm = g_ptr_array_index (idletime->priv->array, 0);
-	egg_idletime_xsync_alarm_set (idletime, alarm, EGG_IDLETIME_ALARM_TYPE_DISABLED);
-
-	/* emit signal so say we've reset all timers */
-	g_signal_emit (idletime, signals [SIGNAL_RESET], 0);
-
-	/* we need to be reset again on the next event */
-	idletime->priv->reset_set = FALSE;
-}
-
-/**
  * egg_idletime_alarm_find_id:
  */
 static EggIdletimeAlarm *
@@ -313,36 +282,6 @@ egg_idletime_alarm_new (EggIdletime *idletime, guint id)
 }
 
 /**
- * egg_idletime_alarm_set:
- */
-gboolean
-egg_idletime_alarm_set (EggIdletime *idletime, guint id, guint timeout)
-{
-	EggIdletimeAlarm *alarm;
-
-	g_return_val_if_fail (EGG_IS_IDLETIME (idletime), FALSE);
-	g_return_val_if_fail (id != 0, FALSE);
-	g_return_val_if_fail (timeout != 0, FALSE);
-
-	/* see if we already created an alarm with this ID */
-	alarm = egg_idletime_alarm_find_id (idletime, id);
-	if (alarm == NULL) {
-		/* create a new alarm */
-		alarm = egg_idletime_alarm_new (idletime, id);
-
-		/* add to array */
-		g_ptr_array_add (idletime->priv->array, alarm);
-	}
-
-	/* set the timeout */
-	XSyncIntToValue (&alarm->timeout, (gint)timeout);
-
-	/* set, and start the timer */
-	egg_idletime_xsync_alarm_set (idletime, alarm, EGG_IDLETIME_ALARM_TYPE_POSITIVE);
-	return TRUE;
-}
-
-/**
  * egg_idletime_alarm_free:
  */
 static gboolean
@@ -359,24 +298,9 @@ egg_idletime_alarm_free (EggIdletime *idletime, EggIdletimeAlarm *alarm)
 	return TRUE;
 }
 
-/**
- * egg_idletime_alarm_remove:
- */
-gboolean
-egg_idletime_alarm_remove (EggIdletime *idletime, guint id)
-{
-	EggIdletimeAlarm *alarm;
+#endif /* HAVE_X11 */
 
-	g_return_val_if_fail (EGG_IS_IDLETIME (idletime), FALSE);
-
-	alarm = egg_idletime_alarm_find_id (idletime, id);
-	if (alarm == NULL)
-		return FALSE;
-	egg_idletime_alarm_free (idletime, alarm);
-	return TRUE;
-}
-
-#elif defined(HAVE_WAYLAND)
+#ifdef HAVE_WAYLAND
 
 /**
  * egg_idletime_alarm_wayland_find_id:
@@ -438,76 +362,7 @@ egg_idletime_wayland_notification_listener = {
 	.resumed = egg_idletime_wayland_notification_resumed_cb,
 };
 
-/**
- * egg_idletime_alarm_set:
- */
-gboolean
-egg_idletime_alarm_set (EggIdletime *idletime, guint id, guint timeout)
-{
-	EggIdletimeWaylandNotification *wn;
-
-	g_return_val_if_fail (EGG_IS_IDLETIME (idletime), FALSE);
-	g_return_val_if_fail (id != 0, FALSE);
-	g_return_val_if_fail (timeout != 0, FALSE);
-
-	if (idletime->priv->idle_notifier == NULL) {
-		g_warning ("EggIdletime: idle_notifier not available");
-		return FALSE;
-	}
-
-	/* see if we already created a notification with this ID */
-	wn = egg_idletime_alarm_wayland_find_id (idletime, id);
-	if (wn != NULL) {
-		if (wn->notification)
-			ext_idle_notification_v1_destroy (wn->notification);
-		wn->timeout = timeout;
-	} else {
-		wn = g_new0 (EggIdletimeWaylandNotification, 1);
-		wn->id = id;
-		wn->timeout = timeout;
-		g_ptr_array_add (idletime->priv->wayland_notifications, wn);
-	}
-
-	wn->notification = ext_idle_notifier_v1_get_input_idle_notification (
-		idletime->priv->idle_notifier, timeout, idletime->priv->seat);
-	ext_idle_notification_v1_add_listener (wn->notification,
-		&egg_idletime_wayland_notification_listener, idletime);
-
-	return TRUE;
-}
-
-/**
- * egg_idletime_alarm_remove:
- */
-gboolean
-egg_idletime_alarm_remove (EggIdletime *idletime, guint id)
-{
-	EggIdletimeWaylandNotification *wn;
-
-	g_return_val_if_fail (EGG_IS_IDLETIME (idletime), FALSE);
-
-	wn = egg_idletime_alarm_wayland_find_id (idletime, id);
-	if (wn == NULL)
-		return FALSE;
-
-	if (wn->notification)
-		ext_idle_notification_v1_destroy (wn->notification);
-	g_ptr_array_remove (idletime->priv->wayland_notifications, wn);
-	g_free (wn);
-	return TRUE;
-}
-
-/**
- * egg_idletime_alarm_reset_all:
- */
-void
-egg_idletime_alarm_reset_all (EggIdletime *idletime)
-{
-	g_return_if_fail (EGG_IS_IDLETIME (idletime));
-	g_signal_emit (idletime, signals [SIGNAL_RESET], 0);
-}
-
-#endif /* HAVE_X11 */
+#endif /* HAVE_WAYLAND */
 
 /**
  * egg_idletime_class_init:
@@ -563,7 +418,42 @@ egg_idletime_get_time (EggIdletime *idletime)
 	return 0;
 }
 
-#ifdef HAVE_X11
+#ifdef HAVE_WAYLAND
+
+/**
+ * egg_idletime_wayland_registry_global_cb:
+ */
+static void
+egg_idletime_wayland_registry_global_cb (void *data, struct wl_registry *registry,
+					 uint32_t name, const char *interface,
+					 uint32_t version)
+{
+	EggIdletime *idletime = EGG_IDLETIME (data);
+
+	if (g_strcmp0 (interface, "ext_idle_notifier_v1") == 0) {
+		idletime->priv->idle_notifier = wl_registry_bind (registry, name,
+			&ext_idle_notifier_v1_interface, MIN (version, 2u));
+		g_debug ("bound ext_idle_notifier_v1 (version %u)", MIN (version, 2u));
+	} else if (g_strcmp0 (interface, "wl_seat") == 0) {
+		if (idletime->priv->seat == NULL) {
+			idletime->priv->seat = wl_registry_bind (registry, name,
+				&wl_seat_interface, MIN (version, 1u));
+		}
+	}
+}
+
+static void
+egg_idletime_wayland_registry_global_remove_cb (void *data, struct wl_registry *registry,
+						uint32_t name)
+{
+}
+
+static const struct wl_registry_listener egg_idletime_wayland_registry_listener = {
+	.global = egg_idletime_wayland_registry_global_cb,
+	.global_remove = egg_idletime_wayland_registry_global_remove_cb,
+};
+
+#endif /* HAVE_WAYLAND */
 
 /**
  * egg_idletime_init:
@@ -576,6 +466,13 @@ egg_idletime_init (EggIdletime *idletime)
 	idletime->priv->reset_set = FALSE;
 	idletime->priv->array = g_ptr_array_new ();
 
+#ifdef HAVE_WAYLAND
+	idletime->priv->wayland_notifications = NULL;
+	idletime->priv->wayland_is_idle = FALSE;
+	idletime->priv->idle_timer = NULL;
+#endif
+
+#ifdef HAVE_X11
 	if (gdk_display_get_default () != NULL &&
 	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
 		int sync_error;
@@ -616,72 +513,15 @@ egg_idletime_init (EggIdletime *idletime)
 		g_ptr_array_add (idletime->priv->array, alarm);
 		return;
 	}
-	if (gdk_display_get_default () != NULL &&
-	    GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ())) {
-		g_debug ("X11 backend not available on Wayland display");
-		return;
-	}
-	g_debug ("No idle tracking available for current display");
-}
-
-#elif defined(HAVE_WAYLAND)
-
-/**
- * egg_idletime_wayland_registry_global_cb:
- */
-static void
-egg_idletime_wayland_registry_global_cb (void *data, struct wl_registry *registry,
-					 uint32_t name, const char *interface,
-					 uint32_t version)
-{
-	EggIdletime *idletime = EGG_IDLETIME (data);
-
-	if (g_strcmp0 (interface, "ext_idle_notifier_v1") == 0) {
-		idletime->priv->idle_notifier = wl_registry_bind (registry, name,
-			&ext_idle_notifier_v1_interface, MIN (version, 2u));
-		g_debug ("bound ext_idle_notifier_v1 (version %u)", MIN (version, 2u));
-	} else if (g_strcmp0 (interface, "wl_seat") == 0) {
-		if (idletime->priv->seat == NULL) {
-			idletime->priv->seat = wl_registry_bind (registry, name,
-				&wl_seat_interface, MIN (version, 1u));
-		}
-	}
-}
-
-static void
-egg_idletime_wayland_registry_global_remove_cb (void *data, struct wl_registry *registry,
-						uint32_t name)
-{
-}
-
-static const struct wl_registry_listener egg_idletime_wayland_registry_listener = {
-	.global = egg_idletime_wayland_registry_global_cb,
-	.global_remove = egg_idletime_wayland_registry_global_remove_cb,
-};
-
-/**
- * egg_idletime_init:
- **/
-static void
-egg_idletime_init (EggIdletime *idletime)
-{
-	idletime->priv = egg_idletime_get_instance_private (idletime);
-
-	idletime->priv->reset_set = FALSE;
-	idletime->priv->array = g_ptr_array_new ();
-	idletime->priv->wayland_notifications = g_ptr_array_new_with_free_func (g_free);
-	idletime->priv->wayland_is_idle = FALSE;
-	idletime->priv->idle_timer = g_timer_new ();
-
-	if (gdk_display_get_default () != NULL &&
-	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
-		g_debug ("Wayland idle tracking not available on X11 display");
-		return;
-	}
-
+#endif
+#ifdef HAVE_WAYLAND
 	if (gdk_display_get_default () != NULL &&
 	    GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ())) {
 		struct wl_display *display;
+		struct wl_registry *registry;
+
+		idletime->priv->wayland_notifications = g_ptr_array_new_with_free_func (g_free);
+		idletime->priv->idle_timer = g_timer_new ();
 		struct wl_registry *registry;
 
 		display = gdk_wayland_display_get_wl_display (gdk_display_get_default ());
@@ -707,10 +547,158 @@ egg_idletime_init (EggIdletime *idletime)
 		}
 		return;
 	}
+#endif
 	g_debug ("No idle tracking available for current display");
 }
 
-#endif /* HAVE_X11 */
+/**
+ * egg_idletime_alarm_set:
+ */
+gboolean
+egg_idletime_alarm_set (EggIdletime *idletime, guint id, guint timeout)
+{
+	g_return_val_if_fail (EGG_IS_IDLETIME (idletime), FALSE);
+	g_return_val_if_fail (id != 0, FALSE);
+	g_return_val_if_fail (timeout != 0, FALSE);
+
+#ifdef HAVE_X11
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		EggIdletimeAlarm *alarm;
+
+		/* see if we already created an alarm with this ID */
+		alarm = egg_idletime_alarm_find_id (idletime, id);
+		if (alarm == NULL) {
+			/* create a new alarm */
+			alarm = egg_idletime_alarm_new (idletime, id);
+
+			/* add to array */
+			g_ptr_array_add (idletime->priv->array, alarm);
+		}
+
+		/* set the timeout */
+		XSyncIntToValue (&alarm->timeout, (gint)timeout);
+
+		/* set, and start the timer */
+		egg_idletime_xsync_alarm_set (idletime, alarm, EGG_IDLETIME_ALARM_TYPE_POSITIVE);
+		return TRUE;
+	}
+#endif
+#ifdef HAVE_WAYLAND
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ())) {
+		EggIdletimeWaylandNotification *wn;
+
+		if (idletime->priv->idle_notifier == NULL) {
+			g_warning ("EggIdletime: idle_notifier not available");
+			return FALSE;
+		}
+
+		/* see if we already created a notification with this ID */
+		wn = egg_idletime_alarm_wayland_find_id (idletime, id);
+		if (wn != NULL) {
+			if (wn->notification)
+				ext_idle_notification_v1_destroy (wn->notification);
+			wn->timeout = timeout;
+		} else {
+			wn = g_new0 (EggIdletimeWaylandNotification, 1);
+			wn->id = id;
+			wn->timeout = timeout;
+			g_ptr_array_add (idletime->priv->wayland_notifications, wn);
+		}
+
+		wn->notification = ext_idle_notifier_v1_get_input_idle_notification (
+			idletime->priv->idle_notifier, timeout, idletime->priv->seat);
+		ext_idle_notification_v1_add_listener (wn->notification,
+			&egg_idletime_wayland_notification_listener, idletime);
+
+		return TRUE;
+	}
+#endif
+	return FALSE;
+}
+
+/**
+ * egg_idletime_alarm_remove:
+ */
+gboolean
+egg_idletime_alarm_remove (EggIdletime *idletime, guint id)
+{
+	g_return_val_if_fail (EGG_IS_IDLETIME (idletime), FALSE);
+
+#ifdef HAVE_X11
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		EggIdletimeAlarm *alarm;
+
+		alarm = egg_idletime_alarm_find_id (idletime, id);
+		if (alarm == NULL)
+			return FALSE;
+		return egg_idletime_alarm_free (idletime, alarm);
+	}
+#endif
+#ifdef HAVE_WAYLAND
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ())) {
+		EggIdletimeWaylandNotification *wn;
+
+		wn = egg_idletime_alarm_wayland_find_id (idletime, id);
+		if (wn == NULL)
+			return FALSE;
+
+		if (wn->notification)
+			ext_idle_notification_v1_destroy (wn->notification);
+		g_ptr_array_remove (idletime->priv->wayland_notifications, wn);
+		g_free (wn);
+		return TRUE;
+	}
+#endif
+	return FALSE;
+}
+
+/**
+ * egg_idletime_alarm_reset_all:
+ */
+void
+egg_idletime_alarm_reset_all (EggIdletime *idletime)
+{
+	g_return_if_fail (EGG_IS_IDLETIME (idletime));
+
+#ifdef HAVE_X11
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		guint i;
+		EggIdletimeAlarm *alarm;
+
+		if (!idletime->priv->reset_set)
+			return;
+
+		/* reset all the alarms (except the reset alarm) to their timeouts */
+		for (i=1; i<idletime->priv->array->len; i++) {
+			alarm = g_ptr_array_index (idletime->priv->array, i);
+			egg_idletime_xsync_alarm_set (idletime, alarm, EGG_IDLETIME_ALARM_TYPE_POSITIVE);
+		}
+
+		/* set the reset alarm to be disabled */
+		alarm = g_ptr_array_index (idletime->priv->array, 0);
+		egg_idletime_xsync_alarm_set (idletime, alarm, EGG_IDLETIME_ALARM_TYPE_DISABLED);
+
+		/* emit signal so say we've reset all timers */
+		g_signal_emit (idletime, signals [SIGNAL_RESET], 0);
+
+		/* we need to be reset again on the next event */
+		idletime->priv->reset_set = FALSE;
+		return;
+	}
+#endif
+#ifdef HAVE_WAYLAND
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ())) {
+		g_signal_emit (idletime, signals [SIGNAL_RESET], 0);
+		return;
+	}
+#endif
+}
 
 /**
  * egg_idletime_finalize:
@@ -743,8 +731,7 @@ egg_idletime_finalize (GObject *object)
 	}
 #endif
 #ifdef HAVE_WAYLAND
-	if (gdk_display_get_default () != NULL &&
-	    GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ())) {
+	if (idletime->priv->wayland_notifications != NULL) {
 		EggIdletimeWaylandNotification *wn;
 
 		for (i = 0; i < idletime->priv->wayland_notifications->len; i++) {
@@ -753,11 +740,11 @@ egg_idletime_finalize (GObject *object)
 				ext_idle_notification_v1_destroy (wn->notification);
 		}
 		g_ptr_array_free (idletime->priv->wayland_notifications, TRUE);
-		if (idletime->priv->idle_notifier)
-			ext_idle_notifier_v1_destroy (idletime->priv->idle_notifier);
-		if (idletime->priv->idle_timer)
-			g_timer_destroy (idletime->priv->idle_timer);
 	}
+	if (idletime->priv->idle_notifier)
+		ext_idle_notifier_v1_destroy (idletime->priv->idle_notifier);
+	if (idletime->priv->idle_timer)
+		g_timer_destroy (idletime->priv->idle_timer);
 #endif
 	g_ptr_array_free (idletime->priv->array, TRUE);
 
