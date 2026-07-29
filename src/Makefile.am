@@ -8,11 +8,12 @@ EXTRA_DIST =						\
 	org.mate.PowerManager.Backlight.xml		\
 	org.mate.PowerManager.KbdBacklight.xml		\
 	gpm-marshal.list				\
+	wlr-output-power-management-unstable-v1.xml	\
 	$(NULL)
 
 WAYLAND_PROTOCOLS_DATADIR = @WAYLAND_PROTOCOLS_DATADIR@
 EXT_IDLE_NOTIFY_XML = $(WAYLAND_PROTOCOLS_DATADIR)/staging/ext-idle-notify/ext-idle-notify-v1.xml
-WLR_OUTPUT_POWER_XML = $(top_srcdir)/subprojects/wlr-protocols/unstable/wlr-output-power-management-unstable-v1.xml
+WLR_OUTPUT_POWER_XML = $(srcdir)/wlr-output-power-management-unstable-v1.xml
 
 AM_CPPFLAGS =						\
 	$(GLIB_CFLAGS)					\

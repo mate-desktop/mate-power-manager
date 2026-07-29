@@ -159,6 +159,14 @@ if test "x$enable_wayland" != "xno"; then
                         if test "x$WAYLAND_SCANNER" = "xno"; then
                                 AC_MSG_ERROR([wayland-scanner not found])
                         fi
+
+                        AC_MSG_CHECKING([for wlr-output-power-management-unstable-v1.xml])
+                        WLR_PROTOCOLS_XML="${srcdir}/src/wlr-output-power-management-unstable-v1.xml"
+                        if test ! -f "$WLR_PROTOCOLS_XML"; then
+                                AC_MSG_RESULT([not found])
+                                AC_MSG_ERROR([wlr-output-power-management-unstable-v1.xml not found in src/.])
+                        fi
+                        AC_MSG_RESULT([yes])
                 fi
         fi
 fi

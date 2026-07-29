@@ -49,20 +49,28 @@ if enable_wayland
     output: 'ext-idle-notify-v1-client.h',
     command: [wayland_scanner, 'client-header', '@INPUT@', '@OUTPUT@']
   )
-  sources += ext_idle_notify_code
 
-  wlr_output_power_xml = join_paths(meson.current_source_dir(), '..', 'subprojects', 'wlr-protocols', 'unstable', 'wlr-output-power-management-unstable-v1.xml')
+  wlr_power_xml = files('wlr-output-power-management-unstable-v1.xml')
   wlr_output_power_code = custom_target('wlr-output-power-protocol',
-    input: wlr_output_power_xml,
+    input: wlr_power_xml,
     output: 'wlr-output-power-management-unstable-v1-protocol.c',
     command: [wayland_scanner, 'private-code', '@INPUT@', '@OUTPUT@']
   )
   wlr_output_power_header = custom_target('wlr-output-power-header',
-    input: wlr_output_power_xml,
+    input: wlr_power_xml,
     output: 'wlr-output-power-management-unstable-v1-client.h',
     command: [wayland_scanner, 'client-header', '@INPUT@', '@OUTPUT@']
   )
-  sources += wlr_output_power_code
+
+  wayland_protocol_sources = [
+    ext_idle_notify_code,
+    ext_idle_notify_header,
+    wlr_output_power_code,
+    wlr_output_power_header,
+  ]
+  sources += wayland_protocol_sources
+else
+  wayland_protocol_sources = []
 endif
 marshal_files = gnome.genmarshal('gpm-marshal', prefix : 'gpm_marshal', sources : 'gpm-marshal.list')
 
@@ -210,6 +218,7 @@ executable(
     dbus_Backlight,
     dbus_KbdBacklight,
     dbus_Manager,
+    wayland_protocol_sources,
   ],
   include_directories : [
     include_directories('..'),

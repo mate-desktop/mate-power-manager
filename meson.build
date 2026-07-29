@@ -91,7 +91,7 @@ enable_applet = get_option('applets')
 enable_applets_inprocess = get_option('applets-in-process')
 enable_keyring = get_option('gnome-keyring')
 enable_libsecret = get_option('libsecret')
-enable_wayland = get_option('wayland')
+enable_wayland = get_option('enable-wayland')
 
 gtk = dependency('gtk+-3.0', version : '>= 3.22.0')
 glib = dependency('glib-2.0', version : '>= 2.50.0')
