@@ -198,65 +198,6 @@ gpm_dpms_x11_set_mode (GpmDpms *dpms, GpmDpmsMode mode, GError **error)
 }
 
 /**
- * gpm_dpms_set_mode:
- **/
-gboolean
-gpm_dpms_set_mode (GpmDpms *dpms, GpmDpmsMode mode, GError **error)
-{
-	gboolean ret;
-
-	g_return_val_if_fail (GPM_IS_DPMS (dpms), FALSE);
-
-	if (mode == GPM_DPMS_MODE_UNKNOWN) {
-		g_debug ("mode unknown");
-		g_set_error (error, GPM_DPMS_ERROR, GPM_DPMS_ERROR_GENERAL,
-			     "Unknown DPMS mode");
-		return FALSE;
-	}
-
-	ret = gpm_dpms_x11_set_mode (dpms, mode, error);
-	return ret;
-}
-
-/**
- * gpm_dpms_get_mode:
- **/
-gboolean
-gpm_dpms_get_mode (GpmDpms *dpms, GpmDpmsMode *mode, GError **error)
-{
-	gboolean ret;
-	if (mode)
-		*mode = GPM_DPMS_MODE_UNKNOWN;
-	ret = gpm_dpms_x11_get_mode (dpms, mode, error);
-	return ret;
-}
-
-/**
- * gpm_dpms_poll_mode_cb:
- **/
-static gboolean
-gpm_dpms_poll_mode_cb (GpmDpms *dpms)
-{
-	gboolean ret;
-	GpmDpmsMode mode;
-	GError *error = NULL;
-
-	/* Try again */
-	ret = gpm_dpms_x11_get_mode (dpms, &mode, &error);
-	if (!ret) {
-		g_clear_error (&error);
-		return TRUE;
-	}
-
-	if (mode != dpms->priv->mode) {
-		dpms->priv->mode = mode;
-		g_signal_emit (dpms, signals [MODE_CHANGED], 0, mode);
-	}
-
-	return TRUE;
-}
-
-/**
  * gpm_dpms_clear_timeouts:
  **/
 static gboolean
@@ -277,41 +218,81 @@ out:
 	return ret;
 }
 
-#else /* !HAVE_X11 */
+#endif /* HAVE_X11 */
 
+/**
+ * gpm_dpms_set_mode:
+ **/
 gboolean
 gpm_dpms_set_mode (GpmDpms *dpms, GpmDpmsMode mode, GError **error)
 {
-#ifdef HAVE_WAYLAND
-	if (gdk_display_get_default () != NULL &&
-	    GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ())) {
+	g_return_val_if_fail (GPM_IS_DPMS (dpms), FALSE);
+
+	if (mode == GPM_DPMS_MODE_UNKNOWN) {
+		g_debug ("mode unknown");
 		g_set_error (error, GPM_DPMS_ERROR, GPM_DPMS_ERROR_GENERAL,
-			     "Wayland DPMS not yet implemented");
+			     "Unknown DPMS mode");
 		return FALSE;
 	}
+
+#ifdef HAVE_X11
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		return gpm_dpms_x11_set_mode (dpms, mode, error);
+	}
 #endif
-	g_return_val_if_fail (GPM_IS_DPMS (dpms), FALSE);
 	g_set_error (error, GPM_DPMS_ERROR, GPM_DPMS_ERROR_GENERAL,
 		     "DPMS not supported on this display");
 	return FALSE;
 }
 
+/**
+ * gpm_dpms_get_mode:
+ **/
 gboolean
 gpm_dpms_get_mode (GpmDpms *dpms, GpmDpmsMode *mode, GError **error)
 {
 	g_return_val_if_fail (GPM_IS_DPMS (dpms), FALSE);
+
+#ifdef HAVE_X11
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		return gpm_dpms_x11_get_mode (dpms, mode, error);
+	}
+#endif
 	if (mode)
 		*mode = GPM_DPMS_MODE_ON;
 	return TRUE;
 }
 
+/**
+ * gpm_dpms_poll_mode_cb:
+ **/
 static gboolean
 gpm_dpms_poll_mode_cb (GpmDpms *dpms)
 {
+#ifdef HAVE_X11
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		gboolean ret;
+		GpmDpmsMode mode;
+		GError *error = NULL;
+
+		ret = gpm_dpms_x11_get_mode (dpms, &mode, &error);
+		if (!ret) {
+			g_clear_error (&error);
+			return TRUE;
+		}
+
+		if (mode != dpms->priv->mode) {
+			dpms->priv->mode = mode;
+			g_signal_emit (dpms, signals [MODE_CHANGED], 0, mode);
+		}
+		return TRUE;
+	}
+#endif
 	return TRUE;
 }
-
-#endif /* HAVE_X11 */
 
 /**
  * gpm_dpms_class_init:

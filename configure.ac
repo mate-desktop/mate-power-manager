@@ -139,6 +139,8 @@ if test "x$enable_wayland" != "xno"; then
                 have_wayland=yes
                 AC_DEFINE([HAVE_WAYLAND], 1, [Define if Wayland support is enabled])
                 PKG_CHECK_MODULES(WAYLAND_PROTOCOLS, wayland-protocols)
+                WAYLAND_PROTOCOLS_DATADIR=`pkg-config --variable=pkgdatadir wayland-protocols`
+                AC_SUBST(WAYLAND_PROTOCOLS_DATADIR)
                 AC_PATH_PROG([WAYLAND_SCANNER], [wayland-scanner], [no])
                 if test "x$WAYLAND_SCANNER" = "xno"; then
                         AC_MSG_ERROR([wayland-scanner not found])

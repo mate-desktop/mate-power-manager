@@ -36,6 +36,20 @@ cflags = [
 
 if enable_wayland
   cflags += '-DHAVE_WAYLAND'
+  wp_dep = dependency('wayland-protocols')
+  wp_datadir = wp_dep.get_pkgconfig_variable('pkgdatadir')
+  ext_idle_notify_xml = join_paths(wp_datadir, 'staging', 'ext-idle-notify', 'ext-idle-notify-v1.xml')
+  ext_idle_notify_code = custom_target('ext-idle-notify-protocol',
+    input: ext_idle_notify_xml,
+    output: 'ext-idle-notify-v1-protocol.c',
+    command: [wayland_scanner, 'private-code', '@INPUT@', '@OUTPUT@']
+  )
+  ext_idle_notify_header = custom_target('ext-idle-notify-header',
+    input: ext_idle_notify_xml,
+    output: 'ext-idle-notify-v1-client.h',
+    command: [wayland_scanner, 'client-header', '@INPUT@', '@OUTPUT@']
+  )
+  sources += ext_idle_notify_code
 endif
 marshal_files = gnome.genmarshal('gpm-marshal', prefix : 'gpm_marshal', sources : 'gpm-marshal.list')
 

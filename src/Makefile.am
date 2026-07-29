@@ -10,6 +10,9 @@ EXTRA_DIST =						\
 	gpm-marshal.list				\
 	$(NULL)
 
+WAYLAND_PROTOCOLS_DATADIR = @WAYLAND_PROTOCOLS_DATADIR@
+EXT_IDLE_NOTIFY_XML = $(WAYLAND_PROTOCOLS_DATADIR)/staging/ext-idle-notify/ext-idle-notify-v1.xml
+
 AM_CPPFLAGS =						\
 	$(GLIB_CFLAGS)					\
 	$(DBUS_CFLAGS)					\
@@ -84,6 +87,12 @@ libgpmshared_a_SOURCES =				\
 	gpm-marshal.c					\
 	gpm-upower.c					\
 	gpm-upower.h
+
+if HAVE_WAYLAND
+libgpmshared_a_SOURCES +=				\
+	ext-idle-notify-v1-protocol.c			\
+	$(NULL)
+endif
 
 mate_power_backlight_helper_SOURCES =			\
 	gpm-backlight-helper.c				\
@@ -302,6 +311,19 @@ BUILT_SOURCES = 					\
 	gpm-marshal.h					\
 	$(NULL)
 
+if HAVE_WAYLAND
+BUILT_SOURCES +=					\
+	ext-idle-notify-v1-client.h			\
+	ext-idle-notify-v1-protocol.c			\
+	$(NULL)
+endif
+
+ext-idle-notify-v1-client.h: $(EXT_IDLE_NOTIFY_XML)
+	$(AM_V_GEN)$(WAYLAND_SCANNER) client-header < $< > $@
+
+ext-idle-notify-v1-protocol.c: $(EXT_IDLE_NOTIFY_XML)
+	$(AM_V_GEN)$(WAYLAND_SCANNER) private-code < $< > $@
+
 gpm-marshal.c: gpm-marshal.list
 	echo "#include \"gpm-marshal.h\"" > $@ && \
 	@GLIB_GENMARSHAL@ $< --prefix=gpm_marshal --body >> $@
@@ -333,6 +355,7 @@ org.mate.PowerManager.KbdBacklight.h: org.mate.PowerManager.KbdBacklight.xml
 clean-local:
 	rm -f *~
 	rm -f gpm-marshal.c gpm-marshal.h
+	rm -f ext-idle-notify-v1-client.h ext-idle-notify-v1-protocol.c
 
 CLEANFILES = \
 	$(BUILT_SOURCES)				\

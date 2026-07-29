@@ -35,6 +35,8 @@
 
 #ifdef HAVE_WAYLAND
 #include <gdk/gdkwayland.h>
+#include <wayland-client.h>
+#include "ext-idle-notify-v1-client.h"
 #endif /* HAVE_WAYLAND */
 
 #include <stdio.h>
@@ -44,6 +46,7 @@
 #include "egg-idletime.h"
 
 static void     egg_idletime_finalize   (GObject       *object);
+gint64          egg_idletime_get_time   (EggIdletime   *idletime);
 
 struct EggIdletimePrivate
 {
@@ -55,7 +58,11 @@ struct EggIdletimePrivate
 	Display			*dpy;
 #endif
 #ifdef HAVE_WAYLAND
-	gpointer		 idle_notifier;
+	struct ext_idle_notifier_v1 *idle_notifier;
+	struct wl_seat		 *seat;
+	GPtrArray		*wayland_notifications; /* of EggIdletimeWaylandNotification* */
+	gboolean		 wayland_is_idle;
+	GTimer			*idle_timer;
 #endif
 };
 
@@ -67,6 +74,15 @@ typedef struct
 	XSyncAlarm		 xalarm;
 	EggIdletime		*idletime;
 } EggIdletimeAlarm;
+#endif
+
+#ifdef HAVE_WAYLAND
+typedef struct
+{
+	guint			 id;
+	guint			 timeout;
+	struct ext_idle_notification_v1 *notification;
+} EggIdletimeWaylandNotification;
 #endif
 
 enum {
@@ -97,17 +113,6 @@ static gint64
 egg_idletime_xsyncvalue_to_int64 (XSyncValue value)
 {
 	return ((guint64) XSyncValueHigh32 (value)) << 32 | (guint64) XSyncValueLow32 (value);
-}
-
-/**
- * egg_idletime_get_time:
- */
-gint64
-egg_idletime_get_time (EggIdletime *idletime)
-{
-	XSyncValue value;
-	XSyncQueryCounter (idletime->priv->dpy, idletime->priv->idle_counter, &value);
-	return egg_idletime_xsyncvalue_to_int64 (value);
 }
 
 /**
@@ -373,34 +378,133 @@ egg_idletime_alarm_remove (EggIdletime *idletime, guint id)
 
 #elif defined(HAVE_WAYLAND)
 
-/* Wayland idle detection using ext-idle-notify-v1 (placeholder) */
-
-gint64
-egg_idletime_get_time (EggIdletime *idletime)
+/**
+ * egg_idletime_alarm_wayland_find_id:
+ */
+static EggIdletimeWaylandNotification *
+egg_idletime_alarm_wayland_find_id (EggIdletime *idletime, guint id)
 {
-	g_return_val_if_fail (EGG_IS_IDLETIME (idletime), 0);
-	return 0;
+	guint i;
+	EggIdletimeWaylandNotification *wn;
+	for (i = 0; i < idletime->priv->wayland_notifications->len; i++) {
+		wn = g_ptr_array_index (idletime->priv->wayland_notifications, i);
+		if (wn->id == id)
+			return wn;
+	}
+	return NULL;
 }
 
+/**
+ * egg_idletime_wayland_notification_idled_cb:
+ */
+static void
+egg_idletime_wayland_notification_idled_cb (void *data,
+					    struct ext_idle_notification_v1 *notification)
+{
+	EggIdletime *idletime = EGG_IDLETIME (data);
+	EggIdletimeWaylandNotification *wn;
+	guint i;
+
+	for (i = 0; i < idletime->priv->wayland_notifications->len; i++) {
+		wn = g_ptr_array_index (idletime->priv->wayland_notifications, i);
+		if (wn->notification == notification) {
+			g_signal_emit (idletime, signals [SIGNAL_ALARM_EXPIRED], 0, wn->id);
+			break;
+		}
+	}
+	idletime->priv->wayland_is_idle = TRUE;
+	if (idletime->priv->idle_timer)
+		g_timer_start (idletime->priv->idle_timer);
+}
+
+/**
+ * egg_idletime_wayland_notification_resumed_cb:
+ */
+static void
+egg_idletime_wayland_notification_resumed_cb (void *data,
+					      struct ext_idle_notification_v1 *notification)
+{
+	EggIdletime *idletime = EGG_IDLETIME (data);
+
+	if (idletime->priv->wayland_is_idle) {
+		idletime->priv->wayland_is_idle = FALSE;
+		g_signal_emit (idletime, signals [SIGNAL_RESET], 0);
+	}
+}
+
+static const struct ext_idle_notification_v1_listener
+egg_idletime_wayland_notification_listener = {
+	.idled = egg_idletime_wayland_notification_idled_cb,
+	.resumed = egg_idletime_wayland_notification_resumed_cb,
+};
+
+/**
+ * egg_idletime_alarm_set:
+ */
+gboolean
+egg_idletime_alarm_set (EggIdletime *idletime, guint id, guint timeout)
+{
+	EggIdletimeWaylandNotification *wn;
+
+	g_return_val_if_fail (EGG_IS_IDLETIME (idletime), FALSE);
+	g_return_val_if_fail (id != 0, FALSE);
+	g_return_val_if_fail (timeout != 0, FALSE);
+
+	if (idletime->priv->idle_notifier == NULL) {
+		g_warning ("EggIdletime: idle_notifier not available");
+		return FALSE;
+	}
+
+	/* see if we already created a notification with this ID */
+	wn = egg_idletime_alarm_wayland_find_id (idletime, id);
+	if (wn != NULL) {
+		if (wn->notification)
+			ext_idle_notification_v1_destroy (wn->notification);
+		wn->timeout = timeout;
+	} else {
+		wn = g_new0 (EggIdletimeWaylandNotification, 1);
+		wn->id = id;
+		wn->timeout = timeout;
+		g_ptr_array_add (idletime->priv->wayland_notifications, wn);
+	}
+
+	wn->notification = ext_idle_notifier_v1_get_input_idle_notification (
+		idletime->priv->idle_notifier, timeout, idletime->priv->seat);
+	ext_idle_notification_v1_add_listener (wn->notification,
+		&egg_idletime_wayland_notification_listener, idletime);
+
+	return TRUE;
+}
+
+/**
+ * egg_idletime_alarm_remove:
+ */
+gboolean
+egg_idletime_alarm_remove (EggIdletime *idletime, guint id)
+{
+	EggIdletimeWaylandNotification *wn;
+
+	g_return_val_if_fail (EGG_IS_IDLETIME (idletime), FALSE);
+
+	wn = egg_idletime_alarm_wayland_find_id (idletime, id);
+	if (wn == NULL)
+		return FALSE;
+
+	if (wn->notification)
+		ext_idle_notification_v1_destroy (wn->notification);
+	g_ptr_array_remove (idletime->priv->wayland_notifications, wn);
+	g_free (wn);
+	return TRUE;
+}
+
+/**
+ * egg_idletime_alarm_reset_all:
+ */
 void
 egg_idletime_alarm_reset_all (EggIdletime *idletime)
 {
 	g_return_if_fail (EGG_IS_IDLETIME (idletime));
-}
-
-gboolean
-egg_idletime_alarm_set (EggIdletime *idletime, guint id, guint timeout)
-{
-	g_return_val_if_fail (EGG_IS_IDLETIME (idletime), FALSE);
-	g_warning ("EggIdletime: alarm_set not supported without X11");
-	return FALSE;
-}
-
-gboolean
-egg_idletime_alarm_remove (EggIdletime *idletime, guint id)
-{
-	g_return_val_if_fail (EGG_IS_IDLETIME (idletime), FALSE);
-	return FALSE;
+	g_signal_emit (idletime, signals [SIGNAL_RESET], 0);
 }
 
 #endif /* HAVE_X11 */
@@ -431,6 +535,37 @@ egg_idletime_class_init (EggIdletimeClass *klass)
 }
 
 /**
+ * egg_idletime_get_time:
+ * Return value: current idle time in milliseconds
+ **/
+gint64
+egg_idletime_get_time (EggIdletime *idletime)
+{
+	g_return_val_if_fail (EGG_IS_IDLETIME (idletime), 0);
+
+#ifdef HAVE_X11
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_X11_DISPLAY (gdk_display_get_default ()) &&
+	    idletime->priv->idle_counter) {
+		XSyncValue value;
+		XSyncQueryCounter (idletime->priv->dpy, idletime->priv->idle_counter, &value);
+		return egg_idletime_xsyncvalue_to_int64 (value);
+	}
+#endif
+#ifdef HAVE_WAYLAND
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ()) &&
+	    idletime->priv->wayland_is_idle &&
+	    idletime->priv->idle_timer) {
+		return (gint64)(g_timer_elapsed (idletime->priv->idle_timer, NULL) * 1000.0);
+	}
+#endif
+	return 0;
+}
+
+#ifdef HAVE_X11
+
+/**
  * egg_idletime_init:
  **/
 static void
@@ -441,7 +576,6 @@ egg_idletime_init (EggIdletime *idletime)
 	idletime->priv->reset_set = FALSE;
 	idletime->priv->array = g_ptr_array_new ();
 
-#ifdef HAVE_X11
 	if (gdk_display_get_default () != NULL &&
 	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
 		int sync_error;
@@ -482,16 +616,101 @@ egg_idletime_init (EggIdletime *idletime)
 		g_ptr_array_add (idletime->priv->array, alarm);
 		return;
 	}
-#endif
-#ifdef HAVE_WAYLAND
 	if (gdk_display_get_default () != NULL &&
 	    GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ())) {
-		g_debug ("Wayland idle tracking not yet implemented");
+		g_debug ("X11 backend not available on Wayland display");
 		return;
 	}
-#endif
 	g_debug ("No idle tracking available for current display");
 }
+
+#elif defined(HAVE_WAYLAND)
+
+/**
+ * egg_idletime_wayland_registry_global_cb:
+ */
+static void
+egg_idletime_wayland_registry_global_cb (void *data, struct wl_registry *registry,
+					 uint32_t name, const char *interface,
+					 uint32_t version)
+{
+	EggIdletime *idletime = EGG_IDLETIME (data);
+
+	if (g_strcmp0 (interface, "ext_idle_notifier_v1") == 0) {
+		idletime->priv->idle_notifier = wl_registry_bind (registry, name,
+			&ext_idle_notifier_v1_interface, MIN (version, 2u));
+		g_debug ("bound ext_idle_notifier_v1 (version %u)", MIN (version, 2u));
+	} else if (g_strcmp0 (interface, "wl_seat") == 0) {
+		if (idletime->priv->seat == NULL) {
+			idletime->priv->seat = wl_registry_bind (registry, name,
+				&wl_seat_interface, MIN (version, 1u));
+		}
+	}
+}
+
+static void
+egg_idletime_wayland_registry_global_remove_cb (void *data, struct wl_registry *registry,
+						uint32_t name)
+{
+}
+
+static const struct wl_registry_listener egg_idletime_wayland_registry_listener = {
+	.global = egg_idletime_wayland_registry_global_cb,
+	.global_remove = egg_idletime_wayland_registry_global_remove_cb,
+};
+
+/**
+ * egg_idletime_init:
+ **/
+static void
+egg_idletime_init (EggIdletime *idletime)
+{
+	idletime->priv = egg_idletime_get_instance_private (idletime);
+
+	idletime->priv->reset_set = FALSE;
+	idletime->priv->array = g_ptr_array_new ();
+	idletime->priv->wayland_notifications = g_ptr_array_new_with_free_func (g_free);
+	idletime->priv->wayland_is_idle = FALSE;
+	idletime->priv->idle_timer = g_timer_new ();
+
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		g_debug ("Wayland idle tracking not available on X11 display");
+		return;
+	}
+
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ())) {
+		struct wl_display *display;
+		struct wl_registry *registry;
+
+		display = gdk_wayland_display_get_wl_display (gdk_display_get_default ());
+		if (display == NULL) {
+			g_warning ("Cannot get Wayland display");
+			return;
+		}
+
+		registry = wl_display_get_registry (display);
+		if (registry == NULL) {
+			g_warning ("Cannot get Wayland registry");
+			return;
+		}
+
+		wl_registry_add_listener (registry, &egg_idletime_wayland_registry_listener, idletime);
+		wl_display_roundtrip (display);
+
+		if (idletime->priv->idle_notifier == NULL) {
+			g_debug ("Compositor does not support ext_idle_notifier_v1");
+		}
+		if (idletime->priv->seat == NULL) {
+			g_warning ("No wl_seat available");
+		}
+		return;
+	}
+	g_debug ("No idle tracking available for current display");
+}
+
+#endif /* HAVE_X11 */
 
 /**
  * egg_idletime_finalize:
@@ -521,6 +740,23 @@ egg_idletime_finalize (GObject *object)
 			g_object_unref (alarm->idletime);
 			g_free (alarm);
 		}
+	}
+#endif
+#ifdef HAVE_WAYLAND
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ())) {
+		EggIdletimeWaylandNotification *wn;
+
+		for (i = 0; i < idletime->priv->wayland_notifications->len; i++) {
+			wn = g_ptr_array_index (idletime->priv->wayland_notifications, i);
+			if (wn->notification)
+				ext_idle_notification_v1_destroy (wn->notification);
+		}
+		g_ptr_array_free (idletime->priv->wayland_notifications, TRUE);
+		if (idletime->priv->idle_notifier)
+			ext_idle_notifier_v1_destroy (idletime->priv->idle_notifier);
+		if (idletime->priv->idle_timer)
+			g_timer_destroy (idletime->priv->idle_timer);
 	}
 #endif
 	g_ptr_array_free (idletime->priv->array, TRUE);
