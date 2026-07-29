@@ -522,7 +522,6 @@ egg_idletime_init (EggIdletime *idletime)
 
 		idletime->priv->wayland_notifications = g_ptr_array_new_with_free_func (g_free);
 		idletime->priv->idle_timer = g_timer_new ();
-		struct wl_registry *registry;
 
 		display = gdk_wayland_display_get_wl_display (gdk_display_get_default ());
 		if (display == NULL) {
@@ -591,6 +590,10 @@ egg_idletime_alarm_set (EggIdletime *idletime, guint id, guint timeout)
 
 		if (idletime->priv->idle_notifier == NULL) {
 			g_warning ("EggIdletime: idle_notifier not available");
+			return FALSE;
+		}
+		if (idletime->priv->seat == NULL) {
+			g_warning ("EggIdletime: no Wayland seat available");
 			return FALSE;
 		}
 

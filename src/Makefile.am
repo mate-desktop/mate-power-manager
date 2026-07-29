@@ -90,7 +90,7 @@ libgpmshared_a_SOURCES =				\
 	gpm-upower.h
 
 if HAVE_WAYLAND
-libgpmshared_a_SOURCES +=				\
+nodist_libgpmshared_a_SOURCES =				\
 	ext-idle-notify-v1-protocol.c			\
 	wlr-output-power-management-unstable-v1-protocol.c	\
 	$(NULL)
