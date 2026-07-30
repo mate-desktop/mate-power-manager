@@ -93,7 +93,7 @@ struct GpmManagerPrivate
 	UpClient		*client;
 	gboolean		 on_battery;
 	gboolean		 just_resumed;
-	GtkStatusIcon		*status_icon;
+	gchar			*status_icon_name;
 	NotifyNotification	*notification_general;
 	NotifyNotification	*notification_warning_low;
 	NotifyNotification	*notification_discharging;
@@ -482,9 +482,8 @@ gpm_manager_notify (GpmManager *manager, NotifyNotification **notification_class
 	gpm_manager_notify_close (manager, *notification_class);
 
 	/* if the status icon is hidden, don't point at it */
-	if (manager->priv->status_icon != NULL &&
-	    gtk_status_icon_is_embedded (manager->priv->status_icon))
-		notification = notify_notification_new (title, message, gtk_status_icon_get_icon_name(manager->priv->status_icon));
+	if (manager->priv->status_icon_name != NULL)
+		notification = notify_notification_new (title, message, manager->priv->status_icon_name);
 	else
 		notification = notify_notification_new (title, message, icon);
 	notify_notification_set_timeout (notification, timeout);
@@ -1910,7 +1909,7 @@ gpm_manager_init (GpmManager *manager)
 	manager->priv->tray_icon = gpm_tray_icon_new ();
 
 	/* keep a reference for the notifications */
-	manager->priv->status_icon = gpm_tray_icon_get_status_icon (manager->priv->tray_icon);
+	manager->priv->status_icon_name = gpm_tray_icon_get_icon_name (manager->priv->tray_icon);
 
 	gpm_manager_sync_policy_sleep (manager);
 
@@ -1990,7 +1989,7 @@ gpm_manager_finalize (GObject *object)
 	g_object_unref (manager->priv->kbd_backlight);
 	g_object_unref (manager->priv->console);
 	g_object_unref (manager->priv->client);
-	g_object_unref (manager->priv->status_icon);
+	g_free (manager->priv->status_icon_name);
 
 	if (LOGIND_RUNNING()) {
 		/* Let systemd take over again ... */

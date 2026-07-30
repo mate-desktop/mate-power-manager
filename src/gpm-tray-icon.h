@@ -57,7 +57,7 @@ gboolean	 gpm_tray_icon_set_tooltip		(GpmTrayIcon	*icon,
 							 const gchar	*tooltip);
 gboolean	 gpm_tray_icon_set_icon			(GpmTrayIcon	*icon,
 							 const gchar	*icon_name);
-GtkStatusIcon	*gpm_tray_icon_get_status_icon		(GpmTrayIcon	*icon);
+gchar		*gpm_tray_icon_get_icon_name		(GpmTrayIcon	*icon);
 
 G_END_DECLS
 

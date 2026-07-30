@@ -102,6 +102,7 @@ deps = [
   keyring,
   libsecret,
   notify,
+  appindicator,
 ]
 
 if enable_wayland
