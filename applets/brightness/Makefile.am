@@ -1,5 +1,10 @@
 NULL =
 
+if HAVE_WAYLAND
+WAYLAND_CPPFLAGS = $(GTK_LAYER_SHELL_CFLAGS)
+WAYLAND_LIBS = $(GTK_LAYER_SHELL_LIBS)
+endif
+
 AM_CPPFLAGS =							\
 	-I. -I$(srcdir) 					\
 	$(GLIB_CFLAGS)						\
@@ -7,6 +12,7 @@ AM_CPPFLAGS =							\
 	$(CAIRO_CFLAGS)						\
 	$(PANEL_CFLAGS)						\
 	$(LIBNOTIFY_CFLAGS)					\
+	$(WAYLAND_CPPFLAGS)					\
 	-DBINDIR=\"$(bindir)\"			 		\
 	-DMATELOCALEDIR=\""$(datadir)/locale"\"			\
 	-DDATADIR=\"$(datadir)\"				\
@@ -38,7 +44,8 @@ libmate_brightness_applet_la_LDFLAGS = -module -avoid-version
 libmate_brightness_applet_la_LIBADD =				\
 	$(DBUS_LIBS)						\
 	$(CAIRO_LIBS)						\
-	$(PANEL_LIBS)
+	$(PANEL_LIBS)						\
+	$(WAYLAND_LIBS)
 else
 APPLET_IN_PROCESS = false
 APPLET_LOCATION   = $(libexecdir)/mate-brightness-applet
@@ -52,7 +59,8 @@ mate_brightness_applet_CFLAGS = $(AM_CFLAGS)
 mate_brightness_applet_LDADD =					\
 	$(DBUS_LIBS)						\
 	$(CAIRO_LIBS)						\
-	$(PANEL_LIBS)
+	$(PANEL_LIBS)						\
+	$(WAYLAND_LIBS)
 endif
 
 appletdir       = $(datadir)/mate-panel/applets

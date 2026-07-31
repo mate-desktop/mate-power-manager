@@ -15,18 +15,24 @@ cflags = [
   '-DEGG_CONSOLE="GPM_CONSOLE"'
   ]
 
+applet_deps = [
+  gtk,
+  glib,
+  cairo,
+  notify,
+  dbus,
+  dbusglib,
+  matepanel
+]
+
+if enable_wayland
+  applet_deps += gtk_layer_shell
+endif
+
 if enable_applets_inprocess
   shared_library('mate-brightness-applet',
     sources: source_files,
-    dependencies : [
-      gtk,
-      glib,
-      cairo,
-      notify,
-      dbus,
-      dbusglib,
-      matepanel
-    ],
+    dependencies : applet_deps,
     include_directories : config_inc,
     c_args : cflags,
     install : true,
@@ -35,15 +41,7 @@ if enable_applets_inprocess
 else
   executable('mate-brightness-applet',
     sources: source_files,
-    dependencies : [
-      gtk,
-      glib,
-      cairo,
-      notify,
-      dbus,
-      dbusglib,
-      matepanel
-    ],
+    dependencies : applet_deps,
     include_directories : config_inc,
     c_args : cflags,
     install : true,

@@ -118,6 +118,7 @@ if enable_wayland
   wayland_client = dependency('wayland-client', required: true)
   wayland_protocols = dependency('wayland-protocols', required: true)
   wayland_scanner = find_program('wayland-scanner', required: true)
+  gtk_layer_shell = dependency('gtk-layer-shell-0', required: true)
   conf.set('HAVE_WAYLAND', 1)
 endif
 

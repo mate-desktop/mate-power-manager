@@ -170,6 +170,15 @@ if test "x$enable_wayland" != "xno"; then
                         fi
                         AC_MSG_RESULT([yes])
                 fi
+
+                if test "x$have_wayland" = "xyes"; then
+                        PKG_CHECK_MODULES(GTK_LAYER_SHELL, gtk-layer-shell-0, [], [
+                                if test "x$enable_wayland" = "xyes"; then
+                                        AC_MSG_ERROR([Wayland support requested but gtk-layer-shell not found])
+                                fi
+                                have_wayland=no
+                        ])
+                fi
         fi
 fi
 
