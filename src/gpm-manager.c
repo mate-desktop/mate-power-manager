@@ -93,7 +93,6 @@ struct GpmManagerPrivate
 	UpClient		*client;
 	gboolean		 on_battery;
 	gboolean		 just_resumed;
-	gchar			*status_icon_name;
 	NotifyNotification	*notification_general;
 	NotifyNotification	*notification_warning_low;
 	NotifyNotification	*notification_discharging;
@@ -475,6 +474,7 @@ gpm_manager_notify (GpmManager *manager, NotifyNotification **notification_class
 {
 	gboolean ret;
 	GError *error = NULL;
+	gchar *tray_icon_name;
 	NotifyNotification *notification;
 	GtkWidget *dialog;
 
@@ -482,10 +482,12 @@ gpm_manager_notify (GpmManager *manager, NotifyNotification **notification_class
 	gpm_manager_notify_close (manager, *notification_class);
 
 	/* if the status icon is hidden, don't point at it */
-	if (manager->priv->status_icon_name != NULL)
-		notification = notify_notification_new (title, message, manager->priv->status_icon_name);
+	tray_icon_name = gpm_tray_icon_get_icon_name (manager->priv->tray_icon);
+	if (tray_icon_name != NULL)
+		notification = notify_notification_new (title, message, tray_icon_name);
 	else
 		notification = notify_notification_new (title, message, icon);
+	g_free (tray_icon_name);
 	notify_notification_set_timeout (notification, timeout);
 	notify_notification_set_urgency (notification, urgency);
 	g_signal_connect (notification, "closed", G_CALLBACK (gpm_manager_notification_closed_cb), notification_class);
@@ -1908,9 +1910,6 @@ gpm_manager_init (GpmManager *manager)
 	g_debug ("creating new tray icon");
 	manager->priv->tray_icon = gpm_tray_icon_new ();
 
-	/* keep a reference for the notifications */
-	manager->priv->status_icon_name = gpm_tray_icon_get_icon_name (manager->priv->tray_icon);
-
 	gpm_manager_sync_policy_sleep (manager);
 
 	manager->priv->engine = gpm_engine_new ();
@@ -1989,7 +1988,6 @@ gpm_manager_finalize (GObject *object)
 	g_object_unref (manager->priv->kbd_backlight);
 	g_object_unref (manager->priv->console);
 	g_object_unref (manager->priv->client);
-	g_free (manager->priv->status_icon_name);
 
 	if (LOGIND_RUNNING()) {
 		/* Let systemd take over again ... */

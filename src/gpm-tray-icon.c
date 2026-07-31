@@ -470,11 +470,15 @@ gpm_tray_icon_init (GpmTrayIcon *icon)
 	icon->priv->indicator = app_indicator_new ("mate-power-manager",
 	                                           "mate-power-manager",
 	                                           APP_INDICATOR_CATEGORY_HARDWARE);
-	app_indicator_set_status (icon->priv->indicator, APP_INDICATOR_STATUS_ACTIVE);
-	gpm_tray_icon_rebuild_menu (icon);
+	g_object_ref_sink (icon->priv->indicator);
+
+	/* start hidden; the engine decides when to show the icon */
+	app_indicator_set_status (icon->priv->indicator, APP_INDICATOR_STATUS_PASSIVE);
 
 	allowed_in_menu = g_settings_get_boolean (icon->priv->settings, GPM_SETTINGS_SHOW_ACTIONS);
 	gpm_tray_icon_enable_actions (icon, allowed_in_menu);
+
+	gpm_tray_icon_rebuild_menu (icon);
 }
 
 /**
@@ -491,6 +495,7 @@ gpm_tray_icon_finalize (GObject *object)
 
 	tray_icon = GPM_TRAY_ICON (object);
 
+	g_object_unref (tray_icon->priv->settings);
 	g_object_unref (tray_icon->priv->indicator);
 	g_object_unref (tray_icon->priv->engine);
 	g_free (tray_icon->priv->current_icon);
