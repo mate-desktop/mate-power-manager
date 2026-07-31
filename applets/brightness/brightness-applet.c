@@ -38,6 +38,11 @@
 
 #include "gpm-common.h"
 
+#ifdef HAVE_WAYLAND
+#include <gdk/gdkwayland.h>
+#include <gtk-layer-shell/gtk-layer-shell.h>
+#endif /* HAVE_WAYLAND */
+
 #define GPM_TYPE_BRIGHTNESS_APPLET		(gpm_brightness_applet_get_type ())
 #define GPM_BRIGHTNESS_APPLET(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), GPM_TYPE_BRIGHTNESS_APPLET, GpmBrightnessApplet))
 #define GPM_BRIGHTNESS_APPLET_CLASS(k)		(G_TYPE_CHECK_CLASS_CAST((k), GPM_TYPE_BRIGHTNESS_APPLET, GpmBrightnessAppletClass))
@@ -723,14 +728,85 @@ gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 	/* update UI for current brightness */
 	gpm_applet_update_popup_level (applet);
 
+	/*Get the applet location, we need that now in wayland and later in x11*/
+	gdk_window_get_origin (gtk_widget_get_window (GTK_WIDGET(applet)), &x, &y);
+
+#ifdef HAVE_WAYLAND
+
+
+	if (1 == 1)
+	{
+		gboolean top, bottom, left, right;
+		GtkWidget *toplevel;
+		toplevel = gtk_widget_get_toplevel (GTK_WIDGET (applet));
+
+		if (!(GTK_IS_WIDGET(toplevel)))
+			g_message("invalid toplevel widget");
+
+		if (!gtk_layer_is_layer_window (GTK_WINDOW (applet->popup)))
+		{
+		gtk_layer_init_for_window (GTK_WINDOW (applet->popup));
+		gtk_layer_set_layer (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_LAYER_TOP);
+		gtk_layer_set_keyboard_mode (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_KEYBOARD_MODE_ON_DEMAND);
+		}
+
+		top = gtk_layer_get_anchor (GTK_WINDOW (toplevel), GTK_LAYER_SHELL_EDGE_TOP);
+		bottom = gtk_layer_get_anchor (GTK_WINDOW (toplevel), GTK_LAYER_SHELL_EDGE_BOTTOM);
+		left = gtk_layer_get_anchor (GTK_WINDOW (toplevel), GTK_LAYER_SHELL_EDGE_LEFT);
+		right = gtk_layer_get_anchor (GTK_WINDOW (toplevel), GTK_LAYER_SHELL_EDGE_RIGHT);
+
+		/*Set anchors to the edges (will hold to panel edge) and position along the panel
+		 *Unset margins and anchors from any other position so as to avoid rendering issues
+		 *when orientation changes as when the panel is moved
+		 */
+
+		if (top && left && right)
+		{
+		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_TOP, TRUE);
+		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_LEFT, TRUE);
+		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_BOTTOM, FALSE);
+		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_RIGHT, FALSE);
+		gtk_layer_set_margin (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_LEFT, x);
+		gtk_layer_set_margin (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_TOP, 0);
+		}
+		if (bottom && left && right)
+		{
+		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_BOTTOM, TRUE);
+		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_LEFT, TRUE);
+		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_TOP, FALSE);
+		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_RIGHT, FALSE);
+		gtk_layer_set_margin (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_LEFT, x);
+		gtk_layer_set_margin (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_TOP, 0);
+		}
+		if (left && bottom && top && !right)
+		{
+		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_LEFT, TRUE);
+		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_TOP, TRUE);
+		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_RIGHT, FALSE);
+		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_BOTTOM, FALSE);
+		gtk_layer_set_margin (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_TOP, y);
+		gtk_layer_set_margin (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_LEFT, 0);
+		}
+		if (right && bottom && top && !left)
+		{
+		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_RIGHT, TRUE);
+		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_TOP, TRUE);
+		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_LEFT, FALSE);
+		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_BOTTOM, FALSE);
+		gtk_layer_set_margin (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_TOP, y);
+		gtk_layer_set_margin (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_LEFT, 0);
+		}
+	}
+
+#endif /* HAVE_WAYLAND */
+
 	gtk_widget_show_all (applet->popup);
 
 	/* retrieve geometry parameters and move window appropriately */
 	orientation = mate_panel_applet_get_orient (MATE_PANEL_APPLET (MATE_PANEL_APPLET (applet)));
-	gdk_window_get_origin (gtk_widget_get_window (GTK_WIDGET(applet)), &x, &y);
-
 	gtk_widget_get_allocation (GTK_WIDGET (applet), &allocation);
 	gtk_widget_get_allocation (GTK_WIDGET (applet->popup), &popup_allocation);
+
 	switch (orientation) {
 	case MATE_PANEL_APPLET_ORIENT_DOWN:
 		x += allocation.x + allocation.width/2;
