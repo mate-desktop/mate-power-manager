@@ -4,3 +4,4 @@ option('libsecret', type : 'boolean', value : true, description : 'libsecret ena
 option('applets', type : 'boolean', value : true, description : 'applets enabled')
 option('applets-in-process', type : 'boolean', value : false, description : 'build applets in-process')
 option('enable-wayland', type : 'boolean', value : false, description : 'Wayland support')
+option('appindicator', type : 'feature', value : 'auto', description : 'ayatana appindicator support')

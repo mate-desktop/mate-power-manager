@@ -114,7 +114,34 @@ PKG_CHECK_MODULES(LIBNOTIFY, libnotify >= $LIBNOTIFY_REQUIRED)
 
 PKG_CHECK_MODULES(UPOWER, upower-glib >= $UPOWER_REQUIRED)
 
-PKG_CHECK_MODULES(APPLICATION_INDICATOR, ayatana-appindicator3-0.1)
+dnl ---------------------------------------------------------------------------
+dnl - Build with appindicator support
+dnl ---------------------------------------------------------------------------
+AC_ARG_ENABLE(appindicator,
+        AS_HELP_STRING([--enable-appindicator],
+                        [Enable ayatana appindicator support (default: auto)]),
+        [enable_appindicator=$enableval],
+        [enable_appindicator=auto])
+
+AC_MSG_CHECKING([whether to support appindicator])
+
+have_appindicator=no
+if test "x$enable_appindicator" != "xno"; then
+        PKG_CHECK_MODULES(APPLICATION_INDICATOR, ayatana-appindicator3-0.1, [
+                have_appindicator=yes
+                AC_DEFINE([HAVE_APP_INDICATOR], 1, [Define if appindicator support is enabled])
+        ], [
+                if test "x$enable_appindicator" = "xyes"; then
+                        AC_MSG_ERROR([appindicator support requested but ayatana-appindicator3-0.1 not found])
+                fi
+        ])
+fi
+
+if test "x$have_appindicator" = "xyes"; then
+        AC_MSG_RESULT([yes])
+else
+        AC_MSG_RESULT([no])
+fi
 
 dnl ---------------------------------------------------------------------------
 dnl - Make paths available for source files
@@ -139,7 +166,6 @@ have_wayland=no
 if test "x$enable_wayland" != "xno"; then
         PKG_CHECK_MODULES(WAYLAND_CLIENT, wayland-client, [
                 have_wayland=yes
-                AC_DEFINE([HAVE_WAYLAND], 1, [Define if Wayland support is enabled])
         ], [
                 if test "x$enable_wayland" = "xyes"; then
                         AC_MSG_ERROR([Wayland support requested but wayland-client not found])
@@ -159,9 +185,14 @@ if test "x$enable_wayland" != "xno"; then
                         AC_SUBST(WAYLAND_PROTOCOLS_DATADIR)
                         AC_PATH_PROG([WAYLAND_SCANNER], [wayland-scanner], [no])
                         if test "x$WAYLAND_SCANNER" = "xno"; then
-                                AC_MSG_ERROR([wayland-scanner not found])
+                                if test "x$enable_wayland" = "xyes"; then
+                                        AC_MSG_ERROR([Wayland support requested but wayland-scanner not found])
+                                fi
+                                have_wayland=no
                         fi
+                fi
 
+                if test "x$have_wayland" = "xyes"; then
                         AC_MSG_CHECKING([for wlr-output-power-management-unstable-v1.xml])
                         WLR_PROTOCOLS_XML="${srcdir}/src/wlr-output-power-management-unstable-v1.xml"
                         if test ! -f "$WLR_PROTOCOLS_XML"; then
@@ -183,6 +214,7 @@ if test "x$enable_wayland" != "xno"; then
 fi
 
 if test "x$have_wayland" = "xyes"; then
+        AC_DEFINE([HAVE_WAYLAND], 1, [Define if Wayland support is enabled])
         AC_MSG_RESULT([yes])
 else
         AC_MSG_RESULT([no])
@@ -339,6 +371,7 @@ Configure summary:
     gnome-keyring support .......: ${with_keyring}
     Building extra applets ......: ${enable_applets}
     Applets in-process...........: ${enable_applets_inprocess}
+    Appindicator support ........: ${have_appindicator}
     Wayland support .............: ${have_wayland}
     Self test support ...........: ${have_tests}
     dbus-1 services dir .........: $DBUS_SERVICES_DIR
