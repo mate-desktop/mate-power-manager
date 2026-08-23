@@ -559,6 +559,10 @@ gpm_tray_icon_init (GpmTrayIcon *icon)
 	                                           APP_INDICATOR_CATEGORY_HARDWARE);
 	g_object_ref_sink (icon->priv->indicator);
 
+	/* the SNI host resolves icon names in its own process, so it needs
+	 * to be told where our status icons live */
+	app_indicator_set_icon_theme_path (icon->priv->indicator, GPM_ICONS_DATA);
+
 	/* start hidden; the engine decides when to show the icon */
 	app_indicator_set_status (icon->priv->indicator, APP_INDICATOR_STATUS_PASSIVE);
 #else
