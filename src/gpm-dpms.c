@@ -286,38 +286,64 @@ gpm_dpms_wayland_output_find (GpmDpms *dpms, uint32_t name)
 }
 
 static void
+gpm_dpms_wayland_output_attach (GpmDpms *dpms, struct wl_registry *registry,
+				GpmDpmsWaylandOutput *wo)
+{
+	struct wl_output *output;
+
+	if (wo->power != NULL)
+		return;
+	if (dpms->priv->power_manager == NULL)
+		return;
+
+	output = wl_registry_bind (registry, wo->name,
+				   &wl_output_interface, 1);
+	if (output == NULL)
+		return;
+
+	wo->power = zwlr_output_power_manager_v1_get_output_power (
+		dpms->priv->power_manager, output);
+	zwlr_output_power_v1_add_listener (wo->power,
+		&gpm_dpms_wayland_power_listener, wo);
+
+	/* wl_output has no release request at version 1; drop the proxy */
+	wl_proxy_destroy ((struct wl_proxy *) output);
+
+	g_debug ("added zwlr_output_power_v1 for output %u", wo->name);
+}
+
+static void
 gpm_dpms_wayland_registry_global_cb (void *data, struct wl_registry *registry,
 				     uint32_t name, const char *interface,
 				     uint32_t version)
 {
 	GpmDpms *dpms = data;
+	guint i;
 
 	if (g_strcmp0 (interface, "zwlr_output_power_manager_v1") == 0) {
+		if (dpms->priv->power_manager != NULL)
+			return;
 		dpms->priv->power_manager = wl_registry_bind (registry, name,
 			&zwlr_output_power_manager_v1_interface, 1);
 		g_debug ("bound zwlr_output_power_manager_v1");
+
+		/* attach any outputs announced before the power manager */
+		for (i = 0; i < dpms->priv->wayland_outputs->len; i++)
+			gpm_dpms_wayland_output_attach (dpms, registry,
+				g_ptr_array_index (dpms->priv->wayland_outputs, i));
 	} else if (g_strcmp0 (interface, "wl_output") == 0) {
-		struct wl_output *output;
 		GpmDpmsWaylandOutput *wo;
 
 		wo = gpm_dpms_wayland_output_find (dpms, name);
 		if (wo != NULL)
 			return;
 
-		output = wl_registry_bind (registry, name,
-					   &wl_output_interface, 1);
-		if (dpms->priv->power_manager == NULL)
-			return;
-
 		wo = g_new0 (GpmDpmsWaylandOutput, 1);
 		wo->name = name;
 		wo->mode = GPM_DPMS_MODE_ON;
-		wo->power = zwlr_output_power_manager_v1_get_output_power (
-			dpms->priv->power_manager, output);
-		zwlr_output_power_v1_add_listener (wo->power,
-			&gpm_dpms_wayland_power_listener, wo);
 		g_ptr_array_add (dpms->priv->wayland_outputs, wo);
-		g_debug ("added zwlr_output_power_v1 for output %u", name);
+
+		gpm_dpms_wayland_output_attach (dpms, registry, wo);
 	}
 }
 
@@ -333,7 +359,6 @@ gpm_dpms_wayland_registry_global_remove_cb (void *data,
 	if (wo->power)
 		zwlr_output_power_v1_destroy (wo->power);
 	g_ptr_array_remove (dpms->priv->wayland_outputs, wo);
-	g_free (wo);
 	g_debug ("removed zwlr_output_power_v1 for output %u", name);
 }
 
@@ -368,6 +393,8 @@ gpm_dpms_wayland_set_mode (GpmDpms *dpms, GpmDpmsMode mode, GError **error)
 
 	for (i = 0; i < dpms->priv->wayland_outputs->len; i++) {
 		GpmDpmsWaylandOutput *wo = g_ptr_array_index (dpms->priv->wayland_outputs, i);
+		if (wo->power == NULL)
+			continue;
 		zwlr_output_power_v1_set_mode (wo->power, wlr_mode);
 	}
 

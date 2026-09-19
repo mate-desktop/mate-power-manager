@@ -610,8 +610,13 @@ egg_idletime_alarm_set (EggIdletime *idletime, guint id, guint timeout)
 			g_ptr_array_add (idletime->priv->wayland_notifications, wn);
 		}
 
-		wn->notification = ext_idle_notifier_v1_get_input_idle_notification (
-			idletime->priv->idle_notifier, timeout, idletime->priv->seat);
+		if (ext_idle_notifier_v1_get_version (idletime->priv->idle_notifier) >= 2) {
+			wn->notification = ext_idle_notifier_v1_get_input_idle_notification (
+				idletime->priv->idle_notifier, timeout, idletime->priv->seat);
+		} else {
+			wn->notification = ext_idle_notifier_v1_get_idle_notification (
+				idletime->priv->idle_notifier, timeout, idletime->priv->seat);
+		}
 		ext_idle_notification_v1_add_listener (wn->notification,
 			&egg_idletime_wayland_notification_listener, idletime);
 
