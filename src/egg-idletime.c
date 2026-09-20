@@ -657,7 +657,6 @@ egg_idletime_alarm_remove (EggIdletime *idletime, guint id)
 		if (wn->notification)
 			ext_idle_notification_v1_destroy (wn->notification);
 		g_ptr_array_remove (idletime->priv->wayland_notifications, wn);
-		g_free (wn);
 		return TRUE;
 	}
 #endif
