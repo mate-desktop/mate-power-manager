@@ -1753,7 +1753,7 @@ gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
                                         &error );
     //append all our arguments
     if (proxy == NULL) {
-        g_error ("Error connecting to dbus - %s", error->message);
+        g_warning ("Error connecting to dbus - %s", error->message);
         g_error_free (error);
         return -1;
     }
@@ -1772,7 +1772,7 @@ gpm_manager_systemd_inhibit (GDBusProxy *proxy) {
                             &error
                             );
     if (error != NULL) {
-        g_error ("Error in dbus - %s", error->message);
+        g_warning ("Error in dbus - %s", error->message);
         g_error_free (error);
         return -EIO;
     }
