@@ -920,9 +920,11 @@ gpm_brightness_finalize (GObject *object)
 	g_return_if_fail (GPM_IS_BRIGHTNESS (object));
 	brightness = GPM_BRIGHTNESS (object);
 #ifdef HAVE_X11
-	g_ptr_array_unref (brightness->priv->resources);
-	gdk_window_remove_filter (brightness->priv->root_window,
-				  gpm_brightness_filter_xevents, brightness);
+	if (brightness->priv->resources != NULL)
+		g_ptr_array_unref (brightness->priv->resources);
+	if (brightness->priv->root_window != NULL)
+		gdk_window_remove_filter (brightness->priv->root_window,
+					  gpm_brightness_filter_xevents, brightness);
 #endif
 	G_OBJECT_CLASS (gpm_brightness_parent_class)->finalize (object);
 }
