@@ -103,11 +103,33 @@ notify = dependency('libnotify', version : '>= 0.7.0')
 canberra = dependency('libcanberra-gtk3', version : '>= 0.10')
 matepanel = dependency('libmatepanelapplet-4.0', version : '>= 1.17.0',required: enable_applet)
 upower = dependency('upower-glib', version : '>= 0.99.8')
-appindicator = dependency('ayatana-appindicator3-0.1', required: enable_appindicator)
 libsecret = dependency('libsecret-1', version : '>= 0.11', required: enable_libsecret)
 keyring = dependency('gnome-keyring-1', version : '>= 3.0.0', required: enable_keyring)
 md = dependency('mate-desktop-2.0', version : '>= 1.27.1')
 libm = cc.find_library('m', required: false)
+
+appindicator_ayatana = dependency('ayatana-appindicator3-0.1', required : false)
+ubuntu_ayatana = dependency('appindicator3-0.1', required : false)
+
+if enable_appindicator.enabled()
+  if appindicator_ayatana.found()
+    appindicator = dependency('ayatana-appindicator3-0.1')
+  elif ubuntu_ayatana.found()
+    appindicator = dependency('appindicator3-0.1')
+  else
+    error ('Neither Ayatana AppIndicator nor Ubuntu AppIndicator library is present, but you enabled AppIndicator support.')
+  endif
+elif enable_appindicator.auto()
+  if appindicator_ayatana.found()
+    appindicator = dependency('ayatana-appindicator3-0.1')
+  elif ubuntu_ayatana.found()
+    appindicator = dependency('appindicator3-0.1')
+  else
+    appindicator = []
+  endif
+else
+   appindicator = []
+endif
 
 xrandr = dependency('xrandr', version : '>= 1.3.0', required: true)
 xproto = dependency('xproto', version : '>= 7.0.15', required: true)
@@ -129,7 +151,6 @@ conf.set('WITH_KEYRING', keyring.found())
 conf.set('WITH_LIBSECRET', libsecret.found())
 conf.set('APPLETS_INPROCESS', enable_applets_inprocess)
 conf.set('HAVE_X11', 1)
-conf.set('HAVE_APP_INDICATOR', appindicator.found())
 conf.set_quoted('GETTEXT_PACKAGE', meson.project_name())
 conf.set_quoted('LOCALEDIR',
                 join_paths(get_option('prefix'),
@@ -140,6 +161,12 @@ conf.set_quoted('DATADIR',
 
 conf.set_quoted('PACKAGE_URL', 'https://mate-desktop.org')
 conf.set_quoted('VERSION', meson.project_version())
+
+if appindicator_ayatana.found() and not enable_appindicator.disabled()
+  config_data.set('HAVE_AYATANA_APPINDICATOR', 1)
+elif ubuntu_ayatana.found() and not enable_appindicator.disabled()
+  config_data.set('HAVE_UBUNTU_APPINDICATOR', 1)
+endif
 
 configure_file(
   output : 'config.h',

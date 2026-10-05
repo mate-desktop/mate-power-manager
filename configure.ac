@@ -81,6 +81,7 @@ XRANDR_REQUIRED=1.3.0
 XPROTO_REQUIRED=7.0.15
 CANBERRA_REQUIRED=0.10
 UPOWER_REQUIRED=0.99.8
+APPINDICATOR_REQUIRED=0.0.13
 
 dnl ---------------------------------------------------------------------------
 dnl - Check library dependencies
@@ -117,30 +118,47 @@ PKG_CHECK_MODULES(UPOWER, upower-glib >= $UPOWER_REQUIRED)
 dnl ---------------------------------------------------------------------------
 dnl - Build with appindicator support
 dnl ---------------------------------------------------------------------------
-AC_ARG_ENABLE(appindicator,
-        AS_HELP_STRING([--enable-appindicator],
-                        [Enable ayatana appindicator support (default: auto)]),
-        [enable_appindicator=$enableval],
-        [enable_appindicator=auto])
+AYATANA_APPINDICATOR_PKG=ayatana-appindicator3-0.1
+UBUNTU_APPINDICATOR_PKG=appindicator3-0.1
 
-AC_MSG_CHECKING([whether to support appindicator])
+PKG_CHECK_EXISTS($AYATANA_APPINDICATOR_PKG >= $APPINDICATOR_REQUIRED,
+		 [have_appindicator_ayatana="yes"],
+		 [have_appindicator_ayatana="no"])
+PKG_CHECK_EXISTS($UBUNTU_APPINDICATOR_PKG >= $APPINDICATOR_REQUIRED,
+		 [have_appindicator_ubuntu="yes"],
+		 [have_appindicator_ubuntu="no"])
 
-have_appindicator=no
-if test "x$enable_appindicator" != "xno"; then
-        PKG_CHECK_MODULES(APPLICATION_INDICATOR, ayatana-appindicator3-0.1, [
-                have_appindicator=yes
-                AC_DEFINE([HAVE_APP_INDICATOR], 1, [Define if appindicator support is enabled])
-        ], [
-                if test "x$enable_appindicator" = "xyes"; then
-                        AC_MSG_ERROR([appindicator support requested but ayatana-appindicator3-0.1 not found])
-                fi
-        ])
+AC_ARG_ENABLE([appindicator],
+	      AS_HELP_STRING([--enable-appindicator[=@<:@no/auto/yes@:>@]],[Build support for application indicators]),
+	      [enable_appindicator=$enableval],
+	      [enable_appindicator="auto"])
+
+
+if  test "x$enable_appindicator" = "xauto" &&
+   (test "x$have_appindicator_ayatana" = "xyes" ||
+    test "x$have_appindicator_ubuntu" = "xyes"); then
+	AC_MSG_NOTICE([Enabling AppIndicator support (as --enable-appindicator=auto was used).])
+	enable_appindicator="yes"
 fi
 
-if test "x$have_appindicator" = "xyes"; then
-        AC_MSG_RESULT([yes])
-else
-        AC_MSG_RESULT([no])
+if test "x$enable_appindicator" = "xyes"; then
+	if test "x$have_appindicator_ayatana" = "xyes"; then
+		AC_MSG_NOTICE([Buidling against Ayatana AppIndicator.])
+		PKG_CHECK_MODULES(AYATANA_APPINDICATOR,
+				  [$AYATANA_APPINDICATOR_PKG >= $APPINDICATOR_REQUIRED],
+				  [AC_DEFINE(HAVE_AYATANA_APPINDICATOR, 1, [Have Ayatana AppIndicator])])
+		AC_SUBST(AYATANA_APPINDICATOR_CFLAGS)
+		AC_SUBST(AYATANA_APPINDICATOR_LIBS)
+	elif test "x$have_appindicator_ubuntu" = "xyes"; then
+		AC_MSG_NOTICE([Buidling against Ubuntu AppIndicator.])
+		PKG_CHECK_MODULES(UBUNTU_APPINDICATOR,
+				  [$UBUNTU_APPINDICATOR_PKG >= $APPINDICATOR_REQUIRED],
+				  [AC_DEFINE(HAVE_UBUNTU_APPINDICATOR, 1, [Have Ubuntu AppIndicator])])
+		AC_SUBST(UBUNTU_APPINDICATOR_CFLAGS)
+		AC_SUBST(UBUNTU_APPINDICATOR_LIBS)
+	else
+		AC_MSG_ERROR([Neither Ayatana AppIndicator nor Ubuntu AppIndicator library is present, but you enabled AppIndicator support.])
+	fi
 fi
 
 dnl ---------------------------------------------------------------------------
@@ -371,7 +389,11 @@ Configure summary:
     gnome-keyring support .......: ${with_keyring}
     Building extra applets ......: ${enable_applets}
     Applets in-process...........: ${enable_applets_inprocess}
-    Appindicator support ........: ${have_appindicator}
+
+    AppIndicator enabled:              ${enable_appindicator}
+    Ayatana AppIndicator (preferred)   ${have_appindicator_ayatana}
+    Ubuntu AppIndicator (legacy)       ${have_appindicator_ubuntu}
+
     Wayland support .............: ${have_wayland}
     Self test support ...........: ${have_tests}
     dbus-1 services dir .........: $DBUS_SERVICES_DIR

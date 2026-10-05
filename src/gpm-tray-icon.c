@@ -43,8 +43,10 @@
 
 #include <libmate-desktop/mate-image-menu-item.h>
 
-#ifdef HAVE_APP_INDICATOR
+#if defined(HAVE_AYATANA_APPINDICATOR)
 #include <libayatana-appindicator/app-indicator.h>
+#elif defined(HAVE_UBUNTU_APPINDICATOR)
+#include <libappindicator/app-indicator.h>
 #endif
 
 #include "gpm-upower.h"
@@ -59,7 +61,7 @@ struct GpmTrayIconPrivate
 {
 	GSettings		*settings;
 	GpmEngine		*engine;
-#ifdef HAVE_APP_INDICATOR
+#if defined(HAVE_AYATANA_APPINDICATOR) || defined(HAVE_UBUNTU_APPINDICATOR)
 	AppIndicator		*indicator;
 #else
 	GtkStatusIcon		*status_icon;
@@ -88,7 +90,7 @@ static void
 gpm_tray_icon_show (GpmTrayIcon *icon, gboolean enabled)
 {
 	g_return_if_fail (GPM_IS_TRAY_ICON (icon));
-#ifdef HAVE_APP_INDICATOR
+#if defined(HAVE_AYATANA_APPINDICATOR) || defined(HAVE_UBUNTU_APPINDICATOR)
 	app_indicator_set_status (icon->priv->indicator,
 				 enabled ? APP_INDICATOR_STATUS_ACTIVE : APP_INDICATOR_STATUS_PASSIVE);
 #else
@@ -107,7 +109,7 @@ gpm_tray_icon_set_tooltip (GpmTrayIcon *icon, const gchar *tooltip)
 	g_return_val_if_fail (GPM_IS_TRAY_ICON (icon), FALSE);
 	g_return_val_if_fail (tooltip != NULL, FALSE);
 
-#ifdef HAVE_APP_INDICATOR
+#if defined(HAVE_AYATANA_APPINDICATOR) || defined(HAVE_UBUNTU_APPINDICATOR)
 	app_indicator_set_title (icon->priv->indicator, tooltip);
 #else
 	gtk_status_icon_set_tooltip_text (icon->priv->status_icon, tooltip);
@@ -141,7 +143,7 @@ gpm_tray_icon_set_icon (GpmTrayIcon *icon, const gchar *icon_name)
 
 	if (icon_name != NULL) {
 		g_debug ("Setting icon to %s", icon_name);
-#ifdef HAVE_APP_INDICATOR
+#if defined(HAVE_AYATANA_APPINDICATOR) || defined(HAVE_UBUNTU_APPINDICATOR)
 		app_indicator_set_icon (icon->priv->indicator, icon_name);
 #else
 		gtk_status_icon_set_from_icon_name (icon->priv->status_icon,
@@ -437,7 +439,7 @@ skip_prefs:
 	return menu;
 }
 
-#ifndef HAVE_APP_INDICATOR
+#if !defined(HAVE_AYATANA_APPINDICATOR) && !defined(HAVE_UBUNTU_APPINDICATOR)
 /**
  * gpm_tray_icon_popup_cleared_cd:
  * @widget: The popup Gtkwidget
@@ -499,7 +501,7 @@ gpm_tray_icon_activate_cb (GtkStatusIcon *status_icon, GpmTrayIcon *icon)
 	g_debug ("icon left clicked");
 	gpm_tray_icon_popup_menu (icon, gtk_get_current_event_time());
 }
-#endif /* !HAVE_APP_INDICATOR */
+#endif /* !defined(HAVE_AYATANA_APPINDICATOR) && !defined(HAVE_UBUNTU_APPINDICATOR) */
 
 /**
  * gpm_tray_icon_rebuild_menu:
@@ -509,7 +511,7 @@ gpm_tray_icon_activate_cb (GtkStatusIcon *status_icon, GpmTrayIcon *icon)
 static void
 gpm_tray_icon_rebuild_menu (GpmTrayIcon *icon)
 {
-#ifdef HAVE_APP_INDICATOR
+#if defined(HAVE_AYATANA_APPINDICATOR) || defined(HAVE_UBUNTU_APPINDICATOR)
 	GtkMenu *menu;
 
 	menu = gpm_tray_icon_create_menu (icon);
@@ -553,7 +555,7 @@ gpm_tray_icon_init (GpmTrayIcon *icon)
 	g_signal_connect (icon->priv->settings, "changed",
 			  G_CALLBACK (gpm_tray_icon_settings_changed_cb), icon);
 
-#ifdef HAVE_APP_INDICATOR
+#if defined(HAVE_AYATANA_APPINDICATOR) || defined(HAVE_UBUNTU_APPINDICATOR)
 	icon->priv->indicator = app_indicator_new ("mate-power-manager",
 	                                           "mate-power-manager",
 	                                           APP_INDICATOR_CATEGORY_HARDWARE);
@@ -599,7 +601,7 @@ gpm_tray_icon_finalize (GObject *object)
 	tray_icon = GPM_TRAY_ICON (object);
 
 	g_object_unref (tray_icon->priv->settings);
-#ifdef HAVE_APP_INDICATOR
+#if defined(HAVE_AYATANA_APPINDICATOR) || defined(HAVE_UBUNTU_APPINDICATOR)
 	g_object_unref (tray_icon->priv->indicator);
 #else
 	g_object_unref (tray_icon->priv->status_icon);
