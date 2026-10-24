@@ -30,7 +30,7 @@
 #include <mate-panel-applet.h>
 #include <gtk/gtk.h>
 #include <glib-object.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include <dbus/dbus-glib.h>
 
 #include "gpm-common.h"
@@ -397,7 +397,7 @@ gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 
 	license_trans = g_strjoin("\n\n", _(license[0]), _(license[1]), _(license[2]), NULL);
 
-	gtk_show_about_dialog (NULL,
+	GtkWidget *about = g_object_new (GTK_TYPE_ABOUT_DIALOG,
 	                       "program-name", GPM_POWER_PROFILES_APPLET_NAME,
 	                       "version", VERSION,
 	                       "title", _("About Power Manager Power Profiles Applet"),
@@ -413,6 +413,9 @@ gpm_applet_dialog_about_cb (GtkAction *action, gpointer data)
 	                       "website", PACKAGE_URL,
 	                       NULL);
 
+	g_signal_connect_swapped (about, "response",
+	                          G_CALLBACK (gtk_widget_destroy), about);
+	gtk_widget_show (about);
 	g_free (license_trans);
 }
 
