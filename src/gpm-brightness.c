@@ -938,14 +938,12 @@ gpm_brightness_foreach_screen (GpmBrightness *brightness, GpmXRandROp op)
 			return TRUE;
 		}
 
-		g_debug ("DDC/CI failed; falling back to the gamma ramp");
-		brightness->priv->use_ddc = FALSE;
-		/* Arm the fallback here: without this the call returned FALSE and the
-		 * sysfs helper took over, which does nothing on a desktop. */
-		brightness->priv->use_gamma = TRUE;
-		brightness->priv->gamma_level =
-			CLAMP (brightness->priv->shared_value / 100.0,
-			       GPM_GAMMA_MIN_LEVEL, 1.0);
+		/* Never mix the two backends.  A gamma "top-up" on top of a
+		 * backlight that was only partly applied leaves the user with two
+		 * dimmers and no way to tell which one is at fault; the monitor keeps
+		 * whatever it has and the caller sees the failure. */
+		g_debug ("DDC/CI write was not confirmed; leaving the backlight alone");
+		return FALSE;
 	}
 #endif
 
