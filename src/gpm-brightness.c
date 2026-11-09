@@ -50,6 +50,17 @@
 
 #include "egg-discrete.h"
 
+#ifdef HAVE_DDCUTIL
+#include <ddcutil_status_codes.h>
+#include <ddcutil_c_api.h>
+
+/* VCP 0x10 is "Brightness"; the nVidia driver fails the read-back of a write
+ * that actually landed, hence the "2" variant below and the retries. */
+#define GPM_DDC_BRIGHTNESS_CODE	0x10
+#define GPM_DDC_RETRIES		3
+#define GPM_DDC_OPEN_RETRIES	5
+#endif
+
 #include "gpm-brightness.h"
 #include "gpm-common.h"
 #include "gpm-marshal.h"
@@ -69,6 +80,10 @@ struct GpmBrightnessPrivate
 	gboolean		 has_extension;
 	gboolean		 use_gamma;	/* no "Backlight" output property: drive CRTC gamma */
 	gdouble			 gamma_level;	/* 0.0 .. 1.0, 1.0 = untouched */
+#ifdef HAVE_DDCUTIL
+	gboolean		 use_ddc;	/* real monitor brightness through DDC/CI */
+	DDCA_Display_Handle	 ddc_handle;
+#endif
 	gboolean		 hw_changed;
 	gint			 extension_levels;
 	gint			 extension_current;
@@ -267,6 +282,10 @@ gpm_brightness_output_set_internal (GpmBrightness *brightness, RROutput output, 
 	return ret;
 }
 
+#ifdef HAVE_DDCUTIL
+static gboolean gpm_brightness_ddc_open (GpmBrightness *brightness);
+#endif
+
 /**
  * gpm_brightness_setup_display:
  **/
@@ -339,6 +358,16 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 		gdk_x11_display_error_trap_pop_ignored (gdk_display_get_default ());
 
 		if (!any_output) {
+#ifdef HAVE_DDCUTIL
+			/* Desktop monitor: DDC/CI is the only way to touch the real
+			 * backlight.  The gamma ramp below stays as the fallback. */
+			if (gpm_brightness_ddc_open (brightness)) {
+				g_debug ("No backlight property; using DDC/CI");
+				brightness->priv->use_ddc = TRUE;
+				return TRUE;
+			}
+			g_debug ("DDC/CI unavailable");
+#endif
 			g_debug ("No output carries a backlight property; using CRTC gamma");
 			brightness->priv->use_gamma = TRUE;
 			brightness->priv->gamma_level = 1.0;
@@ -348,6 +377,96 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 
 	return TRUE;
 }
+
+#ifdef HAVE_DDCUTIL
+static gboolean
+gpm_brightness_ddc_open (GpmBrightness *brightness)
+{
+	DDCA_Display_Info_List *list;
+	gboolean opened = FALSE;
+
+	/* The bus answers through the nVidia driver intermittently: a single failed
+	 * open is not evidence that the monitor has no DDC/CI. */
+	for (gint attempt = 0; attempt < GPM_DDC_OPEN_RETRIES && !opened; attempt++) {
+		list = NULL;
+		if (ddca_get_display_info_list2 (FALSE, &list) != DDCRC_OK || list == NULL) {
+			g_usleep (G_USEC_PER_SEC / 3);
+			continue;
+		}
+
+		for (guint i = 0; i < list->ct && !opened; i++) {
+			if (ddca_open_display2 (list->info[i].dref, TRUE,
+						&brightness->priv->ddc_handle) == DDCRC_OK &&
+			    brightness->priv->ddc_handle != NULL)
+				opened = TRUE;
+		}
+
+		ddca_free_display_info_list (list);
+
+		if (!opened)
+			g_usleep (G_USEC_PER_SEC / 3);
+	}
+
+	return opened;
+}
+
+static gboolean
+gpm_brightness_ddc_get (GpmBrightness *brightness, guint *percentage)
+{
+	DDCA_Non_Table_Vcp_Value val;
+	guint max;
+	guint cur;
+	gint i;
+
+	for (i = 0; i < GPM_DDC_RETRIES; i++) {
+		if (ddca_get_non_table_vcp_value (brightness->priv->ddc_handle,
+						  GPM_DDC_BRIGHTNESS_CODE,
+						  &val) != DDCRC_OK)
+			continue;
+
+		max = ((guint) val.sh << 8) | val.sl;
+		cur = ((guint) val.mh << 8) | val.ml;
+		if (max == 0)
+			return FALSE;
+
+		*percentage = (cur * 100 + max / 2) / max;
+		return TRUE;
+	}
+
+	return FALSE;
+}
+
+static gboolean
+gpm_brightness_ddc_set (GpmBrightness *brightness, guint percentage)
+{
+	DDCA_Non_Table_Vcp_Value val;
+	guint max;
+	guint target;
+	gint i;
+
+	if (ddca_get_non_table_vcp_value (brightness->priv->ddc_handle,
+					  GPM_DDC_BRIGHTNESS_CODE, &val) != DDCRC_OK)
+		return FALSE;
+
+	max = ((guint) val.sh << 8) | val.sl;
+	if (max == 0)
+		return FALSE;
+
+	target = (percentage * max + 50) / 100;
+
+	for (i = 0; i < GPM_DDC_RETRIES; i++) {
+		/* Never verify: this is what "--noverify" does on the command line and
+		 * the only mode that reports success on the nVidia driver. */
+		if (ddca_set_non_table_vcp_value2 (brightness->priv->ddc_handle,
+						   GPM_DDC_BRIGHTNESS_CODE,
+						   (target >> 8) & 0xff,
+						   target & 0xff) == DDCRC_OK)
+			return TRUE;
+	}
+
+	return FALSE;
+}
+#endif /* HAVE_DDCUTIL */
 
 /**
  * gpm_brightness_gamma_apply:
@@ -672,6 +791,49 @@ gpm_brightness_foreach_screen (GpmBrightness *brightness, GpmXRandROp op)
 	if (!brightness->priv->has_extension)
 		return FALSE;
 
+#ifdef HAVE_DDCUTIL
+	/* Real monitor brightness first; drop to the gamma ramp if the monitor
+	 * stops answering mid-session. */
+	if (brightness->priv->use_ddc) {
+		gboolean ok = FALSE;
+
+		switch (op) {
+		case ACTION_BACKLIGHT_GET:
+			ok = gpm_brightness_ddc_get (brightness, &brightness->priv->shared_value);
+			break;
+		case ACTION_BACKLIGHT_SET:
+			ok = gpm_brightness_ddc_set (brightness, brightness->priv->shared_value);
+			break;
+		case ACTION_BACKLIGHT_INC:
+		case ACTION_BACKLIGHT_DEC:
+			{
+				guint current;
+
+				if (gpm_brightness_ddc_get (brightness, &current)) {
+					gint next = (op == ACTION_BACKLIGHT_INC)
+						? MIN ((gint) current + 10, 100)
+						: MAX ((gint) current - 10, 0);
+
+					ok = gpm_brightness_ddc_set (brightness, (guint) next);
+					if (ok)
+						brightness->priv->shared_value = (guint) next;
+				}
+			}
+			break;
+		default:
+			break;
+		}
+
+		if (ok) {
+			brightness->priv->hw_changed = TRUE;
+			return TRUE;
+		}
+
+		g_debug ("DDC/CI failed; falling back to the gamma ramp");
+		brightness->priv->use_ddc = FALSE;
+	}
+#endif
+
 	/* Desktop monitor: no per-output property to write, so the gamma ramp is
 	 * the hardware.  The value is kept here because a gamma ramp has no
 	 * "current brightness" to read back. */
@@ -876,6 +1038,16 @@ gpm_brightness_set (GpmBrightness *brightness, guint percentage, gboolean *hw_ch
 	/* we did something to the hardware, so untrusted */
 	if (ret)
 		brightness->priv->cache_trusted = FALSE;
+
+#ifdef HAVE_DDCUTIL
+	/* ...except over DDC/CI: the monitor answers a read-back with EIO as often as
+	 * not on the nVidia driver, so remember what was just written instead of
+	 * asking it again and reporting a stale value. */
+	if (ret && brightness->priv->use_ddc) {
+		brightness->priv->cache_percentage = percentage;
+		brightness->priv->cache_trusted = TRUE;
+	}
+#endif
 
 	return ret;
 }
@@ -1094,6 +1266,12 @@ gpm_brightness_finalize (GObject *object)
 	g_return_if_fail (object != NULL);
 	g_return_if_fail (GPM_IS_BRIGHTNESS (object));
 	brightness = GPM_BRIGHTNESS (object);
+#ifdef HAVE_DDCUTIL
+	if (brightness->priv->ddc_handle != NULL) {
+		ddca_close_display (brightness->priv->ddc_handle);
+		brightness->priv->ddc_handle = NULL;
+	}
+#endif
 #ifdef HAVE_X11
 	if (brightness->priv->resources != NULL)
 		g_ptr_array_unref (brightness->priv->resources);

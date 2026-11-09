@@ -181,6 +181,7 @@ executable(
     libm,
     x11,
     xrandr,
+    ddcutil,
     deps
   ],
   link_with :libmpm_shared,
@@ -231,6 +232,7 @@ executable(
     xext,
     xrandr,
     canberra,
+    ddcutil,
     deps
   ],
   link_with :libmpm_shared,
@@ -274,6 +276,7 @@ if get_option('enable-tests')
       x11,
       xext,
       xrandr,
+      ddcutil,
       deps
     ],
     link_with :libmpm_shared,
