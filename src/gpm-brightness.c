@@ -58,8 +58,9 @@
  * that actually landed, hence the "2" variant below and the retries. */
 #define GPM_DDC_BRIGHTNESS_CODE	0x10
 #define GPM_DDC_RETRIES		3
-#define GPM_DDC_OPEN_RETRIES	5
-#define GPM_DDC_APPLY_MS	120
+#define GPM_DDC_OPEN_RETRIES	12
+#define GPM_DDC_APPLY_MS	200
+#define GPM_DDC_CONFIRM_TRIES	3
 #endif
 
 #include "gpm-brightness.h"
@@ -421,7 +422,7 @@ gpm_brightness_ddc_open (GpmBrightness *brightness)
 		ddca_free_display_info_list (list);
 
 		if (!opened)
-			g_usleep (G_USEC_PER_SEC / 3);
+			g_usleep (G_USEC_PER_SEC);
 	}
 
 	if (opened) {
@@ -521,8 +522,34 @@ gpm_brightness_ddc_set (GpmBrightness *brightness, guint percentage)
 						    target & 0xff);
 		g_debug ("DDC set %u%% -> raw %u: rc=%d (%s)", percentage, target, rc,
 			 ddca_rc_name (rc));
-		if (rc == DDCRC_OK)
-			return TRUE;
+		if (rc == DDCRC_OK) {
+			gboolean read_ok = FALSE;
+
+			/* A successful write is not a delivered write: read it back and
+			 * write again if the monitor still shows something else.  When the
+			 * read itself fails (normal on this driver) keep the write. */
+			for (gint v = 0; v < GPM_DDC_CONFIRM_TRIES; v++) {
+				DDCA_Non_Table_Vcp_Value back;
+				guint cur;
+
+				if (ddca_get_non_table_vcp_value (brightness->priv->ddc_handle,
+								  GPM_DDC_BRIGHTNESS_CODE,
+								  &back) != DDCRC_OK) {
+					g_usleep (G_USEC_PER_SEC / 10);
+					continue;
+				}
+				read_ok = TRUE;
+				cur = ((guint) back.mh << 8) | back.ml;
+				g_debug ("DDC read back %u (wanted %u)", cur, target);
+				if (cur == target)
+					return TRUE;
+				break;
+			}
+			if (!read_ok)
+				return TRUE;
+			g_debug ("DDC write lost, retrying");
+			continue;
+		}
 
 		/* A handle that saw an error tends to keep failing; reopen it. */
 		ddca_close_display (brightness->priv->ddc_handle);
