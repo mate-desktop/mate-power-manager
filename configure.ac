@@ -110,6 +110,15 @@ PKG_CHECK_MODULES(X11, [
  x11 xext xproto >= $XPROTO_REQUIRED])
 AC_DEFINE([HAVE_X11], 1, [Define if X11 support is available])
 
+# DDC/CI: real monitor brightness on desktops, where there is no backlight
+# property.  Optional - without libddcutil the gamma ramp is used instead.
+PKG_CHECK_MODULES(DDCUTIL, [ddcutil >= 2.0.0], [
+	AC_DEFINE([HAVE_DDCUTIL], 1, [Define if DDC/CI support is available])
+	have_ddcutil=yes
+], [have_ddcutil=no])
+AC_SUBST(DDCUTIL_CFLAGS)
+AC_SUBST(DDCUTIL_LIBS)
+
 PKG_CHECK_MODULES(LIBNOTIFY, libnotify >= $LIBNOTIFY_REQUIRED)
 
 PKG_CHECK_MODULES(UPOWER, upower-glib >= $UPOWER_REQUIRED)
