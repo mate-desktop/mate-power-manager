@@ -56,6 +56,10 @@
 
 #define GPM_SOLE_SETTER_USE_CACHE	TRUE	/* this may be insanity */
 
+/* A gamma ramp of 0 makes the screen unreadable - there is no hardware
+ * backlight to restore it with a button, so keep a floor. */
+#define GPM_GAMMA_MIN_LEVEL		0.10
+
 struct GpmBrightnessPrivate
 {
 	gboolean		 has_changed_events;
@@ -63,6 +67,8 @@ struct GpmBrightnessPrivate
 	guint			 cache_percentage;
 	guint			 last_set_hw;
 	gboolean		 has_extension;
+	gboolean		 use_gamma;	/* no "Backlight" output property: drive CRTC gamma */
+	gdouble			 gamma_level;	/* 0.0 .. 1.0, 1.0 = untouched */
 	gboolean		 hw_changed;
 	gint			 extension_levels;
 	gint			 extension_current;
@@ -292,11 +298,136 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 		/* Do we support "BACKLIGHT" (legacy) */
 		brightness->priv->backlight = XInternAtom (brightness->priv->dpy, "BACKLIGHT", True);
 		if (brightness->priv->backlight == None) {
-			g_debug ("No outputs have backlight property");
-			return FALSE;
+			/* Desktop monitors have no backlight property at all: the only
+			 * thing we can drive is the CRTC gamma ramp, which is what
+			 * "xrandr --brightness" does.  Keep the backend alive for that
+			 * instead of reporting "no hardware". */
+			g_debug ("No outputs have backlight property; using CRTC gamma");
+			brightness->priv->use_gamma = TRUE;
+			brightness->priv->gamma_level = 1.0;
+			return TRUE;
 		}
 	}
+
+	/* The atom can exist in the server without any output carrying it - a
+	 * desktop monitor has no backlight property at all - so ask the outputs. */
+	{
+		XRRScreenResources *resources;
+		gboolean any_output = FALSE;
+
+		gdk_x11_display_error_trap_push (gdk_display_get_default ());
+		gdk_x11_display_error_trap_push (gdk_display_get_default ());
+		resources = XRRGetScreenResourcesCurrent (brightness->priv->dpy,
+							  DefaultRootWindow (brightness->priv->dpy));
+		if (resources != NULL) {
+			gint i;
+
+			for (i = 0; i < resources->noutput; i++) {
+				XRRPropertyInfo *info;
+
+				info = XRRQueryOutputProperty (brightness->priv->dpy,
+							       resources->outputs[i],
+							       brightness->priv->backlight);
+				if (info != NULL) {
+					any_output = TRUE;
+					XFree (info);
+					break;
+				}
+			}
+			XRRFreeScreenResources (resources);
+		}
+		gdk_x11_display_error_trap_pop_ignored (gdk_display_get_default ());
+
+		if (!any_output) {
+			g_debug ("No output carries a backlight property; using CRTC gamma");
+			brightness->priv->use_gamma = TRUE;
+			brightness->priv->gamma_level = 1.0;
+			return TRUE;
+		}
+	}
+
 	return TRUE;
+}
+
+/**
+ * gpm_brightness_gamma_apply:
+ * @brightness: the brightness object
+ * @level: 0.0 .. 1.0, where 1.0 leaves the output untouched
+ *
+ * Scales every active CRTC's gamma ramp, i.e. exactly what
+ * "xrandr --output <out> --brightness <level>" does.  This is the only way to
+ * dim a desktop monitor whose output carries no "Backlight" property.
+ *
+ * Return value: %TRUE if at least one CRTC was programmed
+ **/
+static gboolean
+gpm_brightness_gamma_apply (GpmBrightness *brightness, gdouble level)
+{
+	XRRScreenResources *resources;
+	GdkDisplay *display;
+	gboolean applied = FALSE;
+	gint i;
+
+	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
+
+	level = CLAMP (level, GPM_GAMMA_MIN_LEVEL, 1.0);
+
+	/* A CRTC that cannot take a ramp answers with an X error, and an untrapped
+	 * X error kills the daemon; skip such CRTCs instead of dying. */
+	display = gdk_display_get_default ();
+	gdk_x11_display_error_trap_push (display);
+
+	resources = XRRGetScreenResourcesCurrent (brightness->priv->dpy,
+						  GDK_WINDOW_XID (brightness->priv->root_window));
+	if (resources == NULL) {
+		gdk_x11_display_error_trap_pop_ignored (display);
+		return FALSE;
+	}
+
+	for (i = 0; i < resources->ncrtc; i++) {
+		XRRCrtcInfo *crtc_info;
+		XRRCrtcGamma *gamma;
+		gint size;
+		gint j;
+
+		crtc_info = XRRGetCrtcInfo (brightness->priv->dpy, resources, resources->crtcs[i]);
+		if (crtc_info == NULL)
+			continue;
+		if (crtc_info->mode == None) {
+			/* disabled CRTC: nothing on screen to dim */
+			XRRFreeCrtcInfo (crtc_info);
+			continue;
+		}
+
+		size = XRRGetCrtcGammaSize (brightness->priv->dpy, resources->crtcs[i]);
+		if (size <= 0) {
+			XRRFreeCrtcInfo (crtc_info);
+			continue;
+		}
+
+		gamma = XRRAllocGamma (size);
+		for (j = 0; j < size; j++) {
+			gdouble ramp = (size > 1) ? (gdouble) j / (size - 1) : 0.0;
+			guint16 value = (guint16) (ramp * level * 65535.0 + 0.5);
+
+			gamma->red[j] = value;
+			gamma->green[j] = value;
+			gamma->blue[j] = value;
+		}
+
+		XRRSetCrtcGamma (brightness->priv->dpy, resources->crtcs[i], gamma);
+		XRRFreeGamma (gamma);
+		XRRFreeCrtcInfo (crtc_info);
+		applied = TRUE;
+	}
+
+	XRRFreeScreenResources (resources);
+	XSync (brightness->priv->dpy, False);
+
+	if (gdk_x11_display_error_trap_pop (display))
+		g_debug ("X error while programming the gamma ramp");
+
+	return applied;
 }
 
 /**
@@ -540,6 +671,50 @@ gpm_brightness_foreach_screen (GpmBrightness *brightness, GpmXRandROp op)
 	/* Return immediately if we can't use XRandR */
 	if (!brightness->priv->has_extension)
 		return FALSE;
+
+	/* Desktop monitor: no per-output property to write, so the gamma ramp is
+	 * the hardware.  The value is kept here because a gamma ramp has no
+	 * "current brightness" to read back. */
+	if (brightness->priv->use_gamma) {
+		gdouble step = 10.0 / 100.0;
+
+		switch (op) {
+		case ACTION_BACKLIGHT_GET:
+			brightness->priv->shared_value =
+				(guint) (brightness->priv->gamma_level * 100.0 + 0.5);
+			return TRUE;
+		case ACTION_BACKLIGHT_SET:
+			brightness->priv->gamma_level =
+				CLAMP (brightness->priv->shared_value / 100.0,
+				       GPM_GAMMA_MIN_LEVEL, 1.0);
+			brightness->priv->shared_value =
+				MAX (brightness->priv->shared_value,
+				     (guint) (GPM_GAMMA_MIN_LEVEL * 100.0 + 0.5));
+			break;
+		case ACTION_BACKLIGHT_INC:
+			brightness->priv->gamma_level =
+				CLAMP (brightness->priv->gamma_level + step,
+				       GPM_GAMMA_MIN_LEVEL, 1.0);
+			brightness->priv->shared_value =
+				(guint) (brightness->priv->gamma_level * 100.0 + 0.5);
+			break;
+		case ACTION_BACKLIGHT_DEC:
+			brightness->priv->gamma_level =
+				CLAMP (brightness->priv->gamma_level - step,
+				       GPM_GAMMA_MIN_LEVEL, 1.0);
+			brightness->priv->shared_value =
+				(guint) (brightness->priv->gamma_level * 100.0 + 0.5);
+			break;
+		default:
+			return FALSE;
+		}
+
+		if (gpm_brightness_gamma_apply (brightness, brightness->priv->gamma_level)) {
+			brightness->priv->hw_changed = TRUE;
+			return TRUE;
+		}
+		return FALSE;
+	}
 
 	/* do for each screen */
 	length = brightness->priv->resources->len;
