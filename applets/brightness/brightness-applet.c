@@ -131,6 +131,20 @@ static void      gpm_applet_destroy_cb            (GtkWidget *widget);
  * gpm_applet_get_brightness:
  * Return value: Success value, or zero for failure
  **/
+static gboolean gpm_brightness_applet_dbus_connect (GpmBrightnessApplet *applet);
+
+/* The proxy is created once at start-up, and start-up usually loses the race
+ * against the lazily activated daemon: the proxy stays NULL and every call
+ * silently does nothing while the slider keeps moving.  Retry on demand. */
+static gboolean
+gpm_applet_ensure_connected (GpmBrightnessApplet *applet)
+{
+	if (applet->proxy != NULL)
+		return TRUE;
+
+	return gpm_brightness_applet_dbus_connect (applet);
+}
+
 static gboolean
 gpm_applet_get_brightness (GpmBrightnessApplet *applet)
 {
@@ -138,7 +152,7 @@ gpm_applet_get_brightness (GpmBrightnessApplet *applet)
 	gboolean ret;
 	guint policy_brightness;
 
-	if (applet->proxy == NULL) {
+	if (!gpm_applet_ensure_connected (applet)) {
 		g_warning ("not connected\n");
 		return FALSE;
 	}
@@ -171,7 +185,7 @@ gpm_applet_set_brightness (GpmBrightnessApplet *applet)
 	GError  *error = NULL;
 	gboolean ret;
 
-	if (applet->proxy == NULL) {
+	if (!gpm_applet_ensure_connected (applet)) {
 		g_warning ("not connected");
 		return FALSE;
 	}
