@@ -57,7 +57,7 @@
 /* VCP 0x10 is "Brightness"; the nVidia driver fails the read-back of a write
  * that actually landed, hence the "2" variant below and the retries. */
 #define GPM_DDC_BRIGHTNESS_CODE	0x10
-#define GPM_DDC_RETRIES		3
+#define GPM_DDC_RETRIES		5
 #define GPM_DDC_OPEN_RETRIES	2
 #define GPM_DDC_APPLY_MS	200
 #define GPM_DDC_CONFIRM_TRIES	3
@@ -383,6 +383,18 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 
 		if (!any_output) {
 #ifdef HAVE_DDCUTIL
+			/* A backlight class device (e.g. the ddcci kernel module) is
+			 * the better path: the kernel does the DDC/CI talking with its
+			 * own retries, and the helper below already reads it. */
+			gint levels = gpm_brightness_helper_get_value ("get-max-brightness");
+
+			if (levels > 0) {
+				g_debug ("Using the kernel backlight device (%d levels)",
+					 levels);
+				brightness->priv->extension_levels = levels;
+				return TRUE;
+			}
+
 			/* Desktop monitor: DDC/CI is the only way to touch the real
 			 * backlight.  The gamma ramp below stays as the fallback. */
 			g_debug ("No backlight property; using DDC/CI");
@@ -747,10 +759,34 @@ gpm_brightness_ddc_set (GpmBrightness *brightness, guint percentage)
 			return FALSE;
 	}
 
-	/* Every attempt went out on the wire; the monitor may have taken one even
-	 * though we could not read it back.  Report success rather than bouncing
-	 * the slider back, and let the next read tell the truth. */
-	g_debug ("DDC write sent %d times without confirmation", GPM_DDC_RETRIES);
+	/* Nothing was confirmed.  Ask the monitor what it actually has, so the UI
+	 * shows the truth instead of the value we hoped for: roughly half of the
+	 * writes on this driver are dropped, and a slider that lies is worse than
+	 * one that snaps back. */
+	{
+		DDCA_Non_Table_Vcp_Value back;
+
+		if (ddca_get_non_table_vcp_value (brightness->priv->ddc_handle,
+						  GPM_DDC_BRIGHTNESS_CODE,
+						  &back) == DDCRC_OK) {
+			guint max = brightness->priv->ddc_max;
+			guint cur = ((guint) back.mh << 8) | back.ml;
+
+			if (max == 0)
+				max = 100;
+
+			g_mutex_lock (&brightness->priv->ddc_lock);
+			brightness->priv->cache_percentage = (cur * 100 + max / 2) / max;
+			brightness->priv->cache_trusted = TRUE;
+			g_mutex_unlock (&brightness->priv->ddc_lock);
+
+			g_debug ("DDC write not confirmed; monitor reports %u%%",
+				 brightness->priv->cache_percentage);
+			return FALSE;
+		}
+	}
+
+	g_debug ("DDC write sent %d times, monitor unreadable", GPM_DDC_RETRIES);
 	return TRUE;
 }
 #endif /* HAVE_DDCUTIL */
