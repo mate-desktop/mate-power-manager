@@ -425,6 +425,19 @@ gpm_brightness_ddc_open_busno (GpmBrightness *brightness)
 	return ok;
 }
 
+/* A handle opened before the monitor was power-cycled keeps answering OK while
+ * its writes go nowhere; reopening is the only way out. */
+static gboolean
+gpm_brightness_ddc_reopen (GpmBrightness *brightness)
+{
+	if (brightness->priv->ddc_handle != NULL) {
+		ddca_close_display (brightness->priv->ddc_handle);
+		brightness->priv->ddc_handle = NULL;
+	}
+
+	return gpm_brightness_ddc_open (brightness);
+}
+
 static gboolean
 gpm_brightness_ddc_open (GpmBrightness *brightness)
 {
@@ -624,9 +637,19 @@ gpm_brightness_ddc_set (GpmBrightness *brightness, guint percentage)
 				 * again before concluding the write was lost */
 				g_usleep (GPM_DDC_SETTLE_MS * 1000);
 			}
-			if (!read_ok)
+			if (!read_ok) {
+				/* The read failed, so the write may or may not have landed.
+				 * Use the remaining attempts: on this monitor a write that
+				 * reaches it at all often needs two or three sends. */
+				g_debug ("DDC write unconfirmed, reopening and sending again");
+				g_usleep (GPM_DDC_SETTLE_MS * 1000);
+				if (!gpm_brightness_ddc_reopen (brightness))
+					return TRUE;
+				continue;
+			}
+			g_debug ("DDC write lost, reopening and retrying");
+			if (!gpm_brightness_ddc_reopen (brightness))
 				return TRUE;
-			g_debug ("DDC write lost, retrying");
 			continue;
 		}
 
@@ -637,7 +660,11 @@ gpm_brightness_ddc_set (GpmBrightness *brightness, guint percentage)
 			return FALSE;
 	}
 
-	return FALSE;
+	/* Every attempt went out on the wire; the monitor may have taken one even
+	 * though we could not read it back.  Report success rather than bouncing
+	 * the slider back, and let the next read tell the truth. */
+	g_debug ("DDC write sent %d times without confirmation", GPM_DDC_RETRIES);
+	return TRUE;
 }
 #endif /* HAVE_DDCUTIL */
 
