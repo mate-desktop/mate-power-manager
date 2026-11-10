@@ -1347,6 +1347,9 @@ gpm_applet_cb (MatePanelApplet *_applet, const gchar *iid, gpointer data)
 	GtkActionGroup *action_group;
 
 	static const GtkActionEntry menu_actions [] = {
+		{ "Settings", "preferences-system", N_("_Settings"),
+		  NULL, NULL,
+		  G_CALLBACK (gpm_applet_show_preferences) },
 		{ "About", "help-about", N_("_About"),
 		  NULL, NULL,
 		  G_CALLBACK (gpm_applet_dialog_about_cb) },

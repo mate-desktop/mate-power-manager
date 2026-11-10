@@ -1695,6 +1695,13 @@ gpm_brightness_backend_changed (GSettings *settings, const gchar *key,
 	brightness->priv->use_gamma = FALSE;
 	brightness->priv->use_ddc = FALSE;
 	brightness->priv->has_extension = gpm_brightness_setup_display (brightness);
+
+	/* Start from a known state.  Two backends dimming at once (a leftover
+	 * gamma ramp under a real backlight) is exactly the confusion this
+	 * dialog is meant to remove, so reset the new backend to 100%. */
+	brightness->priv->cache_trusted = FALSE;
+	brightness->priv->shared_value = 100;
+	gpm_brightness_set (brightness, 100, NULL);
 }
 
 static void
