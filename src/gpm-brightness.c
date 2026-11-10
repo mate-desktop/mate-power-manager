@@ -496,14 +496,26 @@ gpm_brightness_ddc_reopen (GpmBrightness *brightness)
 static gboolean
 gpm_brightness_ddc_open (GpmBrightness *brightness)
 {
+	static gboolean ddc_inited = FALSE;
 	DDCA_Display_Info_List *list;
 	gboolean opened = FALSE;
+
+	/* The C API initializes itself with defaults when it is used implicitly,
+	 * and those defaults ignore the ddcutil configuration file.  On this
+	 * machine the panel only accepts writes when the i2c source address is
+	 * 0x51, which lives in that file, so writes reported DDCRC_OK and never
+	 * reached the backlight.  Initialize explicitly so the file is read. */
+	if (!ddc_inited) {
+		DDCA_Status irc = ddca_init (NULL, DDCA_SYSLOG_ERROR, DDCA_INIT_OPTIONS_NONE);
+		g_debug ("libddcutil init: rc=%d (%s)", irc, ddca_rc_name (irc));
+		ddc_inited = TRUE;
+	}
 
 	/* The bus answers through the nVidia driver intermittently: a single failed
 	 * open is not evidence that the monitor has no DDC/CI. */
 	for (gint attempt = 0; attempt < GPM_DDC_OPEN_RETRIES && !opened; attempt++) {
 		list = NULL;
-		if (ddca_get_display_info_list2 (FALSE, &list) != DDCRC_OK || list == NULL) {
+		if (ddca_get_display_info_list2 (TRUE, &list) != DDCRC_OK || list == NULL) {
 			if (gpm_brightness_ddc_open_busno (brightness))
 				opened = TRUE;
 			if (!opened)
