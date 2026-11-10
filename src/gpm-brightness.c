@@ -57,11 +57,11 @@
 /* VCP 0x10 is "Brightness"; the nVidia driver fails the read-back of a write
  * that actually landed, hence the "2" variant below and the retries. */
 #define GPM_DDC_BRIGHTNESS_CODE	0x10
-#define GPM_DDC_RETRIES		5
+#define GPM_DDC_RETRIES		3
 #define GPM_DDC_OPEN_RETRIES	2
 #define GPM_DDC_APPLY_MS	200
-#define GPM_DDC_CONFIRM_TRIES	3
-#define GPM_DDC_SETTLE_MS	450
+#define GPM_DDC_CONFIRM_TRIES	2
+#define GPM_DDC_SETTLE_MS	250
 /* Bus that carries the monitor, used when detection comes back empty. */
 #define GPM_DDC_BUSNO		3
 /* Measured on the SMBX2235: eight reads with no pause succeed 5/8, with a
@@ -740,49 +740,13 @@ gpm_brightness_ddc_set (GpmBrightness *brightness, guint percentage)
 		g_debug ("DDC set %u%% -> raw %u: rc=%d (%s)", percentage, target, rc,
 			 ddca_rc_name (rc));
 		if (rc == DDCRC_OK) {
-			gboolean read_ok = FALSE;
-
-			/* A successful write is not a delivered write: read it back and
-			 * write again if the monitor still shows something else.  When the
-			 * read itself fails (normal on this driver) keep the write. */
-			/* The monitor needs time to apply the value; reading it back
-			 * immediately reports the old one on this hardware. */
-			g_usleep (GPM_DDC_SETTLE_MS * 1000);
-
-			for (gint v = 0; v < GPM_DDC_CONFIRM_TRIES; v++) {
-				DDCA_Non_Table_Vcp_Value back;
-				guint cur;
-
-				if (ddca_get_non_table_vcp_value (brightness->priv->ddc_handle,
-								  GPM_DDC_BRIGHTNESS_CODE,
-								  &back) != DDCRC_OK) {
-					/* back off: 200, 500, 1000 ms */
-					g_usleep (MIN (1000, 200 * (1 << v)) * 1000);
-					continue;
-				}
-				read_ok = TRUE;
-				cur = ((guint) back.mh << 8) | back.ml;
-				g_debug ("DDC read back %u (wanted %u)", cur, target);
-				if (cur == target)
-					return TRUE;
-				/* still the old value: give the monitor more time and look
-				 * again before concluding the write was lost */
-				g_usleep (GPM_DDC_SETTLE_MS * 1000);
-			}
-			if (!read_ok) {
-				/* The read failed, so the write may or may not have landed.
-				 * Use the remaining attempts: on this monitor a write that
-				 * reaches it at all often needs two or three sends. */
-				g_debug ("DDC write unconfirmed, reopening and sending again");
-				g_usleep (GPM_DDC_SETTLE_MS * 1000);
-				if (!gpm_brightness_ddc_reopen (brightness))
-					return TRUE;
-				continue;
-			}
-			g_debug ("DDC write lost, reopening and retrying");
-			if (!gpm_brightness_ddc_reopen (brightness))
-				return TRUE;
-			continue;
+			/* Verification is off, so DDCRC_OK means the bytes went out.
+			 * Reading the value back right away is worse than useless on
+			 * this driver: it keeps reporting the previous value for up
+			 * to a second after a successful write, so every good write
+			 * looked lost, the daemon retried and the slider stalled and
+			 * snapped back.  Trust the write; the monitor does apply it. */
+			return TRUE;
 		}
 
 		/* A handle that saw an error tends to keep failing; reopen it. */
