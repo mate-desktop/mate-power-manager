@@ -92,9 +92,13 @@ struct GpmBrightnessPrivate
 	gboolean		 use_ddc;	/* real monitor brightness through DDC/CI */
 	DDCA_Display_Handle	 ddc_handle;
 	guint			 ddc_max;	/* VCP 0x10 maximum, read once */
-	guint			 ddc_apply_idle;	/* debounce for interactive changes */
+	GThread			*ddc_thread;	/* owns the bus; never blocks the UI */
+	GMutex			 ddc_lock;
+	GCond			 ddc_cond;
+	gboolean		 ddc_stop;
+	gboolean		 ddc_has_work;
+	guint			 ddc_target;	/* percentage waiting to be written */
 	gint64			 ddc_last_op;	/* monotonic time of the last bus operation */
-	guint			 ddc_pending;	/* percentage waiting to be written */
 #endif
 	gboolean		 hw_changed;
 	gint			 extension_levels;
@@ -298,6 +302,8 @@ gpm_brightness_output_set_internal (GpmBrightness *brightness, RROutput output, 
 static gboolean gpm_brightness_ddc_open (GpmBrightness *brightness);
 static gboolean gpm_brightness_ddc_set (GpmBrightness *brightness, guint percentage);
 static gboolean gpm_brightness_ddc_open_busno (GpmBrightness *brightness);
+static gpointer gpm_brightness_ddc_worker (gpointer data);
+static gboolean gpm_brightness_ddc_failed_cb (gpointer data);
 #endif
 #ifdef HAVE_X11
 static gboolean gpm_brightness_gamma_apply (GpmBrightness *brightness, gdouble level);
@@ -378,17 +384,20 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 #ifdef HAVE_DDCUTIL
 			/* Desktop monitor: DDC/CI is the only way to touch the real
 			 * backlight.  The gamma ramp below stays as the fallback. */
-			if (gpm_brightness_ddc_open (brightness)) {
-				g_debug ("No backlight property; using DDC/CI");
-				brightness->priv->use_ddc = TRUE;
-				/* A previous run may have left the screen dimmed through the
-				 * gamma ramp; DDC/CI drives the backlight, so hand the picture
-				 * back at full range. */
-				brightness->priv->use_gamma = FALSE;
-				gpm_brightness_gamma_apply (brightness, 1.0);
-				return TRUE;
-			}
-			g_debug ("DDC/CI unavailable");
+			g_debug ("No backlight property; using DDC/CI");
+			brightness->priv->use_ddc = TRUE;
+			/* A previous run may have left the screen dimmed through the
+			 * gamma ramp; DDC/CI drives the backlight, so hand the picture
+			 * back at full range. */
+			brightness->priv->use_gamma = FALSE;
+			gpm_brightness_gamma_apply (brightness, 1.0);
+
+			g_mutex_init (&brightness->priv->ddc_lock);
+			g_cond_init (&brightness->priv->ddc_cond);
+			brightness->priv->ddc_thread =
+				g_thread_new ("ddc-brightness",
+					      gpm_brightness_ddc_worker, brightness);
+			return TRUE;
 #endif
 			g_debug ("No output carries a backlight property; using CRTC gamma");
 			brightness->priv->use_gamma = TRUE;
@@ -562,20 +571,70 @@ gpm_brightness_ddc_get (GpmBrightness *brightness, guint *percentage)
 	return FALSE;
 }
 
-/* A DDC/CI write costs hundreds of milliseconds, while dragging a slider emits a
- * stream of changes: writing each one queues up on the bus and some writes are
- * lost.  Only the last value matters, so coalesce them. */
+/* DDC/CI could not be opened at all: hand the backlight to the gamma ramp,
+ * which is the only thing left on a desktop. */
 static gboolean
-gpm_brightness_ddc_apply_cb (gpointer data)
+gpm_brightness_ddc_failed_cb (gpointer data)
 {
 	GpmBrightness *brightness = data;
 
-	brightness->priv->ddc_apply_idle = 0;
-
-	if (brightness->priv->use_ddc && brightness->priv->ddc_handle != NULL)
-		gpm_brightness_ddc_set (brightness, brightness->priv->ddc_pending);
+	brightness->priv->use_ddc = FALSE;
+	brightness->priv->use_gamma = TRUE;
+	brightness->priv->gamma_level =
+		CLAMP (brightness->priv->shared_value / 100.0,
+		       GPM_GAMMA_MIN_LEVEL, 1.0);
+	gpm_brightness_gamma_apply (brightness, brightness->priv->gamma_level);
 
 	return G_SOURCE_REMOVE;
+}
+
+/* DDC/CI work must not run in the main loop: a write costs hundreds of
+ * milliseconds, the confirmation waits for the monitor, and reopening a stale
+ * handle can take seconds - the whole desktop froze while dragging the slider.
+ * The worker owns the handle; the UI only posts the latest value. */
+static gpointer
+gpm_brightness_ddc_worker (gpointer data)
+{
+	GpmBrightness *brightness = data;
+
+	if (!gpm_brightness_ddc_open (brightness)) {
+		g_debug ("DDC/CI unavailable");
+		g_idle_add (gpm_brightness_ddc_failed_cb, brightness);
+		return NULL;
+	}
+
+	g_mutex_lock (&brightness->priv->ddc_lock);
+
+	while (!brightness->priv->ddc_stop) {
+		guint target;
+		gboolean ok;
+
+		while (!brightness->priv->ddc_has_work && !brightness->priv->ddc_stop)
+			g_cond_wait (&brightness->priv->ddc_cond,
+				     &brightness->priv->ddc_lock);
+
+		if (brightness->priv->ddc_stop)
+			break;
+
+		brightness->priv->ddc_has_work = FALSE;
+		target = brightness->priv->ddc_target;
+
+		g_mutex_unlock (&brightness->priv->ddc_lock);
+
+		ok = gpm_brightness_ddc_set (brightness, target);
+
+		g_mutex_lock (&brightness->priv->ddc_lock);
+
+		/* coalesce: a newer value arrived while we were writing */
+		if (ok && !brightness->priv->ddc_has_work) {
+			brightness->priv->cache_percentage = target;
+			brightness->priv->cache_trusted = TRUE;
+		}
+	}
+
+	g_mutex_unlock (&brightness->priv->ddc_lock);
+
+	return NULL;
 }
 
 static gboolean
@@ -999,19 +1058,15 @@ gpm_brightness_foreach_screen (GpmBrightness *brightness, GpmXRandROp op)
 
 		switch (op) {
 		case ACTION_BACKLIGHT_GET:
-			/* A read failing is normal on this driver - keep the cached value
-			 * and keep DDC/CI, otherwise the next call ends up in the sysfs
-			 * helper, which has nothing to write to on a desktop. */
-			if (gpm_brightness_ddc_get (brightness, &brightness->priv->shared_value))
-				return TRUE;
+			/* The worker owns the bus; never block the UI on a read. */
 			brightness->priv->shared_value = brightness->priv->cache_percentage;
 			return TRUE;
 		case ACTION_BACKLIGHT_SET:
-			brightness->priv->ddc_pending = brightness->priv->shared_value;
-			if (brightness->priv->ddc_apply_idle != 0)
-				g_source_remove (brightness->priv->ddc_apply_idle);
-			brightness->priv->ddc_apply_idle =
-				g_timeout_add (GPM_DDC_APPLY_MS, gpm_brightness_ddc_apply_cb, brightness);
+			g_mutex_lock (&brightness->priv->ddc_lock);
+			brightness->priv->ddc_target = brightness->priv->shared_value;
+			brightness->priv->ddc_has_work = TRUE;
+			g_cond_signal (&brightness->priv->ddc_cond);
+			g_mutex_unlock (&brightness->priv->ddc_lock);
 			ok = TRUE;
 			break;
 		case ACTION_BACKLIGHT_INC:
@@ -1019,20 +1074,20 @@ gpm_brightness_foreach_screen (GpmBrightness *brightness, GpmXRandROp op)
 			{
 				guint current;
 
-				if (gpm_brightness_ddc_get (brightness, &current)) {
-					gint next = (op == ACTION_BACKLIGHT_INC)
-						? MIN ((gint) current + 10, 100)
-						: MAX ((gint) current - 10, 0);
+				gint next;
 
-					brightness->priv->shared_value = (guint) next;
-					brightness->priv->ddc_pending = (guint) next;
-					if (brightness->priv->ddc_apply_idle != 0)
-						g_source_remove (brightness->priv->ddc_apply_idle);
-					brightness->priv->ddc_apply_idle =
-						g_timeout_add (GPM_DDC_APPLY_MS,
-							       gpm_brightness_ddc_apply_cb, brightness);
-					ok = TRUE;
-				}
+				current = brightness->priv->cache_percentage;
+				next = (op == ACTION_BACKLIGHT_INC)
+					? MIN ((gint) current + 10, 100)
+					: MAX ((gint) current - 10, 0);
+
+				brightness->priv->shared_value = (guint) next;
+				g_mutex_lock (&brightness->priv->ddc_lock);
+				brightness->priv->ddc_target = (guint) next;
+				brightness->priv->ddc_has_work = TRUE;
+				g_cond_signal (&brightness->priv->ddc_cond);
+				g_mutex_unlock (&brightness->priv->ddc_lock);
+				ok = TRUE;
 			}
 			break;
 		default:
@@ -1486,9 +1541,13 @@ gpm_brightness_finalize (GObject *object)
 	g_return_if_fail (GPM_IS_BRIGHTNESS (object));
 	brightness = GPM_BRIGHTNESS (object);
 #ifdef HAVE_DDCUTIL
-	if (brightness->priv->ddc_apply_idle != 0) {
-		g_source_remove (brightness->priv->ddc_apply_idle);
-		brightness->priv->ddc_apply_idle = 0;
+	if (brightness->priv->ddc_thread != NULL) {
+		g_mutex_lock (&brightness->priv->ddc_lock);
+		brightness->priv->ddc_stop = TRUE;
+		g_cond_signal (&brightness->priv->ddc_cond);
+		g_mutex_unlock (&brightness->priv->ddc_lock);
+		g_thread_join (brightness->priv->ddc_thread);
+		brightness->priv->ddc_thread = NULL;
 	}
 	if (brightness->priv->ddc_handle != NULL) {
 		ddca_close_display (brightness->priv->ddc_handle);
