@@ -656,19 +656,16 @@ gpm_brightness_ddc_ready_cb (gpointer data)
 	return G_SOURCE_REMOVE;
 }
 
-/* DDC/CI could not be opened at all: hand the backlight to the gamma ramp,
- * which is the only thing left on a desktop. */
+/* DDC/CI could not be opened yet.  Do NOT fall back to the gamma ramp: mixing a
+ * hardware dimming level with a software ramp leaves the monitor in a state the
+ * user cannot reason about, and the panel then needs a power cycle to recover.
+ * The worker keeps retrying the hardware path instead. */
 static gboolean
 gpm_brightness_ddc_failed_cb (gpointer data)
 {
-	GpmBrightness *brightness = data;
+	(void) data;
 
-	brightness->priv->use_ddc = FALSE;
-	brightness->priv->use_gamma = TRUE;
-	brightness->priv->gamma_level =
-		CLAMP (brightness->priv->shared_value / 100.0,
-		       GPM_GAMMA_MIN_LEVEL, 1.0);
-	gpm_brightness_gamma_apply (brightness, brightness->priv->gamma_level);
+	g_debug ("DDC/CI still unavailable; keeping the hardware path, no gamma fallback");
 
 	return G_SOURCE_REMOVE;
 }
