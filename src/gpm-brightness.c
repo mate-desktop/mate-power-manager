@@ -511,6 +511,18 @@ gpm_brightness_ddc_open (GpmBrightness *brightness)
 			continue;
 		}
 
+		if (list->ct == 0) {
+			/* Detection succeeded but found nothing, while the bus itself
+			 * still answers.  Do not treat an empty list as proof that
+			 * there is no monitor: address the known bus directly. */
+			if (gpm_brightness_ddc_open_busno (brightness))
+				opened = TRUE;
+			ddca_free_display_info_list (list);
+			if (!opened)
+				g_usleep (G_USEC_PER_SEC / 3);
+			continue;
+		}
+
 		for (guint i = 0; i < list->ct && !opened; i++) {
 			DDCA_Status rc;
 
