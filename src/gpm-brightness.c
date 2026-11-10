@@ -58,7 +58,7 @@
  * that actually landed, hence the "2" variant below and the retries. */
 #define GPM_DDC_BRIGHTNESS_CODE	0x10
 #define GPM_DDC_RETRIES		3
-#define GPM_DDC_OPEN_RETRIES	12
+#define GPM_DDC_OPEN_RETRIES	2
 #define GPM_DDC_APPLY_MS	200
 #define GPM_DDC_CONFIRM_TRIES	3
 #define GPM_DDC_SETTLE_MS	450
@@ -304,6 +304,7 @@ static gboolean gpm_brightness_ddc_set (GpmBrightness *brightness, guint percent
 static gboolean gpm_brightness_ddc_open_busno (GpmBrightness *brightness);
 static gpointer gpm_brightness_ddc_worker (gpointer data);
 static gboolean gpm_brightness_ddc_failed_cb (gpointer data);
+static gboolean gpm_brightness_ddc_ready_cb (gpointer data);
 #endif
 #ifdef HAVE_X11
 static gboolean gpm_brightness_gamma_apply (GpmBrightness *brightness, gdouble level);
@@ -479,7 +480,7 @@ gpm_brightness_ddc_open (GpmBrightness *brightness)
 		ddca_free_display_info_list (list);
 
 		if (!opened)
-			g_usleep (G_USEC_PER_SEC);
+			g_usleep (G_USEC_PER_SEC / 3);
 	}
 
 	if (opened) {
@@ -571,6 +572,21 @@ gpm_brightness_ddc_get (GpmBrightness *brightness, guint *percentage)
 	return FALSE;
 }
 
+/* DDC/CI came up (possibly after retrying): the backlight is real now, so undo
+ * any gamma dimming the fallback applied in the meantime. */
+static gboolean
+gpm_brightness_ddc_ready_cb (gpointer data)
+{
+	GpmBrightness *brightness = data;
+
+	if (brightness->priv->use_gamma) {
+		brightness->priv->use_gamma = FALSE;
+		gpm_brightness_gamma_apply (brightness, 1.0);
+	}
+
+	return G_SOURCE_REMOVE;
+}
+
 /* DDC/CI could not be opened at all: hand the backlight to the gamma ramp,
  * which is the only thing left on a desktop. */
 static gboolean
@@ -597,10 +613,22 @@ gpm_brightness_ddc_worker (gpointer data)
 {
 	GpmBrightness *brightness = data;
 
-	if (!gpm_brightness_ddc_open (brightness)) {
-		g_debug ("DDC/CI unavailable");
-		g_idle_add (gpm_brightness_ddc_failed_cb, brightness);
-		return NULL;
+	gint failures = 0;
+
+	while (!brightness->priv->ddc_stop && brightness->priv->ddc_handle == NULL) {
+		if (gpm_brightness_ddc_open (brightness)) {
+			g_idle_add (gpm_brightness_ddc_ready_cb, brightness);
+			break;
+		}
+
+		/* The monitor answers through this driver when it feels like it:
+		 * keep trying in the background instead of giving up for the whole
+		 * session.  After a minute without luck, hand the backlight to the
+		 * gamma ramp so the user is not left with a dead slider. */
+		if (++failures == 12)
+			g_idle_add (gpm_brightness_ddc_failed_cb, brightness);
+		g_debug ("DDC/CI still unavailable (attempt %d)", failures);
+		g_usleep (5 * G_USEC_PER_SEC);
 	}
 
 	g_mutex_lock (&brightness->priv->ddc_lock);
