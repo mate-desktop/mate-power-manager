@@ -61,6 +61,9 @@
 #define GPM_DDC_OPEN_RETRIES	12
 #define GPM_DDC_APPLY_MS	200
 #define GPM_DDC_CONFIRM_TRIES	3
+#define GPM_DDC_SETTLE_MS	150
+/* Bus that carries the monitor, used when detection comes back empty. */
+#define GPM_DDC_BUSNO		3
 #endif
 
 #include "gpm-brightness.h"
@@ -290,6 +293,7 @@ gpm_brightness_output_set_internal (GpmBrightness *brightness, RROutput output, 
 #ifdef HAVE_DDCUTIL
 static gboolean gpm_brightness_ddc_open (GpmBrightness *brightness);
 static gboolean gpm_brightness_ddc_set (GpmBrightness *brightness, guint percentage);
+static gboolean gpm_brightness_ddc_open_busno (GpmBrightness *brightness);
 #endif
 #ifdef HAVE_X11
 static gboolean gpm_brightness_gamma_apply (GpmBrightness *brightness, gdouble level);
@@ -393,6 +397,30 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 }
 
 #ifdef HAVE_DDCUTIL
+/* Detection on this driver intermittently returns an empty list even though the
+ * monitor answers; address the known bus directly instead of giving up. */
+static gboolean
+gpm_brightness_ddc_open_busno (GpmBrightness *brightness)
+{
+	DDCA_Display_Identifier did = NULL;
+	DDCA_Status rc;
+	gboolean ok = FALSE;
+
+	if (ddca_create_busno_display_identifier (GPM_DDC_BUSNO, &did) != DDCRC_OK ||
+	    did == NULL)
+		return FALSE;
+
+	rc = ddca_open_display2 (did, TRUE, &brightness->priv->ddc_handle);
+	g_debug ("DDC open by busno %d: rc=%d (%s)", GPM_DDC_BUSNO, rc,
+		 ddca_rc_name (rc));
+	if (rc == DDCRC_OK && brightness->priv->ddc_handle != NULL)
+		ok = TRUE;
+
+	ddca_free_display_identifier (did);
+
+	return ok;
+}
+
 static gboolean
 gpm_brightness_ddc_open (GpmBrightness *brightness)
 {
@@ -404,7 +432,10 @@ gpm_brightness_ddc_open (GpmBrightness *brightness)
 	for (gint attempt = 0; attempt < GPM_DDC_OPEN_RETRIES && !opened; attempt++) {
 		list = NULL;
 		if (ddca_get_display_info_list2 (FALSE, &list) != DDCRC_OK || list == NULL) {
-			g_usleep (G_USEC_PER_SEC / 3);
+			if (gpm_brightness_ddc_open_busno (brightness))
+				opened = TRUE;
+			if (!opened)
+				g_usleep (G_USEC_PER_SEC / 3);
 			continue;
 		}
 
@@ -528,6 +559,10 @@ gpm_brightness_ddc_set (GpmBrightness *brightness, guint percentage)
 			/* A successful write is not a delivered write: read it back and
 			 * write again if the monitor still shows something else.  When the
 			 * read itself fails (normal on this driver) keep the write. */
+			/* The monitor needs time to apply the value; reading it back
+			 * immediately reports the old one on this hardware. */
+			g_usleep (GPM_DDC_SETTLE_MS * 1000);
+
 			for (gint v = 0; v < GPM_DDC_CONFIRM_TRIES; v++) {
 				DDCA_Non_Table_Vcp_Value back;
 				guint cur;
@@ -535,7 +570,8 @@ gpm_brightness_ddc_set (GpmBrightness *brightness, guint percentage)
 				if (ddca_get_non_table_vcp_value (brightness->priv->ddc_handle,
 								  GPM_DDC_BRIGHTNESS_CODE,
 								  &back) != DDCRC_OK) {
-					g_usleep (G_USEC_PER_SEC / 10);
+					/* back off: 200, 500, 1000 ms */
+					g_usleep (MIN (1000, 200 * (1 << v)) * 1000);
 					continue;
 				}
 				read_ok = TRUE;
@@ -1136,8 +1172,8 @@ gpm_brightness_set (GpmBrightness *brightness, guint percentage, gboolean *hw_ch
 	ret = gpm_brightness_foreach_screen (brightness, ACTION_BACKLIGHT_SET);
 #endif
 
-	/* legacy fallback */
-	if (!ret) {
+	/* legacy fallback (sysfs) - pointless once DDC/CI owns the backlight */
+	if (!ret && !brightness->priv->use_ddc) {
 		if (brightness->priv->extension_levels < 0)
 			brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
 		brightness->priv->extension_current = egg_discrete_from_percent (percentage, brightness->priv->extension_levels+1);
@@ -1196,8 +1232,8 @@ gpm_brightness_get (GpmBrightness *brightness, guint *percentage)
 	percentage_local = brightness->priv->shared_value;
 #endif
 
-	/* legacy fallback */
-	if (!ret) {
+	/* legacy fallback (sysfs) - pointless once DDC/CI owns the backlight */
+	if (!ret && !brightness->priv->use_ddc) {
 		if (brightness->priv->extension_levels < 0)
 			brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
 		brightness->priv->extension_current = gpm_brightness_helper_get_value ("get-brightness");
@@ -1253,8 +1289,8 @@ gpm_brightness_up (GpmBrightness *brightness, gboolean *hw_changed)
 	if (ret)
 		brightness->priv->cache_trusted = FALSE;
 
-	/* legacy fallback */
-	if (!ret) {
+	/* legacy fallback (sysfs) - pointless once DDC/CI owns the backlight */
+	if (!ret && !brightness->priv->use_ddc) {
 		if (brightness->priv->extension_levels < 0)
 			brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
 		brightness->priv->extension_current = gpm_brightness_helper_get_value ("get-brightness");
@@ -1307,8 +1343,8 @@ gpm_brightness_down (GpmBrightness *brightness, gboolean *hw_changed)
 	if (ret)
 		brightness->priv->cache_trusted = FALSE;
 
-	/* legacy fallback */
-	if (!ret) {
+	/* legacy fallback (sysfs) - pointless once DDC/CI owns the backlight */
+	if (!ret && !brightness->priv->use_ddc) {
 		if (brightness->priv->extension_levels < 0)
 			brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
 		brightness->priv->extension_current = gpm_brightness_helper_get_value ("get-brightness");
