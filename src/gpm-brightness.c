@@ -88,6 +88,8 @@ struct GpmBrightnessPrivate
 	gboolean		 has_extension;
 	gboolean		 use_gamma;	/* no "Backlight" output property: drive CRTC gamma */
 	gdouble			 gamma_level;	/* 0.0 .. 1.0, 1.0 = untouched */
+	GSettings		*settings;
+	gchar			*backend;	/* auto | notebook | kernel | ddc | gamma */
 #ifdef HAVE_DDCUTIL
 	gboolean		 use_ddc;	/* real monitor brightness through DDC/CI */
 	DDCA_Display_Handle	 ddc_handle;
@@ -341,6 +343,17 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 		/* Do we support "BACKLIGHT" (legacy) */
 		brightness->priv->backlight = XInternAtom (brightness->priv->dpy, "BACKLIGHT", True);
 		if (brightness->priv->backlight == None) {
+			if (g_strcmp0 (brightness->priv->backend, "notebook") == 0) {
+				g_debug ("Backend forced: notebook, but there is no "
+					 "backlight property");
+				return FALSE;
+			}
+			if (g_strcmp0 (brightness->priv->backend, "gamma") != 0 &&
+			    g_strcmp0 (brightness->priv->backend, "auto") != 0) {
+				/* a specific real backend was requested; do not
+				 * silently fall back to gamma */
+				return FALSE;
+			}
 			/* Desktop monitors have no backlight property at all: the only
 			 * thing we can drive is the CRTC gamma ramp, which is what
 			 * "xrandr --brightness" does.  Keep the backend alive for that
@@ -382,17 +395,37 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 		gdk_x11_display_error_trap_pop_ignored (gdk_display_get_default ());
 
 		if (!any_output) {
-#ifdef HAVE_DDCUTIL
-			/* A backlight class device (e.g. the ddcci kernel module) is
-			 * the better path: the kernel does the DDC/CI talking with its
-			 * own retries, and the helper below already reads it. */
-			gint levels = gpm_brightness_helper_get_value ("get-max-brightness");
+			gboolean force_kernel =
+				g_strcmp0 (brightness->priv->backend, "kernel") == 0;
+			gboolean force_ddc =
+				g_strcmp0 (brightness->priv->backend, "ddc") == 0;
+			gboolean force_gamma =
+				g_strcmp0 (brightness->priv->backend, "gamma") == 0;
 
-			if (levels > 0) {
-				g_debug ("Using the kernel backlight device (%d levels)",
-					 levels);
-				brightness->priv->extension_levels = levels;
+			if (force_gamma) {
+				g_debug ("Backend forced: gamma");
+				brightness->priv->use_gamma = TRUE;
+				brightness->priv->gamma_level = 1.0;
 				return TRUE;
+			}
+#ifdef HAVE_DDCUTIL
+			if (!force_ddc) {
+				/* A backlight class device (e.g. the ddcci kernel module)
+				 * is the better path: the kernel does the DDC/CI talking
+				 * with its own retries, and the helper reads it. */
+				gint levels = gpm_brightness_helper_get_value ("get-max-brightness");
+
+				if (levels > 0) {
+					g_debug ("Using the kernel backlight device (%d levels)",
+						 levels);
+					brightness->priv->extension_levels = levels;
+					return TRUE;
+				}
+				if (force_kernel) {
+					g_debug ("Backend forced: kernel, but there is no "
+						 "backlight device");
+					return FALSE;
+				}
 			}
 
 			/* Desktop monitor: DDC/CI is the only way to touch the real
@@ -1649,6 +1682,21 @@ gpm_brightness_class_init (GpmBrightnessClass *klass)
  * gpm_brightness_init:
  * @brightness: This brightness class instance
  **/
+/* The preference changed in the applet: re-evaluate which backend to use
+ * without restarting the daemon. */
+static void
+gpm_brightness_backend_changed (GSettings *settings, const gchar *key,
+				GpmBrightness *brightness)
+{
+	g_free (brightness->priv->backend);
+	brightness->priv->backend = g_settings_get_string (settings, key);
+	g_debug ("Brightness backend changed to %s", brightness->priv->backend);
+
+	brightness->priv->use_gamma = FALSE;
+	brightness->priv->use_ddc = FALSE;
+	brightness->priv->has_extension = gpm_brightness_setup_display (brightness);
+}
+
 static void
 gpm_brightness_init (GpmBrightness *brightness)
 {
@@ -1659,6 +1707,17 @@ gpm_brightness_init (GpmBrightness *brightness)
 	brightness->priv->cache_percentage = 0;
 	brightness->priv->hw_changed = FALSE;
 	brightness->priv->extension_levels = -1;
+
+	brightness->priv->settings = g_settings_new ("org.mate.power-manager");
+	brightness->priv->backend =
+		g_settings_get_string (brightness->priv->settings,
+				       "brightness-backend");
+	g_debug ("Brightness backend preference: %s", brightness->priv->backend);
+
+	g_signal_connect (brightness->priv->settings,
+			  "changed::brightness-backend",
+			  G_CALLBACK (gpm_brightness_backend_changed),
+			  brightness);
 
 #ifdef HAVE_X11
 	if (gdk_display_get_default () != NULL &&

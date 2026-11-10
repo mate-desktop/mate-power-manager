@@ -609,6 +609,179 @@ on_popup_button_press (GtkWidget      *widget,
 	return FALSE;
 }
 
+/* --- backend preferences ------------------------------------------------ */
+
+static gboolean
+gpm_applet_backend_available (const gchar *id, const gchar **reason)
+{
+	GDir *dir;
+	const gchar *name;
+	gboolean have_plain = FALSE, have_ddcci = FALSE;
+
+	if (g_strcmp0 (id, "gamma") == 0) {
+		*reason = NULL;
+		return TRUE;
+	}
+
+	if (g_strcmp0 (id, "ddc") == 0) {
+		gchar *path = g_find_program_in_path ("ddcutil");
+
+		*reason = path != NULL ? NULL :
+			_("ddcutil is not installed, or the monitor does not answer DDC/CI");
+		g_free (path);
+		return *reason == NULL;
+	}
+
+	dir = g_dir_open ("/sys/class/backlight", 0, NULL);
+	if (dir == NULL) {
+		*reason = _("no backlight device in /sys/class/backlight");
+		return FALSE;
+	}
+
+	while ((name = g_dir_read_name (dir)) != NULL) {
+		if (g_str_has_prefix (name, "ddcci"))
+			have_ddcci = TRUE;
+		else
+			have_plain = TRUE;
+	}
+	g_dir_close (dir);
+
+	if (g_strcmp0 (id, "notebook") == 0) {
+		*reason = have_plain ? NULL :
+			_("no built-in backlight: this is not a laptop");
+		return have_plain;
+	}
+
+	if (g_strcmp0 (id, "kernel") == 0) {
+		*reason = have_ddcci ? NULL :
+			_("the ddcci kernel module is not loaded, or the device was not created");
+		return have_ddcci;
+	}
+
+	*reason = NULL;
+	return TRUE;
+}
+
+static void
+gpm_applet_backend_toggled (GtkToggleButton *button, gpointer user_data)
+{
+	GSettings *settings;
+	const gchar *id;
+
+	if (!gtk_toggle_button_get_active (button))
+		return;
+
+	id = g_object_get_data (G_OBJECT (button), "backend-id");
+	if (id == NULL)
+		return;
+
+	settings = g_settings_new ("org.mate.power-manager");
+	g_settings_set_string (settings, "brightness-backend", id);
+	g_object_unref (settings);
+}
+
+static void
+gpm_applet_add_backend_row (GtkWidget *list, GtkRadioButton **group,
+			    const gchar *id, const gchar *title,
+			    const gchar *detail, const gchar *current)
+{
+	GtkWidget *row, *box, *radio, *labels, *lbl;
+	const gchar *reason = NULL;
+	gboolean available;
+	gchar *text;
+
+	available = gpm_applet_backend_available (id, &reason);
+	text = g_strdup (available ? detail : reason);
+
+	row = gtk_list_box_row_new ();
+	gtk_list_box_row_set_activatable (GTK_LIST_BOX_ROW (row), FALSE);
+	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 10);
+	gtk_container_set_border_width (GTK_CONTAINER (box), 8);
+	gtk_container_add (GTK_CONTAINER (row), box);
+
+	radio = gtk_radio_button_new_with_label_from_widget (*group, title);
+	gtk_widget_set_valign (radio, GTK_ALIGN_START);
+	gtk_widget_set_sensitive (radio, available);
+	g_object_set_data (G_OBJECT (radio), "backend-id", (gpointer) id);
+	gtk_box_pack_start (GTK_BOX (box), radio, FALSE, FALSE, 0);
+	if (*group == NULL)
+		*group = GTK_RADIO_BUTTON (radio);
+
+	if (g_strcmp0 (id, current) == 0)
+		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radio), TRUE);
+
+	g_signal_connect (radio, "toggled",
+			  G_CALLBACK (gpm_applet_backend_toggled), NULL);
+
+	labels = gtk_box_new (GTK_ORIENTATION_VERTICAL, 2);
+	lbl = gtk_label_new (text);
+	gtk_label_set_xalign (GTK_LABEL (lbl), 0.0);
+	gtk_label_set_line_wrap (GTK_LABEL (lbl), TRUE);
+	gtk_label_set_max_width_chars (GTK_LABEL (lbl), 46);
+	gtk_style_context_add_class (gtk_widget_get_style_context (lbl),
+				     "dim-label");
+	gtk_box_pack_start (GTK_BOX (labels), lbl, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (box), labels, TRUE, TRUE, 0);
+
+	gtk_list_box_insert (GTK_LIST_BOX (list), row, -1);
+	g_free (text);
+}
+
+static void
+gpm_applet_show_preferences (GtkWidget *widget, GpmBrightnessApplet *applet)
+{
+	GtkWidget *dialog, *content, *list, *lbl, *box;
+	GtkRadioButton *group = NULL;
+	GSettings *settings;
+	gchar *current;
+
+	settings = g_settings_new ("org.mate.power-manager");
+	current = g_settings_get_string (settings, "brightness-backend");
+
+	dialog = gtk_dialog_new_with_buttons (_("Brightness settings"), NULL,
+					      GTK_DIALOG_MODAL,
+					      _("Close"), GTK_RESPONSE_CLOSE,
+					      NULL);
+	gtk_window_set_default_size (GTK_WINDOW (dialog), 440, -1);
+	gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
+
+	content = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
+	box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 10);
+	gtk_container_set_border_width (GTK_CONTAINER (box), 12);
+	gtk_box_pack_start (GTK_BOX (content), box, TRUE, TRUE, 0);
+
+	lbl = gtk_label_new (_("How should screen brightness be controlled?"));
+	gtk_label_set_xalign (GTK_LABEL (lbl), 0.0);
+	gtk_widget_set_margin_bottom (lbl, 4);
+	gtk_box_pack_start (GTK_BOX (box), lbl, FALSE, FALSE, 0);
+
+	list = gtk_list_box_new ();
+	gtk_list_box_set_selection_mode (GTK_LIST_BOX (list), GTK_SELECTION_NONE);
+	gtk_box_pack_start (GTK_BOX (box), list, TRUE, TRUE, 0);
+
+	gpm_applet_add_backend_row (list, &group, "auto",
+		_("Automatic"), _("Pick the best available method"), current);
+	gpm_applet_add_backend_row (list, &group, "notebook",
+		_("Laptop panel"), _("Backlight through /sys/class/backlight"), current);
+	gpm_applet_add_backend_row (list, &group, "kernel",
+		_("Monitor, kernel driver (ddcci)"),
+		_("Reliable DDC/CI handled by the kernel"), current);
+	gpm_applet_add_backend_row (list, &group, "ddc",
+		_("Monitor, DDC/CI (libddcutil)"),
+		_("Talks to the monitor directly from userspace"), current);
+	gpm_applet_add_backend_row (list, &group, "gamma",
+		_("Software dimming (gamma)"),
+		_("Darkens the picture, not the backlight. Always available"), current);
+
+	gtk_widget_show_all (dialog);
+	gtk_dialog_run (GTK_DIALOG (dialog));
+	gtk_widget_destroy (dialog);
+
+	g_free (current);
+	g_object_unref (settings);
+}
+
+
 /**
  * gpm_applet_create_popup:
  * @applet: Brightness applet instance
@@ -661,6 +834,22 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
 	gtk_box_pack_start (GTK_BOX(box), applet->btn_plus, FALSE, FALSE, 0);
 	gtk_box_pack_start (GTK_BOX(box), applet->slider, TRUE, TRUE, 0);
 	gtk_box_pack_start (GTK_BOX(box), applet->btn_minus, FALSE, FALSE, 0);
+
+	/* settings button: backend selection lives behind it */
+	{
+		GtkWidget *btn_prefs, *img;
+
+		btn_prefs = gtk_button_new ();
+		img = gtk_image_new_from_icon_name ("preferences-system",
+						    GTK_ICON_SIZE_MENU);
+		gtk_button_set_image (GTK_BUTTON (btn_prefs), img);
+		gtk_button_set_relief (GTK_BUTTON (btn_prefs), GTK_RELIEF_NONE);
+		gtk_widget_set_can_focus (btn_prefs, FALSE);
+		gtk_widget_set_tooltip_text (btn_prefs, _("Brightness settings"));
+		g_signal_connect (btn_prefs, "clicked",
+				  G_CALLBACK (gpm_applet_show_preferences), applet);
+		gtk_box_pack_start (GTK_BOX (box), btn_prefs, FALSE, FALSE, 0);
+	}
 
 	/* frame */
 	frame = gtk_frame_new (NULL);
