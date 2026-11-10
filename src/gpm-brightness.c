@@ -61,9 +61,12 @@
 #define GPM_DDC_OPEN_RETRIES	12
 #define GPM_DDC_APPLY_MS	200
 #define GPM_DDC_CONFIRM_TRIES	3
-#define GPM_DDC_SETTLE_MS	150
+#define GPM_DDC_SETTLE_MS	450
 /* Bus that carries the monitor, used when detection comes back empty. */
 #define GPM_DDC_BUSNO		3
+/* Measured on the SMBX2235: eight reads with no pause succeed 5/8, with a
+ * 0.5 s pause 7/8.  Keep roughly that much space between bus operations. */
+#define GPM_DDC_MIN_INTERVAL_MS	450
 #endif
 
 #include "gpm-brightness.h"
@@ -90,6 +93,7 @@ struct GpmBrightnessPrivate
 	DDCA_Display_Handle	 ddc_handle;
 	guint			 ddc_max;	/* VCP 0x10 maximum, read once */
 	guint			 ddc_apply_idle;	/* debounce for interactive changes */
+	gint64			 ddc_last_op;	/* monotonic time of the last bus operation */
 	guint			 ddc_pending;	/* percentage waiting to be written */
 #endif
 	gboolean		 hw_changed;
@@ -485,6 +489,34 @@ gpm_brightness_ddc_open (GpmBrightness *brightness)
 	return opened;
 }
 
+static void
+gpm_brightness_ddc_mark_op (GpmBrightness *brightness)
+{
+	brightness->priv->ddc_last_op = g_get_monotonic_time ();
+}
+
+/* Writes wait for their turn; reads that come too soon report "use the cache"
+ * instead of queueing another transaction on a bus that drops them. */
+static gboolean
+gpm_brightness_ddc_ready (GpmBrightness *brightness, gboolean block)
+{
+	gint64 elapsed;
+
+	if (brightness->priv->ddc_last_op == 0)
+		return TRUE;
+
+	elapsed = g_get_monotonic_time () - brightness->priv->ddc_last_op;
+	if (elapsed >= GPM_DDC_MIN_INTERVAL_MS * 1000)
+		return TRUE;
+
+	if (!block)
+		return FALSE;
+
+	g_usleep (GPM_DDC_MIN_INTERVAL_MS * 1000 - elapsed);
+
+	return TRUE;
+}
+
 static gboolean
 gpm_brightness_ddc_get (GpmBrightness *brightness, guint *percentage)
 {
@@ -493,7 +525,13 @@ gpm_brightness_ddc_get (GpmBrightness *brightness, guint *percentage)
 	guint cur;
 	gint i;
 
+	if (!gpm_brightness_ddc_ready (brightness, FALSE)) {
+		*percentage = brightness->priv->cache_percentage;
+		return TRUE;
+	}
+
 	for (i = 0; i < GPM_DDC_RETRIES; i++) {
+		gpm_brightness_ddc_mark_op (brightness);
 		if (ddca_get_non_table_vcp_value (brightness->priv->ddc_handle,
 						  GPM_DDC_BRIGHTNESS_CODE,
 						  &val) != DDCRC_OK)
@@ -542,11 +580,14 @@ gpm_brightness_ddc_set (GpmBrightness *brightness, guint percentage)
 
 	target = (percentage * max + 50) / 100;
 
+	gpm_brightness_ddc_ready (brightness, TRUE);
+
 	for (i = 0; i < GPM_DDC_RETRIES; i++) {
 		DDCA_Status rc;
 
 		/* Never verify: this is what "--noverify" does on the command line and
 		 * the only mode that reports success on the nVidia driver. */
+		gpm_brightness_ddc_mark_op (brightness);
 		rc = ddca_set_non_table_vcp_value2 (brightness->priv->ddc_handle,
 						    GPM_DDC_BRIGHTNESS_CODE,
 						    (target >> 8) & 0xff,
@@ -579,7 +620,9 @@ gpm_brightness_ddc_set (GpmBrightness *brightness, guint percentage)
 				g_debug ("DDC read back %u (wanted %u)", cur, target);
 				if (cur == target)
 					return TRUE;
-				break;
+				/* still the old value: give the monitor more time and look
+				 * again before concluding the write was lost */
+				g_usleep (GPM_DDC_SETTLE_MS * 1000);
 			}
 			if (!read_ok)
 				return TRUE;
