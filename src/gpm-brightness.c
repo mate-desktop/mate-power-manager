@@ -1440,6 +1440,13 @@ gpm_brightness_set (GpmBrightness *brightness, guint percentage, gboolean *hw_ch
 	}
 #endif
 
+	/* Announce the change.  Until now the signal was only produced from X
+	 * events, so a reset done by the daemon itself (switching the backend
+	 * resets everything to 100%) never reached the applet and its slider kept
+	 * showing a level that was no longer applied. */
+	if (ret)
+		gpm_brightness_may_have_changed (brightness);
+
 	return ret;
 }
 
