@@ -814,6 +814,19 @@ gpm_brightness_ddc_worker (gpointer data)
 
 	g_mutex_unlock (&brightness->priv->ddc_lock);
 
+	/* libddcutil ties a display handle to the thread that opened it: closing
+	 * it from another thread fails with DDCRC_LOCKED ("Attempting to unlock
+	 * display lock owned by different thread"), after which the library shuts
+	 * itself down and the next call crashed the daemon in libX11.  The worker
+	 * therefore closes its own handle before it exits; finalize() only joins
+	 * the thread. */
+#ifdef HAVE_DDCUTIL
+	if (brightness->priv->ddc_handle != NULL) {
+		ddca_close_display (brightness->priv->ddc_handle);
+		brightness->priv->ddc_handle = NULL;
+	}
+#endif
+
 	return NULL;
 }
 
@@ -1724,10 +1737,9 @@ gpm_brightness_finalize (GObject *object)
 		g_thread_join (brightness->priv->ddc_thread);
 		brightness->priv->ddc_thread = NULL;
 	}
-	if (brightness->priv->ddc_handle != NULL) {
-		ddca_close_display (brightness->priv->ddc_handle);
-		brightness->priv->ddc_handle = NULL;
-	}
+	/* No ddca_close_display() here: the worker closed its own handle before
+	 * exiting, and libddcutil refuses to release a display from any other
+	 * thread (DDCRC_LOCKED, then "libddcutil terminating"). */
 #endif
 #ifdef HAVE_X11
 	if (brightness->priv->resources != NULL)
