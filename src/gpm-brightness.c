@@ -1394,6 +1394,13 @@ gpm_brightness_update_cache (GpmBrightness *brightness)
 
 	g_return_if_fail (GPM_IS_BRIGHTNESS (brightness));
 
+	/* Same guard as init(): the cache is pure XRandR state, and the ddc and
+	 * kernel backends never open an X display. */
+	if (brightness->priv->dpy == NULL ||
+	    gdk_display_get_default () == NULL ||
+	    !GDK_IS_X11_DISPLAY (gdk_display_get_default ()))
+		return;
+
 	/* invalidate and remove all the previous entries */
 	length = brightness->priv->resources->len;
 	if (length > 0)
@@ -1844,7 +1851,12 @@ gpm_brightness_init (GpmBrightness *brightness)
 	}
 
 #ifdef HAVE_X11
-	if (gdk_display_get_default () != NULL &&
+	/* priv->dpy is set by gpm_brightness_setup_display(), and that function
+	 * returns early for the ddc and kernel backends, which need no X at all.
+	 * Entering the RandR wiring anyway dereferenced a NULL Display in
+	 * gpm_brightness_update_cache() -> RootWindow(NULL) -> SIGSEGV. */
+	if (brightness->priv->dpy != NULL &&
+	    gdk_display_get_default () != NULL &&
 	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
 		GdkScreen *screen;
 		GdkDisplay *display;
