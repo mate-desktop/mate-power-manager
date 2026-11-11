@@ -148,11 +148,22 @@ gpm_button_grab_keystring (GpmButton *button, guint64 keycode)
 	GdkDisplay *gdkdisplay;
 	gint ret;
 
+	/* The grab window only exists when gpm_button_init() ran its X11 branch.
+	 * When the daemon is D-Bus-activated from an environment without a usable
+	 * X display (no DISPLAY, stale XAUTHORITY), that branch is skipped and the
+	 * window stays NULL - GDK_WINDOW_XID() then asserts and the daemon dies
+	 * with SIGSEGV inside libX11.  Refuse the grab instead. */
+	if (button->priv->window == NULL ||
+	    !GDK_IS_X11_WINDOW (button->priv->window))
+		return FALSE;
+
 	/* get the current X Display */
-	display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
+	gdkdisplay = gdk_display_get_default ();
+	if (gdkdisplay == NULL || !GDK_IS_X11_DISPLAY (gdkdisplay))
+		return FALSE;
+	display = GDK_DISPLAY_XDISPLAY (gdkdisplay);
 
 	/* don't abort on error */
-	gdkdisplay = gdk_display_get_default ();
 	gdk_x11_display_error_trap_push (gdkdisplay);
 
 	/* grab the key if possible */
