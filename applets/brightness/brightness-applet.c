@@ -33,6 +33,10 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 #include <gdk/gdkkeysyms.h>
+
+#ifdef HAVE_X11
+#include <gdk/gdkx.h>
+#endif
 #include <glib-object.h>
 #include <dbus/dbus-glib.h>
 
@@ -182,7 +186,6 @@ gpm_applet_get_brightness (GpmBrightnessApplet *applet)
 static gboolean
 gpm_applet_set_brightness (GpmBrightnessApplet *applet)
 {
-	GError  *error = NULL;
 	gboolean ret;
 
 	if (!gpm_applet_ensure_connected (applet)) {
@@ -190,18 +193,14 @@ gpm_applet_set_brightness (GpmBrightnessApplet *applet)
 		return FALSE;
 	}
 
-	ret = dbus_g_proxy_call (applet->proxy, "SetBrightness", &error,
-				 G_TYPE_UINT, applet->level,
-				 G_TYPE_INVALID,
-				 G_TYPE_INVALID);
-	if (error) {
-		g_debug ("ERROR: %s", error->message);
-		g_error_free (error);
-	}
-	if (!ret) {
-		/* abort as the DBUS method failed */
-		g_warning ("SetBrightness failed!");
-	}
+	/* Fire and forget: the applet can be an in-process module now, and a
+	 * synchronous call would freeze the whole panel while the daemon talks
+	 * DDC/CI to the monitor.  The resulting value comes back through
+	 * BrightnessChanged. */
+	dbus_g_proxy_call_no_reply (applet->proxy, "SetBrightness",
+				    G_TYPE_UINT, applet->level,
+				    G_TYPE_INVALID);
+	ret = TRUE;
 
 	return ret;
 }
@@ -633,6 +632,13 @@ gpm_applet_backend_available (const gchar *id, const gchar **reason)
 	gboolean have_plain = FALSE, have_ddcci = FALSE;
 
 	if (g_strcmp0 (id, "gamma") == 0) {
+		/* The ramp is an X11 feature; on a Wayland session there is
+		 * nothing to drive. */
+		if (gdk_display_get_default () == NULL ||
+		    !GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+			*reason = _("Requires an X11 session");
+			return FALSE;
+		}
 		*reason = NULL;
 		return TRUE;
 	}

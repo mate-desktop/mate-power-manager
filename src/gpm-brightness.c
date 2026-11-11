@@ -374,6 +374,19 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 		return FALSE;
 	}
 
+	/* gamma is an X11 feature: on Wayland there is no ramp to drive, so do not
+	 * leave the user with a red cross - use the hardware path instead. */
+	if (g_strcmp0 (brightness->priv->backend, "gamma") == 0 &&
+	    (gdk_display_get_default () == NULL ||
+	     !GDK_IS_X11_DISPLAY (gdk_display_get_default ()))) {
+		g_debug ("gamma needs X11; using DDC/CI on this display server");
+#ifdef HAVE_DDCUTIL
+		return gpm_brightness_start_ddc (brightness);
+#else
+		return FALSE;
+#endif
+	}
+
 	/* Everything below talks RandR, which does not exist off X11.  Do not even
 	 * ask for the X display there: GDK_DISPLAY_XDISPLAY on a Wayland display is
 	 * meaningless and the probes then fail with a fatal g_error. */
