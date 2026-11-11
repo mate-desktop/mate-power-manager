@@ -1712,13 +1712,22 @@ gpm_brightness_backend_changed (GSettings *settings, const gchar *key,
 	brightness->priv->backend = g_settings_get_string (settings, key);
 	g_debug ("Brightness backend changed to %s", brightness->priv->backend);
 
+	/* Release the OLD backend first.  Resetting only the new one leaves the
+	 * previous mechanism at its dimmed value: switching DDC -> gamma kept the
+	 * panel's backlight at 0 while the ramp went to 1.0, so the screen stayed
+	 * black and nothing could be explained by the UI. */
+#ifdef HAVE_DDCUTIL
+	if (brightness->priv->use_ddc && brightness->priv->ddc_handle != NULL)
+		gpm_brightness_ddc_set (brightness, 100);
+#endif
+	if (brightness->priv->use_gamma)
+		gpm_brightness_gamma_apply (brightness, 1.0);
+
 	brightness->priv->use_gamma = FALSE;
 	brightness->priv->use_ddc = FALSE;
 	brightness->priv->has_extension = gpm_brightness_setup_display (brightness);
 
-	/* Start from a known state.  Two backends dimming at once (a leftover
-	 * gamma ramp under a real backlight) is exactly the confusion this
-	 * dialog is meant to remove, so reset the new backend to 100%. */
+	/* Then start the new backend from a known state. */
 	brightness->priv->cache_trusted = FALSE;
 	brightness->priv->shared_value = 100;
 	gpm_brightness_set (brightness, 100, NULL);
