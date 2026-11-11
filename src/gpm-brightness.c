@@ -929,6 +929,13 @@ gpm_brightness_gamma_apply (GpmBrightness *brightness, gdouble level)
 
 	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
 
+	/* The root window exists only after the X11 branch of init ran.  Callers
+	 * like gpm_brightness_start_ddc() reset the ramp early, and touching
+	 * GDK_WINDOW_XID(NULL) asserts and then segfaults in libX11. */
+	if (brightness->priv->root_window == NULL ||
+	    !GDK_IS_X11_WINDOW (brightness->priv->root_window))
+		return FALSE;
+
 	level = CLAMP (level, GPM_GAMMA_MIN_LEVEL, 1.0);
 
 	/* A CRTC that cannot take a ramp answers with an X error, and an untrapped
