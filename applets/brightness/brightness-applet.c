@@ -1185,6 +1185,20 @@ brightness_changed_cb (DBusGProxy          *proxy,
 {
 	g_debug ("BrightnessChanged detected: %u\n", brightness);
 	applet->level = brightness;
+
+	/* Switching the backend resets the level in the daemon.  Without this the
+	 * popup keeps the handle where the user left it and shows a value that is
+	 * no longer applied.  Block the value-changed handler while syncing, so
+	 * the update does not bounce back to the daemon as a new write. */
+	if (applet->popup != NULL && applet->slider != NULL) {
+		g_signal_handlers_block_by_func (applet->slider,
+						 G_CALLBACK (gpm_applet_slide_cb),
+						 applet);
+		gpm_applet_update_popup_level (applet);
+		g_signal_handlers_unblock_by_func (applet->slider,
+						   G_CALLBACK (gpm_applet_slide_cb),
+						   applet);
+	}
 }
 
 /**
