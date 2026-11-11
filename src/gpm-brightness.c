@@ -307,9 +307,33 @@ static gboolean gpm_brightness_ddc_open_busno (GpmBrightness *brightness);
 static gpointer gpm_brightness_ddc_worker (gpointer data);
 static gboolean gpm_brightness_ddc_failed_cb (gpointer data);
 static gboolean gpm_brightness_ddc_ready_cb (gpointer data);
+static gpointer gpm_brightness_ddc_worker (gpointer data);
+static gboolean gpm_brightness_start_ddc (GpmBrightness *brightness);
 #endif
 #ifdef HAVE_X11
 static gboolean gpm_brightness_gamma_apply (GpmBrightness *brightness, gdouble level);
+#endif
+
+#ifdef HAVE_DDCUTIL
+/* Start the DDC/CI worker.  Used both when RandR reports no backlight property
+ * at all and when the user forced the DDC backend. */
+static gboolean
+gpm_brightness_start_ddc (GpmBrightness *brightness)
+{
+	g_debug ("No backlight property; using DDC/CI");
+	brightness->priv->use_ddc = TRUE;
+	/* A previous run may have left the screen dimmed through the gamma ramp;
+	 * DDC/CI drives the backlight, so hand the picture back at full range. */
+	brightness->priv->use_gamma = FALSE;
+	gpm_brightness_gamma_apply (brightness, 1.0);
+
+	g_mutex_init (&brightness->priv->ddc_lock);
+	g_cond_init (&brightness->priv->ddc_cond);
+	brightness->priv->ddc_thread =
+		g_thread_new ("ddc-brightness",
+			      gpm_brightness_ddc_worker, brightness);
+	return TRUE;
+}
 #endif
 
 /**
@@ -346,6 +370,30 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 			if (g_strcmp0 (brightness->priv->backend, "notebook") == 0) {
 				g_debug ("Backend forced: notebook, but there is no "
 					 "backlight property");
+				return FALSE;
+			}
+			if (g_strcmp0 (brightness->priv->backend, "ddc") == 0) {
+#ifdef HAVE_DDCUTIL
+				/* A desktop monitor has no RandR backlight property,
+				 * but the requested backend does not need one. */
+				g_debug ("Backend forced: ddc");
+				return gpm_brightness_start_ddc (brightness);
+#else
+				return FALSE;
+#endif
+			}
+			if (g_strcmp0 (brightness->priv->backend, "kernel") == 0) {
+				gint levels =
+					gpm_brightness_helper_get_value ("get-max-brightness");
+
+				if (levels > 0) {
+					g_debug ("Backend forced: kernel (%d levels)",
+						 levels);
+					brightness->priv->extension_levels = levels;
+					return TRUE;
+				}
+				g_debug ("Backend forced: kernel, but there is no "
+					 "backlight device");
 				return FALSE;
 			}
 			if (g_strcmp0 (brightness->priv->backend, "gamma") != 0 &&
@@ -430,20 +478,7 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 
 			/* Desktop monitor: DDC/CI is the only way to touch the real
 			 * backlight.  The gamma ramp below stays as the fallback. */
-			g_debug ("No backlight property; using DDC/CI");
-			brightness->priv->use_ddc = TRUE;
-			/* A previous run may have left the screen dimmed through the
-			 * gamma ramp; DDC/CI drives the backlight, so hand the picture
-			 * back at full range. */
-			brightness->priv->use_gamma = FALSE;
-			gpm_brightness_gamma_apply (brightness, 1.0);
-
-			g_mutex_init (&brightness->priv->ddc_lock);
-			g_cond_init (&brightness->priv->ddc_cond);
-			brightness->priv->ddc_thread =
-				g_thread_new ("ddc-brightness",
-					      gpm_brightness_ddc_worker, brightness);
-			return TRUE;
+			return gpm_brightness_start_ddc (brightness);
 #endif
 			g_debug ("No output carries a backlight property; using CRTC gamma");
 			brightness->priv->use_gamma = TRUE;
