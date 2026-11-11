@@ -325,7 +325,11 @@ gpm_brightness_start_ddc (GpmBrightness *brightness)
 	/* A previous run may have left the screen dimmed through the gamma ramp;
 	 * DDC/CI drives the backlight, so hand the picture back at full range. */
 	brightness->priv->use_gamma = FALSE;
-	gpm_brightness_gamma_apply (brightness, 1.0);
+	/* The ramp only exists on X11; on Wayland there is no display to talk to
+	 * and touching it crashed the daemon. */
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_X11_DISPLAY (gdk_display_get_default ()))
+		gpm_brightness_gamma_apply (brightness, 1.0);
 
 	g_mutex_init (&brightness->priv->ddc_lock);
 	g_cond_init (&brightness->priv->ddc_cond);
@@ -345,6 +349,40 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 	gint major, minor;
 
 	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
+
+	/* DDC/CI and the kernel backlight do not need X at all.  On a Wayland
+	 * session there is no X display to query, and the RandR probes below
+	 * returned FALSE there, leaving the daemon with "Dim capable hardware not
+	 * present" and the applet showing a red cross. */
+	if (g_strcmp0 (brightness->priv->backend, "ddc") == 0) {
+#ifdef HAVE_DDCUTIL
+		g_debug ("Backend forced: ddc (no X needed)");
+		return gpm_brightness_start_ddc (brightness);
+#else
+		return FALSE;
+#endif
+	}
+	if (g_strcmp0 (brightness->priv->backend, "kernel") == 0) {
+		gint levels = gpm_brightness_helper_get_value ("get-max-brightness");
+
+		if (levels > 0) {
+			g_debug ("Backend forced: kernel (%d levels), no X needed", levels);
+			brightness->priv->extension_levels = levels;
+			return TRUE;
+		}
+		g_debug ("Backend forced: kernel, but there is no backlight device");
+		return FALSE;
+	}
+
+	/* Everything below talks RandR, which does not exist off X11.  Do not even
+	 * ask for the X display there: GDK_DISPLAY_XDISPLAY on a Wayland display is
+	 * meaningless and the probes then fail with a fatal g_error. */
+	if (gdk_display_get_default () == NULL ||
+	    !GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		g_debug ("Not an X11 display: only the ddc and kernel backends are "
+			 "available");
+		return FALSE;
+	}
 
 	/* get the display */
 	brightness->priv->dpy = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
@@ -1761,6 +1799,17 @@ gpm_brightness_init (GpmBrightness *brightness)
 			  "changed::brightness-backend",
 			  G_CALLBACK (gpm_brightness_backend_changed),
 			  brightness);
+
+	/* Wayland session (or no X at all): RandR is unavailable, but DDC/CI and
+	 * the kernel backlight do not need it - set the backend up here, since the
+	 * X11 block below is skipped entirely. */
+	if (gdk_display_get_default () == NULL ||
+	    !GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		brightness->priv->has_extension =
+			gpm_brightness_setup_display (brightness);
+		if (!brightness->priv->has_extension)
+			g_debug ("no dimming backend available on this display server");
+	}
 
 #ifdef HAVE_X11
 	if (gdk_display_get_default () != NULL &&
