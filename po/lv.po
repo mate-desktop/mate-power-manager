@@ -1,28 +1,31 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-power-manager package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Jānis-Marks Gailis <jm-gailis@fai-vianet.fr>, 2018
 # Rihards Priedītis <rprieditis@gmail.com>, 2018
 # Imants Liepiņš <imzzinator@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # reki the human <voiceofwise1@gmail.com>, 2020
-# 
+# Rihards Prieditis <rprieditis@gmail.com>, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-power-manager 1.26.0\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/pulls\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-power-manager/"
+"pulls\n"
 "POT-Creation-Date: 2022-10-29 15:32+0200\n"
-"PO-Revision-Date: 2018-03-11 20:39+0000\n"
-"Last-Translator: reki the human <voiceofwise1@gmail.com>, 2020\n"
-"Language-Team: Latvian (https://app.transifex.com/mate/teams/13566/lv/)\n"
+"PO-Revision-Date: 2026-11-12 15:18+0000\n"
+"Last-Translator: Rihards Prieditis <rprieditis@gmail.com>\n"
+"Language-Team: Latvian <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/mate-power-manager/lv/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: lv\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2;\n"
+"X-Generator: Weblate 2026.11.1\n"
 
 #: applets/brightness/brightness-applet.c:108
 msgid "Power Manager Brightness Applet"
@@ -30,21 +33,21 @@ msgstr "Barošanas pārvaldnieka spilgtuma sīklietotne"
 
 #: applets/brightness/brightness-applet.c:109
 msgid "Adjusts laptop panel brightness."
-msgstr "Pielāgo klēpjdatora paneļa spilgtumu."
+msgstr "Pielāgo klēpjdatora ekrāna spilgtumu."
 
 #: applets/brightness/brightness-applet.c:370
 #: applets/inhibit/inhibit-applet.c:223
 msgid "Cannot connect to mate-power-manager"
-msgstr "Nevar pieslēgties pie mate-power-manager"
+msgstr "Neizdevās savienoties ar mate-power-manager"
 
 #: applets/brightness/brightness-applet.c:372
 msgid "Cannot get laptop panel brightness"
-msgstr "Nevar nolasīt klēpjdatora paneļa spilgtumu"
+msgstr "Neizdevās iegūt klēpjdatora ekrāna spilgtumu"
 
 #: applets/brightness/brightness-applet.c:374
 #, c-format
 msgid "LCD brightness : %d%%"
-msgstr "LCD spilgtums : %d%%"
+msgstr "LCD spilgtums: %d%%"
 
 #: applets/brightness/brightness-applet.c:817
 #: applets/inhibit/inhibit-applet.c:285
@@ -54,6 +57,10 @@ msgid ""
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
 msgstr ""
+"Barošanas pārvaldnieks ir brīva programmatūra; jūs varat to izplatīt un/vai "
+"modificēt saskaņā ar GNU General Public License noteikumiem, kā tos "
+"publicējis Free Software Foundation; vai nu licences 2. versiju, vai (pēc "
+"jūsu izvēles) jebkuru vēlāku versiju."
 
 #: applets/brightness/brightness-applet.c:822
 #: applets/inhibit/inhibit-applet.c:290
@@ -63,6 +70,10 @@ msgid ""
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
 msgstr ""
+"Barošanas pārvaldnieks tiek izplatīts ar cerību, ka tas būs noderīgs, taču "
+"BEZ JEBKĀDĀM GARANTIJĀM; pat bez netiešas garantijas par PIEMĒROTĪBU "
+"PĀRDOŠANAI vai DERĪGUMU KONKRĒTAM MĒRĶIM. Sīkāk skatiet GNU General Public "
+"License."
 
 #: applets/brightness/brightness-applet.c:827
 #: applets/inhibit/inhibit-applet.c:295
@@ -71,28 +82,35 @@ msgid ""
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
+"Jums kopā ar šo programmu vajadzēja saņemt GNU General Public License "
+"kopiju; ja tā nav, rakstiet Free Software Foundation, Inc., 51 Franklin "
+"Street, Fifth Floor, Boston, MA 02110-1301, USA."
 
 #: applets/brightness/brightness-applet.c:840
 msgid "About Power Manager Brightness Applet"
-msgstr ""
+msgstr "Par barošanas pārvaldnieka spilgtuma sīklietotni"
 
 #: applets/brightness/brightness-applet.c:842
 msgid ""
 "Copyright © 2006 Benjamin Canou\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
+"Autortiesības © 2006 Benjamin Canou\n"
+"Autortiesības © 2011-2021 MATE izstrādātāji"
 
 #: applets/brightness/brightness-applet.c:849
 #: applets/inhibit/inhibit-applet.c:317 src/gpm-tray-icon.c:212
 msgid "translator-credits"
 msgstr ""
+"Rihards Priedītis <rprieditis@gmail.com>\n"
+"\n"
 "Launchpad Contributions:\n"
-"  Kristaps https://launchpad.net/~retail"
+" Kristaps https://launchpad.net/~retail"
 
 #: applets/brightness/brightness-applet.c:1080
 #: applets/inhibit/inhibit-applet.c:500
 msgid "_About"
-msgstr "P_ar"
+msgstr "_Par"
 
 #: applets/brightness/brightness-applet.c:1083
 #: applets/inhibit/inhibit-applet.c:503 data/gpm-prefs.ui:41
@@ -109,41 +127,43 @@ msgstr "Spilgtuma sīklietotne"
 
 #: applets/inhibit/inhibit-applet.c:87
 msgid "Power Manager Inhibit Applet"
-msgstr "Barošanas pārvaldnieka nomākšanas sīklietotne"
+msgstr "Barošanas pārvaldnieka bloķēšanas sīklietotne"
 
 #: applets/inhibit/inhibit-applet.c:88
 msgid "Allows user to inhibit automatic power saving."
-msgstr "Ļaut lietotājiem nomākt automātisko enerģijas taupīšanu."
+msgstr "Ļauj lietotājam bloķēt automātisko enerģijas taupīšanu."
 
 #: applets/inhibit/inhibit-applet.c:226
 msgid "Automatic sleep inhibited"
-msgstr "Automātiskās iemigšanas nomākta"
+msgstr "Automātiskā iemigšana bloķēta"
 
 #: applets/inhibit/inhibit-applet.c:228
 msgid "Automatic sleep enabled"
-msgstr "Automātiskā iemigšana aktivizēta"
+msgstr "Automātiskā iemigšana ieslēgta"
 
 #: applets/inhibit/inhibit-applet.c:256
 msgid "Manual inhibit"
-msgstr "Pašrocīgā nomākšana"
+msgstr "Manuāla bloķēšana"
 
 #: applets/inhibit/inhibit-applet.c:308
 msgid "About Power Manager Inhibit Applet"
-msgstr ""
+msgstr "Par barošanas pārvaldnieka bloķēšanas sīklietotni"
 
 #: applets/inhibit/inhibit-applet.c:310
 msgid ""
 "Copyright © 2006-2007 Richard Hughes\n"
 "Copyright © 2011-2021 MATE developers"
 msgstr ""
+"Autortiesības © 2006-2007 Richard Hughes\n"
+"Autortiesības © 2011-2021 MATE izstrādātāji"
 
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:5
 msgid "Inhibit Applet Factory"
-msgstr "Nomākšanas sīklietotnes ražotne"
+msgstr "Bloķēšanas sīklietotnes ražotne"
 
 #: applets/inhibit/org.mate.InhibitApplet.mate-panel-applet.desktop.in.in:9
 msgid "Inhibit Applet"
-msgstr "Nomākšanas sīklietotne"
+msgstr "Bloķēšanas sīklietotne"
 
 #: data/mate-power-manager.desktop.in.in:3 src/gpm-tray-icon.c:203
 msgid "Power Manager"
@@ -151,34 +171,33 @@ msgstr "Barošanas pārvaldnieks"
 
 #: data/mate-power-manager.desktop.in.in:4 src/gpm-tray-icon.c:205
 msgid "Power management daemon"
-msgstr "Barošanas pārvaldnieka dēmons"
+msgstr "Barošanas pārvaldības dēmons"
 
 #: data/org.mate.power-manager.gschema.xml.in:26
 #: data/org.mate.power-manager.gschema.xml.in:41
 msgid "Whether to hibernate, suspend or do nothing when inactive"
-msgstr "Vai sastindzināt, iesnaudināt vai nedarīt neko, kad neaktīvs"
+msgstr "Vai neaktivitātes laikā hibernēt, iesnaudināt vai nedarīt neko"
 
 #: data/org.mate.power-manager.gschema.xml.in:27
 #: data/org.mate.power-manager.gschema.xml.in:42
 msgid ""
 "The type of sleeping that should be performed when the computer is inactive."
-msgstr ""
+msgstr "Miega veids, kas jāizmanto, kad dators ir neaktīvs."
 
 #: data/org.mate.power-manager.gschema.xml.in:31
 msgid "Battery critical low action"
-msgstr "Baterijas kritiski zema darbība"
+msgstr "Darbība, kad baterija ir kritiski zema"
 
 #: data/org.mate.power-manager.gschema.xml.in:32
 msgid "The action to take when the battery is critically low."
-msgstr ""
+msgstr "Darbība, kas jāveic, kad baterija ir kritiski zema."
 
 #: data/org.mate.power-manager.gschema.xml.in:36
 msgid ""
 "If the battery event should occur when the lid is shut and the power "
 "disconnected"
 msgstr ""
-"Vai vajadzētu notikt baterijas notikumiem, kad vāks ir aizvērts un strāva "
-"atvienota"
+"Vai baterijas notikumam jānotiek, ja vāks ir aizvērts un barošana atvienota"
 
 #: data/org.mate.power-manager.gschema.xml.in:37
 msgid ""
@@ -186,71 +205,76 @@ msgid ""
 "closed on battery') when the lid is previously shut and the AC power "
 "disconnected at a later time."
 msgstr ""
-"Vai baterijas vāka aizvēršanas notikumam vajadzētu notikt (piemēram, "
-"'Iesnaudināt, kad vāks baterijai aizvērts'), kad vāks iepriekš aizvērts un "
-"maiņstrāva atvienota vēlāk."
+"Vai baterijas vāka aizvēršanas notikumam jānotiek (piemēram, „Iesnaudināt, "
+"kad vāks aizvērts, barojot no baterijas”), ja vāks jau iepriekš bija "
+"aizvērts un maiņstrāvas barošana vēlāk tiek atvienota."
 
 #: data/org.mate.power-manager.gschema.xml.in:46
 msgid "UPS critical low action"
-msgstr "Darbība, kad UPS tukšs"
+msgstr "Darbība, kad UPS ir kritiski zems"
 
 #: data/org.mate.power-manager.gschema.xml.in:47
 msgid "The action to take when the UPS is critically low."
-msgstr ""
+msgstr "Darbība, kas jāveic, kad UPS ir kritiski zems."
 
 #: data/org.mate.power-manager.gschema.xml.in:51
 msgid "UPS low power action"
-msgstr "Darbība, kad UPS gandrīz tukšs"
+msgstr "Darbība, kad UPS ir zems"
 
 #: data/org.mate.power-manager.gschema.xml.in:52
 msgid "The action to take when the UPS is low."
-msgstr ""
+msgstr "Darbība, kas jāveic, kad UPS ir zems."
 
 #: data/org.mate.power-manager.gschema.xml.in:56
 msgid "Allow backlight brightness adjustment"
-msgstr "Atļaut monitora spilgtuma pielāgošanu"
+msgstr "Atļaut fona apgaismojuma spilgtuma pielāgošanu"
 
 #: data/org.mate.power-manager.gschema.xml.in:57
 msgid ""
 "If the screen brightness should be changed when switching between AC and "
 "battery power."
 msgstr ""
-"Vai mainīt ekrāna spilgtumu, pārslēdzoties starp strāvas un bateriju "
+"Vai mainīt ekrāna spilgtumu, pārslēdzoties starp maiņstrāvas un baterijas "
 "barošanu."
 
 #: data/org.mate.power-manager.gschema.xml.in:61
 msgid "Reduce the backlight brightness when on battery power"
-msgstr "Samazināt ekrāna spožumu darbojoties uz baterijas"
+msgstr "Samazināt fona apgaismojuma spilgtumu, barojot no baterijas"
 
 #: data/org.mate.power-manager.gschema.xml.in:62
 msgid ""
 "If the screen should be reduced in brightness when the computer is on "
 "battery power."
-msgstr "Vai, izmantojot baterijas strāvu, samazināt ekrāna spilgtumu."
+msgstr "Vai samazināt ekrāna spilgtumu, kad dators tiek barots no baterijas."
 
 #: data/org.mate.power-manager.gschema.xml.in:66
 msgid "Reduce the keyboard backlight when on battery power"
-msgstr ""
+msgstr "Samazināt tastatūras apgaismojumu, barojot no baterijas"
 
 #: data/org.mate.power-manager.gschema.xml.in:67
 msgid ""
 "If the keyboard backlight brightness should be reduced when the computer is "
 "on battery power"
 msgstr ""
+"Vai samazināt tastatūras apgaismojuma spilgtumu, kad dators tiek barots no "
+"baterijas"
 
 #: data/org.mate.power-manager.gschema.xml.in:71
 msgid "Keyboard backlight brightness when on AC power."
-msgstr ""
+msgstr "Tastatūras apgaismojuma spilgtums, barojot no maiņstrāvas."
 
 #: data/org.mate.power-manager.gschema.xml.in:72
 msgid ""
 "Percent brightness to set keyboard backlight at when on AC power. Legal "
 "values are between 0 and 100."
 msgstr ""
+"Tastatūras apgaismojuma spilgtums procentos, barojot no maiņstrāvas. Derīgās "
+"vērtības ir no 0 līdz 100."
 
 #: data/org.mate.power-manager.gschema.xml.in:76
 msgid "Percent to reduce keyboard backlight by when on battery power."
 msgstr ""
+"Par cik procentiem samazināt tastatūras apgaismojumu, barojot no baterijas."
 
 #: data/org.mate.power-manager.gschema.xml.in:77
 msgid ""
@@ -258,10 +282,13 @@ msgid ""
 "For example, if set to '60', the backlight will be cut by 40% on battery "
 "power. Legal values are between 0 and 100."
 msgstr ""
+"Par cik procentiem samazināt tastatūras apgaismojumu, barojot no baterijas. "
+"Piemēram, ja iestatīts '60', barojot no baterijas, apgaismojums tiks "
+"samazināts par 40%. Derīgās vērtības ir no 0 līdz 100."
 
 #: data/org.mate.power-manager.gschema.xml.in:81
 msgid "Percent to reduce keyboard backlight by when idle."
-msgstr ""
+msgstr "Par cik procentiem samazināt tastatūras apgaismojumu dīkstāvē."
 
 #: data/org.mate.power-manager.gschema.xml.in:82
 msgid ""
@@ -269,89 +296,93 @@ msgid ""
 "if set to '60', the backlight will be cut by 40% when idle. Legal values are"
 " between 0 and 100."
 msgstr ""
+"Par cik procentiem samazināt tastatūras apgaismojumu dīkstāvē. Piemēram, ja "
+"iestatīts '60', dīkstāvē apgaismojums tiks samazināts par 40%. Derīgās "
+"vērtības ir no 0 līdz 100."
 
 #: data/org.mate.power-manager.gschema.xml.in:86
 msgid "The brightness of the screen when idle"
-msgstr "Ekrāna spožums, kad dīkstāvē"
+msgstr "Ekrāna spilgtums dīkstāvē"
 
 #: data/org.mate.power-manager.gschema.xml.in:87
 msgid ""
 "This is the laptop panel screen brightness used when the session is idle. "
 "Only valid when use-time-for-policy is true."
 msgstr ""
+"Klēpjdatora ekrāna spilgtums, kad sesija ir dīkstāvē. Derīgs tikai tad, ja "
+"use-time-for-policy ir \"true\" (patiess)."
 
 #: data/org.mate.power-manager.gschema.xml.in:91
 msgid "Dim the screen after a period of inactivity when on battery power"
-msgstr ""
-"Barojoties no akumulatora, samazināt ekrāna spilgtumu pēc bezdarbības brīža"
+msgstr "Aptumšot ekrānu pēc neaktivitātes perioda, barojot no baterijas"
 
 #: data/org.mate.power-manager.gschema.xml.in:92
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on battery power."
 msgstr ""
-"Vai dīkstāvē vajadzētu samazināt ekrāna spilgtumu, lai ietaupītu enerģiju, "
-"izmantojot baterija strāvu."
+"Vai aptumšot ekrānu, lai taupītu enerģiju, kad dators ir dīkstāvē un tiek "
+"barots no baterijas."
 
 #: data/org.mate.power-manager.gschema.xml.in:96
 msgid "The default amount of time to dim the screen after idle"
-msgstr "Noklusētais laiks, pēc kura aptumšot ekrānu, kad nekas netiek darīts"
+msgstr "Noklusējuma laiks līdz ekrāna aptumšošanai dīkstāvē"
 
 #: data/org.mate.power-manager.gschema.xml.in:97
 msgid "The default amount of time to dim the screen after idle."
-msgstr "Noklusētais laiks, pēc kura aptumšot ekrānu, kad nekas netiek darīts."
+msgstr "Noklusējuma laiks līdz ekrāna aptumšošanai dīkstāvē."
 
 #: data/org.mate.power-manager.gschema.xml.in:101
 msgid "LCD dimming amount when on battery"
-msgstr "LCD aptumšošanas mērs, kad izmanto baterijas strāvu"
+msgstr "LCD aptumšošanas apjoms, barojot no baterijas"
 
 #: data/org.mate.power-manager.gschema.xml.in:102
 msgid ""
 "The amount to dim the brightness of the display when on battery power. "
 "Possible values are between 0 and 100."
 msgstr ""
-"Apjoms, par kuru samazināt ekrāna gaišumu, kad dators izmanto baterijas "
-"strāvu. Iespējamās vērtības ir starp 0 un 100."
+"Par cik samazināt displeja spilgtumu, barojot no baterijas. Iespējamās "
+"vērtības ir no 0 līdz 100."
 
 #: data/org.mate.power-manager.gschema.xml.in:106
 msgid "Dim the screen after a period of inactivity when on AC power"
-msgstr ""
-"Barojoties no strāvas, samazināt ekrāna spilgtumu pēc bezdarbības brīža"
+msgstr "Aptumšot ekrānu pēc neaktivitātes perioda, barojot no maiņstrāvas"
 
 #: data/org.mate.power-manager.gschema.xml.in:107
 msgid ""
 "If the screen should be dimmed to save power when the computer is idle when "
 "on AC power."
 msgstr ""
-"Vai dīkstāvē vajadzētu samazināt ekrāna spilgtumu, lai ietaupītu enerģiju, "
-"izmantojot maiņstrāvu."
+"Vai aptumšot ekrānu, lai taupītu enerģiju, kad dators ir dīkstāvē un tiek "
+"barots no maiņstrāvas."
 
 #: data/org.mate.power-manager.gschema.xml.in:111
 msgid "Method used to blank screen on AC"
-msgstr ""
-"Metode, kas tiks izmantota ekrāna aptumšošanai izmantojot barošanas vadu"
+msgstr "Ekrāna nodzēšanas metode, barojot no maiņstrāvas"
 
 #: data/org.mate.power-manager.gschema.xml.in:112
 msgid "The DPMS method used to blank the screen when on AC power."
-msgstr ""
+msgstr "DPMS metode, ko izmanto ekrāna nodzēšanai, barojot no maiņstrāvas."
 
 #: data/org.mate.power-manager.gschema.xml.in:116
 msgid "Method used to blank screen on battery"
-msgstr "Metode, kas tiks izmantota ekrāna aptumšošanai izmantojot bateriju"
+msgstr "Ekrāna nodzēšanas metode, barojot no baterijas"
 
 #: data/org.mate.power-manager.gschema.xml.in:117
 msgid "The DPMS method used to blank the screen when on battery power."
-msgstr ""
+msgstr "DPMS metode, ko izmanto ekrāna nodzēšanai, barojot no baterijas."
 
 #: data/org.mate.power-manager.gschema.xml.in:121
 msgid "LCD brightness when on AC"
-msgstr "LCD spilgtums, kad izmanto maiņstrāvu"
+msgstr "LCD spilgtums, barojot no maiņstrāvas"
 
 #: data/org.mate.power-manager.gschema.xml.in:122
 msgid ""
 "The brightness of the display when on AC power. Possible values are between "
 "0.0 and 100.0."
 msgstr ""
+"Displeja spilgtums, barojot no maiņstrāvas. Iespējamās vērtības ir no 0.0 "
+"līdz 100.0."
 
 #: data/org.mate.power-manager.gschema.xml.in:126
 msgid "Suspend button action"
@@ -359,15 +390,15 @@ msgstr "Iesnaudināšanas pogas darbība"
 
 #: data/org.mate.power-manager.gschema.xml.in:127
 msgid "The action to take when the system suspend button is pressed."
-msgstr ""
+msgstr "Darbība, kas jāveic, nospiežot sistēmas iesnaudināšanas pogu."
 
 #: data/org.mate.power-manager.gschema.xml.in:131
 msgid "Hibernate button action"
-msgstr "Sastindzināšanas pogas darbība"
+msgstr "Hibernācijas pogas darbība"
 
 #: data/org.mate.power-manager.gschema.xml.in:132
 msgid "The action to take when the system hibernate button is pressed."
-msgstr ""
+msgstr "Darbība, kas jāveic, nospiežot sistēmas hibernācijas pogu."
 
 #: data/org.mate.power-manager.gschema.xml.in:136
 msgid "Power button action"
@@ -375,128 +406,142 @@ msgstr "Barošanas pogas darbība"
 
 #: data/org.mate.power-manager.gschema.xml.in:137
 msgid "The action to take when the system power button is pressed."
-msgstr ""
+msgstr "Darbība, kas jāveic, nospiežot sistēmas barošanas pogu."
 
 #: data/org.mate.power-manager.gschema.xml.in:141
 msgid "Laptop lid close action on battery"
-msgstr "Klēpjdatora vāka aizvēršanas darbība, kad izmanto baterijas strāvu"
+msgstr "Klēpjdatora vāka aizvēršanas darbība, barojot no baterijas"
 
 #: data/org.mate.power-manager.gschema.xml.in:142
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on "
 "battery power."
 msgstr ""
+"Darbība, kas jāveic, kad klēpjdatora vāks tiek aizvērts un klēpjdators tiek "
+"barots no baterijas."
 
 #: data/org.mate.power-manager.gschema.xml.in:146
 msgid "Laptop lid close action when on AC"
-msgstr "Klēpjdatora vāka aizvēršanas darbība, kad izmanto maiņstrāvu"
+msgstr "Klēpjdatora vāka aizvēršanas darbība, barojot no maiņstrāvas"
 
 #: data/org.mate.power-manager.gschema.xml.in:147
 msgid ""
 "The action to take when the laptop lid is closed and the laptop is on AC "
 "power."
 msgstr ""
+"Darbība, kas jāveic, kad klēpjdatora vāks tiek aizvērts un klēpjdators tiek "
+"barots no maiņstrāvas."
 
 #: data/org.mate.power-manager.gschema.xml.in:151
 msgid "Whether to use time-based notifications"
-msgstr "Vai lietot uz laika balstītus paziņojumus"
+msgstr "Vai izmantot uz laiku balstītus paziņojumus"
 
 #: data/org.mate.power-manager.gschema.xml.in:152
 msgid ""
 "If time based notifications should be used. If set to false, then the "
 "percentage change is used instead, which may fix a broken ACPI BIOS."
 msgstr ""
-"Vai būtu jālieto laika balstīti paziņojumi. Ja uzstādīts uz aplams, tad tā "
-"vietā tiek lietotas procentuālās izmaiņas, kas var salabot salauztu ACPI "
-"BIOS."
+"Vai izmantot uz laiku balstītus paziņojumus. Ja iestatīts uz \"false\" "
+"(aplams), tā vietā tiek izmantota procentu izmaiņa, kas var palīdzēt bojāta "
+"ACPI BIOS gadījumā."
 
 #: data/org.mate.power-manager.gschema.xml.in:156
 msgid "Check CPU load before sleeping"
-msgstr "Pārbaudīt CPU pirms iesnaušanas"
+msgstr "Pirms iemigšanas pārbaudīt CPU noslodzi"
 
 #: data/org.mate.power-manager.gschema.xml.in:157
 msgid "If the CPU load should be checked before doing the idle action."
-msgstr "Vai būtu jāpārbauda CPU noslodze pirms dīkstāves darbību veikšanas."
+msgstr "Vai pirms dīkstāves darbības veikšanas pārbaudīt CPU noslodzi."
 
 #: data/org.mate.power-manager.gschema.xml.in:161
 msgid "Whether NetworkManager should be connected and disconnected on sleep."
-msgstr ""
+msgstr "Vai NetworkManager jāatvieno un jāpievieno miega režīmā."
 
 #: data/org.mate.power-manager.gschema.xml.in:162
 msgid ""
 "Whether NetworkManager should disconnect before suspending or hibernating "
 "and connect on resume."
 msgstr ""
-"Vai NetworkManager pirms iesnaušanās vai sastingšanas būtu jāatvienojas, un "
-"jāsavienojas atmostoties."
+"Vai NetworkManager jāatvienojas pirms iesnaudināšanas vai hibernācijas un "
+"jāpievienojas pēc atsākšanas."
 
 #: data/org.mate.power-manager.gschema.xml.in:166
 msgid "Use mate-screensaver lock setting"
-msgstr "Lietot mate-screensaver lock iestatījumu"
+msgstr "Izmantot mate-screensaver bloķēšanas iestatījumu"
 
 #: data/org.mate.power-manager.gschema.xml.in:167
 msgid ""
 "Whether to use the screen lock setting of mate-screensaver to decide if the "
 "screen is locked after a hibernate, suspend or blank screen."
 msgstr ""
-"Vai izmantot mate-screensaver ekrāna bloķēšanas iestatījumus, lai noteiktu "
-"vai bloķēt ekrānu atmodinot datoru vai ieslēdzot ekrānu."
+"Vai izmantot mate-screensaver ekrāna bloķēšanas iestatījumu, lai noteiktu, "
+"vai ekrāns tiek bloķēts pēc hibernācijas, iesnaudināšanas vai ekrāna "
+"nodzēšanas."
 
 #: data/org.mate.power-manager.gschema.xml.in:171
 msgid "Lock screen when blanked"
-msgstr "Slēgt ekrānu, kad tukšs"
+msgstr "Bloķēt ekrānu, kad tas nodzēsts"
 
 #: data/org.mate.power-manager.gschema.xml.in:172
 msgid ""
 "Whether the screen is locked when the screen is turned off. Only used if "
 "lock-use-screensaver is false."
 msgstr ""
+"Vai bloķēt ekrānu, kad ekrāns tiek izslēgts. Izmanto tikai tad, ja lock-use-"
+"screensaver ir \"false\" (aplams)."
 
 #: data/org.mate.power-manager.gschema.xml.in:176
 msgid "Lock screen on suspend"
-msgstr "Slēgt ekrānu, iesnaudinot datoru"
+msgstr "Bloķēt ekrānu, iesnaudinot"
 
 #: data/org.mate.power-manager.gschema.xml.in:177
 msgid ""
 "Whether the screen is locked when the computer wakes up from a suspend. Only"
 " used if lock-use-screensaver is false."
 msgstr ""
+"Vai bloķēt ekrānu, kad dators pamostas pēc iesnaudināšanas. Izmanto tikai "
+"tad, ja lock-use-screensaver ir \"false\" (aplams)."
 
 #: data/org.mate.power-manager.gschema.xml.in:181
 msgid "Lock screen on hibernate"
-msgstr "Slēgt ekrānu sastindzinot"
+msgstr "Bloķēt ekrānu, hibernējot"
 
 #: data/org.mate.power-manager.gschema.xml.in:182
 msgid ""
 "Whether the screen is locked when the computer wakes up from a hibernate. "
 "Only used if lock-use-screensaver is false."
 msgstr ""
+"Vai bloķēt ekrānu, kad dators pamostas pēc hibernācijas. Izmanto tikai tad, "
+"ja lock-use-screensaver ir \"false\" (aplams)."
 
 #: data/org.mate.power-manager.gschema.xml.in:186
 #: data/org.mate.power-manager.gschema.xml.in:191
 msgid "Lock GNOME keyring on sleep"
-msgstr ""
+msgstr "Bloķēt GNOME atslēgu saiti miega režīmā"
 
 #: data/org.mate.power-manager.gschema.xml.in:187
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters suspend. This"
 " means the keyring will have to be unlocked on resume."
 msgstr ""
+"Vai bloķēt GNOME atslēgu saiti, pirms dators tiek iesnaudināts. Tas nozīmē, "
+"ka pēc atsākšanas atslēgu saite būs jāatbloķē."
 
 #: data/org.mate.power-manager.gschema.xml.in:192
 msgid ""
 "Whether the GNOME keyring is locked before the computer enters hibernate. "
 "This means the keyring will have to be unlocked on resume."
 msgstr ""
+"Vai bloķēt GNOME atslēgu saiti, pirms dators tiek hibernēts. Tas nozīmē, ka "
+"pēc atsākšanas atslēgu saite būs jāatbloķē."
 
 #: data/org.mate.power-manager.gschema.xml.in:196
 msgid "If we should show the low capacity warning for a broken battery"
-msgstr "Vai būtu jārāda zemas baterijas strāvas brīdinājums bojātām baterijām"
+msgstr "Vai rādīt brīdinājumu par mazu ietilpību bojātai baterijai"
 
 #: data/org.mate.power-manager.gschema.xml.in:197
 msgid "If we should show the low capacity warning for a broken battery."
-msgstr ""
-"Vai būtu jārāda zemas baterijas strāvas brīdinājums bojātām baterijām."
+msgstr "Vai rādīt brīdinājumu par mazu ietilpību bojātai baterijai."
 
 #: data/org.mate.power-manager.gschema.xml.in:201
 msgid "Notify when AC adapter is disconnected"
@@ -514,178 +559,188 @@ msgstr "Paziņot, kad pilnībā pielādēts"
 msgid ""
 "If a notification message should be displayed when the battery is fully "
 "charged."
-msgstr ""
-"Vai paziņojuma ziņojumam vajadzētu tikt attēlotam, kad baterija pilnība "
-"uzlādēta."
+msgstr "Vai rādīt paziņojumu, kad baterija ir pilnībā uzlādēta."
 
 #: data/org.mate.power-manager.gschema.xml.in:211
 msgid "Notify on a sleep failure"
-msgstr "Ziņot par iemigšanas kļūdām"
+msgstr "Paziņot par iemigšanas kļūmi"
 
 #: data/org.mate.power-manager.gschema.xml.in:212
 msgid ""
 "If a notification message should be displayed after suspend or hibernate "
 "failed."
-msgstr ""
-"Vai pēc neveiksmīgas iesnaudināšanas vai sastindzināšanas rādīt attiecīgu "
-"paziņojumu."
+msgstr "Vai rādīt paziņojumu, ja iesnaudināšana vai hibernācija neizdevās."
 
 #: data/org.mate.power-manager.gschema.xml.in:216
 msgid "The URI to show to the user on sleep failure"
-msgstr "URI, kuru rādīt lietotājam, kad neizdodas iesnausties"
+msgstr "URI, ko rādīt lietotājam iemigšanas kļūmes gadījumā"
 
 #: data/org.mate.power-manager.gschema.xml.in:217
 msgid ""
 "When sleep fails we can show the user a button to help fix the situation. "
 "Leave this blank if the button should not be shown."
 msgstr ""
-"Kad neizdodas iesnausties, rādīt lietotājam pogu, lai palīdzētu labot "
-"radušos situāciju. Atstājiet tukšu, lai šo pogu nerādītu."
+"Ja iemigšana neizdodas, lietotājam var parādīt pogu, kas palīdz novērst "
+"problēmu. Atstājiet tukšu, ja pogu nevajag rādīt."
 
 #: data/org.mate.power-manager.gschema.xml.in:221
 msgid "Notify on a low power"
-msgstr "Ziņot par zemu jaudu"
+msgstr "Paziņot par zemu baterijas līmeni"
 
 #: data/org.mate.power-manager.gschema.xml.in:222
 #: data/org.mate.power-manager.gschema.xml.in:227
 msgid ""
 "If a notification message should be displayed when the battery is getting "
 "low."
-msgstr ""
-"Vai paziņojuma ziņojumam vajadzētu tikt attēlotam, kad baterijas strāva "
-"tuvojas beigām."
+msgstr "Vai rādīt paziņojumu, kad baterijas līmenis kļūst zems."
 
 #: data/org.mate.power-manager.gschema.xml.in:226
 msgid "Notify on low capacity of mouse battery"
-msgstr ""
+msgstr "Paziņot par zemu peles baterijas līmeni"
 
 #: data/org.mate.power-manager.gschema.xml.in:231
 msgid "Whether we should show the history data points"
-msgstr ""
+msgstr "Vai rādīt vēstures datu punktus"
 
 #: data/org.mate.power-manager.gschema.xml.in:232
 msgid ""
 "Whether we should show the history data points in the statistics window."
-msgstr ""
+msgstr "Vai statistikas logā rādīt vēstures datu punktus."
 
 #: data/org.mate.power-manager.gschema.xml.in:236
 msgid "Whether we should smooth the history data"
-msgstr ""
+msgstr "Vai izlīdzināt vēstures datus"
 
 #: data/org.mate.power-manager.gschema.xml.in:237
 msgid "Whether we should smooth the history data in the graph."
-msgstr ""
+msgstr "Vai grafikā izlīdzināt vēstures datus."
 
 #: data/org.mate.power-manager.gschema.xml.in:241
 msgid "The default graph type to show for history"
-msgstr ""
+msgstr "Noklusējuma grafika veids vēsturei"
 
 #: data/org.mate.power-manager.gschema.xml.in:242
 msgid "The default graph type to show in the history window."
-msgstr ""
+msgstr "Noklusējuma grafika veids, ko rādīt vēstures logā."
 
 #: data/org.mate.power-manager.gschema.xml.in:246
 msgid "The maximum time displayed for history"
-msgstr ""
+msgstr "Maksimālais vēsturē attēlotais laiks"
 
 #: data/org.mate.power-manager.gschema.xml.in:247
 msgid ""
 "The maximum duration of time displayed on the x-axis of the history graph."
-msgstr ""
+msgstr "Maksimālais laika ilgums, ko attēlo vēstures grafika x asī."
 
 #: data/org.mate.power-manager.gschema.xml.in:251
 msgid "Whether we should show the stats data points"
-msgstr ""
+msgstr "Vai rādīt statistikas datu punktus"
 
 #: data/org.mate.power-manager.gschema.xml.in:252
 msgid "Whether we should show the stats data points in the statistics window."
-msgstr ""
+msgstr "Vai statistikas logā rādīt statistikas datu punktus."
 
 #: data/org.mate.power-manager.gschema.xml.in:256
 msgid "Whether we should smooth the stats data"
-msgstr ""
+msgstr "Vai izlīdzināt statistikas datus"
 
 #: data/org.mate.power-manager.gschema.xml.in:257
 msgid "Whether we should smooth the stats data in the graph."
-msgstr ""
+msgstr "Vai grafikā izlīdzināt statistikas datus."
 
 #: data/org.mate.power-manager.gschema.xml.in:261
 msgid "The default graph type to show for stats"
-msgstr ""
+msgstr "Noklusējuma grafika veids statistikai"
 
 #: data/org.mate.power-manager.gschema.xml.in:262
 msgid "The default graph type to show in the stats window."
-msgstr ""
+msgstr "Noklusējuma grafika veids, ko rādīt statistikas logā."
 
 #: data/org.mate.power-manager.gschema.xml.in:266
 msgid "The index of the page number to show by default"
-msgstr ""
+msgstr "Pēc noklusējuma rādāmās lapas indekss"
 
 #: data/org.mate.power-manager.gschema.xml.in:267
 msgid ""
 "The index of the page number to show by default which is used to return "
 "focus to the correct page."
 msgstr ""
+"Pēc noklusējuma rādāmās lapas indekss, ko izmanto, lai atgrieztu fokusu "
+"pareizajā lapā."
 
 #: data/org.mate.power-manager.gschema.xml.in:271
 msgid "The ID of the last device selected"
-msgstr ""
+msgstr "Pēdējās atlasītās ierīces ID"
 
 #: data/org.mate.power-manager.gschema.xml.in:272
 msgid ""
 "The identifier of the last device which is used to return focus to the "
 "correct device."
 msgstr ""
+"Pēdējās ierīces identifikators, ko izmanto, lai atgrieztu fokusu pareizajai "
+"ierīcei."
 
 #: data/org.mate.power-manager.gschema.xml.in:276
 msgid "Percentage considered low"
-msgstr "Procenti, ko uzskatīt kā zemus"
+msgstr "Procenti, kas tiek uzskatīti par zemu līmeni"
 
 #: data/org.mate.power-manager.gschema.xml.in:277
 msgid ""
 "The percentage of the battery when it is considered low. Only valid when "
 "use-time-for-policy is false."
 msgstr ""
+"Baterijas uzlādes procenti, pie kuriem līmenis tiek uzskatīts par zemu. "
+"Derīgs tikai tad, ja use-time-for-policy ir \"false\" (aplams)."
 
 #: data/org.mate.power-manager.gschema.xml.in:281
 msgid "Percentage considered critical"
-msgstr "Procenti, ko uzskatīt kritiskus"
+msgstr "Procenti, kas tiek uzskatīti par kritisku līmeni"
 
 #: data/org.mate.power-manager.gschema.xml.in:282
 msgid ""
 "The percentage of the battery when it is considered critical. Only valid "
 "when use-time-for-policy is false."
 msgstr ""
+"Baterijas uzlādes procenti, pie kuriem līmenis tiek uzskatīts par kritisku. "
+"Derīgs tikai tad, ja use-time-for-policy ir \"false\" (aplams)."
 
 #: data/org.mate.power-manager.gschema.xml.in:286
 msgid "Percentage action is taken"
-msgstr "Pieņemta procentuālā darbība"
+msgstr "Procenti, pie kuriem tiek veikta darbība"
 
 #: data/org.mate.power-manager.gschema.xml.in:287
 msgid ""
 "The percentage of the battery when the critical action is performed. Only "
 "valid when use-time-for-policy is false."
 msgstr ""
+"Baterijas uzlādes procenti, pie kuriem tiek veikta kritiskā darbība. Derīgs "
+"tikai tad, ja use-time-for-policy ir \"false\" (aplams)."
 
 #: data/org.mate.power-manager.gschema.xml.in:291
 msgid "The time remaining when low"
-msgstr "Atlikušais laiks, kad gandrīz tukša"
+msgstr "Atlikušais laiks, kad līmenis ir zems"
 
 #: data/org.mate.power-manager.gschema.xml.in:292
 msgid ""
 "The time remaining in seconds of the battery when it is considered low. Only"
 " valid when use-time-for-policy is true."
 msgstr ""
+"Atlikušais baterijas darbības laiks sekundēs, pie kura līmenis tiek "
+"uzskatīts par zemu. Derīgs tikai tad, ja use-time-for-policy ir \"true\" "
+"(patiess)."
 
 #: data/org.mate.power-manager.gschema.xml.in:296
 msgid "The time remaining when critical"
-msgstr "Atlikušais laiks, kad tukša"
+msgstr "Atlikušais laiks, kad līmenis ir kritisks"
 
 #: data/org.mate.power-manager.gschema.xml.in:297
 msgid ""
 "The time remaining in seconds of the battery when it is considered critical."
 " Only valid when use-time-for-policy is true."
 msgstr ""
+"Atlikušais baterijas darbības laiks sekundēs, pie kura līmenis tiek "
+"uzskatīts par kritisku. Derīgs tikai tad, ja use-time-for-policy ir \"true\" "
+"(patiess)."
 
 #: data/org.mate.power-manager.gschema.xml.in:301
 msgid "The time remaining when action is taken"
@@ -696,102 +751,105 @@ msgid ""
 "The time remaining in seconds of the battery when critical action is taken. "
 "Only valid when use-time-for-policy is true."
 msgstr ""
+"Atlikušais baterijas darbības laiks sekundēs, pie kura tiek veikta kritiskā "
+"darbība. Derīgs tikai tad, ja use-time-for-policy ir \"true\" (patiess)."
 
 #: data/org.mate.power-manager.gschema.xml.in:306
 msgid "Sleep timeout computer when on battery"
-msgstr "Laiks, līdz dators iesnaužas, kad izmanto bateriju"
+msgstr "Datora iemigšanas noildze, barojot no baterijas"
 
 #: data/org.mate.power-manager.gschema.xml.in:307
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before it goes to sleep."
 msgstr ""
-"Laiks sekundēs, pirms dators iesnaužas aktivitātes trūkuma dēļ, kad tas "
-"izmanto baterijas strāvu."
+"Cik sekundes datoram, kas tiek barots no baterijas, jābūt neaktīvam, pirms "
+"tas iemieg."
 
 #: data/org.mate.power-manager.gschema.xml.in:311
 msgid "Sleep timeout computer when on AC"
-msgstr "Laiks, līdz dators iesnaužas, kad izmanto maiņstrāvu"
+msgstr "Datora iemigšanas noildze, barojot no maiņstrāvas"
 
 #: data/org.mate.power-manager.gschema.xml.in:312
 msgid ""
 "The amount of time in seconds the computer on AC power needs to be inactive "
 "before it goes to sleep."
 msgstr ""
-"Laiks sekundēs, pirms dators iesnaužas aktivitātes trūkuma dēļ, kad tas "
-"izmanto maiņstrāvu."
+"Cik sekundes datoram, kas tiek barots no maiņstrāvas, jābūt neaktīvam, pirms "
+"tas iemieg."
 
 #: data/org.mate.power-manager.gschema.xml.in:316
 msgid "Sleep timeout computer when on UPS"
-msgstr "Laiks, līdz dators iesnaužas, kad izmanto UPS"
+msgstr "Datora iemigšanas noildze, barojot no UPS"
 
 #: data/org.mate.power-manager.gschema.xml.in:317
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before it goes to sleep."
 msgstr ""
-"Laiks sekundēs, pirms dators iesnaužas aktivitātes trūkuma dēļ, kad tas "
-"izmanto UPS."
+"Cik sekundes datoram, kas tiek barots no UPS, jābūt neaktīvam, pirms tas "
+"iemieg."
 
 #: data/org.mate.power-manager.gschema.xml.in:321
 msgid "Sleep timeout display when on AC"
-msgstr "Laiks, līdz monitors iesnaužas, kad izmanto maiņstrāvu"
+msgstr "Displeja iemigšanas noildze, barojot no maiņstrāvas"
 
 #: data/org.mate.power-manager.gschema.xml.in:322
 msgid ""
 "The amount of time in seconds before the display goes to sleep when the "
 "computer is on AC power."
 msgstr ""
-"Laiks sekundēs, pirms monitors iesnaužas, kad dators izmanto maiņstrāvu."
+"Cik sekundes jāpaiet, pirms displejs iemieg, kad dators tiek barots no "
+"maiņstrāvas."
 
 #: data/org.mate.power-manager.gschema.xml.in:326
 msgid "Sleep timeout display when on battery"
-msgstr "Laiks, līdz monitors iesnaužas, kad izmanto bateriju"
+msgstr "Displeja iemigšanas noildze, barojot no baterijas"
 
 #: data/org.mate.power-manager.gschema.xml.in:327
 msgid ""
 "The amount of time in seconds the computer on battery power needs to be "
 "inactive before the display goes to sleep."
 msgstr ""
-"Laiks sekundēs, pirms dators iesnaužas aktivitātes trūkuma dēļ, kad dators "
-"izmanto baterijas strāvu."
+"Cik sekundes datoram, kas tiek barots no baterijas, jābūt neaktīvam, pirms "
+"displejs iemieg."
 
 #: data/org.mate.power-manager.gschema.xml.in:331
 msgid "Sleep timeout display when on UPS"
-msgstr "Laiks, līdz monitors iesnaužas, kad izmanto UPS"
+msgstr "Displeja iemigšanas noildze, barojot no UPS"
 
 #: data/org.mate.power-manager.gschema.xml.in:332
 msgid ""
 "The amount of time in seconds the computer on UPS power needs to be inactive"
 " before the display goes to sleep."
 msgstr ""
-"Laiks sekundēs, pirms monitors iesnaužas aktivitātes trūkuma dēļ, kad  "
-"dators izmanto UPS."
+"Cik sekundes datoram, kas tiek barots no UPS, jābūt neaktīvam, pirms "
+"displejs iemieg."
 
 #: data/org.mate.power-manager.gschema.xml.in:336
 msgid "If sounds should be used"
-msgstr "Vai vajadzetu lietot skaņas"
+msgstr "Vai izmantot skaņas"
 
 #: data/org.mate.power-manager.gschema.xml.in:337
 msgid ""
 "If sounds should be used when the power is critically low, or inhibit "
 "requests have stopped the policy action."
 msgstr ""
-"Vai būtu jālieto skaņas, kad bateriju līmenis ir kritiski zems, vai arī "
-"nomākšanas pieprasījums ir pārtraucis politikas darbību."
+"Vai izmantot skaņas, kad barošanas līmenis ir kritiski zems vai bloķēšanas "
+"pieprasījumi ir apturējuši politikas darbību."
 
 #: data/org.mate.power-manager.gschema.xml.in:341
 msgid ""
 "If preferences and statistics items should be shown in the context menu"
-msgstr "Vai iestatījumu un statistiku rādīt konteksta izvēlnē"
+msgstr "Vai konteksta izvēlnē rādīt iestatījumu un statistikas vienumus"
 
 #: data/org.mate.power-manager.gschema.xml.in:345
 msgid "When to show the notification icon"
-msgstr "Kad rādīt paziņojuma ikonu"
+msgstr "Kad rādīt paziņojumu ikonu"
 
 #: data/org.mate.power-manager.gschema.xml.in:346
 msgid "Display options for the notification icon."
-msgstr ""
+msgstr "Paziņojumu ikonas rādīšanas opcijas."
 
 #: data/mate-power-preferences.desktop.in.in:3
 msgid "Power Management"
@@ -806,6 +864,7 @@ msgstr "Konfigurēt barošanas pārvaldību"
 #: data/mate-power-preferences.desktop.in.in:13
 msgid "MATE;power;management;preferences;settings;"
 msgstr ""
+"MATE;power;management;preferences;settings;barošana;pārvaldība;iestatījumi;"
 
 #: data/mate-power-statistics.desktop.in.in:3 data/gpm-statistics.ui:8
 #: src/gpm-statistics.c:787 src/gpm-statistics.c:1259
@@ -814,15 +873,15 @@ msgstr "Barošanas statistika"
 
 #: data/mate-power-statistics.desktop.in.in:4
 msgid "Observe power management"
-msgstr "Pārlūkot barošanas pārvaldību"
+msgstr "Novērot barošanas pārvaldību"
 
 #: data/gpm-statistics.ui:119
 msgid "Details"
-msgstr "Detaļas"
+msgstr "Sīkāka informācija"
 
 #: data/gpm-statistics.ui:145 data/gpm-statistics.ui:347
 msgid "Graph type:"
-msgstr "Grafika tips:"
+msgstr "Grafika veids:"
 
 #: data/gpm-statistics.ui:180
 msgid "Data length:"
@@ -834,7 +893,7 @@ msgstr "Nav datu, ko attēlot."
 
 #: data/gpm-statistics.ui:281 data/gpm-statistics.ui:442
 msgid "Use smoothed line"
-msgstr "Izmantot noapaļotu līniju"
+msgstr "Izmantot izlīdzinātu līniju"
 
 #: data/gpm-statistics.ui:296 data/gpm-statistics.ui:457
 msgid "Show data points"
@@ -850,11 +909,11 @@ msgstr "Statistika"
 
 #: data/gpm-prefs.ui:23
 msgid "Power Management Preferences"
-msgstr "Barošanas pārvaldnieka iestatījumi"
+msgstr "Barošanas pārvaldības iestatījumi"
 
 #: data/gpm-prefs.ui:58
 msgid "Make Default"
-msgstr "Padarīt par noklusēto"
+msgstr "Iestatīt kā noklusējumu"
 
 #: data/gpm-prefs.ui:71
 msgid "_Close"
@@ -862,11 +921,11 @@ msgstr "_Aizvērt"
 
 #: data/gpm-prefs.ui:138 data/gpm-prefs.ui:406 data/gpm-prefs.ui:746
 msgid "Put computer to _sleep when inactive for:"
-msgstr "Iemidzināt datoru, kad ta_s ir neaktīvs:"
+msgstr "Iemidzināt datoru, ja tas ir neaktīvs ilgāk _par:"
 
 #: data/gpm-prefs.ui:176 data/gpm-prefs.ui:444
 msgid "When laptop lid is cl_osed:"
-msgstr "Kad k_lēpjdatora vāks ir aizvērts:"
+msgstr "Kad klēpjdatora _vāks tiek aizvērts:"
 
 #: data/gpm-prefs.ui:213 data/gpm-prefs.ui:519 data/gpm-prefs.ui:825
 #: data/gpm-prefs.ui:1031
@@ -875,66 +934,66 @@ msgstr "Darbības"
 
 #: data/gpm-prefs.ui:252 data/gpm-prefs.ui:560 data/gpm-prefs.ui:861
 msgid "Put _display to sleep when inactive for:"
-msgstr "Iemi_dzināt monitoru, kad dators ir neaktīvs:"
+msgstr "Iemidzināt _displeju, ja tas ir neaktīvs ilgāk par:"
 
 #: data/gpm-prefs.ui:289
 msgid "Set display _brightness to:"
-msgstr "Iestatīt monitora _spilgtumu uz:"
+msgstr "Iestatīt displeja _spilgtumu uz:"
 
 #: data/gpm-prefs.ui:322 data/gpm-prefs.ui:607
 msgid "Di_m display when idle"
-msgstr "Aptu_mšot ekrānu, kad nekas netiek darīts"
+msgstr "Aptu_mšot displeju dīkstāvē"
 
 #: data/gpm-prefs.ui:344 data/gpm-prefs.ui:629 data/gpm-prefs.ui:890
 msgid "Display"
-msgstr "Attēlot"
+msgstr "Displejs"
 
 #: data/gpm-prefs.ui:363
 msgid "On AC Power"
-msgstr "Izmantojot vadu"
+msgstr "No maiņstrāvas"
 
 #: data/gpm-prefs.ui:482
 msgid "When battery po_wer is critically low:"
-msgstr "Kad baterijas ir _tukšas:"
+msgstr "Kad baterijas līmenis ir kritiski _zems:"
 
 #: data/gpm-prefs.ui:591
 msgid "_Reduce backlight brightness"
-msgstr "Samazināt ek_rāna spilgtumu"
+msgstr "Samazināt fona _apgaismojuma spilgtumu"
 
 #: data/gpm-prefs.ui:663
 msgid "_Reduce keyboard backlight"
-msgstr ""
+msgstr "Samazināt _tastatūras apgaismojumu"
 
 #: data/gpm-prefs.ui:685 src/gpm-upower.c:510
 msgid "Keyboard"
 msgid_plural "Keyboards"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Tastatūra"
+msgstr[1] "Tastatūras"
+msgstr[2] "Tastatūras"
 
 #: data/gpm-prefs.ui:707
 msgid "On Battery Power"
-msgstr "Izmanto bateriju"
+msgstr "No baterijas"
 
 #: data/gpm-prefs.ui:760
 msgid "When UPS power is l_ow:"
-msgstr "Kad UPS ir _gandrīz tukšs:"
+msgstr "Kad UPS līmenis ir _zems:"
 
 #: data/gpm-prefs.ui:774
 msgid "When UPS power is _critically low:"
-msgstr "Kad UPS ir _tukšs:"
+msgstr "Kad UPS līmenis ir _kritiski zems:"
 
 #: data/gpm-prefs.ui:912
 msgid "On UPS Power"
-msgstr "Izmantojot UPS"
+msgstr "No UPS"
 
 #: data/gpm-prefs.ui:956
 msgid "When the power _button is pressed:"
-msgstr "Kad ieslēgšanas _poga ir nospiesta:"
+msgstr "Kad nospiesta _barošanas poga:"
 
 #: data/gpm-prefs.ui:994
 msgid "When the _suspend button is pressed:"
-msgstr "Kad ie_snaudināšanas poga ir nospiesta:"
+msgstr "Kad nospiesta ie_snaudināšanas poga:"
 
 #: data/gpm-prefs.ui:1065
 msgid "_Never display an icon"
@@ -942,15 +1001,15 @@ msgstr "_Nekad nerādīt ikonu"
 
 #: data/gpm-prefs.ui:1083
 msgid "_Only display an icon when battery power is low"
-msgstr "Rādīt ikonu _tikai tad, kad baterija ir tukša"
+msgstr "Rādīt ikonu _tikai tad, kad baterijas līmenis ir zems"
 
 #: data/gpm-prefs.ui:1101
 msgid "Only display an icon when charging or _discharging"
-msgstr "Radīt ikonu tikai tad, kad baterija lā_dējas vai izlādējas"
+msgstr "Rādīt ikonu tikai tad, kad baterija tiek uzlādēta vai iz_lādēta"
 
 #: data/gpm-prefs.ui:1119
 msgid "Only display an icon when a battery is p_resent"
-msgstr "_Rādīt ikonu tikai tad, kad ir baterija"
+msgstr "Rādīt ikonu tikai tad, kad baterija ir _pievienota"
 
 #: data/gpm-prefs.ui:1137
 msgid "_Always display an icon"
@@ -958,55 +1017,55 @@ msgstr "_Vienmēr rādīt ikonu"
 
 #: data/gpm-prefs.ui:1161
 msgid "Notification Area"
-msgstr "Paziņojumu lauks"
+msgstr "Paziņojumu apgabals"
 
 #: data/gpm-prefs.ui:1183
 msgid "General"
-msgstr "Vispārīgs"
+msgstr "Vispārīgi"
 
 #: src/gpm-backlight-helper.c:167
 msgid "Set the current brightness"
-msgstr "Iestatīt patreizējo spožumu"
+msgstr "Iestatīt pašreizējo spilgtumu"
 
 #: src/gpm-backlight-helper.c:170
 msgid "Get the current brightness"
-msgstr "Iegūt patreizējo spožumu"
+msgstr "Iegūt pašreizējo spilgtumu"
 
 #: src/gpm-backlight-helper.c:173
 msgid "Get the number of brightness levels supported"
-msgstr "Iegūt atbalstīto spožuma līmeņu skaitu"
+msgstr "Iegūt atbalstīto spilgtuma līmeņu skaitu"
 
 #: src/gpm-backlight-helper.c:185
 msgid "MATE Power Manager Backlight Helper"
-msgstr "MATE Barošanas Pārvaldnieka Apgaismojuma Palīgs"
+msgstr "MATE barošanas pārvaldnieka fona apgaismojuma palīgs"
 
 #: src/gpm-backlight-helper.c:193
 msgid "No valid option was specified"
-msgstr "Nav izvēlēta derīga iespēja"
+msgstr "Nav norādīta derīga opcija"
 
 #: src/gpm-backlight-helper.c:202
 msgid "No backlights were found on your system"
-msgstr ""
+msgstr "Sistēmā netika atrasts neviens fona apgaismojums"
 
 #: src/gpm-backlight-helper.c:213
 msgid "Could not get the value of the backlight"
-msgstr ""
+msgstr "Neizdevās iegūt fona apgaismojuma vērtību"
 
 #: src/gpm-backlight-helper.c:231
 msgid "Could not get the maximum value of the backlight"
-msgstr ""
+msgstr "Neizdevās iegūt fona apgaismojuma maksimālo vērtību"
 
 #: src/gpm-backlight-helper.c:248
 msgid "This program can only be used by the root user"
-msgstr "Šo programmu drīkst lietot tikai administrators"
+msgstr "Šo programmu var izmantot tikai lietotājs root"
 
 #: src/gpm-backlight-helper.c:257
 msgid "This program must only be run through pkexec"
-msgstr ""
+msgstr "Šo programmu drīkst palaist tikai ar pkexec"
 
 #: src/gpm-backlight-helper.c:268
 msgid "Could not set the value of the backlight"
-msgstr ""
+msgstr "Neizdevās iestatīt fona apgaismojuma vērtību"
 
 #: src/gpm-common.c:53
 msgid "Unknown time"
@@ -1016,17 +1075,17 @@ msgstr "Nezināms laiks"
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%i minūte"
+msgstr[1] "%i minūtes"
+msgstr[2] "%i minūšu"
 
 #: src/gpm-common.c:69
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%i stunda"
+msgstr[1] "%i stundas"
+msgstr[2] "%i stundu"
 
 #: src/gpm-common.c:75
 #, c-format
@@ -1036,16 +1095,16 @@ msgstr "%i %s %i %s"
 #: src/gpm-common.c:76
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "stunda"
+msgstr[1] "stundas"
+msgstr[2] "stundu"
 
 #: src/gpm-common.c:77
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "minūte"
+msgstr[1] "minūtes"
+msgstr[2] "minūšu"
 
 #. Translators: This is %i days
 #: src/gpm-graph-widget.c:433
@@ -1109,7 +1168,7 @@ msgstr "%.1fV"
 
 #: src/gpm-main.c:170
 msgid "Show version of installed program and exit"
-msgstr "Parāda instalētās programmas versiju un iziet"
+msgstr "Parādīt instalētās programmas versiju un iziet"
 
 #: src/gpm-main.c:172
 msgid "Exit after a small delay (for debugging)"
@@ -1125,15 +1184,15 @@ msgstr "MATE barošanas pārvaldnieks"
 
 #: src/gpm-manager.c:222 src/gpm-manager.c:294
 msgid "Battery is very low"
-msgstr "Baterija ir tukša"
+msgstr "Baterijas līmenis ir ļoti zems"
 
 #: src/gpm-manager.c:274
 msgid "Power plugged in"
-msgstr "Pieslēgts strāvai"
+msgstr "Barošana pievienota"
 
 #: src/gpm-manager.c:278
 msgid "Power unplugged"
-msgstr "Atslēgts no strāvas"
+msgstr "Barošana atvienota"
 
 #: src/gpm-manager.c:282
 msgid "Lid has opened"
@@ -1145,7 +1204,7 @@ msgstr "Vāks aizvērts"
 
 #: src/gpm-manager.c:290
 msgid "Battery is low"
-msgstr "Baterija ir gandrīz tukša"
+msgstr "Baterijas līmenis ir zems"
 
 #: src/gpm-manager.c:298
 msgid "Battery is full"
@@ -1153,35 +1212,35 @@ msgstr "Baterija ir pilna"
 
 #: src/gpm-manager.c:302
 msgid "Suspend started"
-msgstr "Sākās iesnaušana"
+msgstr "Iesnaudināšana sākta"
 
 #: src/gpm-manager.c:306
 msgid "Resumed"
-msgstr "Atmostas"
+msgstr "Darbība atsākta"
 
 #: src/gpm-manager.c:310
 msgid "Suspend failed"
-msgstr "Neizdevās iesnausties"
+msgstr "Iesnaudināšana neizdevās"
 
 #: src/gpm-manager.c:577
 msgid "Computer failed to suspend."
-msgstr "Datoram neizdevās iesnausties"
+msgstr "Datoru neizdevās iesnaudināt."
 
 #: src/gpm-manager.c:579
 msgid "Failed to suspend"
-msgstr "Neizdevās iesnausties"
+msgstr "Neizdevās iesnaudināt"
 
 #: src/gpm-manager.c:583
 msgid "Computer failed to hibernate."
-msgstr "Datoram neizdevas sastingt"
+msgstr "Datoru neizdevās hibernēt."
 
 #: src/gpm-manager.c:585
 msgid "Failed to hibernate"
-msgstr "Neizdevās sastingt"
+msgstr "Neizdevās hibernēt"
 
 #: src/gpm-manager.c:590
 msgid "Failure was reported as:"
-msgstr ""
+msgstr "Paziņotā kļūme:"
 
 #: src/gpm-manager.c:603
 msgid "Visit help page"
@@ -1193,7 +1252,7 @@ msgstr "Ekrāna DPMS aktivizēts"
 
 #: src/gpm-manager.c:868
 msgid "On battery power"
-msgstr "Izmanto baterijas strāvu"
+msgstr "Barošana no baterijas"
 
 #: src/gpm-manager.c:886
 msgid "Laptop lid is closed"
@@ -1219,9 +1278,9 @@ msgstr ""
 #: src/gpm-manager.c:1157
 msgid "Battery Charged"
 msgid_plural "Batteries Charged"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Baterija uzlādēta"
+msgstr[1] "Baterijas uzlādētas"
+msgstr[2] "Baterijas uzlādētas"
 
 #: src/gpm-manager.c:1203
 msgid "Battery Discharging"
@@ -1230,7 +1289,7 @@ msgstr "Baterija izlādējas"
 #: src/gpm-manager.c:1207
 #, c-format
 msgid "%s of battery power remaining (%.0f%%)"
-msgstr ""
+msgstr "Atlicis %s baterijas darbības laika (%.0f%%)"
 
 #: src/gpm-manager.c:1210 src/gpm-manager.c:1222
 #, c-format
@@ -1244,120 +1303,120 @@ msgstr "UPS izlādējas"
 #: src/gpm-manager.c:1219
 #, c-format
 msgid "%s of UPS backup power remaining (%.0f%%)"
-msgstr ""
+msgstr "Atlicis %s UPS rezerves barošanas laika (%.0f%%)"
 
 #: src/gpm-manager.c:1303
 msgid "Battery low"
-msgstr "Baterija ir gandrīz tukša"
+msgstr "Baterijas līmenis ir zems"
 
 #: src/gpm-manager.c:1306
 msgid "Laptop battery low"
-msgstr "Klēpjdatora baterija ir gandrīz tukša"
+msgstr "Klēpjdatora baterijas līmenis ir zems"
 
 #: src/gpm-manager.c:1312
 #, c-format
 msgid "Approximately <b>%s</b> remaining (%.0f%%)"
-msgstr ""
+msgstr "Atlicis aptuveni <b>%s</b> (%.0f%%)"
 
 #: src/gpm-manager.c:1316
 msgid "UPS low"
-msgstr "UPS gandrīz tukšs"
+msgstr "UPS līmenis ir zems"
 
 #: src/gpm-manager.c:1320
 #, c-format
 msgid "Approximately <b>%s</b> of remaining UPS backup power (%.0f%%)"
-msgstr ""
+msgstr "Atlicis aptuveni <b>%s</b> UPS rezerves barošanas laika (%.0f%%)"
 
 #: src/gpm-manager.c:1329 src/gpm-manager.c:1468
 msgid "Mouse battery low"
-msgstr "Peles baterija gandrīz tukša"
+msgstr "Peles baterijas līmenis ir zems"
 
 #: src/gpm-manager.c:1332
 #, c-format
 msgid "Wireless mouse is low in power (%.0f%%)"
-msgstr ""
+msgstr "Bezvadu peles baterijas līmenis ir zems (%.0f%%)"
 
 #: src/gpm-manager.c:1336 src/gpm-manager.c:1476
 msgid "Keyboard battery low"
-msgstr "Tastatūras baterija ir gandrīz tukša"
+msgstr "Tastatūras baterijas līmenis ir zems"
 
 #: src/gpm-manager.c:1339
 #, c-format
 msgid "Wireless keyboard is low in power (%.0f%%)"
-msgstr ""
+msgstr "Bezvadu tastatūras baterijas līmenis ir zems (%.0f%%)"
 
 #: src/gpm-manager.c:1343 src/gpm-manager.c:1485
 msgid "PDA battery low"
-msgstr "PDA baterija ir gandrīz tukša"
+msgstr "PDA baterijas līmenis ir zems"
 
 #: src/gpm-manager.c:1346
 #, c-format
 msgid "PDA is low in power (%.0f%%)"
-msgstr ""
+msgstr "PDA baterijas līmenis ir zems (%.0f%%)"
 
 #: src/gpm-manager.c:1350 src/gpm-manager.c:1495 src/gpm-manager.c:1505
 msgid "Cell phone battery low"
-msgstr "Mobilā tālruņa baterija ir gandrīz tukša"
+msgstr "Mobilā tālruņa baterijas līmenis ir zems"
 
 #: src/gpm-manager.c:1353
 #, c-format
 msgid "Cell phone is low in power (%.0f%%)"
-msgstr ""
+msgstr "Mobilā tālruņa baterijas līmenis ir zems (%.0f%%)"
 
 #: src/gpm-manager.c:1357
 msgid "Media player battery low"
-msgstr ""
+msgstr "Mediju atskaņotāja baterijas līmenis ir zems"
 
 #: src/gpm-manager.c:1360
 #, c-format
 msgid "Media player is low in power (%.0f%%)"
-msgstr ""
+msgstr "Mediju atskaņotāja baterijas līmenis ir zems (%.0f%%)"
 
 #: src/gpm-manager.c:1364 src/gpm-manager.c:1514
 msgid "Tablet battery low"
-msgstr ""
+msgstr "Planšetdatora baterijas līmenis ir zems"
 
 #: src/gpm-manager.c:1367
 #, c-format
 msgid "Tablet is low in power (%.0f%%)"
-msgstr ""
+msgstr "Planšetdatora baterijas līmenis ir zems (%.0f%%)"
 
 #: src/gpm-manager.c:1371 src/gpm-manager.c:1523
 msgid "Attached computer battery low"
-msgstr ""
+msgstr "Pievienotā datora baterijas līmenis ir zems"
 
 #: src/gpm-manager.c:1374
 #, c-format
 msgid "Attached computer is low in power (%.0f%%)"
-msgstr ""
+msgstr "Pievienotā datora baterijas līmenis ir zems (%.0f%%)"
 
 #: src/gpm-manager.c:1422
 msgid "Battery critically low"
-msgstr "Baterija ir tukša"
+msgstr "Baterijas līmenis ir kritiski zems"
 
 #: src/gpm-manager.c:1425 src/gpm-manager.c:1583
 msgid "Laptop battery critically low"
-msgstr "Klēpjdatora baterija ir tukša"
+msgstr "Klēpjdatora baterijas līmenis ir kritiski zems"
 
 #: src/gpm-manager.c:1434
 msgid "Plug in your AC adapter to avoid losing data."
-msgstr "Lai izvairītos no datu zudumiem, pieslēdziet strāvas vadu."
+msgstr "Lai nezaudētu datus, pievienojiet maiņstrāvas adapteri."
 
 #: src/gpm-manager.c:1438
 msgid "Computer will suspend very soon unless it is plugged in."
-msgstr "Dators drīz iesnaudīsies, ja vien nepieslēgsiet strāvas vadu."
+msgstr "Ja dators netiks pievienots barošanai, tas drīz tiks iesnaudināts."
 
 #: src/gpm-manager.c:1442
 msgid "Computer will hibernate very soon unless it is plugged in."
-msgstr "Dators drīz sastings, ja vien nepieslēgsiet strāvas vadu."
+msgstr "Ja dators netiks pievienots barošanai, tas drīz tiks hibernēts."
 
 #: src/gpm-manager.c:1446
 msgid "Computer will shutdown very soon unless it is plugged in."
-msgstr "Dators drīz izslēgsies, ja vien nepieslēgsiet strāvas vadu."
+msgstr "Ja dators netiks pievienots barošanai, tas drīz izslēgsies."
 
 #: src/gpm-manager.c:1453 src/gpm-manager.c:1619
 msgid "UPS critically low"
-msgstr "UPS ir tukšs"
+msgstr "UPS līmenis ir kritiski zems"
 
 #: src/gpm-manager.c:1457
 #, c-format
@@ -1365,6 +1424,8 @@ msgid ""
 "Approximately <b>%s</b> of remaining UPS power (%.0f%%). Restore AC power to"
 " your computer to avoid losing data."
 msgstr ""
+"Atlicis aptuveni <b>%s</b> UPS barošanas laika (%.0f%%). Lai nezaudētu "
+"datus, atjaunojiet datora maiņstrāvas barošanu."
 
 #: src/gpm-manager.c:1471
 #, c-format
@@ -1372,6 +1433,8 @@ msgid ""
 "Wireless mouse is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
+"Bezvadu peles baterijas līmenis ir ļoti zems (%.0f%%). Ja ierīce netiks "
+"uzlādēta, tā drīz pārstās darboties."
 
 #: src/gpm-manager.c:1479
 #, c-format
@@ -1379,6 +1442,8 @@ msgid ""
 "Wireless keyboard is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
+"Bezvadu tastatūras baterijas līmenis ir ļoti zems (%.0f%%). Ja ierīce netiks "
+"uzlādēta, tā drīz pārstās darboties."
 
 #: src/gpm-manager.c:1488
 #, c-format
@@ -1386,6 +1451,8 @@ msgid ""
 "PDA is very low in power (%.0f%%). This device will soon stop functioning if"
 " not charged."
 msgstr ""
+"PDA baterijas līmenis ir ļoti zems (%.0f%%). Ja ierīce netiks uzlādēta, tā "
+"drīz pārstās darboties."
 
 #: src/gpm-manager.c:1498
 #, c-format
@@ -1393,6 +1460,8 @@ msgid ""
 "Cell phone is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
+"Mobilā tālruņa baterijas līmenis ir ļoti zems (%.0f%%). Ja ierīce netiks "
+"uzlādēta, tā drīz pārstās darboties."
 
 #: src/gpm-manager.c:1508
 #, c-format
@@ -1400,6 +1469,8 @@ msgid ""
 "Media player is very low in power (%.0f%%). This device will soon stop "
 "functioning if not charged."
 msgstr ""
+"Mediju atskaņotāja baterijas līmenis ir ļoti zems (%.0f%%). Ja ierīce netiks "
+"uzlādēta, tā drīz pārstās darboties."
 
 #: src/gpm-manager.c:1517
 #, c-format
@@ -1407,6 +1478,8 @@ msgid ""
 "Tablet is very low in power (%.0f%%). This device will soon stop functioning"
 " if not charged."
 msgstr ""
+"Planšetdatora baterijas līmenis ir ļoti zems (%.0f%%). Ja ierīce netiks "
+"uzlādēta, tā drīz pārstās darboties."
 
 #: src/gpm-manager.c:1526
 #, c-format
@@ -1414,14 +1487,16 @@ msgid ""
 "Attached computer is very low in power (%.0f%%). The device will soon "
 "shutdown if not charged."
 msgstr ""
+"Pievienotā datora baterijas līmenis ir ļoti zems (%.0f%%). Ja ierīce netiks "
+"uzlādēta, tā drīz izslēgsies."
 
 #: src/gpm-manager.c:1591
 msgid ""
 "The battery is below the critical level and this computer will <b>power-"
 "off</b> when the battery becomes completely empty."
 msgstr ""
-"Baterija enerģija ir zem kritiskā līmeņa un šis dators <b>izslēgsies</b>, "
-"kad baterija pilnībā iztukšosies."
+"Baterijas līmenis ir zem kritiskā, un šis dators <b>izslēgsies</b>, kad "
+"baterija būs pilnīgi tukša."
 
 #: src/gpm-manager.c:1597
 msgid ""
@@ -1429,45 +1504,43 @@ msgid ""
 "suspend.<br><b>NOTE:</b> A small amount of power is required to keep your "
 "computer in a suspended state."
 msgstr ""
-"Baterijas enerģija ir zem kritiskā līmeņa un šis dators drīz iesnaudīsies. "
-"<br><b>IEGAUMĒJIET:</b> Nepieciešams neliels strāvas daudzums, lai dators "
-"atrastos snaušanas režīmā."
+"Baterijas līmenis ir zem kritiskā, un šis dators drīz tiks iesnaudināts.<br>"
+"<b>PIEZĪME:</b> Lai dators paliktu iesnaudinātā stāvoklī, nepieciešams "
+"neliels enerģijas daudzums."
 
 #: src/gpm-manager.c:1604
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "hibernate."
-msgstr ""
-"Baterija enerģija ir zem kritiskā līmeņa un šis dators drīzumā sastings."
+msgstr "Baterijas līmenis ir zem kritiskā, un šis dators drīz tiks hibernēts."
 
 #: src/gpm-manager.c:1609
 msgid ""
 "The battery is below the critical level and this computer is about to "
 "shutdown."
-msgstr ""
-"Baterija enerģija ir zem kritiskā līmeņa un šis dators drīz izslēgsies."
+msgstr "Baterijas līmenis ir zem kritiskā, un šis dators drīz izslēgsies."
 
 #: src/gpm-manager.c:1627
 msgid ""
 "The UPS is below the critical level and this computer will <b>power-off</b> "
 "when the UPS becomes completely empty."
 msgstr ""
-"UPS enerģija ir zem kritiskā līmeņa un šis dators <b>izslēgsies</b>, kad UPS"
-" būs pilnīgi tukšs."
+"UPS līmenis ir zem kritiskā, un šis dators <b>izslēgsies</b>, kad UPS būs "
+"pilnīgi tukšs."
 
 #: src/gpm-manager.c:1633
 msgid ""
 "The UPS is below the critical level and this computer is about to hibernate."
-msgstr "UPS enerģija ir zem kritiskā līmeņa, šis dators drīzumā sastings."
+msgstr "UPS līmenis ir zem kritiskā, un šis dators drīz tiks hibernēts."
 
 #: src/gpm-manager.c:1638
 msgid ""
 "The UPS is below the critical level and this computer is about to shutdown."
-msgstr "UPS enerģija ir zem kritiskā līmeņa un šis dators drīz izslēgsies."
+msgstr "UPS līmenis ir zem kritiskā, un šis dators drīz izslēgsies."
 
 #: src/gpm-prefs.c:77
 msgid "MATE Power Preferences"
-msgstr "MATE Barošanas iestatījumi"
+msgstr "MATE barošanas iestatījumi"
 
 #: src/gpm-prefs-core.c:242
 msgid "Shutdown"
@@ -1499,7 +1572,7 @@ msgstr "Nekad"
 
 #: src/gpm-statistics.c:71
 msgid "Charge profile"
-msgstr "Pielādes profils"
+msgstr "Uzlādes profils"
 
 #: src/gpm-statistics.c:72
 msgid "Discharge profile"
@@ -1507,7 +1580,7 @@ msgstr "Izlādes profils"
 
 #: src/gpm-statistics.c:74
 msgid "Charge accuracy"
-msgstr "Pielādes precizitāte"
+msgstr "Uzlādes precizitāte"
 
 #: src/gpm-statistics.c:75
 msgid "Discharge accuracy"
@@ -1515,15 +1588,15 @@ msgstr "Izlādes precizitāte"
 
 #: src/gpm-statistics.c:77 src/gpm-statistics.c:435
 msgid "Rate"
-msgstr "Likme"
+msgstr "Ātrums"
 
 #: src/gpm-statistics.c:78
 msgid "Charge"
-msgstr "Pielāde"
+msgstr "Uzlāde"
 
 #: src/gpm-statistics.c:79 src/gpm-statistics.c:449
 msgid "Time to full"
-msgstr "Laiks līdz pilnai pielādei"
+msgstr "Laiks līdz pilnai uzlādei"
 
 #: src/gpm-statistics.c:80 src/gpm-statistics.c:454
 msgid "Time to empty"
@@ -1573,33 +1646,33 @@ msgstr "Nezināms"
 #, c-format
 msgid "%.0f second"
 msgid_plural "%.0f seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%.0f sekunde"
+msgstr[1] "%.0f sekundes"
+msgstr[2] "%.0f sekunžu"
 
 #: src/gpm-statistics.c:264
 #, c-format
 msgid "%.1f minute"
 msgid_plural "%.1f minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%.1f minūte"
+msgstr[1] "%.1f minūtes"
+msgstr[2] "%.1f minūšu"
 
 #: src/gpm-statistics.c:269
 #, c-format
 msgid "%.1f hour"
 msgid_plural "%.1f hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%.1f stunda"
+msgstr[1] "%.1f stundas"
+msgstr[2] "%.1f stundu"
 
 #: src/gpm-statistics.c:273
 #, c-format
 msgid "%.1f day"
 msgid_plural "%.1f days"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%.1f diena"
+msgstr[1] "%.1f dienas"
+msgstr[2] "%.1f dienu"
 
 #: src/gpm-statistics.c:282
 msgid "Yes"
@@ -1631,23 +1704,23 @@ msgstr "Sērijas numurs"
 
 #: src/gpm-statistics.c:385
 msgid "Supply"
-msgstr "Piegāde"
+msgstr "Barošana"
 
 #: src/gpm-statistics.c:388
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%d sekunde"
+msgstr[1] "%d sekundes"
+msgstr[2] "%d sekunžu"
 
 #: src/gpm-statistics.c:392
 msgid "Refreshed"
-msgstr "Atsvaidzināta"
+msgstr "Atsvaidzināts"
 
 #: src/gpm-statistics.c:402
 msgid "Present"
-msgstr "Klātesošs"
+msgstr "Pievienota"
 
 #: src/gpm-statistics.c:409
 msgid "Rechargeable"
@@ -1655,7 +1728,7 @@ msgstr "Uzlādējama"
 
 #: src/gpm-statistics.c:415
 msgid "State"
-msgstr "Štats"
+msgstr "Stāvoklis"
 
 #: src/gpm-statistics.c:419
 msgid "Energy"
@@ -1671,11 +1744,11 @@ msgstr "Enerģija, kad pilna"
 
 #: src/gpm-statistics.c:428
 msgid "Energy (design)"
-msgstr "Enerģija (paredzētā)"
+msgstr "Enerģija (nominālā)"
 
 #: src/gpm-statistics.c:442
 msgid "Voltage"
-msgstr "Voltāža"
+msgstr "Spriegums"
 
 #: src/gpm-statistics.c:464
 msgid "Percentage"
@@ -1691,7 +1764,7 @@ msgstr "Tehnoloģija"
 
 #: src/gpm-statistics.c:481
 msgid "Online"
-msgstr "Tiešsaistē"
+msgstr "Pievienots tīklam"
 
 #: src/gpm-statistics.c:779
 msgid "Device Information"
@@ -1712,13 +1785,13 @@ msgstr "Pagājušais laiks"
 
 #: src/gpm-statistics.c:1010
 msgid "Power"
-msgstr "Strāva"
+msgstr "Jauda"
 
 #: src/gpm-statistics.c:1016 src/gpm-statistics.c:1066
 #: src/gpm-statistics.c:1072 src/gpm-statistics.c:1078
 #: src/gpm-statistics.c:1084
 msgid "Cell charge"
-msgstr "Šūnas spriegums"
+msgstr "Elementa uzlāde"
 
 #: src/gpm-statistics.c:1022 src/gpm-statistics.c:1028
 msgid "Predicted time"
@@ -1726,24 +1799,24 @@ msgstr "Paredzamais laiks"
 
 #: src/gpm-statistics.c:1068 src/gpm-statistics.c:1080
 msgid "Correction factor"
-msgstr "Labošanas faktors"
+msgstr "Korekcijas koeficients"
 
 #: src/gpm-statistics.c:1074 src/gpm-statistics.c:1086
 msgid "Prediction accuracy"
-msgstr "Paredzējuma precizitāte"
+msgstr "Prognozes precizitāte"
 
 #: src/gpm-statistics.c:1245
 msgid "Select this device at startup"
-msgstr "Palaižoties izvēlēties šo ierīci"
+msgstr "Atlasīt šo ierīci palaišanas laikā"
 
 #: src/gpm-tray-icon.c:206
 msgid "Copyright © 2011-2021 MATE developers"
-msgstr ""
+msgstr "Autortiesības © 2011-2021 MATE izstrādātāji"
 
 #: src/gpm-tray-icon.c:319
 #, c-format
 msgid "%s remaining"
-msgstr ""
+msgstr "Atlicis %s"
 
 #: src/gpm-tray-icon.c:374
 msgid "_Preferences"
@@ -1752,7 +1825,7 @@ msgstr "_Iestatījumi"
 #: src/gpm-upower.c:214
 #, c-format
 msgid "%s not present"
-msgstr ""
+msgstr "%s nav pievienota"
 
 #: src/gpm-upower.c:227 src/gpm-upower.c:291
 #, c-format
@@ -1765,7 +1838,7 @@ msgid ""
 "Battery is fully charged.\n"
 "Provides %s laptop runtime"
 msgstr ""
-"Baterija ir pilnībā uzlādēta\n"
+"Baterija ir pilnībā uzlādēta.\n"
 "Nodrošina %s klēpjdatora darbības laika"
 
 #: src/gpm-upower.c:247
@@ -1776,7 +1849,7 @@ msgstr "%s ir pilnībā uzlādēta"
 #: src/gpm-upower.c:255
 #, c-format
 msgid "%s %s remaining (%.1f%%)"
-msgstr "%s %s atlicis (%.1f%%)"
+msgstr "%s — atlicis %s (%.1f%%)"
 
 #: src/gpm-upower.c:260
 #, c-format
@@ -1789,28 +1862,28 @@ msgid ""
 "%s %s until charged (%.1f%%)\n"
 "Provides %s battery runtime"
 msgstr ""
-"%s %s līdz uzlādei (%.1f%%)\n"
+"%s — %s līdz uzlādei (%.1f%%)\n"
 "Nodrošina %s baterijas darbības laika"
 
 #: src/gpm-upower.c:285
 #, c-format
 msgid "%s %s until charged (%.1f%%)"
-msgstr "%s %s līdz uzlādei (%.1f%%)"
+msgstr "%s — %s līdz uzlādei (%.1f%%)"
 
 #: src/gpm-upower.c:298
 #, c-format
 msgid "%s waiting to discharge (%.1f%%)"
-msgstr "%s gaida līdz izlādei (%.1f%%)"
+msgstr "%s gaida izlādi (%.1f%%)"
 
 #: src/gpm-upower.c:304
 #, c-format
 msgid "%s waiting to charge (%.1f%%)"
-msgstr "%s gaida līdz uzlādei (%.1f%%)"
+msgstr "%s gaida uzlādi (%.1f%%)"
 
 #: src/gpm-upower.c:309
 #, c-format
 msgid "%s empty"
-msgstr ""
+msgstr "%s ir tukša"
 
 #: src/gpm-upower.c:369
 msgid "Product:"
@@ -1823,7 +1896,7 @@ msgstr "Statuss:"
 
 #: src/gpm-upower.c:373
 msgid "Missing"
-msgstr "Iztrūkst"
+msgstr "Nav pievienota"
 
 #: src/gpm-upower.c:376 src/gpm-upower.c:657
 msgid "Charged"
@@ -1839,7 +1912,7 @@ msgstr "Izlādējas"
 
 #: src/gpm-upower.c:387
 msgid "Percentage charge:"
-msgstr "Uzlādēts procentos:"
+msgstr "Uzlāde procentos:"
 
 #: src/gpm-upower.c:391
 msgid "Vendor:"
@@ -1859,11 +1932,11 @@ msgstr "Modelis:"
 
 #: src/gpm-upower.c:409
 msgid "Charge time:"
-msgstr "Uzlādēšanās laiks:"
+msgstr "Uzlādes laiks:"
 
 #: src/gpm-upower.c:415
 msgid "Discharge time:"
-msgstr "Izlādēšanās laiks:"
+msgstr "Izlādes laiks:"
 
 #: src/gpm-upower.c:422
 msgid "Excellent"
@@ -1879,7 +1952,7 @@ msgstr "Pietiekami"
 
 #: src/gpm-upower.c:428
 msgid "Poor"
-msgstr "Vājš"
+msgstr "Vāji"
 
 #: src/gpm-upower.c:432
 msgid "Capacity:"
@@ -1887,96 +1960,96 @@ msgstr "Ietilpība:"
 
 #: src/gpm-upower.c:438 src/gpm-upower.c:463
 msgid "Current charge:"
-msgstr "Pašreizējais pielāde:"
+msgstr "Pašreizējā uzlāde:"
 
 #: src/gpm-upower.c:444
 msgid "Last full charge:"
-msgstr "Pēdējā pilnā pielāde:"
+msgstr "Pēdējā pilnā uzlāde:"
 
 #: src/gpm-upower.c:450 src/gpm-upower.c:468
 msgid "Design charge:"
-msgstr "Paredzētā pielāde:"
+msgstr "Nominālā uzlāde:"
 
 #: src/gpm-upower.c:455
 msgid "Charge rate:"
-msgstr "Pielādes ātrums:"
+msgstr "Uzlādes ātrums:"
 
 #: src/gpm-upower.c:490
 msgid "AC adapter"
 msgid_plural "AC adapters"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Maiņstrāvas adapteris"
+msgstr[1] "Maiņstrāvas adapteri"
+msgstr[2] "Maiņstrāvas adapteri"
 
 #: src/gpm-upower.c:494
 msgid "Laptop battery"
 msgid_plural "Laptop batteries"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Klēpjdatora baterija"
+msgstr[1] "Klēpjdatora baterijas"
+msgstr[2] "Klēpjdatora baterijas"
 
 #: src/gpm-upower.c:498
 msgid "UPS"
 msgid_plural "UPSs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "UPS"
+msgstr[1] "UPS"
+msgstr[2] "UPS"
 
 #: src/gpm-upower.c:502
 msgid "Monitor"
 msgid_plural "Monitors"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Monitors"
+msgstr[1] "Monitori"
+msgstr[2] "Monitori"
 
 #: src/gpm-upower.c:506
 msgid "Mouse"
 msgid_plural "Mice"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Pele"
+msgstr[1] "Peles"
+msgstr[2] "Peles"
 
 #: src/gpm-upower.c:514
 msgid "PDA"
 msgid_plural "PDAs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "PDA"
+msgstr[1] "PDA"
+msgstr[2] "PDA"
 
 #: src/gpm-upower.c:518
 msgid "Cell phone"
 msgid_plural "Cell phones"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Mobilais tālrunis"
+msgstr[1] "Mobilie tālruņi"
+msgstr[2] "Mobilie tālruņi"
 
 #: src/gpm-upower.c:522
 msgid "Media player"
 msgid_plural "Media players"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Mediju atskaņotājs"
+msgstr[1] "Mediju atskaņotāji"
+msgstr[2] "Mediju atskaņotāji"
 
 #: src/gpm-upower.c:526
 msgid "Tablet"
 msgid_plural "Tablets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Planšetdators"
+msgstr[1] "Planšetdatori"
+msgstr[2] "Planšetdatori"
 
 #: src/gpm-upower.c:530
 msgid "Computer"
 msgid_plural "Computers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Dators"
+msgstr[1] "Datori"
+msgstr[2] "Datori"
 
 #: src/gpm-upower.c:534
 msgid "Gaming input"
 msgid_plural "Gaming inputs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Spēļu ievadierīce"
+msgstr[1] "Spēļu ievadierīces"
+msgstr[2] "Spēļu ievadierīces"
 
 #: src/gpm-upower.c:601
 msgid "Lithium Ion"
@@ -1992,7 +2065,7 @@ msgstr "Litija dzelzs fosfāta"
 
 #: src/gpm-upower.c:613
 msgid "Lead acid"
-msgstr "Svina skābes"
+msgstr "Svina-skābes"
 
 #: src/gpm-upower.c:617
 msgid "Nickel Cadmium"
@@ -2008,7 +2081,7 @@ msgstr "Nezināma tehnoloģija"
 
 #: src/gpm-upower.c:653
 msgid "Empty"
-msgstr "Tukšs"
+msgstr "Tukša"
 
 #: src/gpm-upower.c:661
 msgid "Waiting to charge"
@@ -2020,4 +2093,4 @@ msgstr "Gaida izlādi"
 
 #: src/gpm-upower.c:669
 msgid "Unknown state"
-msgstr ""
+msgstr "Nezināms stāvoklis"
