@@ -804,28 +804,6 @@ gpm_applet_show_preferences (GtkWidget *widget, GpmBrightnessApplet *applet)
 
 
 /**
- * gpm_applet_popup_focus_out_cb:
- *
- * The popup is a layer-shell window in the TOP layer, not an xdg_popup, so it
- * has no grab: a click outside it goes to the other window and the popup stays
- * open (with the panel keeping its hover highlight) until the applet itself is
- * clicked again.  With KEYBOARD_MODE_ON_DEMAND the popup takes keyboard focus
- * when clicked and loses it on any click elsewhere, so closing on focus-out
- * gives the expected behaviour on the native Wayland path and on XWayland.
- **/
-static gboolean
-gpm_applet_popup_focus_out_cb (GtkWidget *widget, GdkEventFocus *event, GpmBrightnessApplet *applet)
-{
-	if (!applet->popped)
-		return FALSE;
-
-	applet->popped = FALSE;
-	gtk_widget_hide (applet->popup);
-	gpm_applet_update_tooltip (applet);
-	return FALSE;
-}
-
-/**
  * gpm_applet_create_popup:
  * @applet: Brightness applet instance
  *
@@ -901,8 +879,6 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
 
 	/* window */
 	applet->popup = gtk_window_new (GTK_WINDOW_POPUP);
-	g_signal_connect (G_OBJECT (applet->popup), "focus-out-event",
-			  G_CALLBACK (gpm_applet_popup_focus_out_cb), applet);
 	gtk_window_set_type_hint (GTK_WINDOW(applet->popup), GDK_WINDOW_TYPE_HINT_UTILITY);
 	gtk_container_add (GTK_CONTAINER(applet->popup), frame);
 
