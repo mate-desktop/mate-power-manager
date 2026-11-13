@@ -236,8 +236,6 @@ gpm_applet_get_icon (GpmBrightnessApplet *applet)
 		icon = GPM_BRIGHTNESS_APPLET_ICON;
 	}
 
-	g_printerr ("DBG get_icon: proxy=%p call_worked=%d size=%d icon=%s\n",
-		    (void *) applet->proxy, applet->call_worked, applet->size, icon);
 
 	applet->icon = gtk_icon_theme_load_icon (gtk_icon_theme_get_default (),
 						 icon, applet->size - 2, 0, NULL);
@@ -929,24 +927,11 @@ gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 		gpm_applet_create_popup (applet);
 	}
 
-	g_printerr ("DBG popup_cb: popup=%p relative_to=%p realized=%d\n",
-		    (void *) applet->popup,
-		    (void *) gtk_popover_get_relative_to (GTK_POPOVER (applet->popup)),
-		    gtk_widget_get_realized (GTK_WIDGET (applet->popup)));
 
 	/* update UI for current brightness */
 	applet->popped = TRUE;
 	gpm_applet_update_popup_level (applet);
 	gtk_popover_popup (GTK_POPOVER (applet->popup));
-	{
-		GtkAllocation pa;
-		GdkWindow *pw = gtk_widget_get_window (applet->popup);
-		gtk_widget_get_allocation (applet->popup, &pa);
-		g_printerr ("DBG after popup: visible=%d mapped=%d alloc=%dx%d+%d+%d win=%p\n",
-			    gtk_widget_get_visible (applet->popup),
-			    gtk_widget_get_mapped (applet->popup),
-			    pa.width, pa.height, pa.x, pa.y, (void *) pw);
-	}
 
 	return TRUE;
 }
@@ -1085,7 +1070,6 @@ brightness_changed_cb (DBusGProxy          *proxy,
 		g_signal_handlers_block_by_func (applet->slider,
 						 G_CALLBACK (gpm_applet_slide_cb),
 						 applet);
-	g_printerr ("DBG init: poll_id=%u popup=%p\n", applet->poll_id, (void *) applet->popup);
 		gpm_applet_update_popup_level (applet);
 		g_signal_handlers_unblock_by_func (applet->slider,
 						   G_CALLBACK (gpm_applet_slide_cb),
@@ -1186,8 +1170,6 @@ gpm_brightness_applet_poll_cb (GpmBrightnessApplet *applet)
 	}
 	g_object_unref (bus);
 
-	g_printerr ("DBG poll: owner=%d proxy=%p call_worked=%d\n",
-		    has_owner, (void *) applet->proxy, applet->call_worked);
 
 	if (has_owner && applet->proxy == NULL) {
 		gpm_brightness_applet_dbus_connect (applet);
