@@ -793,7 +793,7 @@ gpm_applet_show_preferences (GtkWidget *widget, GpmBrightnessApplet *applet)
  * only in gpm_applet_popup_cb().
  **/
 static void
-gpm_applet_popover_closed_cb (GtkPopover *popover, GpmBrightnessApplet *applet)
+gpm_applet_popover_closed_cb (GtkMenu *menu, GpmBrightnessApplet *applet)
 {
 	applet->popped = FALSE;
 	gpm_applet_update_tooltip (applet);
@@ -876,27 +876,30 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
 	gtk_frame_set_shadow_type (GTK_FRAME(frame), GTK_SHADOW_OUT);
 	gtk_container_add (GTK_CONTAINER(frame), box);
 
-	/* popover, anchored to the applet widget */
-	applet->popup = gtk_popover_new (GTK_WIDGET (applet));
-	gtk_popover_set_modal (GTK_POPOVER (applet->popup), TRUE);
-	gtk_popover_set_position (GTK_POPOVER (applet->popup),
-				  MATE_PANEL_APPLET_VERTICAL (orientation) ?
-				  GTK_POS_LEFT : GTK_POS_TOP);
-	gtk_container_add (GTK_CONTAINER (applet->popup), frame);
+	/* A GtkMenu is the only popup that gets a real grab on Wayland: the
+	 * compositor places the xdg_popup and dismisses it on a click outside.
+	 * A GtkPopover here stayed 1x1, and a layer-shell window has no grab at
+	 * all - the same widget serves X11, Xwayland and native Wayland. */
+	{
+		GtkWidget *menu, *item;
 
-	g_signal_connect (G_OBJECT (applet->popup), "closed",
-			  G_CALLBACK (gpm_applet_popover_closed_cb), applet);
+		menu = gtk_menu_new ();
+		item = gtk_menu_item_new ();
+		gtk_container_add (GTK_CONTAINER (item), frame);
+		gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
 
-	g_signal_connect (G_OBJECT(applet->popup), "key-press-event",
-	                  G_CALLBACK(gpm_applet_key_press_cb), applet);
+		applet->popup = menu;
 
-	/* the popover content must be shown explicitly: gtk_popover_popup() shows
-	 * only the popover itself, and an unshown child chain leaves it 1x1. */
-	gtk_widget_show_all (applet->popup);
+		g_signal_connect (G_OBJECT (menu), "deactivate",
+				  G_CALLBACK (gpm_applet_popover_closed_cb), applet);
+		g_signal_connect (G_OBJECT (menu), "key-press-event",
+				  G_CALLBACK (gpm_applet_key_press_cb), applet);
 
-	/* follow the panel volume control theme */
-	context = gtk_widget_get_style_context (GTK_WIDGET (applet->popup));
-	gtk_style_context_add_class (context, "mate-panel-applet-slider");
+		gtk_widget_show_all (menu);
+
+		context = gtk_widget_get_style_context (GTK_WIDGET (menu));
+		gtk_style_context_add_class (context, "mate-panel-applet-slider");
+	}
 }
 
 /**
@@ -917,7 +920,7 @@ gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 	if (applet->popped) {
 		applet->popped = FALSE;
 		if (applet->popup != NULL)
-			gtk_popover_popdown (GTK_POPOVER (applet->popup));
+			gtk_menu_popdown (GTK_MENU (applet->popup));
 		gpm_applet_update_tooltip (applet);
 		return TRUE;
 	}
@@ -931,7 +934,13 @@ gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 	/* update UI for current brightness */
 	applet->popped = TRUE;
 	gpm_applet_update_popup_level (applet);
-	gtk_popover_popup (GTK_POPOVER (applet->popup));
+	/* The trigger event is mandatory: with NULL the shell treats the very
+	 * release that opened the menu as a click-outside and deactivates it a
+	 * few hundred ms later. */
+	gtk_menu_popup_at_widget (GTK_MENU (applet->popup), GTK_WIDGET (applet),
+				  GDK_GRAVITY_NORTH_WEST,
+				  GDK_GRAVITY_SOUTH_WEST,
+				  gtk_get_current_event ());
 
 	return TRUE;
 }
