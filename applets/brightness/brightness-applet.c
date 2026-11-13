@@ -67,7 +67,8 @@ typedef struct{
 	/* connection to g-p-m */
 	DBusGProxy *proxy;
 	DBusGConnection *connection;
-	guint bus_watch_id;
+	guint bus_watch_id;	/* GDBus name watcher */
+	guint poll_id;		/* presence polling fallback */
 	guint level;
 	/* a cache for panel size */
 	gint size;
@@ -1266,6 +1267,54 @@ gpm_brightness_applet_dbus_disconnect (GpmBrightnessApplet *applet)
 }
 
 /**
+ * gpm_brightness_applet_poll_cb:
+ *
+ * The name watcher is event driven and should be enough, but it can miss the
+ * transition when the daemon is started by D-Bus activation right after the
+ * applet: the applet then keeps drawing the "disabled" icon for the whole
+ * session.  Poll the bus every couple of seconds as a fallback.  Only
+ * NameHasOwner is asked - no brightness/DDC traffic at all - so this costs one
+ * tiny round trip per tick and nothing when the state has not changed.
+ **/
+static gboolean
+gpm_brightness_applet_poll_cb (GpmBrightnessApplet *applet)
+{
+	GDBusConnection *bus;
+	GVariant *reply;
+	gboolean has_owner = FALSE;
+
+	bus = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, NULL);
+	if (bus == NULL)
+		return TRUE;
+
+	reply = g_dbus_connection_call_sync (bus,
+					     "org.freedesktop.DBus",
+					     "/org/freedesktop/DBus",
+					     "org.freedesktop.DBus",
+					     "NameHasOwner",
+					     g_variant_new ("(s)", GPM_DBUS_SERVICE),
+					     G_VARIANT_TYPE ("(b)"),
+					     G_DBUS_CALL_FLAGS_NONE, 500, NULL, NULL);
+	if (reply != NULL) {
+		g_variant_get (reply, "(b)", &has_owner);
+		g_variant_unref (reply);
+	}
+	g_object_unref (bus);
+
+	if (has_owner && applet->proxy == NULL) {
+		gpm_brightness_applet_dbus_connect (applet);
+		gpm_applet_update_tooltip (applet);
+		gpm_applet_draw_cb (applet);
+	} else if (!has_owner && applet->proxy != NULL) {
+		gpm_brightness_applet_dbus_disconnect (applet);
+		gpm_applet_update_tooltip (applet);
+		gpm_applet_draw_cb (applet);
+	}
+
+	return TRUE;
+}
+
+/**
  * gpm_brightness_applet_name_appeared_cb:
  **/
 static void
@@ -1321,6 +1370,11 @@ gpm_brightness_applet_init (GpmBrightnessApplet *applet)
 				  (GBusNameAppearedCallback) gpm_brightness_applet_name_appeared_cb,
 				  (GBusNameVanishedCallback) gpm_brightness_applet_name_vanished_cb,
 				  applet, NULL);
+
+	/* cheap presence fallback, see gpm_brightness_applet_poll_cb() */
+	applet->poll_id = g_timeout_add_seconds (2,
+						 (GSourceFunc) gpm_brightness_applet_poll_cb,
+						 applet);
 
 	/* coldplug */
 	applet->call_worked = gpm_applet_get_brightness (applet);
