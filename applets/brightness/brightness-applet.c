@@ -897,6 +897,28 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
 
 		gtk_widget_show_all (menu);
 
+		/* A GtkMenu carries the theme's menu chrome (its own background,
+		 * padding and a focus outline around the item).  The brightness popup
+		 * must look like the panel slider popup it always was, so flatten it
+		 * to the panel background and drop the item's padding/outline. */
+		{
+			GtkCssProvider *css = gtk_css_provider_new ();
+
+			gtk_css_provider_load_from_data (css,
+				"menu.mate-panel-applet-slider {"
+				"  padding: 0; border-width: 0; background-color: @theme_bg_color; }"
+				"menu.mate-panel-applet-slider menuitem {"
+				"  padding: 0; border-width: 0; outline-width: 0; }"
+				"menu.mate-panel-applet-slider menuitem:hover,"
+				"menu.mate-panel-applet-slider menuitem:selected {"
+				"  background: none; background-image: none; }",
+				-1, NULL);
+			gtk_style_context_add_provider (gtk_widget_get_style_context (menu),
+							GTK_STYLE_PROVIDER (css),
+							GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+			g_object_unref (css);
+		}
+
 		context = gtk_widget_get_style_context (GTK_WIDGET (menu));
 		gtk_style_context_add_class (context, "mate-panel-applet-slider");
 	}
