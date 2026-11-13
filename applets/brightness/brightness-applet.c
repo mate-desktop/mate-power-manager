@@ -889,6 +889,10 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
 	g_signal_connect (G_OBJECT(applet->popup), "key-press-event",
 	                  G_CALLBACK(gpm_applet_key_press_cb), applet);
 
+	/* the popover content must be shown explicitly: gtk_popover_popup() shows
+	 * only the popover itself, and an unshown child chain leaves it 1x1. */
+	gtk_widget_show_all (applet->popup);
+
 	/* follow the panel volume control theme */
 	context = gtk_widget_get_style_context (GTK_WIDGET (applet->popup));
 	gtk_style_context_add_class (context, "mate-panel-applet-slider");
