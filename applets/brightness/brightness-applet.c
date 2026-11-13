@@ -1082,6 +1082,7 @@ brightness_changed_cb (DBusGProxy          *proxy,
 		g_signal_handlers_block_by_func (applet->slider,
 						 G_CALLBACK (gpm_applet_slide_cb),
 						 applet);
+	g_printerr ("DBG init: poll_id=%u popup=%p\n", applet->poll_id, (void *) applet->popup);
 		gpm_applet_update_popup_level (applet);
 		g_signal_handlers_unblock_by_func (applet->slider,
 						   G_CALLBACK (gpm_applet_slide_cb),
