@@ -1851,24 +1851,28 @@ gpm_brightness_init (GpmBrightness *brightness)
 	}
 
 #ifdef HAVE_X11
-	/* priv->dpy is set by gpm_brightness_setup_display(), and that function
-	 * returns early for the ddc and kernel backends, which need no X at all.
-	 * Entering the RandR wiring anyway dereferenced a NULL Display in
-	 * gpm_brightness_update_cache() -> RootWindow(NULL) -> SIGSEGV. */
-	if (brightness->priv->dpy != NULL &&
-	    gdk_display_get_default () != NULL &&
+	/* On X11 the backend is chosen here: setup_display() fills priv->dpy on
+	 * the RandR path and returns early for the ddc and kernel backends.  Gate
+	 * the RandR wiring on dpy AFTER that call, never before it: dpy is NULL
+	 * until setup_display() runs, so testing it first skipped the call
+	 * entirely and left the daemon with no backend at all ("Dim capable
+	 * hardware not present" with the applet showing a red cross). */
+	if (gdk_display_get_default () != NULL &&
 	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		brightness->priv->has_extension = gpm_brightness_setup_display (brightness);
+		if (brightness->priv->has_extension == FALSE)
+			g_debug ("no XRANDR extension");
+
+		/* ddc/kernel: no RandR wiring, and priv->dpy is legitimately NULL. */
+		if (brightness->priv->dpy == NULL)
+			return;
+
 		GdkScreen *screen;
 		GdkDisplay *display;
 		int event_base;
 		int ignore;
 
 		brightness->priv->resources = g_ptr_array_new_with_free_func ((GDestroyNotify) XRRFreeScreenResources);
-
-		/* can we do this */
-		brightness->priv->has_extension = gpm_brightness_setup_display (brightness);
-		if (brightness->priv->has_extension == FALSE)
-			g_debug ("no XRANDR extension");
 
 		screen = gdk_screen_get_default ();
 		brightness->priv->root_window = gdk_screen_get_root_window (screen);
