@@ -1182,6 +1182,9 @@ gpm_brightness_applet_poll_cb (GpmBrightnessApplet *applet)
 	}
 	g_object_unref (bus);
 
+	g_printerr ("DBG poll: owner=%d proxy=%p call_worked=%d\n",
+		    has_owner, (void *) applet->proxy, applet->call_worked);
+
 	if (has_owner && applet->proxy == NULL) {
 		gpm_brightness_applet_dbus_connect (applet);
 		gpm_applet_update_tooltip (applet);
