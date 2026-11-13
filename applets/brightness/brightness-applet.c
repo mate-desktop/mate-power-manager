@@ -922,10 +922,18 @@ gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 		gpm_applet_create_popup (applet);
 	}
 
+	g_printerr ("DBG popup_cb: popup=%p relative_to=%p realized=%d\n",
+		    (void *) applet->popup,
+		    (void *) gtk_popover_get_relative_to (GTK_POPOVER (applet->popup)),
+		    gtk_widget_get_realized (GTK_WIDGET (applet->popup)));
+
 	/* update UI for current brightness */
 	applet->popped = TRUE;
 	gpm_applet_update_popup_level (applet);
 	gtk_popover_popup (GTK_POPOVER (applet->popup));
+	g_printerr ("DBG after popup: visible=%d mapped=%d\n",
+		    gtk_widget_get_visible (applet->popup),
+		    gtk_widget_get_mapped (applet->popup));
 
 	return TRUE;
 }
