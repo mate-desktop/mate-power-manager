@@ -23,6 +23,7 @@ AM_CPPFLAGS =						\
 	$(MATE_DESKTOP_CFLAGS)			\
 	$(KEYRING_CFLAGS)				\
 	$(X11_CFLAGS)					\
+	$(DDCUTIL_CFLAGS)				\
 	$(LIBNOTIFY_CFLAGS)				\
 	$(CANBERRA_CFLAGS)				\
 	$(GSTREAMER_CFLAGS)				\
@@ -131,6 +132,7 @@ mate_power_statistics_LDADD =				\
 	libgpmshared.a					\
 	$(GLIB_LIBS)					\
 	$(X11_LIBS)					\
+	$(DDCUTIL_LIBS)					\
 	$(UPOWER_LIBS)					\
 	$(CAIRO_LIBS)					\
 	$(DBUS_LIBS)					\
@@ -158,6 +160,7 @@ mate_power_preferences_LDADD =				\
 	libgpmshared.a					\
 	$(GLIB_LIBS)					\
 	$(X11_LIBS)					\
+	$(DDCUTIL_LIBS)					\
 	$(CAIRO_LIBS)					\
 	$(DBUS_LIBS)					\
 	$(GPM_EXTRA_LIBS)				\
@@ -217,6 +220,7 @@ mate_power_manager_LDADD =				\
 	libgpmshared.a					\
 	$(GLIB_LIBS)					\
 	$(X11_LIBS)					\
+	$(DDCUTIL_LIBS)					\
 	$(GSTREAMER_LIBS)				\
 	$(CAIRO_LIBS)					\
 	$(MATE_DESKTOP_LIBS)			\
@@ -224,6 +228,7 @@ mate_power_manager_LDADD =				\
 	$(KEYRING_LIBS)					\
 	$(DBUS_LIBS)					\
 	$(X11_LIBS)					\
+	$(DDCUTIL_LIBS)					\
 	$(CANBERRA_LIBS)				\
 	$(LIBNOTIFY_LIBS)				\
 	$(GPM_EXTRA_LIBS)				\
@@ -289,6 +294,7 @@ mate_power_self_test_SOURCES =				\
 mate_power_self_test_LDADD =				\
 	$(GLIB_LIBS)					\
 	$(X11_LIBS)					\
+	$(DDCUTIL_LIBS)					\
 	$(CAIRO_LIBS)					\
 	$(MATE_DESKTOP_LIBS)			\
 	$(LIBSECRET_LIBS)					\
@@ -297,6 +303,7 @@ mate_power_self_test_LDADD =				\
 	$(UPOWER_LIBS)					\
 	$(DBUS_LIBS)					\
 	$(X11_LIBS)					\
+	$(DDCUTIL_LIBS)					\
 	$(LIBNOTIFY_LIBS)				\
 	$(GPM_EXTRA_LIBS)				\
 	-lm

@@ -33,6 +33,10 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 #include <gdk/gdkkeysyms.h>
+
+#ifdef HAVE_X11
+#include <gdk/gdkx.h>
+#endif
 #include <glib-object.h>
 #include <dbus/dbus-glib.h>
 
@@ -63,7 +67,8 @@ typedef struct{
 	/* connection to g-p-m */
 	DBusGProxy *proxy;
 	DBusGConnection *connection;
-	guint bus_watch_id;
+	guint bus_watch_id;	/* GDBus name watcher */
+	guint poll_id;		/* presence polling fallback */
 	guint level;
 	/* a cache for panel size */
 	gint size;
@@ -131,6 +136,20 @@ static void      gpm_applet_destroy_cb            (GtkWidget *widget);
  * gpm_applet_get_brightness:
  * Return value: Success value, or zero for failure
  **/
+static gboolean gpm_brightness_applet_dbus_connect (GpmBrightnessApplet *applet);
+
+/* The proxy is created once at start-up, and start-up usually loses the race
+ * against the lazily activated daemon: the proxy stays NULL and every call
+ * silently does nothing while the slider keeps moving.  Retry on demand. */
+static gboolean
+gpm_applet_ensure_connected (GpmBrightnessApplet *applet)
+{
+	if (applet->proxy != NULL)
+		return TRUE;
+
+	return gpm_brightness_applet_dbus_connect (applet);
+}
+
 static gboolean
 gpm_applet_get_brightness (GpmBrightnessApplet *applet)
 {
@@ -138,7 +157,7 @@ gpm_applet_get_brightness (GpmBrightnessApplet *applet)
 	gboolean ret;
 	guint policy_brightness;
 
-	if (applet->proxy == NULL) {
+	if (!gpm_applet_ensure_connected (applet)) {
 		g_warning ("not connected\n");
 		return FALSE;
 	}
@@ -168,26 +187,21 @@ gpm_applet_get_brightness (GpmBrightnessApplet *applet)
 static gboolean
 gpm_applet_set_brightness (GpmBrightnessApplet *applet)
 {
-	GError  *error = NULL;
 	gboolean ret;
 
-	if (applet->proxy == NULL) {
+	if (!gpm_applet_ensure_connected (applet)) {
 		g_warning ("not connected");
 		return FALSE;
 	}
 
-	ret = dbus_g_proxy_call (applet->proxy, "SetBrightness", &error,
-				 G_TYPE_UINT, applet->level,
-				 G_TYPE_INVALID,
-				 G_TYPE_INVALID);
-	if (error) {
-		g_debug ("ERROR: %s", error->message);
-		g_error_free (error);
-	}
-	if (!ret) {
-		/* abort as the DBUS method failed */
-		g_warning ("SetBrightness failed!");
-	}
+	/* Fire and forget: the applet can be an in-process module now, and a
+	 * synchronous call would freeze the whole panel while the daemon talks
+	 * DDC/CI to the monitor.  The resulting value comes back through
+	 * BrightnessChanged. */
+	dbus_g_proxy_call_no_reply (applet->proxy, "SetBrightness",
+				    G_TYPE_UINT, applet->level,
+				    G_TYPE_INVALID);
+	ret = TRUE;
 
 	return ret;
 }
@@ -221,6 +235,7 @@ gpm_applet_get_icon (GpmBrightnessApplet *applet)
 	} else {
 		icon = GPM_BRIGHTNESS_APPLET_ICON;
 	}
+
 
 	applet->icon = gtk_icon_theme_load_icon (gtk_icon_theme_get_default (),
 						 icon, applet->size - 2, 0, NULL);
@@ -587,45 +602,228 @@ gpm_applet_scroll_cb (GpmBrightnessApplet *applet, GdkEventScroll *event)
  *
  * hide popup on focus loss.
  **/
-static gboolean
-on_popup_button_press (GtkWidget      *widget,
-                       GdkEventButton *event,
-                       GpmBrightnessApplet *applet)
-{
-	GtkWidget *event_widget;
 
-	if (event->type != GDK_BUTTON_PRESS) {
-		return FALSE;
-	}
-	event_widget = gtk_get_event_widget ((GdkEvent *)event);
-	g_debug ("Button press: %p dock=%p", event_widget, widget);
-	if (event_widget == widget) {
-		gtk_widget_hide (applet->popup);
-		applet->popped = FALSE;
-		gpm_applet_update_tooltip (applet);
+/* --- backend preferences ------------------------------------------------ */
+
+static gboolean
+gpm_applet_backend_available (const gchar *id, const gchar **reason)
+{
+	GDir *dir;
+	const gchar *name;
+	gboolean have_plain = FALSE, have_ddcci = FALSE;
+
+	if (g_strcmp0 (id, "gamma") == 0) {
+		/* The ramp is an X11 feature; on a Wayland session there is
+		 * nothing to drive. */
+		if (gdk_display_get_default () == NULL ||
+		    !GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+			*reason = _("Requires an X11 session");
+			return FALSE;
+		}
+		*reason = NULL;
 		return TRUE;
 	}
 
-	return FALSE;
+	if (g_strcmp0 (id, "ddc") == 0) {
+		gchar *path = g_find_program_in_path ("ddcutil");
+
+		*reason = path != NULL ? NULL :
+			_("ddcutil is not installed, or the monitor does not answer DDC/CI");
+		g_free (path);
+		return *reason == NULL;
+	}
+
+	dir = g_dir_open ("/sys/class/backlight", 0, NULL);
+	if (dir == NULL) {
+		*reason = _("no backlight device in /sys/class/backlight");
+		return FALSE;
+	}
+
+	while ((name = g_dir_read_name (dir)) != NULL) {
+		if (g_str_has_prefix (name, "ddcci"))
+			have_ddcci = TRUE;
+		else
+			have_plain = TRUE;
+	}
+	g_dir_close (dir);
+
+	if (g_strcmp0 (id, "notebook") == 0) {
+		*reason = have_plain ? NULL :
+			_("no built-in backlight: this is not a laptop");
+		return have_plain;
+	}
+
+	if (g_strcmp0 (id, "kernel") == 0) {
+		*reason = have_ddcci ? NULL :
+			_("the ddcci kernel module is not loaded, or the device was not created");
+		return have_ddcci;
+	}
+
+	*reason = NULL;
+	return TRUE;
+}
+
+static void
+gpm_applet_backend_toggled (GtkToggleButton *button, gpointer user_data)
+{
+	GSettings *settings;
+	const gchar *id;
+
+	if (!gtk_toggle_button_get_active (button))
+		return;
+
+	id = g_object_get_data (G_OBJECT (button), "backend-id");
+	if (id == NULL)
+		return;
+
+	settings = g_settings_new ("org.mate.power-manager");
+	g_settings_set_string (settings, "brightness-backend", id);
+	g_object_unref (settings);
+}
+
+static void
+gpm_applet_add_backend_row (GtkWidget *list, GtkRadioButton **group,
+			    const gchar *id, const gchar *title,
+			    const gchar *detail, const gchar *current)
+{
+	GtkWidget *row, *box, *radio, *labels, *lbl;
+	const gchar *reason = NULL;
+	gboolean available;
+	gchar *text;
+
+	available = gpm_applet_backend_available (id, &reason);
+	text = g_strdup (available ? detail : reason);
+
+	row = gtk_list_box_row_new ();
+	gtk_list_box_row_set_activatable (GTK_LIST_BOX_ROW (row), FALSE);
+	box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 10);
+	gtk_container_set_border_width (GTK_CONTAINER (box), 8);
+	gtk_container_add (GTK_CONTAINER (row), box);
+
+	radio = gtk_radio_button_new_with_label_from_widget (*group, title);
+	gtk_widget_set_valign (radio, GTK_ALIGN_START);
+	gtk_widget_set_sensitive (radio, available);
+	g_object_set_data (G_OBJECT (radio), "backend-id", (gpointer) id);
+	gtk_box_pack_start (GTK_BOX (box), radio, FALSE, FALSE, 0);
+	if (*group == NULL)
+		*group = GTK_RADIO_BUTTON (radio);
+
+	if (g_strcmp0 (id, current) == 0)
+		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radio), TRUE);
+
+	g_signal_connect (radio, "toggled",
+			  G_CALLBACK (gpm_applet_backend_toggled), NULL);
+
+	labels = gtk_box_new (GTK_ORIENTATION_VERTICAL, 2);
+	lbl = gtk_label_new (text);
+	gtk_label_set_xalign (GTK_LABEL (lbl), 0.0);
+	gtk_label_set_line_wrap (GTK_LABEL (lbl), TRUE);
+	gtk_label_set_max_width_chars (GTK_LABEL (lbl), 46);
+	gtk_style_context_add_class (gtk_widget_get_style_context (lbl),
+				     "dim-label");
+	gtk_box_pack_start (GTK_BOX (labels), lbl, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (box), labels, TRUE, TRUE, 0);
+
+	gtk_list_box_insert (GTK_LIST_BOX (list), row, -1);
+	g_free (text);
+}
+
+static void
+gpm_applet_show_preferences (GtkWidget *widget, GpmBrightnessApplet *applet)
+{
+	GtkWidget *dialog, *content, *list, *lbl, *box;
+	GtkRadioButton *group = NULL;
+	GSettings *settings;
+	gchar *current;
+
+	settings = g_settings_new ("org.mate.power-manager");
+	current = g_settings_get_string (settings, "brightness-backend");
+
+	dialog = gtk_dialog_new_with_buttons (_("Brightness settings"), NULL,
+					      GTK_DIALOG_MODAL,
+					      _("Close"), GTK_RESPONSE_CLOSE,
+					      NULL);
+	gtk_window_set_default_size (GTK_WINDOW (dialog), 440, -1);
+	gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
+
+	content = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
+	box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 10);
+	gtk_container_set_border_width (GTK_CONTAINER (box), 12);
+	gtk_box_pack_start (GTK_BOX (content), box, TRUE, TRUE, 0);
+
+	lbl = gtk_label_new (_("How should screen brightness be controlled?"));
+	gtk_label_set_xalign (GTK_LABEL (lbl), 0.0);
+	gtk_widget_set_margin_bottom (lbl, 4);
+	gtk_box_pack_start (GTK_BOX (box), lbl, FALSE, FALSE, 0);
+
+	list = gtk_list_box_new ();
+	gtk_list_box_set_selection_mode (GTK_LIST_BOX (list), GTK_SELECTION_NONE);
+	gtk_box_pack_start (GTK_BOX (box), list, TRUE, TRUE, 0);
+
+	gpm_applet_add_backend_row (list, &group, "auto",
+		_("Automatic"), _("Pick the best available method"), current);
+	gpm_applet_add_backend_row (list, &group, "notebook",
+		_("Laptop panel"), _("Backlight through /sys/class/backlight"), current);
+	gpm_applet_add_backend_row (list, &group, "kernel",
+		_("Monitor, kernel driver (ddcci)"),
+		_("Reliable DDC/CI handled by the kernel"), current);
+	gpm_applet_add_backend_row (list, &group, "ddc",
+		_("Monitor, DDC/CI (libddcutil)"),
+		_("Talks to the monitor directly from userspace"), current);
+	gpm_applet_add_backend_row (list, &group, "gamma",
+		_("Software dimming (gamma)"),
+		_("Darkens the picture, not the backlight. Always available"), current);
+
+	gtk_widget_show_all (dialog);
+	gtk_dialog_run (GTK_DIALOG (dialog));
+	gtk_widget_destroy (dialog);
+
+	g_free (current);
+	g_object_unref (settings);
+}
+
+
+/**
+ * gpm_applet_popover_closed_cb:
+ * @popover: the brightness popover
+ * @applet: Brightness applet instance
+ *
+ * The popover is dismissed by GTK/the compositor (click outside, Escape) as
+ * well as by our own toggle, so keep the applet state in sync here instead of
+ * only in gpm_applet_popup_cb().
+ **/
+static void
+gpm_applet_popover_closed_cb (GtkMenu *menu, GpmBrightnessApplet *applet)
+{
+	applet->popped = FALSE;
+	gpm_applet_update_tooltip (applet);
+	/* The menu's grab swallows the pointer's leave, so the applet can keep its
+	 * prelight until something else redraws it: drop the flag explicitly and
+	 * repaint instead of waiting for a leave that will not arrive. */
+	gtk_widget_unset_state_flags (GTK_WIDGET (applet), GTK_STATE_FLAG_PRELIGHT);
+	gtk_widget_queue_draw (GTK_WIDGET (applet));
 }
 
 /**
  * gpm_applet_create_popup:
  * @applet: Brightness applet instance
  *
- * cretes a new popup according to orientation of panel
+ * creates the brightness popover: a GtkPopover anchored to the applet widget.
+ * On Wayland GTK turns it into an xdg_popup of the panel's layer surface (the
+ * panel is a gtk-layer-shell window), so the compositor gives the popup a grab
+ * and dismisses it on a click outside; on X11 the same widget uses a GTK grab.
+ * One code path for the native Wayland, Xwayland and Xorg configurations.
  **/
 static void
 gpm_applet_create_popup (GpmBrightnessApplet *applet)
 {
-	static GtkWidget *box, *frame;
-	GtkWidget       *toplevel;
+	GtkWidget *box, *frame;
 	GtkStyleContext *context;
-	GdkScreen       *screen;
-	GdkVisual       *visual;
-	gint orientation = mate_panel_applet_get_orient (MATE_PANEL_APPLET (MATE_PANEL_APPLET (applet)));
+	gint orientation;
 
 	gpm_applet_destroy_popup_cb (applet);
+
+	orientation = mate_panel_applet_get_orient (MATE_PANEL_APPLET (MATE_PANEL_APPLET (applet)));
 
 	/* slider */
 	if (MATE_PANEL_APPLET_VERTICAL(orientation)) {
@@ -662,31 +860,76 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
 	gtk_box_pack_start (GTK_BOX(box), applet->slider, TRUE, TRUE, 0);
 	gtk_box_pack_start (GTK_BOX(box), applet->btn_minus, FALSE, FALSE, 0);
 
+	/* settings button: backend selection lives behind it */
+	{
+		GtkWidget *btn_prefs, *img;
+
+		btn_prefs = gtk_button_new ();
+		img = gtk_image_new_from_icon_name ("preferences-system",
+						    GTK_ICON_SIZE_MENU);
+		gtk_button_set_image (GTK_BUTTON (btn_prefs), img);
+		gtk_button_set_relief (GTK_BUTTON (btn_prefs), GTK_RELIEF_NONE);
+		gtk_widget_set_can_focus (btn_prefs, FALSE);
+		gtk_widget_set_tooltip_text (btn_prefs, _("Brightness settings"));
+		g_signal_connect (btn_prefs, "clicked",
+				  G_CALLBACK (gpm_applet_show_preferences), applet);
+		gtk_box_pack_start (GTK_BOX (box), btn_prefs, FALSE, FALSE, 0);
+	}
+
 	/* frame */
 	frame = gtk_frame_new (NULL);
 	gtk_frame_set_shadow_type (GTK_FRAME(frame), GTK_SHADOW_OUT);
 	gtk_container_add (GTK_CONTAINER(frame), box);
 
-	/* window */
-	applet->popup = gtk_window_new (GTK_WINDOW_POPUP);
-	gtk_window_set_type_hint (GTK_WINDOW(applet->popup), GDK_WINDOW_TYPE_HINT_UTILITY);
-	gtk_container_add (GTK_CONTAINER(applet->popup), frame);
+	/* A GtkMenu is the only popup that gets a real grab on Wayland: the
+	 * compositor places the xdg_popup and dismisses it on a click outside.
+	 * A GtkPopover here stayed 1x1, and a layer-shell window has no grab at
+	 * all - the same widget serves X11, Xwayland and native Wayland. */
+	{
+		GtkWidget *menu, *item;
 
-	/* window events */
-	g_signal_connect (G_OBJECT(applet->popup), "button-press-event",
-	                  G_CALLBACK (on_popup_button_press), applet);
+		menu = gtk_menu_new ();
+		item = gtk_menu_item_new ();
+		gtk_container_add (GTK_CONTAINER (item), frame);
+		gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
 
-	g_signal_connect (G_OBJECT(applet->popup), "key-press-event",
-	                  G_CALLBACK(gpm_applet_key_press_cb), applet);
+		applet->popup = menu;
 
-	/* Set volume control frame, slider and toplevel window to follow panel volume control theme */
-	toplevel = gtk_widget_get_toplevel (frame);
-	context = gtk_widget_get_style_context (GTK_WIDGET(toplevel));
-	gtk_style_context_add_class(context,"mate-panel-applet-slider");
-	/*Make transparency possible in gtk3 theme3 */
-	screen = gtk_widget_get_screen(GTK_WIDGET(toplevel));
-	visual = gdk_screen_get_rgba_visual(screen);
-	gtk_widget_set_visual(GTK_WIDGET(toplevel), visual);
+		g_signal_connect (G_OBJECT (menu), "deactivate",
+				  G_CALLBACK (gpm_applet_popover_closed_cb), applet);
+		g_signal_connect (G_OBJECT (menu), "key-press-event",
+				  G_CALLBACK (gpm_applet_key_press_cb), applet);
+
+		gtk_widget_show_all (menu);
+
+		/* A GtkMenu carries the theme's menu chrome (its own background,
+		 * padding and a focus outline around the item).  The brightness popup
+		 * must look like the panel slider popup it always was, so flatten it
+		 * to the panel background and drop the item's padding/outline. */
+		{
+			GtkCssProvider *css = gtk_css_provider_new ();
+
+			gtk_css_provider_load_from_data (css,
+				"menu.mate-panel-applet-slider {"
+				"  padding: 0; border-width: 0; background-color: @theme_bg_color; }"
+				"menu.mate-panel-applet-slider menuitem,"
+				"menu.mate-panel-applet-slider menuitem:focus,"
+				"menu.mate-panel-applet-slider menuitem:hover {"
+				"  padding: 0; border-width: 0; outline-width: 0;"
+				"  outline-style: none; background: none;"
+				"  background-image: none; box-shadow: none; }"
+				"menu.mate-panel-applet-slider frame {"
+				"  border-width: 0; box-shadow: none; }",
+				-1, NULL);
+			gtk_style_context_add_provider (gtk_widget_get_style_context (menu),
+							GTK_STYLE_PROVIDER (css),
+							GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+			g_object_unref (css);
+		}
+
+		context = gtk_widget_get_style_context (GTK_WIDGET (menu));
+		gtk_style_context_add_class (context, "mate-panel-applet-slider");
+	}
 }
 
 /**
@@ -698,12 +941,6 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
 static gboolean
 gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 {
-	GtkAllocation allocation, popup_allocation;
-	gint orientation, x, y;
-	GdkWindow *window;
-	GdkDisplay *display;
-	GdkSeat *seat;
-
 	/* react only to left mouse button */
 	if (event->button != 1) {
 		return FALSE;
@@ -711,152 +948,33 @@ gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 
 	/* if yet popped, release focus and hide */
 	if (applet->popped) {
-		gtk_widget_hide (applet->popup);
 		applet->popped = FALSE;
+		if (applet->popup != NULL)
+			gtk_menu_popdown (GTK_MENU (applet->popup));
 		gpm_applet_update_tooltip (applet);
 		return TRUE;
 	}
-
-	/* otherwise pop */
-	applet->popped = TRUE;
 
 	/* create a new popup (initial or if panel parameters changed) */
 	if (applet->popup == NULL) {
 		gpm_applet_create_popup (applet);
 	}
 
+
 	/* update UI for current brightness */
+	applet->popped = TRUE;
 	gpm_applet_update_popup_level (applet);
-
-	/*Get the applet location, we need that now in wayland and later in x11*/
-	gdk_window_get_origin (gtk_widget_get_window (GTK_WIDGET(applet)), &x, &y);
-
-#ifdef HAVE_WAYLAND
-
-
-	if (1 == 1)
-	{
-		gboolean top, bottom, left, right;
-		GtkWidget *toplevel;
-		toplevel = gtk_widget_get_toplevel (GTK_WIDGET (applet));
-
-		if (!(GTK_IS_WIDGET(toplevel)))
-			g_message("invalid toplevel widget");
-
-		if (!gtk_layer_is_layer_window (GTK_WINDOW (applet->popup)))
-		{
-		gtk_layer_init_for_window (GTK_WINDOW (applet->popup));
-		gtk_layer_set_layer (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_LAYER_TOP);
-		gtk_layer_set_keyboard_mode (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_KEYBOARD_MODE_ON_DEMAND);
-		}
-
-		top = gtk_layer_get_anchor (GTK_WINDOW (toplevel), GTK_LAYER_SHELL_EDGE_TOP);
-		bottom = gtk_layer_get_anchor (GTK_WINDOW (toplevel), GTK_LAYER_SHELL_EDGE_BOTTOM);
-		left = gtk_layer_get_anchor (GTK_WINDOW (toplevel), GTK_LAYER_SHELL_EDGE_LEFT);
-		right = gtk_layer_get_anchor (GTK_WINDOW (toplevel), GTK_LAYER_SHELL_EDGE_RIGHT);
-
-		/*Set anchors to the edges (will hold to panel edge) and position along the panel
-		 *Unset margins and anchors from any other position so as to avoid rendering issues
-		 *when orientation changes as when the panel is moved
-		 */
-
-		if (top && left && right)
-		{
-		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_TOP, TRUE);
-		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_LEFT, TRUE);
-		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_BOTTOM, FALSE);
-		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_RIGHT, FALSE);
-		gtk_layer_set_margin (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_LEFT, x);
-		gtk_layer_set_margin (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_TOP, 0);
-		}
-		if (bottom && left && right)
-		{
-		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_BOTTOM, TRUE);
-		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_LEFT, TRUE);
-		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_TOP, FALSE);
-		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_RIGHT, FALSE);
-		gtk_layer_set_margin (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_LEFT, x);
-		gtk_layer_set_margin (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_TOP, 0);
-		}
-		if (left && bottom && top && !right)
-		{
-		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_LEFT, TRUE);
-		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_TOP, TRUE);
-		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_RIGHT, FALSE);
-		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_BOTTOM, FALSE);
-		gtk_layer_set_margin (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_TOP, y);
-		gtk_layer_set_margin (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_LEFT, 0);
-		}
-		if (right && bottom && top && !left)
-		{
-		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_RIGHT, TRUE);
-		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_TOP, TRUE);
-		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_LEFT, FALSE);
-		gtk_layer_set_anchor (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_BOTTOM, FALSE);
-		gtk_layer_set_margin (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_TOP, y);
-		gtk_layer_set_margin (GTK_WINDOW (applet->popup), GTK_LAYER_SHELL_EDGE_LEFT, 0);
-		}
-	}
-
-#endif /* HAVE_WAYLAND */
-
-	gtk_widget_show_all (applet->popup);
-
-	/* retrieve geometry parameters and move window appropriately */
-	orientation = mate_panel_applet_get_orient (MATE_PANEL_APPLET (MATE_PANEL_APPLET (applet)));
-	gtk_widget_get_allocation (GTK_WIDGET (applet), &allocation);
-	gtk_widget_get_allocation (GTK_WIDGET (applet->popup), &popup_allocation);
-
-	switch (orientation) {
-	case MATE_PANEL_APPLET_ORIENT_DOWN:
-		x += allocation.x + allocation.width/2;
-		y += allocation.y + allocation.height;
-		x -= popup_allocation.width/2;
-		break;
-	case MATE_PANEL_APPLET_ORIENT_UP:
-		x += allocation.x + allocation.width/2;
-		y += allocation.y;
-		x -= popup_allocation.width/2;
-		y -= popup_allocation.height;
-		break;
-	case MATE_PANEL_APPLET_ORIENT_RIGHT:
-		y += allocation.y + allocation.height/2;
-		x += allocation.x + allocation.width;
-		y -= popup_allocation.height/2;
-		break;
-	case MATE_PANEL_APPLET_ORIENT_LEFT:
-		y += allocation.y + allocation.height/2;
-		x += allocation.x;
-		x -= popup_allocation.width;
-		y -= popup_allocation.height/2;
-		break;
-	default:
-		g_assert_not_reached ();
-	}
-
-	gtk_window_move (GTK_WINDOW (applet->popup), x, y);
-
-	/* grab input */
-	window = gtk_widget_get_window (GTK_WIDGET (applet->popup));
-	display = gdk_window_get_display (window);
-	seat = gdk_display_get_default_seat (display);
-	gdk_seat_grab (seat,
-	               window,
-	               GDK_SEAT_CAPABILITY_ALL,
-	               TRUE,
-	               NULL,
-	               NULL,
-	               NULL,
-	               NULL);
+	/* The trigger event is mandatory: with NULL the shell treats the very
+	 * release that opened the menu as a click-outside and deactivates it a
+	 * few hundred ms later. */
+	gtk_menu_popup_at_widget (GTK_MENU (applet->popup), GTK_WIDGET (applet),
+				  GDK_GRAVITY_NORTH_WEST,
+				  GDK_GRAVITY_SOUTH_WEST,
+				  gtk_get_current_event ());
 
 	return TRUE;
 }
 
-/**
- * gpm_applet_theme_change_cb:
- *
- * Updtes icon when theme changes
- **/
 static void
 gpm_applet_theme_change_cb (GtkIconTheme *icon_theme, gpointer data)
 {
@@ -982,6 +1100,20 @@ brightness_changed_cb (DBusGProxy          *proxy,
 {
 	g_debug ("BrightnessChanged detected: %u\n", brightness);
 	applet->level = brightness;
+
+	/* Switching the backend resets the level in the daemon.  Without this the
+	 * popup keeps the handle where the user left it and shows a value that is
+	 * no longer applied.  Block the value-changed handler while syncing, so
+	 * the update does not bounce back to the daemon as a new write. */
+	if (applet->popup != NULL && applet->slider != NULL) {
+		g_signal_handlers_block_by_func (applet->slider,
+						 G_CALLBACK (gpm_applet_slide_cb),
+						 applet);
+		gpm_applet_update_popup_level (applet);
+		g_signal_handlers_unblock_by_func (applet->slider,
+						   G_CALLBACK (gpm_applet_slide_cb),
+						   applet);
+	}
 }
 
 /**
@@ -1043,6 +1175,55 @@ gpm_brightness_applet_dbus_disconnect (GpmBrightnessApplet *applet)
 }
 
 /**
+ * gpm_brightness_applet_poll_cb:
+ *
+ * The name watcher is event driven and should be enough, but it can miss the
+ * transition when the daemon is started by D-Bus activation right after the
+ * applet: the applet then keeps drawing the "disabled" icon for the whole
+ * session.  Poll the bus every couple of seconds as a fallback.  Only
+ * NameHasOwner is asked - no brightness/DDC traffic at all - so this costs one
+ * tiny round trip per tick and nothing when the state has not changed.
+ **/
+static gboolean
+gpm_brightness_applet_poll_cb (GpmBrightnessApplet *applet)
+{
+	GDBusConnection *bus;
+	GVariant *reply;
+	gboolean has_owner = FALSE;
+
+	bus = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, NULL);
+	if (bus == NULL)
+		return TRUE;
+
+	reply = g_dbus_connection_call_sync (bus,
+					     "org.freedesktop.DBus",
+					     "/org/freedesktop/DBus",
+					     "org.freedesktop.DBus",
+					     "NameHasOwner",
+					     g_variant_new ("(s)", GPM_DBUS_SERVICE),
+					     G_VARIANT_TYPE ("(b)"),
+					     G_DBUS_CALL_FLAGS_NONE, 500, NULL, NULL);
+	if (reply != NULL) {
+		g_variant_get (reply, "(b)", &has_owner);
+		g_variant_unref (reply);
+	}
+	g_object_unref (bus);
+
+
+	if (has_owner && applet->proxy == NULL) {
+		gpm_brightness_applet_dbus_connect (applet);
+		gpm_applet_update_tooltip (applet);
+		gpm_applet_draw_cb (applet);
+	} else if (!has_owner && applet->proxy != NULL) {
+		gpm_brightness_applet_dbus_disconnect (applet);
+		gpm_applet_update_tooltip (applet);
+		gpm_applet_draw_cb (applet);
+	}
+
+	return TRUE;
+}
+
+/**
  * gpm_brightness_applet_name_appeared_cb:
  **/
 static void
@@ -1098,6 +1279,11 @@ gpm_brightness_applet_init (GpmBrightnessApplet *applet)
 				  (GBusNameAppearedCallback) gpm_brightness_applet_name_appeared_cb,
 				  (GBusNameVanishedCallback) gpm_brightness_applet_name_vanished_cb,
 				  applet, NULL);
+
+	/* cheap presence fallback, see gpm_brightness_applet_poll_cb() */
+	applet->poll_id = g_timeout_add_seconds (2,
+						 (GSourceFunc) gpm_brightness_applet_poll_cb,
+						 applet);
 
 	/* coldplug */
 	applet->call_worked = gpm_applet_get_brightness (applet);
@@ -1158,6 +1344,9 @@ gpm_applet_cb (MatePanelApplet *_applet, const gchar *iid, gpointer data)
 	GtkActionGroup *action_group;
 
 	static const GtkActionEntry menu_actions [] = {
+		{ "Settings", "preferences-system", N_("_Settings"),
+		  NULL, NULL,
+		  G_CALLBACK (gpm_applet_show_preferences) },
 		{ "About", "help-about", N_("_About"),
 		  NULL, NULL,
 		  G_CALLBACK (gpm_applet_dialog_about_cb) },

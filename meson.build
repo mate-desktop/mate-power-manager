@@ -110,6 +110,9 @@ md = dependency('mate-desktop-2.0', version : '>= 1.27.1')
 libm = cc.find_library('m', required: false)
 
 xrandr = dependency('xrandr', version : '>= 1.3.0', required: true)
+# Optional: real monitor brightness (DDC/CI) for desktops, where there is no
+# backlight property and the gamma ramp is only a software dimmer.
+ddcutil = dependency('ddcutil', version : '>= 2.0.0', required : false)
 xproto = dependency('xproto', version : '>= 7.0.15', required: true)
 x11 = dependency('x11', version : '>= 1.3.0', required: true)
 xext = dependency('xext', version : '>= 1.3.0', required: true)
@@ -129,6 +132,7 @@ conf.set('WITH_KEYRING', keyring.found())
 conf.set('WITH_LIBSECRET', libsecret.found())
 conf.set('APPLETS_INPROCESS', enable_applets_inprocess)
 conf.set('HAVE_X11', 1)
+conf.set('HAVE_DDCUTIL', ddcutil.found())
 conf.set('HAVE_APP_INDICATOR', appindicator.found())
 conf.set_quoted('GETTEXT_PACKAGE', meson.project_name())
 conf.set_quoted('LOCALEDIR',

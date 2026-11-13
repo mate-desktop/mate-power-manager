@@ -50,11 +50,34 @@
 
 #include "egg-discrete.h"
 
+#ifdef HAVE_DDCUTIL
+#include <ddcutil_status_codes.h>
+#include <ddcutil_c_api.h>
+
+/* VCP 0x10 is "Brightness"; the nVidia driver fails the read-back of a write
+ * that actually landed, hence the "2" variant below and the retries. */
+#define GPM_DDC_BRIGHTNESS_CODE	0x10
+#define GPM_DDC_RETRIES		3
+#define GPM_DDC_OPEN_RETRIES	2
+#define GPM_DDC_APPLY_MS	200
+#define GPM_DDC_CONFIRM_TRIES	2
+#define GPM_DDC_SETTLE_MS	250
+/* Bus that carries the monitor, used when detection comes back empty. */
+#define GPM_DDC_BUSNO		3
+/* Measured on the SMBX2235: eight reads with no pause succeed 5/8, with a
+ * 0.5 s pause 7/8.  Keep roughly that much space between bus operations. */
+#define GPM_DDC_MIN_INTERVAL_MS	450
+#endif
+
 #include "gpm-brightness.h"
 #include "gpm-common.h"
 #include "gpm-marshal.h"
 
 #define GPM_SOLE_SETTER_USE_CACHE	TRUE	/* this may be insanity */
+
+/* A gamma ramp of 0 makes the screen unreadable - there is no hardware
+ * backlight to restore it with a button, so keep a floor. */
+#define GPM_GAMMA_MIN_LEVEL		0.10
 
 struct GpmBrightnessPrivate
 {
@@ -63,6 +86,22 @@ struct GpmBrightnessPrivate
 	guint			 cache_percentage;
 	guint			 last_set_hw;
 	gboolean		 has_extension;
+	gboolean		 use_gamma;	/* no "Backlight" output property: drive CRTC gamma */
+	gdouble			 gamma_level;	/* 0.0 .. 1.0, 1.0 = untouched */
+	GSettings		*settings;
+	gchar			*backend;	/* auto | notebook | kernel | ddc | gamma */
+#ifdef HAVE_DDCUTIL
+	gboolean		 use_ddc;	/* real monitor brightness through DDC/CI */
+	DDCA_Display_Handle	 ddc_handle;
+	guint			 ddc_max;	/* VCP 0x10 maximum, read once */
+	GThread			*ddc_thread;	/* owns the bus; never blocks the UI */
+	GMutex			 ddc_lock;
+	GCond			 ddc_cond;
+	gboolean		 ddc_stop;
+	gboolean		 ddc_has_work;
+	guint			 ddc_target;	/* percentage waiting to be written */
+	gint64			 ddc_last_op;	/* monotonic time of the last bus operation */
+#endif
 	gboolean		 hw_changed;
 	gint			 extension_levels;
 	gint			 extension_current;
@@ -261,6 +300,46 @@ gpm_brightness_output_set_internal (GpmBrightness *brightness, RROutput output, 
 	return ret;
 }
 
+#ifdef HAVE_DDCUTIL
+static gboolean gpm_brightness_ddc_open (GpmBrightness *brightness);
+static gboolean gpm_brightness_ddc_set (GpmBrightness *brightness, guint percentage);
+static gboolean gpm_brightness_ddc_open_busno (GpmBrightness *brightness);
+static gpointer gpm_brightness_ddc_worker (gpointer data);
+static gboolean gpm_brightness_ddc_failed_cb (gpointer data);
+static gboolean gpm_brightness_ddc_ready_cb (gpointer data);
+static gpointer gpm_brightness_ddc_worker (gpointer data);
+static gboolean gpm_brightness_start_ddc (GpmBrightness *brightness);
+#endif
+#ifdef HAVE_X11
+static gboolean gpm_brightness_gamma_apply (GpmBrightness *brightness, gdouble level);
+#endif
+
+#ifdef HAVE_DDCUTIL
+/* Start the DDC/CI worker.  Used both when RandR reports no backlight property
+ * at all and when the user forced the DDC backend. */
+static gboolean
+gpm_brightness_start_ddc (GpmBrightness *brightness)
+{
+	g_debug ("No backlight property; using DDC/CI");
+	brightness->priv->use_ddc = TRUE;
+	/* A previous run may have left the screen dimmed through the gamma ramp;
+	 * DDC/CI drives the backlight, so hand the picture back at full range. */
+	brightness->priv->use_gamma = FALSE;
+	/* The ramp only exists on X11; on Wayland there is no display to talk to
+	 * and touching it crashed the daemon. */
+	if (gdk_display_get_default () != NULL &&
+	    GDK_IS_X11_DISPLAY (gdk_display_get_default ()))
+		gpm_brightness_gamma_apply (brightness, 1.0);
+
+	g_mutex_init (&brightness->priv->ddc_lock);
+	g_cond_init (&brightness->priv->ddc_cond);
+	brightness->priv->ddc_thread =
+		g_thread_new ("ddc-brightness",
+			      gpm_brightness_ddc_worker, brightness);
+	return TRUE;
+}
+#endif
+
 /**
  * gpm_brightness_setup_display:
  **/
@@ -270,6 +349,53 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 	gint major, minor;
 
 	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
+
+	/* DDC/CI and the kernel backlight do not need X at all.  On a Wayland
+	 * session there is no X display to query, and the RandR probes below
+	 * returned FALSE there, leaving the daemon with "Dim capable hardware not
+	 * present" and the applet showing a red cross. */
+	if (g_strcmp0 (brightness->priv->backend, "ddc") == 0) {
+#ifdef HAVE_DDCUTIL
+		g_debug ("Backend forced: ddc (no X needed)");
+		return gpm_brightness_start_ddc (brightness);
+#else
+		return FALSE;
+#endif
+	}
+	if (g_strcmp0 (brightness->priv->backend, "kernel") == 0) {
+		gint levels = gpm_brightness_helper_get_value ("get-max-brightness");
+
+		if (levels > 0) {
+			g_debug ("Backend forced: kernel (%d levels), no X needed", levels);
+			brightness->priv->extension_levels = levels;
+			return TRUE;
+		}
+		g_debug ("Backend forced: kernel, but there is no backlight device");
+		return FALSE;
+	}
+
+	/* gamma is an X11 feature: on Wayland there is no ramp to drive, so do not
+	 * leave the user with a red cross - use the hardware path instead. */
+	if (g_strcmp0 (brightness->priv->backend, "gamma") == 0 &&
+	    (gdk_display_get_default () == NULL ||
+	     !GDK_IS_X11_DISPLAY (gdk_display_get_default ()))) {
+		g_debug ("gamma needs X11; using DDC/CI on this display server");
+#ifdef HAVE_DDCUTIL
+		return gpm_brightness_start_ddc (brightness);
+#else
+		return FALSE;
+#endif
+	}
+
+	/* Everything below talks RandR, which does not exist off X11.  Do not even
+	 * ask for the X display there: GDK_DISPLAY_XDISPLAY on a Wayland display is
+	 * meaningless and the probes then fail with a fatal g_error. */
+	if (gdk_display_get_default () == NULL ||
+	    !GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		g_debug ("Not an X11 display: only the ddc and kernel backends are "
+			 "available");
+		return FALSE;
+	}
 
 	/* get the display */
 	brightness->priv->dpy = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
@@ -292,11 +418,582 @@ gpm_brightness_setup_display (GpmBrightness *brightness)
 		/* Do we support "BACKLIGHT" (legacy) */
 		brightness->priv->backlight = XInternAtom (brightness->priv->dpy, "BACKLIGHT", True);
 		if (brightness->priv->backlight == None) {
-			g_debug ("No outputs have backlight property");
+			if (g_strcmp0 (brightness->priv->backend, "notebook") == 0) {
+				g_debug ("Backend forced: notebook, but there is no "
+					 "backlight property");
+				return FALSE;
+			}
+			if (g_strcmp0 (brightness->priv->backend, "ddc") == 0) {
+#ifdef HAVE_DDCUTIL
+				/* A desktop monitor has no RandR backlight property,
+				 * but the requested backend does not need one. */
+				g_debug ("Backend forced: ddc");
+				return gpm_brightness_start_ddc (brightness);
+#else
+				return FALSE;
+#endif
+			}
+			if (g_strcmp0 (brightness->priv->backend, "kernel") == 0) {
+				gint levels =
+					gpm_brightness_helper_get_value ("get-max-brightness");
+
+				if (levels > 0) {
+					g_debug ("Backend forced: kernel (%d levels)",
+						 levels);
+					brightness->priv->extension_levels = levels;
+					return TRUE;
+				}
+				g_debug ("Backend forced: kernel, but there is no "
+					 "backlight device");
+				return FALSE;
+			}
+			if (g_strcmp0 (brightness->priv->backend, "gamma") != 0 &&
+			    g_strcmp0 (brightness->priv->backend, "auto") != 0) {
+				/* a specific real backend was requested; do not
+				 * silently fall back to gamma */
+				return FALSE;
+			}
+			/* Desktop monitors have no backlight property at all: the only
+			 * thing we can drive is the CRTC gamma ramp, which is what
+			 * "xrandr --brightness" does.  Keep the backend alive for that
+			 * instead of reporting "no hardware". */
+			g_debug ("No outputs have backlight property; using CRTC gamma");
+			brightness->priv->use_gamma = TRUE;
+			brightness->priv->gamma_level = 1.0;
+			return TRUE;
+		}
+	}
+
+	/* The atom can exist in the server without any output carrying it - a
+	 * desktop monitor has no backlight property at all - so ask the outputs. */
+	{
+		XRRScreenResources *resources;
+		gboolean any_output = FALSE;
+
+		gdk_x11_display_error_trap_push (gdk_display_get_default ());
+		gdk_x11_display_error_trap_push (gdk_display_get_default ());
+		resources = XRRGetScreenResourcesCurrent (brightness->priv->dpy,
+							  DefaultRootWindow (brightness->priv->dpy));
+		if (resources != NULL) {
+			gint i;
+
+			for (i = 0; i < resources->noutput; i++) {
+				XRRPropertyInfo *info;
+
+				info = XRRQueryOutputProperty (brightness->priv->dpy,
+							       resources->outputs[i],
+							       brightness->priv->backlight);
+				if (info != NULL) {
+					any_output = TRUE;
+					XFree (info);
+					break;
+				}
+			}
+			XRRFreeScreenResources (resources);
+		}
+		gdk_x11_display_error_trap_pop_ignored (gdk_display_get_default ());
+
+		if (!any_output) {
+			gboolean force_kernel =
+				g_strcmp0 (brightness->priv->backend, "kernel") == 0;
+			gboolean force_ddc =
+				g_strcmp0 (brightness->priv->backend, "ddc") == 0;
+			gboolean force_gamma =
+				g_strcmp0 (brightness->priv->backend, "gamma") == 0;
+
+			if (force_gamma) {
+				g_debug ("Backend forced: gamma");
+				brightness->priv->use_gamma = TRUE;
+				brightness->priv->gamma_level = 1.0;
+				return TRUE;
+			}
+#ifdef HAVE_DDCUTIL
+			if (!force_ddc) {
+				/* A backlight class device (e.g. the ddcci kernel module)
+				 * is the better path: the kernel does the DDC/CI talking
+				 * with its own retries, and the helper reads it. */
+				gint levels = gpm_brightness_helper_get_value ("get-max-brightness");
+
+				if (levels > 0) {
+					g_debug ("Using the kernel backlight device (%d levels)",
+						 levels);
+					brightness->priv->extension_levels = levels;
+					return TRUE;
+				}
+				if (force_kernel) {
+					g_debug ("Backend forced: kernel, but there is no "
+						 "backlight device");
+					return FALSE;
+				}
+			}
+
+			/* Desktop monitor: DDC/CI is the only way to touch the real
+			 * backlight.  The gamma ramp below stays as the fallback. */
+			return gpm_brightness_start_ddc (brightness);
+#endif
+			g_debug ("No output carries a backlight property; using CRTC gamma");
+			brightness->priv->use_gamma = TRUE;
+			brightness->priv->gamma_level = 1.0;
+			return TRUE;
+		}
+	}
+
+	return TRUE;
+}
+
+#ifdef HAVE_DDCUTIL
+/* Detection on this driver intermittently returns an empty list even though the
+ * monitor answers; address the known bus directly instead of giving up. */
+static gboolean
+gpm_brightness_ddc_open_busno (GpmBrightness *brightness)
+{
+	DDCA_Display_Identifier did = NULL;
+	DDCA_Status rc;
+	gboolean ok = FALSE;
+
+	if (ddca_create_busno_display_identifier (GPM_DDC_BUSNO, &did) != DDCRC_OK ||
+	    did == NULL)
+		return FALSE;
+
+	rc = ddca_open_display2 (did, TRUE, &brightness->priv->ddc_handle);
+	g_debug ("DDC open by busno %d: rc=%d (%s)", GPM_DDC_BUSNO, rc,
+		 ddca_rc_name (rc));
+	if (rc == DDCRC_OK && brightness->priv->ddc_handle != NULL)
+		ok = TRUE;
+
+	ddca_free_display_identifier (did);
+
+	return ok;
+}
+
+/* A handle opened before the monitor was power-cycled keeps answering OK while
+ * its writes go nowhere; reopening is the only way out. */
+static gboolean
+gpm_brightness_ddc_reopen (GpmBrightness *brightness)
+{
+	if (brightness->priv->ddc_handle != NULL) {
+		ddca_close_display (brightness->priv->ddc_handle);
+		brightness->priv->ddc_handle = NULL;
+	}
+
+	return gpm_brightness_ddc_open (brightness);
+}
+
+static gboolean
+gpm_brightness_ddc_open (GpmBrightness *brightness)
+{
+	static gboolean ddc_inited = FALSE;
+	DDCA_Display_Info_List *list;
+	gboolean opened = FALSE;
+
+	/* The C API initializes itself with defaults when it is used implicitly,
+	 * and those defaults ignore the ddcutil configuration file.  On this
+	 * machine the panel only accepts writes when the i2c source address is
+	 * 0x51, which lives in that file, so writes reported DDCRC_OK and never
+	 * reached the backlight.  Initialize explicitly so the file is read. */
+	if (!ddc_inited) {
+		DDCA_Status irc = ddca_init (NULL, DDCA_SYSLOG_ERROR, DDCA_INIT_OPTIONS_NONE);
+		g_debug ("libddcutil init: rc=%d (%s)", irc, ddca_rc_name (irc));
+		ddc_inited = TRUE;
+	}
+
+	/* The bus answers through the nVidia driver intermittently: a single failed
+	 * open is not evidence that the monitor has no DDC/CI. */
+	for (gint attempt = 0; attempt < GPM_DDC_OPEN_RETRIES && !opened; attempt++) {
+		list = NULL;
+		if (ddca_get_display_info_list2 (TRUE, &list) != DDCRC_OK || list == NULL) {
+			if (gpm_brightness_ddc_open_busno (brightness))
+				opened = TRUE;
+			if (!opened)
+				g_usleep (G_USEC_PER_SEC / 3);
+			continue;
+		}
+
+		if (list->ct == 0) {
+			/* Detection succeeded but found nothing, while the bus itself
+			 * still answers.  Do not treat an empty list as proof that
+			 * there is no monitor: address the known bus directly. */
+			if (gpm_brightness_ddc_open_busno (brightness))
+				opened = TRUE;
+			ddca_free_display_info_list (list);
+			if (!opened)
+				g_usleep (G_USEC_PER_SEC / 3);
+			continue;
+		}
+
+		for (guint i = 0; i < list->ct && !opened; i++) {
+			DDCA_Status rc;
+
+			rc = ddca_open_display2 (list->info[i].dref, TRUE,
+						 &brightness->priv->ddc_handle);
+			g_debug ("DDC open attempt %d display %u: rc=%d (%s)", attempt, i,
+				 rc, ddca_rc_name (rc));
+			if (rc == DDCRC_OK && brightness->priv->ddc_handle != NULL)
+				opened = TRUE;
+		}
+
+		ddca_free_display_info_list (list);
+
+		if (!opened)
+			g_usleep (G_USEC_PER_SEC / 3);
+	}
+
+	if (opened) {
+		DDCA_Non_Table_Vcp_Value val;
+
+		/* Cache the maximum: reading it on every write costs another round trip
+		 * that this driver fails often enough to make the write look broken. */
+		brightness->priv->ddc_max = 100;
+		for (gint i = 0; i < GPM_DDC_OPEN_RETRIES; i++) {
+			if (ddca_get_non_table_vcp_value (brightness->priv->ddc_handle,
+							  GPM_DDC_BRIGHTNESS_CODE,
+							  &val) == DDCRC_OK) {
+				guint max = ((guint) val.sh << 8) | val.sl;
+				guint cur = ((guint) val.mh << 8) | val.ml;
+
+				/* A corrupted reply looks like a plausible small maximum
+				 * (measured: 33 for a monitor whose maximum is 100), and the
+				 * current value then exceeds it.  Take the largest sane reading
+				 * over several attempts instead of trusting the first. */
+				if (max > 0 && max <= 1000 && cur <= max &&
+				    max > brightness->priv->ddc_max)
+					brightness->priv->ddc_max = max;
+			}
+			g_usleep (G_USEC_PER_SEC / 5);
+		}
+		g_debug ("DDC maximum brightness: %u", brightness->priv->ddc_max);
+	}
+
+	return opened;
+}
+
+static void
+gpm_brightness_ddc_mark_op (GpmBrightness *brightness)
+{
+	brightness->priv->ddc_last_op = g_get_monotonic_time ();
+}
+
+/* Writes wait for their turn; reads that come too soon report "use the cache"
+ * instead of queueing another transaction on a bus that drops them. */
+static gboolean
+gpm_brightness_ddc_ready (GpmBrightness *brightness, gboolean block)
+{
+	gint64 elapsed;
+
+	if (brightness->priv->ddc_last_op == 0)
+		return TRUE;
+
+	elapsed = g_get_monotonic_time () - brightness->priv->ddc_last_op;
+	if (elapsed >= GPM_DDC_MIN_INTERVAL_MS * 1000)
+		return TRUE;
+
+	if (!block)
+		return FALSE;
+
+	g_usleep (GPM_DDC_MIN_INTERVAL_MS * 1000 - elapsed);
+
+	return TRUE;
+}
+
+static gboolean
+gpm_brightness_ddc_get (GpmBrightness *brightness, guint *percentage)
+{
+	DDCA_Non_Table_Vcp_Value val;
+	guint max;
+	guint cur;
+	gint i;
+
+	if (!gpm_brightness_ddc_ready (brightness, FALSE)) {
+		*percentage = brightness->priv->cache_percentage;
+		return TRUE;
+	}
+
+	for (i = 0; i < GPM_DDC_RETRIES; i++) {
+		gpm_brightness_ddc_mark_op (brightness);
+		if (ddca_get_non_table_vcp_value (brightness->priv->ddc_handle,
+						  GPM_DDC_BRIGHTNESS_CODE,
+						  &val) != DDCRC_OK)
+			continue;
+
+		max = ((guint) val.sh << 8) | val.sl;
+		cur = ((guint) val.mh << 8) | val.ml;
+		if (max == 0)
+			max = brightness->priv->ddc_max;
+
+		*percentage = (cur * 100 + max / 2) / max;
+		return TRUE;
+	}
+
+	return FALSE;
+}
+
+/* DDC/CI came up (possibly after retrying): the backlight is real now, so undo
+ * any gamma dimming the fallback applied in the meantime. */
+static gboolean
+gpm_brightness_ddc_ready_cb (gpointer data)
+{
+	GpmBrightness *brightness = data;
+
+	if (brightness->priv->use_gamma) {
+		brightness->priv->use_gamma = FALSE;
+		gpm_brightness_gamma_apply (brightness, 1.0);
+	}
+
+	return G_SOURCE_REMOVE;
+}
+
+/* DDC/CI could not be opened yet.  Do NOT fall back to the gamma ramp: mixing a
+ * hardware dimming level with a software ramp leaves the monitor in a state the
+ * user cannot reason about, and the panel then needs a power cycle to recover.
+ * The worker keeps retrying the hardware path instead. */
+static gboolean
+gpm_brightness_ddc_failed_cb (gpointer data)
+{
+	(void) data;
+
+	g_debug ("DDC/CI still unavailable; keeping the hardware path, no gamma fallback");
+
+	return G_SOURCE_REMOVE;
+}
+
+/* DDC/CI work must not run in the main loop: a write costs hundreds of
+ * milliseconds, the confirmation waits for the monitor, and reopening a stale
+ * handle can take seconds - the whole desktop froze while dragging the slider.
+ * The worker owns the handle; the UI only posts the latest value. */
+static gpointer
+gpm_brightness_ddc_worker (gpointer data)
+{
+	GpmBrightness *brightness = data;
+
+	gint failures = 0;
+
+	while (!brightness->priv->ddc_stop && brightness->priv->ddc_handle == NULL) {
+		if (gpm_brightness_ddc_open (brightness)) {
+			g_idle_add (gpm_brightness_ddc_ready_cb, brightness);
+			break;
+		}
+
+		/* The monitor answers through this driver when it feels like it:
+		 * keep trying in the background instead of giving up for the whole
+		 * session.  After a minute without luck, hand the backlight to the
+		 * gamma ramp so the user is not left with a dead slider. */
+		if (++failures == 12)
+			g_idle_add (gpm_brightness_ddc_failed_cb, brightness);
+		g_debug ("DDC/CI still unavailable (attempt %d)", failures);
+		g_usleep (5 * G_USEC_PER_SEC);
+	}
+
+	g_mutex_lock (&brightness->priv->ddc_lock);
+
+	while (!brightness->priv->ddc_stop) {
+		guint target;
+		gboolean ok;
+
+		while (!brightness->priv->ddc_has_work && !brightness->priv->ddc_stop)
+			g_cond_wait (&brightness->priv->ddc_cond,
+				     &brightness->priv->ddc_lock);
+
+		if (brightness->priv->ddc_stop)
+			break;
+
+		brightness->priv->ddc_has_work = FALSE;
+		target = brightness->priv->ddc_target;
+
+		g_mutex_unlock (&brightness->priv->ddc_lock);
+
+		ok = gpm_brightness_ddc_set (brightness, target);
+
+		g_mutex_lock (&brightness->priv->ddc_lock);
+
+		/* coalesce: a newer value arrived while we were writing */
+		if (ok && !brightness->priv->ddc_has_work) {
+			brightness->priv->cache_percentage = target;
+			brightness->priv->cache_trusted = TRUE;
+		}
+	}
+
+	g_mutex_unlock (&brightness->priv->ddc_lock);
+
+	/* libddcutil ties a display handle to the thread that opened it: closing
+	 * it from another thread fails with DDCRC_LOCKED ("Attempting to unlock
+	 * display lock owned by different thread"), after which the library shuts
+	 * itself down and the next call crashed the daemon in libX11.  The worker
+	 * therefore closes its own handle before it exits; finalize() only joins
+	 * the thread. */
+#ifdef HAVE_DDCUTIL
+	if (brightness->priv->ddc_handle != NULL) {
+		ddca_close_display (brightness->priv->ddc_handle);
+		brightness->priv->ddc_handle = NULL;
+	}
+#endif
+
+	return NULL;
+}
+
+static gboolean
+gpm_brightness_ddc_set (GpmBrightness *brightness, guint percentage)
+{
+	DDCA_Non_Table_Vcp_Value val;
+	guint max;
+	guint target;
+	gint i;
+
+	(void) val;
+	max = brightness->priv->ddc_max;
+	if (max == 0)
+		return FALSE;
+
+	target = (percentage * max + 50) / 100;
+
+	gpm_brightness_ddc_ready (brightness, TRUE);
+
+	for (i = 0; i < GPM_DDC_RETRIES; i++) {
+		DDCA_Status rc;
+
+		/* Never verify: this is what "--noverify" does on the command line and
+		 * the only mode that reports success on the nVidia driver. */
+		gpm_brightness_ddc_mark_op (brightness);
+		rc = ddca_set_non_table_vcp_value2 (brightness->priv->ddc_handle,
+						    GPM_DDC_BRIGHTNESS_CODE,
+						    (target >> 8) & 0xff,
+						    target & 0xff);
+		g_debug ("DDC set %u%% -> raw %u: rc=%d (%s)", percentage, target, rc,
+			 ddca_rc_name (rc));
+		if (rc == DDCRC_OK) {
+			/* Verification is off, so DDCRC_OK means the bytes went out.
+			 * Reading the value back right away is worse than useless on
+			 * this driver: it keeps reporting the previous value for up
+			 * to a second after a successful write, so every good write
+			 * looked lost, the daemon retried and the slider stalled and
+			 * snapped back.  Trust the write; the monitor does apply it. */
+			return TRUE;
+		}
+
+		/* A handle that saw an error tends to keep failing; reopen it. */
+		ddca_close_display (brightness->priv->ddc_handle);
+		brightness->priv->ddc_handle = NULL;
+		if (!gpm_brightness_ddc_open (brightness))
+			return FALSE;
+	}
+
+	/* Nothing was confirmed.  Ask the monitor what it actually has, so the UI
+	 * shows the truth instead of the value we hoped for: roughly half of the
+	 * writes on this driver are dropped, and a slider that lies is worse than
+	 * one that snaps back. */
+	{
+		DDCA_Non_Table_Vcp_Value back;
+
+		if (ddca_get_non_table_vcp_value (brightness->priv->ddc_handle,
+						  GPM_DDC_BRIGHTNESS_CODE,
+						  &back) == DDCRC_OK) {
+			guint max = brightness->priv->ddc_max;
+			guint cur = ((guint) back.mh << 8) | back.ml;
+
+			if (max == 0)
+				max = 100;
+
+			g_mutex_lock (&brightness->priv->ddc_lock);
+			brightness->priv->cache_percentage = (cur * 100 + max / 2) / max;
+			brightness->priv->cache_trusted = TRUE;
+			g_mutex_unlock (&brightness->priv->ddc_lock);
+
+			g_debug ("DDC write not confirmed; monitor reports %u%%",
+				 brightness->priv->cache_percentage);
 			return FALSE;
 		}
 	}
+
+	g_debug ("DDC write sent %d times, monitor unreadable", GPM_DDC_RETRIES);
 	return TRUE;
+}
+#endif /* HAVE_DDCUTIL */
+
+/**
+ * gpm_brightness_gamma_apply:
+ * @brightness: the brightness object
+ * @level: 0.0 .. 1.0, where 1.0 leaves the output untouched
+ *
+ * Scales every active CRTC's gamma ramp, i.e. exactly what
+ * "xrandr --output <out> --brightness <level>" does.  This is the only way to
+ * dim a desktop monitor whose output carries no "Backlight" property.
+ *
+ * Return value: %TRUE if at least one CRTC was programmed
+ **/
+static gboolean
+gpm_brightness_gamma_apply (GpmBrightness *brightness, gdouble level)
+{
+	XRRScreenResources *resources;
+	GdkDisplay *display;
+	gboolean applied = FALSE;
+	gint i;
+
+	g_return_val_if_fail (GPM_IS_BRIGHTNESS (brightness), FALSE);
+
+	/* The root window exists only after the X11 branch of init ran.  Callers
+	 * like gpm_brightness_start_ddc() reset the ramp early, and touching
+	 * GDK_WINDOW_XID(NULL) asserts and then segfaults in libX11. */
+	if (brightness->priv->root_window == NULL ||
+	    !GDK_IS_X11_WINDOW (brightness->priv->root_window))
+		return FALSE;
+
+	level = CLAMP (level, GPM_GAMMA_MIN_LEVEL, 1.0);
+
+	/* A CRTC that cannot take a ramp answers with an X error, and an untrapped
+	 * X error kills the daemon; skip such CRTCs instead of dying. */
+	display = gdk_display_get_default ();
+	gdk_x11_display_error_trap_push (display);
+
+	resources = XRRGetScreenResourcesCurrent (brightness->priv->dpy,
+						  GDK_WINDOW_XID (brightness->priv->root_window));
+	if (resources == NULL) {
+		gdk_x11_display_error_trap_pop_ignored (display);
+		return FALSE;
+	}
+
+	for (i = 0; i < resources->ncrtc; i++) {
+		XRRCrtcInfo *crtc_info;
+		XRRCrtcGamma *gamma;
+		gint size;
+		gint j;
+
+		crtc_info = XRRGetCrtcInfo (brightness->priv->dpy, resources, resources->crtcs[i]);
+		if (crtc_info == NULL)
+			continue;
+		if (crtc_info->mode == None) {
+			/* disabled CRTC: nothing on screen to dim */
+			XRRFreeCrtcInfo (crtc_info);
+			continue;
+		}
+
+		size = XRRGetCrtcGammaSize (brightness->priv->dpy, resources->crtcs[i]);
+		if (size <= 0) {
+			XRRFreeCrtcInfo (crtc_info);
+			continue;
+		}
+
+		gamma = XRRAllocGamma (size);
+		for (j = 0; j < size; j++) {
+			gdouble ramp = (size > 1) ? (gdouble) j / (size - 1) : 0.0;
+			guint16 value = (guint16) (ramp * level * 65535.0 + 0.5);
+
+			gamma->red[j] = value;
+			gamma->green[j] = value;
+			gamma->blue[j] = value;
+		}
+
+		XRRSetCrtcGamma (brightness->priv->dpy, resources->crtcs[i], gamma);
+		XRRFreeGamma (gamma);
+		XRRFreeCrtcInfo (crtc_info);
+		applied = TRUE;
+	}
+
+	XRRFreeScreenResources (resources);
+	XSync (brightness->priv->dpy, False);
+
+	if (gdk_x11_display_error_trap_pop (display))
+		g_debug ("X error while programming the gamma ramp");
+
+	return applied;
 }
 
 /**
@@ -541,6 +1238,108 @@ gpm_brightness_foreach_screen (GpmBrightness *brightness, GpmXRandROp op)
 	if (!brightness->priv->has_extension)
 		return FALSE;
 
+#ifdef HAVE_DDCUTIL
+	/* Real monitor brightness first; drop to the gamma ramp if the monitor
+	 * stops answering mid-session. */
+	if (brightness->priv->use_ddc) {
+		gboolean ok = FALSE;
+
+		switch (op) {
+		case ACTION_BACKLIGHT_GET:
+			/* The worker owns the bus; never block the UI on a read. */
+			brightness->priv->shared_value = brightness->priv->cache_percentage;
+			return TRUE;
+		case ACTION_BACKLIGHT_SET:
+			g_mutex_lock (&brightness->priv->ddc_lock);
+			brightness->priv->ddc_target = brightness->priv->shared_value;
+			brightness->priv->ddc_has_work = TRUE;
+			g_cond_signal (&brightness->priv->ddc_cond);
+			g_mutex_unlock (&brightness->priv->ddc_lock);
+			ok = TRUE;
+			break;
+		case ACTION_BACKLIGHT_INC:
+		case ACTION_BACKLIGHT_DEC:
+			{
+				guint current;
+
+				gint next;
+
+				current = brightness->priv->cache_percentage;
+				next = (op == ACTION_BACKLIGHT_INC)
+					? MIN ((gint) current + 10, 100)
+					: MAX ((gint) current - 10, 0);
+
+				brightness->priv->shared_value = (guint) next;
+				g_mutex_lock (&brightness->priv->ddc_lock);
+				brightness->priv->ddc_target = (guint) next;
+				brightness->priv->ddc_has_work = TRUE;
+				g_cond_signal (&brightness->priv->ddc_cond);
+				g_mutex_unlock (&brightness->priv->ddc_lock);
+				ok = TRUE;
+			}
+			break;
+		default:
+			break;
+		}
+
+		if (ok) {
+			brightness->priv->hw_changed = TRUE;
+			return TRUE;
+		}
+
+		/* Never mix the two backends.  A gamma "top-up" on top of a
+		 * backlight that was only partly applied leaves the user with two
+		 * dimmers and no way to tell which one is at fault; the monitor keeps
+		 * whatever it has and the caller sees the failure. */
+		g_debug ("DDC/CI write was not confirmed; leaving the backlight alone");
+		return FALSE;
+	}
+#endif
+
+	/* Desktop monitor: no per-output property to write, so the gamma ramp is
+	 * the hardware.  The value is kept here because a gamma ramp has no
+	 * "current brightness" to read back. */
+	if (brightness->priv->use_gamma) {
+		gdouble step = 10.0 / 100.0;
+
+		switch (op) {
+		case ACTION_BACKLIGHT_GET:
+			brightness->priv->shared_value =
+				(guint) (brightness->priv->gamma_level * 100.0 + 0.5);
+			return TRUE;
+		case ACTION_BACKLIGHT_SET:
+			brightness->priv->gamma_level =
+				CLAMP (brightness->priv->shared_value / 100.0,
+				       GPM_GAMMA_MIN_LEVEL, 1.0);
+			brightness->priv->shared_value =
+				MAX (brightness->priv->shared_value,
+				     (guint) (GPM_GAMMA_MIN_LEVEL * 100.0 + 0.5));
+			break;
+		case ACTION_BACKLIGHT_INC:
+			brightness->priv->gamma_level =
+				CLAMP (brightness->priv->gamma_level + step,
+				       GPM_GAMMA_MIN_LEVEL, 1.0);
+			brightness->priv->shared_value =
+				(guint) (brightness->priv->gamma_level * 100.0 + 0.5);
+			break;
+		case ACTION_BACKLIGHT_DEC:
+			brightness->priv->gamma_level =
+				CLAMP (brightness->priv->gamma_level - step,
+				       GPM_GAMMA_MIN_LEVEL, 1.0);
+			brightness->priv->shared_value =
+				(guint) (brightness->priv->gamma_level * 100.0 + 0.5);
+			break;
+		default:
+			return FALSE;
+		}
+
+		if (gpm_brightness_gamma_apply (brightness, brightness->priv->gamma_level)) {
+			brightness->priv->hw_changed = TRUE;
+			return TRUE;
+		}
+		return FALSE;
+	}
+
 	/* do for each screen */
 	length = brightness->priv->resources->len;
 	for (i=0; i<length; i++) {
@@ -594,6 +1393,13 @@ gpm_brightness_update_cache (GpmBrightness *brightness)
 	XRRScreenResources *resource;
 
 	g_return_if_fail (GPM_IS_BRIGHTNESS (brightness));
+
+	/* Same guard as init(): the cache is pure XRandR state, and the ddc and
+	 * kernel backends never open an X display. */
+	if (brightness->priv->dpy == NULL ||
+	    gdk_display_get_default () == NULL ||
+	    !GDK_IS_X11_DISPLAY (gdk_display_get_default ()))
+		return;
 
 	/* invalidate and remove all the previous entries */
 	length = brightness->priv->resources->len;
@@ -686,8 +1492,8 @@ gpm_brightness_set (GpmBrightness *brightness, guint percentage, gboolean *hw_ch
 	ret = gpm_brightness_foreach_screen (brightness, ACTION_BACKLIGHT_SET);
 #endif
 
-	/* legacy fallback */
-	if (!ret) {
+	/* legacy fallback (sysfs) - pointless once DDC/CI owns the backlight */
+	if (!ret && !brightness->priv->use_ddc) {
 		if (brightness->priv->extension_levels < 0)
 			brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
 		brightness->priv->extension_current = egg_discrete_from_percent (percentage, brightness->priv->extension_levels+1);
@@ -701,6 +1507,23 @@ gpm_brightness_set (GpmBrightness *brightness, guint percentage, gboolean *hw_ch
 	/* we did something to the hardware, so untrusted */
 	if (ret)
 		brightness->priv->cache_trusted = FALSE;
+
+#ifdef HAVE_DDCUTIL
+	/* ...except over DDC/CI: the monitor answers a read-back with EIO as often as
+	 * not on the nVidia driver, so remember what was just written instead of
+	 * asking it again and reporting a stale value. */
+	if (ret && brightness->priv->use_ddc) {
+		brightness->priv->cache_percentage = percentage;
+		brightness->priv->cache_trusted = TRUE;
+	}
+#endif
+
+	/* Announce the change.  Until now the signal was only produced from X
+	 * events, so a reset done by the daemon itself (switching the backend
+	 * resets everything to 100%) never reached the applet and its slider kept
+	 * showing a level that was no longer applied. */
+	if (ret)
+		gpm_brightness_may_have_changed (brightness);
 
 	return ret;
 }
@@ -736,8 +1559,8 @@ gpm_brightness_get (GpmBrightness *brightness, guint *percentage)
 	percentage_local = brightness->priv->shared_value;
 #endif
 
-	/* legacy fallback */
-	if (!ret) {
+	/* legacy fallback (sysfs) - pointless once DDC/CI owns the backlight */
+	if (!ret && !brightness->priv->use_ddc) {
 		if (brightness->priv->extension_levels < 0)
 			brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
 		brightness->priv->extension_current = gpm_brightness_helper_get_value ("get-brightness");
@@ -793,8 +1616,8 @@ gpm_brightness_up (GpmBrightness *brightness, gboolean *hw_changed)
 	if (ret)
 		brightness->priv->cache_trusted = FALSE;
 
-	/* legacy fallback */
-	if (!ret) {
+	/* legacy fallback (sysfs) - pointless once DDC/CI owns the backlight */
+	if (!ret && !brightness->priv->use_ddc) {
 		if (brightness->priv->extension_levels < 0)
 			brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
 		brightness->priv->extension_current = gpm_brightness_helper_get_value ("get-brightness");
@@ -847,8 +1670,8 @@ gpm_brightness_down (GpmBrightness *brightness, gboolean *hw_changed)
 	if (ret)
 		brightness->priv->cache_trusted = FALSE;
 
-	/* legacy fallback */
-	if (!ret) {
+	/* legacy fallback (sysfs) - pointless once DDC/CI owns the backlight */
+	if (!ret && !brightness->priv->use_ddc) {
 		if (brightness->priv->extension_levels < 0)
 			brightness->priv->extension_levels = gpm_brightness_helper_get_value ("get-max-brightness");
 		brightness->priv->extension_current = gpm_brightness_helper_get_value ("get-brightness");
@@ -919,6 +1742,19 @@ gpm_brightness_finalize (GObject *object)
 	g_return_if_fail (object != NULL);
 	g_return_if_fail (GPM_IS_BRIGHTNESS (object));
 	brightness = GPM_BRIGHTNESS (object);
+#ifdef HAVE_DDCUTIL
+	if (brightness->priv->ddc_thread != NULL) {
+		g_mutex_lock (&brightness->priv->ddc_lock);
+		brightness->priv->ddc_stop = TRUE;
+		g_cond_signal (&brightness->priv->ddc_cond);
+		g_mutex_unlock (&brightness->priv->ddc_lock);
+		g_thread_join (brightness->priv->ddc_thread);
+		brightness->priv->ddc_thread = NULL;
+	}
+	/* No ddca_close_display() here: the worker closed its own handle before
+	 * exiting, and libddcutil refuses to release a display from any other
+	 * thread (DDCRC_LOCKED, then "libddcutil terminating"). */
+#endif
 #ifdef HAVE_X11
 	if (brightness->priv->resources != NULL)
 		g_ptr_array_unref (brightness->priv->resources);
@@ -950,6 +1786,37 @@ gpm_brightness_class_init (GpmBrightnessClass *klass)
  * gpm_brightness_init:
  * @brightness: This brightness class instance
  **/
+/* The preference changed in the applet: re-evaluate which backend to use
+ * without restarting the daemon. */
+static void
+gpm_brightness_backend_changed (GSettings *settings, const gchar *key,
+				GpmBrightness *brightness)
+{
+	g_free (brightness->priv->backend);
+	brightness->priv->backend = g_settings_get_string (settings, key);
+	g_debug ("Brightness backend changed to %s", brightness->priv->backend);
+
+	/* Release the OLD backend first.  Resetting only the new one leaves the
+	 * previous mechanism at its dimmed value: switching DDC -> gamma kept the
+	 * panel's backlight at 0 while the ramp went to 1.0, so the screen stayed
+	 * black and nothing could be explained by the UI. */
+#ifdef HAVE_DDCUTIL
+	if (brightness->priv->use_ddc && brightness->priv->ddc_handle != NULL)
+		gpm_brightness_ddc_set (brightness, 100);
+#endif
+	if (brightness->priv->use_gamma)
+		gpm_brightness_gamma_apply (brightness, 1.0);
+
+	brightness->priv->use_gamma = FALSE;
+	brightness->priv->use_ddc = FALSE;
+	brightness->priv->has_extension = gpm_brightness_setup_display (brightness);
+
+	/* Then start the new backend from a known state. */
+	brightness->priv->cache_trusted = FALSE;
+	brightness->priv->shared_value = 100;
+	gpm_brightness_set (brightness, 100, NULL);
+}
+
 static void
 gpm_brightness_init (GpmBrightness *brightness)
 {
@@ -961,20 +1828,51 @@ gpm_brightness_init (GpmBrightness *brightness)
 	brightness->priv->hw_changed = FALSE;
 	brightness->priv->extension_levels = -1;
 
+	brightness->priv->settings = g_settings_new ("org.mate.power-manager");
+	brightness->priv->backend =
+		g_settings_get_string (brightness->priv->settings,
+				       "brightness-backend");
+	g_debug ("Brightness backend preference: %s", brightness->priv->backend);
+
+	g_signal_connect (brightness->priv->settings,
+			  "changed::brightness-backend",
+			  G_CALLBACK (gpm_brightness_backend_changed),
+			  brightness);
+
+	/* Wayland session (or no X at all): RandR is unavailable, but DDC/CI and
+	 * the kernel backlight do not need it - set the backend up here, since the
+	 * X11 block below is skipped entirely. */
+	if (gdk_display_get_default () == NULL ||
+	    !GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		brightness->priv->has_extension =
+			gpm_brightness_setup_display (brightness);
+		if (!brightness->priv->has_extension)
+			g_debug ("no dimming backend available on this display server");
+	}
+
 #ifdef HAVE_X11
+	/* On X11 the backend is chosen here: setup_display() fills priv->dpy on
+	 * the RandR path and returns early for the ddc and kernel backends.  Gate
+	 * the RandR wiring on dpy AFTER that call, never before it: dpy is NULL
+	 * until setup_display() runs, so testing it first skipped the call
+	 * entirely and left the daemon with no backend at all ("Dim capable
+	 * hardware not present" with the applet showing a red cross). */
 	if (gdk_display_get_default () != NULL &&
 	    GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+		brightness->priv->has_extension = gpm_brightness_setup_display (brightness);
+		if (brightness->priv->has_extension == FALSE)
+			g_debug ("no XRANDR extension");
+
+		/* ddc/kernel: no RandR wiring, and priv->dpy is legitimately NULL. */
+		if (brightness->priv->dpy == NULL)
+			return;
+
 		GdkScreen *screen;
 		GdkDisplay *display;
 		int event_base;
 		int ignore;
 
 		brightness->priv->resources = g_ptr_array_new_with_free_func ((GDestroyNotify) XRRFreeScreenResources);
-
-		/* can we do this */
-		brightness->priv->has_extension = gpm_brightness_setup_display (brightness);
-		if (brightness->priv->has_extension == FALSE)
-			g_debug ("no XRANDR extension");
 
 		screen = gdk_screen_get_default ();
 		brightness->priv->root_window = gdk_screen_get_root_window (screen);

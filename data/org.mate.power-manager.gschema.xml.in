@@ -71,6 +71,17 @@
       <summary>Reduce the keyboard backlight when on battery power</summary>
       <description>If the keyboard backlight brightness should be reduced when the computer is on battery power</description>
     </key>
+    <key name="brightness-backend" type="s">
+      <default>'auto'</default>
+      <summary>Backend used to control screen brightness</summary>
+      <description>
+        Which backend drives the screen brightness.  "auto" picks the best
+        available one: the RandR backlight property, then a kernel backlight
+        device, then DDC/CI through libddcutil, then the gamma ramp.
+        "notebook" forces the RandR property, "kernel" a /sys/class/backlight
+        device, "ddc" libddcutil, and "gamma" the software gamma ramp.
+      </description>
+    </key>
     <key name="kbd-brightness-on-ac" type="i">
       <default>100</default>
       <summary>Keyboard backlight brightness when on AC power.</summary>
