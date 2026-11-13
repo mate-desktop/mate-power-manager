@@ -931,9 +931,15 @@ gpm_applet_popup_cb (GpmBrightnessApplet *applet, GdkEventButton *event)
 	applet->popped = TRUE;
 	gpm_applet_update_popup_level (applet);
 	gtk_popover_popup (GTK_POPOVER (applet->popup));
-	g_printerr ("DBG after popup: visible=%d mapped=%d\n",
-		    gtk_widget_get_visible (applet->popup),
-		    gtk_widget_get_mapped (applet->popup));
+	{
+		GtkAllocation pa;
+		GdkWindow *pw = gtk_widget_get_window (applet->popup);
+		gtk_widget_get_allocation (applet->popup, &pa);
+		g_printerr ("DBG after popup: visible=%d mapped=%d alloc=%dx%d+%d+%d win=%p\n",
+			    gtk_widget_get_visible (applet->popup),
+			    gtk_widget_get_mapped (applet->popup),
+			    pa.width, pa.height, pa.x, pa.y, (void *) pw);
+	}
 
 	return TRUE;
 }
