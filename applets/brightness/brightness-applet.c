@@ -797,6 +797,11 @@ gpm_applet_popover_closed_cb (GtkMenu *menu, GpmBrightnessApplet *applet)
 {
 	applet->popped = FALSE;
 	gpm_applet_update_tooltip (applet);
+	/* The menu's grab swallows the pointer's leave, so the applet can keep its
+	 * prelight until something else redraws it: drop the flag explicitly and
+	 * repaint instead of waiting for a leave that will not arrive. */
+	gtk_widget_unset_state_flags (GTK_WIDGET (applet), GTK_STATE_FLAG_PRELIGHT);
+	gtk_widget_queue_draw (GTK_WIDGET (applet));
 }
 
 /**
@@ -907,11 +912,14 @@ gpm_applet_create_popup (GpmBrightnessApplet *applet)
 			gtk_css_provider_load_from_data (css,
 				"menu.mate-panel-applet-slider {"
 				"  padding: 0; border-width: 0; background-color: @theme_bg_color; }"
-				"menu.mate-panel-applet-slider menuitem {"
-				"  padding: 0; border-width: 0; outline-width: 0; }"
-				"menu.mate-panel-applet-slider menuitem:hover,"
-				"menu.mate-panel-applet-slider menuitem:selected {"
-				"  background: none; background-image: none; }",
+				"menu.mate-panel-applet-slider menuitem,"
+				"menu.mate-panel-applet-slider menuitem:focus,"
+				"menu.mate-panel-applet-slider menuitem:hover {"
+				"  padding: 0; border-width: 0; outline-width: 0;"
+				"  outline-style: none; background: none;"
+				"  background-image: none; box-shadow: none; }"
+				"menu.mate-panel-applet-slider frame {"
+				"  border-width: 0; box-shadow: none; }",
 				-1, NULL);
 			gtk_style_context_add_provider (gtk_widget_get_style_context (menu),
 							GTK_STYLE_PROVIDER (css),
