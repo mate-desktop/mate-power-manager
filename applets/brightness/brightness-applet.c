@@ -236,6 +236,9 @@ gpm_applet_get_icon (GpmBrightnessApplet *applet)
 		icon = GPM_BRIGHTNESS_APPLET_ICON;
 	}
 
+	g_printerr ("DBG get_icon: proxy=%p call_worked=%d size=%d icon=%s\n",
+		    (void *) applet->proxy, applet->call_worked, applet->size, icon);
+
 	applet->icon = gtk_icon_theme_load_icon (gtk_icon_theme_get_default (),
 						 icon, applet->size - 2, 0, NULL);
 
